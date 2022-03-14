@@ -1,0 +1,6 @@
+---
+- name: Xcode Swift Development Snapshot
+  date: 2018-05-02 18:10:55.000000000 -05:00
+  download: swift-DEVELOPMENT-SNAPSHOT-NO_ASSERTIONS-LTO-2018-05-02-a-osx.pkg
+  debug_info: swift-DEVELOPMENT-SNAPSHOT-NO_ASSERTIONS-LTO-2018-05-02-a-osx-symbols.pkg
+  dir: swift-DEVELOPMENT-SNAPSHOT-NO_ASSERTIONS-LTO-2018-05-02-a

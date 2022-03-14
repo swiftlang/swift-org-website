@@ -1,0 +1,35 @@
+- date: 2022-03-02 10:10:00-06:00
+  debug_info: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-osx-symbols.pkg
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-osx.pkg
+  name: Swift Development Snapshot
+- date: 2022-02-11 17:22:44-06:00
+  debug_info: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-osx-symbols.pkg
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-osx.pkg
+  name: Xcode Swift Development Snapshot
+- date: 2022-02-10 04:48:04-06:00
+  debug_info: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-osx-symbols.pkg
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-osx.pkg
+  name: Xcode Swift Development Snapshot
+- date: 2022-02-09 05:45:35-06:00
+  debug_info: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-osx-symbols.pkg
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-osx.pkg
+  name: Xcode Swift Development Snapshot
+- date: 2022-02-07 09:58:58-06:00
+  debug_info: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-osx-symbols.pkg
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-osx.pkg
+  name: Xcode Swift Development Snapshot
+- date: 2022-01-11 10:03:44-06:00
+  debug_info: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-osx-symbols.pkg
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-osx.pkg
+  name: Xcode Swift Development Snapshot
+- date: 2022-01-09 07:25:52-06:00
+  debug_info: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-osx-symbols.pkg
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-osx.pkg
+  name: Xcode Swift Development Snapshot

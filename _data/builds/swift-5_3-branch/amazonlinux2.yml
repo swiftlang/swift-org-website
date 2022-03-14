@@ -1,0 +1,151 @@
+---
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-11 12:13:09.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-11-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-11-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-11-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-10 15:48:16.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-10-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-10-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-10-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-09 05:27:51.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-09-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-09-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-09-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-08 14:44:54.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-08-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-08-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-08-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-07 11:17:01.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-06 14:45:02.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-06-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-06-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-06-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-05 10:47:44.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-05-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-05-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-05-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-04 10:55:30.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-04-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-04-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-04-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-03 12:27:37.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-03-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-03-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-03-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-02 12:09:33.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-02-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-02-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-02-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-11-01 10:49:27.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-01-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-01-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-01-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-10-29 16:12:27.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-29-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-29-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-29-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-10-13 13:13:49.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-13-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-13-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-13-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-10-12 17:28:10.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-12-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-12-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-12-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-10-11 01:16:36.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-11-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-11-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-11-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-10-03 06:42:57.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-03-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-03-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-03-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-09-09 12:04:06.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-09-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-09-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-09-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-09-07 11:39:41.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-07-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-07-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-07-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-09-06 12:50:49.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-06-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-06-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-06-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-09-05 11:29:08.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-05-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-05-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-05-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-09-04 10:38:06.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-04-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-04-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-04-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-09-03 18:04:26.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-03-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-03-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-03-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-09-02 16:35:30.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-02-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-02-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-02-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-09-01 13:15:23.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-01-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-01-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-01-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-08-31 07:25:13.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-31-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-31-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-31-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-08-27 05:43:05.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-27-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-27-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-27-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-08-18 10:29:35.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-18-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-18-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-18-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-08-17 09:03:34.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-17-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-17-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-17-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-08-15 13:03:19.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-15-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-15-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-15-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2020-08-13 17:45:08.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-13-a-amazonlinux2.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-13-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-13-a

@@ -1,0 +1,6 @@
+---
+- name: Ubuntu 15.10
+  date: 2016-10-11 04:28:49.000000000 -05:00
+  download: swift-3.0.1-PREVIEW-3-ubuntu15.10.tar.gz
+  download_signature: swift-3.0.1-PREVIEW-3-ubuntu15.10.tar.gz.sig
+  dir: swift-3.0.1-PREVIEW-3

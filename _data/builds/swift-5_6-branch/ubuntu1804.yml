@@ -1,0 +1,35 @@
+- date: 2022-03-02 10:10:00-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-ubuntu18.04.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2022-02-11 13:09:18-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-ubuntu18.04.tar.gz.sig
+  name: Ubuntu 18.04 Swift Development Snapshot
+- date: 2022-02-10 01:48:14-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-ubuntu18.04.tar.gz.sig
+  name: Ubuntu 18.04 Swift Development Snapshot
+- date: 2022-02-09 02:51:13-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-ubuntu18.04.tar.gz.sig
+  name: Ubuntu 18.04 Swift Development Snapshot
+- date: 2022-02-07 01:31:43-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-ubuntu18.04.tar.gz.sig
+  name: Ubuntu 18.04 Swift Development Snapshot
+- date: 2022-01-11 01:10:51-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-ubuntu18.04.tar.gz.sig
+  name: Ubuntu 18.04 Swift Development Snapshot
+- date: 2022-01-08 22:30:48-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-ubuntu18.04.tar.gz.sig
+  name: Ubuntu 18.04 Swift Development Snapshot

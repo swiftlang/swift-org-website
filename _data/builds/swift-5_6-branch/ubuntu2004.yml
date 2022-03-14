@@ -1,0 +1,35 @@
+- date: 2022-03-02 10:10:00-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-ubuntu20.04.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2022-02-11 15:19:41-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-ubuntu20.04.tar.gz.sig
+  name: Ubuntu 20.04 Swift Development Snapshot
+- date: 2022-02-10 04:31:02-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-ubuntu20.04.tar.gz.sig
+  name: Ubuntu 20.04 Swift Development Snapshot
+- date: 2022-02-09 03:10:09-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-ubuntu20.04.tar.gz.sig
+  name: Ubuntu 20.04 Swift Development Snapshot
+- date: 2022-02-07 03:08:06-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-ubuntu20.04.tar.gz.sig
+  name: Ubuntu 20.04 Swift Development Snapshot
+- date: 2022-01-11 01:26:07-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-ubuntu20.04.tar.gz.sig
+  name: Ubuntu 20.04 Swift Development Snapshot
+- date: 2022-01-09 08:47:57-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-ubuntu20.04.tar.gz.sig
+  name: Ubuntu 20.04 Swift Development Snapshot

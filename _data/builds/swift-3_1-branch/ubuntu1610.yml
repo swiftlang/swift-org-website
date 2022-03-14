@@ -1,0 +1,326 @@
+---
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-13 22:03:36.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-14-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-14-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-14-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-13 08:27:13.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-13-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-13-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-13-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-12 05:41:45.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-12-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-12-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-12-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-11 09:15:33.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-11-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-11-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-11-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-10 07:06:16.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-10-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-10-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-10-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-09 05:07:44.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-09-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-09-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-09-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-08 08:14:16.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-08-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-08-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-08-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-07 07:33:42.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-07-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-07-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-07-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-06 11:55:21.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-06-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-06-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-06-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-05 07:50:42.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-05-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-05-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-05-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-04 12:06:45.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-04-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-04-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-04-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-03 06:12:46.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-03-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-03-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-03-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-02 07:40:33.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-02-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-02-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-02-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-06-01 09:53:36.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-01-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-01-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-06-01-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-05-31 06:15:33.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-31-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-31-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-31-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-05-30 08:37:28.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-30-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-30-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-30-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-05-29 07:06:00.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-29-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-29-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-29-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-05-28 11:44:19.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-28-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-28-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-28-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-05-27 13:31:59.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-27-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-27-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-27-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-05-26 12:06:39.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-26-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-26-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-26-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-05-25 11:29:08.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-25-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-25-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-25-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-05-24 12:15:43.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-24-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-24-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-05-24-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-27 10:10:41.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-27-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-27-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-27-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-24 10:44:49.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-24-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-24-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-24-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-23 11:19:54.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-23-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-23-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-23-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-19 08:32:42.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-19-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-19-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-19-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-18 10:17:22.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-18-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-18-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-18-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-17 07:01:12.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-17-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-17-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-17-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-16 09:31:00.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-16-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-16-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-16-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-15 00:21:59.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-15-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-15-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-15-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-13 11:03:08.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-13-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-13-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-13-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-12 10:18:20.000000000 -05:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-12-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-12-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-12-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-11 00:21:40.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-11-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-11-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-11-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-10 05:08:18.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-10-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-10-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-10-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-08 03:54:19.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-08-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-08-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-08-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-07 03:03:26.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-07-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-07-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-07-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-06 02:29:36.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-06-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-06-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-06-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-05 01:49:54.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-05-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-05-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-05-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-04 01:35:28.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-04-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-04-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-04-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-03 02:02:56.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-03-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-03-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-03-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-02 03:09:07.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-02-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-02-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-02-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-03-01 04:12:34.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-01-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-01-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-03-01-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-28 09:27:41.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-28-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-28-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-28-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-27 09:52:52.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-27-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-27-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-27-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-24 08:34:05.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-24-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-24-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-24-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-23 03:37:36.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-23-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-23-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-23-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-22 00:14:38.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-22-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-22-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-22-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-21 07:48:15.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-21-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-21-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-21-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-20 05:49:49.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-20-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-20-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-20-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-19 07:47:17.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-19-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-19-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-19-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-18 10:03:32.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-18-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-18-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-18-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-17 09:53:24.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-17-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-17-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-17-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-16 10:15:55.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-16-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-16-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-16-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-15 06:13:57.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-15-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-15-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-15-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-14 10:13:24.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-14-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-14-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-14-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-13 10:51:35.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-13-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-13-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-13-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-12 11:07:33.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-12-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-12-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-12-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-11 10:00:05.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-11-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-11-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-11-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-10 08:32:00.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-10-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-10-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-10-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-09 06:12:40.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-09-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-09-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-09-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-08 15:55:18.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-08-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-08-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-08-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-07 19:34:13.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-07-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-07-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-07-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-02-05 20:56:13.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-05-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-05-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-02-05-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-01-31 11:04:16.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-01-31-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-01-31-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-01-31-a
+- name: Ubuntu 16.10 Swift Development Snapshot
+  date: 2017-01-22 12:11:49.000000000 -06:00
+  download: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-01-22-a-ubuntu16.10.tar.gz
+  download_signature: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-01-22-a-ubuntu16.10.tar.gz.sig
+  dir: swift-3.1-DEVELOPMENT-SNAPSHOT-2017-01-22-a

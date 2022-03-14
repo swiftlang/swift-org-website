@@ -1,0 +1,160 @@
+- pages:
+    - title: About Swift
+      url: /about/
+      sections:
+        - title: Swift.org and Open Source
+          name: swiftorg-and-open-source
+        - title: Platform Support
+          name: platform-support
+    - title: Blog
+      url: /blog/
+    - title: Getting Started
+      url: /getting-started/
+      sections:
+        - title: Installing Swift
+          name: installing-swift
+        - title: Using the REPL
+          name: using-the-repl
+        - title: Using the Package Manager
+          name: using-the-package-manager
+        - title: Using the LLDB Debugger
+          name: using-the-lldb-debugger
+    - title: Download
+      url: /download/
+      sections:
+        - title: Releases
+          name: releases
+        - title: Snapshots
+          name: snapshots
+        - title: Using Downloads
+          name: using-downloads
+        - title: Docker
+          name: docker
+    - title: Platform Support
+      url: /platform-support/
+    - title: Documentation
+      url: /documentation/
+      sections:
+        - title: Swift Language
+          name: swift-language
+        - title: Standard Library
+          name: standard-library
+        - title: Packages
+          name: packages
+        - title: API Design Guidelines
+          name: api-design-guidelines
+        - title: Tools
+          name: tools
+
+- header: Community
+  pages:
+    - title: Community Overview
+      url: /community/
+      sections:
+        - title: Communication
+          name: communication
+        - title: Community Structure
+          name: community-structure
+        - title: License
+          name: license
+        - title: Forums
+          name: forums
+    - title: Diversity
+      url: /diversity/
+    - title: Mentorship
+      url: /mentorship/
+    - title: Contributing
+      url: /contributing/
+      sections:
+        - title: Answering Questions
+          name: answering-questions
+        - title: Reporting Bugs
+          name: reporting-bugs
+        - title: Triaging Bugs
+          name: triaging-bugs
+        - title: Contributing Code
+          name: contributing-code
+        - title: Adding External Library Dependencies
+          name: adding-external-library-dependencies
+        - title: Participating in the Swift Evolution Process
+          name: participating-in-the-swift-evolution-process
+        - title: LLVM and Swift
+          name: llvm-and-swift
+    - title: Code of Conduct
+      url: /code-of-conduct/
+
+- header: Open Source Development
+  pages:
+    - title: Source Code
+      url: /source-code/
+      sections:
+        - title: Compiler and Standard Library
+          name: compiler-and-standard-library
+        - title: Core Libraries
+          name: core-libraries
+        - title: Package Manager
+          name: package-manager
+        - title: Xcode Playground Support
+          name: playground-support
+        - title: Cloned Repositories
+          name: cloned-repositories
+    - title: Continuous Integration
+      url: /continuous-integration/
+      sections:
+        - title: Configuration
+          name: configuration
+        - title: Usage
+          name: usage
+    - title: Source Compatibility
+      url: /source-compatibility/
+      sections:
+        - title: Current List of Projects
+          name: current-list-of-projects
+        - title: Adding Projects
+          name: adding-projects
+        - title: Maintaining Projects
+          name: maintaining-projects
+        - title: Pull Request Testing
+          name: pull-request-testing
+    - title: Security
+      url: /support/security.html
+
+- header: Open Source Efforts
+  pages:
+    - title: Swift Compiler
+      url: /swift-compiler/
+      sections:
+        - title: Compiler Architecture
+          name: compiler-architecture
+    - title: Standard Library
+      url: /standard-library/
+      sections:
+        - title: Standard Library Preview Package
+          name: standard-library-preview-package
+        - title: Standard Library Design
+          name: standard-library-design
+    - title: Package Manager
+      url: /package-manager/
+      sections:
+        - title: Conceptual Overview
+          name: conceptual-overview
+        - title: Example Usage
+          name: example-usage
+    - title: Core Libraries
+      url: /core-libraries/
+      sections:
+        - title: Foundation
+          name: foundation
+        - title: libdispatch
+          name: libdispatch
+        - title: xctest
+          name: xctest
+    - title: REPL, Debugger & Playgrounds
+      url: /lldb/
+      sections:
+        - title: Combined REPL + Debugger
+          name: why-combine-the-repl-and-debugger
+        - title: Xcode Playgrounds
+          name: xcode-playground-support
+    - title: Swift on Server
+      url: /server/

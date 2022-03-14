@@ -1,0 +1,40 @@
+<tr>
+    <td class="download">
+        <span class="release">
+          
+          {% if include.name == "Windows 10" %}
+          <p title="Download" download>{{ include.name }}<sup>1</sup></p>
+           
+          {% else %}
+          <p title="Download" download>{{ include.name }}</p>
+          {% endif %}
+        </span>
+    </td>
+    {% if include.arch %}
+    <td class="arch-tag"> 
+    <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.download }}">{{ include.arch }}</a>
+    {% if include.build.download_signature %}
+            <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.download_signature }}" title="PGP Signature" class="signature">Signature ({{ include.arch }})</a>
+     {% endif %}
+     {% if include.build.debug_info %}
+            <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.debug_info }}"  title="Debugging Symbols" class="debug">Debugging Symbols</a>
+     {% endif %}
+     {% if include.arch_2 %}
+    <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir_2 }}/{{ include.build_2.dir }}/{{ include.build_2.download }}">{{ include.arch_2 }}</a>
+    {% if include.build_2.download_signature %}
+            <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir_2 }}/{{ include.build_2.dir }}/{{ include.build_2.download_signature }}" title="PGP Signature" class="signature">Signature ({{ include.arch_2 }})</a>
+     {% endif %}
+     {% if include.build_2.debug_info %}
+            <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir_2 }}/{{ include.build_2.dir }}/{{ include.build2.debug_info }}"  title="Debugging Symbols" class="debug">Debugging Symbols</a>
+     {% endif %}
+    {% endif %}
+    </td>
+    {% endif %}
+        <td class="docker-tag">
+        {% if include.build.docker %}
+          <a href="https://hub.docker.com/r/swiftlang/swift/tags">{{ include.build.docker }}</a>
+        {% else %}
+          Unavailable
+        {% endif %}
+    </td>
+</tr>

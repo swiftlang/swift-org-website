@@ -1,0 +1,18 @@
+body {
+  color-scheme: light dark;
+  @include vars-light;
+  @include color-vars-light;
+
+  &[data-color-scheme="light"] {
+    color-scheme: light;
+  }
+
+  &[data-color-scheme="dark"] {
+    color-scheme: dark;
+
+    @media screen {
+      @include vars-dark;
+      @include color-vars-dark;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+- name: SwiftNIO
+  maturity: Graduated
+  pitched: 2018-09-07
+  accepted: 2018-09-07
+  url: http://github.com/apple/swift-nio/
+
+- name: Logging API
+  maturity: Graduated
+  pitched: 2018-09-10
+  accepted: 2019-02-07
+  url: http://github.com/apple/swift-log/
+
+- name: Metrics API
+  maturity: Sandbox
+  pitched: 2019-01-08
+  accepted: 2019-04-04
+  url: http://github.com/apple/swift-metrics/
+    
+- name: Postgres Client
+  maturity: Sandbox
+  pitched: 2018-11-18
+  accepted: 2019-05-16
+  url: https://github.com/vapor/nio-postgres
+
+- name: Redis Client
+  maturity: Sandbox
+  pitched: 2019-01-07
+  accepted: 2019-06-27
+  url: https://github.com/mordil/swift-redis-nio-client
+    
+- name: HTTP Client
+  maturity: Sandbox
+  pitched: 2019-04-18
+  accepted: 2019-06-27
+  url: https://github.com/swift-server/async-http-client
+
+- name: APNS Client
+  maturity: Sandbox
+  pitched: 2019-02-05
+  accepted: 2019-06-27
+  url: https://github.com/kylebrowning/swift-nio-apns
+
+- name: Statsd Client
+  maturity: Sandbox
+  pitched: 2019-06-02
+  accepted: 2019-08-11
+  url: https://github.com/apple/swift-statsd-client
+
+- name: Prometheus Client
+  maturity: Sandbox
+  pitched: 2018-11-18
+  accepted: 2019-08-11
+  url: https://github.com/MrLotU/SwiftPrometheus
+    
+- name: gRPC
+  maturity: Sandbox
+  pitched: 2019-09-30
+  accepted: 2020-02-19
+  url: https://github.com/grpc/grpc-swift
+
+- name: Crypto
+  maturity: Sandbox
+  pitched: 2020-02-20
+  accepted: 2020-03-04
+  url: https://github.com/apple/swift-crypto

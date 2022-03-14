@@ -1,0 +1,91 @@
+---
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-04-23 03:57:56.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-03-25 00:13:43.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-03-23 10:26:28.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-03-22 10:09:37.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-03-21 03:24:10.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-03-20 11:00:13.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-03-19 12:02:11.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-03-16 08:50:18.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-03-15 15:52:40.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-03-10 07:06:08.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-03-03 07:17:40.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-02-25 23:26:32.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-02-24 08:47:23.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-02-20 23:04:48.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-02-12 18:45:07.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-01-23 10:06:18.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-01-11 09:12:25.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2021-01-07 17:07:52.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a

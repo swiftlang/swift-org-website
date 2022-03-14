@@ -1,0 +1,48 @@
+/// Returns the value associated with a keypath in a map, or a default value if
+/// no value is associated with it.
+///
+/// @param {Map} $map
+///
+/// @param {List} $keys
+///   A list of keys where each item represents a new level of nesting.
+///
+/// @param {*} $default [null]
+///   The value to return if nothing is associated with the given keypath.
+///
+/// @returns {*}
+///   The value associated with the keypath or the provided default.
+///
+/// @example scss
+///
+///   $example-map: (
+///     foo: (
+///       bar: (
+///         baz: foobarbaz
+///       ),
+///     ),
+///   );
+///
+///   map-deep-get($example-map, (foo, bar, baz)); // foobarbaz
+///   map-deep-get($example-map, (foo, bar, baz), $default: blah); // foobarbaz
+///   map-deep-get($example-map, (foo, bar, foo); // null
+///   map-deep-get($example-map, (foo, foo, baz); // null
+///   map-deep-get($example-map, (foo, bar, foo), $default: blah); // blah
+///
+@function map-deep-get($map, $keys, $default: null) {
+  @each $key in $keys {
+    @if(not $map or not is-map($map)){
+      $map: ();
+    }
+    $map: map-get($map, $key);
+  }
+  @return if($map, $map, $default);
+}
+
+////
+/// Checks if a variable is a map or not
+///
+/// @returns {Boolean}
+////
+@function is-map($map) {
+  @return type-of($map) == map;
+}

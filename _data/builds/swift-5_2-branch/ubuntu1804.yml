@@ -1,0 +1,361 @@
+---
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-04-28 10:01:32.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-28-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-28-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-28-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-04-27 17:08:39.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-27-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-27-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-27-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-04-24 17:26:05.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-24-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-24-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-24-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-04-14 12:03:46.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-14-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-14-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-14-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-04-13 10:06:43.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-13-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-13-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-13-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-04-12 11:09:51.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-12-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-12-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-12-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-04-11 12:32:21.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-11-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-11-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-11-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-04-07 11:09:19.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-07-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-07-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-07-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-04-06 09:35:01.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-06-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-06-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-06-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-24 04:52:31.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-24-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-24-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-24-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-23 14:22:23.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-23-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-23-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-23-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-22 15:34:29.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-22-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-22-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-22-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-21 17:30:39.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-21-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-21-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-21-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-20 15:11:47.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-20-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-20-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-20-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-19 12:17:44.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-19-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-19-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-19-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-18 17:37:20.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-18-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-18-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-18-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-17 14:14:06.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-17-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-17-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-17-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-16 17:17:35.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-16-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-16-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-16-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-15 17:44:17.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-15-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-15-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-15-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-14 15:22:48.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-14-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-14-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-14-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-13 17:53:53.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-13-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-13-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-13-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-12 18:17:10.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-12-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-12-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-12-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-11 15:41:18.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-11-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-11-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-11-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-10 18:51:20.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-10-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-10-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-10-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-09 18:25:52.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-09-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-09-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-09-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-08 15:38:34.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-08-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-08-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-08-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-07 14:39:43.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-07-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-07-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-07-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-06 15:01:05.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-06-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-06-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-06-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-05 16:36:42.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-05-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-05-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-05-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-03 16:17:52.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-03-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-03-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-03-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-02 11:45:31.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-02-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-02-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-02-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-03-01 12:35:21.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-01-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-01-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-01-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-29 13:24:17.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-29-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-29-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-29-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-28 11:50:19.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-28-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-28-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-28-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-27 16:01:24.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-27-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-27-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-27-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-26 16:22:29.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-26-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-26-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-26-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-23 07:49:59.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-23-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-23-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-23-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-22 13:04:20.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-22-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-22-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-22-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-21 05:25:24.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-21-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-21-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-21-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-20 14:13:33.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-20-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-20-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-20-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-19 12:58:36.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-19-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-19-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-19-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-18 13:42:43.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-18-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-18-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-18-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-16 11:00:21.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-16-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-16-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-16-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-15 07:31:36.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-15-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-15-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-15-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-14 08:15:54.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-14-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-14-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-14-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-13 14:54:24.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-12 17:56:17.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-12-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-12-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-12-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-11 15:41:16.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-11-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-11-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-11-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-09 00:50:23.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-09-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-09-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-09-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-08 16:00:13.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-08-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-08-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-08-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-07 14:21:39.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-07-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-07-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-07-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-06 13:38:04.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-06-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-06-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-06-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-05 07:38:18.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-05-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-05-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-05-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-03 06:49:02.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-03-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-03-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-03-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-02-01 00:22:37.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-01-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-01-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-01-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-31 12:44:57.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-31-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-31-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-31-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-30 16:17:53.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-30-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-30-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-30-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-29 05:47:12.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-29-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-29-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-29-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-28 06:14:47.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-28-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-28-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-28-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-27 07:59:36.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-27-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-27-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-27-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-25 08:00:43.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-25-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-25-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-25-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-24 11:38:50.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-24-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-24-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-24-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-22 04:25:40.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-22-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-22-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-22-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-19 22:40:04.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-20-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-20-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-20-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-17 06:27:35.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-17-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-17-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-17-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-16 03:27:20.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-16-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-16-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-16-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-14 12:05:07.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-14-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-14-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-14-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-13 13:37:52.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-13-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-13-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-13-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-11 12:56:51.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-11-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-11-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-11-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-10 08:15:48.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-10-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-10-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-10-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-09 19:22:37.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-09-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-09-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-09-a
+- name: Ubuntu 18.04 Swift Development Snapshot
+  date: 2020-01-06 17:52:21.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-06-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-06-a-ubuntu18.04.tar.gz.sig
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-06-a

@@ -1,0 +1,7 @@
+---
+- name: Ubuntu 16.04
+  date: 2021-09-20 10:29:16.000000000 -05:00
+  download: swift-5.5-RELEASE-ubuntu16.04.tar.gz
+  download_signature: swift-5.5-RELEASE-ubuntu16.04.tar.gz.sig
+  dir: swift-5.5-RELEASE
+  docker: 5.5-xenial

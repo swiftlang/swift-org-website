@@ -1,0 +1,42 @@
+# This source file is part of the Swift.org open source project
+#
+# Copyright (c) 2022 Apple Inc. and the Swift.org project authors
+# Licensed under Apache License v2.0 with Runtime Library Exception
+#
+# See LICENSE.txt for license information
+# See CONTRIBUTORS.txt for the list of Swift.org project authors
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# usage:
+# docker-compose run build
+#
+# docker-compose up website
+#
+
+version: "2"
+
+services:
+
+   docker-setup:
+      image: swift-website-builder
+      build:
+         context: .
+         dockerfile: Dockerfile
+
+   common: &common
+      image: swift-website-builder
+      depends_on: [docker-setup]
+      volumes:
+        - .:/srv/jekyll:cached
+        - ./.output:/output:z
+
+   build:
+      <<: *common
+      command: /bin/bash -cl "bundle check && bundle exec jekyll build --source /srv/jekyll --destination /output"
+
+   website:
+     <<: *common
+     command: /bin/bash -cl "bundle check && bundle exec jekyll serve --source /srv/jekyll --destination /output --host 0.0.0.0 --watch"
+     ports:
+        - "4000:4000"

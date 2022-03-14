@@ -1,0 +1,671 @@
+---
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-31 03:59:17.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-31-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-31-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-31-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-30 05:29:34.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-30-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-30-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-30-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-29 07:16:10.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-29-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-29-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-29-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-28 01:42:34.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-28-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-28-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-28-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-27 04:20:16.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-27-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-27-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-27-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-26 06:12:28.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-26-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-26-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-26-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-24 02:00:11.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-24-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-24-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-24-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-23 03:07:07.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-23-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-23-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-23-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-22 04:46:49.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-22-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-22-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-22-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-20 23:13:56.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-21-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-21-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-21-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-20 01:37:29.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-20-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-20-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-20-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-19 03:08:23.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-19-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-19-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-19-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-18 04:31:57.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-18-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-18-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-18-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-17 09:06:11.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-17-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-17-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-17-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-14 01:14:21.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-14-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-14-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-14-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-13 02:44:56.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-13-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-13-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-13-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-12 04:54:46.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-12-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-12-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-12-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-05-11 05:21:52.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-11-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-11-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-05-11-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-28 09:57:44.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-28-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-28-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-28-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-27 11:10:42.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-27-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-27-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-27-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-26 10:25:08.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-26-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-26-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-26-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-25 11:36:18.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-25-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-25-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-25-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-24 10:48:36.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-24-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-24-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-24-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-23 11:43:58.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-23-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-23-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-23-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-22 10:28:11.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-22-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-22-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-22-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-21 10:02:31.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-21-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-21-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-21-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-20 10:15:37.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-20-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-20-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-20-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-19 10:20:25.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-19-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-19-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-19-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-18 02:43:33.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-18-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-18-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-18-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-17 07:43:59.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-17-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-17-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-17-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-16 07:26:42.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-16-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-16-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-16-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-15 07:10:14.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-15-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-15-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-15-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-14 07:34:22.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-14-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-14-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-14-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-13 07:05:07.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-13-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-13-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-13-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-12 07:45:05.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-12-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-12-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-12-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-11 01:14:51.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-11-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-11-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-11-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-10 02:19:24.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-10-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-10-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-10-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-09 00:07:46.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-09-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-09-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-09-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-08 03:50:56.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-08-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-08-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-08-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-07 08:34:12.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-07-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-07-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-07-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-06 06:38:49.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-06-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-06-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-06-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-05 09:30:03.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-05-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-05-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-05-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-04 08:24:50.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-04-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-04-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-04-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-03 11:11:12.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-03-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-03-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-03-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-02 10:43:31.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-02-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-02-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-02-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-03-01 09:01:11.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-01-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-01-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-03-01-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-27 22:55:25.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-28-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-28-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-28-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-27 08:20:47.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-27-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-27-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-27-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-26 11:34:30.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-26-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-26-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-26-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-25 11:16:51.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-25-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-25-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-25-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-24 10:56:52.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-24-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-24-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-24-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-23 10:53:21.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-23-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-23-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-23-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-22 08:07:30.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-22-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-22-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-22-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-21 10:49:38.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-21-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-21-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-21-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-20 08:11:52.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-20-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-20-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-20-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-19 09:22:02.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-19-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-19-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-19-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-18 07:44:24.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-18-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-18-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-18-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-17 10:09:54.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-17-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-17-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-17-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-16 08:40:11.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-16-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-16-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-16-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-15 07:20:55.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-15-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-15-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-15-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-14 09:42:40.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-14-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-14-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-14-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-13 10:57:16.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-13-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-13-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-13-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-08 09:10:28.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-08-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-08-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-08-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-07 08:00:25.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-07-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-07-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-07-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-06 08:37:18.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-06-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-06-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-06-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-02-01 02:24:16.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-01-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-01-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-02-01-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-30 06:21:51.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-30-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-30-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-30-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-29 11:21:52.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-29-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-29-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-29-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-28 09:41:45.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-28-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-28-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-28-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-27 11:32:50.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-27-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-27-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-27-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-26 09:35:26.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-26-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-26-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-26-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-25 02:36:20.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-25-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-25-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-25-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-23 11:50:59.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-23-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-23-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-23-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-22 09:39:04.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-22-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-22-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-22-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-18 02:46:12.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-18-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-18-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-18-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-17 07:21:19.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-17-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-17-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-17-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-15 11:30:17.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-15-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-15-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-15-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-14 07:34:37.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-14-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-14-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-14-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-13 09:52:22.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-13-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-13-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-13-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-12 09:01:52.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-12-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-12-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-12-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-11 08:16:58.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-11-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-11-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-11-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2018-01-10 06:26:25.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-10-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-10-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2018-01-10-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-30 11:30:01.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-30-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-30-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-30-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-29 06:30:51.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-29-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-29-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-29-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-28 10:42:59.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-28-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-28-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-28-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-27 09:41:02.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-27-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-27-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-27-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-25 09:05:30.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-25-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-25-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-25-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-24 09:30:15.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-24-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-24-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-24-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-23 08:10:11.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-23-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-23-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-23-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-22 09:26:08.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-22-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-22-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-22-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-21 08:46:24.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-21-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-21-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-21-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-20 09:14:06.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-20-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-20-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-20-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-19 09:12:51.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-19-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-19-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-19-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-18 10:47:22.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-18-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-18-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-18-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-17 09:42:09.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-17-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-17-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-17-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-16 09:18:48.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-16-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-16-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-16-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-15 09:22:29.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-15-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-15-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-15-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-14 10:31:03.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-14-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-14-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-14-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-13 09:45:40.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-13-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-13-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-13-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-12 08:35:01.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-12-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-12-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-12-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-11 02:00:33.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-11-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-11-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-11-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-10 05:56:48.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-10-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-10-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-10-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-09 08:58:38.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-09-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-09-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-09-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-08 09:44:08.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-08-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-08-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-08-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-07 10:19:54.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-07-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-07-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-07-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-04 08:50:22.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-04-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-04-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-04-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-03 04:13:04.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-03-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-03-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-03-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-12-02 10:30:30.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-02-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-02-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-12-02-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-30 08:56:03.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-30-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-30-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-30-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-29 09:51:03.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-29-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-29-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-29-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-28 08:49:59.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-28-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-28-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-28-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-27 07:06:23.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-27-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-27-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-27-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-26 09:22:59.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-26-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-26-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-26-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-25 09:41:14.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-25-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-25-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-25-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-24 07:40:14.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-24-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-24-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-24-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-23 11:27:42.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-23-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-23-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-23-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-22 11:04:59.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-22-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-22-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-22-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-21 02:28:21.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-21-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-21-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-21-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-20 07:59:21.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-20-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-20-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-20-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-19 10:36:23.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-19-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-19-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-19-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-15 04:22:24.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-15-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-15-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-15-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-14 05:18:57.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-14-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-14-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-14-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-06 08:42:02.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-06-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-06-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-06-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-05 06:43:28.000000000 -06:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-05-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-05-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-05-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-04 09:35:51.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-04-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-04-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-04-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-03 07:35:23.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-03-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-03-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-03-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-02 11:28:40.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-02-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-02-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-02-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-11-01 11:03:10.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-01-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-01-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-11-01-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-10-31 12:07:02.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-31-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-31-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-31-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-10-30 07:07:45.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-30-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-30-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-30-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-10-29 06:32:23.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-29-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-29-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-29-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-10-28 10:36:08.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-28-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-28-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-28-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-10-27 07:22:01.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-27-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-27-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-27-a
+- name: Xcode Swift 4.1-Development Snapshot
+  date: 2017-10-25 06:35:00.000000000 -05:00
+  download: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-25-a-osx.pkg
+  debug_info: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-25-a-osx-symbols.pkg
+  dir: swift-4.1-DEVELOPMENT-SNAPSHOT-2017-10-25-a

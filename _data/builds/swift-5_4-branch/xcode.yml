@@ -1,0 +1,91 @@
+---
+- name: Xcode Swift Development Snapshot
+  date: 2021-04-23 09:44:18.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-03-25 04:40:53.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-03-23 13:47:40.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-03-22 12:36:02.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-03-21 07:13:36.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-03-20 14:45:41.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-03-19 15:47:47.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-03-16 11:51:25.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-03-15 18:43:52.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-03-10 10:18:53.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-03-03 11:16:05.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-02-26 02:00:28.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-02-24 12:09:15.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-02-21 03:27:59.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-02-12 21:55:59.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-01-23 22:02:13.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-01-11 12:59:37.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a
+- name: Xcode Swift Development Snapshot
+  date: 2021-01-07 19:13:44.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a-osx.pkg
+  debug_info: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a-osx-symbols.pkg
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a

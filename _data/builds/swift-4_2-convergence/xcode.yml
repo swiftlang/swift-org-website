@@ -1,0 +1,6 @@
+---
+- name: Xcode Swift 4.2 Convergence Snapshot
+  date: 2018-08-08 10:52:04.000000000 -05:00
+  download: swift-4.2-CONVERGENCE-osx.pkg
+  debug_info: swift-4.2-CONVERGENCE-osx-symbols.pkg
+  dir: swift-4.2-CONVERGENCE

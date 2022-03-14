@@ -1,0 +1,151 @@
+---
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-11 13:12:22.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-11-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-11-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-11-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-10 15:55:11.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-10-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-10-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-10-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-09 05:53:50.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-09-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-09-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-09-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-08 14:27:39.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-08-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-08-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-08-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-07 09:10:28.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-06 13:30:07.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-06-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-06-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-06-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-05 11:59:41.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-05-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-05-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-05-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-04 09:06:23.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-04-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-04-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-04-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-03 12:39:10.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-03-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-03-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-03-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-02 11:21:40.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-02-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-02-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-02-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-11-01 11:57:00.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-01-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-01-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-01-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-10-29 15:06:09.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-29-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-29-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-29-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-10-13 13:52:05.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-13-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-13-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-13-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-10-12 15:43:52.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-12-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-12-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-12-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-10-11 03:02:04.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-11-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-11-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-11-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-10-03 05:35:42.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-03-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-03-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-03-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-09-09 13:07:06.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-09-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-09-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-09-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-09-07 16:09:27.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-07-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-07-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-07-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-09-06 06:04:09.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-06-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-06-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-06-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-09-05 13:48:27.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-05-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-05-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-05-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-09-04 06:02:17.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-04-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-04-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-04-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-09-03 16:23:08.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-03-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-03-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-03-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-09-02 17:39:32.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-02-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-02-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-02-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-09-01 11:31:45.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-01-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-01-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-01-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-08-31 07:36:58.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-31-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-31-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-31-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-08-27 02:20:59.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-27-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-27-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-27-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-08-18 09:28:31.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-18-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-18-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-18-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-08-17 10:07:21.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-17-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-17-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-17-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-08-15 16:23:38.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-15-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-15-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-15-a
+- name: Ubuntu ceos8 Swift Development Snapshot
+  date: 2020-08-13 16:04:31.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-13-a-centos8.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-13-a-centos8.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-13-a

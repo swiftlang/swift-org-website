@@ -1,0 +1,146 @@
+---
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-11 14:14:45.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-11-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-11-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-11-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-10 15:40:44.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-10-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-10-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-10-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-09 07:28:22.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-09-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-09-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-09-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-08 16:26:38.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-08-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-08-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-08-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-07 09:24:48.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-07-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-06 13:34:56.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-06-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-06-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-06-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-05 12:21:07.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-05-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-05-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-05-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-04 09:27:56.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-04-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-04-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-04-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-03 14:02:09.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-03-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-03-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-03-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-02 10:10:47.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-02-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-02-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-02-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-11-01 09:38:10.000000000 -06:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-01-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-01-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-11-01-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-10-29 14:56:17.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-29-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-29-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-29-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-10-13 11:33:18.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-13-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-13-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-13-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-10-12 17:44:11.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-12-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-12-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-12-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-10-11 01:14:59.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-11-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-11-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-11-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-10-03 05:01:37.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-03-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-03-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-10-03-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-09-09 14:16:20.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-09-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-09-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-09-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-09-07 13:50:22.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-07-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-07-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-07-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-09-06 10:32:44.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-06-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-06-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-06-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-09-05 09:10:34.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-05-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-05-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-05-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-09-04 12:48:31.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-04-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-04-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-04-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-09-03 17:31:20.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-03-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-03-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-03-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-09-02 14:52:17.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-02-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-02-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-02-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-09-01 14:57:49.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-01-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-01-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-09-01-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-08-31 09:00:49.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-31-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-31-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-31-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-08-27 13:33:20.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-27-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-27-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-27-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-08-18 11:38:47.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-18-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-18-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-18-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-08-17 11:13:56.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-17-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-17-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-17-a
+- name: Ubuntu 20.04 Swift Development Snapshot
+  date: 2020-08-15 14:38:11.000000000 -05:00
+  download: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-15-a-ubuntu20.04.tar.gz
+  download_signature: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-15-a-ubuntu20.04.tar.gz.sig
+  dir: swift-5.3-DEVELOPMENT-SNAPSHOT-2020-08-15-a

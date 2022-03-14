@@ -1,0 +1,16 @@
+{% highlight bash %}
+$ apt-get install \
+          binutils \
+          git \
+          libc6-dev \
+          libcurl3 \
+          libedit2 \
+          libgcc-5-dev \
+          libpython2.7 \
+          libsqlite3-0 \
+          libstdc++-5-dev \
+          libxml2 \
+          pkg-config \
+          tzdata \
+          zlib1g-dev
+{% endhighlight %}

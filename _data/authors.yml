@@ -1,0 +1,257 @@
+dabrahams:
+    name: Dave Abrahams
+    email: dabrahams@apple.com
+    gravatar: 5b45540ae377ec54a071f313b7193a27
+    github: dabrahams
+
+lplarson:
+    name: Luke Larson
+    email: llarson@apple.com
+    gravatar: aee6117015b8d1ce941e47e98d08ec8c
+    github: lplarson
+
+najacque:
+    name: Nicole Jacque
+    email: nicole_jacque@apple.com
+    gravatar: 91a5d491b5dc3852952dcbdf55b628ff
+    github: najacque
+
+tkremenek:
+    name: Ted Kremenek
+    gravatar: b6520643611a05fd040d0abcee3c883c
+    email: kremenek@apple.com
+    github: tkremenek
+    about: "Ted Kremenek is a member of the Swift Core Team and manages the Languages and Runtimes group at Apple."
+
+ematejska:
+    name: Ewa Matejska
+    email:  ematejska@apple.com
+    github: ematejska
+
+twostraws:
+   name: Paul Hudson
+   gravatar: a16d66fdf58b8ac3738db189a9f5b222
+   email: paul@hackingwithswift.com
+   github: twostraws
+   twitter: twostraws
+   about: "Paul Hudson is the creator of Hacking with Swift, and a member of the Diversity in Swift work group."
+
+seabaylea:
+   name: Chris Bailey
+   email: BAILEYC@uk.ibm.com
+   github: seabaylea
+   twitter: Chris__Bailey
+   gravatar: 8d00f5acbaa7d24e0900e5045462e008
+
+k8stone:
+   name: Kate Stone
+   email: k8stone@apple.com
+   github: k8stone
+   twitter: k8stone
+
+eeckstein:
+   name: Erik Eckstein
+   email: eeckstein@apple.com
+   github: eeckstein
+   about: "Erik Eckstein is member of the Swift team at Apple.  He has worked on various aspects of the Swift compiler's optimization pipeline."
+
+krilnon:
+   name: Kyle Murray
+   email: kyle_murray@apple.com
+   gravatar: 3d990ea970403d31eed634851f480386
+   github: krilnon
+
+graydon:
+   name: Graydon Hoare
+   email: ghoare@apple.com
+   gravatar: f1bc67b53f1a5512d778426cf447c5ab
+   github: graydon
+
+aciid:
+   name: Ankit Aggarwal
+   email: ankit_aggarwal@apple.com
+   github: aciidb0mb3r
+   twitter: aciidb0mb3r
+   gravatar: 9b923f8f8e522c67e81454756fc027e9
+
+nkcsgexi:
+   name: Xi Ge
+   email: xi_ge@apple.com
+   github: nkcsgexi
+   twitter: xge_apple
+
+natecook1000:
+    name: Nate Cook
+    email: natecook@apple.com
+    github: natecook1000
+    twitter: nnnnnnnn
+    gravatar: 5f463dd4e7af28b64ad8f0e032ee82dc
+    about: "Nate Cook is a member of the Swift standard library team at Apple."
+
+kubamracek:
+   name: Kuba Mracek
+   email: mracek@apple.com
+   github: kubamracek
+   twitter: kubamracek
+
+airspeedswift:
+   name: Ben Cohen
+   email: ben_cohen@apple.com
+   github: airspeedswift
+   twitter: airspeedswift
+
+rudkx:
+   name: Mark Lacey
+   email: mark.lacey@apple.com
+   github: rudkx
+
+shahmishal:
+   name: Mishal Shah
+   email: mishal_shah@apple.com
+   github: shahmishal
+   twitter: mishaldshah
+   gravatar: 231cec2cc45a272aa5b341b413fdc2ed
+   about: "Mishal Shah is an engineer on the Swift Infrastructure team at Apple."
+
+mikeash:
+   name: Mike Ash
+   email: mikeash@apple.com
+   github: mikeash
+   twitter: mikeash
+   gravatar: 9245f9f7df459c19a735740e281aeae2
+
+jrose:
+   name: Jordan Rose
+   email: jordan_rose@apple.com
+   github: jrose-apple
+   twitter: UINT_MIN
+   gravatar: c4fe988326eed161b989d0c5521cb105
+
+milseman:
+   name: Michael Ilseman
+   email: milseman@apple.com
+   github: milseman
+   twitter: ilseman
+   gravatar: e54661d4315ba730cb1c49bac05e1145
+   about: "Michael Ilseman is an engineer on the Swift Standard Library team at Apple."
+
+lorentey:
+   name: Karoy Lorentey
+   email: klorentey@apple.com
+   github: lorentey
+   twitter: lorentey
+   about: "Karoy Lorentey is an engineer on the Swift Standard Library team at Apple."
+
+atrick:
+   name: Andrew Trick
+   email: atrick@apple.com
+   github: atrick
+
+nathawes:
+   name: Nathan Hawes
+   email: nhawes@apple.com
+   github: nathawes
+   gravatar: d5da511fd75bfa72c70fbea84914c88c
+
+jckarter:
+   name: Joe Groff
+   email: jgroff@apple.com
+   github: jckarter
+   twitter: jckarter
+
+jlettner:
+   name: Julian Lettner
+   email: lettner@apple.com
+   github: yln
+
+ericasadun:
+  name: Erica Sadun
+  twitter: ericasadun
+
+xedin:
+   name: Pavel Yaskevich
+   email: pyaskevich@apple.com
+   github: xedin
+
+tanner:
+   name: Tanner Nelson
+   twitter: tanner0101
+   about: "Tanner Nelson is member of the Swift Server Work Group and creator of the Vapor web framework."
+
+stephentyrone:
+   name: Steve Canon
+   github: stephentyrone
+   about: "Steve Canon is a member of Apple’s Swift Standard Library team. Previously he spent a decade working on Apple’s math library and the Accelerate framework."
+
+bitjammer:
+  name: Ashley Garland
+  email: acgarland@apple.com
+  github: bitjammer
+  gravatar: 16d6907db8e31495729e94a232d159fd
+  about: "Ashley Garland is a member of Apple's Developer Publications Authoring Tools team.  She previously worked on the Swift Standard Library and Compiler, including Markup, Reflection, Syntax, and Migrator libraries."
+
+corybenfield:
+  name: Cory Benfield
+  email: lukasa@apple.com
+  github: Lukasa
+  about: "Cory Benfield is a member of a team developing foundational server-side Swift libraries as part of Apple‘s Cloud Services division, and is a core developer on SwiftNIO."
+
+slavapestov:
+  name: Slava Pestov
+  email: spestov
+  github: slavapestov
+  about: "Slava Pestov is a member of the Swift compiler team at Apple."
+
+tomerd:
+  name: Tom Doron
+  email: tomer@apple.com
+  github: tomerd
+  twitter: tomerdoron
+  gravatar: 3cb408ef512103925c4fe709bf3f3b11
+  about: "Tom Doron is a member of the Swift Core Team and the Swift Server Work Group. He manages a team working on server-side Swift libraries at Apple."
+
+ktoso:
+  name: Konrad ‘ktoso’ Malawski
+  email: ktoso@apple.com
+  github: ktoso
+  twitter: ktosopl
+  gravatar: 03cb20b97f6a14701c24c4e088b6af87
+  about: "Konrad Malawski is a member of a team developing foundational server-side Swift libraries at Apple, with focus on distributed systems and concurrency."
+
+compnerd:
+  name: Saleem Abdulrasool
+  email: compnerd@compnerd.org
+  github: compnerd
+  twitter: compnerd
+  about: "Saleem Abdulrasool is a member of the Swift Core Team and a software engineer at Google Brain."
+
+hborla:
+   name: Holly Borla
+   email: hborla@apple.com
+   github: hborla
+   twitter: hollyborla
+   about: "Holly Borla is an engineer on the Swift compiler team at Apple, and a member of the Diversity in Swift work group."
+
+krstnfx:
+   name: Kristina Fox
+   github: krstnfx
+   twitter: krstnfx
+   about: "Kristina Fox is an iOS engineer on the health team at Apple, and a member of the Diversity in Swift work group."
+
+yim-lee:
+   name: Yim Lee
+   email: yim.lee@apple.com
+   github: yim-lee
+   gravatar: 6c6eb474fd49bcafa7a8ba7d91ad06e0
+   about: "Yim Lee is an engineer on the Swift team at Apple, developing foundational server-side technologies with focus on distributed systems."
+
+franklinsch:
+   name: Franklin Schrans
+   email: fschrans@apple.com
+   github: franklinsch
+   gravatar: 0207e0cc0ed5247a65e635fa4d1ed5b9
+   about: "Franklin Schrans is a member of the Swift-DocC team at Apple."
+
+diversity-work-group:
+   name: The Diversity in Swift work group
+   about: "The Diversity in Swift work group is a group of volunteers working to make our community more approachable and inclusive."

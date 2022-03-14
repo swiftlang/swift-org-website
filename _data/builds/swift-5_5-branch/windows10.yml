@@ -1,0 +1,151 @@
+---
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-09-06 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-09-06-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-09-06-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-09-06-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-08-30 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-30-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-30-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-30-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-08-29 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-29-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-29-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-29-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-08-23 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-23-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-23-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-23-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-08-11 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-11-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-11-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-11-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-08-10 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-10-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-10-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-10-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-08-07 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-07-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-07-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-07-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-08-03 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-03-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-03-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-03-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-08-02 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-02-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-02-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-02-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-07-31 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-31-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-31-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-31-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-07-27 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-27-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-27-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-27-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-07-19 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-19-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-19-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-19-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-07-18 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-18-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-18-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-18-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-07-08 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-08-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-08-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-08-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-07-03 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-03-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-03-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-03-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-07-01 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-01-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-01-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-07-01-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-06-30 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-30-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-30-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-30-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-06-29 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-29-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-29-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-29-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-06-26 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-26-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-26-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-26-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-06-23 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-23-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-23-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-23-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-06-14 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-14-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-14-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-14-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-06-02 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-02-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-02-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-06-02-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-05-30 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-30-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-30-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-30-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-05-26 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-26-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-26-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-26-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-05-18 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-18-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-18-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-18-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-05-14 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-14-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-14-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-14-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-05-11 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-11-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-11-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-11-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-05-09 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-09-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-09-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-09-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-05-02 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-02-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-02-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-05-02-a
+- name: Windows 10 Swift 5.5 Development Snapshot
+  date: 2021-04-19 05:10:00.000000000 -05:00
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-04-19-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-04-19-a-windows10.exe.sig
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-04-19-a

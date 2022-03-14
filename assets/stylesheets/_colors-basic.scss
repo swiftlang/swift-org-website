@@ -1,0 +1,48 @@
+// reset
+ul, menu, dir {
+  padding-inline-start: 0;
+}
+
+body {
+  background: var(--color-background-light);
+  color: var(--color-text-light);
+}
+
+nav[role="navigation"], footer[role="contentinfo"] {
+  background: var(--color-nav-background-light);
+  color: var(--color-nav-text-light);
+}
+
+nav[role="navigation"] ul li a:visited,
+footer[role="contentinfo"] p,
+footer[role="contentinfo"] p.privacy a {
+  color: var(--color-nav-text-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  #logo a {
+    background-image: url('/assets/images/swift~dark.svg');
+  }
+
+  body {
+    background: var(--color-background-dark);
+    color: var(--color-text-dark);
+  }
+
+  nav[role="navigation"], footer[role="contentinfo"] {
+    background: var(--color-nav-background-dark);
+    color: var(--color-nav-text-dark);
+  }
+
+  .title a:link, .title a:visited  {
+    color: var(--color-text-dark);
+  }
+
+  nav[role="navigation"] ul li a:link,
+  nav[role="navigation"] ul li a:visited,
+  nav[role="navigation"] ul li ul a:link,
+  footer[role="contentinfo"] p,
+  footer[role="contentinfo"] p.privacy a {
+    color: var(--color-nav-text-dark);
+  }
+}

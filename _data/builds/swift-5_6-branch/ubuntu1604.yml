@@ -1,0 +1,31 @@
+---
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2022-02-11 16:12:05.000000000 -06:00
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2022-02-10 03:35:19.000000000 -06:00
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2022-02-09 03:29:09.000000000 -06:00
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2022-02-07 01:57:57.000000000 -06:00
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2022-01-11 01:46:54.000000000 -06:00
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a
+- name: Ubuntu 16.04 Swift Development Snapshot
+  date: 2022-01-10 00:28:33.000000000 -06:00
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-ubuntu16.04.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-ubuntu16.04.tar.gz.sig
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a

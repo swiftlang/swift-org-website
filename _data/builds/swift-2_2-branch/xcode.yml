@@ -1,0 +1,81 @@
+---
+- name: Xcode
+  date: 2016-04-23 05:06:21.000000000 -05:00
+  download: swift-2.2.1-SNAPSHOT-2016-04-23-a-osx.pkg
+  debug_info: swift-2.2.1-SNAPSHOT-2016-04-23-a-osx-symbols.pkg
+  dir: swift-2.2.1-SNAPSHOT-2016-04-23-a
+- name: Xcode
+  date: 2016-04-12 09:24:21.000000000 -05:00
+  download: swift-2.2.1-SNAPSHOT-2016-04-12-a-osx.pkg
+  debug_info: swift-2.2.1-SNAPSHOT-2016-04-12-a-osx-symbols.pkg
+  dir: swift-2.2.1-SNAPSHOT-2016-04-12-a
+- name: Xcode
+  date: 2016-03-28 10:10:41.000000000 -05:00
+  download: swift-2.2.1-SNAPSHOT-2016-03-28-a-osx.pkg
+  debug_info: swift-2.2.1-SNAPSHOT-2016-03-28-a-osx-symbols.pkg
+  dir: swift-2.2.1-SNAPSHOT-2016-03-28-a
+- name: Xcode
+  date: 2016-03-01 04:52:03.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-03-01-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2016-03-01-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2016-03-01-a
+- name: Xcode
+  date: 2016-02-24 10:00:47.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-02-24-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2016-02-24-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2016-02-24-a
+- name: Xcode
+  date: 2016-02-08 21:54:39.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-02-08-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2016-02-08-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2016-02-08-a
+- name: Xcode
+  date: 2016-02-03 08:50:51.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-02-03-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2016-02-03-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2016-02-03-a
+- name: Xcode
+  date: 2016-01-25 12:56:26.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-01-25-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2016-01-25-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2016-01-25-a
+- name: Xcode
+  date: 2016-01-11 17:22:20.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-01-11-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2016-01-11-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2016-01-11-a
+- name: Xcode
+  date: 2016-01-06 07:18:21.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-01-06-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2016-01-06-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2016-01-06-a
+- name: Xcode
+  date: 2015-12-31 17:16:48.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-31-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2015-12-31-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2015-12-31-a
+- name: Xcode
+  date: 2015-12-22 19:53:18.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-22-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2015-12-22-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2015-12-22-a
+- name: Xcode
+  date: 2015-12-21 15:11:28.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-21-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2015-12-21-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2015-12-21-a
+- name: Xcode
+  date: 2015-12-18 17:51:31.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-18-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2015-12-18-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2015-12-18-a
+- name: Xcode
+  date: 2015-12-10 17:03:50.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-10-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2015-12-10-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2015-12-10-a
+- name: Xcode
+  date: 2015-12-01 17:03:50.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-01-a-osx.pkg
+  debug_info: swift-2.2-SNAPSHOT-2015-12-01-a-osx-symbols.pkg
+  dir: swift-2.2-SNAPSHOT-2015-12-01-a

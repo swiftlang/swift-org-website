@@ -1,0 +1,193 @@
+@media only screen and(max-width: 767px) {
+    nav[role="navigation"] {
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid var(--color-nav-rule);
+        border-right: none;
+        padding: 20px 30px;
+        overflow: hidden;
+
+        &.open .list-items {
+            display: block;
+        }
+
+        & .list-items {
+          padding-top: var(--content-margin-bottom);
+           display: none;
+        }
+    }
+
+    .menu-toggle {
+        content:  ' ';
+        height: 20px;
+        width: 20px;
+        background-image: var(--menu-icon-close);
+        background-repeat: no-repeat;
+        background-position: center center;
+        cursor: pointer;
+    }
+
+    .menu-toggle.open {
+        background-image: var(--menu-icon);
+    }
+
+    #logo {
+      margin: 0;
+      padding: 0;
+
+      a {
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+
+    main {
+        max-width: 100%;
+        min-width: 320px;
+        margin-left: 0;
+        padding: 30px 30px 0;
+    }
+
+    footer[role="contentinfo"] {
+        margin-left: 0;
+        flex-direction: column;
+    }
+
+    .footer-other {
+      display: flex;
+      justify-content: space-between;
+      margin-top: var(--content-margin-bottom);
+    }
+
+    h1 {
+        font-size: 48px;
+        font-weight: 300;
+        line-height: 1;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 300;
+        line-height: 1.1;
+    }
+
+    h3 {
+        font-size: 38px;
+        font-weight: 300;
+        line-height: 1.1;
+    }
+
+    h4 {
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    h5 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+
+    h6 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    div.highlighter-rouge {
+        margin-left: 0;
+    }
+
+    article {
+        blockquote {
+            margin-left: 0.5em;
+        }
+    }
+
+    table.downloads {
+        border: 1px var(--color-dropdown-border) solid;
+
+        &, thead, tbody, th, td, tr {
+            display: block !important;
+        }
+
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            border: 1px solid var(--color-dropdown-border);
+        }
+
+        td {
+            border-left: none !important;
+            border-right: none !important;
+            border-bottom: 1px solid var(--color-dropdown-border) !important;
+            position: relative;
+            padding-left: 35%;
+            width: 100% !important;
+        }
+
+        td:before {
+            position: absolute;
+            top: 0.5em;
+            left: 0.5em;
+            width: 27.5%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        td.platform:before {
+            content: "Platform";
+        }
+
+        td.download:before {
+            content: "Download";
+            top: 1em;
+        }
+
+        td.date:before {
+            content: "Date";
+        }
+
+        td.toolchain:before {
+            content: "Toolchain";
+            top: 1em;
+        }
+
+        td.github-tag:before {
+            content: "GitHub Tag";
+        }
+
+        td.docker-tag:before {
+            content: "Docker Tag";
+        }
+
+        td.arch-tag:before {
+            content: "Architecture";
+        }
+    }
+}
+
+.nav-menu-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.menu-item {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.logo-container {
+  justify-self: center;
+}
+
+.menu-toggle {
+  justify-self: right;
+}

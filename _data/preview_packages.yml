@@ -1,0 +1,6 @@
+- repo: https://github.com/apple/swift-se0270-range-set/
+  name: SE0270_RangeSet
+  description: >-
+    Operations on noncontiguous subranges of collections, 
+    such as <code>subranges(where:)</code> and <code>moveSubranges(_:to:)</code>, 
+    as well as the supporting <code>RangeSet</code> type.

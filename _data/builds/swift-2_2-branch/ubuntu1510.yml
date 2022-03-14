@@ -1,0 +1,81 @@
+---
+- name: Ubuntu 15.10
+  date: 2016-04-23 05:36:51.000000000 -05:00
+  download: swift-2.2.1-SNAPSHOT-2016-04-23-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2.1-SNAPSHOT-2016-04-23-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2.1-SNAPSHOT-2016-04-23-a
+- name: Ubuntu 15.10
+  date: 2016-04-12 09:45:57.000000000 -05:00
+  download: swift-2.2.1-SNAPSHOT-2016-04-12-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2.1-SNAPSHOT-2016-04-12-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2.1-SNAPSHOT-2016-04-12-a
+- name: Ubuntu 15.10
+  date: 2016-03-28 06:54:38.000000000 -05:00
+  download: swift-2.2.1-SNAPSHOT-2016-03-28-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2.1-SNAPSHOT-2016-03-28-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2.1-SNAPSHOT-2016-03-28-a
+- name: Ubuntu 15.10
+  date: 2016-03-01 02:39:59.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-03-01-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2016-03-01-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2016-03-01-a
+- name: Ubuntu 15.10
+  date: 2016-02-24 03:27:19.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-02-24-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2016-02-24-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2016-02-24-a
+- name: Ubuntu 15.10
+  date: 2016-02-08 15:11:55.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2016-02-08-a
+- name: Ubuntu 15.10
+  date: 2016-02-03 06:13:07.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-02-03-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2016-02-03-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2016-02-03-a
+- name: Ubuntu 15.10
+  date: 2016-01-25 11:12:47.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-01-25-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2016-01-25-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2016-01-25-a
+- name: Ubuntu 15.10
+  date: 2016-01-11 13:02:41.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2016-01-11-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2016-01-11-a
+- name: Ubuntu 15.10
+  date: 2016-01-06 04:48:28.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2016-01-06-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2016-01-06-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2016-01-06-a
+- name: Ubuntu 15.10
+  date: 2015-12-31 17:31:37.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-31-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2015-12-31-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2015-12-31-a
+- name: Ubuntu 15.10 Swift 2.2 Snapshot
+  date: 2015-12-22 19:26:10.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-22-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2015-12-22-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2015-12-22-a
+- name: Ubuntu 15.10
+  date: 2015-12-21 14:27:31.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-21-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2015-12-21-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2015-12-21-a
+- name: Ubuntu 15.10
+  date: 2015-12-18 19:37:31.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-18-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2015-12-18-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2015-12-18-a
+- name: Ubuntu 15.10
+  date: 2015-12-10 17:00:00.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-10-a-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2015-12-10-a-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2015-12-10-a
+- name: Ubuntu 15.10
+  date: 2015-12-01 17:00:00.000000000 -06:00
+  download: swift-2.2-SNAPSHOT-2015-12-01-b-ubuntu15.10.tar.gz
+  download_signature: swift-2.2-SNAPSHOT-2015-12-01-b-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2-SNAPSHOT-2015-12-01-b

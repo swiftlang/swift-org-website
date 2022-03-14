@@ -1,0 +1,20 @@
+# Temporary files.
+*~
+
+# Xcode user data.
+xcuserdata
+
+# Finder metadata
+.DS_Store
+
+# Built site content.
+/_site
+
+# Jekyll metadata
+.jekyll-metadata
+
+# Asset Cache
+.asset-cache
+
+# Build output
+.output

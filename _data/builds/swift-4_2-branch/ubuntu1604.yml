@@ -1,0 +1,631 @@
+---
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-30 08:16:24.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-30-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-30-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-30-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-29 05:06:04.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-29-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-29-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-29-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-26 10:28:40.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-26-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-26-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-26-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-25 08:08:57.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-25-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-25-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-25-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-23 09:53:02.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-23-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-23-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-23-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-22 09:09:18.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-22-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-22-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-22-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-21 10:09:56.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-21-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-21-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-21-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-20 04:28:41.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-20-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-20-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-20-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-18 06:13:13.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-18-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-18-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-18-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-17 10:46:52.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-17-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-17-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-17-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-16 10:50:02.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-16-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-16-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-16-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-15 09:27:58.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-15-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-15-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-15-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-14 10:33:31.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-14-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-14-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-14-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-13 09:20:48.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-13-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-13-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-13-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-12 10:41:52.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-12-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-12-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-12-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-11 01:17:38.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-11-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-11-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-11-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-10 01:36:32.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-10-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-10-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-10-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-09 02:13:39.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-09-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-09-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-09-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-08 03:34:18.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-08-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-08-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-08-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-07 09:41:42.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-07-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-07-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-07-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-06 10:16:54.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-06-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-06-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-06-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-05 06:18:38.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-05-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-05-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-05-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-03 09:16:50.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-03-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-03-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-03-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-02 09:33:53.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-02-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-02-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-02-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-10-01 09:51:49.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-01-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-01-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-10-01-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-28 10:10:46.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-28-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-28-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-28-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-27 10:32:45.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-27-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-27-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-27-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-26 11:31:14.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-26-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-26-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-26-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-25 09:17:04.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-25-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-25-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-25-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-24 11:34:43.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-24-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-24-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-24-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-22 08:54:07.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-22-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-22-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-22-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-21 08:43:11.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-21-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-21-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-21-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-13 23:18:04.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-14-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-14-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-14-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-13 08:08:39.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-13-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-13-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-13-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-11 06:04:47.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-11-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-11-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-11-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-10 10:24:54.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-10-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-10-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-10-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-08 06:59:05.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-08-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-08-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-08-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-09-07 08:24:49.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-07-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-07-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-09-07-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-25 09:50:06.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-25-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-25-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-25-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-24 11:17:18.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-24-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-24-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-24-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-23 12:53:16.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-23-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-23-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-23-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-22 14:32:47.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-22-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-22-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-22-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-21 10:11:04.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-21-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-21-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-21-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-20 11:26:12.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-20-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-20-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-20-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-18 11:48:57.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-18-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-18-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-18-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-17 13:37:00.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-17-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-17-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-17-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-16 14:22:40.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-16-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-16-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-16-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-15 09:20:31.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-15-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-15-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-15-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-14 10:37:55.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-14-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-14-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-14-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-10 10:06:19.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-10-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-10-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-10-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-07 14:20:40.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-07-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-07-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-07-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-06 10:51:32.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-06-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-06-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-06-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-03 12:31:57.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-03-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-03-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-03-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-02 14:26:17.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-02-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-02-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-02-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-08-01 11:10:38.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-01-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-01-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-08-01-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-31 01:21:27.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-31-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-31-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-31-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-30 00:28:36.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-30-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-30-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-30-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-28 10:33:16.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-28-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-28-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-28-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-27 12:11:17.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-24 09:06:25.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-24-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-24-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-24-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-23 14:55:58.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-23-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-23-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-23-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-22 11:48:15.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-22-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-22-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-22-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-21 14:31:19.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-21-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-21-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-21-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-20 11:49:42.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-20-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-20-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-20-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-19 14:16:16.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-19-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-19-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-19-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-18 10:29:26.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-18-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-18-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-18-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-17 12:45:56.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-17-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-17-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-17-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-16 14:28:20.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-16-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-16-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-16-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-14 13:26:45.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-14-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-14-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-14-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-13 10:18:14.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-13-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-13-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-13-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-12 12:23:18.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-12-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-12-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-12-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-11 14:33:52.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-11-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-11-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-11-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-09 12:51:17.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-09-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-09-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-09-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-08 14:50:57.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-08-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-08-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-08-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-07 12:03:30.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-07-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-07-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-07-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-06 14:32:11.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-06-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-06-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-06-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-05 13:46:49.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-05-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-05-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-05-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-04 10:13:18.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-04-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-04-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-04-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-03 11:55:52.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-03-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-03-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-03-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-02 12:58:43.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-02-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-02-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-02-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-07-01 11:18:20.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-01-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-01-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-01-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-30 10:59:55.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-30-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-30-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-30-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-29 07:23:41.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-29-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-29-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-29-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-28 14:35:53.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-28-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-28-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-28-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-26 13:37:00.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-26-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-26-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-26-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-23 03:39:11.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-23-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-23-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-23-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-21 08:57:02.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-21-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-21-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-21-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-20 10:51:25.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-20-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-20-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-20-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-19 13:05:35.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-19-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-19-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-19-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-18 09:04:50.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-18-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-18-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-18-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-17 11:44:51.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-17-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-17-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-17-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-16 14:42:22.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-16-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-16-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-16-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-15 11:41:27.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-15-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-15-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-15-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-14 13:42:37.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-14-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-14-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-14-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-12 10:36:13.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-12-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-12-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-12-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-11 13:10:43.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-11-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-11-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-11-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-10 04:57:33.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-10-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-10-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-10-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-09 13:10:34.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-09-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-09-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-09-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-08 10:31:09.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-08-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-08-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-08-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-07 13:11:47.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-07-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-07-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-07-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-06 10:04:54.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-06-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-06-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-06-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-05 12:45:13.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-05-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-05-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-05-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-04 14:11:30.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-04-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-04-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-04-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-03 11:12:48.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-03-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-03-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-03-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-02 09:56:21.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-02-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-02-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-02-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-06-01 12:54:16.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-01-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-01-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-06-01-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-31 13:15:08.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-31-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-31-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-31-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-30 14:50:38.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-30-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-30-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-30-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-29 08:38:19.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-29-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-29-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-29-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-28 10:22:30.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-28-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-28-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-28-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-27 12:44:27.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-27-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-27-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-27-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-26 14:51:11.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-26-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-26-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-26-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-23 12:21:35.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-23-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-23-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-23-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-22 13:44:28.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-22-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-22-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-22-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-21 07:37:40.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-21-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-21-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-21-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-20 09:45:37.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-20-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-20-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-20-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-19 11:56:40.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-19-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-19-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-19-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-18 13:45:08.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-18-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-18-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-18-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-16 08:47:17.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-16-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-16-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-16-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-14 09:00:00.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-14-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-14-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-14-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-13 11:10:42.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-13-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-13-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-13-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-12 13:11:09.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-12-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-12-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-12-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-10 23:14:42.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-10-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-10-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-10-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-08 11:56:19.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-08-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-08-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-08-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-05-02 10:02:37.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-02-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-02-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-02-a
+- name: Ubuntu 16.04 Swift 4.0-Development Snapshot
+  date: 2018-04-24 00:30:45.000000000 -05:00
+  download: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-04-23-a-ubuntu16.04.tar.gz
+  download_signature: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-04-23-a-ubuntu16.04.tar.gz.sig
+  dir: swift-4.2-DEVELOPMENT-SNAPSHOT-2018-04-23-a

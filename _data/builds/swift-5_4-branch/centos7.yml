@@ -1,0 +1,91 @@
+---
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-04-23 12:49:00.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-03-25 02:16:13.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-03-23 12:33:07.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-03-22 12:25:34.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-03-21 03:59:23.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-03-20 11:06:00.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-03-19 12:08:24.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-03-16 09:30:31.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-03-15 17:58:46.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-03-10 07:13:33.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-03-03 07:24:10.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-02-26 01:42:04.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-02-24 08:47:34.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-02-20 23:01:25.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-02-12 20:43:09.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-01-23 10:10:10.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-01-11 09:47:16.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a
+- name: Ubuntu ceos7 Swift Development Snapshot
+  date: 2021-01-07 18:49:05.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a-centos7.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a-centos7.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a

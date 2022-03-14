@@ -1,0 +1,6 @@
+---
+- name: Ubuntu 14.04
+  date: 2016-05-03 02:40:09.000000000 -06:00
+  download: swift-2.2.1-RELEASE-ubuntu14.04.tar.gz
+  download_signature: swift-2.2.1-RELEASE-ubuntu14.04.tar.gz.sig
+  dir: swift-2.2.1-RELEASE

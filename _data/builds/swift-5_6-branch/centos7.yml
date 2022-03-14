@@ -1,0 +1,35 @@
+- date: 2022-03-02 10:10:00-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-centos7.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2022-02-11 15:27:58-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-centos7.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-centos7.tar.gz.sig
+  name: Ubuntu ceos7 Swift Development Snapshot
+- date: 2022-02-10 04:36:26-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-centos7.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-centos7.tar.gz.sig
+  name: Ubuntu ceos7 Swift Development Snapshot
+- date: 2022-02-09 05:44:06-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-centos7.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-centos7.tar.gz.sig
+  name: Ubuntu ceos7 Swift Development Snapshot
+- date: 2022-02-07 02:49:46-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-centos7.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-centos7.tar.gz.sig
+  name: Ubuntu ceos7 Swift Development Snapshot
+- date: 2022-01-11 06:20:58-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-centos7.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-centos7.tar.gz.sig
+  name: Ubuntu ceos7 Swift Development Snapshot
+- date: 2022-01-09 03:42:07-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-centos7.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-centos7.tar.gz.sig
+  name: Ubuntu ceos7 Swift Development Snapshot

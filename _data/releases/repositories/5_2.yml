@@ -1,0 +1,14 @@
+- name: swift
+- name: swift-cmark
+- name: swift-corelibs-foundation
+- name: swift-corelibs-libdispatch
+- name: swift-corelibs-xctest
+- name: swift-llbuild
+- name: swift-package-manager
+- name: swift-stress-tester
+- name: swift-syntax
+- name: swift-xcode-playground-support
+- name: swift-integration-tests
+- name: sourcekit-lsp
+- name: indexstore-db
+- name: llvm-project

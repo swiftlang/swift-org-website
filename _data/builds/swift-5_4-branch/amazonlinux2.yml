@@ -1,0 +1,91 @@
+---
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-04-23 03:57:12.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-04-23-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-03-25 00:02:52.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-25-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-03-23 10:25:09.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-23-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-03-22 10:56:05.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-22-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-03-21 03:13:10.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-21-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-03-20 10:54:20.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-20-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-03-19 11:52:45.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-19-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-03-16 11:10:31.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-16-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-03-15 15:38:48.000000000 -05:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-15-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-03-10 07:30:30.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-10-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-03-03 09:12:42.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-03-03-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-02-25 23:59:34.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-26-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-02-24 10:57:28.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-24-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-02-20 23:16:39.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-21-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-02-12 19:21:48.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-02-12-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-01-23 12:04:43.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-23-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-01-11 10:25:51.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a
+- name: Ubuntu amazolix2 Swift Development Snapshot
+  date: 2021-01-07 16:47:19.000000000 -06:00
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a-amazonlinux2.tar.gz
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a-amazonlinux2.tar.gz.sig
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-07-a

@@ -1,0 +1,6 @@
+---
+- name: Ubuntu 15.10
+  date: 2016-05-03 02:39:59.000000000 -06:00
+  download: swift-2.2.1-RELEASE-ubuntu15.10.tar.gz
+  download_signature: swift-2.2.1-RELEASE-ubuntu15.10.tar.gz.sig
+  dir: swift-2.2.1-RELEASE

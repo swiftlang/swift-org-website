@@ -1,0 +1,35 @@
+- date: 2022-03-02 10:10:00-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-amazonlinux2.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-amazonlinux2.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2022-02-11 14:08:34-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-amazonlinux2.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-amazonlinux2.tar.gz.sig
+  name: Ubuntu amazolix2 Swift Development Snapshot
+- date: 2022-02-10 02:27:46-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-amazonlinux2.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-amazonlinux2.tar.gz.sig
+  name: Ubuntu amazolix2 Swift Development Snapshot
+- date: 2022-02-09 02:54:55-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-amazonlinux2.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-amazonlinux2.tar.gz.sig
+  name: Ubuntu amazolix2 Swift Development Snapshot
+- date: 2022-02-07 01:32:54-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-amazonlinux2.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-amazonlinux2.tar.gz.sig
+  name: Ubuntu amazolix2 Swift Development Snapshot
+- date: 2022-01-11 02:18:19-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-amazonlinux2.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-amazonlinux2.tar.gz.sig
+  name: Ubuntu amazolix2 Swift Development Snapshot
+- date: 2022-01-09 05:53:04-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-amazonlinux2.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-amazonlinux2.tar.gz.sig
+  name: Ubuntu amazolix2 Swift Development Snapshot

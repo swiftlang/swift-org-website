@@ -1,0 +1,13 @@
+////
+/// Applies styling to hide an element, while keeping it visible to Voice Over and other assistants.
+////
+@mixin visuallyhidden() {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}

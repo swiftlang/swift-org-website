@@ -1,0 +1,7 @@
+---
+- name: Amazon Linx 2
+  date: 2020-05-20 10:28:49.000000000 -05:00
+  download: swift-5.2.4-RELEASE-amazonlinux2.tar.gz
+  download_signature: swift-5.2.4-RELEASE-amazonlinux2.tar.gz.sig
+  dir: swift-5.2.4-RELEASE
+  docker: 5.2.4-amazonlinux2

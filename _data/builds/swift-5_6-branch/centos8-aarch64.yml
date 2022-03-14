@@ -1,0 +1,35 @@
+- date: 2022-03-02 10:10:00-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-centos8-aarch64.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-02-a-centos8-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2022-02-11 13:28:04-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-centos8-aarch64.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-11-a-centos8-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2022-02-10 02:52:42-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-centos8-aarch64.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-10-a-centos8-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2022-02-09 05:39:20-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-centos8-aarch64.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-09-a-centos8-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2022-02-07 00:30:25-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-centos8-aarch64.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-02-07-a-centos8-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2022-01-11 01:26:50-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-centos8-aarch64.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-11-a-centos8-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2022-01-09 23:28:49-06:00
+  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a
+  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-centos8-aarch64.tar.gz
+  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-01-09-a-centos8-aarch64.tar.gz.sig
+  name: Swift Development Snapshot

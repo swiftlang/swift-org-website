@@ -1,0 +1,351 @@
+---
+- name: Xcode Swift Development Snapshot
+  date: 2020-04-28 08:14:04.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-28-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-28-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-28-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-04-27 14:40:58.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-27-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-27-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-27-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-04-24 15:15:47.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-24-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-24-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-24-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-04-14 17:05:51.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-14-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-14-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-14-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-04-13 15:18:08.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-13-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-13-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-13-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-04-12 13:48:27.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-12-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-12-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-12-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-04-11 15:13:07.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-11-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-11-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-11-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-04-07 16:16:10.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-07-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-07-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-07-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-04-06 09:57:24.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-06-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-06-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-04-06-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-24 05:14:58.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-24-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-24-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-24-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-23 14:45:27.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-23-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-23-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-23-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-22 15:46:22.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-22-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-22-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-22-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-21 16:46:36.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-21-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-21-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-21-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-20 14:23:17.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-20-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-20-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-20-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-19 12:10:33.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-19-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-19-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-19-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-18 17:53:25.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-18-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-18-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-18-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-17 14:38:41.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-17-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-17-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-17-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-16 16:25:50.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-16-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-16-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-16-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-15 17:55:17.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-15-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-15-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-15-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-14 15:18:45.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-14-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-14-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-14-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-13 16:57:21.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-13-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-13-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-13-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-12 18:37:05.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-12-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-12-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-12-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-10 17:25:48.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-10-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-10-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-10-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-09 18:51:38.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-09-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-09-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-09-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-08 14:36:20.000000000 -05:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-08-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-08-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-08-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-07 14:06:51.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-07-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-07-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-07-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-06 15:36:40.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-06-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-06-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-06-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-05 17:18:46.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-05-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-05-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-05-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-03 17:12:55.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-03-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-03-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-03-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-02 14:11:07.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-02-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-02-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-02-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-03-01 13:33:42.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-01-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-01-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-03-01-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-29 15:26:26.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-29-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-29-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-29-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-28 15:31:48.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-28-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-28-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-28-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-27 16:25:12.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-27-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-27-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-27-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-23 12:10:50.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-23-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-23-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-23-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-22 10:27:49.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-22-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-22-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-22-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-21 15:00:55.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-21-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-21-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-21-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-20 15:33:16.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-20-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-20-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-20-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-19 14:52:06.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-19-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-19-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-19-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-18 16:49:28.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-18-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-18-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-18-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-16 16:09:15.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-16-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-16-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-16-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-15 11:35:16.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-15-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-15-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-15-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-14 08:45:41.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-14-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-14-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-14-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-13 15:22:32.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-13-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-12 17:45:13.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-12-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-12-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-12-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-11 16:05:25.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-11-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-11-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-11-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-09 00:39:22.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-09-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-09-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-09-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-08 15:20:02.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-08-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-08-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-08-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-07 14:38:48.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-07-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-07-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-07-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-06 14:11:07.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-06-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-06-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-06-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-05 08:08:34.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-05-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-05-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-05-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-03 07:20:05.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-03-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-03-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-03-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-02-01 00:48:03.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-01-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-01-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-01-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-31 15:11:25.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-31-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-31-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-31-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-30 14:24:16.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-30-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-30-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-30-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-29 06:14:36.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-29-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-29-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-29-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-28 07:36:32.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-28-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-28-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-28-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-27 11:03:41.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-27-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-27-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-27-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-25 10:55:49.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-25-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-25-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-25-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-24 17:14:56.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-24-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-24-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-24-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-22 14:27:00.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-22-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-22-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-22-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-20 08:59:58.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-20-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-20-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-20-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-17 17:11:43.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-17-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-17-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-17-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-16 12:16:22.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-16-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-16-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-16-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-14 17:09:01.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-14-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-14-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-14-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-13 16:39:11.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-13-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-13-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-13-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-11 15:08:00.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-11-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-11-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-11-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-10 11:26:50.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-10-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-10-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-10-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-09 21:26:14.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-09-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-09-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-09-a
+- name: Xcode Swift Development Snapshot
+  date: 2020-01-06 16:38:12.000000000 -06:00
+  download: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-06-a-osx.pkg
+  debug_info: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-06-a-osx-symbols.pkg
+  dir: swift-5.2-DEVELOPMENT-SNAPSHOT-2020-01-06-a

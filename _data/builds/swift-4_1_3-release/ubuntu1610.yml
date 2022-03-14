@@ -1,0 +1,6 @@
+---
+- name: Ubuntu 16.10
+  date: 2018-07-27 10:28:49.000000000 -05:00
+  download: swift-4.1.3-RELEASE-ubuntu16.10.tar.gz
+  download_signature: swift-4.1.3-RELEASE-ubuntu16.10.tar.gz.sig
+  dir: swift-4.1.3-RELEASE

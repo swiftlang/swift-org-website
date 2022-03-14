@@ -1,0 +1,220 @@
+- date: 2022-03-09 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2022-03-09-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2022-03-09-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2022-03-09-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2022-02-25 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2022-02-25-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2022-02-25-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2022-02-25-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2022-02-22 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2022-02-22-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2022-02-22-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2022-02-22-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2022-02-03 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2022-02-03-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2022-02-03-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2022-02-03-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2022-01-09 04:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2022-01-09-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2022-01-09-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2022-01-09-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-12-23 04:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-12-23-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-12-23-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-12-23-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-12-06 04:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-12-06-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-12-06-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-12-06-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-12-02 04:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-12-02-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-12-02-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-12-02-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-11-20 04:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-11-20-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-11-20-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-11-20-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-11-12 04:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-11-12-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-11-12-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-11-12-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-11-01 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-11-01-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-11-01-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-11-01-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-10-27 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-10-27-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-10-27-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-10-27-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-10-20 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-10-20-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-10-20-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-10-20-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-10-05 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-10-05-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-10-05-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-10-05-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-09-28 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-09-28-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-09-28-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-09-28-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-09-18 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-09-18-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-09-18-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-09-18-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-08-29 05:10:00-05:00
+  dir: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-29-a
+  download: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-29-a-windows10.exe
+  download_signature: swift-5.5-DEVELOPMENT-SNAPSHOT-2021-08-29-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-08-28 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-08-28-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-08-28-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-08-28-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-08-22 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-08-22-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-08-22-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-08-22-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-08-14 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-08-14-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-08-14-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-08-14-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-08-03 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-08-03-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-08-03-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-08-03-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-07-24 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-07-24-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-07-24-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-07-24-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-07-15 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-07-15-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-07-15-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-07-15-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-07-09 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-07-09-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-07-09-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-07-09-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-07-08 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-07-08-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-07-08-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-07-08-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-06-12 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-06-12-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-06-12-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-06-12-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-05-26 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-05-26-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-05-26-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-05-26-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-05-25 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-05-25-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-05-25-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-05-25-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-05-17 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-05-17-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-05-17-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-05-17-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-05-14 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-05-14-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-05-14-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-05-14-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-05-12 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-05-12-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-05-12-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-05-12-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-05-11 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-05-11-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-05-11-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-05-11-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-05-03 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-05-03-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-05-03-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-05-03-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-04-26 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-04-26-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-04-26-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-04-26-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-04-18 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-04-18-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-04-18-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-04-18-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-04-15 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-04-15-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-04-15-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-04-15-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-04-10 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-04-10-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-04-10-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-04-10-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-03-25 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-03-25-a
+  download: swift-DEVELOPMENT-SNAPSHOT-03-25-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-03-25-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-03-21 05:10:00-05:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-03-21-a
+  download: swift-DEVELOPMENT-SNAPSHOT-03-21-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-03-21-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-03-09 04:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-03-09-a
+  download: swift-DEVELOPMENT-SNAPSHOT-03-09-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-03-09-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-03-07 04:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-03-07-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-03-07-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-03-07-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-03-05 04:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-03-05-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-03-05-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-03-05-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-03-02 04:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2021-03-02-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2021-03-02-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2021-03-02-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
+- date: 2021-01-11 04:10:00-06:00
+  dir: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a
+  download: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a-windows10.exe
+  download_signature: swift-5.4-DEVELOPMENT-SNAPSHOT-2021-01-11-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot

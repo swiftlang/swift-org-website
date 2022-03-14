@@ -1,0 +1,57 @@
+---
+layout: base
+---
+<main role="main">
+<article class="post">
+  <header>
+    <h1>{{ page.title }}</h1>
+
+    <time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    {% for page_author in page.author %}
+    {% assign author = site.data.authors[page_author] %}
+    {% if author.name %}
+      <div class="byline">
+        {% if author.gravatar %}
+          <img src="https://s.gravatar.com/avatar/{{ author.gravatar }}?s=64" alt="{{ author.name }}"/>
+        {% endif %}
+
+        <span class="author">
+          {% if author.twitter %}
+            <a href="https://twitter.com/{{ author.twitter }}/" rel="nofollow" title="{{ author.name }} (@{{ author.twitter}}) on Twitter">{{ author.name }}</a>
+          {% elsif author.github %}
+            <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github}}) on GitHub">{{ author.name }}</a>
+          {% else %}
+            {{ author.name }}
+          {% endif %}
+        </span>
+      </div>
+      {% if author.about %}
+      <div class="about">{{ author.about }}</div>
+      {% endif %}
+    {% endif %}
+    {% endfor %}
+  </header>
+
+  {{ content }}
+
+  {% if page.previous or page.next %}
+  <footer>
+    <nav>
+      {% if page.previous %}
+      <a href="{{ page.previous.url }}" rel="prev" title="Previous: {{ page.previous.title | escape }}">{{ page.previous.title }}</a>
+      {% endif %}
+
+      {% if page.next %}
+      <a href="{{ page.next.url }}" rel="next" title="Next: {{ page.next.title | escape }}">{{ page.next.title }}</a>
+      {% endif %}
+    </nav>
+  </footer>
+  {% endif %}
+</article>
+</main>
+
+{% capture licenseinfo %}
+  <p>Except where otherwise noted, all content on this blog is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>.</p>
+{% endcapture %}
+
+{% include footer.html licenseinfo=licenseinfo %}
