@@ -2,7 +2,7 @@
 layout: post
 date: 2022-03-15 9:00:00
 title: Swift.org Website is Now Open Source
-author: tdoron
+author: tomerd
 ---
 
 The Swift.org site has long served as the hub where developers come together to work on the open source Swift compiler, libraries, and tools.
