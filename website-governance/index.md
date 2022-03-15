@@ -45,7 +45,7 @@ These technical documents are not part of the website content, and are only re-p
 
 Incremental fixes and improvements to the technical infrastructure of the website are done by submitting pull requests, and will be reviewed by the website maintainers.
 
-Technical infrastructure changes need to go through more testing compared to content changes to make sure they work on both macOS and Linux which are the primary development environments for the website.
+Technical infrastructure changes need to go through more testing compared to content changes to make sure they work on both macOS and Linux, which are the primary development environments for the website.
 
 ### Information design, user experience and user interface design governance
 
