@@ -39,7 +39,7 @@ The Swift.org website source code consists of several distinct parts:
 
 1. General content: Markdown, HTML, data files, images and other content.
 2. Blog posts: Source files for blog posts, mostly in markdown form.
-3. Technical infrastructure: Code and scripts for generating the website’s final static content (HTML mostly) from other forms of textual content such ash Markdown and HTML files.
+3. Technical infrastructure: Code and scripts for generating the website’s final static content (HTML mostly) from other forms of textual content such as Markdown and HTML files.
 4. Information design, user experience and user interface design: The layout and navigation of the website, including CSS and images used to define the user experience and user interface.
 
 Each one of these areas is governed by a slightly different contribution process that matches their nature.
