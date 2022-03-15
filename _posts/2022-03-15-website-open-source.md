@@ -64,7 +64,7 @@ Significant changes to blog posts after publication should be infrequent — for
 
 ## Repository on GitHub
 
-The Swift.org] website is now publicly [available on GitHub](https://github.com/apple/swift-org-website/).
+The Swift.org website is now publicly [available on GitHub](https://github.com/apple/swift-org-website/).
 The website repository will also use [GitHub Issues](https://github.com/apple/swift-org-website/issues) for issue tracking.
 We hope this will make it even easier for people to participate, and be a testbed for the rest of the Swift project to move to Issues in the future.
 
