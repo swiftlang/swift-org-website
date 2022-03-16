@@ -138,6 +138,6 @@ extra parameters must be passed to the REPL.  This allows you to use multiple
 different SDKs with the same toolchain.
 
 ~~~ cmd
-set SWIFTFLAGS=-sdk %SDKROOT% -I %SDKROOT%/usr/lib/swift -L SDKROOT%/usr/lib/swift/windows
+set SWIFTFLAGS=-sdk %SDKROOT% -I %SDKROOT%/usr/lib/swift -L %SDKROOT%/usr/lib/swift/windows
 swift repl -target x86_64-unknown-windows-msvc %SWIFTFLAGS%
 ~~~
