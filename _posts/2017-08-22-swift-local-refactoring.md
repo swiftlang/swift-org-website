@@ -17,9 +17,9 @@ a simple refactoring can be implemented and surfaced in Xcode.
 ## Kinds of Refactorings
 
 A **local refactoring** occurs within the confines of a single file.
-Examples of local refactoring include _Extract Method_ and _Extract Repeated Expression_.
+Examples of local refactoring include *Extract Method* and *Extract Repeated Expression*.
 **Global refactorings**, which change code cross multiple files
-(such as _Global Rename_), currently require special coordination by Xcode and currently
+(such as *Global Rename*), currently require special coordination by Xcode and currently
 cannot be implemented on their own within the Swift codebase. This post focuses on
 local refactorings, which can be quite powerful in their own right.
 
@@ -66,12 +66,12 @@ When the user selects one of the available actions:
 3. The refactoring action is asked to perform the transformation with textual source edits.
 4. The source edits are returned as response from [sourcekitd] and are applied by the Xcode editor.
 
-To implement _String Localization_ refactoring, we need to first declare this
+To implement *String Localization* refactoring, we need to first declare this
 refactoring in the [RefactoringKinds.def] file with an entry like:
 
-```cpp
+~~~cpp
   CURSOR_REFACTORING(LocalizeString, "Localize String", localize.string)
-```
+~~~
 
 `CURSOR_REFACTORING` specifies that this refactoring is initialized at a cursor
 location and thus will use [ResolvedCursorInfo] in the implementation. The first field,
@@ -96,7 +96,7 @@ Both declarations are automatically generated from the
 aforementioned entry. To fulfill (1), we need to implement the [isApplicable] function
 of `RefactoringActionLocalizeString` in [Refactoring.cpp], as below:
 
-```cpp
+~~~cpp
 1  bool RefactoringActionLocalizeString::
 2  isApplicable(ResolvedCursorInfo CursorInfo) {
 3    if (CursorInfo.Kind == CursorInfoKind::ExprStart) {
@@ -105,7 +105,7 @@ of `RefactoringActionLocalizeString` in [Refactoring.cpp], as below:
 6      }
 7    }
 8  }
-```
+~~~
 
 Taking a [ResolvedCursorInfo] object as input, it's almost trivial to check
 when to populate the available refactoring menu with
@@ -118,14 +118,14 @@ changed if the refactoring action is applied. To do this, we
 have to implement the [performChange] method of `RefactoringActionLocalizeString`.
 In the implementation of `performChange`, we can access the same `ResolvedCursorInfo` object that [isApplicable] received.
 
-```cpp
+~~~cpp
 1  bool RefactoringActionLocalizeString::
 2  performChange() {
 3    EditConsumer.insert(SM, Cursor.TrailingExpr->getStartLoc(), "NSLocalizedString(");
 4    EditConsumer.insertAfter(SM, Cursor.TrailingExpr->getEndLoc(), ", comment: \"\")");
 5    return false; // Return true if code change aborted.
 6  }
-```
+~~~
 
 Still using String Localization as an example, the [performChange] function
 is fairly straightforward to implement. In the function body, we
@@ -137,13 +137,13 @@ the cursor with the appropriate Foundation API calls, as Lines 3 and 4 illustrat
 ![Range-based Refactoring]({{ site.url }}/assets/images/local-refactoring/Range.png)
 
 As the above figure shows, range-based refactoring is initiated by selecting a
-continuous range of code in a Swift source file. Taking the implementation of the _Extract Expression_
+continuous range of code in a Swift source file. Taking the implementation of the *Extract Expression*
 refactoring as an example, we first need to declare the following item in
 [RefactoringKinds.def].
 
-```cpp
+~~~cpp
   RANGE_REFACTORING(ExtractExpr, "Extract Expression", extract.expr)
-```
+~~~
 
 This entry declares that the Extract Expression refactoring is initiated by a range selection,
 named internally as `ExtractExpr`, using `"Extract Expression"` as display name, and with
@@ -153,7 +153,7 @@ To teach Xcode when this refactoring should be available, we
 also need to implement [isApplicable] for this refactoring in [Refactoring.cpp],
 with the slight difference that the input is a [ResolvedRangeInfo] instead of a [ResolvedCursorInfo] .
 
-```cpp
+~~~cpp
 1  bool RefactoringActionExtractExpr::
 2  isApplicable(ResolvedRangeInfo Info) {
 3    if (Info.Kind != RangeKind::SingleExpression)
@@ -164,7 +164,7 @@ with the slight difference that the input is a [ResolvedRangeInfo] instead of a 
 8    ...
 9    return true;
 10 }
-```
+~~~
 
 Though a little more complex than its counterpart in the aforementioned String
 Localization refactoring, this implementation is self-explaining too. Lines 3
@@ -175,7 +175,7 @@ the example for now. Interested readers can refer to [Refactoring.cpp] for
 more details. For the code change part, we can use the same [ResolvedRangeInfo] instance
 to emit textual edits:
 
-```cpp
+~~~cpp
 1  bool RefactoringActionExtractExprBase::performChange() {
 2    llvm::SmallString<64> DeclBuffer;
 3    llvm::raw_svector_ostream OS(DeclBuffer);
@@ -189,7 +189,7 @@ to emit textual edits:
 11                       PreferredName)
 12   return false; // Return true if code change aborted.
 13 }
-```
+~~~
 
 Lines 2 to 6 construct the declaration of a local variable with the initialized
 value of the expression under extraction, e.g. `let extractedExpr = foo()`. Line
@@ -201,7 +201,6 @@ function body of [performChange], we can access not only the original
 as the edit consumer and source manager, making the implementation more convenient.
 
 ## Diagnostics
-
 A refactoring action may need to be aborted during automated code change for various reasons.
 When this happens, a refactoring implementation can communicate via diagnostics the cause of such failures to the user.
 Refactoring diagnostics employ the same mechanism as the compiler itself.
@@ -210,15 +209,15 @@ an error message if the given new name is an invalid Swift identifier. To do so,
 we first need to declare the following entry for the diagnostics in
 [DiagnosticsRefactoring.def].
 
-```cpp
+~~~cpp
   ERROR(invalid_name, none, "'%0' is not a valid name", (StringRef))
-```
+~~~
 
 After declaring it, we can use the diagnostic in either [isApplicable] or
-[performChange]. For _Local Rename_ refactoring, emitting the diagnostic in
+[performChange]. For *Local Rename* refactoring, emitting the diagnostic in
 [Refactoring.cpp] would look something like:
 
-```cpp
+~~~cpp
 1  bool RefactoringActionLocalRename::performChange() {
    ...
 2    if (!DeclNameViewer(PreferredName).isValid()) {
@@ -227,7 +226,7 @@ After declaring it, we can use the diagnostic in either [isApplicable] or
 5    }
    ...
 6  }
-```
+~~~
 
 ## Testing
 
@@ -235,21 +234,20 @@ Corresponding to the two steps in implementing a new
 refactoring action, we need to test that:
 
 1. The contextually available refactorings are
-   populated properly.
+populated properly.
 2. The automated code change updates the user's codebase correctly.
 
 These two parts are both tested using the [swift-refactor] command line utility which
 is built alongside the compiler.
 
 #### Contextual Refactoring Test
-
-```cpp
+~~~cpp
 1  func foo() {
 2    print("Hello World!")
 3  }
 4  // RUN: %refactor -source-filename %s -pos=2:14 | %FileCheck %s -check-prefix=CHECK-LOCALIZE-STRING
 5  // CHECK-LOCALIZE-STRING: Localize String
-```
+~~~
 
 Let's again take String Localization as an example. The above code
 snippet is a test for contextual refactoring actions.
@@ -257,9 +255,9 @@ Similar tests can be found in [test/refactoring/RefactoringKind/](https://github
 
 Let's take a look at the `RUN` line in more detail, starting with the use of the `%refactor` utility:
 
-```cpp
+~~~cpp
 %refactor -source-filename %s -pos=2:14 | %FileCheck %s -check-prefix=CHECK-LOCALIZE-STRING
-```
+~~~
 
 This line will dump the display names for all applicable refactorings when a user points the cursor to the string literal "Hello World!".
 `%refactor` is an alias that gets substituted by the test runner to give the full path to `swift-refactor` when the tests get run.
@@ -271,9 +269,9 @@ in the format of `line:column`.
 
 To make sure the output of the tool is the expected one, we use the `%FileCheck` utility:
 
-```cpp
+~~~cpp
 %FileCheck %s -check-prefix=CHECK-LOCALIZE-STRING
-```
+~~~
 
 This will check the output text from `%refactor`
 against all following lines with prefix `CHECK-LOCALIZE-STRING`. In this case, it will
@@ -289,9 +287,9 @@ change matches our expectations. As a preparation, we need to teach [swift-refac
 a refactoring kind flag to specify the action we are testing with. To achieve this,
 the following entry is added in [swift-refactor.cpp](https://github.com/apple/swift/blob/master/tools/swift-refactor/swift-refactor.cpp):
 
-```cpp
+~~~cpp
   clEnumValN(RefactoringKind::LocalizeString, "localize-string", "Perform String Localization refactoring"),
-```
+~~~
 
 With such an entry, [swift-refactor] can test the code transformation part of
 String Localization specifically. A typical code transformation test consists of two parts:
@@ -302,46 +300,44 @@ String Localization specifically. A typical code transformation test consists of
 The test performs the designated refactoring in (1) and compares the result
 with (2). It passes if the two are identical, otherwise the test fails.
 
-```swift
+~~~swift
 1  func foo() {
 2    print("Hello World!")
 3  }
 4  // RUN: rm -rf %t.result && mkdir -p %t.result
 5  // RUN: %refactor -localize-string -source-filename %s -pos=2:14 > %t.result/localized.swift
 6  // RUN: diff -u %S/Iutputs/localized.swift.expected %t.result/localized.swift
-```
+~~~
 
-```swift
+~~~swift
 1  func foo() {
 2    print(NSLocalizedString("Hello World!", comment: ""))
 3  }
-```
+~~~
 
 The above two code snippets comprise a meaningful code transformation test.
 Line 4 prepares a temporary source directory
 for the code resulting from the refactoring; using the newly added `-localize-string`,
-Line 5 performs the refactoring code change at the start position of `"Hello World!"` and
+ Line 5 performs the refactoring code change at the start position of `"Hello World!"` and
 dumps the result to the temporary directory; finally, Line 6 compares the result
 with the expected output illustrated in the second code example.
 
 ## Integrating with Xcode
-
 After implementing all of above pieces in the Swift codebase, we
 are ready to test/use the newly added refactoring in Xcode by integrating with
 a locally-built open source toolchain.
 
 1. Run [build-toolchain](https://github.com/apple/swift/blob/master/utils/build-toolchain)
-   to build the open source toolchain locally.
+to build the open source toolchain locally.
 
 2. Untar and copy the toolchain to `/Library/Developer/Toolchains/`.
 
 3. Specify the local toolchain for Xcode's use via `Xcode->Toolchains`, like the
-   following figure illustrates.
+following figure illustrates.
 
 ![Specify Toolchain]({{ site.url }}/assets/images/local-refactoring/Toolchain.png)
 
 ## Potential Local Refactoring Ideas
-
 This post just touches on some of the things that are now possible to implement in the new refactoring engine.
 If you are excited about extending the refactoring engine to implement additional transformations,
 Swift's [issue database] contains [several ideas of refactoring transformations](https://bugs.swift.org/issues/?jql=labels%3DStarterProposal%20AND%20labels%3DRefactoring%20AND%20resolution%3DUnresolved) awaiting implementations.
@@ -351,14 +347,14 @@ label `Refactoring` will be sufficient.
 For further help with implementing refactoring transformations, please see the [documentation] or feel free to ask questions on the [swift-dev](https://lists.swift.org/mailman/listinfo/swift-dev) mailing list.
 
 [sourcekitd]: https://github.com/apple/swift/tree/master/tools/SourceKit
-[resolvedcursorinfo]: https://github.com/apple/swift/blob/7f29b362d68eb990a592257850aabadb24de61df/include/swift/IDE/Utils.h#L158
-[resolvedrangeinfo]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/Utils.h#L344
-[performchange]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L599
-[refactoringkinds.def]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/RefactoringKinds.def
-[isapplicable]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L646
-[diagnosticsrefactoring.def]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/AST/DiagnosticsRefactoring.def
+[ResolvedCursorInfo]: https://github.com/apple/swift/blob/7f29b362d68eb990a592257850aabadb24de61df/include/swift/IDE/Utils.h#L158
+[ResolvedRangeInfo]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/Utils.h#L344
+[performChange]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L599
+[RefactoringKinds.def]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/RefactoringKinds.def
+[isApplicable]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp#L646
+[DiagnosticsRefactoring.def]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/AST/DiagnosticsRefactoring.def
 [swift-refactor]: https://github.com/apple/swift/tree/60a91bb7360dde5ce9531889e0ed10a2edbc961a/tools/swift-refactor
-[refactoring.cpp]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp
+[Refactoring.cpp]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/lib/IDE/Refactoring.cpp
 [documentation]: https://github.com/apple/swift/blob/master/docs/refactoring/SwiftLocalRefactoring.md
-[editconsumer]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/Utils.h#L506
+[EditConsumer]: https://github.com/apple/swift/blob/60a91bb7360dde5ce9531889e0ed10a2edbc961a/include/swift/IDE/Utils.h#L506
 [issue database]: https://bugs.swift.org
