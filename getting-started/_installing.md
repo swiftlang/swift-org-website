@@ -109,7 +109,7 @@ The following additional Visual Studio components are **recommended**:
 | Git for Windows | Microsoft.VisualStudio.Component.Git |
 | Python 3 64-bit (3.7.8) | Component.CPython.x64 |
 
-The following additional Visual Studio components are **suggested**:
+The following additional Visual Studio components are **suggested** for Swift 5.3:
 
 | Component | Visual Studio ID |
 |-----------|------------------|
