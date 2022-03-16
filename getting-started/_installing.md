@@ -71,7 +71,9 @@ In order to develop applications, particularly with the Swift Package Manager, y
 
 The [Windows Package Manager](https://docs.microsoft.com/windows/package-manager/) can be found in the [App Store](https://www.microsoft.com/en-us/p/app-installer/9nblggh4nns1) or be [installed directly](ms-appinstaller:?source=https://aka.ms/getwinget).
 
-The platform dependencies cannot be installed through the Windows Package Manager as the install rules do not install the components necessary.
+0. Install required dependencies:
+ 
+The platform dependencies cannot be installed through the Windows Package Manager as the install rules do not install the components necessary.  They will be installed through Visual Studio installer.
 
 ~~~ cmd
 winget install Git.Git
@@ -83,9 +85,11 @@ start /w vs_community.exe --passive --wait --norestart --nocache ^
   --add Microsoft.VisualStudio.Component.Windows10SDK.19041 ^
   --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
 del /q vs_community.exe
-
-winget install Swift.Toolchain
 ~~~
+
+1. Download the [latest package release](/download).
+
+2. Run the package installer, which will install a Swift toolchain into `%SystemDrive%\Library\Developer\Toolchains`.
 
 ##### Traditional Installation
 
