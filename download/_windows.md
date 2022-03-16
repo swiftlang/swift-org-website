@@ -38,9 +38,20 @@ start /w vs_community.exe --passive --wait --norestart --nocache ^
 del /q vs_community.exe
 ~~~
 
-1. Download the [latest package release](/download).
+0. Install Swift:
 
-2. Run the package installer, which will install a Swift toolchain into `%SystemDrive%\Library\Developer\Toolchains`.
+Swift can be installed through the official installer directly, or using the Windows Package Manager as well.  Notice that Windows Package Manager release may be behind the official release.
+
+* Using the official installer:
+  1. Download the [latest package release](/download).
+  1. Run the package installer.
+
+* Using the Windows Package Manager:
+  ~~~ cmd
+  winget install Swift.Toolchain
+  ~~~
+
+A Swift toolchain will be installed at `%SystemDrive%\Library\Developer\Toolchains\unknown-Asserts-development.xctoolchain`.  A compatible Swift SDK will be installed at `%SystemDrive%\Library\Developer\Platforms\Windows.platform\Developer\SDKs\Windows.sdk`.
 
 #### Traditional Installation
 
@@ -64,7 +75,7 @@ The following additional Visual Studio components are **recommended**:
 | Git for Windows | Microsoft.VisualStudio.Component.Git |
 | Python 3 64-bit (3.7.8) | Component.CPython.x64 |
 
-The following additional Visual Studio components are **suggested** for Swift 5.3:
+The following additional Visual Studio component is **suggested**:
 
 | Component | Visual Studio ID |
 |-----------|------------------|
