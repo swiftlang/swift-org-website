@@ -75,7 +75,7 @@ The platform dependencies cannot be installed through the Windows Package Manage
 
 ~~~ cmd
 winget install Git.Git
-winget install Python.Python.3 --version 3.7.8
+winget install Python.Python.3 --version 3.7.8150.0
 
 curl -sOL https://aka.ms/vs/16/release/vs_community.exe
 start /w vs_community.exe --passive --wait --norestart --nocache ^
