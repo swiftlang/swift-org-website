@@ -125,9 +125,9 @@ $R0: Int32 = 4
 
 ### On Windows
 
-The REPL depends on Python bindings.  You must ensure that Python is available
-in the path.  The following command adds Python to the PATH so that it can be
-used:
+The REPL depends on Python bindings.  You must ensure that Python 3.7 is available
+in the path.  The following command adds Python 3.7 from Visual Studio to `%PATH%`
+so that it can be used:
 
 ~~~ cmd
 path %ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Python37_64;%PATH%
