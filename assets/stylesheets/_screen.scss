@@ -127,6 +127,7 @@ p, li, dd, blockquote, td {
 p {
     & > code {
         white-space: pre-wrap;
+        word-break: break-word;
     }
 }
 
