@@ -22,6 +22,8 @@ body {
 }
 
 a {
+    word-break: break-word;
+
     &:link {
         color: var(--color-link);
         text-decoration: none;
