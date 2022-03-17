@@ -386,7 +386,7 @@ article {
         .byline {
             float: left;
             font-size: 14px;
-            margin-left: 3em;
+            margin-bottom: 1em;
 
             img {
                 width: 32px;
@@ -420,7 +420,8 @@ article {
             font-size: 14px;
             font-weight: 400;
             color: var(--color-figure-gray-tertiary);
-
+            margin-right: 3em;
+            margin-bottom: 1em;
         }
 
         .tags {
