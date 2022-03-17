@@ -22,7 +22,7 @@ Continuous integration jobs are organized within the [CI system](https://ci.swif
 
 There are several ways in which you can interact with the swift.org CI system:
 
-* Integration job status - you can view the build and test status of all integration jobs at  [https://ci.swift.org](https://ci.swift.org).  
+* Integration job status - you can view the build and test status of all integration jobs at  [https://ci.swift.org](https://ci.swift.org).
 * Tests on pull requests - when making a change via pull request, your changes will be tested before being integrated, and results will be posted back inline to the pull request.
 
 ### Pull Request Testing
@@ -32,12 +32,15 @@ When a change is reviewed on a pull request, a member of the Swift team will tri
 ![pull request CI trigger](../continuous-integration/images/ci_pull_command.png)
 
 Testing status is then posted inline with the pull request, showing that a test is in progress.  You can click the "details" link to go directly to the status page for the test in progress.
+
 ![CI Progress](../continuous-integration/images/ci_pending.png)
 
 When tests complete, that result is also updated in the pull request
+
 ![CI Pass](../continuous-integration/images/ci_pass.png)
 
 If there are issues found during testing, you will get a link to the details of the failure.
+
 ![CI Pass](../continuous-integration/images/ci_failure.png)
 
 It is expected that changes meet the [quality standards](../contributing/#quality) for the Swift project before they are committed to the development branch, and you are responsible for fixing problems found by your changes.  If your changes break builds or tests on the development or release branches, you will receive email notification.
@@ -51,4 +54,4 @@ The Swift project welcomes proposals from the community for adding support for o
 
 Community members can volunteer to host nodes for additional platforms on [Swift Community-Hosted Continuous Integration](https://ci-external.swift.org), and are responsible for maintaining the host system.  New nodes can be initiated by creating a pull request at: [Swift Community-Hosted CI Repository](https://github.com/apple/swift-community-hosted-continuous-integration).  Further information about the process is documented in the [README.md](https://github.com/apple/swift-community-hosted-continuous-integration/blob/main/README.md).
 
-The Swift community-hosted CI allows un-supported platforms to be moved over to a supported platform on a case by case basis. Depending on the number of nodes provided, @swift-ci pull request testing can be integrated with the community-hosted CI as well. 
+The Swift community-hosted CI allows un-supported platforms to be moved over to a supported platform on a case by case basis. Depending on the number of nodes provided, @swift-ci pull request testing can be integrated with the community-hosted CI as well.
