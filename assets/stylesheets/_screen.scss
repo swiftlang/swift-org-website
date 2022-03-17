@@ -497,6 +497,8 @@ article {
     }
 
     table {
+        display: block;
+        overflow-x: auto;
         width: auto;
         min-width: 68%;
         margin: 2em auto 3em auto;
