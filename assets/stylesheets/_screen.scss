@@ -22,8 +22,6 @@ body {
 }
 
 a {
-    word-break: break-word;
-
     &:link {
         color: var(--color-link);
         text-decoration: none;
@@ -698,6 +696,10 @@ article {
     border-style: solid;
     padding: 0.5em;
     margin: 0.5em 0 1.5em 0;
+
+    a {
+        word-break: break-word;
+    }
 
     p:first-child {
       margin-top: 0;
