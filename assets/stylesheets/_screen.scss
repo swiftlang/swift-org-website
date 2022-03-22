@@ -122,6 +122,13 @@ p, li, dd, blockquote, td {
     }
 }
 
+p {
+    & > code {
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+}
+
 hr {
     border: none;
     border-top: 1px var(--color-dropdown-border) solid;
@@ -378,7 +385,7 @@ article {
         .byline {
             float: left;
             font-size: 14px;
-            margin-left: 3em;
+            margin-bottom: 1em;
 
             img {
                 width: 32px;
@@ -412,7 +419,8 @@ article {
             font-size: 14px;
             font-weight: 400;
             color: var(--color-figure-gray-tertiary);
-
+            margin-right: 3em;
+            margin-bottom: 1em;
         }
 
         .tags {
@@ -688,6 +696,10 @@ article {
     border-style: solid;
     padding: 0.5em;
     margin: 0.5em 0 1.5em 0;
+
+    a {
+        word-break: break-word;
+    }
 
     p:first-child {
       margin-top: 0;
