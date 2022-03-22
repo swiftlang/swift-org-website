@@ -74,22 +74,17 @@ As mentioned in the [Community Overview][community], the license and copyright p
 For Swift source files the code header should look this:
 
 ~~~~swift
-// subfolder/Filename.swift - Very brief description
+//===----------------------------------------------------------------------===//
 //
 // This source file is part of the Swift.org open source project
 //
-// Copyright (c) 2014 - {{site.time | date: "%Y"}} Apple Inc. and the Swift project authors
+// Copyright (c) {{site.time | date: "%Y"}} Apple Inc. and the Swift project authors
 // Licensed under Apache License v2.0 with Runtime Library Exception
 //
 // See https://swift.org/LICENSE.txt for license information
 // See https://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
 //
-// -----------------------------------------------------------------------------
-///
-/// This file contains stuff that I am describing here in the header and will
-/// be sure to keep up to date.
-///
-// -----------------------------------------------------------------------------
+//===----------------------------------------------------------------------===//
 ~~~~
 
 For C or C++ source or header files, the code header should look this:
@@ -99,7 +94,7 @@ For C or C++ source or header files, the code header should look this:
 //
 // This source file is part of the Swift.org open source project
 //
-// Copyright (c) 2014 - {{site.time | date: "%Y"}} Apple Inc. and the Swift project authors
+// Copyright (c) {{site.time | date: "%Y"}} Apple Inc. and the Swift project authors
 // Licensed under Apache License v2.0 with Runtime Library Exception
 //
 // See https://swift.org/LICENSE.txt for license information
