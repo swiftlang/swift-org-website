@@ -72,33 +72,33 @@ In order to develop applications, particularly with the Swift Package Manager, y
 The [Windows Package Manager](https://docs.microsoft.com/windows/package-manager/) can be found in the [App Store](https://www.microsoft.com/en-us/p/app-installer/9nblggh4nns1) or be [installed directly](ms-appinstaller:?source=https://aka.ms/getwinget).
 
 0. Install required dependencies:
- 
-The platform dependencies cannot be installed through the Windows Package Manager as the install rules do not install the components necessary.  They will be installed through Visual Studio installer.
 
-~~~ cmd
-winget install Git.Git
-winget install Python.Python.3 --version 3.7.8150.0
+   The platform dependencies cannot be installed through the Windows Package Manager as the install rules do not install the components necessary.  They will be installed through Visual Studio installer.
 
-curl -sOL https://aka.ms/vs/16/release/vs_community.exe
-start /w vs_community.exe --passive --wait --norestart --nocache ^
-  --installPath "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community" ^
-  --add Microsoft.VisualStudio.Component.Windows10SDK.19041 ^
-  --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
-del /q vs_community.exe
-~~~
+   ~~~ cmd
+   winget install Git.Git
+   winget install Python.Python.3 --version 3.7.8150.0
+
+   curl -sOL https://aka.ms/vs/16/release/vs_community.exe
+   start /w vs_community.exe --passive --wait --norestart --nocache ^
+     --installPath "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community" ^
+     --add Microsoft.VisualStudio.Component.Windows10SDK.19041 ^
+     --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
+   del /q vs_community.exe
+   ~~~
 
 0. Install Swift:
 
-Swift can be installed through the official installer directly, or using the Windows Package Manager as well.  Notice that Windows Package Manager release may be behind the official release.
+   Swift can be installed through the official installer directly, or using the Windows Package Manager as well.  Notice that Windows Package Manager release may be behind the official release.
 
-* Using the official installer:
-  1. Download the [latest package release](/download).
-  1. Run the package installer.
+   * Using the official installer:
+     1. Download the [latest package release](/download).
+     1. Run the package installer.
 
-* Using the Windows Package Manager:
-  ~~~ cmd
-  winget install Swift.Toolchain
-  ~~~
+   * Using the Windows Package Manager:
+     ~~~ cmd
+     winget install Swift.Toolchain
+     ~~~
 
 A Swift toolchain will be installed at `%SystemDrive%\Library\Developer\Toolchains\unknown-Asserts-development.xctoolchain`.  A compatible Swift SDK will be installed at `%SystemDrive%\Library\Developer\Platforms\Windows.platform\Developer\SDKs\Windows.sdk`.
 
