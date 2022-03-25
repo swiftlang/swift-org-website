@@ -20,7 +20,7 @@ AsyncAlgorithms is a package for algorithms that work with *values over time*. T
 
 The foundation for AsyncAlgorithms is already included in Swift 5.5 in [AsyncSequence](https://github.com/apple/swift-evolution/blob/main/proposals/0298-asyncsequence.md). Swift 5.5 also brings the ability to use a natural `for/in` loop with `await` to process the values in an `AsyncSequence` and `Sequence`-equivalent API like `map` and `filter`. Structured concurrency allows us to write code where intermediate state is simply a local variable, `try` can be used directly on functions that `throw`, and generally treat the logic for asynchronous code similar to that of synchronous code.
 
-We believe an open source package will provide a great home for these APIs. A package gives developers flexibility in deploying across both platforms and OS versions. Development and API design will take place on [GitHub](https://github.com/apple/swift-async-algorithms) and the [Swift Forums](https://forums.swift.org/c/related-projects/).
+We believe an open source package will provide a great home for these APIs. A package gives developers flexibility in deploying across both platforms and OS versions. Development and API design will take place on [GitHub](https://github.com/apple/swift-async-algorithms) and the [Swift Forums](https://forums.swift.org/c/related-projects/swift-async-algorithms/86).
 
 ## A Brief Tour
 
