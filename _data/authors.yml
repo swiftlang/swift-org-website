@@ -252,6 +252,12 @@ franklinsch:
    gravatar: 0207e0cc0ed5247a65e635fa4d1ed5b9
    about: "Franklin Schrans is a member of the Swift-DocC team at Apple."
 
+parkera:
+   name: Tony Parker
+   email: anthony.parker@apple.com
+   github: parkera
+   about: "Tony Parker manages teams at Apple working on Foundation and Swift packages."
+
 diversity-work-group:
    name: The Diversity in Swift work group
    about: "The Diversity in Swift work group is a group of volunteers working to make our community more approachable and inclusive."
