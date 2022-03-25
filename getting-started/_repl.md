@@ -125,9 +125,9 @@ $R0: Int32 = 4
 
 ### On Windows
 
-The REPL depends on Python bindings.  You must ensure that Python is available
-in the path.  The following command adds Python to the PATH so that it can be
-used:
+The REPL depends on Python bindings.  You must ensure that Python 3.7 is available
+in the path.  The following command adds Python 3.7 from Visual Studio to `%PATH%`
+so that it can be used:
 
 ~~~ cmd
 path %ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Python37_64;%PATH%
@@ -138,6 +138,6 @@ extra parameters must be passed to the REPL.  This allows you to use multiple
 different SDKs with the same toolchain.
 
 ~~~ cmd
-set SWIFTFLAGS=-sdk %SDKROOT% -I %SDKROOT%/usr/lib/swift -L SDKROOT%/usr/lib/swift/windows
+set SWIFTFLAGS=-sdk %SDKROOT% -I %SDKROOT%/usr/lib/swift -L %SDKROOT%/usr/lib/swift/windows
 swift repl -target x86_64-unknown-windows-msvc %SWIFTFLAGS%
 ~~~
