@@ -114,7 +114,7 @@ Today we are releasing a prototype version of the **Swift Async Algorithms** pac
 * Pitches and evolution for the future of the package
 
 We are using [GitHub Issues](https://github.com/apple/swift-async-algorithms/issues) to track bugs, feature requests, and starter tasks.
-## References
+### References
 
 #### Documentation
 
