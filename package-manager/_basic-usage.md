@@ -18,7 +18,7 @@ the following example consists of four interdependent packages:
 > ~~~ shell
 > $ git clone https://github.com/apple/example-package-dealer.git
 > $ cd example-package-dealer
-> $ swift run Dealer
+> $ swift run dealer <count>
 > ~~~
 
 ### Creating a Library Package
