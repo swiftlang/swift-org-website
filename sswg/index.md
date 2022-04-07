@@ -63,7 +63,7 @@ The Swift Server Work Group has a [process](https://github.com/swift-server/sswg
 | [PostgresNIO](https://github.com/vapor/nio-postgres) | PostgreSQL driver | Incubating | 11/18/2018 | 5/16/2019 |
 | [RediStack](https://github.com/mordil/swift-redis-nio-client) | Redis driver | Sandbox | 1/7/2019 | 6/27/2019 |
 | [AsyncHTTPClient](https://github.com/swift-server/async-http-client) | HTTP client | Graduated | 4/18/2019 | 6/27/2019 |
-| [APNSwift](https://github.com/kylebrowning/swift-nio-apns) | APNS client | Incubating | 2/5/2019 | 6/27/2019 |
+| [APNSwift](https://github.com/swift-server-community/APNSwift) | APNS client | Incubating | 2/5/2019 | 6/27/2019 |
 | [SwiftStatsdClient](https://github.com/apple/swift-statsd-client) | StatsD driver for the metrics API | Incubating | 6/2/2019 | 8/11/2019 |
 | [SwiftPrometheus](https://github.com/MrLotU/SwiftPrometheus) | Prometheus driver for the metrics API | Sandbox | 11/18/2018 | 8/11/2019  |
 | [gRPC Swift](https://github.com/grpc/grpc-swift) | gRPC client & server framework | Graduated | 9/30/2019 | 2/19/2020 |
@@ -75,7 +75,7 @@ The Swift Server Work Group has a [process](https://github.com/swift-server/sswg
 | [Service Lifecycle](https://github.com/swift-server/swift-service-lifecycle) | Lifecycle management | Incubating | N/A | 9/2/2020 |
 | [Soto for AWS](https://github.com/soto-project/soto) | Third-party SDK for AWS | Incubating | 10/1/2020 | 11/12/2020 |
 | [MultipartKit](https://github.com/vapor/multipart-kit) | Multipart parser and serializer with Codable support for Multipart Form Data | Incubating | 3/3/2021 | 11/11/2021 |
-| [MQTT NIO](https://github.com/adam-fowler/mqtt-nio) | A Swift NIO MQTT v3.1.1 and v5.0 Client | Sandbox | 11/2/2021 | 1/19/2022 |
+| [MQTT NIO](https://github.com/swift-server-community/mqtt-nio) | A Swift NIO MQTT v3.1.1 and v5.0 Client | Sandbox | 11/2/2021 | 1/19/2022 |
 
 The SSWG publishes a [package collection]({{ site.url }}/blog/package-collections/) that contains the projects incubated by the workgroup. The collection is available at `https://swiftserver.group/collection/sswg.json`.
 
