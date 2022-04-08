@@ -1,0 +1,7 @@
+---
+- name: Ubuntu 20.04
+  date: 2022-04-08 10:28:49.000000000 -05:00
+  download: swift-5.6.1-RELEASE-ubuntu20.04-aarch64.tar.gz
+  download_signature: swift-5.6.1-RELEASE-ubuntu20.04-aarch64.tar.gz.sig
+  dir: swift-5.6.1-RELEASE
+  docker: Coming Soon #5.6.1-focal
