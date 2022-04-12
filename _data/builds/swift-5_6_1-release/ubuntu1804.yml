@@ -4,4 +4,4 @@
   download: swift-5.6.1-RELEASE-ubuntu18.04.tar.gz
   download_signature: swift-5.6.1-RELEASE-ubuntu18.04.tar.gz.sig
   dir: swift-5.6.1-RELEASE
-  docker: Coming Soon #5.6.1-bionic
+  docker: 5.6.1-bionic
