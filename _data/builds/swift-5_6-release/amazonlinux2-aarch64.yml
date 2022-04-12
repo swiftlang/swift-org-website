@@ -1,4 +1,4 @@
-- name: Amazon Linx 2
+- name: Amazon Linux 2
   date: 2022-03-14 10:28:49.000000000 -05:00
   download: swift-5.6-RELEASE-amazonlinux2-aarch64.tar.gz
   download_signature: swift-5.6-RELEASE-amazonlinux2-aarch64.tar.gz.sig
