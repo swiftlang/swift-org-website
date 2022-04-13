@@ -3,23 +3,3 @@
   download: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a-ubuntu20.04.tar.gz
   download_signature: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a-ubuntu20.04.tar.gz.sig
   name: Swift Development Snapshot
-- date: 2022-04-12 10:10:00-06:00
-  dir: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a
-  download: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a-ubuntu20.04.tar.gz
-  download_signature: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a-ubuntu20.04.tar.gz.sig
-  name: Swift Development Snapshot
-- date: 2022-04-12 10:10:00-06:00
-  dir: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a
-  download: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a-ubuntu20.04.tar.gz
-  download_signature: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a-ubuntu20.04.tar.gz.sig
-  name: Swift Development Snapshot
-- date: 2022-04-12 10:10:00-06:00
-  dir: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a
-  download: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a-ubuntu20.04.tar.gz
-  download_signature: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a-ubuntu20.04.tar.gz.sig
-  name: Swift Development Snapshot
-- date: 2022-03-31 10:10:00-06:00
-  dir: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-31-a
-  download: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-31-a-ubuntu20.04.tar.gz
-  download_signature: swift-5.6-DEVELOPMENT-SNAPSHOT-2022-03-31-a-ubuntu20.04.tar.gz.sig
-  name: Swift Development Snapshot
