@@ -48,7 +48,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.6-RELEASE">swi
 <h3>Swift 5.5.3</h3>
 
 Date: February 9, 2022<br>
-Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.3-RELEASE">swift-5.3-RELEASE</a>
+Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.5.3-RELEASE">swift-5.5.3-RELEASE</a>
 
 <table id="latest-builds" class="downloads">
     <thead>
