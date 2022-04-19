@@ -60,11 +60,11 @@ In accordance with the SSWG's [Graduation Criteria](https://github.com/swift-ser
 * Swift Service Lifecycle, (from sandbox to incubating)
 * Soto for AWS, (from sandbox to incubating)
 
-The current list of incubated packages can be found under the Projects section on the [SSWG web page](https://www.swift.org/sswg/).
+The current list of incubated packages can be found under the Projects section on the [SSWG web page](/sswg/).
 
 Outside of the incubation process, we've seen the ecosystem continue to grow. Amazon Web Services announced a new Swift SDK and it's great to see established players releasing first-party Swift libraries.
 
-The evolution of Swift also provides a number of opportunities to provide unique experiences for writing Swift for the server. One large effort is the ongoing work into [Distributed Actors](https://www.swift.org/blog/distributed-actors/), which is a new, exciting avenue for Swift that few other mainstream languages currently have.
+The evolution of Swift also provides a number of opportunities to provide unique experiences for writing Swift for the server. One large effort is the ongoing work into [Distributed Actors](/distributed-actors/), which is a new, exciting avenue for Swift that few other mainstream languages currently have.
 
 ## Goals for 2022
 
