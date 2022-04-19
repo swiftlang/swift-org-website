@@ -261,3 +261,11 @@ parkera:
 diversity-work-group:
    name: The Diversity in Swift work group
    about: "The Diversity in Swift work group is a group of volunteers working to make our community more approachable and inclusive."
+
+0xTim:
+  name: Tim Condon
+  email: tim@brokenhands.io
+  github: 0xTim
+  twitter: 0xTim
+  gravatar: c8678b78a2c1c113302ce686f13435d1
+  about: "Tim Condon sits on the SSWG (Swift Server Work Group) and is part of the Vapor Core Team"
