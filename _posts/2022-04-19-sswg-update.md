@@ -34,7 +34,7 @@ The SSWG expect concurrency to be a strong theme for 2022 as `Sendable` checking
 
 Tooling was another focus for the SSWG in 2021 and saw significant new releases to make developers’ lives easier.
 
-First, there was a focus to establish more streamlined ways to install Swift on non-Apple platforms. RPM/Deb packages are the de facto standard for installation on Linux and the call for community contribution was well received. There are now installer scripts for building toolchain packages for multiple platforms and these have been adopted using community repositories to allow easy installation on a number of Linux distributions.
+First, there was a focus to establish more streamlined ways to install Swift on non-Apple platforms. RPM/Deb packages are the de facto standard for installation on Linux and [the call for community contribution](https://forums.swift.org/t/rpm-and-debs-for-swift-call-for-the-community/49117) was well received. There are now [installer scripts](https://github.com/apple/swift-installer-scripts) for building toolchain packages for multiple platforms and these have been adopted using community repositories to allow easy installation on a number of Linux distributions.
 
 Toward the end of the year, [a new Swift for VSCode extension was announced](https://forums.swift.org/t/introducing-swift-for-visual-studio-code/54246) to make working with Swift on VSCode a seamless experience. Thanks to the hard-work from Adam Fowler and Steven Van Impe, this extension enables Swift development in VSCode as well as related tools like GitHub Codespaces with very little setup.
 
