@@ -2,13 +2,13 @@
 layout: post
 published: true
 date: 2022-04-19 11:00:00
-title: SSWG Annual Update
+title: SSWG Annual Update 2021
 author: 0xTim
 ---
 
 Since the last update from the SSWG, the Swift on Server ecosystem has continued to grow and expand.
 
-To start, we are very happy to welcome three new members to the SSWG:
+To start, the SSWG are very happy to welcome three new members:
 
 Adam Fowler
 Fabian Fett (Apple)
@@ -16,7 +16,7 @@ Patrick Freed (MongoDB)
 
 Adam, Fabian and Patrick officially joined the SSWG on September 3rd. Fabian replaced Johannes Weiss who has completed a three year stint on the SSWG. We are extremely grateful for all he's done in that time.
 
-Let’s recap our goals from last year and look forward to what’s to come.
+Let’s recap the SSWG goals from last year and look forward to what’s to come.
 
 ### Swift Concurrency
 
@@ -24,11 +24,11 @@ Swift 5.5 was released in the fall of 2021 and introduced a new concurrency mode
 
 Fully migrating to the new concurrency model is a long process. Many libraries and APIs will need to adopt async/await as well as `Sendable` checking as we progress toward Swift 6.
 
-The SSWG [published the concurrency adoption guidelines](https://github.com/swift-server/guides/blob/main/docs/concurrency-adoption-guidelines.md) for library and application developers and we've seen a lot of great examples of code simplification as developers migrate to the new concurrency model.
+The SSWG [published the concurrency adoption guidelines](https://github.com/swift-server/guides/blob/main/docs/concurrency-adoption-guidelines.md) for library and application developers and there a lot of great examples of code simplification as developers migrate to the new concurrency model.
 
 Significant progress has been made in the Swift on the server ecosystem in adopting async/await. Frameworks like Vapor, Smoke and Hummingbird have added async/await APIs. Many other packages and libraries such as the MongoDB driver and AsyncHTTPClient have also added new async/await APIs.
 
-We expect concurrency to be a strong theme for 2022 as `Sendable` checking is adopted and existing libraries start to migrate to use new features like `AsyncSequence`. There are some low-level packages that still need to adopt new APIs, notably SwiftLog and SwiftDistributedTracing, but these should be completed soon. We believe that the majority of libraries and frameworks should in time become async/await only and not use or expose `EventLoopFuture`s to users.
+The SSWG expect concurrency to be a strong theme for 2022 as `Sendable` checking is adopted and existing libraries start to migrate to use new features like `AsyncSequence`. There are some low-level packages that still need to adopt new APIs, notably SwiftLog and SwiftDistributedTracing, but these should be completed soon. The SSWG believe that the majority of libraries and frameworks should in time become async/await only and not use or expose `EventLoopFuture`s to users.
 
 ### Tooling
 
@@ -36,21 +36,21 @@ Tooling was another focus for the SSWG in 2021 and saw significant new releases 
 
 First, there was a focus to establish more streamlined ways to install Swift on non-Apple platforms. RPM/Deb packages are the de facto standard for installation on Linux and the call for community contribution was well received. There are now installer scripts for building toolchain packages for multiple platforms and these have been adopted using community repositories to allow easy installation on a number of Linux distributions.
 
-Toward the end of the year, [we announced](https://forums.swift.org/t/introducing-swift-for-visual-studio-code/54246) a new Swift for VSCode extension to make working with Swift on VSCode a seamless experience. Thanks to the hard-work from Adam Fowler and Steven Van Impe, this extension enables Swift development in VSCode as well as related tools like GitHub Codespaces with very little setup.
+Toward the end of the year, [a new Swift for VSCode extension was announced](https://forums.swift.org/t/introducing-swift-for-visual-studio-code/54246) to make working with Swift on VSCode a seamless experience. Thanks to the hard-work from Adam Fowler and Steven Van Impe, this extension enables Swift development in VSCode as well as related tools like GitHub Codespaces with very little setup.
 
-Next, we've seen new Swift GitHub Actions from the community to make building and testing Swift code with GitHub Actions easy. These are being migrated to a [new GitHub organization](https://github.com/swift-actions) led by the community for collaboration. This is an ongoing project and we're looking forward to seeing how the community adopts it.
+Next, new Swift GitHub Actions have been created by the community to make building and testing Swift code with GitHub Actions easy. These are being migrated to a [new GitHub organization](https://github.com/swift-actions) led by the community for collaboration. This is an ongoing project and the SSWG are looking forward to seeing how the community adopts it.
 
 Finally, the increase of ARM-based machines for both development and deployment has provided new opportunities for those wanting to use different architectures. Swift 5.6 provides toolchains for ARM Linux as well as multi-platform Docker images with ARM support. We've started to add information to the guides for cross-compilation of applications and will continue to refine them as more people start building Swift applications for ARM. This allows a great experience for working with Swift in Docker and makes deploying to ARM servers (like AWS Graviton) possible.
 
 ### Documentation
 
-We've added a large amount of documentation across SSWG projects, incubated projects, and our own guides. These are a valuable source of information providing technical deep dives and explanations for everything from deploying Swift applications to analyzing performance. However, we know that there is a significant issue with discoverability and this will be a focus for 2022.
+The SSWG have added a large amount of documentation across SSWG projects, incubated projects, and the server guides. These are a valuable source of information providing technical deep dives and explanations for everything from deploying Swift applications to analyzing performance. However, there is a significant issue with discoverability and this will be a focus for 2022.
 
 ### Ecosystem
 
-Due to the pandemic and the late publishing of last year's update, we only added one extra library to the SSWG incubation, MultiPartKit. This was accepted at the Incubating level.
+Due to the pandemic and the late publishing of last year's update, only one extra library was added to the SSWG incubation, MultiPartKit. This was accepted at the Incubating level.
 
-In accordance with the SSWG's [Graduation Criteria](https://github.com/swift-server/sswg/blob/main/process/incubation.md#graduation-criteria), the maturity levels are reviewed at a regular cadence. We are happy to announce that in the last review a number of packages have been voted into a higher maturity level:
+In accordance with the SSWG's [Graduation Criteria](https://github.com/swift-server/sswg/blob/main/process/incubation.md#graduation-criteria), the maturity levels are reviewed at a regular cadence. The SSWG are happy to announce that in the last review a number of packages have been voted into a higher maturity level:
 
 * SwiftMetrics (from incubating to graduated)
 * SwiftStatsdClient, (from sandbox to incubating)
@@ -62,13 +62,13 @@ In accordance with the SSWG's [Graduation Criteria](https://github.com/swift-ser
 
 The current list of incubated packages can be found under the Projects section on the [SSWG web page](/sswg/).
 
-Outside of the incubation process, we've seen the ecosystem continue to grow. Amazon Web Services announced a new Swift SDK and it's great to see established players releasing first-party Swift libraries.
+Outside of the incubation process, the ecosystem continues to grow. Amazon Web Services announced a new Swift SDK and it's great to see established players releasing first-party Swift libraries.
 
 The evolution of Swift also provides a number of opportunities to provide unique experiences for writing Swift for the server. One large effort is the ongoing work into [Distributed Actors](/distributed-actors/), which is a new, exciting avenue for Swift that few other mainstream languages currently have.
 
 ## Goals for 2022
 
-We think 2022 will be an exciting year for Swift on the server as the new concurrency work continues to make Swift a stand out language for the server. Our top level goals for 2022 include:
+The SSWG believe 2022 will be an exciting year for Swift on the server as the new concurrency work continues to make Swift a stand out language for the server. The top level goals for 2022 include:
 
 * Continued focus on growing the ecosystem
 * Continuing the concurrency journey
@@ -78,25 +78,25 @@ We think 2022 will be an exciting year for Swift on the server as the new concur
 
 ### Continued focus on growing the ecosystem
 
-While the last couple of years have seen a significant improvement in the range of packages available for the Swift on server ecosystem, growing the ecosystem continues to be a focus for the SSWG. We are interested in libraries supporting popular server-side components like Kafka, Cassandra and RabbitMQ. If you're interested in writing a driver for these or any other tool or package you think would be useful to the Swift on server ecosystem, we encourage you to submit a pitch.
+While the last couple of years have seen a significant improvement in the range of packages available for the Swift on server ecosystem, growing the ecosystem continues to be a focus for the SSWG. The SSWG are interested in libraries supporting popular server-side components like Kafka, Cassandra and RabbitMQ. If you're interested in writing a driver for these or any other tool or package you think would be useful to the Swift on server ecosystem, you are encouraged to submit a pitch.
 
 ### Continuing the concurrency journey
 
-Adopting Swift's new concurrency model will continue to be a focus for the SSWG in 2022 as we believe it will be transformative for the ecosystem. The initial focus will be on getting logging and tracing over the line and using the new concurrency features and then encouraging the adoption of these updates in packages and libraries.
+Adopting Swift's new concurrency model will continue to be a focus for the SSWG in 2022 as it will be transformative for the ecosystem. The initial focus will be on getting logging and tracing over the line and using the new concurrency features and then encouraging the adoption of these updates in packages and libraries.
 
 ### Expanding the tooling
 
-We're really pleased with how the tooling has evolved over the last 12 months and will continue to push for improvements. With increased focus on using alternative IDEs, projects like SourceKitLSP should see more use and adoption and therefore more improvements and bug fixes. We've already seen some old bugs fixed recently thanks to the focus from the Swift for Visual Studio Code extension. We also want to encourage the community to build plugins for more IDEs as this will only be good for server-side Swift.
+Tooling has evolved significantly over the last 12 months and will continue to be a key aim with more push for improvements. With increased focus on using alternative IDEs, projects like SourceKitLSP should see more use and adoption and therefore more improvements and bug fixes. Some old bugs have already been fixed recently thanks to the focus from the Swift for Visual Studio Code extension. The community are encouraged to build plugins for more IDEs as this will only be good for server-side Swift.
 
-Swift 5.6 also introduces Swift Package Plugins, which will open another avenue of tooling possibilities, including automatically generating documentation using DocC, running linters and code formatters, or even running other build tools for generating CSS and JS applications. It also enables code generation which will be useful to gRPC, Smoke, and the AWS SDKs. We'll be keeping an eye on this to see where we can direct effort to make the biggest impact.
+Swift 5.6 also introduces Swift Package Plugins, which will open another avenue of tooling possibilities, including automatically generating documentation using DocC, running linters and code formatters, or even running other build tools for generating CSS and JS applications. It also enables code generation which will be useful to gRPC, Smoke, and the AWS SDKs. The SSWG will be keeping an eye on this to see where effort can be directed to make the biggest impact.
 
-Next, we're continuing to improve the experience for installing Swift. As previously mentioned, you can already install Swift using RPM and .deb packages. However, some people want to easily manage multiple versions of Swift and easily install a particular version. Other languages have tools for this, such as rustup for Rust. The SSWG has started to build a Swift toolchain installer, provisionally called Swiftly, to achieve similar functionality and there will be more updates on this in the near future.
+Next, another aim is to continue to improve the experience for installing Swift. As previously mentioned, you can already install Swift using RPM and .deb packages. However, some people want to easily manage multiple versions of Swift and easily install a particular version. Other languages have tools for this, such as rustup for Rust. The SSWG has started to build a Swift toolchain installer, provisionally called Swiftly, to achieve similar functionality and there will be more updates on this in the near future.
 
-Finally, we will be looking at encouraging Swift adoption in some popular generic tools such as Dependabot and Sentry. Swift on the server has reached a good level of maturity and it would be great to see these tools add support for Swift.
+Finally, the SSWG will be looking at encouraging Swift adoption in some popular generic tools such as Dependabot and Sentry. Swift on the server has reached a good level of maturity and it would be great to see these tools add support for Swift.
 
 ### Improving build times
 
-As frameworks and applications get more complex and language features are added, build times can suffer. This is less of an issue when building locally for development as you can take advantage of incremental builds but building applications for deployment usually requires a fresh build. We’ve heard that some applications are hitting limits with services like Heroku.
+As frameworks and applications get more complex and language features are added, build times can suffer. This is less of an issue when building locally for development as you can take advantage of incremental builds but building applications for deployment usually requires a fresh build. Some applications are hitting limits with services like Heroku.
 
 Improving build times will take efforts on a number of fronts. The Swift compiler team continues to make improvements and library developers should ensure their code is as efficient as possible with the ecosystem ensuring it provides the necessary pieces to avoid duplication.
 
@@ -104,14 +104,14 @@ One area of focus is the use of SwiftCrypto. Currently, SwiftCrypto has a limite
 
 SwiftCrypto now includes a CryptoExtras module to provide additional APIs for common server requirements, such as RSA. This allows libraries like Vapor's JWTKit to solely depend on SwiftCrypto and not vend their own BoringSSL library, reducing the amount of code that needs to be compiled.
 
-Other areas we can support are caching in SwiftPM and ensure tools like the recently announced GitHub Action support this.
+Other areas the SSWG can support are caching in SwiftPM and ensure tools like the recently announced GitHub Action support this.
 
 ### Increasing Adoption of Server-Side Swift
 
-Finally, a big focus for the SSWG this year will be on improving how we showcase Swift on the server. We know it is being used extensively but we don't do as much as we could to showcase this and to make it easy for people to adopt.
+Finally, a big focus for the SSWG this year will be on improving how Swift is showcased on the server. It is being used extensively but not as much is done as can be to showcase this and to make it easy for people to adopt.
 
-To start we want to improve the discoverability of Swift on the server. There are a lot of good guides and documentation available but they aren’t coherently collated. Encouraging the adoption of DocC and linking to the SSWG guides from different documentation should make this easier to discover, both for users and search engines. If there are features missing that would be helpful, we can help direct effort to plug these gaps.
+The first aim is to improve the discoverability of Swift on the server. There are a lot of good guides and documentation available but they aren’t coherently collated. Encouraging the adoption of DocC and linking to the SSWG guides from different documentation should make this easier to discover, both for users and search engines. If there are features missing that would be helpful, the SSWG can help direct effort to plug these gaps.
 
-We're also going to be launching an in-depth survey on Swift on the server to find out more about the people who use it and the people who don't. The SSWG all use Swift to write server applications day-to-day but there may be gaps and missing tools that we don't know about. The survey should help provide some data for us to work out where to direct effort. Keep an eye out for this survey announcement.
+The SSWG are also going to be launching an in-depth survey on Swift on the server to find out more about the people who use it and the people who don't. The working group members all use Swift to write server applications day-to-day but there may be gaps and missing tools that the group don't know about. The survey should help provide some data to work out where to direct effort. Keep an eye out for this survey announcement.
 
-Last but not least, we want to improve the messaging for using Swift on the server. This encompasses showcasing it in production applications, highlighting success stories, and providing concrete examples of why it should be used. We can demonstrate how async/await makes writing code much easier, how Swift helps reduce run-time bugs, and show concrete performance benefits compared to other languages. If you would like to share your story with our community, please reach out. We'll have more to announce on this front in the coming months.
+Last but not least, the SSWG want to improve the messaging for using Swift on the server. This encompasses showcasing it in production applications, highlighting success stories, and providing concrete examples of why it should be used. Examples include how async/await makes writing code much easier, how Swift helps reduce run-time bugs, and showing concrete performance benefits compared to other languages. If you would like to share your story with our community, please reach out. There'll be more to announce on this front in the coming months.
