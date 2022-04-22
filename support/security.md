@@ -9,7 +9,7 @@ For the protection of our community, Swift.org doesn't disclose, discuss, or con
 
 Recent security updates are listed in the [Security Updates](#security-updates) section below.
 
-Swift.org security documents reference vulnerabilities by [CVE-ID](https://cve.mitre.org/about/) when possible.
+Swift.org security documents reference vulnerabilities by [CVE-ID](https://www.cve.org/About/Overview) when possible.
 
 ### Reporting a security or privacy vulnerability
 
