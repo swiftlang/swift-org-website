@@ -10,9 +10,9 @@ Since the last update from the SSWG, the Swift on Server ecosystem has continued
 
 To start, the SSWG is very happy to welcome three new members:
 
-Adam Fowler
-Fabian Fett (Apple)
-Patrick Freed (MongoDB)
+* Adam Fowler
+* Fabian Fett (Apple)
+* Patrick Freed (MongoDB)
 
 Adam, Fabian and Patrick officially joined the SSWG on September 3rd. Fabian replaced Johannes Weiss who has completed a three year stint on the SSWG. We are extremely grateful for all he's done in that time.
 
