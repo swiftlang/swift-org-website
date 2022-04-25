@@ -25,4 +25,4 @@ in the [bug tracker][bugtracker].
   mark the newer one as a duplicate of the older one.
   Doing so allows others to work more effectively.
 
-[bugtracker]: https://bugs.swift.org
+[bugtracker]: https://github.com/apple/swift/issues
