@@ -226,5 +226,5 @@ export PATH=$HOME/bin/sccache-0.2.8-x86_64-apple-darwin:$PATH
 
 ## Starter bugs
 
-The Swift project uses GitHub Issues for bug tracking and the bugs and enhancement requests could be found at [GitHub Issues](http://github.com/apple/swift/issues). If you are new to the codebase, you can identify beginner tasks by searching for the bugs that have the "[StarterBug](https://github.com/apple/swift/issues/issues?q=is%3Aopen+is%3Aissue+label%3AStarterBug)" label. Here are some beginner bugs that you can start with with today.
+The Swift project uses GitHub Issues for bug tracking and the bugs and enhancement requests could be found at [GitHub Issues](http://github.com/apple/swift/issues). If you are new to the codebase, you can identify beginner tasks by searching for the bugs that have the "[StarterBug](https://github.com/apple/swift/issues/issues?q=is%3Aopen+is%3Aissue+label%3AStarterBug)" label.
 
