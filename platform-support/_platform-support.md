@@ -31,7 +31,7 @@ This table shows the minimum OS version for which a Swift application can be dep
 | **iOS**            |7.0                         |
 | **watchOS**        |2.0                         |
 | **tvOS**           |9.0                         |
-| **Ubuntu**         |16.04                       |
+| **Ubuntu**         |18.04                       |
 | **CentOS**         |7                           |
 | **Amazon Linux**   |2                           |
 | **Windows**        |10.0                        |
