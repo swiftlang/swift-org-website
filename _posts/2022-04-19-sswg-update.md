@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2022-04-19 11:00:00
+date: 2022-04-25 11:00:00
 title: SSWG 2021 Annual Update
 author: 0xTim
 ---
