@@ -12,7 +12,7 @@ The Swift language is developed in the open, and all technical or administrative
 
 * Directory of forum categories and email instructions are in the [forum section](#forums)
 * Source code for all Swift projects can be found on GitHub at [github.com/apple][github]
-* The Swift.org bug tracking system is maintained at [bugs.swift.org][bugtracker]
+* The Swift.org bug tracking system is maintained at [github.com/apple/swift/issues][bugtracker]
 
 All communication within project spaces should adhere to Swift project's [Code of Conduct](/code-of-conduct).
 
@@ -125,6 +125,6 @@ Each contributor is responsible for adding his or her name to the `CONTRIBUTORS.
 
 [github]: https://github.com/apple  "Apple's home page on GitHub"
 [repo]: git+ssh://github.com/apple "Link to the repo hosted on GitHub"
-[bugtracker]:  http://bugs.swift.org
+[bugtracker]:  http://github.com/apple/swift/issues
 
 [swift-apple]: https://developer.apple.com/swift  "Apple developer home page for Swift"
