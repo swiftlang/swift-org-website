@@ -46,7 +46,7 @@ The Swift compiler and debugger run on platforms supporting development.  Suppor
 | **Ubuntu**         | ✓                      | ✓              |
 | **CentOS**         | ✓                      | ✓              |
 | **Amazon Linux**   | ✓                      | ✓              |
-| **Windows**        | ✓                      | In development |
+| **Windows**        | ✓                      | ✓              |
 
 ### Deployment-only
 
