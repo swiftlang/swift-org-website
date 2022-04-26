@@ -3,6 +3,11 @@
   download: swift-DEVELOPMENT-SNAPSHOT-2022-04-21-a-windows10.exe
   download_signature: swift-DEVELOPMENT-SNAPSHOT-2022-04-21-a-windows10.exe.sig
   name: Windows 10 Swift Development Snapshot
+- date: 2022-04-21 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2022-04-21-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2022-04-21-a-windows10.exe
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2022-04-21-a-windows10.exe.sig
+  name: Windows 10 Swift Development Snapshot
 - date: 2022-04-12 10:10:00-06:00
   dir: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a
   download: swift-5.7-DEVELOPMENT-SNAPSHOT-2022-04-12-a-windows10.exe
