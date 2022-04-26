@@ -64,7 +64,7 @@ The current list of incubated packages can be found under the Projects section o
 
 Outside of the incubation process, the ecosystem continues to grow. Amazon Web Services [announced a new Swift SDK](https://aws.amazon.com/blogs/developer/announcing-new-aws-sdk-for-swift-alpha-release/) and it's great to see established players releasing first-party Swift libraries.
 
-The evolution of Swift also provides a number of opportunities to provide unique experiences for writing Swift for the server. One large effort is the ongoing work into [Distributed Actors](/distributed-actors/), which is a new, exciting avenue for Swift that few other mainstream languages currently have.
+The evolution of Swift also provides a number of opportunities to provide unique experiences for writing Swift for the server. One large effort is the ongoing work into [Distributed Actors](/blog/distributed-actors/), which is a new, exciting avenue for Swift that few other mainstream languages currently have.
 
 ## Goals for 2022
 
