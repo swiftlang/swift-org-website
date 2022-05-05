@@ -14,6 +14,20 @@ The Swift website workgroup is a steering team that helps guide the evolution on
 
 Analogous to the [Core Team](/community#core-team) for Swift, the workgroup is responsible for establishing the processes and standards by which changes to the Swift.org website are proposed and eventually integrated.
 
+The current website work group consists of the following people:
+
+* Alexander Sandberg ([@alexandersandberg](https://github.com/alexandersandberg))
+* Dave Verwer ([@daveverwer](https://github.com/daveverwer))
+* James Dempsey ([@James_Dempsey](https://github.com/?))
+* Kristina Fox ([@krstnfx](https://github.com/krstnfx), Apple)
+* Mishal Shah ([@shahmishal](https://github.com/shahmishal), Apple)
+* Michael Schinis ([@mschinis](https://github.com/mschinis))
+* Paul Hudson ([@twostraws](https://github.com/twostraws))
+* Reda Lemeden ([@kaishin](https://github.com/kaishin))
+* Tim Codon ([@0xTim](https://github.com/0xTim), Vapor)
+* Tim Triemstra ([@TimTr](https://github.com/TimTr), Apple)
+
+With Tom Doron ([@tomerd](https://github.com/tomerd), Apple) representing the Swift core team.
 
 ## Charter
 
@@ -44,7 +58,6 @@ When multiple candidates compete for the same seat, the workgroup will vote betw
 
 Inactive members that do not participate for 3 consecutive months will be contacted to confirm their desire to stay with the group.
 After no activity for 6 months, the workgroup will vote on removing them from the group.
-
 
 ## Voting
 
