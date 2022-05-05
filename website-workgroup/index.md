@@ -18,7 +18,7 @@ The current website work group consists of the following people:
 
 * Alexander Sandberg ([@alexandersandberg](https://github.com/alexandersandberg))
 * Dave Verwer ([@daveverwer](https://github.com/daveverwer))
-* James Dempsey ([@James_Dempsey](https://github.com/?))
+* James Dempsey ([@dempseyatgithub](https://github.com/dempseyatgithub))
 * Kristina Fox ([@krstnfx](https://github.com/krstnfx), Apple)
 * Mishal Shah ([@shahmishal](https://github.com/shahmishal), Apple)
 * Michael Schinis ([@mschinis](https://github.com/mschinis))
