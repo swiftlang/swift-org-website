@@ -40,7 +40,7 @@ A core principle for the Swift project is that the community is an open and incl
 
 **[Announcements](http://forums.swift.org/c/development/dev-announce)** - For announcements relevant to developers such as release announcments, branching, and infrastructure updates. 
 
-**[CI Notifications](http://forums.swift.org/c/development/ci-notifications)** -Automated notifications from ci.swift.org for build and test failures. 
+**[CI Notifications](http://forums.swift.org/c/development/ci-notifications)** - Automated notifications from ci.swift.org for build and test failures. 
 
 ### Swift Evolution
 [Evolution]: #evolution
