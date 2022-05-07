@@ -12,49 +12,7 @@ At the end of the mentorship program, mentees’ contributions and learnings wil
 
 ## Current Program
 
-### Timeline 
-
-| Date               | Event                          |
-|:-------------------|:-------------------------------|
-| **May 10th**       |  Mentee Survey Opens           |
-| **May 24th**       |  Mentee Application Deadline   |
-| **June 2nd**       |  Mentorship Pairings Announced |
-| **June 26th**      |  Mentorship Kickoff!           |
-| **June 27th**      |  Mentorship Begins             |
-| **August 1st**     |  Halfway Checkpoint            |
-| **September 12th** |  Mentorship Ends               |
-| **September 18th** |  Wrap-up!                      |
-
-
-### Interest Surveys and Mentorship Matching
-
-If you’re interested in being a mentee, please fill out the [Mentee Interest Survey](#mentee-interest-survey). This survey is not an application; but rather it will tell the Diversity in Swift work group about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the work group may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
-
-The Swift Mentorship Program is also a leadership opportunity for veteran community members, particularly if they are already an open-source project maintainer or frequent contributor. If you’re passionate about lowering the barrier to entry for new contributors in our community, please consider getting involved as a mentor! If you’re interested in participating as a mentor, please message [@diversity-work-group](https://forums.swift.org/new-message?groupname=diversity-work-group) on the Swift Forums.
-
-#### Mentee Interest Survey
-
-If you’re interested in participating as a mentee, please fill out the following survey and send your answers to <a href="https://forums.swift.org/new-message?groupname=diversity-work-group&title=Mentee+Interest+Survey&body=1.+If+you+are+member+of+a+Swift+community+group,+and+you'd+be+interested+in+pairing+up+with+someone+in+that+group,+please+specify+that+group+here%0D%0A2.+How+important+is+it+to+have+a+mentor+within+one+of+your+community+groups%0D%0A3.+Are+you+18+years+or+older%0D%0A4.+Where+are+you+in+your+programming+journey%0D%0A5.+What+barriers+have+you+faced+when+making+(or+thinking+about+making+contributions+to+open+source%0D%0A6.+What+do+you+hope+to+get+out+of+this+program%0D%0A7.+What+timezone+are+you+in%0D%0A8.+Are+there+specific+open-source+projects,+including+personal+projects,+that+you’re+interested+in+contributing+to+(please+specify)+%0D%0A9.+Which+of+the+following+topics+are+you+interested+in">@diversity-work-group</a> on the Swift Forums. Your responses will be used to help match you with a mentor.
-
-1. If you are a member of a Swift community group, and you’d be interested in pairing up with someone in that group, please specify that group here:
-2. How important is it to have a mentor within one of your community groups?
-3. Are you 18 years or older?
-4. Where are you in your programming journey? Here are some questions you might want to answer as part of your response:
-   - Do you want to write Swift or contribute to the compiler?
-   - How much time have you spent with the Swift programming language?
-   - Where do you think your strengths are? What have you enjoyed coding on the most?
-5. What barriers have you faced when making (or thinking about making) contributions to open source?
-6. What do you hope to get out of this program?
-7.  What timezone are you in?
-8.  Are there specific open-source projects, including personal projects, that you’re interested in contributing to? If so, please specify.
-9.  Which of the following topics are you interested in?
-	 - UI programming
-	 - Swift on Server
-	 - Compiler development
-	 - Language design
-	 - Software Architecture
-	 - Testing
-	 - Other (please specify):
+Stay tuned to the [Announcements](https://forums.swift.org/c/general-announce/) category on the Swift Forums for the 2022 offering of the Swift Mentorship Program!
 
 ## Frequently Asked Questions
 
