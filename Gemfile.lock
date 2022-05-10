@@ -14,7 +14,7 @@ GEM
     http_parser.rb (0.8.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
-    jekyll (4.2.1)
+    jekyll (4.2.2)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -64,7 +64,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (= 4.2.1)
+  jekyll (~> 4.2.1)
   jekyll-redirect-from
   webrick (~> 1.7)
 
