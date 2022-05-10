@@ -8,7 +8,7 @@ Swift has the following general dependencies:
 
 - Python[^1] (used by the debugger - lldb)
 
-[^1]: The windows binaries are built against Python 3.7.8
+[^1]: The windows binaries are built against Python 3.10.2
 
 Windows has the following additional platform specific dependencies:
 
@@ -38,7 +38,7 @@ The [Windows Package Manager](https://docs.microsoft.com/windows/package-manager
    del /q vs_community.exe
    ~~~
    
-1. Install Swift:
+0. Install Swift:
 
    Swift can be installed through the official installer directly, or using the Windows Package Manager as well.  Notice that Windows Package Manager release may be behind the official release.
 
