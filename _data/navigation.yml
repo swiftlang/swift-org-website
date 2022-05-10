@@ -95,7 +95,13 @@
         - title: Package Manager
           name: package-manager
         - title: Xcode Playground Support
-          name: playground-support
+          name: xcode-playground-support
+        - title: Source Tooling
+          name: source-tooling
+        - title: SourceKit-LSP Service
+          name: sourcekit-lsp-service
+        - title: Swift.org Website
+          name: swiftorg-website
         - title: Cloned Repositories
           name: cloned-repositories
     - title: Continuous Integration
