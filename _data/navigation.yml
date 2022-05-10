@@ -95,7 +95,7 @@
         - title: Package Manager
           name: package-manager
         - title: Xcode Playground Support
-          name: playground-support
+          name: xcode-playground-support
         - title: Cloned Repositories
           name: cloned-repositories
     - title: Continuous Integration
