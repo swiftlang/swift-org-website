@@ -8,7 +8,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-FROM ruby:3.1
+FROM ruby:2.6
 LABEL PURPOSE="This image is configured to build and run swift website"
 
 RUN mkdir -p /src
@@ -20,7 +20,7 @@ ENV LC_ALL: C.UTF-8
 ENV LANG: en_US.UTF-8
 ENV LANGUAGE: en_US.UTF-8
 
-RUN gem install bundler -v '~> 2.3.13'
+RUN gem install bundler -v '~> 2.1.4'
 
 COPY Gemfile Gemfile.lock /src/
 RUN bundle install -j $(nproc)
