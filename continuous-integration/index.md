@@ -25,6 +25,8 @@ There are several ways in which you can interact with the swift.org CI system:
 * Integration job status - you can view the build and test status of all integration jobs at  [https://ci.swift.org](https://ci.swift.org).
 * Tests on pull requests - when making a change via pull request, your changes will be tested before being integrated, and results will be posted back inline to the pull request.
 
+More usage documentation can be found [here](https://github.com/apple/swift/blob/main/docs/ContinuousIntegration.md).
+
 ### Pull Request Testing
 
 When a change is reviewed on a pull request, a member of the Swift team will trigger testing by the CI system.  Tests can be triggered to run on macOS, Linux, or both platforms.
