@@ -81,4 +81,4 @@ The SSWG publishes a [package collection]({{ site.url }}/blog/package-collection
 
 ## Meeting Time
 
-The SSWG meets biweekly on Thursday at 9:30AM PT (USA Pacific). The meetings take place in the weeks with the [even week numbers](http://www.whatweekisit.org).
+The SSWG meets biweekly on Wednesday at 2:00PM PT (USA Pacific). The meetings take place in the weeks with the [odd week numbers](http://www.whatweekisit.org).
