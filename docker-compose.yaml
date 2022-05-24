@@ -33,7 +33,10 @@ services:
 
    build:
       <<: *common
-      command: /bin/bash -cl "bundle check && bundle exec jekyll build --source /srv/jekyll --destination /output"
+      command: /bin/bash -cl "
+        bundle check
+        && bundle exec jekyll doctor --source /srv/jekyll --destination /output
+        && bundle exec jekyll build --source /srv/jekyll --destination /output"
 
    website:
      <<: *common
