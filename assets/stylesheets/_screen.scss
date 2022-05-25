@@ -565,6 +565,10 @@ article {
         margin-top: 0;
         cursor: pointer;
 
+        table {
+            display: inline-table;
+        }
+
         summary {
             padding-bottom: 0.5em;
             outline: none;
