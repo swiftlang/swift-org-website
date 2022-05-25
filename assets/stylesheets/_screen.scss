@@ -508,8 +508,9 @@ article {
     table {
         display: block;
         overflow-x: auto;
-        width: auto;
+        width: max-content;
         min-width: 68%;
+        max-width: 100%;
         margin: 2em auto 3em auto;
         border-collapse: separate;
         border: 1px var(--color-dropdown-border) solid;
@@ -563,6 +564,10 @@ article {
     details.download {
         margin-top: 0;
         cursor: pointer;
+
+        table {
+            display: inline-table;
+        }
 
         summary {
             padding-bottom: 0.5em;
