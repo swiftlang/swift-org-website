@@ -9,8 +9,8 @@ The project is governed by a core team of engineers that drive the strategic dir
 
 The Swift language is managed as a collection of projects, each with its own repositories.  The current list of projects includes:
 
-* The [Swift compiler](/compiler-stdlib/) command line tool
-* The [standard library](/compiler-stdlib/) bundled as part of the language
+* The [Swift compiler](/swift-compiler/) command line tool
+* The [standard library](/standard-library/) bundled as part of the language
 * [Core libraries](/core-libraries/) that provide higher-level functionality
 * The [LLDB debugger](/lldb/) which includes the Swift REPL
 * The [Swift package manager](/package-manager/) for distributing and building Swift source code
