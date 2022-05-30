@@ -85,6 +85,11 @@
           name: community-participation
     - title: Mentorship
       url: /mentorship/
+      sections:
+        - title: Current Program
+          name: current-program
+        - title: Frequently Asked Questions
+          name: frequently-asked-questions
     - title: Contributing
       url: /contributing/
       sections:
