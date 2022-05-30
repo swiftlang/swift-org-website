@@ -27,13 +27,13 @@ Everyone is welcome to contribute to the Swift.org website in the following ways
 * Asking or answering questions on the forums
 * Reporting or triaging bugs
 
-See `CONTRIBUTING.md` for additional information about the website's contribution guidelines.
+See [`CONTRIBUTING.md`](https://github.com/apple/swift-org-website/blob/main/CONTRIBUTING.md) for additional information about the website's contribution guidelines.
 
 
 ## Governance
 
 The website has a small list of *maintainers* which have *write* access and are in charge of reviewing and merging pull requests from *contributors*.
-The *maintainers* group consists of a small subset of the Swift core team and the [Swift website workgroup members](/website-workgroup). (see `CODEOWNERS`).
+The *maintainers* group consists of a small subset of the Swift core team and the [Swift website workgroup members](/website-workgroup).
 
 The Swift.org website source code consists of several distinct parts:
 
