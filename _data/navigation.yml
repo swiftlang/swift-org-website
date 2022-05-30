@@ -2,6 +2,8 @@
     - title: About Swift
       url: /about/
       sections:
+        - title: Features
+          name: features
         - title: Swift.org and Open Source
           name: swiftorg-and-open-source
         - title: Platform Support
