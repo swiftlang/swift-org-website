@@ -209,3 +209,10 @@
           name: development-guides
     - title: Swift.org website
       url: /website/
+      sections:
+        - title: Community Participation
+          name: community-participation
+        - title: Governance
+          name: governance
+        - title: Website workgroup
+          name: website-workgroup
