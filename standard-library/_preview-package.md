@@ -6,7 +6,7 @@ library APIs that can be implemented as a standalone library are accepted
 through the Swift Evolution process, they are published as individual
 packages and included in the preview package, which acts as an umbrella
 library. The preview package currently includes the following individual
-package:
+packages:
 
 [preview-package]: https://github.com/apple/swift-standard-library-preview/
 
