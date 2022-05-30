@@ -155,6 +155,11 @@
           name: building-projects
     - title: Security
       url: /support/security.html
+      sections:
+        - title: Security Process
+          name: security-process
+        - title: Security Updates
+          name: security-updates
 
 - header: Open Source Efforts
   pages:
