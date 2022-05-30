@@ -70,6 +70,19 @@
           name: forums
     - title: Diversity
       url: /diversity/
+      sections:
+        - title: Mission
+          name: mission
+        - title: Work Group
+          name: work-group
+        - title: Community Groups
+          name: community-groups
+        - title: Events
+          name: events
+        - title: Community-focused blog on Swift.org
+          name: community-focused-blog-on-swiftorg
+        - title: Community Participation
+          name: community-participation
     - title: Mentorship
       url: /mentorship/
     - title: Contributing
