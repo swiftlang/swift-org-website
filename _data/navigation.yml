@@ -138,6 +138,8 @@
           name: configuration
         - title: Usage
           name: usage
+        - title: Community Involvement
+          name: community-involvement
     - title: Source Compatibility
       url: /source-compatibility/
       sections:
