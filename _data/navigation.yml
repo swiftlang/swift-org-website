@@ -34,6 +34,13 @@
           name: docker
     - title: Platform Support
       url: /platform-support/
+      sections:
+        - title: Deployment and Development
+          name: deployment-and-development
+        - title: Deployment-only
+          name: deployment-only
+        - title: Platform Owners
+          name: platform-owners
     - title: Documentation
       url: /documentation/
       sections:
