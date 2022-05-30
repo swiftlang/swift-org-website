@@ -200,5 +200,12 @@
           name: xcode-playground-support
     - title: Swift on Server
       url: /server/
+      sections:
+        - title: Why Swift on Server?
+          name: why-swift-on-server
+        - title: Swift Server Workgroup
+          name: swift-server-workgroup
+        - title: Development guides
+          name: development-guides
     - title: Swift.org website
       url: /website/
