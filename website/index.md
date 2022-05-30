@@ -33,7 +33,7 @@ See [`CONTRIBUTING.md`](https://github.com/apple/swift-org-website/blob/main/CON
 ## Governance
 
 The website has a small list of *maintainers* which have *write* access and are in charge of reviewing and merging pull requests from *contributors*.
-The *maintainers* group consists of a small subset of the Swift core team and the [Swift website workgroup members](/website-workgroup). (see `CODEOWNERS`).
+The *maintainers* group consists of a small subset of the Swift core team and the [Swift website workgroup members](/website-workgroup).
 
 The Swift.org website source code consists of several distinct parts:
 
