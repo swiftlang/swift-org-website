@@ -151,6 +151,8 @@
           name: maintaining-projects
         - title: Pull Request Testing
           name: pull-request-testing
+        - title: Building Projects
+          name: building-projects
     - title: Security
       url: /support/security.html
 
