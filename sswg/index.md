@@ -14,14 +14,15 @@ Analogous to the [Core Team](/community#core-team) for Swift, the work group is 
 The current Swift Server work group consists of the following people:
 
 * Adam Fowler ([@adam-fowler](https://github.com/adam-fowler))
+* Dave Moser ([@dave-moser](https://github.com/dave-moser), Amazon)
 * Fabian Fett ([@fabianfett](https://github.com/fabianfett), Apple)
 * Gwynne Raskind ([@gwynne](https://github.com/gwynne), Vapor)
+* Jimmy McDermott ([@jdmcd](https://github.com/jdmcd) , Transeo)
 * Kaitlin Mahar ([@kmahar](https://github.com/kmahar), MongoDB)
 * Konrad Malawski ([@ktoso](https://github.com/ktoso), Apple)
 * Patrick Freed ([@patrickfreed](https://github.com/patrickfreed), MongoDB)
 * Simon Pilkington ([@tachyonics](https://github.com/tachyonics), Amazon)
 * Tim Condon ([@0xTim](https://github.com/0xTim), Vapor)
-* Todd Varland ([@toddvarland](https://github.com/toddvarland), Amazon)
 
 With Tom Doron ([@tomerd](https://github.com/tomerd), Apple) representing the Swift core team.
 
