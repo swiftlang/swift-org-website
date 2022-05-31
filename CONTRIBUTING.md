@@ -24,7 +24,7 @@ This project and everyone participating in it is governed by the [Swift Code of 
 
 The Swift.org website has a number of goals that are defined in the [website overview](http://swift.org/website). This lays out the aims of Swift.org and should be considered when contributing.
 
-Swift.org is guided by the [Swift Website Workgroup (SWWG)](https://www.swift.org/website-workgroup) and they are responsible for the content on the site, the design and all technical aspects.
+Swift.org is guided by the [Swift Website Workgroup (SWWG)](https://www.swift.org/website-workgroup) and they are responsible for the content on the site, the design, and all technical aspects.
 
 See `LICENSE.md` for legal information.
 
