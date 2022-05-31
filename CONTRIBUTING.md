@@ -30,7 +30,7 @@ See `LICENSE.md` for legal information.
 
 ## Swift Website Workgroup
 
-The [Swift Website Workgroup (SWWG)](https://www.swift.org/website-workgroup) is a steering committee comprised of members from the community. They are responsible for guiding the evolution of Swift.org, whether that be any technical or design changes, or content updates.
+The [Swift Website Workgroup (SWWG)](https://www.swift.org/website-workgroup) is a steering committee comprised of members from the community. They are responsible for guiding the evolution of Swift.org, including technical decisions, design changes, and content updates.
 
 The SWWG should be consulted before proposing any substantial changes to Swift.org, by creating a new post on the forums.
 

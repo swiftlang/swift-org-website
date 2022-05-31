@@ -47,9 +47,9 @@ Steps to reproduce the behavior:
 - Browser [e.g. stock browser, safari]
 - Version [e.g. 22]
 
-### If possible, minimal yet complete reproducer code (or URL to code)
+### If possible, minimal yet complete reproducer code (or link to code)
 
-<!-- Anything else to help us reproducing the issue -->
+<!-- Anything else to help us reproduce the issue -->
 
 ### Swift.org version/commit hash
 
