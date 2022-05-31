@@ -20,6 +20,9 @@ Steps to reproduce the behavior:
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
+**Actual behavior**
+A brief description of the behavior you actually saw that differed from the expected behavior.
+
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
@@ -33,6 +36,18 @@ If applicable, add screenshots to help explain your problem.
  - OS: [e.g. iOS8.1]
  - Browser [e.g. stock browser, safari]
  - Version [e.g. 22]
+
+**If possible, minimal yet complete reproducer code (or URL to code)**
+
+Anything else to help us reproducing the issue
+
+**Swift.org version/commit hash**
+
+Git hash of the site if applicable
+
+**Swift & OS version (output of `swift --version && uname -a`)**
+
+Swift version if applicable
 
 **Additional context**
 Add any other context about the problem here.
