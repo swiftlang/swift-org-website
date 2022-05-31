@@ -24,7 +24,6 @@ The current Swift Server work group consists of the following people:
 * Simon Pilkington ([@tachyonics](https://github.com/tachyonics), Amazon)
 * Tim Condon ([@0xTim](https://github.com/0xTim), Vapor)
 
-
 With Tom Doron ([@tomerd](https://github.com/tomerd), Apple) representing the Swift core team.
 
 ## Communication
