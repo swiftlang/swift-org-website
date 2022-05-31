@@ -18,11 +18,11 @@ The following is a set of guidelines for contributing to Swift.org on GitHub and
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Swift Code of Conduct](https://www.swift.org/code-of-conduct/). By participating, you are expected to uphold this code. Please report unacceptable behavior to one of the [Swift Core Team](https://swift.org/community/#community-structure).
+This project and everyone participating in it is governed by the [Swift Code of Conduct](https://www.swift.org/code-of-conduct/). By participating, you are expected to uphold this code. Please report unacceptable behavior to one of the [Swift Core Team](https://swift.org/community/#community-structure) members.
 
 ## Overview
 
-The Swift.org website has a number of goals that are defined on the [website overview](http://swift.org/website). This lays out the aims of Swift.org and should be considered when contributing.
+The Swift.org website has a number of goals that are defined in the [website overview](http://swift.org/website). This lays out the aims of Swift.org and should be considered when contributing.
 
 Swift.org is guided by the [Swift Website Workgroup (SWWG)](https://www.swift.org/website-workgroup) and they are responsible for the content on the site, the design and all technical aspects.
 
@@ -30,13 +30,13 @@ See `LICENSE.md` for legal information.
 
 ## Swift Website Workgroup
 
-The [Swift Website Workgroup (SWWG)](https://www.swift.org/website-workgroup) is a steering committee comprised of members from Apple and the community. They are responsible for guiding the evolution of Swift.org, whether that be any technical or design changes, or content updates.
+The [Swift Website Workgroup (SWWG)](https://www.swift.org/website-workgroup) is a steering committee comprised of members from the community. They are responsible for guiding the evolution of Swift.org, whether that be any technical or design changes, or content updates.
 
-The SWWG should be consulted before proposing any substantial changes to Swift.org, either on the forums, opening an issue on GitHub or via [Slack](https://swift-server.slack.com/archives/C03FUTB0NTD) - (you can join [here](https://join.slack.com/t/swift-server/shared_invite/zt-1a3hxb9r5-8sFU3D7JUvaP5QO1AjSivg)).
+The SWWG should be consulted before proposing any substantial changes to Swift.org, by creating a new post on the forums.
 
 ## Governance
 
-Swift.org contributions must adhere to the website's [governance process](https://www.swift.org/website-governance/) which dictate how contributions will be accepted. The process covers different scenarios for contributing and how contributions will be accepted.
+Swift.org contributions must adhere to the website's [governance process](https://www.swift.org/website-governance/) which define how contributions will be accepted. The process covers different scenarios for contributing and how contributions will be accepted.
 
 ## Blog Posts
 
