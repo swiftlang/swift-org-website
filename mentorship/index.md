@@ -27,7 +27,7 @@ After the 12-week cohort ends on September 30th, the interest surveys will open 
 
 ### Interest Surveys
 
-The 2022 mentee and mentor interest survey submissions will open on June 1st - check back here for the survey links on that date. In the meantime, start to think through the specific goals that you'd like to work toward through the Swift Mentorship Program.
+The 2022 mentee and mentor interest survey submissions are open June 1st - June 15th. If you are interested in participating as a mentee or mentor, please fill out the interest survey [here](/mentorship-interest-survey/).
 
 The mentee interest survey is not an application; but rather it will tell the Diversity in Swift work group about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the work group may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
 
