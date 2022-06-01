@@ -55,10 +55,6 @@ Steps to reproduce the behavior:
 
 <!-- Git hash of the site if applicable -->
 
-### Swift & OS version (output of `swift --version && uname -a`)
-
-<!-- Swift version if applicable -->
-
 ## Additional context 
 
 <!-- Add any other context about the problem here. -->
