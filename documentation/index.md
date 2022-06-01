@@ -35,6 +35,7 @@ Get involved with an existing translation project, or start a new one.
 
 <div class="links links-external links-list-nostyle" markdown="1">
 - [Read Chinese translation](https://swiftgg.gitbook.io/swift){:target="_blank"}
+- [Read Japanese translation](https://www.swiftlangjp.com){:target="_blank"}
 - [Read Korean translation](https://bbiguduk.gitbook.io/swift){:target="_blank"}
 - [Read Spanish translation](https://swift-book-es.vercel.app/){:target="_blank"}
 </div>
