@@ -7,13 +7,13 @@ Note that nothing prevents Swift from being ported to other Linux distributions 
 
 #### Requirements
 
-* Ubuntu 18.04 or 20.04 (64-bit)
+* Ubuntu 18.04, 20.04, or 22.04
 * CentOS 7, 8
 * Amazon Linux 2
 
 #### Supported Target Platforms
 
-* Ubuntu 18.04 or 20.04 (64-bit)
+* Ubuntu 18.04, 20.04, or 22.04
 * CentOS 7, 8
 * Amazon Linux 2
 
