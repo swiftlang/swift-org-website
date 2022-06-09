@@ -309,7 +309,7 @@ is printed.
   {{expand}}
   {{detail}}
   Especially when a parameter type is `NSObject`, `Any`, `AnyObject`,
-  or a fundamental type such `Int` or `String`, type information and
+  or a fundamental type such as `Int` or `String`, type information and
   context at the point of use may not fully convey intent. In this
   example, the declaration may be clear, but the use site is vague.
 
