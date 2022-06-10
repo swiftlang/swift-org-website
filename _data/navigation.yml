@@ -2,6 +2,8 @@
     - title: About Swift
       url: /about/
       sections:
+        - title: Features
+          name: features
         - title: Swift.org and Open Source
           name: swiftorg-and-open-source
         - title: Platform Support
@@ -32,6 +34,13 @@
           name: docker
     - title: Platform Support
       url: /platform-support/
+      sections:
+        - title: Deployment and Development
+          name: deployment-and-development
+        - title: Deployment-only
+          name: deployment-only
+        - title: Platform Owners
+          name: platform-owners
     - title: Documentation
       url: /documentation/
       sections:
@@ -61,8 +70,26 @@
           name: forums
     - title: Diversity
       url: /diversity/
+      sections:
+        - title: Mission
+          name: mission
+        - title: Work Group
+          name: work-group
+        - title: Community Groups
+          name: community-groups
+        - title: Events
+          name: events
+        - title: Community-focused blog on Swift.org
+          name: community-focused-blog-on-swiftorg
+        - title: Community Participation
+          name: community-participation
     - title: Mentorship
       url: /mentorship/
+      sections:
+        - title: Current Program
+          name: current-program
+        - title: Frequently Asked Questions
+          name: frequently-asked-questions
     - title: Contributing
       url: /contributing/
       sections:
@@ -111,6 +138,8 @@
           name: configuration
         - title: Usage
           name: usage
+        - title: Community Involvement
+          name: community-involvement
     - title: Source Compatibility
       url: /source-compatibility/
       sections:
@@ -122,8 +151,15 @@
           name: maintaining-projects
         - title: Pull Request Testing
           name: pull-request-testing
+        - title: Building Projects
+          name: building-projects
     - title: Security
       url: /support/security.html
+      sections:
+        - title: Security Process
+          name: security-process
+        - title: Security Updates
+          name: security-updates
 
 - header: Open Source Efforts
   pages:
@@ -164,5 +200,19 @@
           name: xcode-playground-support
     - title: Swift on Server
       url: /server/
+      sections:
+        - title: Why Swift on Server?
+          name: why-swift-on-server
+        - title: Swift Server Workgroup
+          name: swift-server-workgroup
+        - title: Development guides
+          name: development-guides
     - title: Swift.org website
       url: /website/
+      sections:
+        - title: Community Participation
+          name: community-participation
+        - title: Governance
+          name: governance
+        - title: Website workgroup
+          name: website-workgroup
