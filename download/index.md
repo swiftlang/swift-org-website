@@ -21,16 +21,6 @@ title: Download Swift
 {% assign amazonlinux2_aarch64_development_builds = site.data.builds.development.amazonlinux2-aarch64 | sort: 'date' | reverse %}
 {% assign windows10_development_builds = site.data.builds.development.windows10 | sort: 'date' | reverse %}
 
-
-{% assign xcode_5_5_builds = site.data.builds.swift-5_5-branch.xcode | sort: 'date' | reverse %}
-{% assign ubuntu1604_5_5_builds = site.data.builds.swift-5_5-branch.ubuntu1604 | sort: 'date' | reverse %}
-{% assign ubuntu1804_5_5_builds = site.data.builds.swift-5_5-branch.ubuntu1804 | sort: 'date' | reverse %}
-{% assign ubuntu2004_5_5_builds = site.data.builds.swift-5_5-branch.ubuntu2004 | sort: 'date' | reverse %}
-{% assign amazonlinux2_5_5_builds = site.data.builds.swift-5_5-branch.amazonlinux2 | sort: 'date' | reverse %}
-{% assign centos7_5_5_builds = site.data.builds.swift-5_5-branch.centos7 | sort: 'date' | reverse %}
-{% assign centos8_5_5_builds = site.data.builds.swift-5_5-branch.centos8 | sort: 'date' | reverse %}
-{% assign windows10_5_5_builds = site.data.builds.swift-5_5-branch.windows10 | sort: 'date' | reverse %}
-
 {% assign xcode_5_6_builds = site.data.builds.swift-5_6-branch.xcode | sort: 'date' | reverse %}
 {% assign ubuntu1604_5_6_builds = site.data.builds.swift-5_6-branch.ubuntu1604 | sort: 'date' | reverse %}
 {% assign ubuntu1804_5_6_builds = site.data.builds.swift-5_6-branch.ubuntu1804 | sort: 'date' | reverse %}
@@ -509,43 +499,6 @@ but they have not gone through the full testing that is performed for official r
   <summary>Older Snapshots</summary>
   {% include_relative _older-5_6-snapshots.md %}
 </details>
-
-
-### Swift 5.5 Development
-
-Swift 5.5 Snapshots are prebuilt binaries
-that are automatically created from `release/5.5` branch.
-These snapshots are not official releases.
-They have gone through automated unit testing,
-but they have not gone through the full testing that is performed for official releases.
-
-<table id="latest-builds" class="downloads">
-    <thead>
-        <tr>
-            <th class="download">Download</th>
-            <th class="date">Date</th>
-            <th class="docker-tag">Docker Tag</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% include_relative _build-docker.html platform="Apple Platforms" build=xcode_5_5_builds.first name="Xcode" platform_dir="xcode" branch_dir="swift-5.5-branch" %}
-        {% include_relative _build-docker.html platform="Linux" build=ubuntu1604_5_5_builds.first name="Ubuntu 16.04" docker_tag="Coming soon" platform_dir="ubuntu1604" branch_dir="swift-5.5-branch" %}
-        {% include_relative _build-docker.html platform="Linux" build=ubuntu1804_5_5_builds.first name="Ubuntu 18.04" docker_tag="Coming soon" platform_dir="ubuntu1804" branch_dir="swift-5.5-branch" %}
-        {% include_relative _build-docker.html platform="Linux" build=ubuntu2004_5_5_builds.first name="Ubuntu 20.04" docker_tag="Coming soon" platform_dir="ubuntu2004" branch_dir="swift-5.5-branch" %}
-        {% include_relative _build-docker.html platform="Linux" build=centos7_5_5_builds.first name="CentOS 7" docker_tag="Coming soon" platform_dir="centos7" branch_dir="swift-5.5-branch" %}
-        {% include_relative _build-docker.html platform="Linux" build=centos8_5_5_builds.first name="CentOS 8" docker_tag="Coming soon" platform_dir="centos8" branch_dir="swift-5.5-branch" %}
-        {% include_relative _build-docker.html platform="Linux" build=amazonlinux2_5_5_builds.first name="Amazon Linux 2" docker_tag="Coming soon" platform_dir="amazonlinux2" branch_dir="swift-5.5-branch" %}
-        {% include_relative _build-docker.html platform="windows" build=windows10_5_5_builds.first name="Windows 10" platform_dir="windows10" branch_dir="swift-5.5-branch" %}
-    </tbody>
-</table>
-
-<sup>1</sup> Swift Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
-
-<details class="download">
-  <summary>Older Snapshots</summary>
-  {% include_relative _older-5_5-snapshots.md %}
-</details>
-
 
 
 Swift is covered by the Swift License at [swift.org/LICENSE.txt](/LICENSE.txt).
