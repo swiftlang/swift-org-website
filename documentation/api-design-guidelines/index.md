@@ -808,6 +808,12 @@ func move(from **start**: Point, to **end**: Point)
   pattern of use where methods are invoked.
   {:#parameter-with-defaults-towards-the-end}
 
+* **If your API will run in production, prefer `#fileID`** over alternatives.
+  `#fileID` saves space and protects developers’ privacy. Use `#filePath` in
+  APIs that are never run by end users (such as test helpers and scripts) if
+  the full path will simplify development workflows or be used for file I/O.
+  Use `#file` to preserve source compatibility with Swift 5.2 or earlier.
+
 ### Argument Labels
 
 ~~~swift
