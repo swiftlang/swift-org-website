@@ -457,7 +457,7 @@ but they have not gone through the full testing that is performed for official r
     </tbody>
 </table>
 
-<!-- <sup>1</sup> Swift Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br> -->
+<sup>1</sup> Swift Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
 
 <details class="download">
   <summary>Older Snapshots</summary>

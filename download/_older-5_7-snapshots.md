@@ -112,7 +112,7 @@ Amazon Linux 2
 {% endif %}
 
 
-<!-- {% if windows10_5_7_builds.size > 1 %}
+{% if windows10_5_7_builds.size > 1 %}
 
 Windows 10
 
@@ -129,4 +129,4 @@ Windows 10
     </tbody>
 </table>
 
-{% endif %} -->
+{% endif %}
