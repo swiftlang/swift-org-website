@@ -25,8 +25,13 @@ layout: base
           {% endif %}
         </span>
       </div>
-      {% if author.about %}
-      <div class="about">{{ author.about }}</div>
+      {% if page.about %}
+        {% assign about = page.about %}
+      {% elsif author.about %}
+        {% assign about = author.about %}
+      {% endif %}
+      {% if about %}
+      <div class="about">{{ about }}</div>
       {% endif %}
     {% endif %}
     {% endfor %}
