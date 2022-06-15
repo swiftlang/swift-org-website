@@ -1,20 +1,7 @@
 - name: Ben Cohen
-  email: ben_cohen@apple.com
-
-- name: Doug Gregor
-  email: dgregor@apple.com
-
-- name: Joe Groff
-  email: jgroff@apple.com
-
-- name: John McCall
-  email: rjmccall@apple.com
-
+- name: Holly Borla
+- name: Marc Aupont
+- name: Paris Pittman
 - name: Saleem Abdulrasool
-  email: compnerd@compnerd.org
-
 - name: Ted Kremenek
-  email: kremenek@apple.com
-
 - name: Tom Doron
-  email: tomerd@apple.com

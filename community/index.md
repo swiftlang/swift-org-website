@@ -21,15 +21,14 @@ All communication within project spaces should adhere to Swift project's [Code o
 Advancing the Swift programming language with a coherent, clear view of its evolution requires strong leadership.  The leadership is taken from the community, and works closely with the much broader group of contributors and users. Roles within the community include:
 
 
-* __[Project lead](#project-lead)__ appoints technical leaders from the community.  Apple Inc. is the project lead, and interacts with the community through its representative.
-* __[Core team](#core-team)__ is the small group of engineers responsible for strategic direction
-* __[Code owner](#code-owners)__ is the individual responsible for a specific area of the Swift codebase
+* __[Project Lead](#project-lead)__ appoints technical leaders from the community.  Apple Inc. is the project lead, and interacts with the community through its representative.
+* __[Core Team](#core-team)__ is the small group responsible for strategic direction and oversight of the Swift project
+* __[Language Workgroup](#language-workgroup)__ is a small group of experts that drive the Swift language forward in a coherent direction
+* __[Code Owner](#code-owners)__ is the individual responsible for a specific area of the Swift codebase
 * __[Committer](/contributing/#commit-access)__ is anyone that has commit access to the Swift code base
 * __[Contributor](/contributing/#contributing-code)__ is anyone that contributes a patch or helps with code review
 
-
 Most importantly, everyone that uses Swift is a valued member of our extended community.
-
 
 #### Project Lead
 
@@ -39,15 +38,23 @@ Apple Inc. is the project lead and serves as the arbiter for the project.  The p
 
 #### Core Team
 
-The Core Team reviews and helps iterate on [language evolution proposals](/contributing/#evolution-process) from the community at large, acting as the approver of these proposals. Team members help drive Swift forward in a coherent direction consistent with the goal of creating the best possible general purpose programming language.
+The Core Team provides cohesion across the Swift community's various workgroups and initiatives, providing support and strategic alignment. The Project Lead appoints members of the Core Team to bring a mixture of experience, expertise, and leadership so the group may together act as effective stewards for the Swift project and its community. The Core Team membership is expected to change over time.
 
-Members of the core team are appointed by the project lead based on their technical expertise and proven contribution to the community. The current Core Team members are:
+The current Core Team members are:
 
 {% assign people = site.data.core_team | sort: "name" %}
-{% for person in people %}{% assign url = "mailto:" | append: person.email %}* [{{ person.name }}]({{ url }})
+{% for person in people %}* {{ person.name }}
 {% endfor %}
 
-The Core Team membership is expected to change over time.  Exceptional community members will be appointed based on their record of community involvement and contributions.
+#### Language Workgroup
+
+The Language Workgroup comprises experts that the Swift Project Lead and the Core Team have identified as possessing a balance of perspectives and expertise to review, guide, and strategically align changes to the language mindfully.  The Language Workgroup reviews and helps iterate [language evolution proposals](/contributing/#evolution-process) from the community, acting as the approver of these proposals.  Workgroup members help drive the Swift language forward coherently to create the best possible general-purpose programming language.  The Language Workgroup membership is expected to change over time.
+
+The current Language Workgroup members are:
+
+{% assign people = site.data.language_wg | sort: "name" %}
+{% for person in people %}* {{ person.name }}
+{% endfor %}
 
 #### Code Owners
 
