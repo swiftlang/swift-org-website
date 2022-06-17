@@ -230,13 +230,15 @@ hborla:
    email: hborla@apple.com
    github: hborla
    twitter: hollyborla
-   about: "Holly Borla is an engineer on the Swift compiler team at Apple, and a member of the Diversity in Swift work group."
+   gravatar: b3e284dd808123c26f476d75da0b5b3c
+   about: "Holly Borla is an engineer on the Apple Swift team, and a member of the Swift Core Team, Language work group, and Diversity in Swift work group."
 
 krstnfx:
    name: Kristina Fox
    github: krstnfx
    twitter: krstnfx
-   about: "Kristina Fox is an iOS engineer on the health team at Apple, and a member of the Diversity in Swift work group."
+   gravatar: 5e142f580e63beae5db6a7ba25e9162c
+   about: "Kristina Fox is an iOS engineering manager on the health team at Apple, and a member of the Diversity in Swift and Swift.org website work groups."
 
 yim-lee:
    name: Yim Lee
