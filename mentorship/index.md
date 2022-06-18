@@ -29,7 +29,7 @@ After the 12-week cohort ends on September 30th, the interest surveys will open 
 
 The 2022 mentee and mentor interest survey submissions are open June 1st - June 15th. If you are interested in participating as a mentee or mentor, please fill out the interest survey [here](/mentorship-interest-survey/).
 
-The mentee interest survey is not an application; but rather it will tell the Diversity in Swift work group about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the work group may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
+The mentee interest survey is not an application; but rather it will tell the Diversity in Swift workgroup about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the workgroup may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
 
 The Swift Mentorship Program is also a leadership opportunity for veteran community members, particularly if they are already an open-source project maintainer or frequent contributor. If you’re passionate about lowering the barrier to entry for new contributors in our community, please consider getting involved as a mentor!
 
@@ -40,13 +40,13 @@ Participation in the Swift Mentorship program is governed by the [Swift Code of 
 <details class="download">
   <summary>How are mentor/mentee pairs selected?</summary>
 
-Mentors and mentees will each fill out an interest survey. The survey is not an application, but rather it tells the Diversity in Swift work group about the participant’s interests, experience, learning goals, and more, which will be used to help the work group match mentor-mentee pairs. The interest surveys have a parallel set of questions to help evaluate whether the mentor has suitable experience to help the mentee with their learning goals. For example, the mentee questionnaire asks the mentee which specific skills/topics they are interested in working on, and the mentor questionnaire asks which specific skills/topics the mentor has experience with and can help a mentee learn about. A potential mentee will not be matched with a mentor if there are not enough mentors, or if there is not a suitable mentor to help them with their learning goals.
+Mentors and mentees will each fill out an interest survey. The survey is not an application, but rather it tells the Diversity in Swift workgroup about the participant’s interests, experience, learning goals, and more, which will be used to help the workgroup match mentor-mentee pairs. The interest surveys have a parallel set of questions to help evaluate whether the mentor has suitable experience to help the mentee with their learning goals. For example, the mentee questionnaire asks the mentee which specific skills/topics they are interested in working on, and the mentor questionnaire asks which specific skills/topics the mentor has experience with and can help a mentee learn about. A potential mentee will not be matched with a mentor if there are not enough mentors, or if there is not a suitable mentor to help them with their learning goals.
 </details>
 
 <details class="download">
   <summary>Are there any necessary qualifications to participate?</summary>
 
-There are no necessary qualifications for mentees — the mentorship program is open to anybody 18 years and older who is willing to learn about Swift! Since this program is designed to encourage and help diverse developers overcome barriers and actively participate in the Swift community, the Diversity in Swift work group strongly encourages members of Women in Swift and Black in Swift to participate.
+There are no necessary qualifications for mentees — the mentorship program is open to anybody 18 years and older who is willing to learn about Swift! Since this program is designed to encourage and help diverse developers overcome barriers and actively participate in the Swift community, the Diversity in Swift workgroup strongly encourages members of Women in Swift and Black in Swift to participate.
 Mentors must be members of the Swift community (e.g., iOS developers, Swift compiler contributors, etc). Prior experience with mentorship is a plus, but not required.
 </details>
 

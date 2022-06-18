@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Swift.org website work group (SWWG)
+title: Swift.org website workgroup (SWWG)
 ---
 
 See [website overview](/website) for more information about the Swift.org website goals, content governance and contribution guidelines.
@@ -14,7 +14,7 @@ The Swift website workgroup is a steering team that helps guide the evolution on
 
 Analogous to the [Core Team](/community#core-team) for Swift, the workgroup is responsible for establishing the processes and standards by which changes to the Swift.org website are proposed and eventually integrated.
 
-The current website work group consists of the following people:
+The current website workgroup consists of the following people:
 
 * Alexander Sandberg ([@alexandersandberg](https://github.com/alexandersandberg))
 * Dave Verwer ([@daveverwer](https://github.com/daveverwer))
@@ -44,7 +44,7 @@ Members of the Swift website workgroup serve at the discretion of the Swift core
 ## Membership
 
 Members of the Swift website workgroup are appointed by the Swift project core team on their expertise and contributions to the community.  
-Membership in the work group is contribution-based and expected to evolve over time.
+Membership in the workgroup is contribution-based and expected to evolve over time.
 Adding new members and removing inactive ones is subject to a workgroup vote and requires unanimous agreement.
 The workgroup's vote then needs to be approved by the Swift core team.
 

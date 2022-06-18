@@ -73,8 +73,8 @@
       sections:
         - title: Mission
           name: mission
-        - title: Work Group
-          name: work-group
+        - title: Workgroup
+          name: workgroup
         - title: Community Groups
           name: community-groups
         - title: Events

@@ -34,8 +34,8 @@ It’s challenging to debug non-deterministic performance, and language-induced 
 
 ## Swift Server Workgroup
 
-The Swift Server work group is a steering team that promotes the use of Swift for developing and deploying server applications.
-The Swift Server work group:
+The Swift Server workgroup is a steering team that promotes the use of Swift for developing and deploying server applications.
+The Swift Server workgroup:
 
 * Defines and prioritize efforts that address the needs of the Swift server community
 * Defines and run an incubation process for these efforts to reduce duplication of effort, increase compatibility and promote best practices
@@ -45,7 +45,7 @@ Read more about the workgroup and server incubator it runs [here]({{site.url}}/s
 
 ## Development guides
 
-The following guides have been developed by the Swift Server work group and the Swift on Server community.
+The following guides have been developed by the Swift Server workgroup and the Swift on Server community.
 They are designed to help teams and individuals running Swift Server applications on Linux and to provide orientation for those who want to start with such development.
 They focus on how to compile, test, deploy and debug such application and provides tips in those areas.
 

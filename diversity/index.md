@@ -9,11 +9,11 @@ title: Diversity in Swift
 
 The mission of Diversity in Swift is to foster an inclusive Swift community by creating more pathways for a diverse group of developers, increasing the engagement and retention of those developers, and helping developers of all backgrounds establish leadership and technical expertise within the community. Our differences in identity and experience enrich our community with new ideas and perspectives, and we are committed to ensuring that everybody feels supported and valued in the Swift community.
 
-## Work Group
+## Workgroup
 
-The Diversity in Swift work group is made up of Swift community members from various organizations and backgrounds. Members of the work group will serve for two years, and they are all volunteers working to fulfill the Diversity in Swift mission.
+The Diversity in Swift workgroup is made up of Swift community members from various organizations and backgrounds. Members of the workgroup will serve for two years, and they are all volunteers working to fulfill the Diversity in Swift mission.
 
-The current Diversity in Swift work group consists of the following people:
+The current Diversity in Swift workgroup consists of the following people:
 
 * Devanshi Modha ([@devanshimodha](https://forums.swift.org/u/devanshimodha))
 * Holly Borla ([@hborla](https://forums.swift.org/u/hborla/))
@@ -22,7 +22,7 @@ The current Diversity in Swift work group consists of the following people:
 * Paul Hudson ([@paul_hudson](https://forums.swift.org/u/paul_hudson/))
 * Timirah James ([@timirahj](https://forums.swift.org/u/timirahj))
 
-You can reach the Diversity in Swift work group on the Swift Forums as [@diversity-work-group](https://forums.swift.org/g/diversity-work-group).
+You can reach the Diversity in Swift workgroup on the Swift Forums as [@diversity-work-group](https://forums.swift.org/g/diversity-work-group).
 
 ## Community Groups
 
@@ -42,7 +42,7 @@ Diversity in Swift will occasionally host virtual events and meetups for network
 
 ## Community-focused blog on Swift.org
 
-The Diversity in Swift work group will include posts on the Swift.org blog that recognize and highlight the work being done by developers across our community. The Diversity in Swift work group will use the [Community Showcase](https://forums.swift.org/c/community-showcase) to brainstorm ideas and topics for these community-focused blog posts. Please post any recommendations that you think Swift users would be interested in hearing more about on the Community Showcase, along with a brief description of why you found that work helpful or inspiring. Occasionally, the Diversity in Swift work group may also post a Call For Participation to solicit recommendations about a specific Swift topic.
+The Diversity in Swift workgroup will include posts on the Swift.org blog that recognize and highlight the work being done by developers across our community. The Diversity in Swift workgroup will use the [Community Showcase](https://forums.swift.org/c/community-showcase) to brainstorm ideas and topics for these community-focused blog posts. Please post any recommendations that you think Swift users would be interested in hearing more about on the Community Showcase, along with a brief description of why you found that work helpful or inspiring. Occasionally, the Diversity in Swift workgroup may also post a Call For Participation to solicit recommendations about a specific Swift topic.
 
 ## Community Participation
 
