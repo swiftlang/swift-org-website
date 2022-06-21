@@ -2,11 +2,11 @@
 layout: post
 published: true
 date: 2022-06-21 10:00:00
-title: Exploring Swift&#58; Property wrappers in the wild
+title: "Exploring Swift: Property wrappers in the wild"
 author: [tingbecker, twostraws]
 ---
 
-Property wrappers were [introduced in Swift 5.1](https://github.com/apple/swift-evolution/blob/main/proposals/0258-property-wrappers.md) as to make it easier to reuse common programming patterns, but since then they have grown to work with local context, function and closure parameters, and more. We’re lucky enough to have lots of creators in our community creating apps with property wrappers then writing about their experiences, and we’d like to share a few of our favorites with you here.
+Property wrappers were [introduced in Swift 5.1](https://github.com/apple/swift-evolution/blob/main/proposals/0258-property-wrappers.md) as a way to make it easier to reuse common programming patterns, but since then they have grown to work with local context, function and closure parameters, and more. We’re lucky enough to have lots of creators in our community creating apps with property wrappers then writing about their experiences, and we’d like to share a few of our favorites with you here.
 
 ![Erica Sadun on stage giving a talk on property wrappers](/assets/images/property-wrappers-blog/erica.png){: style="float: left; margin-right: 1em; max-width: 50%"}
 In [her talk on property wrappers](https://www.youtube.com/watch?v=ctNMf_qVXPg) from dotSwift 2020, [Erica Sadun](https://twitter.com/ericasadun) teaches us why property wrappers help us specify behavior contracts at the point of declaration rather than the point of use. Erica has been one of the most active participants in the Swift Evolution process – we really appreciate her work! Another great talk comes from [Stewart Lynch](https://twitter.com/StewartLynch), who demonstrates how both wrapped values and projected values are useful when working with property wrappers, showing in detail how we could use them in both UIKit and SwiftUI – [you can find it here](https://www.youtube.com/watch?v=AXfSE2ET8c8).
