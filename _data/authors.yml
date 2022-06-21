@@ -34,7 +34,7 @@ twostraws:
    email: paul@hackingwithswift.com
    github: twostraws
    twitter: twostraws
-   about: "Paul Hudson is the creator of Hacking with Swift, and a member of the Diversity in Swift work group."
+   about: "Paul Hudson is the creator of Hacking with Swift, and a member of the Diversity in Swift workgroup."
 
 seabaylea:
    name: Chris Bailey
@@ -176,7 +176,7 @@ xedin:
 tanner:
    name: Tanner Nelson
    twitter: tanner0101
-   about: "Tanner Nelson is member of the Swift Server Work Group and creator of the Vapor web framework."
+   about: "Tanner Nelson is member of the Swift Server Workgroup and creator of the Vapor web framework."
 
 stephentyrone:
    name: Steve Canon
@@ -208,7 +208,7 @@ tomerd:
   github: tomerd
   twitter: tomerdoron
   gravatar: 3cb408ef512103925c4fe709bf3f3b11
-  about: "Tom Doron is a member of the Swift Core Team and the Swift Server Work Group. He manages a team working on server-side Swift libraries at Apple."
+  about: "Tom Doron is a member of the Swift Core Team and the Swift Server Workgroup. He manages a team working on server-side Swift libraries at Apple."
 
 ktoso:
   name: Konrad ‘ktoso’ Malawski
@@ -230,13 +230,13 @@ hborla:
    email: hborla@apple.com
    github: hborla
    twitter: hollyborla
-   about: "Holly Borla is an engineer on the Swift compiler team at Apple, and a member of the Diversity in Swift work group."
+   about: "Holly Borla is an engineer on the Swift compiler team at Apple, and a member of the Diversity in Swift workgroup."
 
 krstnfx:
    name: Kristina Fox
    github: krstnfx
    twitter: krstnfx
-   about: "Kristina Fox is an iOS engineer on the health team at Apple, and a member of the Diversity in Swift work group."
+   about: "Kristina Fox is an iOS engineer on the health team at Apple, and a member of the Diversity in Swift workgroup."
 
 yim-lee:
    name: Yim Lee
@@ -268,10 +268,10 @@ diversity-workgroup:
   github: 0xTim
   twitter: 0xTim
   gravatar: c8678b78a2c1c113302ce686f13435d1
-  about: "Tim Condon sits on the SSWG (Swift Server Work Group) and is part of the Vapor Core Team"
+  about: "Tim Condon sits on the SSWG (Swift Server Workgroup) and is part of the Vapor Core Team"
 
 devanshimodha:
   name: Devanshi Modha
   github: devanshimodha
   twitter: devanshimodha
-  about: "Devanshi is an iOS engineer and a member of the Diversity in Swift work group."
+  about: "Devanshi is an iOS engineer and a member of the Diversity in Swift workgroup."
