@@ -2,7 +2,7 @@
 layout: post
 date: 2021-05-10 10:00:00
 title: Announcing the Swift Mentorship Program
-author: diversity-work-group
+author: diversity-workgroup
 ---
 
 We’re thrilled to announce the Swift Mentorship Program — a new contributor program for the Swift community and part of the [Diversity in Swift](/diversity) initiative. The Swift Mentorship Program is designed to support developers as they become active open source contributors to the Swift project, providing direct mentorship with experienced members of the community.

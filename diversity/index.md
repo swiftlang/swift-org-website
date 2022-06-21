@@ -22,13 +22,13 @@ The current Diversity in Swift workgroup consists of the following people:
 * Paul Hudson ([@paul_hudson](https://forums.swift.org/u/paul_hudson/))
 * Timirah James ([@timirahj](https://forums.swift.org/u/timirahj))
 
-You can reach the Diversity in Swift workgroup on the Swift Forums as [@diversity-work-group](https://forums.swift.org/g/diversity-work-group).
+You can reach the Diversity in Swift workgroup on the Swift Forums as [@diversity-workgroup](https://forums.swift.org/g/diversity-workgroup).
 
 ## Community Groups
 
 To support various members of our Swift community, we have created specific community groups for developers to connect with others who have similar experiences and backgrounds. The available community groups are **Women in Swift**, **Black in Swift**, and **Pride in Swift**. These are private, moderated support spaces on the Swift Forums.
 
-If you’re interested in joining one of these groups, please message [@diversity-work-group](https://forums.swift.org/new-message?groupname=diversity-work-group&title=Join+Community+Group&body=1.+Which+community+group(s)+would+you+like+to+join%0D%0A2.+What+support+do+you+hope+to+get+out+of+this+community+group) on the Swift Forums, and briefly answer the following questions:
+If you’re interested in joining one of these groups, please message [@diversity-workgroup](https://forums.swift.org/new-message?groupname=diversity-workgroup&title=Join+Community+Group&body=1.+Which+community+group(s)+would+you+like+to+join%0D%0A2.+What+support+do+you+hope+to+get+out+of+this+community+group) on the Swift Forums, and briefly answer the following questions:
 
 1. Which community group(s) would you like to join?
 2. What support do you hope to get out of this community group?

@@ -2,7 +2,7 @@
 layout: post
 date: 2020-12-16 9:59:00
 title: Accessibility and Inclusion in the Swift Community
-author: diversity-work-group
+author: diversity-workgroup
 ---
 
 Diversity and inclusion are both critically important values when writing software designed to be used and enjoyed by everyone. The Swift community embraces these values, and we are excited to highlight ways to make sure everyone feels welcome, and bring even more people into the fold of Swift development.

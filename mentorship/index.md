@@ -35,7 +35,7 @@ The Swift Mentorship Program is also a leadership opportunity for veteran commun
 
 ## Frequently Asked Questions
 
-Participation in the Swift Mentorship program is governed by the [Swift Code of Conduct](/code-of-conduct), and participants agree to the Swift Mentorship Program [terms and conditions](/mentorship-tos/). If you have any questions or concerns throughout the program, please reach out to [@diversity-work-group](https://forums.swift.org/new-message?groupname=diversity-work-group) on the Swift Forums.
+Participation in the Swift Mentorship program is governed by the [Swift Code of Conduct](/code-of-conduct), and participants agree to the Swift Mentorship Program [terms and conditions](/mentorship-tos/). If you have any questions or concerns throughout the program, please reach out to [@diversity-workgroup](https://forums.swift.org/new-message?groupname=diversity-workgroup) on the Swift Forums.
 
 <details class="download">
   <summary>How are mentor/mentee pairs selected?</summary>
@@ -95,11 +95,11 @@ There is no formal evaluation at the end of the mentorship program. However, the
 <details class="download">
   <summary>I’m interested in being a mentor! What should I do?</summary>
 
-Please reach out to <a href="https://forums.swift.org/new-message?groupname=diversity-work-group">@diversity-work-group</a> on the Swift Forums if you are interested in participating as a mentor.
+Please reach out to <a href="https://forums.swift.org/new-message?groupname=diversity-workgroup">@diversity-workgroup</a> on the Swift Forums if you are interested in participating as a mentor.
 </details>
 
 <details class="download">
   <summary>I have more questions. What should I do?</summary>
 
-Please reach out to <a href="https://forums.swift.org/new-message?groupname=diversity-work-group">@diversity-work-group</a> on the Swift Forums with any additional questions you have!
+Please reach out to <a href="https://forums.swift.org/new-message?groupname=diversity-workgroup">@diversity-workgroup</a> on the Swift Forums with any additional questions you have!
 </details>
