@@ -9,7 +9,7 @@ The Swift.org site has long served as the hub where developers come together to 
 Today, we are happy to announce that the Swift.org website itself is also an open source project, ready for community contributions.
 With this move, the website is also expanding its mandate to better support the entire community of Swift users, not just contributors.
 
-To aid in this effort, a new [Swift website work group (SWWG)](/website-workgroup) will be formed to navigate the evolution of the website.
+To aid in this effort, a new [Swift website workgroup (SWWG)](/website-workgroup) will be formed to navigate the evolution of the website.
 It is exciting to imagine what the future of our site can become with the whole community pitching in. So let’s dive into what this all means.
 
 
@@ -26,16 +26,16 @@ As an open source project, the website goals have grown. The site should:
 * Promote activities occurring anywhere within the community
 * Support collaboration and evolution in building the Swift ecosystem
 
-## Swift Website Work Group (SWWG)
+## Swift Website Workgroup (SWWG)
 
-The Swift Website Work Group (SWWG) will have the charter to work across any tools and platforms necessary to create a truly great web experience that achieves the goals stated above.
+The Swift Website Workgroup (SWWG) will have the charter to work across any tools and platforms necessary to create a truly great web experience that achieves the goals stated above.
 This includes work on the main website, as well as the forums, and documentation.
 
 Anyone is welcome to contribute to the Swift.org website. All they need to do is create a pull request with a fix or improvement to the [repository](https://github.com/apple/swift-org-website/) for the site.
 The maintenance of the project, and approvals for community PRs, will be handled by the SWWG, composed of people from the broad Swift community.
 There is also a [forum for folks to talk](https://forums.swift.org/c/swift-website) about the project.
 
-Today, we are opening up nominations for community members who would like to serve on the [Swift Website Work Group (SWWG)](/website-workgroup).
+Today, we are opening up nominations for community members who would like to serve on the [Swift Website Workgroup (SWWG)](/website-workgroup).
 The goal is to get between five and ten volunteers to manage the day-to-day review of PRs from the community, as well as direct strategy for the site.
 
 Individuals who would like to join the workgroup should apply by [contacting the @swift-website-workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup) via the Swift.org forums with your reasons for interest, and special skills that will help you serve in this capacity.
@@ -44,7 +44,7 @@ Members of the Core Team will review applications, and may have follow-up questi
 
 ### Diversity in Swift
 
-Much like other work groups at Swift.org, the Diversity in Swift team will work with the SWWG to ensure the principles and interests of the entire Swift community are always considered. You can [read more about the Swift website work group (SWWG) charter here.](/website-workgroup)
+Much like other workgroups at Swift.org, the Diversity in Swift team will work with the SWWG to ensure the principles and interests of the entire Swift community are always considered. You can [read more about the Swift website workgroup (SWWG) charter here.](/website-workgroup)
 
 
 ## Types of Content
@@ -73,14 +73,14 @@ We hope this will make it even easier for people to participate, and be a testbe
 
 To read up on the full details of the SWWG, check out:
 
-* [Swift website work group charter](/website-workgroup)
+* [Swift website workgroup charter](/website-workgroup)
 * [Swift.org website governance](/website-governance)
 * [Swift forum for website evolution](https://forums.swift.org/c/swift-website)
 
 
-One of the first tasks for the work group will be to determine the future technology stack upon which to build the site.
+One of the first tasks for the workgroup will be to determine the future technology stack upon which to build the site.
 For example, documentation-style pages could move to Swift-DocC. And it may be good to use a Swift-based tool to replace Jekyll.
 Other efforts may include designing new “Getting Started” content to make the site more welcoming.
 
-If you would like to join the work group, please email your interest soon.
+If you would like to join the workgroup, please email your interest soon.
 The goal is to have the first cadre of members set by the end of April 2022.

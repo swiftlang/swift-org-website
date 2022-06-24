@@ -394,7 +394,7 @@ Alex Lorenz
 
 Swift and C++ interoperability is an ongoing open-source initiative
 that aims to make C++ APIs convenient to use from Swift (and vice versa). It's spearheaded
-by the Swift and C++ interoperability workgroup (https://forums.swift.org/g/cxx-interop-work-group, https://forums.swift.org/c/development/c-interoperability/82).
+by the Swift and C++ interoperability workgroup (https://forums.swift.org/g/cxx-interop-workgroup, https://forums.swift.org/c/development/c-interoperability/82).
 This project builds upon the ongoing effort for exposing C++ APIs to Swift,
 by providing some Swift overlays for the C++ standard library types, like std::string
 and std::vector.

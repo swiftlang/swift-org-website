@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Swift Server Work Group (SSWG)
+title: Swift Server Workgroup (SSWG)
 ---
 
-The Swift Server work group is a steering team that promotes the use of Swift for developing and deploying server applications. The Swift Server work group will:
+The Swift Server workgroup is a steering team that promotes the use of Swift for developing and deploying server applications. The Swift Server workgroup will:
 
 * Define and prioritize efforts that address the needs of the Swift server community
 * Define and run an incubation process for these efforts to reduce duplication of effort, increase compatibility and promote best practices
 * Channel feedback for Swift language features needed by the server development community to the Swift Core Team
 
-Analogous to the [Core Team](/community#core-team) for Swift, the work group is responsible for providing overall technical direction and establishing the standards by which libraries and tools are proposed, developed and eventually recommended. Membership of the work group is contribution-based and is expected to evolve over time.
+Analogous to the [Core Team](/community#core-team) for Swift, the workgroup is responsible for providing overall technical direction and establishing the standards by which libraries and tools are proposed, developed and eventually recommended. Membership of the workgroup is contribution-based and is expected to evolve over time.
 
-The current Swift Server work group consists of the following people:
+The current Swift Server workgroup consists of the following people:
 
 * Adam Fowler ([@adam-fowler](https://github.com/adam-fowler))
 * Dave Moser ([@dave-moser](https://github.com/dave-moser), Amazon)
@@ -28,7 +28,7 @@ With Tom Doron ([@tomerd](https://github.com/tomerd), Apple) representing the Sw
 
 ## Communication
 
-The Swift Server work group uses the [Swift Server forum](https://forums.swift.org/c/server) for general discussion.
+The Swift Server workgroup uses the [Swift Server forum](https://forums.swift.org/c/server) for general discussion.
 
 ## Community Participation
 
@@ -40,11 +40,11 @@ Everyone is welcome to contribute in the following ways:
 * Reporting or triaging bugs
 * Submitting pull requests to the library projects for implementation or tests
 
-These conversations will take place on the [Swift Server forum](https://forums.swift.org/c/server). Over time, the work group may form smaller working groups to focus on specific technology areas.
+These conversations will take place on the [Swift Server forum](https://forums.swift.org/c/server). Over time, the workgroup may form smaller working groups to focus on specific technology areas.
 
 ## Charter
 
-The main goal of the Swift Server work group is to eventually recommend libraries and tools for server application development with Swift. The difference between this work group and the Swift Evolution process is that server-oriented libraries and tools that are produced as a result of work group efforts will exist outside of the Swift language project itself. The work group will work to nurture, mature and recommend projects as they move into their development and release stages.
+The main goal of the Swift Server workgroup is to eventually recommend libraries and tools for server application development with Swift. The difference between this workgroup and the Swift Evolution process is that server-oriented libraries and tools that are produced as a result of workgroup efforts will exist outside of the Swift language project itself. The workgroup will work to nurture, mature and recommend projects as they move into their development and release stages.
 
 ## Voting
 
@@ -52,7 +52,7 @@ In various situations the SSWG shall hold a vote. These votes can happen on the 
 
 ## Incubation Process
 
-The Swift Server Work Group has a [process](https://github.com/swift-server/sswg/blob/master/process/incubation.md) which allows a project to go through incubation stages until it graduates and becomes a recommended project.
+The Swift Server Workgroup has a [process](https://github.com/swift-server/sswg/blob/master/process/incubation.md) which allows a project to go through incubation stages until it graduates and becomes a recommended project.
 
 ## Projects
 

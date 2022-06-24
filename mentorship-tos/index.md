@@ -29,7 +29,7 @@ Participants in the Swift Mentorship Program (the **"Program"**) shall be subjec
   * Either party may end the relationship at any time;
   * There is no guarantee that a Mentor can or will provide specific guidance;
   * To ensure that the focus on the mentoring is career-related; and
-  * Mentors and Mentees must stop communicating if they feel uncomfortable or apprehensive about their mentorship relationship and should reach out to: the Diversity in Swift work group on the Swift Forums at @diversity-work-group
+  * Mentors and Mentees must stop communicating if they feel uncomfortable or apprehensive about their mentorship relationship and should reach out to: the Diversity in Swift workgroup on the Swift Forums at [@diversity-workgroup](https://forums.swift.org/new-message?groupname=diversity-workgroup)
 
 7. **Confidentiality.** Mentors and Mentees will treat any information, suggestions, advice or guidance they receive in the course of their participation in the Program in confidence, unless release of that information has been agreed by the other party, is required by law or the information is already available in the public domain other than as a result of a breach of this section. You must not use any personal data about a Mentor or Mentee for any purpose (including, but not limited to, their email address or phone number) not related to the Program. Although the Mentors and Mentees agree to maintain the confidentiality of all information shared within the mentoring partnership, as the Mentors and Mentees may not be affiliated with Apple, Apple cannot guarantee that any information you disclose to your Mentor or Mentee (as applicable) will be kept confidential by the recipient. 
 
