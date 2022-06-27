@@ -17,11 +17,11 @@ If the mentee has not contributed to the project before, they will first work wi
 |:-------------------|:-------------------------------|
 | **June 1st**       |  Interest surveys open         |
 | **June 15th**      |  Interest survey deadline      |
-| **June 27th**      |  Mentorship pairings announced |
-| **July 4th**       |  12-week cohort begins         |
-| **August 8th**     |  Halfway checkpoint            |
-| **September 23rd** |  12-week cohort ends           |
-| **September 30th** |  Feedback deadline             |
+| **July 4th**       |  Mentorship pairings announced |
+| **July 11th**      |  12-week cohort begins         |
+| **August 15th**    |  Halfway checkpoint            |
+| **September 30th** |  12-week cohort ends           |
+| **October 14th**   |  Feedback deadline             |
 
 After the 12-week cohort ends on September 30th, the interest surveys will open back up to offer short-term mentorship for starter bug contributions.
 
