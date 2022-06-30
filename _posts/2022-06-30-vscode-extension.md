@@ -16,7 +16,7 @@ The extension is primarily targeted at Swift Packager Manager (SwiftPM) projects
 
 ### Pre-configured Development Environment
 
-Visual Studio Code uses a number of JSON configuration files to set up your development environment. The Swift extension will auto-generate these files for your SwiftPM project so you won't need to manually set them up. When you load a project, the extension creates build tasks for everything in your project, along with debug and release versions for any executables in your Package.swift. It will also create debugger launch configurations for debug and release builds of all executables.
+Visual Studio Code uses a number of JSON configuration files to set up your development environment. The Swift extension will auto-generate these files for your SwiftPM project so you won't need to manually set them up. When you load a project, the extension creates build tasks for everything in your project, along with debug and release versions for any executables in your `Package.swift`. It will also create debugger launch configurations for debug and release builds of all executables.
 
 ### Package Dependencies View
 
