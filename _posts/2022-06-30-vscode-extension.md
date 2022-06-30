@@ -40,7 +40,7 @@ Visual Studio Code allows you to create workspaces which include multiple worksp
 
 ### Developing inside a Container
 
-The Remote - Containers extension allows you to run Visual Studio Code inside a Docker container to compile and test your code inside that container. It is possible to use this with the Swift extension to test/debug your Swift code. This is particularly useful if you are developing on macOS but deploying to Linux as differences in Linux and macOS performance or features can be caught early.
+The **Remote - Containers** extension allows you to run Visual Studio Code inside a Docker container to compile and test your code inside that container. It is possible to use this with the Swift extension to test/debug your Swift code. This is particularly useful if you are developing on macOS but deploying to Linux as differences in Linux and macOS performance or features can be caught early.
 
 You can also use container support with the nightly Swift Docker images to test new Swift features without having to install a new OS or version of Xcode.
 
