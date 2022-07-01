@@ -100,8 +100,7 @@ if let votes = try? regex.wholeMatch(in: intent) {
 }
 ```
 
-There are two informative sessions about the new string processing APIs: [Meet Swift Regex](https://developer.apple.com/videos/play/wwdc2022/110357/) and [
-Swift Regex: Beyond the basics](https://developer.apple.com/videos/play/wwdc2022/110358/).
+There are two informative sessions about the new string processing APIs: [Meet Swift Regex](https://developer.apple.com/videos/play/wwdc2022/110357/) and [Swift Regex: Beyond the basics](https://developer.apple.com/videos/play/wwdc2022/110358/).
 
 ### Generics and protocols
 
