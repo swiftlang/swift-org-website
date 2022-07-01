@@ -1,4 +1,11 @@
-# Swift Extension for Visual Studio Code
+---
+layout: post
+published: true
+date: 2022-06-30 09:20:00
+title: Swift Extension for Visual Studio Code
+author: o_aberration
+description: Adam Fowler is a member of the Swift Server Workgroup and is known for his work on a number of open source projects including Soto and Hummingbird.
+---
 
 As Swift is deployed across more platforms, it is important that Swift can be developed on more platforms as well. The [Swift Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang) provides a cross-platform solution for Swift development supporting macOS, Linux, and Windows. 
 
