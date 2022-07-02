@@ -38,7 +38,7 @@ The language server protocol (LSP) is a standard for providing language features
 
 ### Debugger
 
-A debugger is provided via the CodeLLDB debugger extension. All the hard work integrating with LLDB is done by CodeLLDB. The Swift extension provides the integration with CodeLLDB by creating debug launch configurations for your project executables on start up. It also configures CodeLLDB to use the Swift version of LLDB.
+A debugger is provided via the [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) debugger extension. All the hard work integrating with LLDB is done by CodeLLDB. The Swift extension provides the integration with CodeLLDB by creating debug launch configurations for your project executables on start up. It also configures CodeLLDB to use the Swift version of LLDB.
 
 ### Test Explorer
 
