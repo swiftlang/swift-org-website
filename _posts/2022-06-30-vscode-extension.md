@@ -28,9 +28,13 @@ Visual Studio Code uses a number of JSON configuration files to set up your deve
 
 The extension provides a package dependency view that shows a list of all your package dependencies along with the versions you are using. The view can be expanded so you can inspect the contents of each dependency. A right-click menu allows you to view the repository for that package as well as replace the dependency with a version local to your computer. Buttons in the title bar add resolve, update, and reset actions for your package.
 
+![Package dependency view]({{ site.baseurl }}/assets/images/vscode-extension-blog/package-dependencies.png)
+
 ### SourceKit-LSP integration
 
 The language server protocol (LSP) is a standard for providing language features such as symbol completion and jump-to-definition in source code editors like Visual Studio Code. Swift support is available to LSP-compatible editors via Apple's SourceKit-LSP implementation. The Swift extension manages the running of a SourceKit-LSP server to provide these language features for Swift and C/C++ source files.
+
+![Symbol completion]({{ site.baseurl }}/assets/images/vscode-extension-blog/symbol-completion.mp4)
 
 ### Debugger
 
@@ -39,6 +43,8 @@ A debugger is provided via the CodeLLDB debugger extension. All the hard work in
 ### Test Explorer
 
 The Test Explorer provides a UI similar to the Xcode Tests UI. The UI contains a tree view, including all the test targets, with each XCTestCase class embedded within those targets and each individual test embedded within those classes. Tests can be run outside of a debugger or in the debugger. You can run individual tests, or filter the tests being run by class or test target, or just run all tests. The UI updates as tests succeed or fail.
+
+![Text explorer view]({{ site.baseurl }}/assets/images/vscode-extension-blog/test-explorer.png)
 
 ### Multi-Project Workspaces
 
