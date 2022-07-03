@@ -199,4 +199,4 @@ Concurrency support in Swift received many other major upgrades this year, such 
 
 There are so many more great updates that it's impossible to cover them all. We are getting faster builds in Xcode thanks to parallelization, faster type checking for function signatures with protocols and `where` clauses, optimizations for run-time protocol conformance checking and more. With reduced standard library size, Swift can run in a variety of environments, and with streamlined toolchain distribution for Linux, many more of us can enjoy using Swift on our favorite platforms.
 
-We are really looking forward to exploring of all these new features further and to using them in our projects.
+We are really looking forward to exploring all of these new features further and to using them in our projects.
