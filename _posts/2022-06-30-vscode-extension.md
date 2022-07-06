@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2022-06-30 09:20:00
+date: 2022-07-07 09:20:00
 title: Swift Extension for Visual Studio Code
 author: adam-fowler
 ---
