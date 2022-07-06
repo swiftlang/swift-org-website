@@ -288,3 +288,24 @@ ronavitzur:
     name: Ron Avitzur
     twitter: RonAvitzur
     about: "Ron Avitzur is the author of the Pacific Tech Graphing Calculator"
+
+fbernutz:
+   name: Feli Bernutz
+   gravatar: 97e98bcaf45715adc2fedabd3c5c1289
+   github: fbernutz
+   twitter: felibe444
+   about: "Feli Bernutz is an iOS engineer at Spotify."
+
+hishnash:
+   name: Matthaus Woolard
+   gravatar: e64eb1d7af21b8a05976f003f2d70b20
+   github: hishnash
+   twitter: hishnash
+   about: "Matthaus Woolard is a data scientist, software engineer and co-founder of Nil Coalescing."
+
+natpanferova:
+   name: Natalia Panferova
+   gravatar: 0cac4017be2dd8a7d8f7b1d276395a92
+   github: nataliapanferova
+   twitter: natpanferova
+   about: "Natalia Panferova is an iOS and macOS engineer and co-founder of Nil Coalescing."
