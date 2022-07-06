@@ -6,7 +6,9 @@ title: "Swift language announcements from WWDC22"
 author: [fbernutz, hishnash, natpanferova]
 ---
 
-![Sketchnote summary for Swift language announcements from WWDC22 blog post](/assets/images/swift-language-updates-from-wwdc22-blog/wwdc22-swift-updates-sketch.jpeg)
+![Sketchnote summary for Swift language announcements from WWDC22 blog post](/assets/images/swift-language-updates-from-wwdc22-blog/wwdc22-swift-updates-sketch-thumbnail.jpeg)
+
+> See the [sketchnote in full resolution](/assets/images/swift-language-updates-from-wwdc22-blog/wwdc22-swift-updates-sketch.jpeg)
 
 Swift has evolved significantly during the past year, and we've seen two large updates to the language. [Swift 5.6](https://apple.github.io/swift-evolution/#?version=5.6) was released in March 2022 and introduced major improvements to the type system, concurrency model and Swift ecosystem. It laid the groundwork for further updates in [Swift 5.7](https://apple.github.io/swift-evolution/#?version=5.7), which is included in [beta versions of Xcode 14](https://developer.apple.com/download/applications/) and available on the [Swift.org downloads page](https://www.swift.org/download/#swift-57-development).
 
