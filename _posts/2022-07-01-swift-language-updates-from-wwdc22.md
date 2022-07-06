@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2022-07-01 22:00:00
+date: 2022-07-06 08:00:00
 title: "Swift language announcements from WWDC22"
 author: [fbernutz, hishnash, natpanferova]
 ---
