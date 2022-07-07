@@ -216,3 +216,12 @@
           name: governance
         - title: Website workgroup
           name: website-workgroup
+    - title: C++ Interoperability
+      url: /cxx-interop-workgroup/
+      sections:
+        - title: Charter
+          name: charter
+        - title: Membership
+          name: membership
+        - title: Communication
+          name: communication
