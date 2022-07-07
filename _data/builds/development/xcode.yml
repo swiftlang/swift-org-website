@@ -1,3 +1,8 @@
+- date: 2022-07-06 10:10:00-06:00
+  debug_info: swift-DEVELOPMENT-SNAPSHOT-2022-07-06-a-osx-symbols.pkg
+  dir: swift-DEVELOPMENT-SNAPSHOT-2022-07-06-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2022-07-06-a-osx.pkg
+  name: Swift Development Snapshot
 - date: 2022-06-26 10:10:00-06:00
   debug_info: swift-DEVELOPMENT-SNAPSHOT-2022-06-26-a-osx-symbols.pkg
   dir: swift-DEVELOPMENT-SNAPSHOT-2022-06-26-a
