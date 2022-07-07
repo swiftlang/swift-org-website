@@ -18,7 +18,7 @@ The [Swift Server Workgroup](https://www.swift.org/sswg/) (SSWG) felt there was 
 
 ## Features
 
-The extension is primarily targeted at Swift Packager Manager (SwiftPM) projects. It consists of a number of components already available as well as new ones, all brought together into one coherent package. Below is a list of some of the key features.
+The extension is primarily targeted at Swift Packager Manager (SwiftPM) projects. It consists of a number of components already available as well as new ones, all brought together into one coherent package.
 
 ### Pre-configured Development Environment
 
@@ -42,7 +42,7 @@ A debugger is provided via the [CodeLLDB](https://marketplace.visualstudio.com/i
 
 ### Test Explorer
 
-The Test Explorer provides a UI similar to the Xcode Tests UI. The UI contains a tree view, including all the test targets, with each XCTestCase class embedded within those targets and each individual test embedded within those classes. Tests can be run outside of a debugger or in the debugger. You can run individual tests, or filter the tests being run by class or test target, or just run all tests. The UI updates as tests succeed or fail.
+The Test Explorer provides a UI similar to the Xcode Tests UI. The UI contains a tree view, including all the test targets, with each XCTestCase class contained within those targets and each individual test contained within those classes. Tests can be run outside of a debugger or in the debugger. You can run individual tests, or filter the tests being run by class or test target, or just run all tests. The UI updates as tests succeed or fail.
 
 ![Text explorer view]({{ site.baseurl }}/assets/images/vscode-extension-blog/test-explorer.png)
 
