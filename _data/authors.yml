@@ -309,3 +309,10 @@ natpanferova:
    github: nataliapanferova
    twitter: natpanferova
    about: "Natalia Panferova is an iOS and macOS engineer and co-founder of Nil Coalescing."
+   
+adam-fowler:
+  name: Adam Fowler
+  email: adamfowler71@gmail.com
+  github: adam-fowler
+  twitter: o_aberration
+  about: "Adam Fowler is an open source developer and is a member of the SSWG (Swift Server Workgroup)."
