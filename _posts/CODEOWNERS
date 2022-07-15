@@ -8,9 +8,13 @@
 # (W), PGP key ID and fingerprint (P), description (D), and snail-mail address
 # (S).
 
+# N: Christopher Thielen
+# E: c_thielen@apple.com
+# D: Apple
+
 # N: Holly Borla
 # E: hborla@apple.com
-# D: Swift team
+# D: Swift core team
 
 # N: Ted Kremenek
 # E: kremenek@apple.com
@@ -20,8 +24,12 @@
 # E: timt@apple.com
 # D: Apple
 
+# N: Tom Doron
+# E: tomer@apple.com
+# D: Swift core team
+
 ###
 
 # The following lines are used by GitHub to automatically recommend reviewers.
 
-* @hborla @TimTr @tkremenek
+* @cthielen @hborla @TimTr @tkremenek @tomerd
