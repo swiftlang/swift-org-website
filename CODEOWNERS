@@ -16,6 +16,10 @@
 # E: ben_cohen@apple.com
 # D: Apple, Swift core team
 
+# N: Christopher Thielen
+# E: c_thielen@apple.com
+# D: Apple
+ 
 # N: Mishal Shah
 # E: mishal_shah@apple.com
 # D: Apple
@@ -28,7 +32,7 @@
 # E: timt@apple.com
 # D: Apple
 
-# N: Tomer Doron
+# N: Tom Doron
 # E: tomer@apple.com
 # D: Apple, Swift core team
 
@@ -37,3 +41,5 @@
 # The following lines are used by GitHub to automatically recommend reviewers.
 
 * @0xTim @alexandersandberg @daveverwer @dempseyatgithub @kaishin @krstnfx @mschinis @shahmishal @TimTr @twostraws @tomerd
+
+/_post/* @cthielen @TimTr @tkremenek @tomerd
