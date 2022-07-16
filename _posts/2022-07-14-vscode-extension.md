@@ -34,7 +34,7 @@ The extension provides a package dependency view that shows a list of all your p
 
 The language server protocol (LSP) is a standard for providing language features such as symbol completion and jump-to-definition in source code editors like Visual Studio Code. Swift support is available to LSP-compatible editors via Apple's SourceKit-LSP implementation. The Swift extension manages the running of a SourceKit-LSP server to provide these language features for Swift and C/C++ source files.
 
-![Symbol completion]({{ site.baseurl }}/assets/images/vscode-extension-blog/symbol-completion.mp4)
+![Symbol completion]({{ site.baseurl }}/assets/images/vscode-extension-blog/symbol-completion.gif)
 
 ### Debugger
 
