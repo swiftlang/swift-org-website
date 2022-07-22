@@ -32,11 +32,11 @@ The current Documentation Workgroup consists of the following people:
 
 ## Charter
 
-The main goal of the Documentation Workgroup is to deliver a stellar
+The main goal of the Documentation Workgroup is to deliver a great
 documentation experience to the Swift community. To that end, the workgroup
 will develop tooling like Swift-DocC to support the experience it wants to
 provide for the ecosystem and future Swift language documentation efforts. Over
-time, the workgroup will also help define guidelines for writing stellar
+time, the workgroup will also help define guidelines for writing quality
 documentation and drive a cohesive documentation ecosystem across Swift.
 
 In that capacity, workgroup members review proposals for changes to the
@@ -45,7 +45,7 @@ and provide feedback in an effort to integrate these changes in a way that is
 consistent with the documentation experience’s goals.
 
 Workgroup members may also initiate projects to improve different aspects of
-the Swift documentation experience, including documentation for the UX and UI
+the Swift documentation experience, such as documentation UI/UX
 design and the documentation authoring syntax.
 
 Members of the Documentation Workgroup serve at the discretion of the Swift
@@ -59,9 +59,9 @@ documentation experience as outlined in the charter above. If you’d like to
 join the workgroup, please reach out to `@swift-documentation-workgroup` in the
 forums.
 
-Inactive members that do not participate for 3 consecutive months will be
+Inactive members that do not participate for three consecutive months will be
 contacted to confirm their desire to stay with the group. After no activity for
-6 months, they will be removed from the group.
+six months, they will be removed from the group.
 
 The Core Team also selects one member of the workgroup as the chair. The chair
 has no special authority over the workgroup, but they are responsible for
@@ -72,8 +72,8 @@ ensuring its smooth functioning, including by:
 * Coordinating meetings between workgroup representatives and the Core Team
   when issues need to be raised to the Core Team
 
-The workgroup’s members tries to make a decision independently by consensus
-whenever possible, and raises issues to the Core Team when there are particular
+Workgroup members will try to make a decision independently by consensus
+whenever possible, and will raise issues to the Core Team when there are particular
 challenges with reaching consensus on significant decisions.
 
 ## Communication
