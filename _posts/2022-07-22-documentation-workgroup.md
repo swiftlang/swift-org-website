@@ -45,6 +45,6 @@ To learn more and get involved with the Documentation Workgroup:
 * Read the Swift Documentation Workgroup [charter](/documentation-workgroup)
 * Discuss ideas in the
   [Swift-DocC](https://forums.swift.org/c/development/swift-docc) forum
-* Use the `@swift-documentation-workgroup` handle to reach out to the workgroup
+* Use the [@swift-documentation-workgroup](https://forums.swift.org/new-message?groupname=swift-documentation-workgroup) handle to reach out to the workgroup
   directly in forums
 
