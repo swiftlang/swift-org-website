@@ -37,16 +37,16 @@ open "http://localhost:4000"
 
 ### Running in Docker
 
-Building with docker-compose
+First build the site with Docker Compose:
 
-```
+```bash
 docker-compose run build
 ```
 
-Running the site with docker-compose
+Then you can run the site:
 
 ```
 docker-compose up website
 ```
 
-Website available on `http://localhost:4000`
+The website will be available on `http://localhost:4000`
