@@ -266,7 +266,7 @@ Generally, in flame graphs, the X axis just means "count", it does **not** mean 
 
 Note that this flame graph is _not_ a CPU flame graph, 1 sample means 1 allocation here and not time spent on the CPU. Also be aware that stack frames that appear wide don't necessarily allocate directly, it means that they or something they call has allocated a lot. For example, `BaseSocketChannel.readable` is a very wide frame, and yet, it is not a function which allocates directly. However, it calls other functions (such as other parts of SwiftNIO and AsyncHTTPClient) that do allocate a lot. It may take a little while to get familiar with flame graphs but there are great resources available online.
 
-![](../images/perf-malloc-full.svg)
+![]({{site.url}}/assets/images/server-guides/perf-malloc-full.svg)
 
 ## Allocation flame graphs on macOS
 

@@ -130,7 +130,7 @@ sudo perf script > out.perf
 
 The resulting file will look something like:
 
-![](../images/perf-issues-flamegraph.svg)
+![]({{site.url}}/assets/images/server-guides/perf-issues-flamegraph.svg)
 
 And we can see that almost all of our runtime is spent in `isFavouriteNumber` which is invoked from `addFavouriteNumber`. That should be a very good hint to the programmer on where to look for improvements. Maybe after all, we should use `Set<Int>` to store the favourite numbers, that should get is an answer to if a number is a favourite number in constant time (_O(1)_).
 
