@@ -3,8 +3,6 @@ layout: page
 title: Deploying to Servers or Public Cloud
 ---
 
-## Deployment to Servers or Public Cloud
-
 The following guides can help with the deployment to public cloud providers:
 * [AWS]({{site.url}}/server/guides/deploying/aws)
 * [DigitalOcean]({{site.url}}/server/guides/deploying/digital-ocean)
@@ -15,7 +13,7 @@ The following guides can help with the deployment to public cloud providers:
 
 If you are deploying to you own servers (e.g. bare metal, VMs or Docker) there are several strategies for packaging Swift applications for deployment, see the [Packaging Guide]({{site.url}}/server/guides/packaging) for more information.
 
-### Deploying a Debuggable Configuration (Production on Linux)
+## Deploying a Debuggable Configuration (Production on Linux)
 
 - If you have `--privileged`/`--security-opt seccomp=unconfined` containers or are running in VMs or even bare metal, you can run your binary with
 
