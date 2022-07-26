@@ -35,7 +35,7 @@ However, contributions to the Swift.org blog have a more extensive review proces
 
 Community-focused content on the blog is facilitated by the [website workgroup](/website-workgroup); reach out to [@swift-website-workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup) if you’re interested in contributing to the Swift.org blog.
 
-### Swift libraries documentation and "The Swift Programing Language"
+### Swift libraries documentation and "The Swift Programming Language"
 
 The Swift.org website hosts technical documentation for several Swift libraries, as well as "The Swift Programming Language".
 
