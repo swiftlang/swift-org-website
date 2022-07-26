@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Swift on Server Guides | Libraries | Log Levels
+title: Log Levels
 ---
 
 This guide serves as guidelines for library authors with regard to what [SwiftLog](https://github.com/apple/swift-log) log levels are appropriate for use in libraries, and in what situations to use what level.
