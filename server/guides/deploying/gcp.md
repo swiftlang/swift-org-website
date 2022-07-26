@@ -46,7 +46,7 @@ project root:
 You should test your Dockerfile with `docker build . -t test` and
 `docker run -p 8080:8080 test` and make sure it builds and runs locally.
 
-The _Dockerfile_ is the same as in the [packaging guide](./packaging.md#docker).
+The _Dockerfile_ is the same as in the [packaging guide]({{site.url}}/server/guides/packaging/#docker).
 Replace `<executable-name>` with your `executableTarget` (ie. "Server"):
 
 ```Dockerfile
