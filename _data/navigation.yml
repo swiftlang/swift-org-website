@@ -206,7 +206,7 @@
         - title: Swift Server Workgroup
           name: swift-server-workgroup
         - title: Development guides
-          name: development-guides
+          url: /server/guides/
     - title: Swift.org website
       url: /website/
       sections:
