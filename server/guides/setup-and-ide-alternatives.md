@@ -5,7 +5,7 @@ title: Installing Swift and using with IDEs
 
 ## Installing Swift
 
-The [supported platforms](https://swift.org/platform-support/) for running Swift on the server and the [ready-built tools packages](https://swift.org/download/) are all hosted on swift.org together with installation instructions. There you also can find the [language reference documentation](https://swift.org/documentation/).
+The [supported platforms]({{site.url}}/platform-support/) for running Swift on the server and the [ready-built tools packages]({{site.url}}/download/) are all hosted here on swift.org together with installation instructions. There's also the [language reference documentation]({{site.url}}/documentation/) section for viewing more information about Swift.
 
 ## IDEs/Editors with Swift Support
 
