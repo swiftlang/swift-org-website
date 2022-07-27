@@ -3,7 +3,7 @@ layout: page
 title: Swift on Server Guides
 ---
 
-The Swift Server Workgroup and Swift on Server community have developed a number of guides for using Swift on the server.  They are designed to help teams and individuals running Swift Server applications on Linux and to provide orientation for those who want to start with such development.
+The Swift Server Workgroup and Swift on Server community have developed a number of guides for using Swift on the server. They are designed to help teams and individuals running Swift Server applications on Linux and to provide orientation for those who want to start with such development.
 
 They focus on how to compile, test, deploy and debug such application and provides tips in those areas.
 
@@ -20,6 +20,6 @@ They focus on how to compile, test, deploy and debug such application and provid
 Additionally, there are specific guides for library developers:
 
 * [Log Levels]({{site.url}}/server/guides/libraries/log-levels)
-* [Adopting Swift Concurrency]({{site.url}}/server/guides//libraries/concurrency-adoption-guidelines)
+* [Adopting Swift Concurrency]({{site.url}}/server/guides/libraries/concurrency-adoption-guidelines)
 
 _These guides are community effort, and all are invited to share their tips and know-how by submitting pull requests to the [Swift.org site](https://github.com/apple/swift-org-website)_.

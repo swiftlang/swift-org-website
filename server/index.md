@@ -45,4 +45,4 @@ Read more about the workgroup and server incubator it runs [here]({{site.url}}/s
 
 ## Development guides
 
-The Swift Server Workgroup and Swift on Server community have developed a number of guides for using Swift on the server. They cover a range of topics from packaging, deployment and profiling. See the [server guides]({{site.url}}//server/guides/) for all the guides.
+The Swift Server Workgroup and Swift on Server community have developed a number of guides for using Swift on the server. They cover a range of topics from packaging, deployment and profiling. See the [server guides]({{site.url}}/server/guides/) for all the guides.
