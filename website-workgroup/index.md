@@ -24,7 +24,7 @@ The current website workgroup consists of the following people:
 * Michael Schinis ([@mschinis](https://github.com/mschinis))
 * Paul Hudson ([@twostraws](https://github.com/twostraws))
 * Reda Lemeden ([@kaishin](https://github.com/kaishin))
-* Tim Codon ([@0xTim](https://github.com/0xTim), Vapor)
+* Tim Condon ([@0xTim](https://github.com/0xTim), Vapor)
 * Tim Triemstra ([@TimTr](https://github.com/TimTr), Apple)
 
 With Tom Doron ([@tomerd](https://github.com/tomerd), Apple) representing the Swift core team.
