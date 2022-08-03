@@ -45,16 +45,4 @@ Read more about the workgroup and server incubator it runs [here]({{site.url}}/s
 
 ## Development guides
 
-The following guides have been developed by the Swift Server workgroup and the Swift on Server community.
-They are designed to help teams and individuals running Swift Server applications on Linux and to provide orientation for those who want to start with such development.
-They focus on how to compile, test, deploy and debug such application and provides tips in those areas.
-
-- [Setup and code editing](https://github.com/swift-server/guides/blob/main/docs/setup-and-ide-alternatives.md)
-- [Building](https://github.com/swift-server/guides/blob/main/docs/building.md)
-- [Testing](https://github.com/swift-server/guides/blob/main/docs/testing.md)
-- [Debugging Memory leaks](https://github.com/swift-server/guides/blob/main/docs/memory-leaks-and-usage.md)
-- [Performance troubleshooting and analysis](https://github.com/swift-server/guides/blob/main/docs/performance.md)
-- [Debugging multithreading issues and memory checks](https://github.com/swift-server/guides/blob/main/docs/llvm-sanitizers.md)
-- [Deployment](https://github.com/swift-server/guides/blob/main/docs/deployment.md)
-
-_These guides are community effort, and all are invited to share their tips and know-how by submitting pull requests to the [source repository](https://github.com/swift-server/guides)_.
+The Swift Server Workgroup and Swift on Server community have developed a number of guides for using Swift on the server. They cover a range of topics from packaging, deployment and profiling. See the [server guides]({{site.url}}/server/guides/) for all the guides.

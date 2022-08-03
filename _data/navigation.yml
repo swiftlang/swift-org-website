@@ -205,7 +205,7 @@
           name: why-swift-on-server
         - title: Swift Server Workgroup
           name: swift-server-workgroup
-        - title: Development guides
+        - title: Swift Server Guides
           name: development-guides
     - title: Swift.org website
       url: /website/

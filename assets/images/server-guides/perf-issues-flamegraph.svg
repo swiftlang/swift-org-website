@@ -1,0 +1,676 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" width="1200" height="422" onload="init(evt)" viewBox="0 0 1200 422" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Flame graph stack visualization. See https://github.com/brendangregg/FlameGraph for latest version, and http://www.brendangregg.com/flamegraphs.html for examples. -->
+<!-- NOTES:  -->
+<defs>
+	<linearGradient id="background" y1="0" y2="1" x1="0" x2="0" >
+		<stop stop-color="#eeeeee" offset="5%" />
+		<stop stop-color="#eeeeb0" offset="95%" />
+	</linearGradient>
+</defs>
+<style type="text/css">
+	text { font-family:Verdana; font-size:12px; fill:rgb(0,0,0); }
+	#search, #ignorecase { opacity:0.1; cursor:pointer; }
+	#search:hover, #search.show, #ignorecase:hover, #ignorecase.show { opacity:1; }
+	#subtitle { text-anchor:middle; font-color:rgb(160,160,160); }
+	#title { text-anchor:middle; font-size:17px}
+	#unzoom { cursor:pointer; }
+	#frames > *:hover { stroke:black; stroke-width:0.5; cursor:pointer; }
+	.hide { display:none; }
+	.parent { opacity:0.5; }
+</style>
+<script type="text/ecmascript">
+<![CDATA[
+	"use strict";
+	var details, searchbtn, unzoombtn, matchedtxt, svg, searching, currentSearchTerm, ignorecase, ignorecaseBtn;
+	function init(evt) {
+		details = document.getElementById("details").firstChild;
+		searchbtn = document.getElementById("search");
+		ignorecaseBtn = document.getElementById("ignorecase");
+		unzoombtn = document.getElementById("unzoom");
+		matchedtxt = document.getElementById("matched");
+		svg = document.getElementsByTagName("svg")[0];
+		searching = 0;
+		currentSearchTerm = null;
+	}
+
+	window.addEventListener("click", function(e) {
+		var target = find_group(e.target);
+		if (target) {
+			if (target.nodeName == "a") {
+				if (e.ctrlKey === false) return;
+				e.preventDefault();
+			}
+			if (target.classList.contains("parent")) unzoom();
+			zoom(target);
+		}
+		else if (e.target.id == "unzoom") unzoom();
+		else if (e.target.id == "search") search_prompt();
+		else if (e.target.id == "ignorecase") toggle_ignorecase();
+	}, false)
+
+	// mouse-over for info
+	// show
+	window.addEventListener("mouseover", function(e) {
+		var target = find_group(e.target);
+		if (target) details.nodeValue = "Function: " + g_to_text(target);
+	}, false)
+
+	// clear
+	window.addEventListener("mouseout", function(e) {
+		var target = find_group(e.target);
+		if (target) details.nodeValue = ' ';
+	}, false)
+
+	// ctrl-F for search
+	window.addEventListener("keydown",function (e) {
+		if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) {
+			e.preventDefault();
+			search_prompt();
+		}
+	}, false)
+
+	// ctrl-I to toggle case-sensitive search
+	window.addEventListener("keydown",function (e) {
+		if (e.ctrlKey && e.keyCode === 73) {
+			e.preventDefault();
+			toggle_ignorecase();
+		}
+	}, false)
+
+	// functions
+	function find_child(node, selector) {
+		var children = node.querySelectorAll(selector);
+		if (children.length) return children[0];
+		return;
+	}
+	function find_group(node) {
+		var parent = node.parentElement;
+		if (!parent) return;
+		if (parent.id == "frames") return node;
+		return find_group(parent);
+	}
+	function orig_save(e, attr, val) {
+		if (e.attributes["_orig_" + attr] != undefined) return;
+		if (e.attributes[attr] == undefined) return;
+		if (val == undefined) val = e.attributes[attr].value;
+		e.setAttribute("_orig_" + attr, val);
+	}
+	function orig_load(e, attr) {
+		if (e.attributes["_orig_"+attr] == undefined) return;
+		e.attributes[attr].value = e.attributes["_orig_" + attr].value;
+		e.removeAttribute("_orig_"+attr);
+	}
+	function g_to_text(e) {
+		var text = find_child(e, "title").firstChild.nodeValue;
+		return (text)
+	}
+	function g_to_func(e) {
+		var func = g_to_text(e);
+		// if there's any manipulation we want to do to the function
+		// name before it's searched, do it here before returning.
+		return (func);
+	}
+	function update_text(e) {
+		var r = find_child(e, "rect");
+		var t = find_child(e, "text");
+		var w = parseFloat(r.attributes.width.value) -3;
+		var txt = find_child(e, "title").textContent.replace(/\([^(]*\)$/,"");
+		t.attributes.x.value = parseFloat(r.attributes.x.value) + 3;
+
+		// Smaller than this size won't fit anything
+		if (w < 2 * 12 * 0.59) {
+			t.textContent = "";
+			return;
+		}
+
+		t.textContent = txt;
+		// Fit in full text width
+		if (/^ *$/.test(txt) || t.getSubStringLength(0, txt.length) < w)
+			return;
+
+		for (var x = txt.length - 2; x > 0; x--) {
+			if (t.getSubStringLength(0, x + 2) <= w) {
+				t.textContent = txt.substring(0, x) + "..";
+				return;
+			}
+		}
+		t.textContent = "";
+	}
+
+	// zoom
+	function zoom_reset(e) {
+		if (e.attributes != undefined) {
+			orig_load(e, "x");
+			orig_load(e, "width");
+		}
+		if (e.childNodes == undefined) return;
+		for (var i = 0, c = e.childNodes; i < c.length; i++) {
+			zoom_reset(c[i]);
+		}
+	}
+	function zoom_child(e, x, ratio) {
+		if (e.attributes != undefined) {
+			if (e.attributes.x != undefined) {
+				orig_save(e, "x");
+				e.attributes.x.value = (parseFloat(e.attributes.x.value) - x - 10) * ratio + 10;
+				if (e.tagName == "text")
+					e.attributes.x.value = find_child(e.parentNode, "rect[x]").attributes.x.value + 3;
+			}
+			if (e.attributes.width != undefined) {
+				orig_save(e, "width");
+				e.attributes.width.value = parseFloat(e.attributes.width.value) * ratio;
+			}
+		}
+
+		if (e.childNodes == undefined) return;
+		for (var i = 0, c = e.childNodes; i < c.length; i++) {
+			zoom_child(c[i], x - 10, ratio);
+		}
+	}
+	function zoom_parent(e) {
+		if (e.attributes) {
+			if (e.attributes.x != undefined) {
+				orig_save(e, "x");
+				e.attributes.x.value = 10;
+			}
+			if (e.attributes.width != undefined) {
+				orig_save(e, "width");
+				e.attributes.width.value = parseInt(svg.width.baseVal.value) - (10 * 2);
+			}
+		}
+		if (e.childNodes == undefined) return;
+		for (var i = 0, c = e.childNodes; i < c.length; i++) {
+			zoom_parent(c[i]);
+		}
+	}
+	function zoom(node) {
+		var attr = find_child(node, "rect").attributes;
+		var width = parseFloat(attr.width.value);
+		var xmin = parseFloat(attr.x.value);
+		var xmax = parseFloat(xmin + width);
+		var ymin = parseFloat(attr.y.value);
+		var ratio = (svg.width.baseVal.value - 2 * 10) / width;
+
+		// XXX: Workaround for JavaScript float issues (fix me)
+		var fudge = 0.0001;
+
+		unzoombtn.classList.remove("hide");
+
+		var el = document.getElementById("frames").children;
+		for (var i = 0; i < el.length; i++) {
+			var e = el[i];
+			var a = find_child(e, "rect").attributes;
+			var ex = parseFloat(a.x.value);
+			var ew = parseFloat(a.width.value);
+			var upstack;
+			// Is it an ancestor
+			if (0 == 0) {
+				upstack = parseFloat(a.y.value) > ymin;
+			} else {
+				upstack = parseFloat(a.y.value) < ymin;
+			}
+			if (upstack) {
+				// Direct ancestor
+				if (ex <= xmin && (ex+ew+fudge) >= xmax) {
+					e.classList.add("parent");
+					zoom_parent(e);
+					update_text(e);
+				}
+				// not in current path
+				else
+					e.classList.add("hide");
+			}
+			// Children maybe
+			else {
+				// no common path
+				if (ex < xmin || ex + fudge >= xmax) {
+					e.classList.add("hide");
+				}
+				else {
+					zoom_child(e, xmin, ratio);
+					update_text(e);
+				}
+			}
+		}
+		search();
+	}
+	function unzoom() {
+		unzoombtn.classList.add("hide");
+		var el = document.getElementById("frames").children;
+		for(var i = 0; i < el.length; i++) {
+			el[i].classList.remove("parent");
+			el[i].classList.remove("hide");
+			zoom_reset(el[i]);
+			update_text(el[i]);
+		}
+		search();
+	}
+
+	// search
+	function toggle_ignorecase() {
+		ignorecase = !ignorecase;
+		if (ignorecase) {
+			ignorecaseBtn.classList.add("show");
+		} else {
+			ignorecaseBtn.classList.remove("show");
+		}
+		reset_search();
+		search();
+	}
+	function reset_search() {
+		var el = document.querySelectorAll("#frames rect");
+		for (var i = 0; i < el.length; i++) {
+			orig_load(el[i], "fill")
+		}
+	}
+	function search_prompt() {
+		if (!searching) {
+			var term = prompt("Enter a search term (regexp " +
+			    "allowed, eg: ^ext4_)"
+			    + (ignorecase ? ", ignoring case" : "")
+			    + "\nPress Ctrl-i to toggle case sensitivity", "");
+			if (term != null) {
+				currentSearchTerm = term;
+				search();
+			}
+		} else {
+			reset_search();
+			searching = 0;
+			currentSearchTerm = null;
+			searchbtn.classList.remove("show");
+			searchbtn.firstChild.nodeValue = "Search"
+			matchedtxt.classList.add("hide");
+			matchedtxt.firstChild.nodeValue = ""
+		}
+	}
+	function search(term) {
+		if (currentSearchTerm === null) return;
+		var term = currentSearchTerm;
+
+		var re = new RegExp(term, ignorecase ? 'i' : '');
+		var el = document.getElementById("frames").children;
+		var matches = new Object();
+		var maxwidth = 0;
+		for (var i = 0; i < el.length; i++) {
+			var e = el[i];
+			var func = g_to_func(e);
+			var rect = find_child(e, "rect");
+			if (func == null || rect == null)
+				continue;
+
+			// Save max width. Only works as we have a root frame
+			var w = parseFloat(rect.attributes.width.value);
+			if (w > maxwidth)
+				maxwidth = w;
+
+			if (func.match(re)) {
+				// highlight
+				var x = parseFloat(rect.attributes.x.value);
+				orig_save(rect, "fill");
+				rect.attributes.fill.value = "rgb(230,0,230)";
+
+				// remember matches
+				if (matches[x] == undefined) {
+					matches[x] = w;
+				} else {
+					if (w > matches[x]) {
+						// overwrite with parent
+						matches[x] = w;
+					}
+				}
+				searching = 1;
+			}
+		}
+		if (!searching)
+			return;
+
+		searchbtn.classList.add("show");
+		searchbtn.firstChild.nodeValue = "Reset Search";
+
+		// calculate percent matched, excluding vertical overlap
+		var count = 0;
+		var lastx = -1;
+		var lastw = 0;
+		var keys = Array();
+		for (k in matches) {
+			if (matches.hasOwnProperty(k))
+				keys.push(k);
+		}
+		// sort the matched frames by their x location
+		// ascending, then width descending
+		keys.sort(function(a, b){
+			return a - b;
+		});
+		// Step through frames saving only the biggest bottom-up frames
+		// thanks to the sort order. This relies on the tree property
+		// where children are always smaller than their parents.
+		var fudge = 0.0001;	// JavaScript floating point
+		for (var k in keys) {
+			var x = parseFloat(keys[k]);
+			var w = matches[keys[k]];
+			if (x >= lastx + lastw - fudge) {
+				count += w;
+				lastx = x;
+				lastw = w;
+			}
+		}
+		// display matched percent
+		matchedtxt.classList.remove("hide");
+		var pct = 100 * count / maxwidth;
+		if (pct != 100) pct = pct.toFixed(1)
+		matchedtxt.firstChild.nodeValue = "Matched: " + pct + "%";
+	}
+]]>
+</script>
+<rect x="0.0" y="0" width="1200.0" height="422.0" fill="url(#background)"  />
+<text id="title" x="600.00" y="24" >Flame Graph</text>
+<text id="details" x="10.00" y="405" > </text>
+<text id="unzoom" x="10.00" y="24" class="hide">Reset Zoom</text>
+<text id="search" x="1090.00" y="24" >Search</text>
+<text id="ignorecase" x="1174.00" y="24" >ic</text>
+<text id="matched" x="1090.00" y="405" > </text>
+<g id="frames">
+<g >
+<title>load_elf_binary (1 samples, 0.76%)</title><rect x="1090.9" y="245" width="9.0" height="15.0" fill="rgb(244,4,8)" rx="2" ry="2" />
+<text  x="1093.92" y="255.5" ></text>
+</g>
+<g >
+<title>ext4_file_read_iter (4 samples, 3.05%)</title><rect x="1099.9" y="197" width="36.1" height="15.0" fill="rgb(225,209,50)" rx="2" ry="2" />
+<text  x="1102.92" y="207.5" >ext..</text>
+</g>
+<g >
+<title>finish_task_switch (4 samples, 3.05%)</title><rect x="1099.9" y="117" width="36.1" height="15.0" fill="rgb(210,60,31)" rx="2" ry="2" />
+<text  x="1102.92" y="127.5" >fin..</text>
+</g>
+<g >
+<title>main (127 samples, 96.95%)</title><rect x="10.0" y="357" width="1144.0" height="15.0" fill="rgb(216,73,22)" rx="2" ry="2" />
+<text  x="13.00" y="367.5" >main</text>
+</g>
+<g >
+<title>sched_clock (1 samples, 0.76%)</title><rect x="1126.9" y="37" width="9.1" height="15.0" fill="rgb(244,16,34)" rx="2" ry="2" />
+<text  x="1129.95" y="47.5" ></text>
+</g>
+<g >
+<title>protocol witness for main.FavouriteNumbers.addFavouriteNumber(Swift.Int) -&gt; () in conformance main.MyFavouriteNumbers : main.FavouriteNumbers in main (120 samples, 91.60%)</title><rect x="10.0" y="293" width="1080.9" height="15.0" fill="rgb(222,222,46)" rx="2" ry="2" />
+<text  x="13.00" y="303.5" >protocol witness for main.FavouriteNumbers.addFavouriteNumber(Swift.Int) -&gt; () in conformance main.MyFavouriteNumbers : main.FavouriteNumbers in main</text>
+</g>
+<g >
+<title>generic specialization &lt;Swift._ContiguousArrayBuffer&lt;(Swift.Int, Swift.Int)&gt;&gt; of (extension in Swift):Swift._ArrayBufferProtocol._arrayOutOfPlaceUpdate(inout Swift._ContiguousArrayBuffer&lt;A.Element&gt;, Swift.Int, Swift.Int, (Swift.UnsafeMutablePointer&lt;A.Element&gt;, Swift.Int) -&gt; ()) -&gt; () (1 samples, 0.76%)</title><rect x="973.8" y="229" width="9.0" height="15.0" fill="rgb(225,136,35)" rx="2" ry="2" />
+<text  x="976.82" y="239.5" ></text>
+</g>
+<g >
+<title>load_elf_binary (4 samples, 3.05%)</title><rect x="1154.0" y="245" width="36.0" height="15.0" fill="rgb(205,104,0)" rx="2" ry="2" />
+<text  x="1156.97" y="255.5" >loa..</text>
+</g>
+<g >
+<title>swift_deallocClassInstance (1 samples, 0.76%)</title><rect x="1018.9" y="261" width="9.0" height="15.0" fill="rgb(210,52,37)" rx="2" ry="2" />
+<text  x="1021.85" y="271.5" ></text>
+</g>
+<g >
+<title>swift_release (1 samples, 0.76%)</title><rect x="1000.8" y="229" width="9.0" height="15.0" fill="rgb(239,77,49)" rx="2" ry="2" />
+<text  x="1003.84" y="239.5" ></text>
+</g>
+<g >
+<title>open_path (4 samples, 3.05%)</title><rect x="1099.9" y="325" width="36.1" height="15.0" fill="rgb(253,174,41)" rx="2" ry="2" />
+<text  x="1102.92" y="335.5" >ope..</text>
+</g>
+<g >
+<title>do_execveat_common.isra.34 (1 samples, 0.76%)</title><rect x="1090.9" y="277" width="9.0" height="15.0" fill="rgb(231,223,24)" rx="2" ry="2" />
+<text  x="1093.92" y="287.5" ></text>
+</g>
+<g >
+<title>read (4 samples, 3.05%)</title><rect x="1099.9" y="309" width="36.1" height="15.0" fill="rgb(217,66,49)" rx="2" ry="2" />
+<text  x="1102.92" y="319.5" >read</text>
+</g>
+<g >
+<title>search_binary_handler (1 samples, 0.76%)</title><rect x="1090.9" y="261" width="9.0" height="15.0" fill="rgb(245,92,4)" rx="2" ry="2" />
+<text  x="1093.92" y="271.5" ></text>
+</g>
+<g >
+<title>do_syscall_64 (1 samples, 0.76%)</title><rect x="1090.9" y="309" width="9.0" height="15.0" fill="rgb(208,126,49)" rx="2" ry="2" />
+<text  x="1093.92" y="319.5" ></text>
+</g>
+<g >
+<title>generic_file_read_iter (4 samples, 3.05%)</title><rect x="1099.9" y="181" width="36.1" height="15.0" fill="rgb(228,49,13)" rx="2" ry="2" />
+<text  x="1102.92" y="191.5" >gen..</text>
+</g>
+<g >
+<title>intel_pmu_enable_all (4 samples, 3.05%)</title><rect x="1154.0" y="165" width="36.0" height="15.0" fill="rgb(233,197,4)" rx="2" ry="2" />
+<text  x="1156.97" y="175.5" >int..</text>
+</g>
+<g >
+<title>sys_execve (4 samples, 3.05%)</title><rect x="1154.0" y="293" width="36.0" height="15.0" fill="rgb(215,184,53)" rx="2" ry="2" />
+<text  x="1156.97" y="303.5" >sys..</text>
+</g>
+<g >
+<title>entry_SYSCALL_64_after_hwframe (4 samples, 3.05%)</title><rect x="1154.0" y="325" width="36.0" height="15.0" fill="rgb(235,211,10)" rx="2" ry="2" />
+<text  x="1156.97" y="335.5" >ent..</text>
+</g>
+<g >
+<title>__sched_text_start (4 samples, 3.05%)</title><rect x="1099.9" y="133" width="36.1" height="15.0" fill="rgb(248,196,40)" rx="2" ry="2" />
+<text  x="1102.92" y="143.5" >__s..</text>
+</g>
+<g >
+<title>main.MyFavouriteNumbers.addFavouriteNumber(Swift.Int) -&gt; () (120 samples, 91.60%)</title><rect x="10.0" y="277" width="1080.9" height="15.0" fill="rgb(240,114,1)" rx="2" ry="2" />
+<text  x="13.00" y="287.5" >main.MyFavouriteNumbers.addFavouriteNumber(Swift.Int) -&gt; ()</text>
+</g>
+<g >
+<title>do_execveat_common.isra.34 (4 samples, 3.05%)</title><rect x="1154.0" y="277" width="36.0" height="15.0" fill="rgb(234,31,15)" rx="2" ry="2" />
+<text  x="1156.97" y="287.5" >do_..</text>
+</g>
+<g >
+<title>generic specialization &lt;Swift._ContiguousArrayBuffer&lt;(Swift.Int, Swift.Int)&gt;&gt; of default argument 3 of (extension in Swift):Swift._ArrayBufferProtocol._arrayOutOfPlaceUpdate(inout Swift._ContiguousArrayBuffer&lt;A.Element&gt;, Swift.Int, Swift.Int, (Swift.UnsafeMutablePointer&lt;A.Element&gt;, Swift.Int) -&gt; ()) -&gt; () (1 samples, 0.76%)</title><rect x="982.8" y="229" width="9.0" height="15.0" fill="rgb(231,108,3)" rx="2" ry="2" />
+<text  x="985.82" y="239.5" ></text>
+</g>
+<g >
+<title>x86_pmu_enable (4 samples, 3.05%)</title><rect x="1154.0" y="181" width="36.0" height="15.0" fill="rgb(210,83,34)" rx="2" ry="2" />
+<text  x="1156.97" y="191.5" >x86..</text>
+</g>
+<g >
+<title>mmap_region (1 samples, 0.76%)</title><rect x="1145.0" y="229" width="9.0" height="15.0" fill="rgb(252,50,18)" rx="2" ry="2" />
+<text  x="1147.96" y="239.5" ></text>
+</g>
+<g >
+<title>sys_mmap (1 samples, 0.76%)</title><rect x="1145.0" y="293" width="9.0" height="15.0" fill="rgb(231,204,35)" rx="2" ry="2" />
+<text  x="1147.96" y="303.5" ></text>
+</g>
+<g >
+<title>do_syscall_64 (1 samples, 0.76%)</title><rect x="1145.0" y="309" width="9.0" height="15.0" fill="rgb(245,51,49)" rx="2" ry="2" />
+<text  x="1147.96" y="319.5" ></text>
+</g>
+<g >
+<title>perf_event_exec (4 samples, 3.05%)</title><rect x="1154.0" y="213" width="36.0" height="15.0" fill="rgb(219,204,14)" rx="2" ry="2" />
+<text  x="1156.97" y="223.5" >per..</text>
+</g>
+<g >
+<title>entry_SYSCALL_64_after_hwframe (1 samples, 0.76%)</title><rect x="1090.9" y="325" width="9.0" height="15.0" fill="rgb(248,23,21)" rx="2" ry="2" />
+<text  x="1093.92" y="335.5" ></text>
+</g>
+<g >
+<title>shift_arg_pages (1 samples, 0.76%)</title><rect x="1090.9" y="213" width="9.0" height="15.0" fill="rgb(235,179,15)" rx="2" ry="2" />
+<text  x="1093.92" y="223.5" ></text>
+</g>
+<g >
+<title>[unknown] (4 samples, 3.05%)</title><rect x="1154.0" y="341" width="36.0" height="15.0" fill="rgb(245,214,31)" rx="2" ry="2" />
+<text  x="1156.97" y="351.5" >[un..</text>
+</g>
+<g >
+<title>__libc_start_main (120 samples, 91.60%)</title><rect x="10.0" y="325" width="1080.9" height="15.0" fill="rgb(215,141,1)" rx="2" ry="2" />
+<text  x="13.00" y="335.5" >__libc_start_main</text>
+</g>
+<g >
+<title>swift_release (5 samples, 3.82%)</title><rect x="1027.9" y="261" width="45.0" height="15.0" fill="rgb(213,39,16)" rx="2" ry="2" />
+<text  x="1030.86" y="271.5" >swif..</text>
+</g>
+<g >
+<title>vfs_read (4 samples, 3.05%)</title><rect x="1099.9" y="245" width="36.1" height="15.0" fill="rgb(254,186,51)" rx="2" ry="2" />
+<text  x="1102.92" y="255.5" >vfs..</text>
+</g>
+<g >
+<title>nmi (1 samples, 0.76%)</title><rect x="973.8" y="213" width="9.0" height="15.0" fill="rgb(231,198,32)" rx="2" ry="2" />
+<text  x="976.82" y="223.5" ></text>
+</g>
+<g >
+<title>__perf_event_task_sched_in (4 samples, 3.05%)</title><rect x="1099.9" y="101" width="36.1" height="15.0" fill="rgb(211,160,29)" rx="2" ry="2" />
+<text  x="1102.92" y="111.5" >__p..</text>
+</g>
+<g >
+<title>__malloc_usable_size (1 samples, 0.76%)</title><rect x="964.8" y="229" width="9.0" height="15.0" fill="rgb(214,108,43)" rx="2" ry="2" />
+<text  x="967.81" y="239.5" ></text>
+</g>
+<g >
+<title>perf_event_nmi_handler (1 samples, 0.76%)</title><rect x="1181.0" y="133" width="9.0" height="15.0" fill="rgb(238,104,46)" rx="2" ry="2" />
+<text  x="1183.99" y="143.5" ></text>
+</g>
+<g >
+<title>swift_release@plt (1 samples, 0.76%)</title><rect x="1009.8" y="245" width="9.1" height="15.0" fill="rgb(208,15,50)" rx="2" ry="2" />
+<text  x="1012.85" y="255.5" ></text>
+</g>
+<g >
+<title>do_mmap (1 samples, 0.76%)</title><rect x="1145.0" y="245" width="9.0" height="15.0" fill="rgb(252,27,24)" rx="2" ry="2" />
+<text  x="1147.96" y="255.5" ></text>
+</g>
+<g >
+<title>vm_mmap_pgoff (1 samples, 0.76%)</title><rect x="1145.0" y="261" width="9.0" height="15.0" fill="rgb(220,25,46)" rx="2" ry="2" />
+<text  x="1147.96" y="271.5" ></text>
+</g>
+<g >
+<title>main.MyFavouriteNumbers.isFavouriteNumber(Swift.Int) -&gt; Swift.Bool (112 samples, 85.50%)</title><rect x="10.0" y="261" width="1008.9" height="15.0" fill="rgb(248,100,4)" rx="2" ry="2" />
+<text  x="13.00" y="271.5" >main.MyFavouriteNumbers.isFavouriteNumber(Swift.Int) -&gt; Swift.Bool</text>
+</g>
+<g >
+<title>intel_pmu_enable_all (4 samples, 3.05%)</title><rect x="1099.9" y="69" width="36.1" height="15.0" fill="rgb(210,93,15)" rx="2" ry="2" />
+<text  x="1102.92" y="79.5" >int..</text>
+</g>
+<g >
+<title>entry_SYSCALL_64_after_hwframe (1 samples, 0.76%)</title><rect x="1145.0" y="325" width="9.0" height="15.0" fill="rgb(221,72,21)" rx="2" ry="2" />
+<text  x="1147.96" y="335.5" ></text>
+</g>
+<g >
+<title>swift_retain_n (1 samples, 0.76%)</title><rect x="1081.9" y="261" width="9.0" height="15.0" fill="rgb(223,204,17)" rx="2" ry="2" />
+<text  x="1084.91" y="271.5" ></text>
+</g>
+<g >
+<title>all (131 samples, 100%)</title><rect x="10.0" y="373" width="1180.0" height="15.0" fill="rgb(225,207,19)" rx="2" ry="2" />
+<text  x="13.00" y="383.5" ></text>
+</g>
+<g >
+<title>main (120 samples, 91.60%)</title><rect x="10.0" y="309" width="1080.9" height="15.0" fill="rgb(226,57,51)" rx="2" ry="2" />
+<text  x="13.00" y="319.5" >main</text>
+</g>
+<g >
+<title>io_schedule (4 samples, 3.05%)</title><rect x="1099.9" y="165" width="36.1" height="15.0" fill="rgb(234,192,53)" rx="2" ry="2" />
+<text  x="1102.92" y="175.5" >io_..</text>
+</g>
+<g >
+<title>entry_SYSCALL_64_after_hwframe (4 samples, 3.05%)</title><rect x="1099.9" y="293" width="36.1" height="15.0" fill="rgb(244,92,8)" rx="2" ry="2" />
+<text  x="1102.92" y="303.5" >ent..</text>
+</g>
+<g >
+<title>search_binary_handler (4 samples, 3.05%)</title><rect x="1154.0" y="261" width="36.0" height="15.0" fill="rgb(215,149,53)" rx="2" ry="2" />
+<text  x="1156.97" y="271.5" >sea..</text>
+</g>
+<g >
+<title>__intel_pmu_enable_all.constprop.23 (4 samples, 3.05%)</title><rect x="1099.9" y="53" width="36.1" height="15.0" fill="rgb(237,229,21)" rx="2" ry="2" />
+<text  x="1102.92" y="63.5" >__i..</text>
+</g>
+<g >
+<title>__vfs_read (4 samples, 3.05%)</title><rect x="1099.9" y="229" width="36.1" height="15.0" fill="rgb(225,153,7)" rx="2" ry="2" />
+<text  x="1102.92" y="239.5" >__v..</text>
+</g>
+<g >
+<title>schedule (4 samples, 3.05%)</title><rect x="1099.9" y="149" width="36.1" height="15.0" fill="rgb(225,127,44)" rx="2" ry="2" />
+<text  x="1102.92" y="159.5" >sch..</text>
+</g>
+<g >
+<title>do_syscall_64 (4 samples, 3.05%)</title><rect x="1099.9" y="277" width="36.1" height="15.0" fill="rgb(250,196,42)" rx="2" ry="2" />
+<text  x="1102.92" y="287.5" >do_..</text>
+</g>
+<g >
+<title>perf (4 samples, 3.05%)</title><rect x="1154.0" y="357" width="36.0" height="15.0" fill="rgb(209,42,29)" rx="2" ry="2" />
+<text  x="1156.97" y="367.5" >perf</text>
+</g>
+<g >
+<title>__intel_pmu_enable_all.constprop.23 (4 samples, 3.05%)</title><rect x="1154.0" y="149" width="36.0" height="15.0" fill="rgb(209,119,3)" rx="2" ry="2" />
+<text  x="1156.97" y="159.5" >__i..</text>
+</g>
+<g >
+<title>sys_execve (1 samples, 0.76%)</title><rect x="1090.9" y="293" width="9.0" height="15.0" fill="rgb(228,194,47)" rx="2" ry="2" />
+<text  x="1093.92" y="303.5" ></text>
+</g>
+<g >
+<title>ctx_resched (4 samples, 3.05%)</title><rect x="1154.0" y="197" width="36.0" height="15.0" fill="rgb(254,143,24)" rx="2" ry="2" />
+<text  x="1156.97" y="207.5" >ctx..</text>
+</g>
+<g >
+<title>malloc (1 samples, 0.76%)</title><rect x="991.8" y="229" width="9.0" height="15.0" fill="rgb(239,59,29)" rx="2" ry="2" />
+<text  x="994.83" y="239.5" ></text>
+</g>
+<g >
+<title>sys_mmap_pgoff (1 samples, 0.76%)</title><rect x="1145.0" y="277" width="9.0" height="15.0" fill="rgb(219,92,20)" rx="2" ry="2" />
+<text  x="1147.96" y="287.5" ></text>
+</g>
+<g >
+<title>new_sync_read (4 samples, 3.05%)</title><rect x="1099.9" y="213" width="36.1" height="15.0" fill="rgb(217,32,18)" rx="2" ry="2" />
+<text  x="1102.92" y="223.5" >new..</text>
+</g>
+<g >
+<title>native_write_msr (3 samples, 2.29%)</title><rect x="1154.0" y="133" width="27.0" height="15.0" fill="rgb(230,90,2)" rx="2" ry="2" />
+<text  x="1156.97" y="143.5" >n..</text>
+</g>
+<g >
+<title>cfree@GLIBC_2.2.5 (1 samples, 0.76%)</title><rect x="1136.0" y="341" width="9.0" height="15.0" fill="rgb(225,15,37)" rx="2" ry="2" />
+<text  x="1138.95" y="351.5" ></text>
+</g>
+<g >
+<title>_dl_map_object (4 samples, 3.05%)</title><rect x="1099.9" y="341" width="36.1" height="15.0" fill="rgb(228,73,12)" rx="2" ry="2" />
+<text  x="1102.92" y="351.5" >_dl..</text>
+</g>
+<g >
+<title>[unknown] (121 samples, 92.37%)</title><rect x="10.0" y="341" width="1089.9" height="15.0" fill="rgb(210,154,28)" rx="2" ry="2" />
+<text  x="13.00" y="351.5" >[unknown]</text>
+</g>
+<g >
+<title>mmap64 (1 samples, 0.76%)</title><rect x="1145.0" y="341" width="9.0" height="15.0" fill="rgb(239,3,34)" rx="2" ry="2" />
+<text  x="1147.96" y="351.5" ></text>
+</g>
+<g >
+<title>x86_pmu_enable (4 samples, 3.05%)</title><rect x="1099.9" y="85" width="36.1" height="15.0" fill="rgb(248,125,43)" rx="2" ry="2" />
+<text  x="1102.92" y="95.5" >x86..</text>
+</g>
+<g >
+<title>sys_read (4 samples, 3.05%)</title><rect x="1099.9" y="261" width="36.1" height="15.0" fill="rgb(220,132,32)" rx="2" ry="2" />
+<text  x="1102.92" y="271.5" >sys..</text>
+</g>
+<g >
+<title>setup_new_exec (4 samples, 3.05%)</title><rect x="1154.0" y="229" width="36.0" height="15.0" fill="rgb(221,196,52)" rx="2" ry="2" />
+<text  x="1156.97" y="239.5" >set..</text>
+</g>
+<g >
+<title>setup_arg_pages (1 samples, 0.76%)</title><rect x="1090.9" y="229" width="9.0" height="15.0" fill="rgb(226,150,11)" rx="2" ry="2" />
+<text  x="1093.92" y="239.5" ></text>
+</g>
+<g >
+<title>swift_release_n (1 samples, 0.76%)</title><rect x="1072.9" y="261" width="9.0" height="15.0" fill="rgb(238,113,31)" rx="2" ry="2" />
+<text  x="1075.90" y="271.5" ></text>
+</g>
+<g >
+<title>move_page_tables (1 samples, 0.76%)</title><rect x="1090.9" y="197" width="9.0" height="15.0" fill="rgb(212,110,38)" rx="2" ry="2" />
+<text  x="1093.92" y="207.5" ></text>
+</g>
+<g >
+<title>do_syscall_64 (4 samples, 3.05%)</title><rect x="1154.0" y="309" width="36.0" height="15.0" fill="rgb(232,108,28)" rx="2" ry="2" />
+<text  x="1156.97" y="319.5" >do_..</text>
+</g>
+<g >
+<title>merged generic specialization &lt;Swift.Int&gt; of Swift.ContiguousArray._copyToNewBuffer(oldCount: Swift.Int) -&gt; () (5 samples, 3.82%)</title><rect x="964.8" y="245" width="45.0" height="15.0" fill="rgb(251,106,24)" rx="2" ry="2" />
+<text  x="967.81" y="255.5" >merg..</text>
+</g>
+<g >
+<title>native_write_msr (3 samples, 2.29%)</title><rect x="1099.9" y="37" width="27.0" height="15.0" fill="rgb(215,3,43)" rx="2" ry="2" />
+<text  x="1102.92" y="47.5" >n..</text>
+</g>
+</g>
+</svg>
