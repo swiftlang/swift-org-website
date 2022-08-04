@@ -58,9 +58,9 @@ Please see the [Swift evolution repository](https://github.com/apple/swift-evolu
 ### Server
 [Server]: #server
 
-For developers to discuss erver focused capabilities supported by Swift.org and the Server workgroup.
+For developers to discuss server-focused capabilities supported by Swift.org and the Server workgroup.
 
-**[Development](https://forums.swift.org/c/server/serverdev)** - For developers to discuss the implementation of server focused capabilities developed by the Server workgroup.
+**[Development](https://forums.swift.org/c/server/serverdev)** - For developers to discuss the implementation of server-focused capabilities developed by the Server workgroup.
 
 **[Docker](https://forums.swift.org/c/server/docker)** - For developers to discuss the official Docker image support for Swift.
 
