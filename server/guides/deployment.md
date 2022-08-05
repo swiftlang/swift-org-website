@@ -4,14 +4,14 @@ title: Deploying to Servers or Public Cloud
 ---
 
 The following guides can help with the deployment to public cloud providers:
-* [AWS]({{site.url}}/server/guides/deploying/aws)
-* [DigitalOcean]({{site.url}}/server/guides/deploying/digital-ocean)
-* [Heroku]({{site.url}}/server/guides/deploying/heroku)
-* [Kubernetes & Docker]({{site.url}}/server/guides/packaging/#docker)
-* [GCP]({{site.url}}/server/guides/deploying/gcp)
+* [AWS]({{site.url}}/server/guides/deploying/aws.html)
+* [DigitalOcean]({{site.url}}/server/guides/deploying/digital-ocean.html)
+* [Heroku]({{site.url}}/server/guides/deploying/heroku.html)
+* [Kubernetes & Docker]({{site.url}}/server/guides/packaging.html#docker)
+* [GCP]({{site.url}}/server/guides/deploying/gcp.html)
 * _Have a guides for other popular public clouds like Azure? Add it here!_
 
-If you are deploying to you own servers (e.g. bare metal, VMs or Docker) there are several strategies for packaging Swift applications for deployment, see the [Packaging Guide]({{site.url}}/server/guides/packaging) for more information.
+If you are deploying to you own servers (e.g. bare metal, VMs or Docker) there are several strategies for packaging Swift applications for deployment, see the [Packaging Guide]({{site.url}}/server/guides/packaging.html) for more information.
 
 ## Deploying a Debuggable Configuration (Production on Linux)
 

@@ -13,7 +13,7 @@ The Linux [`perf` tool](https://perf.wiki.kernel.org/index.php/Main_Page) is an 
 
 In general, `perf` can count and/or record the call stacks of your threads when a certain event occurs. These events can be triggered by:
 
-- Time (e.g. 1000 times per second), useful for time profiling. For an example use, see the [CPU performance debugging guide]({{site.url}}/server/guides/performance).
+- Time (e.g. 1000 times per second), useful for time profiling. For an example use, see the [CPU performance debugging guide]({{site.url}}/server/guides/performance.html).
 - System calls, useful to see where your system calls are happening.
 - Various system events, for example if you'd like to know when context switches occur.
 - CPU performance counters, useful if your performance issues can be traced down to micro-architectural details of your CPU (such as branch mispredictions). For an example, see [SwiftNIO's Advanced Performance Analysis guide](https://github.com/apple/swift-nio/blob/main/docs/advanced-performance-analysis.md).

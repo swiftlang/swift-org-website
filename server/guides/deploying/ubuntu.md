@@ -5,9 +5,9 @@ title: Deploying on Ubuntu
 
 Once you have your Ubuntu virtual machine ready, you can deploy your Swift app. This guide assumes you have a fresh install with a non-root user named `swift`. It also assumes both `root` and `swift` are accessible via SSH. For information on setting this up, check out the platform guides:
 
-- [DigitalOcean]({{site.url}}/server/guides/deploying/digital-ocean)
+- [DigitalOcean]({{site.url}}/server/guides/deploying/digital-ocean.html)
 
-The [packaging]({{site.url}}/server/guides/packaging) guide provides an overview of available deployment options. This guide takes you through each deployment option step-by-step for Ubuntu specifically. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server), but you can test with your own project.
+The [packaging]({{site.url}}/server/guides/packaging.html) guide provides an overview of available deployment options. This guide takes you through each deployment option step-by-step for Ubuntu specifically. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server), but you can test with your own project.
 
 - [Binary Deployment](#binary-deployment)
 - [Source Deployment](#source-deployment)
@@ -39,7 +39,7 @@ docker run --rm \
      cp -P /usr/lib/swift/linux/lib*so* .build/install/'
 ```
 
-> Tip: If you are building this project for production, use `swift build -c release`, see [building for production]({{site.url}}/server/guides/building/#building-for-production) for more information.
+> Tip: If you are building this project for production, use `swift build -c release`, see [building for production]({{site.url}}/server/guides/building.html#building-for-production) for more information.
 
 Notice that Swift's shared libraries are being included. This is important since Swift is not ABI stable on Linux. This means Swift programs must run against the shared libraries they were compiled with. 
 
@@ -173,7 +173,7 @@ cd swift-nio
 swift build
 ```
 
-> Tip: If you are building this project for production, use `swift build -c release`, see [building for production]({{site.url}}/server/guides/building/#building-for-production) for more information.
+> Tip: If you are building this project for production, use `swift build -c release`, see [building for production]({{site.url}}/server/guides/building.html#building-for-production) for more information.
 
 ### Run
 
