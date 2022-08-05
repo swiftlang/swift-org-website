@@ -20,7 +20,7 @@ To not waste your time, be sure to do any profiling in _release mode_. Swift's o
     
 #### Install `perf`
 
-Follow the [installation instructions]({{site.url}}/server/guides/linux-perf) in the Linux `perf` utility guide.
+Follow the [installation instructions]({{site.url}}/server/guides/linux-perf.html) in the Linux `perf` utility guide.
 
 #### Clone the `FlameGraph` project
 
@@ -45,7 +45,7 @@ or similar.
 
 ## Tools
 
-In this guide, we will be using the [Linux `perf`](https://perf.wiki.kernel.org/index.php/Main_Page) tool. If you're struggling to get `perf` to work, have a look at our [information regarding `perf`]({{site.url}}/server/guides/linux-perf). If you're running in a Docker container, don't forget that you'll need a privileged container. And generally, you will need `root` access, so you may need to prefix the commands with `sudo`.
+In this guide, we will be using the [Linux `perf`](https://perf.wiki.kernel.org/index.php/Main_Page) tool. If you're struggling to get `perf` to work, have a look at our [information regarding `perf`]({{site.url}}/server/guides/linux-perf.html). If you're running in a Docker container, don't forget that you'll need a privileged container. And generally, you will need `root` access, so you may need to prefix the commands with `sudo`.
 
 ## Getting a `perf` user probe
 

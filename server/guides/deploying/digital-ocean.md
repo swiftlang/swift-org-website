@@ -64,4 +64,4 @@ Copy the root user's authorized SSH keys to the newly created user. This will al
 rsync --archive --chown=swift:swift ~/.ssh /home/swift
 ```
 
-Your DigitalOcean virtual machine is now ready. Continue using the [Ubuntu]({{site.url}}/server/guides/deploying/ubuntu) guide. 
+Your DigitalOcean virtual machine is now ready. Continue using the [Ubuntu]({{site.url}}/server/guides/deploying/ubuntu.html) guide.
