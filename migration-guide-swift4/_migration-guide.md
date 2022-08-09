@@ -71,7 +71,7 @@ func foo(_: ((Int, Int) -> ()) {}
 foo { let (x, y) = $0; print(x + y) }
 ```
 
-> For more information about this language change, see the [Swift Evolution Document for SE-0110](https://github.com/apple/swift-evolution/blob/main/proposals/0110-distingish-single-tuple-arg.md).
+> For more information about this language change, see the [Swift Evolution Document for SE-0110](https://github.com/apple/swift-evolution/blob/main/proposals/0110-distinguish-single-tuple-arg.md).
 
 #### Default parameter values must be public
 
