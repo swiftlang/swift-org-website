@@ -4,7 +4,8 @@ title: Deploying to Servers or Public Cloud
 ---
 
 The following guides can help with the deployment to public cloud providers:
-* [AWS]({{site.url}}/server/guides/deploying/aws.html)
+* [AWS on EC2]({{site.url}}/server/guides/deploying/aws.html)
+* [AWS on Fargate with Vapor and MongoDB Atlas]({{site.url}}/server/guides/deploying/aws-copilot-fargate-vapor-mongo.html)
 * [DigitalOcean]({{site.url}}/server/guides/deploying/digital-ocean.html)
 * [Heroku]({{site.url}}/server/guides/deploying/heroku.html)
 * [Kubernetes & Docker]({{site.url}}/server/guides/packaging.html#docker)
