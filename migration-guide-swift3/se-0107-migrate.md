@@ -173,7 +173,7 @@ let name: String = withUnsafePointer(to: &bytes) { ptr -> String in
 
 In general, developer's should not make layout assumptions. However,
 some "obvious" cases can be safely assumed, including homogeneous
-arrays and tuples, and structs with homgeneous stored
+arrays and tuples, and structs with homogeneous stored
 properties. Imported C structs naturally follow the layout rules of
 the platform's C ABI.
 
@@ -446,7 +446,7 @@ R0.l = 0x04
 ### Socket API Helper
 
 BSD sockets are a common pain point for Swift interoperability. Swift
-3.0 exposes the difficultly in doing this correcly. Fortunately, Quinn
+3.0 exposes the difficultly in doing this correctly. Fortunately, Quinn
 "The Eskimo!" has provided these helpful wrappers:
 
 ~~~

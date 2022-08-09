@@ -137,7 +137,7 @@ To run the stress tester over a Swift package manager project, you can either ge
 
 #### Filing reports for issues found by the stress tester
 
-When the stress tester detects an issue it reports details about the failure in Xcode's build log, or in the swift build invocation's command-line ouput. A typical issue will look something like the below, found when stress testing the SwiftSyntax project:
+When the stress tester detects an issue it reports details about the failure in Xcode's build log, or in the swift build invocation's command-line output. A typical issue will look something like the below, found when stress testing the SwiftSyntax project:
 
 <pre>
 Detected unexpected failure: Sourcekitd crashed

@@ -75,7 +75,7 @@ foo { let (x, y) = $0; print(x + y) }
 
 #### Default parameter values must be public
 
-The compiler is now more strict about the accessiblity of referenced, non-literal values used as default arguments for your public functions; they must be also be `public`. Among other things, this exposes an opportunity for optimizing access to the value at the call site. Because this may involve API design, the Migrator does not suggest fixes, although there are some possibilities for you to consider as an API author:
+The compiler is now more strict about the accessibility of referenced, non-literal values used as default arguments for your public functions; they must be also be `public`. Among other things, this exposes an opportunity for optimizing access to the value at the call site. Because this may involve API design, the Migrator does not suggest fixes, although there are some possibilities for you to consider as an API author:
 
 - Make the referenced default values `public`.
 - Provide `public` functions which return a sensible default value.

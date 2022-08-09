@@ -144,7 +144,7 @@ addr2line -e /tmp/test -a 0xc62ce -ipf | swift demangle
 ## Debugging transient memory usage with `heaptrack`
 [Heaptrack](https://github.com/KDE/heaptrack) is very useful for analyzing memory leaks/usage with less overhead than `valgrind` - but more importantly is also allows for analyzing transient memory usage which may significantly impact performance by putting to much pressure on the allocator. 
 
-In addition to command line acccess, there is a graphical front-end `heaptrack_gui`.
+In addition to command line access, there is a graphical front-end `heaptrack_gui`.
 
 A key feature is that it allows for diffing between two different runs of your application, making it fairly easy to troubleshoot differences in `malloc` behavior between e.g. feature branches and main.
 
@@ -190,7 +190,7 @@ Finally, we can analyze the output as a diff from these runs using `heaptrack_pr
 ```
 heaptrack_print -T -d heaptrack.test_1000_autoReadGetAndSet.84341.gz heaptrack.test_1000_autoReadGetAndSet.84372.gz | swift demangle
 ```
-`-T` gives us the temporary allocations (as it in this case was not a leak, but a transient alloaction - if you have leaks remove `-T`).
+`-T` gives us the temporary allocations (as it in this case was not a leak, but a transient allocation - if you have leaks remove `-T`).
 
 The output can be quite long, but in this case as we look for transient allocations, scroll down to:
 

@@ -85,7 +85,7 @@ Swift is a fun and powerful language, and folks often want to use it also for th
 
 See also: 
 
-- The [SwiftPM suport for Swift scripts](https://forums.swift.org/t/swiftpm-support-for-swift-scripts/33126) thread has an initial design that could be used as the basis of this work. It may need some polish, figuring out the details the project cound aim for implementing a basic version of it.
+- The [SwiftPM support for Swift scripts](https://forums.swift.org/t/swiftpm-support-for-swift-scripts/33126) thread has an initial design that could be used as the basis of this work. It may need some polish, figuring out the details the project cound aim for implementing a basic version of it.
 
 **Skills required**
 

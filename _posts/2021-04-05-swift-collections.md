@@ -60,7 +60,7 @@ colors.sort()
 
 ![Deque Lookup Benchmark]({{ site.url }}/assets/images/collections-blog/DequeLookup.png){:width="100%"}
 
-> *Like `Array`, accessing an element at an arbirary offset is a constant time operation for `Deque`.*
+> *Like `Array`, accessing an element at an arbitrary offset is a constant time operation for `Deque`.*
 
 To support efficient insertions at the front, deques need to give up on maintaining their elements in a contiguous buffer. This tends to make them work slightly slower than arrays for use cases that don't call for inserting/removing elements at the front -- so it's probably not a good idea to blindly replace all your arrays with deques.
 
