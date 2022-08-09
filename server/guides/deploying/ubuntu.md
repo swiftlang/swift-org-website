@@ -89,7 +89,7 @@ Use `CTRL+C` to quit the server.
 
 Congratulations on getting your Swift server app running on Ubuntu!
 
-## Source Deployement
+## Source Deployment
 
 This section shows you how to build and run your project on the deployment server.
 
@@ -127,7 +127,7 @@ tar xzf swift-5.2-RELEASE-ubuntu18.04.tar.gz
 
 ### Install Toolchain
 
-Move Swift somewhere easy to acess. This guide will use `/swift` with each compiler version in a subfolder. 
+Move Swift somewhere easy to access. This guide will use `/swift` with each compiler version in a subfolder. 
 
 ```sh
 sudo mkdir /swift

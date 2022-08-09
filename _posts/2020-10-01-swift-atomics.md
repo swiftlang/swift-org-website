@@ -115,7 +115,7 @@ The ordering enumerations correspond to `std::memory_order` in the C/C++ standar
 
 All atomic operations exposed by this package are guaranteed to have lock-free implementations. Lock-freedom means that the atomic operations are non-blocking -- they don't ever need to wait on the progress of some other thread to complete their own task.
 
-However, we do not guarantee wait-free operation: depending on the capabilities of the target platform, some of the exposed operations may be implemented by compare-and-exchange loops. When multiple threads are repatedly competing for access to the same atomic variable, this may result in unfair scheduling where some threads may get repeatedly preempted by others, forcing them to retry their operation an arbitrary number of times. That said, all atomic operations map directly to dedicated, wait-free CPU instructions where available -- to the extent supported by LLVM & Clang.
+However, we do not guarantee wait-free operation: depending on the capabilities of the target platform, some of the exposed operations may be implemented by compare-and-exchange loops. When multiple threads are repeatedly competing for access to the same atomic variable, this may result in unfair scheduling where some threads may get repeatedly preempted by others, forcing them to retry their operation an arbitrary number of times. That said, all atomic operations map directly to dedicated, wait-free CPU instructions where available -- to the extent supported by LLVM & Clang.
 
 ## What's Next?
 

@@ -228,7 +228,7 @@ struct ToDoItem: Content {
 let MONGODB_DATABASE = Environment.get("MONGODB_DATABASE") ?? ""
 let MONGODB_COLLECTION = Environment.get("MONGODB_COLLECTION") ?? ""
 
-// define an extenstion to the Vapor Request object to interact with the database and collection
+// define an extension to the Vapor Request object to interact with the database and collection
 extension Request {
 
     var todoCollection: MongoCollection<ToDoItem> {

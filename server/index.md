@@ -23,7 +23,7 @@ Services built with Swift are also CPU-efficient, given the language’s focus o
 Swift-based applications start quickly since there are almost no warm up operations.
 This makes Swift a great fit for cloud services, which are often re-scheduled onto new VMs or containers to address platform formation changes.
 Using Swift also helps streamline continuous delivery pipelines, since you incur less wait time for new versions of the service fleet to come online.
-Finally, quick boot times make Swift a perfect fit for serveless applications such as Cloud Functions or Lambda with negligible cold start times.
+Finally, quick boot times make Swift a perfect fit for serverless applications such as Cloud Functions or Lambda with negligible cold start times.
 
 ### Deterministic performance
 Swift’s use of ARC (instead of tracing garbage collection) and its lack of JIT gives it an important edge in the cloud services space.

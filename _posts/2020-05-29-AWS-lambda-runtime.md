@@ -87,7 +87,7 @@ import AWSLambdaRuntime
 import AWSLambdaEvents
 
 // In this example we are receiving an APIGateway.V2.Request,
-// and respoding with APIGateway.V2.Response
+// and responding with APIGateway.V2.Response
 Lambda.run { (context, request: APIGateway.V2.Request, callback) in
    ...
    callback(.success(APIGateway.V2.Response(statusCode: .accepted)))

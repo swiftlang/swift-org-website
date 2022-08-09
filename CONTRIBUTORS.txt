@@ -14,7 +14,7 @@ needs to be listed here.
 Names below this line are automatically generated from the repository logs of
 the Swift open source project at https://github.com/apple/swift.
 It contains the information about the committer that was publicly present
-when the commit was made, and merges duplicate entries into one line per pseron.
+when the commit was made, and merges duplicate entries into one line per person.
 If your name or email has been incorrectly merged, please open a pull request
 with a change to the .mailmap file.
 
