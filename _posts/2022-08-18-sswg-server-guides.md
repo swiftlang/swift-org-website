@@ -1,15 +1,21 @@
 ---
 layout: post
 published: true
-date: 2022-08-09 11:00:00
-title: Server Guides now on Swift.org
+date: 2022-08-18 13:00:00
+title: Server Guides Now on Swift.org
 author: 0xTim
 ---
 
-The [Swift Server Workgroup](/sswg/) has hosted a set of guides for server development on Github for a number of years now. With the open sourcing of the website, we've transitioned the guides to Swift.org! You can find the guides [here](/server/guides/).
+The [Swift Server Workgroup](/sswg/) has maintained a set of open source guides for Swift on Server development for a number of years. Now that swift.org is open source, we've [moved the guides to this site](/server/guides/).
 
-The guides cover everything from setting up your environment, building and testing applications, profiling them and deploying them. There are guides for deploying to AWS, both on EC2 and ECS, Digital Ocean, Heroku and GCP. There are also guides for how best to package Docker containers and debug issues in production.
+The guides cover a number of useful topics:
 
-Additionally, the guides contain a section for library authors. These currently cover best practices for logging in libraries at different levels and how to adopt Swift concurrency.
+ * [Setting up your environment](/server/guides/setup-and-ide-alternatives.html)
+ * [Building]({{site.url}}/server/guides/building.html) and [testing]({{site.url}}/server/guides/testing.html)
+ * [Profiling]({{site.url}}/server/guides/performance.html) and [deploying]({{site.url}}/server/guides/deployment.html) (including AWS, Digital Ocean, Heroku, and GCP)
+ * [Docker best practices]({{site.url}}/server/guides/packaging.html)
+ * [Debugging in production]({{site.url}}/server/guides/llvm-sanitizers.html)
 
-If you have anything you'd like to see covered in the guides you can either [create an issue](https://github.com/apple/swift-org-website/issues/new/choose) or create a post on the forums.
+The guides also include a section for library authors, covering best practices for log levels and approaches for adopting Swift concurrency.
+
+If you'd like to contribute to the guides, you can [create an issue](https://github.com/apple/swift-org-website/issues/new/choose) or post on [the forums](https://forums.swift.org).
