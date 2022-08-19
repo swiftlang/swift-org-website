@@ -41,7 +41,7 @@
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:image" content="{{ site.url }}/apple-touch-icon-180x180.png" />
   {% if page.robots %}
-    <meta name="robots" content="{{page.robots}}" />
+  <meta name="robots" content="{{page.robots}}" />
   {% endif %}
   {% if page.id %}
   <meta property="og:type" content="article" />
@@ -60,20 +60,21 @@
 </head>
 
 <body>
-{% include navigation.html %}
-{{content}}
-<!-- metrics -->
-<script>
+  {% include navigation.html %}
+  {{content}}
+  <!-- metrics -->
+  <script>
     /* RSID: */
-    var s_account="awdswiftorg"
-</script>
-<script src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
-<script>
-    s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+    var s_account = "awdswiftorg"
+  </script>
+  <script src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+  <script>
+    s.pageName = AC && AC.Tracking && AC.Tracking.pageName();
 
     /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
-    var s_code=s.t();if(s_code)document.write(s_code)
-</script>
-<!-- /metrics -->
+    var s_code = s.t(); if (s_code) document.write(s_code)
+  </script>
+  <!-- /metrics -->
 </body>
+
 </html>
