@@ -19,6 +19,7 @@
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
   <link rel="mask-icon" href="/assets/images/icon-swift.svg" color="#F05339" />
+  <link rel="preconnect" href="https://developer.apple.com" />
   {% if page.atom %}
   <link rel="alternate" type="application/atom+xml" title="Swift.org (Atom Feed)" href="/atom.xml" />
   {% endif %}
@@ -54,13 +55,13 @@
   <meta property="og:url" content="{{ site.url }}" />
   <meta property="og:description" content="{{ site.description | strip_html | escape}}" />
   {% endif %}
+  <script src="/assets/javascripts/color-scheme-toggle.js" defer></script>
+  <script src="/assets/javascripts/application.js" defer></script>
 </head>
 
 <body>
-<script src="/assets/javascripts/color-scheme-toggle.js"></script>
 {% include navigation.html %}
 {{content}}
-<script src="/assets/javascripts/application.js"></script>
 <!-- metrics -->
 <script>
     /* RSID: */
