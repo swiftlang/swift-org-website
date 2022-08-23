@@ -19,7 +19,7 @@ Swift.org uses [Jekyll](https://jekyllrb.com), a blog-aware, static site generat
 
 Requirements
 - Git
-- Ruby 2.6 or higher
+- Ruby 3.1 or higher
   _(a Ruby installation manager, such as
   [rbenv](https://github.com/sstephenson/rbenv) or
   [RVM](https://rvm.io) is recommended, but not required)_
