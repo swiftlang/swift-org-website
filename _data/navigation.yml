@@ -216,6 +216,21 @@
           name: governance
         - title: Website workgroup
           name: website-workgroup
+    - title: Language Workgroup
+      url: /language-workgroup/
+      sections:
+        - title: Charter
+          name: charter
+        - title: Membership
+          name: membership
+        - title: Decision making
+          name: decision-making
+        - title: Communication
+          name: communication
+        - title: Evolution process
+          name: evolution-process
+        - title: Community participation
+          name: community-participation
     - title: C++ Interoperability
       url: /cxx-interop-workgroup/
       sections:
