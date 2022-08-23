@@ -8,7 +8,7 @@ The Swift Language Workgroup guides the development of the Swift language and st
 # Charter
 
 The Swift Language Workgroup:
-* works with the [Swift Core Team](https://swift.org/community/#community-structure) to define a roadmap for the focus areas of language and library development in the upcoming releases of Swift;
+* works with the [Swift Core Team](/community/#community-structure) to define a roadmap for the focus areas of language and library development in the upcoming releases of Swift;
 * works with the Swift Core Team and other workgroups to define, document, and develop the Swift evolution process;
 * implements the evolution process for the Swift language and library by:
   * soliciting, writing, and approving feature roadmaps,
@@ -85,4 +85,4 @@ The Language Workgroup is not separate from the Swift community. Workgroup membe
 
 Proposals or feedback about the Swift language, the general evolution process, a specific evolution proposal, or any other topic under the purview of the Language Workgroup are always welcome. The primary way to communicate with the Language Workgroup is simply to post in the [Evolution category](https://forums.swift.org/c/evolution/) on the Swift forums, either by adding a reply to an existing review, pitch, or other discussion thread or by creating a new thread in [Evolution > Discussion](https://forums.swift.org/c/evolution/discuss) or [Evolution > Pitches](https://forums.swift.org/c/evolution/pitches). Community members may also reach out privately to members of the Language Workgroup by email or private message on the forums.
 
-The Language Workgroup follows the Swift [Code of Conduct](https://www.swift.org/code-of-conduct/). Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the workgroup chair or a member of the [Swift Core Team](https://swift.org/community/#community-structure) or by flagging the behavior for moderation, whether you are the target of that behavior or not.
+The Language Workgroup follows the Swift [Code of Conduct](/code-of-conduct/). Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the workgroup chair or a member of the [Swift Core Team](/community/#community-structure) or by flagging the behavior for moderation, whether you are the target of that behavior or not.
