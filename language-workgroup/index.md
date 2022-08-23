@@ -33,16 +33,16 @@ The Core Team also selects one member of the workgroup as the chair. The chair h
 
 The current members of the Language Workgroup are:
 
-* Tony Allevato
-* Holly Borla
-* Steve Canon
-* Ben Cohen
-* Doug Gregor
-* Joe Groff
-* Freddy Kellison-Linn
-* John McCall (chair)
-* Becca Royal-Gordon
-* Xiaodi Wu
+* [Tony Allevato](https://github.com/allevato/)
+* [Holly Borla](https://github.com/hborla/)
+* [Steve Canon](https://github.com/stephentyrone/)
+* [Ben Cohen](https://github.com/airspeedswift/)
+* [Doug Gregor](https://github.com/DougGregor/)
+* [Joe Groff](https://github.com/jckarter/)
+* [Freddy Kellison-Linn](https://github.com/Jumhyn/)
+* [John McCall](https://github.com/rjmccall/) (chair)
+* [Becca Royal-Gordon](https://github.com/beccadax/)
+* [Xiaodi Wu](https://github.com/xwu/)
 
 ## Decision making
 
