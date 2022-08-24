@@ -38,6 +38,7 @@ Get involved with an existing translation project, or start a new one.
 - [Read Japanese translation](https://www.swiftlangjp.com){:target="_blank"}
 - [Read Korean translation](https://bbiguduk.gitbook.io/swift){:target="_blank"}
 - [Read Spanish translation](https://swift-book-es.vercel.app/){:target="_blank"}
+- [Read Ukrainian translation](https://book.swift.org.ua){:target="_blank"}
 </div>
 
 <div class="info" markdown="1">
