@@ -316,3 +316,10 @@ adam-fowler:
   github: adam-fowler
   twitter: o_aberration
   about: "Adam Fowler is an open source developer and is a member of the SSWG (Swift Server Workgroup)."
+
+danieleggert:
+  name: Daniel Eggert
+  email: deggert@apple.com
+  gravatar: dcda0a6799a6cf53879fca308db01edf
+  github: danieleggert
+  about: "Daniel Eggert is a member of the team at Apple working on Mail for iOS and macOS."
