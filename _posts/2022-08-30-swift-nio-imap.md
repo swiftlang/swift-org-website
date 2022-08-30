@@ -15,7 +15,7 @@ This package implements:
  * High performance
  * Integration with SwiftNIO
 
-# Motivation
+## Motivation
 
 Email has been a indispensable part of the internet for over 40 years and is a ubiquitous part of many products and services today.
 
@@ -25,7 +25,7 @@ Correctly parsing and encoding IMAP is notoriously difficult. SwiftNIO IMAP redu
 
 This package is focused on parsing and encoding IMAP while also providing some common convenience methods related to core IMAP types. It does not implement any of busines logic related to IMAP.
 
-# A Brief Tour
+## A Brief Tour
 
 The SwiftNIO IMAP targets RFC 3501, IMAP version 4rev1, and additionally supports extensions from more than 20 RFCs: RFC 2087, 2177, 2221, 2342, 2971, 3348, 3501, 3502, 3516, 3691, 4315, 4467, 4469, 4731, 4959, 5032, 5161, 5182, 5258, 5464, 5819, 6154, 6851, 7162, 7377, 7888, and 8438.
 
@@ -108,7 +108,7 @@ S: A001 OK LOGIN completed
 
 The so-called `LITERAL+` / `LITERAL-` support can be enabled either using a `CAPABILITY` response from the server or alternatively by explicitly setting encoding options.
 
-# Integration with SwiftNIO
+## Integration with SwiftNIO
 
 SwiftNIO IMAP provides a pair of `ChannelHandler` objects that can be integrated into a SwiftNIO `ChannelPipeline`. This allows sending IMAP commands using NIO `Channel`s.
 
@@ -125,17 +125,17 @@ try await channel.writeAndFlush(CommandStreamPart.tagged(TaggedCommand(tag: "a00
 
 The `ChannelHandler`s support transparent literals, IMAP capabilities, and all of the rest of the functionality of SwiftNIO IMAP. They're powerful building blocks for IMAP applications on both the server and client.
 
-# What’s Next
+## What’s Next
 
 The version of SwiftNIO IMAP we’re releasing today is still a prototype. We want to solicit feedback from the community. 
 
 We’ve done extensive testing of the project’s code and we believe that it’s close to being “production ready”. But we would love to have design discussions on the Swift forums about what is missing, and which bits and pieces could be improved.
 
-# Get Involved
+## Get Involved
 
 Your feedback, experience, and contributions are very welcome!
 
- * Get started by trying out the SwiftNIO IMAP library on GitHub. (link?)
- * Discuss the library, suggest improvements and get help in the Swift forums. (link?)
+ * Get started by trying out [the SwiftNIO IMAP library on GitHub](https://github.com/apple/swift-nio-imap/).
+ * Discuss the library, suggest improvements and get help in [the Swift forums](https://forums.swift.org).
  * Open issues for problems you find.
- * Contribute pull requests to fix any issues
+ * Contribute pull requests to fix any issues.
