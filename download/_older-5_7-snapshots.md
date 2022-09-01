@@ -54,6 +54,25 @@ Ubuntu 20.04
 
 {% endif %}
 
+{% if ubuntu2204_5_7_builds.size > 1 %}
+
+Ubuntu 22.04
+
+<table id="linux-builds" class="downloads">
+    <thead>
+        <tr>
+            <th class="download">Download</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for build in ubuntu2204_5_7_builds | offset:1 | limit:10 %}
+            {% include_relative _old-snapshot.html build=build name="Ubuntu 22.04" platform_dir="ubuntu2204" branch_dir="swift-5.7-branch" %}
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endif %}
+
 {% if centos7_5_7_builds.size > 1 %}
 
 CentOS 7
