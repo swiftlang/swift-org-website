@@ -3,7 +3,6 @@ layout: page
 title: Download Swift
 ---
 
-
 {% assign xcode_development_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}
 {% assign ubuntu1510_development_builds = site.data.builds.development.ubuntu1510 | sort: 'date' | reverse %}
 {% assign ubuntu1404_development_builds = site.data.builds.development.ubuntu1404 | sort: 'date' | reverse %}
