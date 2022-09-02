@@ -350,50 +350,6 @@ footer[role="contentinfo"] {
     }
 }
 
-.links {
-  ul {
-      list-style: none;
-      ul {
-          list-style: disc;
-          margin-top: 5px;
-      }
-  }
-
-  a:after {
-      content: " ›"
-  }
-}
-  
-.links .link-external:after, // Needed for specificity of existing styles
-.links-external a:after, // Needed for Jekyll html + markdown link markup
-.link-external:after {
-    content: " ↗"
-}
-
-.links-download a:after {
-    content: " ⬇"
-}
-
-.links-list-nostyle {
-  ul {
-      padding-left: 0;
-      ul {
-          list-style: none;
-      }
-  }
-}
-
-.links-sublevel {
-  p {
-      margin-bottom: 0
-  }
-
-  ul {
-      margin-top: 0;
-      padding-left: 40px;
-  }
-}
-
 article {
     &:first-of-type {
         padding-bottom: 36px;
@@ -655,6 +611,50 @@ article {
     .bad pre:before, pre.bad:before {
         content: "⛔️";
         float: right;
+    }
+
+    .links {
+        ul {
+            list-style: none;
+            ul {
+                list-style: disc;
+                margin-top: 5px;
+            }
+        }
+        a:after {
+            content: " ›"
+        }
+    }
+
+
+    .links .link-external:after, // Needed for specificity of existing styles
+    .links-external a:after, // Needed for Jekyll html + markdown link markup
+    .link-external:after {
+      content: " ↗"
+    }
+
+    .links-download a:after {
+      content: " ⬇"
+    }
+
+    .links-list-nostyle {
+      ul {
+        padding-left: 0;
+        ul {
+            list-style: none;
+        }
+      }
+    }
+
+    .links-sublevel {
+      p {
+        margin-bottom: 0
+      }
+
+      ul {
+        margin-top: 0;
+        padding-left: 40px;
+      }
     }
 
     footer {
