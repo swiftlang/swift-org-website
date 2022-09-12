@@ -414,7 +414,7 @@ $ yum install swiftlang
 ```
 
 
-<sup>1</sup> Swift 5.7 contains Linux and Windows changes only, Swift 5.6 is available as part of Xcode 13.3.<br>
+<sup>1</sup> Swift 5.7 is available as part of Xcode 14.<br>
 <sup>2</sup> Swift 5.7 Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
 
 
