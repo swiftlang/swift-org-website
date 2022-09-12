@@ -35,7 +35,7 @@ Swift benefits from decades of advancement in computer science to offer syntax t
 Swift is a powerful and intuitive programming language on macOS, iOS, watchOS, tvOS and beyond. Swift code is safe by design, yet also produces software that is optimized to run lightning-fast.
 
 <div class="links links-list-nostyle" markdown="1">
-  - [Learn more about Swift on Apple platforms](#)
+  - [[TODO] Learn more about Swift on Apple platforms](#)
 </div>
 
 ### Server
@@ -82,6 +82,6 @@ Stay up-to-date with the latest in the Swift community.
 
 <div class="links links-list-nostyle" markdown="1">
   - [Visit the Swift.org blog](/blog/)
-  - [Learn about the Swift forums](/community/#forums)
-  - [@Swiftlang on Twitter](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
+  - [Visit the Swift forums](https://forums.swift.org)
+  - [Follow @Swiftlang on Twitter](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
 </div>
