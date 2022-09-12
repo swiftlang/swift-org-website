@@ -26,7 +26,7 @@ offering a guided tour, a comprehensive guide, and a formal reference of the lan
 </div>
 
 <div class="links links-download" markdown="1">
-[Download The Swift Programming Language in ePub format](https://docs.swift.org/swift-book/TheSwiftProgrammingLanguageSwift.epub)
+[Download The Swift Programming Language in ePub format](https://docs.swift.org/swift-book/TheSwiftProgrammingLanguage.epub)
 </div>
 
 #### Translations
