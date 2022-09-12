@@ -11,7 +11,7 @@ Swift is a general-purpose programming language built using a modern approach to
 <div class="links links-list-nostyle" markdown="1">
   - [Get started with Swift](/getting-started)
   - [Read the documentation](/documentation)
-  - [Latest release: 5.6.3](/download/#swift-563)
+  - [Latest release: 5.7](/download/#swift-57)
 </div>
 
 ## Why Swift?
