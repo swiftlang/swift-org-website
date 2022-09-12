@@ -1,13 +1,14 @@
 ## Using the REPL
 
-If you run the `swift` command without any other arguments,
+If you run `swift repl` without any other arguments,
 you'll launch the REPL, an interactive shell
 that will read, evaluate, and print the results
 of any Swift code you enter.
 
 ~~~ shell
-$ swift
-Welcome to Apple Swift version 2.2. Type :help for assistance.
+$ swift repl
+Welcome to Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50).
+Type :help for assistance.
   1>
 ~~~
 
