@@ -48,9 +48,10 @@ high-level description of the major components of the Swift compiler:
     is "canonical" SIL.
 
 * **SIL Optimizations**: The SIL optimizations (implemented in
-    [lib/Analysis](https://github.com/apple/swift/tree/main/lib/SILOptimizer/Analysis), [lib/ARC](https://github.com/apple/swift/tree/main/lib/SILOptimizer/ARC), [lib/LoopTransforms](https://github.com/apple/swift/tree/main/lib/SILOptimizer/LoopTransforms),
-    and
-    [lib/Transforms](https://github.com/apple/swift/tree/main/lib/SILOptimizer/Transforms))
+    [lib/SILOptimizer/Analysis](https://github.com/apple/swift/tree/main/lib/SILOptimizer/Analysis),
+    [lib/SILOptimizer/ARC](https://github.com/apple/swift/tree/main/lib/SILOptimizer/ARC),
+    [lib/SILOptimizer/LoopTransforms](https://github.com/apple/swift/tree/main/lib/SILOptimizer/LoopTransforms), and
+    [lib/SILOptimizer/Transforms](https://github.com/apple/swift/tree/main/lib/SILOptimizer/Transforms))
     perform additional high-level, Swift-specific optimizations to the
     program, including (for example) Automatic Reference Counting
     optimizations, devirtualization, and generic specialization.
