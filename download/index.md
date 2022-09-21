@@ -391,7 +391,7 @@ Tag: [swift-5.7-RELEASE](https://github.com/apple/swift/releases/tag/swift-5.7-R
 
 ### RPM
 <div class="warning" markdown="1">
-Swift 5.6.3 RPMs for Amazon Linux 2 and CentOS 7 for **experimental use only**. Please provide your [feedback](https://github.com/apple/swift/issues). Swift 5.7 RPMs will be available soon.
+Swift 5.7 RPMs for Amazon Linux 2 and CentOS 7 for **experimental use only**. Please provide your [feedback](https://github.com/apple/swift/issues).
 </div>
 
 
