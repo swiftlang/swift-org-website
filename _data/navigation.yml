@@ -240,3 +240,14 @@
           name: membership
         - title: Communication
           name: communication
+    - title: Documentation Workgroup
+      url: /documentation-workgroup/
+      sections:
+        - title: Charter
+          name: charter
+        - title: Membership
+          name: membership
+        - title: Communication
+          name: communication
+        - title: Community Participation
+          name: community-participation
