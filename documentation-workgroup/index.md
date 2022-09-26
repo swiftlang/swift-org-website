@@ -94,7 +94,7 @@ contribute, consider:
 * Discussing ideas in the Swift Forums, for example in the [Swift-DocC
   forum](https://forums.swift.org/c/development/swift-docc) for
   Swift-DocC–related ideas
-* Creating [GitHub Issues](https://github.com/apple/swift/issues) to track
-  documentation and documentation tooling enhancements and bugs
+* Opening issues to track enhancements and bugs for the projects governed by the Documentation Workgroup:
+  [Swift-DocC](https://github.com/apple/swift-docc/issues), [The Swift Programming Language book](https://github.com/apple/swift-book/issues)
 * Participating in the [Swift Mentorship
   Program](/mentorship)
