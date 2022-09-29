@@ -77,8 +77,8 @@ The Swift Server Workgroup has a [process](https://github.com/swift-server/sswg/
 | [Soto for AWS](https://github.com/soto-project/soto) | Third-party SDK for AWS | Incubating | 10/1/2020 | 11/12/2020 |
 | [MultipartKit](https://github.com/vapor/multipart-kit) | Multipart parser and serializer with Codable support for Multipart Form Data | Incubating | 3/3/2021 | 11/11/2021 |
 | [MQTT NIO](https://github.com/swift-server-community/mqtt-nio) | A Swift NIO MQTT v3.1.1 and v5.0 Client | Sandbox | 11/2/2021 | 1/19/2022 |
-| [GraphQL](https://github.com/GraphQLSwift/GraphQL) | GraphQL query language implementation | Incubating | 22/8/2022 | 15/9/2022 |
-| [Graphiti](https://github.com/GraphQLSwift/Graphiti) | Library for building GraphQL schemas | Incubating | 22/8/2022 | 15/9/2022 |
+| [GraphQL](https://github.com/GraphQLSwift/GraphQL) | GraphQL query language implementation | Incubating | 8/22/2022 | 9/15/2022 |
+| [Graphiti](https://github.com/GraphQLSwift/Graphiti) | Library for building GraphQL schemas | Incubating | 8/22/2022 | 9/15/2022 |
 
 The SSWG publishes a [package collection]({{ site.url }}/blog/package-collections/) that contains the projects incubated by the workgroup. The collection is available at `https://swiftserver.group/collection/sswg.json`.
 
