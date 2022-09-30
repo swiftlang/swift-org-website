@@ -83,7 +83,7 @@ Most communication is expected to happen asynchronously on the Swift Forums. The
 <details class="download">
   <summary>How are open source tasks for mentees identified?</summary>
 
-If the mentee does not have any ideas in mind, project maintainers and mentors may identify starter tasks that are suitable for newcomers to the project. For example, the Swift compiler project has issues labeled [StarterBug](https://github.com/apple/swift/issues?q=is%3Aopen+is%3Aissue+label%3AStarterBug). Beyond the initial contribution, mentors or mentees may suggest small “projects” that are implementable given the expected time commitment. Otherwise, every open source project has an endless supply of issues to be fixed! Participants may rely on the issue tracking system for the open source project to identify these tasks.
+If the mentee does not have any ideas in mind, project maintainers and mentors may identify starter tasks that are suitable for newcomers to the project. For example, the Swift compiler project has issues labeled <a href="https://github.com/apple/swift/issues?q=is%3Aopen+is%3Aissue+label%3AStarterBug">StarterBug</a>. Beyond the initial contribution, mentors or mentees may suggest small “projects” that are implementable given the expected time commitment. Otherwise, every open source project has an endless supply of issues to be fixed! Participants may rely on the issue tracking system for the open source project to identify these tasks.
 </details>
 
 <details class="download">
