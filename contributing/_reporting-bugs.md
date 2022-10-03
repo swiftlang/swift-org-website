@@ -22,7 +22,7 @@ When filing a new Swift bug, please include the following:
 Because Swift is under very active development, we receive a lot of bug reports. Before filing a new issue, take a moment to browse our [existing issues](https://github.com/apple/swift/issues) to make sure you're not filing a duplicate.
 
 <div class="warning" markdown="1">
-Before filing an issue requesting a new language feature, see [Participating in the Swift Evolution Process](#participating-in-the-swift-evolution-process).
+Before filing an issue requesting a new language feature, see the [Swift Evolution Process section](#participating-in-the-swift-evolution-process).
 </div>
 
 [bugtracker]:  http://github.com/apple/swift/issues
