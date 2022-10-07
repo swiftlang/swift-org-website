@@ -14,7 +14,7 @@ When opening an issue, please include the following:
   If the issue is a crash, include a stack trace. Otherwise, describe the behavior you were expecting to see, along with the behavior you actually observed.
 
 - **A reproducible test case.**
-  Double-check that your test case reproduces the issue. A relatively small sample (roughly within 50 lines of code) is best pasted directly into the description; a larger one may be uploaded as an attachment. Consider reducing the sample to the smallest amount of code possible—a smaller test case is easier to reason about and more appealing to сontributors.
+  Double-check that your test case reproduces the issue. A relatively small sample (roughly within 50 lines of code) is best pasted directly into the description; a larger one may be uploaded as an attachment. Consider reducing the sample to the smallest amount of code possible — a smaller test case is easier to reason about and more appealing to сontributors.
 
 - **A description of the environment that reproduces the problem.**
   Include information about the Swift compiler's version, the deployment target (if explicitly set) and your platform.
