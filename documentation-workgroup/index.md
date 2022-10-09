@@ -17,18 +17,18 @@ The Documentation Workgroup will:
 
 The current Documentation Workgroup consists of the following people:
 
-* Daniel Grumberg
-* Dave Verwer
-* David Rönnqvist
-* Ethan Kusters
-* Franklin Schrans (chair)
-* Joe Heck
-* Kelvin Ma
-* Kyle Murray
-* Kyle Ye
-* Max Obermeier
-* Sven Schmidt
-* Victoria Mitchell
+* [Daniel Grumberg](https://github.com/daniel-grumberg)
+* [Dave Verwer](https://github.com/daveverwer)
+* [David Rönnqvist](https://github.com/d-ronnqvist)
+* [Ethan Kusters](https://github.com/ethan-kusters)
+* [Franklin Schrans](https://github.com/franklinsch) (chair)
+* [Joe Heck](https://github.com/heckj)
+* [Kelvin Ma](https://github.com/kelvin13)
+* [Kyle Murray](https://github.com/krilnon)
+* [Kyle Ye](https://github.com/Kyle-Ye)
+* [Max Obermeier](https://github.com/theMomax)
+* [Sven Schmidt](https://github.com/finestructure)
+* [Victoria Mitchell](https://github.com/QuietMisdreavus)
 
 ## Charter
 
