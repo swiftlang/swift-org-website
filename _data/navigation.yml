@@ -112,6 +112,8 @@
 
 - header: Open Source Development
   pages:
+    - title: Swift Evolution
+      url: /swift-evolution/
     - title: Source Code
       url: /source-code/
       sections:
@@ -163,8 +165,6 @@
 
 - header: Open Source Efforts
   pages:
-    - title: Swift Evolution
-      url: /swift-evolution/
     - title: Swift Compiler
       url: /swift-compiler/
       sections:
