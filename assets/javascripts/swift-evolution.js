@@ -167,7 +167,7 @@ function init() {
   })
 
   document.querySelector('#proposals-count-number').innerHTML = 'Loading…'
-  req.open('get', 'https://data.swift.org/swift-evolution/proposals')
+  req.open('get', 'https://download.swift.org/swift-evolution/proposals.json')
   req.send()
 }
 
