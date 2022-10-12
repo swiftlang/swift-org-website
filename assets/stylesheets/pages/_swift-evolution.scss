@@ -173,7 +173,6 @@
     .proposal-detail {
         break-inside: avoid;
         display: flex;
-        max-width: 373px;
     }
     
     .proposal-detail-label {
@@ -198,20 +197,8 @@
         color: var(--color-text);
     }
     
-    .authors .proposal-detail-value {
-        width: 280px;
-    }
-    
     .authors a {
         white-space: nowrap;
-    }
-    
-    .review-manager .proposal-detail-value {
-        width: 223px;
-    }
-    
-    .bug-list {
-        width: 310px;
     }
     
     .bug-list a,
