@@ -1,3 +1,8 @@
+- date: 2022-10-22 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2022-10-22-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2022-10-22-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2022-10-22-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2022-10-19 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2022-10-19-a
   download: swift-DEVELOPMENT-SNAPSHOT-2022-10-19-a-centos7.tar.gz
