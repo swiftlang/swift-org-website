@@ -40,9 +40,7 @@ Swift.org contributions must adhere to the website's [governance process](https:
 
 ## Blog Posts
 
-Blog posts are covered by a [separate governance process](https://www.swift.org/website-governance/#blog-posts-governance) which has a more extensive review process. You should [reach out to the SWWG](https://forums.swift.org/new-message?groupname=swift-website-workgroup) if you would like to contribute a post. This can encompass sharing language changes, libraries and tools and highlighting work done by the community.
-
-Please note that pull requests for blog posts that have not been discussed with the SWWG will be rejected, with the exception of minor updates to existing posts like typos.
+Blog posts are covered by a [separate governance process](https://www.swift.org/website-governance/#blog-posts-governance). Community-contributed blog posts are welcome through the [community blog post submission process](http://swift.org/blog-post-contributions/).
 
 ## Community Participation
 
