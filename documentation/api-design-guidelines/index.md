@@ -638,13 +638,16 @@ is printed.
 
   ~~~ swift
   extension Shape {
-    /// Returns `true` iff `other` is within the area of `self`.
+    /// Returns `true` if `other` is within the area of `self`;
+    /// otherwise, `false`.
     func **contains**(_ other: **Point**) -> Bool { ... }
 
-    /// Returns `true` iff `other` is entirely within the area of `self`.
+    /// Returns `true` if `other` is entirely within the area of `self`;
+    /// otherwise, `false`.
     func **contains**(_ other: **Shape**) -> Bool { ... }
 
-    /// Returns `true` iff `other` is within the area of `self`.
+    /// Returns `true` if `other` is within the area of `self`;
+    /// otherwise, `false`.
     func **contains**(_ other: **LineSegment**) -> Bool { ... }
   }
   ~~~
@@ -655,8 +658,8 @@ is printed.
 
   ~~~ swift
   extension Collection where Element : Equatable {
-    /// Returns `true` iff `self` contains an element equal to
-    /// `sought`.
+    /// Returns `true` if `self` contains an element equal to
+    /// `sought`; otherwise, `false`.
     func **contains**(_ sought: Element) -> Bool { ... }
   }
   ~~~
@@ -959,9 +962,10 @@ x.move(**from:** x, **to:** y)
   /// bytes to allocate.
   ///
   /// - Returns:
-  ///   - **reallocated**: `true` iff a new block of memory
-  ///     was allocated.
-  ///   - **capacityChanged**: `true` iff `capacity` was updated.
+  ///   - **reallocated**: `true` if a new block of memory
+  ///     was allocated; otherwise, `false`.
+  ///   - **capacityChanged**: `true` if `capacity` was updated;
+  ///     otherwise, `false`.
   mutating func ensureUniqueStorage(
     minimumCapacity requestedCapacity: Int, 
     allocate: (_ **byteCount**: Int) -> UnsafePointer&lt;Void&gt;

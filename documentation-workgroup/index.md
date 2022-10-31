@@ -17,18 +17,18 @@ The Documentation Workgroup will:
 
 The current Documentation Workgroup consists of the following people:
 
-* Daniel Grumberg
-* Dave Verwer
-* David Rönnqvist
-* Ethan Kusters
-* Franklin Schrans (chair)
-* Joe Heck
-* Kelvin Ma
-* Kyle Murray
-* Kyle Ye
-* Max Obermeier
-* Sven Schmidt
-* Victoria Mitchell
+* [Daniel Grumberg](https://github.com/daniel-grumberg)
+* [Dave Verwer](https://github.com/daveverwer)
+* [David Rönnqvist](https://github.com/d-ronnqvist)
+* [Ethan Kusters](https://github.com/ethan-kusters)
+* [Franklin Schrans](https://github.com/franklinsch) (chair)
+* [Joe Heck](https://github.com/heckj)
+* [Kelvin Ma](https://github.com/kelvin13)
+* [Kyle Murray](https://github.com/krilnon)
+* [Kyle Ye](https://github.com/Kyle-Ye)
+* [Max Obermeier](https://github.com/theMomax)
+* [Sven Schmidt](https://github.com/finestructure)
+* [Victoria Mitchell](https://github.com/QuietMisdreavus)
 
 ## Charter
 
@@ -94,7 +94,7 @@ contribute, consider:
 * Discussing ideas in the Swift Forums, for example in the [Swift-DocC
   forum](https://forums.swift.org/c/development/swift-docc) for
   Swift-DocC–related ideas
-* Creating [GitHub Issues](https://github.com/apple/swift/issues) to track
-  documentation and documentation tooling enhancements and bugs
+* Opening issues to track enhancements and bugs for the projects governed by the Documentation Workgroup:
+  [Swift-DocC](https://github.com/apple/swift-docc/issues), [The Swift Programming Language book](https://github.com/apple/swift-book/issues)
 * Participating in the [Swift Mentorship
   Program](/mentorship)

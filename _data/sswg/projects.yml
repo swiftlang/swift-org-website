@@ -63,3 +63,15 @@
   pitched: 2020-02-20
   accepted: 2020-03-04
   url: https://github.com/apple/swift-crypto
+  
+- name: GraphQL
+  maturity: Incubating
+  pitched: 2022-08-22
+  accepted: 2022-09-15
+  url: https://github.com/GraphQLSwift/GraphQL
+
+- name: Graphiti
+  maturity: Incubating
+  pitched: 2022-08-22
+  accepted: 2022-09-15
+  url: https://github.com/GraphQLSwift/Graphiti

@@ -47,15 +47,16 @@ high-level description of the major components of the Swift compiler:
     uninitialized variables). The end result of these transformations
     is "canonical" SIL.
 
-* **SIL Optimizations**: The SIL optimizations (implemented in
-    [lib/Analysis](https://github.com/apple/swift/tree/main/lib/SILOptimizer/Analysis), [lib/ARC](https://github.com/apple/swift/tree/main/lib/SILOptimizer/ARC), [lib/LoopTransforms](https://github.com/apple/swift/tree/main/lib/SILOptimizer/LoopTransforms),
-    and
-    [lib/Transforms](https://github.com/apple/swift/tree/main/lib/SILOptimizer/Transforms))
+* **SIL optimizations**: The SIL optimizations (implemented in
+    [lib/SILOptimizer/Analysis](https://github.com/apple/swift/tree/main/lib/SILOptimizer/Analysis),
+    [lib/SILOptimizer/ARC](https://github.com/apple/swift/tree/main/lib/SILOptimizer/ARC),
+    [lib/SILOptimizer/LoopTransforms](https://github.com/apple/swift/tree/main/lib/SILOptimizer/LoopTransforms), and
+    [lib/SILOptimizer/Transforms](https://github.com/apple/swift/tree/main/lib/SILOptimizer/Transforms))
     perform additional high-level, Swift-specific optimizations to the
     program, including (for example) Automatic Reference Counting
     optimizations, devirtualization, and generic specialization.
 
-* **LLVM IR Generation**: IR generation (implemented in
+* **LLVM IR generation**: IR generation (implemented in
     [lib/IRGen](https://github.com/apple/swift/tree/main/lib/IRGen))
     lowers SIL to [LLVM IR](http://llvm.org/docs/LangRef.html), at
     which point [LLVM](http://llvm.org) can continue to optimize it

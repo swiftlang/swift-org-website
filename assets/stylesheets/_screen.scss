@@ -969,3 +969,12 @@ article {
 .visuallyhidden {
   @include visuallyhidden();
 }
+
+.stage {
+    background-color: #fffbcc;
+    color: #808080;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 10px;
+    text-align: center;
+}
