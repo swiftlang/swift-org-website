@@ -99,12 +99,12 @@
           name: reporting-bugs
         - title: Triaging Bugs
           name: triaging-bugs
+        - title: Swift Evolution
+          name: evolution-process
         - title: Contributing Code
           name: contributing-code
         - title: Adding External Library Dependencies
           name: adding-external-library-dependencies
-        - title: Participating in the Swift Evolution Process
-          name: participating-in-the-swift-evolution-process
         - title: LLVM and Swift
           name: llvm-and-swift
     - title: Code of Conduct
@@ -112,6 +112,8 @@
 
 - header: Open Source Development
   pages:
+    - title: Swift Evolution
+      url: /swift-evolution/
     - title: Source Code
       url: /source-code/
       sections:
