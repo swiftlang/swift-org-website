@@ -1,26 +1,13 @@
 <a name="evolution-process"></a>
 
-## Participating in the Swift Evolution Process
+## Swift Evolution
 
-Anyone with a good idea can help shape the future features and direction of the language.
-To reach the best possible solution to a problem,
-we discuss and iterate on ideas in a
-[public forum](/community/#swift-evolution).
-Once a proposal is refined and approved,
-it becomes a release goal,
-and is tracked as a feature of an upcoming version of Swift.
-
-To support this process,
-the [Swift Evolution repository][swift-evolution-repo]
-collects the goals for the upcoming major and minor releases
-(as defined by the [core team](/community/#core-team))
-as well as proposals for changes to Swift.
-The [Swift evolution process][swift-evolution-process] document details how ideas are
-proposed, discussed, reviewed, and eventually accepted into upcoming releases.
+Shaping the future of Swift is a community effort that anyone can participate in via the [Evolution section of the Swift forums][swift-evolution-forums].
+The [Swift evolution process][swift-evolution-process] covers all changes to the Swift language and the public interface of the Swift standard library, including new language features and APIs, changes to existing language features or APIs, removal of existing features, and so on. 
 
 See the [Swift evolution review schedule][swift-evolution-reviews]
 for current and upcoming proposal reviews.
 
-[swift-evolution-repo]: https://github.com/apple/swift-evolution  "Swift Evolution repository"
+[swift-evolution-forums]: /community/#swift-evolution  "Swift Evolution forums"
 [swift-evolution-process]: https://github.com/apple/swift-evolution/blob/main/process.md  "Swift Evolution process"
-[swift-evolution-reviews]: https://apple.github.io/swift-evolution  "Swift Evolution reviews"
+[swift-evolution-reviews]: /swift-evolution  "Swift Evolution reviews"
