@@ -90,7 +90,9 @@ The interactive mode will be included in a future ArgumentParser release — you
 Author: Sofía Rodríguez
 
 This feature creates an accessible, easy and fast way to navigate and discover symbols in DocC documentation websites. Quick navigation aims to bring a similar experience to what you achieve using Open Quickly in Xcode and other search tools in IDEs or web-based documentation.
-[Image: Image.jpg]
+
+![image]({{ site.url }}/assets/images/gsoc-2022/quick-navigation.png)
+
 
 ### 
 Key functionalities
@@ -112,7 +114,7 @@ The examples below show how to use our new package to produce messages to and co
 
 The `sendAsync(_:)` method of `KafkaProducer` returns a message-id that can later be used to identify the corresponding acknowledgement. Acknowledgements are received through the `acknowledgements` `AsyncSequence`. Each acknowledgement indicates that producing a message was successful or returns an error.
 
-```
+```swift
 let producer = try await KafkaProducer(
     config: .init(),
     logger: logger
