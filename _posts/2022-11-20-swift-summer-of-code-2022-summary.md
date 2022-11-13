@@ -20,7 +20,8 @@ Once again, thank you to all the mentors, participants, and a warm “we look fo
 
 ## Bootstrapping SwiftSyntaxBuilder
 
-Author: Fredrik Wieczerkowski
+> Author: Fredrik Wieczerkowski
+> Mentor: Alex Hoppen
 
 [The `SwiftSyntax` library](https://github.com/apple/swift-syntax), which lets users represent, parse and generate Swift source code in Swift, received major updates. In particular, the result builder-based `SwiftSyntaxBuilder` Domain-Specific Language (DSL) was improved, inconveniences in the (quite large) API surface fixed and thoroughly tested. During this process the previously [`gyb`](https://github.com/apple/swift/blob/main/utils/gyb.py)-based templates that generated part of `SwiftSyntaxBuilder`'s sources were ported to type-safe Swift code based on `SwiftSyntaxBuilder`. In other words: **The library now uses itself to generate its own code**! 
 
@@ -46,7 +47,8 @@ For more information, check out [the project's writeup](https://gist.github.com/
 
 ## Improving the Debug Output Of The Type Inference Algorithm
 
-Author: Amritpan Kaur
+> Author: Amritpan Kaur
+> Mentor: Pavel Yaskevich
 
 Swift’s type inference algorithm allows us to write source code without explicit type notations. It is implemented via a constraint-based type checker that gathers available type context from the source code and attempts to solve for a concrete type for any parts of the source code that is missing type information to produce a final, and hopefully valid, fully-typed Swift expression. The type inference algorithm also produces a debug output that shows this process and is especially helpful for debugging invalid expressions. However, this output has been difficult to understand and unwieldy. This summer, I worked with my mentor, Pavel Yaskevich, to make this output more human-friendly and welcoming to compiler developers of all experience levels.
 
@@ -87,7 +89,8 @@ The interactive mode will be included in a future ArgumentParser release — you
 
 ## Quick navigation in DocC websites
 
-Author: Sofía Rodríguez
+> Author: Sofía Rodríguez
+> Mentors: Marina Aísa, Franklin Schrans, Beatriz Magalhaes
 
 This feature creates an accessible, easy and fast way to navigate and discover symbols in DocC documentation websites. Quick navigation aims to bring a similar experience to what you achieve using Open Quickly in Xcode and other search tools in IDEs or web-based documentation.
 
@@ -105,7 +108,8 @@ Key functionalities
 
 ## Kafka Client Package for Swift
 
-Author: Felix Schlegel
+> Author: Felix Schlegel
+> Mentor: Franz Busch
 
 [SwiftKafka](https://github.com/swift-server/swift-kafka-gsoc) is a new Swift package that provides a convenient way to communicate with [Apache Kafka](https://kafka.apache.org/) servers. During the package development, the main goal was to create an API that leverages [Swift's new concurrency features](https://docs.swift.org/swift-book/LanguageGuide/Concurrency.html). Under the hood, this package uses the [librdkafka](http://github.com/edenhill/librdkafka) C library and we made sure during the development to wrap the provided unsafe and blocking APIs into safe and nice to use Swift APIs.
 The examples below show how to use our new package to produce messages to and consume messages from a Kafka server.
