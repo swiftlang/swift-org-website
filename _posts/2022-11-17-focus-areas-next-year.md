@@ -67,7 +67,7 @@ Development on the Swift package manager is focused on starting work on an open 
 
 In addition to the feature work above, compiler developers are focused on several improvements at the implementation level:
 
-- Developing a Swift parser that's written in pure Swift and feature-complete with the current C++ implementation.  This opens up a lot of new directions in tooling development, and someday it may even be able to supplant the C++ parser.
+- Developing a Swift parser that's written in pure Swift and feature-complete with the current C++ implementation.  This opens up a lot of new directions in tooling development and, once at feature parity, will supplant the C++ parser.
 
 - Improving the type checking performance of result builders by migrating the type inference implementation over to a new, more scalable infrastructure that supports multi-statement closure inference.
 
