@@ -37,7 +37,7 @@ The Language Workgroup is focused on making progress in five major language area
 
 * To further empower the creation of rich libraries and DSLs, developing the basics of a [procedural macro system](https://forums.swift.org/t/a-possible-vision-for-macros-in-swift/60900).  This effort will start with the creation of a vision document that will lay out a design for what macros can achieve in Swift and how they might fit into the language.
 
-* Introducing support for [C++ interoperability](https://forums.swift.org/t/report-swift-and-c-interoperability-project-progress-in-the-swift-5-7-time-frame/61005) under the auspices of the new dedicate C++ Interoperability Workgroup:
+* Introducing support for [C++ interoperability](https://forums.swift.org/t/report-swift-and-c-interoperability-project-progress-in-the-swift-5-7-time-frame/61005) under the auspices of the new dedicated C++ Interoperability Workgroup:
 
   - Writing documents laying out the design visions for how C++ APIs will be made usable from Swift and vice-versa.
 
