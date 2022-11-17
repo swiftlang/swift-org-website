@@ -61,7 +61,7 @@ Compiler development teams are also working on improving several aspects of how 
 
 ## Package registry
 
-Development on the Swift package manager is focused on starting work on an open source package registry server implementation in concert with the community. The goal is to create the technical components required to transition Swift packages ecosystem from source control based dependencies to registry based ones, enhancing the security and reliability of the ecosystem.
+Development on the Swift package manager is focused on starting work on an open source package registry server implementation in concert with the community. The goal is to create the technical components required to transition Swift packages ecosystem from source control based dependencies to registry based ones, enhancing the security and reliability of the ecosystem. We will work with community-run projects such as the Swift Package Index to ensure great package discovery alongside the benefits that the registry brings.
 
 ## Implementation improvements
 
