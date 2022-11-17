@@ -133,6 +133,10 @@ Work continues on supporting AI/ML applications with Differentiable Swift, focus
 
 - Implementing performance improvements to `KeyPath`s. While this is not strictly a part of differentiable Swift, when optimizing strongly typed models in Swift, key paths become extremely important for introspection of these models. Fast key path traversal is vital for many uses of strongly-typed models, so the hope is to upstream performance improvements in this area. As a first step, there’s been an effort to add a robust set of key path benchmarks to the compiler suite.
 
+## Core Team addition
+
+The Swift Core Team will continue to focus on building out the community and supporting the growth of the Swift ecosystem.  [Mishal Shah](https://github.com/shahmishal) will join the Core Team to bring additional leadership to that critical direction.  As a lead and advocate for much of the underlying infrastructure that supports the Swift project, Mishal has played an essential role in supporting the Swift project's growth for some time.
+
 ## Summary
 
 That's it for now!  We've tried to cover the most important work happening across the project, but there are a lot of smaller things going on, too, that we just didn't have space to cover.  We hope that putting this information together in one place like this has been useful.
