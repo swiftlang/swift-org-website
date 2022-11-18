@@ -323,3 +323,9 @@ danieleggert:
   gravatar: dcda0a6799a6cf53879fca308db01edf
   github: danieleggert
   about: "Daniel Eggert is a member of the team at Apple working on Mail for iOS and macOS."
+
+rjmccall:
+   name: John McCall
+   github: rjmccall
+   twitter: pathofshrines
+   about: "John McCall is an engineer on the Apple Swift team and member of the Language workgroup."
