@@ -1,0 +1,50 @@
+
+.guide-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.use-case-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 1rem;
+
+  .use-case {
+    border: 1px solid var(--color-fill-gray);
+    padding: 0 1rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    
+    h3 {
+      line-height: 1.4;
+      font-size: 1.4rem;
+    }
+    
+    p {
+      flex-grow: 1;
+      color: var(--color-secondary-label);
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+a.cta-secondary {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  display: block;
+  margin: 1rem 0;
+  padding: .5rem 0;
+  text-align: center;
+  
+  &:hover {
+    background-color: var(--color-text);
+    color: var(--color-fill);
+    text-decoration: none;
+  }
+}
