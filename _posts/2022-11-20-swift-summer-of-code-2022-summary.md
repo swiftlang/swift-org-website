@@ -16,14 +16,15 @@ During the 2022 edition of the program, we were lucky to work with 5 great contr
 >- as well as the corresponding ([gsoc-2022](https://forums.swift.org/tag/gsoc-2022)), [gsoc-2021](https://forums.swift.org/tag/gsoc-2021), [gsoc-2020](https://forums.swift.org/tag/gsoc-2020), [gsoc-2019](https://forums.swift.org/tag/gsoc-2019), [gsoc-2018](https://forums.swift.org/tag/gsoc-2018) tags on the Swift Forums.
 
 
-Once again, thank you to all the mentors and participants, and a warm “we look forward to working with you in the future” to any future participants!
+What follows are short summaries of the GSoC projects, written by their authors and mentors.
+We hope those write-ups can shine a light on the exceptional work done by those students, and also inspire new participants to join the program in future editions.
 
 ## Bootstrapping SwiftSyntaxBuilder
 
 > Author: [Fredrik Wieczerkowski](https://github.com/fwcd) <br/>
 > Mentor: [Alex Hoppen](https://github.com/ahoppen)
 
-Fredrik: [The `SwiftSyntax` library](https://github.com/apple/swift-syntax), which lets users represent, parse and generate Swift source code in Swift, received major updates. In particular, the result builder-based `SwiftSyntaxBuilder` Domain-Specific Language (DSL) was improved and inconveniences in the (quite large) API surface were fixed and thoroughly tested. During this process, the previously [`gyb`](https://github.com/apple/swift/blob/main/utils/gyb.py)-based templates that generated part of `SwiftSyntaxBuilder`'s sources were ported to type-safe Swift code based on `SwiftSyntaxBuilder`. In other words, **the library now uses itself to generate its own code**! 
+[The `SwiftSyntax` library](https://github.com/apple/swift-syntax), which lets users represent, parse and generate Swift source code in Swift, received major updates. In particular, the result builder-based `SwiftSyntaxBuilder` Domain-Specific Language (DSL) was improved and inconveniences in the (quite large) API surface were fixed and thoroughly tested. During this process, the previously [`gyb`](https://github.com/apple/swift/blob/main/utils/gyb.py)-based templates that generated part of `SwiftSyntaxBuilder`'s sources were ported to type-safe Swift code based on `SwiftSyntaxBuilder`. In other words, **the library now uses itself to generate its own code**! 
 
 The result of this bootstrapping process is a robust and ergonomic API for generating Swift code that has proven to be useful in the context of a medium-sized codebase. A specific example of how `SwiftSyntaxBuilder` uses Swift's expressiveness to express Swift source code is trailing builder closures, which closely resemble the generated source code. For example, consider the following snippet of Swift code:
 
@@ -50,7 +51,7 @@ For more information, check out [the project's writeup](https://gist.github.com/
 > Author: [Amritpan Kaur](https://github.com/amritpan)<br/>
 > Mentor: [Pavel Yaskevich](https://github.com/xedin)
 
-Amritpan: Swift’s type inference algorithm allows us to write source code without explicit type notations. It is implemented via a constraint-based type checker that gathers available type context from the source code and attempts to solve for a concrete type for any parts of the source code that is missing type information to produce a final, and hopefully valid, fully-typed Swift expression. The type inference algorithm also produces a debug output that shows this process and is especially helpful for debugging invalid expressions. However, this output has been difficult to understand and unwieldy. This summer, I worked with my mentor, Pavel Yaskevich, to make this output more human-friendly and welcoming to compiler developers of all experience levels.
+Swift’s type inference algorithm allows us to write source code without explicit type notations. It is implemented via a constraint-based type checker that gathers available type context from the source code and attempts to solve for a concrete type for any parts of the source code that is missing type information to produce a final, and hopefully valid, fully-typed Swift expression. The type inference algorithm also produces a debug output that shows this process and is especially helpful for debugging invalid expressions. However, this output has been difficult to understand and unwieldy. This summer, I worked with my mentor, Pavel Yaskevich, to make this output more human-friendly and welcoming to compiler developers of all experience levels.
 
 The output in its previous form had repetitive elements, seemed disjointed, and did not show essential type and process details. Over the last few months, I reworked and reformatted the output to improve its readability. To make it easier to follow how an expression or subexpression is type checked, the output now closely tracks constraint solver steps by showing constraint simplification and solver scope changes. The output also explicitly states important type information in context to show how the constraint solver’s path changes type variable bindings and relationships. Additionally, a redesigned layout groups together type properties, simplification process, and nested constraint solver scopes for a more visually friendly format.
 
@@ -63,7 +64,7 @@ I hope the Swift community finds these changes to be an improvement to the type 
 > Author: [Kth](https://github.com/KeithBird)<br/>
 > Mentor: [Nate Cook](https://github.com/natecook1000)
 
-Kth: [swift-argument-parser](https://github.com/apple/swift-argument-parser) provides a straightforward way to declare command-line interfaces in Swift, with the two goals of making it (1) fast and easy to create (2) high-quality, user-friendly CLI tools.
+[swift-argument-parser](https://github.com/apple/swift-argument-parser) provides a straightforward way to declare command-line interfaces in Swift, with the two goals of making it (1) fast and easy to create (2) high-quality, user-friendly CLI tools.
 
 The GSoC project this year was about kicking off work on the upcoming interactive mode which advances these goals by prompting for missing required inputs and guiding users through unfamiliar command line tools. The interactive mode continues ArgumentParser’s approach of providing a lightweight coding experience, building on the metadata CLI tool authors already provide. 
 
@@ -93,7 +94,7 @@ The interactive mode will be included in a future ArgumentParser release — you
 > Author: [Sofía Rodríguez](https://github.com/sofiaromorales) <br/>
 > Mentors: [Marina Aísa](https://github.com/marinaaisa), [Franklin Schrans](https://github.com/franklinsch), [Beatriz Magalhaes](https://github.com/biamx3)
 
-Sofía: This feature creates an accessible, easy and fast way to navigate and discover symbols in Swift-DocC documentation websites. Quick navigation aims to bring a similar experience to what you achieve using Open Quickly in Xcode and other search tools in IDEs or web-based documentation.
+This feature creates an accessible, easy and fast way to navigate and discover symbols in Swift-DocC documentation websites. Quick navigation aims to bring a similar experience to what you achieve using Open Quickly in Xcode and other search tools in IDEs or web-based documentation.
 
 ![image]({{ site.url }}/assets/images/gsoc-2022/quick-navigation.png)
 
@@ -111,7 +112,7 @@ Sofía: This feature creates an accessible, easy and fast way to navigate and di
 > Author: [Felix Schlegel](https://github.com/felixschlegel)<br/>
 > Mentor: [Franz Busch](https://github.com/FranzBusch)
 
-Felix: [SwiftKafka](https://github.com/swift-server/swift-kafka-gsoc) is a new Swift package that provides a convenient way to communicate with [Apache Kafka](https://kafka.apache.org/) servers. During the package development, the main goal was to create an API that leverages [Swift's new concurrency features](https://docs.swift.org/swift-book/LanguageGuide/Concurrency.html). Under the hood, this package uses the [librdkafka](http://github.com/edenhill/librdkafka) C library, and I made sure during the development to wrap the provided unsafe and blocking APIs into safe and nice-to-use Swift APIs.
+[SwiftKafka](https://github.com/swift-server/swift-kafka-gsoc) is a new Swift package that provides a convenient way to communicate with [Apache Kafka](https://kafka.apache.org/) servers. During the package development, the main goal was to create an API that leverages [Swift's new concurrency features](https://docs.swift.org/swift-book/LanguageGuide/Concurrency.html). Under the hood, this package uses the [librdkafka](http://github.com/edenhill/librdkafka) C library, and I made sure during the development to wrap the provided unsafe and blocking APIs into safe and nice-to-use Swift APIs.
 
 The examples below show how to use our new package to produce messages to and consume messages from a Kafka server.
 
