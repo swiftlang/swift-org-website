@@ -23,10 +23,15 @@ Advancing the Swift programming language with a coherent, clear view of its evol
 
 * __[Project Lead](#project-lead)__ appoints technical leaders from the community.  Apple Inc. is the project lead, and interacts with the community through its representative.
 * __[Core Team](#core-team)__ is the small group responsible for strategic direction and oversight of the Swift project
-* __[Language Workgroup](#language-workgroup)__ is a small group of experts that drive the Swift language forward in a coherent direction
 * __[Code Owner](#code-owners)__ is the individual responsible for a specific area of the Swift codebase
 * __[Committer](/contributing/#commit-access)__ is anyone that has commit access to the Swift code base
 * __[Contributor](/contributing/#contributing-code)__ is anyone that contributes a patch or helps with code review
+* __Workgroups__
+   * __[C++ Interoperability Workgroup](/cxx-interop-workgroup)__ is a team that works on adding the support for the bidirectional interoperability between Swift and C++
+   * __[Documentation Workgroup](/documentation-workgroup)__ is a steering team that helps guide the documentation experience for Swift
+   * __[Language Workgroup](#language-workgroup)__ is a small group of experts that drive the Swift language forward in a coherent direction
+   * __[Swift on Server Workgroup](/sswg)__ is a steering team that promotes the use of Swift for developing and deploying server applications
+   * __[Website Workgroup](/website-workgroup/)__ is a steering team that helps guide the evolution on the Swift.org website
 
 Most importantly, everyone that uses Swift is a valued member of our extended community.
 
