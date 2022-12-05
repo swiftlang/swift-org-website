@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2022-12-02 10:00:00
+date: 2022-12-05 10:00:00
 title: Swift Summer of Code 2022 Summary
 author: [ktoso]
 ---
