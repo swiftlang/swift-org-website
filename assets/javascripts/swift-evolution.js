@@ -404,17 +404,10 @@ function renderReviewManager(reviewManager) {
   ])
 }
 
-/** Tracking bugs linked in a proposal are updated via bugs.swift.org. */
+/** Tracking bugs linked in a proposal are updated via GitHub Issues. */
 function renderTrackingBugs(bugs) {
   var bugNodes = bugs.map(function (bug) {
-    return html('a', { href: bug.link, target: '_blank' }, [
-      bug.id,
-      ' (',
-      bug.assignee || 'Unassigned',
-      ', ',
-      bug.status || 'N/A',
-      ')'
-    ])
+    return html('a', { href: bug.link, target: '_blank' }, bug.id)
   })
 
   bugNodes = _joinNodes(bugNodes, ', ')
