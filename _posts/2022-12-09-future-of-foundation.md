@@ -31,4 +31,4 @@ And this also achieves an important community goal:
 * **Open contribution process.** Open source projects are at their best when the community of users can participate and become a community of developers. A new, open contribution process will be available to enable all developers to contribute new API to Foundation.
 
 ## Going Together
-We're excited to start discussing these plans with everyone on the Swift forums. The project itself will launch on GitHub in 2023.
+We're excited to start discussing these plans with everyone [on the Swift forums](https://forums.swift.org/t/what-s-next-for-foundation/61939). The project itself will launch on GitHub in 2023.
