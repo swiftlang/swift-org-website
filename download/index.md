@@ -406,26 +406,13 @@ Tag: [swift-5.7.2-RELEASE](https://github.com/apple/swift/releases/tag/swift-5.7
         {% include_relative _release_build_arch.html platform="Linux" build=centos7_5_7_2_release.first platform_dir="centos7" name="CentOS 7" branch_dir="swift-5.7.2-release" arch="x86_64" %}
         {% include_relative _release_build_arch.html platform="Linux" build=amazonlinux2_5_7_2_release.first platform_dir="amazonlinux2" name="Amazon Linux 2" branch_dir="swift-5.7.2-release" arch="x86_64"
         arch_2="aarch64" platform_dir_2="amazonlinux2-aarch64" build_2=amazonlinux2_aarch64_5_7_2_release.first%}
-        <tr>
-            <td class="download">
-                <span class="release">
-                   Windows 10
-                </span>
-            </td>
-            <td class="toolchain">
-                <span class="download">
-                    Coming Soon
-                </span>
-            </td>
-            <td class="docker-tag">Unavailable</td>
-        </tr>
-        <!-- {% include_relative _release_build_arch.html platform="Windows" build=windows10_5_7_2_release.first platform_dir="windows10" name="Windows 10" branch_dir="swift-5.7.2-release" arch="x86_64" %} -->
+        {% include_relative _release_build_arch.html platform="Windows" build=windows10_5_7_2_release.first platform_dir="windows10" name="Windows 10" branch_dir="swift-5.7.2-release" arch="x86_64" %}
     </tbody>
 </table>
 
 ### RPM
 <div class="warning" markdown="1">
-Swift 5.7.1 RPMs for Amazon Linux 2 and CentOS 7 for **experimental use only**. Please provide your [feedback](https://github.com/apple/swift/issues).
+Swift 5.7.2 RPMs for Amazon Linux 2 and CentOS 7 for **experimental use only**. Please provide your [feedback](https://github.com/apple/swift/issues).
 </div>
 
 
@@ -449,7 +436,7 @@ $ yum install swiftlang
 
 
 <sup>1</sup> Swift 5.7.2 is available as part of Xcode 14.2.<br>
-<!-- <sup>2</sup> Swift 5.7.2 Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br> -->
+<sup>2</sup> Swift 5.7.2 Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
 
 
 {% include_relative _older-releases.md %}
