@@ -867,6 +867,7 @@ article {
      font-family: inherit;
      position: relative;
      top: -.85rem;
+     -moz-appearance: none;
   }
 
   p + input.detail[type=checkbox] {
