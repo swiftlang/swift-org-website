@@ -5,7 +5,7 @@ title: Build an iOS app
 
 In this tutorial you’re going to use Swift and SwiftUI to build a small app to recommend fun new activities to users. Along the way you’ll meet several of the basic components of a SwiftUI app, including text, images, buttons, shapes, stacks, and program state.
 
-To get started, you’ll need to [download Xcode from the Mac App Store](https://apps.apple.com/app/xcode/id497799835?mt=12). It’s free, and comes with all the tools you need to follow this tutorial.
+To get started, you’ll need to [download Xcode from the Mac App Store](https://apps.apple.com/app/xcode/id497799835?mt=12). It’s free, and comes with Swift and all the other tools you need to follow this tutorial.
 
 Go ahead and launch Xcode once it’s installed, then select Create a new Xcode Project. Select the iOS tab at the top, then select the App template and press Next.
 
@@ -18,13 +18,13 @@ When making a new project, Xcode will ask you for a few pieces of information:
 - For Interface make sure SwiftUI is selected.
 - You can uncheck the boxes for Core Data and Include Tests; we won’t be using them here.
 
-Xcode will create the new project for you, and open ContentView.swift for editing. This is where we’ll write all our code, and you’ll see some default SwiftUI code in there for us.
+When you press Next, Xcode will ask where you want to save the project. You’re welcome to choose wherever suits you, but you might find your Desktop is easiest. Once that’s done, Xcode will create the new project for you, then open ContentView.swift for editing. This is where we’ll write all our code, and you’ll see some default SwiftUI code in there for us.
 
 The example code Xcode made for us creates a new view called `ContentView`. Views are how SwiftUI represents our app’s user interface on the screen, and we can add custom layout and logic in there.
 
 On the right-hand side of Xcode, you’ll see a live preview of that code running – if you make a change to the code on the left, it will appear in the preview straight away.
 
-For example, try changing the default `body` code to this:
+For example, try replacing the default `body` code with this:
 
     var body: some View {
         Text("Hello, SwiftUI!")
@@ -43,7 +43,7 @@ The main part of our user interface will be a circle showing the currently recom
 
 In your preview you’ll see a large black circle fills the available screen width. That’s a start, but it’s not quite right – we want some color in there, and ideally adding a little space on either side so it doesn’t look so tight.
 
-Both of these can be accomplished by calling methods on the `Circle` view. We call these *modifiers* in SwiftUI because they modify the way the circle looks or works, and in this case we need to use the `fill()` modifier to color the circle, then the `padding()` modifier to add some space around it, like this:
+Both of these can be accomplished by calling methods on the `Circle` view. We call these *view modifiers* in SwiftUI because they modify the way the circle looks or works, and in this case we need to use the `fill()` modifier to color the circle, then the `padding()` modifier to add some space around it, like this:
 
     Circle()
         .fill(.blue)
@@ -74,7 +74,7 @@ Adjust your `Image` code to this:
 
 **Tip:** That `font()` modifier asks for a 144-point system font, which is nice and big on all devices.
 
-That should now a look a lot better.
+That should now look a lot better.
 
 Next, let’s add some text below the image so it’s clear to the user what the suggestion is. You already met the `Text` view and the `font()` modifier, so you can add this code below the `Circle` code:
 
@@ -123,7 +123,7 @@ And now you should see the layout you expected earlier: our archery icon above t
 
 That’s much better!
 
-To finish up our first pass at this user interface, we can add a title at the top. We already have a `VStack` that allows us to position views one above the other, but  I don’t want the title inside there too because later on we’ll be adding some animation for that part of our screen.
+To finish up our first pass at this user interface, we can add a title at the top. We already have a `VStack` that allows us to position views one above the other, but I don’t want the title inside there too because later on we’ll be adding some animation for that part of our screen.
 
 Fortunately, SwiftUI lets us nest stacks freely, meaning that we can place a `VStack` inside another `VStack` to get the exact behavior we want. So, change your code to this:
 
@@ -164,6 +164,8 @@ SF Symbols has lots of interesting activities to choose from, so I’ve picked o
         
         var body: some View {
 
+**Important:** Notice how the `activities` and `selected` properties are *inside* the struct – that means they belong to `ContentView`, rather than just being free-floating variables in our program.
+
 That creates an array of various activity names, and selects archery as the default. Now we can use the selected activity in our UI using string interpolation – we can place the `selected` variable directly inside strings.
 
 For the activity name this is straightforward:
@@ -185,7 +187,7 @@ Of course, we want that to change *dynamically* rather than having to edit the c
 
 Add this code now:
 
-    Button("Try again…") {
+    Button("Try again") {
         // change activity
     }
     .buttonStyle(.borderedProminent)
@@ -258,13 +260,13 @@ Insert it between the two, like this:
 
     Spacer()
 
-    Button("Try again…") {
+    Button("Try again") {
 
 If you add multiple spacers, they will divide the space equally between them. If you try placing a second spacer before the “Why not try…” text you’ll see what I mean – SwiftUI will create and equal amount of space above the text and below the activity name.
 
 And fourth, it would be nice if the change between activities was smoother, which we can do by animating the change. In SwiftUI, this is done by wrapping changes we want to animate with a call to the `withAnimation()` function, like this:
 
-    Button("Try again…") {
+    Button("Try again") {
         withAnimation {
             selected = activities.randomElement() ?? "Archery"
         }
@@ -287,7 +289,7 @@ To make that happen, we need to start by defining some more program state inside
 
 Next, we can tell SwiftUI to change that identifier every time our button is pressed, like this:
 
-    Button("Try again…") {
+    Button("Try again") {
         withAnimation(.easeInOut(duration: 1)) {
             selected = activities.randomElement() ?? "Archery"
             id += 1
@@ -307,6 +309,6 @@ Press Cmd+R to run your app one last time, and you should see that pressing “T
 
 ## Where now?
 
-We’ve covered a lot of SwiftUI basics in this tutorial, including text, images, buttons, stacks, and even using `@State` to mark values that change over time. SwiftUI is capable of so much more, and can be used to build huge cross-platform apps if you needed.
+We’ve covered a lot of SwiftUI basics in this tutorial, including text, images, buttons, stacks, animation, and even using `@State` to mark values that change over time. SwiftUI is capable of so much more, and can be used to build complex cross-platform apps if you needed.
 
 If you’d like to continue learning SwiftUI, there are lots of free resources available. For example, [Apple publishes a wide variety of tutorials](https://developer.apple.com/tutorials/swiftui) covering essential topics, drawing and animation, app design, and more. We’ll also post links here on Swift.org to some other popular tutorials – we’re a big and welcoming community, and we’re glad to have you join!
