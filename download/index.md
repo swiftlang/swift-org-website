@@ -550,7 +550,6 @@ but they have not gone through the full testing that is performed for official r
 </details>
 
 
-
 Swift is covered by the Swift License at [swift.org/LICENSE.txt](/LICENSE.txt).
 
 ## Using Downloads
