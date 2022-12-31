@@ -1,3 +1,8 @@
+- date: 2022-12-29 10:10:00-06:00
+  dir: swift-5.8-DEVELOPMENT-SNAPSHOT-2022-12-29-a
+  download: swift-5.8-DEVELOPMENT-SNAPSHOT-2022-12-29-a-amazonlinux2.tar.gz
+  download_signature: swift-5.8-DEVELOPMENT-SNAPSHOT-2022-12-29-a-amazonlinux2.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2022-12-20 10:10:00-06:00
   dir: swift-5.8-DEVELOPMENT-SNAPSHOT-2022-12-20-a
   download: swift-5.8-DEVELOPMENT-SNAPSHOT-2022-12-20-a-amazonlinux2.tar.gz
