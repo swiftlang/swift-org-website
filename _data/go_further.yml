@@ -17,7 +17,7 @@
   thumbnail-url: #TBD
   release-date: 2022-06-07
 - title: "Go Further: Swift Strings Under The Hood"
-  description: "Swift strings provide a fast, Unicode-compliant way to work with text. In most cases"
+  description: "Swift strings provide a fast, Unicode-compliant way to work with text. This article provides more detail on how strings are implemented in Swift using UTF-8 and the reasons behind that choice."
   content-type: article
   content-url: https://www.swift.org/blog/utf8-string/
   thumbnail-url: #TBD
