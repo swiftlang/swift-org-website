@@ -1,6 +1,8 @@
 ## Installing Swift
 
-If you don't have Swift installed, [install it first](/install). To test that you have Swift installed, run `swift --version` in the terminal.
+If you don't have Swift installed, [install it first](/install).
+
+To test that you have Swift installed, run `swift --version` in the terminal.
 
 ### Swift Package Manager
 
