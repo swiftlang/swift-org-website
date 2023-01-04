@@ -15,7 +15,7 @@ The current Swift Server workgroup consists of the following people:
 
 * Adam Fowler ([@adam-fowler](https://github.com/adam-fowler))
 * Dave Moser ([@dave-moser](https://github.com/dave-moser), Amazon)
-* Fabian Fett ([@fabianfett](https://github.com/fabianfett), Apple)
+* Franz Busch ([@FranzBusch](https://github.com/FranzBusch), Apple)
 * Gwynne Raskind ([@gwynne](https://github.com/gwynne), Vapor)
 * Jimmy McDermott ([@jdmcd](https://github.com/jdmcd) , Transeo)
 * Kaitlin Mahar ([@kmahar](https://github.com/kmahar), MongoDB)
