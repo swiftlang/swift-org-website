@@ -40,6 +40,7 @@ We can run the tests by running  `swift test`  in our terminal.
 
 ~~~bash
 ❯ swift test
+Building for debugging...
 [3/3] Linking swift-libraryPackageTests
 Test Suite 'All tests' started at 2023-01-03 10:57:52.659
 Test Suite 'swift-libraryPackageTests.xctest' started at 2023-01-03 10:57:52.660
@@ -56,4 +57,62 @@ Test Suite 'All tests' passed at 2023-01-03 10:57:52.664.
 
 ## A small library
 
-Now let’s write a small library
+Now let’s write a small library.
+Replace the example content of `swift-library.swift` with the following code:
+
+~~~swift
+import Foundation
+
+struct Email {
+    public init(_ emailString: String) throws {
+        let regex = #"^\S+@\S+\.\S+$"#
+
+        guard let _ = emailString.range(of: regex, options: .regularExpression) else {
+            throw InvalidEmailError(email: emailString)
+        }
+    }
+}
+
+private struct InvalidEmailError: Error {
+    let email: String
+}
+
+~~~
+
+Now lets add a unit test for this strongly types Email API.  
+Replace the example content of `swift_libraryTests.swift` with the following code:
+
+~~~swift
+@testable import swift_library
+import XCTest
+
+final class swift_libraryTests: XCTestCase {
+    func testEmail() throws {
+        let email = try Email("john.appleseed@apple.com")
+        XCTAssertEqual(email.description, "john.appleseed@apple.com")
+
+        XCTAssertThrowsError(try Email("invalid"))
+    }
+}
+~~~
+
+Once we save that, we can run our application with `swift run`
+Assuming everything went well, we can run the tests successfully again:
+
+~~~no-highlight
+❯ swift test
+Building for debugging...
+[3/3] Linking swift-libraryPackageTests
+Build complete! (0.84s)
+Test Suite 'All tests' started at 2023-01-03 16:22:45.070
+Test Suite 'swift-libraryPackageTests.xctest' started at 2023-01-03 16:22:45.071
+Test Suite 'swift_libraryTests' started at 2023-01-03 16:22:45.071
+Test Case '-[swift_libraryTests.swift_libraryTests testEmail]' started.
+Test Case '-[swift_libraryTests.swift_libraryTests testEmail]' passed (0.005 seconds).
+Test Suite 'swift_libraryTests' passed at 2023-01-03 16:22:45.076.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
+Test Suite 'swift-libraryPackageTests.xctest' passed at 2023-01-03 16:22:45.076.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
+Test Suite 'All tests' passed at 2023-01-03 16:22:45.076.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.007) seconds
+~~~

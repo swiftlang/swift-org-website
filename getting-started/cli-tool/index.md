@@ -94,9 +94,9 @@ This line means that we can now use the `Figlet` module that the `swift-figlet` 
 
 ## A small application
 
-Now let’s write a small application with our new dependency. In our  `main.swift`, add the following code:
+Now let’s write a small application with our new dependency. In our `hello_swift.swift`, add the following code:
 
-```swift
+~~~swift
 import Figlet // from the previous step
 
 @main
@@ -106,7 +106,7 @@ struct FigletTool {
     figlet.say("Hello, Swift!")
   }
 }
-```
+~~~
 
 Once we save that, we can run our application with `swift run`
 Assuming everything went well, you should see your application print this to the screen:
@@ -157,7 +157,7 @@ let package = Package(
 
 We can now import the argument parsing module provided by `swift-argument-parser` and use it in our application
 
-```swift
+~~~swift
 import ArgumentParser
 import Figlet
 
@@ -171,7 +171,7 @@ struct FigletTool: ParsableCommand {
     figlet.say(self.input)
   }
 }
-```
+~~~
 
 For more information about how [swift-argument-parser](https://github.com/apple/swift-argument-parser) parses command line options, see [swift-argument-parser documentation](https://github.com/apple/swift-argument-parser) documentation.
 
