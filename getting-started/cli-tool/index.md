@@ -24,10 +24,10 @@ This will generate a new directory called hello-swift with the following files:
 ├── README.md
 ├── Sources
 │   └── hello-swift
-│       └── main.swift
+│       └── hello_swift.swift
 └── Tests
     └── hello-swiftTests
-        └── hello_swiftTests.swift  
+        └── hello_swiftTests.swift
 ~~~
 
 `Package.swift` is the manifest file for Swift. It’s where you keep metadata for your project, as well as dependencies.
@@ -46,46 +46,51 @@ Hello, world!
 
 ## Adding dependencies
 
-Let’s add a dependency to our application.
-You can find interesting libraries on [Swift Package Index](https://swiftpackageindex.com), the unofficial package index for Swift.
+Swift based applications are usually composed from libraries that provide useful functionality.
 
-[TODO: actually make this library available publicly]
+In this project, we’ll use a package called [swift-figlet](https://github.com/tomerd/swift-figlet) which will help us make ASCII art.
 
-In this project, we’ll use a package called [swift-figlet](https://github.com/tomerd/swift-figlet).
-To do so, we add the following information to our `Package.swift` file:
+You can find more interesting libraries on [Swift Package Index](https://swiftpackageindex.com) -- the unofficial package index for Swift.
+
+To do so, we extend our `Package.swift` file with the following information:
 
 ~~~swift
+// swift-tools-version: 5.7
+
 import PackageDescription
 
 let package = Package(
-    name: "hello-swift",
-    dependencies: [
-       .package(name: "figlet", url: "https://github.com/tomerd/swift-figlet.git", .branch("master")),
-    ],
-    targets: [
-        .target(
-            name: "hello-swift",
-            dependencies: ["figlet"]),
-        .testTarget(
-            name: "hello-swiftTests",
-            dependencies: ["hello-swift"]),
-    ]
+name: "hello-swift",
+  dependencies: [
+    .package(url: "https://github.com/tomerd/swift-figlet", branch: "main"),
+  ],
+  targets: [
+    .executableTarget(
+      name: "hello-swift",
+      dependencies: [
+        .product(name: "Figlet", package: "swift-figlet"),
+      ]
+    ),
+    .testTarget(
+      name: "hello-swiftTests",
+      dependencies: ["hello-swift"]
+    ),
+  ]
 )
 ~~~
 
-Running `swift build`  will instruct SwimPM to install the new dependency and then proceed to build the code.
+Running `swift build` will instruct SwiftPM to install the new dependencies and then proceed to build the code.
 
 Running this command also created a new file for us, `Package.resolved`.
 This file is a snapshot of the exact versions of the dependencies we are using locally.
 
-To use this dependency, we can open `main.swift`, remove everything that’s in there (it’s just an example), and add this line to it:
+To use this dependency, we can open `hello_swift.swift`, remove everything that’s in there (it’s just an example), and add this line to it:
 
 ~~~swift
 import Figlet
 ~~~
 
-This line means that we can now use the `Figlet` module that the `swift-figlet` package exports for us.
-
+This line means that we can now use the `Figlet` module that the `swift-figlet` package exports.
 
 ## A small application
 
@@ -94,18 +99,93 @@ Now let’s write a small application with our new dependency. In our  `main.swi
 ```swift
 import Figlet // from the previous step
 
-let figlet = Figlet()
-figlet.say("Hello, Swift!")
+@main
+struct FigletTool {
+  static func main() {
+    let figlet = Figlet()
+    figlet.say("Hello, Swift!")
+  }
+}
 ```
 
 Once we save that, we can run our application with `swift run`
 Assuming everything went well, you should see your application print this to the screen:
 
 ~~~no-highlight
- _   _      _ _          ____          _  __ _   _
-| | | | ___| | | ___    / ___|_      _(_)/ _| |_| |
-| |_| |/ _ \ | |/ _ \   \___ \ \ /\ / / | |_| __| |
-|  _  |  __/ | | (_) |   ___) \ V  V /| |  _| |_|_|
-|_| |_|\___|_|_|\___( ) |____/ \_/\_/ |_|_|  \__(_)
-                   |/
+_   _          _   _                                  _    __   _     _
+| | | |   ___  | | | |   ___          ___  __      __ (_)  / _| | |_  | |
+| |_| |  / _ \ | | | |  / _ \        / __| \ \ /\ / / | | | |_  | __| | |
+|  _  | |  __/ | | | | | (_) |  _    \__ \  \ V  V /  | | |  _| | |_  |_|
+|_| |_|  \___| |_| |_|  \___/  ( )   |___/   \_/\_/   |_| |_|    \__| (_)
+                              |/
+~~~
+
+## Argument parsing
+
+Most command line tools need to be able and parse command line arguments.
+
+To add this capability to our application, we add a dependency on [swift-argument-parser](https://github.com/apple/swift-argument-parser).
+
+To do so, we extend our `Package.swift` file with the following information:
+
+~~~swift
+// swift-tools-version: 5.7
+
+import PackageDescription
+
+let package = Package(
+  name: "hello-swift",
+  dependencies: [
+    .package(url: "https://github.com/tomerd/swift-figlet", branch: "main"),
+    .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
+  ],
+  targets: [
+    .executableTarget(
+      name: "hello-swift",
+      dependencies: [
+        .product(name: "Figlet", package: "swift-figlet"),
+        .product(name: "ArgumentParser", package: "swift-argument-parser"),
+      ]
+    ),
+    .testTarget(
+      name: "hello-swiftTests",
+      dependencies: ["hello-swift"]
+    ),
+  ]
+)
+~~~
+
+We can now import the argument parsing module provided by `swift-argument-parser` and use it in our application
+
+```swift
+import ArgumentParser
+import Figlet
+
+@main
+struct FigletTool: ParsableCommand {
+  @Option(help: "Specify the input")
+  public var input: String
+
+  public func run() throws {
+    let figlet = Figlet()
+    figlet.say(self.input)
+  }
+}
+```
+
+For more information about how [swift-argument-parser](https://github.com/apple/swift-argument-parser) parses command line options, see [swift-argument-parser documentation](https://github.com/apple/swift-argument-parser) documentation.
+
+Once we save that, we can run our application with `swift run hello-swift --input 'Hello, world!'`
+
+Note we need to specify the executable in this case, so we can pass the `input` argument to it.
+
+Assuming everything went well, you should see your application print this to the screen:
+
+~~~no-highlight
+_   _          _   _                                           _       _   _
+| | | |   ___  | | | |   ___         __      __   ___    _ __  | |   __| | | |
+| |_| |  / _ \ | | | |  / _ \        \ \ /\ / /  / _ \  | '__| | |  / _` | | |
+|  _  | |  __/ | | | | | (_) |  _     \ V  V /  | (_) | | |    | | | (_| | |_|
+|_| |_|  \___| |_| |_|  \___/  ( )     \_/\_/    \___/  |_|    |_|  \__,_| (_)
+                              |/
 ~~~

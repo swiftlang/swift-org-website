@@ -53,3 +53,7 @@ Test Suite 'swift-libraryPackageTests.xctest' passed at 2023-01-03 10:57:52.664.
 Test Suite 'All tests' passed at 2023-01-03 10:57:52.664.
 	 Executed 1 test, with 0 failures (0 unexpected) in 0.003 (0.005) seconds
 ~~~
+
+## A small library
+
+Now let’s write a small library
