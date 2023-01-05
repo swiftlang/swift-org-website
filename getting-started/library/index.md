@@ -63,20 +63,21 @@ Replace the example content of `swift-library.swift` with the following code:
 ~~~swift
 import Foundation
 
-struct Email {
-    public init(_ emailString: String) throws {
-        let regex = #"^\S+@\S+\.\S+$"#
+struct Email: CustomStringConvertible {
+  var description: String
 
-        guard let _ = emailString.range(of: regex, options: .regularExpression) else {
-            throw InvalidEmailError(email: emailString)
-        }
+  public init(_ emailString: String) throws {
+    let regex = #"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,64}"#
+    guard let _ = emailString.range(of: regex, options: .regularExpression) else {
+      throw InvalidEmailError(email: emailString)
     }
+    self.description = emailString
+  }
 }
 
 private struct InvalidEmailError: Error {
-    let email: String
+  let email: String
 }
-
 ~~~
 
 Now lets add a unit test for this strongly types Email API.  
@@ -87,12 +88,12 @@ Replace the example content of `swift_libraryTests.swift` with the following cod
 import XCTest
 
 final class swift_libraryTests: XCTestCase {
-    func testEmail() throws {
-        let email = try Email("john.appleseed@apple.com")
-        XCTAssertEqual(email.description, "john.appleseed@apple.com")
+  func testEmail() throws {
+    let email = try Email("john.appleseed@apple.com")
+    XCTAssertEqual(email.description, "john.appleseed@apple.com")
 
-        XCTAssertThrowsError(try Email("invalid"))
-    }
+    XCTAssertThrowsError(try Email("invalid"))
+  }
 }
 ~~~
 
