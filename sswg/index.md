@@ -79,6 +79,7 @@ The Swift Server Workgroup has a [process](https://github.com/swift-server/sswg/
 | [MQTT NIO](https://github.com/swift-server-community/mqtt-nio) | A Swift NIO MQTT v3.1.1 and v5.0 Client | Sandbox | 11/2/2021 | 1/19/2022 |
 | [GraphQL](https://github.com/GraphQLSwift/GraphQL) | GraphQL query language implementation | Incubating | 8/22/2022 | 9/15/2022 |
 | [Graphiti](https://github.com/GraphQLSwift/Graphiti) | Library for building GraphQL schemas | Incubating | 8/22/2022 | 9/15/2022 |
+| [Swift Distributed Actors](https://github.com/apple/swift-distributed-actors) | Peer-to-peer cluster implementation for Swift Distributed Actors | Sandbox | 10/27/2022 | 1/3/2023 |
 
 The SSWG publishes a [package collection]({{ site.url }}/blog/package-collections/) that contains the projects incubated by the workgroup. The collection is available at `https://swiftserver.group/collection/sswg.json`.
 
