@@ -26,7 +26,7 @@ Larger changes to content, such as introducing broad new topics, require consult
 
 ### Blog posts governance
 
-The Swift.org blog is designed to keep the Swift community informed of recent development in the language, its ecosystem, and news about the community. It is a platform for sharing the language roadmap and release schedule, interesting new features, libraries, and tools, and announcing project & community initiatives.
+The Swift.org blog is designed to keep the Swift community informed of recent development in the language, its ecosystem, and news about the community. It is a platform for sharing the language roadmap, interesting new features, libraries, and tools, and announcing project & community initiatives.
 
 The blog is also an opportunity to recognize and highlight the work being done by members of our community, and we welcome post contributions through the [blog post contribution process]({% link blog-post-contributions/index.md %}).
 
