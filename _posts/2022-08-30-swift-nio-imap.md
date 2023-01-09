@@ -19,7 +19,7 @@ This package implements:
 
 Email has been a indispensable part of the internet for over 40 years and is a ubiquitous part of many products and services today.
 
-Internet Message Access Protocol (IMAP) is the most widely used open standard to retrieve email messages. It has been around for multiple decades and has evolved substantially over the years through various RFCs.   
+Internet Message Access Protocol (IMAP) is the most widely used open standard to retrieve email messages. It has been around for multiple decades and has evolved substantially over the years through various RFCs.
 
 Correctly parsing and encoding IMAP is notoriously difficult. SwiftNIO IMAP reduces this difficulty by handling many subtle details of encoding and parsing IMAP, making it easier than ever to write rich and powerful email integrations with Swift on server.
 
@@ -33,7 +33,7 @@ IMAP uses a text-based “human readable” wire format, and SwiftNIO IMAP bridg
 
 ### Example Exchange
 
-As a quick example, here’s part of the the exchange listed in RFC 3501 section 8, where lines starting with `S:` and `C:` are from the server and client respectively: 
+As a quick example, here’s part of the the exchange listed in RFC 3501 section 8, where lines starting with `S:` and `C:` are from the server and client respectively:
 
 ```text
 S:   * OK IMAP4rev1 Service Ready
@@ -80,7 +80,7 @@ Mailboxes are identified by a “modified UTF-7” encoded string. The `MailboxN
 
 SwiftNIO IMAP can transparently encode and decode client messages both with the synchronizing and non-synchronizing literal encodings from the base RFC 3501 and RFC 7888 extensions.
 
-These variations are handled transparently - for both client and server: 
+These variations are handled transparently - for both client and server:
 
 RFC 3501 “quoted” strings:
 ```text
@@ -127,7 +127,7 @@ The `ChannelHandler`s support transparent literals, IMAP capabilities, and all o
 
 ## What’s Next
 
-The version of SwiftNIO IMAP we’re releasing today is still a prototype. We want to solicit feedback from the community. 
+The version of SwiftNIO IMAP we’re releasing today is still a prototype. We want to solicit feedback from the community.
 
 We’ve done extensive testing of the project’s code and we believe that it’s close to being “production ready”. But we would love to have design discussions on the Swift forums about what is missing, and which bits and pieces could be improved.
 

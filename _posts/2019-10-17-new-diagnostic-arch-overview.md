@@ -104,16 +104,16 @@ After the [Constraint Generation](https://github.com/apple/swift/blob/cfae1a3b16
 
 ### Constraints
 
-* `$Str <bind to> String` 
+* `$Str <bind to> String`
     * Argument `str` has a fixed [String](https://developer.apple.com/documentation/swift/string) type.
 
-* `$One <conforms to> ExpressibleByIntegerLiteral` 
+* `$One <conforms to> ExpressibleByIntegerLiteral`
     * Since integer literals like `1` in Swift could assume any type conforming to the [ExpressibleByIntegerLiteral](https://developer.apple.com/documentation/swift/expressiblebyintegerliteral) protocol (e.g. `Int` or `Double`), the solver can only rely on that information at the beginning.
 
-* `$Plus <bind to> disjunction((String, String) -> String, (Int, Int) -> Int, ...)` 
+* `$Plus <bind to> disjunction((String, String) -> String, (Int, Int) -> Int, ...)`
     * Operator `+` forms a [disjoint set](https://en.wikipedia.org/wiki/Disjoint_sets) of choices, where each element represents the type of an individual overload.
 
-* `($Str, $One) -> $Result <applicable to> $Plus` 
+* `($Str, $One) -> $Result <applicable to> $Plus`
     * The type of `$Result` is not yet known; it will be determined by testing each overload of `$Plus` with argument tuple `($Str, $One)`.
 
 Note that all constraints and type variables are linked with particular locations in the input expression:
@@ -134,14 +134,14 @@ Now, it's time to run the inference algorithm to determine types for `$One` and 
     * Add a new conversion constraint to match argument 1 to parameter 1 - `$One <convertible to> String`
     * Equate `$Result` to `String` since result types have to be equal
 
-3. Some of the newly generated constraints could be immediately tested/simplified e.g. 
+3. Some of the newly generated constraints could be immediately tested/simplified e.g.
 
     * `$Str <convertible to> String` is `true` because `$Str` already has a fixed type of `String` and `String` is convertible to itself
     * `$Result` could be assigned a type of `String` based on equality constraint
 
 4. At this point the only remaining constraints are:
 
-    * `$One <convertible to> String` 
+    * `$One <convertible to> String`
     * `$One <conforms to> ExpressibleByIntegerLiteral`
 
 5. The possible types for `$One` are `Int`, `Double`, and `String`. This is interesting, because none of these possible types satisfy **all** of the remaining constraints; `Int` and `Double` both are not convertible to `String`, and `String` does not conform to `ExpressibleByIntegerLiteral` protocol
@@ -150,7 +150,7 @@ Now, it's time to run the inference algorithm to determine types for `$One` and 
 
 We can see that the error location would be determined by the solver as it executes inference algorithm. Since none of the possible types match for `$One` it should be considered an error location (because it cannot be bound to any type). Complex expressions could have many more than one such location because existing errors result in new ones as the inference algorithm progresses. To narrow down error locations in situations like that, the solver would only pick solutions with the smallest possible number thereof.
 
-At this point it's more or less clear how error locations are identified, but it's not yet obvious how to help the solver make forward progress in such scenarios so it can derive a complete solution. 
+At this point it's more or less clear how error locations are identified, but it's not yet obvious how to help the solver make forward progress in such scenarios so it can derive a complete solution.
 
 ## The Approach
 
@@ -250,7 +250,7 @@ foo(x)
 error: missing argument label 'bar:' in call
 foo(x, "bar")
       ^
-       bar: 
+       bar:
 ~~~
 
 Recording every specific failure and then continuing on to solve the remaining constraint system implies that addressing those failures will produce a well-typed solution. That allows the type checker to produce actionable diagnostics, often with fixes, that lead the developer toward correct code.
@@ -346,7 +346,7 @@ class A {}
 class B : A {
   override init() {}
   func foo() -> A {
-    return A() 
+    return A()
   }
 }
 

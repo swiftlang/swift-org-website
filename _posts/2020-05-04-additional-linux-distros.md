@@ -42,7 +42,7 @@ In all, the work included 9 PRs to the Swift project:
 
 ## How Downloadable Images are Built
 
-Swift CI has moved to use Docker to build and qualify the new Linux distributions. A Dockerfile has been created for each one of the supported distributions, and CI jobs have been created to build, test and create a signed toolchain.  
+Swift CI has moved to use Docker to build and qualify the new Linux distributions. A Dockerfile has been created for each one of the supported distributions, and CI jobs have been created to build, test and create a signed toolchain.
 
 Linux build Dockerfiles are managed in  [Swift's Docker repository](https://github.com/apple/swift-docker) with the goal of evolving them in the open with the community. Our plan is to continue and grow the number of Linux distributions we support, with CentOS 7, Debian and Fedora the most likely candidates to be added next.
 

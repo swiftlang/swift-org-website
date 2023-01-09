@@ -364,18 +364,18 @@ func moveElements(from src: inout Set<String>, to dest: inout Set<String>) {
         dest.insert(e)
     }
 }
- 
+
 class Names {
     var nameSet: Set<String> = []
 }
- 
+
 func moveNames(from src: Names, to dest: Names) {
     moveElements(from: &src.nameSet, to: &dest.nameSet)
 }
- 
+
 var oldNames = Names()
 var newNames = oldNames // Aliasing naturally happens with reference types.
- 
+
 moveNames(from: oldNames, to: newNames)
 ~~~
 

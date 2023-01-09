@@ -6,7 +6,7 @@ redirect_from: /documentation/api-design-guidelines.html
 ---
 <!-- {% comment %}
 The width of <pre> elements on this page is carefully regulated, so we
-can afford to drop the scrollbar boxes. 
+can afford to drop the scrollbar boxes.
 {% endcomment %} -->
 <style>
 article pre {
@@ -16,7 +16,7 @@ article pre {
 
 <!-- {% comment %}
 Define some variables that help us build expanding detail sections
-without too much boilerplate.  We use checkboxes instead of 
+without too much boilerplate.  We use checkboxes instead of
 <details>...</details> because it allows us to:
 
   * Write CSS ensuring that details aren't hidden when printing.
@@ -50,7 +50,7 @@ is printed.
   sufficient; always examine a use case to make sure it looks
   clear in context.
   {:#clarity-at-the-point-of-use}
-  
+
 * **Clarity is more important than brevity.**  Although Swift
   code can be compact, it is a *non-goal*
   to enable the smallest possible code with the fewest characters.
@@ -67,7 +67,7 @@ is printed.
   If you are having trouble describing your API's
   functionality in simple terms, **you may have designed the wrong API.**
   </div>
-  
+
   {{expand}}
   {{detail}}
   {% assign ref = 'https://developer.apple.com/library/prerelease/mac/documentation/Xcode/Reference/xcode_markup_formatting_ref/' %}
@@ -279,7 +279,7 @@ is printed.
   Repurposing a type name in this way fails to optimize clarity and
   expressivity. Instead, strive to choose a name that expresses the
   entity's *role*.
-  
+
   ~~~ swift
   var **greeting** = "Hello"
   protocol ViewController {
@@ -290,11 +290,11 @@ is printed.
   }
   ~~~
   {:.good}
-  
+
   If an associated type is so tightly bound to its protocol constraint
   that the protocol name *is* the role, avoid collision by appending
   `Protocol` to the protocol name:
-  
+
   ~~~ swift
   protocol Sequence {
     associatedtype Iterator : Iterator**Protocol**
@@ -302,7 +302,7 @@ is printed.
   protocol Iterator**Protocol** { ... }
   ~~~
   {{enddetail}}
-  
+
 * **Compensate for weak type information** to clarify a parameter's role.
   {:#weak-type-information}
 
@@ -334,31 +334,31 @@ is printed.
 ### Strive for Fluent Usage
 
 * **Prefer method and function names that make use sites form
-  grammatical English phrases.** 
+  grammatical English phrases.**
   {:#methods-and-functions-read-as-phrases}
-  
+
   {{expand}}
-  {{detail}}  
+  {{detail}}
   ~~~swift
   x.insert(y, at: z)          <span class="commentary">“x, insert y at z”</span>
   x.subViews(havingColor: y)  <span class="commentary">“x's subviews having color y”</span>
   x.capitalizingNouns()       <span class="commentary">“x, capitalizing nouns”</span>
   ~~~
   {:.good}
-  
+
   ~~~swift
   x.insert(y, position: z)
   x.subViews(color: y)
   x.nounCapitalize()
   ~~~
   {:.bad}
-  
+
   It is acceptable for fluency to degrade after the first argument or
   two when those arguments are not central to the call's meaning:
-  
+
   ~~~swift
   AudioUnit.instantiate(
-    with: description, 
+    with: description,
     **options: [.inProcess], completionHandler: stopProgressBar**)
   ~~~
   {{enddetail}}
@@ -377,17 +377,17 @@ is printed.
   {{detail}}
   For example, the first arguments to these calls do not read as part of the same
   phrase as the base name:
-  
+
   ~~~swift
   let foreground = **Color**(red: 32, green: 64, blue: 128)
   let newPart = **factory.makeWidget**(gears: 42, spindles: 14)
   let ref = **Link**(target: destination)
   ~~~
   {:.good}
-  
+
   In the following, the API author has tried to create grammatical
   continuity with the first argument.
-  
+
   ~~~swift
   let foreground = **Color(havingRGBValuesRed: 32, green: 64, andBlue: 128)**
   let newPart = **factory.makeWidget(havingGearCount: 42, andSpindleCount: 14)**
@@ -399,7 +399,7 @@ is printed.
   [argument labels](#argument-labels) means the first argument will
   have a label unless the call is performing a
   [value preserving type conversion](#type-conversion).
-  
+
   ~~~swift
   let rgbForeground = RGBColor(cmykForeground)
   ~~~
@@ -410,7 +410,7 @@ is printed.
 
   * Those without side-effects should read as noun phrases,
     e.g. `x.distance(to: y)`, `i.successor()`.
-  
+
   * Those with side-effects should read as imperative verb phrases,
     e.g., `print(x)`, `x.sort()`, `x.append(y)`.
 
@@ -418,16 +418,16 @@ is printed.
     A mutating method will often have a nonmutating variant with
     similar semantics, but that returns a new value rather than
     updating an instance in-place.
-    
+
     * When the operation is **naturally described by a verb**, use the
       verb's imperative for the mutating method and apply the “ed” or
       “ing” suffix to name its nonmutating counterpart.
-      
+
       |Mutating|Nonmutating|
       |-
       |`x.sort()`|`z = x.sorted()`|
       |`x.append(y)`|`z = x.appending(y)`|
-      
+
       {{expand}}
       {{detail}}
 
@@ -603,22 +603,22 @@ is printed.
   [Acronyms and initialisms](https://en.wikipedia.org/wiki/Acronym)
   that commonly appear as all upper case in American English should be
   uniformly up- or down-cased according to case conventions:
-  
+
   ~~~swift
   var **utf8**Bytes: [**UTF8**.CodeUnit]
   var isRepresentableAs**ASCII** = true
   var user**SMTP**Server: Secure**SMTP**Server
   ~~~
-  
+
   Other acronyms should be treated as ordinary words:
-  
+
   ~~~swift
   var **radar**Detector: **Radar**Scanner
   var enjoys**Scuba**Diving = true
   ~~~
   {{enddetail}}
 
-  
+
 {% comment %}
 * **Be conscious of grammatical ambiguity**. Many words can act as
    either a noun or a verb, e.g. “insert,” “record,” “contract,” and
@@ -725,7 +725,7 @@ func move(from **start**: Point, to **end**: Point)
   {:.good}
 
   These, however, make the documentation awkward and ungrammatical:
-  
+
   ~~~swift
   /// Return an `Array` containing the elements of `self`
   /// that satisfy `**includedInResult**`.
@@ -821,17 +821,17 @@ func move(from **start**: Point, to **end**: Point)
 
 ~~~swift
 func move(**from** start: Point, **to** end: Point)
-x.move(**from:** x, **to:** y) 
+x.move(**from:** x, **to:** y)
 ~~~
 
 * **Omit all labels when arguments can't be usefully distinguished**,
   e.g. `min(number1, number2)`, `zip(sequence1, sequence2)`.
   {:#no-labels-for-indistinguishable-arguments}
-  
+
 * **In initializers that perform value preserving type conversions, omit the
   first argument label**, e.g. `Int64(someUInt32)`
   {:#type-conversion}
-  
+
   {{expand}}
   {{detail}}
   The first argument should always be the source of the conversion.
@@ -862,7 +862,7 @@ x.move(**from:** x, **to:** y)
     init(**saturating** valueToApproximate: UInt64)
   }
   ~~~
-  
+
   > A value preserving type conversion is a
   > [monomorphism](https://en.wikipedia.org/wiki/Monomorphism), i.e.
   > every difference in the
@@ -885,12 +885,12 @@ x.move(**from:** x, **to:** y)
   [preposition](https://en.wikipedia.org/wiki/Preposition),
   e.g. `x.removeBoxes(havingLength: 12)`.
   {:#give-prepositional-phrase-argument-label}
-  
+
   {{expand}}
   {{detail}}
   An exception arises when the first two arguments represent parts of
   a single abstraction.
-  
+
   ~~~swift
   a.move(**toX:** b, **y:** c)
   a.fade(**fromRed:** b, **green:** c, **blue:** d)
@@ -899,14 +899,14 @@ x.move(**from:** x, **to:** y)
 
   In such cases, begin the argument label *after* the preposition, to
   keep the abstraction clear.
-  
+
   ~~~swift
   a.moveTo(**x:** b, **y:** c)
   a.fadeFrom(**red:** b, **green:** c, **blue:** d)
   ~~~
   {:.good}
   {{enddetail}}
-  
+
 * **Otherwise, if the first argument forms part of a grammatical
   phrase, omit its label**, appending any preceding words to the base
   name, e.g. `x.addSubview(y)`
@@ -946,13 +946,13 @@ x.move(**from:** x, **to:** y)
 * **Label tuple members and name closure parameters** where they
   appear in your API.
   {:#label-closure-parameters}
-  
+
   {{expand}}
   {{detail}}
   These names have
   explanatory power, can be referenced from documentation comments,
   and provide expressive access to tuple members.
-  
+
   ~~~ swift
   /// Ensure that we hold uniquely-referenced storage for at least
   /// `requestedCapacity` elements.
@@ -967,11 +967,11 @@ x.move(**from:** x, **to:** y)
   ///   - **capacityChanged**: `true` if `capacity` was updated;
   ///     otherwise, `false`.
   mutating func ensureUniqueStorage(
-    minimumCapacity requestedCapacity: Int, 
+    minimumCapacity requestedCapacity: Int,
     allocate: (_ **byteCount**: Int) -> UnsafePointer&lt;Void&gt;
   ) -> (**reallocated:** Bool, **capacityChanged:** Bool)
   ~~~
-  
+
   Names used for closure parameters should be chosen like
   [parameter names](#parameter-names) for top-level functions. Labels for
   closure arguments that appear at the call site are not supported.

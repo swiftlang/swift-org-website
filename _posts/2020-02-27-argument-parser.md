@@ -30,7 +30,7 @@ import ArgumentParser
 
 struct Random: ParsableCommand {
     @Argument() var highValue: Int
-    
+
     func run() {
         print(Int.random(in: 1...highValue))
     }
@@ -63,13 +63,13 @@ struct Random: ParsableCommand {
 
     @Argument(help: "The highest value to pick.")
     var highValue: Int
-    
+
     func validate() throws {
         guard highValue >= 1 else {
             throw ValidationError("'<high-value>' must be at least 1.")
         }
     }
-    
+
     func run() {
         print(Int.random(in: 1...highValue))
     }
@@ -88,7 +88,7 @@ OVERVIEW: Chooses a random number between 1 and your input.
 USAGE: random <high-value>
 
 ARGUMENTS:
-  <high-value>            The highest value to pick. 
+  <high-value>            The highest value to pick.
 
 OPTIONS:
   -h, --help              Show help information.
@@ -108,13 +108,13 @@ extension Random {
 
         @Argument(help: "The highest value to pick.")
         var highValue: Int
-        
+
         func validate() throws {
             guard highValue >= 1 else {
                 throw ValidationError("'<high-value>' must be at least 1.")
             }
         }
-        
+
         func run() {
             print(Int.random(in: 1...highValue))
         }

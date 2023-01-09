@@ -25,7 +25,7 @@
         {% include_relative _build.html platform="Linux" build=ubuntu1404_3_0_p1_builds.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-3.0-preview-1" %}
     </tbody>
 </table>
-*Swift 3.0 Preview 1 is available as part of Xcode 8.0 beta.  
+*Swift 3.0 Preview 1 is available as part of Xcode 8.0 beta.
 </details>
 <details class="download" style="margin-bottom: 0em;margin-left: 3em">
   <summary>Swift 3.0 Preview 2</summary>

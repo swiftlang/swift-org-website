@@ -15,7 +15,7 @@ things just look *different*, often needlessly so. This is no mere
 aesthetic concern; non-uniformity and lack of predictability make
 everything harder, from coding to debugging to maintenance.
 Fortunately Swift developers created tons of great code in spite of
-that gap, and along the way, there evolved a sense of what 
+that gap, and along the way, there evolved a sense of what
 “Swifty” code looks and feels like.
 
 Informed by that experience, when looking at our APIs, it's easy to
@@ -77,7 +77,7 @@ changes this call:
 
 ~~~swift
 path.addArcWithCenter(
-  origin, radius: 20.0, 
+  origin, radius: 20.0,
   startAngle: 0.0, endAngle: CGFloat(M_PI) * 2.0, clockwise: true)
 ~~~
 
@@ -85,7 +85,7 @@ into this:
 
 ~~~swift
 path.addArc(
-  center: origin, radius: 20.0, 
+  center: origin, radius: 20.0,
   startAngle: 0.0, endAngle: CGFloat(M_PI) * 2.0, clockwise: true)
 ~~~
 

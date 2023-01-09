@@ -57,7 +57,7 @@ to build and transform dictionaries with these new tools.
 ## Grouping Values by a Key
 
 <img
-  alt="Grouping groceries by their department" 
+  alt="Grouping groceries by their department"
   src="{{ site.url }}/assets/images/dictionary-blog/grouping.png"
   srcset="{{ site.url }}/assets/images/dictionary-blog/grouping_2x.png 2x"
   class="dictionary-blog" />
@@ -117,19 +117,19 @@ let departmentCounts = groceriesByDepartment.mapValues { items in items.count }
 // departmentCounts[.bakery] == 2
 ~~~
 
-Because the dictionary has all the same keys, 
-just with different values, 
-it can use the same internal layout as the original dictionary 
-and doesn't need to recompute any hash values. 
-This makes calling `mapValues(_:)` faster 
+Because the dictionary has all the same keys,
+just with different values,
+it can use the same internal layout as the original dictionary
+and doesn't need to recompute any hash values.
+This makes calling `mapValues(_:)` faster
 than rebuilding the dictionary from scratch.
 
 ## Building Dictionaries from Key-Value Pairs
 
-<img 
-  alt="Building a dictionary from names and values" 
-  src="{{ site.url }}/assets/images/dictionary-blog/uniqueKeys.png" 
-  srcset="{{ site.url }}/assets/images/dictionary-blog/uniqueKeys_2x.png 2x" 
+<img
+  alt="Building a dictionary from names and values"
+  src="{{ site.url }}/assets/images/dictionary-blog/uniqueKeys.png"
+  srcset="{{ site.url }}/assets/images/dictionary-blog/uniqueKeys_2x.png 2x"
   class="dictionary-blog" />
 
 You can now create dictionaries
@@ -139,8 +139,8 @@ one for when you have unique keys,
 and one for when you might have keys that repeat.
 
 If you start with a sequence of keys and a sequence of values,
-you can combine them 
-into a single sequence of pairs 
+you can combine them
+into a single sequence of pairs
 using the `zip(_:_:)` function.
 For example,
 this code creates a sequence of tuples
@@ -279,10 +279,10 @@ In addition to easier incremental changes,
 dictionaries now make it simpler to make changes in bulk,
 with methods that merge one dictionary into another.
 
-<img 
-  alt="Merging two carts together" 
-  src="{{ site.url }}/assets/images/dictionary-blog/merging.png" 
-  srcset="{{ site.url }}/assets/images/dictionary-blog/merging_2x.png 2x" 
+<img
+  alt="Merging two carts together"
+  src="{{ site.url }}/assets/images/dictionary-blog/merging.png"
+  srcset="{{ site.url }}/assets/images/dictionary-blog/merging_2x.png 2x"
   class="dictionary-blog" />
 
 To merge the contents of `cart` and another dictionary,

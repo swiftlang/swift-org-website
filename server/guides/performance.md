@@ -6,11 +6,11 @@ title: Debugging Performance Issues
 First of all, it's very important to make sure that you compiled your Swift code in _release mode_. The performance difference between debug and release builds is huge in Swift. You can compile your Swift code in release mode using
 
     swift build -c release
-    
+
 ## Instruments
 
 If you can reproduce your performance issue on macOS, you probably want to check out Instrument's [Time Profiler](https://developer.apple.com/videos/play/wwdc2016/418/).
-    
+
 ## Flamegraphs
 
 [Flamegraphs](http://www.brendangregg.com/flamegraphs.html) are a nice way to visualise what stack frames were running for what percentage of the time. That often helps pinpointing the areas of your program that need improvement. Flamegraphs can be created on most platforms, in this document we will focus on Linux.
@@ -138,7 +138,7 @@ And we can see that almost all of our runtime is spent in `isFavouriteNumber` wh
 For some workloads putting serious pressure on the memory allocation subsystem, it may be beneficial with a custom `malloc` library.
 It requires no changes to the code, but needs interposing with e.g. an environment variable before running your server.
 It is worth benchmarking with the default and with a custom memory allocator to see how much it helps for the specific workload.
-There are many `malloc` implementations out there, but a portable and well-performing one is [Microsofts mimalloc](https://github.com/microsoft/mimalloc). 
+There are many `malloc` implementations out there, but a portable and well-performing one is [Microsofts mimalloc](https://github.com/microsoft/mimalloc).
 
 Typically these are simply enabled by using LD_PRELOAD:
 

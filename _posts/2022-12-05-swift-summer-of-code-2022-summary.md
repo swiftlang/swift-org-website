@@ -25,7 +25,7 @@ To shine a light on their exceptional work and to inspire future participants, l
 
 [The `SwiftSyntax` library](https://github.com/apple/swift-syntax), which lets users represent, parse, and generate Swift source code using Swift, received major updates. The result builder-based `SwiftSyntaxBuilder` Domain-Specific Language (DSL) was improved and inconveniences in the API surface were fixed and thoroughly tested.
 
-During this process, the templates that generated part of `SwiftSyntaxBuilder`'s sources were ported from [`gyb`](https://github.com/apple/swift/blob/main/utils/gyb.py) to type-safe Swift code based on `SwiftSyntaxBuilder`. In other words, the library now **uses itself** to generate its own code! 
+During this process, the templates that generated part of `SwiftSyntaxBuilder`'s sources were ported from [`gyb`](https://github.com/apple/swift/blob/main/utils/gyb.py) to type-safe Swift code based on `SwiftSyntaxBuilder`. In other words, the library now **uses itself** to generate its own code!
 
 The result of this bootstrapping process is a more robust and ergonomic API for generating Swift code.
 
@@ -87,7 +87,7 @@ Check out Amritpan's [forum post](https://forums.swift.org/t/improving-the-debug
 
 [swift-argument-parser](https://github.com/apple/swift-argument-parser) provides a fast and easy way to create high-quality, user-friendly command-line tools in Swift.
 
-The upcoming interactive mode can prompt for missing inputs to help guide users through unfamiliar command line tools. The interactive mode continues ArgumentParser’s approach of providing a lightweight coding experience, building on the metadata tool authors already provide. 
+The upcoming interactive mode can prompt for missing inputs to help guide users through unfamiliar command line tools. The interactive mode continues ArgumentParser’s approach of providing a lightweight coding experience, building on the metadata tool authors already provide.
 
 ```bash
 $ roll --help
@@ -173,6 +173,6 @@ for await messageResult in consumer.messages {
 
 For more information, as well as previous year’s projects, check out:
 
-- Summer of Code project sites: [2022](https://summerofcode.withgoogle.com/programs/2022/organizations/swift), [2021](https://summerofcode.withgoogle.com/archive/2021/organizations/4908645044715520), [2020](https://summerofcode.withgoogle.com/archive/2020/organizations/4543471290941440), [2019](https://summerofcode.withgoogle.com/archive/2019/organizations/6407128493850624), [2018](https://summerofcode.withgoogle.com/archive/2018/organizations/5146674678726656) 
+- Summer of Code project sites: [2022](https://summerofcode.withgoogle.com/programs/2022/organizations/swift), [2021](https://summerofcode.withgoogle.com/archive/2021/organizations/4908645044715520), [2020](https://summerofcode.withgoogle.com/archive/2020/organizations/4543471290941440), [2019](https://summerofcode.withgoogle.com/archive/2019/organizations/6407128493850624), [2018](https://summerofcode.withgoogle.com/archive/2018/organizations/5146674678726656)
 
 - Swift forum tags: [gsoc-2022](https://forums.swift.org/tag/gsoc-2022), [gsoc-2021](https://forums.swift.org/tag/gsoc-2021), [gsoc-2020](https://forums.swift.org/tag/gsoc-2020), [gsoc-2019](https://forums.swift.org/tag/gsoc-2019), [gsoc-2018](https://forums.swift.org/tag/gsoc-2018)

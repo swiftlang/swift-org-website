@@ -55,6 +55,6 @@ Steps to reproduce the behavior:
 
 <!-- Git hash of the site if applicable -->
 
-## Additional context 
+## Additional context
 
 <!-- Add any other context about the problem here. -->

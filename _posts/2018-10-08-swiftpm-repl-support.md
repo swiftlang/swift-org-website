@@ -58,7 +58,7 @@ Optional([AnyHashable("bar"): 3, AnyHashable("foo"): [1, 2, 3, 4]])
 
 ### Vapor's [HTTP](https://github.com/vapor/http)
 
-The [Vapor](http://vapor.codes) project has a [HTTP](https://github.com/vapor/http) package built on top of [SwiftNIO](https://github.com/apple/swift-nio) package. 
+The [Vapor](http://vapor.codes) project has a [HTTP](https://github.com/vapor/http) package built on top of [SwiftNIO](https://github.com/apple/swift-nio) package.
 
 Clone the package and launch REPL using `swift run --repl`:
 
@@ -143,7 +143,7 @@ result: NSDictionary = 1 key/value pair {
 
 Using the REPL with a Swift package requires two pieces of information in order to construct the REPL arguments. The first piece is providing the header search paths for the library targets and their dependencies. For Swift targets, this means providing the path to the module's `.swiftmodule` file and for C targets, we need the path of the directory containing the target's modulemap file. The second piece is constructing a shared dynamic library that contains all of the library targets. This will allow the REPL to load the required symbols at runtime. SwiftPM does this by synthesizing a special product that contains all of the library targets of the root package. This special product is only built when using the `--repl` option and doesn't affect other package manager operations.
 
-Checkout the [pull request](https://github.com/apple/swift-package-manager/pull/1793) that implemented this functionality for full implementation details! 
+Checkout the [pull request](https://github.com/apple/swift-package-manager/pull/1793) that implemented this functionality for full implementation details!
 
 ## Conclusion
 

@@ -27,7 +27,7 @@ A number of editors you may already be familiar with have support for writing Sw
 
 ## Language Server Protocol (LSP) Support
 
-The [SourceKit-LSP project](https://github.com/apple/sourcekit-lsp) provides a Swift implementation of the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), which provides features such as code completion and jump-to-definition in supported editors. 
+The [SourceKit-LSP project](https://github.com/apple/sourcekit-lsp) provides a Swift implementation of the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/), which provides features such as code completion and jump-to-definition in supported editors.
 
 The project has both an [extensive list of editors that support it](https://github.com/apple/sourcekit-lsp/tree/main/Editors) and setup instructions for those editors, including many of those listed above.
 

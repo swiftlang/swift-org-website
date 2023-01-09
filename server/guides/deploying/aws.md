@@ -98,7 +98,7 @@ sudo systemctl start docker
 
 You may have to log out and log back in to be able to use Docker. Check by running `docker ps`, and ensure that it runs without errors.
 
-Download and compile SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server): 
+Download and compile SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server):
 
 ```
 docker run --rm  -v "$PWD:/workspace"  -w /workspace swift:5.4-amazonlinux2   /bin/bash -cl ' \

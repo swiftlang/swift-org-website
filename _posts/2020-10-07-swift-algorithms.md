@@ -26,7 +26,7 @@ The other version looks for a change in the transformation of each successive va
 ~~~swift
 let names = ["Cassie", "Chloe", "Jasmine", "Jordan", "Taylor"]
 let chunks = names.chunked(on: \.first)
-// [["Cassie", "Chloe"], ["Jasmine", "Jordan"], ["Taylor"]] 
+// [["Cassie", "Chloe"], ["Jasmine", "Jordan"], ["Taylor"]]
 ~~~
 
 You can read more about `chunked` or any of the other components in the `Algorithms` package in the included guides:

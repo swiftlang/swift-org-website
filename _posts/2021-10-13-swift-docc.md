@@ -42,7 +42,7 @@ workflow.
 - **Make it easy to connect documentation together.** It’s easier to find
 documentation when it’s well organized. Another key goal is to provide an
 intuitive way for developers to organize documentation into logical groups and
-to write links to other pages. 
+to write links to other pages.
 
 ## Overview
 
@@ -56,9 +56,9 @@ their own right for building other developer tools. The components include:
 
 - [**Swift-DocC**](https://github.com/apple/swift-docc) — the documentation compiler tool that processes source file
 comments, standalone Markdown files, and related assets to produce a
-machine-readable JSON archive. 
+machine-readable JSON archive.
 - [**Swift-DocC-Render**](https://github.com/apple/swift-docc-render) — a JavaScript-based web application that renders
-compiled DocC archives. 
+compiled DocC archives.
 - [**Swift-Markdown**](https://github.com/apple/swift-markdown) — a library that makes it easy to parse Markdown syntax in
 Swift.
 - [**SymbolKit**](https://github.com/apple/swift-docc-symbolkit) — a Swift library that parses the symbol graph files emitted by
@@ -76,7 +76,7 @@ Source file documentation comment
 
 ~~~swift
 /// A model representing a sloth.
-/// 
+///
 /// You can create a sloth using the ``init(name:color:power:)`` initializer, or
 /// create a randomly generated sloth using a ``SlothGenerator``:
 ///
@@ -109,7 +109,7 @@ Like other components of the core Swift tooling, this project will follow the
 Swift Evolution process, with one of the first tasks being to design the
 integration with Swift Package Manager using extensible plug-ins. And soon,
 Swift development trunk snapshots (for a release after Swift 5.5) will include
-the Swift-DocC tools. 
+the Swift-DocC tools.
 
 To read more about the future of Swift-DocC, check out the [Swift-DocC project
 announcement post](https://forums.swift.org/t/announcing-swift-docc) in the

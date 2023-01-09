@@ -2,12 +2,12 @@
 layout: post
 date: 2018-05-10 10:00:00
 title: Introducing Related Projects to Swift Forums
-author: tkremenek 
+author: tkremenek
 ---
 
-The Swift community is growing and [Swift Forums](https://forums.swift.org) are growing with it.  
+The Swift community is growing and [Swift Forums](https://forums.swift.org) are growing with it.
 
-The number of projects in the Swift ecosystem keeps expanding and developers are using them more and more to help build their apps.  While not officially a part of the language, they exist to provide a leg up on development with optimizations to accomplish specific sets of tasks.  
+The number of projects in the Swift ecosystem keeps expanding and developers are using them more and more to help build their apps.  While not officially a part of the language, they exist to provide a leg up on development with optimizations to accomplish specific sets of tasks.
 
 As a developer, there are times when you want to interact with like-minded people who are working with or even on a particular project. Whether it’s to get an answer to a question or to share ideas on how to improve it, it is great to know there is a place to go to have a conversation about it.  Swift Forums is a great place to discuss any of these projects, but we think we can do better.  So, today we’re introducing a new way to interact with these communities: a new top-level category we call Related Projects.
 

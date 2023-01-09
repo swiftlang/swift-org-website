@@ -92,7 +92,7 @@ The [Windows Package Manager](https://docs.microsoft.com/windows/package-manager
    ~~~ cmd
    pip install six
    ~~~
-   
+
 0. Install Swift:
 
    Swift can be installed through the official installer directly, or using the Windows Package Manager as well.  Notice that Windows Package Manager release may be behind the official release.
