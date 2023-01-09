@@ -5,6 +5,16 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        height: 3.5rem;
+    }
+
+    #search-filter {
+        font-size: .8rem;
+        padding: .2rem .5rem;
+        -webkit-appearance: textfield;
+        appearance: textfield;
+        border: .1rem solid var(--color-dropdown-border);
+        border-radius: .5rem;
     }
 
     @supports ((position: sticky) or (position: -webkit-sticky)) {
