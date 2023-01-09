@@ -781,7 +781,7 @@ Finally, it fetches and decodes the display style, and sets up `Mirror`'s remain
     case "\0": self.displayStyle = nil
     default: preconditionFailure("Unknown raw display style '\(rawDisplayStyle)'")
     }
-  
+
     self.subjectType = subjectType
     self._defaultDescendantRepresentation = .generated
   }

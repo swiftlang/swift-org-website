@@ -43,7 +43,7 @@ Members of the Swift website workgroup serve at the discretion of the Swift core
 
 ## Membership
 
-Members of the Swift website workgroup are appointed by the Swift project core team on their expertise and contributions to the community.  
+Members of the Swift website workgroup are appointed by the Swift project core team on their expertise and contributions to the community.
 Membership in the workgroup is contribution-based and expected to evolve over time.
 Adding new members and removing inactive ones is subject to a workgroup vote and requires unanimous agreement.
 The workgroup's vote then needs to be approved by the Swift core team.

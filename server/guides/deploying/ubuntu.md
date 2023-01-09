@@ -14,7 +14,7 @@ The [packaging]({{site.url}}/server/guides/packaging.html) guide provides an ove
 
 ## Binary Deployment
 
-This section shows you how to build your app locally and deploy just the binary. 
+This section shows you how to build your app locally and deploy just the binary.
 
 ### Build Binaries
 
@@ -41,9 +41,9 @@ docker run --rm \
 
 > Tip: If you are building this project for production, use `swift build -c release`, see [building for production]({{site.url}}/server/guides/building.html#building-for-production) for more information.
 
-Notice that Swift's shared libraries are being included. This is important since Swift is not ABI stable on Linux. This means Swift programs must run against the shared libraries they were compiled with. 
+Notice that Swift's shared libraries are being included. This is important since Swift is not ABI stable on Linux. This means Swift programs must run against the shared libraries they were compiled with.
 
-After your project is built, use the following command to create an archive for easy transport to the server. 
+After your project is built, use the following command to create an archive for easy transport to the server.
 
 ```sh
 tar cvzf hello-world.tar.gz -C .build/install .
@@ -127,7 +127,7 @@ tar xzf swift-5.2-RELEASE-ubuntu18.04.tar.gz
 
 ### Install Toolchain
 
-Move Swift somewhere easy to access. This guide will use `/swift` with each compiler version in a subfolder. 
+Move Swift somewhere easy to access. This guide will use `/swift` with each compiler version in a subfolder.
 
 ```sh
 sudo mkdir /swift
@@ -177,7 +177,7 @@ swift build
 
 ### Run
 
-Once the project has finished compiling, run it on your server's IP at port `8080`. 
+Once the project has finished compiling, run it on your server's IP at port `8080`.
 
 ```sh
 .build/debug/NIOHTTP1Server <server_ip> 8080

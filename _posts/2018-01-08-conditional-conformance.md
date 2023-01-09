@@ -42,7 +42,7 @@ This was possible via overloads of the `==` operator, like this one for `Array`:
 extension Array where Element: Equatable {
     public static func ==(lhs: [Element], rhs: [Element]) -> Bool {
         return lhs.elementsEqual(rhs)
-    }  
+    }
 }
 ~~~
 
@@ -61,7 +61,7 @@ let a = ["1","2","x"].map(Int.init)
 a == [1,2,nil]    // expecting 'true'
 ~~~
 
-You'd get a compiler error: 
+You'd get a compiler error:
 
 > Binary operator '==' cannot be applied to two '[Int?]' operands.
 
@@ -189,15 +189,15 @@ start of the next subsequence in the base, or the end.
 extension LazySplitCollection: Collection {
     typealias Element = Base.SubSequence
     typealias Index = Base.Index
-  
+
     var startIndex: Index { return base.startIndex }
     var endIndex: Index { return base.endIndex }
-  
+
     subscript(i: Index) -> Element {
         let separator = base[i...].index(where: isSeparator)
         return base[i..<(separator ?? endIndex)]
     }
-  
+
     func index(after i: Index) -> Index {
         let separator = base[i...].index(where: isSeparator)
         return separator.map(base.index(after:)) ?? endIndex
@@ -212,7 +212,7 @@ collection from the given index for the next separator. If there isn't one,
 substitute the end index in that case. The only fiddly part is skipping over
 the separator in the `index(after:)` implementation, which we do with an
  [optional map][Optional.map].
- 
+
 ### Extending lazy
 
 Now that we have this wrapper, we want to extend all the lazy collection types

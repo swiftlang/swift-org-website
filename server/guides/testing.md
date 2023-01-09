@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Testing
---- 
+---
 
 SwiftPM is integrated with [XCTest, Apple’s unit test framework](https://developer.apple.com/documentation/xctest). Running `swift test` from the terminal, or triggering the test action in your IDE (Xcode or similar), will run all of your XCTest test cases. Test results will be displayed in your IDE or printed out to the terminal.
 
@@ -13,7 +13,7 @@ The above command will run the tests using the latest Swift Docker image, utiliz
 
 Swift supports architecture-specific code. By default, Foundation imports architecture-specific libraries like Darwin or Glibc. While developing on macOS, you may end up using APIs that are not available on Linux. Since you are most likely to deploy a cloud service on Linux, it is critical to test on Linux.
 
-A historically important detail about testing for Linux is the `Tests/LinuxMain.swift` file. 
+A historically important detail about testing for Linux is the `Tests/LinuxMain.swift` file.
 
 - In Swift versions 5.4 and newer tests are automatically discovered on all platforms, no special file or flag needed.
 - In Swift versions >= 5.1 < 5.4, tests can be automatically discovered on Linux using `swift test --enable-test-discovery` flag.

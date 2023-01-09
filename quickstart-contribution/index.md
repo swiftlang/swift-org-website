@@ -17,14 +17,14 @@ title: QuickStart contribution
 
 * macOS 10.14.4 or later
 * Xcode 11 beta 1
-* 60 GB of free disk space 
+* 60 GB of free disk space
 
 
 ### Install Xcode
 
 * Download [Xcode 11 beta 1](https://developer.apple.com/download/) and select Applications
 * Double click on the XIP image
-* Move the Xcode-beta.app to /Applications/  
+* Move the Xcode-beta.app to /Applications/
 
 ~~~bash
 mv ~/Downloads/Xcode-beta.app /Applications/
@@ -52,7 +52,7 @@ port install cmake ninja
 
 ### Setup Swift Repositories
 
-* Clone Swift repository  
+* Clone Swift repository
 
 ~~~bash
 git clone git@github.com:apple/swift.git
@@ -65,7 +65,7 @@ git clone git@github.com:apple/swift.git
 
 * * *
 
-## Build Swift Compiler 
+## Build Swift Compiler
 
 * * *
 
@@ -79,7 +79,7 @@ git clone git@github.com:apple/swift.git
 
 ### Build Swift Compiler with Sccache
 
-* Install sccache using Homebrew [2] 
+* Install sccache using Homebrew [2]
 
 ~~~bash
 brew install sccache
@@ -185,7 +185,7 @@ git clone git@github.com:apple/swift.git
 ### build swift-corelibs-foundation against a downloadable toolchain
 
 * Download and install the latest trunk snapshot using the Installer app from [swift.org](https://swift.org/download/#snapshots)
-* Clone Swift repository  
+* Clone Swift repository
 
 ~~~bash
 git clone git@github.com:apple/swift.git
@@ -201,10 +201,10 @@ git clone git@github.com:apple/swift.git
 
 * * *
 
-[1] Manually install CMake 
+[1] Manually install CMake
 
 * Download [CMake](https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-Darwin-x86_64.tar.gz)
-* Install CMake 
+* Install CMake
 
 ~~~bash
 mkdir -p $HOME/bin
@@ -212,7 +212,7 @@ tar xfz cmake-3.14.4-Darwin-x86_64.tar.gz -C $HOME/bin
 export PATH=$HOME/bin/cmake-3.14.4-Darwin-x86_64/CMake.app/Contents/bin:$PATH
 ~~~
 
-[2] Manually Install Sccache: 
+[2] Manually Install Sccache:
 
 * Download [sccache](https://github.com/mozilla/sccache/releases/download/0.2.8/sccache-0.2.8-x86_64-apple-darwin.tar.gz)
 * Install sccache

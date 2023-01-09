@@ -57,7 +57,7 @@ The package implements atomic operations for the following Swift types, all of w
 - Any `RawRepresentable` type whose `RawValue` is in turn an atomic type (such as simple custom enum types)
 - Strong references to class instances that opted into atomic use (by conforming to the `AtomicReference` protocol)
 
-Of particular note is full support for atomic strong references. This provides a convenient memory reclamation solution for concurrent data structures that fits perfectly with Swift's reference counting memory management model. (Atomic strong references are implemented in terms of `DoubleWord` operations.) 
+Of particular note is full support for atomic strong references. This provides a convenient memory reclamation solution for concurrent data structures that fits perfectly with Swift's reference counting memory management model. (Atomic strong references are implemented in terms of `DoubleWord` operations.)
 
 One common use case for an atomic strong reference is to create a lazily initialized (but otherwise constant) variable of some class type. Using general atomic references would be unreasonably expensive in this simple case, so we also provide a separate set of more efficient constructs (`ManagedAtomicLazyReference` and `UnsafeAtomicLazyReference`) that are optimized specifically for lazy initialization. This can be a useful replacement for `lazy var` stored properties in class contexts, which aren't safe to use in concurrent contexts.
 

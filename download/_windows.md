@@ -37,13 +37,13 @@ The [Windows Package Manager](https://docs.microsoft.com/windows/package-manager
      --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
    del /q vs_community.exe
    ~~~
-   
+
    Start up a new Command Prompt and install the Python library six.
 
    ~~~ cmd
    pip install six
    ~~~
-   
+
 0. Install Swift:
 
    Swift can be installed through the official installer directly, or using the Windows Package Manager as well.  Notice that Windows Package Manager release may be behind the official release.

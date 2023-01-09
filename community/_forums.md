@@ -12,7 +12,7 @@ A core principle for the Swift project is that the community is an open and incl
 - Different users may have different preferences in choice of language for discussion and are encouraged to use their language of choice.
 
 - As a matter of courtesy, responses to a post should be in the same language as the original post in order to maintain the original inclusiveness of the discussion and not inadvertantly exclude other participants already engaged on the thread (including the author of the original post).
-  
+
 - A response to a post has the option of providing _additional text_ in a different language if that is helpful.
 
 ### Announcements
@@ -38,9 +38,9 @@ A core principle for the Swift project is that the community is an open and incl
 
 **[LLBuild](http://forums.swift.org/c/development/llbuild)** - For developers to discuss the implementation of the low level build system (llbuild). This category will accept email sent to: swift+llbuild@forums.swift.org
 
-**[Announcements](http://forums.swift.org/c/development/dev-announce)** - For announcements relevant to developers such as release announcements, branching, and infrastructure updates. 
+**[Announcements](http://forums.swift.org/c/development/dev-announce)** - For announcements relevant to developers such as release announcements, branching, and infrastructure updates.
 
-**[CI Notifications](http://forums.swift.org/c/development/ci-notifications)** - Automated notifications from ci.swift.org for build and test failures. 
+**[CI Notifications](http://forums.swift.org/c/development/ci-notifications)** - Automated notifications from ci.swift.org for build and test failures.
 
 ### Swift Evolution
 [Evolution]: #evolution

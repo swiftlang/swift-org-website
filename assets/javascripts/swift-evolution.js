@@ -51,7 +51,7 @@ var REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main
  *
  * `className`: Mapping of states in the proposals JSON to the CSS class names used
  * to manipulate and display proposals based on their status.
- * 
+ *
  * `count`: Number of proposals that determine after all proposals is loaded
  */
 var states = {
@@ -245,7 +245,7 @@ function renderSearchBar () {
     return html('li', null, [
       html('input', { type: 'checkbox', className: 'filtered-by-status', id: 'filter-by-' + className, value: className }),
       html('label', { className: className, tabindex: '0', role: 'button', 'for': 'filter-by-' + className, 'data-state-key': state }, [
-        addNumberToState(states[state].name, states[state].count)        
+        addNumberToState(states[state].name, states[state].count)
       ])
     ])
   })
@@ -308,7 +308,7 @@ function renderProposals() {
     '.awaitingReview', '.scheduledForReview', '.activeReview', '.accepted', '.acceptedWithRevisions',
     '.previewing', '.implemented', '.returnedForRevision', '.rejected', '.withdrawn'
   ]
-    
+
   proposalPresentationOrder.map(function (state) {
     var matchingProposals = proposals.filter(function (p) { return p.status && p.status.state === state })
     matchingProposals.map(function (proposal) {
@@ -453,7 +453,7 @@ function renderPreview() {
       'Preview: '
     ]),
     html('div', { className: 'proposal-detail-value' }, [
-      html('a', { href: 'https://github.com/apple/swift-standard-library-preview', target: '_blank' }, 
+      html('a', { href: 'https://github.com/apple/swift-standard-library-preview', target: '_blank' },
         'Standard Library Preview'
       )
     ])
@@ -538,7 +538,7 @@ function _joinNodes (nodeList, text) {
 function addEventListeners() {
   var searchInput = document.querySelector('#search-filter')
 
-  // typing in the search field causes the filter to be reapplied.  
+  // typing in the search field causes the filter to be reapplied.
   searchInput.addEventListener('search', filterProposals)
 
   // each of the individual statuses needs to trigger filtering as well

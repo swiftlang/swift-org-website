@@ -105,7 +105,7 @@ Will generate a collection JSON file looks like this:
               "products": [
                 {
                   "name": "MyProduct",
-                  "targets": ["MyTarget"],  
+                  "targets": ["MyTarget"],
                   "type": { "library": ["automatic"] }
                 }
               ],
@@ -116,7 +116,7 @@ Will generate a collection JSON file looks like this:
               ],
               "toolsVersion": "5.1.0"
             }
-          }       
+          }
         }
       ]
     }

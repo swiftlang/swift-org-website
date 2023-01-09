@@ -227,7 +227,7 @@ The `Collections` package is not intended to be a comprehensive taxonomy of data
 As the focus of this package is on providing production grade data structure implementations, the bar for inclusion is high. Some baseline criteria for evaluating contributions:
 
 - **Reliability.** The implementation must work correctly without any unhandled edge cases, and it must continue working in the face of future language, compiler and standard library changes.
-   
+
   To help with this work, the package includes support for writing combinatorial regression tests, as well as a library of semi-automated conformance checks for semantic protocol requirements.
 
 - **Runtime performance.** The implementation must exhibit best-of-class performance on all practical working sets, from a single element to tens of millions. This doesn't just mean asymptotic performance --  constant factors matter, too!

@@ -17,7 +17,7 @@ Your production workloads however will likely run on Linux and depending on your
 To not waste your time, be sure to do any profiling in _release mode_. Swift's optimiser will produce significantly faster code which will also allocate less in release mode. Usually this means you need to run
 
     swift run -c release
-    
+
 #### Install `perf`
 
 Follow the [installation instructions]({{site.url}}/server/guides/linux-perf.html) in the Linux `perf` utility guide.
@@ -80,7 +80,7 @@ What `perf` is telling you here is that it added a new events called `probe_libc
 Let's confirm that our `probe_libc:malloc` probe actually works by running:
 
     perf stat -e probe_libc:malloc -- bash -c 'echo Hello World'
-    
+
 which should output something like
 
 ```
@@ -88,7 +88,7 @@ Hello World
 
  Performance counter stats for 'bash -c echo Hello World':
 
-              1021      probe_libc:malloc                                           
+              1021      probe_libc:malloc
 
        0.003840500 seconds time elapsed
 
