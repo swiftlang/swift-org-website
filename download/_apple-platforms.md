@@ -61,7 +61,7 @@ To submit to the App Store you must build your app using the version of Swift th
 
    An Xcode toolchain (`.xctoolchain`) includes a copy of the compiler, lldb, and other related tools needed to provide a cohesive development experience for working in a specific version of Swift.
 
-1. Open Xcode's `Preferences`, navigate to `Components > Toolchains`, and select the installed Swift toolchain.
+1. Open `Xcode` > `Toolchains` > `Manage Toolchains...`, and select the installed Swift toolchain.
 
 1. Xcode uses the selected toolchain for building Swift code, debugging, and even code completion and syntax coloring.  You'll see a new toolchain indicator in Xcode's toolbar when Xcode is using a Swift toolchain. Select the Xcode toolchain to go back to Xcode's built-in tools.
 
