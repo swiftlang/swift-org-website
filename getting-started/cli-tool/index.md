@@ -155,7 +155,7 @@ let package = Package(
 )
 ~~~
 
-We can now import the argument parsing module provided by `swift-argument-parser` and use it in our application
+We can now import the argument parsing module provided by `swift-argument-parser` and use it in our application:
 
 ~~~swift
 import ArgumentParser
