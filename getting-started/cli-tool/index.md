@@ -122,7 +122,7 @@ _   _          _   _                                  _    __   _     _
 
 ## Argument parsing
 
-Most command line tools need to be able and parse command line arguments.
+Most command line tools need to be able to parse command line arguments.
 
 To add this capability to our application, we add a dependency on [swift-argument-parser](https://github.com/apple/swift-argument-parser).
 
