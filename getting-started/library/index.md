@@ -80,7 +80,7 @@ private struct InvalidEmailError: Error {
 }
 ~~~
 
-Now lets add a unit test for this strongly types Email API.  
+Now lets add a unit test for this strongly typed Email API.  
 Replace the example content of `swift_libraryTests.swift` with the following code:
 
 ~~~swift
