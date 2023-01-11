@@ -774,7 +774,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2.5-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.5</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.5</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -794,7 +794,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2.5-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.2.5 is Linux only change, Swift 5.2.4 is available as part of [Xcode 11.5](https://itunes.apple.com/app/xcode/id497799835).
+<sup>1</sup> Swift 5.2.5 is Linux only change, Swift 5.2.4 is available as part of [Xcode 11.5](https://itunes.apple.com/app/xcode/id497799835). <br><br>
 
 <h3>Swift 5.2.4</h3>
 
@@ -813,7 +813,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.5</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.5</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -832,7 +832,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2.4-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.2.4 is available as part of [Xcode 11.5](https://itunes.apple.com/app/xcode/id497799835).
+<sup>1</sup> Swift 5.2.4 is available as part of [Xcode 11.5](https://itunes.apple.com/app/xcode/id497799835). <br><br>
 
 
 <h3>Swift 5.2.3</h3>
@@ -852,7 +852,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2.3-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.4.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.4.1</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -868,7 +868,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2.3-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.2.3 is Linux only change, Swift 5.2.2 is available as part of Xcode 11.4.1.
+<sup>1</sup> Swift 5.2.3 is Linux only change, Swift 5.2.2 is available as part of Xcode 11.4.1. <br><br>
 
 
 <h3>Swift 5.2.2</h3>
@@ -888,7 +888,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2.2-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.4.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.4.1</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -904,7 +904,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2.2-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.2.2 is available as part of Xcode 11.4.1.
+<sup>1</sup> Swift 5.2.2 is available as part of Xcode 11.4.1. <br><br>
 
 
 <h3>Swift 5.2.1</h3>
@@ -924,7 +924,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2.1-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.4</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.4</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -940,7 +940,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2.1-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.2.1 is Linux only change, Swift 5.2 is available as part of Xcode 11.4.
+<sup>1</sup> Swift 5.2.1 is Linux only change, Swift 5.2 is available as part of Xcode 11.4. <br><br>
 
 
 <h3>Swift 5.2</h3>
@@ -960,7 +960,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2-RELEASE">swi
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.4</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.4</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -976,7 +976,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.2-RELEASE">swi
     </tbody>
 </table>
 
-*Swift 5.2 is available as part of Xcode 11.4.
+<sup>1</sup> Swift 5.2 is available as part of Xcode 11.4. <br><br>
 
 
 <h3>Swift 5.1.5</h3>
@@ -996,7 +996,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1.5-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.3</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.3</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1013,7 +1013,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1.5-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.1.5 is Linux only change, Swift 5.1.3 is available as part of Xcode 11.3.
+<sup>1</sup> Swift 5.1.5 is Linux only change, Swift 5.1.3 is available as part of Xcode 11.3. <br><br>
 
 
 <h3>Swift 5.1.4</h3>
@@ -1033,7 +1033,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.3</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.3</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1050,7 +1050,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1.4-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.1.4 is Linux only change, Swift 5.1.3 is available as part of Xcode 11.3.
+<sup>1</sup> Swift 5.1.4 is Linux only change, Swift 5.1.3 is available as part of Xcode 11.3. <br><br>
 
 
 <h3>Swift 5.1.3</h3>
@@ -1070,7 +1070,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1.3-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.3</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.3</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1087,7 +1087,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1.3-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.1.3 is available as part of Xcode 11.3.
+<sup>1</sup> Swift 5.1.3 is available as part of Xcode 11.3. <br><br>
 
 
 <h3>Swift 5.1.2</h3>
@@ -1107,7 +1107,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1.2-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.2</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.2</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1124,7 +1124,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1.2-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.1.2 is available as part of Xcode 11.2.
+<sup>1</sup> Swift 5.1.2 is available as part of Xcode 11.2. <br><br>
 
 
 <h3>Swift 5.1.1</h3>
@@ -1144,7 +1144,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1.1-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.0</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.0</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1161,7 +1161,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1.1-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.1.1 is Linux only change, Swift 5.1 is available as part of Xcode 11.
+<sup>1</sup> Swift 5.1.1 is Linux only change, Swift 5.1 is available as part of Xcode 11. <br><br>
 
 
 <h3>Swift 5.1</h3>
@@ -1181,7 +1181,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1-RELEASE">swi
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.0</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 11.0</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1198,7 +1198,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.1-RELEASE">swi
     </tbody>
 </table>
 
-*Swift 5.1 is available as part of Xcode 11.
+<sup>1</sup> Swift 5.1 is available as part of Xcode 11. <br><br>
 
 <h3>Swift 5.0.3</h3>
 
@@ -1217,7 +1217,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.0.3-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.2.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.2.1</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1234,7 +1234,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.0.3-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.0.3 is Linux only change, Swift 5.0.1 is available as part of Xcode 10.2.1.
+<sup>1</sup> Swift 5.0.3 is Linux only change, Swift 5.0.1 is available as part of Xcode 10.2.1. <br><br>
 
   <h3>Swift 5.0.2</h3>
 
@@ -1253,7 +1253,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.0.2-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.2.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.2.1</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1270,7 +1270,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.0.2-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.0.2 is Linux only change, Swift 5.0.1 is available as part of Xcode 10.2.1.
+<sup>1</sup> Swift 5.0.2 is Linux only change, Swift 5.0.1 is available as part of Xcode 10.2.1. <br><br>
 
 
   <h3>Swift 5.0.1</h3>
@@ -1290,7 +1290,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.0.1-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.2.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.2.1</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1307,7 +1307,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.0.1-RELEASE">s
     </tbody>
 </table>
 
-*Swift 5.0.1 is available as part of Xcode 10.2.1.
+<sup>1</sup> Swift 5.0.1 is available as part of Xcode 10.2.1. <br><br>
 
   <h3>Swift 5.0</h3>
 
@@ -1326,7 +1326,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.0-RELEASE">swi
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.2</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.2</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1343,7 +1343,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.0-RELEASE">swi
     </tbody>
 </table>
 
-*Swift 5.0 is available as part of Xcode 10.2.
+<sup>1</sup> Swift 5.0 is available as part of Xcode 10.2. <br><br>
 
 </details>
 <details class="download" style="margin-bottom: 0em">
@@ -1365,7 +1365,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.1</a><sup> 1</sup>
                 </span>
             </td>
             <td class="toolchain">
@@ -1381,8 +1381,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _release_build.html platform="Linux" build=ubuntu1404_4_2_4_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.2.4-release" %}
     </tbody>
 </table>
-
-*Swift 4.2.4 is Linux only change, Swift 4.2.1 is available as part of Xcode 10.1.
+<sup>1</sup> Swift 4.2.4 is Linux only change, Swift 4.2.1 is available as part of Xcode 10.1. <br><br>
 
   <h3>Swift 4.2.3</h3>
 <table id="latest-builds" class="downloads">
@@ -1396,7 +1395,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.1</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.2.3-release/xcode/swift-4.2.3-RELEASE/swift-4.2.3-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.2.3-release/xcode/swift-4.2.3-RELEASE/swift-4.2.3-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1410,7 +1409,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_2_3_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.2.3-release" %}
     </tbody>
 </table>
-*Swift 4.2.3 is Linux only change, Swift 4.2.1 is available as part of Xcode 10.1.
+<sup>1</sup> Swift 4.2.3 is Linux only change, Swift 4.2.1 is available as part of Xcode 10.1. <br><br>
 
 <h3>Swift 4.2.2</h3>
 <table id="latest-builds" class="downloads">
@@ -1424,7 +1423,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.1</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.2.2-release/xcode/swift-4.2.2-RELEASE/swift-4.2.2-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.2.2-release/xcode/swift-4.2.2-RELEASE/swift-4.2.2-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1438,8 +1437,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_2_2_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.2.2-release" %}
     </tbody>
 </table>
-*Swift 4.2.2 is Linux only change, Swift 4.2.1 is available as part of Xcode 10.1.
-
+<sup>1</sup> Swift 4.2.2 is Linux only change, Swift 4.2.1 is available as part of Xcode 10.1. <br><br>
 
 <h3>Swift 4.2.1</h3>
 <table id="latest-builds" class="downloads">
@@ -1453,7 +1451,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.1</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.2.1-release/xcode/swift-4.2.1-RELEASE/swift-4.2.1-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.2.1-release/xcode/swift-4.2.1-RELEASE/swift-4.2.1-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1467,7 +1465,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_2_1_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.2.1-release" %}
     </tbody>
 </table>
-*Swift 4.2.1 is available as part of Xcode 10.1.
+<sup>1</sup> Swift 4.2.1 is available as part of Xcode 10.1. <br><br>
 
 <h3>Swift 4.2</h3>
 <table id="latest-builds" class="downloads">
@@ -1481,7 +1479,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.0</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 10.0</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.2-release/xcode/swift-4.2-RELEASE/swift-4.2-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.2-release/xcode/swift-4.2-RELEASE/swift-4.2-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1495,7 +1493,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_2_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.2-release" %}
     </tbody>
 </table>
-*Swift 4.2 is available as part of Xcode 10.
+<sup>1</sup> Swift 4.2 is available as part of Xcode 10. <br><br>
 
 <h3>Swift 4.1.3</h3>
 <table id="latest-builds" class="downloads">
@@ -1509,7 +1507,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.4</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.4</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.1.3-release/xcode/swift-4.1.3-RELEASE/swift-4.1.3-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.1.3-release/xcode/swift-4.1.3-RELEASE/swift-4.1.3-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1523,7 +1521,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_1_3_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.1.3-release" %}
     </tbody>
 </table>
-*Swift 4.1.3 is Linux only change, Swift 4.1.2 is available as part of Xcode 9.4.
+<sup>1</sup> Swift 4.1.3 is Linux only change, Swift 4.1.2 is available as part of Xcode 9.4. <br><br>
 
 <h3>Swift 4.1.2</h3>
 <table id="latest-builds" class="downloads">
@@ -1537,7 +1535,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.4</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.4</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.1.2-release/xcode/swift-4.1.2-RELEASE/swift-4.1.2-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.1.2-release/xcode/swift-4.1.2-RELEASE/swift-4.1.2-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1551,7 +1549,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_1_2_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.1.2-release" %}
     </tbody>
 </table>
-*Swift 4.1.2 is available as part of Xcode 9.4.
+<sup>1</sup> Swift 4.1.2 is available as part of Xcode 9.4. <br><br>
 
 <h3>Swift 4.1.1</h3>
 <table id="latest-builds" class="downloads">
@@ -1565,7 +1563,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.3</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.3</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.1.1-release/xcode/swift-4.1.1-RELEASE/swift-4.1.1-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.1.1-release/xcode/swift-4.1.1-RELEASE/swift-4.1.1-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1579,7 +1577,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_1_1_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.1.1-release" %}
     </tbody>
 </table>
-*Swift 4.1.1 is Linux only change, Swift 4.1 is available as part of Xcode 9.3.
+<sup>1</sup> Swift 4.1.1 is Linux only change, Swift 4.1 is available as part of Xcode 9.3. <br><br>
 
 <h3>Swift 4.1</h3>
 <table id="latest-builds" class="downloads">
@@ -1593,7 +1591,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.3</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.3</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.1-release/xcode/swift-4.1-RELEASE/swift-4.1-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.1-release/xcode/swift-4.1-RELEASE/swift-4.1-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1607,7 +1605,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_1_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.1-release" %}
     </tbody>
 </table>
-*Swift 4.1 is available as part of Xcode 9.3.
+<sup>1</sup> Swift 4.1 is available as part of Xcode 9.3. <br><br>
 
 <h3>Swift 4.0.3</h3>
 <table id="latest-builds" class="downloads">
@@ -1621,7 +1619,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.2</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.2</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.0.3-release/xcode/swift-4.0.3-RELEASE/swift-4.0.3-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.0.3-release/xcode/swift-4.0.3-RELEASE/swift-4.0.3-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1635,7 +1633,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_0_3_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.0.3-release" %}
     </tbody>
 </table>
-*Swift 4.0.3 is available as part of Xcode 9.2.
+<sup>1</sup> Swift 4.0.3 is available as part of Xcode 9.2. <br><br>
 
 <h3>Swift 4.0.2</h3>
 <table id="latest-builds" class="downloads">
@@ -1649,7 +1647,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.1</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.0.2-release/xcode/swift-4.0.2-RELEASE/swift-4.0.2-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.0.2-release/xcode/swift-4.0.2-RELEASE/swift-4.0.2-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1663,7 +1661,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_0_2_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.0.2-release" %}
     </tbody>
 </table>
-*Swift 4.0.2 is available as part of Xcode 9.1.
+<sup>1</sup> Swift 4.0.2 is available as part of Xcode 9.1. <br><br>
 
 <h3>Swift 4.0</h3>
 <table id="latest-builds" class="downloads">
@@ -1677,7 +1675,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.0</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 9.0</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-4.0-release/xcode/swift-4.0-RELEASE/swift-4.0-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-4.0-release/xcode/swift-4.0-RELEASE/swift-4.0-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1691,7 +1689,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_4_0_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-4.0-release" %}
     </tbody>
 </table>
-*Swift 4.0 is available as part of Xcode 9.0.
+<sup>1</sup> Swift 4.0 is available as part of Xcode 9.0. <br><br>
 </details>
 
 <details class="download" style="margin-bottom: 0em">
@@ -1709,7 +1707,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 8.3.2</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 8.3.2</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-3.1.1-release/xcode/swift-3.1.1-RELEASE/swift-3.1.1-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.1.1-release/xcode/swift-3.1.1-RELEASE/swift-3.1.1-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1723,7 +1721,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_3_1_1_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-3.1.1-release" %}
     </tbody>
 </table>
-*Swift 3.1.1 is available as part of Xcode 8.3.2.
+<sup>1</sup> Swift 3.1.1 is available as part of Xcode 8.3.2. <br><br>
 
 <h3>Swift 3.1</h3>
 <table id="latest-builds" class="downloads">
@@ -1737,7 +1735,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 8.3</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 8.3</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-3.1-release/xcode/swift-3.1-RELEASE/swift-3.1-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.1-release/xcode/swift-3.1-RELEASE/swift-3.1-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1751,7 +1749,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_3_1_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-3.1-release" %}
     </tbody>
 </table>
-*Swift 3.1 is available as part of Xcode 8.3.
+<sup>1</sup> Swift 3.1 is available as part of Xcode 8.3. <br><br>
 
 <h3>Swift 3.0.2</h3>
 <table id="latest-builds" class="downloads">
@@ -1765,7 +1763,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 8.2</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 8.2</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-3.0.2-release/xcode/swift-3.0.2-RELEASE/swift-3.0.2-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0.2-release/xcode/swift-3.0.2-RELEASE/swift-3.0.2-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1778,7 +1776,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_3_0_2_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-3.0.2-release" %}
     </tbody>
 </table>
-*Swift 3.0.2 is available as part of Xcode 8.2.
+<sup>1</sup> Swift 3.0.2 is available as part of Xcode 8.2. <br><br>
 
 <h3>Swift 3.0.1</h3>
 <table id="latest-builds" class="downloads">
@@ -1792,7 +1790,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 8.1</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 8.1</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-3.0.1-release/xcode/swift-3.0.1-RELEASE/swift-3.0.1-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0.1-release/xcode/swift-3.0.1-RELEASE/swift-3.0.1-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1806,7 +1804,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_3_0_1_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-3.0.1-release" %}
     </tbody>
 </table>
-*Swift 3.0.1 is available as part of Xcode 8.1.
+<sup>1</sup> Swift 3.0.1 is available as part of Xcode 8.1. <br><br>
 
 <h3>Swift 3.0</h3>
   <table id="latest-builds" class="downloads">
@@ -1820,7 +1818,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 8</a>*
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>Xcode 8</a><sup> 1</sup>
                 </span>
                  <a href="https://download.swift.org/swift-3.0-release/xcode/swift-3.0-RELEASE/swift-3.0-RELEASE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0-release/xcode/swift-3.0-RELEASE/swift-3.0-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -1833,7 +1831,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_3_0_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-3.0-release" %}
     </tbody>
 </table>
-*Swift 3.0 is available as part of Xcode 8.
+<sup>1</sup> Swift 3.0 is available as part of Xcode 8. <br><br>
 </details>
 
 <details class="download" style="margin-bottom: 0em">
@@ -1851,7 +1849,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" title="Download" download>Xcode 7.3.1</a>*
+                    <a href="https://developer.apple.com/xcode/download/" title="Download" download>Xcode 7.3.1</a><sup> 1</sup>
                 </span>
             </td>
             <td class="date">
@@ -1862,7 +1860,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_2_2_1_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-2.2.1-release" %}
     </tbody>
 </table>
-*Swift 2.2.1 is available as part of Xcode 7.3.1.
+<sup>1</sup> Swift 2.2.1 is available as part of Xcode 7.3.1. <br><br>
 
 <h3>Swift 2.2</h3>
 <table id="latest-builds" class="downloads">
@@ -1876,7 +1874,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" title="Download" download>Xcode 7.3</a>*
+                    <a href="https://developer.apple.com/xcode/download/" title="Download" download>Xcode 7.3</a><sup> 1</sup>
                 </span>
             </td>
             <td class="date">
@@ -1887,5 +1885,5 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         {% include_relative _build.html platform="Linux" build=ubuntu1404_2_2_release.first platform_dir="ubuntu1404" name="Ubuntu 14.04" branch_dir="swift-2.2-release" %}
     </tbody>
 </table>
-*Swift 2.2 is available as part of Xcode 7.3 release.
+<sup>1</sup> Swift 2.2 is available as part of Xcode 7.3 release. <br><br>
 </details>
