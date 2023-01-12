@@ -224,3 +224,7 @@ _   _          _   _                                           _       _   _
 |_| |_|  \___| |_| |_|  \___/  ( )     \_/\_/    \___/  |_|    |_|  \__,_| (_)
                               |/
 ~~~
+
+---
+
+Find the source code for this guide at [https://github.com/apple/swift-getting-started-cli](https://github.com/apple/swift-getting-started-cli)

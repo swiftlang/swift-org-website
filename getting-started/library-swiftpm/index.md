@@ -118,3 +118,7 @@ Test Suite 'swift-libraryPackageTests.xctest' passed at 2023-01-03 16:22:45.076.
 Test Suite 'All tests' passed at 2023-01-03 16:22:45.076.
 	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.007) seconds
 ~~~
+
+---
+
+Find the source code for this guide at [https://github.com/apple/swift-getting-started-package-library](https://github.com/apple/swift-getting-started-package-library)
