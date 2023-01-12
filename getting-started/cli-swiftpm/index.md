@@ -11,37 +11,58 @@ Let’s write a small application with our new Swift development environment.
 To start, we’ll use SwiftPM to make a new project for us. In your terminal of choice run:
 
 ~~~bash
-❯ mkdir hello-swift
-❯ cd hello-swift
-❯ swift package init --name hello-swift --type executable
+❯ mkdir MyCLI
+❯ cd MyCLI
+❯ swift package init --name MyCLI --type executable
 ~~~
 
-This will generate a new directory called hello-swift with the following files:
+This will generate a new directory called MyCLI with the following files:
 
 ~~~no-highlight
 .
 ├── Package.swift
 ├── README.md
 ├── Sources
-│   └── hello-swift
-│       └── hello_swift.swift
+│   └── MyCLI
+│       └── MyCLI.swift
 └── Tests
-    └── hello-swiftTests
-        └── hello_swiftTests.swift
+    └── MyCLITests
+        └── MyCLITests.swift
 ~~~
 
 `Package.swift` is the manifest file for Swift. It’s where you keep metadata for your project, as well as dependencies.
 
-`Sources/hello-swift/main.swift` is the application entry point and where we’ll write our application code.
-`Test/hello-swiftTests/hello_swiftTests.swift` is where we can write tests for our application.
+`Sources/MyCLI/MyCLI.swift` is the application entry point and where we’ll write our application code.
+`Test/MyCLITests/MyCLITests.swift` is where we can write tests for our application.
 
-In fact, SwiftPM generated a "Hello, world!" project for us!
-We can run this program by running  `swift run`  in our terminal.
+In fact, SwiftPM generated a "Hello, world!" project for us, including some unit tests!
+
+We can run the tests by running  `swift test`  in our terminal.
 
 ~~~bash
-❯ swift run
-[3/3] Linking hello-swift
-Hello, world!
+❯ swift test
+Building for debugging...
+[6/6] Linking MyCLIPackageTests
+Build complete! (16.53s)
+Test Suite 'All tests' started at 2023-01-12 13:38:22.393
+Test Suite 'MyCLIPackageTests.xctest' started at 2023-01-12 13:38:22.394
+Test Suite 'MyCLITests' started at 2023-01-12 13:38:22.394
+Test Case '-[MyCLITests.MyCLITests testExample]' started.
+Test Case '-[MyCLITests.MyCLITests testExample]' passed (0.003 seconds).
+Test Suite 'MyCLITests' passed at 2023-01-12 13:38:22.397.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.003 (0.003) seconds
+Test Suite 'MyCLIPackageTests.xctest' passed at 2023-01-12 13:38:22.398.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.003 (0.004) seconds
+Test Suite 'All tests' passed at 2023-01-12 13:38:22.398.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.003 (0.005) seconds
+~~~
+
+We can also run the program by running  `swift run`  in our terminal.
+
+~~~bash
+❯ swift run MyCLI
+[3/3] Linking MyCLI
+Hello, World!
 ~~~
 
 ## Adding dependencies
@@ -60,20 +81,23 @@ To do so, we extend our `Package.swift` file with the following information:
 import PackageDescription
 
 let package = Package(
-name: "hello-swift",
+name: "MyCLI",
+  products: [
+    .executable(name: "MyCLI", targets: ["MyCLI"])
+  ],
   dependencies: [
     .package(url: "https://github.com/tomerd/swift-figlet", branch: "main"),
   ],
   targets: [
     .executableTarget(
-      name: "hello-swift",
+      name: "MyCLI",
       dependencies: [
         .product(name: "Figlet", package: "swift-figlet"),
       ]
     ),
     .testTarget(
-      name: "hello-swiftTests",
-      dependencies: ["hello-swift"]
+      name: "MyCLITests",
+      dependencies: ["MyCLI"]
     ),
   ]
 )
@@ -84,7 +108,7 @@ Running `swift build` will instruct SwiftPM to install the new dependencies and 
 Running this command also created a new file for us, `Package.resolved`.
 This file is a snapshot of the exact versions of the dependencies we are using locally.
 
-To use this dependency, we can open `hello_swift.swift`, remove everything that’s in there (it’s just an example), and add this line to it:
+To use this dependency, we can open `MyCLI.swift`, remove everything that’s in there (it’s just an example), and add this line to it:
 
 ~~~swift
 import Figlet
@@ -94,7 +118,7 @@ This line means that we can now use the `Figlet` module that the `swift-figlet` 
 
 ## A small application
 
-Now let’s write a small application with our new dependency. In our `hello_swift.swift`, add the following code:
+Now let’s write a small application with our new dependency. In our `MyCLI.swift`, add the following code:
 
 ~~~swift
 import Figlet // from the previous step
@@ -102,10 +126,19 @@ import Figlet // from the previous step
 @main
 struct FigletTool {
   static func main() {
-    let figlet = Figlet()
-    figlet.say("Hello, Swift!")
+    Figlet.say("Hello, Swift!")
   }
 }
+~~~
+
+Now lets remove the default unit test since we changes the tools' code.
+Replace the example content of `MyCLITests.swift` with the following code:
+
+~~~swift
+@testable import MyCLI
+import XCTest
+
+final class MyCLITests: XCTestCase {}
 ~~~
 
 Once we save that, we can run our application with `swift run`
@@ -134,22 +167,25 @@ To do so, we extend our `Package.swift` file with the following information:
 import PackageDescription
 
 let package = Package(
-  name: "hello-swift",
+  name: "swift-swift",
   dependencies: [
     .package(url: "https://github.com/tomerd/swift-figlet", branch: "main"),
     .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
   ],
+  products: [
+    .executable(name: "MyCLI", targets: ["MyCLI"])
+  ],  
   targets: [
     .executableTarget(
-      name: "hello-swift",
+      name: "MyCLI",
       dependencies: [
         .product(name: "Figlet", package: "swift-figlet"),
         .product(name: "ArgumentParser", package: "swift-argument-parser"),
       ]
     ),
     .testTarget(
-      name: "hello-swiftTests",
-      dependencies: ["hello-swift"]
+      name: "MyCLITests",
+      dependencies: ["MyCLI"]
     ),
   ]
 )
@@ -167,15 +203,14 @@ struct FigletTool: ParsableCommand {
   public var input: String
 
   public func run() throws {
-    let figlet = Figlet()
-    figlet.say(self.input)
+    Figlet.say(self.input)
   }
 }
 ~~~
 
 For more information about how [swift-argument-parser](https://github.com/apple/swift-argument-parser) parses command line options, see [swift-argument-parser documentation](https://github.com/apple/swift-argument-parser) documentation.
 
-Once we save that, we can run our application with `swift run hello-swift --input 'Hello, world!'`
+Once we save that, we can run our application with `swift run MyCLI --input 'Hello, world!'`
 
 Note we need to specify the executable in this case, so we can pass the `input` argument to it.
 
