@@ -1,3 +1,8 @@
+- date: 2023-01-13 10:10:00-06:00
+  dir: swift-5.8-DEVELOPMENT-SNAPSHOT-2023-01-13-a
+  download: swift-5.8-DEVELOPMENT-SNAPSHOT-2023-01-13-a-ubuntu20.04-aarch64.tar.gz
+  download_signature: swift-5.8-DEVELOPMENT-SNAPSHOT-2023-01-13-a-ubuntu20.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2023-01-11 10:10:00-06:00
   dir: swift-5.8-DEVELOPMENT-SNAPSHOT-2023-01-11-a
   download: swift-5.8-DEVELOPMENT-SNAPSHOT-2023-01-11-a-ubuntu20.04-aarch64.tar.gz
