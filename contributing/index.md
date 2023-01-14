@@ -20,6 +20,7 @@ as described in [Source Code](/source-code).
 {% include_relative _answering-questions.md %}
 {% include_relative _reporting-bugs.md %}
 {% include_relative _triaging-bugs.md %}
+{% include_relative _website-and-blog-post-contributions.md %}
 {% include_relative _swift-evolution-process.md %}
 {% include_relative _contributing-code.md %}
 {% comment %}{% include_relative _contributing-documentation.md %}{% endcomment %}
@@ -28,4 +29,3 @@ as described in [Source Code](/source-code).
 * * *
 
 {% include_relative _llvm.md %}
-
