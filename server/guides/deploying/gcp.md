@@ -46,7 +46,7 @@ project root:
 You should test your Dockerfile with `docker build . -t test` and
 `docker run -p 8080:8080 test` and make sure it builds and runs locally.
 
-The _Dockerfile_ is the same as in the [packaging guide]({{site.url}}/server/guides/packaging.html#docker).
+The _Dockerfile_ is the same as in the [packaging guide](/server/guides/packaging.html#docker).
 Replace `<executable-name>` with your `executableTarget` (ie. "Server"):
 
 ```Dockerfile
@@ -138,7 +138,7 @@ have the server listen on `$PORT`.
 
 ## Deployment
 
-![cloud build trigger settings and how to connect a code repository]({{site.url}}/assets/images/server-guides/gcp-connect-repo.png)
+![cloud build trigger settings and how to connect a code repository](/assets/images/server-guides/gcp-connect-repo.png)
 
 Push all files to a remote repository. Cloud Build currently supports, GitHub,
 Bitbucket and GitLab. now) and head to
@@ -172,7 +172,7 @@ As a last step before deploying the new service, go to the
 and make sure "Cloud Run" is enabled. This gives Cloud Build the necessary IAM
 permissions to deploy Cloud Run services.
 
-![cloud build settings]({{site.url}}/assets/images/server-guides/gcp-cloud-build-settings.png)
+![cloud build settings](/assets/images/server-guides/gcp-cloud-build-settings.png)
 
 In the Trigger overview page, you should see your new "swift-service" trigger.
 Click on "RUN" on the right to start the trigger manually from the `main`
@@ -189,11 +189,11 @@ options:
 
 After a successful build you should see the service URL in the build logs:
 
-![successful build and deployment to cloud run]({{site.url}}/assets/images/server-guides/gcp-cloud-build.png)
+![successful build and deployment to cloud run](/assets/images/server-guides/gcp-cloud-build.png)
 
 You can head over to Cloud Run and see your service running there:
 
-![cloud run overview]({{site.url}}/assets/images/server-guides/gcp-cloud-run.png)
+![cloud run overview](/assets/images/server-guides/gcp-cloud-run.png)
 
 The trigger will deploy every new commit on `main`. You can also enable Pull
 Request triggers for feature-driven workflows. Cloud Build also allows

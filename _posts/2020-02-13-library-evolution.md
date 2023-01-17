@@ -15,7 +15,7 @@ Swift 5.1 shipped with two new features related to binary stability which enable
 
 Module stability currently requires library evolution support; typically you will enable both features when building a binary framework for distribution.
 
-For more details on how binary stability, module stability and library evolution support fit together, please see an earlier post on this blog titled [ABI stability and more]({{ site.url }}/blog/abi-stability-and-more/).
+For more details on how binary stability, module stability and library evolution support fit together, please see an earlier post on this blog titled [ABI stability and more](/blog/abi-stability-and-more/).
 
 ## When to enable library evolution support
 
@@ -395,7 +395,7 @@ The Swift compiler currently only guarantees binary compatibility among differen
 
 However, stable module interfaces and library evolution can be used on all platforms supported by Swift. So on non-Apple platforms, you can still use multiple versions of the same library without recompiling a client application, as long as all binaries were built with the same version of the Swift compiler.
 
-As mentioned in [ABI stability and more]({{ site.url }}/blog/abi-stability-and-more/), as development of Swift on Linux, Windows, and other platforms matures, the Swift Core Team will evaluate stabilizing the ABI on those platforms as well. This will lift the restriction on mixing and matching artifacts built with different compiler versions.
+As mentioned in [ABI stability and more](/blog/abi-stability-and-more/), as development of Swift on Linux, Windows, and other platforms matures, the Swift Core Team will evaluate stabilizing the ABI on those platforms as well. This will lift the restriction on mixing and matching artifacts built with different compiler versions.
 
 ### Objective-C interoperability
 
@@ -498,7 +498,7 @@ Please feel free to post questions about this post on the [associated thread](ht
 
 The list below collects various links found earlier in this document:
 
-- Blog post: [ABI stability and more](https://swift.org/blog/abi-stability-and-more/)
+- Blog post: [ABI stability and more](/blog/abi-stability-and-more/)
 - WWDC talk: [Binary frameworks in Swift](https://developer.apple.com/wwdc19/416)
 - Specification document: [LibraryEvolution.rst](https://github.com/apple/swift/blob/master/docs/LibraryEvolution.rst)
 - Evolution proposal: [SE-0193 Cross-module inlining and specialization](https://github.com/apple/swift-evolution/blob/master/proposals/0193-cross-module-inlining-and-specialization.md)

@@ -86,7 +86,7 @@ Our immediate goal is to simplify building cross-platform libraries and applicat
 
 ## What's Next?
 
-System is only in its infancy—it currently includes a small number of system calls, currency types, and convenience functionality. As part of the effort to increase the API coverage, we'll be working to adopt System in the Swift Package Manager. This will include [enhancements to FilePath](https://github.com/apple/swift-system/pull/2) and adding support for the recently announced [Swift on Windows](https://swift.org/blog/swift-on-windows/).
+System is only in its infancy—it currently includes a small number of system calls, currency types, and convenience functionality. As part of the effort to increase the API coverage, we'll be working to adopt System in the Swift Package Manager. This will include [enhancements to FilePath](https://github.com/apple/swift-system/pull/2) and adding support for the recently announced [Swift on Windows](/blog/swift-on-windows/).
 
 There's a ton of exciting work left to do. System (especially the forthcoming Windows support!) is a fantastic opportunity to get involved in the Swift project and help it grow into a strong, vibrant, cross-platform ecosystem.
 

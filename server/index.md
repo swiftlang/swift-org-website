@@ -41,8 +41,8 @@ The Swift Server workgroup:
 * Defines and run an incubation process for these efforts to reduce duplication of effort, increase compatibility and promote best practices
 * Channels feedback for Swift language features needed by the server development community to the Swift Core Team
 
-Read more about the workgroup and server incubator it runs [here]({{site.url}}/sswg "Swift Server Workgroup").
+Read more about the workgroup and server incubator it runs [here](/sswg "Swift Server Workgroup").
 
 ## Development guides
 
-The Swift Server Workgroup and Swift on Server community have developed a number of guides for using Swift on the server. They cover a range of topics from packaging, deployment and profiling. See the [server guides]({{site.url}}/server/guides/) for all the guides.
+The Swift Server Workgroup and Swift on Server community have developed a number of guides for using Swift on the server. They cover a range of topics from packaging, deployment and profiling. See the [server guides](/server/guides/) for all the guides.

@@ -7,7 +7,7 @@ This guide illustrates how to deploy a Server-Side Swift workload on AWS. The wo
 
 ## Architecture
 
-![Architecture]({{site.url}}/assets/images/server-guides/aws/aws-fargate-vapor-mongo.png)
+![Architecture](/assets/images/server-guides/aws/aws-fargate-vapor-mongo.png)
 
 - Amazon API Gateway receives API requests
 - API Gateway locates your application containers in AWS Fargate through internal DNS managed by AWS Cloud Map
@@ -322,7 +322,7 @@ Your application requires credentials to authenticate to your MongoDB Atlas data
 
 Determine the connection string from the MongoDB Atlas website. Select the *Connect* button on your cluster page and the *Connect your application*.
 
-![Architecture]({{site.url}}/assets/images/server-guides/aws/aws-fargate-vapor-mongo-atlas-connection.png)
+![Architecture](/assets/images/server-guides/aws/aws-fargate-vapor-mongo-atlas-connection.png)
 
 Select *Swift version 1.2.0* as the Driver and copy the displayed connection string. It looks something like this:
 
@@ -545,7 +545,7 @@ Output:
 
 Use the IP addresses to create a Network Access rule in your MongoDB Atlas account for each address.
 
-![Architecture]({{site.url}}/assets/images/server-guides/aws/aws-fargate-vapor-mongo-atlas-network-address.png)
+![Architecture](/assets/images/server-guides/aws/aws-fargate-vapor-mongo-atlas-network-address.png)
 
 ## Step 12: Use your API
 

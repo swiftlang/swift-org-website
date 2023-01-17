@@ -1,15 +1,15 @@
 :host {
   --color-header-background-light: #fafafa;
   --color-header-text-light: #333333;
-  --icon-close-url-light: url("https://swift.org/assets/images/icon-close.svg");
-  --icon-menu-url-light: url("https://swift.org/assets/images/icon-menu.svg");
-  --logo-url-light: url("https://swift.org/assets/images/swift.svg");
+  --icon-close-url-light: url("/assets/images/icon-close.svg");
+  --icon-menu-url-light: url("/assets/images/icon-menu.svg");
+  --logo-url-light: url("/assets/images/swift.svg");
 
   --color-header-background-dark: #333333;
   --color-header-text-dark: #fafafa;
-  --icon-close-url-dark: url("https://swift.org/assets/images/icon-close~dark.svg");
-  --icon-menu-url-dark: url("https://swift.org/assets/images/icon-menu~dark.svg");
-  --logo-url-dark: url("https://swift.org/assets/images/swift~dark.svg");
+  --icon-close-url-dark: url("/assets/images/icon-close~dark.svg");
+  --icon-menu-url-dark: url("/assets/images/icon-menu~dark.svg");
+  --logo-url-dark: url("/assets/images/swift~dark.svg");
 
   --color-header-background: var(--color-header-background-light);
   --color-header-border: var(--color-nav-keyline);

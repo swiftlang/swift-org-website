@@ -75,9 +75,9 @@ Platform owners help facilitate contributors to the Swift project to collaborate
 
 |                    | Getting Started                                     | Toolchain Provider                            | Pull Request Testing Required|
 |:------------------:|:---------------------------------------------------:|:-------------------------------------------------:|:----------------------------:|
-| **Apple platforms**         | [Docs](https://swift.org/getting-started/#on-macos)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
-| **Linux**          | [Docs](https://swift.org/getting-started/#on-linux)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
-| **Windows**        | [Docs](https://swift.org/getting-started/#on-windows)| [Saleem Abdulrasool](https://github.com/compnerd) |                              |
+| **Apple platforms**         | [Docs](/getting-started/#on-macos)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
+| **Linux**          | [Docs](/getting-started/#on-linux)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
+| **Windows**        | [Docs](/getting-started/#on-windows)| [Saleem Abdulrasool](https://github.com/compnerd) |                              |
 
 * Apple platforms includes macOS, iOS, tvOS, and watchOS.
 * Linux includes Ubuntu, CentOS and Amazon Linux platforms.
@@ -90,7 +90,7 @@ Pull request testing hardware for a given platform are provided by various membe
 
 ### Code Signature for Downloadable Builds
 
-Platform owners will build and sign the toolchain before providing it to Apple. Apple will then re-sign the toolchain under [swift.org](https://swift.org) certificate and distribute it on the website. The builds will only be re-signed if they are not built by Apple. There will be random audits to validate the signatures between both the platform owners and Apple.
+Platform owners will build and sign the toolchain before providing it to Apple. Apple will then re-sign the toolchain under [swift.org](/) certificate and distribute it on the website. The builds will only be re-signed if they are not built by Apple. There will be random audits to validate the signatures between both the platform owners and Apple.
 
 ### Platform Review
 

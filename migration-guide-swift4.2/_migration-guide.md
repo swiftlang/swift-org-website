@@ -1,6 +1,6 @@
 Xcode 10.0 comes with a Swift Migrator tool that helps you migrate your project to Swift 4.2.
 
-> For the previous release's Migration Guide, see [Migrating to Swift 4]({{ site.url }}/migration-guide-swift4).
+> For the previous release's Migration Guide, see [Migrating to Swift 4](/migration-guide-swift4).
 
 ## Pre-Migration Preparation
 

@@ -1,6 +1,6 @@
 Xcode 10.2 comes with a Swift Migrator tool that helps you migrate your project to Swift 5.
 
-> For the previous release's Migration Guide, see [Migrating to Swift 4.2]({{ site.url }}/migration-guide-swift4.2).
+> For the previous release's Migration Guide, see [Migrating to Swift 4.2](/migration-guide-swift4.2).
 
 ## Pre-Migration Preparation
 

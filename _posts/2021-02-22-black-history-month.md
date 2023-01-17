@@ -25,4 +25,4 @@ To help young readers discover books written by and featuring people of color, [
 
 ## Join in on the celebration!
 
-We are grateful for the perspectives, resources, and innovation that the Black community has brought to Swift. Please join in on the Black History Month celebration over on the [Community Showcase forum](https://forums.swift.org/c/community-showcase/) and share how the Black community has made a positive impact on your journey with Swift. If you are a member of the Black Swift community, we highly encourage you to [join Black in Swift](https://swift.org/diversity/#community-groups) to connect with others in the community!
+We are grateful for the perspectives, resources, and innovation that the Black community has brought to Swift. Please join in on the Black History Month celebration over on the [Community Showcase forum](https://forums.swift.org/c/community-showcase/) and share how the Black community has made a positive impact on your journey with Swift. If you are a member of the Black Swift community, we highly encourage you to [join Black in Swift](/diversity/#community-groups) to connect with others in the community!

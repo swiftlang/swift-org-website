@@ -147,7 +147,7 @@ Checkout the [pull request](https://github.com/apple/swift-package-manager/pull/
 
 ## Conclusion
 
-REPL support for Swift packages will further enhance the REPL environment and enable easier experimentation for library package authors and consumers. The feature is available to try in the latest trunk [snapshot](https://swift.org/download/#snapshots). If you find bugs or have enhancement requests, please file a [JIRA](https://github.com/apple/swift-package-manager/blob/master/Documentation/Resources.md#reporting-a-good-swiftpm-bug)!
+REPL support for Swift packages will further enhance the REPL environment and enable easier experimentation for library package authors and consumers. The feature is available to try in the latest trunk [snapshot](/download/#snapshots). If you find bugs or have enhancement requests, please file a [JIRA](https://github.com/apple/swift-package-manager/blob/master/Documentation/Resources.md#reporting-a-good-swiftpm-bug)!
 
 ## Questions?
 

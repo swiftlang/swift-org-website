@@ -46,7 +46,7 @@ analysis can be derived.
 
 ## Cursor-based Refactoring
 
-![Cursor-based Refactoring]({{ site.url }}/assets/images/local-refactoring/Cursor.png)
+![Cursor-based Refactoring](/assets/images/local-refactoring/Cursor.png)
 
 Cursor-based refactoring is initiated by a cursor location in a Swift source file.
 Refactoring actions implement methods that the refactoring engine uses to display the available actions
@@ -134,7 +134,7 @@ the cursor with the appropriate Foundation API calls, as Lines 3 and 4 illustrat
 
 ## Range-based Refactoring
 
-![Range-based Refactoring]({{ site.url }}/assets/images/local-refactoring/Range.png)
+![Range-based Refactoring](/assets/images/local-refactoring/Range.png)
 
 As the above figure shows, range-based refactoring is initiated by selecting a
 continuous range of code in a Swift source file. Taking the implementation of the *Extract Expression*
@@ -335,7 +335,7 @@ to build the open source toolchain locally.
 3. Specify the local toolchain for Xcode's use via `Xcode->Toolchains`, like the
 following figure illustrates.
 
-![Specify Toolchain]({{ site.url }}/assets/images/local-refactoring/Toolchain.png)
+![Specify Toolchain](/assets/images/local-refactoring/Toolchain.png)
 
 ## Potential Local Refactoring Ideas
 This post just touches on some of the things that are now possible to implement in the new refactoring engine.

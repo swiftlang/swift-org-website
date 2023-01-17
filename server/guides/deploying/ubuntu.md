@@ -5,9 +5,9 @@ title: Deploying on Ubuntu
 
 Once you have your Ubuntu virtual machine ready, you can deploy your Swift app. This guide assumes you have a fresh install with a non-root user named `swift`. It also assumes both `root` and `swift` are accessible via SSH. For information on setting this up, check out the platform guides:
 
-- [DigitalOcean]({{site.url}}/server/guides/deploying/digital-ocean.html)
+- [DigitalOcean](/server/guides/deploying/digital-ocean.html)
 
-The [packaging]({{site.url}}/server/guides/packaging.html) guide provides an overview of available deployment options. This guide takes you through each deployment option step-by-step for Ubuntu specifically. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server), but you can test with your own project.
+The [packaging](/server/guides/packaging.html) guide provides an overview of available deployment options. This guide takes you through each deployment option step-by-step for Ubuntu specifically. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server), but you can test with your own project.
 
 - [Binary Deployment](#binary-deployment)
 - [Source Deployment](#source-deployment)
@@ -39,7 +39,7 @@ docker run --rm \
      cp -P /usr/lib/swift/linux/lib*so* .build/install/'
 ```
 
-> Tip: If you are building this project for production, use `swift build -c release`, see [building for production]({{site.url}}/server/guides/building.html#building-for-production) for more information.
+> Tip: If you are building this project for production, use `swift build -c release`, see [building for production](/server/guides/building.html#building-for-production) for more information.
 
 Notice that Swift's shared libraries are being included. This is important since Swift is not ABI stable on Linux. This means Swift programs must run against the shared libraries they were compiled with.
 
@@ -112,9 +112,9 @@ sudo apt install clang libicu-dev build-essential pkg-config
 
 ### Download Toolchain
 
-This guide will install Swift 5.2. Visit the [Swift Downloads](https://swift.org/download/#releases) page for a link to latest release. Copy the download link for Ubuntu 18.04.
+This guide will install Swift 5.2. Visit the [Swift Downloads](/download/#releases) page for a link to latest release. Copy the download link for Ubuntu 18.04.
 
-![Download Swift]({{site.url}}/assets/images/server-guides/swift-download-ubuntu-18-copy-link.png)
+![Download Swift](/assets/images/server-guides/swift-download-ubuntu-18-copy-link.png)
 
 Download and decompress the Swift toolchain.
 
@@ -123,7 +123,7 @@ wget https://swift.org/builds/swift-5.2-release/ubuntu1804/swift-5.2-RELEASE/swi
 tar xzf swift-5.2-RELEASE-ubuntu18.04.tar.gz
 ```
 
-> Note: Swift's [Using Downloads](https://swift.org/download/#using-downloads) guide includes information on how to verify downloads using PGP signatures.
+> Note: Swift's [Using Downloads](/download/#using-downloads) guide includes information on how to verify downloads using PGP signatures.
 
 ### Install Toolchain
 
@@ -173,7 +173,7 @@ cd swift-nio
 swift build
 ```
 
-> Tip: If you are building this project for production, use `swift build -c release`, see [building for production]({{site.url}}/server/guides/building.html#building-for-production) for more information.
+> Tip: If you are building this project for production, use `swift build -c release`, see [building for production](/server/guides/building.html#building-for-production) for more information.
 
 ### Run
 

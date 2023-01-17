@@ -7,7 +7,7 @@ author: tomerd
 
 ---
 
-It is my pleasure to announce a new set of Linux distributions officially supported by the Swift project. [Swift.org](https://swift.org/download/) now offers downloadable toolchain and Docker images for the following new Linux distributions:
+It is my pleasure to announce a new set of Linux distributions officially supported by the Swift project. [Swift.org](/download/) now offers downloadable toolchain and Docker images for the following new Linux distributions:
 
 * Ubuntu 20.04
 * CentOS 8

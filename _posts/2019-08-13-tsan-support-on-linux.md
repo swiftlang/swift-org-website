@@ -6,7 +6,7 @@ title: Thread Sanitizer for Swift on Linux
 author: jlettner
 ---
 
-Thread Sanitizer is now available on Linux as part of Swift 5.1! Head over to [Swift.org](https://swift.org/download/#snapshots) and grab a Swift 5.1 Development snapshot to try it out.
+Thread Sanitizer is now available on Linux as part of Swift 5.1! Head over to [Swift.org](/download/#snapshots) and grab a Swift 5.1 Development snapshot to try it out.
 
 The Swift language guarantees [memory safety](https://docs.swift.org/swift-book/LanguageGuide/MemorySafety.html) in single threaded environments. However, conflicting accesses in multithreaded code lead to _data races_. Data races in Swift cause unexpected behavior and can even lead to memory corruption, breaking Swift’s memory safety. [Thread Sanitizer](https://developer.apple.com/documentation/code_diagnostics/thread_sanitizer) is a bug-finding tool that diagnoses data races at run time. It instruments code during compilation and detects data races when they happen during execution.
 

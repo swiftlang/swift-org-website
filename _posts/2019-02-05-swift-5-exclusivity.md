@@ -113,7 +113,7 @@ Builds Only" and "Compile-time Enforcement Only":
 
 <img
   alt="Xcode exclusivity build setting"
-  src="{{ site.url }}/assets/images/exclusivity-blog/XcodeBuildSettings.png"
+  src="/assets/images/exclusivity-blog/XcodeBuildSettings.png"
   class="exclusivity-blog" />
 
 The corresponding swiftc compiler flags are
@@ -139,7 +139,7 @@ build time, as shown in the screen shot below:
 
 <img
   alt="testCount error"
-  src="{{ site.url }}/assets/images/exclusivity-blog/Example1.png"
+  src="/assets/images/exclusivity-blog/Example1.png"
   class="exclusivity-blog" />
 
 `inout` argument violations can often be trivially fixed with the
@@ -172,7 +172,7 @@ alias each other":
 
 <img
   alt="append(removingFrom:) error"
-  src="{{ site.url }}/assets/images/exclusivity-blog/Example2.png"
+  src="/assets/images/exclusivity-blog/Example2.png"
   class="exclusivity-blog" />
 
 To avoid these simultaneous modifications, the local variable can be
@@ -197,7 +197,7 @@ running the program traps with the "Simultaneous access" diagnostic:
 
 <img
   alt="global count error"
-  src="{{ site.url }}/assets/images/exclusivity-blog/Example3.png"
+  src="/assets/images/exclusivity-blog/Example3.png"
   class="exclusivity-blog" />
 
 In many cases, as shown in the next example, the conflicting accesses
@@ -243,7 +243,7 @@ Xcode first pinpoints the inner conflicting access:
 
 <img
   alt="Point error: inner position"
-  src="{{ site.url }}/assets/images/exclusivity-blog/Example4a.png"
+  src="/assets/images/exclusivity-blog/Example4a.png"
   class="exclusivity-blog" />
 
 Selecting "Previous access" from the current thread's view in the
@@ -251,7 +251,7 @@ sidebar pinpoints the outer modification:
 
 <img
   alt="Point error: outer position"
-  src="{{ site.url }}/assets/images/exclusivity-blog/Example4b.png"
+  src="/assets/images/exclusivity-blog/Example4b.png"
   class="exclusivity-blog" />
 
 The exclusivity violation can be avoided by copying any values that

@@ -66,7 +66,7 @@ DocC is a documentation compiler that makes it easy for you to produce documenta
 ## API Design Guidelines
 Delivering a clear, consistent developer experience when writing Swift code is largely defined by the names and idioms that appear in APIs. These design guidelines explain how to make sure that your code feels like a part of the larger Swift ecosystem.
 <div class="links" markdown="1">
-  [Read the API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
+  [Read the API Design Guidelines](/documentation/api-design-guidelines/)
 </div>
 
 ## Tools

@@ -20,7 +20,7 @@ To not waste your time, be sure to do any profiling in _release mode_. Swift's o
 
 #### Install `perf`
 
-Follow the [installation instructions]({{site.url}}/server/guides/linux-perf.html) in the Linux `perf` utility guide.
+Follow the [installation instructions](/server/guides/linux-perf.html) in the Linux `perf` utility guide.
 
 #### Clone the `FlameGraph` project
 
@@ -45,7 +45,7 @@ or similar.
 
 ## Tools
 
-In this guide, we will be using the [Linux `perf`](https://perf.wiki.kernel.org/index.php/Main_Page) tool. If you're struggling to get `perf` to work, have a look at our [information regarding `perf`]({{site.url}}/server/guides/linux-perf.html). If you're running in a Docker container, don't forget that you'll need a privileged container. And generally, you will need `root` access, so you may need to prefix the commands with `sudo`.
+In this guide, we will be using the [Linux `perf`](https://perf.wiki.kernel.org/index.php/Main_Page) tool. If you're struggling to get `perf` to work, have a look at our [information regarding `perf`](/server/guides/linux-perf.html). If you're running in a Docker container, don't forget that you'll need a privileged container. And generally, you will need `root` access, so you may need to prefix the commands with `sudo`.
 
 ## Getting a `perf` user probe
 
@@ -266,7 +266,7 @@ Generally, in flame graphs, the X axis just means "count", it does **not** mean 
 
 Note that this flame graph is _not_ a CPU flame graph, 1 sample means 1 allocation here and not time spent on the CPU. Also be aware that stack frames that appear wide don't necessarily allocate directly, it means that they or something they call has allocated a lot. For example, `BaseSocketChannel.readable` is a very wide frame, and yet, it is not a function which allocates directly. However, it calls other functions (such as other parts of SwiftNIO and AsyncHTTPClient) that do allocate a lot. It may take a little while to get familiar with flame graphs but there are great resources available online.
 
-![]({{site.url}}/assets/images/server-guides/perf-malloc-full.svg)
+![](/assets/images/server-guides/perf-malloc-full.svg)
 
 ## Allocation flame graphs on macOS
 

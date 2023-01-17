@@ -204,7 +204,7 @@ Boris Beugling, Anders Bertelrund, Tom Doron
 
 ### Swift-DocC
 
-Swift-DocC is the documentation compiler for Swift, read more about it here: [Swift-DocC is Now Open Source](https://www.swift.org/blog/swift-docc/).
+Swift-DocC is the documentation compiler for Swift, read more about it here: [Swift-DocC is Now Open Source](/blog/swift-docc/).
 
 #### Swift-DocC support for diffing documentation archives
 
