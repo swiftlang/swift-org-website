@@ -1,24 +1,24 @@
 - title: "Go Further: Concurrency"
   description: "Swift has concurrency features built into the language making it easier to write concurrent code with the assistance of the compiler. This video introduces the async/await mechanism, a key part of Swift Concurrency."
-  content-type: video
-  content-url: https://developer.apple.com/videos/play/wwdc2021/10132/
-  thumbnail-url: #TBD
-  release-date: 2021-06-08
+  content_type: video
+  content_url: https://developer.apple.com/videos/play/wwdc2021/10132/
+  thumbnail_url: #TBD
+  release_date: 2021-06-08
 - title: "Go Further: Swift Generics"
   description: "In Swift, generics are a fundamental way to write abstract code. This video walks through the basics of Swift Generics and introducing generics into your code."
-  content-type: video
-  content-url: https://developer.apple.com/videos/play/wwdc2021/10132/
-  thumbnail-url: #TBD
-  release-date: 2021-06-09
+  content_type: video
+  content_url: https://developer.apple.com/videos/play/wwdc2021/10132/
+  thumbnail_url: #TBD
+  release_date: 2021-06-09
 - title: "Go Further: Regular Expressions"
   description: "Swift provides first-class regular expression support, commonly known as regex, for effective string processing. This video gives an overview of the power and flexibility of Swift Regex."
-  content-type: video
-  content-url: https://developer.apple.com/videos/play/wwdc2022/110357/
-  thumbnail-url: #TBD
-  release-date: 2022-06-07
+  content_type: video
+  content_url: https://developer.apple.com/videos/play/wwdc2022/110357/
+  thumbnail_url: #TBD
+  release_date: 2022-06-07
 - title: "Go Further: Swift Strings Under The Hood"
   description: "Swift strings provide a fast, Unicode-compliant way to work with text. This article provides more detail on how strings are implemented in Swift using UTF-8 and the reasons behind that choice."
-  content-type: article
-  content-url: https://www.swift.org/blog/utf8-string/
-  thumbnail-url: #TBD
-  release-date: 2019-03-20
+  content_type: article
+  content_url: https://www.swift.org/blog/utf8-string/
+  thumbnail_url: #TBD
+  release_date: 2019-03-20

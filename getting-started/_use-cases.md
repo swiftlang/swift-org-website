@@ -39,6 +39,6 @@ If you want to get started with a language reference, [The Swift Programming Lan
       Requires macOS 12 and Xcode 14.
     </p>
 
-    <a href="/" class="cta-secondary">Start tutorial</a>
+    <a href="/getting-started/swiftui" class="cta-secondary">Start tutorial</a>
   </li>
 </ul>
