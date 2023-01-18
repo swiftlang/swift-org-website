@@ -3,7 +3,7 @@ layout: page
 title: Package Manager
 ---
 
-The Swift Package Manager is a tool for managing the distribution of Swift code.
+The Swift Package Manager (SwiftPM) is a tool for managing the distribution of Swift code.
 It's integrated with the Swift build system
 to automate the process of downloading, compiling, and linking dependencies.
 
