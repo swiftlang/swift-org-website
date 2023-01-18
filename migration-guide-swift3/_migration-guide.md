@@ -42,7 +42,7 @@ Here is a brief overview of the more impactful source-breaking changes:
 
 ### API Design Guidelines
 
-The Objective-C APIs are imported into Swift 3 according to the new [Swift API design guidelines](https://swift.org/documentation/api-design-guidelines). This affects both how the SDKs are imported and the Objective-C user frameworks. The Swift Standard Library also has many changes for adhering to the guidelines. For more details you can refer to proposal [SE-0005 - Better Translation of Objective-C APIs Into Swift](https://github.com/apple/swift-evolution/blob/main/proposals/0005-objective-c-name-translation.md).
+The Objective-C APIs are imported into Swift 3 according to the new [Swift API design guidelines](/documentation/api-design-guidelines). This affects both how the SDKs are imported and the Objective-C user frameworks. The Swift Standard Library also has many changes for adhering to the guidelines. For more details you can refer to proposal [SE-0005 - Better Translation of Objective-C APIs Into Swift](https://github.com/apple/swift-evolution/blob/main/proposals/0005-objective-c-name-translation.md).
 The migrator is lowercasing enums declared by the user, to match them with the new guidelines.
 
 ### SDK

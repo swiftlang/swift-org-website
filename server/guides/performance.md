@@ -106,7 +106,7 @@ for f in 0..<2_000 {
 
 The above program contains the `TerribleArray` data structure which has _O(n)_ appends and not the amortised _O(1)_ that users are used to from `Array`.
 
-We will assume, that you have Linux's `perf` installed and configured, documentation on how to install `perf` can be found in [this guide]({{site.url}}/server/guides/linux-perf.html).
+We will assume, that you have Linux's `perf` installed and configured, documentation on how to install `perf` can be found in [this guide](/server/guides/linux-perf.html).
 
 Let's assume we have compiled the above code using `swift build -c release` into a binary called `./slow`. We also assume that the `https://github.com/brendangregg/FlameGraph` repository is cloned in `~/FlameGraph`:
 
@@ -130,7 +130,7 @@ sudo perf script > out.perf
 
 The resulting file will look something like:
 
-![]({{site.url}}/assets/images/server-guides/perf-issues-flamegraph.svg)
+![](/assets/images/server-guides/perf-issues-flamegraph.svg)
 
 And we can see that almost all of our runtime is spent in `isFavouriteNumber` which is invoked from `addFavouriteNumber`. That should be a very good hint to the programmer on where to look for improvements. Maybe after all, we should use `Set<Int>` to store the favourite numbers, that should get is an answer to if a number is a favourite number in constant time (_O(1)_).
 

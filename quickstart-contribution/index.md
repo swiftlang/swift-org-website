@@ -184,7 +184,7 @@ git clone git@github.com:apple/swift.git
 
 ### build swift-corelibs-foundation against a downloadable toolchain
 
-* Download and install the latest trunk snapshot using the Installer app from [swift.org](https://swift.org/download/#snapshots)
+* Download and install the latest trunk snapshot using the Installer app from [swift.org](/download/#snapshots)
 * Clone Swift repository
 
 ~~~bash

@@ -28,7 +28,7 @@ Swift uses compile-time type inference to achieve clear and concise syntax. Some
 
 See also:
 
-- [GSoC 2020 page](https://swift.org/gsoc2020/#tracking-for-typecheckers-type-inference), minus the interactive command line tool part due to shorter coding period)
+- [GSoC 2020 page](/gsoc2020/#tracking-for-typecheckers-type-inference), minus the interactive command line tool part due to shorter coding period)
 
 **Expected outcomes/benefits/deliverables**
 

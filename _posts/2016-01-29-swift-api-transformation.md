@@ -59,7 +59,7 @@ path.fillWith(kCGBlendModeMultiply, alpha: 0.7)
 ~~~
 
 We've put three parts of this proposed transformation up for public
-review in [Swift's evolution group](https://swift.org/community/#mailing-lists):
+review in [Swift's evolution group](/community/#mailing-lists):
 [changes to how Cocoa is imported](https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md),
 [changes to the surface of the standard library](https://github.com/apple/swift-evolution/blob/master/proposals/0006-apply-api-guidelines-to-the-standard-library.md),
 and the
@@ -93,7 +93,7 @@ Will we make this change? The jury is out, but this is the time to
 make your voice heard.  The review period has been extended through
 **Friday, February 5th**.  If you'd like to help shape the future of your
 language and frameworks,
-[join the discussion]({{ site.url }}/contributing/#participating-in-the-swift-evolution-process).
+[join the discussion](/contributing/#participating-in-the-swift-evolution-process).
 The proposals and associated review threads are here:
 
 * [API Design Guidelines](https://github.com/apple/swift-evolution/blob/master/proposals/0023-api-guidelines.md) — [discussion](http://news.gmane.org/find-root.php?message_id=ABB71FFD%2d1AE8%2d43D3%2dB3F5%2d58225A2BAD66%40apple.com)

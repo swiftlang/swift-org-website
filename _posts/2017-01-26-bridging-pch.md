@@ -22,16 +22,16 @@ In Swift 3.1, the compiler has gained a new mode to reduce this cost: _precompil
 When this mode is enabled, instead of repeatedly parsing the bridging header for each Swift file in a mixed-language target, the bridging header is parsed only once, and the result (a temporary "precompiled header" or "PCH" file) is cached and reused across all Swift files in the target.
 This leverages the same precompiled header technology that is used to precompile prefix headers in Objective-C and C++ code.
 
-In the Swift project this mode was developed and tested against, it **reduced debug build time by 30%**. The speedup depends on the size of a project's bridging header, and the mode does not affect [whole-module-optimization builds]({{ site.url }}/blog/whole-module-optimizations).
+In the Swift project this mode was developed and tested against, it **reduced debug build time by 30%**. The speedup depends on the size of a project's bridging header, and the mode does not affect [whole-module-optimization builds](/blog/whole-module-optimizations).
 But it can significantly improve compile times when iterating in debug configuration.
 
 ## Trying it out
 
-This mode is part of Swift 3.1 and is available in [nightly snapshots on swift.org]({{ site.url }}/download/#snapshots), as well as in [Xcode 8.3 beta](https://developer.apple.com/download/).
+This mode is part of Swift 3.1 and is available in [nightly snapshots on swift.org](/download/#snapshots), as well as in [Xcode 8.3 beta](https://developer.apple.com/download/).
 It is currently experimental and must be manually enabled; in future releases, if developer feedback indicates it's working well and providing significant speedup, it will be enabled by default.
 To try it out in the meantime, install a compiler that supports it, open the build settings for your project and set "Other Swift Flags" to contain the option `-enable-bridging-pch`:
 
-![Enabling bridging PCH]({{ site.url }}/assets/images/bridging-pch-blog/build-setting.png)
+![Enabling bridging PCH](/assets/images/bridging-pch-blog/build-setting.png)
 
 ## Reporting feedback
 

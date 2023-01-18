@@ -11,7 +11,7 @@ With the release of Swift 5.0, Swift is now ABI stable and is delivered as a cor
 * Most obviously, applications written in Swift no longer need to be distributed with the Swift runtime libraries, reducing download size.
 * The Swift runtime can be more deeply integrated and optimized with these host operating systems, allowing Swift programs to launch faster, get better runtime performance, and use less memory.
 * Apple will be able to deliver platform frameworks using Swift in future OSes.
-* When a future version of Swift also provides [module stability](https://swift.org/blog/abi-stability-and-more/#module-stability), third parties will also be able to ship binary frameworks written in Swift.
+* When a future version of Swift also provides [module stability](/blog/abi-stability-and-more/#module-stability), third parties will also be able to ship binary frameworks written in Swift.
 
 However, as a result of this, the Swift runtime is now *a component of the user's target operating system* rather than part of the developer's toolchain. As a consequence, in the future, for a Swift project to adopt new Swift runtime and standard library functionality, it may also have to require new OS versions that include an updated Swift runtime supporting the added features. This tradeoff between adopting new language features and frameworks or maintaining compatibility with older OS versions has always existed for Objective-C and Apple system frameworks, and will now be a factor for Swift as well.
 

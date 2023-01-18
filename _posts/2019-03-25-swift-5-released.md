@@ -20,15 +20,15 @@ The ABI is now declared stable for Swift 5 on Apple platforms.  As a result, the
 
 See these blog posts for more details:
 
- * [ABI Stability and More](https://swift.org/blog/abi-stability-and-more/)
- * [Evolving Swift On Apple Platforms After ABI Stability](https://swift.org/blog/abi-stability-and-apple/)
+ * [ABI Stability and More](/blog/abi-stability-and-more/)
+ * [Evolving Swift On Apple Platforms After ABI Stability](/blog/abi-stability-and-apple/)
 
 #### Standard Library Updates
 
 The standard library in Swift 5 includes the following new features:
 
-* String reimplemented with UTF-8 encoding which can often result in faster code (See the [UTF-8 String](https://swift.org/blog/utf8-string/) blog post for more background on this change)
-* Improved support for raw text in string literals (See the [String Literals](https://swift.org/blog/behind-se-0200/) blog post for more background on this refinement)
+* String reimplemented with UTF-8 encoding which can often result in faster code (See the [UTF-8 String](/blog/utf8-string/) blog post for more background on this change)
+* Improved support for raw text in string literals (See the [String Literals](/blog/behind-se-0200/) blog post for more background on this refinement)
 * Result and SIMD vector types added to the Standard Library
 * Enhancements to String interpolation, adding more flexibility to construct text from data
 * Performance improvements to Dictionary and Set
@@ -54,7 +54,7 @@ Swift 5 implements the following Standard Library proposals from the Swift Evolu
 
 #### Additional Language and Compiler Updates
 
-Swift 5 defaults to enforcing exclusive access to memory for both debug and release builds (See the [Swift 5 Exclusivity Enforcement](https://swift.org/blog/swift-5-exclusivity/) blog post for more information about this update). And Swift 5 supports dynamically callable types that help improve interoperability with dynamic languages such as Python, JavaScript and Ruby.
+Swift 5 defaults to enforcing exclusive access to memory for both debug and release builds (See the [Swift 5 Exclusivity Enforcement](/blog/swift-5-exclusivity/) blog post for more information about this update). And Swift 5 supports dynamically callable types that help improve interoperability with dynamic languages such as Python, JavaScript and Ruby.
 
 Swift 5 also implements the following language proposals from the Swift Evolution process:
 
@@ -80,7 +80,7 @@ Swift 5 implements the following Package Manager proposals from the Swift Evolut
 
 Swift 5 is source compatible with Swift 4, Swift 4.1 and Swift 4.2.
 
-To help with moving to Swift 5 from earlier releases of Swift, Apple’s Xcode 10.2 contains a code migrator that can automatically handle many of the needed source changes. There is also a [migration guide](https://swift.org/migration-guide-swift5/) available to guide you through many of the changes — especially through the ones that are less mechanical and require more direct scrutiny.
+To help with moving to Swift 5 from earlier releases of Swift, Apple’s Xcode 10.2 contains a code migrator that can automatically handle many of the needed source changes. There is also a [migration guide](/migration-guide-swift5/) available to guide you through many of the changes — especially through the ones that are less mechanical and require more direct scrutiny.
 
 ### Documentation
 
@@ -91,13 +91,13 @@ An updated version of [The Swift Programming Language](https://docs.swift.org/sw
 #### Linux
 
 Official binaries for Ubuntu 18.04, Ubuntu 16.04 and Ubuntu 14.04 are
-[available for download](https://swift.org/download/).
+[available for download](/download/).
 
 #### Apple (Xcode)
 
 For development on Apple’s platforms, Swift 5 ships as part of [Xcode 10.2](https://itunes.apple.com/app/xcode/id497799835).
 
-A toolchain is also [available for download](https://swift.org/download/) from Swift.org.
+A toolchain is also [available for download](/download/) from Swift.org.
 
 ### Sources
 

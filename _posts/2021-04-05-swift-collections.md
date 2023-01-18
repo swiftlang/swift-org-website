@@ -37,7 +37,7 @@ colors.popLast() // "orange"
 
 <br />
 
-![Deque Prepend Benchmark]({{ site.url }}/assets/images/collections-blog/DequePrepend.png){:width="100%"}
+![Deque Prepend Benchmark](/assets/images/collections-blog/DequePrepend.png){:width="100%"}
 
 > *Prepending an element is a constant time operation for `Deque`, but a linear time operation for `Array`.*
 >
@@ -58,7 +58,7 @@ colors.sort()
 
 <br />
 
-![Deque Lookup Benchmark]({{ site.url }}/assets/images/collections-blog/DequeLookup.png){:width="100%"}
+![Deque Lookup Benchmark](/assets/images/collections-blog/DequeLookup.png){:width="100%"}
 
 > *Like `Array`, accessing an element at an arbitrary offset is a constant time operation for `Deque`.*
 
@@ -77,7 +77,7 @@ let buildingMaterials: OrderedSet = ["straw", "sticks", "bricks"]
 
 <br />
 
-![OrderedSet Append Benchmark]({{ site.url }}/assets/images/collections-blog/OrderedSetAppend.png){:width="100%"}
+![OrderedSet Append Benchmark](/assets/images/collections-blog/OrderedSetAppend.png){:width="100%"}
 
 > *Appending an element, which includes ensuring it's unique, is a constant time operation for `OrderedSet`.*
 >
@@ -105,7 +105,7 @@ buildingMaterials.append("glass") // (inserted: true, index: 3)
 
 <br />
 
-![OrderedSet Lookup Benchmark]({{ site.url }}/assets/images/collections-blog/OrderedSetLookup.png){:width="100%"}
+![OrderedSet Lookup Benchmark](/assets/images/collections-blog/OrderedSetLookup.png){:width="100%"}
 
 > *Membership testing is a constant time operation for `OrderedSet`, but a linear time operation for `Array`.*
 
@@ -150,7 +150,7 @@ let responses: OrderedDictionary = [
 
 <br />
 
-![OrderedDictionary Append Benchmark]({{ site.url }}/assets/images/collections-blog/OrderedDictionaryAppend.png){:width="100%"}
+![OrderedDictionary Append Benchmark](/assets/images/collections-blog/OrderedDictionaryAppend.png){:width="100%"}
 
 > *Inserting a new key-value pair into an `OrderedDictionary` appends it in constant time.*
 
@@ -163,7 +163,7 @@ responses[500] = "Internal Server Error"
 
 <br />
 
-![OrderedDictionary Lookup Benchmark]({{ site.url }}/assets/images/collections-blog/OrderedDictionaryLookup.png){:width="100%"}
+![OrderedDictionary Lookup Benchmark](/assets/images/collections-blog/OrderedDictionaryLookup.png){:width="100%"}
 
 > *Looking up a value for a key is a constant time operation for `OrderedDictionary`.*
 

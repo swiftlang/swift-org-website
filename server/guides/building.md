@@ -3,7 +3,7 @@ layout: page
 title: Build System
 ---
 
-The recommended way to build server applications is with [Swift Package Manager](https://swift.org/package-manager/). SwiftPM provides a cross-platform foundation for building Swift code and works nicely for having one code base that can be edited as well as run on many Swift platforms.
+The recommended way to build server applications is with [Swift Package Manager](/package-manager/). SwiftPM provides a cross-platform foundation for building Swift code and works nicely for having one code base that can be edited as well as run on many Swift platforms.
 
 ## Building
 SwiftPM works from the command line and is also integrated within Xcode.

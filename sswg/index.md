@@ -81,7 +81,7 @@ The Swift Server Workgroup has a [process](https://github.com/swift-server/sswg/
 | [Graphiti](https://github.com/GraphQLSwift/Graphiti) | Library for building GraphQL schemas | Incubating | 8/22/2022 | 9/15/2022 |
 | [Swift Distributed Actors](https://github.com/apple/swift-distributed-actors) | Peer-to-peer cluster implementation for Swift Distributed Actors | Sandbox | 10/27/2022 | 1/3/2023 |
 
-The SSWG publishes a [package collection]({{ site.url }}/blog/package-collections/) that contains the projects incubated by the workgroup. The collection is available at `https://swiftserver.group/collection/sswg.json`.
+The SSWG publishes a [package collection](/blog/package-collections/) that contains the projects incubated by the workgroup. The collection is available at `https://swiftserver.group/collection/sswg.json`.
 
 ## Meeting Time
 

@@ -58,8 +58,8 @@ to build and transform dictionaries with these new tools.
 
 <img
   alt="Grouping groceries by their department"
-  src="{{ site.url }}/assets/images/dictionary-blog/grouping.png"
-  srcset="{{ site.url }}/assets/images/dictionary-blog/grouping_2x.png 2x"
+  src="/assets/images/dictionary-blog/grouping.png"
+  srcset="/assets/images/dictionary-blog/grouping_2x.png 2x"
   class="dictionary-blog" />
 
 A new grouping initializer makes it a snap
@@ -128,8 +128,8 @@ than rebuilding the dictionary from scratch.
 
 <img
   alt="Building a dictionary from names and values"
-  src="{{ site.url }}/assets/images/dictionary-blog/uniqueKeys.png"
-  srcset="{{ site.url }}/assets/images/dictionary-blog/uniqueKeys_2x.png 2x"
+  src="/assets/images/dictionary-blog/uniqueKeys.png"
+  srcset="/assets/images/dictionary-blog/uniqueKeys_2x.png 2x"
   class="dictionary-blog" />
 
 You can now create dictionaries
@@ -281,8 +281,8 @@ with methods that merge one dictionary into another.
 
 <img
   alt="Merging two carts together"
-  src="{{ site.url }}/assets/images/dictionary-blog/merging.png"
-  srcset="{{ site.url }}/assets/images/dictionary-blog/merging_2x.png 2x"
+  src="/assets/images/dictionary-blog/merging.png"
+  srcset="/assets/images/dictionary-blog/merging_2x.png 2x"
   class="dictionary-blog" />
 
 To merge the contents of `cart` and another dictionary,

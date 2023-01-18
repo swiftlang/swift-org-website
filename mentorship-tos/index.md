@@ -13,7 +13,7 @@ Participants in the Swift Mentorship Program (the **"Program"**) shall be subjec
 
 **"Participants," "You", or "Your"** means both Mentors and Mentees entering into this Agreement.
 
-**"Swift Community"** means the community of Swift users more fully described at [https://swift.org/community/](https://swift.org/community/).
+**"Swift Community"** means the community of Swift users more fully described at [https://swift.org/community/](/community/).
 
 2. **Eligibility Requirements.** All survey submissions must be submitted through the Swift Forums and will not be accepted through any other channel. Participants will be selected based on the review criteria for the Program. Selection and airing decisions are in Apple’s sole discretion and are confidential. To be eligible to participate in the Program, you must be 18 years of age or older, and you must be a member of the Swift Community.
 
@@ -23,7 +23,7 @@ Participants in the Swift Mentorship Program (the **"Program"**) shall be subjec
 
 5. **Privacy.**  Participants will be asked to provide personal information about themselves in their submission to the Program. Mentors and Mentees may also be asked to provide personal data to other participants who wish to be matched with them as a Mentor or Mentee. Data collected pursuant to this Agreement will be treated in accordance with Apple’s Privacy Policy, which is incorporated by reference into this Agreement and which can be viewed at: [https://www.apple.com/legal/privacy/](https://www.apple.com/legal/privacy/).
 
-6. **Code of Conduct.** Apple is committed to diversity and to providing a harassment-free experience for everyone. All participants have the right to a safe and welcoming environment regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, or any other attributes. By taking part in the Program, Mentors and Mentees agree to comply with the Community Guidelines and Code of Conduct which can be viewed at: [https://swift.org/code-of-conduct/](https://swift.org/code-of-conduct/). Apple reserves the right, at any time and from time to time, to update, revise, supplement, and otherwise modify this Agreement and to impose new or additional rules, policies, terms, or conditions on participation in the Program, including revising the Community Guidelines and Code of Conduct. In addition, Participants agree:
+6. **Code of Conduct.** Apple is committed to diversity and to providing a harassment-free experience for everyone. All participants have the right to a safe and welcoming environment regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, or any other attributes. By taking part in the Program, Mentors and Mentees agree to comply with the Community Guidelines and Code of Conduct which can be viewed at: [https://swift.org/code-of-conduct/](/code-of-conduct/). Apple reserves the right, at any time and from time to time, to update, revise, supplement, and otherwise modify this Agreement and to impose new or additional rules, policies, terms, or conditions on participation in the Program, including revising the Community Guidelines and Code of Conduct. In addition, Participants agree:
   * To be open and truthful in communications;
   * To respect each other’s time availability;
   * Either party may end the relationship at any time;

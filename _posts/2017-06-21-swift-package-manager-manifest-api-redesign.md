@@ -7,7 +7,7 @@ author: aciid
 ---
 
 The Package Manager in Swift 4 includes the redesigned `Package.swift` manifest
-API.  The new API is easier to use and follows the [design guidelines](https://swift.org/documentation/api-design-guidelines/).  The target
+API.  The new API is easier to use and follows the [design guidelines](/documentation/api-design-guidelines/).  The target
 inference rules in Swift 3 Package Manager were a common source of confusion. We
 revised these rules and removed most of the inference, favoring the practice of
 explicitly specifying package structure in the manifest.

@@ -9,19 +9,19 @@ This guide will walk you through setting up an Ubuntu virtual machine on a Digit
 
 Use the create menu to create a new Droplet.
 
-![Create Droplet]({{site.url}}/assets/images/server-guides/digital-ocean-create-droplet.png)
+![Create Droplet](/assets/images/server-guides/digital-ocean-create-droplet.png)
 
 Under distributions, select Ubuntu 18.04 LTS.
 
-![Ubuntu Distro]({{site.url}}/assets/images/server-guides/digital-ocean-distributions-ubuntu-18.png)
+![Ubuntu Distro](/assets/images/server-guides/digital-ocean-distributions-ubuntu-18.png)
 
-> Note: You may select any version of Linux that Swift supports. You can check which operating systems are officially supported on the [Swift Releases](https://swift.org/download/#releases) page.
+> Note: You may select any version of Linux that Swift supports. You can check which operating systems are officially supported on the [Swift Releases](/download/#releases) page.
 
 After selecting the distribution, choose any plan and datacenter region you prefer. Then setup an SSH key to access the server after it is created. Finally, click create Droplet and wait for the new server to spin up.
 
 Once the new server is ready, hover over the Droplet's IP address and click copy.
 
-![Droplet List]({{site.url}}/assets/images/server-guides/digital-ocean-droplet-list.png)
+![Droplet List](/assets/images/server-guides/digital-ocean-droplet-list.png)
 
 ## Initial Setup
 
@@ -64,4 +64,4 @@ Copy the root user's authorized SSH keys to the newly created user. This will al
 rsync --archive --chown=swift:swift ~/.ssh /home/swift
 ```
 
-Your DigitalOcean virtual machine is now ready. Continue using the [Ubuntu]({{site.url}}/server/guides/deploying/ubuntu.html) guide.
+Your DigitalOcean virtual machine is now ready. Continue using the [Ubuntu](/server/guides/deploying/ubuntu.html) guide.

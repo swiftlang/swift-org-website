@@ -347,4 +347,4 @@ can [download the latest snapshot][Download] and try it out!
 [Optional.map]: https://developer.apple.com/documentation/swift/optional/#topics
 [Bug]: https://bugs.swift.org/browse/SR-6691?jql=labels%20%3D%20StarterProposal
 [EvolutionProcess]: https://github.com/apple/swift-evolution/blob/master/process.md
-[Download]: https://swift.org/download/#snapshots
+[Download]: /download/#snapshots

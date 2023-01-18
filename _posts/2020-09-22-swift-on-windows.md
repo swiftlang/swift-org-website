@@ -5,7 +5,7 @@ title: Introducing Swift on Windows
 author: compnerd
 ---
 
-The Swift project is introducing [new downloadable Swift toolchain images]({{ site.url }}/download) for Windows!  These images contain development components needed to build and run Swift code on Windows.
+The Swift project is introducing [new downloadable Swift toolchain images](/download) for Windows!  These images contain development components needed to build and run Swift code on Windows.
 
 For over a year now, there has been a significant endeavour to port Swift to Windows in conjunction with the developer community at swift.org.  The Windows support is now at a point where early adopters can start using Swift to build real experiences on this platform.
 
@@ -19,7 +19,7 @@ With these core libraries and the flexible interoperability of Swift with C, it 
 
 This [demo calculator](https://github.com/compnerd/swift-win32/blob/ed4993f7cbb284a83ee77fcecdc2570cf24355e4/Examples/Calculator/Calculator.swift) is written entirely in Swift, with code seamlessly flipping between the application code written in Swift and the system libraries:
 
-![Calculator app written in Swift running on Windows]({{ site.url }}/assets/images/windows-blog/calculator.gif)
+![Calculator app written in Swift running on Windows](/assets/images/windows-blog/calculator.gif)
 
 This project was built using:
 
@@ -31,7 +31,7 @@ Although the demo application is built with CMake, Swift Package Manager support
 
 Here you can see stepping through the application using `lldb`:
 
-![LLDB console debugging Swift application on Windows]({{ site.url }}/assets/images/windows-blog/lldb.png)
+![LLDB console debugging Swift application on Windows](/assets/images/windows-blog/lldb.png)
 
 ## Cross-Platform Applications
 
@@ -67,7 +67,7 @@ Adding support for Windows to Swift is the beginning of a journey.  The current 
 
 ## Getting Started and Getting Involved!
 
-The [Getting Started]({{ site.url }}/getting-started/) section has been updated with new information about using Swift on Windows!  For the early adopters who are getting started and finding issues, please report them to the [Swift Bug Tracker](https://bugs.swift.org).
+The [Getting Started](/getting-started/) section has been updated with new information about using Swift on Windows!  For the early adopters who are getting started and finding issues, please report them to the [Swift Bug Tracker](https://bugs.swift.org).
 
 There are many opportunities for those interested in helping push Swift on Windows forward.  One of the things that makes Swift easy to use is libraries: publishing new libraries and packages for Swift on Windows or porting existing ones is another way to get involved and help make working with Swift an ever greater delight.
 
