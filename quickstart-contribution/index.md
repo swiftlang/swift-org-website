@@ -9,7 +9,7 @@ title: QuickStart contribution
     * [Build Swift Compiler with Sccache](#build-swift-compiler-with-sccache)
     * [Build Swift stdlib against a downloadable toolchain](#build-swift-stdlib-against-a-downloadable-toolchain)
 * [Build swift-corelibs-foundation](#build-swift-corelibs-foundation)
-* [Starter Bugs](#starter-bugs)
+* [Good first issues](#good-first-issues)
 
 ## Configure the system
 
@@ -224,7 +224,11 @@ export PATH=$HOME/bin/sccache-0.2.8-x86_64-apple-darwin:$PATH
 ~~~
 
 
-## Starter bugs
+## Good first issues
 
-The Swift project uses GitHub Issues for bug tracking and the bugs and enhancement requests could be found at [GitHub Issues](http://github.com/apple/swift/issues). If you are new to the codebase, you can identify beginner tasks by searching for the bugs that have the "[StarterBug](https://github.com/apple/swift/issues/issues?q=is%3Aopen+is%3Aissue+label%3AStarterBug)" label.
+The Swift project uses GitHub Issues for tracking bugs, ideas, and tasks. For
+example, the issues for the Swift compiler repository can be found on its
+[issues dashboard](http://github.com/apple/swift/issues). Beginner-friendly
+issues are decorated with the `good first issue` label and can be found by
+visiting `https://github.com/apple/<repository>/contribute`.
 
