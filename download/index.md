@@ -370,13 +370,23 @@ title: Download Swift
 {% assign amazonlinux2_aarch64_5_7_2_release = site.data.builds.swift-5_7_2-release.amazonlinux2-aarch64 | sort: 'date' | reverse %}
 {% assign windows10_5_7_2_release = site.data.builds.swift-5_7_2-release.windows10 | sort: 'date' | reverse %}
 
+{% assign ubuntu1804_5_7_3_release = site.data.builds.swift-5_7_3-release.ubuntu1804 | sort: 'date' | reverse %}
+{% assign ubuntu2004_5_7_3_release = site.data.builds.swift-5_7_3-release.ubuntu2004 | sort: 'date' | reverse %}
+{% assign ubuntu2004_aarch64_5_7_3_release = site.data.builds.swift-5_7_3-release.ubuntu2004-aarch64 | sort: 'date' | reverse %}
+{% assign ubuntu2204_5_7_3_release = site.data.builds.swift-5_7_3-release.ubuntu2204 | sort: 'date' | reverse %}
+{% assign ubuntu2204_aarch64_5_7_3_release = site.data.builds.swift-5_7_3-release.ubuntu2204-aarch64 | sort: 'date' | reverse %}
+{% assign centos7_5_7_3_release = site.data.builds.swift-5_7_3-release.centos7 | sort: 'date' | reverse %}
+{% assign amazonlinux2_5_7_3_release = site.data.builds.swift-5_7_3-release.amazonlinux2 | sort: 'date' | reverse %}
+{% assign amazonlinux2_aarch64_5_7_3_release = site.data.builds.swift-5_7_3-release.amazonlinux2-aarch64 | sort: 'date' | reverse %}
+{% assign windows10_5_7_3_release = site.data.builds.swift-5_7_3-release.windows10 | sort: 'date' | reverse %}
+
 
 ## Releases
 
-### Swift 5.7.2
+### Swift 5.7.3
 
-Date: December 13, 2022<br>
-Tag: [swift-5.7.2-RELEASE](https://github.com/apple/swift/releases/tag/swift-5.7.2-RELEASE)
+Date: January 18, 2023<br>
+Tag: [swift-5.7.3-RELEASE](https://github.com/apple/swift/releases/tag/swift-5.7.3-RELEASE)
 
 <table id="latest-builds" class="downloads">
     <thead>
@@ -395,21 +405,21 @@ Tag: [swift-5.7.2-RELEASE](https://github.com/apple/swift/releases/tag/swift-5.7
             </td>
             <td class="toolchain">
                 <span class="download">
-                    <a href="https://download.swift.org/swift-5.7.2-release/xcode/swift-5.7.2-RELEASE/swift-5.7.2-RELEASE-osx.pkg" title="Download" download>Universal</a>
-                    <a href="https://download.swift.org/swift-5.7.2-release/xcode/swift-5.7.2-RELEASE/swift-5.7.2-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="signature">Debugging Symbols</a>
+                    <a href="https://download.swift.org/swift-5.7.3-release/xcode/swift-5.7.3-RELEASE/swift-5.7.3-RELEASE-osx.pkg" title="Download" download>Universal</a>
+                    <a href="https://download.swift.org/swift-5.7.3-release/xcode/swift-5.7.3-RELEASE/swift-5.7.3-RELEASE-osx-symbols.pkg" title="Debugging Symbols" class="signature">Debugging Symbols</a>
                 </span>
             </td>
             <td class="docker-tag">Unavailable</td>
         </tr>
-        {% include_relative _release_build_arch.html platform="Linux" build=ubuntu1804_5_7_2_release.first platform_dir="ubuntu1804" name="Ubuntu 18.04" branch_dir="swift-5.7.2-release" arch="x86_64"%}
-		{% include_relative _release_build_arch.html platform="Linux" build=ubuntu2004_5_7_2_release.first platform_dir="ubuntu2004" name="Ubuntu 20.04" branch_dir="swift-5.7.2-release" arch="x86_64"
-        arch_2="aarch64" platform_dir_2="ubuntu2004-aarch64" build_2=ubuntu2004_aarch64_5_7_2_release.first%}
-        {% include_relative _release_build_arch.html platform="Linux" build=ubuntu2204_5_7_2_release.first platform_dir="ubuntu2204" name="Ubuntu 22.04" branch_dir="swift-5.7.2-release" arch="x86_64"
-        arch_2="aarch64" platform_dir_2="ubuntu2204-aarch64" build_2=ubuntu2204_aarch64_5_7_2_release.first%}
-        {% include_relative _release_build_arch.html platform="Linux" build=centos7_5_7_2_release.first platform_dir="centos7" name="CentOS 7" branch_dir="swift-5.7.2-release" arch="x86_64" %}
-        {% include_relative _release_build_arch.html platform="Linux" build=amazonlinux2_5_7_2_release.first platform_dir="amazonlinux2" name="Amazon Linux 2" branch_dir="swift-5.7.2-release" arch="x86_64"
-        arch_2="aarch64" platform_dir_2="amazonlinux2-aarch64" build_2=amazonlinux2_aarch64_5_7_2_release.first%}
-        {% include_relative _release_build_arch.html platform="Windows" build=windows10_5_7_2_release.first platform_dir="windows10" name="Windows 10" branch_dir="swift-5.7.2-release" arch="x86_64" %}
+        {% include_relative _release_build_arch.html platform="Linux" build=ubuntu1804_5_7_3_release.first platform_dir="ubuntu1804" name="Ubuntu 18.04" branch_dir="swift-5.7.3-release" arch="x86_64"%}
+		{% include_relative _release_build_arch.html platform="Linux" build=ubuntu2004_5_7_3_release.first platform_dir="ubuntu2004" name="Ubuntu 20.04" branch_dir="swift-5.7.3-release" arch="x86_64"
+        arch_2="aarch64" platform_dir_2="ubuntu2004-aarch64" build_2=ubuntu2004_aarch64_5_7_3_release.first%}
+        {% include_relative _release_build_arch.html platform="Linux" build=ubuntu2204_5_7_3_release.first platform_dir="ubuntu2204" name="Ubuntu 22.04" branch_dir="swift-5.7.3-release" arch="x86_64"
+        arch_2="aarch64" platform_dir_2="ubuntu2204-aarch64" build_2=ubuntu2204_aarch64_5_7_3_release.first%}
+        {% include_relative _release_build_arch.html platform="Linux" build=centos7_5_7_3_release.first platform_dir="centos7" name="CentOS 7" branch_dir="swift-5.7.3-release" arch="x86_64" %}
+        {% include_relative _release_build_arch.html platform="Linux" build=amazonlinux2_5_7_3_release.first platform_dir="amazonlinux2" name="Amazon Linux 2" branch_dir="swift-5.7.3-release" arch="x86_64"
+        arch_2="aarch64" platform_dir_2="amazonlinux2-aarch64" build_2=amazonlinux2_aarch64_5_7_3_release.first%}
+        {% include_relative _release_build_arch.html platform="Windows" build=windows10_5_7_3_release.first platform_dir="windows10" name="Windows 10" branch_dir="swift-5.7.3-release" arch="x86_64" %}
     </tbody>
 </table>
 
@@ -438,8 +448,8 @@ $ yum install swiftlang
 ```
 
 
-<sup>1</sup> Swift 5.7.2 is available as part of Xcode 14.2.<br>
-<sup>2</sup> Swift 5.7.2 Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
+<sup>1</sup> Swift 5.7.3 contains Linux and Windows changes only, Swift 5.7.2 is available as part of Xcode 14.2.<br>
+<sup>2</sup> Swift 5.7.3 Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
 
 
 {% include_relative _older-releases.md %}
