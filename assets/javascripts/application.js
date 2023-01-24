@@ -3,8 +3,9 @@ layout: source
 ---
 
 (function () {
-  var navbarElement = document.querySelectorAll('nav[role="navigation"] > ul li.active ul li a');
-  var headerElement = document.querySelectorAll('nav[role="navigation"] > ul li.active');
+  var navbarElement = document.querySelectorAll('nav[role="navigation"] > .list-items > ul li.active ul li a');
+  var headerElement = document.querySelectorAll('nav[role="navigation"] > .list-items > ul li.active ul li');
+
   var activeClass = "active";
 
   Array.prototype.forEach.call(navbarElement, (element) => {
@@ -18,7 +19,7 @@ layout: source
       Array.prototype.forEach.call(headerElement, (element) => {
         element.classList.remove(activeClass);
       });
-      target.classList.add(activeClass);
+      target.parentElement.classList.add(activeClass);
     });
   });
 
@@ -37,5 +38,5 @@ layout: source
   document.getElementById('menu-toggle').addEventListener('mousedown', function() {
     toggleClass(document.getElementById('menu-toggle'), 'open');
     toggleClass(document.querySelector('nav[role="navigation"]'), 'open');
-});
+  });
 })();
