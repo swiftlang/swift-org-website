@@ -10,7 +10,7 @@ Ready to dive deeper? Here are some hand-picked resources covering about various
         {{ resource.description }}
       </p>
       
-      <a href="{{ resource.content_url }}" class="cta-secondary">
+      <a href="{{ resource.content_url }}" class="cta-secondary external" target="_blank">
         {% if resource.content_type == "video" %}
         Watch video
         {% elsif resource.content_type == "article" %}

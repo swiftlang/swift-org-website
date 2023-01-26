@@ -66,4 +66,8 @@ a.cta-secondary {
     color: var(--color-fill);
     text-decoration: none;
   }
+  
+  &.external:after {
+    content: " ↗"
+  }
 }
