@@ -1,7 +1,26 @@
 
-.guide-list {
+.go-further-list{
   list-style: none;
   padding-left: 0;
+  display: grid;
+  gap: 1rem;
+  
+  .resource {
+    border: 1px solid var(--color-fill-gray);
+    padding: 0 1rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    
+    p {
+      flex-grow: 1;
+      color: var(--color-secondary-label);
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .use-case-list {
@@ -29,7 +48,7 @@
   }
   
   @media (min-width: 1000px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -46,5 +65,9 @@ a.cta-secondary {
     background-color: var(--color-text);
     color: var(--color-fill);
     text-decoration: none;
+  }
+  
+  &.external:after {
+    content: " ↗"
   }
 }
