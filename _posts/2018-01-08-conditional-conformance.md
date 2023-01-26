@@ -160,7 +160,7 @@ operation sums them up.
 
 The standard library doesn't have a lazy split operation. Below is a sketch
 of how one could work. If you're interested in making a contribution to Swift,
-this would make for a great [starter bug][Bug] and [evolution proposal][EvolutionProcess].
+this would make for a great [first issue][Issue] and [evolution proposal][EvolutionProcess].
 
 First, we create a simple generic wrapper struct that can hold any base collection, and a
 closure to identify elements on which to split:
@@ -345,6 +345,6 @@ can [download the latest snapshot][Download] and try it out!
 [GenericsManifesto]: https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md
 [SE-0143]: https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md
 [Optional.map]: https://developer.apple.com/documentation/swift/optional/#topics
-[Bug]: https://bugs.swift.org/browse/SR-6691?jql=labels%20%3D%20StarterProposal
-[EvolutionProcess]: https://github.com/apple/swift-evolution/blob/master/process.md
+[Issue]: https://github.com/apple/swift/issues/49240
+[EvolutionProcess]: https://www.swift.org/swift-evolution
 [Download]: /download/#snapshots
