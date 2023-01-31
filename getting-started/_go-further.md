@@ -4,17 +4,25 @@ Ready to dive deeper? Here are some hand-picked resources covering about various
 
 <ul class="go-further-list">
   {% for resource in site.data.go_further %}
-  <li class="resource">
+  <li class="resource{% if resource.featured %} featured{% endif %}">
+      {% if resource.thumbnail_url %}
+        <img class="thumbnail" src="{{ resource.thumbnail_url }}"/>
+      {% elsif resource.content_type == "article" %}
+        <img class="thumbnail" src="/assets/images/getting-started/article-thumbnail.jpg"/>
+      {% endif %}
+
       <h3>{{ resource.title }}</h3>
       <p class="description">
         {{ resource.description }}
       </p>
       
-      <a href="{{ resource.content_url }}" class="cta-secondary external" target="_blank">
+      <a href="{{ resource.content_url }}" class="cta-secondary{% if resource.external %} external" target="_blank"{% else %}"{% endif %}>
         {% if resource.content_type == "video" %}
         Watch video
         {% elsif resource.content_type == "article" %}
-        Read article        
+        Read article
+        {% elsif resource.content_type == "book" %}
+        Read book
         {% else %}
         View resource
         {% endif %}
