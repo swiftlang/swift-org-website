@@ -1,6 +1,6 @@
 ## Using Swift
 
-If you want to get started with a language reference, [The Swift Programming Language](https://docs.swift.org/swift-book/) book is the best resource. However, if you'd prefer to get straight into writing some code, here are some examples of the many use cases of Swift.
+If you want to get started with a language reference, [The Swift Programming Language (TSPL)](https://docs.swift.org/swift-book/) book is the best resource. However, if you'd prefer to get straight into writing some code, here are some examples of the many use cases of Swift.
 
 <ul class="use-case-list">
 
