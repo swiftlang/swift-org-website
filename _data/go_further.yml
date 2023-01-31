@@ -1,8 +1,7 @@
-- title: "The Swift Programming Language Book"
-  description: "The authoritative reference for Swift,
-offering a guided tour, a comprehensive guide, and a formal reference of the language."
+- title: "A Swift Tour"
+  description: "_The Swift Programming Language_, the authoritative reference for Swift, begins with a tour of the language. The tour gives you an introduction to the fundamental features, concepts, and syntax of Swift. The remainder of the book explains each topic in greater detail."
   content_type: book
-  content_url: https://docs.swift.org/swift-book
+  content_url: https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html
   thumbnail_url: #TBD
   release_date: 2014-08-18
   featured: true

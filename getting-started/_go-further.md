@@ -13,7 +13,7 @@ Ready to dive deeper? Here are some hand-picked resources covering about various
 
       <h3>{{ resource.title }}</h3>
       <p class="description">
-        {{ resource.description }}
+        {{ resource.description | markdownify }}
       </p>
       
       <a href="{{ resource.content_url }}" class="cta-secondary{% if resource.external %} external" target="_blank"{% else %}"{% endif %}>
