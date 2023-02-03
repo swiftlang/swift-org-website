@@ -2,7 +2,7 @@
 
 Here are some examples of the many use cases of Swift, in case you want to jump in and start writing some code right away.
 
-If you need a language reference to look at, [The Swift Programming Language (TSPL)](https://docs.swift.org/swift-book/) book is available in [multiple languages](/documentation/#translations).
+Looking for a language reference? [The Swift Programming Language (TSPL)](https://docs.swift.org/swift-book/) book is available in [multiple languages](/documentation/#translations).
 
 <ul class="use-case-list">
 
