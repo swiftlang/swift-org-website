@@ -19,6 +19,6 @@
 - title: "Swift Strings Under The Hood"
   description: "Swift strings provide a fast, Unicode-compliant way to work with text. This article provides more detail on how strings are implemented in Swift using UTF-8 and the reasons behind that choice."
   content_type: article
-  content_url: https://www.swift.org/blog/utf8-string/
+  content_url: /blog/utf8-string/
   thumbnail_url: #TBD
   release_date: 2019-03-20

@@ -22,3 +22,5 @@ Ready to dive deeper? Here are some hand-picked resources covering about various
   </li>
   {% endfor %}
 </ul>
+
+Looking for even more? In the [documentation](/documentation/) you can find resources, references, and guidelines related to the Swift project, including the [API Design Guidelines](/documentation/api-design-guidelines/).
