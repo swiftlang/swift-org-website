@@ -15,12 +15,10 @@
       sections:
         - title: Installing Swift
           name: installing-swift
-        - title: Using the REPL
-          name: using-the-repl
-        - title: Using the Package Manager
-          name: using-the-package-manager
-        - title: Using the LLDB Debugger
-          name: using-the-lldb-debugger
+        - title: Using Swift
+          name: using-swift
+        - title: Go Further
+          name: go-further
     - title: Download
       url: /download/
       sections:
