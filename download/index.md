@@ -21,6 +21,7 @@ title: Download Swift
 {% assign amazonlinux2_aarch64_development_builds = site.data.builds.development.amazonlinux2-aarch64 | sort: 'date' | reverse %}
 {% assign windows10_development_builds = site.data.builds.development.windows10 | sort: 'date' | reverse %}
 {% assign ubi9_development_builds = site.data.builds.development.ubi9 | sort: 'date' | reverse %}
+{% assign ubi9_aarch64_development_builds = site.data.builds.development.ubi9-aarch64 | sort: 'date' | reverse %}
 
 
 {% assign xcode_5_7_builds = site.data.builds.swift-5_7-branch.xcode | sort: 'date' | reverse %}
@@ -481,7 +482,7 @@ but they have not gone through the full testing that is performed for official r
         {% include_relative _build-arch.html platform="Linux" build=ubuntu2204_development_builds.first build_2=ubuntu2204_aarch64_development_builds.first name="Ubuntu 22.04" docker_tag="nightly-jammy" platform_dir="ubuntu2204" platform_dir_2="ubuntu2204-aarch64" branch_dir="development" arch="x86_64" arch_2="aarch64" %}
         {% include_relative _build-arch.html platform="Linux" build=centos7_development_builds.first name="CentOS 7" docker_tag="nightly-centos7" platform_dir="centos7" branch_dir="development" arch="x86_64" %}
         {% include_relative _build-arch.html platform="Linux" build=amazonlinux2_development_builds.first build_2=amazonlinux2_aarch64_development_builds.first name="Amazon Linux 2" docker_tag="nightly-amazonlinux2" platform_dir="amazonlinux2" platform_dir_2="amazonlinux2-aarch64" branch_dir="development" arch="x86_64" arch_2="aarch64" %}
-        {% include_relative _build-arch.html platform="Linux" build=ubi9_development_builds.first name="Universal Base Image 9" docker_tag="Coming Soon" platform_dir="ubi9" branch_dir="development" arch="x86_64" %}
+        {% include_relative _build-arch.html platform="Linux" build=ubi9_development_builds.first build_2=ubi9_aarch64_development_builds.first name="Universal Base Image 9" docker_tag="Coming Soon" platform_dir="ubi9" platform_dir_2="ubi9-aarch64" branch_dir="development" arch="x86_64" arch_2="aarch64" %}
         {% include_relative _build-arch.html platform="windows" build=windows10_development_builds.first name="Windows 10" platform_dir="windows10" branch_dir="development" arch="x86_64" %}
     </tbody>
 </table>
