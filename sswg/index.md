@@ -57,26 +57,26 @@ The Swift Server Workgroup has a [process](https://github.com/swift-server/sswg/
 ## Projects
 
 <table>
-	<thead>
-		<tr>
-			<th>Project</th>
-			<th>Description</th>
-			<th>Maturity Level</th>
-			<th>Pitched</th>
-			<th>Accepted</th>
-		</tr>
-	</thead>
-	<tbody>
-		{% for project in site.data.sswg.projects %}
-		<tr>
-			<td><a href="{{ project.url }}">{{ project.name }}</a></td>
-			<td>{{ project.description }}</td>
-			<td>{{ project.maturity }}</td>
-			<td>{{ project.pitched }}</td>
-			<td>{{ project.accepted }}</td>
-		</tr>
-		{% endfor %}
-	</tbody>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description</th>
+      <th>Maturity Level</th>
+      <th>Pitched</th>
+      <th>Accepted</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for project in site.data.sswg.projects %}
+    <tr>
+      <td><a href="{{ project.url }}">{{ project.name }}</a></td>
+      <td>{{ project.description }}</td>
+      <td>{{ project.maturity }}</td>
+      <td>{{ project.pitched }}</td>
+      <td>{{ project.accepted }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
 
 The SSWG publishes a [package collection](/blog/package-collections/) that contains the projects incubated by the workgroup. The collection is available at `https://swiftserver.group/collection/sswg.json`.
