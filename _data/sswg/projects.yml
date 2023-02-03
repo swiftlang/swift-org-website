@@ -1,77 +1,160 @@
 - name: SwiftNIO
+  description: Event-driven network application framework.
   maturity: Graduated
-  pitched: 2018-09-07
+  pitched: N/A
   accepted: 2018-09-07
   url: http://github.com/apple/swift-nio/
 
-- name: Logging API
+- name: SwiftLog
+  description: Logging API
   maturity: Graduated
   pitched: 2018-09-10
   accepted: 2019-02-07
   url: http://github.com/apple/swift-log/
 
-- name: Metrics API
-  maturity: Sandbox
+- name: SwiftMetrics
+  description: Metrics API
+  maturity: Graduated
   pitched: 2019-01-08
   accepted: 2019-04-04
   url: http://github.com/apple/swift-metrics/
     
-- name: Postgres Client
-  maturity: Sandbox
+- name: PostgresNIO
+  description: PostgreSQL driver
+  maturity: Incubating
   pitched: 2018-11-18
   accepted: 2019-05-16
   url: https://github.com/vapor/nio-postgres
 
-- name: Redis Client
+- name: RediStack
+  description: Redis driver
   maturity: Sandbox
   pitched: 2019-01-07
   accepted: 2019-06-27
   url: https://github.com/mordil/swift-redis-nio-client
     
-- name: HTTP Client
-  maturity: Sandbox
+- name: AsyncHTTPClient
+  description: HTTP Client
+  maturity: Graduated
   pitched: 2019-04-18
   accepted: 2019-06-27
   url: https://github.com/swift-server/async-http-client
 
-- name: APNS Client
-  maturity: Sandbox
+- name: APNSwift
+  description: APNS Client
+  maturity: Incubating
   pitched: 2019-02-05
   accepted: 2019-06-27
-  url: https://github.com/kylebrowning/swift-nio-apns
+  url: https://github.com/swift-server-community/APNSwift
 
-- name: Statsd Client
-  maturity: Sandbox
+- name: SwiftStatsdClient
+  description: StatsD driver for the metrics API
+  maturity: Incubating
   pitched: 2019-06-02
   accepted: 2019-08-11
   url: https://github.com/apple/swift-statsd-client
 
-- name: Prometheus Client
+- name: SwiftPrometheus
+  description: Prometheus driver for the metrics API
   maturity: Sandbox
   pitched: 2018-11-18
   accepted: 2019-08-11
   url: https://github.com/MrLotU/SwiftPrometheus
     
-- name: gRPC
-  maturity: Sandbox
+- name: gRPC Swift
+  description: gRPC client & server framework
+  maturity: Graduated
   pitched: 2019-09-30
   accepted: 2020-02-19
   url: https://github.com/grpc/grpc-swift
 
-- name: Crypto
-  maturity: Sandbox
+- name: Swift Crypto
+  description: Open-source implementation of a substantial portion of the API of Apple CryptoKit
+  maturity: Incubating
   pitched: 2020-02-20
   accepted: 2020-03-04
   url: https://github.com/apple/swift-crypto
   
+- name: OpenAPIKit
+  description: OpenAPI client
+  maturity: Sandbox
+  pitched: 2020-01-14
+  accepted: 2020-04-29
+  url: https://github.com/mattpolzin/OpenAPIKit
+  
+- name: MongoSwift
+  description: MongoDB driver
+  maturity: Incubating
+  pitched: 2019-10-30
+  accepted: 2020-05-13
+  url: https://github.com/mongodb/mongo-swift-driver
+  
+- name: Swift AWS Lambda Runtime
+  description: Runtime library for AWS Lambda functions in Swift
+  maturity: Sandbox
+  pitched: N/A
+  accepted: 2020-06-24
+  url: https://github.com/swift-server/swift-aws-lambda-runtime
+  
+- name: Backtrace
+  description: Nice backtraces in production
+  maturity: Incubating
+  pitched: 2019-05-30
+  accepted: 2020-07-29
+  url: https://github.com/swift-server/swift-backtrace
+  
+- name: Service Lifecycle
+  description: Lifecycle management
+  maturity: Incubating
+  pitched: N/A
+  accepted: 2020-09-02
+  url: https://github.com/swift-server/swift-service-lifecycle
+  
+- name: Soto for AWS
+  description: Third-party SDK for AWS
+  maturity: Incubating
+  pitched: 2020-10-01
+  accepted: 2020-11-12
+  url: https://github.com/soto-project/soto
+  
+- name: MultipartKit
+  description: Multipart parser and serializer with Codable support for Multipart Form Data
+  maturity: Incubating
+  pitched: 2021-03-03
+  accepted: 2021-11-11
+  url: https://github.com/vapor/multipart-kit
+  
+- name: MQTT NIO
+  description: A Swift NIO MQTT v3.1.1 and v5.0 Client
+  maturity: Sandbox
+  pitched: 2021-11-02
+  accepted: 2022-01-19
+  url: https://github.com/swift-server-community/mqtt-nio
+  
 - name: GraphQL
+  description: GraphQL query language implementation
   maturity: Incubating
   pitched: 2022-08-22
   accepted: 2022-09-15
   url: https://github.com/GraphQLSwift/GraphQL
 
 - name: Graphiti
+  description: Library for building GraphQL schemas
   maturity: Incubating
   pitched: 2022-08-22
   accepted: 2022-09-15
   url: https://github.com/GraphQLSwift/Graphiti
+
+- name: Swift Distributed Actors
+  description: Peer-to-peer cluster implementation for Swift Distributed Actors
+  maturity: Sandbox
+  pitched: 2022-10-27
+  accepted: 2023-01-03
+  url: https://github.com/apple/swift-distributed-actors
+
+- name: CassandraClient
+  description: Client library for the Cassandra distributed database
+  maturity: Incubating
+  pitched: 2023-01-19
+  accepted: 2023-02-02
+  url: https://github.com/apple/swift-cassandra-client
