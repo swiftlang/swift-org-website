@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Build a Web Server
+title: Build a Web Server with Vapor
 ---
 
 {% include getting-started/_installing.md %}
@@ -25,7 +25,7 @@ vapor new HelloVapor
 
 This pulls down a template and asks you a series of questions to create a simple project with everything you need to get started. This guide will create a simple REST API that you can send and receive JSON to and from. So answer no to all other questions. You'll see the project created successfully:
 
-![A New Vapor Project]({{site.url}}/assets/images/getting-started-guides/web-server/new-project.png)
+![A New Vapor Project]({{site.url}}/assets/images/getting-started-guides/vapor-web-server/new-project.png)
 
 Navigate into the created directory and open the project in your IDE of choice. For instance, to use VSCode run:
 
