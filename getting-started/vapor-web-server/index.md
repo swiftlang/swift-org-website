@@ -74,7 +74,7 @@ Try it with different names to see it change automatically!
 
 ## Returning JSON
 
-Vapor uses [`Codable`](https://developer.apple.com/documentation/swift/codable) under the hood to make it easy to send and receive JSON, using a wrapper protocol called `Content` to add a few extra features. Next, you'll return a JSON body with the message from the Hello! route. First, create a new type at the bottom of **routes.swift**:
+Vapor uses [`Codable`](https://developer.apple.com/documentation/foundation/archives_and_serialization/encoding_and_decoding_custom_types) under the hood to make it easy to send and receive JSON, using a wrapper protocol called `Content` to add a few extra features. Next, you'll return a JSON body with the message from the Hello! route. First, create a new type at the bottom of **routes.swift**:
 
 ```swift
 struct UserResponse: Content {
