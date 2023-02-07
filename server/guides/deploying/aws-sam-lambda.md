@@ -114,7 +114,7 @@ Outputs:
     Description: "DynamoDB Table Name"
     Value: !Ref SwiftAPITable
 ```
-## Step 2: Initialize Lambda functions with SPM
+## Step 2: Initialize Lambda functions with SwiftPM
 
 Lambda functions, written in Swift, process the API events. The *PutItem* function processes *POST* requests to add items to the database. The *GetItems* function processes *GET* requests to retrieve items from the database.
 
