@@ -72,7 +72,7 @@ The goal of this project is to implement basic support for defining package depe
 
 **Potential mentors**
 
-* [Boris Bügling](https://github.com/neonichu)
+- [Boris Bügling](https://github.com/neonichu)
 
 #### Customizable package templates
 
@@ -91,5 +91,5 @@ SwiftPM currently supports a handful of hardcoded templates that can act as a st
 
 **Potential mentors**
 
-* [Boris Bügling](https://github.com/neonichu)
+- [Boris Bügling](https://github.com/neonichu)
 
