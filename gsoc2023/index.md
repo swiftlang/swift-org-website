@@ -53,7 +53,7 @@ Design and implementation of new C++ standard library overlay functionality that
 
 **Project size**: Medium
 
-*Recommended skills*
+**Recommended skills**
 
 - Proficient with Swift and SwiftPM
 - Familiarity with scripting languages is a plus
