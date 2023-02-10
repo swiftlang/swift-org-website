@@ -1,3 +1,8 @@
+- date: 2023-02-09 10:10:00-06:00
+  debug_info: swift-5.8-DEVELOPMENT-SNAPSHOT-2023-02-09-a-osx-symbols.pkg
+  dir: swift-5.8-DEVELOPMENT-SNAPSHOT-2023-02-09-a
+  download: swift-5.8-DEVELOPMENT-SNAPSHOT-2023-02-09-a-osx.pkg
+  name: Swift Development Snapshot
 - date: 2023-02-08 10:10:00-06:00
   debug_info: swift-5.8-DEVELOPMENT-SNAPSHOT-2023-02-08-a-osx-symbols.pkg
   dir: swift-5.8-DEVELOPMENT-SNAPSHOT-2023-02-08-a
