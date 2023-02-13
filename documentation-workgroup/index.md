@@ -79,9 +79,12 @@ challenges with reaching consensus on significant decisions.
 ## Communication
 
 The Documentation Workgroup communicates with the broader Swift community using
-the [Swift-DocC forum](https://forums.swift.org/c/development/swift-docc) for
-general discussions about Swift-DocC. The workgroup can also be contacted
-privately by messaging `@swift-documentation-workgroup` on the Swift Forums.
+the [Swift-DocC forum](https://forums.swift.org/c/development/swift-docc) and the
+`#swift-docc` channel on the [Swift Open Source Slack](https://join.slack.com/t/swift-open-source/shared_invite/zt-1c63oypf9-4kpDcKcW1SKwaPkoQ7R0Jg)
+for general discussions about Swift-DocC. You can also contact the workgroup
+publicly via the `#documentation-workgroup` channel on Slack or privately by
+messaging [@swift-documentation-workgroup](https://forums.swift.org/new-message?groupname=swift-documentation-workgroup)
+on the Swift Forums.
 
 ## Community Participation
 
@@ -89,12 +92,7 @@ Everyone is invited to participate in contributing to Swift’s documentation
 experience and the Documentation Workgroup’s initiatives. If you’d like to
 contribute, consider:
 
-* Joining the Documentation Workgroup’s open meetings on WebEx (reach out to
-    `@swift-documentation-workgroup` in forums for details)
-* Discussing ideas in the Swift Forums, for example in the [Swift-DocC
-  forum](https://forums.swift.org/c/development/swift-docc) for
-  Swift-DocC–related ideas
-* Opening issues to track enhancements and bugs for the projects governed by the Documentation Workgroup:
-  [Swift-DocC](https://github.com/apple/swift-docc/issues), [The Swift Programming Language book](https://github.com/apple/swift-book/issues)
-* Participating in the [Swift Mentorship
-  Program](/mentorship)
+* Joining the Documentation Workgroup’s open meetings on WebEx. Reach out to `@swift-documentation-workgroup` in the forums or in the `#documentation-workgroup` channel on the [Swift Open Source Slack](https://join.slack.com/t/swift-open-source/shared_invite/zt-1c63oypf9-4kpDcKcW1SKwaPkoQ7R0Jg) for details
+* Discussing Swift-DocC–related ideas in the [Swift-DocC forum](https://forums.swift.org/c/development/swift-docc) or in the `#swift-docc` channel on the [Swift Open Source Slack](https://join.slack.com/t/swift-open-source/shared_invite/zt-1c63oypf9-4kpDcKcW1SKwaPkoQ7R0Jg)
+* Opening issues to track enhancements and bugs for the projects governed by the Documentation Workgroup: [Swift-DocC](https://github.com/apple/swift-docc/issues), [The Swift Programming Language book](https://github.com/apple/swift-book/issues)
+* Participating in the [Swift Mentorship Program](/mentorship)
