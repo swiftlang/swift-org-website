@@ -329,3 +329,9 @@ rjmccall:
    github: rjmccall
    twitter: pathofshrines
    about: "John McCall is an engineer on the Apple Swift team and member of the Language workgroup."
+
+amartini:
+  name: Alex Martini
+  email: amartini@apple.com
+  github: amartini51
+  about: "Alex Martini is a member of the Developer Publications team at Apple."
