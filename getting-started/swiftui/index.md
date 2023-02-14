@@ -407,3 +407,5 @@ Press Cmd+R to run your app one last time, and you should see that pressing “T
 We’ve covered a lot of SwiftUI basics in this tutorial, including text, images, buttons, stacks, animation, and even using `@State` to mark values that change over time. SwiftUI is capable of so much more, and can be used to build complex cross-platform apps if needed.
 
 If you’d like to continue learning SwiftUI, there are lots of free resources available. For example, [Apple publishes a wide variety of tutorials](https://developer.apple.com/tutorials/swiftui) covering essential topics, drawing and animation, app design, and more. We’ll also post links here on Swift.org to some other popular tutorials – we’re a big and welcoming community, and we’re glad to have you join!
+
+The code for this tutorial can be found [here](https://github.com/0xTim/swift-org-swiftui-tutorial).
