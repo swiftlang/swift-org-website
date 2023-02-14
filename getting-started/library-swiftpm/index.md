@@ -16,7 +16,7 @@ To start, we’ll use SwiftPM to make a new project for us. In your terminal of 
 ❯ swift package init --name MyLibrary --type library
 ~~~
 
-This will generate a new directory called hello-swift with the following files:
+This will generate a new directory called _MyLibrary_ with the following files:
 
 ~~~no-highlight
 .
@@ -30,7 +30,7 @@ This will generate a new directory called hello-swift with the following files:
         └── MyLibraryTests.swift
 ~~~
 
-`Package.swift` is the manifest file for Swift. It’s where you keep metadata for your project, as well as dependencies.
+`Package.swift` is the manifest file for Swift. It’s where you keep metadata for your project, as well as its dependencies.
 
 `Sources/MyLibrary/MyLibrary.swift` is the library initial source file and where we’ll write our library code.
 `Test/MyLibraryTests/MyLibraryTests.swift` is where we can write tests for our library.
@@ -81,7 +81,7 @@ private struct InvalidEmailError: Error {
 }
 ~~~
 
-Now lets add a unit test for this strongly typed Email API.
+Now let's add a unit test for this strongly typed Email API.
 Replace the example content of `MyLibraryTests.swift` with the following code:
 
 ~~~swift
@@ -98,7 +98,7 @@ final class MyLibraryTests: XCTestCase {
 }
 ~~~
 
-Once we save that, we can run our application with `swift run`
+Once we save that, we can run our application with `swift run`.
 Assuming everything went well, we can run the tests successfully again:
 
 ~~~no-highlight
