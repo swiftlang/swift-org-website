@@ -25,10 +25,6 @@ offering a guided tour, a comprehensive guide, and a formal reference of the lan
   </div>
 </div>
 
-<div class="links links-download" markdown="1">
-[Download The Swift Programming Language in ePub format](https://docs.swift.org/swift-book/TheSwiftProgrammingLanguage.epub)
-</div>
-
 #### Translations
 We encourage you to participate in translating _The Swift Programming Language_ into other languages.
 Get involved with an existing translation project, or start a new one.
