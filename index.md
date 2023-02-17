@@ -9,9 +9,9 @@ atom: true
 Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
 
 <div class="links links-list-nostyle" markdown="1">
-  - [Get started with Swift](/getting-started)
-  - [Read the documentation](/documentation)
-  - [Latest release: 5.7](/download/#swift-57)
+  - [Latest release: 5.7](/blog/swift-5.7-released)
+  - [Get started](/getting-started)
+  - [Read the docs](/documentation)
 </div>
 
 ## Why Swift?
@@ -57,7 +57,7 @@ No matter how you want to get involved, we ask that you first learn what’s exp
 Anyone with a good idea can help shape the future features and direction of the language. To reach the best possible solution to a problem, we discuss and iterate on ideas in a public forum.
 
 <div class="links links-list-nostyle" markdown="1">
-  - [The Swift Evolution Process](/contributing/#participating-in-the-swift-evolution-process)
+  - [The Swift Evolution Process](/contributing/#swift-evolution)
 </div>
 
 ### Code
