@@ -17,16 +17,12 @@ _The Swift Programming Language_ is the authoritative reference for Swift,
 offering a guided tour, a comprehensive guide, and a formal reference of the language.
 
 <div id="language-links" class="links links-list-nostyle links-sublevel" markdown="1">
-[Read The Swift Programming Language](https://docs.swift.org/swift-book)
+[Read The Swift Programming Language](https://docs.swift.org/swift-book/documentation/the-swift-programming-language)
   <div class="links-sublevel" markdown="1">
-  - [A Swift Tour](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html)
-  - [Language guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
-  - [Language reference](https://docs.swift.org/swift-book/ReferenceManual/AboutTheLanguageReference.html)
+  - [A Swift Tour](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour)
+  - [Language guide](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics)
+  - [Language reference](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/aboutthelanguagereference)
   </div>
-</div>
-
-<div class="links links-download" markdown="1">
-[Download The Swift Programming Language in ePub format](https://docs.swift.org/swift-book/TheSwiftProgrammingLanguage.epub)
 </div>
 
 #### Translations
