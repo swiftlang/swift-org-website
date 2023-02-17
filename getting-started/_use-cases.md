@@ -27,7 +27,7 @@ Looking for a language reference? [The Swift Programming Language (TSPL)](https:
   <li class="use-case">
     <h3>Web Service</h3>
     <p class="description">
-      Use a web frameworks to build a web service.
+      Use a web framework to build a web service.
       Requires macOS or Linux.
     </p>
 
