@@ -7,9 +7,9 @@ author: [amartini]
 ---
 
 
-We’re happy to announce that [The Swift Programming Language][tspl] book is now published using  [Swift-DocC][docc], starting with Swift 5.8.  TSPL is now ready to start accepting content contributions, under the direction of the Swift Documentation Workgroup.
+We’re happy to announce that [The Swift Programming Language][tspl] book (TSPL) is now published using  [Swift-DocC][docc], starting with Swift 5.8.  TSPL is now ready to start accepting content contributions, under the direction of the Swift Documentation Workgroup.
 
-This is a major step for the book.  It was first open-sourced in August 2022 and since then, we’ve merged over 50 pull requests as we converted to DocC.  We also made enhancements to DocC based on what we learned working on the book, like adding control over automatic see-also sections and new on-page navigation. Other DocC content that guides developers through a linear narrative, like the documentation for large or complex packages, can also take advantage of these enhancements.
+This is a major step for the book.  It was first release as open source in August 2022 and since then, we’ve merged over 50 pull requests as we converted to DocC.  We also made enhancements to DocC based on what we learned working on the book, like adding control over automatic see-also sections and new on-page navigation. Other DocC content that guides developers through a linear narrative, like the documentation for large or complex packages, can also take advantage of these enhancements.
 
 ## Get involved
 
