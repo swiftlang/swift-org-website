@@ -4,7 +4,7 @@
   content_url: https://developer.apple.com/videos/play/wwdc2021/10132/
   thumbnail_url: #TBD
   release_date: 2021-06-08
-- title: "Swift Generics"
+- title: "Generics"
   description: "In Swift, generics are a fundamental way to write abstract code. This video walks through the basics of Swift Generics and introducing generics into your code."
   content_type: video
   content_url: https://developer.apple.com/videos/play/wwdc2021/10132/
@@ -16,7 +16,7 @@
   content_url: https://developer.apple.com/videos/play/wwdc2022/110357/
   thumbnail_url: #TBD
   release_date: 2022-06-07
-- title: "Swift Strings Under The Hood"
+- title: "Strings Under The Hood"
   description: "Swift strings provide a fast, Unicode-compliant way to work with text. This article provides more detail on how strings are implemented in Swift using UTF-8 and the reasons behind that choice."
   content_type: article
   content_url: /blog/utf8-string/

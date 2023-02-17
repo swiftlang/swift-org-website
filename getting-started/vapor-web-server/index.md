@@ -1,13 +1,19 @@
 ---
 layout: page
-title: Build a Web Server with Vapor
+title: Build a Web Service with Vapor
 ---
 
 {% include getting-started/_installing.md %}
 
+## Choosing a web framework
+
+Over the years, the Swift community created several web frameworks designed to help building web services.
+This guide focuses on the [Vapor](https://vapor.codes) web framework, a popular choice with the community.
+
 ## Installing Vapor
 
-This guide uses the [Vapor](https://vapor.codes) web framework to build a server application. First, you need to install the Vapor toolbox. If you already have Homebrew installed on macOS, run
+First, you need to install the Vapor toolbox.
+If you already have Homebrew installed on macOS, run
 
 ```bash
 brew install vapor
@@ -57,7 +63,7 @@ app.get("hello", ":name") { req async throws -> String in
 }
 ```
 
-Here's what the code does: 
+Here's what the code does:
 
 1. Declare a new route handler registered as a **GET** request to `/hello/<NAME>`. The `:` denotes a dynamic path parameter in Vapor and will match any value and allow you to retrieve it in your route handler. `app.get(...)` takes a closure as the final parameter that can be asynchronous and must return a `Response` or something conforming to `ResponseEncodable`, such as `String`.
 2. Get the name from the parameters. By default, this returns a `String`. If you want to extract another type, such as `Int` or `UUID` you can write `req.parameters.require("id", as: UUID.self)` and Vapor will attempt to cast it to the type and automatically throw an error if it's unable to. This throws an error if the route hasn't been registered with the correct parameter name.

@@ -9,7 +9,7 @@ Looking for a language reference? [The Swift Programming Language (TSPL)](https:
   <li class="use-case">
     <h3>Command-line Tool</h3>
     <p class="description">
-      Build a command-line tool using SwiftPM.
+      Build a cross-platform command-line tool.
     </p>
 
     <a href="/getting-started/cli-swiftpm" class="cta-secondary">Start tutorial</a>
@@ -18,16 +18,16 @@ Looking for a language reference? [The Swift Programming Language (TSPL)](https:
   <li class="use-case">
     <h3>Library</h3>
     <p class="description">
-      Build a library using SwiftPM.
+      Build a cross-platform library.
     </p>
 
     <a href="/getting-started/library-swiftpm" class="cta-secondary">Start tutorial</a>
   </li>
 
   <li class="use-case">
-    <h3>Web Server with Vapor</h3>
+    <h3>Web Service</h3>
     <p class="description">
-      Use the open-source Vapor framework to build a web service using SwiftPM.
+      Use a web framework to build a web service.
       Requires macOS or Linux.
     </p>
 
@@ -35,7 +35,7 @@ Looking for a language reference? [The Swift Programming Language (TSPL)](https:
   </li>
 
   <li class="use-case">
-    <h3>App for Apple platforms</h3>
+    <h3>iOS and macOS Application</h3>
     <p class="description">
       Use Swift and SwiftUI to build an app that works on iOS and macOS.
       Requires macOS 12 and Xcode 14.
