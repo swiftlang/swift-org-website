@@ -9,7 +9,7 @@ If you're new to Swift, check out [A Swift Tour][TSPL] in
 _The Swift Programming Language_, for a quick introduction to the
 most important concepts and features of the language.
 
-[TSPL]: https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-ID1
+[TSPL]: https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour/
 
 {% include_relative _installing.md %}
 {% include_relative _repl.md %}

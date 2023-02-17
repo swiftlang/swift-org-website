@@ -28,4 +28,4 @@ You can find instructions for how to install Swift in
 
 {% include_relative _basic-usage.md %}
 
-[TSPL]: https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-ID1
+[TSPL]: https://docs.swift.org/swift-book/documentation/the-swift-programming-language/
