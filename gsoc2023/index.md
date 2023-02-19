@@ -20,6 +20,66 @@ If you would like to reach out to a mentor privately, rather than making a publi
 
 ## Potential Projects
 
+### Swift Dev Experience
+
+#### Implement Incremental Re-Parsing in SwiftParser
+
+**Project size**: Medium
+
+**Recommended skills**
+
+- Proficiency in Swift
+- Knowledge of parsers is a bonus, but can be acquired during the project
+
+**Description**
+
+The Swift parser written in C++ was able to incrementally re-parse a syntax tree after an edit, re-using syntax nodes that have not changed. This functionality was not implemented when we [re-implemented the parser to Swift](https://github.com/apple/swift-syntax/tree/main/Sources/SwiftParser).
+
+The goal of this project is to port the old incremental re-parsing design to Swift, set up unit tests that make sure incremental re-parsing produces the same result as parsing the tree from scratch, and to expand the old incremental re-parsing design to re-use more syntax nodes.
+
+Note that the ability to incrementally re-parse a syntax tree has been removed from the C++ code base after SwiftParser was implemented. Check out the release/5.6 branch to view the last version of incremental parsing. This [pull request](https://github.com/apple/swift/pull/16340) initially implemented incremental parsing in C++.
+
+**Expected outcomes/benefits/deliverables**
+
+The goal of this project is to implement incremental re-parsing of Swift code in the new parser with a strong focus on performance to keep parsing times well below 10ms, even for files with multiple thousand lines of code
+
+**Potential mentors**
+
+- [Alex Hoppen](https://github.com/ahoppen)
+
+#### SourceKit Client Library
+
+**Project size**: Large
+
+**Recommended skills**
+
+- Proficiency in Swift
+- Ability to understand C++ code, writing C++ should not be necessary
+
+**Description**
+
+[SourceKit](https://github.com/apple/swift/tree/main/tools/SourceKit) is a framework that provides IDE features like code completion, jump to definition and syntax coloring based on the compiler’s deep understanding of the source code. Clients interface with sourcekitd via XPC objects, which are basically dictionaries keyed by strings, similar to JSON. This makes it hard for clients of sourcekitd, like [SourceKit-LSP](https://github.com/apple/sourcekit-lsp) to know which requests sourcekitd offers, which parameters these requests take and which parameters the returned result has.
+
+The goal of this project is to implement a SourceKit client library that wraps the XPC communication details. Its main features should be the following:
+
+- It should offer native Swift interface, request parameters should be normal Swift function parameters and and the returned result should be a struct
+- It should use Swift’s concurrency features
+- The client library should be document based, meaning that
+    - You need to open a document before you can send requests for it, creating an object on the client library that represents the open document.
+    - Once the object representing a document it in the client library is destroyed, the document should be closed in sourcekitd
+    - If sourcekitd crashes after the document is opened, the client library should transparently re-open the document with its latest contents before sending a request for it
+
+To test that the client library works in practice, SourceKit-LSP should be its first user and all requests sent in SwiftLanguageServer.swift should be made through the client library.
+
+
+**Expected outcomes/benefits/deliverables**
+
+A client library for SourceKit that provides a type-safe interface, eliminating bugs like forgetting to pass a required parameter, expecting a parameter in the response that doesn’t exist, or forgetting to open a document before sending a request to it
+
+**Potential mentors**
+
+- [Alex Hoppen](https://github.com/ahoppen)
+
 ### Swift/C++  Interop
 
 #### Expand the Swift overlay for the C++ Standard Library
@@ -64,7 +124,7 @@ Swift is a fun and powerful language, and people often want to use it also for t
 
 - See also:
 
-There's a pitch (https://forums.swift.org/t/pitch-swiftpm-support-for-swift-scripts-revision/46717) which outlines an initial design from a previous GSoC proposal that could be used as the basis of this work. It may need some polish, figuring out the details the project could aim for implementing a basic version of it.
+There's a [pitch](https://forums.swift.org/t/pitch-swiftpm-support-for-swift-scripts-revision/46717) which outlines an initial design from a previous GSoC proposal that could be used as the basis of this work. It may need some polish, figuring out the details the project could aim for implementing a basic version of it.
 
 **Expected outcomes/benefits/deliverables**
 
