@@ -138,7 +138,7 @@ We would like to create a Swift native implementation of a [Memcached Client](ht
 
 **Expected outcomes/benefits/deliverables**
 
-The goal is to support the fundamental commands and expose as an asynchronous first Swift API.
+The goal is to support the fundamental commands and expose as an asynchronous-first Swift API.
 
 **Potential mentors**
 
