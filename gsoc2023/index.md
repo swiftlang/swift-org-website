@@ -47,39 +47,6 @@ The goal of this project is to implement incremental re-parsing of Swift code in
 
 - [Alex Hoppen](https://github.com/ahoppen)
 
-#### SourceKit Client Library
-
-**Project size**: Large
-
-**Recommended skills**
-
-- Proficiency in Swift
-- Ability to understand C++ code, writing C++ should not be necessary
-
-**Description**
-
-[SourceKit](https://github.com/apple/swift/tree/main/tools/SourceKit) is a framework that provides IDE features like code completion, jump to definition and syntax coloring based on the compiler’s deep understanding of the source code. Clients interface with sourcekitd via XPC objects, which are basically dictionaries keyed by strings, similar to JSON. This makes it hard for clients of sourcekitd, like [SourceKit-LSP](https://github.com/apple/sourcekit-lsp) to know which requests sourcekitd offers, which parameters these requests take and which parameters the returned result has.
-
-The goal of this project is to implement a SourceKit client library that wraps the XPC communication details. Its main features should be the following:
-
-- It should offer native Swift interface, request parameters should be normal Swift function parameters and and the returned result should be a struct
-- It should use Swift’s concurrency features
-- The client library should be document based, meaning that
-    - You need to open a document before you can send requests for it, creating an object on the client library that represents the open document.
-    - Once the object representing a document it in the client library is destroyed, the document should be closed in sourcekitd
-    - If sourcekitd crashes after the document is opened, the client library should transparently re-open the document with its latest contents before sending a request for it
-
-To test that the client library works in practice, SourceKit-LSP should be its first user and all requests sent in SwiftLanguageServer.swift should be made through the client library.
-
-
-**Expected outcomes/benefits/deliverables**
-
-A client library for SourceKit that provides a type-safe interface, eliminating bugs like forgetting to pass a required parameter, expecting a parameter in the response that doesn’t exist, or forgetting to open a document before sending a request to it
-
-**Potential mentors**
-
-- [Alex Hoppen](https://github.com/ahoppen)
-
 ### Swift/C++  Interop
 
 #### Expand the Swift overlay for the C++ Standard Library
@@ -153,3 +120,26 @@ SwiftPM currently supports a handful of hardcoded templates that can act as a st
 
 - [Boris Bügling](https://github.com/neonichu)
 
+
+### Swift on Server
+
+### Memcached Client
+
+**Project size**: Medium
+
+**Recommended skills**
+
+- Basic proficiency with Swift 
+- Familiarity with SwiftNIO or other event loop systems
+
+**Description**
+
+We would like to create a Swift native implementation of a [Memcached Client](https://github.com/memcached/memcached) using [SwiftNIO](https://github.com/apple/swift-nio) for the networking stack. The goal is to implement the [binary protocol](https://github.com/memcached/memcached/wiki/BinaryProtocolRevamped) of Memcached to send commands and receives responses. To achieve this we need to implement the request encoding and response decoding. Furthermore, our client should support request pipelining to improve its performance.
+
+**Expected outcomes/benefits/deliverables**
+
+The goal is to support the fundamental commands and expose as an asynchronous first Swift API.
+
+**Potential mentors**
+
+- [Franz Bunsh](https://github.com/FranzBusch)
