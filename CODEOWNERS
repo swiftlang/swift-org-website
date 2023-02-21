@@ -22,7 +22,7 @@
  
 # N: Mishal Shah
 # E: mishal_shah@apple.com
-# D: Apple
+# D: Apple, Swift core team
 
 # N: Ted Kremenek
 # E: kremenek@apple.com
@@ -42,4 +42,4 @@
 
 * @0xTim @alexandersandberg @daveverwer @dempseyatgithub @kaishin @krstnfx @mschinis @shahmishal @TimTr @twostraws @tomerd
 
-/_post/* @cthielen @TimTr @tkremenek @tomerd
+/_posts/* @cthielen @TimTr @tkremenek @tomerd
