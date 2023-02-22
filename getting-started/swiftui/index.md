@@ -297,8 +297,7 @@ This is called a *property wrapper*, meaning that it wraps our `selected` proper
 
 That fixes the two errors in our code, so you can now press Cmd+R to build and run your app in the iOS simulator. It will suggest baseball by default, but every time you press “Try again” you’ll see it change.
 
-![Running The App in the Simulator]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/running-in-simulator.png)
-
+<img class="device-aspect-ratio" src="{{site.url}}/assets/images/getting-started-guides/swiftui-ios/running-in-simulator.png" alt="Running The App in the Simulator">
 
 ## Adding some polish
 
@@ -399,8 +398,9 @@ So, add these two modifiers to the inner `VStack`, telling SwiftUI to identify t
 
 Press Cmd+R to run your app one last time, and you should see that pressing “Try Again” now smoothly animates the old activity off the screen, and replaces it with a new one. It even overlaps animations if you press “Try Again” repeatedly!
 
-![App Demo]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/app-demo.gif)
-
+<video class="device-aspect-ratio" autoplay loop muted>
+  <source src="{{site.url}}/assets/videos/getting-started-guides/swiftui-app/demo.mp4" type="video/mp4">
+</video>
 
 ## Where now?
 
