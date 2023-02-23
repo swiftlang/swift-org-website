@@ -690,6 +690,11 @@ article {
             }
         }
     }
+
+    .device-aspect-ratio {
+        width: 100%;
+        max-width: 400px;
+    }
 }
 
 .title {
