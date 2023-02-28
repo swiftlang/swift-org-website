@@ -129,7 +129,7 @@ Invoke-RestMethod -Url 'get.scoop.sh' | Invoke-Expression
      ~~~ cmd
      winget install Swift.Toolchain
      ~~~
-   * Using the Windows Package Manager:
+   * Using Scoop:
      ~~~ cmd
      scoop install swift
      ~~~
