@@ -52,7 +52,7 @@ In various situations the SSWG shall hold a vote. These votes can happen on the 
 
 ## Incubation Process
 
-The Swift Server Workgroup has a [process](https://github.com/swift-server/sswg/blob/master/process/incubation.md) which allows a project to go through incubation stages until it graduates and becomes a recommended project.
+The Swift Server Workgroup has a [process](/sswg/incubation-process.html) which allows a project to go through incubation stages until it graduates and becomes a recommended project.
 
 ## Projects
 
