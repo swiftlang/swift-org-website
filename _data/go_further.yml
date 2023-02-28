@@ -1,24 +1,36 @@
+- title: "A Swift Tour"
+  description: "_The Swift Programming Language_, the authoritative reference for Swift, begins with a tour of the language. The tour gives you an introduction to the fundamental features, concepts, and syntax of Swift. The remainder of the book explains each topic in greater detail."
+  content_type: book
+  content_url: https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html
+  thumbnail_url: #TBD
+  release_date: 2014-08-18
+  featured: true
+  external: true
 - title: "Concurrency"
   description: "Swift has concurrency features built into the language making it easier to write concurrent code with the assistance of the compiler. This video introduces the async/await mechanism, a key part of Swift Concurrency."
   content_type: video
   content_url: https://developer.apple.com/videos/play/wwdc2021/10132/
-  thumbnail_url: #TBD
+  thumbnail_url: /assets/images/getting-started/meet-async-await-thumbnail.jpg
   release_date: 2021-06-08
+  external: true
 - title: "Generics"
   description: "In Swift, generics are a fundamental way to write abstract code. This video walks through the basics of Swift Generics and introducing generics into your code."
   content_type: video
-  content_url: https://developer.apple.com/videos/play/wwdc2021/10132/
-  thumbnail_url: #TBD
+  content_url: https://developer.apple.com/videos/play/wwdc2022/110352/
+  thumbnail_url: /assets/images/getting-started/swift-generics-thumbnail.jpg
   release_date: 2021-06-09
+  external: true
 - title: "Regular Expressions"
   description: "Swift provides first-class regular expression support, commonly known as regex, for effective string processing. This video gives an overview of the power and flexibility of Swift Regex."
   content_type: video
   content_url: https://developer.apple.com/videos/play/wwdc2022/110357/
-  thumbnail_url: #TBD
+  thumbnail_url: /assets/images/getting-started/regular-expression-thumbnail.jpg
   release_date: 2022-06-07
+  external: true
 - title: "Strings Under The Hood"
   description: "Swift strings provide a fast, Unicode-compliant way to work with text. This article provides more detail on how strings are implemented in Swift using UTF-8 and the reasons behind that choice."
   content_type: article
   content_url: /blog/utf8-string/
   thumbnail_url: #TBD
   release_date: 2019-03-20
+  external: false
