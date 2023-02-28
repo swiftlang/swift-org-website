@@ -13,7 +13,7 @@ The teams at Apple and Vapor have engineers that will actively participate in th
 
 The incubation process is designed to help nurture and mature projects ensuring standardization, quality, and longevity. It also seeks to increase the visibility of ideas, experiments, or other early work that can add value to the SSWG mission.
 The following document details this incubation process.
-The SSWG [steering group](https://swift.org/server/) has a similar role to the Swift Core Team and will make the final decision on moving pitches/proposals through the incubation process based on the feedback of the community.
+The SSWG [steering group](/server/) has a similar role to the Swift Core Team and will make the final decision on moving pitches/proposals through the incubation process based on the feedback of the community.
 Just like for Swift Evolution, pitches and proposals can be made by anyone, being part of the SSWG steering group is absolutely not a requirement.
 
 ## Process
