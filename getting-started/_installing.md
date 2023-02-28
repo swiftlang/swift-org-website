@@ -82,7 +82,7 @@ Invoke-RestMethod -Url 'get.scoop.sh' | Invoke-Expression
 
 0. Install required dependencies:
 
-   The platform dependencies cannot be installed through the Windows Package Manager as the install rules do not install the components necessary.  They will be installed through Visual Studio installer.
+   The platform dependencies cannot be installed through the currently supported package managers as the install rules do not install the components necessary.  They will be installed through Visual Studio installer.
 
    #### With Winget (Windows Package Manager):
    ~~~ pwsh
