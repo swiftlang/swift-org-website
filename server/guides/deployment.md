@@ -13,7 +13,7 @@ The following guides can help with the deployment to public cloud providers:
 * [GCP](/server/guides/deploying/gcp.html)
 * _Have a guides for other popular public clouds like Azure? Add it here!_
 
-If you are deploying to you own servers (e.g. bare metal, VMs or Docker) there are several strategies for packaging Swift applications for deployment, see the [Packaging Guide](/server/guides/packaging.html) for more information.
+If you are deploying to your own servers (e.g. bare metal, VMs or Docker) there are several strategies for packaging Swift applications for deployment, see the [Packaging Guide](/server/guides/packaging.html) for more information.
 
 ## Deploying a Debuggable Configuration (Production on Linux)
 
