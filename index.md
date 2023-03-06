@@ -16,17 +16,30 @@ Swift is a general-purpose programming language built using a modern approach to
 
 ## Why Swift?
 
-### Safe
+<ul class="why-swift-list">
+  <li>
+    <h3>Safe</h3>
+    <p>
+      Swift prioritizes safety and clarity, ensuring that code behaves in a safe manner while also promoting clear and concise programming practices.
+    </p>
+  </li>
+  <li>
+    <h3>Fast</h3>
+    <p>
+      Swift aims to replace C-based languages (C, C++, and Objective-C) and match their performance, while maintaining consistency and predictability.
+    </p>
+  </li>
+  <li>
+    <h3>Expressive</h3>
+    <p>
+      Swift builds upon decades of advancements in computer science, providing a modern syntax that is a joy to use.
+    </p>
+  </li>
+</ul>
 
-The most obvious way to write code should also behave in a safe manner. Undefined behavior is the enemy of safety, and developer mistakes should be caught before software is in production. Opting for safety sometimes means Swift will feel strict, but we believe that clarity saves time in the long run.
-
-### Fast
-
-Swift is intended as a replacement for C-based languages (C, C++, and Objective-C). As such, Swift must be comparable to those languages in performance for most tasks. Performance must also be predictable and consistent, not just fast in short bursts that require clean-up later. There are lots of languages with novel features — being fast is rare.
-
-### Expressive
-
-Swift benefits from decades of advancement in computer science to offer syntax that is a joy to use, with modern features developers expect. But Swift is never done. We will monitor language advancements and embrace what works, continually evolving to make Swift even better.
+<div class="links links-list-nostyle" markdown="1">
+  - [Learn more about Swift](/about)
+</div>
 
 ## Use cases
 
