@@ -1,0 +1,30 @@
+.why-swift-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 1rem;
+
+  li {
+    border: 1px solid var(--color-fill-tertiary);
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      line-height: 1.4;
+      font-size: 1.4rem;
+      padding-top: 0;
+    }
+
+    p {
+      flex-grow: 1;
+      color: var(--color-secondary-label);
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
