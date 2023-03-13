@@ -1,0 +1,33 @@
+title: Community Showcase
+description: Packages voted on by the community. [Learn more](https://swiftpackageindex.com).
+packages:
+  - name: SPIManifest
+    description: "Swift package to read `.spi.yml` files."
+    swift_compatibility: Swift 5.6+
+    stars: 4
+    url: https://swiftpackageindex.com/SwiftPackageIndex/SPIManifest
+  - name: SemanticVersion
+    description: "Represent semantic versions like "1.0.0" or "1.2.3-beta1" (SemVer) in Swift."
+    swift_compatibility: Swift 5.4+
+    stars: 36
+    url: https://swiftpackageindex.com/SwiftPackageIndex/SemanticVersion
+  - name: SPI-Server
+    description: "The Swift Package Index is the place to find Swift packages!"
+    swift_compatibility: Swift 5.7
+    stars: 399
+    url: https://swiftpackageindex.com/SwiftPackageIndex/SwiftPackageIndex-Server
+  - name: LeftPad
+    description: "This is not a real Package, it's just for testing package metadata."
+    swift_compatibility: Swift 5.4+
+    stars: 2
+    url: https://swiftpackageindex.com/daveverwer/LeftPad
+  - name: Arena
+    description: "A command line tool to create Swift Playground projects with SPM package dependencies"
+    swift_compatibility: Swift 5.6+
+    stars: 593
+    url: https://swiftpackageindex.com/finestructure/Arena
+  - name: Rester
+    description: "A command line tool to test (REST) APIs"
+    swift_compatibility: Swift 5.4+
+    stars: 42
+    url: https://swiftpackageindex.com/finestructure/Rester
