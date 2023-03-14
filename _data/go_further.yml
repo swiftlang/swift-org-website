@@ -27,10 +27,10 @@
   thumbnail_url: /assets/images/getting-started/regular-expression-thumbnail.jpg
   release_date: 2022-06-07
   external: true
-- title: "Strings Under The Hood"
-  description: "Swift strings provide a fast, Unicode-compliant way to work with text. This article provides more detail on how strings are implemented in Swift using UTF-8 and the reasons behind that choice."
+- title: "Structures and Classes"
+  description: "In Swift, many existing types as well as types you define are structures and classes. This chapter of _The Swift Programming Language_ describes the similarities and differences of these fundamental building blocks, including the key concepts of value types and reference types."
   content_type: article
-  content_url: /blog/utf8-string/
+  content_url: https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures
   thumbnail_url: #TBD
-  release_date: 2019-03-20
-  external: false
+  release_date: 2022-09-12
+  external: true
