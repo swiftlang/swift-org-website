@@ -134,7 +134,7 @@ SwiftPM currently supports a handful of hardcoded templates that can act as a st
 
 **Description**
 
-We would like to create a Swift native implementation of a [Memcached Client](https://github.com/memcached/memcached) using [SwiftNIO](https://github.com/apple/swift-nio) for the networking stack. The goal is to implement the [binary protocol](https://github.com/memcached/memcached/wiki/BinaryProtocolRevamped) of Memcached to send commands and receives responses. To achieve this we need to implement the request encoding and response decoding. Furthermore, our client should support request pipelining to improve its performance.
+We would like to create a Swift native implementation of a [Memcached Client](https://github.com/memcached/memcached) using [SwiftNIO](https://github.com/apple/swift-nio) for the networking stack. The goal is to implement the [meta command protocol](https://github.com/memcached/memcached/blob/master/doc/protocol.txt) of Memcached to send commands and receives responses. To achieve this we need to implement the request encoding and response decoding. Furthermore, our client should support request pipelining to improve its performance.
 
 **Expected outcomes/benefits/deliverables**
 
