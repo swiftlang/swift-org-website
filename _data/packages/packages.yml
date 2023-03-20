@@ -1,6 +1,6 @@
 categories:
-  - name: Community Showcase
-    description: "Packages voted on by the community. [Learn more](https://swiftpackageindex.com)."
+  - name: Newest Packages
+    description: "Freshly created packages from the community."
     packages:
       - name: SPIManifest
         description: "Swift package to read `.spi.yml` files."
@@ -32,6 +32,39 @@ categories:
         swift_compatibility: Swift 5.4+
         stars: 42
         url: https://swiftpackageindex.com/finestructure/Rester
+  - name: Community Showcase
+    description: "Packages voted on by the community. [Learn more](https://swiftpackageindex.com)."
+    packages:
+      - name: Showcase Package One
+        description: "Sample package description, what does it do?"
+        swift_compatibility: Swift 5.6+
+        stars: 1
+        url: https://example.com/example/one
+      - name: Showcase Package Two
+        description: "Sample package description, what does it do?"
+        swift_compatibility: Swift 5.6+
+        stars: 1
+        url: https://example.com/example/two
+      - name: Showcase Package Three
+        description: "Sample package description, what does it do?"
+        swift_compatibility: Swift 5.6+
+        stars: 1
+        url: https://example.com/example/three
+      - name: Showcase Package Four
+        description: "Sample package description, what does it do?"
+        swift_compatibility: Swift 5.6+
+        stars: 1
+        url: https://example.com/example/four
+      - name: Showcase Package Five
+        description: "Sample package description, what does it do?"
+        swift_compatibility: Swift 5.6+
+        stars: 1
+        url: https://example.com/example/five
+      - name: Showcase Package Six
+        description: "Sample package description, what does it do?"
+        swift_compatibility: Swift 5.6+
+        stars: 1
+        url: https://example.com/example/six
   - name: Problematic Packages
     description: "Packages that could cause layout issues."
     packages:
