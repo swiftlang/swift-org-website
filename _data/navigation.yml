@@ -32,6 +32,13 @@
           name: using-downloads
         - title: Docker
           name: docker
+    - title: Packages
+      url: /packages/
+      sections:
+        - title: Package Search
+          name: package-search
+        - title: Showcase
+          name: showcase
     - title: Platform Support
       url: /platform-support/
       sections:

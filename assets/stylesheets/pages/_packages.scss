@@ -1,0 +1,11 @@
+.package-search {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+
+  input[type="search"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+  }
+}
