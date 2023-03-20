@@ -1,5 +1,5 @@
 categories:
-  - title: Community Showcase
+  - name: Community Showcase
     description: "Packages voted on by the community. [Learn more](https://swiftpackageindex.com)."
     packages:
       - name: SPIManifest
@@ -32,7 +32,7 @@ categories:
         swift_compatibility: Swift 5.4+
         stars: 42
         url: https://swiftpackageindex.com/finestructure/Rester
-  - title: Problematic Packages
+  - name: Problematic Packages
     description: "Packages that could cause layout issues."
     packages:
       - name: Problematic One
