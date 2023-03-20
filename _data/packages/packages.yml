@@ -5,32 +5,32 @@ categories:
       - name: SPIManifest
         description: "Swift package to read `.spi.yml` files."
         swift_compatibility: Swift 5.6+
-        stars: 4
+        stars: "4"
         url: https://swiftpackageindex.com/SwiftPackageIndex/SPIManifest
       - name: SemanticVersion
         description: 'Represent semantic versions like "1.0.0" or "1.2.3-beta1" (SemVer) in Swift.'
         swift_compatibility: Swift 5.4+
-        stars: 36
+        stars: "36"
         url: https://swiftpackageindex.com/SwiftPackageIndex/SemanticVersion
       - name: SPI-Server
         description: "The Swift Package Index is the place to find Swift packages!"
         swift_compatibility: Swift 5.7
-        stars: 399
+        stars: "399"
         url: https://swiftpackageindex.com/SwiftPackageIndex/SwiftPackageIndex-Server
       - name: LeftPad
         description: "This is not a real Package, it's just for testing package metadata."
         swift_compatibility: Swift 5.4+
-        stars: 2
+        stars: "2"
         url: https://swiftpackageindex.com/daveverwer/LeftPad
       - name: Arena
         description: "A command line tool to create Swift Playground projects with SPM package dependencies"
         swift_compatibility: Swift 5.6+
-        stars: 593
+        stars: "593"
         url: https://swiftpackageindex.com/finestructure/Arena
       - name: Rester
         description: "A command line tool to test (REST) APIs"
         swift_compatibility: Swift 5.4+
-        stars: 42
+        stars: "42"
         url: https://swiftpackageindex.com/finestructure/Rester
   - name: Community Showcase
     description: "Packages voted on by the community. [Learn more](https://swiftpackageindex.com)."
@@ -38,32 +38,32 @@ categories:
       - name: Showcase Package One
         description: "Sample package description, what does it do?"
         swift_compatibility: Swift 5.6+
-        stars: 1
+        stars: "1"
         url: https://example.com/example/one
       - name: Showcase Package Two
         description: "Sample package description, what does it do?"
         swift_compatibility: Swift 5.6+
-        stars: 1
+        stars: "1"
         url: https://example.com/example/two
       - name: Showcase Package Three
         description: "Sample package description, what does it do?"
         swift_compatibility: Swift 5.6+
-        stars: 1
+        stars: "1"
         url: https://example.com/example/three
       - name: Showcase Package Four
         description: "Sample package description, what does it do?"
         swift_compatibility: Swift 5.6+
-        stars: 1
+        stars: "1"
         url: https://example.com/example/four
       - name: Showcase Package Five
         description: "Sample package description, what does it do?"
         swift_compatibility: Swift 5.6+
-        stars: 1
+        stars: "1"
         url: https://example.com/example/five
       - name: Showcase Package Six
         description: "Sample package description, what does it do?"
         swift_compatibility: Swift 5.6+
-        stars: 1
+        stars: "1"
         url: https://example.com/example/six
   - name: Problematic Packages
     description: "Packages that could cause layout issues."
@@ -71,14 +71,14 @@ categories:
       - name: Problematic One
         description: "This package has a very long description, which causes it to be problematic for display reasons. It has multiple sentences and really is just far too long. Seriously, stop typing now."
         swift_compatibility: Swift 5.6+
-        stars: 1
+        stars: "1"
         url: https://example.com/problematic/one
       - name: Problematic Two
         description: "This package has a very large number of stars."
         swift_compatibility: Swift 5.6+
-        stars: 100,000,000,000
+        stars: "100,000,000,000"
         url: https://example.com/problematic/two
       - name: Problematic Three
         description: "This package has no compatibility information."
-        stars: 1
+        stars: "1"
         url: https://example.com/problematic/three
