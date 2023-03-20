@@ -9,3 +9,38 @@
     font-size: 18px;
   }
 }
+
+ul.package-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .description > p {
+      // Even though this looks specific to WebKit, it works in Safari, Chrome, and Firefox.
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  ul.metadata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+
+    .stars > picture {
+      display: inline-block;
+    }
+  }
+}
