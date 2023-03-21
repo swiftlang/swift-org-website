@@ -143,3 +143,31 @@ The goal is to support the fundamental commands and expose as an asynchronous-fi
 **Potential mentors**
 
 - [Franz Bunsh](https://github.com/FranzBusch)
+
+
+### Swift-DocC 
+
+#### Swift-DocC Authoring Localization Support
+
+**Project Size**: Medium 
+
+**Recommended skills**
+
+- Basic proficiency with Swift
+
+**Expected difficulty**: Medium
+
+**Description**
+
+Swift-DocC-Render recently added support for rendering localized documentation. However, Swift-DocC currently only supports authoring documentation in a single language.
+
+The goal of this project is to design and implement support for writing localized documentation by enhancing the Swift-DocC compiler to support localized DocC catalog inputs and produce an output that's compatible with Swift-DocC-Render's existing localization support. The participant will take part in collaborative technical design and Swift-DocC development.
+
+**Expected outcomes/benefits/deliverables**
+
+Technical design and implementation for authoring localized documentation.
+
+**Potential mentors**
+
+- [Bina Maniar](https://github.com/binamaniar)
+- [Marina Aísa](https://github.com/marinaaisa) 
