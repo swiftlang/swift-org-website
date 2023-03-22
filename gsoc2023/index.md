@@ -76,7 +76,7 @@ Design and implementation of new C++ standard library overlay functionality that
 
 ### Swift Package Manager
 
-### Scripting in Swift
+#### Scripting in Swift
 
 **Project size**: Medium
 
@@ -123,7 +123,7 @@ SwiftPM currently supports a handful of hardcoded templates that can act as a st
 
 ### Swift on Server
 
-### Memcached Client
+#### Memcached Client
 
 **Project size**: Medium
 
