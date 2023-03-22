@@ -8,7 +8,7 @@ atom: true
 
 Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
 
-<div class="links links-list-nostyle" markdown="1">
+<div class="link-grid" markdown="1">
   - [Latest release: 5.7](/blog/swift-5.7-released)
   - [Get started](/getting-started)
   - [Read the docs](/documentation)
@@ -43,21 +43,24 @@ Swift is a general-purpose programming language built using a modern approach to
 
 ## Use cases
 
-### Apple platforms
+<ul class="use-cases">
+  <li>
+    <h3>Apple platforms</h3>
+    <p>
+      Swift is a powerful and intuitive programming language on macOS, iOS, watchOS, tvOS and beyond. Swift code is safe by design, yet also produces software that is optimized to run lightning-fast.
+    </p>
 
-Swift is a powerful and intuitive programming language on macOS, iOS, watchOS, tvOS and beyond. Swift code is safe by design, yet also produces software that is optimized to run lightning-fast.
+    <a href="" class="cta-secondary">[TODO] Learn more</a>
+  </li>
+  <li>
+    <h3>Server</h3>
+    <p>
+      Ever dreamed of using the same programming language on both your mobile applications and their server back-ends? Swift's small footprint, quick startup time, and deterministic performance make it specifically suitable for Server applications.
+    </p>
 
-<div class="links links-list-nostyle" markdown="1">
-  - [[TODO] Learn more about Swift on Apple platforms](#)
-</div>
-
-### Server
-
-Ever dreamed of using the same programming language on both your mobile applications and their server back-ends? Swift's small footprint, quick startup time, and deterministic performance make it specifically suitable for Server applications.
-
-<div class="links links-list-nostyle" markdown="1">
-  - [Learn more about Swift on Server](/server/)
-</div>
+    <a href="/server" class="cta-secondary">Learn more</a>
+  </li>
+</ul>
 
 ## Getting involved
 
@@ -65,29 +68,29 @@ Everyone is welcome to contribute to Swift. Contributing doesn’t just mean sub
 
 No matter how you want to get involved, we ask that you first learn what’s expected of anyone who participates in the project by reading the [Community Overview](/community/). If you’re contributing code, you should also know how to build and run Swift from the repository, as described in [Source Code](/source-code/).
 
-### Design
-
-Anyone with a good idea can help shape the future features and direction of the language. To reach the best possible solution to a problem, we discuss and iterate on ideas in a public forum.
-
-<div class="links links-list-nostyle" markdown="1">
-  - [The Swift Evolution Process](/contributing/#swift-evolution)
-</div>
-
-### Code
-
-Swift welcomes developers from all walks of life, with different backgrounds, and with a wide range of experience. A diverse community has more great ideas, more unique perspectives, and produces more great code.
-
-<div class="links links-list-nostyle" markdown="1">
-  - [Learn more](/contributing/#contributing-code)
-</div>
-
-### Troubleshoot
-
-Reporting issues is a great way for anyone to help improve Swift. Nearly as important is triaging those issues to ensure that they are reproducible, small, and unique.
-
-<div class="links links-list-nostyle" markdown="1">
-  - [Learn more](/contributing/#triaging-bugs)
-</div>
+<ul class="getting-involved">
+  <li>
+    <h3>Design</h3>
+    <p>
+      Help shape the future of Swift by participating in <em>the Swift evolution process</em>.
+    </p>
+    <a href="/contributing/#swift-evolution" class="cta-secondary">Learn More</a>
+  </li>
+  <li>
+    <h3>Code</h3>
+    <p>
+      Contribute to the Swift compiler, standard library, and other core components of the project.
+    </p>
+    <a href="/contributing/#contributing-code" class="cta-secondary">Learn more</a>
+  </li>
+  <li>
+    <h3>Troubleshoot</h3>
+    <p>
+      Help improve the quality of Swift by reporting and triaging bugs.
+    </p>
+    <a href="/contributing/#triaging-bugs" class="cta-secondary">Learn more</a>
+  </li>
+</ul>
 
 ## What's new
 
