@@ -335,3 +335,15 @@ amartini:
   email: amartini@apple.com
   github: amartini51
   about: "Alex Martini is a member of the Developer Publications team at Apple."
+
+daveverwer:
+  name: Dave Verwer
+  gravatar: 8a70777dc92ec5cacc67ae417edc4be9
+  github: daveverwer
+  about: "Dave Verwer is the author of iOS Dev Weekly and co-founder of the Swift Package Index."
+
+svenaschmidt:
+  name: Sven A. Schmidt
+  gravatar: 291bc7d4b4d1aa0624248398074f5b24
+  github: finestructure
+  about: "Sven A. Schmidt is an independent software developer and the co-creator of the Swift Package Index."
