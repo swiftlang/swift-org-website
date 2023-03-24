@@ -8,9 +8,9 @@ author: [daveverwer, svenaschmidt]
 
 Building a thriving open source ecosystem is important to Swift’s success, and open source packages are the building blocks that help power countless Swift projects. As the number of packages increases, discovery becomes critical for developers needing to find the tools and libraries that help them build their apps and services.
 
-Over the last three years, the [Swift Package Index](https://swiftpackageindex.com) has served as the community’s package directory, and has become the go-to site for searching and discovering libraries and tools to help them with their work.
+Over the last three years, the [Swift Package Index](https://swiftpackageindex.com) has become a popular destination for searching and discovering packages to help developers with their work.
 
-Recognizing the valuable resource Swift Package Index provides to the community, the service has received sponsorship from various sources ranging from individuals to companies. Today, Apple joins that list of sponsors.
+Recognizing the valuable resource the Swift Package Index provides to the community, the service is now sponsored by Apple.
 
 The post below is a Developer Spotlight from Swift Package Index creators [Dave Verwer](https://daveverwer.com) and [Sven A. Schmidt](https://mastodon.social/@finestructure) about their journey building the index into what it is today.
 
