@@ -376,7 +376,7 @@ article {
     header {
         width: 100%;
         display: inline-block;
-        padding-bottom: 2.5em;
+        padding-bottom: 1.5em;
 
         h1 {
             padding-bottom: 0.125em;
@@ -414,13 +414,13 @@ article {
         }
 
         time {
-            float: left;
+            display: block;
             text-transform: uppercase;
             font-size: 14px;
             font-weight: 400;
             color: var(--color-figure-gray-tertiary);
             margin-right: 3em;
-            margin-bottom: 1em;
+            margin-bottom: 2em;
         }
 
         .tags {
