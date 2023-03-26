@@ -43,6 +43,6 @@ the LLDB coding conventions.
 
 [llvm-project]: https://github.com/apple/llvm-project
 [LLVM]: http://llvm.org
-[llvm-bugs]: https://bugs.llvm.org/ "LLVM Bug Tracker"
+[llvm-bugs]: https://github.com/llvm/llvm-project/issues "LLVM Bug Tracker"
 [Clang]: http://clang.llvm.org
 [LLDB]: http://lldb.llvm.org
