@@ -29,6 +29,10 @@ ul.package-list {
 
     .stars > picture {
       display: inline-block;
+
+      > img {
+        width: inherit;
+      }
     }
   }
 }
