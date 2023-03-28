@@ -74,7 +74,7 @@ No matter how you want to get involved, we ask that you first learn what’s exp
     <p>
       Help shape the future of Swift by participating in <em>the Swift evolution process</em>.
     </p>
-    <a href="/contributing/#swift-evolution" class="cta-secondary">Learn More</a>
+    <a href="/contributing/#swift-evolution" class="cta-secondary">Learn more</a>
   </li>
   <li>
     <h3>Code</h3>
