@@ -349,6 +349,7 @@ function renderProposals() {
       if (state === '.implemented') detailNodes.push(renderVersion(proposal.status.version))
       if (state === '.previewing') detailNodes.push(renderPreview())
       if (proposal.implementation) detailNodes.push(renderImplementation(proposal.implementation))
+      if (proposal.featureIdentifier) detailNodes.push(renderFeatureIdentifier(proposal.featureIdentifier))
       if (state === '.acceptedWithRevisions') detailNodes.push(renderStatus(proposal.status))
 
       if (state === '.activeReview' || state === '.scheduledForReview') {
@@ -444,6 +445,18 @@ function renderImplementation(implementations) {
     html('div', { className: 'implementation-list proposal-detail-value' },
       implNodes
     )
+  ])
+}
+
+/** For proposals that contain a Feature Identifier */
+function renderFeatureIdentifier(featureIdentifier) {
+  return html('div', { className: 'proposal-detail' }, [
+    html('div', { className: 'proposal-detail-label' }, [
+      'Feature Identifier: '
+    ]),
+    html('div', { className: 'proposal-detail-value' }, [
+      featureIdentifier
+    ])
   ])
 }
 
@@ -718,7 +731,8 @@ function _searchProposals(filterText) {
       ['trackingBugs', 'link'],
       ['trackingBugs', 'status'],
       ['trackingBugs', 'id'],
-      ['trackingBugs', 'assignee']
+      ['trackingBugs', 'assignee'],
+      ['featureIdentifier']
   ]
 
   // reflect over the proposals and find ones with matching properties
