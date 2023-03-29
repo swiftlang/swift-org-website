@@ -23,18 +23,6 @@ title: Download Swift
 {% assign ubi9_development_builds = site.data.builds.development.ubi9 | sort: 'date' | reverse %}
 {% assign ubi9_aarch64_development_builds = site.data.builds.development.ubi9-aarch64 | sort: 'date' | reverse %}
 
-
-{% assign xcode_5_7_builds = site.data.builds.swift-5_7-branch.xcode | sort: 'date' | reverse %}
-{% assign ubuntu1804_5_7_builds = site.data.builds.swift-5_7-branch.ubuntu1804 | sort: 'date' | reverse %}
-{% assign ubuntu2004_5_7_builds = site.data.builds.swift-5_7-branch.ubuntu2004 | sort: 'date' | reverse %}
-{% assign ubuntu2004_aarch64_5_7_builds = site.data.builds.swift-5_7-branch.ubuntu2004-aarch64 | sort: 'date' | reverse %}
-{% assign ubuntu2204_5_7_builds = site.data.builds.swift-5_7-branch.ubuntu2204 | sort: 'date' | reverse %}
-{% assign ubuntu2204_aarch64_5_7_builds = site.data.builds.swift-5_7-branch.ubuntu2204-aarch64 | sort: 'date' | reverse %}
-{% assign amazonlinux2_5_7_builds = site.data.builds.swift-5_7-branch.amazonlinux2 | sort: 'date' | reverse %}
-{% assign amazonlinux2_aarch64_5_7_builds = site.data.builds.swift-5_7-branch.amazonlinux2-aarch64 | sort: 'date' | reverse %}
-{% assign centos7_5_7_builds = site.data.builds.swift-5_7-branch.centos7 | sort: 'date' | reverse %}
-{% assign windows10_5_7_builds = site.data.builds.swift-5_7-branch.windows10 | sort: 'date' | reverse %}
-
 {% assign xcode_5_8_builds = site.data.builds.swift-5_8-branch.xcode | sort: 'date' | reverse %}
 {% assign ubuntu1804_5_8_builds = site.data.builds.swift-5_8-branch.ubuntu1804 | sort: 'date' | reverse %}
 {% assign ubuntu2004_5_8_builds = site.data.builds.swift-5_8-branch.ubuntu2004 | sort: 'date' | reverse %}
@@ -530,42 +518,6 @@ but they have not gone through the full testing that is performed for official r
 <details class="download">
   <summary>Older Snapshots</summary>
   {% include_relative _older-5_8-snapshots.md %}
-</details>
-
-
-### Swift 5.7 Development
-
-Swift 5.7 Snapshots are prebuilt binaries
-that are automatically created from `release/5.7` branch.
-These snapshots are not official releases.
-They have gone through automated unit testing,
-but they have not gone through the full testing that is performed for official releases.
-
-<table id="latest-builds" class="downloads">
-    <thead>
-        <tr>
-            <th class="download">Download</th>
-            <th class="date">Date</th>
-            <th class="arch-tag">Architecture</th>
-            <th class="docker-tag">Docker Tag</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% include_relative _build-arch.html platform="Apple Platforms" build=xcode_5_7_builds.first name="Xcode" platform_dir="xcode" branch_dir="swift-5.7-branch" arch="Universal" %}
-        {% include_relative _build-arch.html platform="Linux" build=ubuntu1804_5_7_builds.first name="Ubuntu 18.04" docker_tag="nightly-5.7-bionic" platform_dir="ubuntu1804" branch_dir="swift-5.7-branch" arch="x86_64" %}
-        {% include_relative _build-arch.html platform="Linux" build=ubuntu2004_5_7_builds.first build_2=ubuntu2004_aarch64_5_7_builds.first name="Ubuntu 20.04" docker_tag="nightly-5.7-focal" platform_dir="ubuntu2004" platform_dir_2="ubuntu2004-aarch64" branch_dir="swift-5.7-branch" arch="x86_64" arch_2="aarch64" %}
-        {% include_relative _build-arch.html platform="Linux" build=ubuntu2204_5_7_builds.first build_2=ubuntu2204_aarch64_5_7_builds.first name="Ubuntu 22.04" docker_tag="nightly-5.7-jammy" platform_dir="ubuntu2204" platform_dir_2="ubuntu2204-aarch64" branch_dir="swift-5.7-branch" arch="x86_64" arch_2="aarch64" %}
-        {% include_relative _build-arch.html platform="Linux" build=centos7_5_7_builds.first name="CentOS 7" docker_tag="nightly-5.7-centos7" platform_dir="centos7" branch_dir="swift-5.7-branch" arch="x86_64" %}
-        {% include_relative _build-arch.html platform="Linux" build=amazonlinux2_5_7_builds.first build_2=amazonlinux2_aarch64_5_7_builds.first name="Amazon Linux 2" docker_tag="nightly-5.7-amazonlinux2" platform_dir="amazonlinux2" platform_dir_2="amazonlinux2-aarch64" branch_dir="swift-5.7-branch" arch="x86_64" arch_2="aarch64" %}
-        {% include_relative _build-arch.html platform="windows" build=windows10_5_7_builds.first name="Windows 10" platform_dir="windows10" branch_dir="swift-5.7-branch" arch="x86_64" %}
-    </tbody>
-</table>
-
-<sup>1</sup> Swift Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
-
-<details class="download">
-  <summary>Older Snapshots</summary>
-  {% include_relative _older-5_7-snapshots.md %}
 </details>
 
 
