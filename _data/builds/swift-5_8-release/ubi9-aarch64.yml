@@ -1,0 +1,7 @@
+---
+- name: UBI 9
+  date: 2023-03-30 10:28:49.000000000 -05:00
+  download: swift-5.8-RELEASE-ubi9-aarch64.tar.gz
+  download_signature: swift-5.8-RELEASE-ubi9-aarch64.tar.gz.sig
+  dir: swift-5.8-RELEASE
+  docker: Coming Soon #5.8-rhel-ubi9
