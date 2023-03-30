@@ -3,7 +3,9 @@ layout: page
 title: Debugging Performance Issues
 ---
 
-First of all, it's very important to make sure that you compiled your Swift code in _release mode_. The performance difference between debug and release builds is huge in Swift. You can compile your Swift code in release mode using
+First of all, it's very important to make sure that you compiled your Swift code in _release mode_. The performance difference between debug and release builds is huge in Swift.
+
+You can compile your Swift code in release mode using:
 
     swift build -c release
 

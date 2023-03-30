@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Swift.org website
+excerpt: "Swift.org is the website of the Swift programming language providing newcomers and experienced developers with documentation, announcements, and news about Swift and the Swift community in a safe, friendly environment."
 ---
 
 Swift.org website goals include:

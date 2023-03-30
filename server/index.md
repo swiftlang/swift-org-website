@@ -2,6 +2,7 @@
 redirect_from: "/server-apis/"
 layout: page
 title: Swift on Server
+excerpt: "Swift has unique characteristics that make it specifically suitable for Server applications, including a small memory footprint, fast startup times, and deterministic performance."
 ---
 
 Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.

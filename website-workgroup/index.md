@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Swift.org website workgroup (SWWG)
+excerpt: "The Swift website workgroup is a steering team that helps guide the evolution on the Swift.org website."
 ---
 
 See [website overview](/website) for more information about the Swift.org website goals, content governance and contribution guidelines.

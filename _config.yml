@@ -5,6 +5,8 @@ timezone: America/Lower_Princes
 exclude: ["README.md", "config.ru", "Gemfile", "Gemfile.lock", "Procfile", "vendor"]
 safe: true
 future: true
+excerpt_separator: <!--end excerpt-->
+page_excerpts: true
 
 kramdown:
     syntax_highlighter: rouge

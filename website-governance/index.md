@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Swift.org website governance
+excerpt: "The Swift.org website has group of maintainers which includes a subset of the Swift core team and the Swift website workgroup members. The maintainers are in charge of reviewing and merging pull requests from contributors. The Swift.org website source code consists of several distinct parts. Each one of these areas is governed by a slightly different contribution process that matches their nature."
 ---
 
 See [website overview](/website) for more information about the Swift.org website goals and contribution guidelines.

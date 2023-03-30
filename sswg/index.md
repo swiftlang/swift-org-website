@@ -3,7 +3,7 @@ layout: page
 title: Swift Server Workgroup (SSWG)
 ---
 
-The Swift Server workgroup is a steering team that promotes the use of Swift for developing and deploying server applications. The Swift Server workgroup will:
+The Swift Server workgroup is a steering team that promotes the use of Swift for developing and deploying server applications. <!--end excerpt--> The Swift Server workgroup will:
 
 * Define and prioritize efforts that address the needs of the Swift server community
 * Define and run an incubation process for these efforts to reduce duplication of effort, increase compatibility and promote best practices
