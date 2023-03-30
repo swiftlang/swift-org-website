@@ -347,3 +347,11 @@ svenaschmidt:
   gravatar: 291bc7d4b4d1aa0624248398074f5b24
   github: finestructure
   about: "Sven A. Schmidt is an independent software developer and the co-creator of the Swift Package Index."
+
+alexandersandberg:
+  name: Alexander Sandberg
+  gravatar: 3a1582c3f0a9ef8455b504bb3e1106a7
+  email: hi@alexandersandberg.com
+  github: alexandersandberg
+  twitter: alexandberg
+  about: "Alexander Sandberg is an iOS and macOS developer and a member of the Swift Website Workgroup."
