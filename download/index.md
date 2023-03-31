@@ -433,25 +433,14 @@ Tag: [swift-5.8-RELEASE](https://github.com/apple/swift/releases/tag/swift-5.8-R
         {% include_relative _release_build_arch.html platform="Linux" build=centos7_5_8_release.first platform_dir="centos7" name="CentOS 7" branch_dir="swift-5.8-release" arch="x86_64" %}
         {% include_relative _release_build_arch.html platform="Linux" build=amazonlinux2_5_8_release.first platform_dir="amazonlinux2" name="Amazon Linux 2" branch_dir="swift-5.8-release" arch="x86_64"
         arch_2="aarch64" platform_dir_2="amazonlinux2-aarch64" build_2=amazonlinux2_aarch64_5_8_release.first%}
-        <!-- {% include_relative _release_build_arch.html platform="Windows" build=windows10_5_8_release.first platform_dir="windows10" name="Windows 10" branch_dir="swift-5.8-release" arch="x86_64" %} -->
-        <tr>
-            <td class="download">
-                <span class="release">
-                    Windows 10
-                </span>
-            </td>
-            <td class="toolchain">
-                <span class="download">
-                    Coming Soon<sup> 2</sup>
-                </span>
-            </td>
-            <td class="docker-tag">Unavailable</td>
-        </tr>
+        {% include_relative _release_build_arch.html platform="Linux" build=ubi9_5_8_release.first platform_dir="ubi9" name="Red Hat Universal Base Image 9" branch_dir="swift-5.8-release" arch="x86_64"
+        arch_2="aarch64" platform_dir_2="ubi9-aarch64" build_2=ubi9_aarch64_5_8_release.first%}
+        {% include_relative _release_build_arch.html platform="Windows" build=windows10_5_8_release.first platform_dir="windows10" name="Windows 10" branch_dir="swift-5.8-release" arch="x86_64" %}
     </tbody>
 </table>
 
 <sup>1</sup> Swift 5.8 is available as part of [Xcode 14.3](https://itunes.apple.com/app/xcode/id497799835).<br>
-<sup>2</sup> Download content is being staged and should be available within the next 24 hours.<br><br>
+<sup>2</sup> Swift 5.8 Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
 
 ### RPM
 <div class="warning" markdown="1">
