@@ -4,4 +4,4 @@
   download: swift-5.8-RELEASE-amazonlinux2.tar.gz
   download_signature: swift-5.8-RELEASE-amazonlinux2.tar.gz.sig
   dir: swift-5.8-RELEASE
-  docker: Coming Soon #5.8-amazonlinux2
+  docker: 5.8-amazonlinux2

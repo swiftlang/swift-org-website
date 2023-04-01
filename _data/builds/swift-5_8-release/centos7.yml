@@ -4,4 +4,4 @@
   download: swift-5.8-RELEASE-centos7.tar.gz
   download_signature: swift-5.8-RELEASE-centos7.tar.gz.sig
   dir: swift-5.8-RELEASE
-  docker: Coming Soon #5.8-centos7
+  docker: 5.8-centos7
