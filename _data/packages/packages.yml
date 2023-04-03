@@ -1,84 +1,98 @@
 categories:
-  - name: Newest Packages
-    description: "Freshly created packages from the community."
+  - name: Networking packages
+    description: "Top rated packages from the networking category of [Swift Package Index](https://swiftpackageindex.com)."
     packages:
-      - name: SPIManifest
-        description: "Swift package to read `.spi.yml` files."
-        swift_compatibility: Swift 5.6+
-        stars: "4"
-        url: https://swiftpackageindex.com/SwiftPackageIndex/SPIManifest
-      - name: SemanticVersion
-        description: 'Represent semantic versions like "1.0.0" or "1.2.3-beta1" (SemVer) in Swift.'
-        swift_compatibility: Swift 5.4+
-        stars: "36"
-        url: https://swiftpackageindex.com/SwiftPackageIndex/SemanticVersion
-      - name: SPI-Server
-        description: "The Swift Package Index is the place to find Swift packages!"
-        swift_compatibility: Swift 5.7
-        stars: "399"
-        url: https://swiftpackageindex.com/SwiftPackageIndex/SwiftPackageIndex-Server
-      - name: LeftPad
-        description: "This is not a real Package, it's just for testing package metadata."
-        swift_compatibility: Swift 5.4+
-        stars: "2"
-        url: https://swiftpackageindex.com/daveverwer/LeftPad
-      - name: Arena
-        description: "A command line tool to create Swift Playground projects with SPM package dependencies"
-        swift_compatibility: Swift 5.6+
-        stars: "593"
-        url: https://swiftpackageindex.com/finestructure/Arena
-      - name: Rester
-        description: "A command line tool to test (REST) APIs"
-        swift_compatibility: Swift 5.4+
-        stars: "42"
-        url: https://swiftpackageindex.com/finestructure/Rester
+      - name: "swift-nio"
+        description: "SwiftNIO is an open-source network application framework providing low-level building blocks for building high-performance, maintainable, and scalable protocol servers & clients for rapid development."
+        swift_compatibility: 5.5+
+        platform_compatibility: macOS, Linux
+        stars: "7,297"
+        url: https://swiftpackageindex.com/apple/swift-nio
+      - name: Alamofire
+        description: "Alamofire is a HTTP networking library written in Swift which provides chainable request/response methods, Swift concurrency support, authentication and advanced features such as chainable request/response methods, authentication and response validation."
+        swift_compatibility: 5.5+
+        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+        stars: "39,145"
+        url: https://swiftpackageindex.com/Alamofire/Alamofire
+      - name: "Pulse"
+        description: "Pulse is a powerful logging system for Apple Platforms, enabling users to record and inspect logs and URLSession network requests, view them with PulseUI, and share them using Pulse Pro or Pulse for macOS."
+        swift_compatibility: 5.7+
+        platform_compatibility: iOS, macOS, tvOS, watchOS
+        stars: "5,227"
+        url: https://swiftpackageindex.com/kean/Pulse
+      - name: "Moya"
+        description: "Moya provides compile-time checking for correct API endpoint accesses, lets you define clear usage of different endpoints with associated enum values and treats test stubs as first-class citizens to make unit testing easy."
+        swift_compatibility: 5.5+
+        platform_compatibility: iOS, macOS, tvOS, watchOS
+        stars: "14,490"
+        url: https://swiftpackageindex.com/Moya/Moya
+      - name: "Socket"
+        description: "BlueSocket library allows developers to use Swift to create sockets of different families, types, and protocols for use in a range of projects, with customised configurations, SSL support and various read/write functions."
+        swift_compatibility: 5.5+
+        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+        stars: "1,349"
+        url: https://swiftpackageindex.com/Kitura/BlueSocket
+      - name: "RealHTTP"
+        description: "RealHTTP is a lightweight yet powerful async-based HTTP library made in Swift designed to make an easy-to-use, effortless HTTP client."
+        swift_compatibility: 5.6+
+        platform_compatibility: iOS, macOS, tvOS, watchOS
+        stars: "246"
+        url: https://swiftpackageindex.com/immobiliare/RealHTTP
   - name: Community Showcase
-    description: "Packages voted on by the community. [Learn more](https://swiftpackageindex.com)."
+    description: "Packages voted on by the community and from the [Swift Package Indexing podcast](https://swiftpackageindexing.transistor.fm). [Learn more](https://swiftpackageindex.com)."
     packages:
-      - name: Showcase Package One
-        description: "Sample package description, what does it do?"
-        swift_compatibility: Swift 5.6+
+      - name: "Settings"
+        description: "Settings library offers a settings window to add to macOS apps in minutes with built-in SwiftUI support, allowing users to customize their app to their preferences."
+        swift_compatibility: 5.7+
+        platform_compatibility: macOS
+        stars: "1,249"
+        url: https://swiftpackageindex.com/sindresorhus/Settings
+      - name: "PopupView"
+        description: "Popup View is a SwiftUI library used to show toasts, alerts, and popups with customizable parameters to enable a more dynamic user experience."
+        swift_compatibility: 5.7+
+        platform_compatibility: iOS, macOS
+        stars: "2,112"
+        url: https://swiftpackageindex.com/exyte/PopupView
+      - name: "MenuBuilder"
+        description: "MenuBuilder is a library for creating macOS menus with a SwiftUI-style syntax. It allows developers to quickly and easily create menus with actionable items, separators and submenus, with support for modifiers and conditionals."
+        swift_compatibility: 5.5+
+        platform_compatibility: macOS
+        stars: "30"
+        url: https://swiftpackageindex.com/j-f1/MenuBuilder
+      - name: "ContributorUI"
+        description: "ContributorUI is a library for user interface that displays all developers contributing to a project, allowing for a minimal setup and easy integration into iOS and macOS applications."
+        swift_compatibility: 5.7+
+        platform_compatibility: iOS, macOS
+        stars: "16"
+        url: https://swiftpackageindex.com/dscyrescotti/ContributorUI
+      - name: "GEOSwift"
+        description: "GEOSwift is a type-safe, MIT-licensed Swift interface to the OSGeo's GEOS library routines that enables easily handling a geometric object model (points, linestrings, polygons etc.) and related topological operations (intersections, overlapping etc.)."
+        swift_compatibility: 5.5+
+        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+        stars: "1,380"
+        url: https://swiftpackageindex.com/GEOSwift/GEOSwift
+      - name: "swift-cli-version"
+        description: "swift-cli-version is a swift package that allows you to set the version of a command line tool to the git tag or the git sha, if a tag is not set for the current commit. It provides plugins to use in your project and documentation to explain how to use them."
+        swift_compatibility: 5.7+
+        platform_compatibility: macOS, Linux
         stars: "1"
-        url: https://example.com/example/one
-      - name: Showcase Package Two
-        description: "Sample package description, what does it do?"
-        swift_compatibility: Swift 5.6+
-        stars: "1"
-        url: https://example.com/example/two
-      - name: Showcase Package Three
-        description: "Sample package description, what does it do?"
-        swift_compatibility: Swift 5.6+
-        stars: "1"
-        url: https://example.com/example/three
-      - name: Showcase Package Four
-        description: "Sample package description, what does it do?"
-        swift_compatibility: Swift 5.6+
-        stars: "1"
-        url: https://example.com/example/four
-      - name: Showcase Package Five
-        description: "Sample package description, what does it do?"
-        swift_compatibility: Swift 5.6+
-        stars: "1"
-        url: https://example.com/example/five
-      - name: Showcase Package Six
-        description: "Sample package description, what does it do?"
-        swift_compatibility: Swift 5.6+
-        stars: "1"
-        url: https://example.com/example/six
+        url: https://swiftpackageindex.com/m-housh/swift-cli-version
   - name: Problematic Packages
     description: "Packages that could cause layout issues."
     packages:
-      - name: Problematic One
-        description: "This package has a very long description, which causes it to be problematic for display reasons. It has multiple sentences and really is just far too long. Seriously, stop typing now."
-        swift_compatibility: Swift 5.6+
+      - name: Problematic Package One
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum sem sed libero laoreet, auctor vestibulum nulla dignissim. Nulla et diam fermentum, faucibus tellus at, fermentum metus. Praesent consequat nisi vel eros consectetur, at scelerisque mi cursus. Aliquam blandit, leo nec posuere ultrices, orci ex fringilla velit, sit amet egestas metus sapien et eros. Curabitur ante mauris, aliquet dignissim arcu vitae, finibus rutrum diam. Mauris ornare nisl non sem tempor condimentum. Fusce sagittis tortor est, non accumsan magna mollis vel. Integer luctus lacus ut lorem feugiat blandit. Pellentesque quis eros id mi euismod facilisis non eu risus. Duis eleifend, nulla at pretium viverra, augue quam efficitur eros, sed dignissim neque turpis consectetur risus. Nullam eu aliquet dui, in commodo justo. Maecenas maximus lacus vitae mauris vulputate, vel scelerisque justo efficitur. Quisque fringilla, nulla a tincidunt rhoncus, ipsum magna maximus quam, in blandit dolor diam non ante. Sed euismod nisl nibh, ut aliquam nisi faucibus vel. Nam ipsum turpis, varius at libero vel, hendrerit sagittis lorem. Nullam luctus dolor nec justo suscipit placerat."
+        swift_compatibility: 5.6+
+        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
         stars: "1"
         url: https://example.com/problematic/one
-      - name: Problematic Two
+      - name: Problematic Package Two
         description: "This package has a very large number of stars."
-        swift_compatibility: Swift 5.6+
+        swift_compatibility: 5.6+
+        platform_compatibility: iOS
         stars: "100,000,000,000"
         url: https://example.com/problematic/two
-      - name: Problematic Three
+      - name: Problematic Package Three
         description: "This package has no compatibility information."
         stars: "1"
         url: https://example.com/problematic/three
