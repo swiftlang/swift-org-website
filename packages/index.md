@@ -13,21 +13,26 @@ Swift has a rich ecosystem of open-source packages that you can easily import in
 <ul class="package-list">
   {% for package in category.packages %}
   <li>
+    <h4>{{ package.name }}</h4>
     <section>
-      <h4>{{ package.name }}</h4>
       <div class="description">{{ package.description | markdownify }}</div>
+        <ul class="metadata">
+        <li class="swift_compatibility">
+          <strong>Swift:</strong>
+          {{ package.swift_compatibility }}
+        </li>
+        <li class="platform_compatibility">
+          <strong>Platforms:</strong>
+          {{ package.platform_compatibility }}
+        </li>
+        <li class="stars">
+            <picture>
+            <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
+            <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
+            </picture> {{ package.stars }}
+        </li>
+        </ul>
     </section>
-    <ul class="metadata">
-      <li class="compatibility">
-        {{ package.swift_compatibility }}
-      </li>
-      <li class="stars">
-        <picture>
-          <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
-          <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
-        </picture> {{ package.stars }}
-      </li>
-    </ul>
   </li>
   {% endfor %}
 </ul>
