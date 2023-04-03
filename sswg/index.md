@@ -18,7 +18,7 @@ The current Swift Server workgroup consists of the following people:
 * Franz Busch ([@FranzBusch](https://github.com/FranzBusch), Apple)
 * Gwynne Raskind ([@gwynne](https://github.com/gwynne), Vapor)
 * Jimmy McDermott ([@jdmcd](https://github.com/jdmcd) , Transeo)
-* Kaitlin Mahar ([@kmahar](https://github.com/kmahar), MongoDB)
+* Joannis Orlandos ([@joannis](https://github.com/joannis))
 * Konrad Malawski ([@ktoso](https://github.com/ktoso), Apple)
 * Patrick Freed ([@patrickfreed](https://github.com/patrickfreed), MongoDB)
 * Simon Pilkington ([@tachyonics](https://github.com/tachyonics), Amazon)
