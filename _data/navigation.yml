@@ -35,8 +35,6 @@
     - title: Packages
       url: /packages/
       sections:
-        - title: Package Search
-          name: package-search
         - title: Showcase
           name: showcase
     - title: Platform Support
