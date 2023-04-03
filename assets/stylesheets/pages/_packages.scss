@@ -9,7 +9,15 @@ ul.package-list {
     display: flex;
     flex-direction: column;
 
-    > section {
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    section {
       display: grid;
       grid-template-columns: 3fr 1fr;
       gap: 40px;
@@ -37,6 +45,13 @@ ul.package-list {
             width: inherit;
           }
         }
+      }
+    }
+
+    &:hover {
+      h4 {
+        color: var(--color-link);
+        text-decoration: underline;
       }
     }
   }

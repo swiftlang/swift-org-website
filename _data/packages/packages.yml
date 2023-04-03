@@ -1,6 +1,6 @@
 categories:
   - name: Networking packages
-    description: "Top rated packages from the networking category of [Swift Package Index](https://swiftpackageindex.com)."
+    description: "Top rated packages from the [networking](https://swiftpackageindex.com/keywords/networking) category of [Swift Package Index](https://swiftpackageindex.com)."
     packages:
       - name: "swift-nio"
         description: "SwiftNIO is an open-source network application framework providing low-level building blocks for building high-performance, maintainable, and scalable protocol servers & clients for rapid development."
