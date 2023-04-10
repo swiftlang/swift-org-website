@@ -349,7 +349,7 @@ function renderProposals() {
       if (state === '.implemented') detailNodes.push(renderVersion(proposal.status.version))
       if (state === '.previewing') detailNodes.push(renderPreview())
       if (proposal.implementation) detailNodes.push(renderImplementation(proposal.implementation))
-      if (proposal.featureIdentifier) detailNodes.push(renderFeatureIdentifier(proposal.featureIdentifier))
+      if (proposal.upcomingFeatureFlag) detailNodes.push(renderUpcomingFeatureFlag(proposal.upcomingFeatureFlag))
       if (state === '.acceptedWithRevisions') detailNodes.push(renderStatus(proposal.status))
 
       if (state === '.activeReview' || state === '.scheduledForReview') {
@@ -448,14 +448,14 @@ function renderImplementation(implementations) {
   ])
 }
 
-/** For proposals that contain a Feature Identifier */
-function renderFeatureIdentifier(featureIdentifier) {
+/** For proposals that contain an upcoming feature flag. */
+function renderUpcomingFeatureFlag(upcomingFeatureFlag) {
   return html('div', { className: 'proposal-detail' }, [
     html('div', { className: 'proposal-detail-label' }, [
-      'Feature Identifier: '
+      'Upcoming Feature Flag: '
     ]),
     html('div', { className: 'proposal-detail-value' }, [
-      featureIdentifier
+      upcomingFeatureFlag
     ])
   ])
 }
@@ -732,7 +732,7 @@ function _searchProposals(filterText) {
       ['trackingBugs', 'status'],
       ['trackingBugs', 'id'],
       ['trackingBugs', 'assignee'],
-      ['featureIdentifier']
+      ['upcomingFeatureFlag']
   ]
 
   // reflect over the proposals and find ones with matching properties
