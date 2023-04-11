@@ -87,7 +87,7 @@ Invoke-RestMethod -Url 'get.scoop.sh' | Invoke-Expression
    #### With Winget (Windows Package Manager):
    ~~~ pwsh
    winget install Git.Git
-   winget install Python.Python.3 --version 3.10.2150.0
+   winget install Python.Python.3.10
 
    curl -sOL https://aka.ms/vs/16/release/vs_community.exe
    start /w vs_community.exe --passive --wait --norestart --nocache ^
