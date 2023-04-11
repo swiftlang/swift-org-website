@@ -594,7 +594,7 @@ function addEventListeners() {
     })
   })
 
-  document.querySelector('.filter-button').addEventListener('click', toggleFiltering)
+  document.querySelector('.filter-button').addEventListener('click', toggleStatusFiltering)
 
   var filterToggle = document.querySelector('.filter-toggle')
   filterToggle.querySelector('.toggle-filter-panel').addEventListener('click', toggleFilterPanel)
@@ -643,7 +643,7 @@ function addEventListeners() {
  * Toggles whether filters are active. Rather than being cleared, they are saved to be restored later.
  * Additionally, toggles the presence of the "Filtered by:" status indicator.
  */
-function toggleFiltering() {
+function toggleStatusFiltering() {
   var filterDescription = document.querySelector('.filter-toggle')
   var shouldPreserveSelection = !filterDescription.classList.contains('hidden')
 
@@ -967,7 +967,7 @@ function _applyFragment(fragment) {
   // specifying any filter in the fragment should activate the filters in the UI
   if (actions.version.length || actions.status.length) {
     toggleFilterPanel()
-    toggleFiltering()
+    toggleStatusFiltering()
   }
 
   filterProposals()
