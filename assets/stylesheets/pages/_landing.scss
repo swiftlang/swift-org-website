@@ -29,6 +29,7 @@
 .link-grid {
   ul {
     display: grid;
+    align-items: stretch;
     gap: 1rem;
     padding: 0;
     grid-template-columns: repeat(1, 1fr);
@@ -41,6 +42,7 @@
   li {
     list-style: none;
     padding-left: 0;
+    display: flex;
 
     a {
       border-radius: var(--border-radius);
@@ -49,13 +51,53 @@
       display: block;
       padding: .5rem 0;
       text-align: center;
+      flex-grow: 1;
+
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .latest-release-container {
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
       
       &:hover {
         background-color: var(--color-text);
         color: var(--color-fill);
         text-decoration: none;
+
+        img {
+          filter: invert(1);
+        }
+
+        .latest-release-container {
+          span {
+            border-color: var(--color-fill);
+          }
+        }
+      }
+
+      img {
+        height: 64px;
+        width: 64px;
+        display: block;
+        margin: 0 auto;
       }
     }
+  }
+}
+
+.latest-release-container {
+  span {
+    padding: .2rem .5rem;
+    border: 2px solid var(--color-text);
+    font-weight: bold;
+    border-radius: 4px;
   }
 }
 

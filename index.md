@@ -9,16 +9,41 @@ atom: true
 Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
 
 <div class="link-grid" markdown="1">
-  - [Latest release: 5.7](/blog/swift-5.7-released)
-  - [Get started](/getting-started)
-  - [Read the docs](/documentation)
+  <ul>
+    <li>
+      <a href="/blog/swift-5.7-released">
+        <div class="flex-container">
+          <div class="latest-release-container">
+          <span>
+            5.7
+          </span>
+          </div>
+          Latest release
+        </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="/getting-started">
+        <img src="/assets/images/landing-page/hiker.svg" />
+        Get started
+      </a>
+    </li>
+
+    <li>  
+      <a href="/documentation">
+        <img src="/assets/images/landing-page/book.svg" />
+        Read the docs
+      </a>
+    </li>
+  </ul>
 </div>
 
-## Why Swift?
+## why swift?
 
 <ul class="why-swift-list">
   <li>
-    <h3>Safe</h3>
+    <h3>safe</h3>
     <p>
       Swift prioritizes safety and clarity, ensuring that code behaves in a safe manner while also promoting clear and concise programming practices.
     </p>
