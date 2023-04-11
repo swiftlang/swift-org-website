@@ -442,15 +442,15 @@ Tag: [swift-5.8-RELEASE](https://github.com/apple/swift/releases/tag/swift-5.8-R
 <sup>1</sup> Swift 5.8 is available as part of [Xcode 14.3](https://itunes.apple.com/app/xcode/id497799835).<br>
 <sup>2</sup> Swift 5.8 Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
 
-### RPM
+#### RPM
 <div class="warning" markdown="1">
-Swift 5.8 RPMs for Amazon Linux 2 and CentOS 7 for **experimental use only**. Please provide your [feedback](https://github.com/apple/swift/issues).
+Swift 5.8 RPMs for Amazon Linux 2 and CentOS 7 are for **experimental use only**. Please provide your [feedback](https://github.com/apple/swift/issues).
 </div>
 
 
 Use the instructions below for RPM installation:
 
-**Amazon Linux 2**
+##### Amazon Linux 2
 
 ```bash
 $ curl https://download.swift.org/experimental-use-only/repo/amazonlinux/releases/2/swiftlang.repo > /etc/yum.repos.d/swiftlang.repo
@@ -458,7 +458,7 @@ $ amazon-linux-extras install epel
 $ yum install swiftlang
 ```
 
-**CentOS 7**
+##### CentOS 7
 
 ```bash
 $ curl https://download.swift.org/experimental-use-only/repo/centos/releases/7/swiftlang.repo > /etc/yum.repos.d/swiftlang.repo
