@@ -38,6 +38,18 @@ var languageVersions = [
   'Next'
 ]
 
+/** 
+ * Mapping of proposal ids to upcoming feature flags. 
+ * Temporary until upcomingFeatureFlag property is returned in proposals.json. 
+ */
+const upcomingFeatureFlags = new Map([
+  ['SE-0274', 'ConciseMagicFile'],
+  ['SE-0286', 'ForwardTrailingClosures'],
+  ['SE-0335', 'ExistentialAny'],
+  ['SE-0354', 'BareSlashRegexLiterals'],
+  ['SE-0384', 'ImportObjcForwardDeclarations']
+])
+
 /** Storage for the user's current selection of filters when filtering is toggled off. */
 var filterSelection = []
 
@@ -137,6 +149,14 @@ function init() {
     proposals = proposals.filter(function (proposal) {
       return !proposal.errors
     })
+    
+    // Add upcomingFeatureFlag to proposal if present in mapping.
+    // Temporary until upcomingFeatureFlag property is returned in proposals.json. 
+    for (var proposal of proposals) {
+      if (upcomingFeatureFlags.has(proposal.id)) {
+        proposal.upcomingFeatureFlag = upcomingFeatureFlags.get(proposal.id)
+      }
+    }
 
     // descending numeric sort based the numeric nnnn in a proposal ID's SE-nnnn
     proposals.sort(function compareProposalIDs (p1, p2) {
