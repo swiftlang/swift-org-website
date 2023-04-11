@@ -38,6 +38,18 @@ var languageVersions = [
   'Next'
 ]
 
+/** 
+ * Mapping of proposal ids to upcoming feature flags. 
+ * Temporary until upcomingFeatureFlag property is returned in proposals.json. 
+ */
+const upcomingFeatureFlags = new Map([
+  ['SE-0274', 'ConciseMagicFile'],
+  ['SE-0286', 'ForwardTrailingClosures'],
+  ['SE-0335', 'ExistentialAny'],
+  ['SE-0354', 'BareSlashRegexLiterals'],
+  ['SE-0384', 'ImportObjcForwardDeclarations']
+])
+
 /** Storage for the user's current selection of filters when filtering is toggled off. */
 var filterSelection = []
 
@@ -137,6 +149,14 @@ function init() {
     proposals = proposals.filter(function (proposal) {
       return !proposal.errors
     })
+    
+    // Add upcomingFeatureFlag to proposal if present in mapping.
+    // Temporary until upcomingFeatureFlag property is returned in proposals.json. 
+    for (var proposal of proposals) {
+      if (upcomingFeatureFlags.has(proposal.id)) {
+        proposal.upcomingFeatureFlag = upcomingFeatureFlags.get(proposal.id)
+      }
+    }
 
     // descending numeric sort based the numeric nnnn in a proposal ID's SE-nnnn
     proposals.sort(function compareProposalIDs (p1, p2) {
@@ -349,6 +369,7 @@ function renderProposals() {
       if (state === '.implemented') detailNodes.push(renderVersion(proposal.status.version))
       if (state === '.previewing') detailNodes.push(renderPreview())
       if (proposal.implementation) detailNodes.push(renderImplementation(proposal.implementation))
+      if (proposal.upcomingFeatureFlag) detailNodes.push(renderUpcomingFeatureFlag(proposal.upcomingFeatureFlag))
       if (state === '.acceptedWithRevisions') detailNodes.push(renderStatus(proposal.status))
 
       if (state === '.activeReview' || state === '.scheduledForReview') {
@@ -444,6 +465,18 @@ function renderImplementation(implementations) {
     html('div', { className: 'implementation-list proposal-detail-value' },
       implNodes
     )
+  ])
+}
+
+/** For proposals that contain an upcoming feature flag. */
+function renderUpcomingFeatureFlag(upcomingFeatureFlag) {
+  return html('div', { className: 'proposal-detail' }, [
+    html('div', { className: 'proposal-detail-label' }, [
+      'Upcoming Feature Flag: '
+    ]),
+    html('div', { className: 'proposal-detail-value' }, [
+      upcomingFeatureFlag
+    ])
   ])
 }
 
@@ -718,7 +751,8 @@ function _searchProposals(filterText) {
       ['trackingBugs', 'link'],
       ['trackingBugs', 'status'],
       ['trackingBugs', 'id'],
-      ['trackingBugs', 'assignee']
+      ['trackingBugs', 'assignee'],
+      ['upcomingFeatureFlag']
   ]
 
   // reflect over the proposals and find ones with matching properties
