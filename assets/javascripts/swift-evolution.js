@@ -53,8 +53,11 @@ const upcomingFeatureFlags = new Map([
 /** Storage for the user's current selection of filters when filtering is toggled off. */
 var filterSelection = []
 
+var upcomingFeatureFlagFilterEnabled = false
+
 var GITHUB_BASE_URL = 'https://github.com/'
 var REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
+var UFF_INFO_URL = 'https://github.com/apple/swift-evolution/blob/main/proposals/0362-piecemeal-future-features.md'
 
 /**
  * `name`: Mapping of the states in the proposals JSON to human-readable names.
@@ -594,10 +597,12 @@ function addEventListeners() {
     })
   })
 
-  document.querySelector('.filter-button').addEventListener('click', toggleStatusFiltering)
+  document.querySelector('#status-filter-button').addEventListener('click', toggleStatusFiltering)
 
   var filterToggle = document.querySelector('.filter-toggle')
   filterToggle.querySelector('.toggle-filter-panel').addEventListener('click', toggleFilterPanel)
+  
+  document.querySelector('#flag-filter-button').addEventListener('click', toggleFlagFiltering)
 
   // Behavior conditional on certain browser features
   var CSS = window.CSS
@@ -649,7 +654,7 @@ function toggleStatusFiltering() {
 
   filterDescription.classList.toggle('hidden')
   var selected = document.querySelectorAll('.filter-list input[type=checkbox]:checked')
-  var filterButton = document.querySelector('.filter-button')
+  var filterButton = document.querySelector('#status-filter-button')
 
   if (shouldPreserveSelection) {
     filterSelection = [].map.call(selected, function (checkbox) { return checkbox.id })
@@ -689,6 +694,17 @@ function toggleFilterPanel() {
   }
 }
 
+function toggleFlagFiltering() {
+  console.log("toggleFlagFiltering()")
+  var filterButton = document.querySelector('#flag-filter-button')
+  var newValue = !filterButton.classList.contains('active')
+  filterButton.setAttribute('aria-pressed', newValue ? 'true' : 'false')
+  filterButton.classList.toggle('active')
+  upcomingFeatureFlagFilterEnabled = newValue
+  
+  filterProposals()
+}
+
 /**
  * Applies both the status-based and text-input based filters to the proposals list.
  */
@@ -717,11 +733,13 @@ function filterProposals() {
   var intersection = matchingSets.reduce(function (intersection, candidates) {
     return intersection.filter(function (alreadyIncluded) { return candidates.indexOf(alreadyIncluded) !== -1 })
   }, matchingSets[0] || [])
+  
+  var matchingProposals = _filteredUpcomingFeatureFlag(intersection)
 
-  _applyFilter(intersection)
+  _applyFilter(matchingProposals)
   _updateURIFragment()
 
-  determineNumberOfProposals(intersection)
+  determineNumberOfProposals(matchingProposals)
   updateFilterStatus()
 }
 
@@ -788,6 +806,17 @@ function _searchProposals(filterText) {
   })
 
   return matchingProposals
+}
+
+function _filteredUpcomingFeatureFlag(proposals) {
+  if (upcomingFeatureFlagFilterEnabled) {
+    var matchingProposals = proposals.filter(function (proposal) {
+      return proposal.upcomingFeatureFlag ? true : false
+    })
+    return matchingProposals
+  } else {
+    return proposals
+  }
 }
 
 /**
@@ -1079,10 +1108,21 @@ function updateFilterDescription(selectedStateNames) {
   }
 }
 
-/** Updates the `${n} Proposals` display just above the proposals list. */
+/** 
+ * Updates the `${n} Proposals` display just above the proposals list.
+ * Indicates when proposals with upcoming feature flags are shown including link
+ * to explanation of what upcoming feature flags are.
+ */
 function updateProposalsCount (count) {
   var numberField = document.querySelector('#proposals-count-number')
-  numberField.innerText = (count.toString() + ' proposal' + (count !== 1 ? 's' : ''))
+  var baseString = (count.toString() + ' proposal' + (count !== 1 ? 's' : ''))
+  if (upcomingFeatureFlagFilterEnabled) {
+    var anchorTag = '<a href="' + UFF_INFO_URL + '" target="_blank">'
+    var uffText = 'upcoming feature flag' + (count !== 1 ? 's' : '')
+    numberField.innerHTML = baseString + " with "+ (count !== 1 ? '' : 'an ') + anchorTag + uffText + '</a>'
+  } else {
+    numberField.innerHTML = baseString
+  }
 }
 
 function updateFilterStatus () {
