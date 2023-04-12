@@ -1087,6 +1087,15 @@ function updateFilterDescription(selectedStateNames) {
   if (window.matchMedia('(max-width: 414px)').matches) {
     FILTER_DESCRIPTION_LIMIT = 1
   }
+  
+  // On very narrow screens, shorten long status names
+  if (window.matchMedia('(max-width: 360px)').matches) {
+    selectedStateNames.forEach((name, index) => {
+      var newName = name.replace('Scheduled for Review', 'Scheduled')
+      newName = newName.replace('Returned for Revision', 'Returned')
+      selectedStateNames[index] = newName
+    })
+  }
 
   var container = document.querySelector('.toggle-filter-panel')
 
