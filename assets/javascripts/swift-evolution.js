@@ -695,7 +695,6 @@ function toggleFilterPanel() {
 }
 
 function toggleFlagFiltering() {
-  console.log("toggleFlagFiltering()")
   var filterButton = document.querySelector('#flag-filter-button')
   var newValue = !filterButton.classList.contains('active')
   filterButton.setAttribute('aria-pressed', newValue ? 'true' : 'false')
