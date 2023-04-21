@@ -902,7 +902,7 @@ function _applyFragment(fragment) {
   fragment = fragment.substring(2) // remove the #?
 
   // Use this literal's keys as the source of truth for key-value pairs in the fragment
-  var actions = { proposal: [], search: null, status: [], version: [] }
+  var actions = { proposal: [], search: null, status: [], version: [], flags: false }
 
   // Parse the fragment as a query string
   Object.keys(actions).forEach(function (action) {
@@ -913,6 +913,8 @@ function _applyFragment(fragment) {
       var value = values[1] // 1st capture group from the RegExp
       if (action === 'search') {
         value = decodeURIComponent(value)
+      } else if (action === 'flags') {
+        value = value === 'true'
       } else {
         value = value.split(',')
       }
@@ -997,6 +999,11 @@ function _applyFragment(fragment) {
     toggleFilterPanel()
     toggleStatusFiltering()
   }
+  
+  // Toggle upcoming feature flag filter if needed
+  if (actions.flags && !upcomingFeatureFlagFilterEnabled) {
+    toggleFlagFiltering()
+  }
 
   filterProposals()
 }
@@ -1049,6 +1056,7 @@ function _updateURIFragment() {
   if (actions.proposal.length) fragments.push('proposal=' + actions.proposal.join(','))
   if (actions.status.length) fragments.push('status=' + actions.status.join(','))
   if (actions.version.length) fragments.push('version=' + actions.version.join(','))
+  if (upcomingFeatureFlagFilterEnabled) fragments.push('flags=true')
 
   // encoding the search lets you search for `??` and other edge cases.
   if (actions.search) fragments.push('search=' + encodeURIComponent(actions.search))
