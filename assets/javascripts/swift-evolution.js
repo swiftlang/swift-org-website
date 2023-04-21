@@ -729,13 +729,13 @@ function filterProposals() {
       .map(function (part) { return _searchProposals(part) })
   }
 
-  var intersection = matchingSets.reduce(function (intersection, candidates) {
+  var matchingProposals = matchingSets.reduce(function (intersection, candidates) {
     return intersection.filter(function (alreadyIncluded) { return candidates.indexOf(alreadyIncluded) !== -1 })
   }, matchingSets[0] || [])
   
-  var matchingProposals = _filteredUpcomingFeatureFlag(intersection)
-
-  _applyFilter(matchingProposals)
+  matchingProposals = _applyFlagFilter(matchingProposals)
+  matchingProposals = _applyStatusFilter(matchingProposals)
+  _setProposalVisibility(matchingProposals)
   _updateURIFragment()
 
   determineNumberOfProposals(matchingProposals)
@@ -807,24 +807,28 @@ function _searchProposals(filterText) {
   return matchingProposals
 }
 
-function _filteredUpcomingFeatureFlag(proposals) {
+/**
+ * Helper for `filterProposals` that makes the upcoming feature flag filter take effect.
+ *
+ * @param {Proposal[]} matchingProposals - The proposals that have passed the text filtering phase.
+ * @returns {Proposal[]} The results of applying the upcoming feature flag filter.
+ */
+function _applyFlagFilter(matchingProposals) {
   if (upcomingFeatureFlagFilterEnabled) {
-    var matchingProposals = proposals.filter(function (proposal) {
+    matchingProposals = proposals.filter(function (proposal) {
       return proposal.upcomingFeatureFlag ? true : false
     })
-    return matchingProposals
-  } else {
-    return proposals
   }
+  return matchingProposals
 }
 
 /**
- * Helper for `filterProposals` that actually makes the filter take effect.
+ * Helper for `filterProposals` that makes the status filter take effect.
  *
- * @param {Proposal[]} matchingProposals - The proposals that have passed the text filtering phase.
- * @returns {Void} Toggles `display: hidden` to apply the filter.
+ * @param {Proposal[]} matchingProposals - The proposals that have passed the text and upcoming feature flag filtering phase.
+ * @returns {Proposal[]} The results of applying the status filter.
  */
-function _applyFilter(matchingProposals) {
+function _applyStatusFilter(matchingProposals) {
   // filter out proposals based on the grouping checkboxes
   var allStateCheckboxes = document.querySelectorAll('.filter-list input:checked')
   var selectedStates = [].map.call(allStateCheckboxes, function (checkbox) { return checkbox.value })
@@ -857,7 +861,16 @@ function _applyFilter(matchingProposals) {
         })
     }
   }
+  return matchingProposals
+}
 
+/**
+ * Helper for `filterProposals` that sets the visibility of proposals to display only matching items.
+ *
+ * @param {Proposal[]} matchingProposals - The proposals that have passed all filtering tests.
+ * @returns {Void} Toggles `display: hidden` to apply the filter.
+ */
+function _setProposalVisibility(matchingProposals) {
   var filteredProposals = proposals.filter(function (proposal) {
     return matchingProposals.indexOf(proposal) === -1
   })
