@@ -729,16 +729,17 @@ function filterProposals() {
       .map(function (part) { return _searchProposals(part) })
   }
 
-  var matchingProposals = matchingSets.reduce(function (intersection, candidates) {
+  var searchMatches = matchingSets.reduce(function (intersection, candidates) {
     return intersection.filter(function (alreadyIncluded) { return candidates.indexOf(alreadyIncluded) !== -1 })
   }, matchingSets[0] || [])
   
-  matchingProposals = _applyFlagFilter(matchingProposals)
-  matchingProposals = _applyStatusFilter(matchingProposals)
-  _setProposalVisibility(matchingProposals)
+  var searchAndFlagMatches = _applyFlagFilter(searchMatches)
+  var fullMatches = _applyStatusFilter(searchAndFlagMatches)
+  _setProposalVisibility(fullMatches)
   _updateURIFragment()
 
-  determineNumberOfProposals(matchingProposals)
+ // The per-status counts take only search string and flag filter matches into account
+  determineNumberOfProposals(searchAndFlagMatches)
   updateFilterStatus()
 }
 
