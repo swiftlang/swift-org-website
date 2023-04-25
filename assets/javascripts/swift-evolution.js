@@ -816,7 +816,7 @@ function _searchProposals(filterText) {
  */
 function _applyFlagFilter(matchingProposals) {
   if (upcomingFeatureFlagFilterEnabled) {
-    matchingProposals = proposals.filter(function (proposal) {
+    matchingProposals = matchingProposals.filter(function (proposal) {
       return proposal.upcomingFeatureFlag ? true : false
     })
   }
