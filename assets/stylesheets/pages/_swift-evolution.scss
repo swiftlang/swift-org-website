@@ -75,6 +75,10 @@
             .icon-line {
                 stroke: white;
             }
+            
+            .icon-flag {
+                fill: white;
+            }
 
             .icon-circle {
                 fill: var(--color-evolution-secondary-fill);
@@ -285,12 +289,6 @@
             margin-top: 1rem;
             width: 100%;
             justify-content: end;
-        }
-    }
-
-    @media (max-width: 414px) {
-        .filter-button {
-            order: 0;
         }
     }
 
