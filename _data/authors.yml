@@ -258,7 +258,7 @@ parkera:
    name: Tony Parker
    email: anthony.parker@apple.com
    github: parkera
-   about: "Tony Parker manages teams at Apple working on Foundation and Swift packages."
+   about: "Tony Parker manages teams at Apple working on Foundation, Swift packages, and the Swift Standard Library."
 
 diversity-workgroup:
    name: The Diversity in Swift workgroup
