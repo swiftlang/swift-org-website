@@ -75,7 +75,7 @@ Swift is a general-purpose programming language built using a modern approach to
       Swift is a powerful and intuitive programming language on macOS, iOS, watchOS, tvOS and beyond. Swift code is safe by design, yet also produces software that is optimized to run lightning-fast.
     </p>
 
-    <a href="" class="cta-secondary">[TODO] Learn more</a>
+    <a href="https://developer.apple.com/swift/resources/" class="cta-secondary">Learn more</a>
   </li>
   <li>
     <h3>Server</h3>
