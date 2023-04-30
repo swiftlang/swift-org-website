@@ -1,3 +1,8 @@
+- date: 2023-04-29 10:10:00-06:00
+  dir: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-04-29-a
+  download: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-04-29-a-amazonlinux2.tar.gz
+  download_signature: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-04-29-a-amazonlinux2.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2023-04-28 10:10:00-06:00
   dir: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-04-28-a
   download: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-04-28-a-amazonlinux2.tar.gz
