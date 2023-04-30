@@ -86,6 +86,7 @@ var states = {
   '.activeReview': {
     name: 'Active Review',
     shortName: 'Active Review',
+    statusPrefix: 'In ',
     className: 'active-review',
     count: 0
   },
@@ -599,8 +600,7 @@ function addEventListeners() {
 
   document.querySelector('#status-filter-button').addEventListener('click', toggleStatusFiltering)
 
-  var filterToggle = document.querySelector('.filter-toggle')
-  filterToggle.querySelector('.toggle-filter-panel').addEventListener('click', toggleFilterPanel)
+  document.querySelector('.filter-panel-toggle').addEventListener('click', toggleFilterPanel)
   
   document.querySelector('#flag-filter-button').addEventListener('click', toggleFlagFiltering)
 
@@ -645,14 +645,19 @@ function addEventListeners() {
 }
 
 /**
- * Toggles whether filters are active. Rather than being cleared, they are saved to be restored later.
- * Additionally, toggles the presence of the "Filtered by:" status indicator.
+ * Toggles whether status+version filters are active.
+ * Rather than being cleared, selected filters are saved to be restored later.
+ * Additionally, toggles the appearance of the "Show/Hide Filters" filter toggle link and the
+ * status description subheading.
  */
 function toggleStatusFiltering() {
-  var filterDescription = document.querySelector('.filter-toggle')
-  var shouldPreserveSelection = !filterDescription.classList.contains('hidden')
+  var statusStringHeader = document.querySelector('#status-filter-subhead')
+  statusStringHeader.classList.toggle('hidden')
 
-  filterDescription.classList.toggle('hidden')
+  var filterPanelToggle = document.querySelector('.filter-panel-toggle')
+  var shouldPreserveSelection = !filterPanelToggle.classList.contains('hidden')
+
+  filterPanelToggle.classList.toggle('hidden')
   var selected = document.querySelectorAll('.filter-list input[type=checkbox]:checked')
   var filterButton = document.querySelector('#status-filter-button')
 
@@ -683,7 +688,7 @@ function toggleStatusFiltering() {
  */
 function toggleFilterPanel() {
   var panel = document.querySelector('.expandable')
-  var button = document.querySelector('.toggle-filter-panel')
+  var button = document.querySelector('.filter-panel-toggle')
 
   panel.classList.toggle('expanded')
 
@@ -830,13 +835,24 @@ function _applyFlagFilter(matchingProposals) {
  * @returns {Proposal[]} The results of applying the status filter.
  */
 function _applyStatusFilter(matchingProposals) {
-  // filter out proposals based on the grouping checkboxes
-  var allStateCheckboxes = document.querySelectorAll('.filter-list input:checked')
-  var selectedStates = [].map.call(allStateCheckboxes, function (checkbox) { return checkbox.value })
+  // get all checked state checkboxes, both status and version as an array
+  var allCheckedStateCheckboxes = Array.from(document.querySelectorAll('.filter-list input:checked'))
+  
+  // get checkbox values for all checked state checkboxes, both status and version
+  var selectedStates = allCheckedStateCheckboxes.map(function (checkbox) { return checkbox.value })
 
-  var selectedStateNames = [].map.call(allStateCheckboxes, function (checkbox) { return checkbox.nextElementSibling.innerText.trim() })
-  updateFilterDescription(selectedStateNames)
+  updateStatusFilterToggleText(selectedStates.length)
 
+  // get array of keys for only selected *statuses* to update the status filter subheading
+  var selectedStatusNames = allCheckedStateCheckboxes.reduce( function(array, checkbox) {
+    let value = checkbox.nextElementSibling.getAttribute("data-state-key")
+    if (value) { array.push(value) }
+    return array
+  }, [])
+
+  updateStatusFilterSubheading(selectedStatusNames)
+
+  // Use all selected states, status and version to filter out proposals based on the grouping checkboxes
   if (selectedStates.length) {
     matchingProposals = matchingProposals
       .filter(function (proposal) {
@@ -1092,49 +1108,32 @@ function _idSafeName (name) {
 }
 
 /**
- * Changes the text after 'Filtered by: ' to reflect the current status filters.
- *
- * After FILTER_DESCRIPTION_LIMIT filters are explicitly named, start combining the descriptive text
- * to just state the number of status filters taking effect, not what they are.
- *
- * @param {string[]} selectedStateNames - CSS class names corresponding to which statuses were selected.
- * Populated from the global `stateNames` array.
- */
-function updateFilterDescription(selectedStateNames) {
-  var FILTER_DESCRIPTION_LIMIT = 2
-  var stateCount = selectedStateNames.length
+  * Updates the status filter subheading
+  *
+  * @param {string[]} selectedStates - each element is a key in the states objects. For example: '.accepted'.
+  */
+function updateStatusFilterSubheading(selectedStates) {
+  var statusFilterSubheading = document.querySelector('#status-filter-description')
+  statusFilterSubheading.innerText = descriptionForSelectedStatuses(selectedStates)
+}
 
-  // Limit the length of filter text on small screens.
-  if (window.matchMedia('(max-width: 414px)').matches) {
-    FILTER_DESCRIPTION_LIMIT = 1
-  }
-  
-  // On very narrow screens, shorten long status names
-  if (window.matchMedia('(max-width: 360px)').matches) {
-    selectedStateNames.forEach((name, index) => {
-      var newName = name.replace('Scheduled for Review', 'Scheduled')
-      newName = newName.replace('Returned for Revision', 'Returned')
-      selectedStateNames[index] = newName
-    })
-  }
+/**
+* Updates the link text of the status filter panel toggle
+*
+* @param {number} filterCount - The number of selected filters.
+*/
+function updateStatusFilterToggleText(filterCount) {
+  var container = document.querySelector('.filter-panel-toggle')
 
-  var container = document.querySelector('.toggle-filter-panel')
-
-  // modify the state names to clump together Implemented with version names
-  var swiftVersionStates = selectedStateNames.filter(function (state) { return state.match(/swift/i) })
-
-  if (swiftVersionStates.length > 0 && swiftVersionStates.length <= FILTER_DESCRIPTION_LIMIT) {
-    selectedStateNames = selectedStateNames.filter(function (state) { return !state.match(/swift|implemented/i) })
-      .concat('Implemented (' + swiftVersionStates.join(', ') + ')')
-  }
-
-  if (selectedStateNames.length > FILTER_DESCRIPTION_LIMIT) {
-    container.innerText = stateCount + ' Filters'
-  } else if (selectedStateNames.length === 0) {
-    container.innerText = 'All Statuses'
+  if (filterCount === 0) {
+    var panel = document.querySelector('.expandable')
+    if (panel.classList.contains('expanded')) {
+      container.innerText = 'Hide Filters'
+    } else {
+      container.innerText = 'Show Filters'
+    }
   } else {
-    selectedStateNames = selectedStateNames.map(cleanNumberFromState)
-    container.innerText = selectedStateNames.join(' or ')
+    container.innerText = filterCount + ' Filter' + ((filterCount !== 1) ? 's' : '')
   }
 }
 
@@ -1144,14 +1143,19 @@ function updateFilterDescription(selectedStateNames) {
  * to explanation of what upcoming feature flags are.
  */
 function updateProposalsCount (count) {
+  // Calculate and set value of proposal count span
   var numberField = document.querySelector('#proposals-count-number')
   var baseString = (count.toString() + ' proposal' + (count !== 1 ? 's' : ''))
+  numberField.innerHTML = baseString
+
+  // Calculate and set value of flag filter description span
+  var flagFilterDescription = document.querySelector('#flag-filter-description')
   if (upcomingFeatureFlagFilterEnabled) {
     var anchorTag = '<a href="' + UFF_INFO_URL + '" target="_blank">'
     var uffText = 'upcoming feature flag' + (count !== 1 ? 's' : '')
-    numberField.innerHTML = baseString + " with "+ (count !== 1 ? '' : 'an ') + anchorTag + uffText + '</a>'
+    flagFilterDescription.innerHTML = " with "+ (count !== 1 ? '' : 'an ') + anchorTag + uffText + '</a>'
   } else {
-    numberField.innerHTML = baseString
+    flagFilterDescription.innerHTML = ""
   }
 }
 
@@ -1170,4 +1174,52 @@ function cleanNumberFromState (state) {
 
 function addNumberToState (state, count) {
   return state + ' (' + count + ')'
+}
+
+/**
+* Generates the user-presentable description for an array of selected options. 
+* To prevent listing more than five statuses. When more than five statuses are selected
+* the generated string uses the form "All Statuses Except" followed by unselected statuses.
+*
+* @param {string[]} selectedOptions - each element is a key in the states objects. For example: '.accepted'.
+*/
+function descriptionForSelectedStatuses(selectedOptions) {
+  let allStateOptions = [
+      '.awaitingReview', '.scheduledForReview', '.activeReview', '.accepted',
+      '.previewing', '.implemented', '.returnedForRevision', '.rejected', '.withdrawn'
+   ]
+  let selectedCount  = selectedOptions.length
+  let totalCount = allStateOptions.length
+  let ALL_EXCEPT_MAX_COUNT = 3
+  let allExceptThreshold = totalCount - ALL_EXCEPT_MAX_COUNT
+
+  if (selectedCount === 0 || selectedCount === totalCount) {
+    return "All Statuses"
+  } else if (selectedCount >= allExceptThreshold) {
+    let unselectedOptions = allStateOptions.filter(function (option) {
+      return selectedOptions.indexOf(option) === -1
+    })
+    return "All Statuses Except " + listStringForStatuses(unselectedOptions, "and")
+  } else {
+    return listStringForStatuses(selectedOptions, "or")
+  }
+}
+
+/**
+* Generates a user-presentable list of statuses for an array of selected options. 
+* Takes a conjunction string to join the last element for arrays of two or more elements.
+*
+* @param {string[]} options - each element is a key in the states objects. For example: '.accepted'.
+* @param {string} conjunction - Used to join the last element if two or more elements are present.
+*/
+function listStringForStatuses(options, conjunction) {
+  let optionNames = options.map( function (option) {
+    let state = states[option]
+     return (state.statusPrefix ?? '') + state.shortName
+  })
+  if (optionNames.length === 1){
+    return optionNames[0]
+  } else {
+    return optionNames.slice(0, -1).join(", ") + " " + conjunction + " " + optionNames.slice(-1)[0]
+  }
 }

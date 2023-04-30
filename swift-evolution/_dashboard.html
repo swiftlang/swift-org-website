@@ -24,15 +24,18 @@
           </g>
         </svg>
       </span>
-      <span class="filter-toggle hidden">
-        <span class="filter-description">Filtered by:
-            <a role="button" tabindex="0" class="toggle-filter-panel" aria-pressed="false">All Statuses</a>
-        </span>
-      </span>
+      <a role="button" tabindex="0" class="filter-panel-toggle hidden" aria-pressed="false">Show Filters</a>
     </div>
   </div>
   <section class="proposals">
-    <div id="proposals-count"><span id="proposals-count-number"></span></div>
+    <div id="proposals-list-header">
+      <div id="proposals-count">
+        <span id="proposals-count-number"></span><span id="flag-filter-description"></span>
+      </div>
+      <div id="status-filter-subhead" class="hidden">
+        <span id="status-filter-description"></span>
+      </div>
+    </div>
     <ul class="proposals-list">
         <!-- {proposals} -->
     </ul>

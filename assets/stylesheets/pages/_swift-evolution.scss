@@ -45,14 +45,6 @@
         }
     }
 
-    .filter-toggle {
-        animation: fade-in .3s;
-
-        &.hidden {
-            display: none;
-        }
-    }
-
     .filter-container {
         display: flex;
         font-size: .8rem;
@@ -86,9 +78,14 @@
         }
     }
 
-    .toggle-filter-panel {
+    .filter-panel-toggle {
         color: var(--color-link);
         cursor: pointer;
+        animation: fade-in .3s;
+        
+        &.hidden {
+            display: none;
+        }
     }
 
     .filter-options {
@@ -138,12 +135,32 @@
             color: white;
         }
     }
+    
+    #proposals-list-header {
+        margin: 1rem 0;
+    }
 
     #proposals-count-number {
         font-size: 1rem;
         font-weight: 500;
-        margin: 1rem 0;
-        display: inline-block;
+    }
+    
+    #flag-filter-description {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    #status-filter-subhead {
+        &.hidden {
+            display: none;
+        }
+        line-height: 1rem;
+        margin-bottom: 1.3rem;
+    }
+
+    #status-filter-description {
+        font-size: .9rem;
+        font-weight: 300;
     }
 
     #version-options-label {
@@ -291,7 +308,20 @@
             justify-content: end;
         }
     }
-
+    
+    // Make proposal list heading fit for
+    // iPad vertical split view
+    @media (max-width: 320px) {
+        #proposals-count-number {
+            font-size: .9rem;
+            letter-spacing: -.2px;
+        }
+        #flag-filter-description {
+            font-size: .9rem;
+            letter-spacing: -.2px;
+        }
+    }
+    
     /* Status label colors */
 
     .color-awaiting-review {
