@@ -162,7 +162,7 @@ function init() {
       }
     }
 
-    // descending numeric sort based the numeric nnnn in a proposal ID's SE-nnnn
+    // Descending numeric sort based the numeric nnnn in a proposal ID's SE-nnnn
     proposals.sort(function compareProposalIDs (p1, p2) {
       return parseInt(p1.id.match(/\d\d\d\d/)[0]) - parseInt(p2.id.match(/\d\d\d\d/)[0])
     })
@@ -177,7 +177,7 @@ function init() {
       filterProposals()
     }
 
-    // apply selections from the current page's URI fragment
+    // Apply selections from the current page's URI fragment
     _applyFragment(document.location.hash)
   })
 
@@ -228,7 +228,7 @@ function html(elementType, attributes, children) {
 }
 
 function determineNumberOfProposals(proposals) {
-  // reset count
+  // Reset count
   Object.keys(states).forEach(function (state){
     states[state].count = 0
   })
@@ -292,7 +292,7 @@ function renderSearchBar () {
   })[0]
 
   if (implementedCheckboxIfPresent) {
-    // add an extra row of options to filter by language version
+    // Add an extra row of options to filter by language version
     var versionRowHeader = html('h5', { id: 'version-options-label', className: 'hidden' }, 'Language Version')
     var versionRow = html('ul', { id: 'version-options', className: 'filter-list hidden' })
 
@@ -576,10 +576,10 @@ function _joinNodes (nodeList, text) {
 function addEventListeners() {
   var searchInput = document.querySelector('#search-filter')
 
-  // typing in the search field causes the filter to be reapplied.
+  // Typing in the search field causes the filter to be reapplied.
   searchInput.addEventListener('search', filterProposals)
 
-  // each of the individual statuses needs to trigger filtering as well
+  // Each of the individual statuses needs to trigger filtering as well
   ;[].forEach.call(document.querySelectorAll('.filter-list input'), function (element) {
     element.addEventListener('change', filterProposals)
   })
@@ -592,7 +592,7 @@ function addEventListeners() {
       expandableArea.querySelector(selector).classList.toggle('hidden')
     })
 
-    // don't persist any version selections when the row is hidden
+    // Don't persist any version selections when the row is hidden
     ;[].concat.apply([], expandableArea.querySelectorAll('.filter-by-swift-version')).forEach(function (versionCheckbox) {
       versionCheckbox.checked = false
     })
@@ -607,7 +607,7 @@ function addEventListeners() {
   // Behavior conditional on certain browser features
   var CSS = window.CSS
   if (CSS) {
-    // emulate position: sticky when it isn't available.
+    // Emulate position: sticky when it isn't available.
     if (!(CSS.supports('position', 'sticky') || CSS.supports('position', '-webkit-sticky'))) {
       window.addEventListener('scroll', function () {
         var breakpoint = document.querySelector('header').getBoundingClientRect().bottom
@@ -615,7 +615,7 @@ function addEventListeners() {
         var position = window.getComputedStyle(nav).position
         var shadowNav // maintain the main content height when the main 'nav' is removed from the flow
 
-        // this is measuring whether or not the header has scrolled offscreen
+        // This is measuring whether or not the header has scrolled offscreen
         if (breakpoint <= 0) {
           if (position !== 'fixed') {
             shadowNav = nav.cloneNode(true)
@@ -633,7 +633,7 @@ function addEventListeners() {
     }
   }
 
-  // on smaller screens, hide the filter panel when scrolling
+  // On smaller screens, hide the filter panel when scrolling
   if (window.matchMedia('(max-width: 414px)').matches) {
     window.addEventListener('scroll', function () {
       var breakpoint = document.querySelector('header').getBoundingClientRect().bottom
@@ -697,6 +697,11 @@ function toggleFilterPanel() {
   } else {
     button.setAttribute('aria-pressed', 'false')
   }
+  
+  // Update the 'Hide Filters' / 'Show Filters' / 'n Filters' text of the filter panel link
+  var allCheckedStateCheckboxes = document.querySelectorAll('.filter-list input:checked')
+  updateStatusFilterToggleText(allCheckedStateCheckboxes.length)
+
 }
 
 function toggleFlagFiltering() {
@@ -778,7 +783,7 @@ function _searchProposals(filterText) {
       ['upcomingFeatureFlag']
   ]
 
-  // reflect over the proposals and find ones with matching properties
+  // Reflect over the proposals and find ones with matching properties
   var matchingProposals = proposals.filter(function (proposal) {
     var match = false
     searchableProperties.forEach(function (propertyList) {
@@ -835,15 +840,15 @@ function _applyFlagFilter(matchingProposals) {
  * @returns {Proposal[]} The results of applying the status filter.
  */
 function _applyStatusFilter(matchingProposals) {
-  // get all checked state checkboxes, both status and version as an array
+  // Get all checked state checkboxes, both status and version as an array
   var allCheckedStateCheckboxes = Array.from(document.querySelectorAll('.filter-list input:checked'))
   
-  // get checkbox values for all checked state checkboxes, both status and version
+  // Get checkbox values for all checked state checkboxes, both status and version
   var selectedStates = allCheckedStateCheckboxes.map(function (checkbox) { return checkbox.value })
 
   updateStatusFilterToggleText(selectedStates.length)
 
-  // get array of keys for only selected *statuses* to update the status filter subheading
+  // Get array of keys for only selected *statuses* to update the status filter subheading
   var selectedStatusNames = allCheckedStateCheckboxes.reduce(function(array, checkbox) {
     let value = checkbox.nextElementSibling.getAttribute("data-state-key")
     if (value) { array.push(value) }
@@ -861,7 +866,7 @@ function _applyStatusFilter(matchingProposals) {
         })
       })
 
-    // handle version-specific filtering options
+    // Handle version-specific filtering options
     if (selectedStates.some(function (state) { return state.match(/swift/i) })) {
       matchingProposals = matchingProposals
         .filter(function (proposal) {
@@ -1024,7 +1029,7 @@ function _applyFragment(fragment) {
     })
   }
 
-  // specifying any filter in the fragment should activate the filters in the UI
+  // Specifying any filter in the fragment should activate the filters in the UI
   if (actions.version.length || actions.status.length) {
     toggleFilterPanel()
     toggleStatusFiltering()
@@ -1081,7 +1086,7 @@ function _updateURIFragment() {
 
   actions.status = statuses
 
-  // build the actual fragment string.
+  // Build the actual fragment string.
   var fragments = []
   if (actions.proposal.length) fragments.push('proposal=' + actions.proposal.join(','))
   if (actions.status.length) fragments.push('status=' + actions.status.join(','))
@@ -1098,7 +1103,7 @@ function _updateURIFragment() {
 
   var fragment = '#?' + fragments.join('&')
 
-  // avoid creating new history entries each time a search or filter updates
+  // Avoid creating new history entries each time a search or filter updates
   window.history.replaceState(null, null, fragment)
 }
 
@@ -1178,7 +1183,7 @@ function addNumberToState (state, count) {
 
 /**
 * Generates the user-presentable description for an array of selected options. 
-* To prevent listing more than five statuses. When more than five statuses are selected
+* To prevent listing more than five statuses, when more than five are selected
 * the generated string uses the form "All Statuses Except" followed by unselected statuses.
 *
 * @param {string[]} selectedOptions - each element is a key in the states objects. For example: '.accepted'.
@@ -1188,7 +1193,7 @@ function descriptionForSelectedStatuses(selectedOptions) {
       '.awaitingReview', '.scheduledForReview', '.activeReview', '.accepted',
       '.previewing', '.implemented', '.returnedForRevision', '.rejected', '.withdrawn'
    ]
-  let selectedCount  = selectedOptions.length
+  let selectedCount = selectedOptions.length
   let totalCount = allStateOptions.length
   let ALL_EXCEPT_MAX_COUNT = 3
   let allExceptThreshold = totalCount - ALL_EXCEPT_MAX_COUNT
