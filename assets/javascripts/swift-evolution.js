@@ -844,7 +844,7 @@ function _applyStatusFilter(matchingProposals) {
   updateStatusFilterToggleText(selectedStates.length)
 
   // get array of keys for only selected *statuses* to update the status filter subheading
-  var selectedStatusNames = allCheckedStateCheckboxes.reduce( function(array, checkbox) {
+  var selectedStatusNames = allCheckedStateCheckboxes.reduce(function(array, checkbox) {
     let value = checkbox.nextElementSibling.getAttribute("data-state-key")
     if (value) { array.push(value) }
     return array
