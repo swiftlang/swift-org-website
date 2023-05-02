@@ -11,11 +11,11 @@ Swift is a general-purpose programming language built using a modern approach to
 <div class="link-grid" markdown="1">
   <ul>
     <li>
-      <a href="/blog/swift-5.7-released">
+      <a href="/blog/swift-5.8-released">
         <div class="flex-container">
           <div class="latest-release-container">
           <span>
-            5.7
+            5.8
           </span>
           </div>
           Latest release
