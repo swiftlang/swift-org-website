@@ -596,6 +596,10 @@ function addEventListeners() {
     ;[].concat.apply([], expandableArea.querySelectorAll('.filter-by-swift-version')).forEach(function (versionCheckbox) {
       versionCheckbox.checked = false
     })
+    
+    // Update the 'Hide Filters' / 'Show Filters' / 'n Filters' text
+    var allCheckedStateCheckboxes = document.querySelectorAll('.filter-list input:checked')
+    updateStatusFilterToggleText(allCheckedStateCheckboxes.length)
   })
 
   document.querySelector('#status-filter-button').addEventListener('click', toggleStatusFiltering)
