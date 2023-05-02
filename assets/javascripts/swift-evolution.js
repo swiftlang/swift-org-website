@@ -1208,23 +1208,30 @@ function descriptionForSelectedStatuses(selectedOptions) {
     let unselectedOptions = allStateOptions.filter(function (option) {
       return selectedOptions.indexOf(option) === -1
     })
-    return "All Statuses Except " + listStringForStatuses(unselectedOptions, "and")
+    return "All Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
   } else {
-    return listStringForStatuses(selectedOptions, "or")
+    return listStringForStatuses(selectedOptions, "or", true)
   }
 }
 
 /**
 * Generates a user-presentable list of statuses for an array of selected options. 
 * Takes a conjunction string to join the last element for arrays of two or more elements.
+* The statusPrefix turns a status that is a noun phrase e.g. 'Active Review' into a
+* verb phrase e.g. 'In Active Review'.
+*
+* For a list of exact status names, Use false for useStatusPrefix.
+* For a list of status names that reads like a sentence, Use true for useStatusPrefix. 
 *
 * @param {string[]} options - each element is a key in the states objects. For example: '.accepted'.
 * @param {string} conjunction - Used to join the last element if two or more elements are present.
+* @param {boolean} useStatusPrefix - Uses prepends statusPrefix, if defined, on the status name.
 */
-function listStringForStatuses(options, conjunction) {
+function listStringForStatuses(options, conjunction, useStatusPrefix) {
   let optionNames = options.map( function (option) {
     let state = states[option]
-     return (state.statusPrefix ?? '') + state.shortName
+    let prefix = useStatusPrefix ? (state.statusPrefix ?? '') : ''
+     return prefix + state.shortName
   })
   if (optionNames.length === 1){
     return optionNames[0]
