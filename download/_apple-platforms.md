@@ -5,10 +5,16 @@ You can try out a version that is still in development
 by downloading one of the packages above.
 
 <div class="danger" markdown="1">
-To submit to the App Store you must build your app using the version of Swift that comes included within Xcode.
+To submit to the App Store you must build your app using a version of Swift that comes included within Xcode.
 </div>
 
 #### Requirements for Tools
+
+<div class="warning" markdown="1">
+Xcode is not required to run the package installer or use an installed
+toolchain. However, when Xcode is not installed, the functionality of the Swift
+Package Manager may be limited due to some [outstanding issues](https://github.com/apple/swift-package-manager/issues/4396).
+</div>
 
 ### Swift 5.1
 * macOS 10.14.6
@@ -53,23 +59,41 @@ To submit to the App Store you must build your app using the version of Swift th
 
 ### Installation
 
-1. Download the [latest package release](/download).
+1. Download a [snapshot](/download/#snapshots) or [release](/download/#releases)
+   package. Make sure that your system meets the aforecited requirements for
+   this package.
 
 1. Run the package installer,
    which will install an Xcode toolchain into
    `/Library/Developer/Toolchains/`.
 
-   An Xcode toolchain (`.xctoolchain`) includes a copy of the compiler, lldb, and other related tools needed to provide a cohesive development experience for working in a specific version of Swift.
+   An Xcode toolchain (`.xctoolchain`) includes a copy of the compiler, LLDB, 
+   and other related tools needed to provide a cohesive development experience
+   for working in a specific version of Swift.
 
-1. Open Xcode's `Preferences`, navigate to `Components > Toolchains`, and select the installed Swift toolchain.
+* To select the installed toolchain in Xcode, navigate to `Xcode > Toolchains`.
 
-1. Xcode uses the selected toolchain for building Swift code, debugging, and even code completion and syntax coloring.  You'll see a new toolchain indicator in Xcode's toolbar when Xcode is using a Swift toolchain. Select the Xcode toolchain to go back to Xcode's built-in tools.
+  Xcode uses the selected toolchain for building Swift code, debugging, and
+  even code completion and syntax coloring. You'll see a new toolchain
+  indicator in Xcode's toolbar when Xcode is using an installed toolchain.
+  Select the default toolchain to go back to Xcode's built-in tools.
 
-1. Selecting a Swift toolchain affects the Xcode IDE only.  To use the Swift toolchain with command-line tools, use `xcrun --toolchain swift` and `xcodebuild -toolchain swift`, or add the Swift toolchain to your path as follows:
+* Selecting a toolchain in Xcode affects the IDE only. To use the installed
+  toolchain with
+  * `xcrun`, pass the `--toolchain swift` option. For example:
 
-~~~ shell
-$ export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
-~~~
+    ~~~ shell
+    xcrun --toolchain swift swift --version
+    ~~~
+
+  * `xcodebuild`, pass the `-toolchain swift` option.
+
+  Alternatively, you may select the toolchain on the command line by exporting
+  the `TOOLCHAINS` environment variable as follows:
+
+  ~~~ shell
+  export TOOLCHAINS=$(plutil -extract CFBundleIdentifier raw /Library/Developer/Toolchains/<toolchain name>.xctoolchain/Info.plist)
+  ~~~
 
 ### Code Signing on macOS
 

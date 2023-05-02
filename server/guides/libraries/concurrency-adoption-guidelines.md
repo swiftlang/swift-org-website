@@ -27,9 +27,9 @@ extension Worker {
 }
 ```
 
-If a function cannot fail but was using futures before, it should not include the `throws` keyword in its new incarnation. 
+If a function cannot fail but was using futures before, it should not include the `throws` keyword in its new incarnation.
 
-Such adoption can begin immediately, and should not cause any issues to existing users of existing libraries. 
+Such adoption can begin immediately, and should not cause any issues to existing users of existing libraries.
 
 ### SwiftNIO helper functions
 
@@ -37,10 +37,10 @@ To allow an easy transition to async code, SwiftNIO offers a number of helper me
 
 On every `EventLoopFuture` you can call `.get()` to transition the future into an `await`-able invocation. If you want to translate async/await calls to an `EventLoopFuture` we recommend the following pattern:
 
-```swift 
+```swift
 #if compiler(>=5.5) && canImport(_Concurrency)
 
-func yourAsyncFunctionConvertedToAFuture(on eventLoop: EventLoop) 
+func yourAsyncFunctionConvertedToAFuture(on eventLoop: EventLoop)
     -> EventLoopFuture<Result> {
     let promise = context.eventLoop.makePromise(of: Out.self)
     promise.completeWithTask {
@@ -117,26 +117,26 @@ In such situations, it may be helpful to utilize the following trick to be able 
 ```swift
 #if swift(>=5.5) && canImport(_Concurrency)
 public typealias MYPREFIX_Sendable = Swift.Sendable
-#else 
+#else
 public typealias MYPREFIX_Sendable = Any
 #endif
 ```
 
-> **NOTE:** Yes, we're using `swift(>=5.5)` here, while we're using `compiler(>=5.5)` to guard specific APIs using concurrency features. 
+> **NOTE:** Yes, we're using `swift(>=5.5)` here, while we're using `compiler(>=5.5)` to guard specific APIs using concurrency features.
 
 The `Any` alias is effectively a no-op when applied as generic constraint, and thus this way it is possible to keep the same `Container<Value>` declaration working across Swift versions.
 
 ### Task Local Values and Logging
 
-The newly introduced Task Local Values API ([SE-0311][SE-0311]) allows for implicit carrying of metadata along with `Task` execution. It is a natural fit for tracing and carrying metadata around with task execution, and e.g. including it in log messages. 
+The newly introduced Task Local Values API ([SE-0311][SE-0311]) allows for implicit carrying of metadata along with `Task` execution. It is a natural fit for tracing and carrying metadata around with task execution, and e.g. including it in log messages.
 
-We are working on adjusting [SwiftLog](https://github.com/apple/swift-log) to become powerful enough to automatically pick up and log specific task local values. This change will be introduced in a source compatible way. 
+We are working on adjusting [SwiftLog](https://github.com/apple/swift-log) to become powerful enough to automatically pick up and log specific task local values. This change will be introduced in a source compatible way.
 
-For now libraries should continue using logger metadata, but we expect that in the future a lot of the cases where metadata is manually passed to each log statement can be replaced with setting task local values. 
+For now libraries should continue using logger metadata, but we expect that in the future a lot of the cases where metadata is manually passed to each log statement can be replaced with setting task local values.
 
 ### Preparing for the concept of Deadlines
 
-Deadlines are another feature that closely relate to Swift Concurrency, and were originally pitched during the early versions of the Structured Concurrency proposal and later on moved out of it. The Swift team remains interested in introducing deadline concepts to the language and some preparation for it already has been performed inside the concurrency runtime. Right now however, there is no support for deadlines in Swift Concurrency and it is fine to continue using mechanisms like `NIODeadline` or similar mechanisms to cancel tasks after some period of time has passed. 
+Deadlines are another feature that closely relate to Swift Concurrency, and were originally pitched during the early versions of the Structured Concurrency proposal and later on moved out of it. The Swift team remains interested in introducing deadline concepts to the language and some preparation for it already has been performed inside the concurrency runtime. Right now however, there is no support for deadlines in Swift Concurrency and it is fine to continue using mechanisms like `NIODeadline` or similar mechanisms to cancel tasks after some period of time has passed.
 
 Once Swift Concurrency gains deadline support, they will manifest in being able to cancel a task (and its child tasks) once such deadline (point in time) has been exceeded. For APIs to be “ready for deadlines” they don’t have to do anything special other than preparing to be able to deal with `Task`s and their cancellation.
 
@@ -164,7 +164,7 @@ let err = errno // BAD, we are most likely on a different thread here (!)
 
 Please take care when interacting with any thread-local API from Swift Concurrency. If your library had used thread local storage before, you will want to move them to use [task-local values](https://github.com/apple/swift-evolution/blob/main/proposals/0311-task-locals.md) instead as they work correctly with Swift’s structured concurrency tasks.
 
-Another tricky situation is with imported C code. There may be no good way to annotate the imported types as Sendable (or it would be too troublesome to do so by hand). Swift is likely to gain improved support for imported code and potentially allow ignoring some of the concurrency safety checks on imported code. 
+Another tricky situation is with imported C code. There may be no good way to annotate the imported types as Sendable (or it would be too troublesome to do so by hand). Swift is likely to gain improved support for imported code and potentially allow ignoring some of the concurrency safety checks on imported code.
 
 These relaxed semantics for imported code are not implemented yet, but keep it in mind when working with C APIs from Swift and trying to adopt the `-warn-concurrency` mode today. Please file any issues you hit on [bugs.swift.org](https://bugs.swift.org/secure/Dashboard.jspa) so we can inform the development of these checking heuristics based on real issues you hit.
 

@@ -15,10 +15,10 @@ The current Swift Server workgroup consists of the following people:
 
 * Adam Fowler ([@adam-fowler](https://github.com/adam-fowler))
 * Dave Moser ([@dave-moser](https://github.com/dave-moser), Amazon)
-* Fabian Fett ([@fabianfett](https://github.com/fabianfett), Apple)
+* Franz Busch ([@FranzBusch](https://github.com/FranzBusch), Apple)
 * Gwynne Raskind ([@gwynne](https://github.com/gwynne), Vapor)
 * Jimmy McDermott ([@jdmcd](https://github.com/jdmcd) , Transeo)
-* Kaitlin Mahar ([@kmahar](https://github.com/kmahar), MongoDB)
+* Joannis Orlandos ([@joannis](https://github.com/joannis))
 * Konrad Malawski ([@ktoso](https://github.com/ktoso), Apple)
 * Patrick Freed ([@patrickfreed](https://github.com/patrickfreed), MongoDB)
 * Simon Pilkington ([@tachyonics](https://github.com/tachyonics), Amazon)
@@ -52,35 +52,34 @@ In various situations the SSWG shall hold a vote. These votes can happen on the 
 
 ## Incubation Process
 
-The Swift Server Workgroup has a [process](https://github.com/swift-server/sswg/blob/master/process/incubation.md) which allows a project to go through incubation stages until it graduates and becomes a recommended project.
+The Swift Server Workgroup has a [process](/sswg/incubation-process.html) which allows a project to go through incubation stages until it graduates and becomes a recommended project.
 
 ## Projects
 
-| Project | Description | Maturity Level | Pitched | Accepted |
-|---|---|---|---|---|
-| [SwiftNIO](http://github.com/apple/swift-nio/) | Event-driven network application framework. | Graduated  | N/A  | 9/7/2018 |
-| [SwiftLog](http://github.com/apple/swift-log/) | Logging API | Graduated | 9/10/2018 | 2/7/2019 |
-| [SwiftMetrics](http://github.com/apple/swift-metrics/) | Metrics API | Graduated | 1/8/2019 | 4/4/2019 |
-| [PostgresNIO](https://github.com/vapor/nio-postgres) | PostgreSQL driver | Incubating | 11/18/2018 | 5/16/2019 |
-| [RediStack](https://github.com/mordil/swift-redis-nio-client) | Redis driver | Sandbox | 1/7/2019 | 6/27/2019 |
-| [AsyncHTTPClient](https://github.com/swift-server/async-http-client) | HTTP client | Graduated | 4/18/2019 | 6/27/2019 |
-| [APNSwift](https://github.com/swift-server-community/APNSwift) | APNS client | Incubating | 2/5/2019 | 6/27/2019 |
-| [SwiftStatsdClient](https://github.com/apple/swift-statsd-client) | StatsD driver for the metrics API | Incubating | 6/2/2019 | 8/11/2019 |
-| [SwiftPrometheus](https://github.com/MrLotU/SwiftPrometheus) | Prometheus driver for the metrics API | Sandbox | 11/18/2018 | 8/11/2019  |
-| [gRPC Swift](https://github.com/grpc/grpc-swift) | gRPC client & server framework | Graduated | 9/30/2019 | 2/19/2020 |
-| [Swift Crypto](https://github.com/apple/swift-crypto) | Open-source implementation of a substantial portion of the API of Apple CryptoKit | Incubating | 2/20/2020 | 3/4/2020 |
-| [OpenAPIKit](https://github.com/mattpolzin/OpenAPIKit) | OpenAPI client | Sandbox | 1/14/2020 | 4/29/2020 |
-| [MongoSwift](https://github.com/mongodb/mongo-swift-driver) | MongoDB driver | Incubating | 10/30/2019 | 5/13/2020 |
-| [Swift AWS Lambda Runtime](https://github.com/swift-server/swift-aws-lambda-runtime) | Runtime library for AWS Lambda functions in Swift | Sandbox | N/A | 6/24/2020 |
-| [Backtrace](https://github.com/swift-server/swift-backtrace) | Nice backtraces in production | Incubating | 5/30/19 | 7/29/2020 |
-| [Service Lifecycle](https://github.com/swift-server/swift-service-lifecycle) | Lifecycle management | Incubating | N/A | 9/2/2020 |
-| [Soto for AWS](https://github.com/soto-project/soto) | Third-party SDK for AWS | Incubating | 10/1/2020 | 11/12/2020 |
-| [MultipartKit](https://github.com/vapor/multipart-kit) | Multipart parser and serializer with Codable support for Multipart Form Data | Incubating | 3/3/2021 | 11/11/2021 |
-| [MQTT NIO](https://github.com/swift-server-community/mqtt-nio) | A Swift NIO MQTT v3.1.1 and v5.0 Client | Sandbox | 11/2/2021 | 1/19/2022 |
-| [GraphQL](https://github.com/GraphQLSwift/GraphQL) | GraphQL query language implementation | Incubating | 8/22/2022 | 9/15/2022 |
-| [Graphiti](https://github.com/GraphQLSwift/Graphiti) | Library for building GraphQL schemas | Incubating | 8/22/2022 | 9/15/2022 |
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description</th>
+      <th>Maturity Level</th>
+      <th>Pitched</th>
+      <th>Accepted</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for project in site.data.sswg.projects %}
+    <tr>
+      <td><a href="{{ project.url }}">{{ project.name }}</a></td>
+      <td>{{ project.description }}</td>
+      <td>{{ project.maturity }}</td>
+      <td>{{ project.pitched }}</td>
+      <td>{{ project.accepted }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
-The SSWG publishes a [package collection]({{ site.url }}/blog/package-collections/) that contains the projects incubated by the workgroup. The collection is available at `https://swiftserver.group/collection/sswg.json`.
+The SSWG publishes a [package collection](/blog/package-collections/) that contains the projects incubated by the workgroup. The collection is available at `https://swiftserver.group/collection/sswg.json`.
 
 ## Meeting Time
 

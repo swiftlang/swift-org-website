@@ -3,7 +3,7 @@
     <input id="search-filter" class="filter" title="Search proposals" placeholder="Search" type="search" incremental />
     
     <div class="filter-container">
-      <span role="button" class="filter-button" aria-label="Toggle status filtering options" aria-pressed="false" tabindex="0">
+      <span role="button" id="status-filter-button" class="filter-button" aria-label="Toggle status filtering options" aria-pressed="false" tabindex="0" title="Toggle proposal status filter">
         <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="filter-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1.381818, 0.400000)">
                 <ellipse class="icon-circle" id="filter-icon-circle" stroke="#888" cx="8.92443193" cy="9.85624994" rx="8.90625" ry="8.90625"></ellipse>
@@ -11,6 +11,17 @@
                 <path d="M5.25846596,10.2124999 L12.7515909,10.2124999" class="icon-line" id="line-middle" stroke="#888" stroke-linecap="square"></path>
                 <path d="M6.9967741,13.7749999 L11.1173991,13.7749999" class="icon-line" id="line-bottom" stroke="#888" stroke-linecap="square"></path>  
             </g>
+        </svg>
+      </span>
+      <span role="button" id="flag-filter-button" class="filter-button" aria-label="Toggle upcoming feature flag filtering" aria-pressed="false" tabindex="0" title="Toggle upcoming feature flag filter">
+        <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="flag-button-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="flag-button" transform="translate(1.000000, 1.000000)">
+                  <circle class="icon-circle" id="filter-icon-circle" stroke="#888888" cx="8.90625" cy="8.90625" r="8.90625"></circle>
+                  <polygon class="icon-flag" id="Path" fill="#888888" fill-rule="nonzero" points="5.85770196 3.19092433 5.86399453 3.69088474 5.9999604 14.4937074 6.00625298 14.9936678 5.00633217 15.006253 5.0000396 14.5062926 4.86407373 3.70346988 4.85778115 3.20350948"></polygon>
+                  <path d="M6.97193141,3 C5.84463226,3 5,3.28070198 5,3.28070198 L5,9.48771889 C5,9.48771889 5.84463226,9.20701691 6.97193141,9.20701691 C8.09923056,9.20701691 9.29310099,10 10.4982444,10 C11.7033991,10 13.4771998,9.48771889 13.4771998,9.48771889 L13.4771998,3.28070198 C13.4771998,3.28070198 11.7002889,3.79298309 10.4982444,3.79298309 C9.29621116,3.79298309 8.09923056,3 6.97193141,3 Z" class="icon-flag" id="flag" fill="#888888"></path>
+              </g>
+          </g>
         </svg>
       </span>
       <span class="filter-toggle hidden">

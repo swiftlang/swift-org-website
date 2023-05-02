@@ -33,7 +33,7 @@ It is always fine for a library to log at `trace` and `debug` levels, and these 
 
 This is in contrast with `debug` which some users _may_ choose to run enabled on their production systems.
 
-> Debug level logging should be not "too" noisy. Developers should assume some production deployments may need to (or want to) run with debug level logging enabled. 
+> Debug level logging should be not "too" noisy. Developers should assume some production deployments may need to (or want to) run with debug level logging enabled.
 >
 > Debug level logging should not completely undermine the performance of a production system.
 
@@ -183,7 +183,7 @@ The exact metadata does not matter, they're just some placeholder in this exampl
 Now, we would like to avoid logging _all_ this information in every single log statement. Instead, we are able to just repeatedly log the `"id"` metadata, like this:
 
 ```swift
-// ... 
+// ...
 log.trace("Something something...", metadata: ["id": "..."])
 log.trace("Finished streaming response", metadata: ["id": "..."]) // good, the same ID is propagated
 ```

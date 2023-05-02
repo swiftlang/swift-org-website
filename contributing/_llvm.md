@@ -4,7 +4,7 @@ Swift is built on the [LLVM Compiler Infrastructure][LLVM]. Swift uses the LLVM 
 
 Apple maintains a fork of the [LLVM
 Core](https://github.com/llvm/llvm-project) source repository on
-GitHub as [llvm-project][llvm-project], respectively. 
+GitHub as [llvm-project][llvm-project], respectively.
 This repository track upstreams LLVM development and contains
 additional changes for Swift. The upstream LLVM repository
 are merged into the Swift-specific repository frequently. Every
@@ -43,6 +43,6 @@ the LLDB coding conventions.
 
 [llvm-project]: https://github.com/apple/llvm-project
 [LLVM]: http://llvm.org
-[llvm-bugs]: https://bugs.llvm.org/ "LLVM Bug Tracker"
+[llvm-bugs]: https://github.com/llvm/llvm-project/issues "LLVM Bug Tracker"
 [Clang]: http://clang.llvm.org
 [LLDB]: http://lldb.llvm.org

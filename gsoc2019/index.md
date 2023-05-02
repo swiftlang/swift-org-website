@@ -104,7 +104,7 @@ LLDB is the debugger of choice for Swift. Debuggers depend more on the underlyin
 
 **Skills required**
 
-Knowledge of C++. 
+Knowledge of C++.
 Knowledge of how debuggers work is a plus.
 Knowledge of swift object memory layout is a plus, but can be gained during the bonding period.
 

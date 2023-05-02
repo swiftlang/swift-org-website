@@ -28,14 +28,14 @@ If you would like to reach out to a mentor privately, rather than making a publi
 
 **Recommended skills**:
 
-- Basic proficiency with Swift 
+- Basic proficiency with Swift
 - Python knowledge is beneficial but not necessary
 
 **Expected difficulty**: Medium
 
 **Description**:
 
-[SwiftSyntax](http://github.com/apple/swift-syntax) heavily relies on code-generation for its syntax node definitions. These files are currently being generated using gyb, a Python-based code generation tool developed as part of the Swift compiler. SwiftSyntax itself also has code generation capabilities, which have recently been significantly improved by the introduction of [SwiftSyntaxBuilder](https://github.com/apple/swift-syntax/tree/main/Sources/SwiftSyntaxBuilder). 
+[SwiftSyntax](http://github.com/apple/swift-syntax) heavily relies on code-generation for its syntax node definitions. These files are currently being generated using gyb, a Python-based code generation tool developed as part of the Swift compiler. SwiftSyntax itself also has code generation capabilities, which have recently been significantly improved by the introduction of [SwiftSyntaxBuilder](https://github.com/apple/swift-syntax/tree/main/Sources/SwiftSyntaxBuilder).
 
 During the Google Summer of Code project, the student will migrate the current gyb-based code generation to use SwiftSyntaxBuilder, dogfooding SwiftSyntaxBuilder inside SwiftSyntax itself. To perform the migration, the student will also make further improvements to SwiftSyntaxBuilder, with the goal of transitioning SwiftSyntaxBuilder from its current development state to be production-ready.
 
@@ -56,7 +56,7 @@ Alex Hoppen
 
 **Recommended skills**:
 
-- Basic proficiency with Swift and scripting languages 
+- Basic proficiency with Swift and scripting languages
 - Proficient with RPMs, Debian packages and software packaging on Linux.
 
 **Expected difficulty**: Medium
@@ -104,7 +104,7 @@ Tom Doron, or Dario Rexin
 **Recommended skills**:
 
 - Basic proficiency with Swift
-- Nice to have: Kafka experience 
+- Nice to have: Kafka experience
 - Nice to have: experience with wrapping C APIs from Swift
 
 **Expected difficulty**: Medium
@@ -153,12 +153,12 @@ Boris Beugling, Anders Bertelrund, Tom Doron
 
 **Recommended skills**:
 
-- Basic proficiency with Swift 
+- Basic proficiency with Swift
 - Experience with dependency management systems
 
 **Expected difficulty**: Medium
 
-**Description**: 
+**Description**:
 
 Software Bill of Material (aka SBOM) is a technique for sharing dependency versions between different projects. This technique is useful for larger systems that span across multiple repositories, share same core dependencies, and need to align the versions of these core dependencies system wide.
 
@@ -204,7 +204,7 @@ Boris Beugling, Anders Bertelrund, Tom Doron
 
 ### Swift-DocC
 
-Swift-DocC is the documentation compiler for Swift, read more about it here: [Swift-DocC is Now Open Source](https://www.swift.org/blog/swift-docc/).
+Swift-DocC is the documentation compiler for Swift, read more about it here: [Swift-DocC is Now Open Source](/blog/swift-docc/).
 
 #### Swift-DocC support for diffing documentation archives
 
@@ -264,7 +264,7 @@ Marina Aisa, Beatriz Magalhaes
 
 **Recommended skills**:
 
-- Basic proficiency with Swift 
+- Basic proficiency with Swift
 - An interest in command line tools
 
 **Expected difficulty**: Medium
@@ -312,7 +312,7 @@ Pavel Yaskevich
 ### Swift and C++ Interoperability
 
 Swift and C++ interoperability is an ongoing open-source project that aims to make Swift APIs convenient to use from C++ (and vice versa). It's spearheaded
-by the [Swift and C++ interoperability workgroup](https://forums.swift.org/c/development/c-interoperability/82). 
+by the [Swift and C++ interoperability workgroup](https://forums.swift.org/c/development/c-interoperability/82).
 
 #### Bridging Swift Error Handling Model to C++
 
@@ -327,7 +327,7 @@ by the [Swift and C++ interoperability workgroup](https://forums.swift.org/c/dev
 
 **Description**:
 
-This project builds upon the ongoing open-source effort for exposing Swift APIs to C++, by adding support for exposing functions that `throw` Swift errors to C++, and by providing C++ classes that let users handle Swift `Error` values from C++. 
+This project builds upon the ongoing open-source effort for exposing Swift APIs to C++, by adding support for exposing functions that `throw` Swift errors to C++, and by providing C++ classes that let users handle Swift `Error` values from C++.
 
 This project has two primary aspects. At first, the participant will need to extend the C++ interface generator for a Swift module to emit C++ interfaces for Swift
 functions that `throw`, and a C++ class that represents Swift's `Error` type. Then, the participant will need to implement a C++ exception class that wraps around

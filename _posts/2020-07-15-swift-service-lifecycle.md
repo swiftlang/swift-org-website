@@ -6,7 +6,7 @@ title: Introducing Swift Service Lifecycle
 author: tomerd
 ---
 
-It is my pleasure to announce a new open source project for the Swift server ecosystem, [Swift Service Lifecycle](https://github.com/swift-server/swift-service-lifecycle). Service Lifecycle is a Swift package designed to help server applications, also known as services, manage their startup and shutdown sequences. 
+It is my pleasure to announce a new open source project for the Swift server ecosystem, [Swift Service Lifecycle](https://github.com/swift-server/swift-service-lifecycle). Service Lifecycle is a Swift package designed to help server applications, also known as services, manage their startup and shutdown sequences.
 
 ## What is it?
 
@@ -16,7 +16,7 @@ Today, server applications and frameworks must find ways to address the need on 
 
 ## How does it work?
 
-The recommended way of using this library is creating a `ServiceLifecycle` instance in your server application's `main`, and register `LifecycleTasks` with it. Upon calling the `start` function, `ServiceLifecycle`  will start these tasks in the order they were registered. 
+The recommended way of using this library is creating a `ServiceLifecycle` instance in your server application's `main`, and register `LifecycleTasks` with it. Upon calling the `start` function, `ServiceLifecycle`  will start these tasks in the order they were registered.
 
 By default, `ServiceLifecycle` also registers a `Signal` handler that traps `INT` and `TERM` , which are typical `Signal`s used in modern deployment platforms to communicate shutdown request. The shutdown sequence begins once the `Signal` is captured, and the `LifecycleTasks` are shut down in the reverse order they have been registered in.
 

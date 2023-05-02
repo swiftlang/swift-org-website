@@ -1,6 +1,6 @@
 Xcode 10.0 comes with a Swift Migrator tool that helps you migrate your project to Swift 4.2.
 
-> For the previous release's Migration Guide, see [Migrating to Swift 4]({{ site.url }}/migration-guide-swift4).
+> For the previous release's Migration Guide, see [Migrating to Swift 4](/migration-guide-swift4).
 
 ## Pre-Migration Preparation
 
@@ -14,7 +14,7 @@ The migration assistant does a *migrator build* to gather the changes, using the
 
 > If your project depends on other open-source projects that are provided by Carthage or CocoaPods, consult the [Using Carthage/CocoaPods Projects](#using-carthagecocoapods-projects) section.
 
-## Swift Migration Assistant 
+## Swift Migration Assistant
 
 When you open your project with Xcode 10 for the first time, you will see a migration opportunity item in the Issue Navigator: click it to activate a sheet asking you if you'd like to migrate. You can be reminded later or invoke the Migrator manually from the menu *Edit -> Convert -> To Current Swift Syntax...*
 

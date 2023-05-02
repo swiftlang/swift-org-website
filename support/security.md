@@ -22,7 +22,7 @@ To report a security or privacy vulnerability, please send an email to [cve@foru
 * A description of the behavior you observed as well as the behavior that you expected
 * A numbered list of steps required to reproduce the issue and/or a video demonstration, if the steps may be hard to follow
 
-Please use [Swift.org's CVE PGP key]({{site.url}}/keys/cve-signing-key-1.asc) to encrypt sensitive information that you send by email.
+Please use [Swift.org's CVE PGP key](/keys/cve-signing-key-1.asc) to encrypt sensitive information that you send by email.
 
 You'll receive an email reply from Swift.org to acknowledge that we received your report, and we’ll contact you if we need more information.
 

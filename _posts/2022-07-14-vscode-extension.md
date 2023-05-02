@@ -6,15 +6,15 @@ title: Swift Extension for Visual Studio Code
 author: adam-fowler
 ---
 
-As Swift is deployed across more platforms, it is important that Swift can be developed on more platforms as well. The [Swift Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang) provides a cross-platform solution for Swift development supporting macOS, Linux, and Windows. 
+As Swift is deployed across more platforms, it is important that Swift can be developed on more platforms as well. The [Swift Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang) provides a cross-platform solution for Swift development supporting macOS, Linux, and Windows.
 
 ##  Motivation
 
-Swift is held back from extending outside the Apple ecosystem by the lack of a first-class, integrated development environment on non-Apple platforms. There is no Xcode if you are developing on Linux or Windows. 
+Swift is held back from extending outside the Apple ecosystem by the lack of a first-class, integrated development environment on non-Apple platforms. There is no Xcode if you are developing on Linux or Windows.
 
 Until this point there have been individual components to make up that development environment like Apple's [SourceKit-LSP](https://github.com/apple/sourcekit-lsp) project and support for the Swift version of LLDB when using the [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) extension, but nothing to bring them all together.
 
-The [Swift Server Workgroup](https://www.swift.org/sswg/) (SSWG) felt there was a need for a more complete solution. The Swift Extension for Visual Studio Code from the SSWG brings together many of these components into one package with everything pre-configured to work from the get-go.
+The [Swift Server Workgroup](/sswg/) (SSWG) felt there was a need for a more complete solution. The Swift Extension for Visual Studio Code from the SSWG brings together many of these components into one package with everything pre-configured to work from the get-go.
 
 ## Features
 

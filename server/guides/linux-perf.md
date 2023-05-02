@@ -13,7 +13,7 @@ The Linux [`perf` tool](https://perf.wiki.kernel.org/index.php/Main_Page) is an 
 
 In general, `perf` can count and/or record the call stacks of your threads when a certain event occurs. These events can be triggered by:
 
-- Time (e.g. 1000 times per second), useful for time profiling. For an example use, see the [CPU performance debugging guide]({{site.url}}/server/guides/performance.html).
+- Time (e.g. 1000 times per second), useful for time profiling. For an example use, see the [CPU performance debugging guide](/server/guides/performance.html).
 - System calls, useful to see where your system calls are happening.
 - Various system events, for example if you'd like to know when context switches occur.
 - CPU performance counters, useful if your performance issues can be traced down to micro-architectural details of your CPU (such as branch mispredictions). For an example, see [SwiftNIO's Advanced Performance Analysis guide](https://github.com/apple/swift-nio/blob/main/docs/advanced-performance-analysis.md).
@@ -32,20 +32,20 @@ Technically, `perf` is part of the Linux kernel sources and you'd want a `perf` 
     ```
     apt-get update && apt-get -y install linux-tools-generic
     ```
-    
+
   See below for more information because Ubuntu packages a different `perf` per kernel version.
 - Debian
 
     ```
     apt-get update && apt-get -y install linux-perf
     ```
-    
+
 - Fedora/RedHat derivates
 
    ```
    yum install -y perf
    ```
-   
+
 You can confirm that your `perf` installation works using  `perf stat -- sleep 0.1` (if you're already `root`) or `sudo perf stat -- sleep 0.1`.
 
 
@@ -54,7 +54,7 @@ You can confirm that your `perf` installation works using  `perf stat -- sleep 0
 On Ubuntu (and other distributions that package `perf` per kernel version) you may see an error after installing `linux-tools-generic`. The error message will look similar to
 
 ```
-$ perf stat -- sleep 0.1 
+$ perf stat -- sleep 0.1
 WARNING: perf not found for kernel 5.10.25
 
   You may need to install the following packages for this specific kernel:
@@ -105,14 +105,14 @@ $ perf stat -- sleep 0.1
 
  Performance counter stats for 'sleep 0.1':
 
-              0.44 msec task-clock                #    0.004 CPUs utilized          
-                 1      context-switches          #    0.002 M/sec                  
-                 0      cpu-migrations            #    0.000 K/sec                  
-                57      page-faults               #    0.129 M/sec                  
-   <not supported>      cycles                                                      
-   <not supported>      instructions                                                
-   <not supported>      branches                                                    
-   <not supported>      branch-misses                                               
+              0.44 msec task-clock                #    0.004 CPUs utilized
+                 1      context-switches          #    0.002 M/sec
+                 0      cpu-migrations            #    0.000 K/sec
+                57      page-faults               #    0.129 M/sec
+   <not supported>      cycles
+   <not supported>      instructions
+   <not supported>      branches
+   <not supported>      branch-misses
 
        0.102869000 seconds time elapsed
 

@@ -3,7 +3,7 @@ layout: page
 title: Build System
 ---
 
-The recommended way to build server applications is with [Swift Package Manager](https://swift.org/package-manager/). SwiftPM provides a cross-platform foundation for building Swift code and works nicely for having one code base that can be edited as well as run on many Swift platforms.
+The recommended way to build server applications is with [Swift Package Manager](/package-manager/). SwiftPM provides a cross-platform foundation for building Swift code and works nicely for having one code base that can be edited as well as run on many Swift platforms.
 
 ## Building
 SwiftPM works from the command line and is also integrated within Xcode.
@@ -25,19 +25,19 @@ Note, if you want to run the Swift compiler for Intel CPUs on an Apple Silicon (
 
 `$ docker run -v "$PWD:/code" -w /code --platform linux/amd64 -e QEMU_CPU=max swift:latest swift build`
 
-The above command will run the build using the latest Swift Docker image, utilizing bind mounts to the sources on your Mac. 
+The above command will run the build using the latest Swift Docker image, utilizing bind mounts to the sources on your Mac.
 
 ### Debug vs. Release Mode
 By default, SwiftPM will build a debug version of the application. Note that debug versions are not suitable for running in production as they are significantly slower. To build a release version of your app, run `swift build -c release`.
 
 ### Locating Binaries
-Binary artifacts that can be deployed are found under `.build/x86_64-unknown-linux` on Linux, and `.build/x86_64-apple-macosx` on macOS. 
+Binary artifacts that can be deployed are found under `.build/x86_64-unknown-linux` on Linux, and `.build/x86_64-apple-macosx` on macOS.
 
 SwiftPM can show you the full binary path using `swift build --show-bin-path -c release`.
 
 ### Building for production
 
-- Build production code in release mode by compiling with `swift build -c release`. Running code compiled in debug mode will hurt performance significantly. 
+- Build production code in release mode by compiling with `swift build -c release`. Running code compiled in debug mode will hurt performance significantly.
 
 - For best performance in Swift 5.2 or later, pass `-Xswiftc -cross-module-optimization` (this won't work in Swift versions before 5.2) - enabling this should be verified with performance tests (as any optimization changes) as it may sometimes cause performance regressions.
 

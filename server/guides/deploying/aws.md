@@ -9,51 +9,51 @@ This guide describes how to launch an AWS instance running Amazon Linux 2 and co
 
 Use the Service menu to select the EC2 service.
 
-![Select EC2 service]({{site.url}}/assets/images/server-guides/aws/services.png)
+![Select EC2 service](/assets/images/server-guides/aws/services.png)
 
 Click on "Instances" in the "Instances" menu
 
-![Select Instances]({{site.url}}/assets/images/server-guides/aws/ec2.png)
+![Select Instances](/assets/images/server-guides/aws/ec2.png)
 
 Click on "Launch Instance", either on the top of the screen, or if this is the first instance you have created in the region, in the main section of the screen.
 
-![Launch instance]({{site.url}}/assets/images/server-guides/aws/launch-0.png)
+![Launch instance](/assets/images/server-guides/aws/launch-0.png)
 
 Choose an Amazon Machine Image (AMI). In this case the guide is assuming that we will be using Amazon Linux 2, so select that AMI type.
 
-![Choose AMI]({{site.url}}/assets/images/server-guides/aws/launch-1.png)
+![Choose AMI](/assets/images/server-guides/aws/launch-1.png)
 
 Choose an instance type. Larger instances types will have more memory and CPU, but will be more expensive. A smaller instance type will be sufficient to experiment. In this case I have a `t2.micro` instance type selected.
 
-![Choose Instance type]({{site.url}}/assets/images/server-guides/aws/launch-2.png)
+![Choose Instance type](/assets/images/server-guides/aws/launch-2.png)
 
 Configure instance details. If you want to access this instance directly to the internet, ensure that the subnet that you select is auto-assigns a public IP. It is assumed that the VPC has internet connectivity, which means that it needs to have a Internet Gateway (IGW) and the correct networking rules, but this is the case for the default VPC. If you wish to set this instance up in a private (non-internet accessible) VPC you will need to set up a bastion host, AWS Systems Manager Session Manager, or some other mechanism to connect to the instance.
 
-![Choose Instance details]({{site.url}}/assets/images/server-guides/aws/launch-3.png)
+![Choose Instance details](/assets/images/server-guides/aws/launch-3.png)
 
 Add storage. The AWS EC2 launch wizard will suggest some form of storage by default. For our testing purposes this should be fine, but if you know that you need more storage, or a different storage performance requirements, then you can change the size and volume type here.
 
-![Choose Instance storage]({{site.url}}/assets/images/server-guides/aws/launch-4.png)
+![Choose Instance storage](/assets/images/server-guides/aws/launch-4.png)
 
 Add tags. It is recommended you add as many tags as you need to correctly identify this server later. Especially if you have many servers, it can be difficult to remember which one was used for which purpose. At a very minimum, add a `Name` tag with something memorable.
 
-![Add tags]({{site.url}}/assets/images/server-guides/aws/launch-5.png)
+![Add tags](/assets/images/server-guides/aws/launch-5.png)
 
 Configure security group. The security group is a stateful firewall that limits the traffic that is accepted by your instance. It is recommended to limit this as much as possible. In this case we are configuring it to only allow traffic on port 22 (ssh). It is recommended to restrict the source as well. To limit it to your workstation's current IP, click on the dropdown under "Source" and select "My IP".
 
-![Configure security group]({{site.url}}/assets/images/server-guides/aws/launch-6.png)
+![Configure security group](/assets/images/server-guides/aws/launch-6.png)
 
 Launch instance. Click on "Launch", and select a key pair that you will use to connect to the instance. If you already have a keypair that you have used previously, you can reuse it here by selecting "Choose an existing key pair". Otherwise you can create a keypair now by selecting "Create a new key pair".
 
-![Launch instance]({{site.url}}/assets/images/server-guides/aws/launch-7.png)
+![Launch instance](/assets/images/server-guides/aws/launch-7.png)
 
 Wait for instance to launch. When it is ready it will show as "running" under "Instance state", and "2/2 checks pass" under "Status Checks". Click on the instance to view the details on the bottom pane of the window, and look for the "IPv4 Public IP".
 
-![Wait for instance launch and view details]({{site.url}}/assets/images/server-guides/aws/ec2-list.png)
+![Wait for instance launch and view details](/assets/images/server-guides/aws/ec2-list.png)
 
 Connect to instance. Using the keypair that you used or created in the launch step and the IP in the previous step, run ssh. Be sure to use the `-A` option with ssh so that in a future step we will be able to use the same key to connect to a second instance.
 
-![Connect to instance]({{site.url}}/assets/images/server-guides/aws/ssh-0.png)
+![Connect to instance](/assets/images/server-guides/aws/ssh-0.png)
 
 We have two options to compile the binary: either directly on the instance or using Docker. We will go through both options here.
 
@@ -64,7 +64,7 @@ There are two alternative ways to compile code on the instance, either by:
 - or by [using docker, and compiling inside a docker container](#compile-with-docker)
 
 ### Compile using a downloaded toolchain
-Run the following command in the SSH terminal. Note that there may be a more up to date version of the swift toolchain. Check https://swift.org/download/#releases for the latest available toolchain url for Amazon Linux 2.
+Run the following command in the SSH terminal. Note that there may be a more up to date version of the swift toolchain. Check [https://swift.org/download/#releases](/download/#releasess) for the latest available toolchain url for Amazon Linux 2.
 
 ```
 SwiftToolchainUrl="https://swift.org/builds/swift-5.4.1-release/amazonlinux2/swift-5.4.1-RELEASE/swift-5.4.1-RELEASE-amazonlinux2.tar.gz"
@@ -76,7 +76,7 @@ gunzip < swift.tar.gz | sudo tar -C / -xv --strip-components 1
 
 Finally, check that Swift is correctly installed by running the Swift REPL: `swift`.
 
-![Invoke REPL]({{site.url}}/assets/images/server-guides/aws/repl.png)
+![Invoke REPL](/assets/images/server-guides/aws/repl.png)
 
 Let's now download and build an test application. We will use the `--static-swift-stdlib` option so that it can be deployed to a different server without the Swift toolchain installed. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server), but you can test with your own project.
 
@@ -98,7 +98,7 @@ sudo systemctl start docker
 
 You may have to log out and log back in to be able to use Docker. Check by running `docker ps`, and ensure that it runs without errors.
 
-Download and compile SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server): 
+Download and compile SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server):
 
 ```
 docker run --rm  -v "$PWD:/workspace"  -w /workspace swift:5.4-amazonlinux2   /bin/bash -cl ' \
@@ -123,4 +123,4 @@ curl localhost:8080
 
 From here, options are endless and will depend on your application of Swift. If you wish to run a web service be sure to open the Security Group to the correct port and from the correct source. When you are done testing Swift, shut down the instance to avoid paying for unneeded compute. From the EC2 dashboard, select both instances, select "Actions" from the menu, then select "Instance state" and then finally "terminate".
 
-![Terminate Instance]({{site.url}}/assets/images/server-guides/aws/terminate.png)
+![Terminate Instance](/assets/images/server-guides/aws/terminate.png)

@@ -66,11 +66,11 @@ footer[role="contentinfo"] aside i {
 }
 
 footer[role="contentinfo"] aside i.feed {
-  background-image: url("https://swift.org/assets/images/icon-feed.svg");
+  background-image: url("/assets/images/icon-feed.svg");
 }
 
 footer[role="contentinfo"] aside i.twitter {
-  background-image: url("https://swift.org/assets/images/icon-twitter.svg");
+  background-image: url("/assets/images/icon-twitter.svg");
 }
 
 footer[role="contentinfo"] p {

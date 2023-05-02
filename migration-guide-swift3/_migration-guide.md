@@ -4,15 +4,15 @@ Xcode 8.0 comes with a Swift Migrator tool that helps you migrate your project t
 
 ## Pre-Migration Preparation
 
-To get the most effective migration, make sure that the project that you intend to migrate builds successfully, and all its tests pass, when using Xcode 7.3[.1].  
+To get the most effective migration, make sure that the project that you intend to migrate builds successfully, and all its tests pass, when using Xcode 7.3[.1].
 Also make sure that the project is managed under source control. This will allow you to easily review the changes that were applied via the migration assistant and to discard them and re-try the migration if needed.
 
-If you have multiple schemes that build different independent products (or the same product for different platforms) it is important to create one scheme that builds everything in your project and for all the platforms you need, including your unit test targets. The migration assistant does a migrator "build" to gather the changes, using the scheme you have selected, so the targets that will get processed are the ones that are included in the scheme.  
+If you have multiple schemes that build different independent products (or the same product for different platforms) it is important to create one scheme that builds everything in your project and for all the platforms you need, including your unit test targets. The migration assistant does a migrator "build" to gather the changes, using the scheme you have selected, so the targets that will get processed are the ones that are included in the scheme.
 To review and modify what is included in the scheme, invoke the *"Edit Scheme..."* sheet and select the *"Build"* tab from the column on the left, and make sure all your targets and their unit tests are included.
 
 If your project depends on other open-source projects that are provided by Carthage or CocoaPods, consult the [Using Carthage/CocoaPods Projects](#using-carthagecocoapods-projects) section.
 
-## Swift Migration Assistant 
+## Swift Migration Assistant
 When you open your project with Xcode 8.0 for the first time, you will be prompted via the migration assistant to do a migration pass. The assistant can also be invoked manually from the menu *Edit -> Convert -> To Current Swift Syntax...*
 
 You can choose from two kinds of migration to perform:
@@ -29,7 +29,7 @@ Note that in the diff view, the original source (before conversion) is on the ri
 
 There may have been issues with processing the targets, that will negatively impact the migration process. Switch to the *"Report Navigator"* and select the *'Convert'* entry that was added; this is the conversion build log. Check the log for errors that may have showed up.
 
-If you see errors about not being able to code-sign the target, try disabling code-signing from the build settings of the target.  
+If you see errors about not being able to code-sign the target, try disabling code-signing from the build settings of the target.
 If you see other errors, please file a bug report at https://bugreport.apple.com and include the details.
 
 If you need to apply any workarounds, discard the changes that you accepted from the migration assistant earlier, apply the workarounds, and invoke the assistant manually to re-try the conversion from the start.
@@ -42,7 +42,7 @@ Here is a brief overview of the more impactful source-breaking changes:
 
 ### API Design Guidelines
 
-The Objective-C APIs are imported into Swift 3 according to the new [Swift API design guidelines](https://swift.org/documentation/api-design-guidelines). This affects both how the SDKs are imported and the Objective-C user frameworks. The Swift Standard Library also has many changes for adhering to the guidelines. For more details you can refer to proposal [SE-0005 - Better Translation of Objective-C APIs Into Swift](https://github.com/apple/swift-evolution/blob/main/proposals/0005-objective-c-name-translation.md).  
+The Objective-C APIs are imported into Swift 3 according to the new [Swift API design guidelines](/documentation/api-design-guidelines). This affects both how the SDKs are imported and the Objective-C user frameworks. The Swift Standard Library also has many changes for adhering to the guidelines. For more details you can refer to proposal [SE-0005 - Better Translation of Objective-C APIs Into Swift](https://github.com/apple/swift-evolution/blob/main/proposals/0005-objective-c-name-translation.md).
 The migrator is lowercasing enums declared by the user, to match them with the new guidelines.
 
 ### SDK
@@ -80,12 +80,12 @@ Range(r) // converts to Range<Int>
 ~~~
 
 ### Language
-- **Consistent first argument labels**  
+- **Consistent first argument labels**
 The first argument label in functions is now considered API by default, see [SE-0046 - Establish consistent label behavior across all parameters including first labels](https://github.com/apple/swift-evolution/blob/main/proposals/0046-first-label.md).
 The migrator adds underscore labels to preserve the existing APIs:
 
         func foo(bar: Int) => func foo(_ bar: Int)
-- **Changes with handling of UnsafePointer\<T\>**  
+- **Changes with handling of UnsafePointer\<T\>**
 In Swift 3, the nullability of non-object pointer types is now represented explicitly using optionals, such as `UnsafePointer<Int>?`, see [SE-0055 - Make unsafe pointer nullability explicit using Optional](https://github.com/apple/swift-evolution/blob/main/proposals/0055-optional-unsafe-pointers.md). This means that the types `UnsafePointer`, `UnsafeMutablePointer`, `AutoreleasingUnsafeMutablePointer`, `OpaquePointer`, `Selector`, and `NSZone` now represent non-nullable pointers, i.e. pointers that are never `nil`. Code working with these types may have to make several changes:
 
     - To set a pointer to `nil`, it must be optional. The migrator will handle some simple cases here, but in general you must decide whether your pointers should be optional just like your object references.
@@ -93,8 +93,8 @@ In Swift 3, the nullability of non-object pointer types is now represented expli
     - Callbacks (C functions or blocks) that take or return pointer types must match the original declaration in using or omitting `Optional`.
     - Due to compiler limitations, passing a pointer through a function that uses C variadics (such as NSLog) is not allowed. As a workaround, please use the following idiom to pass it as a pointer-sized integer value instead: `Int(bitPattern: nullablePointer)`.
 
-- **Objective-C lightweight generic classes are now imported as generic types**  
-[SE-0057 - Importing Objective-C Lightweight Generics](https://github.com/apple/swift-evolution/blob/main/proposals/0057-importing-objc-generics.md)  
+- **Objective-C lightweight generic classes are now imported as generic types**
+[SE-0057 - Importing Objective-C Lightweight Generics](https://github.com/apple/swift-evolution/blob/main/proposals/0057-importing-objc-generics.md)
 Because Objective-C generics are not represented at runtime,  there are some limitations on what can be done with them in Swift:
   - If an Objective-C generic class is used in a checked `as?`, `as!`, or `is` cast, the generic parameters are not checked at runtime. The cast succeeds if the operand is an instance of the Objective-C class, regardless of parameters.
 
@@ -117,30 +117,30 @@ Because Objective-C generics are not represented at runtime,  there are some lim
             return T()
           }
         }
-        
+
         // Error: extension can't be constrained
         extension NSFoo where T: NSString {
         }
 
   - Foundation container classes `NS[Mutable]Array`, `NS[Mutable]Set`, and  `NS[Mutable]Dictionary` are still imported as nongeneric classes for the time being.
 
-- **Objective-C id is imported as as Swift Any type**  
-[SE-0116 - Import Objective-C id as Swift Any type](https://github.com/apple/swift-evolution/blob/main/proposals/0116-id-as-any.md)  
+- **Objective-C id is imported as as Swift Any type**
+[SE-0116 - Import Objective-C id as Swift Any type](https://github.com/apple/swift-evolution/blob/main/proposals/0116-id-as-any.md)
 Objective-C interfaces that use `id` and untyped collections will be imported into Swift as taking the `Any` type instead of `AnyObject`.
 
-- **Changes with handling of ImplicitlyUnwrappedOptional**  
-[SE-0054 - Abolish ImplicitlyUnwrappedOptional type](https://github.com/apple/swift-evolution/blob/main/proposals/0054-abolish-iuo.md)  
-Variable bindings which previously had inferred type `T!` from their binding on the right-hand side will now have type `T?`. The compiler will emit an error at sites where those bound variables are used in a context that demands a non-optional type and suggest that the value be forced with the `!` operator.  
-Explicitly written nested IUO types (like `[Int!]`) will have to be rewritten to use the corresponding optional type (`[Int?]`) or non-optional type (`[Int]`) depending on what's more appropriate for the context. However, most declarations with non-nested IUO type will continue to work as they did before.  
+- **Changes with handling of ImplicitlyUnwrappedOptional**
+[SE-0054 - Abolish ImplicitlyUnwrappedOptional type](https://github.com/apple/swift-evolution/blob/main/proposals/0054-abolish-iuo.md)
+Variable bindings which previously had inferred type `T!` from their binding on the right-hand side will now have type `T?`. The compiler will emit an error at sites where those bound variables are used in a context that demands a non-optional type and suggest that the value be forced with the `!` operator.
+Explicitly written nested IUO types (like `[Int!]`) will have to be rewritten to use the corresponding optional type (`[Int?]`) or non-optional type (`[Int]`) depending on what's more appropriate for the context. However, most declarations with non-nested IUO type will continue to work as they did before.
 Unsugared use of the `ImplicitlyUnwrappedOptional` type will have to be replaced with the postfix `!` notation.
 
-- **Closures are non-escaping by default**  
-[SE-0103 - Make non-escaping closures the default](https://github.com/apple/swift-evolution/blob/main/proposals/0103-make-noescape-default.md)  
+- **Closures are non-escaping by default**
+[SE-0103 - Make non-escaping closures the default](https://github.com/apple/swift-evolution/blob/main/proposals/0103-make-noescape-default.md)
 The default for closures was switched and they require an `@escaping` annotation if a closure argument can escape the function body.
 
-- **UnsafeRawPointer type was introduced to enforce type safety with respect to unsafe pointer conversion.**  
-[SE-0107 - UnsafeRawPointer API](https://github.com/apple/swift-evolution/blob/main/proposals/0107-unsaferawpointer.md)  
-An `Unsafe[Mutable]RawPointer` type has been introduced. It replaces `Unsafe[Mutable]Pointer<Void>`. Conversion from `UnsafePointer<T>` to `UnsafePointer<U>` has been disallowed. `Unsafe[Mutable]RawPointer` provides an API for untyped memory access and an API for binding memory to a type. Binding memory allows for safe conversion between pointer types.  
+- **UnsafeRawPointer type was introduced to enforce type safety with respect to unsafe pointer conversion.**
+[SE-0107 - UnsafeRawPointer API](https://github.com/apple/swift-evolution/blob/main/proposals/0107-unsaferawpointer.md)
+An `Unsafe[Mutable]RawPointer` type has been introduced. It replaces `Unsafe[Mutable]Pointer<Void>`. Conversion from `UnsafePointer<T>` to `UnsafePointer<U>` has been disallowed. `Unsafe[Mutable]RawPointer` provides an API for untyped memory access and an API for binding memory to a type. Binding memory allows for safe conversion between pointer types.
 For detailed instructions on how to migrate your code to the new API refer to the [UnsafeRawPointer migration guide](/migration-guide-swift3/se-0107-migrate.html).
 
 ## After Migration
@@ -158,10 +158,10 @@ See [Known Migration Issues](#known-migration-issues) section, for a list of iss
 
 If you are using binary Swift modules from other projects that are not built along with your project in your Xcode workspace, you can choose from one of the following migration strategies:
 
-- **Include the source code of the project in your Xcode workspace**  
+- **Include the source code of the project in your Xcode workspace**
 With this approach you will build and migrate the open-source project along with your own project. Use Xcode 7.3[.1] to make the necessary changes and validate that the project builds and links everything correctly. Include the other Xcode project files in your workspace and setup your scheme for building the targets that your project depends on. If you have setup framework search paths for finding the binary Swift modules inside Carthage's build folder, either remove the search paths or clean the build folder, so that you are sure that you are only using the Swift modules that are built from your Xcode workspace.
 
-- **Wait until the upstream open-source project updates to Swift 2.3 or Swift 3**  
+- **Wait until the upstream open-source project updates to Swift 2.3 or Swift 3**
 You can follow this workflow for migrating your project:
 	- Keep your project as it is building with Xcode 7.3
 	- Invoke the migration assistant and apply the source changes that are suggested for your own project only (for Swift 2.3 or Swift 3)

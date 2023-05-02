@@ -35,7 +35,7 @@ There are new package collections already available today, and we expect others 
 
 **Swift Server Workgroup**
 
-[The Swift Server Workgroup](https://swift.org/sswg/) (part of the Swift project) has published a package collection that contains the packages incubated by the workgroup. The SSWG collection is available at:
+[The Swift Server Workgroup](/sswg/) (part of the Swift project) has published a package collection that contains the packages incubated by the workgroup. The SSWG collection is available at:
 
 
 >  https://swiftserver.group/collection/sswg.json
@@ -105,7 +105,7 @@ Will generate a collection JSON file looks like this:
               "products": [
                 {
                   "name": "MyProduct",
-                  "targets": ["MyTarget"],  
+                  "targets": ["MyTarget"],
                   "type": { "library": ["automatic"] }
                 }
               ],
@@ -116,7 +116,7 @@ Will generate a collection JSON file looks like this:
               ],
               "toolsVersion": "5.1.0"
             }
-          }       
+          }
         }
       ]
     }

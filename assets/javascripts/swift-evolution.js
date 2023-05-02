@@ -34,14 +34,30 @@ var languageVersions = [
   '5.6',
   '5.7',
   '5.8',
+  '5.9',
   'Next'
 ]
+
+/** 
+ * Mapping of proposal ids to upcoming feature flags. 
+ * Temporary until upcomingFeatureFlag property is returned in proposals.json. 
+ */
+const upcomingFeatureFlags = new Map([
+  ['SE-0274', 'ConciseMagicFile'],
+  ['SE-0286', 'ForwardTrailingClosures'],
+  ['SE-0335', 'ExistentialAny'],
+  ['SE-0354', 'BareSlashRegexLiterals'],
+  ['SE-0384', 'ImportObjcForwardDeclarations']
+])
 
 /** Storage for the user's current selection of filters when filtering is toggled off. */
 var filterSelection = []
 
+var upcomingFeatureFlagFilterEnabled = false
+
 var GITHUB_BASE_URL = 'https://github.com/'
 var REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
+var UFF_INFO_URL = 'https://github.com/apple/swift-evolution/blob/main/proposals/0362-piecemeal-future-features.md'
 
 /**
  * `name`: Mapping of the states in the proposals JSON to human-readable names.
@@ -51,7 +67,7 @@ var REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main
  *
  * `className`: Mapping of states in the proposals JSON to the CSS class names used
  * to manipulate and display proposals based on their status.
- * 
+ *
  * `count`: Number of proposals that determine after all proposals is loaded
  */
 var states = {
@@ -136,6 +152,14 @@ function init() {
     proposals = proposals.filter(function (proposal) {
       return !proposal.errors
     })
+    
+    // Add upcomingFeatureFlag to proposal if present in mapping.
+    // Temporary until upcomingFeatureFlag property is returned in proposals.json. 
+    for (var proposal of proposals) {
+      if (upcomingFeatureFlags.has(proposal.id)) {
+        proposal.upcomingFeatureFlag = upcomingFeatureFlags.get(proposal.id)
+      }
+    }
 
     // descending numeric sort based the numeric nnnn in a proposal ID's SE-nnnn
     proposals.sort(function compareProposalIDs (p1, p2) {
@@ -245,7 +269,7 @@ function renderSearchBar () {
     return html('li', null, [
       html('input', { type: 'checkbox', className: 'filtered-by-status', id: 'filter-by-' + className, value: className }),
       html('label', { className: className, tabindex: '0', role: 'button', 'for': 'filter-by-' + className, 'data-state-key': state }, [
-        addNumberToState(states[state].name, states[state].count)        
+        addNumberToState(states[state].name, states[state].count)
       ])
     ])
   })
@@ -308,7 +332,7 @@ function renderProposals() {
     '.awaitingReview', '.scheduledForReview', '.activeReview', '.accepted', '.acceptedWithRevisions',
     '.previewing', '.implemented', '.returnedForRevision', '.rejected', '.withdrawn'
   ]
-    
+
   proposalPresentationOrder.map(function (state) {
     var matchingProposals = proposals.filter(function (p) { return p.status && p.status.state === state })
     matchingProposals.map(function (proposal) {
@@ -348,6 +372,7 @@ function renderProposals() {
       if (state === '.implemented') detailNodes.push(renderVersion(proposal.status.version))
       if (state === '.previewing') detailNodes.push(renderPreview())
       if (proposal.implementation) detailNodes.push(renderImplementation(proposal.implementation))
+      if (proposal.upcomingFeatureFlag) detailNodes.push(renderUpcomingFeatureFlag(proposal.upcomingFeatureFlag))
       if (state === '.acceptedWithRevisions') detailNodes.push(renderStatus(proposal.status))
 
       if (state === '.activeReview' || state === '.scheduledForReview') {
@@ -404,17 +429,10 @@ function renderReviewManager(reviewManager) {
   ])
 }
 
-/** Tracking bugs linked in a proposal are updated via bugs.swift.org. */
+/** Tracking bugs linked in a proposal are updated via GitHub Issues. */
 function renderTrackingBugs(bugs) {
   var bugNodes = bugs.map(function (bug) {
-    return html('a', { href: bug.link, target: '_blank' }, [
-      bug.id,
-      ' (',
-      bug.assignee || 'Unassigned',
-      ', ',
-      bug.status || 'N/A',
-      ')'
-    ])
+    return html('a', { href: bug.link, target: '_blank' }, bug.id)
   })
 
   bugNodes = _joinNodes(bugNodes, ', ')
@@ -453,6 +471,18 @@ function renderImplementation(implementations) {
   ])
 }
 
+/** For proposals that contain an upcoming feature flag. */
+function renderUpcomingFeatureFlag(upcomingFeatureFlag) {
+  return html('div', { className: 'proposal-detail' }, [
+    html('div', { className: 'proposal-detail-label' }, [
+      'Upcoming Feature Flag: '
+    ]),
+    html('div', { className: 'proposal-detail-value' }, [
+      upcomingFeatureFlag
+    ])
+  ])
+}
+
 /** For `.previewing` proposals, link to the stdlib preview package. */
 function renderPreview() {
   return html('div', { className: 'proposal-detail' }, [
@@ -460,7 +490,7 @@ function renderPreview() {
       'Preview: '
     ]),
     html('div', { className: 'proposal-detail-value' }, [
-      html('a', { href: 'https://github.com/apple/swift-standard-library-preview', target: '_blank' }, 
+      html('a', { href: 'https://github.com/apple/swift-standard-library-preview', target: '_blank' },
         'Standard Library Preview'
       )
     ])
@@ -545,7 +575,7 @@ function _joinNodes (nodeList, text) {
 function addEventListeners() {
   var searchInput = document.querySelector('#search-filter')
 
-  // typing in the search field causes the filter to be reapplied.  
+  // typing in the search field causes the filter to be reapplied.
   searchInput.addEventListener('search', filterProposals)
 
   // each of the individual statuses needs to trigger filtering as well
@@ -567,10 +597,12 @@ function addEventListeners() {
     })
   })
 
-  document.querySelector('.filter-button').addEventListener('click', toggleFiltering)
+  document.querySelector('#status-filter-button').addEventListener('click', toggleStatusFiltering)
 
   var filterToggle = document.querySelector('.filter-toggle')
   filterToggle.querySelector('.toggle-filter-panel').addEventListener('click', toggleFilterPanel)
+  
+  document.querySelector('#flag-filter-button').addEventListener('click', toggleFlagFiltering)
 
   // Behavior conditional on certain browser features
   var CSS = window.CSS
@@ -616,13 +648,13 @@ function addEventListeners() {
  * Toggles whether filters are active. Rather than being cleared, they are saved to be restored later.
  * Additionally, toggles the presence of the "Filtered by:" status indicator.
  */
-function toggleFiltering() {
+function toggleStatusFiltering() {
   var filterDescription = document.querySelector('.filter-toggle')
   var shouldPreserveSelection = !filterDescription.classList.contains('hidden')
 
   filterDescription.classList.toggle('hidden')
   var selected = document.querySelectorAll('.filter-list input[type=checkbox]:checked')
-  var filterButton = document.querySelector('.filter-button')
+  var filterButton = document.querySelector('#status-filter-button')
 
   if (shouldPreserveSelection) {
     filterSelection = [].map.call(selected, function (checkbox) { return checkbox.id })
@@ -662,6 +694,16 @@ function toggleFilterPanel() {
   }
 }
 
+function toggleFlagFiltering() {
+  var filterButton = document.querySelector('#flag-filter-button')
+  var newValue = !filterButton.classList.contains('active')
+  filterButton.setAttribute('aria-pressed', newValue ? 'true' : 'false')
+  filterButton.classList.toggle('active')
+  upcomingFeatureFlagFilterEnabled = newValue
+  
+  filterProposals()
+}
+
 /**
  * Applies both the status-based and text-input based filters to the proposals list.
  */
@@ -687,14 +729,17 @@ function filterProposals() {
       .map(function (part) { return _searchProposals(part) })
   }
 
-  var intersection = matchingSets.reduce(function (intersection, candidates) {
+  var searchMatches = matchingSets.reduce(function (intersection, candidates) {
     return intersection.filter(function (alreadyIncluded) { return candidates.indexOf(alreadyIncluded) !== -1 })
   }, matchingSets[0] || [])
-
-  _applyFilter(intersection)
+  
+  var searchAndFlagMatches = _applyFlagFilter(searchMatches)
+  var fullMatches = _applyStatusFilter(searchAndFlagMatches)
+  _setProposalVisibility(fullMatches)
   _updateURIFragment()
 
-  determineNumberOfProposals(intersection)
+ // The per-status counts take only search string and flag filter matches into account
+  determineNumberOfProposals(searchAndFlagMatches)
   updateFilterStatus()
 }
 
@@ -724,7 +769,8 @@ function _searchProposals(filterText) {
       ['trackingBugs', 'link'],
       ['trackingBugs', 'status'],
       ['trackingBugs', 'id'],
-      ['trackingBugs', 'assignee']
+      ['trackingBugs', 'assignee'],
+      ['upcomingFeatureFlag']
   ]
 
   // reflect over the proposals and find ones with matching properties
@@ -763,12 +809,27 @@ function _searchProposals(filterText) {
 }
 
 /**
- * Helper for `filterProposals` that actually makes the filter take effect.
+ * Helper for `filterProposals` that makes the upcoming feature flag filter take effect.
  *
  * @param {Proposal[]} matchingProposals - The proposals that have passed the text filtering phase.
- * @returns {Void} Toggles `display: hidden` to apply the filter.
+ * @returns {Proposal[]} The results of applying the upcoming feature flag filter.
  */
-function _applyFilter(matchingProposals) {
+function _applyFlagFilter(matchingProposals) {
+  if (upcomingFeatureFlagFilterEnabled) {
+    matchingProposals = matchingProposals.filter(function (proposal) {
+      return proposal.upcomingFeatureFlag ? true : false
+    })
+  }
+  return matchingProposals
+}
+
+/**
+ * Helper for `filterProposals` that makes the status filter take effect.
+ *
+ * @param {Proposal[]} matchingProposals - The proposals that have passed the text and upcoming feature flag filtering phase.
+ * @returns {Proposal[]} The results of applying the status filter.
+ */
+function _applyStatusFilter(matchingProposals) {
   // filter out proposals based on the grouping checkboxes
   var allStateCheckboxes = document.querySelectorAll('.filter-list input:checked')
   var selectedStates = [].map.call(allStateCheckboxes, function (checkbox) { return checkbox.value })
@@ -801,7 +862,16 @@ function _applyFilter(matchingProposals) {
         })
     }
   }
+  return matchingProposals
+}
 
+/**
+ * Helper for `filterProposals` that sets the visibility of proposals to display only matching items.
+ *
+ * @param {Proposal[]} matchingProposals - The proposals that have passed all filtering tests.
+ * @returns {Void} Toggles `display: hidden` to apply the filter.
+ */
+function _setProposalVisibility(matchingProposals) {
   var filteredProposals = proposals.filter(function (proposal) {
     return matchingProposals.indexOf(proposal) === -1
   })
@@ -846,7 +916,7 @@ function _applyFragment(fragment) {
   fragment = fragment.substring(2) // remove the #?
 
   // Use this literal's keys as the source of truth for key-value pairs in the fragment
-  var actions = { proposal: [], search: null, status: [], version: [] }
+  var actions = { proposal: [], search: null, status: [], version: [], upcoming: false }
 
   // Parse the fragment as a query string
   Object.keys(actions).forEach(function (action) {
@@ -857,6 +927,8 @@ function _applyFragment(fragment) {
       var value = values[1] // 1st capture group from the RegExp
       if (action === 'search') {
         value = decodeURIComponent(value)
+      } else if (action === 'upcoming') {
+        value = value === 'true'
       } else {
         value = value.split(',')
       }
@@ -939,7 +1011,12 @@ function _applyFragment(fragment) {
   // specifying any filter in the fragment should activate the filters in the UI
   if (actions.version.length || actions.status.length) {
     toggleFilterPanel()
-    toggleFiltering()
+    toggleStatusFiltering()
+  }
+  
+  // Toggle upcoming feature flag filter if needed
+  if (actions.upcoming && !upcomingFeatureFlagFilterEnabled) {
+    toggleFlagFiltering()
   }
 
   filterProposals()
@@ -993,6 +1070,7 @@ function _updateURIFragment() {
   if (actions.proposal.length) fragments.push('proposal=' + actions.proposal.join(','))
   if (actions.status.length) fragments.push('status=' + actions.status.join(','))
   if (actions.version.length) fragments.push('version=' + actions.version.join(','))
+  if (upcomingFeatureFlagFilterEnabled) fragments.push('upcoming=true')
 
   // encoding the search lets you search for `??` and other edge cases.
   if (actions.search) fragments.push('search=' + encodeURIComponent(actions.search))
@@ -1030,6 +1108,15 @@ function updateFilterDescription(selectedStateNames) {
   if (window.matchMedia('(max-width: 414px)').matches) {
     FILTER_DESCRIPTION_LIMIT = 1
   }
+  
+  // On very narrow screens, shorten long status names
+  if (window.matchMedia('(max-width: 360px)').matches) {
+    selectedStateNames.forEach((name, index) => {
+      var newName = name.replace('Scheduled for Review', 'Scheduled')
+      newName = newName.replace('Returned for Revision', 'Returned')
+      selectedStateNames[index] = newName
+    })
+  }
 
   var container = document.querySelector('.toggle-filter-panel')
 
@@ -1051,10 +1138,21 @@ function updateFilterDescription(selectedStateNames) {
   }
 }
 
-/** Updates the `${n} Proposals` display just above the proposals list. */
+/** 
+ * Updates the `${n} Proposals` display just above the proposals list.
+ * Indicates when proposals with upcoming feature flags are shown including link
+ * to explanation of what upcoming feature flags are.
+ */
 function updateProposalsCount (count) {
   var numberField = document.querySelector('#proposals-count-number')
-  numberField.innerText = (count.toString() + ' proposal' + (count !== 1 ? 's' : ''))
+  var baseString = (count.toString() + ' proposal' + (count !== 1 ? 's' : ''))
+  if (upcomingFeatureFlagFilterEnabled) {
+    var anchorTag = '<a href="' + UFF_INFO_URL + '" target="_blank">'
+    var uffText = 'upcoming feature flag' + (count !== 1 ? 's' : '')
+    numberField.innerHTML = baseString + " with "+ (count !== 1 ? '' : 'an ') + anchorTag + uffText + '</a>'
+  } else {
+    numberField.innerHTML = baseString
+  }
 }
 
 function updateFilterStatus () {

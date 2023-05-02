@@ -97,8 +97,12 @@
           name: reporting-bugs
         - title: Triaging Bugs
           name: triaging-bugs
+        - title: Blog Post Contributions
+          name: website-and-blog-post-contributions
         - title: Swift Evolution
           name: evolution-process
+        - title: Good First Issues
+          name: good-first-issues
         - title: Contributing Code
           name: contributing-code
         - title: Adding External Library Dependencies

@@ -15,7 +15,7 @@ Swift 5.1 shipped with two new features related to binary stability which enable
 
 Module stability currently requires library evolution support; typically you will enable both features when building a binary framework for distribution.
 
-For more details on how binary stability, module stability and library evolution support fit together, please see an earlier post on this blog titled [ABI stability and more]({{ site.url }}/blog/abi-stability-and-more/).
+For more details on how binary stability, module stability and library evolution support fit together, please see an earlier post on this blog titled [ABI stability and more](/blog/abi-stability-and-more/).
 
 ## When to enable library evolution support
 
@@ -108,7 +108,7 @@ With that out of the way, let's move on and describe some common resilient chang
       // is part of the framework's binary interface.
       case rect(w: Int, h: Int)
       case circle(radius: Int)
-  
+
       // The order that these methods are declared
       // can be reordered. Their ordering is NOT
       // part of the framework's binary interface.
@@ -178,7 +178,7 @@ With that out of the way, let's move on and describe some common resilient chang
     var z: Int { get }
 
     associatedtype Magnitude = Double
-  
+
     var magnitude: Magnitude { get }
   }
   ~~~
@@ -226,7 +226,7 @@ With that out of the way, let's move on and describe some common resilient chang
   @frozen public enum Shape : CustomStringConvertible {
     case rect(w: Int, h: Int)
     case circle(radius: Int)
-  
+
     public var description: String { ... }
   }
   ~~~
@@ -249,7 +249,7 @@ With that out of the way, let's move on and describe some common resilient chang
   ~~~
 
   we can add a new class `Gizmo` in version 2 inheriting from `Gadget`, and simultaneously change `Widget` to inherit from `Gizmo`:
-  
+
   ~~~swift
   public class Gadget {}
   public class Gizmo : Gadget {}
@@ -327,7 +327,7 @@ The compiler imposes two language restrictions on `@frozen` structs:
 - While the stored properties of a `@frozen` struct need not be ABI-public, the _types_ of those stored properties must be ABI-public types. This means that ABI-private structs and enums are never be part of a framework's binary interface, because they cannot be recursively contained in an ABI-public `@frozen` type.
 
   So the following is legal, because the type of `Widget.id` is `Int`, which is ABI-public:
-  
+
   ~~~swift
     @frozen
     public struct Widget {
@@ -336,38 +336,38 @@ The compiler imposes two language restrictions on `@frozen` structs:
   ~~~
 
   However, a similar declaration except where the `id` property has a custom private type `ID` is not:
-  
+
   ~~~swift
     @frozen
     public struct Widget {
       private let id: ID
     }
-    
+
     fileprivate struct ID {
       private let id: Int
     }
   ~~~
-  
+
   To make the above compile, the definition of `ID` can be changed to be `public` or `@usableFromInline`.
 
 - If any stored properties in the struct have initial value expressions, those initial value expressions are compiled as if they are `@inlinable`, meaning the initial value can only be expressed in terms of references to other ABI-public declarations.
 
   For example, the following is legal, because `doInternalThing()` is `@usableFromInline`:
-  
+
   ~~~swift
     @usableFromInline
     func doInternalThing() -> Int { ... }
-    
+
     public struct Widget {
       private let id: Int = doInternalThing()
     }
   ~~~
-  
+
   But this is not:
-  
+
   ~~~swift
     func doInternalThing() -> Int { ... }
-    
+
     public struct Widget {
       private let id: Int = doInternalThing()
     }
@@ -395,7 +395,7 @@ The Swift compiler currently only guarantees binary compatibility among differen
 
 However, stable module interfaces and library evolution can be used on all platforms supported by Swift. So on non-Apple platforms, you can still use multiple versions of the same library without recompiling a client application, as long as all binaries were built with the same version of the Swift compiler.
 
-As mentioned in [ABI stability and more]({{ site.url }}/blog/abi-stability-and-more/), as development of Swift on Linux, Windows, and other platforms matures, the Swift Core Team will evaluate stabilizing the ABI on those platforms as well. This will lift the restriction on mixing and matching artifacts built with different compiler versions.
+As mentioned in [ABI stability and more](/blog/abi-stability-and-more/), as development of Swift on Linux, Windows, and other platforms matures, the Swift Core Team will evaluate stabilizing the ABI on those platforms as well. This will lift the restriction on mixing and matching artifacts built with different compiler versions.
 
 ### Objective-C interoperability
 
@@ -458,7 +458,7 @@ This is accomplished in two steps. First, for every protocol requirement, the bi
 
 Finally, to cope with adding new protocol requirements, protocol witness tables require _runtime instantiation_. Instead of emitting a witness table in the client code directly, the compiler emits a symbolic description of the conformance. The instantiation process places the protocol requirements in the correct order and fills missing entries to point to their default implementation, to produce a well-formed witness table which can be passed off to a dispatch thunk.
 
-Unlike structs and enums, protocols do not define an opt-out mechanism to publish the exact layout of the protocol and get around the use of dispatch thunks. This is because the overhead is negligible in practice. 
+Unlike structs and enums, protocols do not define an opt-out mechanism to publish the exact layout of the protocol and get around the use of dispatch thunks. This is because the overhead is negligible in practice.
 
 If you've been paying particularly close attention, you might (correctly) guess that just like the other resilience features, if the conformance is defined in the same framework as the protocol, the compiler does not use runtime instantiation or dispatch thunks.
 
@@ -498,7 +498,7 @@ Please feel free to post questions about this post on the [associated thread](ht
 
 The list below collects various links found earlier in this document:
 
-- Blog post: [ABI stability and more](https://swift.org/blog/abi-stability-and-more/)
+- Blog post: [ABI stability and more](/blog/abi-stability-and-more/)
 - WWDC talk: [Binary frameworks in Swift](https://developer.apple.com/wwdc19/416)
 - Specification document: [LibraryEvolution.rst](https://github.com/apple/swift/blob/master/docs/LibraryEvolution.rst)
 - Evolution proposal: [SE-0193 Cross-module inlining and specialization](https://github.com/apple/swift-evolution/blob/master/proposals/0193-cross-module-inlining-and-specialization.md)

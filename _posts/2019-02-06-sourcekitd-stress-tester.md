@@ -29,7 +29,7 @@ Within this set there are two main classes of requests: syntactic and semantic.
 
 ### Stress testing sourcekitd
 
-To help find crashes, assertion failures, hangs and other failures in sourcekitd, the latest [swift.org](https://swift.org/download/#snapshots) trunk development snapshot for macOS now includes the sourcekitd stress tester. If you look in the usr/bin directory, though, you'll see there are actually two new executables:
+To help find crashes, assertion failures, hangs and other failures in sourcekitd, the latest [swift.org](/download/#snapshots) trunk development snapshot for macOS now includes the sourcekitd stress tester. If you look in the usr/bin directory, though, you'll see there are actually two new executables:
 
 - *sk-stress-test*: the stress tester itself, and
 - *sk-swiftc-wrapper*: a helper utility that makes it easier to run the stress tester over all the files in an entire Swift project.
@@ -54,7 +54,7 @@ The currently supported strategies are:
 
     The animation below visualizes this process for a small example file. Note that SemanticRefactoring requests are not shown, as they coincide with the locations and timing of the CursorInfo and RangeInfo requests.
 
-    > ![Animated visualization of the default rewrite mode]({{ site.url }}/assets/images/stress-tester-blog/default.gif){:width="100%"}
+    > ![Animated visualization of the default rewrite mode](/assets/images/stress-tester-blog/default.gif){:width="100%"}
 
     This strategy never modifies the input Swift source file, so assuming that file compiles, any failures it reports may affect users simply browsing and navigating unmodified, valid Swift code. These are generally higher-priority issues.
 
@@ -62,7 +62,7 @@ The currently supported strategies are:
 
     In this mode an EditorOpen request is also sent, but with no file content. EditorReplaceText requests are instead made to introduce the content of the input Swift source file token by token from top to bottom, with various semantic requests being made before and after each token insertion based on the token's type and what higher level syntactic structures it is a part of. CursorInfo requests, for example, are made at the start positions of all identifier tokens as soon as they are introduced, while CodeComplete requests are sent immediately before inserting identifiers, and immediately after inserting identifiers and tokens that end expressions. RangeInfo requests, meanwhile, are sent for all higher-level syntactic structures, as soon as their first and last tokens have been inserted. As with the default mode, SemanticRefactoring requests are sent for each available refactoring returned from the CursorInfo and RangeInfo requests.
 
-    > ![Animated visualization of the basic rewrite mode]({{ site.url }}/assets/images/stress-tester-blog/basic.gif){:width="100%"}
+    > ![Animated visualization of the basic rewrite mode](/assets/images/stress-tester-blog/basic.gif){:width="100%"}
 
     While browsing and navigating valid code is important, many sourcekitd requests like CodeComplete, are primarily invoked on Swift source files in an invalid, incomplete state. This is the simplest strategy that exercises sourcekitd on source with incomplete syntax and unresolvable identifiers.
 
@@ -70,7 +70,7 @@ The currently supported strategies are:
 
     This mode works like the basic mode, but as if it was being run for each top-level declaration in the file concurrently. It inserts a single token of the first top-level declaration, then of the next top-level declaration, then of the next, and so on, in a round-robin-like scheme, until all tokens have been placed. Semantic requests, like CursorInfo and CodeComplete, are performed before and/or after each token is inserted, according to the same rules as the basic mode, above.
 
-    > ![Animated visualization of the concurrent rewrite mode]({{ site.url }}/assets/images/stress-tester-blog/concurrent.gif){:width="100%"}
+    > ![Animated visualization of the concurrent rewrite mode](/assets/images/stress-tester-blog/concurrent.gif){:width="100%"}
 
     As well as producing incomplete syntax, this approach also results in declarations later in the file being temporarily nested inside earlier declarations, often giving them invalid contexts.
 
@@ -78,7 +78,7 @@ The currently supported strategies are:
 
     As with the previous two modes, an initial EditorOpen request is sent with no file content, and tokens are inserted gradually via EditorReplaceText requests. The ordering in this case, though, is from the most deeply nested token in syntactic structure of the provided file, to the least. This depth is based on SwiftSyntax's syntax tree, so is quite fine-grained. In the expression `(1-2)+3`, for example, the tokens would be inserted in the following temporal order: `1`, `2`, `-`, `(`, `)`, `3`, `+`. Beyond the different insertion order, this mode otherwise works similarly the concurrent and basic modes, sending semantic requests as tokens are introduced based on both their type and the higher level structures they complete.
 
-    > ![Animated visualization of the insideOut rewrite mode]({{ site.url }}/assets/images/stress-tester-blog/insideOut.gif){:width="100%"}
+    > ![Animated visualization of the insideOut rewrite mode](/assets/images/stress-tester-blog/insideOut.gif){:width="100%"}
 
     This approach results in fairly incomprehensible modifications and file states in its early stages, but has been quite useful in finding issues in SwiftSyntax and the recently introduced incremental parsing logic that sourcekitd uses to provide the syntactic information in the EditorOpen and EditorReplaceText requests.
 
@@ -90,7 +90,7 @@ The stress tester executable itself isn't very convenient to run over an existin
 
 ### Regression and pull request testing via Swift CI
 
-To help catch sourcekitd failures as they're introduced, the stress tester is now being run over the 78 open source projects in the [Swift source compatibility suite](https://swift.org/source-compatibility/) as part of Swift's continuous integration testing. The Swift source compatibility suite was put together to help ensure the compatibility of Swift source code as the language and compiler evolve, but its mix of Xcode and Swift Package Manager projects across a variety of domains make it a great corpus of real-world Swift code to run the stress tester over too. Swift CI is currently running the stress tester over the full suite once per week due to its long runtime, and over a smaller subset that has a faster turnaround on a continuous basis whenever sourcekitd and compiler changes are made.
+To help catch sourcekitd failures as they're introduced, the stress tester is now being run over the 78 open source projects in the [Swift source compatibility suite](/source-compatibility/) as part of Swift's continuous integration testing. The Swift source compatibility suite was put together to help ensure the compatibility of Swift source code as the language and compiler evolve, but its mix of Xcode and Swift Package Manager projects across a variety of domains make it a great corpus of real-world Swift code to run the stress tester over too. Swift CI is currently running the stress tester over the full suite once per week due to its long runtime, and over a smaller subset that has a faster turnaround on a continuous basis whenever sourcekitd and compiler changes are made.
 
 Running over the Swift source compatibility suite has found 91 issues affecting sourcekitd so far, including several regressions caused by fixes to earlier issues the stress tester reported. To make it easier to catch such regressions before changes are merged, we've also added pull request testing support for running the stress tester over a subset of the source compatibility suite. Swift project contributors can run the stress tester against their changes before merging by including the @swift-ci mention below in a comment on their PR:
 
@@ -101,18 +101,18 @@ To date 72 of the 91 sourcekitd issues detected by the stress tester have been f
 
 ### Find and report sourcekitd crashes in your own Projects
 
-The projects in the source compatibility suite are a great start, but the more projects the stress tester is run over, the more issues it will be able find. It's for this reason the sourcekitd stress tester is now included in the [swift.org](https://swift.org/download/#snapshots) trunk development toolchains. If you work on any Swift projects (and if you're reading this blog you probably do) please try running it over them and report any failures it finds using the instructions below.  This will not only improve your own Swift editing experience in future releases, but also everyone else's.
+The projects in the source compatibility suite are a great start, but the more projects the stress tester is run over, the more issues it will be able find. It's for this reason the sourcekitd stress tester is now included in the [swift.org](/download/#snapshots) trunk development toolchains. If you work on any Swift projects (and if you're reading this blog you probably do) please try running it over them and report any failures it finds using the instructions below.  This will not only improve your own Swift editing experience in future releases, but also everyone else's.
 
 #### Xcode projects
 
 To run the stress tester over an Xcode project:
 
-1. Download and install the latest trunk development snapshot of the Swift toolchain from [swift.org](https://swift.org/download/#snapshots)
+1. Download and install the latest trunk development snapshot of the Swift toolchain from [swift.org](/download/#snapshots)
 2. Open Xcode and select the downloaded toolchain via Xcode > Toolchains in the menu
 3. Open your project and navigate to the Build Settings view for your project or the particular target you would like to stress test
 4. Add a user-defined build setting `SWIFT_EXEC` with the value set to `$(TOOLCHAIN_DIR)/usr/bin/sk-swiftc-wrapper` as shown below:
 
-    ![Add the SWIFT_EXEC custom build setting]({{ site.url }}/assets/images/stress-tester-blog/xcode.png){:width="100%"}
+    ![Add the SWIFT_EXEC custom build setting](/assets/images/stress-tester-blog/xcode.png){:width="100%"}
 
 5. Start a build (⌘B) of the target you'd like to stress test and look at the build log in the Report Navigator for details on any issues it detects. Stress testing sourcekitd is an expensive operation, so expect the build to take significantly longer than usual.
 6. If any issues are detected, please follow the filing instructions below.
@@ -122,7 +122,7 @@ To run the stress tester over an Xcode project:
 
 To run the stress tester over a Swift package manager project, you can either generate an Xcode project via `swift package --generate-xcodeproj` and follow the instructions above, or use the following instructions to run on the command line:
 
-1. Download and install the latest development snapshot of the Swift toolchain from [swift.org](https://swift.org/download/#snapshots)
+1. Download and install the latest development snapshot of the Swift toolchain from [swift.org](/download/#snapshots)
 2. Determine the path to the installed toolchain's bin directory. Depending on the installation options you chose this should be under `Library/Developer/Toolchains/<toolchain>/usr/bin` in either your home directory or the root directory.
 
     `$ TOOLCHAIN_BIN=/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2019-01-21-a.xctoolchain/usr/bin`

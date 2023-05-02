@@ -4,7 +4,7 @@ title: Debugging Memory Leaks and Usage
 ---
 
 There are many different tools for troubleshooting memory leaks both on Linux and macOS, each with different strengths and ease-of-use. One excellent tool is the Xcode's [Memory Graph Debugger](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-DontLinkElementID_1).
-[Instruments](https://help.apple.com/instruments/mac/10.0/#/dev022f987b) and `leaks` can also be very useful. If you cannot run or reproduce the problem on macOS, there are a number of server-side alternatives below. 
+[Instruments](https://help.apple.com/instruments/mac/10.0/#/dev022f987b) and `leaks` can also be very useful. If you cannot run or reproduce the problem on macOS, there are a number of server-side alternatives below.
 
 ## Example program
 
@@ -142,7 +142,7 @@ addr2line -e /tmp/test -a 0xc62ce -ipf | swift demangle
 0x00000000000c62ce: test.myFunctionDoingTheAllocation() -> () at crtstuff.c:?
 ```
 ## Debugging transient memory usage with `heaptrack`
-[Heaptrack](https://github.com/KDE/heaptrack) is very useful for analyzing memory leaks/usage with less overhead than `valgrind` - but more importantly is also allows for analyzing transient memory usage which may significantly impact performance by putting to much pressure on the allocator. 
+[Heaptrack](https://github.com/KDE/heaptrack) is very useful for analyzing memory leaks/usage with less overhead than `valgrind` - but more importantly is also allows for analyzing transient memory usage which may significantly impact performance by putting to much pressure on the allocator.
 
 In addition to command line access, there is a graphical front-end `heaptrack_gui`.
 
@@ -181,7 +181,7 @@ heaptrack stats:
 Heaptrack finished! Now run the following to investigate the data:
 
   heaptrack --analyze "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84372.gz"
-ubuntu@ip-172-31-25-161 /t/.nio_alloc_counter_tests_GRusAy> 
+ubuntu@ip-172-31-25-161 /t/.nio_alloc_counter_tests_GRusAy>
 ```
 Here we could see that we had 673989 allocations in the feature branch version and 319347 in `main`, so clearly a regression.
 

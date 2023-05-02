@@ -5,21 +5,21 @@ title: Introducing Swift on Windows
 author: compnerd
 ---
 
-The Swift project is introducing [new downloadable Swift toolchain images]({{ site.url }}/download) for Windows!  These images contain development components needed to build and run Swift code on Windows.
+The Swift project is introducing [new downloadable Swift toolchain images](/download) for Windows!  These images contain development components needed to build and run Swift code on Windows.
 
 For over a year now, there has been a significant endeavour to port Swift to Windows in conjunction with the developer community at swift.org.  The Windows support is now at a point where early adopters can start using Swift to build real experiences on this platform.
- 
+
 ## Bringing Swift to Windows
 
 Porting Swift to Windows is not about simply porting the compiler, but rather ensuring that the full ecosystem is available on the platform.  This includes the compiler, the standard library, and the core libraries (dispatch, Foundation, XCTest).  These libraries are part of what enables developers to write powerful applications with ease and without having to worry about many of the details of the underlying system.  There are many technical details in the story of bringing Swift to a usable state on Windows, and if you are interested in them, I would recommend checking out my [talk on the topic](https://www.youtube.com/watch?v=Zjlxa1NIfJc) from the LLVM Developer Conference.
- 
+
 With these core libraries and the flexible interoperability of Swift with C, it is possible to develop applications on Windows purely in Swift while taking advantage of the existing corpus of libraries on the Windows platforms.
 
 ## Example Application
 
 This [demo calculator](https://github.com/compnerd/swift-win32/blob/ed4993f7cbb284a83ee77fcecdc2570cf24355e4/Examples/Calculator/Calculator.swift) is written entirely in Swift, with code seamlessly flipping between the application code written in Swift and the system libraries:
 
-![Calculator app written in Swift running on Windows]({{ site.url }}/assets/images/windows-blog/calculator.gif)
+![Calculator app written in Swift running on Windows](/assets/images/windows-blog/calculator.gif)
 
 This project was built using:
 
@@ -31,7 +31,7 @@ Although the demo application is built with CMake, Swift Package Manager support
 
 Here you can see stepping through the application using `lldb`:
 
-![LLDB console debugging Swift application on Windows]({{ site.url }}/assets/images/windows-blog/lldb.png)
+![LLDB console debugging Swift application on Windows](/assets/images/windows-blog/lldb.png)
 
 ## Cross-Platform Applications
 
@@ -64,10 +64,10 @@ I had been working with Alexander at Readdle about his team’s work, and he sen
 More details are available on [Readdle's blog](https://sparkmailapp.com/blog/swift-windows).
 
 Adding support for Windows to Swift is the beginning of a journey.  The current support sets the first milestone where the language is usable.  There is yet another even broader part of the ecosystem like lldb and the Swift Package Manager which still need more work to be as complete in their support for this different platform.
- 
+
 ## Getting Started and Getting Involved!
 
-The [Getting Started]({{ site.url }}/getting-started/) section has been updated with new information about using Swift on Windows!  For the early adopters who are getting started and finding issues, please report them to the [Swift Bug Tracker](https://bugs.swift.org).
+The [Getting Started](/getting-started/) section has been updated with new information about using Swift on Windows!  For the early adopters who are getting started and finding issues, please report them to the [Swift Bug Tracker](https://bugs.swift.org).
 
 There are many opportunities for those interested in helping push Swift on Windows forward.  One of the things that makes Swift easy to use is libraries: publishing new libraries and packages for Swift on Windows or porting existing ones is another way to get involved and help make working with Swift an ever greater delight.
 

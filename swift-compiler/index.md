@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Swift Compiler
-redirect_from: 
+redirect_from:
   - /compiler-stdlib/
 ---
 

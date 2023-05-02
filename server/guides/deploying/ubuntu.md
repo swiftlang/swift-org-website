@@ -5,16 +5,16 @@ title: Deploying on Ubuntu
 
 Once you have your Ubuntu virtual machine ready, you can deploy your Swift app. This guide assumes you have a fresh install with a non-root user named `swift`. It also assumes both `root` and `swift` are accessible via SSH. For information on setting this up, check out the platform guides:
 
-- [DigitalOcean]({{site.url}}/server/guides/deploying/digital-ocean.html)
+- [DigitalOcean](/server/guides/deploying/digital-ocean.html)
 
-The [packaging]({{site.url}}/server/guides/packaging.html) guide provides an overview of available deployment options. This guide takes you through each deployment option step-by-step for Ubuntu specifically. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server), but you can test with your own project.
+The [packaging](/server/guides/packaging.html) guide provides an overview of available deployment options. This guide takes you through each deployment option step-by-step for Ubuntu specifically. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server), but you can test with your own project.
 
 - [Binary Deployment](#binary-deployment)
 - [Source Deployment](#source-deployment)
 
 ## Binary Deployment
 
-This section shows you how to build your app locally and deploy just the binary. 
+This section shows you how to build your app locally and deploy just the binary.
 
 ### Build Binaries
 
@@ -39,11 +39,11 @@ docker run --rm \
      cp -P /usr/lib/swift/linux/lib*so* .build/install/'
 ```
 
-> Tip: If you are building this project for production, use `swift build -c release`, see [building for production]({{site.url}}/server/guides/building.html#building-for-production) for more information.
+> Tip: If you are building this project for production, use `swift build -c release`, see [building for production](/server/guides/building.html#building-for-production) for more information.
 
-Notice that Swift's shared libraries are being included. This is important since Swift is not ABI stable on Linux. This means Swift programs must run against the shared libraries they were compiled with. 
+Notice that Swift's shared libraries are being included. This is important since Swift is not ABI stable on Linux. This means Swift programs must run against the shared libraries they were compiled with.
 
-After your project is built, use the following command to create an archive for easy transport to the server. 
+After your project is built, use the following command to create an archive for easy transport to the server.
 
 ```sh
 tar cvzf hello-world.tar.gz -C .build/install .
@@ -112,9 +112,9 @@ sudo apt install clang libicu-dev build-essential pkg-config
 
 ### Download Toolchain
 
-This guide will install Swift 5.2. Visit the [Swift Downloads](https://swift.org/download/#releases) page for a link to latest release. Copy the download link for Ubuntu 18.04.
+This guide will install Swift 5.2. Visit the [Swift Downloads](/download/#releases) page for a link to latest release. Copy the download link for Ubuntu 18.04.
 
-![Download Swift]({{site.url}}/assets/images/server-guides/swift-download-ubuntu-18-copy-link.png)
+![Download Swift](/assets/images/server-guides/swift-download-ubuntu-18-copy-link.png)
 
 Download and decompress the Swift toolchain.
 
@@ -123,11 +123,11 @@ wget https://swift.org/builds/swift-5.2-release/ubuntu1804/swift-5.2-RELEASE/swi
 tar xzf swift-5.2-RELEASE-ubuntu18.04.tar.gz
 ```
 
-> Note: Swift's [Using Downloads](https://swift.org/download/#using-downloads) guide includes information on how to verify downloads using PGP signatures.
+> Note: Swift's [Using Downloads](/download/#using-downloads) guide includes information on how to verify downloads using PGP signatures.
 
 ### Install Toolchain
 
-Move Swift somewhere easy to access. This guide will use `/swift` with each compiler version in a subfolder. 
+Move Swift somewhere easy to access. This guide will use `/swift` with each compiler version in a subfolder.
 
 ```sh
 sudo mkdir /swift
@@ -173,11 +173,11 @@ cd swift-nio
 swift build
 ```
 
-> Tip: If you are building this project for production, use `swift build -c release`, see [building for production]({{site.url}}/server/guides/building.html#building-for-production) for more information.
+> Tip: If you are building this project for production, use `swift build -c release`, see [building for production](/server/guides/building.html#building-for-production) for more information.
 
 ### Run
 
-Once the project has finished compiling, run it on your server's IP at port `8080`. 
+Once the project has finished compiling, run it on your server's IP at port `8080`.
 
 ```sh
 .build/debug/NIOHTTP1Server <server_ip> 8080

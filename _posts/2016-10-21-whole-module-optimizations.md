@@ -18,7 +18,7 @@ So what is it about? Let’s first look at how the compiler works without whole-
 
 A module is a set of Swift files. Each module compiles down to a single unit of distribution—either a framework or an executable. In single-file compilation (without `-wmo`) the Swift compiler is invoked for each file in the module separately. Actually, this is what happens behind the scenes. As a user you don’t have to do this manually. It is automatically done by the compiler driver or the Xcode build system.
 
-![single file compilation]({{ site.url }}/assets/images/wmo-blog/single-file.png)
+![single file compilation](/assets/images/wmo-blog/single-file.png)
 
 After reading and parsing a source file (and doing some other stuff, like type checking), the compiler optimizes the Swift code, generates machine code and writes an object file. Finally the linker combines all object files and generates the shared library or executable.
 
@@ -54,9 +54,9 @@ Even the simple return statement in `getElement` needs a lookup in the type’s 
 
 With whole-module optimization the compiler can do a lot better. When compiling with the `-wmo` option, the compiler optimizes all files of a module as a whole.
 
-![whole-module compilation]({{ site.url }}/assets/images/wmo-blog/wmo.png)
+![whole-module compilation](/assets/images/wmo-blog/wmo.png)
 
-This has two big advantages. First, the compiler sees the implementation of all functions in a module, so it can perform optimizations like function inlining and function specialization. 
+This has two big advantages. First, the compiler sees the implementation of all functions in a module, so it can perform optimizations like function inlining and function specialization.
 Function specialization means that the compiler creates a new version of a function which is optimized for a specific call-context. For example, the compiler can specialize a generic function for concrete types.
 
 In our example, the compiler produces a version of the generic `Container` which is specialized for the concrete type `Int`.
@@ -71,7 +71,7 @@ struct Container {
 }
 ~~~
 
-Then the compiler can inline the specialized `getElement` function into the `add` function. 
+Then the compiler can inline the specialized `getElement` function into the `add` function.
 
 ~~~swift
 func add (c1: Container<Int>, c2: Container<Int>) -> Int {
@@ -98,13 +98,13 @@ All this saves a lot of compile time, especially if you only make a small change
 How does this work in whole-module compilation?
 Let’s look at how the compiler works in whole-module optimization mode in more detail.
 
-![whole-module compilation details]({{ site.url }}/assets/images/wmo-blog/wmo-detail.png)
+![whole-module compilation details](/assets/images/wmo-blog/wmo-detail.png)
 
 Internally the compiler runs in multiple phases: parser, type checking, SIL optimizations, LLVM backend.
 
 Parsing and type checking is very fast in most cases, and we expect it to get even faster in subsequent Swift releases.
 The SIL optimizer (SIL stands for “Swift Intermediate Language”) performs all the important Swift-specific optimizations, like generic specialization, function inlining, etc. This phase of the compiler typically takes about one third of the compilation time.
-Most of the compilation time is consumed by the LLVM backend which runs lower-level optimizations and does the code generation. 
+Most of the compilation time is consumed by the LLVM backend which runs lower-level optimizations and does the code generation.
 
 After performing whole-module optimizations in the SIL optimizer the module is split again into multiple parts. The LLVM backend processes the split parts in multiple threads. It also avoids re-processing of a part if that part didn’t change since the previous build.
 So even with whole-module optimizations, the compiler is able to perform a big part of the compilation work in parallel (multi-threaded) and incrementally.

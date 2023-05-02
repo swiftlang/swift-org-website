@@ -13,7 +13,7 @@ high-level description of the major components of the Swift compiler:
   [lib/Parse](https://github.com/apple/swift/tree/main/lib/Parse))
   with an integrated, hand-coded lexer. The parser is responsible for
   generating an Abstract Syntax Tree (AST) without any semantic or
-  type information, and emit warnings or errors for grammatical problems
+  type information, and emits warnings or errors for grammatical problems
   with the input source.
 
 * **Semantic analysis**: Semantic analysis (implemented in

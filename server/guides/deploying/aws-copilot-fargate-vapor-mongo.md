@@ -7,7 +7,7 @@ This guide illustrates how to deploy a Server-Side Swift workload on AWS. The wo
 
 ## Architecture
 
-![Architecture]({{site.url}}/assets/images/server-guides/aws/aws-fargate-vapor-mongo.png)
+![Architecture](/assets/images/server-guides/aws/aws-fargate-vapor-mongo.png)
 
 - Amazon API Gateway receives API requests
 - API Gateway locates your application containers in AWS Fargate through internal DNS managed by AWS Cloud Map
@@ -30,7 +30,7 @@ To build this sample application, you need:
 
 If you are new to MongoDB Atlas, follow this [Getting Started Guide](https://www.mongodb.com/docs/atlas/getting-started/). You need to create the following items:
 
-- Atlas Account 
+- Atlas Account
 - Cluster
 - Database Username / Password
 - Database
@@ -251,10 +251,10 @@ func routes(_ app: Application) throws {
 
     // POST item inserts a new item into the database and returns the item as JSON
     app.post("item") { req async throws -> ToDoItem in
-        
+
         var item = try req.content.decode(ToDoItem.self)
         item.createdOn = Date()
-        
+
         let response = try await req.todoCollection.insertOne(item)
         item._id = response?.insertedID.objectIDValue
 
@@ -322,7 +322,7 @@ Your application requires credentials to authenticate to your MongoDB Atlas data
 
 Determine the connection string from the MongoDB Atlas website. Select the *Connect* button on your cluster page and the *Connect your application*.
 
-![Architecture]({{site.url}}/assets/images/server-guides/aws/aws-fargate-vapor-mongo-atlas-connection.png)
+![Architecture](/assets/images/server-guides/aws/aws-fargate-vapor-mongo-atlas-connection.png)
 
 Select *Swift version 1.2.0* as the Driver and copy the displayed connection string. It looks something like this:
 
@@ -347,7 +347,7 @@ Copilot generates a *manifest.yml* file for your application that defines the at
 - configure the service network as *private*
 - add environment variables for the MONGODB_DATABASE and MONGODB_COLLECTION
 
-To implement these changes, replace the contents of the *manifest.yml* file with the following code. Update the values of MONGODB_DATABASE and MONGODB_COLLECTION to reflect the names of the database and cluster you created in MongoDB Atlas for this application. 
+To implement these changes, replace the contents of the *manifest.yml* file with the following code. Update the values of MONGODB_DATABASE and MONGODB_COLLECTION to reflect the names of the database and cluster you created in MongoDB Atlas for this application.
 
 If you are building this solution on a **Mac M1/M2** machine, uncomment the **platform** property in the manifest.yml file to specify an ARM build. The default value is *linux/x86_64*.
 
@@ -545,7 +545,7 @@ Output:
 
 Use the IP addresses to create a Network Access rule in your MongoDB Atlas account for each address.
 
-![Architecture]({{site.url}}/assets/images/server-guides/aws/aws-fargate-vapor-mongo-atlas-network-address.png)
+![Architecture](/assets/images/server-guides/aws/aws-fargate-vapor-mongo-atlas-network-address.png)
 
 ## Step 12: Use your API
 

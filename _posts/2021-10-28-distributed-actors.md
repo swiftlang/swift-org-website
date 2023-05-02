@@ -13,11 +13,11 @@ This library provides a complete solution for using distributed actors in server
 
 Distributed actors are an early and _experimental language feature_.  We aim to simplify and push the state-of-the-art for distributed systems programming in Swift as we did with concurrent programming with local actors and Swift's structured concurrency approach embedded in the language.
 
-Currently, we are iterating on the design of distributed actors. We are looking to gather your feedback, use-cases, and general ideas in the proposal's [pitch thread](https://forums.swift.org/t/pitch-distributed-actors/51669), as well as the [Distributed Actors category](https://forums.swift.org/c/server/distributed-actors/79) on the Swift forums. The library and language feature described in the proposal and this blog post are available in [nightly toolchains](https://swift.org/downloads), so please feel free to download them and get a feel for the feature. We will be posting updated proposals and other discussion threads on the forums, so if you are interested, please follow the respective category and threads on the Swift forums.
+Currently, we are iterating on the design of distributed actors. We are looking to gather your feedback, use-cases, and general ideas in the proposal's [pitch thread](https://forums.swift.org/t/pitch-distributed-actors/51669), as well as the [Distributed Actors category](https://forums.swift.org/c/server/distributed-actors/79) on the Swift forums. The library and language feature described in the proposal and this blog post are available in [nightly toolchains](/downloads), so please feel free to download them and get a feel for the feature. We will be posting updated proposals and other discussion threads on the forums, so if you are interested, please follow the respective category and threads on the Swift forums.
 
 We are most interested in general feedback, thoughts about use cases, and potential transport implementations you would be interested in taking on. As we mature and design the language feature, the library (introduced below) will serve as the _reference implementation_ of one such advanced and powerful actor transport. If you are interested in distributed systems, [contributions to the library](https://github.com/apple/swift-distributed-actors/) itself are also very welcome, and there is [much to be done](https://github.com/apple/swift-distributed-actors/issues) there as well!
 
-Soon, we will also provide a more complete “reference guide,” examples, and article-style guides.  These materials, to be authored using the [recently open-sourced DocC](https://swift.org/blog/swift-docc/) documentation compiler, will teach about the specific patterns and use-cases this library enables.
+Soon, we will also provide a more complete “reference guide,” examples, and article-style guides.  These materials, to be authored using the [recently open-sourced DocC](/blog/swift-docc/) documentation compiler, will teach about the specific patterns and use-cases this library enables.
 
 These proposed language features–as all language features–will go through a proper [Swift Evolution process](https://github.com/apple/swift-evolution/blob/main/process.md) before lifting their experimental status. We invite the community to participate and help us shape the language and APIs through review, contributions, and sharing experiences. Thank you very much in advance!
 
@@ -105,7 +105,7 @@ Today, we are announcing the open source release of the [Swift Distributed Actor
 
 This cluster library is focused on server-side peer-to-peer systems, which are often used in systems which require "live" interactions with multiple parties, such as: presence systems, game lobbies, monitoring or IoT systems, and classical "control plane" systems such as orchestrators, schedulers, etc.
 
-The library makes use of [SwiftNIO](https://github.com/apple/swift-nio), Swift’s high-performance server-side focused networking library, to implement the cluster’s networking layer. The cluster also provides a membership service, based on the [Swift Cluster Membership](https://swift.org/blog/swift-cluster-membership/) library which was open sourced earlier last year. This means you can use this cluster in a stand-alone mode, without needing to spin up additional service discovery or database services. We believe this is an important capability as it simplifies deployment in some bare-metal scenarios, and makes utilizing this cluster technology viable in others where it otherwise might not have been possible due to resource constraints.
+The library makes use of [SwiftNIO](https://github.com/apple/swift-nio), Swift’s high-performance server-side focused networking library, to implement the cluster’s networking layer. The cluster also provides a membership service, based on the [Swift Cluster Membership](/blog/swift-cluster-membership/) library which was open sourced earlier last year. This means you can use this cluster in a stand-alone mode, without needing to spin up additional service discovery or database services. We believe this is an important capability as it simplifies deployment in some bare-metal scenarios, and makes utilizing this cluster technology viable in others where it otherwise might not have been possible due to resource constraints.
 
 The cluster is designed to be very extensible, and it is possible to bring your own implementations of most of the core components, including node discovery, failure detection and more.
 
@@ -146,7 +146,7 @@ The actor system exposes many useful functions regarding the cluster state and a
 
 If the cluster already has multiple nodes, it is only necessary for a single node to join a new node for all the other nodes to eventually learn about this new node. Membership information is gossiped throughout the cluster automatically.
 
-In a production system, we wouldn't be hardcoding the joining process like this. Production deployments usually have some form of service discovery of nodes available, and thanks to [Swift Service Discovery](https://swift.org/blog/swift-service-discovery/) we can easily utilize those to discover and automatically join nodes into our cluster. Swift Service Discovery provides an abstract API over discovery mechanisms, and can support backends such as DNS records or Kubernetes service discovery. We could use a hypothetical DNS discovery mechanism to discover the nodes:
+In a production system, we wouldn't be hardcoding the joining process like this. Production deployments usually have some form of service discovery of nodes available, and thanks to [Swift Service Discovery](/blog/swift-service-discovery/) we can easily utilize those to discover and automatically join nodes into our cluster. Swift Service Discovery provides an abstract API over discovery mechanisms, and can support backends such as DNS records or Kubernetes service discovery. We could use a hypothetical DNS discovery mechanism to discover the nodes:
 
 ~~~swift
 // **** APIS AND SYNTAX ARE WORK IN PROGRESS / PENDING SWIFT EVOLUTION ****
@@ -216,7 +216,7 @@ The cluster provides the ability to reason about the lifecycle of actors, regard
 
 Whenever a watched actor is deinitialized, or the node on which it was running is determined "down", a terminated signal is emitted about this actor, to any actors which were watching its lifecycle. The cluster uses the [Swift Cluster Membership](https://www.github.com/apple/swift-cluster-membership) library which was open sourced earlier last year to detect nodes failing, and it moves them along a lifecycle graph as shown below:
 
-![Cluster lifecycle diagram]({{ site.url }}/assets/images/distributed-blog/cluster_lifecycle.png)
+![Cluster lifecycle diagram](/assets/images/distributed-blog/cluster_lifecycle.png)
 
 Cluster events are emitted as an `AsyncSequence<Cluster.Event>`. Such sequence always begins with a “snapshot” of the current state of the cluster, followed by any changes that occur since that moment. This could be used to implement a function that waits until the cluster reaches a certain size for example:
 

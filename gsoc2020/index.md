@@ -56,7 +56,7 @@ Today, the `.swiftmodule` format is fairly opaque, and the best insight our tool
 **Skills required**
 
 Cursory knowledge of C++
-Familiarity with Swift 
+Familiarity with Swift
 
 **Potential mentors**
 
@@ -205,14 +205,14 @@ Building large scale distributed systems in Swift requires solutions that are qu
 
 **Expected outcomes/benefits/deliverables**
 
-* Implement distributed tracing library based on the [OpenTracing specification](https://github.com/opentracing/specification/blob/master/specification.md). 
+* Implement distributed tracing library based on the [OpenTracing specification](https://github.com/opentracing/specification/blob/master/specification.md).
 * Demonstrate the implementations can be used in the context of [Dispatch](https://developer.apple.com/documentation/DISPATCH) and [SwifNIO](https://github.com/apple/swift-nio).
 * Demonstrate exporting data emitted by the library to observability tools e.g. [Zipkin](https://zipkin.io/).
 
 
 **Skills required**
 
-* Knowledge of concurrency models and distributed systems. 
+* Knowledge of concurrency models and distributed systems.
 * Familiarity with Swift.
 * Familiarity with OpenTracing or other observability specifications.
 * Experience with distributed tracing systems like Zipkin or Honeycomb is a plus.

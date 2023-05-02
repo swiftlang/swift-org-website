@@ -93,7 +93,7 @@ This creates **.swift-version** with `5.2` as its contents.
 
 ### Procfile
 
-Heroku uses the **Procfile** to know how to run your app. This includes the executable name and any arguments necessary. You'll see `$PORT` below, this allows heroku to assign a specific port when it launches the app. 
+Heroku uses the **Procfile** to know how to run your app. This includes the executable name and any arguments necessary. You'll see `$PORT` below, this allows heroku to assign a specific port when it launches the app.
 
 ```
 web: NIOHTTP1Server 0.0.0.0 $PORT

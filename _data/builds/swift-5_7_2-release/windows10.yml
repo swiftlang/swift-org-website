@@ -1,0 +1,7 @@
+---
+- name: Windows 10
+  date: 2022-12-13 10:29:16.000000000 -05:00
+  download: swift-5.7.2-RELEASE-windows10.exe
+  download_signature: swift-5.7.2-RELEASE-windows10.exe.sig
+  dir: swift-5.7.2-RELEASE
+  windows: true

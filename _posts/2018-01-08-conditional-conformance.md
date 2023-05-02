@@ -42,7 +42,7 @@ This was possible via overloads of the `==` operator, like this one for `Array`:
 extension Array where Element: Equatable {
     public static func ==(lhs: [Element], rhs: [Element]) -> Bool {
         return lhs.elementsEqual(rhs)
-    }  
+    }
 }
 ~~~
 
@@ -61,7 +61,7 @@ let a = ["1","2","x"].map(Int.init)
 a == [1,2,nil]    // expecting 'true'
 ~~~
 
-You'd get a compiler error: 
+You'd get a compiler error:
 
 > Binary operator '==' cannot be applied to two '[Int?]' operands.
 
@@ -160,7 +160,7 @@ operation sums them up.
 
 The standard library doesn't have a lazy split operation. Below is a sketch
 of how one could work. If you're interested in making a contribution to Swift,
-this would make for a great [starter bug][Bug] and [evolution proposal][EvolutionProcess].
+this would make for a great [first issue][Issue] and [evolution proposal][EvolutionProcess].
 
 First, we create a simple generic wrapper struct that can hold any base collection, and a
 closure to identify elements on which to split:
@@ -189,15 +189,15 @@ start of the next subsequence in the base, or the end.
 extension LazySplitCollection: Collection {
     typealias Element = Base.SubSequence
     typealias Index = Base.Index
-  
+
     var startIndex: Index { return base.startIndex }
     var endIndex: Index { return base.endIndex }
-  
+
     subscript(i: Index) -> Element {
         let separator = base[i...].index(where: isSeparator)
         return base[i..<(separator ?? endIndex)]
     }
-  
+
     func index(after i: Index) -> Index {
         let separator = base[i...].index(where: isSeparator)
         return separator.map(base.index(after:)) ?? endIndex
@@ -212,7 +212,7 @@ collection from the given index for the next separator. If there isn't one,
 substitute the end index in that case. The only fiddly part is skipping over
 the separator in the `index(after:)` implementation, which we do with an
  [optional map][Optional.map].
- 
+
 ### Extending lazy
 
 Now that we have this wrapper, we want to extend all the lazy collection types
@@ -345,6 +345,6 @@ can [download the latest snapshot][Download] and try it out!
 [GenericsManifesto]: https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md
 [SE-0143]: https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md
 [Optional.map]: https://developer.apple.com/documentation/swift/optional/#topics
-[Bug]: https://bugs.swift.org/browse/SR-6691?jql=labels%20%3D%20StarterProposal
-[EvolutionProcess]: https://github.com/apple/swift-evolution/blob/master/process.md
-[Download]: https://swift.org/download/#snapshots
+[Issue]: https://github.com/apple/swift/issues/49240
+[EvolutionProcess]: https://www.swift.org/swift-evolution
+[Download]: /download/#snapshots

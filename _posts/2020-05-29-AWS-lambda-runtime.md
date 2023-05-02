@@ -17,7 +17,7 @@ Many modern systems have client components, like iOS, macOS or watchOS applicati
 
 [Serverless functions](https://en.wikipedia.org/wiki/Serverless_computing) are becoming an increasingly popular choice for running event-driven or otherwise ad-hoc compute tasks in the cloud. They power mission critical microservices and data intensive workloads. In many cases, serverless functions allow developers to more easily scale and control compute costs given their on-demand nature.
 
-When using serverless functions, attention must be given to resource utilization as it directly impacts the costs of the system. This is where Swift shines! With its low memory footprint, deterministic performance, and quick start time, Swift is a fantastic match for the serverless functions architecture.  
+When using serverless functions, attention must be given to resource utilization as it directly impacts the costs of the system. This is where Swift shines! With its low memory footprint, deterministic performance, and quick start time, Swift is a fantastic match for the serverless functions architecture.
 
 Combine this with Swift’s developer friendliness, expressiveness, and emphasis on safety, and we have a solution that is great for developers at all skill levels, scalable, and cost effective.
 
@@ -98,7 +98,7 @@ Lambda.run { (context, request: APIGateway.V2.Request, callback) in
 
 Modeling Lambda functions as closures is both simple and safe. Swift AWS Lambda Runtime will ensure that the user-provided function is offloaded from the network processing thread to its own thread so that even if the code becomes slow or unresponsive, the underlying Lambda process can continue and interact with the Runtime engine. This safety comes at a small performance penalty from context switching between the networking and processing threads. In most cases, the simplicity and safety of using the Closure-based API is preferred over the complexity of the performance-oriented API detailed below.
 
-Performance-sensitive Lambda functions may choose to use a more complex API which allows the user code to run on the same thread as the networking handlers. Swift AWS Lambda Runtime uses [SwiftNIO](https://www.github.com/apple/swift-nio) as its underlying networking engine, which means these APIs are based on SwiftNIO’s concurrency primitives like the `EventLoop` and `EventLoopFuture`.  
+Performance-sensitive Lambda functions may choose to use a more complex API which allows the user code to run on the same thread as the networking handlers. Swift AWS Lambda Runtime uses [SwiftNIO](https://www.github.com/apple/swift-nio) as its underlying networking engine, which means these APIs are based on SwiftNIO’s concurrency primitives like the `EventLoop` and `EventLoopFuture`.
 
 For example, handling an `SNS` message:
 
