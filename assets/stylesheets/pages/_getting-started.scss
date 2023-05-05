@@ -1,4 +1,3 @@
-
 .go-further-list {
   $grid-breakpoint: 1000px;
   list-style: none;
@@ -24,7 +23,7 @@
       padding-top: 0;
     }
 
-    p {
+    .description {
       flex-grow: 1;
       color: var(--color-secondary-label);
     }
