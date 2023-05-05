@@ -1,10 +1,24 @@
 - title: "A Swift Tour"
   description: "_The Swift Programming Language_, the authoritative reference for Swift, begins with a tour of the language. The tour gives you an introduction to the fundamental features, concepts, and syntax of Swift. The remainder of the book explains each topic in greater detail."
   content_type: book
-  content_url: https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html
+  content_url: https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour/
   thumbnail_url: #TBD
   release_date: 2014-08-18
   featured: true
+  external: true
+- title: "Value and Reference Types"
+  description: "This article describes the differences in behavior between _value types_ and _reference types_—a fundamental part of learning Swift and choosing between structures and classes."
+  content_type: article
+  content_url: https://www.swift.org/blog/2023-04-29-value-and-reference-types
+  thumbnail_url: #TBD
+  release_date: 2023-04-29
+  external: false
+- title: "Generics"
+  description: "In Swift, generics are a fundamental way to write abstract code. This video walks through the basics of Swift Generics and introducing generics into your code."
+  content_type: video
+  content_url: https://developer.apple.com/videos/play/wwdc2022/110352/
+  thumbnail_url: /assets/images/getting-started/swift-generics-thumbnail.jpg
+  release_date: 2021-06-09
   external: true
 - title: "Concurrency"
   description: "Swift has concurrency features built into the language making it easier to write concurrent code with the assistance of the compiler. This video introduces the async/await mechanism, a key part of Swift Concurrency."
@@ -13,13 +27,6 @@
   thumbnail_url: /assets/images/getting-started/meet-async-await-thumbnail.jpg
   release_date: 2021-06-08
   external: true
-- title: "Generics"
-  description: "In Swift, generics are a fundamental way to write abstract code. This video walks through the basics of Swift Generics and introducing generics into your code."
-  content_type: video
-  content_url: https://developer.apple.com/videos/play/wwdc2022/110352/
-  thumbnail_url: /assets/images/getting-started/swift-generics-thumbnail.jpg
-  release_date: 2021-06-09
-  external: true
 - title: "Regular Expressions"
   description: "Swift provides first-class regular expression support, commonly known as regex, for effective string processing. This video gives an overview of the power and flexibility of Swift Regex."
   content_type: video
@@ -27,10 +34,4 @@
   thumbnail_url: /assets/images/getting-started/regular-expression-thumbnail.jpg
   release_date: 2022-06-07
   external: true
-- title: "Structures and Classes"
-  description: "In Swift, many existing types as well as types you define are structures and classes. This chapter of _The Swift Programming Language_ describes the similarities and differences of these fundamental building blocks, including the key concepts of value types and reference types."
-  content_type: article
-  content_url: https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures
-  thumbnail_url: #TBD
-  release_date: 2022-09-12
-  external: true
+  
