@@ -12,9 +12,9 @@ Ready to dive deeper? Here are some hand-picked resources covering about various
       {% endif %}
 
       <h3>{{ resource.title }}</h3>
-      <p class="description">
+      <div class="description">
         {{ resource.description | markdownify }}
-      </p>
+      </div>
       
       <a href="{{ resource.content_url }}" class="cta-secondary{% if resource.external %} external" target="_blank"{% else %}"{% endif %}>
         {% if resource.content_type == "video" %}

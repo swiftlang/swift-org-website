@@ -25,7 +25,7 @@ Swift is a general-purpose programming language built using a modern approach to
 
     <li>
       <a href="/getting-started">
-        <img src="/assets/images/landing-page/hiker.svg" />
+        <img src="/assets/images/landing-page/signs.svg" />
         Get started
       </a>
     </li>
