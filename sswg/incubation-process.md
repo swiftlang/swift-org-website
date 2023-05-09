@@ -123,9 +123,9 @@ The SSWG reserves the right to define a singular solution for critical building 
 
 It is recommended for projects that have been accepted to any of the maturity levels to list the maturity level in their project's README with the appropriate badge as defined:
 
-[![sswg:sandbox|94x20](https://img.shields.io/badge/sswg-sandbox-lightgrey.svg)](https://github.com/swift-server/sswg/blob/main/process/incubation.md#sandbox-level)
-[![sswg:incubating|104x20](https://img.shields.io/badge/sswg-incubating-blue.svg)](https://github.com/swift-server/sswg/blob/main/process/incubation.md#incubating-level)
-[![sswg:graduated|104x20](https://img.shields.io/badge/sswg-graduated-green.svg)](https://github.com/swift-server/sswg/blob/main/process/incubation.md#graduated-level)
+[![sswg:sandbox](https://img.shields.io/badge/sswg-sandbox-lightgrey.svg)](https://swift.org/sswg/incubation-process.html#sandbox-level){: style="display: inline-block; width: 94px; height: 20px"}
+[![sswg:incubating](https://img.shields.io/badge/sswg-incubating-blue.svg)](https://swift.org/sswg/incubation-process.html#incubating-level){: style="display: inline-block; width: 104px; height: 20px"}
+[![sswg:graduated](https://img.shields.io/badge/sswg-graduated-green.svg)](https://swift.org/sswg/incubation-process.html#graduated-level){: style="display: inline-block; width: 104px; height: 20px"}
 
 The SSWG will meet every 6 months to review all projects, and it reserves the right to demote, archive, or remove projects that no longer fulfill minimal requirements.
 For example, a Graduated project that no longer receives regular updates or fails to address security concerns in timely fashion. Similarly, the SSWG reserves the right to remove or archive Pitches and Proposals that no longer receive updates.
