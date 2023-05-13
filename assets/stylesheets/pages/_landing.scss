@@ -55,9 +55,11 @@
       .flex-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
         height: 100%;
 
         .latest-release-container {
+          height: 64px;
           flex-grow: 1;
           display: flex;
           align-items: center;
