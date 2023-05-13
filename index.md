@@ -135,10 +135,10 @@ Stay up-to-date with the latest in the Swift community.
 </div>
 
 <script>
-	var featuredSnippets = document.querySelectorAll('.featured-snippet');
-	var visibleSnippet = document.querySelector('.featured-snippet.visible');
-	var randomIndex = Math.floor(Math.random() * featuredSnippets.length);
+  var featuredSnippets = document.querySelectorAll('.featured-snippet');
+  var visibleSnippet = document.querySelector('.featured-snippet.visible');
+  var randomIndex = Math.floor(Math.random() * featuredSnippets.length);
 
-	visibleSnippet?.classList.remove('visible');
-	featuredSnippets[randomIndex]?.classList.add('visible');
+  visibleSnippet?.classList.remove('visible');
+  featuredSnippets[randomIndex]?.classList.add('visible');
 </script>
