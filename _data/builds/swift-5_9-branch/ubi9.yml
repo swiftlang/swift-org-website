@@ -1,3 +1,8 @@
+- date: 2023-05-12 10:10:00-06:00
+  dir: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-05-12-a
+  download: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-05-12-a-ubi9.tar.gz
+  download_signature: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-05-12-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2023-05-11 10:10:00-06:00
   dir: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-05-11-a
   download: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-05-11-a-ubi9.tar.gz
