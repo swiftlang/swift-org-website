@@ -15,6 +15,10 @@ See [website overview](/website) for more information about the Swift.org websit
 
 Swift.org uses [Jekyll](https://jekyllrb.com), a blog-aware, static site generator in Ruby.
 
+## Calendar Updates
+
+Update Calendar events in [calendar.yml](/_data/calendar.yml) (events are Pacific Time Zone)
+
 ### Running locally
 
 Requirements

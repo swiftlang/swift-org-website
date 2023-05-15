@@ -1,0 +1,2 @@
+import{p as a,b as t}from"./p-6c241004.js";export{s as setNonce}from"./p-6c241004.js";const e=()=>{const t=import.meta.url;const e={};if(t!==""){e.resourcesUrl=new URL(".",t).href}return a(e)};e().then((a=>t([["p-f2db04cf",[[2,"swift-calendar",{theme:[1],jsData:[1,"js-data"],pathDataFile:[1,"path-data-file"],pathIcalFile:[1,"path-ical-file"],todayDate:[32],daysInMonth:[32],selectedDate:[32],isModalOpen:[32],modalData:[32],events:[32],isEventsView:[32]}],[6,"swift-modal",{theme:[1],show:[1540],close:[16]}]]]],a)));
+//# sourceMappingURL=web-components-stencil.esm.js.map

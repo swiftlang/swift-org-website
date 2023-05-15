@@ -978,3 +978,19 @@ article {
     padding: 10px 10px;
     text-align: center;
 }
+
+.calendar-menu {
+    list-style: none;
+
+    i {
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        display: block;
+
+        &.feed {
+            background-image: url("/assets/images/icon-feed.svg");
+        }
+    }
+}

@@ -1,0 +1,14 @@
+- date: 2023-3-22
+  entries:
+    - name: Test 1
+      description: Description 1
+      location: Location 1
+      url: https://www.swift.org
+      start: "08:30:00"
+      duration: 0H30M
+    - name: Test 2
+      description: Description 2
+      location: Location 2
+      url: https://www.swift.org
+      start: "18:00:00"
+      duration: 2H30M

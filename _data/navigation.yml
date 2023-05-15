@@ -68,6 +68,8 @@
           name: license
         - title: Forums
           name: forums
+    - title: Calendar
+      url: /calendar/
     - title: Diversity
       url: /diversity/
       sections:

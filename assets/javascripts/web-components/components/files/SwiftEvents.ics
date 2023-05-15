@@ -1,0 +1,39 @@
+---
+layout: none
+---
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+TZNAME:PDT
+TZOFFSETTO:-0700
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+TZNAME:PST
+TZOFFSETTO:-0800
+END:STANDARD
+END:VTIMEZONE
+PRODID:Swift Calendar
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+{% for calendar in site.data.calendar %}
+{% for entry in calendar.entries %}
+BEGIN:VEVENT
+UID:{{ calendar.date | date: "%Y%m%d" }}{{ entry.name }}@swift.org
+SUMMARY:{{ entry.name }}
+DTSTAMP:{{ site.time | date: "%Y%m%dT%H%M%S" }}
+DTSTART;TZID="America/Los_Angeles":{{ calendar.date | append:" " | append:entry.start | append:" " | append:"-0700" | date: "%Y%m%dT%H%M%S" }}
+DESCRIPTION:{{ entry.description }}
+URL:{{ entry.url }}
+LOCATION:{{ entry.location }}
+DURATION:PT{{ entry.duration }}
+END:VEVENT
+{% endfor %}
+{% endfor %}
+END:VCALENDAR

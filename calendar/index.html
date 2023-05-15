@@ -1,0 +1,22 @@
+---
+layout: page
+title: Calendar
+atom: true
+---
+
+<script type="module" src="/assets/javascripts/web-components/web-components-stencil.esm.js"></script>
+<script nomodule src="/assets/javascripts/web-components/web-components-stencil.js"></script>
+
+<ul class="calendar-menu">
+  <li>
+    <a href="/assets/javascripts/web-components/components/files/feed.xml" title="Subscribe to Calendar Updates">
+      <i class="feed"></i>
+    </a>
+  </li>
+</ul>
+
+<swift-calendar
+  theme="auto"
+  js-data='{{ site.data.calendar | jsonify }}'
+  path-ical-file="/assets/javascripts/web-components/components/files/SwiftEvents.ics"
+/>

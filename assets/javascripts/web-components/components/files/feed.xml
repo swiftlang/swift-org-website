@@ -1,0 +1,22 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ "Swift Calendar" | xml_escape }}</title>
+    <description>{{ "Swift Calendar" | xml_escape }}</description>
+    <link>https://www.swift.org</link>
+    <atom:link href="{{ site.url }}/assets/javascripts/swift-web-components/components/files/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    {% for calendar in site.data.calendar %}
+    {% for entry in calendar.entries %}
+      <item>
+        <title>{{ entry.name | xml_escape }}</title>
+        <description>{{ entry.description | xml_escape }}</description>
+      </item>
+    {% endfor %}
+    {% endfor %}
+  </channel>
+</rss>

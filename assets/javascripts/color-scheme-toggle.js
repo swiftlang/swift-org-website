@@ -134,6 +134,15 @@ function getColorSchemeAttribute() {
 
 function updateColorSchemeAttribute(color) {
   document.body.setAttribute('data-color-scheme', color);
+  setupComponentsColorScheme();
+}
+
+function setupComponentsColorScheme() {
+  setTimeout(() => {
+    if (document.querySelector('swift-calendar')) {
+      document.querySelector('swift-calendar').setAttribute('theme', getColorSchemeAttribute());
+    }
+  })
 }
 
 function preferredColorSchemeSetting() {
@@ -179,4 +188,6 @@ function ready() {
   getToggleRadioNodeList().addEventListener('change', (e) => {
     setColorSchemeFor(e.target.value);
   });
+
+  setupComponentsColorScheme();
 }
