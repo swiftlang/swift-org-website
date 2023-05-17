@@ -26,10 +26,10 @@
 }
 
 .featured-snippet {
-  display: none !important;
+  display: none;
 
   &.visible {
-    display: block !important;
+    display: block;
   }
 
   &.highlighter-rouge {
