@@ -89,7 +89,7 @@ This shift in stewardship will enable the Diversity in Swift champions to focus 
 
 The new Contributor Experience workgroup will explore providing community members with the best support system and mechanics. Some example investments from this new workgroup will be improvements to the process and documentation for contributing code, bug reports, discussion on the Swift Forums, and more.
 
-For more details, please see the [Contributor Experience Workgroup Charter]({{ site.url }}/contributor-experience).
+For more details, please see the [Contributor Experience Workgroup Charter]({{ site.url }}/contributor-experience-workgroup).
 
 ## Next Steps and You
 
