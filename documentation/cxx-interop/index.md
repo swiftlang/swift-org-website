@@ -55,7 +55,7 @@ Bidirectional interoperability with C++ is supported in Swift 5.9 and above.
 * * *
 
 <div class="info" markdown="1">
-C++ interoperability is an actively evolving feature. The [status page](status) provides an
+C++ interoperability is an actively evolving feature of Swift. The [status page](status) provides an
 overview of the currently supported interoperability features.
 </div>
 
