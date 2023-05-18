@@ -79,9 +79,10 @@ Swift is a general-purpose programming language built using a modern approach to
     <a href="/getting-started/swiftui" class="cta-secondary">Learn more</a>
   </li>
   <li>
-    <h3>Command-line</h3>
+    <h3>Cross-platform Command-line</h3>
     <p>
-      Writing Swift code is interactive and fun, the syntax is concise yet expressive.
+      Writing Swift is interactive and fun, the syntax is concise yet expressive.
+      Swift code is safe by design and produces software that runs lightning-fast.
       <br><br>
       SwiftArgumentParser and Swift's growing package ecosystem make developing cross-platform command-line tools a breeze.
     </p>
@@ -91,7 +92,6 @@ Swift is a general-purpose programming language built using a modern approach to
   <li>
     <h3>Server and Networking</h3>
     <p>
-      Swift code is safe by design and produces software that runs lightning-fast.
       Swift's small memory footprint, quick startup time, and deterministic performance make it a great choice for server and other networked applications.
       <br><br>
       SwiftNIO and Swift's dynamic server ecosystem bring joy to developing networked applications.
