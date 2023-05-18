@@ -69,7 +69,7 @@ The current members and initiatives of the Diversity in Swift Workgroup will be 
 
 Over the coming weeks, the Swift project will add two new groups to provide support in areas of growing momentum in the Swift project.  This overall picture of groups will look as follows:
 
-![image]({{ site.url }}/assets/images/evolving-workgroups-blog/community-structure.png)
+![Swift Workgroups Diagram]({{ site.url }}/assets/images/evolving-workgroups-blog/community-structure.png)
 
 ### Ecosystem Steering Group
 
