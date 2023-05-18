@@ -143,6 +143,10 @@
   @media (min-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  li:nth-child(2n-1):nth-last-of-type(1) {
+    grid-column: span 2;
+  }
 }
 
 .getting-involved,
