@@ -45,7 +45,7 @@ Steering groups:
 Workgroups:
 
 * The **Server Workgroup**, often referred to as the "Swift on Server Workgroup," promotes the use of Swift for developing and deploying server applications.
-The workgroup has helped [incubate](https://www.swift.org/sswg/incubation-process.html) more than twenty critical server libraries, some of which the workgroup members developed together with the rest of the community.  It also published in-depth guides for developing, deploying, and troubleshooting server applications written in Swift.
+The workgroup has helped [incubate](/sswg/incubation-process.html) more than twenty critical server libraries, some of which the workgroup members developed together with the rest of the community.  It also published in-depth guides for developing, deploying, and troubleshooting server applications written in Swift.
 
 * The **Documentation Workgroup** helps guide the documentation experience for Swift.  The workgroup shepherds the development of [Swift-DocC](https://github.com/apple/swift-docc) features that bring exciting ways to customize and enhance the experience of authored API documentation.  The group also published a revamped version of _[The Swift Programming Language](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/)_ book written using DocC and maintained by the open source community.
 
@@ -93,7 +93,7 @@ For more details, please see the [Contributor Experience Workgroup Charter]({{ s
 
 ## Next Steps and You
 
-If you're interested in getting involved, check out the charters of the above groups, or read about other ways to [contribute to the project](https://www.swift.org/contributing/). If you have contributed and don’t fall neatly into one of the groups above, keep going! All contributions are valuable.
+If you're interested in getting involved, check out the charters of the above groups, or read about other ways to [contribute to the project](/contributing/). If you have contributed and don’t fall neatly into one of the groups above, keep going! All contributions are valuable.
 
 If you want to keep up with these changes, we invite you to join us for the kick-off of our Contributor Meeting series, occurring quarterly. Keep an eye out for more information on the Swift forums.
 
@@ -101,7 +101,7 @@ Onward!
 
 ### Previous Related Announcements
 
-* [Documentation Workgroup announcement](https://www.swift.org/blog/documentation-workgroup/)
-* [Language Workgroup announcement](https://www.swift.org/blog/language-workgroup/)
-* [Website Workgroup announcement](https://www.swift.org/blog/website-open-source/)
-* [Server Workgroup announcement](https://www.swift.org/blog/server-api-workgroup/)
+* [Documentation Workgroup announcement](/blog/documentation-workgroup/)
+* [Language Workgroup announcement](/blog/language-workgroup/)
+* [Website Workgroup announcement](/blog/website-open-source/)
+* [Server Workgroup announcement](/blog/server-api-workgroup/)
