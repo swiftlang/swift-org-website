@@ -169,6 +169,8 @@
 
 - header: Open Source Efforts
   pages:
+    - title: Contributor Experience
+      url: /contributor-experience-workgroup/
     - title: Swift Compiler
       url: /swift-compiler/
       sections:
