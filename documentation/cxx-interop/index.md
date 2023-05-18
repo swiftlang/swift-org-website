@@ -64,6 +64,30 @@ overview of the currently supported interoperability features.
 This section provides the basic high-level overview of how
 Swift interoperates with C++.
 
+### Enabling C++ Interoperability
+
+Swift code interoperates with C and Objective-C APIs by default.
+You must enable interoperability with C++ if you want to use
+C++ APIs from Swift, or expose Swift APIs to C++.
+
+The following guides describe how C++ interoperability can be enabled when
+working with a specific build system or IDE:
+
+<div class="links" markdown="1">
+[Read how to mix Swift and C++ in an Xcode project](TODO)
+
+[Read how to use C++ APIs from Swift in a Swift package](TODO)
+
+[Read how to use CMake to mix Swift and C++](TODO)
+</div>
+
+Other build systems can enable C++ interoperability by passing in the required
+flag to the Swift compiler:
+
+<div class="links" markdown="1">
+[Read how to enable C++ interoperability when invoking Swift compiler directly](TODO)
+</div>
+
 ### Importing C++ into Swift
 
 Header files are commonly used to describe the public interface of a
