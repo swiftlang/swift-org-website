@@ -247,7 +247,185 @@ language constructs and standard library types can be exposed to C++.
 
 ## Using C++ APIs from Swift
 
-This section describes how C++ code gets imported into Swift. It then dives into details of how to use C++ APIs from Swift, including APIs from the C++ standard library.
+A wide array of C++ types and functions can be used from Swift. This section
+dives into the details of how the supported types and functions can be
+used from Swift in a safe and ergonomic manner.
+
+### Invoking C++ Functions
+
+C++ functions from imported modules can be invoked using the
+familiar function call syntax from Swift. For example, this C++ function:
+
+```c++
+void printWelcomeMessage(const std::string &name);
+```
+
+Can be invoked directly from Swift as if it was a regular Swift function:
+
+```swift
+printWelcomeMessage("Thomas");
+```
+
+### C++ Structures and Classes Are Value Types By Default
+
+Swift maps C++ structures and classes to Swift `struct` types by default.
+Swift considers them to be
+[value types](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures#Structures-and-Enumerations-Are-Value-Types). This means that they're always copied
+when they're passed around in your Swift code.
+
+The special members of a C++ structure or class type are used by Swift when it
+needs to perform a copy of a value or dispose of a value when it goes out of
+scope. If the C++ type has a copy
+constructor, Swift will use it when a value of such type is copied in
+Swift. And if the C++ type has a destructor, Swift will call the destructor when
+a Swift value of such type is destroyed.
+
+As of Swift 5.9, C++ structures and classes with a deleted copy constructor
+are not available in Swift. Non-copyable C++ structures or classes that also
+have a move constructor will be available in a future version of Swift.
+They will map to
+[non-copyable](https://github.com/apple/swift-evolution/blob/main/proposals/0390-noncopyable-structs-and-enums.md) Swift `structs`. In the meantime, such C++ types can be annotated
+with [Swift-provided annotations for reference types](TODO) to make them
+available in Swift. 
+
+### Constructing C++ Types From Swift
+
+Public constructors inside C++ structures and classes
+that aren't copy or move constructors 
+become initializers in Swift. 
+
+For example, these constructors of the C++ `Color` class:
+
+```c++
+class Color {
+public:
+  Color();
+  Color(float red, float blue, float green);
+  Color(float value);
+
+  ...
+  float red, blue, green;
+};
+```
+
+Become initializers. They can be called from Swift to create a value of type
+`Color`: 
+
+```swift
+let theEmptiness = Color()
+let oceanBlue = Color(0.0, 0.0, 1.0)
+let seattleGray = Color(0.7)
+```
+
+### Accessing Data Members Of a C++ Type
+
+The public data members of C++ structures and classes become properties
+in Swift. For example, the data members of the `Color` class shown above
+can be accessed just like any other Swift property:
+
+```swift
+let color: Color = getRandomColor()
+print("Today I'm feeling \(color.red) red but also \(color.blue) blue")
+```
+
+### Calling C++ Member Functions
+
+Member functions inside C++ structures and classes become methods in
+Swift.
+Constant member functions become `nonmutating` Swift methods, whereas
+member function without a `const` qualifier become `mutating` Swift methods.
+For example, this member function in the C++ `Color` class:
+
+```c++
+void Color::invert() { ... }
+```
+
+Is considered to be a `mutating` method in Swift:
+
+```swift
+var red = Color(1.0, 0.0, 0.0)
+red.invert() // red becomes yellow.
+```
+
+And as such it can't be called on constant `Color` values. However,
+this constant member function:
+
+```c++
+Color Color::inverted() const { ... }
+```
+
+Is not a `mutating` method in Swift, and thus it can be called on a constant
+`Color` value:
+
+```swift
+let darkGray = Color(0.2, 0.2, 0.2)
+let veryLightGray = darkGray.inverted()
+```
+
+Static C++ member functions become `static` Swift methods.
+
+### Using C++ Enumerations
+
+Scoped C++ enumerations become Swift enumerations with raw values.
+All of their cases get mapped to Swift cases as well. For example,
+the following C++ enumeration:
+
+```c++
+enum class TreeKind {
+  Oak,
+  Redwood,
+  Willow
+};
+```
+
+Is represented in Swift as the following enumeration:
+
+```swift
+enum TreeKind : Int32 {
+  case Oak = 0
+  case Redwood = 1
+  case Willow = 2
+}
+```
+
+As such, it can be used just like any other `enum` in Swift:
+
+```swift
+func isConiferous(treeKind: TreeKind) -> Bool {
+  switch treeKind {
+    case .Redwood: return true
+    default: return false
+  }
+}
+```
+
+Unscoped C++ enumerations become Swift structures. Their cases become
+variables outside of the Swift structure itself. For example, the following
+unscoped enum:
+
+```c++
+enum MushroomKind {
+  Oyster,
+  Portobello,
+  Button
+}
+```
+
+Is represented in Swift as the following structure:
+
+```swift
+struct MushroomKind : Equatable, RawRepresentable {
+    public init(_ rawValue: UInt32)
+    public init(rawValue: UInt32)
+    public var rawValue: UInt32
+}
+var Oyster: MushroomKind { get }
+var Portobello: MushroomKind { get }
+var Button: MushroomKind { get }
+```
+
+## Using C++ Standard Library from Swift
+
 
 ## Using Swift APIs from C++
 
