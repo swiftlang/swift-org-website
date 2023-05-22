@@ -47,12 +47,12 @@ The idea of being able to adopt upcoming changes sooner rather than later is a g
 To address this, Swift evolution proposal [SE-0362](https://github.com/apple/swift-evolution/blob/main/proposals/0362-piecemeal-future-features.md), implemented in Swift 5.8, details a generalized mechanism for enabling upcoming features.
 
 Instead of a different compiler flag for each upcoming feature, the compiler gains one new flag that is followed by the name of the feature to be enabled:
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-enable-upcoming-feature <em>UpcomingFeatureFlag</em>
-</code></pre></div></div>
+```
+ -enable-upcoming-feature <#UpcomingFeatureFlag#>
+ ```
 
 For example, to enable the upcoming Regex literal syntax discussed above, you would use:
- ```swift
+ ```
  -enable-upcoming-feature BareRegexLiteralSyntax
  ```
 In Swift Package Manager manifests you specify these using a new `SwiftSetting`:
