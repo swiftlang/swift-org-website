@@ -10,11 +10,11 @@ Beginning in Swift 5.8 you can flexibly adopt upcoming Swift features using a ne
 
 ## Source-Breaking Changes
 
-Each new release of Swift adds features and capabilities. These changes go through the [Swift evolution process](https://github.com/apple/swift-evolution/blob/main/process.md){:target="_blank"} where they are proposed, discussed by the community, and accepted.
+Each new release of Swift adds features and capabilities. These changes go through the [Swift evolution process](https://github.com/apple/swift-evolution/blob/main/process.md) where they are proposed, discussed by the community, and accepted.
 
 One important consideration for all changes to Swift is _source compatibility_. To be source compatible, existing Swift code must continue to compile and behave as expected with new versions of the compiler.
 
-To help meet this strong goal, the Swift project maintains an extensive [source compatibility test suite](https://www.swift.org/source-compatibility/){:target="_blank"}. Proposed changes are tested to ensure they do not introduce source-breaking changes. In addition, each evolution proposal includes a discussion of source compatibility.
+To help meet this strong goal, the Swift project maintains an extensive [source compatibility test suite](/source-compatibility/). Proposed changes are tested to ensure they do not introduce source-breaking changes. In addition, each evolution proposal includes a discussion of source compatibility.
 
 On rare occasions, a proposed change that breaks source compatibility is considered important enough to be accepted. These source-breaking changes are not introduced immediately, but wait until the next major version of Swift.
 
@@ -22,15 +22,15 @@ On rare occasions, a proposed change that breaks source compatibility is conside
 One example of a source-breaking change is the syntax for Regex literals introduced in Swift 5.7.
   
 The desired literal syntax is to enclose the regex pattern in forward slashes, as is the convention for regular expressions in many different tools and languages:
-```
+```swift
 let regex = /[a-zA-Z_][0-9a-zA-Z_]*/
 ```
-However, there are cases where this new syntax would break existing code, as detailed in [the SE-0354 proposal](https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md#source-compatibility){:target="_blank"}.
+However, there are cases where this new syntax would break existing code, as detailed in [the SE-0354 proposal](https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md#source-compatibility).
 
 Even though the source incompatibility would not affect many projects and is not likely to be a difficult fix in affected projects, it is still a breaking change. 
 
 Therefore, in Swift 5.7, regex literals only support the extended literal delimiters:
-```
+```swift
 let regex = #/[a-zA-Z_][0-9a-zA-Z_]*/#
 ```
 The source breaking change does not come into effect until the next major language version—in this case Swift 6.
@@ -44,7 +44,7 @@ SDKs that shipped with Xcode 14 have this flag set by default, so you may alread
 ## A Generalized Solution
 The idea of being able to adopt upcoming changes sooner rather than later is a good one. However, adding an ever-increasing number of separate compiler flags for each upcoming feature does not scale well.
 
-To address this, Swift evolution proposal [SE-0362](https://github.com/apple/swift-evolution/blob/main/proposals/0362-piecemeal-future-features.md){:target="_blank"}, implemented in Swift 5.8, details a generalized mechanism for enabling upcoming features.
+To address this, Swift evolution proposal [SE-0362](https://github.com/apple/swift-evolution/blob/main/proposals/0362-piecemeal-future-features.md), implemented in Swift 5.8, details a generalized mechanism for enabling upcoming features.
 
 Instead of a different compiler flag for each upcoming feature, the compiler gains one new flag that is followed by the name of the feature to be enabled:
 
@@ -52,11 +52,11 @@ Instead of a different compiler flag for each upcoming feature, the compiler gai
 </code></pre></div></div>
 
 For example, to enable the upcoming Regex literal syntax discussed above, you would use:
- ```
+ ```swift
  -enable-upcoming-feature BareRegexLiteralSyntax
  ```
 In Swift Package Manager manifests you specify these using a new `SwiftSetting`:
-```
+```swift
 .enableUpcomingFeature(name: "BareSlashRegexLiterals")
 ``` 
 ### Checking For Features In Code
@@ -69,7 +69,7 @@ Note that since `hasFeature()` was introduced with the Swift 5.8 compiler, earli
 
 For example:
 
-```
+```swift
 #if compiler(>=5.8)
   #if hasFeature(BareSlashRegexLiterals)
   let regex = /.../
@@ -80,7 +80,7 @@ For example:
 let regex = try NSRegularExpression(pattern: "...")
 #endif
 ```
-The section [Feature detection in source code](https://github.com/apple/swift-evolution/blob/main/proposals/0362-piecemeal-future-features.md#feature-detection-in-source-code){:target="_blank"} in SE-0362 discusses the use of `hasFeature()` in detail.
+The section [Feature detection in source code](https://github.com/apple/swift-evolution/blob/main/proposals/0362-piecemeal-future-features.md#feature-detection-in-source-code) in SE-0362 discusses the use of `hasFeature()` in detail.
 
 ## How To Enable Upcoming Features
 You enable an upcoming feature on target by target basis by setting the compiler flag for a particular target.
@@ -124,13 +124,13 @@ For a Swift Package, enable upcoming features for a target in its `SwiftSetting`
        .enableUpcomingFeature(name: “ExistentialAny”)])
 ```
 You will also need to update the tools version specified in the manifest to 5.8 or later:
-```
+```swift
 // swift-tools-version: 5.8
 ```
 
 ## Finding Upcoming Feature Flags
 
-Use the [Swift Evolution Dashboard](https://www.swift.org/swift-evolution/){:target="_blank"} to find upcoming feature flags:
+Use the [Swift Evolution Dashboard](/swift-evolution/) to find upcoming feature flags:
 
 - Filter to see all proposals with an upcoming feature flag
 - Search for upcoming feature flags by name
@@ -144,43 +144,43 @@ It’s also important to note that most changes to Swift maintain source compati
 
 As of Swift 5.8, the current set of upcoming feature flags are:
 
-#### [SE-0274](https://github.com/apple/swift-evolution/blob/main/proposals/0274-magic-file.md){:target="_blank"}: Concise magic file names
+#### [SE-0274](https://github.com/apple/swift-evolution/blob/main/proposals/0274-magic-file.md): Concise magic file names
 The `#file` literal generates a string with the format `<module-name>/<file-name>` instead of the full file path.
 
 Upcoming Feature Flag: `ConciseMagicFile`
 
-[Read Full Details](https://github.com/apple/swift-evolution/blob/main/proposals/0274-magic-file.md#source-compatibility){:target="_blank"}
+[Read Full Details](https://github.com/apple/swift-evolution/blob/main/proposals/0274-magic-file.md#source-compatibility)
 
-#### [SE-0286](https://github.com/apple/swift-evolution/blob/main/proposals/0286-forward-scan-trailing-closures.md){:target="_blank"}: Forward-scan matching for trailing closures
+#### [SE-0286](https://github.com/apple/swift-evolution/blob/main/proposals/0286-forward-scan-trailing-closures.md): Forward-scan matching for trailing closures
 Some existing methods can be ambiguous or fail to type check when called using multiple trailing closures. Fix is to provide closures as regular arguments.
 
 Upcoming Feature Flag: `ForwardTrailingClosures `
 
-[Read Full Details](https://github.com/apple/swift-evolution/blob/main/proposals/0286-forward-scan-trailing-closures.md#mitigating-the-source-compatibility-impact-swift--6){:target="_blank"}
+[Read Full Details](https://github.com/apple/swift-evolution/blob/main/proposals/0286-forward-scan-trailing-closures.md#mitigating-the-source-compatibility-impact-swift--6)
 
-#### [SE-0335](https://github.com/apple/swift-evolution/blob/main/proposals/0335-existential-any.md){:target="_blank"}: Introduce existential any
+#### [SE-0335](https://github.com/apple/swift-evolution/blob/main/proposals/0335-existential-any.md): Introduce existential any
 The `any` keyword must be used when a protocol is used as an existential type.
 
 Example:
-```
+```swift
 @protocol Drawable { }
 
 let drawable: any Drawable  // Use of 'any' keyword required
 ```
 Upcoming Feature Flag: `ExistentialAny `
 
-[Read Full Details](https://github.com/apple/swift-evolution/blob/main/proposals/0335-existential-any.md#source-compatibility){:target="_blank"}
+[Read Full Details](https://github.com/apple/swift-evolution/blob/main/proposals/0335-existential-any.md#source-compatibility)
 
-#### [SE-0354](https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md){:target="_blank"}: Regex literals
+#### [SE-0354](https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md): Regex literals
 Allows Regex literals to use forward slash as the delimiter.
 
 Example:
-```
+```swift
 let regex = /[a-zA-Z_][0-9a-zA-Z_]*/
 ```
 Upcoming Feature Flag: `BareSlashRegexLiterals `
 
-[Read Full Details](https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md#source-compatibility){:target="_blank"}
+[Read Full Details](https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md#source-compatibility)
 
 ## Benefits Of Enabling Upcoming Features
 
