@@ -15,27 +15,6 @@ article pre {
 }
 </style>
 
-<!-- {% comment %}
-Define some variables that help us build expanding detail sections
-without too much boilerplate.  We use checkboxes instead of
-<details>...</details> because it allows us to:
-
-  * Write CSS ensuring that details aren't hidden when printing.
-  * Add a button that expands or collapses all sections at once.
-{% endcomment %} -->
-{% capture expand %}{::nomarkdown}
-<input type="checkbox" class="detail">
-{:/nomarkdown}{% endcapture %}
-{% assign detail = '<div class="more" markdown="1">' %}
-{% assign enddetail = '</div>' %}
-
-<div class="info screenonly" markdown="1">
-To facilitate use as a quick reference, the details of many guidelines
-can be expanded individually. Details are never hidden when this page
-is printed.
-<input type="button" id="toggle" value="Expand all details now" onClick="show_or_hide_all()" />
-</div>
-
 ## Table of Contents
 {:.no_toc}
 
@@ -73,18 +52,13 @@ C++ APIs from Swift, or expose Swift APIs to C++.
 The following guides describe how C++ interoperability can be enabled when
 working with a specific build system or IDE:
 
-<div class="links" markdown="1">
-[Read how to use C++ APIs from Swift in a Swift package](TODO)
-
-[Read how to use CMake to mix Swift and C++](TODO)
-</div>
+- [Read how to use C++ APIs from Swift in a Swift package](TODO)
+- [Read how to use CMake to mix Swift and C++](TODO)
 
 Other build systems can enable C++ interoperability by passing in the required
 flag to the Swift compiler:
 
-<div class="links" markdown="1">
-[Read how to enable C++ interoperability when invoking Swift compiler directly](TODO)
-</div>
+- [Read how to enable C++ interoperability when invoking Swift compiler directly](TODO)
 
 ### Importing C++ into Swift
 

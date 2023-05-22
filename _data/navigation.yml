@@ -52,6 +52,8 @@
           name: packages
         - title: API Design Guidelines
           name: api-design-guidelines
+        - title: C++ Interoperability
+          name: mixing-swift-and-c
         - title: Tools
           name: tools
 
