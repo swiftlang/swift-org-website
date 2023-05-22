@@ -3,9 +3,7 @@ layout: page
 title: Packages
 ---
 
-Swift has a rich ecosystem of open-source packages that you can easily import into your project using the [Swift Package Manager](https://www.swift.org/package-manager/) (SPM). Use the [Swift Package Index](https://swiftpackageindex.com) to search for libraries and tools that are compatible with SPM.
-
-## Community Packages
+Swift has a rich ecosystem of open-source packages that you can easily import into your project using the [Swift Package Manager](/package-manager/) (SPM). With more than 5,500 open-source packages, you’re sure to find what you’re looking for, whether it’s a package to help you build great apps for Apple platforms or if you’re looking to develop server backends with Swift. Or, get started today by [creating a package yourself](https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode).
 
 {% for category in site.data.packages.packages.categories %}
 <h3>{{ category.name }}</h3>
