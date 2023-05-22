@@ -349,37 +349,66 @@ C++ member function could lead to Swift code not observing the mutation
 of the instance pointed to by `this` and using the original value of such
 instance for the rest of the Swift code execution.
 
-#### Member Functions Returning References And View Types
+#### Member Functions Returning References
 
-Some functions are unsafe (TODO).
+Member functions that return references, pointers, or
+certain structures/classes that contain references or pointers
+often return a reference that points inside of `this`, the object
+used to call the function.
+Such member functions are considered to be unsafe in Swift,
+as the returned reference
+is not associated with the owning object which can get
+destroyed while the reference is still in use. Swift automatically
+renames such member functions in order to emphasize their unsafety.
+Their Swift name is prefixed
+with two underscores and suffixed with `Unsafe`. For example, the following
+member function:
 
-Please look at this section to see how to work with them safely in Swift.
-
-#### Overloaded Member Functions
-
-Two member functions that have the same name but different `const` qualifiers
-are both available in Swift. The function without `const` becomes `Mutating`
-in Swift. 
-
-TODO have an example.
-
-For example, the following C++ method:
-
-```
+```c++
 class Forest {
 public:
-  Tree getFirstTree() const;
-  Tree getFirstTree();
+  const Tree &getRootTree() const { return rootTree; }
 
+  ...
+private:
+  Tree rootTree;
 };
 ```
 
-will map to:
+Becomes the `__getRootTreeUnsafe` method in Swift.
 
-```swift
-  getFirstTree
-  getFirstTreeMutating
+The set of rules that determine which functions are unsafe, and the
+recommended guidelines for calling such methods safely from Swift
+are documented in an upcoming section that describes how to
+[safely work with C++ references and view types in Swift](#working-with-c-references-and-view-types-in-swift).
+
+#### Overloaded Member Functions
+
+C++ allows member functions to be overloaded based on their `const` qualifier.
+For example, the `Forest` class can have a constant `getRootTree` overload,
+and a non-constant one:
+
+```c++
+class Forest {
+public:
+  const Tree &getRootTree() const { return rootTree; }
+  Tree &getRootTree() { return rootTree; }
+
+  ...
+private:
+  Tree rootTree;
+};
 ```
+
+Both overloads of `getRootTree` become methods in Swift. However, Swift
+renames the non-constant overload to avoid having two methods with the
+same name, argument labels and parameter types.
+Swift appends the `Mutating` suffix to the name of the `mutating`
+method, when it finds that the type already has a `nonmutating` method
+with the same original name. This rename is done before the safety
+of the method is taken into account.
+For instance, the two `getRootTree` members from the example above become
+`__getRootTreeUnsafe` and `__getRootTreeMutatingUnsafe` methods in Swift. 
 
 #### Static Member Functions
 
@@ -634,13 +663,13 @@ conform an existing C++ type to a Swift protocol.
 
 ### Conforming C++ Type To Swift Protocol
 
-A C++ type can conform to a Swift protocol, retroactively (after the type has
-been defined). Such conformance enables the following use cases in Swift:
+Swift protocol conformance can be added to a C++ type retroactively
+(after the type has been defined). Such conformance enables the
+following use cases in Swift:
 
 - Generic Swift functions and types
-[constrained by a protocol](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/generics#Type-Constraints)
- accept
-  a conforming C++ value.
+[constrained by protocols](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/generics#Type-Constraints)
+ can work with a conforming C++ value.
 - A [protocol type](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols#Protocols-as-Types)
  can represent a conforming C++ value.
 
@@ -670,28 +699,63 @@ let treeEmoji: Dictionary<Tree, String> = [
 
 ### Conforming Class Template To Swift Protocol
 
-A Swift extension can add protocol conformance for a specific class template specialization in Swift.
-
-For example (TODO: Need better example):
-
-```swift
-// Swift module `Calculator`
-protocol Fractional {
-  associatedtype Numerator
-  associatedtype Denominator
-}
-```
-
-This makes it possible:
+A Swift extension can add protocol conformance for a specific class template specialization in Swift. For instance, the following class template:
 
 ```c++
-template<class T, class U>
-class Fraction {
- 
-} SWIFT_CONFORMS_TO(Calculator.Fractional);
+template<class T>
+class SerializedValue {
+public:
+  T deserialize() const;
+
+  ...
+};
+
+using SerializedInt = SerializedValue<int>;
+using SerializedFloat = SerializedValue<float>;
 ```
 
-Then, every specialization conforms to such protocol.
+Can be serialized over to:
+
+```swift
+protocol Deserializable {
+  associatedtype ValueType
+
+  func deserialize() -> ValueType
+}
+
+extension SerializedInt: Serializable {}
+```
+
+However, `SerializedFloat` does not conform to `Serializable`. In that case
+`SWIFT_CONFORMS_TO` Annotation can be used:
+
+```c++
+template<class T>
+class SerializedValue {
+public:
+  using ValueType = T;
+
+  ...  
+} SWIFT_CONFORMS_TO(Serialization.Deserializable);
+```
+
+Then, both `SerializedInt` and `SerializedFloat` conform to `Deserializable`,
+and can be used in generic code:
+
+```swift
+extension Deserializable {
+  var deserializedDescription: String {
+    "serialized value \(deserialize().description)"  
+  }
+}
+
+func printDeserialized(_ item: some Deserializable) {
+  print("obtained: \(item.deserializedDescription)")
+}
+
+printDeserialized(getSerializedInt())
+printDeserialized(getSerializedFloat())
+```
 
 ## Working With C++ Collections
 
