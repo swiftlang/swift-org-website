@@ -74,8 +74,6 @@ The following guides describe how C++ interoperability can be enabled when
 working with a specific build system or IDE:
 
 <div class="links" markdown="1">
-[Read how to mix Swift and C++ in an Xcode project](TODO)
-
 [Read how to use C++ APIs from Swift in a Swift package](TODO)
 
 [Read how to use CMake to mix Swift and C++](TODO)
@@ -245,11 +243,11 @@ void printTreeArt(const Tree &tree) {
 The [C++ interoperability status page](status) describes which Swift
 language constructs and standard library types can be exposed to C++.
 
-## Using C++ APIs from Swift
+## Using C++ Types And Functions In Swift
 
 A wide array of C++ types and functions can be used from Swift. This section
-dives into the details of how the supported types and functions can be
-used from Swift in a safe and ergonomic manner.
+goes over the fundamentals of how the supported types and functions can be
+used from Swift.
 
 ### Invoking C++ Functions
 
@@ -332,6 +330,9 @@ print("Today I'm feeling \(color.red) red but also \(color.blue) blue")
 
 Member functions inside C++ structures and classes become methods in
 Swift.
+
+#### Constant Member Functions Are `nonmutating`
+
 Constant member functions become `nonmutating` Swift methods, whereas
 member function without a `const` qualifier become `mutating` Swift methods.
 For example, this member function in the C++ `Color` class:
@@ -362,7 +363,60 @@ let darkGray = Color(0.2, 0.2, 0.2)
 let veryLightGray = darkGray.inverted()
 ```
 
+<!-- {% comment %}
+TODO: Talk about const rule.
+{% endcomment %} -->
+
+#### Constant Member Function Assumptions
+
+The Swift compiler assumes that constant member functions do not
+mutate the instance that `this` points to. A violation of this assumption by a
+C++ member function could lead to Swift code not observing the mutation
+of the instance pointed to by `this` and using the original value of such
+instance for the rest of the Swift code execution.
+
+#### Member Functions Returning References And View Types
+
+Some functions are unsafe (TODO).
+
+Please look at this section to see how to work with them safely in Swift.
+
+#### Overloaded Member Functions
+
+Two member functions that have the same name but different `const` qualifiers
+are both available in Swift. The function without `const` becomes `Mutating`
+in Swift. 
+
+TODO have an example.
+
+For example, the following C++ method:
+
+```
+class Forest {
+public:
+  Tree getFirstTree() const;
+  Tree getFirstTree();
+
+};
+```
+
+will map to:
+
+```swift
+  getFirstTree
+  getFirstTreeMutating
+```
+
+#### Static Member Functions
+
 Static C++ member functions become `static` Swift methods.
+
+### Acessing Inherited Members From Swift
+
+Inherited members become available in Swift inside the specific
+Swift structure/class.
+
+TODO: what are the rules on shadowed names.
 
 ### Using C++ Enumerations
 
@@ -424,10 +478,291 @@ var Portobello: MushroomKind { get }
 var Button: MushroomKind { get }
 ```
 
+### Using C++ Type Aliases
+
+A C++ `using` or `typedef` declaration becomes a `typealias` in Swift.
+For instance, the following `using` declaration:
+
+```c++
+using CustomString = std::string;
+```
+
+Becomes a `CustomString` type in Swift.
+
+### Using Class Templates 
+
+An instantiated specialization of a class or structure template is mapped
+to a distinct type in Swift. For example, the following C++ class
+template:
+
+```c++
+template<class T, class U>
+class Fraction {
+public:
+  T numerator;
+  U denominator;
+
+  Fraction(const T &, const U &);
+};
+```
+
+Is not available in Swift by itself. However, a function that returns
+an instantiated specialization of `Fraction` is:
+
+```c++
+Fraction<int, float> getMagicNumber();
+```
+
+Such function can be called from Swift, as its return value
+is the `Fraction<int, float>` specialization:
+
+```
+let magicNum = getMagicNumber()
+print(magicNum.numerator, magicNum.denominator)
+```
+
+An instantiated specialization of a class template is treated like
+a regular C++ structure or class when it is mapped into Swift. For
+example, the `Fraction<int, float>` template specialization becomes a
+Swift structure:
+
+```swift
+struct Fraction<CInt, Float> {
+  var numerator: CInt
+  var denominator: Float
+
+  init(_: CInt, _: Float)
+}
+```
+
+A C++ type alias can refer to a specific specialization of a
+class template. For example, in order to construct a 
+`Fraction<int, float>` from Swift, you first want to create a
+C++ type alias that refers to such template specialization:
+
+```c++
+// Bring `Fraction<int, float>` type to Swift with a C++ `using` declaration.
+using MagicFraction = Fraction<int, float>;
+```
+
+Then you can use this type alias directly from Swift:
+
+```swift
+let oneEights = MagicFraction(1, 8.0)
+print(oneEights.numerator)
+```
+
+A [follow-up section of this document](#conforming-class-template-to-swift-protocol)
+describes how Swift generics and protocol extensions can be used to write
+generic Swift code that works with any specialization of a class template.
+
+## Customizing How C++ Maps To Swift
+
+The defaults that determine how C++ types and functions map to Swift can be
+changed, by annotating a specific C++
+function or type with one of the provided customization macros. For example,
+you can choose to provide a different Swift name for a specific C++
+function using the `SWIFT_NAME` macro.
+
+The `<swift/bridging>` header defines the customization macros that can be used
+to annotate C++ functions and types. This header ships with the
+Swift toolchain. On platforms like Linux, both the system's C++ compiler and
+the Swift compiler should find this header automatically.
+On other platforms, like Windows, you might
+need to add additional header search path flags (`-I`) to your C++ and Swift
+compiler invocations to make sure that this header is found. 
+
+<!-- {% comment %}
+TODO: Talk about Xcode.
+{% endcomment %} -->
+
+This section describes just two of the customization macros from 
+the `<swift/bridging>` header. The other customization macros and their
+behavior are documented in the subsequent sections in this document.
+The [complete list](#list-of-customization-macros-in-swiftbridging) of all the
+customization macros is provided in the appendix.
+
+### Renaming C++ APIs In Swift
+
+The `SWIFT_NAME` macro provides a different name for C++
+types and functions in Swift. C++ types can be renamed by specifying the Swift
+type name inside of the `SWIFT_NAME` macro. For example,
+the following C++ structure:
+
+```c++
+struct Error {
+  ...
+} SWIFT_NAME("CxxLibraryError");
+```
+
+Gets renamed to `CxxLibraryError` structure in Swift.
+
+When renaming a function, you need to specify the Swift function name
+(including argument labels) inside of the `SWIFT_NAME` macro.
+For example, the following C++ function:
+
+```c++
+#include <swift/bridging>
+
+void sendCopy(const std::string &) SWIFT_NAME(send(_:));
+```
+
+Gets renamed to `send` in Swift:
+
+```swift
+send("Hello, this is Swift!")
+```
+
+### Mapping Getters And Setters to Computed Properties
+
+The `SWIFT_COMPUTED_PROPERTY` macro maps a C++ getter and setter member
+function to a computed property in Swift. For example, the following getter
+and setter pair:
+
+```c++
+#include <swift/bridging>
+
+class Tree {
+public:
+  TreeKind getKind() const SWIFT_COMPUTED_PROPERTY;
+  void setKind(TreeKind kind) SWIFT_COMPUTED_PROPERTY;
+  
+  ...
+};
+```
+
+Gets mapped to a single `treeKind` computed property in Swift:
+
+```swift
+func makeNotAConiferousTree(tree: inout Tree) {
+  tree.kind = tree.kind == .Redwood ? .Oak : tree.kind
+}
+```
+
+Both the getter and setter need to operate on the same underlying C++ type for
+this transformation to be successful in Swift.
+
+<!-- {% comment %}
+TODO: Can getter accept const ref.
+{% endcomment %} -->
+
+It's possible to map just the getter to a computed property, a setter is not
+required for this transformation to work.
+
+## Extending C++ Types In Swift
+
+Swift [extensions](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/extensions)
+can add new functionality to C++ types in Swift. They can also
+conform an existing C++ type to a Swift protocol. 
+
+> Extensions can add new functionality to a C++ type, but they can't override
+> existing functionality of a C++ type.
+
+### Conforming C++ Type To Swift Protocol
+
+A C++ type can conform to a Swift protocol, retroactively (after the type has
+been defined). Such conformance enables the following use cases in Swift:
+
+- Generic Swift functions and types
+[constrained by a protocol](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/generics#Type-Constraints)
+ accept
+  a conforming C++ value.
+- A [protocol type](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols#Protocols-as-Types)
+ can represent a conforming C++ value.
+
+For example, a Swift extension to the C++ class `Tree` can add
+`Hashable` conformance:
+
+```swift
+extension Tree: Hashable {
+  static func == (lhs: Tree, rhs: Tree) -> Bool {
+    return lhs.kind == rhs.kind
+  }
+
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(self.kind.rawValue)
+  }
+}
+```
+
+Such conformance then lets you use `Tree` as a key in a Swift dictionary:
+
+```swift
+let treeEmoji: Dictionary<Tree, String> = [
+  Tree(.Oak): "🌳",
+  Tree(.Redwood): "🌲"
+]
+```
+
+### Conforming Class Template To Swift Protocol
+
+A Swift extension can add protocol conformance for a specific class template specialization in Swift.
+
+For example (TODO: Need better example):
+
+```swift
+// Swift module `Calculator`
+protocol Fractional {
+  associatedtype Numerator
+  associatedtype Denominator
+}
+```
+
+This makes it possible:
+
+```c++
+template<class T, class U>
+class Fraction {
+ 
+} SWIFT_CONFORMS_TO(Calculator.Fractional);
+```
+
+Then, every specialization conforms to such protocol.
+
+## Working With C++ Collections
+
+This section is used to describe collection / iterator bridging.
+
+## Mapping C++ Types To Swift Reference Types
+
+This section describes how to map C++ types that have reference semantics to
+reference types in Swift
+
+## Working With C++ References And View Types In Swift
+
+This section describes how to safely work with C++ references and view types
+in Swift.
+
 ## Using C++ Standard Library from Swift
 
+This section describes how to import the C++ standard library, and how
+to use the types from it in Swift.
+
+### Importing C++ Standard Library
+
+The platform's C++ standard library can be imported into Swift by importing
+the `CxxStdlib` module.
+
+Please see the [status page](TODO) for details on which C++ standard libraries
+are supported on the supported platforms.
 
 ## Using Swift APIs from C++
 
+A Swift library author might want to expose their interface to C++, to allow a C++ codebase to interoperate with the Swift library. This document describes how this can be accomplished, by first describing how Swift can expose its interface to C++, and then going into the details on how to use Swift APIs from C++.
+
 This section describes how APIs in a Swift module
 get exposed to C++. It then goes into details of how to use Swift APIs from C++.
+
+
+## Appendix
+
+This section contains additional tables and references for certain topics
+that are outlined in the documentation above.
+
+### List Of Customization Macros In `<swift/bridging>` 
+
+| Macro                     | Documentation |
+| ------------------------- | ------------- |
+| `SWIFT_NAME`                | [Renaming C++ APIs In Swift](#renaming-c-apis-in-swift)       |
+| `SWIFT_COMPUTED_PROPERTY`   | [Mapping Getters And Setters to Computed Properties](#mapping-getters-and-setters-to-computed-properties)        |
+| `SWIFT_CONFORMS_TO`   | [Conforming Class Template To Swift Protocol](#conforming-class-template-to-swift-protocol)        |
