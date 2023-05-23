@@ -17,9 +17,28 @@ ul.package-list {
       }
     }
 
+    h4 {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+
+      p {
+        margin: 0;
+      }
+
+      picture {
+        display: inline-block;
+
+        > img {
+          width: inherit;
+        }
+      }
+    }
+
     section {
       display: grid;
-      grid-template-columns: 3fr 1fr;
+      grid-template-columns: 2fr 1fr;
       gap: 40px;
 
       .description > p {
@@ -37,19 +56,11 @@ ul.package-list {
         gap: 10px;
         padding: 0;
         list-style: none;
-
-        .stars > picture {
-          display: inline-block;
-
-          > img {
-            width: inherit;
-          }
-        }
       }
     }
 
     &:hover {
-      h4 {
+      h4 > p {
         color: var(--color-link);
         text-decoration: underline;
       }

@@ -23,10 +23,25 @@ There are thousands of packages to explore through the community-run package ind
   {% for package in category.packages %}
   <li>
     <a href="{{ package.url }}">
-      <h4>{{ package.name }}</h4>
+      <h4>
+        <p>{{ package.name }}</p>
+        <div>
+          <picture>
+            <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
+            <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
+          </picture> {{ package.stars }}
+        </div>
+      </h4>
       <section>
-        <div class="description">{{ package.description | markdownify }}</div>
+        <div class="description">
+          {{ package.description | markdownify }}
+          <p>{{ package.activity }} {{ package.authors }}</p>
+        </div>
         <ul class="metadata">
+          <li class="license">
+            <strong>License: </strong>
+            {{ package.license }}
+          </li>
           <li class="swift_compatibility">
             <strong>Swift:</strong>
             {{ package.swift_compatibility }}
@@ -34,12 +49,6 @@ There are thousands of packages to explore through the community-run package ind
           <li class="platform_compatibility">
             <strong>Platforms:</strong>
             {{ package.platform_compatibility }}
-          </li>
-          <li class="stars">
-            <picture>
-              <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
-              <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
-            </picture> {{ package.stars }}
           </li>
         </ul>
       </section>
