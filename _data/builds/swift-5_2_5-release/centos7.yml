@@ -1,7 +1,0 @@
----
-- name: CentOS 7
-  date: 2020-08-04 10:28:49.000000000 -05:00
-  download: swift-5.2.5-RELEASE-centos7.tar.gz
-  download_signature: swift-5.2.5-RELEASE-centos7.tar.gz.sig
-  dir: swift-5.2.5-RELEASE
-  docker: 5.2.5-centos7

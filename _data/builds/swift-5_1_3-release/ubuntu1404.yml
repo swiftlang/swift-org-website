@@ -1,6 +1,0 @@
----
-- name: Ubuntu 14.04
-  date: 2019-12-13 10:29:16.000000000 -05:00
-  download: swift-5.1.3-RELEASE-ubuntu14.04.tar.gz
-  download_signature: swift-5.1.3-RELEASE-ubuntu14.04.tar.gz.sig
-  dir: swift-5.1.3-RELEASE

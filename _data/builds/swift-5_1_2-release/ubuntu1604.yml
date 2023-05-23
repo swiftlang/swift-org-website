@@ -1,7 +1,0 @@
----
-- name: Ubuntu 16.04
-  date: 2019-11-07 10:29:16.000000000 -05:00
-  download: swift-5.1.2-RELEASE-ubuntu16.04.tar.gz
-  download_signature: swift-5.1.2-RELEASE-ubuntu16.04.tar.gz.sig
-  dir: swift-5.1.2-RELEASE
-  docker: 5.1.2-xenial
