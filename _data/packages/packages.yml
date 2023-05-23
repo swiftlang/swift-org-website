@@ -1,4 +1,62 @@
 categories:
+  - name: Community Showcase
+    anchor: community
+    description: "The community showcase celebrates new and innovative packages discussed on recent community podcasts, blogs, and newsletters. If you would like to submit a package you have written or are using for inclusion, [here’s how](#)!"
+    packages:
+      - name: "Settings"
+        description: "Settings library offers a settings window to add to macOS apps in minutes with built-in SwiftUI support, allowing users to customize their app to their preferences."
+        swift_compatibility: 5.7+
+        platform_compatibility: macOS
+        activity: "In development for 3 years, with activity 7 days ago."
+        authors: "Written by Sindre Sorhus and 13 other contributors."
+        license: "MIT"
+        stars: "1,249"
+        url: https://swiftpackageindex.com/sindresorhus/Settings
+      - name: "PopupView"
+        description: "Popup View is a SwiftUI library used to show toasts, alerts, and popups with customizable parameters to enable a more dynamic user experience."
+        swift_compatibility: 5.7+
+        platform_compatibility: iOS, macOS
+        activity: "In development for 3 years, with activity 15 days ago."
+        authors: "Written by AlisaMylnikova and 18 other contributors."
+        license: "MIT"
+        stars: "2,112"
+        url: https://swiftpackageindex.com/exyte/PopupView
+      - name: "MenuBuilder"
+        description: "MenuBuilder is a library for creating macOS menus with a SwiftUI-style syntax. It allows developers to quickly and easily create menus with actionable items, separators and submenus, with support for modifiers and conditionals."
+        swift_compatibility: 5.5+
+        platform_compatibility: macOS
+        activity: "In development for 2 years, with activity 2 months ago."
+        authors: "Written by Jed Fox and 5 other contributors."
+        license: "MIT"
+        stars: "30"
+        url: https://swiftpackageindex.com/j-f1/MenuBuilder
+      - name: "ContributorUI"
+        description: "ContributorUI is a library for user interface that displays all developers contributing to a project, allowing for a minimal setup and easy integration into iOS and macOS applications."
+        swift_compatibility: 5.7+
+        platform_compatibility: iOS, macOS
+        activity: "In development for 2 months, with activity 2 months ago."
+        authors: "Written by dscyrescotti and 3 other contributors."
+        license: "MIT"
+        stars: "16"
+        url: https://swiftpackageindex.com/dscyrescotti/ContributorUI
+      - name: "GEOSwift"
+        description: "GEOSwift is a type-safe, MIT-licensed Swift interface to the OSGeo's GEOS library routines that enables easily handling a geometric object model (points, linestrings, polygons etc.) and related topological operations (intersections, overlapping etc.)."
+        swift_compatibility: 5.5+
+        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+        activity: "In development for 8 years, with activity 1 month ago."
+        authors: "Written by Andrew Hershberger, Andrea Cremaschi, and 29 other contributors."
+        license: "MIT"
+        stars: "1,380"
+        url: https://swiftpackageindex.com/GEOSwift/GEOSwift
+      - name: "swift-cli-version"
+        description: "swift-cli-version is a swift package that allows you to set the version of a command line tool to the git tag or the git sha, if a tag is not set for the current commit. It provides plugins to use in your project and documentation to explain how to use them."
+        swift_compatibility: 5.7+
+        platform_compatibility: macOS, Linux
+        activity: "In development for 2 months, with activity 2 months ago."
+        authors: "Written by Michael Housh."
+        license: "MIT"
+        stars: "1"
+        url: https://swiftpackageindex.com/m-housh/swift-cli-version
   - name: Networking packages
     anchor: networking
     description: "Covering everything from abstractions on top of core networking libraries to full-featured HTTP clients to low-level networking libraries. If you need a little more on top of URLSession, or a lot more, you’ll find it here."
@@ -60,64 +118,6 @@ categories:
         license: "MIT"
         stars: "246"
         url: https://swiftpackageindex.com/immobiliare/RealHTTP
-  - name: Community Showcase
-    anchor: community
-    description: "The community showcase celebrates new and innovative packages discussed on recent community podcasts, blogs, and newsletters. If you would like to submit a package you have written or are using for inclusion, [here’s how](#)!"
-    packages:
-      - name: "Settings"
-        description: "Settings library offers a settings window to add to macOS apps in minutes with built-in SwiftUI support, allowing users to customize their app to their preferences."
-        swift_compatibility: 5.7+
-        platform_compatibility: macOS
-        activity: "In development for 3 years, with activity 7 days ago."
-        authors: "Written by Sindre Sorhus and 13 other contributors."
-        license: "MIT"
-        stars: "1,249"
-        url: https://swiftpackageindex.com/sindresorhus/Settings
-      - name: "PopupView"
-        description: "Popup View is a SwiftUI library used to show toasts, alerts, and popups with customizable parameters to enable a more dynamic user experience."
-        swift_compatibility: 5.7+
-        platform_compatibility: iOS, macOS
-        activity: "In development for 3 years, with activity 15 days ago."
-        authors: "Written by AlisaMylnikova and 18 other contributors."
-        license: "MIT"
-        stars: "2,112"
-        url: https://swiftpackageindex.com/exyte/PopupView
-      - name: "MenuBuilder"
-        description: "MenuBuilder is a library for creating macOS menus with a SwiftUI-style syntax. It allows developers to quickly and easily create menus with actionable items, separators and submenus, with support for modifiers and conditionals."
-        swift_compatibility: 5.5+
-        platform_compatibility: macOS
-        activity: "In development for 2 years, with activity 2 months ago."
-        authors: "Written by Jed Fox and 5 other contributors."
-        license: "MIT"
-        stars: "30"
-        url: https://swiftpackageindex.com/j-f1/MenuBuilder
-      - name: "ContributorUI"
-        description: "ContributorUI is a library for user interface that displays all developers contributing to a project, allowing for a minimal setup and easy integration into iOS and macOS applications."
-        swift_compatibility: 5.7+
-        platform_compatibility: iOS, macOS
-        activity: "In development for 2 months, with activity 2 months ago."
-        authors: "Written by dscyrescotti and 3 other contributors."
-        license: "MIT"
-        stars: "16"
-        url: https://swiftpackageindex.com/dscyrescotti/ContributorUI
-      - name: "GEOSwift"
-        description: "GEOSwift is a type-safe, MIT-licensed Swift interface to the OSGeo's GEOS library routines that enables easily handling a geometric object model (points, linestrings, polygons etc.) and related topological operations (intersections, overlapping etc.)."
-        swift_compatibility: 5.5+
-        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
-        activity: "In development for 8 years, with activity 1 month ago."
-        authors: "Written by Andrew Hershberger, Andrea Cremaschi, and 29 other contributors."
-        license: "MIT"
-        stars: "1,380"
-        url: https://swiftpackageindex.com/GEOSwift/GEOSwift
-      - name: "swift-cli-version"
-        description: "swift-cli-version is a swift package that allows you to set the version of a command line tool to the git tag or the git sha, if a tag is not set for the current commit. It provides plugins to use in your project and documentation to explain how to use them."
-        swift_compatibility: 5.7+
-        platform_compatibility: macOS, Linux
-        activity: "In development for 2 months, with activity 2 months ago."
-        authors: "Written by Michael Housh."
-        license: "MIT"
-        stars: "1"
-        url: https://swiftpackageindex.com/m-housh/swift-cli-version
   - name: Testing packages
     anchor: testing
     description: "Whether you're looking for an extension on top of XCTest or a completely different way to approach testing, these packages are here to help."
