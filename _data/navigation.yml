@@ -35,8 +35,8 @@
     - title: Packages
       url: /packages/
       sections:
-        - title: Showcase
-          name: showcase
+        - title: Featured Packages
+          name: featured-packages
     - title: Platform Support
       url: /platform-support/
       sections:
