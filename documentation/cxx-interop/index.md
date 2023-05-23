@@ -401,8 +401,8 @@ private:
 ```
 
 Both overloads of `getRootTree` become methods in Swift. However, Swift
-renames the non-constant overload to avoid having two methods with the
-same name, argument labels and parameter types.
+renames the non-constant overload to avoid having two ambiguous methods with
+the same name and arguments.
 Swift appends the `Mutating` suffix to the name of the `mutating`
 method, when it finds that the type already has a `nonmutating` method
 with the same original name. This rename is done before the safety
@@ -410,14 +410,53 @@ of the method is taken into account.
 For instance, the two `getRootTree` members from the example above become
 `__getRootTreeUnsafe` and `__getRootTreeMutatingUnsafe` methods in Swift. 
 
+#### Virtual Member Functions
+
+As of Swift 5.9, virtual member functions are not available in Swift.
+
 #### Static Member Functions
 
 Static C++ member functions become `static` Swift methods.
 
 ### Acessing Inherited Members From Swift
 
-Inherited members become available in Swift inside the specific
-Swift structure/class.
+A C++ class or structure becomes a standalone type in Swift. Its
+relationship with base C++ classes is not preserved in Swift.
+Swift tries its best to provide access to the members inherited from base
+classes of a C++ type. The public member functions and data members from a
+C++ base class become methods and properties in Swift, as if they
+were defined in the specific class itself.
+
+For example, the following two C++ classes:
+
+```c++
+class Plant {
+public:
+  void water(float amount) { moisture += amount; }
+private:
+  float moisture = 0.0;
+};
+
+class Fern: public Plant {
+public:
+  void trim();
+};
+```
+
+Become two distinct Swift structures, with `Fern` structure getting an
+additional `water` method from `Plant`:
+
+```swift
+struct Plant { 
+  mutating func water(_ amount: Float)
+}
+
+struct Fern {
+  init()
+  mutating func water(_ amount: Float) // Calls `Plant::water`
+  mutating func trim()
+}
+```
 
 TODO: what are the rules on shadowed names.
 
@@ -673,8 +712,8 @@ following use cases in Swift:
 - A [protocol type](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols#Protocols-as-Types)
  can represent a conforming C++ value.
 
-For example, a Swift extension to the C++ class `Tree` can add
-`Hashable` conformance:
+For example, a Swift extension can add
+`Hashable` conformance to the C++ class `Tree`: 
 
 ```swift
 extension Tree: Hashable {
