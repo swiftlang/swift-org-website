@@ -15,6 +15,11 @@ article pre {
 }
 </style>
 
+<div class="info" markdown="1">
+C++ interoperability is a new feature in the upcoming Swift 5.9 release.
+This reference guide is going to be continously updated until Swift 5.9 is released.
+</div>
+
 ## Table of Contents
 {:.no_toc}
 
@@ -385,8 +390,8 @@ are documented in an upcoming section that describes how to
 #### Overloaded Member Functions
 
 C++ allows member functions to be overloaded based on their `const` qualifier.
-For example, the `Forest` class can have a constant `getRootTree` overload,
-and a non-constant one:
+For example, the `Forest` class can have two `getRootTree` members, that differ
+only in their constness and their return type:
 
 ```c++
 class Forest {
@@ -400,14 +405,14 @@ private:
 };
 ```
 
-Both overloads of `getRootTree` become methods in Swift. However, Swift
-renames the non-constant overload to avoid having two ambiguous methods with
-the same name and arguments.
-Swift appends the `Mutating` suffix to the name of the `mutating`
-method, when it finds that the type already has a `nonmutating` method
-with the same original name. This rename is done before the safety
-of the method is taken into account.
-For instance, the two `getRootTree` members from the example above become
+The two `getRootTree` member functions become methods in Swift. Swift
+renames the `mutating` method to avoid having two ambiguous methods with
+the same name and arguments, when it finds that the type already has a 
+`nonmutating` method with the same Swift name. The rename appends
+the `Mutating` suffix to the name of the `mutating` method.
+This rename is done before the safety of the method is taken into account.
+In the example shown above, 
+the two `getRootTree` member functions become
 `__getRootTreeUnsafe` and `__getRootTreeMutatingUnsafe` methods in Swift. 
 
 #### Virtual Member Functions
@@ -457,8 +462,6 @@ struct Fern {
   mutating func trim()
 }
 ```
-
-TODO: what are the rules on shadowed names.
 
 ### Using C++ Enumerations
 
@@ -738,7 +741,8 @@ let treeEmoji: Dictionary<Tree, String> = [
 
 ### Conforming Class Template To Swift Protocol
 
-A Swift extension can add protocol conformance for a specific class template specialization in Swift. For instance, the following class template:
+A Swift extension can add protocol conformance for a specific class template specialization in Swift. For instance, a specific
+specialization of the following class template:
 
 ```c++
 template<class T>
@@ -753,9 +757,10 @@ using SerializedInt = SerializedValue<int>;
 using SerializedFloat = SerializedValue<float>;
 ```
 
-Can be serialized over to:
+Can conform to a protocol using a Swift `extension`:
 
 ```swift
+// Swift module 'Serialization'
 protocol Deserializable {
   associatedtype ValueType
 
@@ -765,8 +770,15 @@ protocol Deserializable {
 extension SerializedInt: Serializable {}
 ```
 
-However, `SerializedFloat` does not conform to `Serializable`. In that case
-`SWIFT_CONFORMS_TO` Annotation can be used:
+In the example above `SerializedInt` conforms to the `Deserializable` protocol.
+However, other specializations of the class template, like `SerializedFloat`,
+do not conform to `Deserializable`.
+
+The `SWIFT_CONFORMS_TO` customization macro from the `<swift/bridging>`
+header can be used to conform all specializations of a class template to
+Swift protocol automatically. For example, the 
+definition of the `SerializedValue` class template can be annotated with
+`SWIFT_CONFORMS_TO`:
 
 ```c++
 template<class T>
@@ -778,8 +790,9 @@ public:
 } SWIFT_CONFORMS_TO(Serialization.Deserializable);
 ```
 
-Then, both `SerializedInt` and `SerializedFloat` conform to `Deserializable`,
-and can be used in generic code:
+This makes all specializations, like `SerializedInt` and `SerializedFloat`,
+conform to `Deserializable` automatically in Swift. This means that they
+can be easily used in generic code:
 
 ```swift
 extension Deserializable {
@@ -788,7 +801,7 @@ extension Deserializable {
   }
 }
 
-func printDeserialized(_ item: some Deserializable) {
+func printDeserialized<T: Deserializable>(_ item: T) {
   print("obtained: \(item.deserializedDescription)")
 }
 
@@ -809,6 +822,10 @@ reference types in Swift
 
 This section describes how to safely work with C++ references and view types
 in Swift.
+
+## Working With Non-Copyable C++ Types
+
+This section describes strategies for working with non-copyable C++ types.
 
 ## Using C++ Standard Library from Swift
 
