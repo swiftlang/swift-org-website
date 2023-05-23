@@ -45,7 +45,7 @@ ul.package-list {
         // Even though this looks specific to WebKit, it works in Safari, Chrome, and Firefox.
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 6;
         text-overflow: ellipsis;
         overflow: hidden;
       }
@@ -66,4 +66,8 @@ ul.package-list {
       }
     }
   }
+}
+
+p.more {
+  text-align: right;
 }
