@@ -7,7 +7,7 @@ Swift has a rich ecosystem of open-source packages that you can easily import in
 
 ## Featured Packages
 
-There are thousands of packages to explore through the community-run package index project, the [Swift Package Index](https://swiftpackageindex.com/). Below are a selection of the best packages in commonly used categories, as well as packages picked by from podcasts and blogs around the community. Click or tap on any package below to explore the full metadata in the package index:
+There are thousands of packages to explore through the community-run package index project, the [Swift Package Index](https://swiftpackageindex.com/). Below is a selection of the best packages in commonly used categories and packages picked by podcasts or blogs around the community.
 
 <ul>
   {% for category in site.data.packages.packages.categories %}
