@@ -1,10 +1,10 @@
 categories:
   - name: Networking packages
     anchor: networking
-    description: "Covering everything from abstractions on top of core networking libraries, to full-featured HTTP clients, to low-level networking libraries. If you need a little more on top of URLSession, or a lot more, you'll find it here."
+    description: "Covering everything from abstractions on top of core networking libraries to full-featured HTTP clients to low-level networking libraries. If you need a little more on top of URLSession, or a lot more, you’ll find it here."
     more:
-      - title: "Explore more networking packages"
-        url: https://swiftpackageindex.com/keywords/networking
+      title: "Explore more networking packages"
+      url: https://swiftpackageindex.com/keywords/networking
     packages:
       - name: "swift-nio"
         description: "SwiftNIO is an open-source network application framework providing low-level building blocks for building high-performance, maintainable, and scalable protocol servers & clients for rapid development."
@@ -62,7 +62,7 @@ categories:
         url: https://swiftpackageindex.com/immobiliare/RealHTTP
   - name: Community Showcase
     anchor: community
-    description: "Packages voted on by the community and from the [Swift Package Indexing podcast](https://swiftpackageindexing.transistor.fm). [Learn more](https://swiftpackageindex.com)."
+    description: "The community showcase celebrates new and innovative packages discussed on recent community podcasts, blogs, and newsletters. If you would like to submit a package you have written or are using for inclusion, [here’s how](#)!"
     packages:
       - name: "Settings"
         description: "Settings library offers a settings window to add to macOS apps in minutes with built-in SwiftUI support, allowing users to customize their app to their preferences."
@@ -77,7 +77,7 @@ categories:
         description: "Popup View is a SwiftUI library used to show toasts, alerts, and popups with customizable parameters to enable a more dynamic user experience."
         swift_compatibility: 5.7+
         platform_compatibility: iOS, macOS
-        activity: "In development for 3 years, with activity XXX days ago."
+        activity: "In development for 3 years, with activity 15 days ago."
         authors: "Written by AlisaMylnikova and 18 other contributors."
         license: "MIT"
         stars: "2,112"
@@ -122,8 +122,8 @@ categories:
     anchor: testing
     description: "Whether you're looking for an extension on top of XCTest or a completely different way to approach testing, these packages are here to help."
     more:
-      - title: "Explore more testing packages"
-        url: https://swiftpackageindex.com/keywords/testing
+      title: "Explore more testing packages"
+      url: https://swiftpackageindex.com/keywords/testing
     packages:
       - name: "Quick"
         description: "Quick is a behavior-driven development framework for Swift and Objective-C, inspired by RSpec, Specta, and Ginkgo. It includes Nimble, a matcher framework for creating clearer test expectations."
@@ -175,7 +175,7 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: iOS, macOS, tvOS, Linux
         authors: "Written by Stephen Celis and 73 other contributors."
-        activity: "In development for xxx years, with activity xxx days ago."
+        activity: "In development for 5 years, with activity 12 days ago."
         license: "MIT"
         stars: "3,170"
         url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
