@@ -25,7 +25,10 @@ article pre {
 
 <div class="info" markdown="1">
 C++ interoperability is a new feature in the upcoming Swift 5.9 release.
-This reference guide is going to be continously updated until Swift 5.9 is released.
+Swift 5.9 is still under development, and as such the initial C++
+interoperability support might still change in Swift 5.9.
+This reference guide is going to be continously updated until Swift 5.9 is
+released.
 </div>
 
 ## Introduction
@@ -41,8 +44,16 @@ Bidirectional interoperability with C++ is supported in Swift 5.9 and above.
 * * *
 
 <div class="info" markdown="1">
-C++ interoperability is an actively evolving feature of Swift. The [status page](status) provides an
-overview of the currently supported interoperability features.
+C++ interoperability is an actively evolving feature of Swift. Certain
+aspects of its design and functionality might change in future releases of Swift,
+as the Swift community gathers feedback from real world adoption of C++
+interoperability in mixed Swift and C++ codebases.
+The [status page](status) provides an
+overview of the currently supported interoperability features, and
+lists the [known issues](status) as well. If you find a related bug,
+or would like to suggest a related change,
+please create a
+[new issue on GitHub](https://github.com/apple/swift/issues/new/choose).
 </div>
 
 ## Overview
