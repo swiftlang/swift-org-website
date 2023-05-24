@@ -77,20 +77,6 @@ ul.package-list-grid {
   padding: 0;
   list-style: none;
 
-  //   a {
-  //     color: inherit;
-
-  //     &:hover {
-  //       text-decoration: none;
-
-  //       h4,
-  //       p.metadata-link {
-  //         color: var(--color-link);
-  //         text-decoration: underline;
-  //       }
-  //     }
-  //   }
-
   h4 {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -101,6 +87,8 @@ ul.package-list-grid {
     }
 
     .stars {
+      // Uncomment to show stars on grid view
+      // display: none;
       font-size: 18px;
 
       picture {

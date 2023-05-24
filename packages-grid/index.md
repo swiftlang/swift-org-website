@@ -34,7 +34,7 @@ There are thousands of packages to explore through the community-run package ind
       {{ package.description | markdownify }}
     </section>
     <p class="metadata-link">
-      <a href="{{ package.url }}" target="_blank">View Package Metadata&hellip;</a>
+      <a href="{{ package.url }}" target="_blank">View Metadata&hellip;</a>
     </p>
   </li>
   {% endfor %}
