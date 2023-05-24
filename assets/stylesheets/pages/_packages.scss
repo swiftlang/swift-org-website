@@ -14,13 +14,17 @@ ul.package-list {
 
       &:hover {
         text-decoration: none;
+
+        h4 > p {
+          color: var(--color-link);
+          text-decoration: underline;
+        }
       }
     }
 
     h4 {
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 10px;
       align-items: center;
 
       p {
@@ -58,13 +62,6 @@ ul.package-list {
         list-style: none;
       }
     }
-
-    &:hover {
-      h4 > p {
-        color: var(--color-link);
-        text-decoration: underline;
-      }
-    }
   }
 }
 
@@ -74,6 +71,46 @@ ul.package-list-grid {
   gap: 20px;
   padding: 0;
   list-style: none;
+
+  //   a {
+  //     color: inherit;
+
+  //     &:hover {
+  //       text-decoration: none;
+
+  //       h4,
+  //       p.metadata-link {
+  //         color: var(--color-link);
+  //         text-decoration: underline;
+  //       }
+  //     }
+  //   }
+
+  h4 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+
+    .stars {
+      font-size: 18px;
+
+      picture {
+        display: inline-block;
+
+        > img {
+          width: inherit;
+        }
+      }
+    }
+  }
+
+  p.metadata-link {
+    text-align: right;
+  }
 }
 
 p.more {
