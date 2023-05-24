@@ -35,7 +35,7 @@ There are thousands of packages to explore through the community-run package ind
       <section>
         <div class="description">
           {{ package.description | markdownify }}
-          <p>{{ package.activity }} {{ package.authors }}</p>
+          <p class="activity">{{ package.activity }} {{ package.authors }}</p>
         </div>
         <ul class="metadata">
           <li class="license">

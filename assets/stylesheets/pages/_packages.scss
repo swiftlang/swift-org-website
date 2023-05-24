@@ -54,6 +54,11 @@ ul.package-list {
         overflow: hidden;
       }
 
+      .activity {
+        font-size: 16px;
+        color: var(--color-secondary-label);
+      }
+
       ul.metadata {
         display: flex;
         flex-direction: column;
