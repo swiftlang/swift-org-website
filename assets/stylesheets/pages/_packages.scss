@@ -131,7 +131,7 @@ ul.package-list-alternate {
         // Even though this looks specific to WebKit, it works in Safari, Chrome, and Firefox.
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 6;
         text-overflow: ellipsis;
         overflow: hidden;
       }
@@ -139,24 +139,42 @@ ul.package-list-alternate {
 
     .metadata {
       display: flex;
-      justify-content: flex-start;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
-      div.platform-compatibility {
+      div {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        font-size: 13px;
+        border-radius: 4px;
+        border: 1px black solid;
+        font-size: 12px;
         line-height: 1;
         white-space: nowrap;
-        color: #007aff;
-        border-radius: 4px;
-        border: 1px #007aff solid;
 
         > span {
           padding: 4px 5px;
+        }
 
-          &:not(:last-child) {
+        &.platform-compatibility {
+          color: #007aff;
+          border-color: #007aff;
+
+          > span:not(:last-child) {
             border-right: 1px solid #007aff;
+          }
+        }
+
+        &.swift-compatibility {
+          color: #f05138;
+          border-color: #f05138;
+
+          > span {
+            padding-left: 22px;
+            background-image: url("/assets/images/icon-swift-color.svg");
+            background-repeat: no-repeat;
+            background-position: 3px center;
+            background-size: 13px;
           }
         }
       }

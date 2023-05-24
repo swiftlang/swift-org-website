@@ -34,10 +34,13 @@ There are thousands of packages to explore through the community-run package ind
       {{ package.description | markdownify }}
     </section>
     <section class="metadata">
-      <div class="platform-compatibility">
+      <div class="platform-compatibility" aria-label="Platform compatibility">
       {% for platform in package.platform_compatibility %}
-      <span class="badge">{{ platform }}</span>
+        <span>{{ platform }}</span>
       {% endfor %}
+      </div>
+      <div class="swift-compatibility" aria-label="Swift version compatibility">
+        <span>{{ package.swift_compatibility }}</span>
       </div>
     </section>
   </li>
