@@ -1083,9 +1083,39 @@ to use the types from it in Swift.
 
 The platform's C++ standard library can be imported into Swift by importing
 the `CxxStdlib` module.
+The `std` namespace becomes `std` enum in Swift. The functions and types
+inside of the `std` namespace become nested types and static functions in
+the `std` Swift enum.
 
 Please see the [status page](TODO) for details on which C++ standard libraries
 are supported on the supported platforms.
+
+### Using `std::string`
+
+The `std::string` C++ type becomes a structure in Swift. It conforms to
+the `ExpressibleByStringLiteral` protocol, so it can be initialized directly
+using a string literal in Swift:
+
+```swift
+import CxxStdlib
+
+let s: std.string = "Hello C++ world!"
+```
+
+Swift `String` can be easily converted to a C++ `std::string`:
+
+```swift
+let swiftString = "This is " + "a Swift string"
+let cxxString = std.string(swiftString)
+```
+
+The same conversion can be made in the opposite direction, going from a C++
+`std::string` to a Swift `String`:
+
+```swift
+let cxxString = std.string("This is a C++ string")
+let swiftString = String(cxxString)
+```
 
 ## Using Swift APIs from C++
 
