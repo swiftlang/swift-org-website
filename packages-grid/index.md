@@ -21,15 +21,7 @@ There are thousands of packages to explore through the community-run package ind
 <ul class="package-list-grid">
   {% for package in category.packages %}
   <li>
-    <h4>
-      <p>{{ package.name }}</p>
-      <div class="stars">
-        <picture>
-          <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
-          <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
-        </picture> {{ package.stars }}
-      </div>
-    </h4>
+    <h4>{{ package.name }}</h4>
     <section class="description">
       {{ package.description | markdownify }}
     </section>
