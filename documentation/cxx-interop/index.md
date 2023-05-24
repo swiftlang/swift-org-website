@@ -743,7 +743,8 @@ let treeEmoji: Dictionary<Tree, String> = [
 
 ### Conforming Class Template To Swift Protocol
 
-A Swift extension can add protocol conformance for a specific class template specialization in Swift. For instance, a specific
+A Swift extension can add protocol conformance to a specific class template
+specialization in Swift. For instance, a specific
 specialization of the following class template:
 
 ```c++
@@ -772,6 +773,7 @@ protocol Deserializable {
   func deserialize() -> ValueType
 }
 
+// `SerializedInt` specialization now conforms to `Serializable`
 extension SerializedInt: Serializable {}
 ```
 
@@ -781,7 +783,7 @@ do not conform to `Deserializable`.
 
 The `SWIFT_CONFORMS_TO` customization macro from the `<swift/bridging>`
 header can be used to conform all specializations of a class template to
-Swift protocol automatically. For example, the 
+a Swift protocol automatically. For example, the 
 definition of the `SerializedValue` class template can be annotated with
 `SWIFT_CONFORMS_TO`:
 
@@ -796,11 +798,16 @@ public:
 ```
 
 This makes all specializations, like `SerializedInt` and `SerializedFloat`,
-conform to `Deserializable` automatically in Swift. This means that they
-can be easily used in generic code:
+conform to `Deserializable` automatically in Swift. This makes it possible
+to add functionality to all specializations of a class
+template in Swift, by using a protocol extension. This also lets you use any
+specialization in constrained generic code without any additional explicit
+conformances:
 
 ```swift
 extension Deserializable {
+  // All specializations of the `SerializedValue` template now have
+  // `deserializedDescription` property in Swift.
   var deserializedDescription: String {
     "serialized value \(deserialize().description)"  
   }
@@ -810,6 +817,8 @@ func printDeserialized<T: Deserializable>(_ item: T) {
   print("obtained: \(item.deserializedDescription)")
 }
 
+// Both `SerializedInt` and `SerializedFloat` specializations automatically
+// conform to `Deserializable`
 printDeserialized(getSerializedInt())
 printDeserialized(getSerializedFloat())
 ```
