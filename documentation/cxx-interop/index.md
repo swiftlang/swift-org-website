@@ -814,9 +814,251 @@ printDeserialized(getSerializedInt())
 printDeserialized(getSerializedFloat())
 ```
 
-## Working With C++ Collections
+## Working With C++ Containers
 
-This section is used to describe collection / iterator bridging.
+C++ container types, like the [`std::vector`](https://en.cppreference.com/w/cpp/container/vector) class
+template,
+typically provide iterator-based APIs for users in C++.
+Using a C++ iterator is unsafe in Swift, as such use is not
+associated with its owning container which can get destroyed
+while the iterator is still in use.
+Instead of relying on C++ iterators, Swift attempts to automatically
+conform certain C++ container types to protocols which allow safe access to the
+underlying container in Swift.
+Swift also provides a handful of
+other protocols that provide safe access to the underlying container for
+types that conform to them manually using an `extension` in Swift.
+
+### Using Random Access C++ Collections In Swift
+
+Swift attemps to conform C++ containers that provide random access to their
+elements, like `std::vector`, to Swift's `RandomAccessCollection` protocol
+automatically. This makes it possible to traverse
+through the collection's elements safely, using familiar Swift control flow
+statements and APIs.
+For example, you can traverse through the elements
+of the `vector` returned by this function:
+
+```c++
+std::vector<Tree> getEnchantedTrees();
+```
+
+Using the `for-in` loop in Swift:
+
+```swift
+let trees = getEnchantedTrees()
+for tree in trees {
+  print(tree.kind)
+}
+```
+
+Collection methods like `map` and `filter` are also available:
+
+```swift
+let oakTrees = getEnchantedTrees().filter { $0.kind == .Oak }
+```
+
+Swift's `count` property returns the number of elements in such
+collection. Swift's subscript operator can be used to access a specific
+element in the collection as well. This makes it possible to mutate individual
+elements in the C++ container:
+
+```swift
+var trees = getEnchantedTrees()
+for i in 0..<trees.count {
+  trees[i].kind = .Oak
+}
+```
+
+A C++ container that conforms to `RandomAccessCollection` can be easily
+converted into a Swift collection type, like `Array`:
+
+```swift
+let treesArray = Array<Tree>(getEnchantedTrees())
+```
+
+Swift **does not** convert C++ container types to Swift collection types
+automatically. Any conversion from a C++ container type, like `std::vector`,
+to a Swift collection type, like `Array`, is explicit in Swift.
+
+#### Conformance Rules For Random Access C++ Collections
+
+The following two conditions must be satisfied in order for a C++ container
+type to automatically conform to `RandomAccessCollection` in Swift:
+
+- The C++ container type must have `begin` and `end` member functions. Both
+  functions must be constant and must return the same iterator type.
+- The C++ iterator type must satisfy the
+  [`RandomAccessIterator`]( https://en.cppreference.com/w/cpp/named_req/RandomAccessIterator)
+  C++ requirement. It must be possible to advance it using `operator +=` in C++
+  and also to subscript into it using `operator []` in C++.
+
+When these conditions are satisfied, Swift conforms the Swift structure
+that represents the underlying C++ container type to
+the `CxxRandomAccessCollection` protocol, which adds the
+`RandomAccessCollection` conformance.
+
+### Using Sequential C++ Collections In Swift
+
+The sequential C++ container types that do not provide random access to their
+elements are automatically
+conformed to the `CxxConvertibleToCollection` protocol in Swift.
+This makes
+it possible to easily convert them to Swift collection types like `Array` and
+`Set` in Swift. For example, the `std::set` returned by this function:
+
+```c++
+std::set<int> getWinningNumers();
+```
+
+Can be easily converted to either an `Array` or `Set` in Swift:
+
+```swift
+let winners = getWinningNumers()
+for number in Array(winners) {
+  print(number)
+}
+let setOfWinners = Set(winners)
+```
+
+In addition to automatic conformances, Swift lets you conform
+a sequential C++ container to the `Sequence` protocol manually,
+by providing a `CxxSequence` protocol that implements `Sequence` for a
+conforming C++ container. Such conformance
+lets you use familiar APIs and control flow statements for
+types that don't provide random access to their elements. For example,
+the `std::set<TreeKind>` container type:
+
+```c++
+using SetOfTreeKinds = std::set<TreeKind>;
+```
+
+Can be easily conformed to `CxxSequence` using an `extension` in Swift:
+
+```swift
+extension SetOfTreeKinds: CxxSequence { }
+```
+
+This lets you traverse through the elements of such set using
+the `for-in` loop in Swift:
+
+```swift
+let highTreeKinds: SetOfTreeKinds = getHighElevationTreeKinds()
+for treeKind in highTreeKinds {
+  print("Fact: \(treeKind) tree can survive above 5000 feet!")
+}
+```
+
+Collection methods like `map` and `filter` are also available for types
+that conform to `CxxSequence`.
+
+#### Conformance Rules For `CxxSequence` Protocol
+
+The following two conditions must be satisfied when conforming a C++ container
+type to `CxxSequence` in Swift:
+
+- The C++ container type must have `begin` and `end` member functions. Both
+  functions must be constant and must return the same iterator type.
+- The C++ iterator type must satisfy the
+  [`InputIterator`](https://en.cppreference.com/w/cpp/named_req/InputIterator)
+  C++ requirement. It must be possible to increment it using `operator ++` in
+  C++ and also to dereference it using `operator *` in C++.
+
+Conforming a type to `CxxSequence` automatically conforms it to Swift's
+`Sequence` protocol.
+
+### Using Associative Container C++ Types In Swift
+
+Associative C++ container types, like `std::map`, provide efficient access
+to stored elements using a lookup key.
+The `find` member function that performs such lookup is unsafe in Swift. Instead
+of using `find`, Swift automatically conforms associative containers from the
+C++ standard library to the `CxxDictionary` protocol. Such conformance lets
+you use Swift's subscript operator when working with an associative C++
+container in Swift. For example, the `std::unordered_map` returned by this
+function:
+
+```c++
+std::unordered_map<std::string, std::string>
+getAirportCodeToCityMappings();
+```
+
+Can be used like a dictionary in Swift, with the subscript returning
+a value stored in the container, or `nil` if such value doesn't exist:
+
+```swift
+let mapping = getAirportCodeToCityMappings();
+if let dubCity = mapping["DUB"] {
+   print(dubCity)
+}
+```
+
+The provided subscript calls the container's `find` method safely inside of its
+implementation.
+
+Associative C++ containers can also be manually conformed to `CxxSequence` when
+you need to traverse through their elements in Swift.
+
+Swift does not conform custom associative C++ containers
+to `CxxDictionary` automatically. A manually written Swift `extension`
+can be used to add the `CxxDictionary` conformance
+retroactively for a custom associative container type.
+
+### Best Practices For Working With C++ Containers in Swift
+
+#### Do Not Use C++ Iterators In Swift
+
+As outlined at the start of this section, using C++ iterators is unsafe in
+Swift. It's easy to misuse C++ iterators, for instance:
+
+- it's easy to use an iterator after the C++ container is destroyed.
+- it's easy to dereference an iterator that has advanced past the container's
+  last element.
+
+You should use protocols like `CxxRandomAccessCollection`,
+`CxxSequence` and `CxxDictionary` when working with C++ containers
+instead of relying on C++ iterator APIs.
+
+Member functions inside of C++ container types that return C++ iterators are
+marked unsafe in Swift, just like 
+[member functions that return references](#member-functions-returning-references).
+Other C++ APIs, like top-level functions that take or return iterators could
+still be directly available in Swift.
+You should avoid using such functions in Swift.
+
+#### Avoiding Deep Container Copies
+
+C++ container types become value types types in Swift. This means that
+Swift calls the container's copy constructor, which in turn copies all the
+elements, every time a copy is made in Swift. For example,
+Swift will copy all of the elements from a `std::vector<int>` represented
+by the `CxxVectorOfInt` type into a new `vector` whenever it's passed into
+this Swift function:
+
+```swift
+func takesVectorType(_ : CxxVectorOfInt) {
+  ...
+}
+
+let vector = createCxxVectorOfInt()
+takesVectorType(vector) // 'vector' is copied here.
+```
+
+Swift's upcoming
+[parameter ownership modifiers](https://github.com/apple/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md),
+which will be provided in Swift 5.9, will let you avoid copies
+when passing immutable values to functions. Mutable values can be passed
+by `inout` to a Swift function, which lets you avoid a deep copy of
+the C++ container:
+
+```swift
+func mutatesVectorType(_ : inout CxxVectorOfInt) {
+  ...
+}
+
+var vector = createCxxVectorOfInt()
+takesVectorType(&vector) // 'vector' is not copied!
+```
 
 ## Mapping C++ Types To Swift Reference Types
 
