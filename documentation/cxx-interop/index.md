@@ -15,16 +15,18 @@ article pre {
 }
 </style>
 
-<div class="info" markdown="1">
-C++ interoperability is a new feature in the upcoming Swift 5.9 release.
-This reference guide is going to be continously updated until Swift 5.9 is released.
-</div>
-
 ## Table of Contents
 {:.no_toc}
 
 * TOC
 {:toc}
+
+* * *
+
+<div class="info" markdown="1">
+C++ interoperability is a new feature in the upcoming Swift 5.9 release.
+This reference guide is going to be continously updated until Swift 5.9 is released.
+</div>
 
 ## Introduction
 
