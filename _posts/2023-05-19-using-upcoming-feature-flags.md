@@ -10,7 +10,7 @@ Beginning in Swift 5.8 you can flexibly adopt upcoming Swift features using a ne
 
 ## Source-Breaking Changes
 
-Each new release of Swift adds features and capabilities. These changes go through the [Swift evolution process](https://github.com/apple/swift-evolution/blob/main/process.md) where they are proposed, discussed by the community, and accepted.
+Each new release of Swift adds features and capabilities. These changes go through the [Swift Evolution process](https://github.com/apple/swift-evolution/blob/main/process.md) where they are proposed, discussed by the community, and accepted.
 
 One important consideration for all changes to Swift is _source compatibility_. To be source compatible, existing Swift code must continue to compile and behave as expected with new versions of the compiler.
 
@@ -21,7 +21,7 @@ On rare occasions, a proposed change that breaks source compatibility is conside
 ## An Example: Regex Literals
 One example of a source-breaking change is the syntax for Regex literals introduced in Swift 5.7.
   
-The desired literal syntax is to enclose the regex pattern in forward slashes, as is the convention for regular expressions in many different tools and languages:
+The desired literal syntax is to enclose the regex pattern in forward slashes, which is the convention for regular expressions in many different tools and languages:
 ```swift
 let regex = /[a-zA-Z_][0-9a-zA-Z_]*/
 ```
@@ -33,7 +33,7 @@ Therefore, in Swift 5.7, regex literals only support the extended literal delimi
 ```swift
 let regex = #/[a-zA-Z_][0-9a-zA-Z_]*/#
 ```
-The source breaking change does not come into effect until the next major language version—in this case Swift 6.
+The source breaking change does not come into effect until the next major language version—Swift 6.
 
 However, it would be beneficial for developers to be able to opt into using the ‘bare slash’ syntax for Regex literals now, rather than wait until Swift 6.
 
@@ -46,12 +46,12 @@ The idea of being able to adopt upcoming changes sooner rather than later is a g
 
 To address this, Swift evolution proposal [SE-0362](https://github.com/apple/swift-evolution/blob/main/proposals/0362-piecemeal-future-features.md), implemented in Swift 5.8, details a generalized mechanism for enabling upcoming features.
 
-Instead of a different compiler flag for each upcoming feature, the compiler gains one new flag that is followed by the name of the feature to be enabled:
+Instead of creating a different compiler flag for each upcoming feature, the compiler gains one new flag that is followed by the name of the feature to be enabled:
 ```
  -enable-upcoming-feature <#UpcomingFeatureFlag#>
  ```
 
-For example, to enable the upcoming Regex literal syntax discussed above, you would use:
+For example, to enable the upcoming Regex literal syntax you would use:
  ```
  -enable-upcoming-feature BareRegexLiteralSyntax
  ```
@@ -82,8 +82,18 @@ let regex = try NSRegularExpression(pattern: "...")
 ```
 The section [Feature detection in source code](https://github.com/apple/swift-evolution/blob/main/proposals/0362-piecemeal-future-features.md#feature-detection-in-source-code) in SE-0362 discusses the use of `hasFeature()` in detail.
 
+## Benefits Of Enabling Upcoming Features
+
+There are a number of benefits to enabling upcoming features in your code:
+
+1. You can find out immediately if your code is affected by the changes. If it is, you can update your code now or turn the feature off and schedule the time to make the necessary adjustments without needing to wait for Swift 6 to be released.
+
+2. If your code compiles cleanly with the upcoming features enabled, then you know these features will not be an issue for you when you migrate to Swift 6.
+
+3. Once enabled, you can be sure that new code you write will already incorporate these upcoming features and not need to be updated later. This also allows you and your team to begin building ‘muscle memory’ now, writing code that takes the changes into account.
+
 ## How To Enable Upcoming Features
-You enable an upcoming feature on target by target basis by setting the compiler flag for a particular target.
+You enable an upcoming feature by setting the compiler flag for a given target.
 
 To enable multiple features, use the compiler flag multiple times, once per enabled feature.
 
@@ -113,7 +123,7 @@ OTHER_SWIFT_FLAGS = $(inherited) \
 ```
 
 ### In SPM Packages
-For a Swift Package, enable upcoming features for a target in its `SwiftSetting` array in the package manifest:
+For a Swift package, enable upcoming features for a target in its `SwiftSetting` array in the package manifest:
 
 ```swift
 .target(name: "MyTarget",
@@ -136,11 +146,11 @@ Use the [Swift Evolution Dashboard](/swift-evolution/) to find upcoming feature 
 - Search for upcoming feature flags by name
 - View upcoming feature flags for proposals that define one 
 
-Each dashboard entry links to full Swift evolution proposal where the upcoming feature flag is defined. Details on the changes that the flag enables are in the body of the proposal, typically in the _Source Compatibility_ section.
+Each dashboard entry links to full Swift Evolution proposal where the upcoming feature flag is defined. Details on the changes that the flag enables are in the body of the proposal, typically in the _Source Compatibility_ section.
 
 It’s also important to note that most changes to Swift maintain source compatibility and therefore do not have an upcoming feature flag.
 
-## Valid Swift 5.8 Upcoming Feature Flags
+## Upcoming Feature Flags Added In Swift 5.8
 
 As of Swift 5.8, the current set of upcoming feature flags are:
 
@@ -182,19 +192,9 @@ Upcoming Feature Flag: `BareSlashRegexLiterals `
 
 [Read Full Details](https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md#source-compatibility)
 
-## Benefits Of Enabling Upcoming Features
-
-There are a number of benefits to enabling upcoming features in your code:
-
-1. You can find out immediately if your code is affected by the changes. If it is, you can update your code now or turn the feature off and schedule the time to make the necessary adjustments without needing to wait for Swift 6 to be released.
-
-2. If your code compiles cleanly with the upcoming features enabled, then you know these features will not be an issue for you when you migrate to Swift 6.
-
-3. Once enabled, you can be sure that new code you write will already incorporate these upcoming features and not need to be updated later. This also allows you and your team to begin building ‘muscle memory’ now, writing code that takes the changes into account.
-
 ## Get Started Today
 
-Enabling upcoming features gives you a flexible way to migrate your code to adopt changes coming in Swift 6 at your own pace, feature by feature, target by target.
+Enabling upcoming features gives you a flexible way to migrate your code to adopt changes coming in the next major release of Swift at your own pace, feature by feature, target by target.
 
 You can start looking into these features today in a low-risk way by creating a test branch of your project and enabling upcoming features one at a time, one target at a time.
 
