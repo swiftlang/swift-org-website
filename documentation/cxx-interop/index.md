@@ -1091,7 +1091,7 @@ This section describes strategies for working with non-copyable C++ types.
 ## Using C++ Standard Library from Swift
 
 This section describes how to import the C++ standard library, and how
-to use the types from it in Swift.
+to use the types provided by it in Swift.
 
 ### Importing C++ Standard Library
 
@@ -1101,7 +1101,8 @@ The `std` namespace becomes `std` enumeration in Swift. The functions and types
 inside of the `std` namespace become nested types and static functions in
 the `std` Swift enumeration.
 
-The status page contains a [list of the supported C++ standard libraries](TODO),
+The status page contains a
+[list of the supported C++ standard libraries](status#c-standard-library-support),
 that describes which C++ standard libraries are supported on the
 platforms supported by Swift.
 
