@@ -744,7 +744,7 @@ let treeEmoji: Dictionary<Tree, String> = [
 ### Conforming Class Template To Swift Protocol
 
 A Swift extension can add protocol conformance to a specific class template
-specialization in Swift. For instance, a specific
+specialization in Swift. For example, a specific
 specialization of the following class template:
 
 ```c++
@@ -792,6 +792,7 @@ template<class T>
 class SerializedValue {
 public:
   using ValueType = T;
+  T deserialize() const;
 
   ...  
 } SWIFT_CONFORMS_TO(Serialization.Deserializable);
@@ -800,9 +801,7 @@ public:
 This makes all specializations, like `SerializedInt` and `SerializedFloat`,
 conform to `Deserializable` automatically in Swift. This makes it possible
 to add functionality to all specializations of a class
-template in Swift, by using a protocol extension. This also lets you use any
-specialization in constrained generic code without any additional explicit
-conformances:
+template in Swift, by using a protocol extension:
 
 ```swift
 extension Deserializable {
@@ -812,7 +811,13 @@ extension Deserializable {
     "serialized value \(deserialize().description)"  
   }
 }
+```
 
+This also lets you use any
+specialization in constrained generic code without any additional explicit
+conformances:
+
+```swift
 func printDeserialized<T: Deserializable>(_ item: T) {
   print("obtained: \(item.deserializedDescription)")
 }
@@ -983,7 +988,7 @@ to stored elements using a lookup key.
 The `find` member function that performs such lookup is unsafe in Swift. Instead
 of using `find`, Swift automatically conforms associative containers from the
 C++ standard library to the `CxxDictionary` protocol. Such conformance lets
-you use Swift's subscript operator when working with an associative C++
+you use the subscript operator when working with an associative C++
 container in Swift. For example, the `std::unordered_map` returned by this
 function:
 
@@ -1126,6 +1131,9 @@ The same conversion can be made in the opposite direction, going from a C++
 let cxxString = std.string("This is a C++ string")
 let swiftString = String(cxxString)
 ```
+
+Swift does not convert C++ `std::string` type to Swift's `String` type
+automatically. 
 
 ## Using Swift APIs from C++
 
