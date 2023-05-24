@@ -6,7 +6,7 @@ categories:
       - name: "Settings"
         description: "Settings library offers a settings window to add to macOS apps in minutes with built-in SwiftUI support, allowing users to customize their app to their preferences."
         swift_compatibility: 5.7+
-        platform_compatibility: macOS
+        platform_compatibility: [macOS]
         activity: "In development for 3 years, with activity within the last month."
         authors: "Written by Sindre Sorhus and 13 other contributors."
         license: "MIT"
@@ -15,7 +15,7 @@ categories:
       - name: "PopupView"
         description: "Popup View is a SwiftUI library used to show toasts, alerts, and popups with customizable parameters to enable a more dynamic user experience."
         swift_compatibility: 5.7+
-        platform_compatibility: iOS, macOS
+        platform_compatibility: [iOS, macOS]
         activity: "In development for 3 years, with activity within the last month."
         authors: "Written by AlisaMylnikova and 18 other contributors."
         license: "MIT"
@@ -24,7 +24,7 @@ categories:
       - name: "MenuBuilder"
         description: "MenuBuilder is a library for creating macOS menus with a SwiftUI-style syntax. It allows developers to quickly and easily create menus with actionable items, separators and submenus, with support for modifiers and conditionals."
         swift_compatibility: 5.5+
-        platform_compatibility: macOS
+        platform_compatibility: [macOS]
         activity: "In development for 2 years, with activity 2 months ago."
         authors: "Written by Jed Fox and 5 other contributors."
         license: "MIT"
@@ -33,7 +33,7 @@ categories:
       - name: "ContributorUI"
         description: "ContributorUI is a library for user interface that displays all developers contributing to a project, allowing for a minimal setup and easy integration into iOS and macOS applications."
         swift_compatibility: 5.7+
-        platform_compatibility: iOS, macOS
+        platform_compatibility: [iOS, macOS]
         activity: "In development for 2 months, with activity 2 months ago."
         authors: "Written by dscyrescotti and 3 other contributors."
         license: "MIT"
@@ -42,7 +42,7 @@ categories:
       - name: "GEOSwift"
         description: "GEOSwift is a type-safe, MIT-licensed Swift interface to the OSGeo's GEOS library routines that enables easily handling a geometric object model (points, linestrings, polygons etc.) and related topological operations (intersections, overlapping etc.)."
         swift_compatibility: 5.5+
-        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+        platform_compatibility: [iOS, macOS, tvOS, watchOS, Linux]
         activity: "In development for 8 years, with activity 1 month ago."
         authors: "Written by Andrew Hershberger, Andrea Cremaschi, and 29 other contributors."
         license: "MIT"
@@ -51,7 +51,7 @@ categories:
       - name: "swift-cli-version"
         description: "swift-cli-version is a swift package that allows you to set the version of a command line tool to the git tag or the git sha, if a tag is not set for the current commit. It provides plugins to use in your project and documentation to explain how to use them."
         swift_compatibility: 5.7+
-        platform_compatibility: macOS, Linux
+        platform_compatibility: [macOS, Linux]
         activity: "In development for 2 months, with activity 2 months ago."
         authors: "Written by Michael Housh."
         license: "MIT"
@@ -67,7 +67,7 @@ categories:
       - name: "swift-nio"
         description: "SwiftNIO is an open-source network application framework providing low-level building blocks for building high-performance, maintainable, and scalable protocol servers & clients for rapid development."
         swift_compatibility: 5.5+
-        platform_compatibility: macOS, Linux
+        platform_compatibility: [macOS, Linux]
         activity: "In development for 6 years, with activity within the last month."
         authors: "Written by Johannes Weiss and 164 other contributors."
         license: "Apache 2.0"
@@ -76,7 +76,7 @@ categories:
       - name: Alamofire
         description: "Alamofire is a HTTP networking library written in Swift which provides chainable request/response methods, Swift concurrency support, authentication and advanced features such as chainable request/response methods, authentication and response validation."
         swift_compatibility: 5.5+
-        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+        platform_compatibility: [iOS, macOS, tvOS, watchOS, Linux]
         activity: "In development for 8 years, with activity within the last month."
         authors: "Written by Christian Noon and 258 other contributors."
         license: "MIT"
@@ -85,7 +85,7 @@ categories:
       - name: "Pulse"
         description: "Pulse is a powerful logging system for Apple Platforms, enabling users to record and inspect logs and URLSession network requests, view them with PulseUI, and share them using Pulse Pro or Pulse for macOS."
         swift_compatibility: 5.7+
-        platform_compatibility: iOS, macOS, tvOS, watchOS
+        platform_compatibility: [iOS, macOS, tvOS, watchOS]
         activity: "In development for 3 years, with activity within the last month."
         authors: "Written by kean and 28 other contributors."
         license: "MIT"
@@ -94,7 +94,7 @@ categories:
       - name: "Moya"
         description: "Moya provides compile-time checking for correct API endpoint accesses, lets you define clear usage of different endpoints with associated enum values and treats test stubs as first-class citizens to make unit testing easy."
         swift_compatibility: 5.5+
-        platform_compatibility: iOS, macOS, tvOS, watchOS
+        platform_compatibility: [iOS, macOS, tvOS, watchOS]
         activity: "In development for 8 years, with activity 2 months ago."
         authors: "Written by Ash Furrow, Łukasz Mróz, and 261 other contributors."
         license: "MIT"
@@ -103,7 +103,7 @@ categories:
       - name: "Socket"
         description: "BlueSocket library allows developers to use Swift to create sockets of different families, types, and protocols for use in a range of projects, with customised configurations, SSL support and various read/write functions."
         swift_compatibility: 5.5+
-        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+        platform_compatibility: [iOS, macOS, tvOS, watchOS, Linux]
         activity: "In development for 7 years, with activity 10 months ago."
         authors: "Written by Bill Abt and 35 other contributors."
         license: "Apache 2.0"
@@ -112,7 +112,7 @@ categories:
       - name: "RealHTTP"
         description: "RealHTTP is a lightweight yet powerful async-based HTTP library made in Swift designed to make an easy-to-use, effortless HTTP client."
         swift_compatibility: 5.6+
-        platform_compatibility: iOS, macOS, tvOS, watchOS
+        platform_compatibility: [iOS, macOS, tvOS, watchOS]
         activity: "In development for 2 years, with activity 2 months ago."
         authors: "Written by Daniele Margutti and 12 other contributors."
         license: "MIT"
@@ -128,7 +128,7 @@ categories:
       - name: "Quick"
         description: "Quick is a behavior-driven development framework for Swift and Objective-C, inspired by RSpec, Specta, and Ginkgo. It includes Nimble, a matcher framework for creating clearer test expectations."
         swift_compatibility: 5.7+
-        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+        platform_compatibility: [iOS, macOS, tvOS, watchOS, Linux]
         activity: "In development for 8 years, with activity within the last month."
         authors: "Written by Brian Gesiak and 165 other contributors."
         license: "Apache 2.0"
@@ -137,7 +137,7 @@ categories:
       - name: "Nimble"
         description: "Nimble enables expressing expected outcomes of Swift or Objective-C expressions in a natural, easily understood language. It supports type checking, custom failure messages, async/await, lazy evaluation, polling expectations, and a variety of built-in matchers for testing values, types, comparisons, truthiness, and more."
         swift_compatibility: 5.7+
-        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+        platform_compatibility: [iOS, macOS, tvOS, watchOS, Linux]
         activity: "In development for 8 years, with activity within the last month."
         authors: "Written by Jeff Hui, Sho Ikeda, and 130 other contributors."
         license: "Apache 2.0"
@@ -146,7 +146,7 @@ categories:
       - name: "combine-schedulers"
         description: "CombineSchedulers provides testable and versatile schedulers for Combine framework, enabling better control over time and execution in publishers. It includes features such as `TestScheduler`, `ImmediateScheduler`, and SwiftUI/UIKit animation support."
         swift_compatibility: 5.5+
-        platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+        platform_compatibility: [iOS, macOS, tvOS, watchOS, Linux]
         activity: "In development for 2 years, with activity within the last month."
         authors: "Written by Stephen Celis, Brandon Williams, and 12 other contributors"
         license: "MIT"
@@ -155,7 +155,7 @@ categories:
       - name: "OCHamcrest"
         description: "OCHamcrest provides a module of matcher objects for declaring rules to check if given objects match specified rules, and a framework to create custom matchers. Matchers can be combined for flexibility."
         swift_compatibility: 5.5+
-        platform_compatibility: iOS, macOS, tvOS, watchOS
+        platform_compatibility: [iOS, macOS, tvOS, watchOS]
         activity: "In development for 13 years, with activity 2 years ago."
         authors: "Written by Jon Reid and 23 other contributors"
         license: "BSD 2-Clause"
@@ -164,7 +164,7 @@ categories:
       - name: "OCMockito"
         description: "OCMockito provides an Objective-C implementation of Mockito for creating, verifying, and stubbing mock objects. It emphasizes readable tests and reports verification failures as unit test failures."
         swift_compatibility: 5.5+
-        platform_compatibility: iOS, macOS, tvOS, watchOS
+        platform_compatibility: [iOS, macOS, tvOS, watchOS]
         activity: "In development for 12 years, with activity 1 year ago."
         authors: "Written by Jon Reid and 32 other contributors."
         license: "MIT"
@@ -173,7 +173,7 @@ categories:
       - name: "swift-snapshot-testing"
         description: "SnapshotTesting enables delightful Swift snapshot testing for various data types, such as images, text, and data. It offers device-agnostic snapshots, first-class Xcode support, and custom diff tool integration. Plug-ins are available to extend functionality."
         swift_compatibility: 5.5+
-        platform_compatibility: iOS, macOS, tvOS, Linux
+        platform_compatibility: [iOS, macOS, tvOS, Linux]
         authors: "Written by Stephen Celis and 73 other contributors."
         activity: "In development for 5 years, with activity within the last month."
         license: "MIT"
@@ -186,7 +186,7 @@ categories:
   #     - name: Problematic Package One
   #       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum sem sed libero laoreet, auctor vestibulum nulla dignissim. Nulla et diam fermentum, faucibus tellus at, fermentum metus. Praesent consequat nisi vel eros consectetur, at scelerisque mi cursus. Aliquam blandit, leo nec posuere ultrices, orci ex fringilla velit, sit amet egestas metus sapien et eros. Curabitur ante mauris, aliquet dignissim arcu vitae, finibus rutrum diam. Mauris ornare nisl non sem tempor condimentum. Fusce sagittis tortor est, non accumsan magna mollis vel. Integer luctus lacus ut lorem feugiat blandit. Pellentesque quis eros id mi euismod facilisis non eu risus. Duis eleifend, nulla at pretium viverra, augue quam efficitur eros, sed dignissim neque turpis consectetur risus. Nullam eu aliquet dui, in commodo justo. Maecenas maximus lacus vitae mauris vulputate, vel scelerisque justo efficitur. Quisque fringilla, nulla a tincidunt rhoncus, ipsum magna maximus quam, in blandit dolor diam non ante. Sed euismod nisl nibh, ut aliquam nisi faucibus vel. Nam ipsum turpis, varius at libero vel, hendrerit sagittis lorem. Nullam luctus dolor nec justo suscipit placerat."
   #       swift_compatibility: 5.6+
-  #       platform_compatibility: iOS, macOS, tvOS, watchOS, Linux
+  #       platform_compatibility: [iOS, macOS, tvOS, watchOS, Linux]
   #       authors: "Written by John Lennon and 3 other contributors."
   #       license: "MIT"
   #       stars: "1"
@@ -194,7 +194,7 @@ categories:
   #     - name: Problematic Package Two
   #       description: "This package has a very large number of stars."
   #       swift_compatibility: 5.6+
-  #       platform_compatibility: iOS
+  #       platform_compatibility: [iOS]
   #       authors: "Written by Paul McCartney and 3 other contributors."
   #       license: "MIT"
   #       stars: "100,000,000,000"

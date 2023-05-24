@@ -48,7 +48,7 @@ There are thousands of packages to explore through the community-run package ind
           </li>
           <li class="platform_compatibility">
             <strong>Platforms:</strong>
-            {{ package.platform_compatibility }}
+            {{ package.platform_compatibility | join: ", " }}
           </li>
         </ul>
       </section>
