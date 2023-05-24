@@ -18,11 +18,11 @@ There are thousands of packages to explore through the community-run package ind
 {% for category in site.data.packages.packages.categories %}
 <h3 id="{{ category.anchor }}-packages">{{ category.name }}</h3>
 <p>{{ category.description | markdownify }}</p>
-<ul class="package-list-grid">
+<ul class="package-list-alternate">
   {% for package in category.packages %}
   <li>
     <h4>
-      <p>{{ package.name }}</p>
+      <div>{{ package.name }}</div>
       <div class="stars">
         <picture>
           <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
@@ -33,9 +33,13 @@ There are thousands of packages to explore through the community-run package ind
     <section class="description">
       {{ package.description | markdownify }}
     </section>
-    <p class="metadata-link">
-      <a href="{{ package.url }}" target="_blank">View Metadata&hellip;</a>
-    </p>
+    <section class="metadata">
+      <div class="platform-compatibility">
+      {% for platform in package.platform_compatibility %}
+      <span class="badge">{{ platform }}</span>
+      {% endfor %}
+      </div>
+    </section>
   </li>
   {% endfor %}
 </ul>
