@@ -757,6 +757,9 @@ public:
 
 using SerializedInt = SerializedValue<int>;
 using SerializedFloat = SerializedValue<float>;
+
+SerializedInt getSerializedInt();
+SerializedFloat getSerializedFloat();
 ```
 
 Can conform to a protocol using a Swift `extension`:
