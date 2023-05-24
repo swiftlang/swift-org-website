@@ -84,13 +84,11 @@ The section [Feature detection in source code](https://github.com/apple/swift-ev
 
 ## Benefits Of Enabling Upcoming Features
 
-There are a number of benefits to enabling upcoming features in your code:
+There are two significant benefits to enabling upcoming features in your code.
 
-1. You can find out immediately if your code is affected by the changes. If it is, you can update your code now or turn the feature off and schedule the time to make the necessary adjustments without needing to wait for Swift 6 to be released.
+First, you’ll find out immediately if your code will require changes. This lets you discover the scope of any work needed and gives you the flexibility to update your code now or when it best fits your schedule.
 
-2. If your code compiles cleanly with the upcoming features enabled, then you know these features will not be an issue for you when you migrate to Swift 6.
-
-3. Once enabled, you can be sure that new code you write will already incorporate these upcoming features and not need to be updated later. This also allows you and your team to begin building ‘muscle memory’ now, writing code that takes the changes into account.
+Second, you can start using the upcoming features right away. All new code you write incorporates these changes, easing your eventual move to the next major language version. You’ll also begin building ‘muscle memory’ and experience with the upcoming syntax and behavior.
 
 ## How To Enable Upcoming Features
 You enable an upcoming feature by setting the compiler flag for a given target.
@@ -122,7 +120,7 @@ OTHER_SWIFT_FLAGS = $(inherited) \
     -enable-upcoming-feature ExistentialAny
 ```
 
-### In SPM Packages
+### In SwiftPM Packages
 For a Swift package, enable upcoming features for a target in its `SwiftSetting` array in the package manifest:
 
 ```swift
