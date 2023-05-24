@@ -37,6 +37,16 @@
       sections:
         - title: Featured Packages
           name: featured-packages
+    - title: Packages (Grid)
+      url: /packages-grid/
+      sections:
+        - title: Featured Packages
+          name: featured-packages
+    - title: Packages (Alternate)
+      url: /packages-alternate/
+      sections:
+        - title: Featured Packages
+          name: featured-packages
     - title: Platform Support
       url: /platform-support/
       sections:

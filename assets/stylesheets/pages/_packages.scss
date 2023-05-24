@@ -68,6 +68,14 @@ ul.package-list {
   }
 }
 
+ul.package-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
 p.more {
   text-align: right;
 }
