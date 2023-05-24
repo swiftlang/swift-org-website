@@ -1081,14 +1081,15 @@ to use the types from it in Swift.
 
 ### Importing C++ Standard Library
 
-The platform's C++ standard library can be imported into Swift by importing
+Swift can import the platform's C++ standard library, by importing
 the `CxxStdlib` module.
-The `std` namespace becomes `std` enum in Swift. The functions and types
+The `std` namespace becomes `std` enumeration in Swift. The functions and types
 inside of the `std` namespace become nested types and static functions in
-the `std` Swift enum.
+the `std` Swift enumeration.
 
-Please see the [status page](TODO) for details on which C++ standard libraries
-are supported on the supported platforms.
+The status page contains a [list of the supported C++ standard libraries](TODO),
+that describes which C++ standard libraries are supported on the
+platforms supported by Swift.
 
 ### Using `std::string`
 
