@@ -21,28 +21,30 @@ There are thousands of packages to explore through the community-run package ind
 <ul class="package-list-alternate">
   {% for package in category.packages %}
   <li>
-    <h4>
-      <div>{{ package.name }}</div>
-      <div class="stars">
-        <picture>
-          <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
-          <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
-        </picture> {{ package.stars }}
-      </div>
-    </h4>
-    <section class="description">
-      {{ package.description | markdownify }}
-    </section>
-    <section class="metadata">
-      <div class="platform-compatibility" aria-label="Platform compatibility">
-      {% for platform in package.platform_compatibility %}
-        <span>{{ platform }}</span>
-      {% endfor %}
-      </div>
-      <div class="swift-compatibility" aria-label="Swift version compatibility">
-        <span>{{ package.swift_compatibility }}</span>
-      </div>
-    </section>
+    <a href="{{ package.url }}" target="_blank">
+      <h4>
+        <div class="package-name">{{ package.name }}</div>
+        <div class="stars">
+          <picture>
+            <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
+            <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
+          </picture> {{ package.stars }}
+        </div>
+      </h4>
+      <section class="description">
+        {{ package.description | markdownify }}
+      </section>
+      <section class="metadata">
+        <div class="platform-compatibility" title="Platform compatibility">
+        {% for platform in package.platform_compatibility %}
+          <span>{{ platform }}</span>
+        {% endfor %}
+        </div>
+        <div class="swift-compatibility" title="Swift version compatibility">
+          <span>{{ package.swift_compatibility }}</span>
+        </div>
+      </section>
+    </a>
   </li>
   {% endfor %}
 </ul>

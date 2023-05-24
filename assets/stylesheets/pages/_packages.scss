@@ -94,34 +94,54 @@ ul.package-list-grid {
 ul.package-list-alternate {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 60px 40px;
   padding: 0;
   list-style: none;
 
-  h4 {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    padding-top: 0;
+  li {
+    > a {
+      display: flex;
+      flex-direction: column;
+      color: inherit;
+      height: 100%;
 
-    .stars {
-      font-size: 18px;
+      &:hover {
+        text-decoration: none;
 
-      picture {
-        display: inline-block;
-
-        > img {
-          width: inherit;
+        .package-name {
+          color: var(--color-link);
+          text-decoration: underline;
+          background-image: url("/assets/images/icon-external-color.svg");
         }
       }
     }
-  }
 
-  li {
-    display: flex;
-    flex-direction: column;
-    background-color: #f7f7f7;
-    padding: 15px;
+    h4 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0;
+
+      .package-name {
+        padding-right: 18px;
+        background-image: url("/assets/images/icon-external.svg");
+        background-repeat: no-repeat;
+        background-size: 11px;
+        background-position: top 3px right;
+      }
+
+      .stars {
+        font-size: 18px;
+
+        picture {
+          display: inline-block;
+
+          > img {
+            width: inherit;
+          }
+        }
+      }
+    }
 
     .description {
       flex-grow: 1;
