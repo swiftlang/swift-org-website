@@ -160,7 +160,7 @@ Upcoming Feature Flag: `ConciseMagicFile`
 [Read Full Details](https://github.com/apple/swift-evolution/blob/main/proposals/0274-magic-file.md#source-compatibility)
 
 #### [SE-0286](https://github.com/apple/swift-evolution/blob/main/proposals/0286-forward-scan-trailing-closures.md): Forward-scan matching for trailing closures
-Some existing methods can be ambiguous or fail to type check when called using multiple trailing closures. Fix is to provide closures as regular arguments.
+Some existing methods can be ambiguous or fail to type check when called using multiple trailing closures. In these cases, provide the closures as regular arguments.
 
 Upcoming Feature Flag: `ForwardTrailingClosures `
 
