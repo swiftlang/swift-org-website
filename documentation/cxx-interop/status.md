@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Status of C++ Interoperability Support
+title: Supported Features and Limitations of C++ Interoperability
 official_url: https://swift.org/documentation/cxx-interop/status/
 redirect_from: 
 - /documentation/cxx-interop/status.html

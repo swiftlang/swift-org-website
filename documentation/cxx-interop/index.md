@@ -1130,15 +1130,6 @@ Finally, we hope to support unique reference types, such as `std::unique_ptr` in
 
 The `swift/bridging` header will be in the toolchain search paths already, so you just need to import it. Once this header is imported, you'll have access to several annotations that are helpful for preparing your C++ headers (APIs) for Swift to import them, including the three annotations mentioned above.
 
-## Working With C++ References And View Types In Swift
-
-This section describes how to safely work with C++ references and view types
-in Swift.
-
-## Working With Non-Copyable C++ Types
-
-This section describes strategies for working with non-copyable C++ types.
-
 ## Using C++ Standard Library from Swift
 
 This section describes how to import the C++ standard library, and how
