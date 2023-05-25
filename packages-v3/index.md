@@ -24,8 +24,8 @@ There are thousands of packages to explore through the community-run package ind
   <li>
     <a href="{{ package.url }}" target="_blank">
       <h4>
-        <p>{{ package.name }}</p>
-        <div>
+        <div class="package-name">{{ package.name }}</div>
+        <div class="stars">
           <picture>
             <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
             <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">

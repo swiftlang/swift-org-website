@@ -147,30 +147,35 @@ ul.package-list-v3 {
   padding: 0 0 0 25px;
   list-style: none;
 
-  > li {
-    display: flex;
-    flex-direction: column;
-
-    a {
+  li {
+    > a {
+      display: flex;
+      flex-direction: column;
       color: inherit;
+      height: 100%;
 
       &:hover {
         text-decoration: none;
 
-        h4 > p {
+        .package-name {
           color: var(--color-link);
           text-decoration: underline;
+          background-image: url("/assets/images/icon-external-color.svg");
         }
       }
     }
 
     h4 {
-      display: grid;
-      grid-template-columns: 1fr auto;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
 
-      p {
-        margin: 0;
+      .package-name {
+        padding-right: 18px;
+        background-image: url("/assets/images/icon-external.svg");
+        background-repeat: no-repeat;
+        background-size: 11px;
+        background-position: top 3px right;
       }
 
       picture {
