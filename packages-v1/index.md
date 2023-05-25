@@ -55,6 +55,6 @@ There are thousands of packages to explore through the community-run package ind
 </ul>
 
 <p class="more">
-  <a href="{{ category.more.url }}" target="_blank">{{ category.more.title }}&hellip;</a>
+  <a href="{{ category.more.url }}" target="_blank">{{ category.more.title }}</a>
 </p>
 {% endfor %}

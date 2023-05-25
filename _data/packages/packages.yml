@@ -67,7 +67,7 @@ categories:
     anchor: networking
     description: "Covering everything from abstractions on top of core networking libraries to full-featured HTTP clients to low-level networking libraries. If you need a little more on top of URLSession, or a lot more, you’ll find it here."
     more:
-      title: "Explore more networking packages"
+      title: "Explore more networking packages…"
       url: https://swiftpackageindex.com/keywords/networking
     packages:
       - name: "swift-nio"
@@ -128,7 +128,7 @@ categories:
     anchor: testing
     description: "Whether you're looking for an extension on top of XCTest or a completely different way to approach testing, these packages are here to help."
     more:
-      title: "Explore more testing packages"
+      title: "Explore more testing packages…"
       url: https://swiftpackageindex.com/keywords/testing
     packages:
       - name: "Quick"
