@@ -86,7 +86,9 @@ Virtual member functions are not yet available in Swift.
 
 Swift supports calling some C++ function templates. Any function or
 function template that uses a dependent type in its signature, or a universal
-reference (`T &&`) is not available in Swift.
+reference (`T &&`) is not available in Swift. Any function template with
+non-type template parameters is not available in Swift. Variadic function
+templates are not available in Swift.
 
 A C++ function whose return type is
 not supported in Swift, or with a parameter whose type is
@@ -103,6 +105,9 @@ The following C++ types can be used in Swift:
 - Copyable structures and classes.
   - Swift 5.9 does not support C++ structures and classes that have a deleted
     copy constructor, including move-only structures and classes.
+    - The only exception are the non-copyable C++ structures and classes that
+      have been explicitly
+      [mapped to Swift reference types](index#mapping-c-types-to-swift-reference-types).
 - Enumerations. That includes scoped enumerations (`enum class`).
 
 C++ types that become value types in Swift can be constructed and passed around
@@ -132,6 +137,10 @@ The following C++ standard library types are supported in Swift:
 - Specializations of `std::set` and `std::unordered_set`.
 - Specializations of `std::optional`.
 - Specializations of `std::shared_ptr`.
+- Specializations of `std::array`.
+
+Other standard library types, like `std::unique_ptr`, `std::function` and
+`std::variant` are not yet supported in Swift.
 
 ### Other C++ Features Handled by Swift
 
