@@ -94,7 +94,7 @@ ul.package-list-grid {
 ul.package-list-alternate {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px 40px;
+  gap: 50px 40px;
   padding: 0;
   list-style: none;
 
@@ -197,6 +197,14 @@ ul.package-list-alternate {
             background-size: 13px;
           }
         }
+      }
+    }
+
+    .showcase-reason {
+      p {
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 0;
       }
     }
   }

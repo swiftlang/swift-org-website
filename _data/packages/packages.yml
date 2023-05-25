@@ -12,6 +12,7 @@ categories:
         license: "MIT"
         stars: "1,249"
         url: https://swiftpackageindex.com/sindresorhus/Settings
+        showcase_reason: "Featured on Episode 27 of the Swift Package Indexing podcast."
       - name: "PopupView"
         description: "Popup View is a SwiftUI library used to show toasts, alerts, and popups with customizable parameters to enable a more dynamic user experience."
         swift_compatibility: 5.7+
@@ -21,6 +22,7 @@ categories:
         license: "MIT"
         stars: "2,112"
         url: https://swiftpackageindex.com/exyte/PopupView
+        showcase_reason: "Featured on Episode 27 of the Swift Package Indexing podcast."
       - name: "MenuBuilder"
         description: "MenuBuilder is a library for creating macOS menus with a SwiftUI-style syntax. It allows developers to quickly and easily create menus with actionable items, separators and submenus, with support for modifiers and conditionals."
         swift_compatibility: 5.5+
@@ -30,6 +32,7 @@ categories:
         license: "MIT"
         stars: "30"
         url: https://swiftpackageindex.com/j-f1/MenuBuilder
+        showcase_reason: "Voted as a showcase package by the Swift community."
       - name: "ContributorUI"
         description: "ContributorUI is a library for user interface that displays all developers contributing to a project, allowing for a minimal setup and easy integration into iOS and macOS applications."
         swift_compatibility: 5.7+
@@ -39,6 +42,7 @@ categories:
         license: "MIT"
         stars: "16"
         url: https://swiftpackageindex.com/dscyrescotti/ContributorUI
+        showcase_reason: "Voted as a showcase package by the Swift community."
       - name: "GEOSwift"
         description: "GEOSwift is a type-safe, MIT-licensed Swift interface to the OSGeo's GEOS library routines that enables easily handling a geometric object model (points, linestrings, polygons etc.) and related topological operations (intersections, overlapping etc.)."
         swift_compatibility: 5.5+
@@ -48,6 +52,7 @@ categories:
         license: "MIT"
         stars: "1,380"
         url: https://swiftpackageindex.com/GEOSwift/GEOSwift
+        showcase_reason: "Voted as a showcase package by the Swift community."
       - name: "swift-cli-version"
         description: "swift-cli-version is a swift package that allows you to set the version of a command line tool to the git tag or the git sha, if a tag is not set for the current commit. It provides plugins to use in your project and documentation to explain how to use them."
         swift_compatibility: 5.7+
@@ -57,6 +62,7 @@ categories:
         license: "MIT"
         stars: "1"
         url: https://swiftpackageindex.com/m-housh/swift-cli-version
+        showcase_reason: "Voted as a showcase package by the Swift community."
   - name: Networking packages
     anchor: networking
     description: "Covering everything from abstractions on top of core networking libraries to full-featured HTTP clients to low-level networking libraries. If you need a little more on top of URLSession, or a lot more, you’ll find it here."

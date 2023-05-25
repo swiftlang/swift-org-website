@@ -44,6 +44,11 @@ There are thousands of packages to explore through the community-run package ind
           <span>{{ package.swift_compatibility }}</span>
         </div>
       </section>
+      {% if package.showcase_reason %}
+      <section class="showcase-reason">
+        <p>{{ package.showcase_reason }}</p>
+      </section>
+      {% endif %}
     </a>
   </li>
   {% endfor %}
