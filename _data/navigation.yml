@@ -32,18 +32,18 @@
           name: using-downloads
         - title: Docker
           name: docker
-    - title: Packages
-      url: /packages/
+    - title: Packages (v1)
+      url: /packages-v1/
       sections:
         - title: Featured Packages
           name: featured-packages
-    - title: Packages (Grid)
-      url: /packages-grid/
+    - title: Packages (v2)
+      url: /packages-v2/
       sections:
         - title: Featured Packages
           name: featured-packages
-    - title: Packages (Alternate)
-      url: /packages-alternate/
+    - title: Packages (v3)
+      url: /packages-v3/
       sections:
         - title: Featured Packages
           name: featured-packages

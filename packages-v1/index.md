@@ -18,16 +18,38 @@ There are thousands of packages to explore through the community-run package ind
 {% for category in site.data.packages.packages.categories %}
 <h3 id="{{ category.anchor }}-packages">{{ category.name }}</h3>
 <p>{{ category.description | markdownify }}</p>
-<ul class="package-list-grid">
+<ul class="package-list-v1">
   {% for package in category.packages %}
   <li>
-    <h4>{{ package.name }}</h4>
-    <section class="description">
-      {{ package.description | markdownify }}
-    </section>
-    <p class="metadata-link">
-      <a href="{{ package.url }}" target="_blank">View Metadata&hellip;</a>
-    </p>
+    <a href="{{ package.url }}" target="_blank">
+      <h4>
+        <div class="package-name">{{ package.name }}</div>
+        <div class="stars">
+          <picture>
+            <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
+            <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
+          </picture> {{ package.stars }}
+        </div>
+      </h4>
+      <section class="description">
+        {{ package.description | markdownify }}
+      </section>
+      <section class="metadata">
+        <div class="platform-compatibility" title="Platform compatibility">
+        {% for platform in package.platform_compatibility %}
+          <span>{{ platform }}</span>
+        {% endfor %}
+        </div>
+        <div class="swift-compatibility" title="Swift version compatibility">
+          <span>{{ package.swift_compatibility }}</span>
+        </div>
+      </section>
+      {% if package.showcase_reason %}
+      <section class="showcase-reason">
+        <p>{{ package.showcase_reason }}</p>
+      </section>
+      {% endif %}
+    </a>
   </li>
   {% endfor %}
 </ul>

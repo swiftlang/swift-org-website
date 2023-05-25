@@ -1,97 +1,4 @@
-ul.package-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 0 0 0 25px;
-  list-style: none;
-
-  > li {
-    display: flex;
-    flex-direction: column;
-
-    a {
-      color: inherit;
-
-      &:hover {
-        text-decoration: none;
-
-        h4 > p {
-          color: var(--color-link);
-          text-decoration: underline;
-        }
-      }
-    }
-
-    h4 {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-
-      p {
-        margin: 0;
-      }
-
-      picture {
-        display: inline-block;
-
-        > img {
-          width: inherit;
-        }
-      }
-    }
-
-    section {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 40px;
-
-      .description > p {
-        // Even though this looks specific to WebKit, it works in Safari, Chrome, and Firefox.
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 6;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-
-      .activity {
-        font-size: 16px;
-        color: var(--color-secondary-label);
-      }
-
-      ul.metadata {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 0;
-        list-style: none;
-      }
-    }
-  }
-}
-
-ul.package-list-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 0;
-  list-style: none;
-
-  li {
-    display: flex;
-    flex-direction: column;
-
-    .description {
-      flex-grow: 1;
-    }
-  }
-
-  p.metadata-link {
-    text-align: right;
-  }
-}
-
-ul.package-list-alternate {
+ul.package-list-v1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px 40px;
@@ -205,6 +112,99 @@ ul.package-list-alternate {
         font-size: 12px;
         margin-top: 10px;
         margin-bottom: 0;
+      }
+    }
+  }
+}
+
+ul.package-list-v2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    flex-direction: column;
+
+    .description {
+      flex-grow: 1;
+    }
+  }
+
+  p.metadata-link {
+    text-align: right;
+  }
+}
+
+ul.package-list-v3 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 0 0 25px;
+  list-style: none;
+
+  > li {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+
+        h4 > p {
+          color: var(--color-link);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    h4 {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+
+      p {
+        margin: 0;
+      }
+
+      picture {
+        display: inline-block;
+
+        > img {
+          width: inherit;
+        }
+      }
+    }
+
+    section {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+
+      .description > p {
+        // Even though this looks specific to WebKit, it works in Safari, Chrome, and Firefox.
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .activity {
+        font-size: 16px;
+        color: var(--color-secondary-label);
+      }
+
+      ul.metadata {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
       }
     }
   }

@@ -15,44 +15,19 @@ There are thousands of packages to explore through the community-run package ind
   {% endfor %}
 </ul>
 
-
 {% for category in site.data.packages.packages.categories %}
 <h3 id="{{ category.anchor }}-packages">{{ category.name }}</h3>
 <p>{{ category.description | markdownify }}</p>
-<ul class="package-list">
+<ul class="package-list-v2">
   {% for package in category.packages %}
   <li>
-    <a href="{{ package.url }}" target="_blank">
-      <h4>
-        <p>{{ package.name }}</p>
-        <div>
-          <picture>
-            <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
-            <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
-          </picture> {{ package.stars }}
-        </div>
-      </h4>
-      <section>
-        <div class="description">
-          {{ package.description | markdownify }}
-          <p class="activity">{{ package.activity }} {{ package.authors }}</p>
-        </div>
-        <ul class="metadata">
-          <li class="license">
-            <strong>License: </strong>
-            {{ package.license }}
-          </li>
-          <li class="swift_compatibility">
-            <strong>Swift:</strong>
-            {{ package.swift_compatibility }}
-          </li>
-          <li class="platform_compatibility">
-            <strong>Platforms:</strong>
-            {{ package.platform_compatibility | join: ", " }}
-          </li>
-        </ul>
-      </section>
-    </a>
+    <h4>{{ package.name }}</h4>
+    <section class="description">
+      {{ package.description | markdownify }}
+    </section>
+    <p class="metadata-link">
+      <a href="{{ package.url }}" target="_blank">View Metadata&hellip;</a>
+    </p>
   </li>
   {% endfor %}
 </ul>
