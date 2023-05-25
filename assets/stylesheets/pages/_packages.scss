@@ -3,6 +3,7 @@ ul.package-list-v1 {
   grid-template-columns: 1fr 1fr;
   gap: 50px 40px;
   padding: 0;
+  margin: 50px 0 0 0;
   list-style: none;
 
   li {
@@ -112,6 +113,7 @@ ul.package-list-v1 {
         font-size: 12px;
         margin-top: 10px;
         margin-bottom: 0;
+        color: #666666;
       }
     }
   }
