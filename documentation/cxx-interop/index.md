@@ -1073,62 +1073,77 @@ takesVectorType(&vector) // 'vector' is not copied!
 
 ## Mapping C++ Types To Swift Reference Types
 
-The Swift compiler allows you to annotate some C++ types and import them as reference types (or class types) in Swift. Whether a C++ type should be imported as a reference type is a complex question, and there are two primary criteria that go into answering it.
+The Swift compiler allows you to annotate some C++ types and import them as reference types (or `class` types) in Swift. Whether a C++ type should be imported as a reference type is a complex question, and there are two primary criteria that go into answering it.
 
 The first criterion is whether object identity is part of the "value" of the type. Is comparing the address of two objects just asking whether they're stored at the same location, or it is deciding whether they represent the "same object" in a more significant sense? 
 
-The second criterion whether objects of the C++ class are always passed around by reference.  Are objects predominantly passed around using a pointer or reference type, such as a raw pointer (`*`), raw reference (`&` or `&&`), or smart pointer (like `std::unique_ptr` or `std::shared_ptr`)?  When passed by raw pointer or reference, is there an expectation that that memory is stable and will continue to stay valid, or are receivers expected to copy the object if they need to keep the value alive independently?  If objects are generally allocated and remain at a stable address, even if that address is not semantically part of the "value" of an object, the class may be idiomatically a reference type. This will sometimes be a judgment call for the programmer.
+The second criterion whether objects of the C++ class are always passed around by reference.  Are objects predominantly passed around using a pointer or reference type, such as a raw pointer (`*`), C++ reference (`&` or `&&`), or a smart pointer (like `std::unique_ptr` or `std::shared_ptr`)?  When passed by raw pointer or reference, is there an expectation that that memory is stable and will continue to stay valid, or are receivers expected to copy the object if they need to keep the value alive independently?  If objects are generally allocated and remain at a stable address, even if that address is not semantically part of the "value" of an object, the class may be idiomatically a reference type. This will sometimes be a judgment call for the programmer.
 
-(In the future we hope to support polymorphic C++ classes as well, but the current implementation does not suppor these types.)
+The first and most important criteria is often not possible for a compiler to answer automatically by just looking at the code. If you want the Swift compiler to map a C++ type to a Swift reference type, you must annotate the C++ type with one of the following
+customization macros from the `<swift/bridging>` header:
 
-The first and most important criteria is often not possible for a compiler to answer automatically by just looking at the code. So, if you want the Swift compiler to import a C++ type as a refernece type, you must communciate this via one of two attribute that live in `swift/bridging` (just add `#import` or `#include <swift/bridging>` to get access to them): 
+- [`SWIFT_IMMORTAL_REFERENCE`](#immortal-reference-types)
+- [`SWIFT_SHARED_REFERENCE`](#shared-reference-types)
+- [`SWIFT_UNSAFE_REFERENCE`](#unsafe-reference-types)
 
-  - **Immortal** reference types are not designed to be managed individually by the program. Objects of these types are allocated and then intentionally "leaked" without tracking their uses. Sometimes these objects are not truly immortal: for example, they may be arena-allocated, with an expectation that they will only be referenced from other objects within the arena. Nonetheless, they aren't expected to be individually managed.
+### Immortal Reference Types
 
-    The only reasonable thing Swift can do with immortal reference types is import them as unmanaged classes.  This is perfectly fine when objects are truly immortal.  If the object is arena-allocated, this is unsafe, but it's essentially an unavoidable level of unsafety given the choices of the C++ API.
-    
-    To specify that a C++ type is an immortal reference type, apply the `SWIFT_IMMORTAL_REFERENCE` attribute. Here's an example of `SWIFT_IMMORTAL_REFERENCE` being applied to the C++ type `LoggerSingleton`: 
-    ```c++
-    class SWIFT_IMMORTAL_REFERENCE LoggerSingleton : NonCopyable {
-    public:
-        static LoggerSingleton &getInstance();
-        void log(int x);
-    };
-    ```
+**Immortal** reference types are not designed to be managed individually by the program. Objects of these types are allocated and then intentionally "leaked" without tracking their uses. Sometimes these objects are not truly immortal: for example, they may be arena-allocated, with an expectation that they will only be referenced from other objects within the arena. Nonetheless, they aren't expected to be individually managed.
 
-    And now that `LoggerSingleton` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
-    ```swift
-    let logger = LoggerSingleton.getInstance()
-    logger.log(123)
-    ``` 
+The only reasonable thing Swift can do with immortal reference types is import them as unmanaged classes.  This is perfectly fine when objects are truly immortal.  If the object is arena-allocated, this is unsafe, but it's essentially an unavoidable level of unsafety given the choices of the C++ API.
 
-  - **Shared** reference types are reference-counted with custom retain and release operations. In C++, this is nearly always done with a smart pointer like `std::shared_ptr` rather than expecting programmers to manually use retain and release. This is generally compatible with being imported as a managed type. Shared pointer types are either "intrusive" or "non-intrusive", which unfortunately ends up being relevant to semantics. `std::shared_ptr` is a non-intrusive shared pointer, which supports pointers of any type without needing any cooperation.  Intrusive shared pointers require cooperation but support some additional operations. Currently, Swift only supports importing intrusively reference counted types as foreign reference types, but we intent to lift this restriction over time. (Today, you can still often use non-intrusively reference counted types, such as `std::shared_ptr`, as value types that own their storage.) 
-  
-    To specify that a C++ type is a shared reference type, use the `SWIFT_SHARED_REFERENCE` attribute. This attribute expects two arguments: a retain and release function. These functions must be global functions that take exactly one argument and return void. The argument must be a pointer to the C++ type (not a base type). Swift will call these custom retain and release functions where it would otherwise retain and release Swift classes. Here's an example of `SWIFT_SHARED_REFERENCE` being applied to the C++ type `SharedObject`:
-    
-    ```c++
-    class SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject) SharedObject : NonCopyable, IntrusiveReferenceCounted<SharedObject> {
-    public:
-        static SharedObject* create();
-        void doSomething();
-    };
+To specify that a C++ type is an immortal reference type, apply the `SWIFT_IMMORTAL_REFERENCE` attribute. Here's an example of `SWIFT_IMMORTAL_REFERENCE` being applied to the C++ type `LoggerSingleton`: 
+```c++
+class LoggerSingleton {
+public:
+    LoggerSingleton(const LoggerSingleton &) = delete; // non-copyable
 
-    void retainSharedObject(SharedObject *);
-    void releaseSharedObject(SharedObject *);
-    ```
+    static LoggerSingleton &getInstance();
+    void log(int x);
+} SWIFT_IMMORTAL_REFERENCE;
+```
 
-    And now that `SharedObject` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
-    ```swift
-    let object = SharedObject.create()
-    object.doSomething()
-    // The Swift compiler will release object here.
-    ``` 
+And now that `LoggerSingleton` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
+```swift
+let logger = LoggerSingleton.getInstance()
+logger.log(123)
+``` 
 
-There is also a `SWIFT_UNSAFE_REFERENCE` attribute, which has the same effect as `SWIFT_IMMORTAL_REFERENCE` but communicates different symantics: the type is intended to be used unsafely, rather than living for the duration of the program. 
+### Shared Reference Types
 
-Finally, we hope to support unique reference types, such as `std::unique_ptr` in the future. Unfortuantly, this is not feasable until Swift support non-copyable types.
+**Shared** reference types are reference-counted with custom retain and release operations. In C++, this is nearly always done with a smart pointer like `std::shared_ptr` rather than expecting programmers to manually use retain and release. This is generally compatible with being imported as a managed type. Shared pointer types are either "intrusive" or "non-intrusive", which unfortunately ends up being relevant to semantics. `std::shared_ptr` is a non-intrusive shared pointer, which supports pointers of any type without needing any cooperation.  Intrusive shared pointers require cooperation but support some additional operations. Currently, Swift only supports importing intrusively reference counted types as foreign reference types, but we intent to lift this restriction over time. (Today, you can still often use non-intrusively reference counted types, such as `std::shared_ptr`, as value types that own their storage.)
 
-The `swift/bridging` header will be in the toolchain search paths already, so you just need to import it. Once this header is imported, you'll have access to several annotations that are helpful for preparing your C++ headers (APIs) for Swift to import them, including the three annotations mentioned above.
+To specify that a C++ type is a shared reference type, use the `SWIFT_SHARED_REFERENCE` attribute. This attribute expects two arguments: a retain and release function. These functions must be global functions that take exactly one argument and return void. The argument must be a pointer to the C++ type (not a base type). Swift will call these custom retain and release functions where it would otherwise retain and release Swift classes. Here's an example of `SWIFT_SHARED_REFERENCE` being applied to the C++ type `SharedObject`:
+
+```c++
+class SharedObject : IntrusiveReferenceCounted<SharedObject> {
+public:
+    SharedObject(const SharedObject &) = delete; // non-copyable
+
+    static SharedObject* create();
+    void doSomething();
+} SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject);
+
+void retainSharedObject(SharedObject *);
+void releaseSharedObject(SharedObject *);
+```
+
+And now that `SharedObject` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
+```swift
+let object = SharedObject.create()
+object.doSomething()
+// `object` will be released here.
+``` 
+
+### Unsafe Reference Types
+
+The `SWIFT_UNSAFE_REFERENCE` annotation macro has the same effect as `SWIFT_IMMORTAL_REFERENCE`
+annotation macro. However, it communicates different semantics: the type is intended to be used unsafely, rather than living for the duration of the program. 
+
+### Unique Reference Types
+
+Unique reference types, such as types passed around by `std::unique_ptr` are
+not yet supported by Swift.
 
 ## Using C++ Standard Library from Swift
 
@@ -1480,3 +1495,7 @@ that are outlined in the documentation above.
 | `SWIFT_NAME`                | [Renaming C++ APIs In Swift](#renaming-c-apis-in-swift)       |
 | `SWIFT_COMPUTED_PROPERTY`   | [Mapping Getters And Setters to Computed Properties](#mapping-getters-and-setters-to-computed-properties)        |
 | `SWIFT_CONFORMS_TO`   | [Conforming Class Template To Swift Protocol](#conforming-class-template-to-swift-protocol)        |
+| `SWIFT_IMMORTAL_REFERENCE` | [Immortal Reference Types](#immortal-reference-types) |
+| `SWIFT_SHARED_REFERENCE` | [Shared Reference Types](#shared-reference-types) |
+| `SWIFT_UNSAFE_REFERENCE` | [Unsafe Reference Types](#unsafe-reference-types) |
+
