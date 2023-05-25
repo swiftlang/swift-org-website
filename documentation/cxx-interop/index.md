@@ -241,9 +241,9 @@ A wide array of C++ types and functions can be used from Swift. This section
 goes over the fundamentals of how the supported types and functions can be
 used from Swift.
 
-### Invoking C++ Functions
+### Calling C++ Functions
 
-C++ functions from imported modules can be invoked using the
+C++ functions from imported modules can be called using the
 familiar function call syntax from Swift. For example, this C++ function:
 
 ```c++
@@ -1147,13 +1147,386 @@ let swiftString = String(cxxString)
 Swift does not convert C++ `std::string` type to Swift's `String` type
 automatically. 
 
-## Using Swift APIs from C++
+## Accessing Swift APIs from C++
 
-A Swift library author might want to expose their interface to C++, to allow a C++ codebase to interoperate with the Swift library. This document describes how this can be accomplished, by first describing how Swift can expose its interface to C++, and then going into the details on how to use Swift APIs from C++.
+Swift compiler can generate a header file that contains C++ types and
+functions that represent the Swift types and functions defined in a
+Swift module.
+Such header file can then be included from C++ code, letting
+you use Swift types and call Swift functions from C++.
 
-This section describes how APIs in a Swift module
-get exposed to C++. It then goes into details of how to use Swift APIs from C++.
+Swift considers all public types and functions defined in a
+Swift module as eligible to be exposed to C++ when generating the
+generated header file.
+However, not all public types and functions can be represented in C++ yet.
+The exact rules that determine which Swift types and functions currently get
+exposed to C++ in the generated header are described below.
 
+### Swift Structures Supported by C++
+
+Swift can generate C++ representation for most top-level Swift structures. The
+following Swift structures are not yet supported:
+
+- Zero-sized structures that don't have any stored properties.
+- Non-copyable structures.
+- Generic structures with generic constraints, or with more than 3 generic
+  parameters, or that have variadic generics.
+
+Swift currently does not expose nested structures to C++.
+
+### Swift Classes and Actors Supported by C++
+
+Swift can generate C++ representation for most top-level Swift classes and
+actors. The
+following Swift classes are not yet supported:
+
+- Generic classes and actors.
+
+Swift currently does not expose nested classes and actors to C++.
+
+### Swift Enumerations Supported by C++
+
+Swift can generate C++ representation for most top-level Swift enumerations
+that do not have associated values, and some top-level Swift enumerations
+that have associated values. The
+following Swift enumerations are not yet supported:
+
+- Non-copyable enumerations.
+- Generic enumerations with generic constraints, or with more than 3 generic
+  parameters, or that have variadic generics.
+- Enumerations that have an enumeration case with more than one associated
+  value.
+- Indirect enumerations.
+
+Additionally, the types of all the associated values of an enumeration must be
+representable in C++. The exact set of representable types is described
+below, in the section that describes the representable
+[parameter or return types](#swift-functions-and-properties-supported-by-c). 
+
+Swift currently does not expose nested enumerations to C++.
+
+### Swift Functions and Properties Supported by C++
+
+Any function, property, or initializer is exposed to C++ only when Swift can
+represent all of its parameter and return types in C++. A parameter or return
+type can be represented in C++ only when:
+
+- it is a Swift structure / class / enumeration that is defined in the same
+  Swift module.
+- or, it is a C++ structure, class or enumeration.
+- or, it is one of the
+  [supported Swift standard library types](#supported-swift-standard-library-types).
+  - if it's a generic type, like `Array`, its generic parameters must be bound
+    to one of the types listed here.
+- or, it is an `UnsafePointer` / `UnsafeMutablePointer` /
+  `Optional<UnsafePointer>` / `Optional<UnsafeMutablePointer>` 
+  that points to
+  any type from the supported three type categories listed above.
+  
+Functions or initializers that have a parameter type or a return type that's
+not listed above can not be represented in C++ yet. Properties of type
+that's not listed above can not be represented in C++ yet.
+
+Additionally, the following Swift functions, properties and initializers can
+not yet be represented in C++:
+
+- Asynchronous functions / properties.
+- Functions / properties / initializers that `throw`.
+- Generic functions / properties / initializers with generic constraints
+  or variadic generics.
+- Functions that return an
+  [opaque type](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/opaquetypes).
+- Functions / properties / initializers with the `@_alwaysEmitIntoClient`
+  attribute.
+
+### Supported Swift Standard Library Types
+
+Swift is able to represent the following Swift standard library types in C++:
+
+- Primitive types, such as `Bool`, `Int`, `Float` and
+  their C variants like `CInt`.
+  - The
+    [full list of supported primitive types](#list-of-primitive-swift-types-supported-by-c)
+    is provided in the appendix.
+- Pointer types, like `OpaquePointer`, `UnsafePointer`,
+  `UnsafeMutablePointer`, `UnsafeRawPointer` and `UnsafeMutableRawPointer`.
+- `String` type.
+- `Array` type.
+- `Optional` type.
+
+## Using Swift Types and Functions from C++
+
+A wide array of Swift types and functions gets exposed to C++.
+This section goes over the fundamentals of how the exposed Swift types and
+functions can be used from C++.
+
+### Calling Swift Functions
+
+Top-level Swift functions that are exposed to C++ become `inline` C++ functions
+in the generated header. The C++ functions are placed in the C++ `namespace`
+that represents the Swift module. The body of such C++ function calls the native
+Swift function directly from C++, without using any kind of indirection.
+
+For example, the following Swift function gets exposed to C++ in the generated
+ header:
+
+```swift
+// Swift module 'Greeter'
+
+public func printWelcomeMessage(_ name: String) {
+  print("Welcome \(name)")
+}
+```
+
+C++ code can call `printWelcomeMessage` after including the generated
+header:
+
+```c++
+#include <Greeter-Swift.h>
+
+void cPlusPlusCallsSwift() {
+  Greeter::printWelcomeMessage("Theo");
+}
+```
+
+### Using Swift Structures In C++
+
+Swift structures that are exposed to C++ become final C++ classes in the
+generated header. Top-level structures are placed in the C++ `namespace`
+that represents the Swift module. The exposed initializers, methods and
+properties defined inside of the Swift structure become members of the
+C++ class.
+
+The C++ class that represents a Swift structures is copyable. Its copy
+constructor copies the underlying Swift value into a new value. The destructor
+of the C++ class destroys the underlying Swift value.
+
+As of Swift 5.9, C++ classes that represent Swift structures can not be moved
+in C++ using `std::move`.
+
+#### Creating a Swift Structure In C++
+
+The exposed initializers of a Swift structure become static `init` member
+functions in the C++ class. The C++ code can then call one of such functions
+to create an instance of the structure in C++.
+
+For example, Swift exposes the `MountainPeak` structure shown below in the
+generated header:
+
+```swift
+// Swift module 'Landscape'
+
+public struct MountainPeak {
+  let name: String
+  let height: Float
+
+  public init(name: String, height: Float) { 
+    self.name = name 
+    self.height = height
+  }
+}
+```
+
+The `init` static member function from the `MountainPeak` C++ class can
+be used to create a `MountainPeak` instance in C++:
+
+```c++
+#include <Landscape-Swift.h>
+using namespace Landscape;
+
+void createMountainRange() {
+  auto tallestMountain = MountainPeak::init("Everest", 8848.9);
+}
+```
+
+### Using Swift Classes In C++
+
+Swift classes that are exposed to C++ become C++ classes in the
+generated header. Top-level classes are placed in the C++ `namespace`
+that represents the Swift module. The exposed initializers, methods and
+properties defined inside of the Swift structure become members of the
+C++ class.
+
+The C++ class that represents a Swift structures is copyable and movable.
+Its copy and move constructors, and its destructor obey the rules of Swift's
+[automatic reference
+counting](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting)
+(ARC) model that allows the program to release the Swift class instance when it's no
+longer referenced.
+
+For example, Swift exposes the `MountainRange` class shown below in the
+generated header:
+
+```swift
+// Swift module 'Landscape'
+
+public class MountainRange {
+  let peaks: [MountainPeak]
+
+  public init(peaks: [MountainPeak]) { 
+    self.peaks = peaks 
+  }
+}
+
+public func createSierras() -> MountainRange {
+  ...
+}
+
+public func render(mountainRange: MountainRange) {
+  ...
+}
+```
+
+A `MountainRange` instance can then be passed around in C++ safely. ARC
+will release it once it's no longer in use:
+
+```c++
+#include <Landscape-Swift.h>
+using namespace Landscape;
+
+void renderSierras() {
+  MountainRange range = createSierras();
+  render(range);
+  // The `MountainRange` instance that `range` points to is freed by ARC when
+  // this C++ function returns.
+}
+```
+
+The inheritance hierarchy of Swift classes is represented using a C++
+inheritance hierarchy formed by the C++ classes that represent the
+exposed Swift classes.
+
+### Using Swift Enumerations In C++
+
+Swift enumerations that are exposed to C++ become C++ classes in the
+generated header. Top-level enumerations are placed in the C++ `namespace`
+that represents the Swift module. The exposed initializers, methods and
+properties defined inside of the Swift enumeration become members of the
+C++ class.
+
+The C++ class that represents a Swift enumeration is copyable. Its copy
+constructor copies the underlying Swift value into a new value. The destructor
+of the C++ class destroys the underlying Swift value. As of Swift 5.9, C++
+classes that represent Swift enumerations can not be moved in C++ using
+`std::move`.
+
+The enumeration cases become `static inline` constant C++ data members in the
+C++ class that represents the enum. These members let you:
+- Construct a Swift enumeration that is set to the specific case value in C++.
+- Switch over a Swift enumeration using a `switch` statement in C++.
+
+For example, the following Swift enumeration is exposed in the generated
+header:
+
+```swift
+// Swift module 'Landscape'
+
+public enum VolcanoStatus {
+  case dormant
+  case active
+}
+```
+
+A `VolcanoStatus` instance can be constructed from C++, by using
+`operator()` on one of its members that represents an enumeration case.
+You can also reference such member in the `case` condition inside of a
+`switch` statement in C++: 
+
+```c++
+#include <Landscape-Swift.h>
+using namespace Landscape;
+
+VolcanoStatus invertVolcanoStatus(VolcanoStatus status) {
+  switch (status) {
+  case VolcanoStatus::dormant:
+    return VolcanoStatus::active(); // Returns `VolcanoStatus.active` case.
+  case VolcanoStatus::active:
+    return VolcanoStatus::dormant(); // Returns `VolcanoStatus.dormant` case.
+  }
+}
+```
+
+The `unknownDefault` C++ member allows you to write an exhaustive C++ `switch`
+for a resilient Swift enumeration, as such enumeration might get more cases in
+the future that the C++ code does not know about.
+
+#### Using Enumerations with Associated Values
+
+Swift allows an enumeration to associate a set of values with a particular
+case. Enumerations whose cases have one associated
+value, or no associated values, get exposed to C++. They become C++ classes
+in the
+generated header. The interface of such C++ class closely resembles the
+interface of a class generated for a Swift enumeration without associated
+values. Such classes also contain additional getter member functions, that let
+you extract the associated value stored in the enumeration once you determine
+which case the enumeration is set to.
+
+For example, the following Swift enumeration with associated values is
+exposed in the generated header:
+
+```swift
+// Swift module 'Landscape'
+
+public enum LandmarkIdentifier {
+  case name(String)
+  case id(Int)
+}
+```
+
+The value associated with one of the cases of `LandmarkIdentifier` can be
+extracted by calling the appropriate getter method in C++:
+
+```c++
+#include <Landscape-Swift.h>
+#include <iostream>
+using namespace Landscape;
+
+void printLandmarkIdentifier(LandmarkIdentifier identifier) {
+  switch (status) {
+  case LandmarkIdentifier::name:
+    std::cout << (std::string)identifier.getName();
+    break;
+  case LandmarkIdentifier::id:
+    std::cout << "unnamed landmark #" << identifier.getId();
+    break;
+  }
+}
+```
+
+A new `LandmarkIdentifier` instance can be constructed from C++ as well:
+
+```c++
+auto newLandmarkId = LandmarkIdentifier::id(1234);
+```
+
+### Calling Swift Methods
+
+Swift methods become member functions in C++. 
+
+Swift structures and enumerations have `mutating` and `nonmutating` methods.
+`Nonmutating` methods become constant member functions in C++.
+
+### Accessing Swift Properties in C++
+
+Both stored and computed properties become getter and setter member functions
+in C++. The getter is a constant member function that returns the value of
+the Swift property. Mutable properties have a setter in C++ as well. The
+setter is a member function and should not be invoked on immutable instances
+of a Swift value type.
+
+For example, the following Swift structure is exposed to C++
+in the generated header:
+
+```swift
+public struct LandmarkLocation {
+  public var latitude: Float
+  public var longtitude: Float
+}
+```
+
+C++ code can then call `getLatitude` and `getLongtitude` member functions
+to access the stored property values.
 
 ## Appendix
 
@@ -1167,3 +1540,43 @@ that are outlined in the documentation above.
 | `SWIFT_NAME`                | [Renaming C++ APIs In Swift](#renaming-c-apis-in-swift)       |
 | `SWIFT_COMPUTED_PROPERTY`   | [Mapping Getters And Setters to Computed Properties](#mapping-getters-and-setters-to-computed-properties)        |
 | `SWIFT_CONFORMS_TO`   | [Conforming Class Template To Swift Protocol](#conforming-class-template-to-swift-protocol)        |
+
+### List Of Primitive Swift Types Supported by C++
+
+This table lists the primitive Swift types defined in Swift's
+standard library that can be represented in C++:
+
+| Swift Type               | Corresponding C++ type     |
+| ------------------------ | -------------------------- |
+| `Bool`   | `bool`       |
+| `Int`                | `swift::Int`      |
+| `UInt`   | `swift::UInt`       |
+| `Int8`    | `int8_t`      |
+| `Int16`   | `int16_t`     |
+| `Int32`   | `int32_t`     |
+| `Int64`   | `int64_t`     |
+| `UInt8`   | `uint8_t`     |
+| `UInt16`  | `uint16_t`    |
+| `UInt32`  | `uint32_t`    |
+| `UInt64`  | `uint64_t`    |
+| `Float`    | `float`      |
+| `Double`   | `double`     |
+| `Float32`  | `float`     |
+| `Float64`  | `double`     |
+| `CBool`   | `bool`       |
+| `CChar`   | `char`       |
+| `CWideChar`   | `wchar_t`   |
+| `CChar16`   | `char16_t`       |
+| `CChar32`   | `char32_t`   |
+| `CSignedChar`   | `signed char`   |
+| `CShort`   | `short`   |
+| `CInt`   | `int`   |
+| `CLong`   | `long`   |
+| `CLongLong`   | `long long`   |
+| `CUnsignedChar`   | `unsigned char`   |
+| `CUnsignedShort`   | `unsigned short`   |
+| `CUnsignedInt`   | `unsigned int`   |
+| `CUnsignedLong`   | `unsigned long`   |
+| `CUnsignedLongLong`   | `unsigned long long`   |
+| `CFloat`    | `float`      |
+| `CDouble`   | `double`     |
