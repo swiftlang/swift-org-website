@@ -21,16 +21,6 @@ article pre {
 * TOC
 {:toc}
 
-* * *
-
-<div class="info" markdown="1">
-C++ interoperability is a new feature in the upcoming Swift 5.9 release.
-Swift 5.9 is still under development, and as such the initial C++
-interoperability support might still change in Swift 5.9.
-This reference guide is going to be continously updated until Swift 5.9 is
-released.
-</div>
-
 ## Introduction
 
 This document is the reference guide describing how to mix Swift and C++. It
@@ -39,21 +29,23 @@ how various C++ APIs can be used in Swift. It also describes how Swift APIs
 get exposed to C++, and provides examples showing how the exposed Swift APIs
 can be used from C++.
 
-Bidirectional interoperability with C++ is supported in Swift 5.9 and above. 
+C++ interoperability is a new feature in the upcoming Swift 5.9 release.
 
 * * *
 
 <div class="info" markdown="1">
-C++ interoperability is an actively evolving feature of Swift. Certain
-aspects of its design and functionality might change in future releases of Swift,
+C++ interoperability is an actively evolving feature of Swift.
+It currently supports interoperation between a subset of language features.
+Certain aspects of its design and functionality might change in future releases of Swift,
 as the Swift community gathers feedback from real world adoption of C++
-interoperability in mixed Swift and C++ codebases.
+interoperability in mixed Swift and C++ codebases. Future changes will not
+break code in existing codebases [by default](#source-stability-guarantees-for-mixed-language-codebases).
+
 The [status page](status) provides an
 overview of the currently supported interoperability features, and
-lists the [known issues](status) as well. If you find a related bug,
-or would like to suggest a related change,
-please create a
-[new issue on GitHub](https://github.com/apple/swift/issues/new/choose).
+lists the [known issues](status) as well. You can report bugs or suggest
+changes related to C++ interoperability by filing an
+[issue on Github](https://github.com/apple/swift/issues/new/choose).
 </div>
 
 ## Overview
@@ -100,11 +92,6 @@ header files using the `#include` directive.
 In order for Swift to import a Clang module, it needs to find a 
 `module.modulemap` file that describes how a collection of C++ headers maps
 to a Clang module. 
-
-<!-- {% comment %}
-TODO: talk about SwiftPM generating module map for umbrealla header.
-TODO: talk about Xcode generating module map?
-{% endcomment %} -->
 
 Some IDEs and build systems can generate a module map file for a
 C++ build target. In other cases you might be required to create a module
@@ -232,8 +219,24 @@ void printTreeArt(const Tree &tree) {
 }
 ```
 
-The [C++ interoperability status page](status) describes which Swift
-language constructs and standard library types can be exposed to C++.
+The [C++ interoperability status page](status#supported-swift-apis)
+describes which Swift language constructs and standard library types can be
+exposed to C++.
+
+### Source Stability Guarantees for Mixed-Language Codebases
+
+The way Swift interoperates with C++ is still evolving. Some changes
+in future releases of Swift will require source changes in mixed
+Swift and C++ codebases
+that have already adopted C++ interoperability. However, Swift will not
+force you to adopt new or evolved C++ interoperability features when adopting
+a new version of the Swift toolchain. To make that possible, Swift releases
+after Swift 5.9 will provide multiple compatibility versions of C++
+interoperability, just like Swift provides support for multiple compatibility
+versions of the base Swift language. This means that a project using the 5.9
+compatibility version of C++ interoperability will be insulated from any changes
+made in subsequent releases, and it can move to newer compatibility versions
+at its own pace.
 
 ## Using C++ Types And Functions In Swift
 
@@ -274,9 +277,7 @@ As of Swift 5.9, C++ structures and classes with a deleted copy constructor
 are not available in Swift. Non-copyable C++ structures or classes that also
 have a move constructor will be available in a future version of Swift.
 They will map to
-[non-copyable](https://github.com/apple/swift-evolution/blob/main/proposals/0390-noncopyable-structs-and-enums.md) Swift `structs`. In the meantime, such C++ types can be annotated
-with [Swift-provided annotations for reference types](TODO) to make them
-available in Swift. 
+[non-copyable](https://github.com/apple/swift-evolution/blob/main/proposals/0390-noncopyable-structs-and-enums.md) Swift `structs`.
 
 ### Constructing C++ Types From Swift
 
@@ -355,11 +356,7 @@ let darkGray = Color(0.2, 0.2, 0.2)
 let veryLightGray = darkGray.inverted()
 ```
 
-<!-- {% comment %}
-TODO: Talk about const rule.
-{% endcomment %} -->
-
-#### Constant Member Function Assumptions
+#### Constant Member Functions Must not Mutate the Object
 
 The Swift compiler assumes that constant member functions do not
 mutate the instance that `this` points to. A violation of this assumption by a
@@ -394,11 +391,6 @@ private:
 ```
 
 Becomes the `__getRootTreeUnsafe` method in Swift.
-
-The set of rules that determine which functions are unsafe, and the
-recommended guidelines for calling such methods safely from Swift
-are documented in an upcoming section that describes how to
-[safely work with C++ references and view types in Swift](#working-with-c-references-and-view-types-in-swift).
 
 #### Overloaded Member Functions
 
@@ -624,15 +616,13 @@ function using the `SWIFT_NAME` macro.
 
 The `<swift/bridging>` header defines the customization macros that can be used
 to annotate C++ functions and types. This header ships with the
-Swift toolchain. On platforms like Linux, both the system's C++ compiler and
-the Swift compiler should find this header automatically.
-On other platforms, like Windows, you might
-need to add additional header search path flags (`-I`) to your C++ and Swift
-compiler invocations to make sure that this header is found. 
+Swift toolchain. 
 
-<!-- {% comment %}
-TODO: Talk about Xcode.
-{% endcomment %} -->
+> On Apple and Linux platforms both the system's C++ compiler and
+> the Swift compiler should find this header automatically.
+> On other platforms, like Windows, you might
+> need to add additional header search path flags (`-I`) to your C++ and Swift
+> compiler invocations to make sure that this header is found. 
 
 This section describes just two of the customization macros from 
 the `<swift/bridging>` header. The other customization macros and their
@@ -699,10 +689,6 @@ func makeNotAConiferousTree(tree: inout Tree) {
 
 Both the getter and setter need to operate on the same underlying C++ type for
 this transformation to be successful in Swift.
-
-<!-- {% comment %}
-TODO: Can getter accept const ref.
-{% endcomment %} -->
 
 It's possible to map just the getter to a computed property, a setter is not
 required for this transformation to work.
@@ -1160,99 +1146,8 @@ Swift module as eligible to be exposed to C++ when generating the
 generated header file.
 However, not all public types and functions can be represented in C++ yet.
 The exact rules that determine which Swift types and functions currently get
-exposed to C++ in the generated header are described below.
-
-### Swift Structures Supported by C++
-
-Swift can generate C++ representation for most top-level Swift structures. The
-following Swift structures are not yet supported:
-
-- Zero-sized structures that don't have any stored properties.
-- Non-copyable structures.
-- Generic structures with generic constraints, or with more than 3 generic
-  parameters, or that have variadic generics.
-
-Swift currently does not expose nested structures to C++.
-
-### Swift Classes and Actors Supported by C++
-
-Swift can generate C++ representation for most top-level Swift classes and
-actors. The
-following Swift classes are not yet supported:
-
-- Generic classes and actors.
-
-Swift currently does not expose nested classes and actors to C++.
-
-### Swift Enumerations Supported by C++
-
-Swift can generate C++ representation for most top-level Swift enumerations
-that do not have associated values, and some top-level Swift enumerations
-that have associated values. The
-following Swift enumerations are not yet supported:
-
-- Non-copyable enumerations.
-- Generic enumerations with generic constraints, or with more than 3 generic
-  parameters, or that have variadic generics.
-- Enumerations that have an enumeration case with more than one associated
-  value.
-- Indirect enumerations.
-
-Additionally, the types of all the associated values of an enumeration must be
-representable in C++. The exact set of representable types is described
-below, in the section that describes the representable
-[parameter or return types](#swift-functions-and-properties-supported-by-c). 
-
-Swift currently does not expose nested enumerations to C++.
-
-### Swift Functions and Properties Supported by C++
-
-Any function, property, or initializer is exposed to C++ only when Swift can
-represent all of its parameter and return types in C++. A parameter or return
-type can be represented in C++ only when:
-
-- it is a Swift structure / class / enumeration that is defined in the same
-  Swift module.
-- or, it is a C++ structure, class or enumeration.
-- or, it is one of the
-  [supported Swift standard library types](#supported-swift-standard-library-types).
-  - if it's a generic type, like `Array`, its generic parameters must be bound
-    to one of the types listed here.
-- or, it is an `UnsafePointer` / `UnsafeMutablePointer` /
-  `Optional<UnsafePointer>` / `Optional<UnsafeMutablePointer>` 
-  that points to
-  any type from the supported three type categories listed above.
-  
-Functions or initializers that have a parameter type or a return type that's
-not listed above can not be represented in C++ yet. Properties of type
-that's not listed above can not be represented in C++ yet.
-
-Additionally, the following Swift functions, properties and initializers can
-not yet be represented in C++:
-
-- Asynchronous functions / properties.
-- Functions / properties / initializers that `throw`.
-- Generic functions / properties / initializers with generic constraints
-  or variadic generics.
-- Functions that return an
-  [opaque type](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/opaquetypes).
-- Functions / properties / initializers with the `@_alwaysEmitIntoClient`
-  attribute.
-
-### Supported Swift Standard Library Types
-
-Swift is able to represent the following Swift standard library types in C++:
-
-- Primitive types, such as `Bool`, `Int`, `Float` and
-  their C variants like `CInt`.
-  - The
-    [full list of supported primitive types](#list-of-primitive-swift-types-supported-by-c)
-    is provided in the appendix.
-- Pointer types, like `OpaquePointer`, `UnsafePointer`,
-  `UnsafeMutablePointer`, `UnsafeRawPointer` and `UnsafeMutableRawPointer`.
-- `String` type.
-- `Array` type.
-- `Optional` type.
+exposed to C++ in the generated header are described in the
+[following status page section](status#supported-swift-apis).
 
 ## Using Swift Types and Functions from C++
 
@@ -1540,43 +1435,3 @@ that are outlined in the documentation above.
 | `SWIFT_NAME`                | [Renaming C++ APIs In Swift](#renaming-c-apis-in-swift)       |
 | `SWIFT_COMPUTED_PROPERTY`   | [Mapping Getters And Setters to Computed Properties](#mapping-getters-and-setters-to-computed-properties)        |
 | `SWIFT_CONFORMS_TO`   | [Conforming Class Template To Swift Protocol](#conforming-class-template-to-swift-protocol)        |
-
-### List Of Primitive Swift Types Supported by C++
-
-This table lists the primitive Swift types defined in Swift's
-standard library that can be represented in C++:
-
-| Swift Type               | Corresponding C++ type     |
-| ------------------------ | -------------------------- |
-| `Bool`   | `bool`       |
-| `Int`                | `swift::Int`      |
-| `UInt`   | `swift::UInt`       |
-| `Int8`    | `int8_t`      |
-| `Int16`   | `int16_t`     |
-| `Int32`   | `int32_t`     |
-| `Int64`   | `int64_t`     |
-| `UInt8`   | `uint8_t`     |
-| `UInt16`  | `uint16_t`    |
-| `UInt32`  | `uint32_t`    |
-| `UInt64`  | `uint64_t`    |
-| `Float`    | `float`      |
-| `Double`   | `double`     |
-| `Float32`  | `float`     |
-| `Float64`  | `double`     |
-| `CBool`   | `bool`       |
-| `CChar`   | `char`       |
-| `CWideChar`   | `wchar_t`   |
-| `CChar16`   | `char16_t`       |
-| `CChar32`   | `char32_t`   |
-| `CSignedChar`   | `signed char`   |
-| `CShort`   | `short`   |
-| `CInt`   | `int`   |
-| `CLong`   | `long`   |
-| `CLongLong`   | `long long`   |
-| `CUnsignedChar`   | `unsigned char`   |
-| `CUnsignedShort`   | `unsigned short`   |
-| `CUnsignedInt`   | `unsigned int`   |
-| `CUnsignedLong`   | `unsigned long`   |
-| `CUnsignedLongLong`   | `unsigned long long`   |
-| `CFloat`    | `float`      |
-| `CDouble`   | `double`     |
