@@ -6,15 +6,11 @@ redirect_from:
 - /documentation/cxx-interop/status.html
 ---
 
-## Table of Contents
-{:.no_toc}
-
-* TOC
-{:toc}
-
 Swift [supports](index) bidirectional interoperability with C++. This page
 describes which C++ interoperability features are supported in the
-upcoming Swift 5.9 release.
+upcoming Swift 5.9 release. It also talks about the limitations
+in the current support for C++ interoperability. Additionally, it lists the set
+of known issues that are related to C++ interoperability support.
 
 C++ interoperability is an actively evolving feature of Swift.
 Certain
@@ -24,6 +20,36 @@ interoperability in mixed Swift and C++ codebases.
 This page is going to be updated
 whenever a new release of Swift changes the supported set of C++
 interoperability features.
+
+## Known Issues
+
+Swift 5.9 has some known issues
+and limitations related to C++ interoperability support. All of the known issues
+are [listed on github](https://github.com/apple/swift/issues/66159).
+
+### Known Swift Package Manager Issues
+
+A Swift target that enables C++ interoperability in Swift package manager
+requires its dependencies to enable C++ interoperability as well.
+The following issue tracks the status of this limitation:
+
+- [Swift should provide support for internal imports and resilience for all platforms (that can be enabled in SwiftPM) to allow Swift modules to depend on C++ modules without requiring that the clients enable C++ interoperability](https://github.com/apple/swift/issues/66156)
+
+The other known Swift package manager issues are listed here:
+
+- [The C++ language standard that's specified in the package manifest is not passed to the Swift compiler when C++ interoperability is enabled for Swift code](https://github.com/apple/swift-package-manager/issues/6565)
+
+### Known Performance Issues and Limitations
+
+Swift's current
+[support for C++ container types](index#working-with-c-containers) 
+does not provide explicit
+performance guarantees. Most notably, Swift can make a deep copy of a
+collection when it's used in a `for-in` loop in Swift.
+
+The following issue tracks the status of this performance limitation:
+
+- [Swift should provide language affordances that make it possible to avoid copying a C++ container when traversing through it in a for-in loop, or when using collection methods like map and filter](https://github.com/apple/swift/issues/66158)
 
 ## Platform Support
 

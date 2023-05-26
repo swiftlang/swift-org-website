@@ -43,7 +43,7 @@ break code in existing codebases [by default](#source-stability-guarantees-for-m
 
 The [status page](status) provides an
 overview of the currently supported interoperability features, and
-lists the [known issues](status) as well. You can report bugs or suggest
+lists the [known issues](status#known-issues) as well. You can report bugs or suggest
 changes related to C++ interoperability by filing an
 [issue on Github](https://github.com/apple/swift/issues/new/choose).
 </div>
