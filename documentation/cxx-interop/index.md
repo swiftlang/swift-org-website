@@ -62,13 +62,12 @@ C++ APIs from Swift, or expose Swift APIs to C++.
 The following guides describe how C++ interoperability can be enabled when
 working with a specific build system or IDE:
 
-- [Read how to use C++ APIs from Swift in a Swift package](TODO)
-- [Read how to use CMake to mix Swift and C++](TODO)
+- [Read how to use C++ APIs from Swift in a Swift package](project-build-setup#mixing-swift-and-c-using-swift-package-manager)
 
 Other build systems can enable C++ interoperability by passing in the required
 flag to the Swift compiler:
 
-- [Read how to enable C++ interoperability when invoking Swift compiler directly](TODO)
+- [Read how to enable C++ interoperability when invoking Swift compiler directly](project-build-setup#mixing-swift-and-c-using-other-build-systems)
 
 ### Importing C++ into Swift
 
