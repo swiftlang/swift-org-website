@@ -122,7 +122,7 @@ in Swift.
 Public data members of a C++ structure or class are available in Swift when the
 type of such data member is supported in Swift.
 
-### C++ Standard Library Types Supported In Swift
+### C++ Standard Library Types Supported in Swift
 
 The following C++ standard library types are supported in Swift:
 

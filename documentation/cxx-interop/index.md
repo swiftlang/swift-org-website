@@ -237,7 +237,7 @@ compatibility version of C++ interoperability will be insulated from any changes
 made in subsequent releases, and it can move to newer compatibility versions
 at its own pace.
 
-## Using C++ Types And Functions In Swift
+## Using C++ Types and Functions in Swift
 
 A wide array of C++ types and functions can be used from Swift. This section
 goes over the fundamentals of how the supported types and functions can be
@@ -258,7 +258,7 @@ Can be invoked directly from Swift as if it was a regular Swift function:
 printWelcomeMessage("Thomas");
 ```
 
-### C++ Structures and Classes Are Value Types By Default
+### C++ Structures and Classes are Value Types by Default
 
 Swift maps C++ structures and classes to Swift `struct` types by default.
 Swift considers them to be
@@ -278,7 +278,7 @@ have a move constructor will be available in a future version of Swift.
 They will map to
 [non-copyable](https://github.com/apple/swift-evolution/blob/main/proposals/0390-noncopyable-structs-and-enums.md) Swift `structs`.
 
-### Constructing C++ Types From Swift
+### Constructing C++ Types from Swift
 
 Public constructors inside C++ structures and classes
 that aren't copy or move constructors 
@@ -307,7 +307,7 @@ let oceanBlue = Color(0.0, 0.0, 1.0)
 let seattleGray = Color(0.7)
 ```
 
-### Accessing Data Members Of a C++ Type
+### Accessing Data Members of a C++ Type
 
 The public data members of C++ structures and classes become properties
 in Swift. For example, the data members of the `Color` class shown above
@@ -355,7 +355,7 @@ let darkGray = Color(0.2, 0.2, 0.2)
 let veryLightGray = darkGray.inverted()
 ```
 
-#### Constant Member Functions Must not Mutate the Object
+#### Constant Member Functions Must Not Mutate the Object
 
 The Swift compiler assumes that constant member functions do not
 mutate the instance that `this` points to. A violation of this assumption by a
@@ -427,7 +427,7 @@ As of Swift 5.9, virtual member functions are not available in Swift.
 
 Static C++ member functions become `static` Swift methods.
 
-### Acessing Inherited Members From Swift
+### Acessing Inherited Members from Swift
 
 A C++ class or structure becomes a standalone type in Swift. Its
 relationship with base C++ classes is not preserved in Swift.
@@ -605,7 +605,7 @@ A [follow-up section of this document](#conforming-class-template-to-swift-proto
 describes how Swift generics and protocol extensions can be used to write
 generic Swift code that works with any specialization of a class template.
 
-## Customizing How C++ Maps To Swift
+## Customizing How C++ Maps to Swift
 
 The defaults that determine how C++ types and functions map to Swift can be
 changed, by annotating a specific C++
@@ -629,7 +629,7 @@ behavior are documented in the subsequent sections in this document.
 The [complete list](#list-of-customization-macros-in-swiftbridging) of all the
 customization macros is provided in the appendix.
 
-### Renaming C++ APIs In Swift
+### Renaming C++ APIs in Swift
 
 The `SWIFT_NAME` macro provides a different name for C++
 types and functions in Swift. C++ types can be renamed by specifying the Swift
@@ -660,7 +660,7 @@ Gets renamed to `send` in Swift:
 send("Hello, this is Swift!")
 ```
 
-### Mapping Getters And Setters to Computed Properties
+### Mapping Getters and Setters to Computed Properties
 
 The `SWIFT_COMPUTED_PROPERTY` macro maps a C++ getter and setter member
 function to a computed property in Swift. For example, the following getter
@@ -692,7 +692,7 @@ this transformation to be successful in Swift.
 It's possible to map just the getter to a computed property, a setter is not
 required for this transformation to work.
 
-## Extending C++ Types In Swift
+## Extending C++ Types in Swift
 
 Swift [extensions](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/extensions)
 can add new functionality to C++ types in Swift. They can also
@@ -701,7 +701,7 @@ conform an existing C++ type to a Swift protocol.
 > Extensions can add new functionality to a C++ type, but they can't override
 > existing functionality of a C++ type.
 
-### Conforming C++ Type To Swift Protocol
+### Conforming C++ Type to Swift Protocol
 
 Swift protocol conformance can be added to a C++ type retroactively
 (after the type has been defined). Such conformance enables the
@@ -737,7 +737,7 @@ let treeEmoji: Dictionary<Tree, String> = [
 ]
 ```
 
-### Conforming Class Template To Swift Protocol
+### Conforming Class Template to Swift Protocol
 
 A Swift extension can add protocol conformance to a specific class template
 specialization in Swift. For example, a specific
@@ -824,7 +824,7 @@ printDeserialized(getSerializedInt())
 printDeserialized(getSerializedFloat())
 ```
 
-## Working With C++ Containers
+## Working with C++ Containers
 
 C++ container types, like the [`std::vector`](https://en.cppreference.com/w/cpp/container/vector) class
 template,
@@ -839,7 +839,7 @@ Swift also provides a handful of
 other protocols that provide safe access to the underlying container for
 types that conform to them manually using an `extension` in Swift.
 
-### Using Random Access C++ Collections In Swift
+### Using Random Access C++ Collections in Swift
 
 Swift attemps to conform C++ containers that provide random access to their
 elements, like `std::vector`, to Swift's `RandomAccessCollection` protocol
@@ -891,7 +891,7 @@ Swift **does not** convert C++ container types to Swift collection types
 automatically. Any conversion from a C++ container type, like `std::vector`,
 to a Swift collection type, like `Array`, is explicit in Swift.
 
-#### Conformance Rules For Random Access C++ Collections
+#### Conformance Rules for Random Access C++ Collections
 
 The following two conditions must be satisfied in order for a C++ container
 type to automatically conform to `RandomAccessCollection` in Swift:
@@ -908,7 +908,7 @@ that represents the underlying C++ container type to
 the `CxxRandomAccessCollection` protocol, which adds the
 `RandomAccessCollection` conformance.
 
-### Using Sequential C++ Collections In Swift
+### Using Sequential C++ Collections in Swift
 
 The sequential C++ container types that do not provide random access to their
 elements are automatically
@@ -962,7 +962,7 @@ for treeKind in highTreeKinds {
 Collection methods like `map` and `filter` are also available for types
 that conform to `CxxSequence`.
 
-#### Conformance Rules For `CxxSequence` Protocol
+#### Conformance Rules for `CxxSequence` Protocol
 
 The following two conditions must be satisfied when conforming a C++ container
 type to `CxxSequence` in Swift:
@@ -977,7 +977,7 @@ type to `CxxSequence` in Swift:
 Conforming a type to `CxxSequence` automatically conforms it to Swift's
 `Sequence` protocol.
 
-### Using Associative Container C++ Types In Swift
+### Using Associative Container C++ Types in Swift
 
 Associative C++ container types, like `std::map`, provide efficient access
 to stored elements using a lookup key.
@@ -1014,9 +1014,9 @@ to `CxxDictionary` automatically. A manually written Swift `extension`
 can be used to add the `CxxDictionary` conformance
 retroactively for a custom associative container type.
 
-### Best Practices For Working With C++ Containers in Swift
+### Best Practices for Working with C++ Containers in Swift
 
-#### Do Not Use C++ Iterators In Swift
+#### Do Not Use C++ Iterators in Swift
 
 As outlined at the start of this section, using C++ iterators is unsafe in
 Swift. It's easy to misuse C++ iterators, for instance:
@@ -1070,7 +1070,7 @@ var vector = createCxxVectorOfInt()
 takesVectorType(&vector) // 'vector' is not copied!
 ```
 
-## Mapping C++ Types To Swift Reference Types
+## Mapping C++ Types to Swift Reference Types
 
 The Swift compiler allows you to annotate some C++ types and import them as reference types (or `class` types) in Swift. Whether a C++ type should be imported as a reference type is a complex question, and there are two primary criteria that go into answering it.
 
@@ -1258,7 +1258,7 @@ of the C++ class destroys the underlying Swift value.
 As of Swift 5.9, C++ classes that represent Swift structures can not be moved
 in C++ using `std::move`.
 
-#### Creating a Swift Structure In C++
+#### Creating a Swift Structure in C++
 
 The exposed initializers of a Swift structure become static `init` member
 functions in the C++ class. The C++ code can then call one of such functions
@@ -1293,7 +1293,7 @@ void createMountainRange() {
 }
 ```
 
-### Using Swift Classes In C++
+### Using Swift Classes in C++
 
 Swift classes that are exposed to C++ become C++ classes in the
 generated header. Top-level classes are placed in the C++ `namespace`
@@ -1350,7 +1350,7 @@ The inheritance hierarchy of Swift classes is represented using a C++
 inheritance hierarchy formed by the C++ classes that represent the
 exposed Swift classes.
 
-### Using Swift Enumerations In C++
+### Using Swift Enumerations in C++
 
 Swift enumerations that are exposed to C++ become C++ classes in the
 generated header. Top-level enumerations are placed in the C++ `namespace`
@@ -1487,13 +1487,13 @@ to access the stored property values.
 This section contains additional tables and references for certain topics
 that are outlined in the documentation above.
 
-### List Of Customization Macros In `<swift/bridging>` 
+### List of Customization Macros in `<swift/bridging>` 
 
 | Macro                     | Documentation |
 | ------------------------- | ------------- |
-| `SWIFT_NAME`                | [Renaming C++ APIs In Swift](#renaming-c-apis-in-swift)       |
-| `SWIFT_COMPUTED_PROPERTY`   | [Mapping Getters And Setters to Computed Properties](#mapping-getters-and-setters-to-computed-properties)        |
-| `SWIFT_CONFORMS_TO`   | [Conforming Class Template To Swift Protocol](#conforming-class-template-to-swift-protocol)        |
+| `SWIFT_NAME`                | [Renaming C++ APIs in Swift](#renaming-c-apis-in-swift)       |
+| `SWIFT_COMPUTED_PROPERTY`   | [Mapping Getters and Setters to Computed Properties](#mapping-getters-and-setters-to-computed-properties)        |
+| `SWIFT_CONFORMS_TO`   | [Conforming Class Template to Swift Protocol](#conforming-class-template-to-swift-protocol)        |
 | `SWIFT_IMMORTAL_REFERENCE` | [Immortal Reference Types](#immortal-reference-types) |
 | `SWIFT_SHARED_REFERENCE` | [Shared Reference Types](#shared-reference-types) |
 | `SWIFT_UNSAFE_REFERENCE` | [Unsafe Reference Types](#unsafe-reference-types) |

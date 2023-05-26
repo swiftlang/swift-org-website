@@ -20,7 +20,7 @@ C++ APIs in Swift.
 > As of Swift 5.9, Swift package manager does not yet provide support for
 using Swift APIs in C++.
 
-### Enabling C++ Interoperability In a Package Target
+### Enabling C++ Interoperability in a Package Target
 
 A specific target in a Swift package must enable C++ interoperability in
 order to be able to import and use C++ APIs in Swift.
