@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2023-05-19 15:00:00
+date: 2023-05-29 10:00:00
 title: Using Upcoming Feature Flags
 author: [jamesdempsey]
 ---
@@ -33,7 +33,7 @@ Therefore, in Swift 5.7, regex literals only support the extended literal delimi
 ```swift
 let regex = #/[a-zA-Z_][0-9a-zA-Z_]*/#
 ```
-The source breaking change does not come into effect until the next major language version—Swift 6.
+The source breaking change does not come into effect until the next major language version — Swift 6.
 
 However, it would be beneficial for developers to be able to opt into using the ‘bare slash’ syntax for Regex literals now, rather than wait until Swift 6.
 
@@ -48,9 +48,8 @@ To address this, Swift evolution proposal [SE-0362](https://github.com/apple/swi
 
 Instead of creating a different compiler flag for each upcoming feature, the compiler gains one new flag that is followed by the name of the feature to be enabled:
 ```
- -enable-upcoming-feature <#UpcomingFeatureFlag#>
+ -enable-upcoming-feature SomeUpcomingFeature
  ```
-
 For example, to enable the upcoming Regex literal syntax you would use:
  ```
  -enable-upcoming-feature BareRegexLiteralSyntax
