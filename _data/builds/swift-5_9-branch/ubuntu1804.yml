@@ -1,3 +1,8 @@
+- date: 2023-05-26 10:10:00-06:00
+  dir: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-05-26-a
+  download: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-05-26-a-ubuntu18.04.tar.gz
+  download_signature: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-05-26-a-ubuntu18.04.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2023-05-22 10:10:00-06:00
   dir: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-05-22-a
   download: swift-5.9-DEVELOPMENT-SNAPSHOT-2023-05-22-a-ubuntu18.04.tar.gz
