@@ -355,3 +355,11 @@ alexandersandberg:
   github: alexandersandberg
   twitter: alexandberg
   about: "Alexander Sandberg is an iOS and macOS developer and a member of the Swift Website Workgroup."
+
+jamesdempsey:
+  name: James Dempsey
+  gravatar: 15947d27758dc90df81fd42c4a387bbb
+  email: dempsey@tapas-software.net
+  github: dempseyatgithub
+  twitter: jamesdempsey
+  about: "James Dempsey is an iOS and macOS developer, technical trainer, and a member of the Swift Website Workgroup."
