@@ -769,8 +769,8 @@ protocol Deserializable {
   func deserialize() -> ValueType
 }
 
-// `SerializedInt` specialization now conforms to `Serializable`
-extension SerializedInt: Serializable {}
+// `SerializedInt` specialization now conforms to `Deserializable`
+extension SerializedInt: Deserializable {}
 ```
 
 In the example above `SerializedInt` conforms to the `Deserializable` protocol.
@@ -1038,7 +1038,7 @@ You should avoid using such functions in Swift.
 
 #### Avoiding Deep Container Copies
 
-C++ container types become value types types in Swift. This means that
+C++ container types become value types in Swift. This means that
 Swift calls the container's copy constructor, which in turn copies all the
 elements, every time a copy is made in Swift. For example,
 Swift will copy all of the elements from a `std::vector<int>` represented
@@ -1251,7 +1251,7 @@ that represents the Swift module. The exposed initializers, methods and
 properties defined inside of the Swift structure become members of the
 C++ class.
 
-The C++ class that represents a Swift structures is copyable. Its copy
+The C++ class that represents a Swift structure is copyable. Its copy
 constructor copies the underlying Swift value into a new value. The destructor
 of the C++ class destroys the underlying Swift value.
 
@@ -1301,7 +1301,7 @@ that represents the Swift module. The exposed initializers, methods and
 properties defined inside of the Swift structure become members of the
 C++ class.
 
-The C++ class that represents a Swift structures is copyable and movable.
+The C++ class that represents a Swift class is copyable and movable.
 Its copy and move constructors, and its destructor obey the rules of Swift's
 [automatic reference
 counting](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting)
