@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Supported Features and Limitations of C++ Interoperability
+title: Supported Features and Constraints of C++ Interoperability
 official_url: https://swift.org/documentation/cxx-interop/status/
 redirect_from: 
 - /documentation/cxx-interop/status.html
@@ -296,9 +296,9 @@ standard library that can be represented in C++:
 | `CFloat`    | `float`      |
 | `CDouble`   | `double`     |
 
-## Known Issues
+## Constraints and Limitations
 
-Swift 5.9 has some known issues
+Swift has some known issues
 and limitations related to C++ interoperability support. All of the known issues
 are [listed on github](https://github.com/apple/swift/issues/66159).
 

@@ -39,16 +39,19 @@ is available for download on the
 <div class="info" markdown="1">
 C++ interoperability is an actively evolving feature of Swift.
 It currently supports interoperation between a subset of language features.
-Certain aspects of its design and functionality might change in future releases of Swift,
-as the Swift community gathers feedback from real world adoption of C++
-interoperability in mixed Swift and C++ codebases. Future changes will not
-break code in existing codebases [by default](#source-stability-guarantees-for-mixed-language-codebases).
-
 The [status page](status) provides an
 overview of the currently supported interoperability features, and
-lists the [known issues](status#known-issues) as well. You can report bugs or suggest
-changes related to C++ interoperability by filing an
-[issue on Github](https://github.com/apple/swift/issues/new/choose).
+lists the [existing constraints](status#constraints-and-limitations) as well.
+
+Future releases of Swift might change how Swift and C++
+interoperate,
+as the Swift community gathers feedback from real world adoption of C++
+interoperability in mixed Swift and C++ codebases.
+Please provide the feedback that you have on the
+[Swift forums](https://forums.swift.org/c/development/c-interoperability/), or
+by filing an [issue on Github](https://github.com/apple/swift/issues/new/choose).
+Future changes to the design or functionality of C++ interoperability will not
+break code in existing codebases [by default](#source-stability-guarantees-for-mixed-language-codebases).
 </div>
 
 ## Overview
