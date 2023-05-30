@@ -31,7 +31,7 @@ can be used from C++.
 
 C++ interoperability is a new feature in an upcoming release of Swift. A
 pre-release Swift toolchain that supports C++ interoperability
-is available for download on the
+can be downloaded on
 [Swift website](https://www.swift.org/download/#swift-59-development).
 
 * * *

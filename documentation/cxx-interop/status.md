@@ -8,9 +8,9 @@ redirect_from:
 
 Swift [supports](index) bidirectional interoperability with C++. This page
 describes which C++ interoperability features are supported in the
-upcoming Swift 5.9 release. It also talks about the limitations
+upcoming Swift release. It also talks about the limitations
 in the current support for C++ interoperability. Additionally, it lists the set
-of known issues that are related to C++ interoperability support.
+of constraints that are related to C++ interoperability support.
 
 C++ interoperability is an actively evolving feature of Swift.
 Certain
@@ -117,7 +117,8 @@ Swift.
 
 Class and structure templates are not directly available in Swift. The
 instantiated specializations of a class or structure template are available
-in Swift.
+in Swift. Swift code can access template specialization types by [using a type
+alias defined in a C++ header](index#using-class-templates).
 
 Public data members of a C++ structure or class are available in Swift when the
 type of such data member is supported in Swift.
@@ -298,23 +299,19 @@ standard library that can be represented in C++:
 
 ## Constraints and Limitations
 
-Swift has some known issues
-and limitations related to C++ interoperability support. All of the known issues
-are [listed on github](https://github.com/apple/swift/issues/66159).
+Swift has some known limitations related to C++ interoperability support.
+They're currently [listed on github](https://github.com/apple/swift/issues/66159).
 
-### Known Swift Package Manager Issues
+### Swift Package Manager Constraints
 
 A Swift target that enables C++ interoperability in Swift package manager
-requires its dependencies to enable C++ interoperability as well.
-The following issue tracks the status of this limitation:
+[requires](project-build-setup#vending-packages-that-enable-c-interoperability)
+its dependencies to enable C++ interoperability as well.
+A Swift github issue tracks the status of this constraint:
 
 - [Swift should provide support for internal imports and resilience for all platforms (that can be enabled in SwiftPM) to allow Swift modules to depend on C++ modules without requiring that the clients enable C++ interoperability](https://github.com/apple/swift/issues/66156)
 
-The other known Swift package manager issues are listed here:
-
-- [The C++ language standard that's specified in the package manifest is not passed to the Swift compiler when C++ interoperability is enabled for Swift code](https://github.com/apple/swift-package-manager/issues/6565)
-
-### Known Performance Issues and Limitations
+### Performance Constraints
 
 Swift's current
 [support for C++ container types](index#working-with-c-containers) 
@@ -322,6 +319,6 @@ does not provide explicit
 performance guarantees. Most notably, Swift can make a deep copy of a
 collection when it's used in a `for-in` loop in Swift.
 
-The following issue tracks the status of this performance limitation:
+The following issue tracks the status of this performance constraint:
 
 - [Swift should provide language affordances that make it possible to avoid copying a C++ container when traversing through it in a for-in loop, or when using collection methods like map and filter](https://github.com/apple/swift/issues/66158)
