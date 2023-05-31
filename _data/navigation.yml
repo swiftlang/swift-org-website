@@ -42,11 +42,6 @@
       sections:
         - title: Featured Packages
           name: featured-packages
-    - title: Packages (v3)
-      url: /packages-v3/
-      sections:
-        - title: Featured Packages
-          name: featured-packages
     - title: Platform Support
       url: /platform-support/
       sections:
