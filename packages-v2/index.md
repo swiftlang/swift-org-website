@@ -24,15 +24,20 @@ There are thousands of packages to explore through the community-run package ind
   <li>
     <a href="{{ package.url }}" target="_blank">
       <h4><span>{{ package.name }}</span></h4>
-      <small>{{ package.authors }}</small>
-      <section>
+      <!-- <small>{{ package.authors }}</small> -->
+      <section class="package-info">
         <div class="description">
           {{ package.description | markdownify }}
         </div>
         <ul class="metadata">
           <li class="stars">
             <strong>Stars:</strong>
-            <p>{{ package.stars }}</p>
+            <div>
+              <picture>
+                <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
+                <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
+              </picture> {{ package.stars }}
+            </div>
           </li>
           <li class="age">
             <strong>Age:</strong>
@@ -44,15 +49,29 @@ There are thousands of packages to explore through the community-run package ind
           </li>
           <li class="platform_compatibility">
             <strong>Platforms:</strong>
-            <p>{{ package.platform_compatibility | join: ", " }}</p>
+            <div>
+              <div class="lozenge platform-compatibility" title="{{ package.platform_compatibility_tooltip }}">
+                {% for platform in package.platform_compatibility %}
+                  <span>{{ platform }}</span>
+                {% endfor %}
+              </div>
+            </div>
           </li>
           <li class="swift_compatibility">
             <strong>Swift:</strong>
-            <p>{{ package.swift_compatibility }}</p>
+            <div>
+              <div class="lozenge swift-compatibility" title="Swift version compatibility">
+                <span>{{ package.swift_compatibility }}</span>
+              </div>
+            </div>
           </li>
           <li class="license">
             <strong>License: </strong>
-            <p>{{ package.license }}</p>
+            <div>
+              <div class="lozenge license">
+                <span>{{ package.license }}</span>
+              </div>
+            </div>
           </li>
         </ul>
       </section>
