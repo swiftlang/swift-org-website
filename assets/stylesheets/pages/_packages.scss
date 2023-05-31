@@ -126,7 +126,6 @@ ul.package-list-v2 {
   gap: 40px;
   padding: 0 0 0 25px;
   list-style: none;
-  font-size: 16px;
 
   li {
     > a {
@@ -171,13 +170,17 @@ ul.package-list-v2 {
       gap: 40px;
       margin-bottom: 20px;
 
-      .description > p {
-        // Even though this looks specific to WebKit, it works in Safari, Chrome, and Firefox.
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 6;
-        text-overflow: ellipsis;
-        overflow: hidden;
+      .description {
+        font-size: 16px;
+
+        > p {
+          // Even though this looks specific to WebKit, it works in Safari, Chrome, and Firefox.
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 6;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
       }
 
       ul.metadata {
