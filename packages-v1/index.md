@@ -35,7 +35,7 @@ There are thousands of packages to explore through the community-run package ind
         {{ package.description | markdownify }}
       </section>
       <section class="metadata">
-        <div class="platform-compatibility" title="Platform compatibility">
+        <div class="platform-compatibility" title="{{ package.platform_compatibility_tooltip }}">
         {% for platform in package.platform_compatibility %}
           <span>{{ platform }}</span>
         {% endfor %}
