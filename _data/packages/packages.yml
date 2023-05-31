@@ -8,7 +8,8 @@ categories:
         swift_compatibility: 5.7+
         platform_compatibility: [Apple]
         platform_compatibility_tooltip: "Apple (macOS)"
-        activity: "In development for 3 years, with activity within the last month."
+        age: "3 years"
+        activity: "Within the last month"
         authors: "Written by Sindre Sorhus and 13 other contributors."
         license: "MIT"
         stars: "1,249"
@@ -19,7 +20,8 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        activity: "In development for 8 years, with activity 1 month ago."
+        age: "8 years"
+        activity: "1 month ago"
         authors: "Written by Andrew Hershberger, Andrea Cremaschi, and 29 other contributors."
         license: "MIT"
         stars: "1,380"
@@ -30,7 +32,8 @@ categories:
         swift_compatibility: 5.7+
         platform_compatibility: [Apple]
         platform_compatibility_tooltip: "Apple (macOS, iOS)"
-        activity: "In development for 3 years, with activity within the last month."
+        age: "3 years"
+        activity: "Within the last month"
         authors: "Written by AlisaMylnikova and 18 other contributors."
         license: "MIT"
         stars: "2,112"
@@ -41,7 +44,8 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: [Apple]
         platform_compatibility_tooltip: "Apple (macOS)"
-        activity: "In development for 2 years, with activity 2 months ago."
+        age: "2 years"
+        activity: "2 months ago"
         authors: "Written by Jed Fox and 5 other contributors."
         license: "MIT"
         stars: "30"
@@ -52,7 +56,8 @@ categories:
         swift_compatibility: 5.7+
         platform_compatibility: [Apple]
         platform_compatibility_tooltip: "Apple (macOS, iOS)"
-        activity: "In development for 2 months, with activity 2 months ago."
+        age: "2 months"
+        activity: "2 months ago"
         authors: "Written by dscyrescotti and 3 other contributors."
         license: "MIT"
         stars: "16"
@@ -63,7 +68,8 @@ categories:
         swift_compatibility: 5.7+
         platform_compatibility: [Apple, Linux]
         platform_compatibility_tooltip: "Apple (macOS) and Linux"
-        activity: "In development for 2 months, with activity 2 months ago."
+        age: "2 months"
+        activity: "2 months ago"
         authors: "Written by Michael Housh."
         license: "MIT"
         stars: "1"
@@ -81,7 +87,8 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
         platform_compatibility_tooltip: "Apple (macOS) and Linux"
-        activity: "In development for 6 years, with activity within the last month."
+        age: "6 years"
+        activity: "Within the last month"
         authors: "Written by Johannes Weiss and 164 other contributors."
         license: "Apache 2.0"
         stars: "7,297"
@@ -91,7 +98,8 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        activity: "In development for 8 years, with activity within the last month."
+        age: "8 years"
+        activity: "Within the last month"
         authors: "Written by Christian Noon and 258 other contributors."
         license: "MIT"
         stars: "39,145"
@@ -101,7 +109,8 @@ categories:
         swift_compatibility: 5.7+
         platform_compatibility: [Apple]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
-        activity: "In development for 3 years, with activity within the last month."
+        age: "3 years"
+        activity: "Within the last month"
         authors: "Written by kean and 28 other contributors."
         license: "MIT"
         stars: "5,227"
@@ -111,7 +120,8 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: [Apple]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
-        activity: "In development for 8 years, with activity 2 months ago."
+        age: "8 years"
+        activity: "2 months ago"
         authors: "Written by Ash Furrow, Łukasz Mróz, and 261 other contributors."
         license: "MIT"
         stars: "14,490"
@@ -121,7 +131,8 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        activity: "In development for 7 years, with activity 10 months ago."
+        age: "7 years"
+        activity: "10 months ago"
         authors: "Written by Bill Abt and 35 other contributors."
         license: "Apache 2.0"
         stars: "1,349"
@@ -131,7 +142,8 @@ categories:
         swift_compatibility: 5.6+
         platform_compatibility: [Apple]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
-        activity: "In development for 2 years, with activity 2 months ago."
+        age: "2 years"
+        activity: "2 months ago"
         authors: "Written by Daniele Margutti and 12 other contributors."
         license: "MIT"
         stars: "246"
@@ -148,7 +160,8 @@ categories:
         swift_compatibility: 5.7+
         platform_compatibility: [Apple, Linux]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        activity: "In development for 8 years, with activity within the last month."
+        age: "8 years"
+        activity: "Within the last month"
         authors: "Written by Brian Gesiak and 165 other contributors."
         license: "Apache 2.0"
         stars: "9,677"
@@ -158,7 +171,8 @@ categories:
         swift_compatibility: 5.7+
         platform_compatibility: [Apple, Linux]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        activity: "In development for 8 years, with activity within the last month."
+        age: "8 years"
+        activity: "Within the last month"
         authors: "Written by Jeff Hui, Sho Ikeda, and 130 other contributors."
         license: "Apache 2.0"
         stars: "4,668"
@@ -168,7 +182,8 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        activity: "In development for 2 years, with activity within the last month."
+        age: "2 years"
+        activity: "Within the last month"
         authors: "Written by Stephen Celis, Brandon Williams, and 12 other contributors"
         license: "MIT"
         stars: "591"
@@ -178,7 +193,8 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: [Apple]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
-        activity: "In development for 13 years, with activity 2 years ago."
+        age: "13 years"
+        activity: "2 years ago"
         authors: "Written by Jon Reid and 23 other contributors"
         license: "BSD 2-Clause"
         stars: "715"
@@ -188,7 +204,8 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: [Apple]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
-        activity: "In development for 12 years, with activity 1 year ago."
+        age: "12 years"
+        activity: "1 year ago"
         authors: "Written by Jon Reid and 32 other contributors."
         license: "MIT"
         stars: "988"
@@ -198,8 +215,9 @@ categories:
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
         platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS) and Linux"
+        age: "5 years"
+        activity: "Within the last month"
         authors: "Written by Stephen Celis and 73 other contributors."
-        activity: "In development for 5 years, with activity within the last month."
         license: "MIT"
         stars: "3,170"
         url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
