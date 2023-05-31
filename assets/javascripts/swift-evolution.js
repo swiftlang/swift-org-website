@@ -57,7 +57,7 @@ var upcomingFeatureFlagFilterEnabled = false
 
 var GITHUB_BASE_URL = 'https://github.com/'
 var REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
-var UFF_INFO_URL = 'https://github.com/apple/swift-evolution/blob/main/proposals/0362-piecemeal-future-features.md'
+var UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
 
 /**
  * `name`: Mapping of the states in the proposals JSON to human-readable names.
@@ -1160,7 +1160,7 @@ function updateProposalsCount (count) {
   // Calculate and set value of flag filter description span
   var flagFilterDescription = document.querySelector('#flag-filter-description')
   if (upcomingFeatureFlagFilterEnabled) {
-    var anchorTag = '<a href="' + UFF_INFO_URL + '" target="_blank">'
+    var anchorTag = '<a href="' + UFF_INFO_URL + '">'
     var uffText = 'upcoming feature flag' + (count !== 1 ? 's' : '')
     flagFilterDescription.innerHTML = " with "+ (count !== 1 ? '' : 'an ') + anchorTag + uffText + '</a>'
   } else {
