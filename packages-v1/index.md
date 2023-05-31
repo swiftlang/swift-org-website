@@ -27,15 +27,15 @@ There are thousands of packages to explore through the community-run package ind
         {{ package.description | markdownify }}
       </section>
       <section class="metadata">
-        <div class="platform-compatibility" title="{{ package.platform_compatibility_tooltip }}">
+        <div class="lozenge platform-compatibility" title="{{ package.platform_compatibility_tooltip }}">
         {% for platform in package.platform_compatibility %}
           <span>{{ platform }}</span>
         {% endfor %}
         </div>
-        <div class="swift-compatibility" title="Swift version compatibility">
+        <div class="lozenge swift-compatibility" title="Swift version compatibility">
           <span>{{ package.swift_compatibility }}</span>
         </div>
-        <div class="license" title="Package license">
+        <div class="lozenge license" title="Package license">
           <span>{{ package.license }}</span>
         </div>
       </section>

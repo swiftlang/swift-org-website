@@ -57,7 +57,7 @@ ul.package-list-v1 {
       grid-template-columns: auto auto 1fr auto;
       gap: 10px;
 
-      div {
+      .lozenge {
         display: inline-flex;
         align-items: center;
         justify-content: center;
