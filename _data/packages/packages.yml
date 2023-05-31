@@ -7,7 +7,7 @@ categories:
         description: "Settings library offers a settings window to add to macOS apps in minutes with built-in SwiftUI support, allowing users to customize their app to their preferences."
         swift_compatibility: 5.7+
         platform_compatibility: [Apple]
-        apple_platforms: [macOS]
+        platform_compatibility_tooltip: "Apple (macOS)"
         activity: "In development for 3 years, with activity within the last month."
         authors: "Written by Sindre Sorhus and 13 other contributors."
         license: "MIT"
@@ -18,7 +18,7 @@ categories:
         description: "Popup View is a SwiftUI library used to show toasts, alerts, and popups with customizable parameters to enable a more dynamic user experience."
         swift_compatibility: 5.7+
         platform_compatibility: [Apple]
-        apple_platforms: [macOS, iOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS)"
         activity: "In development for 3 years, with activity within the last month."
         authors: "Written by AlisaMylnikova and 18 other contributors."
         license: "MIT"
@@ -29,7 +29,7 @@ categories:
         description: "MenuBuilder is a library for creating macOS menus with a SwiftUI-style syntax. It allows developers to quickly and easily create menus with actionable items, separators and submenus, with support for modifiers and conditionals."
         swift_compatibility: 5.5+
         platform_compatibility: [Apple]
-        apple_platforms: [macOS]
+        platform_compatibility_tooltip: "Apple (macOS)"
         activity: "In development for 2 years, with activity 2 months ago."
         authors: "Written by Jed Fox and 5 other contributors."
         license: "MIT"
@@ -40,7 +40,7 @@ categories:
         description: "ContributorUI is a library for user interface that displays all developers contributing to a project, allowing for a minimal setup and easy integration into iOS and macOS applications."
         swift_compatibility: 5.7+
         platform_compatibility: [Apple]
-        apple_platforms: [macOS, iOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS)"
         activity: "In development for 2 months, with activity 2 months ago."
         authors: "Written by dscyrescotti and 3 other contributors."
         license: "MIT"
@@ -51,7 +51,7 @@ categories:
         description: "GEOSwift is a type-safe, MIT-licensed Swift interface to the OSGeo's GEOS library routines that enables easily handling a geometric object model (points, linestrings, polygons etc.) and related topological operations (intersections, overlapping etc.)."
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
         activity: "In development for 8 years, with activity 1 month ago."
         authors: "Written by Andrew Hershberger, Andrea Cremaschi, and 29 other contributors."
         license: "MIT"
@@ -62,7 +62,7 @@ categories:
         description: "swift-cli-version is a swift package that allows you to set the version of a command line tool to the git tag or the git sha, if a tag is not set for the current commit. It provides plugins to use in your project and documentation to explain how to use them."
         swift_compatibility: 5.7+
         platform_compatibility: [Apple, Linux]
-        apple_platforms: [macOS]
+        platform_compatibility_tooltip: "Apple (macOS) and Linux"
         activity: "In development for 2 months, with activity 2 months ago."
         authors: "Written by Michael Housh."
         license: "MIT"
@@ -80,7 +80,7 @@ categories:
         description: "SwiftNIO is an open-source network application framework providing low-level building blocks for building high-performance, maintainable, and scalable protocol servers & clients for rapid development."
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
-        apple_platforms: [macOS]
+        platform_compatibility_tooltip: "Apple (macOS) and Linux"
         activity: "In development for 6 years, with activity within the last month."
         authors: "Written by Johannes Weiss and 164 other contributors."
         license: "Apache 2.0"
@@ -90,7 +90,7 @@ categories:
         description: "Alamofire is a HTTP networking library written in Swift which provides chainable request/response methods, Swift concurrency support, authentication and advanced features such as chainable request/response methods, authentication and response validation."
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
         activity: "In development for 8 years, with activity within the last month."
         authors: "Written by Christian Noon and 258 other contributors."
         license: "MIT"
@@ -100,7 +100,7 @@ categories:
         description: "Pulse is a powerful logging system for Apple Platforms, enabling users to record and inspect logs and URLSession network requests, view them with PulseUI, and share them using Pulse Pro or Pulse for macOS."
         swift_compatibility: 5.7+
         platform_compatibility: [Apple]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
         activity: "In development for 3 years, with activity within the last month."
         authors: "Written by kean and 28 other contributors."
         license: "MIT"
@@ -110,7 +110,7 @@ categories:
         description: "Moya provides compile-time checking for correct API endpoint accesses, lets you define clear usage of different endpoints with associated enum values and treats test stubs as first-class citizens to make unit testing easy."
         swift_compatibility: 5.5+
         platform_compatibility: [Apple]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
         activity: "In development for 8 years, with activity 2 months ago."
         authors: "Written by Ash Furrow, Łukasz Mróz, and 261 other contributors."
         license: "MIT"
@@ -120,7 +120,7 @@ categories:
         description: "BlueSocket library allows developers to use Swift to create sockets of different families, types, and protocols for use in a range of projects, with customised configurations, SSL support and various read/write functions."
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
         activity: "In development for 7 years, with activity 10 months ago."
         authors: "Written by Bill Abt and 35 other contributors."
         license: "Apache 2.0"
@@ -130,7 +130,7 @@ categories:
         description: "RealHTTP is a lightweight yet powerful async-based HTTP library made in Swift designed to make an easy-to-use, effortless HTTP client."
         swift_compatibility: 5.6+
         platform_compatibility: [Apple]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
         activity: "In development for 2 years, with activity 2 months ago."
         authors: "Written by Daniele Margutti and 12 other contributors."
         license: "MIT"
@@ -147,7 +147,7 @@ categories:
         description: "Quick is a behavior-driven development framework for Swift and Objective-C, inspired by RSpec, Specta, and Ginkgo. It includes Nimble, a matcher framework for creating clearer test expectations."
         swift_compatibility: 5.7+
         platform_compatibility: [Apple, Linux]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
         activity: "In development for 8 years, with activity within the last month."
         authors: "Written by Brian Gesiak and 165 other contributors."
         license: "Apache 2.0"
@@ -157,7 +157,7 @@ categories:
         description: "Nimble enables expressing expected outcomes of Swift or Objective-C expressions in a natural, easily understood language. It supports type checking, custom failure messages, async/await, lazy evaluation, polling expectations, and a variety of built-in matchers for testing values, types, comparisons, truthiness, and more."
         swift_compatibility: 5.7+
         platform_compatibility: [Apple, Linux]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
         activity: "In development for 8 years, with activity within the last month."
         authors: "Written by Jeff Hui, Sho Ikeda, and 130 other contributors."
         license: "Apache 2.0"
@@ -167,7 +167,7 @@ categories:
         description: "CombineSchedulers provides testable and versatile schedulers for Combine framework, enabling better control over time and execution in publishers. It includes features such as `TestScheduler`, `ImmediateScheduler`, and SwiftUI/UIKit animation support."
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
         activity: "In development for 2 years, with activity within the last month."
         authors: "Written by Stephen Celis, Brandon Williams, and 12 other contributors"
         license: "MIT"
@@ -177,7 +177,7 @@ categories:
         description: "OCHamcrest provides a module of matcher objects for declaring rules to check if given objects match specified rules, and a framework to create custom matchers. Matchers can be combined for flexibility."
         swift_compatibility: 5.5+
         platform_compatibility: [Apple]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
         activity: "In development for 13 years, with activity 2 years ago."
         authors: "Written by Jon Reid and 23 other contributors"
         license: "BSD 2-Clause"
@@ -187,7 +187,7 @@ categories:
         description: "OCMockito provides an Objective-C implementation of Mockito for creating, verifying, and stubbing mock objects. It emphasizes readable tests and reports verification failures as unit test failures."
         swift_compatibility: 5.5+
         platform_compatibility: [Apple]
-        apple_platforms: [macOS, iOS, tvOS, watchOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
         activity: "In development for 12 years, with activity 1 year ago."
         authors: "Written by Jon Reid and 32 other contributors."
         license: "MIT"
@@ -197,7 +197,7 @@ categories:
         description: "SnapshotTesting enables delightful Swift snapshot testing for various data types, such as images, text, and data. It offers device-agnostic snapshots, first-class Xcode support, and custom diff tool integration. Plug-ins are available to extend functionality."
         swift_compatibility: 5.5+
         platform_compatibility: [Apple, Linux]
-        apple_platforms: [macOS, iOS, tvOS]
+        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS) and Linux"
         authors: "Written by Stephen Celis and 73 other contributors."
         activity: "In development for 5 years, with activity within the last month."
         license: "MIT"
