@@ -904,7 +904,8 @@ using C++ containers that conform to `RandomAccessCollection`. Swift
 will most likely make a deep copy of the container when:
 
 - The container is used in a `for-in` loop.
-- The container is used with methods like `filter` and `map`.
+- The container is used with methods like `filter` and `reduce` whose
+  implementation comes from Swift's `Sequence` protocol.
 
 This constraint is tracked on the [status page](status#performance-constraints).
 Several strategies for working around this constraint are
