@@ -6,9 +6,9 @@ redirect_from:
 - /documentation/cxx-interop/status.html
 ---
 
-Swift [supports](index) bidirectional interoperability with C++. This page
-describes which C++ interoperability features are supported in the
-upcoming Swift release. It also talks about the limitations
+A development version of Swift [supports](index) bidirectional interoperability with C++. This page
+describes which C++ interoperability features are currently supported.
+It also talks about the limitations
 in the current support for C++ interoperability. Additionally, it lists the set
 of constraints that are related to C++ interoperability support.
 
