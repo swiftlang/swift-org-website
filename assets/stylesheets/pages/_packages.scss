@@ -119,27 +119,6 @@ ul.package-list-v1 {
   }
 }
 
-ul.package-list-v2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 0;
-  list-style: none;
-
-  li {
-    display: flex;
-    flex-direction: column;
-
-    .description {
-      flex-grow: 1;
-    }
-  }
-
-  p.metadata-link {
-    text-align: right;
-  }
-}
-
 ul.package-list-v3 {
   display: flex;
   flex-direction: column;
