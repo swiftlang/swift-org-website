@@ -3,10 +3,16 @@ ul.package-list-v1 {
   grid-template-columns: 1fr 1fr;
   gap: 50px 40px;
   padding: 0;
-  margin: 50px 0 0 0;
   list-style: none;
 
   li {
+    display: grid;
+
+    &.showcase {
+      grid-template-rows: 5fr 1fr;
+      gap: 5px;
+    }
+
     > a {
       display: flex;
       flex-direction: column;
@@ -16,7 +22,7 @@ ul.package-list-v1 {
       &:hover {
         text-decoration: none;
 
-        .package-name {
+        h4 > span {
           color: var(--color-link);
           text-decoration: underline;
           background-image: url("/assets/images/icon-external-color.svg");
@@ -24,31 +30,12 @@ ul.package-list-v1 {
       }
     }
 
-    h4 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 0;
-
-      .package-name {
-        padding-right: 18px;
-        background-image: url("/assets/images/icon-external.svg");
-        background-repeat: no-repeat;
-        background-size: 11px;
-        background-position: top 3px right;
-      }
-
-      .stars {
-        font-size: 18px;
-
-        picture {
-          display: inline-block;
-
-          > img {
-            width: inherit;
-          }
-        }
-      }
+    h4 > span {
+      padding-right: 18px;
+      background-image: url("/assets/images/icon-external.svg");
+      background-repeat: no-repeat;
+      background-size: 11px;
+      background-position: top 3px right;
     }
 
     .description {
@@ -66,9 +53,9 @@ ul.package-list-v1 {
     }
 
     .metadata {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto auto 1fr auto;
+      gap: 10px;
 
       div {
         display: inline-flex;
@@ -100,6 +87,20 @@ ul.package-list-v1 {
           > span {
             padding-left: 22px;
             background-image: url("/assets/images/icon-swift-color.svg");
+            background-repeat: no-repeat;
+            background-position: 3px center;
+            background-size: 13px;
+          }
+        }
+
+        &.license {
+          grid-column: 4;
+          color: #3ea639;
+          border-color: #3ea639;
+
+          > span {
+            padding-left: 22px;
+            background-image: url("/assets/images/icon-osi.svg");
             background-repeat: no-repeat;
             background-position: 3px center;
             background-size: 13px;
@@ -178,11 +179,6 @@ ul.package-list-v2 {
         -webkit-line-clamp: 6;
         text-overflow: ellipsis;
         overflow: hidden;
-      }
-
-      .activity {
-        font-size: 16px;
-        color: var(--color-secondary-label);
       }
 
       ul.metadata {

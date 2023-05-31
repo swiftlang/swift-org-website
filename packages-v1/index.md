@@ -20,17 +20,9 @@ There are thousands of packages to explore through the community-run package ind
 <p>{{ category.description | markdownify }}</p>
 <ul class="package-list-v1">
   {% for package in category.packages %}
-  <li>
+  <li class="{% if package.showcase_reason %}showcase{% endif %}">
     <a href="{{ package.url }}" target="_blank">
-      <h4>
-        <div class="package-name">{{ package.name }}</div>
-        <div class="stars">
-          <picture>
-            <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
-            <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
-          </picture> {{ package.stars }}
-        </div>
-      </h4>
+      <h4><span>{{ package.name }}</span></h4>
       <section class="description">
         {{ package.description | markdownify }}
       </section>
@@ -43,13 +35,16 @@ There are thousands of packages to explore through the community-run package ind
         <div class="swift-compatibility" title="Swift version compatibility">
           <span>{{ package.swift_compatibility }}</span>
         </div>
+        <div class="license" title="Package license">
+          <span>{{ package.license }}</span>
+        </div>
       </section>
-      {% if package.showcase_reason %}
-      <section class="showcase-reason">
-        <p>{{ package.showcase_reason }}</p>
-      </section>
-      {% endif %}
     </a>
+    {% if package.showcase_reason %}
+    <section class="showcase-reason">
+      {{ package.showcase_reason | markdownify }}
+    </section>
+    {% endif %}
   </li>
   {% endfor %}
 </ul>
