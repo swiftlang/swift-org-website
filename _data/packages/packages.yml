@@ -13,7 +13,7 @@ categories:
         license: "MIT"
         stars: "1,249"
         url: https://swiftpackageindex.com/sindresorhus/Settings
-        showcase_reason: "Featured on [Episode 26](https://swiftpackageindexing.transistor.fm/episodes/26-swift-on-windows-wasm-spi-source-code-quiz-and-package-recommendations) of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/) podcast."
+        showcase_reason: "Featured on [Episode 26](https://swiftpackageindexing.transistor.fm/episodes/26-swift-on-windows-wasm-spi-source-code-quiz-and-package-recommendations){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
       - name: "GEOSwift"
         description: "GEOSwift is a type-safe, MIT-licensed Swift interface to the OSGeo's GEOS library routines that enables easily handling a geometric object model (points, linestrings, polygons etc.) and related topological operations (intersections, overlapping etc.)."
         swift_compatibility: 5.5+
@@ -35,7 +35,7 @@ categories:
         license: "MIT"
         stars: "2,112"
         url: https://swiftpackageindex.com/exyte/PopupView
-        showcase_reason: "Featured on [Episode 26](https://swiftpackageindexing.transistor.fm/episodes/26-swift-on-windows-wasm-spi-source-code-quiz-and-package-recommendations) of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/) podcast."
+        showcase_reason: "Featured on [Episode 26](https://swiftpackageindexing.transistor.fm/episodes/26-swift-on-windows-wasm-spi-source-code-quiz-and-package-recommendations){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
       - name: "MenuBuilder"
         description: "MenuBuilder is a library for creating macOS menus with a SwiftUI-style syntax. It allows developers to quickly and easily create menus with actionable items, separators and submenus, with support for modifiers and conditionals."
         swift_compatibility: 5.5+
