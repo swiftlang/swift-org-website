@@ -67,7 +67,7 @@ Delivering a clear, consistent developer experience when writing Swift code is l
 
 ## Mixing Swift and C++
 
-Swift has support for bidirectional interoperability with C++. A great variety of C++ APIs can be called directly from Swift, and select Swift APIs can be used from C++.
+A development version of Swift has support for bidirectional interoperability with C++. A great variety of C++ APIs can be called directly from Swift, and select Swift APIs can be used from C++.
 <div class="links" markdown="1">
   [Read how to mix Swift and C++](/documentation/cxx-interop/)
 </div>
