@@ -29,9 +29,13 @@ how various C++ APIs can be used in Swift. It also describes how Swift APIs
 get exposed to C++, and provides examples showing how the exposed Swift APIs
 can be used from C++.
 
-C++ interoperability is a new feature in an upcoming release of Swift. A
-pre-release Swift toolchain that supports C++ interoperability
-can be downloaded on the
+C++ interoperability is a feature under development. This documentation
+is provided for those interested in trying it out in its current state.
+Swift's Language Steering Group has approved a technical 
+[vision](https://forums.swift.org/t/accepted-a-vision-for-using-c-from-swift/65274)
+for C++ interoperability to guide its development. C++ interoperability
+is available in a development Swift
+toolchain that can be downloaded on the
 [Swift website](https://www.swift.org/download/#swift-59-development).
 
 * * *
@@ -238,10 +242,10 @@ in future releases of Swift will require source changes in mixed
 Swift and C++ codebases
 that have already adopted C++ interoperability. However, Swift will not
 force you to adopt new or evolved C++ interoperability features when adopting
-a new version of the Swift toolchain. To make that possible, Swift releases
-after Swift 5.9 will provide multiple compatibility versions of C++
+a new version of the Swift toolchain. To make that possible, future Swift releases
+will provide multiple compatibility versions of C++
 interoperability, just like Swift provides support for multiple compatibility
-versions of the base Swift language. This means that a project using the 5.9
+versions of the base Swift language. This means that a project using the current
 compatibility version of C++ interoperability will be insulated from any changes
 made in subsequent releases, and it can move to newer compatibility versions
 at its own pace.
@@ -282,7 +286,7 @@ constructor, Swift will use it when a value of such type is copied in
 Swift. And if the C++ type has a destructor, Swift will call the destructor when
 a Swift value of such type is destroyed.
 
-As of Swift 5.9, C++ structures and classes with a deleted copy constructor
+Currently C++ structures and classes with a deleted copy constructor
 are not available in Swift. Non-copyable C++ structures or classes that also
 have a move constructor will be available in a future version of Swift.
 They will map to
@@ -432,7 +436,7 @@ the two `getRootTree` member functions become
 
 #### Virtual Member Functions
 
-As of Swift 5.9, virtual member functions are not available in Swift.
+Currently virtual member functions are not available in Swift.
 
 #### Static Member Functions
 
@@ -1070,7 +1074,7 @@ takesVectorType(vector) // 'vector' is copied here.
 
 Swift's upcoming
 [parameter ownership modifiers](https://github.com/apple/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md),
-which will be provided in Swift 5.9, will let you avoid copies
+which will be provided in an upcoming Swift release, will let you avoid copies
 when passing immutable values to functions. Mutable values can be passed
 by `inout` to a Swift function, which lets you avoid a deep copy of
 the C++ container:
@@ -1269,7 +1273,7 @@ The C++ class that represents a Swift structure is copyable. Its copy
 constructor copies the underlying Swift value into a new value. The destructor
 of the C++ class destroys the underlying Swift value.
 
-As of Swift 5.9, C++ classes that represent Swift structures can not be moved
+Currently C++ classes that represent Swift structures can not be moved
 in C++ using `std::move`.
 
 #### Creating a Swift Structure in C++
@@ -1374,7 +1378,7 @@ C++ class.
 
 The C++ class that represents a Swift enumeration is copyable. Its copy
 constructor copies the underlying Swift value into a new value. The destructor
-of the C++ class destroys the underlying Swift value. As of Swift 5.9, C++
+of the C++ class destroys the underlying Swift value. Currently C++
 classes that represent Swift enumerations can not be moved in C++ using
 `std::move`.
 
