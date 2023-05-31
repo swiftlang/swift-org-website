@@ -23,36 +23,45 @@ There are thousands of packages to explore through the community-run package ind
   {% for package in category.packages %}
   <li>
     <a href="{{ package.url }}" target="_blank">
-      <h4>
-        <div class="package-name">{{ package.name }}</div>
-        <div class="stars">
-          <picture>
-            <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
-            <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
-          </picture> {{ package.stars }}
-        </div>
-      </h4>
+      <h4><span>{{ package.name }}</span></h4>
+      <small>{{ package.authors }}</small>
       <section>
         <div class="description">
           {{ package.description | markdownify }}
-          <p class="activity">{{ package.activity }} {{ package.authors }}</p>
         </div>
         <ul class="metadata">
-          <li class="license">
-            <strong>License: </strong>
-            {{ package.license }}
+          <li class="stars">
+            <strong>Stars:</strong>
+            <p>{{ package.stars }}</p>
           </li>
-          <li class="swift_compatibility">
-            <strong>Swift:</strong>
-            {{ package.swift_compatibility }}
+          <li class="age">
+            <strong>Age:</strong>
+            <p>{{ package.age }}</p>
+          </li>
+          <li class="activity">
+            <strong>Activity:</strong>
+            <p>{{ package.activity }}</p>
           </li>
           <li class="platform_compatibility">
             <strong>Platforms:</strong>
-            {{ package.platform_compatibility | join: ", " }}
+            <p>{{ package.platform_compatibility | join: ", " }}</p>
+          </li>
+          <li class="swift_compatibility">
+            <strong>Swift:</strong>
+            <p>{{ package.swift_compatibility }}</p>
+          </li>
+          <li class="license">
+            <strong>License: </strong>
+            <p>{{ package.license }}</p>
           </li>
         </ul>
       </section>
     </a>
+    {% if package.showcase_reason %}
+    <section class="showcase-reason">
+      {{ package.showcase_reason | markdownify }}
+    </section>
+    {% endif %}
   </li>
   {% endfor %}
 </ul>
