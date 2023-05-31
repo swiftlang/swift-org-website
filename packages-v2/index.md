@@ -23,29 +23,24 @@ There are thousands of packages to explore through the community-run package ind
   {% for package in category.packages %}
   <li>
     <a href="{{ package.url }}" target="_blank">
-      <h4><span>{{ package.name }}</span></h4>
-      <!-- <small>{{ package.authors }}</small> -->
+      <h4>
+        <div>
+          <span>{{ package.name }}</span>
+        </div>
+        <small>{{ package.authors }}</small>
+      </h4>
       <section class="package-info">
         <div class="description">
           {{ package.description | markdownify }}
         </div>
         <ul class="metadata">
-          <li class="stars">
-            <strong>Stars:</strong>
+          <li class="license">
+            <strong>License: </strong>
             <div>
-              <picture>
-                <source srcset="/assets/images/icon-star~dark.svg" media="(prefers-color-scheme: dark)">
-                <img src="/assets/images/icon-star.svg" width="15" height="15" alt="">
-              </picture> {{ package.stars }}
+              <div class="lozenge license">
+                <span>{{ package.license }}</span>
+              </div>
             </div>
-          </li>
-          <li class="age">
-            <strong>Age:</strong>
-            <p>{{ package.age }}</p>
-          </li>
-          <li class="activity">
-            <strong>Activity:</strong>
-            <p>{{ package.activity }}</p>
           </li>
           <li class="platform_compatibility">
             <strong>Platforms:</strong>
@@ -65,13 +60,19 @@ There are thousands of packages to explore through the community-run package ind
               </div>
             </div>
           </li>
-          <li class="license">
-            <strong>License: </strong>
+          <li class="stars">
+            <strong>Stars:</strong>
             <div>
-              <div class="lozenge license">
-                <span>{{ package.license }}</span>
-              </div>
+              {{ package.stars }}
             </div>
+          </li>
+          <li class="age">
+            <strong>Age:</strong>
+            <p>{{ package.age }}</p>
+          </li>
+          <li class="activity">
+            <strong>Activity:</strong>
+            <p>{{ package.activity }}</p>
           </li>
         </ul>
       </section>

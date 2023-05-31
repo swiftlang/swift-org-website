@@ -126,6 +126,7 @@ ul.package-list-v2 {
   gap: 40px;
   padding: 0 0 0 25px;
   list-style: none;
+  font-size: 16px;
 
   li {
     > a {
@@ -137,7 +138,7 @@ ul.package-list-v2 {
       &:hover {
         text-decoration: none;
 
-        h4 > span {
+        h4 span {
           color: var(--color-link);
           text-decoration: underline;
           background-image: url("/assets/images/icon-external-color.svg");
@@ -145,18 +146,30 @@ ul.package-list-v2 {
       }
     }
 
-    h4 > span {
-      padding-right: 18px;
-      background-image: url("/assets/images/icon-external.svg");
-      background-repeat: no-repeat;
-      background-size: 11px;
-      background-position: top 3px right;
+    h4 {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      small {
+        font-size: 12px;
+        color: #666666;
+      }
+
+      span {
+        padding-right: 18px;
+        background-image: url("/assets/images/icon-external.svg");
+        background-repeat: no-repeat;
+        background-size: 11px;
+        background-position: top 3px right;
+      }
     }
 
     section.package-info {
       display: grid;
       grid-template-columns: 3fr 2fr;
       gap: 40px;
+      margin-bottom: 20px;
 
       .description > p {
         // Even though this looks specific to WebKit, it works in Safari, Chrome, and Firefox.
@@ -177,10 +190,6 @@ ul.package-list-v2 {
 
         li {
           display: contents;
-
-          strong {
-            text-align: right;
-          }
 
           p {
             margin: 0;
@@ -237,6 +246,13 @@ ul.package-list-v2 {
             }
           }
         }
+      }
+    }
+
+    .showcase-reason {
+      p {
+        font-size: 12px;
+        color: #666666;
       }
     }
   }
