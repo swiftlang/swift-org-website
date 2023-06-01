@@ -6,7 +6,7 @@ redirect_from:
 - /documentation/cxx-interop/project-build-setup.html
 ---
 
-A development version of Swift [supports](index) bidirectional interoperability with C++.
+Swift [supports](index) bidirectional interoperability with C++.
 This page
 describes how to set up a mixed-language Swift and C++ project using one of the
 supported IDEs or build systems. It also describes how other build systems can 

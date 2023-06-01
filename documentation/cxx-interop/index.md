@@ -20,13 +20,10 @@ how various C++ APIs can be used in Swift. It also describes how Swift APIs
 get exposed to C++, and provides examples showing how the exposed Swift APIs
 can be used from C++.
 
-C++ interoperability is a feature under development. This documentation
-is provided for those interested in trying it out in its current state.
-Swift's Language Steering Group has approved a technical 
-[vision](https://forums.swift.org/t/accepted-a-vision-for-using-c-from-swift/65274)
-for C++ interoperability to guide its development. C++ interoperability
-is available in a development Swift
-toolchain that can be downloaded on the
+C++ interoperability is a new feature in the upcoming Swift 5.9 release.
+A
+pre-release Swift toolchain that supports C++ interoperability
+can be downloaded on the
 [Swift website](https://www.swift.org/download/#swift-59-development).
 
 * * *
