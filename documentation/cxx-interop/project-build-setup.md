@@ -18,7 +18,7 @@ when invoking Swift compiler directly.
 The [Swift package manager](/package-manager/) allows Swift code to use
 C++ APIs in Swift. 
 
-> Currently Swift package manager does not yet provide support for
+> Swift package manager does not yet provide support for
 using Swift APIs in C++.
 
 ### Enabling C++ Interoperability in a Package Target
