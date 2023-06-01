@@ -93,8 +93,8 @@ provide a more robust and efficient semantic model of C++ headers as
 compared to the preprocessor-based model of directly including the contents of 
 header files using the `#include` directive.
 
-> C++20 introduced C++ modules as an alternative to header files.
-> Swift cannot import C++ modules yet.
+> While Swift compiler uses Clang modules for C++ interoperability,
+> it cannot import the C++ modules introduced in C++20 standard.
 
 ### Creating a Clang Module
 
@@ -197,11 +197,16 @@ the produced value directly into the `tree` variable.
 
 In addition to importing and using C++ APIs, the Swift compiler is also
 capable of exposing Swift APIs from a Swift module to C++. This makes it
-possible to gradually integrate Swift into an existing C++ codebase,
-as the newly added Swift APIs can still be accessed from C++.
+possible to gradually integrate Swift into an existing C++ codebase.
 
 Swift APIs can be accessed by including a header
-file that Swift generates. The generated header uses C++ types and functions
+file that the build system generates when building a Swift module.
+Some build systems generate the header automatically. Other build configurations
+can generate the header manually by following the steps
+outlined on the
+[project and build setup page](project-build-setup#generating-c-header-with-exposed-swift-apis).
+
+The generated header uses C++ types and functions
 to represent Swift types and functions. When C++ interoperability is enabled,
 Swift generates C++ bindings for all the supported public types and functions
 in a Swift module. For example, the following Swift function can be called
@@ -233,7 +238,9 @@ void printTreeArt(const Tree &tree) {
 
 The [C++ interoperability status page](status#supported-swift-apis)
 describes which Swift language constructs and standard library types can be
-exposed to C++.
+exposed to C++. Some unsupported Swift APIs are mapped
+to empty unavailable C++ declarations in the generated header, so you'll get an
+error in the C++ code when you try to use something that's not exposed to C++.
 
 ### Source Stability Guarantees for Mixed-Language Codebases
 
@@ -252,9 +259,9 @@ at its own pace.
 
 ## Using C++ Types and Functions in Swift
 
-A wide array of C++ types and functions can be used from Swift. This section
-goes over the fundamentals of how the supported types and functions can be
-used from Swift.
+A wide array of C++ types and functions can be used directly from Swift.
+This section goes over the fundamentals of how the supported types and
+functions can be used from Swift.
 
 ### Calling C++ Functions
 
@@ -289,8 +296,11 @@ a Swift value of such type is destroyed.
 Currently C++ structures and classes with a deleted copy constructor
 are not available in Swift. Non-copyable C++ structures or classes that also
 have a move constructor will be available in a future version of Swift.
-They will map to
-[non-copyable](https://github.com/apple/swift-evolution/blob/main/proposals/0390-noncopyable-structs-and-enums.md) Swift `structs`.
+
+Some C++ types are always passed around using a pointer or a reference in C++.
+As such it might not make sense to map them to value types in Swift. These
+types can be annotated in C++ to instruct the Swift compiler to map them to
+[reference types in Swift instead](#mapping-c-types-to-swift-reference-types).
 
 ### Constructing C++ Types from Swift
 
@@ -432,7 +442,8 @@ the `Mutating` suffix to the name of the `mutating` method.
 This rename is done before the safety of the method is taken into account.
 In the example shown above, 
 the two `getRootTree` member functions become
-`__getRootTreeUnsafe` and `__getRootTreeMutatingUnsafe` methods in Swift. 
+`__getRootTreeUnsafe` and `__getRootTreeMutatingUnsafe` methods in Swift,
+because they return a reference that points into the `Forest` object.
 
 #### Virtual Member Functions
 
@@ -623,7 +634,7 @@ generic Swift code that works with any specialization of a class template.
 ## Customizing How C++ Maps to Swift
 
 The defaults that determine how C++ types and functions map to Swift can be
-changed, by annotating a specific C++
+changed by annotating a specific C++
 function or type with one of the provided customization macros. For example,
 you can choose to provide a different Swift name for a specific C++
 function using the `SWIFT_NAME` macro.
@@ -848,8 +859,8 @@ Using a C++ iterator is [unsafe](index#do-not-use-c-iterators-in-swift)
 in Swift, as such use is not
 associated with its owning container which can get destroyed
 while the iterator is still in use.
-Instead of relying on C++ iterators, Swift attempts to automatically
-conform C++ container types to protocols that:
+Instead of relying on C++ iterators, Swift automatically
+conforms some C++ container types to protocols that:
 
 - Allow safe access to the underlying container in Swift using standard Swift
   APIs.
@@ -862,7 +873,7 @@ protocols is summarized in a
 
 ### Some C++ Containers Are Swift Collections
 
-Swift attemps to conform C++ containers that provide random access to their
+Swift conforms C++ containers that provide random access to their
 elements, like `std::vector`, to Swift's `RandomAccessCollection` protocol
 automatically. For example, the `std::vector` container returned by this
 function is conformed to the `RandomAccessCollection` protocol
@@ -926,6 +937,9 @@ type to automatically conform to `RandomAccessCollection` in Swift:
   [`RandomAccessIterator`]( https://en.cppreference.com/w/cpp/named_req/RandomAccessIterator)
   C++ requirement. It must be possible to advance it using `operator +=` in C++
   and also to subscript into it using `operator []` in C++.
+- The C++ iterator type must be comparable using `operator ==`. Swift
+  currently doesn't support templated `operator ==`, so it must operate on
+  the concrete iterator type used by the container.
 
 When these conditions are satisfied, Swift conforms the Swift structure
 that represents the underlying C++ container type to
@@ -962,6 +976,22 @@ let setOfWinners = Set(winners)
 C++ containers that automatically conform to the `CxxRandomAccessCollection`
 protocol also automatically conform to the `CxxConvertibleToCollection`
 protocol.
+
+#### Conformance Rules for `CxxConvertibleToCollection` Protocol
+
+The following two conditions must be satisfied 
+in order for a C++ container type to automatically conform to
+`CxxConvertibleToCollection` in Swift:
+
+- The C++ container type must have `begin` and `end` member functions.
+  Both functions must be constant and must return the same iterator type.
+- The C++ iterator type must satisfy the
+  [`InputIterator`](https://en.cppreference.com/w/cpp/named_req/InputIterator) C++ requirement.
+  It must be possible to increment it using `operator ++` in C++ and also to
+  dereference it using `operator *` in C++.
+- The C++ iterator type must be comparable using `operator ==`. Swift
+  currently doesn't support templated `operator ==`, so it must operate on
+  the concrete iterator type used by the container.
 
 ### Using Associative Container C++ Types in Swift
 
@@ -1128,9 +1158,21 @@ logger.log(123)
 
 ### Shared Reference Types
 
-**Shared** reference types are reference-counted with custom retain and release operations. In C++, this is nearly always done with a smart pointer like `std::shared_ptr` rather than expecting programmers to manually use retain and release. This is generally compatible with being imported as a managed type. Shared pointer types are either "intrusive" or "non-intrusive", which unfortunately ends up being relevant to semantics. `std::shared_ptr` is a non-intrusive shared pointer, which supports pointers of any type without needing any cooperation.  Intrusive shared pointers require cooperation but support some additional operations. Currently, Swift only supports importing intrusively reference counted types as foreign reference types, but we intent to lift this restriction over time. (Today, you can still often use non-intrusively reference counted types, such as `std::shared_ptr`, as value types that own their storage.)
+**Shared** reference types are reference-counted types that are passed around by
+pointer or reference in C++. They typically use either:
 
-To specify that a C++ type is a shared reference type, use the `SWIFT_SHARED_REFERENCE` attribute. This attribute expects two arguments: a retain and release function. These functions must be global functions that take exactly one argument and return void. The argument must be a pointer to the C++ type (not a base type). Swift will call these custom retain and release functions where it would otherwise retain and release Swift classes. Here's an example of `SWIFT_SHARED_REFERENCE` being applied to the C++ type `SharedObject`:
+- custom retain and release operations that increment and decrement
+  a reference count stored intrusively in the object.
+- or, a non-intrusive shared pointer type like `std::shared_ptr`,
+  that can store the reference count outside of the object.
+
+Currently Swift can map C++ classes or structures that use custom retain
+and release operations on a reference count stored intrusively in the object
+to a Swift reference type (that behaves like a Swift `class`). Other types
+that rely on `std::shared_ptr` for reference counting can still be used
+as value types in Swift.
+
+To specify that a C++ type is a shared reference type, use the `SWIFT_SHARED_REFERENCE` customization macro. This macro expects two arguments: a retain and release function. These functions must be global functions that take exactly one argument and return void. The argument must be a pointer to the C++ type (not a base type). Swift will call these custom retain and release functions where it would otherwise retain and release Swift classes. Here's an example of `SWIFT_SHARED_REFERENCE` being applied to the C++ type `SharedObject`:
 
 ```c++
 class SharedObject : IntrusiveReferenceCounted<SharedObject> {

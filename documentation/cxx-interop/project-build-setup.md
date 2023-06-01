@@ -164,7 +164,7 @@ The `-Xcc` flag is used to pass additional C++ build settings to the
 C++ Clang compiler embedded in the Swift compiler. For example, you can use
 Clang's `-std=` flag to import C++ headers that require C++20 into Swift:
 
-```
+```shell
 swiftc ... -Xcc -std=c++20 ...
 ```
 
@@ -172,6 +172,24 @@ Putting it all together, the following Swift compiler invocation lets you
 compile a Swift file that imports a Clang module whose module map file is
 located in the `include` directory:
 
-```
+```shell
 swiftc main.swift -cxx-interoperability-mode=default -I include -o main
+```
+
+### Generating C++ Header With Exposed Swift APIs
+
+The `-emit-clang-header-path` Swift frontend flag can be used to emit a
+generated header when exposing Swift APIs to C++ when building Swift code
+in a build system that doesn't provide automatic support for generating
+a header file with exposed APIs.
+
+The following Swift compiler invocation emits a generated header file
+for the `SwiftModule` module that consists of two source files,
+`a.swift` and `b.swift`:
+
+```shell
+swiftc -frontend -typecheck \
+       /sources/a.swift /sources/b.swift -module-name SwiftModule \
+       -cxx-interoperability-mode=default \
+       -emit-clang-header-path SwiftModule-Swift.h
 ```
