@@ -35,7 +35,7 @@ There are thousands of packages to explore through the community-run package ind
         </div>
         <ul class="metadata">
           <li class="license">
-            <strong>License: </strong>
+            <strong>License</strong>
             <div>
               <div class="lozenge license">
                 <span>{{ package.license }}</span>
@@ -43,7 +43,7 @@ There are thousands of packages to explore through the community-run package ind
             </div>
           </li>
           <li class="platform_compatibility">
-            <strong>Platforms:</strong>
+            <strong>Platforms</strong>
             <div>
               <div class="lozenge platform-compatibility" title="{{ package.platform_compatibility_tooltip }}">
                 {% for platform in package.platform_compatibility %}
@@ -53,7 +53,7 @@ There are thousands of packages to explore through the community-run package ind
             </div>
           </li>
           <li class="swift_compatibility">
-            <strong>Swift:</strong>
+            <strong>Swift</strong>
             <div>
               <div class="lozenge swift-compatibility" title="Swift version compatibility">
                 <span>{{ package.swift_compatibility }}</span>
@@ -61,17 +61,17 @@ There are thousands of packages to explore through the community-run package ind
             </div>
           </li>
           <li class="stars">
-            <strong>Stars:</strong>
+            <strong>Stars</strong>
             <div>
               {{ package.stars }}
             </div>
           </li>
           <li class="age">
-            <strong>Age:</strong>
+            <strong>Age</strong>
             <p>{{ package.age }}</p>
           </li>
           <li class="activity">
-            <strong>Activity:</strong>
+            <strong>Activity</strong>
             <p>{{ package.activity }}</p>
           </li>
         </ul>
