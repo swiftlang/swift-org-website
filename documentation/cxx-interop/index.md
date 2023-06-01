@@ -1167,7 +1167,7 @@ pointer or reference in C++. They typically use either:
   that can store the reference count outside of the object.
 
 Currently Swift can map C++ classes or structures that use custom retain
-and release operations on a reference count stored intrusively in the object
+and release operations together with a reference count stored intrusively in the object
 to a Swift reference type (that behaves like a Swift `class`). Other types
 that rely on `std::shared_ptr` for reference counting can still be used
 as value types in Swift.
