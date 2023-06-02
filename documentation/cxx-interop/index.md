@@ -901,6 +901,17 @@ for tree in trees {
 let oakTrees = getEnchantedTrees().filter { $0.kind == .Oak }
 ```
 
+Swift’s count property returns the number of elements in such collection.
+Swift’s subscript operator can be used to access a specific element in the collection as well.
+This makes it possible to mutate individual elements in the C++ container:
+
+```swift
+var trees = getEnchantedTrees()
+for i in 0..<trees.count {
+  trees[i].kind = .Oak
+}
+```
+
 A C++ container that conforms to `RandomAccessCollection` can be easily
 converted into a Swift collection type, like `Array`:
 
@@ -1040,10 +1051,12 @@ to use C++ containers in Swift:
 - Use `for-in` loop to traverse through a C++ container that conforms to `RandomAccessCollection`.
 - Use collection APIs like `map` or `filter` when working with a C++
   container that conforms to `RandomAccessCollection`.
+- Use the subscript operator to access a specific element in a C++ container
+  that conforms to `RandomAccessCollection`
 - Convert other sequential containers to Swift collections if you'd
   like to traverse through their elements, or if you'd like to
   use collection APIs like `map` or `filter`.
-- Use the subscript from the `CxxDictionary` protocol when looking
+- Use the subscript operator from the `CxxDictionary` protocol when looking
   up values in an associative C++ container.
   
 #### Using C++ Containers in Performance Sensitive Swift Code
