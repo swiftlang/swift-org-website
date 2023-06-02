@@ -71,6 +71,7 @@ The following guides describe how C++ interoperability can be enabled when
 working with a specific build system or IDE:
 
 - [Read how to use C++ APIs from Swift in a Swift package](project-build-setup#mixing-swift-and-c-using-swift-package-manager)
+- [Read how to mix Swift and C++ in an Xcode project](project-build-setup#mixing-swift-and-c-using-xcode)
 
 Other build systems can enable C++ interoperability by passing in the required
 flag to the Swift compiler:
@@ -102,10 +103,15 @@ In order for Swift to import a Clang module, it needs to find a
 to a Clang module. 
 
 Some IDEs and build systems can generate a module map file for a
-C++ build target. In other cases you might be required to create a module
+C++ build target automatically.
+Swift Package Manager automatically generates a module map file
+when it [finds an umbrella header](project-build-setup#importing-headers-from-a-c-package-target)
+in a C++ target. Xcode automatically generates a module map file for a
+framework target, with the module map referencing framework's public headers.
+In other cases you might be required to create a module
 map manually.
 
-The recommended way to create a module map is to list all the header
+The recommended way to manually create a module map is to list all the header
 files from a specific C++ target that you want to make available to Swift.
 For example, let's say we want to create a module map for a C++
 library `forestLib`. This library has two header files: `forest.h` and `tree.h`.
@@ -218,7 +224,9 @@ possible to gradually integrate Swift into an existing C++ codebase.
 
 Swift APIs can be accessed by including a header
 file that the build system generates when building a Swift module.
-Some build systems generate the header automatically. Other build configurations
+Some build systems generate the header automatically.
+Xcode can automatically generate the header file for a framework or an App target.
+Other build configurations
 can generate the header manually by following the steps
 outlined on the
 [project and build setup page](project-build-setup#generating-c-header-with-exposed-swift-apis).
