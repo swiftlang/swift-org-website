@@ -256,6 +256,10 @@ Swift is able to represent the following Swift standard library types in C++:
 - `Array` type
 - `Optional` type
 
+For more details on using Swift types like `String` in C++, check out
+the section that describes how to
+[use Swift standard library types from C++](index#using-swift-standard-library-types-from-c).
+
 ### List Of Primitive Swift Types Supported by C++
 
 This table lists the primitive Swift types defined in Swift's

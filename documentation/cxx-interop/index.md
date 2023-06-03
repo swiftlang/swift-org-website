@@ -1572,6 +1572,170 @@ public struct LandmarkLocation {
 C++ code can then call `getLatitude` and `getLongtitude` member functions
 to access the stored property values.
 
+## Using Swift Standard Library Types from C++
+
+Several Swift standard library types can be used in C++. This section
+describes how to use the
+[supported Swift standard library types](status#supported-swift-standard-library-types)
+in C++.
+
+### Using Swift `String` in C++
+
+Swift's `String` type is exposed to C++. It can be initialized directly
+using a string literal in C++:
+
+```c++
+#include <SwiftLibrary-Swift.h>
+
+void createSwiftString() {
+  swift::String test = "Hello Swift world!";
+}
+```
+
+A C++ `std::string` can be easily converted to a Swift `String`:
+
+```c++
+void callSwiftAPI(const std::string &stringValue) {
+  SwiftLibrary::functionTakesString(swift::String(stringValue));
+}
+```
+
+The same conversion can be made in the opposite direction, going from a
+Swift `String` to a C++ `std::string`:
+
+```c++
+std::string getStringFromSwift() {
+  return (std::string)SwiftLibrary::giveMeASwiftString();
+}
+```
+
+The C++ representation of `String` provides access to a number of
+String's methods and properties including:
+
+- `isEmpty`
+- `getCount`
+- `lowercased` and `uppercased`
+- `hasPrefix` and `hasSuffix`
+- `append`
+
+Several other methods and properties not listed here are also available.
+
+An Objective-C `NSString *` can be
+converted to and from a Swift `String` in Objective-C++ language mode.
+
+### Using Swift `Array` in C++
+
+Swift's `Array` type is exposed to C++. C++ represents it using the
+`swift::Array` class template. It must be instantiated with a C++ type that
+represents a Swift type. It can also be instantiated with a native C++ type,
+when a Swift `Array` of such type is used in Swift and is exposed back to C++
+via a public Swift API.
+
+A Swift `Array` can be traversed using a `for` loop in C++. For example,
+take the `StringsAndNumbers` Swift module interface:
+
+```swift
+// Swift module 'StringsAndNumbers'
+
+public func findTheStrings() -> [String]
+public func processRandomNumbers(_ numbers: [Float])
+```
+
+A C++ `for` loop can traverse over the `Array` returned
+from `findTheStrings`:
+
+```c++
+#include <StringsAndNumbers-Swift.h>
+
+void printTheFoundStrings() {
+  auto stringsArray = StringsAndNumbers::findTheStrings();
+  for (const auto &swiftString: stringsArray) {
+    std::cout << (std::string)swiftString << ", ";
+  }
+}
+```
+
+An empty `Array` can be created in C++, mutated, and then passed to Swift.
+For example, C++ code can create an `Array` that contains some floating point
+numbers and pass it to `processRandomNumbers`:
+
+```c++
+#include <StringsAndNumbers-Swift.h>
+
+void processSomeTrulyUniqueRandomNumbers() {
+  auto array = swift::Array<float>::init();
+  array.append(1.0f);
+  array.append(42.0f);
+  StringsAndNumbers::processRandomNumbers(array);
+}
+```
+
+Individual elements in the array can be accessed using `operator []` in C++.
+You cannot mutate an array element using `operator []` however. C++ does not
+yet support mutating individual elements in a Swift `Array`.
+
+The C++ representation of `Array` provides access to a number of
+Array's methods and properties including:
+
+- `getCount`
+- `getCapacity`
+- `append`
+- `insertAt`
+- `removeAt`
+
+Several other methods and properties not listed here are also available.
+
+### Using Swift `Optional` in C++
+
+Swift's `Optional` type is exposed to C++. C++ represents it using the
+`swift::Optional` class template. It must be instantiated with a C++ type that
+represents a Swift type. It can also be instantiated with a native C++ type,
+when a Swift `Array` of such type is used in Swift and is exposed back to C++
+via a public Swift API.
+
+A value stored in a Swift `Optional` can be extracted using the `get` member
+function. For example,
+take the `OptionalValues` Swift module interface:
+
+```swift
+// Swift module 'OptionalValues'
+
+public func maybeMakeString() -> String?
+public func callMeOnThePhoneMaybe(_ number: UInt64?)
+```
+
+The C++ `get` member function can be used to extract the `String`
+value returned by `maybeMakeString`:
+
+```c++
+#include <OptionalValues-Swift.h>
+
+void printAStringOrNone() {
+  auto maybeString = OptionalValues::maybeMakeString();
+  if (maybeString) {
+    std::cout << (std::string)maybeString.get() << "\n";
+  } else {
+    std::cout << "Got no value from Swift :( \n";
+  }
+}
+```
+
+The `Optional` is implicitly convertible to `bool` in C++. That allows
+you to check if it has a value in an `if` condition, like in the example
+shown above.
+
+A Swift `Optional` can also be constructed from C++, using the
+`some` or `none` case constructor:
+
+```c++
+#include <OptionalValues-Swift.h>
+
+void callMeOnThePhone() {
+  OptionalValues::callMeOnThePhoneMaybe(
+    swift::Optional<uint64_t>::some(1234567890));
+}
+```
+
 ## Appendix
 
 This section contains additional tables and references for certain topics
