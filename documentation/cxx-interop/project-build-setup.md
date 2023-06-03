@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Setting Up Mixed-Language Swift and C++ Project
+title: Setting Up Mixed-Language Swift and C++ Projects
 official_url: https://swift.org/documentation/cxx-interop/project-build-setup/
 redirect_from: 
 - /documentation/cxx-interop/project-build-setup.html
@@ -146,11 +146,13 @@ we recommend that you:
 
 - Clearly communicate to clients that they have to enable C++
   interoperability when depending on targets from such package.
+- Clearly communicate to clients that your package relies on an unreleased
+  version of Swift that is still in development.
 
 ## Mixing Swift and C++ Using Other Build Systems
 
 This section describes how to enable and use C++ interoperability
-when invoking the Swift compiler directly. This should allow other
+when invoking the Swift compiler directly. This allows other
 build systems to configure a mixed-language Swift and C++ project.
 
 ### Enabling C++ Interoperability in the Swift Compiler 
@@ -187,7 +189,7 @@ located in the `include` directory:
 swiftc main.swift -cxx-interoperability-mode=default -I include -o main
 ```
 
-### Generating C++ Header With Exposed Swift APIs
+### Generating C++ Header with Exposed Swift APIs
 
 The `-emit-clang-header-path` Swift frontend flag can be used to emit a
 generated header when exposing Swift APIs to C++ when building Swift code
