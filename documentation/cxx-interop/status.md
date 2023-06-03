@@ -34,7 +34,7 @@ wants to use Swift APIs. This header uses Swift-specific compiler extensions
 that are supported only by the following C++ compilers:
 
 - [Clang](https://clang.llvm.org) (starting with LLVM 11 and above)
-- Xcode's Apple Clang
+- Apple Clang
 
 C++ code built with other compilers cannot call Swift functions or use Swift
 types from C++.
@@ -48,7 +48,7 @@ code for a specific deployment platform:
 
 | Platform running Swift application  | Default C++ Standard Library |
 | ------------------------- | ------------- |
-| **macOS, iOS, watchOS, tvOS**     | libc++  |
+| **Apple platforms**     | libc++  |
 | **Ubuntu, CentOS, Amazon Linux**  | libstdc++ |
 | **Windows**   | Microsoft C++ Standard Library (msvcprt)  |
 
@@ -68,10 +68,10 @@ This section describes which C++ APIs are supported in Swift.
 
 Swift supports calling most non-templated:
 
-- Top-level functions.
-- Functions inside of namespaces.
-- Member functions, both instance and static.
-- Constructors.
+- Top-level functions
+- Functions inside of namespaces
+- Member functions, both instance and static
+- Constructors
 
 Functions and constructors that use r-value reference types are not
 yet available in Swift. 
@@ -92,17 +92,17 @@ not supported in Swift is not available in Swift.
 
 The following C++ types can be used in Swift:
 
-- Primitive types, like `int` and `bool`.
-- Pointers.
-- C++ references (excluding r-value reference / universal reference parameters).
-- Type aliases, only when the underlying type is supported in Swift.
-- Copyable structures and classes.
+- Primitive types, like `int` and `bool`
+- Pointers
+- C++ references, excluding r-value reference / universal reference parameters
+- Type aliases, only when the underlying type is supported in Swift
+- Copyable structures and classes
   - Swift currently does not support C++ structures and classes that have a deleted
     copy constructor, including move-only structures and classes.
     - The only exception are the non-copyable C++ structures and classes that
       have been explicitly
       [mapped to Swift reference types](index#mapping-c-types-to-swift-reference-types).
-- Enumerations. That includes scoped enumerations (`enum class`).
+- Enumerations, including scoped enumerations (`enum class`)
 
 C++ types that become value types in Swift can be constructed and passed around
 by value.
@@ -125,14 +125,14 @@ type of such data member is supported in Swift.
 
 The following C++ standard library types are supported in Swift:
 
-- `std::string`, `std::u16string`.
-- Specializations of `std::pair`.
-- Specializations of `std::vector`.
-- Specializations of `std::map` and `std::unordered_map`.
-- Specializations of `std::set` and `std::unordered_set`.
-- Specializations of `std::optional`.
-- Specializations of `std::shared_ptr`.
-- Specializations of `std::array`.
+- `std::string`, `std::u16string`
+- Specializations of `std::pair`
+- Specializations of `std::vector`
+- Specializations of `std::map` and `std::unordered_map`
+- Specializations of `std::set` and `std::unordered_set`
+- Specializations of `std::optional`
+- Specializations of `std::shared_ptr`
+- Specializations of `std::array`
 
 Other standard library types, like `std::unique_ptr`, `std::function` and
 `std::variant` are not yet supported in Swift.
@@ -168,10 +168,10 @@ header.
 Swift can generate C++ representation for most top-level Swift structures. The
 following Swift structures are not yet supported:
 
-- Zero-sized structures that don't have any stored properties.
-- Non-copyable structures.
-- Generic structures with generic constraints, or with more than 3 generic
-  parameters, or that have variadic generics.
+- Zero-sized structures that don't have any stored properties
+- Non-copyable structures
+- Generic structures with generic constraints, or with more than three generic
+  parameters, or that have variadic generics
 
 Swift currently does not expose nested structures to C++.
 
@@ -181,7 +181,7 @@ Swift can generate C++ representation for most top-level Swift classes and
 actors. The
 following Swift classes are not yet supported:
 
-- Generic classes and actors.
+- Generic classes and actors
 
 Swift currently does not expose nested classes and actors to C++.
 
@@ -192,12 +192,12 @@ that do not have associated values, and some top-level Swift enumerations
 that have associated values. The
 following Swift enumerations are not yet supported:
 
-- Non-copyable enumerations.
-- Generic enumerations with generic constraints, or with more than 3 generic
-  parameters, or that have variadic generics.
+- Non-copyable enumerations
+- Generic enumerations with generic constraints, or with more than three generic
+  parameters, or that have variadic generics
 - Enumerations that have an enumeration case with more than one associated
-  value.
-- Indirect enumerations.
+  value
+- Indirect enumerations
 
 Additionally, the types of all the associated values of an enumeration must be
 representable in C++. The exact set of representable types is described
@@ -212,8 +212,8 @@ Any function, property, or initializer is exposed to C++ only when Swift can
 represent all of its parameter and return types in C++. A parameter or return
 type can be represented in C++ only when:
 
-- it is a Swift structure / class / enumeration that is defined in the same
-  Swift module.
+- it is a supported Swift structure / class / enumeration that is defined
+  in the same Swift module.
 - or, it is a C++ structure, class or enumeration.
 - or, it is one of the
   [supported Swift standard library types](#supported-swift-standard-library-types).
@@ -225,35 +225,36 @@ type can be represented in C++ only when:
   any type from the supported three type categories listed above.
   
 Functions or initializers that have a parameter type or a return type that's
-not listed above can not be represented in C++ yet. Properties of type
-that's not listed above can not be represented in C++ yet.
+not listed above cannot be represented in C++ yet. Properties of type
+that's not listed above cannot be represented in C++ yet.
 
 Additionally, the following Swift functions, properties and initializers can
 not yet be represented in C++:
 
-- Asynchronous functions / properties.
-- Functions / properties / initializers that `throw`.
+- Asynchronous functions / properties
+- Functions / properties / initializers that `throw`
 - Generic functions / properties / initializers with generic constraints
-  or variadic generics.
+  or variadic generics
 - Functions that return an
-  [opaque type](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/opaquetypes).
+  [opaque type](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/opaquetypes)
+- Functions that return multiple values
 - Functions / properties / initializers with the `@_alwaysEmitIntoClient`
-  attribute.
+  attribute
 
 ### Supported Swift Standard Library Types
 
 Swift is able to represent the following Swift standard library types in C++:
 
 - Primitive types, such as `Bool`, `Int`, `Float` and
-  their C variants like `CInt`.
+  their C variants like `CInt`
   - The
     [full list of supported primitive types](#list-of-primitive-swift-types-supported-by-c)
     is provided below.
 - Pointer types, like `OpaquePointer`, `UnsafePointer`,
-  `UnsafeMutablePointer`, `UnsafeRawPointer` and `UnsafeMutableRawPointer`.
-- `String` type.
-- `Array` type.
-- `Optional` type.
+  `UnsafeMutablePointer`, `UnsafeRawPointer` and `UnsafeMutableRawPointer`
+- `String` type
+- `Array` type
+- `Optional` type
 
 ### List Of Primitive Swift Types Supported by C++
 
@@ -298,14 +299,14 @@ standard library that can be represented in C++:
 ## Constraints and Limitations
 
 Swift has some known limitations related to C++ interoperability support.
-They're currently [listed on github](https://github.com/apple/swift/issues/66159).
+They're currently [listed on GitHub](https://github.com/apple/swift/issues/66159).
 
 ### Swift Package Manager Constraints
 
-A Swift target that enables C++ interoperability in Swift package manager
+A Swift target that enables C++ interoperability in Swift Package Manager
 [requires](project-build-setup#vending-packages-that-enable-c-interoperability)
 its dependencies to enable C++ interoperability as well.
-A Swift github issue tracks the status of this constraint:
+A Swift GitHub issue tracks the status of this constraint:
 
 - [Swift should provide support for internal imports and resilience for all platforms (that can be enabled in SwiftPM) to allow Swift modules to depend on C++ modules without requiring that the clients enable C++ interoperability](https://github.com/apple/swift/issues/66156)
 

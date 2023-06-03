@@ -53,15 +53,25 @@ as the Swift community gathers feedback from real world adoption of C++
 interoperability in mixed Swift and C++ codebases.
 Please provide the feedback that you have on the
 [Swift forums](https://forums.swift.org/c/development/c-interoperability/), or
-by filing an [issue on Github](https://github.com/apple/swift/issues/new/choose).
+by filing an [issue on GitHub](https://github.com/apple/swift/issues/new/choose).
 Future changes to the design or functionality of C++ interoperability will not
 break code in existing codebases [by default](#source-stability-guarantees-for-mixed-language-codebases).
 </div>
 
 ## Overview
 
-This section provides the basic high-level overview of how
-Swift interoperates with C++.
+This section provides a high-level overview of how to mix Swift and C++. You can
+get started by [enabling C++ interoperability](#enabling-c-interoperability) in
+Swift. You will then want to understand how Swift
+[imports C++ headers](#importing-c-into-swift), and how the imported C++
+types and functions are [represented by the Swift compiler](#working-with-imported-c-apis).
+After that, you will want to look over the follow-up sections that describe
+[how to use](#using-c-types-and-functions-in-swift) the imported C++ APIs in Swift.
+You should also take a look at how Swift APIs
+[can be exposed](#exposing-swift-apis-to-c) to the rest of your C++ codebase.
+If you're interested in using Swift APIs from C++, you will definitely want
+to look over the follow-up sections that describe
+[how to use](#using-swift-types-and-functions-from-c) the exposed Swift APIs in C++.
 
 ### Enabling C++ Interoperability
 
@@ -93,8 +103,9 @@ provide a more robust and efficient semantic model of C++ headers as
 compared to the preprocessor-based model of directly including the contents of 
 header files using the `#include` directive.
 
-> While Swift compiler uses Clang modules for C++ interoperability,
-> it cannot import the C++ modules introduced in C++20 standard.
+> Swift currently cannot import
+> [C++ modules](https://en.cppreference.com/w/cpp/language/modules)
+> introduced in the C++20 language standard.
 
 ### Creating a Clang Module
 
@@ -157,10 +168,16 @@ The Swift compiler represents the imported C++ types and functions
 using Swift declarations once a Clang module is imported. This allows Swift code
 to use C++ types and functions as if they were Swift types and functions.
 
-For example, Swift can represent the following C++ class from the `forestLib`
-library: 
+For example, Swift can represent the following C++ enumeration and
+the following C++ class from the `forestLib` library: 
 
 ```c++
+enum class TreeKind {
+  Oak,
+  Redwood,
+  Willow
+};
+
 class Tree {
 public:
   Tree(TreeKind kind);
@@ -169,9 +186,19 @@ private:
 };
 ```
 
-A Swift structure is used internally by the Swift compiler to represent `Tree`:
+A Swift enumeration is used internally by the Swift compiler to represent `TreeKind`:
 
 ```swift
+enum TreeKind : Int32 {
+  case Oak = 0
+  case Redwood = 1
+  case Willow = 2
+}
+```
+
+A Swift structure is used internally by the Swift compiler to represent `Tree`:
+
+```
 struct Tree {
   init(_ kind: TreeKind)
 }
@@ -186,12 +213,11 @@ import forestLib
 let tree = Tree(.Oak)
 ```
 
-Even though Swift has its own internal representation of the C++ type,
-it doesn't use any kind of indirection to represent a
-value of such type. That means that
-when you're creating a
-`Tree` from Swift, Swift invokes the C++ constructor directly and stores
-the produced value directly into the `tree` variable.
+Swift uses C++ types and
+calls C++ functions directly, without any kind of indirection or wrapping.
+In the example shown above, 
+Swift directly calls the C++ constructor for class `Tree`, and stores the
+resulting object directly into the `tree` variable.
 
 ### Exposing Swift APIs to C++
 
@@ -276,7 +302,7 @@ void printWelcomeMessage(const std::string &name);
 Swift code can call such function as if it was a regular Swift function:
 
 ```swift
-printWelcomeMessage("Thomas");
+printWelcomeMessage("Thomas")
 ```
 
 ### C++ Structures and Classes are Value Types by Default
@@ -1328,7 +1354,7 @@ The C++ class that represents a Swift structure is copyable. Its copy
 constructor copies the underlying Swift value into a new value. The destructor
 of the C++ class destroys the underlying Swift value.
 
-Currently C++ classes that represent Swift structures can not be moved
+Currently C++ classes that represent Swift structures cannot be moved
 in C++ using `std::move`.
 
 #### Creating a Swift Structure in C++
@@ -1434,7 +1460,7 @@ C++ class.
 The C++ class that represents a Swift enumeration is copyable. Its copy
 constructor copies the underlying Swift value into a new value. The destructor
 of the C++ class destroys the underlying Swift value. Currently C++
-classes that represent Swift enumerations can not be moved in C++ using
+classes that represent Swift enumerations cannot be moved in C++ using
 `std::move`.
 
 The enumeration cases become `static inline` constant C++ data members in the

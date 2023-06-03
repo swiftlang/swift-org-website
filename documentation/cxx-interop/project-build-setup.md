@@ -15,10 +15,10 @@ when invoking Swift compiler directly.
 
 ## Mixing Swift and C++ Using Swift Package Manager 
 
-The [Swift package manager](/package-manager/) allows Swift code to use
+The [Swift Package Manager](/package-manager/) allows Swift code to use
 C++ APIs in Swift. 
 
-> Swift package manager does not yet provide support for
+> Swift Package Manager does not yet provide support for
 using Swift APIs in C++.
 
 ### Enabling C++ Interoperability in a Package Target
@@ -48,18 +48,29 @@ let package = Package(
 ### Importing Headers from a C++ Package Target
 
 Swift imports C++ headers using [Clang modules](index#importing-c-into-swift).
-Swift package manager can generate a
+Swift Package Manager can generate a
 [module map file](index#creating-a-clang-module)
 automatically for a C++ target that contains an **umbrella** header. The
 generated module map file allows a Swift target that depends on such C++
 target to import the C++ headers from such target.
 
-The umbrella header used by the C++ target must:
-- Use the name of the C++ target (with additional extension) as its file name.
-- Be placed in the `include` directory in the target.
+The umbrella header must contain a list of `#include` directives
+that include the target's other public C++ headers.
+The supported C++ types and functions
+declared in the headers listed in the umbrella header can be used
+in Swift, once the Clang module represented by the generated module map is imported
+into Swift. 
 
-The umbrella header can then include other C++ headers in the project, which
-will then be imported into Swift.
+The umbrella header used by the C++ target must:
+- Use the name of the C++ target (with an additional extension) as its file name
+- Be located in the target's public headers directory
+
+The `include` subdirectory
+is the target's default public headers directory.
+The `publicHeadersPath` property can be used to specify
+an alternative path for target's public headers.
+
+
 
 For example, the following Swift package builds a Swift command line tool that
 uses a C++ library:
@@ -86,7 +97,7 @@ let package = Package(
 )
 ```
 
-Swift package manager will automatically generate a module map for the C++
+Swift Package Manager will automatically generate a module map for the C++
 library in this package, as it can find an umbrella header in the sources:
 
 ```shell
@@ -95,9 +106,9 @@ Sources
 └── cxxLibrary
     ├── include
     │   ├── cxxLibrary.h   [This is the umbrella header]
-    │   └── classHeader.h
+    │   └── classImpl.h
     ├── cxxLibrary.cpp
-    └── classHeader.cpp
+    └── classImpl.cpp
 ```
 
 The umbrella header `cxxLibrary.h` contains some declarations and also
@@ -107,7 +118,7 @@ includes the other headers in the C++ target:
 // Header file `cxxLibrary.h`
 #pragma once
 
-#include <cxxLibrary/classHeader.h>
+#include <cxxLibrary/classImpl.h>
 ```
 
 The Swift code in the `swiftCLITool` can import `cxxLibrary` directly:
@@ -116,12 +127,12 @@ The Swift code in the `swiftCLITool` can import `cxxLibrary` directly:
 import cxxLibrary
 ```
 
-All of the supported C++ APIs declared in the `classHeader.h` header file
+All of the supported C++ APIs declared in the `classImpl.h` header file
 will then be available in Swift.
 
 ### Vending Packages That Enable C++ Interoperability
 
-Enabling C++ interoperability for a Swift package manager target will
+Enabling C++ interoperability for a Swift Package Manager target will
 need other targets that depend on such target to enable C++ interoperability
 as well. 
 
