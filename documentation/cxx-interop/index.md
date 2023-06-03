@@ -5,15 +5,6 @@ official_url: https://swift.org/documentation/cxx-interop/
 redirect_from: 
 - /documentation/cxx-interop.html
 ---
-<!-- {% comment %}
-The width of <pre> elements on this page is carefully regulated, so we
-can afford to drop the scrollbar boxes.
-{% endcomment %} -->
-<style>
-article pre {
-    overflow: visible;
-}
-</style>
 
 ## Table of Contents
 {:.no_toc}
