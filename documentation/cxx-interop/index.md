@@ -210,6 +210,9 @@ In the example shown above,
 Swift directly calls the C++ constructor for class `Tree`, and stores the
 resulting object directly into the `tree` variable.
 
+A subsequent section of this guide provides more details on
+[how to use](#using-c-types-and-functions-in-swift) the imported C++ APIs in Swift.
+
 ### Exposing Swift APIs to C++
 
 In addition to importing and using C++ APIs, the Swift compiler is also
