@@ -410,6 +410,21 @@ C++ member function could lead to Swift code not observing the mutation
 of the instance pointed to by `this` and using the original value of such
 instance for the rest of the Swift code execution.
 
+C++ permits the mutation of `mutable` fields in constant member functions.
+Constant member functions in structures or classes with such fields 
+still become `nonmutating` methods in Swift. Swift doesn't know which
+constant functions mutate the object, and which don't, so for the sake
+of better API usability Swift still assumes that such functions do not
+mutate the object. You should avoid calling constant member functions
+that mutate `mutable` fields from Swift, unless they're explicitly annotated with a `SWIFT_MUTATING` macro.
+
+> Swift 5.9 will ship with a `SWIFT_MUTATING` customization macro. However, it's not
+> yet available in a downloadable Swift 5.9 toolchain. This macro will
+> allow you to explicitly annotate constant member functions that do mutate the
+> object. Such functions with then become `mutating` methods in Swift. The
+> following [GitHub issue](https://github.com/apple/swift/issues/66322)
+> tracks the status of `SWIFT_MUTATING` support in Swift.
+
 #### Member Functions Returning References Are Unsafe by Default
 
 Member functions that return references, pointers, or
