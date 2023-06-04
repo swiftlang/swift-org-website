@@ -407,7 +407,7 @@ C++ member function could lead to Swift code not observing the mutation
 of the instance pointed to by `this` and using the original value of such
 instance for the rest of the Swift code execution.
 
-#### Member Functions Returning References
+#### Member Functions Returning References Are Unsafe by Default
 
 Member functions that return references, pointers, or
 certain structures/classes that contain references or pointers
@@ -432,6 +432,11 @@ private:
   Tree rootTree;
 };
 ```
+
+The set of rules that determine which functions are unsafe, and the
+recommended guidelines for calling such methods safely from Swift
+are documented in an upcoming section that describes how to
+[safely work with C++ references and view types in Swift](#working-with-c-references-and-view-types-in-swift).
 
 #### Overloaded Member Functions
 
@@ -1109,7 +1114,7 @@ instead of relying on C++ iterator APIs.
 
 Member functions inside of C++ container types that return C++ iterators are
 marked unsafe in Swift, just like 
-[member functions that return references](#member-functions-returning-references).
+[member functions that return references](#member-functions-returning-references-are-unsafe-by-default).
 Other C++ APIs, like top-level functions that take or return iterators could
 still be directly available in Swift.
 You should avoid using such functions in Swift.
@@ -1281,6 +1286,181 @@ let swiftString = String(cxxString)
 
 Swift does not convert C++ `std::string` type to Swift's `String` type
 automatically. 
+
+## Working with C++ References and View Types in Swift
+
+As outlined
+[earlier](#member-functions-returning-references-are-unsafe-by-default),
+member functions that return references, pointers, or certain structures/classes that
+contain references or pointers are considered to be unsafe in Swift.
+Such member functions often return references or view
+types that point back inside of the `this` object, or into memory owned by the
+`this` object. In such cases, the
+lifetime of the object the returned reference or view points to is said to be **dependent**
+on the lifetime
+of its owning object (the `this` object passed to the member function).
+C++ currently doesn't specify which member functions
+return dependent references or views, and which member functions return
+completely independent references or views.
+Therefore
+Swift assumes that any reference or any view
+type returned by a member function is dependent on the `this` object. 
+
+Dependent references and view types are unsafe in Swift, as the
+reference or view is not associated with its owning object. Thus the owning object
+can get destroyed while the reference is still in use. Because of this unsafety,
+and the assumption that all such references and views are dependent, Swift
+renames such member functions to emphasize their unsafety and to discourage
+their use in Swift.
+
+This section describes the exact rules used by Swift to determine which
+member functions return dependent references or view types, and suggests
+approaches for how to write Swift wrappers that call such member functions
+safely from Swift. It also introduces two new customization macros that
+can be applied to C++ code to instruct Swift to treat some member functions
+it thinks are unsafe as safe instead.
+
+### C++ Types Considered to Be References Or View Types by Swift
+
+Swift assumes that a C++ member function that returns one of the following
+types is unsafe in Swift:
+
+- C++ reference
+- Raw pointer
+- C++ class or structure without a user-defined copy constructor,
+  that contains a field whose type is in this list, recursively.
+
+For example, the following two C++ structures are view types in Swift's eyes:
+
+```c++
+struct PairIntRefs {
+  int &firstValue;
+  const int &secondImmutableValue;
+
+  PairIntRefs(int &, const int &);
+};
+
+// Also a view type, since its `refs` field is a view type.
+struct BagOfValues {
+  PairIntRefs refs;
+  int x;
+
+  BagOfValues(PairIntRefs, int);
+};
+```
+
+The rules outlined above define a **heuristic** that Swift uses to detect
+member functions that likely return a dependent reference or view type.
+This heuristic doesn't guarantee that all C++ member functions that return
+dependent references or views will be detected by Swift, and therefore
+some member functions that return dependent references or views could
+appear to be safe in Swift.
+
+### Safely Accessing References with Dependent Lifetime
+
+The recommended approach to calling member functions that return a reference
+or a view type with a dependent lifetime is to wrap them in a Swift API
+that returns a copy of the referenced object.
+
+For example, consider the `Forest` class whose `getRootTree` members
+return references:
+
+```c++
+class Forest {
+public:
+  const Tree &getRootTree() const { return rootTree; }
+  Tree &getRootTree() { return rootTree; }
+
+  ...
+private:
+  Tree rootTree;
+};
+```
+
+As outlined [earlier](#overloaded-member-functions), both of these member
+functions become `__getRootTreeUnsafe` and `__getRootTreeMutatingUnsafe` methods
+in Swift. Such methods are not meant be called directly in your code. Instead,
+you should write a wrapper that achieves the desired objective without
+exposing the dependent reference, that can then be used throughout
+your Swift codebase. For example, lets say you want to inspect the underlying
+`rootTree` value in Swift. You can add a wrapper that allows your Swift codebase
+to inspect the `rootTree` by extending the `Forest` class in Swift
+and adding a `rootTree` computed property that returns a `Tree` value:
+
+```swift
+import forestLib
+
+extension Forest {
+  private borrowing func getRootTreeCopy() -> Tree {
+    return __getRootTreeUnsafe().pointee
+  }
+
+  var rootTree: Tree {
+    getRootTreeCopy()
+  }
+}
+```
+
+The `borrowing` ownership modifier used above is a
+[new addition](https://github.com/apple/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md)
+in Swift 5.9. Some development versions of Swift 5.9 might not allow you to
+use `borrowing` for copyable C++ types like `Forest`. In such cases, prior
+to the release of Swift 5.9, you can
+use a `mutating` method call chain instead to safely copy the `Tree` returned
+by `getRootTree` instead:
+
+```swift
+import forestLib
+
+extension Forest {
+  private mutating func getRootTreeCopy() -> Tree {
+    return __getRootTreeUnsafeMutating().pointee
+  }
+
+  var rootTree: Tree {
+    var mutCopy = self
+    return mutCopy.getRootTreeCopy()
+  }
+}
+```
+
+### Using Methods That Return References and Views with Independent Lifetime
+
+Some C++ member functions that return a reference or a view type might
+return a reference whose lifetime is independent from the `this` object. Swift
+will still assume that such member functions are unsafe. To change that, you can
+annotate your C++ code to instruct Swift to either:
+- Assume that a particular C++ member function returns a completely independent
+  reference or view. Such member function is then assumed to be safe.
+- Assume that a particular C++ class or structure is **self contained**. All
+  member functions that return such self contained types are then assumed to be safe.
+  
+#### Annotating Methods Returning Independent References or Views
+
+The `SWIFT_RETURNS_INDEPENDENT_VALUE` customization macro from the
+`<swift/bridging>` header can be added to a C++ member functions, to let
+Swift know that it doesn't return a dependent reference or a
+dependent view. Such member function is then assumed to be safe in Swift.
+
+For example, the `getName` member function in the `NatureLibrary` C++ class
+is a great candidate for `SWIFT_RETURNS_INDEPENDENT_VALUE`, as its definition
+clearly shows that it retuns a pointer to a constant static string literal, that's not
+stored within the `NatureLibrary` object itself:
+
+```c++
+class NatureLibrary {
+public:
+  const char *getName() const SWIFT_RETURNS_INDEPENDENT_VALUE {
+    return "NatureLibrary";
+  }
+};
+```
+
+#### Annotating C++ Structures or Classes as Self Contained
+  
+The `SWIFT_SELF_CONTAINED` customization macro from the
+`<swift/bridging>` header can be added to a C++ structure or class, to let
+Swift know that it's not a view type.  All member functions that return such self contained type are then assumed to be safe in Swift.
 
 ## Accessing Swift APIs from C++
 
@@ -1751,4 +1931,5 @@ that are outlined in the documentation above.
 | `SWIFT_IMMORTAL_REFERENCE` | [Immortal Reference Types](#immortal-reference-types) |
 | `SWIFT_SHARED_REFERENCE` | [Shared Reference Types](#shared-reference-types) |
 | `SWIFT_UNSAFE_REFERENCE` | [Unsafe Reference Types](#unsafe-reference-types) |
-
+| `SWIFT_SELF_CONTAINED` | [Annotating Methods Returning Independent References or Views](#annotating-methods-returning-independent-references-or-views) |
+| `SWIFT_SELF_CONTAINED` | [Annotating C++ Structures or Classes as Self Contained](#annotating-c-structures-or-classes-as-self-contained) |
