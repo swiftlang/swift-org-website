@@ -1933,3 +1933,11 @@ that are outlined in the documentation above.
 | `SWIFT_UNSAFE_REFERENCE` | [Unsafe Reference Types](#unsafe-reference-types) |
 | `SWIFT_RETURNS_INDEPENDENT_VALUE` | [Annotating Methods Returning Independent References or Views](#annotating-methods-returning-independent-references-or-views) |
 | `SWIFT_SELF_CONTAINED` | [Annotating C++ Structures or Classes as Self Contained](#annotating-c-structures-or-classes-as-self-contained) |
+
+## Document Revision History
+
+This section lists the recent changes made to this reference guide.
+
+**2023-06-05**
+
+- Published the initial version of the guide that describes how to mix Swift and C++.
