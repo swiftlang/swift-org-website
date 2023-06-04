@@ -1931,5 +1931,5 @@ that are outlined in the documentation above.
 | `SWIFT_IMMORTAL_REFERENCE` | [Immortal Reference Types](#immortal-reference-types) |
 | `SWIFT_SHARED_REFERENCE` | [Shared Reference Types](#shared-reference-types) |
 | `SWIFT_UNSAFE_REFERENCE` | [Unsafe Reference Types](#unsafe-reference-types) |
-| `SWIFT_SELF_CONTAINED` | [Annotating Methods Returning Independent References or Views](#annotating-methods-returning-independent-references-or-views) |
+| `SWIFT_RETURNS_INDEPENDENT_VALUE` | [Annotating Methods Returning Independent References or Views](#annotating-methods-returning-independent-references-or-views) |
 | `SWIFT_SELF_CONTAINED` | [Annotating C++ Structures or Classes as Self Contained](#annotating-c-structures-or-classes-as-self-contained) |
