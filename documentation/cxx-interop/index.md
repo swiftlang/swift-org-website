@@ -1320,7 +1320,7 @@ safely from Swift. It also introduces two new customization macros that
 can be applied to C++ code to instruct Swift to treat some member functions
 it thinks are unsafe as safe instead.
 
-### C++ Types Considered to Be References Or View Types by Swift
+### C++ Types Considered to Be References or View Types by Swift
 
 Swift assumes that a C++ member function that returns one of the following
 types is unsafe in Swift:
