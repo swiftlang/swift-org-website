@@ -24,7 +24,7 @@ C++ interoperability is a new feature in the upcoming Swift 5.9 release.
 A
 pre-release Swift toolchain that supports C++ interoperability
 can be downloaded on the
-[Swift website](https://www.swift.org/download/#swift-59-development).
+[Swift website](/download/#swift-59-development).
 
 * * *
 
