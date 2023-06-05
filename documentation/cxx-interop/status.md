@@ -325,3 +325,31 @@ collection when it's used in a `for-in` loop in Swift.
 The following issue tracks the status of this performance constraint:
 
 - [Swift should provide language affordances that make it possible to avoid copying a C++ container when traversing through it in a for-in loop, or when using collection methods like map and filter](https://github.com/apple/swift/issues/66158)
+
+### Compatibility with Existing Codebases That Use C or Objective-C APIs in Swift
+
+Enabling C++ interoperability in an existing codebase that imports and
+uses C or Objective-C APIs in Swift could cause some source breakages in Swift.
+Even though C++ is largely source compatible with C, there are several cases where C++
+diverges. Some common cases of divergences that could cause Swift fail
+to import C or Objective-C headers in C++ mode are listed below:
+
+- C++ uses a broader set of keywords that may conflict with existing C or
+  Objective-C APIs. For example, a C function one of whose parameters is
+  named `class` is not a valid C++ function.
+- Existing C or Objective-C headers might try to import another Clang module
+  inside of an `extern "C"` block. That's not allowed in C++ mode. 
+  
+In cases like this you're advised to fix these issues in
+your C or Objective-C headers. If these headers come from a dependency
+that you don't control, you should report an issue to the vendor that vends
+these headers.
+
+Some existing codebases that use functions from the platform's C standard library
+could see ambiguity errors related to such functions being also defined in
+the C++ standard library. Swift prefers to use math functions like `sin`
+and `pow` from the C standard library. Some other functions that
+Swift doesn't know about could still cause an error. In cases where
+you see such an error related to an ambiguity of a function from the
+platform's C standard library you can resolve it by using an explicit module qualifier
+from Swift when calling such function.
