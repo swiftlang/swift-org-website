@@ -6,7 +6,7 @@ redirect_from:
 - /documentation/cxx-interop/project-build-setup.html
 ---
 
-Swift [supports](index) bidirectional interoperability with C++.
+Swift [supports](https://www.swift.org/documentation/cxx-interop/index) bidirectional interoperability with C++.
 This page
 describes how to set up a mixed-language Swift and C++ project using one of the
 supported IDEs or build systems. It also describes how other build systems can 
@@ -47,9 +47,9 @@ let package = Package(
 
 ### Importing Headers from a C++ Package Target
 
-Swift imports C++ headers using [Clang modules](index#importing-c-into-swift).
+Swift imports C++ headers using [Clang modules](https://www.swift.org/documentation/cxx-interop/index#importing-c-into-swift).
 Swift Package Manager can generate a
-[module map file](index#creating-a-clang-module)
+[module map file](https://www.swift.org/documentation/cxx-interop/index#creating-a-clang-module)
 automatically for a C++ target that contains an **umbrella** header. The
 generated module map file allows a Swift target that depends on such C++
 target to import the C++ headers from such target.
