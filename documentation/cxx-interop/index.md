@@ -534,7 +534,7 @@ struct Fern {
 ```
 
 The exact rules that determine when members from inherited base types
-are introduced to the Swift type that respresents the C++ structure or class
+are introduced to the Swift type that represents the C++ structure or class
 are not yet finalized in Swift 5.9. The following
 [GitHub issue](https://github.com/apple/swift/issues/66323)
 tracks their finalization in Swift 5.9.
@@ -1468,7 +1468,7 @@ dependent view. Such member function is then assumed to be safe in Swift.
 
 For example, the `getName` member function in the `NatureLibrary` C++ class
 is a great candidate for `SWIFT_RETURNS_INDEPENDENT_VALUE`, as its definition
-clearly shows that it retuns a pointer to a constant static string literal, that's not
+clearly shows that it returns a pointer to a constant static string literal, that's not
 stored within the `NatureLibrary` object itself:
 
 ```c++
@@ -1769,11 +1769,11 @@ in the generated header:
 ```swift
 public struct LandmarkLocation {
   public var latitude: Float
-  public var longtitude: Float
+  public var longitude: Float
 }
 ```
 
-C++ code can then call `getLatitude` and `getLongtitude` member functions
+C++ code can then call `getLatitude` and `getLongitude` member functions
 to access the stored property values.
 
 ## Using Swift Standard Library Types from C++
