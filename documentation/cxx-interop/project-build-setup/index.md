@@ -151,12 +151,12 @@ we recommend that you:
   
 ## Mixing Swift and C++ Using Xcode
 
-[Xcode 15](https://developer.apple.com/wwdc2023) supports
+[Xcode 15](https://developer.apple.com/xcode/resources/) supports
 mixed-language Swift and C++ projects. This section describes
 how to use C++ APIs from Swift and Swift APIs from C++ in Xcode. 
 
 Check out the
-["Mix Swift and C++"](https://developer.apple.com/wwdc2023/8229) WWDC session
+["Mix Swift and C++"](https://developer.apple.com/wwdc23/8229) WWDC session
 for more details on how to use C++ interoperability in Xcode. 
 
 ### Enabling C++ Interoperability in Xcode
