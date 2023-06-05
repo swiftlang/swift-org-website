@@ -6,7 +6,7 @@ redirect_from:
 - /documentation/cxx-interop/status.html
 ---
 
-Swift [supports](index) bidirectional interoperability with C++. This page
+Swift [supports](/documentation/cxx-interop) bidirectional interoperability with C++. This page
 describes which C++ interoperability features are currently supported.
 It also talks about the limitations
 in the current support for C++ interoperability. Additionally, it lists the set
@@ -24,7 +24,7 @@ interoperability features.
 ## Platform Support
 
 C++ interoperability is supported for development and deployment
-on [all platforms that Swift supports](https://www.swift.org/platform-support/).
+on [all platforms that Swift supports](/platform-support/).
 
 ### Compiler Support
 
@@ -103,7 +103,7 @@ The following C++ types can be used in Swift:
     copy constructor, including move-only structures and classes.
     - The only exception are the non-copyable C++ structures and classes that
       have been explicitly
-      [mapped to Swift reference types](index#mapping-c-types-to-swift-reference-types).
+      [mapped to Swift reference types](/documentation/cxx-interop#mapping-c-types-to-swift-reference-types).
 - Enumerations, including scoped enumerations (`enum class`)
 
 C++ types that become value types in Swift can be constructed and passed around
@@ -118,7 +118,7 @@ Swift.
 Class and structure templates are not directly available in Swift. The
 instantiated specializations of a class or structure template are available
 in Swift. Swift code can access template specialization types by [using a type
-alias defined in a C++ header](index#using-class-templates).
+alias defined in a C++ header](/documentation/cxx-interop#using-class-templates).
 
 Public data members of a C++ structure or class are available in Swift when the
 type of such data member is supported in Swift.
@@ -260,7 +260,7 @@ Swift is able to represent the following Swift standard library types in C++:
 
 For more details on using Swift types like `String` in C++, check out
 the section that describes how to
-[use Swift standard library types from C++](index#using-swift-standard-library-types-from-c).
+[use Swift standard library types from C++](/documentation/cxx-interop#using-swift-standard-library-types-from-c).
 
 ### List Of Primitive Swift Types Supported by C++
 
@@ -319,7 +319,7 @@ A Swift GitHub issue tracks the status of this constraint:
 ### Performance Constraints
 
 Swift's current
-[support for C++ container types](index#working-with-c-containers) 
+[support for C++ container types](/documentation/cxx-interop#working-with-c-containers) 
 does not provide explicit
 performance guarantees. Most notably, Swift can make a deep copy of a
 collection when it's used in a `for-in` loop in Swift.
