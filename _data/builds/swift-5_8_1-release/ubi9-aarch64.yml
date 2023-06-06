@@ -4,4 +4,4 @@
   download: swift-5.8.1-RELEASE-ubi9-aarch64.tar.gz
   download_signature: swift-5.8.1-RELEASE-ubi9-aarch64.tar.gz.sig
   dir: swift-5.8.1-RELEASE
-  docker: Coming Soon #5.8.1-rhel-ubi9
+  docker: 5.8.1-rhel-ubi9
