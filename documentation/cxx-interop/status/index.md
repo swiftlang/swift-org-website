@@ -26,6 +26,31 @@ interoperability features.
 C++ interoperability is supported for development and deployment
 on [all platforms that Swift supports](/platform-support/).
 
+### Minimum Deployment Version for Mixed-Language Application
+
+C++ interoperability does not impose additional deployment version
+requirements for your application, except when your Swift code
+uses
+[C++ classes or structures that become reference types](#minimum-deployment-version-for-reference-types-imported-from-c).
+The minimum deployment version for an application that does not use such
+reference types is the same as Swift's regular
+[minimum deployment version](/platform-support#minimum-deployment-version).
+
+#### Minimum Deployment Version for Reference Types Imported from C++
+
+The table below shows the minimum OS version for which a mixed Swift and
+C++ application that uses [C++ classes or structures that become reference types](/documentation/cxx-interop#mapping-c-types-to-swift-reference-types)
+can be deployed. Any deployment platform not listed in the table below
+is supported automatically, so the imported reference types do not
+impose addition deployment version requirements for platforms like Ubuntu or CentOS.
+
+| Platform running Swift application  | Minimum deployment version |
+| ------------------------- | ------------- |
+| **macOS**    | 13.3  |
+| **iOS**  | 16.4 |
+| **watchOS**   | 9.4  |
+| **tvOS**   | 16.4  |
+
 ### Compiler Support
 
 C++ interoperability is supported in Swift 5.9 and above.
