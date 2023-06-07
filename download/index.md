@@ -534,7 +534,7 @@ makepkg -si
 
 #### Ubuntu/Debian community build
 
-There's also a community made package for Ubuntu/Debian based distros that is easy to install.
+There's also a community-made package for Ubuntu/Debian based distros that is easy to install.
 Just copy the commands below to add the repository and install Swift.
 
 More information about the community repository is available at [swiftlang.xyz](https://www.swiftlang.xyz/).
