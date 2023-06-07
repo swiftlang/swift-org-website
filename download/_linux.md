@@ -17,6 +17,12 @@ Note that nothing prevents Swift from being ported to other Linux distributions 
 * CentOS 7
 * Amazon Linux 2
 
+### Other distributions that work using community packages and repositories
+
+* Fedora 38
+* Arch Linux
+* Ubuntu/Debian based distros (Using community package from community repository)
+
 * * *
 
 ### Installation
