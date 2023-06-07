@@ -484,7 +484,7 @@ $ yum install swiftlang
 sudo dnf install swift-lang
 ``` 
 
-[Here's link to Fedora Repository for more information](https://src.fedoraproject.org/rpms/swift-lang#)
+Checkout [the corresponding Fedora Repository page](https://src.fedoraproject.org/rpms/swift-lang) for more information.
 
 
 {% include_relative _older-releases.md %}
@@ -492,13 +492,13 @@ sudo dnf install swift-lang
 
 #### Arch Linux
 
-On Arch Linux you can install Swift using AUR. You can either use a repackedged version of the Fedora RPM or get a native build for Arch Linux.
+On Arch Linux you can install Swift using AUR. You can either use a repackaged version of the Fedora RPM or get a native build for Arch Linux.
 
-[More information availble at Arch Linux Wiki](https://wiki.archlinux.org/title/Swift)
+You can find more information available at [Arch Linux Wiki](https://wiki.archlinux.org/title/Swift).
 
 ##### Install using AUR helper tools
 
-Since Swift has AUR packages you can install it using AUR helper tools like yay.
+Since Swift has AUR packages you can install it using AUR helper tools like `yay`:
 
 ```bash
 yay -S swift-language
@@ -524,7 +524,7 @@ After that you will be asked if you want to instal requiered dependencies. Answe
 
 #####  Repackaged Fedora RPM
 
-Can be installed the same way as the previous one. Just change the repository. Also this package is faster to get up and running
+Can be installed the same way as the previous one, and this package is faster to get up and running. Just change the repository like this:
 
 ```bash
 git clone https://aur.archlinux.org/swift-bin.git
@@ -537,7 +537,7 @@ makepkg -si
 There's also a community made package for Ubuntu/Debian based distros that is easy to install.
 Just copy the commands below to add the repository and install Swift.
 
-[More information about the community repository](https://www.swiftlang.xyz/)
+More information about the community repository is available at [swiftlang.xyz](https://www.swiftlang.xyz/).
 
 ```bash
 sudo apt install -y curl
