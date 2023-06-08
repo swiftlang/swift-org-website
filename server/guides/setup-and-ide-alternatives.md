@@ -14,8 +14,6 @@ A number of editors you may already be familiar with have support for writing Sw
 * [Atom IDE support](https://atom.io/packages/ide-swift)
     * [Atomic Blonde](https://atom.io/packages/atomic-blonde) a SourceKit based syntax highlighter for Atom.
 
-* [CLion](https://www.jetbrains.com/help/clion/swift.html)
-
 * [Emacs plugin](https://github.com/swift-emacs/swift-mode)
 
 * [VIM plugin](https://github.com/keith/swift.vim)
