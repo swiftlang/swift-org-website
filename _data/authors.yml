@@ -363,3 +363,15 @@ jamesdempsey:
   github: dempseyatgithub
   twitter: jamesdempsey
   about: "James Dempsey is an iOS and macOS developer, technical trainer, and a member of the Swift Website Workgroup."
+
+honzadvorsky:
+  name: Honza Dvorsky
+  email: honza@apple.com
+  github: czechboy0
+  about: "Honza Dvorsky is a member of a team working on developer tools and services as part of Apple’s Services Engineering division, and is a core developer on Swift OpenAPI Generator."
+
+simonjbeaumont:
+  name: Si Beaumont
+  email: beaumont@apple.com
+  github: simonjbeaumont
+  about: "Si Beaumont is a member of a team developing foundational server-side Swift libraries as part of Apple’s Services Engineering division, and is a core developer on Swift OpenAPI Generator."
