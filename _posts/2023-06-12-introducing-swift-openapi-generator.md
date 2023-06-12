@@ -200,7 +200,7 @@ While Swift OpenAPI Generator supports most of the commonly used features of Ope
 
 ## Get Involved
 
-Check out the repositories, open issues, pull requests, and let us know what you think in the Swift forums.
+Check out the repositories, open issues, pull requests, and let us know what you think in the Swift [forums](https://forums.swift.org/c/server).
 
 * [Meet Swift OpenAPI Generator](https://developer.apple.com/wwdc23/10171) at WWDC23
 * Swift OpenAPI Generator: [https://github.com/apple/swift-openapi-generator](https://github.com/apple/swift-openapi-generator)
