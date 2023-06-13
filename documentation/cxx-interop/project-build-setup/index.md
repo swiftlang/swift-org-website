@@ -9,7 +9,13 @@ redirect_from:
 Swift [supports](/documentation/cxx-interop/) bidirectional interoperability with C++.
 This page
 describes how to set up a mixed-language Swift and C++ project using one of the
-supported IDEs or build systems. It also describes how other build systems can 
+supported IDEs or build systems:
+
+- [Swift Package Manager](#mixing-swift-and-c-using-swift-package-manager)
+- [Xcode](#mixing-swift-and-c-using-xcode)
+
+It also describes how
+[other build systems](#mixing-swift-and-c-using-other-build-systems) can
 enable C++ interoperability by describing how to use C++ interoperability
 when invoking Swift compiler directly.
 
