@@ -41,6 +41,7 @@
 }
 
 .use-case-list {
+  $grid-breakpoint: 1000px;
   list-style: none;
   padding-left: 0;
   display: grid;
@@ -52,10 +53,18 @@
     border-radius: 4px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: $grid-breakpoint) {
+      &.featured {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    }
     
     h3 {
       line-height: 1.4;
       font-size: 1.4rem;
+      padding-top: 0;
     }
     
     p {

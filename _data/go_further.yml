@@ -1,11 +1,3 @@
-- title: "A Swift Tour"
-  description: "_The Swift Programming Language_, the authoritative reference for Swift, begins with a tour of the language. The tour gives you an introduction to the fundamental features, concepts, and syntax of Swift. The remainder of the book explains each topic in greater detail."
-  content_type: book
-  content_url: https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour/
-  thumbnail_url: #TBD
-  release_date: 2014-08-18
-  featured: true
-  external: true
 - title: "Value and Reference Types"
   description: "This article describes the differences in behavior between _value types_ and _reference types_—a fundamental part of learning Swift and choosing between structures and classes."
   content_type: article
