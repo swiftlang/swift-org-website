@@ -76,7 +76,7 @@ Swift is a general-purpose programming language built using a modern approach to
       <br><br>
       Apple offers a wide variety of frameworks and APIs that make applications developed for these platforms unique and fun.
     </p>  
-    <a href="/getting-started/swiftui" class="cta-secondary">Learn more</a>
+    <a href="https://developer.apple.com/swift/resources/" class="cta-secondary">Learn more</a>
   </li>
   <li>
     <h3>Cross-platform Command-line</h3>
