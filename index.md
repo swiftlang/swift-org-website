@@ -97,7 +97,7 @@ Swift is a general-purpose programming language built using a modern approach to
       SwiftNIO and Swift's dynamic server ecosystem bring joy to developing networked applications.
     </p>
 
-    <a href="/getting-started/vapor-web-server" class="cta-secondary">Learn more</a>
+    <a href="/server" class="cta-secondary">Learn more</a>
   </li>
 </ul>
 
