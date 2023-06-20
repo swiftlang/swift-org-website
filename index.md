@@ -72,15 +72,29 @@ Swift is a general-purpose programming language built using a modern approach to
   <li>
     <h3>Apple platforms</h3>
     <p>
-      Swift is a powerful and intuitive programming language on macOS, iOS, watchOS, tvOS and beyond. Swift code is safe by design, yet also produces software that is optimized to run lightning-fast.
-    </p>
-
+      Swift is a powerful and intuitive programming language optimized when running on iOS, macOS, and other Apple platforms.
+      <br><br>
+      Apple offers a wide variety of frameworks and APIs that make applications developed for these platforms unique and fun.
+    </p>  
     <a href="https://developer.apple.com/swift/resources/" class="cta-secondary">Learn more</a>
   </li>
   <li>
-    <h3>Server</h3>
+    <h3>Cross-platform Command-line</h3>
     <p>
-      Ever dreamed of using the same programming language on both your mobile applications and their server back-ends? Swift's small footprint, quick startup time, and deterministic performance make it specifically suitable for Server applications.
+      Writing Swift is interactive and fun, the syntax is concise yet expressive.
+      Swift code is safe by design and produces software that runs lightning-fast.
+      <br><br>
+      SwiftArgumentParser and Swift's growing package ecosystem make developing cross-platform command-line tools a breeze.
+    </p>
+
+    <a href="/getting-started/cli-swiftpm" class="cta-secondary">Learn more</a>
+  </li>
+  <li>
+    <h3>Server and Networking</h3>
+    <p>
+      Swift's small memory footprint, quick startup time, and deterministic performance make it a great choice for server and other networked applications.
+      <br><br>
+      SwiftNIO and Swift's dynamic server ecosystem bring joy to developing networked applications.
     </p>
 
     <a href="/server" class="cta-secondary">Learn more</a>
