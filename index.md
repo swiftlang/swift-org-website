@@ -8,6 +8,13 @@ atom: true
 
 Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
 
+{% for snippet in site.data.featured_snippets %}
+```swift
+{{ snippet -}}
+```
+{: class="featured-snippet {% if forloop.first %}visible{% endif %}" }
+{% endfor %}
+
 <div class="link-grid" markdown="1">
   <ul>
     <li>
@@ -61,13 +68,6 @@ Swift is a general-purpose programming language built using a modern approach to
     </p>
   </li>
 </ul>
-
-{% for snippet in site.data.featured_snippets %}
-```swift
-{{ snippet -}}
-```
-{: class="featured-snippet {% if forloop.first %}visible{% endif %}" }
-{% endfor %}
 
 <div class="links links-list-nostyle" markdown="1">
   - [Learn more about Swift](/about)
