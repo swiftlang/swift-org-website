@@ -18,21 +18,6 @@
   print(greet(person: "Tim", alreadyGreeted: true))
   // Prints "Hello again, Tim!"
 - |
-  enum CompassPoint {
-      case north, south, east, west
-      mutating func turnNorth() {
-          self = .north
-      }
-  }
-  var currentDirection = CompassPoint.west
-  let rememberedDirection = currentDirection
-  currentDirection.turnNorth()
-
-  print("The current direction is \(currentDirection)")
-  print("The remembered direction is \(rememberedDirection)")
-  // Prints "The current direction is north"
-  // Prints "The remembered direction is west"
-- |
   func oneMore(than number: Int) -> Int {
       return number + 1
   }
