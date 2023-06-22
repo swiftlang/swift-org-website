@@ -8,6 +8,13 @@ atom: true
 
 Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
 
+{% for snippet in site.data.featured_snippets %}
+```swift
+{{ snippet -}}
+```
+{: class="featured-snippet {% if forloop.first %}visible{% endif %}" }
+{% endfor %}
+
 <div class="link-grid" markdown="1">
   <ul>
     <li>
@@ -140,3 +147,12 @@ Stay up-to-date with the latest in the Swift community.
   - [Visit the Swift forums](https://forums.swift.org)
   - [Follow @Swiftlang on Twitter](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
 </div>
+
+<script>
+  var featuredSnippets = document.querySelectorAll('.featured-snippet');
+  var visibleSnippet = document.querySelector('.featured-snippet.visible');
+  var randomIndex = Math.floor(Math.random() * featuredSnippets.length);
+
+  visibleSnippet?.classList.remove('visible');
+  featuredSnippets[randomIndex]?.classList.add('visible');
+</script>
