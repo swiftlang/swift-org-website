@@ -19,7 +19,6 @@ The current Diversity in Swift workgroup consists of the following people:
 * Holly Borla ([@hborla](https://forums.swift.org/u/hborla/))
 * Kristina Fox ([@kristina](https://forums.swift.org/u/kristina/))
 * Marc Aupont ([@digimarktech](https://forums.swift.org/u/digimarktech))
-* Paul Hudson ([@paul_hudson](https://forums.swift.org/u/paul_hudson/))
 * Timirah James ([@timirahj](https://forums.swift.org/u/timirahj))
 
 You can reach the Diversity in Swift workgroup on the Swift Forums as [@diversity-workgroup](https://forums.swift.org/g/diversity-workgroup).
