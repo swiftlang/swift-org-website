@@ -23,7 +23,7 @@ The current Documentation Workgroup consists of the following people:
 * [Ethan Kusters](https://github.com/ethan-kusters)
 * [Franklin Schrans](https://github.com/franklinsch) (chair)
 * [Joe Heck](https://github.com/heckj)
-* [Kelvin Ma](https://github.com/kelvin13)
+* [Kelvin Ma](https://github.com/tayloraswift)
 * [Kyle Murray](https://github.com/krilnon)
 * [Kyle Ye](https://github.com/Kyle-Ye)
 * [Max Obermeier](https://github.com/theMomax)
