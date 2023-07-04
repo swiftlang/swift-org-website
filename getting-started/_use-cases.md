@@ -2,7 +2,7 @@
 
 <ul class="use-case-list">
   <li class="use-case featured">
-    <h3>✨ New to Programming?</h3>
+    <h3>✨ New to Swift?</h3>
     <p class="description">
       Swift is a great first language if you are just starting your programming journey. For a brief tour of the language, check out this introductory chapter in The Swift Programming Language book.
     </p>
