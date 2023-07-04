@@ -3,12 +3,12 @@ layout: page
 title: About Swift
 ---
 
-Swift is a **general-purpose** programming language that is **quick** to write, **fast** to run, **modern**, and **safe**. It’s **approachable** for newcomers and **powerful** in expert hands.
+Swift is a general-purpose programming language that's approachable for newcomers and powerful in expert hands. It is quick to write, fast to run, modern, and safe.
 
-* Swift is **general-purpose** and **modern**. Suitable for everything from systems programming, through mobile and desktop apps, to cloud services.
-* Swift is **safe**.  Undefined behavior is the enemy of safety, and it’s best to catch mistakes should be caught before software is in production. Swift makes the obvious path the safest.
-* Swift is **fast** to run and **quick** to write. Predictable and consistent performance that is as quick as C-based languages, with all the advantages of developer-friendly language design.
-* Swift is **approachable** and **powerful**. From “Hello, World!” in one line of code to large-scale apps with hundreds of thousands of lines. Swift scales with your needs.
+* Swift is general-purpose and modern. Suitable for everything from systems programming, through mobile and desktop apps, to cloud services.
+* Swift is safe.  Undefined behavior is the enemy of safety, and it’s best to catch mistakes should be caught before software is in production. Swift makes the obvious path the safest.
+* Swift is fast to run and quick to write. Predictable and consistent performance that is as quick as C-based languages, with all the advantages of developer-friendly language design.
+* Swift is approachable and powerful. From “Hello, World!” in one line of code to large-scale apps with hundreds of thousands of lines. Swift scales with your needs.
 
 ## Tools
 
