@@ -35,7 +35,7 @@ atom: true
       </a>
     </li>
 
-    <li>  
+    <li>
       <a href="/documentation">
         <img src="/assets/images/landing-page/book.svg" />
         Read the docs
@@ -57,7 +57,7 @@ atom: true
       Swift is a powerful and intuitive programming language optimized when running on iOS, macOS, and other Apple platforms.
       <br><br>
       Apple offers a wide variety of frameworks and APIs that make applications developed for these platforms unique and fun.
-    </p>  
+    </p>
     <a href="https://developer.apple.com/swift/resources/" class="cta-secondary">Learn more</a>
   </li>
   <li>
