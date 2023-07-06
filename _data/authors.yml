@@ -375,3 +375,15 @@ simonjbeaumont:
   email: beaumont@apple.com
   github: simonjbeaumont
   about: "Si Beaumont is a member of a team developing foundational server-side Swift libraries as part of Apple’s Services Engineering division, and is a core developer on Swift OpenAPI Generator."
+
+guoyezhang:
+  name: Guoye Zhang
+  email: guoye_zhang@apple.com
+  github: guoye-zhang
+  about: "Guoye Zhang is a member of the team at Apple working on Foundation networking, HTTP, and other internet technologies."
+
+erickinnear:
+  name: Eric Kinnear
+  email: ekinnear@apple.com
+  github: ekinnear
+  about: "Eric Kinnear is a member of the team at Apple working on Foundation networking, HTTP, and other internet technologies."
