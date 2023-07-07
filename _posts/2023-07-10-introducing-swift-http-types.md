@@ -102,7 +102,7 @@ guard response.status == .created else {
 
 ### Integrating with SwiftNIO
 
-SwiftNIO integration is currently implemented in the [swift-nio-extras](https://github.com/apple/swift-nio-extras) package. To configure a NIO channel handler for use with the new HTTP types, we can add `HTTP2FramePayloadToHTTPServerCodec` before our other channel handlers:
+SwiftNIO integration will be available in the [swift-nio-extras](https://github.com/apple/swift-nio-extras) package when this package becomes stable. To configure a NIO channel handler for use with the new HTTP types, we can add `HTTP2FramePayloadToHTTPServerCodec` before our other channel handlers:
 
 ```swift
 NIOTSListenerBootstrap(group: NIOTSEventLoopGroup())
