@@ -1,22 +1,22 @@
 ---
 layout: post
 published: true
-date: 2023-07-06 11:00:00
+date: 2023-07-10 10:00:00
 title: Introducing Swift HTTP Types
 author: [guoyezhang, erickinnear, corybenfield]
 ---
 
-We're excited to announce an effort to design a coherent set of APIs for HTTP interactions in Swift for both HTTP clients and HTTP servers. This effort begins with a new open source Swift package: [Swift HTTP Types](https://github.com/apple/swift-http-types). It is a prototype intended to serve as a starting point for detailed discussion and continuing evolutions.
+We're excited to announce a new open source package called [Swift HTTP Types](https://github.com/apple/swift-http-types).
 
-Building upon many insights from the Swift on server ecosystem, app developers, and the broader Swift community, we're starting with shared currency types for core HTTP operations.
+Building upon insights from Swift on server, app developers, and the broader Swift community, Swift HTTP Types is designed to provide a shared set of currency types for client/server HTTP operations in Swift.
 
 ## HTTP in Swift 
 
 Networking in Swift is ubiquitous for many use cases today, spanning clients, servers, intermediaries, and many other participants across the internet and other networks. HTTP is among the most popular networking technologies, powering daily experiences across the world.
 
-On Apple platforms, the system HTTP implementation is exposed via the URLSession API in the Foundation framework. For Swift on server projects, the recommended HTTP stack is implemented in SwiftNIO.
+On Apple platforms, the system HTTP implementation is exposed via the `URLSession` API in the Foundation framework. For Swift on server projects, the recommended HTTP stack is implemented in SwiftNIO.
 
-To provide the best possible experience for using HTTP in Swift, great data types for HTTP requests and responses are essential.
+To provide the best possible experience for using HTTP in Swift, shared currency types are essential.
 
 ## Swift HTTP Types
 
@@ -28,7 +28,7 @@ As the package matures, our goal is to replace SwiftNIO's `HTTPRequestHead` and 
 
 ## Example Usage
 
-The initial design focuses on offering ergonomic ways to perform the most common HTTP operations, while scaling cleanly to represent advanced use cases.
+The API is designed to offer ergonomic ways to perform the most common HTTP operations, while scaling cleanly to represent advanced use cases.
  
 At their core, HTTP requests are comprised of a method, a scheme, an authority, and a path:
 
@@ -71,7 +71,7 @@ extension HTTPField.Name {
 request.headerFields[.myCustomHeader] = "custom-value"
 ```
 
-We can directly set the value of the header field, in this case we have an array of values to provide for `Accept-Language`:
+We can directly set the value of the header field, including arrays of values:
 
 ```swift
 request.headerFields[raw: .acceptLanguage] = ["en-US", "zh-Hans-CN"]
@@ -89,7 +89,7 @@ request.headerFields[raw: .acceptLanguage] // ["en-US", "zh-Hans-CN"]
 
 ### Integrating with Foundation
 
-Using `URLSession`, we can easily create a new `HTTPRequest` to send a POST request to "www.example.com". Setting a custom `User-Agent` header field value on this request is intuitive and integrates with the type system to offer auto-completions.
+Using `URLSession`, we can easily create a new `HTTPRequest` to send a POST request to "www.example.com". Setting a custom `User-Agent` header field value on this request is intuitive and integrates with the type system to offer auto-completions:
 
 ```swift
 var request = HTTPRequest(method: .post, url: URL(string: "https://www.example.com/upload")!)
@@ -140,19 +140,25 @@ final class ExampleChannelHandler: ChannelDuplexHandler {
 }
 ```
 
-## Request and response body
+## Request and Response Body
 
-HTTP request and response bodies are not currently a part of this package, please continue to use existing mechanisms: `Data` and `InputStream` for Foundation and `ByteBuffer` for SwiftNIO. We are interested in exploring proposals with the community to provide body handling in the future.
+HTTP request and response bodies are not currently a part of this package.
+
+Please continue to use existing the mechanisms: `Data` and `InputStream` for Foundation and `ByteBuffer` for SwiftNIO.
+
+We are interested in exploring proposals with the community to provide body handling in the future.
 
 ## Get Involved
 
-The experience and expertise from this community enables creation of these building blocks for a great HTTP experience in Swift. The version of Swift HTTP Types we're releasing today is a starting point for feedbacks and discussions with the community.
+The experience and expertise from this community is invaluable in creating the building blocks for a great HTTP experience in Swift.
 
-You can get started by 
+The version of Swift HTTP Types we're releasing today is a starting point for feedback and discussion with the community.
 
-* Trying out the [swift-http-types package on GitHub](https://github.com/apple/swift-http-types)
+You can get started by:
+
+* Trying out the [swift-http-types package](https://github.com/apple/swift-http-types)
 * Reading the API proposal and participating in the discussion on the Swift forums
 * Participating in discussions with the [#http tag on the Swift forums](https://forums.swift.org/tag/http)
-* Opening issues and contributing [on GitHub](https://github.com/apple/swift-http-types/issues) for any problems you find
+* Opening [issues and contributing](https://github.com/apple/swift-http-types/issues) for any problems you find
 
-We're looking forward to explore the future of HTTP in Swift together.
+We're looking forward to exploring the future of HTTP in Swift together.
