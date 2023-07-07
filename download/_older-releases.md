@@ -1,7 +1,7 @@
 <details class="download" style="margin-bottom: 0em">
   <summary>Swift 5.x</summary>
 
-<h3>Swift 5.7.3</h3>
+<h3>Swift 5.8</h3>
 
 Date: March 30, 2023<br>
 Tag: <a href="https://github.com/apple/swift/releases/tag/swift-5.8-RELEASE">swift-5.8-RELEASE</a>
