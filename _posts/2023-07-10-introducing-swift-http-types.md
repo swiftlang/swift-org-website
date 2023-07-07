@@ -14,17 +14,21 @@ Building upon insights from Swift on server, app developers, and the broader Swi
 
 Networking in Swift is ubiquitous for many use cases today, spanning clients, servers, intermediaries, and many other participants across the internet and other networks. HTTP is among the most popular networking technologies, powering daily experiences across the world.
 
-On Apple platforms, the system HTTP implementation is exposed via the `URLSession` API in the Foundation framework. For Swift on server projects, the recommended HTTP stack is implemented in SwiftNIO.
+On Apple platforms, the system HTTP implementation is exposed via the `URLSession` API in the Foundation framework. For Swift on server projects, the recommended HTTP stack is implemented in [SwiftNIO](https://github.com/apple/swift-nio).
 
-To provide the best possible experience for using HTTP in Swift, shared currency types are essential.
+To provide the best possible experience for using HTTP in Swift, shared currency types, useful across many projects, are essential.
 
 ## Swift HTTP Types
 
-[Swift HTTP Types](https://github.com/apple/swift-http-types) provides a common representation of the core building blocks of HTTP messages. `HTTPRequest` and `HTTPResponse` represent HTTP messages with a common interface across clients and servers. By adopting them across multiple projects, more code can be shared between clients and servers, and we can eliminate the cost of converting between types when working with multiple frameworks.
+[Swift HTTP Types](https://github.com/apple/swift-http-types) provides a common representation of the core building blocks of HTTP messages.
+
+`HTTPRequest` and `HTTPResponse` represent HTTP messages for both client and server use cases. By adopting them across multiple projects, more code can be shared between clients and servers, eliminating the cost of converting between types when working with multiple frameworks.
 
 These types are built Swift-first to represent every valid HTTP message. Their representations are focused on modern HTTP versions like HTTP/3 and HTTP/2, while also retaining compatibility with HTTP/1.1.
 
-As the package matures, our goal is to replace SwiftNIO's `HTTPRequestHead` and `HTTPResponseHead` as well as the HTTP message details of Foundation's `URLRequest` and `URLResponse`. The new currency types are designed to be suitable for use in any HTTP scenario and are not tied to any existing framework, eliminating the need for duplicate HTTP abstractions.
+As the package matures, our goal is to replace SwiftNIO's `HTTPRequestHead` and `HTTPResponseHead` as well as the HTTP message details of Foundation's `URLRequest` and `URLResponse`.
+
+The new currency types are designed to be suitable for use in any HTTP scenario and are not tied to any existing framework, eliminating the need for duplicate HTTP abstractions.
 
 ## Example Usage
 
@@ -71,7 +75,7 @@ extension HTTPField.Name {
 request.headerFields[.myCustomHeader] = "custom-value"
 ```
 
-We can directly set the value of the header field, including arrays of values:
+We can directly set the value of the header field, including an array of values:
 
 ```swift
 request.headerFields[raw: .acceptLanguage] = ["en-US", "zh-Hans-CN"]
@@ -117,7 +121,7 @@ NIOTSListenerBootstrap(group: NIOTSEventLoopGroup())
     .tlsOptions(tlsOptions)
 ```
 
-Our example channel implementation processes `HTTPRequest`s and provides `HTTPResponse`s:
+Our example channel implementation processes both `HTTPRequest` and `HTTPResponse` types:
 
 ```swift
 final class ExampleChannelHandler: ChannelDuplexHandler {
@@ -142,7 +146,7 @@ final class ExampleChannelHandler: ChannelDuplexHandler {
 
 ## Request and Response Body
 
-HTTP request and response bodies are not currently a part of this package.
+HTTP request and response bodies are not currently part of this package.
 
 Please continue to use existing the mechanisms: `Data` and `InputStream` for Foundation and `ByteBuffer` for SwiftNIO.
 
