@@ -161,7 +161,6 @@ The version of Swift HTTP Types we're releasing today is a starting point for fe
 You can get started by:
 
 * Trying out the [swift-http-types package](https://github.com/apple/swift-http-types)
-* Reading the API proposal and participating in the discussion on the Swift forums
 * Participating in discussions with the [#http tag on the Swift forums](https://forums.swift.org/tag/http)
 * Opening [issues and contributing](https://github.com/apple/swift-http-types/issues) for any problems you find
 
