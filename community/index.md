@@ -37,11 +37,15 @@ Most importantly, everyone that uses Swift is a valued member of our extended co
 
 #### Project Lead
 
+[Contact via Forums](https://forums.swift.org/new-message?username=tkremenek)
+
 Apple Inc. is the project lead and serves as the arbiter for the project.  The project lead makes senior appointments to leadership roles, with those leaders coming from the worldwide Swift community of contributors.  The community leaders and code contributors work together to continually improve Swift, and the language will advance by the good works of everyone involved.
 
 [Ted Kremenek](mailto:kremenek@apple.com) is the appointed representative from Apple, and acts as the voice of the project lead.
 
 #### Core Team
+
+[Contact via Forums](https://forums.swift.org/new-message?groupname=core-team)
 
 The Core Team provides cohesion across the Swift community's various workgroups and initiatives, providing support and strategic alignment. The Project Lead appoints members of the Core Team to bring a mixture of experience, expertise, and leadership so the group may together act as effective stewards for the Swift project and its community. The Core Team membership is expected to change over time.
 
@@ -51,7 +55,9 @@ The current Core Team members are:
 {% for person in people %}* {{ person.name }}
 {% endfor %}
 
-#### Language Workgroup
+#### Language Workgroup 
+
+[Contact via Forums](https://forums.swift.org/new-message?groupname=language-workgroup)
 
 The Language Workgroup comprises experts that the Swift Project Lead and the Core Team have identified as possessing a balance of perspectives and expertise to review, guide, and strategically align changes to the language mindfully.  The Language Workgroup reviews and helps iterate [language evolution proposals](/contributing/#evolution-process) from the community, acting as the approver of these proposals.  Workgroup members help drive the Swift language forward coherently to create the best possible general-purpose programming language.  The Language Workgroup membership is expected to change over time.
 
@@ -62,6 +68,8 @@ The current Language Workgroup members are:
 {% endfor %}
 
 #### Code Owners
+
+[Contact via Forums](https://forums.swift.org/new-message?groupname=code-owners)
 
 Code owners are individuals assigned to specific areas of the Swift project, with code quality their primary responsibility. The umbrella Swift project is composed of numerous sub-projects including the Swift standard library, extensions to the LLDB debugger, and the Swift package manager, to name a few. Each sub-project will be assigned a code owner.  The code owner then works to get all contributions reviewed, gather feedback from the community, and shepherd approved patches into the product.
 
