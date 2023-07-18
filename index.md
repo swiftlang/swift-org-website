@@ -4,9 +4,7 @@ title: Welcome to Swift.org
 atom: true
 ---
 
-# Welcome to Swift.org
-
-Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
+<h1 class="preamble">Swift is a <strong>general-purpose</strong> programming language that's <strong>approachable</strong> for newcomers and <strong>powerful</strong> in expert hands. It is <strong>quick</strong> to write, <strong>fast</strong> to run, <strong>modern</strong>, and <strong>safe</strong>.</h1>
 
 {% for snippet in site.data.featured_snippets %}
 ```swift
@@ -37,7 +35,7 @@ Swift is a general-purpose programming language built using a modern approach to
       </a>
     </li>
 
-    <li>  
+    <li>
       <a href="/documentation">
         <img src="/assets/images/landing-page/book.svg" />
         Read the docs
@@ -45,29 +43,6 @@ Swift is a general-purpose programming language built using a modern approach to
     </li>
   </ul>
 </div>
-
-## Why Swift?
-
-<ul class="why-swift-list">
-  <li>
-    <h3>Safe</h3>
-    <p>
-      Swift prioritizes safety and clarity, ensuring that code behaves in a safe manner while also promoting clear and concise programming practices.
-    </p>
-  </li>
-  <li>
-    <h3>Fast</h3>
-    <p>
-      Swift aims to replace C-based languages (C, C++, and Objective-C) and match their performance, while maintaining consistency and predictability.
-    </p>
-  </li>
-  <li>
-    <h3>Expressive</h3>
-    <p>
-      Swift builds upon decades of advancements in computer science, providing a modern syntax that is a joy to use.
-    </p>
-  </li>
-</ul>
 
 <div class="links links-list-nostyle" markdown="1">
   - [Learn more about Swift](/about)
@@ -82,7 +57,7 @@ Swift is a general-purpose programming language built using a modern approach to
       Swift is a powerful and intuitive programming language optimized when running on iOS, macOS, and other Apple platforms.
       <br><br>
       Apple offers a wide variety of frameworks and APIs that make applications developed for these platforms unique and fun.
-    </p>  
+    </p>
     <a href="https://developer.apple.com/swift/resources/" class="cta-secondary">Learn more</a>
   </li>
   <li>
