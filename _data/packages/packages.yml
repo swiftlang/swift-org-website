@@ -1,7 +1,7 @@
 categories:
   - name: Community Showcase
     anchor: community
-    description: "The community showcase celebrates new and innovative packages discussed on recent community podcasts, blogs, and newsletters. If you would like to submit a package you have written or are using for inclusion, [here’s how](#)!"
+    description: "The community showcase celebrates new and innovative packages discussed on recent community podcasts, blogs, and newsletters. If you would like to submit a package for inclusion here, please [message the Swift Website Workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup)."
     packages:
       - name: "Settings"
         description: "Settings library offers a settings window to add to macOS apps in minutes with built-in SwiftUI support, allowing users to customize their app to their preferences."
