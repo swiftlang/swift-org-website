@@ -18,7 +18,7 @@ There are thousands of packages to explore through the community-run package ind
 {% for category in site.data.packages.packages.categories %}
 <h3 id="{{ category.anchor }}-packages">{{ category.name }}</h3>
 <p>{{ category.description | markdownify }}</p>
-<ul class="package-list-v1">
+<ul class="package-list">
   {% for package in category.packages %}
   <li class="{% if package.showcase_reason %}showcase{% endif %}">
     <a href="{{ package.url }}" target="_blank">
