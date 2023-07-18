@@ -1,0 +1,35 @@
+- |
+  let names = ["Anna", "Alex", "Brian", "Jack"]
+  for name in names {
+      print("Hello, \(name)!")
+  }
+  // Hello, Anna!
+  // Hello, Alex!
+  // Hello, Brian!
+  // Hello, Jack!
+- |
+  func greet(person: String, alreadyGreeted: Bool) -> String {
+      if alreadyGreeted {
+          return greetAgain(person: person)
+      } else {
+          return greet(person: person)
+      }
+  }
+  print(greet(person: "Tim", alreadyGreeted: true))
+  // Prints "Hello again, Tim!"
+- |
+  func oneMore(than number: Int) -> Int {
+      return number + 1
+  }
+
+  var myNumber = 1
+  myNumber = oneMore(than: myNumber)
+  print(myNumber)
+  // Prints "2"
+- |
+  enum Beverage: CaseIterable {
+      case coffee, tea, juice
+  }
+  let numberOfChoices = Beverage.allCases.count
+  print("\(numberOfChoices) beverages available")
+  // Prints "3 beverages available"

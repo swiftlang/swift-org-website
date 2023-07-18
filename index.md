@@ -4,9 +4,14 @@ title: Welcome to Swift.org
 atom: true
 ---
 
-# Welcome to Swift.org
+<h1 class="preamble">Swift is a <strong>general-purpose</strong> programming language that's <strong>approachable</strong> for newcomers and <strong>powerful</strong> in expert hands. It is <strong>quick</strong> to write, <strong>fast</strong> to run, <strong>modern</strong>, and <strong>safe</strong>.</h1>
 
-Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
+{% for snippet in site.data.featured_snippets %}
+```swift
+{{ snippet -}}
+```
+{: class="featured-snippet {% if forloop.first %}visible{% endif %}" }
+{% endfor %}
 
 <div class="link-grid" markdown="1">
   <ul>
@@ -30,7 +35,7 @@ Swift is a general-purpose programming language built using a modern approach to
       </a>
     </li>
 
-    <li>  
+    <li>
       <a href="/documentation">
         <img src="/assets/images/landing-page/book.svg" />
         Read the docs
@@ -38,29 +43,6 @@ Swift is a general-purpose programming language built using a modern approach to
     </li>
   </ul>
 </div>
-
-## Why Swift?
-
-<ul class="why-swift-list">
-  <li>
-    <h3>Safe</h3>
-    <p>
-      Swift prioritizes safety and clarity, ensuring that code behaves in a safe manner while also promoting clear and concise programming practices.
-    </p>
-  </li>
-  <li>
-    <h3>Fast</h3>
-    <p>
-      Swift aims to replace C-based languages (C, C++, and Objective-C) and match their performance, while maintaining consistency and predictability.
-    </p>
-  </li>
-  <li>
-    <h3>Expressive</h3>
-    <p>
-      Swift builds upon decades of advancements in computer science, providing a modern syntax that is a joy to use.
-    </p>
-  </li>
-</ul>
 
 <div class="links links-list-nostyle" markdown="1">
   - [Learn more about Swift](/about)
@@ -72,15 +54,29 @@ Swift is a general-purpose programming language built using a modern approach to
   <li>
     <h3>Apple platforms</h3>
     <p>
-      Swift is a powerful and intuitive programming language on macOS, iOS, watchOS, tvOS and beyond. Swift code is safe by design, yet also produces software that is optimized to run lightning-fast.
+      Swift is a powerful and intuitive programming language optimized when running on iOS, macOS, and other Apple platforms.
+      <br><br>
+      Apple offers a wide variety of frameworks and APIs that make applications developed for these platforms unique and fun.
     </p>
-
     <a href="https://developer.apple.com/swift/resources/" class="cta-secondary">Learn more</a>
   </li>
   <li>
-    <h3>Server</h3>
+    <h3>Cross-platform Command-line</h3>
     <p>
-      Ever dreamed of using the same programming language on both your mobile applications and their server back-ends? Swift's small footprint, quick startup time, and deterministic performance make it specifically suitable for Server applications.
+      Writing Swift is interactive and fun, the syntax is concise yet expressive.
+      Swift code is safe by design and produces software that runs lightning-fast.
+      <br><br>
+      SwiftArgumentParser and Swift's growing package ecosystem make developing cross-platform command-line tools a breeze.
+    </p>
+
+    <a href="/getting-started/cli-swiftpm" class="cta-secondary">Learn more</a>
+  </li>
+  <li>
+    <h3>Server and Networking</h3>
+    <p>
+      Swift's small memory footprint, quick startup time, and deterministic performance make it a great choice for server and other networked applications.
+      <br><br>
+      SwiftNIO and Swift's dynamic server ecosystem bring joy to developing networked applications.
     </p>
 
     <a href="/server" class="cta-secondary">Learn more</a>
@@ -126,3 +122,12 @@ Stay up-to-date with the latest in the Swift community.
   - [Visit the Swift forums](https://forums.swift.org)
   - [Follow @Swiftlang on Twitter](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
 </div>
+
+<script>
+  var featuredSnippets = document.querySelectorAll('.featured-snippet');
+  var visibleSnippet = document.querySelector('.featured-snippet.visible');
+  var randomIndex = Math.floor(Math.random() * featuredSnippets.length);
+
+  visibleSnippet?.classList.remove('visible');
+  featuredSnippets[randomIndex]?.classList.add('visible');
+</script>
