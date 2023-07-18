@@ -56,7 +56,7 @@ For example, to enable the upcoming Regex literal syntax you would use:
  ```
 In Swift Package Manager manifests you specify these using a new `SwiftSetting`:
 ```swift
-.enableUpcomingFeature(name: "BareSlashRegexLiterals")
+.enableUpcomingFeature("BareSlashRegexLiterals")
 ``` 
 ### Checking For Features In Code
 
@@ -126,9 +126,9 @@ For a Swift package, enable upcoming features for a target in its `SwiftSetting`
 .target(name: "MyTarget",
   dependencies:[.fancyLibrary],
     swiftSettings:
-      [.enableUpcomingFeature(name: “ConciseMagicFile”),
-       .enableUpcomingFeature(name: “BareSlashRegexLiterals”),
-       .enableUpcomingFeature(name: “ExistentialAny”)])
+      [.enableUpcomingFeature(“ConciseMagicFile”),
+       .enableUpcomingFeature(“BareSlashRegexLiterals”),
+       .enableUpcomingFeature(“ExistentialAny”)])
 ```
 You will also need to update the tools version specified in the manifest to 5.8 or later:
 ```swift
