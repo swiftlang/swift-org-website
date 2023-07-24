@@ -126,9 +126,9 @@ For a Swift package, enable upcoming features for a target in its `SwiftSetting`
 .target(name: "MyTarget",
   dependencies:[.fancyLibrary],
     swiftSettings:
-      [.enableUpcomingFeature(“ConciseMagicFile”),
-       .enableUpcomingFeature(“BareSlashRegexLiterals”),
-       .enableUpcomingFeature(“ExistentialAny”)])
+      [.enableUpcomingFeature("ConciseMagicFile"),
+       .enableUpcomingFeature("BareSlashRegexLiterals"),
+       .enableUpcomingFeature("ExistentialAny")])
 ```
 You will also need to update the tools version specified in the manifest to 5.8 or later:
 ```swift
