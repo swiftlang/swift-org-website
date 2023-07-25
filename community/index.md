@@ -29,7 +29,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
 * __Workgroups__
    * __[C++ Interoperability Workgroup](/cxx-interop-workgroup)__ is a team that works on adding the support for the bidirectional interoperability between Swift and C++
    * __[Documentation Workgroup](/documentation-workgroup)__ is a steering team that helps guide the documentation experience for Swift
-   * __[Language Workgroup](#language-workgroup)__ is a small group of experts that drive the Swift language forward in a coherent direction
+   * __[Language Steering Group](#language-steering-group)__ is a small group of experts that drive the Swift language forward in a coherent direction
    * __[Swift on Server Workgroup](/sswg)__ is a steering team that promotes the use of Swift for developing and deploying server applications
    * __[Website Workgroup](/website-workgroup/)__ is a steering team that helps guide the evolution on the Swift.org website
 
@@ -55,13 +55,13 @@ The current Core Team members are:
 {% for person in people %}* {{ person.name }}
 {% endfor %}
 
-#### Language Workgroup
+#### Language Steering Group
 
 [Contact via Forums](https://forums.swift.org/new-message?groupname=language-workgroup)
 
-The Language Workgroup comprises experts that the Swift Project Lead and the Core Team have identified as possessing a balance of perspectives and expertise to review, guide, and strategically align changes to the language mindfully.  The Language Workgroup reviews and helps iterate [language evolution proposals](/contributing/#evolution-process) from the community, acting as the approver of these proposals.  Workgroup members help drive the Swift language forward coherently to create the best possible general-purpose programming language.  The Language Workgroup membership is expected to change over time.
+The Language Steering Group comprises experts that the Swift Project Lead and the Core Team have identified as possessing a balance of perspectives and expertise to review, guide, and strategically align changes to the language mindfully.  The Language Steering Group reviews and helps iterate [language evolution proposals](/contributing/#evolution-process) from the community, acting as the approver of these proposals.  Workgroup members help drive the Swift language forward coherently to create the best possible general-purpose programming language.  The Language Steering Group membership is expected to change over time.
 
-The current Language Workgroup members are:
+The current Language Steering Group members are:
 
 {% assign people = site.data.language_wg | sort: "name" %}
 {% for person in people %}* {{ person.name }}
