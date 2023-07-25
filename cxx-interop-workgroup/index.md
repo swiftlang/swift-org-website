@@ -11,7 +11,7 @@ The C++ Interoperability workgroup works to build and advance the interoperabili
 
 The C++ Interoperability workgroup serves as an incubator for the design and implementation of Swift's interoperation with C++. It has no special technical or formal authority. Workgroup members design, implement, test, and document experimental features in the Swift tools that allow both Swift programs to import and use C++ APIs and C++ programs to import and use Swift APIs. When the workgroup feels that a feature is ready, workgroup members guide the feature through the normal Swift evolution process for discussion and formal review. It is a goal of the workgroup that all features will eventually be reviewed rather than remaining perpetually experimental.
 
-As an incubator for language proposals, the C++ Interoperability workgroup works closely with the Language workgroup to get early feedback on its ideas and to provide feedback to the Language workgroup about general directions the language should take.
+As an incubator for language proposals, the C++ Interoperability workgroup works closely with the Language Steering Group to get early feedback on its ideas and to provide feedback to the Language Steering Group about general directions the language should take.
 
 The C++ Interoperability workgroup communicates with the broader Swift community in three primary ways:
 

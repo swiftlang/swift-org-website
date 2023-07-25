@@ -231,7 +231,7 @@ hborla:
    github: hborla
    twitter: hollyborla
    gravatar: b3e284dd808123c26f476d75da0b5b3c
-   about: "Holly Borla is an engineer on the Apple Swift team, and a member of the Swift Core Team, Language workgroup, and Diversity in Swift workgroup."
+   about: "Holly Borla is an engineer on the Apple Swift team, and a member of the Swift Core Team, Language Steering Group, and Diversity in Swift workgroup."
 
 krstnfx:
    name: Kristina Fox
@@ -328,7 +328,7 @@ rjmccall:
    name: John McCall
    github: rjmccall
    twitter: pathofshrines
-   about: "John McCall is an engineer on the Apple Swift team and member of the Language workgroup."
+   about: "John McCall is an engineer on the Apple Swift team and member of the Language Steering Group."
 
 amartini:
   name: Alex Martini
