@@ -84,6 +84,79 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/MarcoEidinger/TLDExtractSwift
         showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
+  - name: Macro packages
+    anchor: macros
+    description: "Macros are new in Swift 5.9 and transform your source code when you compile it, letting you avoid writing repetitive code. [Read more about creating macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros/){:target='_blank'} or check out these packages that include macro targets."
+    more:
+      title: "Explore more packages with macros…"
+      url: https://swiftpackageindex.com/search?query=product:macro
+    packages:
+      - name: SwiftPowerAssert
+        description:
+          Swift Power Assert is a library that provides descriptive assertion
+          messages for tests. It augments assertion failures with information about the
+          values produced during the evaluation of a condition.
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (macOS)
+        license: MIT
+        url: https://swiftpackageindex.com/kishikawakatsumi/swift-power-assert
+      - name: swift-spyable
+        description:
+          Spyable is a powerful tool for Swift that automates the creation of
+          spies for testing. It generates spy classes that track interactions with methods
+          and properties, simplifying behavior verification in tests.
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (macOS)
+        license: MIT
+        url: https://swiftpackageindex.com/Matejkob/swift-spyable
+      - name: SwiftRequest
+        description:
+          SwiftRequest is a lightweight HTTP client that simplifies constructing
+          and executing HTTP requests in Swift. It supports various HTTP methods and provides
+          parameters for headers, query parameters, path parameters, and request bodies.
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (macOS)
+        license: MIT
+        url: https://swiftpackageindex.com/ailtonvivaz/swift-request
+      - name: SFSymbolsMacro
+        description:
+          This Swift Macro enables type-safe usage of SF Symbols. Create an enum
+          to hold symbols, import `SFSymbolsMacro`, and use the `@SFSymbol` annotation.
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (macOS)
+        license: MIT
+        url: https://swiftpackageindex.com/lukepistrol/SFSymbolsMacro
+      - name: AssociatedObject
+        description:
+          Swift macro for adding variable declarations in class extensions by
+          wrapping `objc_getAssociatedObject`/`objc_setAssociatedObject`. Can be used to
+          add stored properties to classes.
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/p-x9/AssociatedObject
+      - name: swift-macro-toolkit
+        description:
+          Swift Macro Toolkit is a library that provides tools and utilities
+          for working with Swift macros. It simplifies tasks such as parsing floating point
+          literals, type destructuring, type normalization, and getting the value of string
+          literals.
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (macOS)
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/stackotter/swift-macro-toolkit
   - name: Networking packages
     anchor: networking
     description: "Covering everything from abstractions on top of core networking libraries to full-featured HTTP clients to low-level networking libraries. If you need a little more on top of URLSession, or a lot more, you’ll find it here."
@@ -91,72 +164,80 @@ categories:
       title: "Explore more networking packages…"
       url: https://swiftpackageindex.com/keywords/networking
     packages:
-      - name: "swift-nio"
-        description: "SwiftNIO is an open-source network application framework providing low-level building blocks for building high-performance, maintainable, and scalable protocol servers & clients for rapid development."
-        swift_compatibility: 5.5+
-        platform_compatibility: [Apple, Linux]
-        platform_compatibility_tooltip: "Apple (macOS) and Linux"
-        age: "6 years"
-        activity: "Within the last month"
-        authors: "Written by Johannes Weiss and 164 other contributors."
-        license: "Apache 2.0"
-        stars: "7,297"
+      - name: swift-nio
+        description:
+          SwiftNIO is a cross-platform networking framework for building high-performance
+          protocol servers and clients. It uses non-blocking I/O for efficient handling
+          of multiple connections.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (macOS, visionOS, watchOS) and Linux
+        license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-nio
       - name: Alamofire
-        description: "Alamofire is a HTTP networking library written in Swift which provides chainable request/response methods, Swift concurrency support, authentication and advanced features such as chainable request/response methods, authentication and response validation."
-        swift_compatibility: 5.5+
-        platform_compatibility: [Apple, Linux]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        age: "8 years"
-        activity: "Within the last month"
-        authors: "Written by Christian Noon and 258 other contributors."
-        license: "MIT"
-        stars: "39,145"
-        url: https://swiftpackageindex.com/Alamofire/Alamofire
-      - name: "Pulse"
-        description: "Pulse is a powerful logging system for Apple Platforms, enabling users to record and inspect logs and URLSession network requests, view them with PulseUI, and share them using Pulse Pro or Pulse for macOS."
-        swift_compatibility: 5.7+
-        platform_compatibility: [Apple]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
-        age: "3 years"
-        activity: "Within the last month"
-        authors: "Written by kean and 28 other contributors."
-        license: "MIT"
-        stars: "5,227"
-        url: https://swiftpackageindex.com/kean/Pulse
-      - name: "Moya"
-        description: "Moya provides compile-time checking for correct API endpoint accesses, lets you define clear usage of different endpoints with associated enum values and treats test stubs as first-class citizens to make unit testing easy."
-        swift_compatibility: 5.5+
-        platform_compatibility: [Apple]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
-        age: "8 years"
-        activity: "2 months ago"
-        authors: "Written by Ash Furrow, Łukasz Mróz, and 261 other contributors."
-        license: "MIT"
-        stars: "14,490"
-        url: https://swiftpackageindex.com/Moya/Moya
-      - name: "Socket"
-        description: "BlueSocket library allows developers to use Swift to create sockets of different families, types, and protocols for use in a range of projects, with customised configurations, SSL support and various read/write functions."
-        swift_compatibility: 5.5+
-        platform_compatibility: [Apple, Linux]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        age: "7 years"
-        activity: "10 months ago"
-        authors: "Written by Bill Abt and 35 other contributors."
-        license: "Apache 2.0"
-        stars: "1,349"
-        url: https://swiftpackageindex.com/Kitura/BlueSocket
-      - name: "RealHTTP"
-        description: "RealHTTP is a lightweight yet powerful async-based HTTP library made in Swift designed to make an easy-to-use, effortless HTTP client."
+        description:
+          Alamofire is an HTTP networking library written in Swift. It provides
+          features such as request/response handling, parameter encoding, authentication,
+          progress tracking, and more. It also offers additional component libraries for
+          image handling and network activity indicator control.
         swift_compatibility: 5.6+
-        platform_compatibility: [Apple]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
-        age: "2 years"
-        activity: "2 months ago"
-        authors: "Written by Daniele Margutti and 12 other contributors."
-        license: "MIT"
-        stars: "246"
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip:
+          Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/Alamofire/Alamofire
+      - name: Pulse
+        description:
+          Pulse is a powerful logging system for Apple platforms. It records
+          and inspects logs and network requests, and allows for real-time viewing and sharing.
+          It is not a network debugging proxy.
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/kean/Pulse
+      - name: Moya
+        description:
+          Moya is a network abstraction layer for Alamofire. It simplifies network
+          calls and provides compile-time checking for API endpoints. It also supports unit
+          testing with test stubs.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/Moya/Moya
+      - name: RealHTTP
+        description:
+          RealHTTP is a lightweight, async-based HTTP library for Swift. It aims
+          to provide an easy-to-use, powerful HTTP client with features like async/await
+          support, request customization, response validation, and more. It also includes
+          an integrated stubber for testing purposes.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
         url: https://swiftpackageindex.com/immobiliare/RealHTTP
+      - name: Socket
+        description:
+          BlueSocket is a Socket framework for Swift. It provides functionality
+          for creating, closing, and listening on sockets, as well as accepting connections.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip:
+          Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/Kitura/BlueSocket
   - name: Testing packages
     anchor: testing
     description: "Whether you're looking for an extension on top of XCTest or a completely different way to approach testing, these packages are here to help."
@@ -164,72 +245,80 @@ categories:
       title: "Explore more testing packages…"
       url: https://swiftpackageindex.com/keywords/testing
     packages:
-      - name: "Quick"
-        description: "Quick is a behavior-driven development framework for Swift and Objective-C, inspired by RSpec, Specta, and Ginkgo. It includes Nimble, a matcher framework for creating clearer test expectations."
+      - name: Quick
+        description:
+          Quick is a behavior-driven development framework for Swift and Objective-C.
+          It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher framework
+          for tests.
         swift_compatibility: 5.7+
-        platform_compatibility: [Apple, Linux]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        age: "8 years"
-        activity: "Within the last month"
-        authors: "Written by Brian Gesiak and 165 other contributors."
-        license: "Apache 2.0"
-        stars: "9,677"
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Quick
-      - name: "Nimble"
-        description: "Nimble enables expressing expected outcomes of Swift or Objective-C expressions in a natural, easily understood language. It supports type checking, custom failure messages, async/await, lazy evaluation, polling expectations, and a variety of built-in matchers for testing values, types, comparisons, truthiness, and more."
+      - name: Nimble
+        description:
+          Nimble is a testing library for Swift and Objective-C. It provides
+          a more expressive way to write assertions and supports operator overloads and
+          asynchronous testing.
         swift_compatibility: 5.7+
-        platform_compatibility: [Apple, Linux]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        age: "8 years"
-        activity: "Within the last month"
-        authors: "Written by Jeff Hui, Sho Ikeda, and 130 other contributors."
-        license: "Apache 2.0"
-        stars: "4,668"
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Nimble
-      - name: "combine-schedulers"
-        description: "CombineSchedulers provides testable and versatile schedulers for Combine framework, enabling better control over time and execution in publishers. It includes features such as `TestScheduler`, `ImmediateScheduler`, and SwiftUI/UIKit animation support."
-        swift_compatibility: 5.5+
-        platform_compatibility: [Apple, Linux]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        age: "2 years"
-        activity: "Within the last month"
-        authors: "Written by Stephen Celis, Brandon Williams, and 12 other contributors"
-        license: "MIT"
-        stars: "591"
+      - name: OCHamcrest
+        description:
+          OCHamcrest is an Objective-C module that provides a library of matchers
+          for creating flexible test assertions and user input validation. It can be added
+          to projects using Swift Package Manager, CocoaPods, or Carthage.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: BSD 2-Clause
+        url: https://swiftpackageindex.com/hamcrest/OCHamcrest
+      - name: combine-schedulers
+        description:
+          Combine Schedulers is a library that provides schedulers for testing
+          and working with Combine publishers. It includes schedulers like `AnyScheduler`,
+          `TestScheduler`, `ImmediateScheduler`, and more.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip:
+          Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
         url: https://swiftpackageindex.com/pointfreeco/combine-schedulers
-      - name: "OCHamcrest"
-        description: "OCHamcrest provides a module of matcher objects for declaring rules to check if given objects match specified rules, and a framework to create custom matchers. Matchers can be combined for flexibility."
-        swift_compatibility: 5.5+
-        platform_compatibility: [Apple]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
-        age: "13 years"
-        activity: "2 years ago"
-        authors: "Written by Jon Reid and 23 other contributors"
-        license: "BSD 2-Clause"
-        stars: "715"
-        url: https://swiftpackageindex.com/
-      - name: "OCMockito"
-        description: "OCMockito provides an Objective-C implementation of Mockito for creating, verifying, and stubbing mock objects. It emphasizes readable tests and reports verification failures as unit test failures."
-        swift_compatibility: 5.5+
-        platform_compatibility: [Apple]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS)"
-        age: "12 years"
-        activity: "1 year ago"
-        authors: "Written by Jon Reid and 32 other contributors."
-        license: "MIT"
-        stars: "988"
+      - name: swift-custom-dump
+        description:
+          A collection of tools for debugging, diffing, and testing data structures
+          in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
+          and `XCTAssertNoDifference` for test assertions.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip:
+          Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
+      - name: OCMockito
+        description:
+          OCMockito is an Objective-C implementation of Mockito, allowing you
+          to create, verify, and stub mock objects. It has some key differences from other
+          mocking frameworks, making tests less fragile and more readable.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
         url: https://swiftpackageindex.com/jonreid/OCMockito
-      - name: "swift-snapshot-testing"
-        description: "SnapshotTesting enables delightful Swift snapshot testing for various data types, such as images, text, and data. It offers device-agnostic snapshots, first-class Xcode support, and custom diff tool integration. Plug-ins are available to extend functionality."
-        swift_compatibility: 5.5+
-        platform_compatibility: [Apple, Linux]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS) and Linux"
-        age: "5 years"
-        activity: "Within the last month"
-        authors: "Written by Stephen Celis and 73 other contributors."
-        license: "MIT"
-        stars: "3,170"
-        url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
 
   # - name: Packages with Unusual Data
   #   description: "Packages that could cause layout issues. These are here for testing purposes only."
