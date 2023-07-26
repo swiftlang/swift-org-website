@@ -3,78 +3,87 @@ categories:
     anchor: community
     description: "The community showcase celebrates new and innovative packages discussed on recent community podcasts, blogs, and newsletters. If you would like to submit a package for inclusion here, please [message the Swift Website Workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup)."
     packages:
-      - name: "Settings"
-        description: "Settings library offers a settings window to add to macOS apps in minutes with built-in SwiftUI support, allowing users to customize their app to their preferences."
+      - name: ColorToolbox
+        description:
+          ColorToolbox provides Swift color utilities for UIKit, AppKit, and
+          SwiftUI. It includes features such as converting from and to hex strings, calculating
+          relative luminance and WCAG contrast ratio, and lightening/darkening colors.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/raymondjavaxx/ColorToolbox
+        showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
+      - name: FileMonitor
+        description:
+          FileMonitor provides a unified API to detect file changes in a directory
+          on Linux and macOS. It detects file creations, modifications, and deletions and
+          then propagates events through a delegate function.
         swift_compatibility: 5.7+
-        platform_compatibility: [Apple]
-        platform_compatibility_tooltip: "Apple (macOS)"
-        age: "3 years"
-        activity: "Within the last month"
-        authors: "Written by Sindre Sorhus and 13 other contributors."
-        license: "MIT"
-        stars: "1,249"
-        url: https://swiftpackageindex.com/sindresorhus/Settings
-        showcase_reason: "Featured on [Episode 26](https://swiftpackageindexing.transistor.fm/episodes/26-swift-on-windows-wasm-spi-source-code-quiz-and-package-recommendations){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
-      - name: "GEOSwift"
-        description: "GEOSwift is a type-safe, MIT-licensed Swift interface to the OSGeo's GEOS library routines that enables easily handling a geometric object model (points, linestrings, polygons etc.) and related topological operations (intersections, overlapping etc.)."
-        swift_compatibility: 5.5+
-        platform_compatibility: [Apple, Linux]
-        platform_compatibility_tooltip: "Apple (macOS, iOS, tvOS, watchOS) and Linux"
-        age: "8 years"
-        activity: "1 month ago"
-        authors: "Written by Andrew Hershberger, Andrea Cremaschi, and 29 other contributors."
-        license: "MIT"
-        stars: "1,380"
-        url: https://swiftpackageindex.com/GEOSwift/GEOSwift
-        showcase_reason: "Showcased by the Swift community."
-      - name: "PopupView"
-        description: "Popup View is a SwiftUI library used to show toasts, alerts, and popups with customizable parameters to enable a more dynamic user experience."
-        swift_compatibility: 5.7+
-        platform_compatibility: [Apple]
-        platform_compatibility_tooltip: "Apple (macOS, iOS)"
-        age: "3 years"
-        activity: "Within the last month"
-        authors: "Written by AlisaMylnikova and 18 other contributors."
-        license: "MIT"
-        stars: "2,112"
-        url: https://swiftpackageindex.com/exyte/PopupView
-        showcase_reason: "Featured on [Episode 26](https://swiftpackageindexing.transistor.fm/episodes/26-swift-on-windows-wasm-spi-source-code-quiz-and-package-recommendations){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
-      - name: "MenuBuilder"
-        description: "MenuBuilder is a library for creating macOS menus with a SwiftUI-style syntax. It allows developers to quickly and easily create menus with actionable items, separators and submenus, with support for modifiers and conditionals."
-        swift_compatibility: 5.5+
-        platform_compatibility: [Apple]
-        platform_compatibility_tooltip: "Apple (macOS)"
-        age: "2 years"
-        activity: "2 months ago"
-        authors: "Written by Jed Fox and 5 other contributors."
-        license: "MIT"
-        stars: "30"
-        url: https://swiftpackageindex.com/j-f1/MenuBuilder
-        showcase_reason: "Showcased by the Swift community."
-      - name: "ContributorUI"
-        description: "ContributorUI is a library for user interface that displays all developers contributing to a project, allowing for a minimal setup and easy integration into iOS and macOS applications."
-        swift_compatibility: 5.7+
-        platform_compatibility: [Apple]
-        platform_compatibility_tooltip: "Apple (macOS, iOS)"
-        age: "2 months"
-        activity: "2 months ago"
-        authors: "Written by dscyrescotti and 3 other contributors."
-        license: "MIT"
-        stars: "16"
-        url: https://swiftpackageindex.com/dscyrescotti/ContributorUI
-        showcase_reason: "Showcased by the Swift community."
-      - name: "swift-cli-version"
-        description: "swift-cli-version is a swift package that allows you to set the version of a command line tool to the git tag or the git sha, if a tag is not set for the current commit. It provides plugins to use in your project and documentation to explain how to use them."
-        swift_compatibility: 5.7+
-        platform_compatibility: [Apple, Linux]
-        platform_compatibility_tooltip: "Apple (macOS) and Linux"
-        age: "2 months"
-        activity: "2 months ago"
-        authors: "Written by Michael Housh."
-        license: "MIT"
-        stars: "1"
-        url: https://swiftpackageindex.com/m-housh/swift-cli-version
-        showcase_reason: "Showcased by the Swift community."
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (macOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/aus-der-Technik/FileMonitor
+        showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
+      - name: Rearrange
+        description:
+          Rearrange is a utility library for working with `NSRange` and `NSTextRange`
+          in the Cocoa text system. It provides convenience methods, extensions, and types
+          for manipulating and transforming ranges.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip:
+          Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: BSD 3-Clause
+        url: https://swiftpackageindex.com/ChimeHQ/Rearrange
+        showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
+      - name: swift-concurrency-extras
+        description:
+          Provides tools and utilities for working with Swift concurrency, including
+          wrapping values in isolated contexts, working with streams and tasks, and improving
+          the testability of asynchronous code.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip:
+          Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/pointfreeco/swift-concurrency-extras
+        showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
+      - name: SwiftUI-VPSwitch
+        description:
+          A customisable SwiftUI toggle control with transition animations between
+          states.
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, visionOS, watchOS)
+        license: MIT
+        url: https://swiftpackageindex.com/VansonLeung/SwiftUI-VPSwitchToggle
+        showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
+      - name: TLDExtract
+        description:
+          TLDExtract can extract the root domain, TLD, second-level domain, and
+          subdomain from URLs or hostnames. It provides an up-to-date Public Suffix List
+          and supports string and URL inputs.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip:
+          Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/MarcoEidinger/TLDExtractSwift
+        showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
   - name: Networking packages
     anchor: networking
     description: "Covering everything from abstractions on top of core networking libraries to full-featured HTTP clients to low-level networking libraries. If you need a little more on top of URLSession, or a lot more, you’ll find it here."
