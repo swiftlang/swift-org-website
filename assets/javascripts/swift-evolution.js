@@ -1,6 +1,6 @@
 // This source file is part of the Swift.org open source project
 //
-// Copyright (c) 2014 - 2022 Apple Inc. and the Swift project authors
+// Copyright (c) 2014 - 2023 Apple Inc. and the Swift project authors
 // Licensed under Apache License v2.0 with Runtime Library Exception
 //
 // See http://swift.org/LICENSE.txt for license information
@@ -47,7 +47,8 @@ const upcomingFeatureFlags = new Map([
   ['SE-0286', 'ForwardTrailingClosures'],
   ['SE-0335', 'ExistentialAny'],
   ['SE-0354', 'BareSlashRegexLiterals'],
-  ['SE-0384', 'ImportObjcForwardDeclarations']
+  ['SE-0384', 'ImportObjcForwardDeclarations'],
+  ['SE-0401', 'DisableOutwardActorInference'],
 ])
 
 /** Storage for the user's current selection of filters when filtering is toggled off. */
