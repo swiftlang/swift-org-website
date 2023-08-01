@@ -3,7 +3,7 @@ layout: page
 title: Build a Web Service with Vapor
 ---
 
-> The source bode for this guide can be found [on GitHub](https://github.com/vapor/swift-getting-started-web-server)
+> The source code for this guide can be found [on GitHub](https://github.com/vapor/swift-getting-started-web-server)
 
 {% include getting-started/_installing.md %}
 
