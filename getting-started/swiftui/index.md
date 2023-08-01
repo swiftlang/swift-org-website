@@ -3,7 +3,7 @@ layout: page
 title: Build an iOS app with SwiftUI
 ---
 
-> The source bode for this guide can be found [on GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial)
+> The source code for this guide can be found [on GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial)
 
 In this tutorial you’re going to use Swift and SwiftUI to build a small app to recommend fun new activities to users. Along the way you’ll meet several of the basic components of a SwiftUI app, including text, images, buttons, shapes, stacks, and program state.
 
