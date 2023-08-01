@@ -410,4 +410,4 @@ We’ve covered a lot of SwiftUI basics in this tutorial, including text, images
 
 If you’d like to continue learning SwiftUI, there are lots of free resources available. For example, [Apple publishes a wide variety of tutorials](https://developer.apple.com/tutorials/swiftui) covering essential topics, drawing and animation, app design, and more. We’ll also post links here on Swift.org to some other popular tutorials – we’re a big and welcoming community, and we’re glad to have you join!
 
-> The source bode for this guide can be found [on GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial)
+> The source code for this guide can be found [on GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial)
