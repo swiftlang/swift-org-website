@@ -3,6 +3,8 @@ layout: page
 title: Build a library
 ---
 
+> The source bode for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-package-library)
+
 {% include getting-started/_installing.md %}
 
 ## Bootstrapping
@@ -121,4 +123,4 @@ Test Suite 'All tests' passed at 2023-01-03 16:22:45.076.
 
 ---
 
-Find the source code for this guide at [https://github.com/apple/swift-getting-started-package-library](https://github.com/apple/swift-getting-started-package-library)
+> The source bode for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-package-library)
