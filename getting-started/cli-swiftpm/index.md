@@ -229,4 +229,4 @@ _   _          _   _                                           _       _   _
 
 ---
 
-> The source bode for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-cli)
+> The source code for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-cli)
