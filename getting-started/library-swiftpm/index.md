@@ -3,7 +3,7 @@ layout: page
 title: Build a library
 ---
 
-> The source bode for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-package-library)
+> The source code for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-package-library)
 
 {% include getting-started/_installing.md %}
 
