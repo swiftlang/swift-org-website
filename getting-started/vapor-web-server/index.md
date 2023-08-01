@@ -159,4 +159,4 @@ $ curl http://localhost:8080/user-info -X POST -d '{"name": "Tim", "age": 99}' -
 
 Congratulations! You've built your first web server in Swift!
 
-> The source bode for this guide can be found [on GitHub](https://github.com/vapor/swift-getting-started-web-server)
+> The source code for this guide can be found [on GitHub](https://github.com/vapor/swift-getting-started-web-server)
