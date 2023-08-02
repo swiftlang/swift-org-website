@@ -18,3 +18,11 @@ xcuserdata
 
 # Build output
 .output
+
+# VS Code files
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/settings.json
+
+# Prettier
+.prettierrc
