@@ -23,6 +23,7 @@ xcuserdata
 .vscode/tasks.json
 .vscode/launch.json
 .vscode/settings.json
+.vscode/extensions.json
 
 # Prettier
 .prettierrc
