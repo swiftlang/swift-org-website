@@ -3,6 +3,8 @@ layout: page
 title: Build a Command-line Tool
 ---
 
+> The source code for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-cli)
+
 {% include getting-started/_installing.md %}
 
 ## Bootstrapping
@@ -227,4 +229,4 @@ _   _          _   _                                           _       _   _
 
 ---
 
-Find the source code for this guide at [https://github.com/apple/swift-getting-started-cli](https://github.com/apple/swift-getting-started-cli)
+> The source code for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-cli)

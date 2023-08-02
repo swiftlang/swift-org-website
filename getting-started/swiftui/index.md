@@ -3,6 +3,8 @@ layout: page
 title: Build an iOS app with SwiftUI
 ---
 
+> The source code for this guide can be found [on GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial)
+
 In this tutorial you’re going to use Swift and SwiftUI to build a small app to recommend fun new activities to users. Along the way you’ll meet several of the basic components of a SwiftUI app, including text, images, buttons, shapes, stacks, and program state.
 
 To get started, you’ll need to [download Xcode from the Mac App Store](https://apps.apple.com/app/xcode/id497799835?mt=12). It’s free, and comes with Swift and all the other tools you need to follow this tutorial.
@@ -408,4 +410,4 @@ We’ve covered a lot of SwiftUI basics in this tutorial, including text, images
 
 If you’d like to continue learning SwiftUI, there are lots of free resources available. For example, [Apple publishes a wide variety of tutorials](https://developer.apple.com/tutorials/swiftui) covering essential topics, drawing and animation, app design, and more. We’ll also post links here on Swift.org to some other popular tutorials – we’re a big and welcoming community, and we’re glad to have you join!
 
-The code for this tutorial can be found [here](https://github.com/0xTim/swift-org-swiftui-tutorial).
+> The source code for this guide can be found [on GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial)

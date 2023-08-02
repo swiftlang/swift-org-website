@@ -3,6 +3,8 @@ layout: page
 title: Build a Web Service with Vapor
 ---
 
+> The source code for this guide can be found [on GitHub](https://github.com/vapor/swift-getting-started-web-server)
+
 {% include getting-started/_installing.md %}
 
 ## Choosing a web framework
@@ -157,4 +159,4 @@ $ curl http://localhost:8080/user-info -X POST -d '{"name": "Tim", "age": 99}' -
 
 Congratulations! You've built your first web server in Swift!
 
-Find the source code for this guide at [https://github.com/vapor/swift-getting-started-web-server](https://github.com/vapor/swift-getting-started-web-server)
+> The source code for this guide can be found [on GitHub](https://github.com/vapor/swift-getting-started-web-server)
