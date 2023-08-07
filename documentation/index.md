@@ -39,8 +39,7 @@ Get involved with an existing translation project, or start a new one.
 
 <div class="info" markdown="1">
 If you know of a quality translation project underway,
-please let us know on the [Compiler Development](https://forums.swift.org/c/development/compiler) forums,
-and we'll provide a link to that project on this page.
+please let us know on the [Swift.org repository](https://github.com/apple/swift-org-website) by opening an issue or submitting a Pull Request.
 </div>
 
 ## Standard Library
