@@ -1,4 +1,4 @@
-### Installation via RPM
+## Installation via RPM
 
 Use the instructions below for RPM installation:
 

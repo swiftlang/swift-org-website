@@ -1,4 +1,4 @@
-### Installation via Tarball
+## Installation via Tarball
 
 0. Install required dependencies:
 

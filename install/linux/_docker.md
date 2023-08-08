@@ -1,4 +1,4 @@
-### Installation via Docker
+## Installation via Docker
 
 Swift official Docker images are hosted on [hub.docker.com/\_/swift](https://hub.docker.com/_/swift/).
 
