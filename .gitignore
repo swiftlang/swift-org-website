@@ -21,7 +21,6 @@ xcuserdata
 
 # VS Code files
 .vscode
-!.vscode/*.template
 
 # Prettier
 .prettierrc
