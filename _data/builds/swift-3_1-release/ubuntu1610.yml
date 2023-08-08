@@ -1,6 +1,0 @@
----
-- name: Ubuntu 16.10
-  date: 2017-03-27 10:28:49.000000000 -05:00
-  download: swift-3.1-RELEASE-ubuntu16.10.tar.gz
-  download_signature: swift-3.1-RELEASE-ubuntu16.10.tar.gz.sig
-  dir: swift-3.1-RELEASE

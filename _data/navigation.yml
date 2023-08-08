@@ -19,6 +19,15 @@
           name: using-swift
         - title: Go Further
           name: go-further
+    - title: Install
+      url: /install/
+      sections:
+        - title: Apple Platform
+          name: apple-platforms
+        - title: Linux
+          name: linux
+        - title: Windows
+          name: windows
     - title: Download
       url: /download/
       sections:
@@ -26,10 +35,8 @@
           name: releases
         - title: Snapshots
           name: snapshots
-        - title: Using Downloads
-          name: using-downloads
-        - title: Docker
-          name: docker
+        - title: Installing Swift
+          name: installing-swift
     - title: Platform Support
       url: /platform-support/
       sections:

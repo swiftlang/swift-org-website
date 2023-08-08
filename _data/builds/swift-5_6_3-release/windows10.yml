@@ -1,7 +1,0 @@
----
-- name: Windows 10
-  date: 2022-09-02 10:29:16.000000000 -05:00
-  download: swift-5.6.3-RELEASE-windows10.exe
-  download_signature: swift-5.6.3-RELEASE-windows10.exe.sig
-  dir: swift-5.6.3-RELEASE
-  windows: true

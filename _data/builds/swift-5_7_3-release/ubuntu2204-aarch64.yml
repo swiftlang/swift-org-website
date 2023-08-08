@@ -1,7 +1,0 @@
----
-- name: Ubuntu 22.04
-  date: 2023-01-18 10:28:49.000000000 -05:00
-  download: swift-5.7.3-RELEASE-ubuntu22.04-aarch64.tar.gz
-  download_signature: swift-5.7.3-RELEASE-ubuntu22.04-aarch64.tar.gz.sig
-  dir: swift-5.7.3-RELEASE
-  docker: 5.7.3-jammy
