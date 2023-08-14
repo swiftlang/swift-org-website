@@ -5,6 +5,32 @@ categories:
           on recent community podcasts, blogs, and newsletters. If you would like to submit
           a package for inclusion here, please [message the Swift Website Workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup).
       packages:
+          - name: swift-composable-architecture
+            description: The Composable Architecture is a library for building applications
+                with state management, composition, side effects, and testing in mind. It can
+                be used with SwiftUI, UIKit, and more.
+            swift_compatibility: 5.7+
+            platform_compatibility:
+                - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            license: MIT
+            url: https://swiftpackageindex.com/pointfreeco/swift-composable-architecture
+            note: Featured on [Episode 159](https://www.empowerapps.show/159){:target='_blank'}
+                of the [Empower Apps podcast](https://www.empowerapps.show/){:target='_blank'}.
+          - name: Semaphore
+            description: Semaphore provides a Swift concurrency primitive for synchronizing
+                tasks. It allows tasks to suspend and resume using signals, preventing concurrent
+                execution and limiting resource access. Ideal for controlling task concurrency.
+            swift_compatibility: 5.7+
+            platform_compatibility:
+                - Apple
+                - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+                Linux
+            license: MIT
+            url: https://swiftpackageindex.com/groue/Semaphore
+            note: Featured on [Episode 158](https://www.empowerapps.show/158){:target='_blank'}
+                of the [Empower Apps podcast](https://www.empowerapps.show/){:target='_blank'}.
           - name: DataKit
             description: DataKit is helps you read and write binary formatted data, providing
                 a simple and declarative interface for encoding and decoding data structures
@@ -58,33 +84,6 @@ categories:
                 Linux
             license: MIT
             url: https://swiftpackageindex.com/omaralbeik/Stores
-            note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
-                of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
-                podcast.
-          - name: swift-composable-architecture
-            description: The Composable Architecture is a library for building applications
-                with state management, composition, side effects, and testing in mind. It can
-                be used in SwiftUI, UIKit, and more.
-            swift_compatibility: 5.7+
-            platform_compatibility:
-                - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-            license: MIT
-            url: https://swiftpackageindex.com/pointfreeco/swift-composable-architecture
-            note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
-                of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
-                podcast.
-          - name: SwiftNRC
-            description: Swift No Reference Counting (NRC) provides a way to create Swift
-                objects without the overhead of reference counting. By using macros and pointers,
-                it offers a more performant alternative to traditional classes in performance-critical
-                applications.
-            swift_compatibility: 5.9+
-            platform_compatibility:
-                - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-            license: No license
-            url: https://swiftpackageindex.com/joehinkle11/SwiftNRC
             note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
                 of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
                 podcast.
