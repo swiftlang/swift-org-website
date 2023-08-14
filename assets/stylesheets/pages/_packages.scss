@@ -1,125 +1,125 @@
 ul.package-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px 40px;
-  padding: 0;
-  list-style: none;
-
-  li {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 40px;
+    padding: 0;
+    list-style: none;
 
-    &.showcase {
-      grid-template-rows: 5fr 1fr;
-      gap: 5px;
-    }
+    li {
+        display: grid;
 
-    > a {
-      display: flex;
-      flex-direction: column;
-      color: inherit;
-      height: 100%;
+        &.showcase {
+            grid-template-rows: 5fr 1fr;
+            gap: 5px;
+        }
 
-      &:hover {
-        text-decoration: none;
+        > a {
+            display: flex;
+            flex-direction: column;
+            color: inherit;
+            height: 100%;
+
+            &:hover {
+                text-decoration: none;
+
+                h4 > span {
+                    color: var(--color-link);
+                    text-decoration: underline;
+                    background-image: url('/assets/images/icon-external-color.svg');
+                }
+            }
+        }
 
         h4 > span {
-          color: var(--color-link);
-          text-decoration: underline;
-          background-image: url("/assets/images/icon-external-color.svg");
-        }
-      }
-    }
-
-    h4 > span {
-      padding-right: 18px;
-      background-image: url("/assets/images/icon-external.svg");
-      background-repeat: no-repeat;
-      background-size: 11px;
-      background-position: top 3px right;
-    }
-
-    .description {
-      flex-grow: 1;
-      font-size: 16px;
-
-      > p {
-        // Even though this looks specific to WebKit, it works in Safari, Chrome, and Firefox.
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 6;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-    }
-
-    .metadata {
-      display: grid;
-      grid-template-columns: auto auto 1fr auto;
-      gap: 10px;
-
-      .lozenge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 4px;
-        border: 1px black solid;
-        font-size: 12px;
-        line-height: 1;
-        white-space: nowrap;
-
-        > span {
-          padding: 4px 5px;
-        }
-
-        &.platform-compatibility {
-          color: #007aff;
-          border-color: #007aff;
-
-          > span:not(:last-child) {
-            border-right: 1px solid #007aff;
-          }
-        }
-
-        &.swift-compatibility {
-          color: #f05138;
-          border-color: #f05138;
-
-          > span {
-            padding-left: 22px;
-            background-image: url("/assets/images/icon-swift-color.svg");
+            padding-right: 18px;
+            background-image: url('/assets/images/icon-external.svg');
             background-repeat: no-repeat;
-            background-position: 3px center;
-            background-size: 13px;
-          }
+            background-size: 11px;
+            background-position: top 3px right;
         }
 
-        &.license {
-          grid-column: 4;
-          color: #3ea639;
-          border-color: #3ea639;
+        .description {
+            flex-grow: 1;
+            font-size: 16px;
 
-          > span {
-            padding-left: 22px;
-            background-image: url("/assets/images/icon-osi.svg");
-            background-repeat: no-repeat;
-            background-position: 3px center;
-            background-size: 13px;
-          }
+            > p {
+                // Even though this looks specific to WebKit, it works in Safari, Chrome, and Firefox.
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 6;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
         }
-      }
-    }
 
-    .showcase-reason {
-      p {
-        font-size: 12px;
-        margin-top: 10px;
-        margin-bottom: 0;
-        color: #666666;
-      }
+        .metadata {
+            display: grid;
+            grid-template-columns: auto auto 1fr auto;
+            gap: 10px;
+
+            .lozenge {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+                border: 1px black solid;
+                font-size: 12px;
+                line-height: 1;
+                white-space: nowrap;
+
+                > span {
+                    padding: 4px 5px;
+                }
+
+                &.platform-compatibility {
+                    color: #007aff;
+                    border-color: #007aff;
+
+                    > span:not(:last-child) {
+                        border-right: 1px solid #007aff;
+                    }
+                }
+
+                &.swift-compatibility {
+                    color: #f05138;
+                    border-color: #f05138;
+
+                    > span {
+                        padding-left: 22px;
+                        background-image: url('/assets/images/icon-swift-color.svg');
+                        background-repeat: no-repeat;
+                        background-position: 3px center;
+                        background-size: 13px;
+                    }
+                }
+
+                &.license {
+                    grid-column: 4;
+                    color: #3ea639;
+                    border-color: #3ea639;
+
+                    > span {
+                        padding-left: 22px;
+                        background-image: url('/assets/images/icon-osi.svg');
+                        background-repeat: no-repeat;
+                        background-position: 3px center;
+                        background-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .note {
+            p {
+                font-size: 12px;
+                margin-top: 10px;
+                margin-bottom: 0;
+                color: #666666;
+            }
+        }
     }
-  }
 }
 
 p.more {
-  text-align: right;
+    text-align: right;
 }
