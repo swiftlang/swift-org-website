@@ -1,85 +1,101 @@
 categories:
     - name: Community Showcase
       anchor: community
-      description: 'The community showcase celebrates new and innovative packages discussed on recent community podcasts, blogs, and newsletters. If you would like to submit a package for inclusion here, please [message the Swift Website Workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup).'
+      description: The community showcase celebrates new and innovative packages discussed
+          on recent community podcasts, blogs, and newsletters. If you would like to submit
+          a package for inclusion here, please [message the Swift Website Workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup).
       packages:
-          - name: ColorToolbox
-            description: ColorToolbox provides Swift color utilities for UIKit, AppKit, and
-                SwiftUI. It includes features such as converting from and to hex strings, calculating
-                relative luminance and WCAG contrast ratio, and lightening/darkening colors.
+          - name: DataKit
+            description: DataKit is helps you read and write binary formatted data, providing
+                a simple and declarative interface for encoding and decoding data structures
+                into binary format.
+            swift_compatibility: 5.8+
+            platform_compatibility:
+                - Apple
+                - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+                Linux
+            license: MIT
+            url: https://swiftpackageindex.com/QuickBirdEng/DataKit
+            note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
+                of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
+                podcast.
+          - name: SwiftWhisper
+            description: SwiftWhisper provides an easy way to add transcription functionality
+                to your Swift app or package. It is powered by `whisper.cpp` and supports CoreML
+                and audio conversion.
             swift_compatibility: 5.6+
+            platform_compatibility:
+                - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+            license: MIT
+            url: https://swiftpackageindex.com/exPHAT/SwiftWhisper
+            note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
+                of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
+                podcast.
+          - name: CleverBird
+            description: CleverBird simplifies interaction with OpenAI's chat APIs. It focuses
+                on chat-based interactions, supports async calls, token counting/encoding, customization,
+                and streaming responses.
+            swift_compatibility: 5.7+
             platform_compatibility:
                 - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
             license: MIT
-            url: https://swiftpackageindex.com/raymondjavaxx/ColorToolbox
-            showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
-          - name: FileMonitor
-            description: FileMonitor provides a unified API to detect file changes in a directory
-                on Linux and macOS. It detects file creations, modifications, and deletions and
-                then propagates events through a delegate function.
+            url: https://swiftpackageindex.com/btfranklin/CleverBird
+            note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
+                of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
+                podcast.
+          - name: Stores
+            description: Stores provides a typed key-value storage solution for Codable types,
+                supporting various persistence layers such as User Defaults, File System, Core
+                Data, and the Keychain.
             swift_compatibility: 5.7+
             platform_compatibility:
                 - Apple
                 - Linux
-            platform_compatibility_tooltip: Apple (macOS) and Linux
-            license: MIT
-            url: https://swiftpackageindex.com/aus-der-Technik/FileMonitor
-            showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
-          - name: Rearrange
-            description: Rearrange is a utility library for working with `NSRange` and `NSTextRange`
-                in the Cocoa text system. It provides convenience methods, extensions, and types
-                for manipulating and transforming ranges.
-            swift_compatibility: 5.6+
-            platform_compatibility:
-                - Apple
-                - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-                Linux
-            license: BSD 3-Clause
-            url: https://swiftpackageindex.com/ChimeHQ/Rearrange
-            showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
-          - name: swift-concurrency-extras
-            description: Provides tools and utilities for working with Swift concurrency, including
-                wrapping values in isolated contexts, working with streams and tasks, and improving
-                the testability of asynchronous code.
-            swift_compatibility: 5.6+
-            platform_compatibility:
-                - Apple
-                - Linux
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
                 Linux
             license: MIT
-            url: https://swiftpackageindex.com/pointfreeco/swift-concurrency-extras
-            showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
-          - name: SwiftUI-VPSwitch
-            description: A customisable SwiftUI toggle control with transition animations between
-                states.
-            swift_compatibility: 5.8+
+            url: https://swiftpackageindex.com/omaralbeik/Stores
+            note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
+                of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
+                podcast.
+          - name: swift-composable-architecture
+            description: The Composable Architecture is a library for building applications
+                with state management, composition, side effects, and testing in mind. It can
+                be used in SwiftUI, UIKit, and more.
+            swift_compatibility: 5.7+
             platform_compatibility:
                 - Apple
-            platform_compatibility_tooltip: Apple (iOS, visionOS, watchOS)
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
             license: MIT
-            url: https://swiftpackageindex.com/VansonLeung/SwiftUI-VPSwitchToggle
-            showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
-          - name: TLDExtract
-            description: TLDExtract can extract the root domain, TLD, second-level domain, and
-                subdomain from URLs or hostnames. It provides an up-to-date Public Suffix List
-                and supports string and URL inputs.
-            swift_compatibility: 5.6+
+            url: https://swiftpackageindex.com/pointfreeco/swift-composable-architecture
+            note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
+                of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
+                podcast.
+          - name: SwiftNRC
+            description: Swift No Reference Counting (NRC) provides a way to create Swift
+                objects without the overhead of reference counting. By using macros and pointers,
+                it offers a more performant alternative to traditional classes in performance-critical
+                applications.
+            swift_compatibility: 5.9+
             platform_compatibility:
                 - Apple
-                - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-                Linux
-            license: MIT
-            url: https://swiftpackageindex.com/MarcoEidinger/TLDExtractSwift
-            showcase_reason: "Featured on [Episode 31](https://share.transistor.fm/s/49376459){:target='_blank'} of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'} podcast."
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            license: No license
+            url: https://swiftpackageindex.com/joehinkle11/SwiftNRC
+            note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
+                of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
+                podcast.
     - name: Macro packages
       anchor: macros
-      description: "Macros are new in Swift 5.9 and transform your source code when you compile it, letting you avoid writing repetitive code. [Read more about creating macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros/){:target='_blank'} or check out these packages that include macro targets."
+      description: Macros are new in Swift 5.9 and transform your source code when you
+          compile it, letting you avoid writing repetitive code. [Read more about creating
+          macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros/){:target='_blank'}
+          or check out these packages that include macro targets.
       more:
-          title: 'More packages that include macros ›'
+          title: "More packages that include macros \u203A"
           url: https://swiftpackageindex.com/search?query=product:macro
       packages:
           - name: SwiftPowerAssert
@@ -93,9 +109,9 @@ categories:
             license: MIT
             url: https://swiftpackageindex.com/kishikawakatsumi/swift-power-assert
           - name: swift-spyable
-            description: Spyable is a powerful tool for Swift that automates the creation of
-                spies for testing. It generates spy classes that track interactions with methods
-                and properties, simplifying behavior verification in tests.
+            description: Spyable is a powerful tool for Swift that automates the creation
+                of spies for testing. It generates spy classes that track interactions with
+                methods and properties, simplifying behavior verification in tests.
             swift_compatibility: 5.9+
             platform_compatibility:
                 - Apple
@@ -113,8 +129,8 @@ categories:
             license: MIT
             url: https://swiftpackageindex.com/ailtonvivaz/swift-request
           - name: SFSymbolsMacro
-            description: This Swift Macro enables type-safe usage of SF Symbols. Create an enum
-                to hold symbols, import `SFSymbolsMacro`, and use the `@SFSymbol` annotation.
+            description: This Swift Macro enables type-safe usage of SF Symbols. Create an
+                enum to hold symbols, import `SFSymbolsMacro`, and use the `@SFSymbol` annotation.
             swift_compatibility: 5.9+
             platform_compatibility:
                 - Apple
@@ -122,9 +138,9 @@ categories:
             license: MIT
             url: https://swiftpackageindex.com/lukepistrol/SFSymbolsMacro
           - name: AssociatedObject
-            description: Swift macro for adding variable declarations in class extensions by
-                wrapping `objc_getAssociatedObject`/`objc_setAssociatedObject`. Can be used to
-                add stored properties to classes.
+            description: Swift macro for adding variable declarations in class extensions
+                by wrapping `objc_getAssociatedObject`/`objc_setAssociatedObject`. Can be used
+                to add stored properties to classes.
             swift_compatibility: 5.9+
             platform_compatibility:
                 - Apple
@@ -133,9 +149,9 @@ categories:
             url: https://swiftpackageindex.com/p-x9/AssociatedObject
           - name: swift-macro-toolkit
             description: Swift Macro Toolkit is a library that provides tools and utilities
-                for working with Swift macros. It simplifies tasks such as parsing floating point
-                literals, type destructuring, type normalization, and getting the value of string
-                literals.
+                for working with Swift macros. It simplifies tasks such as parsing floating
+                point literals, type destructuring, type normalization, and getting the value
+                of string literals.
             swift_compatibility: 5.9+
             platform_compatibility:
                 - Apple
@@ -144,9 +160,11 @@ categories:
             url: https://swiftpackageindex.com/stackotter/swift-macro-toolkit
     - name: Networking packages
       anchor: networking
-      description: 'Covering everything from abstractions on top of core networking libraries to full-featured HTTP clients to low-level networking libraries. If you need a little more on top of URLSession, or a lot more, you’ll find it here.'
+      description: "Covering everything from abstractions on top of core networking libraries
+          to full-featured HTTP clients to low-level networking libraries. If you need a
+          little more on top of URLSession, or a lot more, you\u2019ll find it here."
       more:
-          title: 'More networking packages ›'
+          title: "More networking packages \u203A"
           url: https://swiftpackageindex.com/keywords/networking
       packages:
           - name: swift-nio
@@ -175,8 +193,8 @@ categories:
             url: https://swiftpackageindex.com/Alamofire/Alamofire
           - name: Pulse
             description: Pulse is a powerful logging system for Apple platforms. It records
-                and inspects logs and network requests, and allows for real-time viewing and sharing.
-                It is not a network debugging proxy.
+                and inspects logs and network requests, and allows for real-time viewing and
+                sharing. It is not a network debugging proxy.
             swift_compatibility: 5.7+
             platform_compatibility:
                 - Apple
@@ -184,9 +202,9 @@ categories:
             license: MIT
             url: https://swiftpackageindex.com/kean/Pulse
           - name: Moya
-            description: Moya is a network abstraction layer for Alamofire. It simplifies network
-                calls and provides compile-time checking for API endpoints. It also supports unit
-                testing with test stubs.
+            description: Moya is a network abstraction layer for Alamofire. It simplifies
+                network calls and provides compile-time checking for API endpoints. It also
+                supports unit testing with test stubs.
             swift_compatibility: 5.6+
             platform_compatibility:
                 - Apple
@@ -194,8 +212,8 @@ categories:
             license: MIT
             url: https://swiftpackageindex.com/Moya/Moya
           - name: RealHTTP
-            description: RealHTTP is a lightweight, async-based HTTP library for Swift. It aims
-                to provide an easy-to-use, powerful HTTP client with features like async/await
+            description: RealHTTP is a lightweight, async-based HTTP library for Swift. It
+                aims to provide an easy-to-use, powerful HTTP client with features like async/await
                 support, request customization, response validation, and more. It also includes
                 an integrated stubber for testing purposes.
             swift_compatibility: 5.6+
@@ -217,15 +235,16 @@ categories:
             url: https://swiftpackageindex.com/Kitura/BlueSocket
     - name: Testing packages
       anchor: testing
-      description: "Whether you're looking for an extension on top of XCTest or a completely different way to approach testing, these packages are here to help."
+      description: Whether you're looking for an extension on top of XCTest or a completely
+          different way to approach testing, these packages are here to help.
       more:
-          title: 'More testing packages ›'
+          title: "More testing packages \u203A"
           url: https://swiftpackageindex.com/keywords/testing
       packages:
           - name: Quick
             description: Quick is a behavior-driven development framework for Swift and Objective-C.
-                It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher framework
-                for tests.
+                It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
+                framework for tests.
             swift_compatibility: 5.7+
             platform_compatibility:
                 - Apple
@@ -246,8 +265,7 @@ categories:
             url: https://swiftpackageindex.com/Quick/Nimble
           - name: OCHamcrest
             description: OCHamcrest is an Objective-C module that provides a library of matchers
-                for creating flexible test assertions and user input validation. It can be added
-                to projects using Swift Package Manager, CocoaPods, or Carthage.
+                for creating flexible test assertions and user input validation.
             swift_compatibility: 5.6+
             platform_compatibility:
                 - Apple
@@ -258,7 +276,7 @@ categories:
             description: Combine Schedulers is a library that provides schedulers for testing
                 and working with Combine publishers. It includes schedulers like `AnyScheduler`,
                 `TestScheduler`, `ImmediateScheduler`, and more.
-            swift_compatibility: 5.6+
+            swift_compatibility: 5.7+
             platform_compatibility:
                 - Apple
                 - Linux
@@ -288,27 +306,3 @@ categories:
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/jonreid/OCMockito
-
-    # - name: Packages with Unusual Data
-    #   description: "Packages that could cause layout issues. These are here for testing purposes only."
-    #   packages:
-    #     - name: Problematic Package One
-    #       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum sem sed libero laoreet, auctor vestibulum nulla dignissim. Nulla et diam fermentum, faucibus tellus at, fermentum metus. Praesent consequat nisi vel eros consectetur, at scelerisque mi cursus. Aliquam blandit, leo nec posuere ultrices, orci ex fringilla velit, sit amet egestas metus sapien et eros. Curabitur ante mauris, aliquet dignissim arcu vitae, finibus rutrum diam. Mauris ornare nisl non sem tempor condimentum. Fusce sagittis tortor est, non accumsan magna mollis vel. Integer luctus lacus ut lorem feugiat blandit. Pellentesque quis eros id mi euismod facilisis non eu risus. Duis eleifend, nulla at pretium viverra, augue quam efficitur eros, sed dignissim neque turpis consectetur risus. Nullam eu aliquet dui, in commodo justo. Maecenas maximus lacus vitae mauris vulputate, vel scelerisque justo efficitur. Quisque fringilla, nulla a tincidunt rhoncus, ipsum magna maximus quam, in blandit dolor diam non ante. Sed euismod nisl nibh, ut aliquam nisi faucibus vel. Nam ipsum turpis, varius at libero vel, hendrerit sagittis lorem. Nullam luctus dolor nec justo suscipit placerat."
-    #       swift_compatibility: 5.6+
-    #       platform_compatibility: [macOS, iOS, tvOS, watchOS, Linux]
-    #       authors: "Written by John Lennon and 3 other contributors."
-    #       license: "MIT"
-    #       stars: "1"
-    #       url: https://example.com/problematic/one
-    #     - name: Problematic Package Two
-    #       description: "This package has a very large number of stars."
-    #       swift_compatibility: 5.6+
-    #       platform_compatibility: [iOS]
-    #       authors: "Written by Paul McCartney and 3 other contributors."
-    #       license: "MIT"
-    #       stars: "100,000,000,000"
-    #       url: https://example.com/problematic/two
-    #     - name: Problematic Package Three
-    #       description: "This package has no compatibility information."
-    #       stars: "1"
-    #       url: https://example.com/problematic/three
