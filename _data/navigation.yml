@@ -22,8 +22,8 @@
     - title: Install
       url: /install/
       sections:
-        - title: Apple Platform
-          name: apple-platforms
+        - title: macOS
+          name: macos
         - title: Linux
           name: linux
         - title: Windows
