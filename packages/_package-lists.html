@@ -9,7 +9,7 @@
 <p>{{ category.description | markdownify }}</p>
 <ul class="package-list">
   {% for package in category.packages %}
-  <li class="{% if package.note %}showcase{% endif %}">
+  <li class="{% if package.note %}with-note{% endif %}">
     <a href="{{ package.url }}" target="_blank">
       <h4><span>{{ package.name }}</span></h4>
       <section class="description">{{ package.description | markdownify }}</section>
