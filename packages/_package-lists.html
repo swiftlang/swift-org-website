@@ -14,14 +14,17 @@
       <h4><span>{{ package.name }}</span></h4>
       <section class="description">{{ package.description | markdownify }}</section>
       <section class="metadata">
+        {% if package.platform_compatibility %}
         <div class="lozenge platform-compatibility" title="{{ package.platform_compatibility_tooltip }}">
           {% for platform in package.platform_compatibility %}
           <span>{{ platform }}</span>
           {% endfor %}
         </div>
+        {% endif %} {% if package.swift_compatibility %}
         <div class="lozenge swift-compatibility" title="Swift version compatibility">
           <span>{{ package.swift_compatibility }}</span>
         </div>
+        {% endif %}
         <div class="lozenge license" title="Package license"><span>{{ package.license }}</span></div>
       </section>
     </a>

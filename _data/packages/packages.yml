@@ -446,8 +446,5 @@ categories:
           traffic, reveals request and response content, and helps with debugging and
           bug fixing. It works with NSURLSession and external libraries like Alamofire
           and AFNetworking.
-        swift_compatibility: unknown
-        platform_compatibility: []
-        platform_compatibility_tooltip: ""
         license: MIT
         url: https://swiftpackageindex.com/pmusolino/Wormholy
