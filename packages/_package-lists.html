@@ -1,38 +1,38 @@
 <ul>
-    {% for category in site.data.packages.packages.categories %}
-    <li><a href="#{{ category.anchor }}-packages">{{ category.name }}</a></li>
-    {% endfor %}
+  {% for category in site.data.packages.packages.categories %}
+  <li><a href="#{{ category.anchor }}-packages">{{ category.name }}</a></li>
+  {% endfor %}
 </ul>
 
 {% for category in site.data.packages.packages.categories %}
 <h3 id="{{ category.anchor }}-packages">{{ category.name }}</h3>
 <p>{{ category.description | markdownify }}</p>
 <ul class="package-list">
-    {% for package in category.packages %}
-    <li class="{% if package.note %}showcase{% endif %}">
-        <a href="{{ package.url }}" target="_blank">
-            <h4><span>{{ package.name }}</span></h4>
-            <section class="description">{{ package.description | markdownify }}</section>
-            <section class="metadata">
-                <div class="lozenge platform-compatibility" title="{{ package.platform_compatibility_tooltip }}">
-                    {% for platform in package.platform_compatibility %}
-                    <span>{{ platform }}</span>
-                    {% endfor %}
-                </div>
-                <div class="lozenge swift-compatibility" title="Swift version compatibility">
-                    <span>{{ package.swift_compatibility }}</span>
-                </div>
-                <div class="lozenge license" title="Package license"><span>{{ package.license }}</span></div>
-            </section>
-        </a>
-        {% if package.note %}
-        <section class="note">{{ package.note | markdownify }}</section>
-        {% endif %}
-    </li>
-    {% endfor %}
+  {% for package in category.packages %}
+  <li class="{% if package.note %}showcase{% endif %}">
+    <a href="{{ package.url }}" target="_blank">
+      <h4><span>{{ package.name }}</span></h4>
+      <section class="description">{{ package.description | markdownify }}</section>
+      <section class="metadata">
+        <div class="lozenge platform-compatibility" title="{{ package.platform_compatibility_tooltip }}">
+          {% for platform in package.platform_compatibility %}
+          <span>{{ platform }}</span>
+          {% endfor %}
+        </div>
+        <div class="lozenge swift-compatibility" title="Swift version compatibility">
+          <span>{{ package.swift_compatibility }}</span>
+        </div>
+        <div class="lozenge license" title="Package license"><span>{{ package.license }}</span></div>
+      </section>
+    </a>
+    {% if package.note %}
+    <section class="note">{{ package.note | markdownify }}</section>
+    {% endif %}
+  </li>
+  {% endfor %}
 </ul>
 
 <p class="more">
-    <a href="{{ category.more.url }}" target="_blank">{{ category.more.title }}</a>
+  <a href="{{ category.more.url }}" target="_blank">{{ category.more.title }}</a>
 </p>
 {% endfor %}
