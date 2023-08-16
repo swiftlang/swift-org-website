@@ -157,6 +157,82 @@ categories:
         platform_compatibility_tooltip: Apple (macOS)
         license: Apache 2.0
         url: https://swiftpackageindex.com/stackotter/swift-macro-toolkit
+  - name: Swift on the Server
+    anchor: server
+    description: What packages can help you build a top-class back-end server for your
+      app or a website built with HTML? Swift has several mature back-end frameworks,
+      ORM and database connection packages, and more.
+    more:
+      title: "More Swift on the Server packages \u203A"
+      url: https://swiftpackageindex.com/keywords/server-side-swift
+    packages:
+      - name: vapor
+        description: Vapor is an HTTP web framework for Swift, providing an expressive
+          and easy-to-use foundation for websites, APIs, and cloud projects.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/vapor/vapor
+      - name: fluent
+        description: Fluent helps you work with databases, providing a high-level, type-safe
+          API for querying and manipulating data in Vapor apps.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/vapor/fluent
+      - name: MongoKitten
+        description: MongoKitten is a fast, pure Swift MongoDB driver built for Server
+          Side Swift. It supports both MongoDB in server and embedded environments, and
+          can be used with Vapor or Hummingbird.
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/orlandos-nl/MongoKitten
+      - name: console-kit
+        description: ConsoleKit provides a set of tools and utilities for working with
+          the command-line interface (CLI) in Swift applications. It includes features
+          such as input handling, output formatting, and command execution.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/vapor/console-kit
+      - name: fluent-kit
+        description: FluentKit provides a powerful, type-safe ORM (Object-Relational Mapping)
+          for Swift. It allows you to work with databases using a fluent and expressive
+          API.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/vapor/fluent-kit
+      - name: hummingbird
+        description: Hummingbird is a lightweight, flexible server framework written in
+          Swift. It consists of an HTTP server, a web application framework, and extension
+          modules.
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (macOS, visionOS, tvOS) and Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/hummingbird-project/hummingbird
   - name: Networking packages
     anchor: networking
     description: "Covering everything from abstractions on top of core networking libraries
@@ -305,82 +381,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/jonreid/OCMockito
-  - name: Swift on the Server
-    anchor: server
-    description: What packages can help you build a top-class back-end server for your
-      app or a website built with HTML? Swift has several mature back-end frameworks,
-      ORM and database connection packages, and more.
-    more:
-      title: "More Swift on the Server packages \u203A"
-      url: https://swiftpackageindex.com/keywords/server-side-swift
-    packages:
-      - name: vapor
-        description: Vapor is an HTTP web framework for Swift, providing an expressive
-          and easy-to-use foundation for websites, APIs, and cloud projects.
-        swift_compatibility: 5.6+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
-        license: MIT
-        url: https://swiftpackageindex.com/vapor/vapor
-      - name: fluent
-        description: Fluent helps you work with databases, providing a high-level, type-safe
-          API for querying and manipulating data in Vapor apps.
-        swift_compatibility: 5.6+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/vapor/fluent
-      - name: MongoKitten
-        description: MongoKitten is a fast, pure Swift MongoDB driver built for Server
-          Side Swift. It supports both MongoDB in server and embedded environments, and
-          can be used with Vapor or Hummingbird.
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS) and Linux
-        license: MIT
-        url: https://swiftpackageindex.com/orlandos-nl/MongoKitten
-      - name: console-kit
-        description: ConsoleKit provides a set of tools and utilities for working with
-          the command-line interface (CLI) in Swift applications. It includes features
-          such as input handling, output formatting, and command execution.
-        swift_compatibility: 5.6+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/vapor/console-kit
-      - name: fluent-kit
-        description: FluentKit provides a powerful, type-safe ORM (Object-Relational Mapping)
-          for Swift. It allows you to work with databases using a fluent and expressive
-          API.
-        swift_compatibility: 5.6+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/vapor/fluent-kit
-      - name: hummingbird
-        description: Hummingbird is a lightweight, flexible server framework written in
-          Swift. It consists of an HTTP server, a web application framework, and extension
-          modules.
-        swift_compatibility: 5.6+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (macOS, visionOS, tvOS) and Linux
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/hummingbird-project/hummingbird
   - name: Debug logging packages
     anchor: logging
     description: Whether you want to log something to the console or to disk, or something
