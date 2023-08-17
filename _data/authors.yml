@@ -387,3 +387,10 @@ erickinnear:
   email: ekinnear@apple.com
   github: ekinnear
   about: "Eric Kinnear is a member of the team at Apple working on Foundation networking, HTTP, and other internet technologies."
+
+FranzBusch:
+   name: Franz Busch
+   email: f.busch@apple.com
+   github: FranzBusch
+   gravatar: 3b34dbe9f3870b0e9bf1f4cb0750fa3d
+   about: "Franz Busch is a member of a team developing foundational server-side Swift libraries at Apple, and is a member of the SSWG."
