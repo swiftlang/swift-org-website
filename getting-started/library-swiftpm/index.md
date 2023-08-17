@@ -9,13 +9,13 @@ title: Build a library
 
 ## Bootstrapping
 
-Let’s write a small application with our new Swift development environment.
+Let’s write a small library with our new Swift development environment.
 To start, we’ll use SwiftPM to make a new project for us. In your terminal of choice run:
 
 ~~~bash
-❯ mkdir MyLibrary
-❯ cd MyLibrary
-❯ swift package init --name MyLibrary --type library
+$ mkdir MyLibrary
+$ cd MyLibrary
+$ swift package init --name MyLibrary --type library
 ~~~
 
 This will generate a new directory called _MyLibrary_ with the following files:
@@ -41,7 +41,7 @@ In fact, SwiftPM generated a "Hello, world!" project for us, including some unit
 We can run the tests by running  `swift test`  in our terminal.
 
 ~~~bash
-❯ swift test
+$ swift test
 Building for debugging...
 [4/4] Compiling MyLibraryTests MyLibraryTests.swift
 Build complete! (1.30s)
