@@ -89,11 +89,8 @@ Invoke-RestMethod -Url 'get.scoop.sh' | Invoke-Expression
    winget install Git.Git
    winget install Python.Python.3.10
 
-   curl -sOL https://aka.ms/vs/16/release/vs_community.exe
    winget install Microsoft.VisualStudio.2019.Community --force --custom "--add Microsoft.VisualStudio.Component.Windows10SDK.19041 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64"
-   del /q vs_community.exe
    ~~~
-   <!-- del is an alias to Remove-Item, so no need to replace it -->
 
    #### With Scoop:
    > **NOTE:** This code snippet MUST be run in a traditional Command Prompt (`cmd.exe`)
