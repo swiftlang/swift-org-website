@@ -20,7 +20,7 @@ Windows has the following additional platform specific dependencies:
 
 #### Install using the Windows Package Manager
 
-The [Windows Package Manager](https://docs.microsoft.com/windows/package-manager/) can be found in the [App Store](https://www.microsoft.com/en-us/p/app-installer/9nblggh4nns1) or be [installed directly](ms-appinstaller:?source=https://aka.ms/getwinget).
+The [Windows Package Manager](https://docs.microsoft.com/windows/package-manager/) can be found in the [Microsoft Store](https://www.microsoft.com/en-us/p/app-installer/9nblggh4nns1) or be [installed directly](ms-appinstaller:?source=https://aka.ms/getwinget).
 
 #### Install using Scoop
 
