@@ -71,7 +71,7 @@ Hello, World!
 
 Swift based applications are usually composed from libraries that provide useful functionality.
 
-In this project, we’ll use a package called [swift-figlet](https://github.com/tomerd/swift-figlet) which will help us make ASCII art.
+In this project, we’ll use a package called [example-package-figlet](https://github.com/apple/example-package-figlet) which will help us make ASCII art.
 
 You can find more interesting libraries on [Swift Package Index](https://swiftpackageindex.com) -- the unofficial package index for Swift.
 
