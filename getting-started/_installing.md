@@ -90,7 +90,7 @@ Invoke-RestMethod -Url 'get.scoop.sh' | Invoke-Expression
    winget install Python.Python.3.10
 
    curl -sOL https://aka.ms/vs/16/release/vs_community.exe
-   start /w vs_community.exe --passive --wait --norestart --nocache --installPath "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community" --add Microsoft.VisualStudio.Component.Windows10SDK.19041 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
+   vs_community.exe --passive --wait --norestart --nocache --installPath "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community" --add Microsoft.VisualStudio.Component.Windows10SDK.19041 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
    del /q vs_community.exe
    ~~~
 
@@ -101,7 +101,7 @@ Invoke-RestMethod -Url 'get.scoop.sh' | Invoke-Expression
    scoop install python310
 
    curl -sOL https://aka.ms/vs/16/release/vs_community.exe
-   start /w vs_community.exe --passive --wait --norestart --nocache --installPath "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community" --add Microsoft.VisualStudio.Component.Windows10SDK.19041 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
+   vs_community.exe --passive --wait --norestart --nocache --installPath "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community" --add Microsoft.VisualStudio.Component.Windows10SDK.19041 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
    del /q vs_community.exe
    ~~~
 
