@@ -12,4 +12,6 @@ The work group provides the framework for participants in the the community with
 
 The work group will initially be looking at APIs for networking, security, and HTTP/WebSocket parsing, with the goal of making it possible for anyone to build a simple, secure, HTTP server, or to start to build other server frameworks like pub/sub message brokers.
 
-For more information, take a look at the [Server APIs project page](/server-apis/).
+For more information, take a look at the [Server APIs project page](/sswg/).
+
+> Editor note: The Server APIs Workgroup was renamed to the Swift Server Workgroup. The link in this article has been updated for the new URL.
