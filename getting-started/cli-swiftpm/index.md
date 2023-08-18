@@ -13,9 +13,9 @@ Let’s write a small application with our new Swift development environment.
 To start, we’ll use SwiftPM to make a new project for us. In your terminal of choice run:
 
 ~~~bash
-❯ mkdir MyCLI
-❯ cd MyCLI
-❯ swift package init --name MyCLI --type executable
+$ mkdir MyCLI
+$ cd MyCLI
+$ swift package init --name MyCLI --type executable
 ~~~
 
 This will generate a new directory called MyCLI with the following files:
@@ -42,7 +42,7 @@ In fact, SwiftPM generated a "Hello, world!" project for us, including some unit
 We can run the tests by running  `swift test`  in our terminal.
 
 ~~~bash
-❯ swift test
+$ swift test
 Building for debugging...
 [6/6] Linking MyCLIPackageTests
 Build complete! (16.53s)
@@ -62,7 +62,7 @@ Test Suite 'All tests' passed at 2023-01-12 13:38:22.398.
 We can also run the program by running  `swift run`  in our terminal.
 
 ~~~bash
-❯ swift run MyCLI
+$ swift run MyCLI
 [3/3] Linking MyCLI
 Hello, World!
 ~~~
@@ -71,7 +71,7 @@ Hello, World!
 
 Swift based applications are usually composed from libraries that provide useful functionality.
 
-In this project, we’ll use a package called [swift-figlet](https://github.com/tomerd/swift-figlet) which will help us make ASCII art.
+In this project, we’ll use a package called [example-package-figlet](https://github.com/apple/example-package-figlet) which will help us make ASCII art.
 
 You can find more interesting libraries on [Swift Package Index](https://swiftpackageindex.com) -- the unofficial package index for Swift.
 
@@ -88,13 +88,13 @@ name: "MyCLI",
     .executable(name: "MyCLI", targets: ["MyCLI"])
   ],
   dependencies: [
-    .package(url: "https://github.com/tomerd/swift-figlet", branch: "main"),
+    .package(url: "https://github.com/apple/example-package-figlet", branch: "main"),
   ],
   targets: [
     .executableTarget(
       name: "MyCLI",
       dependencies: [
-        .product(name: "Figlet", package: "swift-figlet"),
+        .product(name: "Figlet", package: "example-package-figlet"),
       ]
     ),
     .testTarget(
@@ -105,7 +105,7 @@ name: "MyCLI",
 )
 ~~~
 
-Running `swift build` will instruct SwiftPM to install the new dependencies and then proceed to build the code.
+Running `swift build` will instruct SwiftPM to download the new dependencies and then proceed to build the code.
 
 Running this command also created a new file for us, `Package.resolved`.
 This file is a snapshot of the exact versions of the dependencies we are using locally.
@@ -116,7 +116,7 @@ To use this dependency, we can open `MyCLI.swift`, remove everything that’s in
 import Figlet
 ~~~
 
-This line means that we can now use the `Figlet` module that the `swift-figlet` package exports.
+This line means that we can now use the `Figlet` module that the `example-package-figlet` package exports.
 
 ## A small application
 
@@ -171,7 +171,7 @@ import PackageDescription
 let package = Package(
   name: "swift-swift",
   dependencies: [
-    .package(url: "https://github.com/tomerd/swift-figlet", branch: "main"),
+    .package(url: "https://github.com/apple/example-package-figlet", branch: "main"),
     .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
   ],
   products: [
@@ -181,7 +181,7 @@ let package = Package(
     .executableTarget(
       name: "MyCLI",
       dependencies: [
-        .product(name: "Figlet", package: "swift-figlet"),
+        .product(name: "Figlet", package: "example-package-figlet"),
         .product(name: "ArgumentParser", package: "swift-argument-parser"),
       ]
     ),
