@@ -36,20 +36,19 @@ Invoke-RestMethod -Url 'get.scoop.sh' | Invoke-Expression
    The platform dependencies cannot be installed through the Windows Package Manager as the install rules do not install the components necessary.  They will be installed through Visual Studio installer.
 
    #### With Winget (Windows Package Manager):
-   ~~~ pwsh
+   ~~~ cmd
    winget install Git.Git
    winget install Python.Python.3.10
 
    curl -sOL https://aka.ms/vs/16/release/vs_community.exe
-   start /w vs_community.exe --passive --wait --norestart --nocache ^
-     --installPath "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community" ^
-     --add Microsoft.VisualStudio.Component.Windows10SDK.19041 ^
-     --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
+   winget install Microsoft.VisualStudio.2019.Community --force --custom "--add Microsoft.VisualStudio.Component.Windows10SDK.19041 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64"
    del /q vs_community.exe
    ~~~
 
    #### With Scoop:
-   ~~~ pwsh
+   > **NOTE:** This code snippet MUST be run in a traditional Command Prompt (`cmd.exe`)
+   
+   ~~~ cmd
    # Scoop already comes pre-installed with Git, so no need to re-install it.
    scoop bucket add versions
    scoop install python310
