@@ -94,7 +94,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "cxxLibrary")
+            name: "cxxLibrary"),
         .executableTarget(
             name: "swiftCLITool", 
             dependencies: ["cxxLibrary"],
