@@ -53,7 +53,9 @@ categories:
         swift_compatibility: 5.6+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/exPHAT/SwiftWhisper
         note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
@@ -157,19 +159,19 @@ categories:
         platform_compatibility_tooltip: Apple (macOS)
         license: Apache 2.0
         url: https://swiftpackageindex.com/stackotter/swift-macro-toolkit
-  - name: Swift on the Server
+  - name: Swift on server
     anchor: server
     description: What packages can help you build a top-class back-end server for your
       app or a website built with HTML? Swift has several mature back-end frameworks,
-      ORM and database connection packages, and more.
+      ORM, database connection packages, and more.
     more:
-      title: "More Swift on the Server packages \u203A"
+      title: "More Swift on server packages \u203A"
       url: https://swiftpackageindex.com/keywords/server-side-swift
     packages:
       - name: vapor
         description: Vapor is an HTTP web framework for Swift, providing an expressive
           and easy-to-use foundation for websites, APIs, and cloud projects.
-        swift_compatibility: 5.6+
+        swift_compatibility: 5.7+
         platform_compatibility:
           - Apple
           - Linux
