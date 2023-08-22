@@ -11,6 +11,6 @@ You can also [create your own package](https://developer.apple.com/documentation
 
 ## Featured Packages
 
-There are thousands of packages to explore through the community-run package index project, the [Swift Package Index](https://swiftpackageindex.com/){:target="_blank"}. Below is a selection of popular packages in commonly used categories and packages picked by podcasts or blogs around the community.
+There are thousands of community-written open source Swift packages to explore through the [Swift Package Index](https://swiftpackageindex.com/){:target="_blank"}. Below is a selection of popular and interesting packages from around the community.
 
 {% include_relative _package-lists.html %}

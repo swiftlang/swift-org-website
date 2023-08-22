@@ -11,7 +11,10 @@
   {% for package in category.packages %}
   <li class="{% if package.note %}with-note{% endif %}">
     <a href="{{ package.url }}" target="_blank">
-      <h4><span>{{ package.name }}</span></h4>
+      <h4>
+        <div class="name">{{ package.name }}</div>
+        <div class="owner">by {{ package.owner }}</div>
+      </h4>
       <section class="description">{{ package.description | markdownify }}</section>
       <section class="metadata">
         {% if package.platform_compatibility %}

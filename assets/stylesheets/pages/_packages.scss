@@ -22,20 +22,30 @@ ul.package-list {
       &:hover {
         text-decoration: none;
 
-        h4 > span {
-          color: var(--color-link);
-          text-decoration: underline;
+        h4 {
           background-image: url("/assets/images/icon-external-color.svg");
+
+          .name {
+            color: var(--color-link);
+            text-decoration: underline;
+          }
         }
       }
     }
 
-    h4 > span {
-      padding-right: 20px;
+    h4 {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-top: 10px;
       background-image: url("/assets/images/icon-external.svg");
       background-repeat: no-repeat;
       background-size: 15px;
-      background-position: top 3px right;
+      background-position: top 15px right;
+
+      .owner {
+        font-size: 16px;
+      }
     }
 
     .description {
