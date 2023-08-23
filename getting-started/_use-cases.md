@@ -28,7 +28,7 @@ Here are some examples of the many use cases of Swift, in case you want to jump 
   <li class="use-case">
     <h3>Library</h3>
     <p class="description">
-      Learn how to create cross-platform library for sharing reusable code, or modularize large code-base.
+      Learn how to create a cross-platform library for sharing reusable code, or modularize large code-base.
     </p>
 
     <a href="/getting-started/library-swiftpm" class="cta-secondary">Start tutorial</a>
