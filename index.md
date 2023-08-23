@@ -120,7 +120,7 @@ Stay up-to-date with the latest in the Swift community.
 <div class="links links-list-nostyle" markdown="1">
   - [Visit the Swift.org blog](/blog/)
   - [Visit the Swift forums](https://forums.swift.org)
-  - [Follow @Swiftlang on Twitter](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
+  - [Follow @swiftlang on X (formally Twitter)](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
 </div>
 
 <script>
