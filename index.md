@@ -85,7 +85,7 @@ atom: true
 
 ## Getting involved
 
-Everyone is welcome to contribute to Swift. Contributing doesn’t just mean submitting pull requests—there are many different ways for you to get involved, including answering questions on the forums, reporting or triaging bugs, and participating in the Swift evolution process.
+Everyone is welcome to contribute to Swift. Contributing doesn’t just mean wiring code or submitting pull request — there are many different ways for you to get involved, including answering questions on the forums, reporting or triaging bugs, and participating in the Swift evolution process.
 
 No matter how you want to get involved, we ask that you first learn what’s expected of anyone who participates in the project by reading the [Community Overview](/community/). If you’re contributing code, you should also know how to build and run Swift from the repository, as described in [Source Code](/source-code/).
 
