@@ -19,7 +19,7 @@ Here are some examples of the many use cases of Swift, in case you want to jump 
   <li class="use-case">
     <h3>Command-line Tool</h3>
     <p class="description">
-      Learn how to create cross-platform command-line tool such as short-lived interactive programs, or long-lived daemon that runs in the background.
+      Learn how to create cross-platform command-line tools such as short-lived interactive programs, or long-lived daemons that run in the background.
     </p>
 
     <a href="/getting-started/cli-swiftpm" class="cta-secondary">Start tutorial</a>
