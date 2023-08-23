@@ -2,8 +2,9 @@ categories:
   - name: Community Showcase
     anchor: community
     description: The community showcase celebrates new and innovative packages discussed
-      on recent community podcasts, blogs, and newsletters. If you would like to submit
-      a package for inclusion here, please [message the Swift Website Workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup).
+      on recent community podcasts, blogs, and newsletters. Submissions for this category
+      are [collected via the Swift Forums](https://example.com) and curated by the [Swift
+      Website Workgroup](https://www.swift.org/website-workgroup/).
     packages:
       - name: swift-composable-architecture
         description: The Composable Architecture is a library for building applications
