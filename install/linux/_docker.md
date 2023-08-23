@@ -6,7 +6,7 @@ Swift Dockerfiles are located on [swift-docker](https://github.com/apple/swift-d
 
 #### Using Docker Images
 
-0. Pull the Docker image from [Docker hub](https://hub.docker.com/_/swift/):
+0. Pull the Docker image from [Docker Hub](https://hub.docker.com/_/swift/):
 
    ~~~ shell
    docker pull swift
