@@ -906,7 +906,7 @@ printDeserialized(getSerializedFloat())
 C++ container types, like the [`std::vector`](https://en.cppreference.com/w/cpp/container/vector) class
 template,
 typically provide iterator-based APIs for users in C++.
-Using a C++ iterator is [unsafe](index#do-not-use-c-iterators-in-swift)
+Using a C++ iterator is [unsafe](#do-not-use-c-iterators-in-swift)
 in Swift, as such use is not
 associated with its owning container which can get destroyed
 while the iterator is still in use.
@@ -920,7 +920,7 @@ conforms some C++ container types to protocols that:
 These protocols and their conformance rules are described below.
 The recommended approach for using C++ containers that conform to these
 protocols is summarized in a
-[follow-up section](index#recommended-approach-for-using-c-containers).
+[follow-up section](#recommended-approach-for-using-c-containers).
 
 ### Some C++ Containers Are Swift Collections
 
@@ -986,7 +986,7 @@ will most likely make a deep copy of the container when:
 
 This constraint is tracked on the [status page](status#performance-constraints).
 Several strategies for working around this constraint are
-[presented below](index#using-c-containers-in-performance-sensitive-swift-code).
+[presented below](#using-c-containers-in-performance-sensitive-swift-code).
 
 #### Conformance Rules for Random Access C++ Collections
 
