@@ -85,7 +85,7 @@ atom: true
 
 ## Getting involved
 
-Everyone is welcome to contribute to Swift. Contributing doesn’t just mean wiring code or submitting pull request — there are many different ways for you to get involved, including answering questions on the forums, reporting or triaging bugs, and participating in the Swift evolution process.
+Everyone is welcome to contribute to Swift. Contributing doesn’t just mean writing code or submitting pull request — there are many different ways for you to get involved, including answering questions on the forums, reporting or triaging bugs, and participating in the Swift evolution process.
 
 No matter how you want to get involved, we ask that you first learn what’s expected of anyone who participates in the project by reading the [Community Overview](/community/). If you’re contributing code, you should also know how to build and run Swift from the repository, as described in [Source Code](/source-code/).
 
@@ -120,7 +120,7 @@ Stay up-to-date with the latest in the Swift community.
 <div class="links links-list-nostyle" markdown="1">
   - [Visit the Swift.org blog](/blog/)
   - [Visit the Swift forums](https://forums.swift.org)
-  - [Follow @swiftlang on X (formally Twitter)](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
+  - [Follow @swiftlang on X (formerly Twitter)](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
 </div>
 
 <script>
