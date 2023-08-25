@@ -394,3 +394,22 @@ FranzBusch:
    github: FranzBusch
    gravatar: 3b34dbe9f3870b0e9bf1f4cb0750fa3d
    about: "Franz Busch is a member of a team developing foundational server-side Swift libraries at Apple, and is a member of the SSWG."
+
+adrian-prantl:
+  name: Adrian Prantl
+  gravatar: 12f9ffd35b20b488b2cb657738fc3eeb
+  email: aprantl@apple.com
+  github: adrian-prantl
+  about: "Adrian Prantl manages the Debugger Compiler Integration team at Apple. He works on debug info in the compiler and the Swift plugin in LLDB."
+
+augustonoronha:
+  name: Augusto Noronha
+  email: anoronha@apple.com
+  github: augusto2112
+  about: "Augusto Noronha works on Swift debugging and is a member of the Debugger Compiler Integration team at Apple."
+
+kastiglione:
+  name: Dave Lee
+  email: davelee@apple.com
+  github: kastiglione
+  about: "Dave Lee works on Swift debugging as a member of the Debugger Compiler Integration team at Apple."
