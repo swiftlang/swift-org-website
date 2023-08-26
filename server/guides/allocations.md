@@ -104,17 +104,16 @@ After we have confirmed that our user probe on `malloc` works in general, let's 
 
 For example, we could analyse a program which does 10 subsequent HTTP requests using [AsyncHTTPClient](https://github.com/swift-server/async-http-client). If you're interested in the full source code, please expand below.
 
-<details>
-<summary>Demo program source code</summary>
+#### Demo program source code
 
 With the following dependencies
 
 ```swift
-    dependencies: [
-        .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.3.0"),
-        .package(url: "https://github.com/apple/swift-nio.git", from: "2.29.0"),
-        .package(url: "https://github.com/apple/swift-log.git", from: "1.4.2"),
-    ],
+dependencies: [
+    .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.3.0"),
+    .package(url: "https://github.com/apple/swift-nio.git", from: "2.29.0"),
+    .package(url: "https://github.com/apple/swift-log.git", from: "1.4.2"),
+],
 ```
 
 We could write this program
@@ -178,7 +177,6 @@ MultiThreadedEventLoopGroup.withCurrentThreadAsEventLoop { eventLoop in
 
 logger.info("exiting")
 ```
-</details>
 
 Assuming you have a program as a Swift package, we should first of all compile it in release mode using `swift build -c release`. Then you should find a binary called `.build/release/your-program-name` which we can then analyse.
 
