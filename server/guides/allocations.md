@@ -104,7 +104,7 @@ After we have confirmed that our user probe on `malloc` works in general, let's 
 
 For example, we could analyse a program which does 10 subsequent HTTP requests using [AsyncHTTPClient](https://github.com/swift-server/async-http-client). If you're interested in the full source code, please expand below.
 
-#### Demo program source code
+### Demo program source code
 
 With the following dependencies
 
