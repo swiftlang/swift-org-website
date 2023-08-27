@@ -373,6 +373,14 @@ article {
         margin-top: 1em;
     }
 
+    hr {
+        margin: 1.5em 0;
+    }
+
+    hr + h2, hr + h3, hr + h4, hr + h5 {
+        padding-top: 0.5em;
+    }
+
     header {
         width: 100%;
         display: inline-block;
