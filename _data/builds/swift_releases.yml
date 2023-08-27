@@ -1302,3 +1302,39 @@
     - name: Windows 10
       archs:
         - x86_64
+- name: 5.8.1
+  tag: swift-5.8.1-RELEASE
+  xcode: Xcode 14.3.1
+  xcode_release: true
+  date: 2023-06-01
+  platforms:
+    - name: Ubuntu 16.04
+      docker: 5.8.1-xenial
+      archs:
+        - x86_64
+    - name: Ubuntu 18.04
+      docker: 5.8.1-bionic
+      archs:
+        - x86_64
+    - name: Ubuntu 20.04
+      docker: 5.8.1-focal
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 22.04
+      docker: 5.8.1-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2
+      docker: 5.8.1-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: CentOS 7
+      docker: 5.8.1-centos7
+      archs:
+        - x86_64
+    - name: Windows 10
+      archs:
+        - x86_64
