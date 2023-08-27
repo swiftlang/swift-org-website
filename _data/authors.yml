@@ -231,7 +231,7 @@ hborla:
    github: hborla
    twitter: hollyborla
    gravatar: b3e284dd808123c26f476d75da0b5b3c
-   about: "Holly Borla is an engineer on the Apple Swift team, and a member of the Swift Core Team, Language workgroup, and Diversity in Swift workgroup."
+   about: "Holly Borla is an engineer on the Apple Swift team, and a member of the Swift Core Team, Language Steering Group, and Diversity in Swift workgroup."
 
 krstnfx:
    name: Kristina Fox
@@ -328,7 +328,7 @@ rjmccall:
    name: John McCall
    github: rjmccall
    twitter: pathofshrines
-   about: "John McCall is an engineer on the Apple Swift team and member of the Language workgroup."
+   about: "John McCall is an engineer on the Apple Swift team and member of the Language Steering Group."
 
 amartini:
   name: Alex Martini
@@ -355,3 +355,42 @@ alexandersandberg:
   github: alexandersandberg
   twitter: alexandberg
   about: "Alexander Sandberg is an iOS and macOS developer and a member of the Swift Website Workgroup."
+
+jamesdempsey:
+  name: James Dempsey
+  gravatar: 15947d27758dc90df81fd42c4a387bbb
+  email: dempsey@tapas-software.net
+  github: dempseyatgithub
+  twitter: jamesdempsey
+  about: "James Dempsey is an iOS and macOS developer, technical trainer, and a member of the Swift Website Workgroup."
+
+honzadvorsky:
+  name: Honza Dvorsky
+  email: honza@apple.com
+  github: czechboy0
+  about: "Honza Dvorsky is a member of a team working on developer tools and services as part of Apple’s Services Engineering division, and is a core developer on Swift OpenAPI Generator."
+
+simonjbeaumont:
+  name: Si Beaumont
+  email: beaumont@apple.com
+  github: simonjbeaumont
+  about: "Si Beaumont is a member of a team developing foundational server-side Swift libraries as part of Apple’s Services Engineering division, and is a core developer on Swift OpenAPI Generator."
+
+guoyezhang:
+  name: Guoye Zhang
+  email: guoye_zhang@apple.com
+  github: guoye-zhang
+  about: "Guoye Zhang is a member of the team at Apple working on Foundation networking, HTTP, and other internet technologies."
+
+erickinnear:
+  name: Eric Kinnear
+  email: ekinnear@apple.com
+  github: ekinnear
+  about: "Eric Kinnear is a member of the team at Apple working on Foundation networking, HTTP, and other internet technologies."
+
+FranzBusch:
+   name: Franz Busch
+   email: f.busch@apple.com
+   github: FranzBusch
+   gravatar: 3b34dbe9f3870b0e9bf1f4cb0750fa3d
+   about: "Franz Busch is a member of a team developing foundational server-side Swift libraries at Apple, and is a member of the SSWG."

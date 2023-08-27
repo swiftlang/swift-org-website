@@ -33,14 +33,13 @@ Get involved with an existing translation project, or start a new one.
 - [Read Chinese translation](https://swiftgg.gitbook.io/swift){:target="_blank"}
 - [Read Japanese translation](https://www.swiftlangjp.com){:target="_blank"}
 - [Read Korean translation](https://bbiguduk.gitbook.io/swift){:target="_blank"}
-- [Read Spanish translation](https://swift-book-es.vercel.app/){:target="_blank"}
+- [Read Spanish translation](https://swiftbook.es){:target="_blank"}
 - [Read Ukrainian translation](https://book.swift.org.ua){:target="_blank"}
 </div>
 
 <div class="info" markdown="1">
 If you know of a quality translation project underway,
-please let us know on the [Compiler Development](https://forums.swift.org/c/development/compiler) forums,
-and we'll provide a link to that project on this page.
+please let us know on the [Swift.org repository](https://github.com/apple/swift-org-website) by opening an issue or submitting a Pull Request.
 </div>
 
 ## Standard Library
@@ -63,6 +62,19 @@ DocC is a documentation compiler that makes it easy for you to produce documenta
 Delivering a clear, consistent developer experience when writing Swift code is largely defined by the names and idioms that appear in APIs. These design guidelines explain how to make sure that your code feels like a part of the larger Swift ecosystem.
 <div class="links" markdown="1">
   [Read the API Design Guidelines](/documentation/api-design-guidelines/)
+</div>
+
+## Mixing Swift and C++
+
+A development version of Swift has support for bidirectional interoperability with C++. A great variety of C++ APIs can be called directly from Swift, and select Swift APIs can be used from C++.
+<div class="links" markdown="1">
+  [Read how to mix Swift and C++](/documentation/cxx-interop/)
+</div>
+
+Swift's support for C++ interoperability is actively evolving. Some C++ APIs and API patterns are not yet available in Swift, and vice-versa. This status page describes the extent to which interoperability is supported between the two languages:
+
+<div class="links" markdown="1">
+  [Status of C++ interoperability support in Swift](/documentation/cxx-interop/status)
 </div>
 
 ## Tools

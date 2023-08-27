@@ -18,3 +18,9 @@ xcuserdata
 
 # Build output
 .output
+
+# VS Code files
+.vscode
+
+# Prettier
+.prettierrc

@@ -46,7 +46,10 @@
           name: deployment-only
         - title: Platform Owners
           name: platform-owners
-    - title: Documentation
+# ------------------------------------------------------------------------------
+- header: Documentation
+  pages:
+    - title: Overview
       url: /documentation/
       sections:
         - title: Swift Language
@@ -57,12 +60,101 @@
           name: packages
         - title: API Design Guidelines
           name: api-design-guidelines
+        - title: C++ Interoperability
+          name: mixing-swift-and-c
         - title: Tools
           name: tools
-
+    - title: Swift Compiler
+      url: /swift-compiler/
+      sections:
+        - title: Compiler Architecture
+          name: compiler-architecture
+    - title: Standard Library
+      url: /standard-library/
+      sections:
+        - title: Standard Library Preview Package
+          name: standard-library-preview-package
+        - title: Standard Library Design
+          name: standard-library-design
+    - title: Package Manager
+      url: /package-manager/
+      sections:
+        - title: Conceptual Overview
+          name: conceptual-overview
+        - title: Example Usage
+          name: example-usage
+    - title: Core Libraries
+      url: /core-libraries/
+      sections:
+        - title: Foundation
+          name: foundation
+        - title: libdispatch
+          name: libdispatch
+        - title: xctest
+          name: xctest
+    - title: REPL, Debugger & Playgrounds
+      url: /lldb/
+      sections:
+        - title: Combined REPL + Debugger
+          name: why-combine-the-repl-and-debugger
+        - title: Xcode Playgrounds
+          name: xcode-playground-support
+    - title: Swift on Server
+      url: /server/
+      sections:
+        - title: Why Swift on Server?
+          name: why-swift-on-server
+        - title: Swift Server Workgroup
+          name: swift-server-workgroup
+        - title: Swift Server Guides
+          name: development-guides
+    - title: Swift Evolution
+      url: /swift-evolution/
+    - title: Source Code
+      url: /source-code/
+      sections:
+        - title: Compiler and Standard Library
+          name: compiler-and-standard-library
+        - title: Core Libraries
+          name: core-libraries
+        - title: Package Manager
+          name: package-manager
+        - title: Xcode Playground Support
+          name: xcode-playground-support
+        - title: Source Tooling
+          name: source-tooling
+        - title: SourceKit-LSP Service
+          name: sourcekit-lsp-service
+        - title: Swift.org Website
+          name: swiftorg-website
+        - title: Cloned Repositories
+          name: cloned-repositories
+    - title: Continuous Integration
+      url: /continuous-integration/
+      sections:
+        - title: Configuration
+          name: configuration
+        - title: Usage
+          name: usage
+        - title: Community Involvement
+          name: community-involvement
+    - title: Source Compatibility
+      url: /source-compatibility/
+      sections:
+        - title: Current List of Projects
+          name: current-list-of-projects
+        - title: Adding Projects
+          name: adding-projects
+        - title: Maintaining Projects
+          name: maintaining-projects
+        - title: Pull Request Testing
+          name: pull-request-testing
+        - title: Building Projects
+          name: building-projects
+# ------------------------------------------------------------------------------
 - header: Community
   pages:
-    - title: Community Overview
+    - title: Overview
       url: /community/
       sections:
         - title: Communication
@@ -116,109 +208,19 @@
           name: adding-external-library-dependencies
         - title: LLVM and Swift
           name: llvm-and-swift
-    - title: Code of Conduct
-      url: /code-of-conduct/
 
-- header: Open Source Development
-  pages:
-    - title: Swift Evolution
-      url: /swift-evolution/
-    - title: Source Code
-      url: /source-code/
+    - title: Contributor Experience Workgroup
+      url: /contributor-experience-workgroup/
+    - title: Server Workgroup
+      url: /sswg/
       sections:
-        - title: Compiler and Standard Library
-          name: compiler-and-standard-library
-        - title: Core Libraries
-          name: core-libraries
-        - title: Package Manager
-          name: package-manager
-        - title: Xcode Playground Support
-          name: xcode-playground-support
-        - title: Source Tooling
-          name: source-tooling
-        - title: SourceKit-LSP Service
-          name: sourcekit-lsp-service
-        - title: Swift.org Website
-          name: swiftorg-website
-        - title: Cloned Repositories
-          name: cloned-repositories
-    - title: Continuous Integration
-      url: /continuous-integration/
-      sections:
-        - title: Configuration
-          name: configuration
-        - title: Usage
-          name: usage
-        - title: Community Involvement
-          name: community-involvement
-    - title: Source Compatibility
-      url: /source-compatibility/
-      sections:
-        - title: Current List of Projects
-          name: current-list-of-projects
-        - title: Adding Projects
-          name: adding-projects
-        - title: Maintaining Projects
-          name: maintaining-projects
-        - title: Pull Request Testing
-          name: pull-request-testing
-        - title: Building Projects
-          name: building-projects
-    - title: Security
-      url: /support/security.html
-      sections:
-        - title: Security Process
-          name: security-process
-        - title: Security Updates
-          name: security-updates
-
-- header: Open Source Efforts
-  pages:
-    - title: Swift Compiler
-      url: /swift-compiler/
-      sections:
-        - title: Compiler Architecture
-          name: compiler-architecture
-    - title: Standard Library
-      url: /standard-library/
-      sections:
-        - title: Standard Library Preview Package
-          name: standard-library-preview-package
-        - title: Standard Library Design
-          name: standard-library-design
-    - title: Package Manager
-      url: /package-manager/
-      sections:
-        - title: Conceptual Overview
-          name: conceptual-overview
-        - title: Example Usage
-          name: example-usage
-    - title: Core Libraries
-      url: /core-libraries/
-      sections:
-        - title: Foundation
-          name: foundation
-        - title: libdispatch
-          name: libdispatch
-        - title: xctest
-          name: xctest
-    - title: REPL, Debugger & Playgrounds
-      url: /lldb/
-      sections:
-        - title: Combined REPL + Debugger
-          name: why-combine-the-repl-and-debugger
-        - title: Xcode Playgrounds
-          name: xcode-playground-support
-    - title: Swift on Server
-      url: /server/
-      sections:
-        - title: Why Swift on Server?
-          name: why-swift-on-server
-        - title: Swift Server Workgroup
-          name: swift-server-workgroup
-        - title: Swift Server Guides
-          name: development-guides
-    - title: Swift.org website
+        - title: Community Participation
+          name: community-participation
+        - title: Governance
+          name: governance
+        - title: Website workgroup
+          name: website-workgroup
+    - title: Website Workgroup
       url: /website/
       sections:
         - title: Community Participation
@@ -227,8 +229,8 @@
           name: governance
         - title: Website workgroup
           name: website-workgroup
-    - title: Language Workgroup
-      url: /language-workgroup/
+    - title: Language Steering Group
+      url: /language-steering-group/
       sections:
         - title: Charter
           name: charter
@@ -242,7 +244,7 @@
           name: evolution-process
         - title: Community participation
           name: community-participation
-    - title: C++ Interoperability
+    - title: C++ Interoperability Workgroup
       url: /cxx-interop-workgroup/
       sections:
         - title: Charter
@@ -262,3 +264,17 @@
           name: communication
         - title: Community Participation
           name: community-participation
+# ------------------------------------------------------------------------------
+- header: Governance
+  pages:
+    - title: Code of Conduct
+      url: /code-of-conduct/
+    - title: License
+      url: /legal/license.html
+    - title: Security
+      url: /support/security.html
+      sections:
+        - title: Security Process
+          name: security-process
+        - title: Security Updates
+          name: security-updates

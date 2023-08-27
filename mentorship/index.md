@@ -11,25 +11,23 @@ If the mentee has not contributed to the project before, they will first work wi
 
 ## Current Program
 
-### 2022 Timeline
+### 2023 Timeline
 
-| Date               | Event                          |
-|:-------------------|:-------------------------------|
-| **June 1st**       |  Interest surveys open         |
-| **June 15th**      |  Interest survey deadline      |
-| **July 4th**       |  Mentorship pairings announced |
-| **July 11th**      |  12-week cohort begins         |
-| **August 15th**    |  Halfway checkpoint            |
-| **September 30th** |  12-week cohort ends           |
-| **October 14th**   |  Feedback deadline             |
-
-After the 12-week cohort ends on September 30th, the interest surveys will open
-back up to offer short-term mentorship for
-[good first issue](/contributing/#good-first-issues) contributions.
+| Date               | Event                            |
+|:-------------------|:---------------------------------|
+| **June 12th**      |  Mentor Interest surveys open    |
+| **June 26th**      |  Mentor Interest survey deadline |
+| **July 3rd**       |  Mentee Interest surveys open    |
+| **July 10th**      |  Mentee Interest survey deadline |
+| **July 24th**      |  Mentorship pairings announced   |
+| **July 31st**      |  12-week cohort begins           |
+| **September 4th**  |  Halfway checkpoint              |
+| **October 20th**   |  12-week cohort ends             |
+| **October 27th**   |  Feedback deadline               |
 
 ### Interest Surveys
 
-The 2022 mentee and mentor interest survey submissions are open June 1st - June 15th. If you are interested in participating as a mentee or mentor, please fill out the interest survey [here](/mentorship-interest-survey/).
+The 2023 mentor interest survey submissions are open from June 12th - June 26th. If you are interested in participating as a mentor, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_9vEcwfZtSblGYjs).
 
 The mentee interest survey is not an application; but rather it will tell the Diversity in Swift workgroup about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the workgroup may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
 
