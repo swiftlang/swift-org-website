@@ -16,11 +16,11 @@ atom: true
 <div class="link-grid" markdown="1">
   <ul>
     <li>
-      <a href="/blog/swift-5.8-released">
+      <a href="/download/#releases">
         <div class="flex-container">
           <div class="latest-release-container">
           <span>
-            5.8
+            {{ site.data.builds.swift_releases.last.name }}
           </span>
           </div>
           Latest release
