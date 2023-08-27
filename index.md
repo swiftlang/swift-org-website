@@ -48,7 +48,7 @@ atom: true
   - [Learn more about Swift](/about)
 </div>
 
-## Use cases
+## Use Cases
 
 <ul class="use-cases">
   <li>
@@ -83,7 +83,7 @@ atom: true
   </li>
 </ul>
 
-## Getting involved
+## Getting Involved
 
 Everyone is welcome to contribute to Swift. Contributing doesn’t just mean writing code or submitting pull request — there are many different ways for you to get involved, including answering questions on the forums, reporting or triaging bugs, and participating in the Swift evolution process.
 
@@ -113,7 +113,7 @@ No matter how you want to get involved, we ask that you first learn what’s exp
   </li>
 </ul>
 
-## What's new
+## What's New
 
 Stay up-to-date with the latest in the Swift community.
 
