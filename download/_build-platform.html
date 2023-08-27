@@ -10,7 +10,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>{{ include.platform.xcode }}</a><sup> 1</sup>
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>{{ include.platform.xcode }}</a> <sup>1</sup>
                 </span>
             </td>
             <td class="arch-tag"> 
@@ -29,7 +29,7 @@
                 <span class="release">
                   
                   {% if platform.name == "Windows 10" %}
-                  <p title="Download" download>{{ platform.name }}<sup>2</sup></p>
+                  <p title="Download" download>{{ platform.name }} <sup>2</sup></p>
                    
                   {% else %}
                   <p title="Download" download>{{ platform.name }}</p>
