@@ -82,11 +82,7 @@
         }
 
         img {
-          filter: invert(1);
-
-          @media (prefers-color-scheme: dark) {
-            filter: none;
-          }
+          filter: var(--icon-filter-hover);
         }
       }
 
@@ -95,10 +91,7 @@
         width: 64px;
         display: block;
         margin: 0 auto;
-
-        @media (prefers-color-scheme: dark) {
-          filter: invert(1);
-        }
+        filter: var(--icon-filter);
       }
     }
   }
