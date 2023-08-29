@@ -6,7 +6,6 @@ title: What's new in Swift debugging on the 5.9 branch?
 author: [adrian-prantl, augustonoronha, kastiglione]
 ---
 
-## What’s new in Swift debugging on the 5.9 branch?
 
 On the Swift 5.9 branch, we introduced a couple of new features to [LLDB](https://lldb.llvm.org/ "LLDB project home page") and the Swift compiler to improve the debugging experience. In this post, we are highlighting three changes that we expect to have the most noticeable impact on Swift debugging workflows.
 
