@@ -23,7 +23,6 @@ This will generate a new directory called _MyLibrary_ with the following files:
 ~~~no-highlight
 .
 ├── Package.swift
-├── README.md
 ├── Sources
 │   └── MyLibrary
 │       └── MyLibrary.swift
@@ -43,19 +42,19 @@ We can run the tests by running  `swift test`  in our terminal.
 ~~~bash
 $ swift test
 Building for debugging...
-[4/4] Compiling MyLibraryTests MyLibraryTests.swift
-Build complete! (1.30s)
-Test Suite 'All tests' started at 2023-01-12 12:05:56.127
-Test Suite 'MyLibraryPackageTests.xctest' started at 2023-01-12 12:05:56.128
-Test Suite 'MyLibraryTests' started at 2023-01-12 12:05:56.128
+[5/5] Linking MyLibraryPackageTests
+Build complete! (7.91s)
+Test Suite 'All tests' started at 2023-08-29 18:59:31.328
+Test Suite 'MyLibraryPackageTests.xctest' started at 2023-08-29 18:59:31.329
+Test Suite 'MyLibraryTests' started at 2023-08-29 18:59:31.329
 Test Case '-[MyLibraryTests.MyLibraryTests testExample]' started.
-Test Case '-[MyLibraryTests.MyLibraryTests testExample]' passed (0.005 seconds).
-Test Suite 'MyLibraryTests' passed at 2023-01-12 12:05:56.133.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
-Test Suite 'MyLibraryPackageTests.xctest' passed at 2023-01-12 12:05:56.133.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
-Test Suite 'All tests' passed at 2023-01-12 12:05:56.133.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.007) seconds
+Test Case '-[MyLibraryTests.MyLibraryTests testExample]' passed (0.001 seconds).
+Test Suite 'MyLibraryTests' passed at 2023-08-29 18:59:31.330.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'MyLibraryPackageTests.xctest' passed at 2023-08-29 18:59:31.330.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'All tests' passed at 2023-08-29 18:59:31.330.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.002) seconds
 ~~~
 
 ## A small library
@@ -100,26 +99,24 @@ final class MyLibraryTests: XCTestCase {
 }
 ~~~
 
-Once we save that, we can run our application with `swift run`.
-Assuming everything went well, we can run the tests successfully again:
+Once we save that, we can run the tests again:
 
 ~~~no-highlight
 ❯ swift test
 Building for debugging...
-[3/3] Linking swift-libraryPackageTests
-Build complete! (0.84s)
-Test Suite 'All tests' started at 2023-01-03 16:22:45.070
-Test Suite 'swift-libraryPackageTests.xctest' started at 2023-01-03 16:22:45.071
-Test Suite 'swift_libraryTests' started at 2023-01-03 16:22:45.071
-Test Case '-[swift_libraryTests.swift_libraryTests testEmail]' started.
-Test Case '-[swift_libraryTests.swift_libraryTests testEmail]' passed (0.005 seconds).
-Test Suite 'swift_libraryTests' passed at 2023-01-03 16:22:45.076.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
-Test Suite 'swift-libraryPackageTests.xctest' passed at 2023-01-03 16:22:45.076.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
-Test Suite 'All tests' passed at 2023-01-03 16:22:45.076.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.005 (0.007) seconds
-~~~
+[5/5] Linking MyLibraryPackageTests
+Build complete! (3.09s)
+Test Suite 'All tests' started at 2023-08-29 19:01:08.640
+Test Suite 'MyLibraryPackageTests.xctest' started at 2023-08-29 19:01:08.641
+Test Suite 'MyLibraryTests' started at 2023-08-29 19:01:08.641
+Test Case '-[MyLibraryTests.MyLibraryTests testEmail]' started.
+Test Case '-[MyLibraryTests.MyLibraryTests testEmail]' passed (0.002 seconds).
+Test Suite 'MyLibraryTests' passed at 2023-08-29 19:01:08.643.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'MyLibraryPackageTests.xctest' passed at 2023-08-29 19:01:08.643.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'All tests' passed at 2023-08-29 19:01:08.643.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
 
 ---
 
