@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Swift Server Work Group Survey 2023
+title: Swift Server Workgroup Survey 2023
 ---
 
-The Swift Server Work Group is collecting feedback through this survey in order to shape the direction and inform the efforts undertaken by the group in the upcoming year.
+The Swift Server Workgroup is collecting feedback through this survey in order to shape the direction and inform the efforts undertaken by the group in the upcoming year.
 
 Please respond and share the survey with fellow developers interested in server-side Swift and let us know your thoughts!
 
