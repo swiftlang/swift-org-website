@@ -9,6 +9,6 @@ Please respond and share the survey with fellow developers interested in server-
 
 The survey will open on September 1st and be open for a few weeks.
 
-The survey is completely anonymous, and personal data is collected through the survey.
+The survey is completely anonymous, and no personal data is collected through the survey.
 
 <iframe src="https://essentials.applesurveys.com/jfe/form/SV_03wLb59BafoWEo6" height="800px" width="100%" frameBorder="0"></iframe>
