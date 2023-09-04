@@ -388,6 +388,13 @@ erickinnear:
   github: ekinnear
   about: "Eric Kinnear is a member of the team at Apple working on Foundation networking, HTTP, and other internet technologies."
 
+al45tair:
+  name: Alastair Houghton
+  email: ahoughton@apple.com
+  gravatar: 4481fa93eb8710047ed4e11a3ac533c8
+  github: al45tair
+  about: "Alastair Houghton works on the Swift and Objective-C language runtimes at Apple."
+
 FranzBusch:
    name: Franz Busch
    email: f.busch@apple.com
