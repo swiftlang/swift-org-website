@@ -1,35 +1,52 @@
 - |
-  let names = ["Anna", "Alex", "Brian", "Jack"]
-  for name in names {
-      print("Hello, \(name)!")
-  }
-  // Hello, Anna!
-  // Hello, Alex!
-  // Hello, Brian!
-  // Hello, Jack!
-- |
-  func greet(person: String, alreadyGreeted: Bool) -> String {
-      if alreadyGreeted {
-          return greetAgain(person: person)
-      } else {
-          return greet(person: person)
-      }
-  }
-  print(greet(person: "Tim", alreadyGreeted: true))
-  // Prints "Hello again, Tim!"
-- |
-  func oneMore(than number: Int) -> Int {
-      return number + 1
+  struct ScientificName: Codable {
+      var genus: String
+      var species: String
+      var subspecies: String?
   }
 
-  var myNumber = 1
-  myNumber = oneMore(than: myNumber)
-  print(myNumber)
-  // Prints "2"
+  let momiji = ScientificName(genus: "Acer", species: "palmatum")
+  let jsonData = try JSONEncoder().encode(momiji)
+
+  // {"genus":"Acer","species":"palmatum"}
 - |
-  enum Beverage: CaseIterable {
-      case coffee, tea, juice
+  struct ScientificName {
+      var genus: String
+      var species: String
+      var subspecies: String?
+
+      var description: String {
+          var text = "\(genus) \(species)"
+          if let subspecies {
+              // subspecies is guaranteed to be non-nil here.
+              text += "subsp. \(subspecies)"
+          }
+          return text
+      }
   }
-  let numberOfChoices = Beverage.allCases.count
-  print("\(numberOfChoices) beverages available")
-  // Prints "3 beverages available"
+- |
+  func squareWave(phase: Float, overtones: UInt) -> Float {
+      return (0...overtones)
+          .map {
+              let harmonic = Float($0 * 2 + 1)
+              return sinf(phase * harmonic) / harmonic
+          }
+          .reduce(0, +)
+  }
+- |
+  let hello = "Hello, world!"
+  let multilineString = """
+                    @@@         
+        @@          @@@@       
+      @@  @@@         @@@@@     
+      @@@@@@@@@       @@@@@    
+        @@@@@@@@@@    @@@@@@   
+          @@@@@@@@@@  @@@@@@   
+            @@@@@@@@@@@@@@@@@  
+  @           @@@@@@@@@@@@@@@  
+  @@@@@@        @@@@@@@@@@@@@  
+    @@@@@@@@@@@@@@@@@@@@@@@@@@ 
+      @@@@@@@@@@@@@@@@@@@@@@@@ 
+          @@@@@@@@@@@@@     @ 
+                        \(hello)
+  """
