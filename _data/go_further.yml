@@ -1,7 +1,7 @@
 - title: "Value and Reference Types"
   description: "This article describes the differences in behavior between _value types_ and _reference types_—a fundamental part of learning Swift and choosing between structures and classes."
   content_type: article
-  content_url: https://www.swift.org/blog/2023-04-29-value-and-reference-types
+  content_url: /documentation/articles/value-and-reference-types.html
   thumbnail_url: #TBD
   release_date: 2023-04-29
   external: false
