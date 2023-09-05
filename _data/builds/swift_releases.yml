@@ -1333,6 +1333,7 @@
         - aarch64
     - name: Red Hat Universal Base Image 9
       docker: 5.8.1-rhel-ubi9
+      dir: ubi9
       archs:
         - x86_64
         - aarch64
