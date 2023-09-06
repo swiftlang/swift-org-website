@@ -52,7 +52,7 @@ atom: true
 
 <ul class="use-cases">
   <li>
-    <h3>Apple platforms</h3>
+    <h3>Apple Platforms</h3>
     <p>
       Swift is a powerful and intuitive programming language optimized when running on iOS, macOS, and other Apple platforms.
       <br><br>
