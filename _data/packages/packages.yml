@@ -1,10 +1,10 @@
 categories:
   - name: Community Showcase
     anchor: community
-    description: The community showcase celebrates new and innovative packages discussed
-      on recent community podcasts, blogs, and newsletters. Submissions for this category
-      are [collected via the Swift Forums](https://example.com) and curated by the [Swift
-      Website Workgroup](https://www.swift.org/website-workgroup/).
+    description: This showcase celebrates new and innovative packages discussed on recent
+      community podcasts, blogs, and newsletters. Package selection in the Community
+      Showcase is an editorial process organised via [the Swift Forums](https://example.com/)
+      and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
     packages:
       - name: swift-composable-architecture
         description: The Composable Architecture is a library for building applications
@@ -114,7 +114,8 @@ categories:
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (macOS)
+          - Linux
+        platform_compatibility_tooltip: Apple (macOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/kishikawakatsumi/swift-power-assert
       - name: swift-spyable
@@ -251,7 +252,7 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (macOS, visionOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (macOS, visionOS, watchOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
   - name: Networking packages
@@ -382,7 +383,7 @@ categories:
           and working with Combine publishers. It includes schedulers like `AnyScheduler`,
           `TestScheduler`, `ImmediateScheduler`, and more.
         owner: Point-Free
-        swift_compatibility: 5.7+
+        swift_compatibility: 5.6+
         platform_compatibility:
           - Apple
           - Linux
