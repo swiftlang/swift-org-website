@@ -117,6 +117,7 @@ Test Suite 'MyLibraryPackageTests.xctest' passed at 2023-08-29 19:01:08.643.
 	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
 Test Suite 'All tests' passed at 2023-08-29 19:01:08.643.
 	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+~~~
 
 ---
 
