@@ -44,9 +44,6 @@ atom: true
   </ul>
 </div>
 
-<div class="links links-list-nostyle" markdown="1">
-  - [Learn more about Swift](/about)
-</div>
 
 ## Use Cases
 
