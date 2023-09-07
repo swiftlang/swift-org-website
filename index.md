@@ -16,7 +16,7 @@ atom: true
 <div class="link-grid" markdown="1">
   <ul>
     <li>
-      <a href="/download/#releases">
+      <a href="/install">
         <div class="flex-container">
           <div class="latest-release-container">
           <span>
