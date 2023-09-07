@@ -12,3 +12,12 @@ There are thousands of packages to help with networking, testing, building user 
 There are thousands of community-written open source Swift packages to explore through the [Swift Package Index](https://swiftpackageindex.com/){:target="_blank"}. Below is a selection of popular and interesting packages from around the community.
 
 {% include_relative _package-lists.html %}
+
+### Next Steps
+
+The package lists above show a selection of the broader Swift package ecosystem. The [Swift Package Index](https://swiftpackageindex.com/) is a community-run search engine for Swift packages with powerful filters to help you find the packages that work for your project. For example, you could search for packages that:
+
+* [Match a search term](https://swiftpackageindex.com/search?query=architecture)
+* [Have compatibility with both iOS and macOS platforms](https://swiftpackageindex.com/search?query=swiftui+platform:ios,macos)
+* [Include an executable helper or tool](https://swiftpackageindex.com/search?query=swiftui+product:executable)
+* [Have been created by a specific author](https://swiftpackageindex.com/search?query=author:apple)
