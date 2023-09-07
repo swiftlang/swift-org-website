@@ -1,6 +1,6 @@
 ## Go Further
 
-Ready to dive deeper? Here are some hand-picked resources covering about various Swift features and use.
+Ready to dive deeper? Here are some hand-picked resources covering various Swift features.
 
 <ul class="go-further-list">
   {% for resource in site.data.go_further %}
