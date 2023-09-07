@@ -1,6 +1,0 @@
----
-- name: Ubuntu 16.04
-  date: 2017-11-01 10:29:16.000000000 -05:00
-  download: swift-4.0.2-RELEASE-ubuntu16.04.tar.gz
-  download_signature: swift-4.0.2-RELEASE-ubuntu16.04.tar.gz.sig
-  dir: swift-4.0.2-RELEASE

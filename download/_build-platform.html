@@ -1,0 +1,66 @@
+<table id="latest-builds" class="downloads">
+    <thead>
+        <tr>
+            <th class="download">Platform</th>
+            <th class="arch-tag">Architecture</th>
+            <th class="docker-tag">Docker Tag</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="download">
+                <span class="release">
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>{{ include.platform.xcode }}</a> <sup>1</sup>
+                </span>
+            </td>
+            <td class="arch-tag"> 
+                {% if include.platform.xcode_toolchain != false %}
+                    <a href="https://download.swift.org/{{ include.platform.tag | downcase }}/xcode/{{ include.platform.tag }}/{{ include.platform.tag }}-osx.pkg" title="Download">Toolchain</a>
+                    <a href="https://download.swift.org/{{ include.platform.tag | downcase }}/xcode/{{ include.platform.tag }}/{{ include.platform.tag }}-osx-symbols.pkg" title="Debugging Symbols" class="signature">Debugging Symbols</a>
+                {% else %}
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>x86_64</a>
+                {% endif %}
+            </td>
+            <td class="docker-tag">Unavailable</td>
+        </tr>
+        {% for platform in include.platform.platforms %}
+        <tr>
+            <td class="download">
+                <span class="release">
+                  
+                  {% if platform.name == "Windows 10" %}
+                  <p title="Download" download>{{ platform.name }} <sup>2</sup></p>
+                   
+                  {% else %}
+                  <p title="Download" download>{{ platform.name }}</p>
+                  {% endif %}
+                </span>
+            </td>
+            <td class="arch-tag"> 
+            {% for arch in platform.archs %}
+                {% if platform.dir %}
+                    {% assign platform_name_url = platform.dir %}
+                    {% assign platform_name = platform_name_url %}
+                {% else %}
+                    {% assign platform_name_url = platform.name | remove: '.' | remove: ' ' | downcase %}
+                    {% assign platform_name = platform.name | remove : ' ' | downcase %}
+                {% endif %}
+                {% assign tag_downcase = include.platform.tag | downcase %}
+                <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.tar.gz">{{ arch }}</a>
+                <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.tar.gz.sig" title="PGP Signature" class="signature">Signature ({{ arch }})</a>
+            {% endfor %}
+            </td>
+            <td class="docker-tag">
+            {% if platform.docker %}
+                <a href="https://hub.docker.com/_/swift/?tab=tags">{{ platform.docker }}</a>
+            {% else %}
+                Unavailable
+            {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<sup>1</sup> Swift {{ site.data.builds.swift_releases.last.name }} is available as part of [{{ include.platform.xcode }}](https://itunes.apple.com/app/xcode/id497799835).<br>
+<sup>2</sup> Swift {{ site.data.builds.swift_releases.last.name }} Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>

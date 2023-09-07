@@ -1,6 +1,0 @@
----
-- name: Ubuntu 15.10
-  date: 2016-09-13 10:28:49.000000000 -05:00
-  download: swift-3.0-RELEASE-ubuntu15.10.tar.gz
-  download_signature: swift-3.0-RELEASE-ubuntu15.10.tar.gz.sig
-  dir: swift-3.0-RELEASE

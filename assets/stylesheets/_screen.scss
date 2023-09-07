@@ -373,6 +373,14 @@ article {
         margin-top: 1em;
     }
 
+    hr {
+        margin: 1.5em 0;
+    }
+
+    hr + h2, hr + h3, hr + h4, hr + h5 {
+        padding-top: 0.5em;
+    }
+
     header {
         width: 100%;
         display: inline-block;
@@ -689,6 +697,11 @@ article {
             }
         }
     }
+
+    .device-aspect-ratio {
+        width: 100%;
+        max-width: 400px;
+    }
 }
 
 .title {
@@ -977,4 +990,34 @@ article {
     line-height: 20px;
     padding: 10px 10px;
     text-align: center;
+}
+
+.article-byline {
+    font-size: 14px;
+    margin-bottom: 1em;
+
+    img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px var(--color-fill-gray) solid;
+        position: absolute;
+        margin-right: 0.25em;
+        margin-top: -6px;
+    }
+
+    span {
+        padding-left: 42px;
+    }
+}
+
+.article-about {
+    float: none;
+    clear: both;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-figure-gray-tertiary);
+    border-left: 1px var(--color-figure-gray-tertiary) solid;
+    margin: 23px 3em 23px 0;
+    padding: 4px 0 4px 10px;
 }
