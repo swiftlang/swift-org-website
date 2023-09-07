@@ -3,7 +3,7 @@ layout: page
 title: About Swift
 ---
 
-Swift is a general-purpose programming language that's approachable for newcomers and powerful in expert hands. It is quick to write, fast to run, modern, and safe.
+Swift is a general-purpose programming language that's approachable for newcomers and powerful for experts. It is fast, modern, safe, and a joy to write.
 
 * Swift is general-purpose and modern. Suitable for everything from systems programming, through mobile and desktop apps, to cloud services.
 * Swift is safe. Undefined behavior is the enemy of safety, and it’s best to catch mistakes before software goes into production. Swift makes the obvious path the safest.
