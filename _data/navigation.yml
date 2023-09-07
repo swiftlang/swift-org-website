@@ -35,8 +35,10 @@
     - title: Packages
       url: /packages/
       sections:
-        - title: Featured Packages
+        - title: Package Ecosystem
           name: featured-packages
+        - title: Next Steps
+          name: next-steps
     - title: Platform Support
       url: /platform-support/
       sections:

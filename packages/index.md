@@ -13,7 +13,7 @@ There are thousands of community-written open source Swift packages to explore t
 
 {% include_relative _package-lists.html %}
 
-### Next Steps
+## Next Steps
 
 The package lists above show a selection of the broader Swift package ecosystem. The [Swift Package Index](https://swiftpackageindex.com/) is a community-run search engine for Swift packages with powerful filters to help you find the packages that work for your project. For example, you could search for packages that:
 
