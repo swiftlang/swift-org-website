@@ -17,7 +17,7 @@ There are thousands of community-written open source Swift packages to explore t
 
 The package lists above show a selection of the broader Swift package ecosystem. The [Swift Package Index](https://swiftpackageindex.com/) is a community-run search engine for Swift packages with powerful filters to help you find the packages that work for your project. For example, you could search for packages that:
 
-* [Match a search term](https://swiftpackageindex.com/search?query=architecture)
+* [Match a search term](https://swiftpackageindex.com/search?query=swiftui)
 * [Have compatibility with both iOS and macOS platforms](https://swiftpackageindex.com/search?query=swiftui+platform:ios,macos)
 * [Include an executable helper or tool](https://swiftpackageindex.com/search?query=swiftui+product:executable)
 * [Have been created by a specific author](https://swiftpackageindex.com/search?query=author:apple)
