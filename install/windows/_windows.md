@@ -12,4 +12,5 @@
 
 **Addtional install options for Windows:**
 
+* [Scoop](/install/windows#install-using-scoop) - *Install using Scoop*
 * [Installer](/install/windows#traditional-installation) - *The installer packages are available on download page.*

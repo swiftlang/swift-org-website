@@ -25,6 +25,17 @@ Windows has the following additional platform specific dependencies:
 
 The [Windows Package Manager](https://docs.microsoft.com/windows/package-manager/) can be found in the [Microsoft Store](https://www.microsoft.com/en-us/p/app-installer/9nblggh4nns1) or be [installed directly](ms-appinstaller:?source=https://aka.ms/getwinget).
 
+
+## Install using Scoop
+
+~~~ pwsh
+# Optional: Needed to run a remote script the first time
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+# Command for installing scoop
+Invoke-RestMethod -Url 'get.scoop.sh' | Invoke-Expression
+~~~
+
+
 0. Install required dependencies:
 
    The platform dependencies cannot be installed through the currently supported package managers as the install rules do not install the components necessary.  They will be installed through the Visual Studio installer.
