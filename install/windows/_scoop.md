@@ -1,4 +1,4 @@
-## Install via Scoop
+## Installation via Scoop
 
 [Scoop](https://scoop.sh) is a command-line installer for Windows. It can be installed through the following PowerShell commands.
 
