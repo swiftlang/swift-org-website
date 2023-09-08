@@ -47,7 +47,7 @@ Because it is installing the files into the Visual Studio image, the files will 
 
 > **NOTE:** This is only required for versions older than 5.9.0.
 
-If Visual Studio is updated, you may have to repair the installation.  See Microsoft’s [instructions](https://support.microsoft.com/en-us/windows/repair-apps-and-programs-in-windows-10-e90eefe4-d0a2-7c1b-dd59-949a9030f317) for repairing installed programs.
+If Visual Studio is updated, you may have to repair the installation. See Microsoft’s [instructions](https://support.microsoft.com/en-us/windows/repair-apps-and-programs-in-windows-10-e90eefe4-d0a2-7c1b-dd59-949a9030f317) for repairing installed programs.
 
 ### Code Signing on Windows
 
@@ -76,7 +76,7 @@ If Visual Studio is updated, you may have to repair the installation.  See Micro
 
 0. Verify the PGP signature.
 
-   The `.exe` installer for Windows are signed using GnuPG with one of the keys of the Swift open source project.  Everyone is strongly encouraged to verify the signatures before using the software.
+   The `.exe` installer for Windows are signed using GnuPG with one of the keys of the Swift open source project. Everyone is strongly encouraged to verify the signatures before using the software.
 
    First, refresh the keys to download new key revocation certificates, if any are available:
 
@@ -101,8 +101,8 @@ If Visual Studio is updated, you may have to repair the installation.  See Micro
    gpg:          There is no indication that the signature belongs to the owner.
    ~~~
 
-   This warning means that there is no path in the Web of Trust between this key and you.  The warning is harmless as long as you have followed the steps above to retrieve the key from a trusted source.
+   This warning means that there is no path in the Web of Trust between this key and you. The warning is harmless as long as you have followed the steps above to retrieve the key from a trusted source.
 
    <div class="warning" markdown="1">
-   If `gpg` fails to verify and reports “BAD signature”, do not use the downloaded toolchain.  Instead, please email <swift-infrastructure@forums.swift.org> with as much detail as possible, so that we can investigate the problem.
+   If `gpg` fails to verify and reports “BAD signature”, do not use the downloaded toolchain. Instead, please email <swift-infrastructure@forums.swift.org> with as much detail as possible, so that we can investigate the problem.
    </div>
