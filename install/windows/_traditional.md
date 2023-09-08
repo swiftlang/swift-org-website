@@ -53,7 +53,7 @@ Because it is installing the files into the Visual Studio image, the files will 
 
 > **NOTE:** This is only required for versions older than 5.9.0.
 
-If Visual Studio is updated, you may have to repair the installation. See Microsoft’s [instructions](https://support.microsoft.com/en-us/windows/repair-apps-and-programs-in-windows-10-e90eefe4-d0a2-7c1b-dd59-949a9030f317) for repairing installed programs.
+If Visual Studio is updated, you may have to repair the installation. See Microsoft’s [instructions](https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-10-e90eefe4-d0a2-7c1b-dd59-949a9030f317) for repairing installed programs.
 
 ### Code Signing on Windows
 
