@@ -13,5 +13,5 @@
 **Additional install options for Linux:**
 
 * [Tarball](/install/linux#installation-via-tarball) - *Tarball packages are available on download page.*
-* [RPM](/install/linux#installation-via-rpm) - *Swift {{ site.data.builds.swift_releases.last.name}} RPMs for Amazon Linux 2 and CentOS 7 are for experimental use only. Please provide your feedback.*
+* [RPM](/install/linux#installation-via-rpm) - *Swift {{ site.data.builds.swift_releases.last.name }} RPMs for Amazon Linux 2 and CentOS 7 are for experimental use only. Please provide your feedback.*
 

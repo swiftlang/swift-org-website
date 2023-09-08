@@ -25,13 +25,13 @@ toolchain. However, when Xcode is not installed, the functionality of the Swift
 Package Manager may be limited due to some [outstanding issues](https://github.com/apple/swift-package-manager/issues/4396).
 </div>
 
-1. Download a latest Swift release 
+0. Download a latest Swift release 
    ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases))
    or development [snapshot](/download/#snapshots) package. 
    Make sure that your system meets the aforecited requirements for
    this package.
 
-1. Run the package installer,
+0. Run the package installer,
    which will install an Xcode toolchain into
    `/Library/Developer/Toolchains/`.
 

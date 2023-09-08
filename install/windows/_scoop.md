@@ -16,7 +16,7 @@ Invoke-RestMethod get.scoop.sh | Invoke-Expression
    scoop install python310
    ~~~
 
-   Start up a new command prompt (CMD/PowerShell) and install the Python library `six`.
+   Start up a new command-line shell (eg. Command Prompt, Windows PowerShell) and install the Python library `six`.
 
    ~~~ batch
    pip install six

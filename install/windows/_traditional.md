@@ -7,7 +7,7 @@ Swift has been tested with [Visual Studio](https://visualstudio.microsoft.com) 2
 The following Visual Studio components are **required**:
 
 | Component | Visual Studio ID |
-|———|——-|
+|-----------|------------------|
 | MSVC v142 - VS 2019 C++ x64/x86 build tools (Latest) | Microsoft.VisualStudio.Component.VC.Tools.x86.x64 |
 | Windows 10 SDK (10.0.17763.0)[^2] | Microsoft.VisualStudio.Component.Windows10SDK.17763 |
 
@@ -16,19 +16,20 @@ The following Visual Studio components are **required**:
 The following additional Visual Studio components are **recommended**:
 
 | Component | Visual Studio ID |
-|———|———|
+|-----------|------------------|
 | Git for Windows | Microsoft.VisualStudio.Component.Git |
 | Python 3 64-bit (3.7.8) | Component.CPython.x64 |
 
 The following additional Visual Studio component is **suggested**:
 
 | Component | Visual Studio ID |
-|———|———|
+|-----------|------------------|
 | C++ CMake tools for Windows | Microsoft.VisualStudio.Component.VC.CMake.Project |
 
 After Visual Studio and the required components are installed:
 
 0. Download a latest Swift release ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases)) or development [snapshot](/download/#snapshots) installer.
+
 0. Run the package installer.
 
 ### Support Files
