@@ -1,6 +1,8 @@
 ## Traditional Installation
 
-> **NOTE:** The traditional installation process is required for Swift older than 5.4.2.
+<div class="warning" markdown="1">
+The traditional installation process is required for Swift older than 5.4.2.
+</div>
 
 Swift has been tested with [Visual Studio](https://visualstudio.microsoft.com) 2019. You will need to install Visual Studio with the following components. The installer for Swift is available in the [Download](/download) section. The toolchain on Windows is typically installed to `%SystemDrive%\Library\Developer\Toolchains`.
 
@@ -34,11 +36,17 @@ After Visual Studio and the required components are installed:
 
 ### Support Files
 
-> **NOTE:** This is only required for versions older than 5.4.2.
+<div class="info" markdown="1">
+This is only required for versions older than 5.4.2.
+</div>
 
-You must use the `x64 Native Tools for VS2019 Command Prompt` to run the following steps. The `x64 Native Tools for VS2019 Command Prompt` runs the `DevEnv` script from Visual Studio that sets up the necessary environment variables to find the system headers.
+<div class="warning" markdown="1">
+You must run the following commands using `x64 Native Tools for VS2019 Command Prompt` as administrator.
+The `x64 Native Tools for VS2019 Command Prompt` sets up the necessary environment variables to find the system headers.
+Administrator permission is required to modify the Visual Studio Installation.
+</div>
 
-In order to make the Windows SDK accessible to Swift, it is necessary to deploy a few files into the Windows SDK. The following will modify your Visual Studio Installation, and as such will require to be run from an (elevated) “Administrator” `x86 Native Tools for VS2019 Command Prompt`.
+In order to make the Windows SDK accessible to Swift, it is necessary to deploy a few files into the Windows SDK.
 
 ~~~ batch
 copy /Y %SDKROOT%\usr\share\ucrt.modulemap "%UniversalCRTSdkDir%\Include\%UCRTVersion%\ucrt\module.modulemap"
@@ -51,13 +59,17 @@ Because it is installing the files into the Visual Studio image, the files will 
 
 ### Repairing after Visual Studio Updates
 
-> **NOTE:** This is only required for versions older than 5.9.0.
+<div class="info" markdown="1">
+This is only required for versions older than 5.9.0.
+</div>
 
-If Visual Studio is updated, you may have to repair the installation. See Microsoft’s [instructions](https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-10-e90eefe4-d0a2-7c1b-dd59-949a9030f317) for repairing installed programs.
+If Visual Studio is updated, you may have to repair the installation. For versions older than 5.4.2, reinstall support files [as mentioned above](#support-files). For newer versions, see Microsoft’s [instructions](https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-10-e90eefe4-d0a2-7c1b-dd59-949a9030f317) for repairing installed programs.
 
 ### Code Signing on Windows
 
-> **NOTE:** The following commands MUST be run in PowerShell.
+<div class="warning" markdown="1">
+The following commands must be run in PowerShell.
+</div>
 
 0. Install GPG from [GnuPG.org](https://gnupg.org/download/index.html)
 
