@@ -26,6 +26,11 @@ The following additional Visual Studio component is **suggested**:
 |———|———|
 | C++ CMake tools for Windows | Microsoft.VisualStudio.Component.VC.CMake.Project |
 
+After Visual Studio and the required components are installed:
+
+0. Download a latest Swift release ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases)) or development [snapshot](/download/#snapshots) installer.
+0. Run the package installer.
+
 ### Support Files
 
 > **NOTE:** This is only required for versions older than 5.4.2.
