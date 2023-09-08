@@ -4,7 +4,7 @@
   <li class="resource featured">
     <h3>Package Manager</h3>
     <p class="description">
-      Install Swift via Windows Package Manager (aka. WinGet).
+      Install Swift via Windows Package Manager (aka WinGet).
     </p>
     <a href="/install/windows#installation-via-windows-package-manager" class="cta-secondary">Instructions</a>
   </li>
