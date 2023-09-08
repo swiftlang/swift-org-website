@@ -43,7 +43,7 @@ This is only required for versions older than 5.4.2.
 <div class="warning" markdown="1">
 You must run the following commands using `x64 Native Tools for VS2019 Command Prompt` as administrator.
 The `x64 Native Tools for VS2019 Command Prompt` sets up the necessary environment variables to find the system headers.
-Administrator permission is required to modify the Visual Studio Installation.
+Administrator permission is required to modify the Visual Studio installation.
 </div>
 
 In order to make the Windows SDK accessible to Swift, it is necessary to deploy a few files into the Windows SDK.
@@ -121,6 +121,6 @@ The following commands must be run in PowerShell.
 
    This warning means that there is no path in the Web of Trust between this key and you. The warning is harmless as long as you have followed the steps above to retrieve the key from a trusted source.
 
-   <div class="warning" markdown="1">
-   If `gpg` fails to verify and reports “BAD signature”, do not use the downloaded toolchain. Instead, please email <swift-infrastructure@forums.swift.org> with as much detail as possible, so that we can investigate the problem.
-   </div>
+<div class="warning" markdown="1">
+If `gpg` fails to verify and reports "BAD signature", do not run the downloaded installer. Instead, please email <swift-infrastructure@forums.swift.org> with as much detail as possible, so that we can investigate the problem.
+</div>
