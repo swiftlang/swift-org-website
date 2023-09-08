@@ -10,7 +10,7 @@
   </li>
 </ul>
 
-**Addtional install options for Windows:**
+**Additional install options for Windows:**
 
 * [Scoop](/install/windows#install-via-scoop) - *Install via Scoop.*
 * [Installer](/install/windows#traditional-installation) - *The installer packages are available on download page.*
