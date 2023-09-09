@@ -93,18 +93,6 @@ title: Download Swift
 {% assign ubuntu1804_4_2_convergence_builds = site.data.builds.swift-4_2-convergence.ubuntu1804 | sort: 'date' | reverse %}
 
 
-{% assign ubuntu1804_5_8_1_release = site.data.builds.swift-5_8_1-release.ubuntu1804 | sort: 'date' | reverse %}
-{% assign ubuntu2004_5_8_1_release = site.data.builds.swift-5_8_1-release.ubuntu2004 | sort: 'date' | reverse %}
-{% assign ubuntu2004_aarch64_5_8_1_release = site.data.builds.swift-5_8_1-release.ubuntu2004-aarch64 | sort: 'date' | reverse %}
-{% assign ubuntu2204_5_8_1_release = site.data.builds.swift-5_8_1-release.ubuntu2204 | sort: 'date' | reverse %}
-{% assign ubuntu2204_aarch64_5_8_1_release = site.data.builds.swift-5_8_1-release.ubuntu2204-aarch64 | sort: 'date' | reverse %}
-{% assign ubi9_5_8_1_release = site.data.builds.swift-5_8_1-release.ubi9 | sort: 'date' | reverse %}
-{% assign ubi9_aarch64_5_8_1_release = site.data.builds.swift-5_8_1-release.ubi9-aarch64 | sort: 'date' | reverse %}
-{% assign centos7_5_8_1_release = site.data.builds.swift-5_8_1-release.centos7 | sort: 'date' | reverse %}
-{% assign amazonlinux2_5_8_1_release = site.data.builds.swift-5_8_1-release.amazonlinux2 | sort: 'date' | reverse %}
-{% assign amazonlinux2_aarch64_5_8_1_release = site.data.builds.swift-5_8_1-release.amazonlinux2-aarch64 | sort: 'date' | reverse %}
-{% assign windows10_5_8_1_release = site.data.builds.swift-5_8_1-release.windows10 | sort: 'date' | reverse %}
-
 ## Releases
 
 ### Swift {{ site.data.builds.swift_releases.last.name }}  
