@@ -46,6 +46,10 @@
                     {% assign platform_name_url = platform.name | remove: '.' | remove: ' ' | downcase %}
                     {% assign platform_name = platform.name | remove : ' ' | downcase %}
                 {% endif %}
+                {% if arch != "x86_64" %}
+                    {% assign platform_name_url = platform_name_url | append: "-" | append: arch %}
+                    {% assign platform_name = platform_name | append: "-" | append: arch %}
+                {% endif %}
                 {% assign tag_downcase = include.platform.tag | downcase %}
                 <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.{{ package_extension }}">{{ arch }}</a>
                 <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.{{ package_extension }}.sig" title="PGP Signature" class="signature">Signature ({{ arch }})</a>
