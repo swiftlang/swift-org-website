@@ -294,23 +294,6 @@
       docker: 5.0-bionic
       archs:
         - x86_64
-- name: 5.0
-  tag: swift-5.0-RELEASE
-  xcode: Xcode 10.2
-  xcode_release: true
-  date: 2019-03-25
-  platforms:
-    - name: Ubuntu 14.04
-      archs:
-        - x86_64
-    - name: Ubuntu 16.04
-      docker: 5.0-xenial
-      archs:
-        - x86_64
-    - name: Ubuntu 18.04
-      docker: 5.0-bionic
-      archs:
-        - x86_64
 - name: 5.0.1
   tag: swift-5.0.1-RELEASE
   xcode: Xcode 10.2.1
