@@ -84,7 +84,7 @@ Platform owners help facilitate contributors to the Swift project to collaborate
 | **Windows**          | [Docs](/getting-started/#on-windows)| [Saleem Abdulrasool](https://github.com/compnerd) | ✓                            |
 
 * Apple platforms includes macOS, iOS, tvOS, and watchOS.
-* Linux includes Ubuntu, CentOS and Amazon Linux platforms.
+* Linux includes Ubuntu, CentOS, Amazon Linux and Red Hat Universal Base Image platforms.
 
 ### Continuous Integration for Platforms
 
