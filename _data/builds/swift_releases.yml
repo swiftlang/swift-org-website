@@ -1066,10 +1066,6 @@
   xcode_release: false
   date: 2022-09-02
   platforms:
-    - name: Ubuntu 16.04
-      docker: 5.6.3-xenial
-      archs:
-        - x86_64
     - name: Ubuntu 18.04
       docker: 5.6.3-bionic
       archs:
@@ -1097,10 +1093,6 @@
   xcode_release: false
   date: 2022-09-12
   platforms:
-    - name: Ubuntu 16.04
-      docker: 5.7-xenial
-      archs:
-        - x86_64
     - name: Ubuntu 18.04
       docker: 5.7-bionic
       archs:
@@ -1128,10 +1120,6 @@
   xcode_release: true
   date: 2022-09-12
   platforms:
-    - name: Ubuntu 16.04
-      docker: 5.7-xenial
-      archs:
-        - x86_64
     - name: Ubuntu 18.04
       docker: 5.7-bionic
       archs:
@@ -1164,10 +1152,6 @@
   xcode_release: true
   date: 2022-11-01
   platforms:
-    - name: Ubuntu 16.04
-      docker: 5.7.1-xenial
-      archs:
-        - x86_64
     - name: Ubuntu 18.04
       docker: 5.7.1-bionic
       archs:
@@ -1200,10 +1184,6 @@
   xcode_release: true
   date: 2022-12-13
   platforms:
-    - name: Ubuntu 16.04
-      docker: 5.7.2-xenial
-      archs:
-        - x86_64
     - name: Ubuntu 18.04
       docker: 5.7.2-bionic
       archs:
@@ -1236,10 +1216,6 @@
   xcode_release: false
   date: 2023-01-18
   platforms:
-    - name: Ubuntu 16.04
-      docker: 5.7.3-xenial
-      archs:
-        - x86_64
     - name: Ubuntu 18.04
       docker: 5.7.3-bionic
       archs:
@@ -1272,10 +1248,6 @@
   xcode_release: false
   date: 2023-03-30
   platforms:
-    - name: Ubuntu 16.04
-      docker: 5.8-xenial
-      archs:
-        - x86_64
     - name: Ubuntu 18.04
       docker: 5.8-bionic
       archs:
