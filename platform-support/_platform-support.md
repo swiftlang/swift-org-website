@@ -13,40 +13,43 @@ The current set of supported platforms for development and deployment are descri
 
 These are the platforms one can use for Swift's development tools. This table shows which platforms you can target when the tools are used on a given platform.  For example, the tools on macOS can build Swift applications that run on iOS.
 
-| Platform running development tools | Deployable targets |
-|:------------------:|:--------------------------:|
-| **macOS**          |  Apple platforms           |
-| **Ubuntu**         |  Ubuntu                    |
-| **CentOS**         |  CentOS                    |
-| **Amazon Linux**   |  Amazon Linux              |
-| **Windows**        |  Windows                   |
+| Platform running development tools     | Deployable targets            |
+|:--------------------------------------:|:-----------------------------:|
+| **macOS**                              |  Apple platforms              |
+| **Ubuntu**                             |  Ubuntu                       |
+| **CentOS**                             |  CentOS                       |
+| **Amazon Linux**                       |  Amazon Linux                 |
+| **Red Hat Universal Base Image**       |  Red Hat Universal Base Image |
+| **Windows**                            |  Windows                      |
 
 #### Minimum deployment version
 
 This table shows the minimum OS version for which a Swift application can be deployed.  For example, a Swift application can run on iOS 7.0 or later, but not iOS 6.
 
 | Platform running Swift application | Minimum deployment version |
-|:------------------:|:--------------------------:|
-| **macOS**          |10.13                       |
-| **iOS**            |11.0                        |
-| **watchOS**        |4.0                         |
-| **tvOS**           |11.0                        |
-| **Ubuntu**         |18.04                       |
-| **CentOS**         |7                           |
-| **Amazon Linux**   |2                           |
-| **Windows**        |10.0                        |
+|:----------------------------------:|:--------------------------:|
+| **macOS**                          |10.13                       |
+| **iOS**                            |11.0                        |
+| **watchOS**                        |4.0                         |
+| **tvOS**                           |11.0                        |
+| **Ubuntu**                         |18.04                       |
+| **CentOS**                         |7                           |
+| **Amazon Linux**                   |2                           |
+| **Red Hat Universal Base Image**   |9                           |
+| **Windows**                        |10.0                        |
 
 #### Development Tools
 
 The Swift compiler and debugger run on platforms supporting development.  Support for the Swift Package Manager and [SourceKit-LSP] are currently supported on most, but not all platforms that support the tools.  This table provides the current breakdown of what tools are available on what platforms.
 
 | Platform running development tools | [Swift Package Manager]| [SourceKit-LSP]|
-|:------------------:|:----------------------:|:--------------:|
-| **macOS**          | ✓                      | ✓              |
-| **Ubuntu**         | ✓                      | ✓              |
-| **CentOS**         | ✓                      | ✓              |
-| **Amazon Linux**   | ✓                      | ✓              |
-| **Windows**        | ✓                      | ✓              |
+|:----------------------------------:|:----------------------:|:--------------:|
+| **macOS**                          | ✓                      | ✓              |
+| **Ubuntu**                         | ✓                      | ✓              |
+| **CentOS**                         | ✓                      | ✓              |
+| **Amazon Linux**                   | ✓                      | ✓              |
+| **Red Hat Universal Base Image**   | ✓                      | ✓              |
+| **Windows**                        | ✓                      | ✓              |
 
 ### Deployment-only
 
@@ -55,15 +58,16 @@ Each platform that supports running Swift applications is required to provide do
 The table below list the available capabilities on each platform for running Swift applications:
 
 | Platform running Swift application | Debugger| REPL|
-|:------------------:|:-------:|:---:|
-| **macOS**          | ✓       | ✓   |
-| **iOS**            | ✓       |     |
-| **watchOS**        | ✓       |     |
-| **tvOS**           | ✓       |     |
-| **Ubuntu**         | ✓       | ✓   |
-| **CentOS**         | ✓       | ✓   |
-| **Amazon Linux**   | ✓       | ✓   |
-| **Windows**        | ✓       | ✓   |
+|:---------------------------------:|:-------:|:---:|
+| **macOS**                         | ✓       | ✓   |
+| **iOS**                           | ✓       |     |
+| **watchOS**                       | ✓       |     |
+| **tvOS**                          | ✓       |     |
+| **Ubuntu**                        | ✓       | ✓   |
+| **CentOS**                        | ✓       | ✓   |
+| **Amazon Linux**                  | ✓       | ✓   |
+| **Red Hat Universal Base Image**  | ✓       | ✓   |
+| **Windows**                       | ✓       | ✓   |
 
 ## Platform Owners
 
@@ -73,11 +77,11 @@ Platform owners help facilitate contributors to the Swift project to collaborate
 
 ### Current Platform Owners
 
-|                    | Getting Started                                     | Toolchain Provider                            | Pull Request Testing Required|
-|:------------------:|:---------------------------------------------------:|:-------------------------------------------------:|:----------------------------:|
-| **Apple platforms**         | [Docs](/getting-started/#on-macos)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
-| **Linux**          | [Docs](/getting-started/#on-linux)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
-| **Windows**        | [Docs](/getting-started/#on-windows)| [Saleem Abdulrasool](https://github.com/compnerd) |                              |
+|                      | Getting Started                     | Toolchain Provider                                | Pull Request Testing Required|
+|:--------------------:|:-----------------------------------:|:-------------------------------------------------:|:----------------------------:|
+| **Apple platforms**  | [Docs](/getting-started/#on-macos)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
+| **Linux**            | [Docs](/getting-started/#on-linux)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
+| **Windows**          | [Docs](/getting-started/#on-windows)| [Saleem Abdulrasool](https://github.com/compnerd) | ✓                            |
 
 * Apple platforms includes macOS, iOS, tvOS, and watchOS.
 * Linux includes Ubuntu, CentOS and Amazon Linux platforms.
