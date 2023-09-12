@@ -6,9 +6,9 @@ Ready to dive deeper? Here are some hand-picked resources covering various Swift
   {% for resource in site.data.go_further %}
   <li class="resource{% if resource.featured %} featured{% endif %}">
       {% if resource.thumbnail_url %}
-        <img class="thumbnail" src="{{ resource.thumbnail_url }}"/>
+        <img class="thumbnail" src="{{ resource.thumbnail_url }}" alt="{{ resource.thumbnail_alt }}"/>
       {% elsif resource.content_type == "article" %}
-        <img class="thumbnail" src="/assets/images/getting-started/article-thumbnail.jpg"/>
+        <img class="thumbnail" src="/assets/images/getting-started/article-thumbnail.jpg" alt="An article icon"/>
       {% endif %}
 
       <h3>{{ resource.title }}</h3>

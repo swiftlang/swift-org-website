@@ -3,6 +3,7 @@
   content_type: article
   content_url: /documentation/articles/value-and-reference-types.html
   thumbnail_url: #TBD
+  thumbnail_alt:
   release_date: 2023-04-29
   external: false
 - title: "Generics"
@@ -10,6 +11,7 @@
   content_type: video
   content_url: https://developer.apple.com/videos/play/wwdc2022/110352/
   thumbnail_url: /assets/images/getting-started/swift-generics-thumbnail.jpg
+  thumbnail_alt: "A block thumbnail image with three emoji icons: a femail farmer, a cow, and a carrot."
   release_date: 2021-06-09
   external: true
 - title: "Concurrency"
@@ -17,6 +19,8 @@
   content_type: video
   content_url: https://developer.apple.com/videos/play/wwdc2021/10132/
   thumbnail_url: /assets/images/getting-started/meet-async-await-thumbnail.jpg
+  thumbnail_alt: |
+    A thumbnail image describing a concurrent sequence diagram with five blocks: green into yellow into purple into another yello into another green.
   release_date: 2021-06-08
   external: true
 - title: "Regular Expressions"
@@ -24,6 +28,7 @@
   content_type: video
   content_url: https://developer.apple.com/videos/play/wwdc2022/110357/
   thumbnail_url: /assets/images/getting-started/regular-expression-thumbnail.jpg
+  thumbnail_alt: "An image describing a block of code about Regular Expression syntax."
   release_date: 2022-06-07
   external: true
   
