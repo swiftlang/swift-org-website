@@ -40,7 +40,14 @@ services:
 
    test:
       <<: *common
-      command: /bin/bash -cl "/code/scripts/test.sh"
+      command: /bin/bash -cl "
+        bundle check
+        && bundle exec jekyll doctor --source /srv/jekyll --destination /output
+        && bundle exec jekyll build --source /srv/jekyll --destination /output"
+
+   check-links:
+      <<: *common
+      command: /bin/bash -cl "/code/scripts/check_links.sh"
       volumes:
          - .:/srv/jekyll:cached
          - ./.output:/output:z
