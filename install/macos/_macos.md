@@ -10,6 +10,6 @@
   </li>
 </ul>
 
-**Addtional install options for macOS:** 
+**Additional install options for macOS:** 
 
-* [Package Installer](/install/macos) - *Package installer (.pkg) are available on download page.*
+* [Package Installer](/install/macos#installation-via-swiftorg-package-installer) - *Package installers (.pkg) are available on download page.*

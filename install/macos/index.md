@@ -5,11 +5,11 @@ title: macOS Installation Options
 
 # macOS Installation Options
 
-## Install Swift via Xcode
+## Installation via Xcode
 
 Download [{{ site.data.builds.swift_releases.last.xcode }}](https://itunes.apple.com/app/xcode/id497799835) which contains the latest Swift release. 
 
-## Install Swift via Swift.org package installer
+## Installation via Swift.org package installer
 
 Xcode includes a release of Swift that is supported by Apple.
 You can try out a version that is still in development
@@ -25,13 +25,13 @@ toolchain. However, when Xcode is not installed, the functionality of the Swift
 Package Manager may be limited due to some [outstanding issues](https://github.com/apple/swift-package-manager/issues/4396).
 </div>
 
-1. Download a latest Swift release 
+0. Download a latest Swift release 
    ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases))
    or development [snapshot](/download/#snapshots) package. 
    Make sure that your system meets the aforecited requirements for
    this package.
 
-1. Run the package installer,
+0. Run the package installer,
    which will install an Xcode toolchain into
    `/Library/Developer/Toolchains/`.
 

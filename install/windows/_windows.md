@@ -4,13 +4,13 @@
   <li class="resource featured">
     <h3>Package Manager</h3>
     <p class="description">
-      Install using the Windows Package Manager.
+      Install Swift via Windows Package Manager (aka WinGet).
     </p>
-    <a href="/install/windows#install-using-the-windows-package-manager" class="cta-secondary">Instructions</a>
+    <a href="/install/windows#installation-via-windows-package-manager" class="cta-secondary">Instructions</a>
   </li>
 </ul>
 
-**Addtional install options for Windows:**
+**Additional install options for Windows:**
 
-* [Scoop](/install/windows#install-using-scoop) - *Install using Scoop*
-* [Installer](/install/windows#traditional-installation) - *The installer packages are available on download page.*
+* [Scoop](/install/windows#installation-via-scoop) - *Install Swift via Scoop.*
+* [Package Installer](/install/windows#traditional-installation) - *Package installers (.exe) are available on download page.*
