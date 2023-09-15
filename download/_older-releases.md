@@ -1981,7 +1981,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" title="Download" download>Xcode 7.3.1</a><sup> 1</sup>
+                    <a href="https://developer.apple.com/download/all/?q=xcode" title="Download" download>Xcode 7.3.1</a><sup> 1</sup>
                 </span>
             </td>
             <td class="date">
@@ -2006,7 +2006,7 @@ Tag: <a href="https://github.com/apple/swift/releases/tag/swift-4.2.4-RELEASE">s
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" title="Download" download>Xcode 7.3</a><sup> 1</sup>
+                    <a href="https://developer.apple.com/download/all/?q=xcode" title="Download" download>Xcode 7.3</a><sup> 1</sup>
                 </span>
             </td>
             <td class="date">
