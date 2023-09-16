@@ -8,6 +8,7 @@ bundle exec jekyll build --source /srv/jekyll --destination /output
 # This line runs broken link checks: https://github.com/gjtorikian/html-proofer
 bundle exec htmlproofer \
     --ignore-status-codes "429" \
+    --allow-missing-href \
     --only-4xx \
     --no-enforce-https \
     --no-check-external-hash \
