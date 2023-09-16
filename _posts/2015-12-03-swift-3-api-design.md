@@ -73,5 +73,5 @@ list](/community/#swift-evolution).
 [clang-importer-proposal]: https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md  "Better Translation of Objective-C APIs into Swift proposal"
 [swift-3-api-guidelines-repo]: https://github.com/apple/swift-3-api-guidelines-review  "Swift 3 API Design Guidelines review repository"
 [objc-cocoa-guidelines]: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html  "Objective-C Coding Guidelines for Cocoa"
-[swift-evolution]: /contributing/#evolution-process  "Swift evolution process"
+[swift-evolution]: /contributing/#swift-evolution  "Swift evolution process"
 [core-libraries]: /core-libraries  "Swift core libraries"
