@@ -11,5 +11,5 @@ bundle exec htmlproofer \
     --only-4xx \
     --no-enforce-https \
     --no-check-external-hash \
-    --ignore-urls "/twitter.com/,/github.com/" \
+    --ignore-urls "/twitter.com/,/github.com/,/swift.org/404.html/" \
     /output
