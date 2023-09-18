@@ -344,7 +344,7 @@ Swift's [issue database] contains [several ideas of refactoring transformations]
 If you'd like to propose new refactoring ideas, filing a task in Swift's [issue database] with
 label `Refactoring` will be sufficient.
 
-For further help with implementing refactoring transformations, please see the [documentation] or feel free to ask questions on the [swift-dev](https://lists.swift.org/mailman/listinfo/swift-dev) mailing list.
+For further help with implementing refactoring transformations, please see the [documentation] or feel free to ask questions on the [swift-dev](https://lists.swift.org/pipermail/swift-dev/) mailing list.
 
 [sourcekitd]: https://github.com/apple/swift/tree/master/tools/SourceKit
 [ResolvedCursorInfo]: https://github.com/apple/swift/blob/7f29b362d68eb990a592257850aabadb24de61df/include/swift/IDE/Utils.h#L158

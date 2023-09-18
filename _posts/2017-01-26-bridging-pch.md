@@ -37,4 +37,10 @@ To try it out in the meantime, install a compiler that supports it, open the bui
 
 If you have a project with a large bridging header, please try using this new mode.
 If you encounter problems, please file a bug in either [Swift.org's bug-tracking system](https://bugs.swift.org/) or [Apple's](https://bugreport.apple.com/).
-General feedback is also welcome by emailing the [swift-users@swift.org](https://lists.swift.org/mailman/listinfo/swift-users) mailing list, or on [Twitter](https://twitter.com/swiftlang) (mention `#SwiftBridgingPCH`).
+General feedback is also welcome by emailing the [swift-users mailing list](https://lists.swift.org/pipermail/swift-users/) mailing list, or on [Twitter](https://twitter.com/swiftlang) (mention `#SwiftBridgingPCH`).
+
+> Note: Swift mailing lists have been shut down, archived, and replaced with
+> [Swift Forums](https://forums.swift.org). See
+> [the announcement here]({% post_url 2018-01-19-forums %}). A place for general
+> feedback is the [Using Swift](https://forums.swift.org/c/swift-users/)
+> category on the forums.
