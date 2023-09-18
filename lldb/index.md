@@ -4,7 +4,7 @@ title: REPL and Debugger
 ---
 
 The Swift.org community makes use of the
-[LLDB debugger](https://github.com/apple/swift-lldb) to provide a
+[LLDB debugger](https://github.com/apple/llvm-project/tree/next/lldb) to provide a
 rich REPL as well as the debugging environment for the Swift Language.
 Swift is tightly coupled to the version of the  Swift compiler embedded in the
 debugger.  Tight integration of compiler and debugger enables accurate
