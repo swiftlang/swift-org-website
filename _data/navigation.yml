@@ -41,7 +41,7 @@
       url: /packages/
       sections:
         - title: Package Ecosystem
-          name: featured-packages
+          name: package-ecosystem
         - title: Next Steps
           name: next-steps
     - title: Platform Support
