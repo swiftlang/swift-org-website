@@ -103,7 +103,7 @@ categories:
       macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros/){:target='_blank'}
       or check out these packages that include macro targets.
     more:
-      title: "More packages that include macros \u203A"
+      title: "More packages that include macros"
       url: https://swiftpackageindex.com/search?query=product:macro
     packages:
       - name: SwiftPowerAssert
@@ -179,7 +179,7 @@ categories:
       app or a website built with HTML? Swift has several mature back-end frameworks,
       ORM, database connection packages, and more.
     more:
-      title: "More Swift on server packages \u203A"
+      title: "More Swift on server packages"
       url: https://swiftpackageindex.com/keywords/server-side-swift
     packages:
       - name: vapor
@@ -261,7 +261,7 @@ categories:
       to full-featured HTTP clients to low-level networking libraries. If you need a
       little more on top of URLSession, or a lot more, you\u2019ll find it here."
     more:
-      title: "More networking packages \u203A"
+      title: "More networking packages"
       url: https://swiftpackageindex.com/keywords/networking
     packages:
       - name: swift-nio
@@ -341,7 +341,7 @@ categories:
     description: Whether you're looking for an extension on top of XCTest or a completely
       different way to approach testing, these packages are here to help.
     more:
-      title: "More testing packages \u203A"
+      title: "More testing packages"
       url: https://swiftpackageindex.com/keywords/testing
     packages:
       - name: Quick
@@ -421,7 +421,7 @@ categories:
       higher level that automates logging of network requests for debugging, there's
       a package to help.
     more:
-      title: "More debug logging packages \u203A"
+      title: "More debug logging packages"
       url: https://swiftpackageindex.com/keywords/logging
     packages:
       - name: CocoaLumberjack
