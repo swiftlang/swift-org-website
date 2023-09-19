@@ -6,7 +6,7 @@
 
 {% for category in site.data.packages.packages.categories %}
 <h3 id="{{ category.anchor }}-packages">{{ category.name }}</h3>
-<p>{{ category.description | markdownify }}</p>
+{{ category.description | markdownify }}
 <ul class="package-list">
   {% for package in category.packages %}
   <li class="{% if package.note %}with-note{% endif %}">
