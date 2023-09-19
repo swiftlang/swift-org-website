@@ -36,9 +36,6 @@
     - name: Ubuntu 15.10
       archs:
         - x86_64
-    - name: Ubuntu 16.04
-      archs:
-        - x86_64
 - name: 3.0.1
   tag: swift-3.0.1-RELEASE
   xcode: Xcode 8.1
@@ -1009,10 +1006,6 @@
       docker: 5.6.1-centos7
       archs:
         - x86_64
-    - name: CentOS 8
-      archs:
-        - x86_64
-        - aarch64
     - name: Windows 10
       archs:
         - x86_64
