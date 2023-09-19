@@ -38,7 +38,6 @@
   {% endfor %}
 </ul>
 
-<p class="more">
-  <a href="{{ category.more.url }}" target="_blank">{{ category.more.title }}</a>
-</p>
-{% endfor %}
+{% if category.more %}
+<a class="cta-secondary" href="{{ category.more.url }}" target="_blank">{{ category.more.title }} &rsaquo;</a>
+{% endif %} {% endfor %}
