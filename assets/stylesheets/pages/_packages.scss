@@ -5,6 +5,10 @@ ul.package-list {
   padding: 0;
   list-style: none;
 
+  @media only screen and(max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
   li {
     display: grid;
 
