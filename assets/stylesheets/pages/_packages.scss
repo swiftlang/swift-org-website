@@ -47,6 +47,10 @@ ul.package-list {
       background-size: 15px;
       background-position: top 15px right;
 
+      .name {
+        padding-right: 20px;
+      }
+
       .owner {
         font-size: 16px;
       }
