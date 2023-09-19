@@ -1,3 +1,83 @@
+- date: 2023-09-17 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-09-17-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-09-17-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-09-17-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-09-16 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-09-16-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-09-16-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-09-16-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-09-14 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-09-14-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-09-14-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-09-14-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-09-13 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-09-13-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-09-13-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-09-13-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-09-08 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-09-08-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-09-08-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-09-08-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-09-06 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-09-06-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-09-06-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-09-06-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-09-05 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-09-05-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-09-05-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-09-05-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-09-04 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-09-04-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-09-04-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-09-04-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-09-02 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-09-02-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-09-02-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-09-02-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-09-01 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-09-01-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-09-01-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-09-01-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-08-29 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-08-29-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-08-29-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-08-29-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-08-27 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-08-27-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-08-27-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-08-27-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-08-26 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-08-26-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-08-26-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-08-26-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-08-25 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-08-25-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-08-25-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-08-25-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-08-24 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-08-24-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-08-24-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-08-24-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-08-23 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-08-23-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-08-23-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-08-23-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2023-08-12 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2023-08-12-a
   download: swift-DEVELOPMENT-SNAPSHOT-2023-08-12-a-ubuntu22.04-aarch64.tar.gz

@@ -1,7 +1,0 @@
----
-- name: Amazon Linux 2
-  date: 2023-03-30 10:28:49.000000000 -05:00
-  download: swift-5.8-RELEASE-amazonlinux2-aarch64.tar.gz
-  download_signature: swift-5.8-RELEASE-amazonlinux2-aarch64.tar.gz.sig
-  dir: swift-5.8-RELEASE
-  docker: 5.8-amazonlinux2

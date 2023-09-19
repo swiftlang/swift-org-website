@@ -1,0 +1,29 @@
+- title: "Value and Reference Types"
+  description: "This article describes the differences in behavior between _value types_ and _reference types_—a fundamental part of learning Swift and choosing between structures and classes."
+  content_type: article
+  content_url: /documentation/articles/value-and-reference-types.html
+  thumbnail_url: #TBD
+  release_date: 2023-04-29
+  external: false
+- title: "Generics"
+  description: "In Swift, generics are a fundamental way to write abstract code. This video walks through the basics of Swift Generics and introducing generics into your code."
+  content_type: video
+  content_url: https://developer.apple.com/videos/play/wwdc2022/110352/
+  thumbnail_url: /assets/images/getting-started/swift-generics-thumbnail.jpg
+  release_date: 2021-06-09
+  external: true
+- title: "Concurrency"
+  description: "Swift has concurrency features built into the language making it easier to write concurrent code with the assistance of the compiler. This video introduces the async/await mechanism, a key part of Swift Concurrency."
+  content_type: video
+  content_url: https://developer.apple.com/videos/play/wwdc2021/10132/
+  thumbnail_url: /assets/images/getting-started/meet-async-await-thumbnail.jpg
+  release_date: 2021-06-08
+  external: true
+- title: "Regular Expressions"
+  description: "Swift provides first-class regular expression support, commonly known as regex, for effective string processing. This video gives an overview of the power and flexibility of Swift Regex."
+  content_type: video
+  content_url: https://developer.apple.com/videos/play/wwdc2022/110357/
+  thumbnail_url: /assets/images/getting-started/regular-expression-thumbnail.jpg
+  release_date: 2022-06-07
+  external: true
+  

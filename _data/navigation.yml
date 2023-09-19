@@ -15,12 +15,19 @@
       sections:
         - title: Installing Swift
           name: installing-swift
-        - title: Using the REPL
-          name: using-the-repl
-        - title: Using the Package Manager
-          name: using-the-package-manager
-        - title: Using the LLDB Debugger
-          name: using-the-lldb-debugger
+        - title: Using Swift
+          name: using-swift
+        - title: Go Further
+          name: go-further
+    - title: Install
+      url: /install/
+      sections:
+        - title: macOS
+          name: macos
+        - title: Linux
+          name: linux
+        - title: Windows
+          name: windows
     - title: Download
       url: /download/
       sections:
@@ -28,10 +35,8 @@
           name: releases
         - title: Snapshots
           name: snapshots
-        - title: Using Downloads
-          name: using-downloads
-        - title: Docker
-          name: docker
+        - title: Installing Swift
+          name: installing-swift
     - title: Packages
       url: /packages/
       sections:
