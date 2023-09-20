@@ -103,7 +103,7 @@ categories:
       macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros/){:target='_blank'}
       or check out these packages that include macro targets.
     more:
-      title: "More packages that include macros"
+      title: More packages that include macros
       url: https://swiftpackageindex.com/search?query=product:macro
     packages:
       - name: SwiftPowerAssert
@@ -114,8 +114,7 @@ categories:
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
+        platform_compatibility_tooltip: Apple (macOS)
         license: MIT
         url: https://swiftpackageindex.com/kishikawakatsumi/swift-power-assert
       - name: swift-spyable
@@ -126,7 +125,8 @@ categories:
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (macOS)
+          - Linux
+        platform_compatibility_tooltip: Apple (macOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/Matejkob/swift-spyable
       - name: SwiftRequest
@@ -158,7 +158,7 @@ categories:
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        platform_compatibility_tooltip: Apple (macOS)
         license: MIT
         url: https://swiftpackageindex.com/p-x9/AssociatedObject
       - name: swift-macro-toolkit
@@ -167,10 +167,6 @@ categories:
           point literals, type destructuring, type normalization, and getting the value
           of string literals.
         owner: stackotter
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (macOS)
         license: Apache 2.0
         url: https://swiftpackageindex.com/stackotter/swift-macro-toolkit
   - name: Swift on server
@@ -179,7 +175,7 @@ categories:
       app or a website built with HTML? Swift has several mature back-end frameworks,
       ORM, database connection packages, and more.
     more:
-      title: "More Swift on server packages"
+      title: More Swift on server packages
       url: https://swiftpackageindex.com/keywords/server-side-swift
     packages:
       - name: vapor
@@ -222,7 +218,7 @@ categories:
           the command-line interface (CLI) in Swift applications. It includes features
           such as input handling, output formatting, and command execution.
         owner: Vapor
-        swift_compatibility: 5.6+
+        swift_compatibility: 5.7+
         platform_compatibility:
           - Apple
           - Linux
@@ -252,7 +248,7 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (macOS, visionOS, watchOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (macOS, visionOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
   - name: Networking packages
@@ -261,7 +257,7 @@ categories:
       to full-featured HTTP clients to low-level networking libraries. If you need a
       little more on top of URLSession, or a lot more, you\u2019ll find it here."
     more:
-      title: "More networking packages"
+      title: More networking packages
       url: https://swiftpackageindex.com/keywords/networking
     packages:
       - name: swift-nio
@@ -341,7 +337,7 @@ categories:
     description: Whether you're looking for an extension on top of XCTest or a completely
       different way to approach testing, these packages are here to help.
     more:
-      title: "More testing packages"
+      title: More testing packages
       url: https://swiftpackageindex.com/keywords/testing
     packages:
       - name: Quick
@@ -421,7 +417,7 @@ categories:
       higher level that automates logging of network requests for debugging, there's
       a package to help.
     more:
-      title: "More debug logging packages"
+      title: More debug logging packages
       url: https://swiftpackageindex.com/keywords/logging
     packages:
       - name: CocoaLumberjack
@@ -439,7 +435,7 @@ categories:
           Datadog. It includes features for log collection, trace collection, and RUM
           events collection.
         owner: Datadog, Inc.
-        swift_compatibility: 5.7+
+        swift_compatibility: 5.8+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS)
