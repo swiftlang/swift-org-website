@@ -1,6 +1,6 @@
 categories:
   - name: Community Showcase
-    anchor: community
+    slug: community
     description: This showcase celebrates new and innovative packages discussed on recent
       community podcasts, blogs, and newsletters. Package selection in the Community
       Showcase is an editorial process organised via [the Swift Forums](https://example.com/)
@@ -97,7 +97,7 @@ categories:
           of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
           podcast.
   - name: Macro packages
-    anchor: macros
+    slug: macros
     description: Macros are new in Swift 5.9 and transform your source code when you
       compile it, letting you avoid writing repetitive code. [Read more about creating
       macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros/){:target='_blank'}
@@ -168,10 +168,14 @@ categories:
           point literals, type destructuring, type normalization, and getting the value
           of string literals.
         owner: stackotter
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Linux
+        platform_compatibility_tooltip: Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/stackotter/swift-macro-toolkit
   - name: Swift on server
-    anchor: server
+    slug: server
     description: What packages can help you build a top-class back-end server for your
       app or a website built with HTML? Swift has several mature back-end frameworks,
       ORM, database connection packages, and more.
@@ -253,7 +257,7 @@ categories:
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
   - name: Networking packages
-    anchor: networking
+    slug: networking
     description: "Covering everything from abstractions on top of core networking libraries
       to full-featured HTTP clients to low-level networking libraries. If you need a
       little more on top of URLSession, or a lot more, you\u2019ll find it here."
@@ -334,7 +338,7 @@ categories:
         license: Apache 2.0
         url: https://swiftpackageindex.com/Kitura/BlueSocket
   - name: Testing packages
-    anchor: testing
+    slug: testing
     description: Whether you're looking for an extension on top of XCTest or a completely
       different way to approach testing, these packages are here to help.
     more:
@@ -413,7 +417,7 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/jonreid/OCMockito
   - name: Debug logging packages
-    anchor: logging
+    slug: logging
     description: Whether you want to log something to the console or to disk, or something
       higher level that automates logging of network requests for debugging, there's
       a package to help.
