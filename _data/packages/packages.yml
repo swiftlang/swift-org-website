@@ -114,7 +114,8 @@ categories:
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (macOS)
+          - Linux
+        platform_compatibility_tooltip: Apple (macOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/kishikawakatsumi/swift-power-assert
       - name: swift-spyable
