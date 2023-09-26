@@ -397,7 +397,7 @@ FranzBusch:
 
 adrian-prantl:
   name: Adrian Prantl
-  gravatar: 12f9ffd35b20b488b2cb657738fc3eeb
+  gravatar: 09d425d65431edfdb8ce3bbb2f2e2bf0
   email: aprantl@apple.com
   github: adrian-prantl
   about: "Adrian Prantl manages the Debugger Compiler Integration team at Apple. He works on debug info in the compiler and the Swift plugin in LLDB."

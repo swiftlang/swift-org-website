@@ -2,19 +2,21 @@
 layout: post
 published: true
 date: 2023-08-25 12:34:56
-title: What's new in Swift debugging on the 5.9 branch?
+title: Debugging Improvements in Swift 5.9
 author: [adrian-prantl, augustonoronha, kastiglione]
 ---
 
 
-On the Swift 5.9 branch, we introduced a couple of new features to [LLDB](https://lldb.llvm.org/ "LLDB project home page") and the Swift compiler to improve the debugging experience. In this post, we are highlighting three changes that we expect to have the most noticeable impact on Swift debugging workflows.
+Swift 5.9 introduced a number of new debugging features to the Swift compiler and the [LLDB](https://lldb.llvm.org/ "LLDB project home page") debugger.
+
+Here are three changes that can help with your everyday debugging workflows.
 
 
-### Faster `p` and `po`
+### Faster variable inspection with the `p` and `po` commands
 
-The `p` and `po` command aliases have been redefined to the new `dwim-print` command. The `dwim-print` command prints values using the most user-friendly implementation. "DWIM" is an acronym for "Do What I Mean". Specifically, when printing variables, `dwim-print` will use the same implementation as `frame variable` or `v` instead of the more expensive expression evaluator.
+LLDB provides the shorthand `p` command alias to inspect variables and `po` to call the debugDescription property of objects. Originally, these were aliases for the rather heavyweight `expression` and `expression -O` commands. In Swift 5.9, the `p` and `po` command aliases have been redefined to the new `dwim-print` command. The `dwim-print` command prints values using the most user-friendly implementation. "DWIM" is an acronym for "Do What I Mean". Specifically, when printing variables, `dwim-print` will use the same implementation as `frame variable` or `v` instead of the more expensive expression evaluator.
 
-By default, the output of `p` no longer includes a persistent result variable, such as `$0`, or `$R0`. In addition to the overhead incurred by persisting the result, persistent result variables retain any objects they contain, which can be an unexpected side effect for the program execution. Users who want persistent results on occasion, can use `expression` (or a unique prefix such as `expr`) directly instead of `p`. To enable persistent results every time, the `p` alias can be redefined in the `~/.lldbinit` file:
+"In addition to being faster, using `p` no longer creates persistent result variables like `$R0`, which are often unused in debugging sessions. Persistent result variables not only incur overhead but also retain any objects they contain, which can be an unexpected side effect for the program execution. Users who want persistent results on occasion, can use `expression` (or a unique prefix such as `expr`) directly instead of `p`. To enable persistent results every time, the `p` alias can be redefined in the `~/.lldbinit` file:
 
 ```
 command unalias p
@@ -23,10 +25,22 @@ command alias p dwim-print --persistent-result on --
 
 The `dwim-print` command also gives `po` new functionality. The `po` command can now print Swift objects by their *address*. When running `po <object-address>`, LLDB's embedded Swift compiler will automatically evaluate the expression `unsafeBitCast(<object-address>, to: AnyObject.self)` under the hood to produce the expected result.
 
+Old behavior in Swift 5.8 and earlier:
+```
+(lldb) po 0x00006000025c43d0
+(Int) 105553155867600
+```
+
+New behavior in Swift 5.9:
+```
+(lldb) po 0x00006000025c43d0
+<MyApp.AppDelegate: 0x6000025c43d0>
+```
+
 See [Introduce dwim-print command](https://reviews.llvm.org/D138315 "LLVM review") and [Change dwim-print to default to disabled persistent results](https://reviews.llvm.org/D145609 "LLVM review") for the patches that introduced these changes.
 
 
-### Using generic type parameters in expressions
+### Support for generic type parameters in expressions
 
 LLDB now supports referring to generic type parameters in expression evaluation. For example, given the following code:
 
@@ -39,12 +53,12 @@ use(5)
 use("Hello!”)
 ```
 
-Running `po T.self`, when stopped in `use`, will print `Int` when coming in through the first call, and `String` in the second. This can be especially useful in combination with conditional breakpoints to stop only when a generic function is instantiated with a certain concrete type. For example, adding the following expression as the condition to a breakpoint inside `use` will only stop when the variable `t` is a `String`: `T.self == String.self`.
+Running `po T.self`, when stopped in `use`, will print `Int` when coming in through the first call, and `String` in the second.  In addition to displaying the concrete type of the generic, you can use this to set conditional that look for concrete types. For example, adding the following expression as the condition to a breakpoint inside `use` will only stop when the variable `t` is a `String`: `T.self == String.self`. (Note that this last example only works on nightly builds of the Swift 5.9 toolchain.)
 
 More details about the implementation of this feature can be found in the [LLDB PR](https://github.com/apple/llvm-project/pull/5715) introducing it.
 
 
-### More precise scope information in the Swift compiler
+### Fine-grained scope information
 
 The Swift compiler now emits more precise lexical scopes in the debug information. Scope information allows a debugger to distinguish between the different variables that are all called `x` in the following example:
 
@@ -109,6 +123,6 @@ With the debug information produced by previous versions of the Swift compiler, 
 For more details, see the [pull request](https://github.com/apple/swift/pull/64941) that introduced this change.
 
 
-### Getting involved
+### Get involved
 
-If you want to learn more about Swift debugging and LLDB, provide feedback, or want to get started with improving the tooling, debug information, or the debugger itself, come join us in the [LLDB section](https://forums.swift.org/c/development/lldb/13) of the Swift development forums!
+If you want to learn more about Swift debugging and LLDB, provide feedback, or contribute to the tooling itself, join us in the [LLDB section](https://forums.swift.org/c/development/lldb/13) of the Swift development forums!
