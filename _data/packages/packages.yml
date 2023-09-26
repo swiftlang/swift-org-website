@@ -96,7 +96,7 @@ categories:
         note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
           of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
           podcast.
-  - name: Macro packages
+  - name: Packages with Macros
     slug: macros
     description: Macros are new in Swift 5.9 and transform your source code when you
       compile it, letting you avoid writing repetitive code. [Read more about creating
@@ -256,7 +256,7 @@ categories:
         platform_compatibility_tooltip: Apple (macOS, visionOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
-  - name: Networking packages
+  - name: Networking
     slug: networking
     description: "Covering everything from abstractions on top of core networking libraries
       to full-featured HTTP clients to low-level networking libraries. If you need a
@@ -337,7 +337,7 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Kitura/BlueSocket
-  - name: Testing packages
+  - name: Testing
     slug: testing
     description: Whether you're looking for an extension on top of XCTest or a completely
       different way to approach testing, these packages are here to help.
@@ -416,7 +416,7 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/jonreid/OCMockito
-  - name: Debug logging packages
+  - name: Debug logging
     slug: logging
     description: Whether you want to log something to the console or to disk, or something
       higher level that automates logging of network requests for debugging, there's
