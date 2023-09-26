@@ -1,11 +1,17 @@
-<div>
-  <label for="package-category-select">Category:</label>
-  <select id="package-category-select">
+<nav class="package-categories">
+  <label for="category-select">Category:</label>
+  <select id="category-select">
     {%- for category in site.data.packages.packages.categories %}
     <option value="{{ category.slug }}">{{ category.name }}</option>
     {%- endfor %}
   </select>
-</div>
+
+  <ul class="category-menu">
+    {%- for category in site.data.packages.packages.categories %}
+    <li><a href="#" data-category-slug="{{ category.slug }}"> {{ category.name }} </a></li>
+    {%- endfor %}
+  </ul>
+</nav>
 
 {%- for category in site.data.packages.packages.categories %}
 <section class="package-list" data-category-slug="{{ category.slug }}" data-category-name="{{ category.name }}">
@@ -50,39 +56,25 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", (event) => {
-    const categorySelect = document.getElementById("package-category-select")
+    const categorySelectElement = document.getElementById("category-select")
 
-    // Set the first category as initially selected
-    const firstCategoryOption = categorySelect.querySelector("option:first-child")
+    // Set the first category as initially selected, or whatever was incoming as an anchor
+    const firstCategoryOption = categorySelectElement.querySelector("option:first-child")
     setSelectedPackageList(firstCategoryOption.value)
 
     // Switch selected categories whenever a new one is chosen
-    categorySelect.addEventListener("change", (event) => {
-      setSelectedPackageList(categorySelect.value)
+    categorySelectElement.addEventListener("change", (event) => {
+      setSelectedPackageList(categorySelectElement.value)
     })
 
-    // Create a list that mapipulates the `select`, for use on Desktop browsers only
-    const listElement = document.createElement("ul")
-    listElement.setAttribute("aria-hidden", "true")
-    listElement.classList.add("category-select")
-    categorySelect.parentElement.appendChild(listElement)
-
-    const packageListElements = document.querySelectorAll("section.package-list")
-    packageListElements.forEach((packageListElement) => {
-      const listItemElement = document.createElement("li")
-      listElement.appendChild(listItemElement)
-
-      const linkElement = document.createElement("a")
-      console.log(packageListElement)
-      linkElement.href = "#"
-      linkElement.dataset.categorySlug = packageListElement.dataset.categorySlug
-      linkElement.innerText = packageListElement.dataset.categoryName
-      linkElement.addEventListener("click", (event) => {
+    // Hook up the change events on the desktop menu
+    const menuLinkElements = document.querySelectorAll(".category-menu a[data-category-slug]")
+    menuLinkElements.forEach((menuLinkElement) => {
+      menuLinkElement.addEventListener("click", (event) => {
         event.preventDefault()
-        categorySelect.value = event.target.dataset.categorySlug
-        categorySelect.dispatchEvent(new Event("change"))
+        categorySelectElement.value = event.target.dataset.categorySlug
+        categorySelectElement.dispatchEvent(new Event("change"))
       })
-      listItemElement.appendChild(linkElement)
     })
   })
 
