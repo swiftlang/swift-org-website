@@ -4,6 +4,35 @@ nav.package-categories {
     display: none;
   }
 
+  #category-select {
+    width: 100%;
+    padding: 7px;
+    font-size: 18px;
+  }
+
+  .category-menu {
+    list-style-type: none;
+    white-space: normal; // Needed?
+    padding: 0;
+
+    li {
+      display: inline-block;
+
+      a.active {
+        color: var(--color-text);
+      }
+    }
+
+    li:first-child {
+      font-weight: 600;
+    }
+
+    li:not(:first-child):not(:last-child)::after {
+      content: " / ";
+      color: black;
+    }
+  }
+
   @media only screen and(max-width: 767px) {
     label[for="category-select"],
     #category-select {

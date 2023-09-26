@@ -1,5 +1,5 @@
 <nav class="package-categories">
-  <label for="category-select">Category:</label>
+  <label for="category-select">Browse a selection of packages:</label>
   <select id="category-select">
     {%- for category in site.data.packages.packages.categories %}
     <option value="{{ category.slug }}">{{ category.name }}</option>
@@ -7,6 +7,7 @@
   </select>
 
   <ul class="category-menu">
+    <li>Browse a selection of packages:</li>
     {%- for category in site.data.packages.packages.categories %}
     <li><a href="#" data-category-slug="{{ category.slug }}"> {{ category.name }} </a></li>
     {%- endfor %}
@@ -59,8 +60,14 @@
     const categorySelectElement = document.getElementById("category-select")
 
     // Set the first category as initially selected, or whatever was incoming as an anchor
-    const firstCategoryOption = categorySelectElement.querySelector("option:first-child")
-    setSelectedPackageList(firstCategoryOption.value)
+    const incomingAnchor = window.location.hash
+    if (incomingAnchor.length > 1) {
+      const slug = incomingAnchor.substr(1)
+      setSelectedPackageList(slug, false)
+    } else {
+      const firstCategoryOption = categorySelectElement.querySelector("option:first-child")
+      setSelectedPackageList(firstCategoryOption.value, false)
+    }
 
     // Switch selected categories whenever a new one is chosen
     categorySelectElement.addEventListener("change", (event) => {
@@ -78,7 +85,8 @@
     })
   })
 
-  function setSelectedPackageList(slug) {
+  function setSelectedPackageList(slug, insertIntoHistory = true) {
+    // Show only the selected package list
     const packageListElements = document.querySelectorAll("section.package-list")
     packageListElements.forEach((packageListElement) => {
       const hiddenCssClass = "hidden"
@@ -87,5 +95,20 @@
         packageListElement.classList.remove(hiddenCssClass)
       }
     })
+
+    // Highlight the selected menu item on desktop
+    const menuLinkElements = document.querySelectorAll(".category-menu a[data-category-slug]")
+    menuLinkElements.forEach((menuLinkElement) => {
+      const activeCssClass = "active"
+      menuLinkElement.classList.remove(activeCssClass)
+      if (menuLinkElement.dataset.categorySlug === slug) {
+        menuLinkElement.classList.add(activeCssClass)
+      }
+    })
+
+    // Add the slug to the URL as an anchor
+    if (insertIntoHistory) {
+      history.pushState({}, "", `#${slug}`)
+    }
   }
 </script>
