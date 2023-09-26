@@ -71,29 +71,7 @@ func f(x: AnyObject?) {
 }
 ```
 
-In fact, the Swift language's scoping rules allow some astonishing things to be done with variable bindings:
-
-```swift
-enum E<T> {
-case A(T)
-case B(T)
-case C(String)
-case D(T, T, T)
-}
-
-func f<T>(_ e: E<T>) -> String {
-  switch e {
-  case .A(let a), .B(let a): return "One variable \(a): T in scope"
-  case .C(let a):            return "One variable \(a): String in scope"
-  case .D(let a, _, let c):  return "One \(a): T and one \(c): T in scope"
-  default:                   return "Only the function argument e is in scope"
-  }
-}
-```
-
-All of these can be correctly disambiguated by LLDB thanks to lexical scope debug information.
-
-The Swift compiler now uses more accurate ASTScope information to generate the lexical scope hierarchy in the debug information, which results in some behavior changes in the debugger. In the example below, the local variable `a` is not yet in scope at the call site of `getInt()` and will only be available after it has been assigned:
+In Swift 5.9, the compiler now uses more accurate ASTScope information to generate the lexical scope hierarchy in the debug information, which results in some behavior changes in the debugger. In the example below, the local variable `a` is not yet in scope at the call site of `getInt()` and will only be available after it has been assigned. With the debug information produced by previous versions of the Swift compiler, the debugger might have displayed uninitialized memory as the contents of `a` at the call site of `getInt()`. In Swift 5.9, the variable `a` only becomes visible after it has been initialized:
 
 ```
   1 func getInt() -> Int { return 42 }
@@ -118,7 +96,29 @@ error: <EXPR>:3:1: error: cannot find 'a' in scope
 42
 ```
 
-With the debug information produced by previous versions of the Swift compiler, the debugger might have displayed uninitialized memory as the contents of `a` at the call site of `getInt()`. In Swift 5.9 the variable `a` only becomes visible after it has been initialized.
+<!--- 
+In fact, the Swift language's scoping rules allow some astonishing things to be done with variable bindings:
+
+```swift
+enum E<T> {
+case A(T)
+case B(T)
+case C(String)
+case D(T, T, T)
+}
+
+func f<T>(_ e: E<T>) -> String {
+  switch e {
+  case .A(let a), .B(let a): return "One variable \(a): T in scope"
+  case .C(let a):            return "One variable \(a): String in scope"
+  case .D(let a, _, let c):  return "One \(a): T and one \(c): T in scope"
+  default:                   return "Only the function argument e is in scope"
+  }
+}
+```
+
+All of these can be correctly disambiguated by LLDB thanks to lexical scope debug information.
+--->
 
 For more details, see the [pull request](https://github.com/apple/swift/pull/64941) that introduced this change.
 
