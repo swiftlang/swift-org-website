@@ -1,4 +1,19 @@
-.category-select {
+nav.package-categories {
+  label[for="category-select"],
+  #category-select {
+    display: none;
+  }
+
+  @media only screen and(max-width: 767px) {
+    label[for="category-select"],
+    #category-select {
+      display: inherit;
+    }
+
+    .category-menu {
+      display: none;
+    }
+  }
 }
 
 .package-list {
