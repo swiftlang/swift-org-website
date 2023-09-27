@@ -1,9 +1,9 @@
 categories:
-  - name: Community Showcase
-    slug: community
-    description: This showcase celebrates new and innovative packages discussed on recent
-      community podcasts, blogs, and newsletters. Package selection in the Community
-      Showcase is an editorial process organised via [the Swift Forums](https://example.com/)
+  - name: New and Notable
+    slug: new-notable
+    description: This showcase celebrates new and interesting packages discussed on
+      recent community podcasts, or written about in blogs and newsletters. Package
+      selection in this section is an editorial process organised via [the Swift Forums](https://example.com/)
       and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
     packages:
       - name: swift-composable-architecture
