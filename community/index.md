@@ -59,7 +59,7 @@ The current Core Team members are:
 
 [Contact via Forums](https://forums.swift.org/new-message?groupname=language-workgroup)
 
-The Language Steering Group comprises experts that the Swift Project Lead and the Core Team have identified as possessing a balance of perspectives and expertise to review, guide, and strategically align changes to the language mindfully.  The Language Steering Group reviews and helps iterate [language evolution proposals](/contributing/#evolution-process) from the community, acting as the approver of these proposals.  Workgroup members help drive the Swift language forward coherently to create the best possible general-purpose programming language.  The Language Steering Group membership is expected to change over time.
+The Language Steering Group comprises experts that the Swift Project Lead and the Core Team have identified as possessing a balance of perspectives and expertise to review, guide, and strategically align changes to the language mindfully.  The Language Steering Group reviews and helps iterate [language evolution proposals](/contributing/#swift-evolution) from the community, acting as the approver of these proposals.  Workgroup members help drive the Swift language forward coherently to create the best possible general-purpose programming language.  The Language Steering Group membership is expected to change over time.
 
 The current Language Steering Group members are:
 

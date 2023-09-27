@@ -14,7 +14,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" title="Download" download>Xcode 8.0 beta</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" title="Download" download>Xcode 8.0 beta</a>*
                 </span>
             </td>
             <td class="date">
@@ -40,7 +40,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" title="Download" download>Xcode 8.0 beta 2</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" title="Download" download>Xcode 8.0 beta 2</a>*
                 </span>
             </td>
             <td class="date">
@@ -67,7 +67,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" download>Xcode 8.0 beta 3</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" download>Xcode 8.0 beta 3</a>*
                 </span>
                 <a href="https://download.swift.org/swift-3.0-preview-3/xcode/swift-3.0-PREVIEW-3/swift-3.0-PREVIEW-3-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0-preview-3/xcode/swift-3.0-PREVIEW-3/swift-3.0-PREVIEW-3-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -96,7 +96,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" download>Xcode 8.0 beta 4</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" download>Xcode 8.0 beta 4</a>*
                 </span>
                 <a href="https://download.swift.org/swift-3.0-preview-4/xcode/swift-3.0-PREVIEW-4/swift-3.0-PREVIEW-4-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0-preview-4/xcode/swift-3.0-PREVIEW-4/swift-3.0-PREVIEW-4-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -125,7 +125,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" download>Xcode 8.0 beta 5</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" download>Xcode 8.0 beta 5</a>*
                 </span>
                 <a href="https://download.swift.org/swift-3.0-preview-5/xcode/swift-3.0-PREVIEW-5/swift-3.0-PREVIEW-5-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0-preview-5/xcode/swift-3.0-PREVIEW-5/swift-3.0-PREVIEW-5-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -154,7 +154,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" download>Xcode 8.0 beta 6</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" download>Xcode 8.0 beta 6</a>*
                 </span>
                 <a href="https://download.swift.org/swift-3.0-preview-6/xcode/swift-3.0-PREVIEW-6/swift-3.0-PREVIEW-6-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0-preview-6/xcode/swift-3.0-PREVIEW-6/swift-3.0-PREVIEW-6-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -183,7 +183,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" download>Xcode 8.0 GM Seed</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" download>Xcode 8.0 GM Seed</a>*
                 </span>
                 <a href="https://download.swift.org/swift-3.0-GM-CANDIDATE/xcode/swift-3.0-GM-CANDIDATE/swift-3.0-GM-CANDIDATE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0-GM-CANDIDATE/xcode/swift-3.0-GM-CANDIDATE/swift-3.0-GM-CANDIDATE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -215,7 +215,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" download>Xcode 8.1 beta</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" download>Xcode 8.1 beta</a>*
                 </span>
                 <a href="https://download.swift.org/swift-3.0.1-preview-1/xcode/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0.1-preview-1/xcode/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -245,7 +245,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" download>Xcode 8.1 beta 2</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" download>Xcode 8.1 beta 2</a>*
                 </span>
                 <a href="https://download.swift.org/swift-3.0.1-preview-2/xcode/swift-3.0.1-PREVIEW-2/swift-3.0.1-PREVIEW-2-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0.1-preview-2/xcode/swift-3.0.1-PREVIEW-2/swift-3.0.1-PREVIEW-2-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -275,7 +275,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" download>Xcode 8.1 beta 3</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" download>Xcode 8.1 beta 3</a>*
                 </span>
                 <a href="https://download.swift.org/swift-3.0.1-preview-3/xcode/swift-3.0.1-PREVIEW-3/swift-3.0.1-PREVIEW-3-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0.1-preview-3/xcode/swift-3.0.1-PREVIEW-3/swift-3.0.1-PREVIEW-3-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -305,7 +305,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" download>Xcode 8.1 GM Seed</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" download>Xcode 8.1 GM Seed</a>*
                 </span>
                 <a href="https://download.swift.org/swift-3.0.1-GM-CANDIDATE/xcode/swift-3.0.1-GM-CANDIDATE/swift-3.0.1-GM-CANDIDATE-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0.1-GM-CANDIDATE/xcode/swift-3.0.1-GM-CANDIDATE/swift-3.0.1-GM-CANDIDATE-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>
@@ -338,7 +338,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://developer.apple.com/xcode/download/" download>Xcode 8.2 beta 2</a>*
+                    <a href="https://developer.apple.com/download/all/?q=xcode" download>Xcode 8.2 beta 2</a>*
                 </span>
                 <a href="https://download.swift.org/swift-3.0.2-preview-1/xcode/swift-3.0.2-PREVIEW-1/swift-3.0.2-PREVIEW-1-osx.pkg" title="Download" class="debug">Toolchain</a>
                 <a href="https://download.swift.org/swift-3.0.2-preview-1/xcode/swift-3.0.2-PREVIEW-1/swift-3.0.2-PREVIEW-1-osx-symbols.pkg" title="Debugging Symbols" class="debug">Debugging Symbols</a>

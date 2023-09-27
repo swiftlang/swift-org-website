@@ -345,7 +345,7 @@ extension String {
 The above techniques all copy the string representation. If the goal
 is interoperability between the two types of C strings without copying
 the String, then it is necessary to bind memory to the correct type
-each time the String is accessed, as described in [UnsafeRawPointer.bindMemory(to:capacity:)](unsafeRawPointer.bindMemory(to:capacity:)).
+each time the String is accessed, as described in [UnsafeRawPointer.bindMemory(to:capacity:)](#unsaferawpointerbindmemorytocapacity).
 
 ### Untyped Buffers ("raw" vs. UInt8)
 

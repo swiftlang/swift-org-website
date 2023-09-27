@@ -1,5 +1,3 @@
-<a name="evolution-process"></a>
-
 ## Swift Evolution
 
 Shaping the future of Swift is a community effort that anyone can participate in via the [Evolution section of the Swift forums][swift-evolution-forums].

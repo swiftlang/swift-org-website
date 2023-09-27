@@ -30,14 +30,14 @@ atom: true
 
     <li>
       <a href="/getting-started">
-        <img src="/assets/images/landing-page/signs.svg" />
+        <img src="/assets/images/landing-page/signs.svg" alt="An icon image with a sign post and two signs pointing in opposite directions." />
         Get started
       </a>
     </li>
 
     <li>
       <a href="/documentation">
-        <img src="/assets/images/landing-page/book.svg" />
+        <img src="/assets/images/landing-page/book.svg" alt="An icon image with an open book." />
         Read the docs
       </a>
     </li>
