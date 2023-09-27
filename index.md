@@ -45,7 +45,7 @@ atom: true
     <li>
       <a href="/packages">
         <img src="/assets/images/landing-page/box.svg" />
-        Explore Packages
+        Explore packages
       </a>
     </li>
   </ul>
