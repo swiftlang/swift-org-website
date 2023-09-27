@@ -25,6 +25,8 @@ offering a guided tour, a comprehensive guide, and a formal reference of the lan
   </div>
 </div>
 
+We welcome your contributions to the book --- pull requests, new issues, and comments on existing topics --- in [the book's repository](https://github.com/apple/swift-book).
+
 #### Translations
 We encourage you to participate in translating _The Swift Programming Language_ into other languages.
 Get involved with an existing translation project, or start a new one.

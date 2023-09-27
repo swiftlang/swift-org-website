@@ -1295,30 +1295,29 @@
   date: 2023-09-18
   platforms:
     - name: Ubuntu 18.04
-      docker: Coming Soon
       archs:
         - x86_64
     - name: Ubuntu 20.04
-      docker: Coming Soon
+      docker: 5.9-focal
       archs:
         - x86_64
         - aarch64
     - name: Ubuntu 22.04
-      docker: Coming Soon
+      docker: 5.9-jammy
       archs:
         - x86_64
         - aarch64
     - name: CentOS 7
-      docker: Coming Soon
+      docker: 5.9-centos7
       archs:
         - x86_64
     - name: Amazon Linux 2
-      docker: Coming Soon
+      docker: 5.9-amazonlinux2
       archs:
         - x86_64
         - aarch64
     - name: Red Hat Universal Base Image 9
-      docker: Coming Soon
+      docker: 5.9-rhel-ubi9
       dir: ubi9
       archs:
         - x86_64
