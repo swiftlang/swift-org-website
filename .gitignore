@@ -10,8 +10,9 @@ xcuserdata
 # Built site content.
 /_site
 
-# Jekyll metadata
+# Temporary Jekyll files
 .jekyll-metadata
+.jekyll-cache
 
 # Asset Cache
 .asset-cache
