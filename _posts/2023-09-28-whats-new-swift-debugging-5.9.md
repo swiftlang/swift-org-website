@@ -51,7 +51,7 @@ func use<T>(_ t: T) {
 }
 
 use(5)
-use("Hello!”)
+use("Hello!")
 ```
 
 Running `po T.self`, when stopped in `use`, will print `Int` when coming in through the first call, and `String` in the second.
@@ -100,7 +100,7 @@ error: <EXPR>:3:1: error: cannot find 'a' in scope
 42
 ```
 
-<!--- 
+<!---
 In fact, the Swift language's scoping rules allow some astonishing things to be done with variable bindings:
 
 ```swift
