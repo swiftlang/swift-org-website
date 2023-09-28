@@ -113,7 +113,7 @@ nav.package-categories {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px 40px;
-    padding: 0;
+    padding: 30px 0;
     list-style: none;
 
     @media only screen and(max-width: 767px) {

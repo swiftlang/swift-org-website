@@ -1,8 +1,13 @@
 {%- assign category = site.data.packages.packages.categories | where: "slug", include.category_slug | first %}
 
 <section class="package-list">
-  <h3 id="{{ category.slug }}-packages">{{ category.name }}</h3>
   {{ category.description | markdownify }}
+  <p>
+    The Swift package ecosystem has thousands of packages to help with all kinds of tasks within your project. This list
+    contains a small selection of available packages. Browse <a href="{% link packages/index.md %}">more lists</a>, or
+    search all available packages at the
+    <a href="https://swiftpackageindex.com" target="_blank">Swift Package Index.</a>
+  </p>
   <ul>
     {% for package in category.packages %}
     <li class="{% if package.note %}with-note{% endif %}">
