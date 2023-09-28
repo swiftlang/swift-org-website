@@ -13,7 +13,7 @@ Browse a small selection of interesting packages in popular categories from arou
 
 ## Create Your Own
 
-Creating a Swift package is a great way to modularise your code either for personal use, for use privately inside your company, or if you want to release an open source package for the rest of the Swift community to use. Start by reading [creating a standalone package with Xcode](https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode), or by watching [Creating Swift Packages](https://developer.apple.com/videos/play/wwdc2019/410/) from WWDC 2019, or [Meet Swift Package plugins](https://developer.apple.com/videos/play/wwdc2022/110359/) from WWDC 2022.
+Creating a Swift package is a great way to modularise your code either for personal use, for use privately inside your company, or if you want to release an open source package for the rest of the Swift community to use. Start by reading [creating a Swift package](https://www.swift.org/getting-started/library-swiftpm/), or by watching [Creating Swift Packages](https://developer.apple.com/videos/play/wwdc2019/410/) from WWDC 2019, or [Meet Swift Package plugins](https://developer.apple.com/videos/play/wwdc2022/110359/) from WWDC 2022.
 
 Then, if you'd like to let other members of the community use your open source package, [add it to the Swift Package Index](https://swiftpackageindex.com/add-a-package).
 
