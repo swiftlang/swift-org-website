@@ -14,9 +14,9 @@ Here are three changes that can help with your everyday debugging workflows.
 
 ### Faster variable inspection with the `p` and `po` commands
 
-LLDB provides the shorthand `p` command alias to inspect variables and `po` to call the debugDescription property of objects. Originally, these were aliases for the rather heavyweight `expression` and `expression -O` commands. In Swift 5.9, the `p` and `po` command aliases have been redefined to the new `dwim-print` command. The `dwim-print` command prints values using the most user-friendly implementation. "DWIM" is an acronym for "Do What I Mean". Specifically, when printing variables, `dwim-print` will use the same implementation as `frame variable` or `v` instead of the more expensive expression evaluator.
+LLDB provides the shorthand `p` command alias to inspect variables and `po` to call the debugDescription property of objects. Originally, these were aliases for the rather heavyweight `expression` and `expression -O` commands. In Swift 5.9, the `p` and `po` command aliases have been redefined to the new `dwim-print` [command](https://reviews.llvm.org/D138315 "LLVM review"). The `dwim-print` command prints values using the most user-friendly implementation. "DWIM" is an acronym for "Do What I Mean". Specifically, when printing variables, `dwim-print` will use the same implementation as `frame variable` or `v` instead of the more expensive expression evaluator.
 
-In addition to being faster, using `p` no longer creates persistent result variables like `$R0`, which are often unused in debugging sessions. Persistent result variables not only incur overhead but also retain any objects they contain, which can be an unexpected side effect for the program execution.
+In addition to being faster, using `p` no longer creates [persistent result variables](https://reviews.llvm.org/D145609 "LLVM review") like `$R0`, which are often unused in debugging sessions. Persistent result variables not only incur overhead but also retain any objects they contain, which can be an unexpected side effect for the program execution.
 
 Users who want persistent results on occasion, can use `expression` (or a unique prefix such as `expr`) directly instead of `p`. If you wish to enable persistent results every time, you can take advantage of LLDB's handy alias feature, by putting the following into the `~/.lldbinit` file:
 
@@ -38,9 +38,6 @@ New behavior in Swift 5.9:
 (lldb) po 0x00006000025c43d0
 <MyApp.AppDelegate: 0x6000025c43d0>
 ```
-
-See [Introduce dwim-print command](https://reviews.llvm.org/D138315 "LLVM review") and [Change dwim-print to default to disabled persistent results](https://reviews.llvm.org/D145609 "LLVM review") for the patches that introduced these changes.
-
 
 ### Support for generic type parameters in expressions
 
