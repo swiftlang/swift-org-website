@@ -11,6 +11,12 @@ Browse a small selection of interesting packages in popular categories from arou
 
 {% include_relative _package-lists.html %}
 
+## Create Your Own
+
+Creating a Swift package is a great way to modularise your code either for personal use, for use privately inside your company, or if you want to release an open source package for the rest of the Swift community to use. Start by reading [creating a standalone package with Xcode](https://developer.apple.com/documentation/xcode/creating-a-standalone-swift-package-with-xcode), or by watching [Creating Swift Packages](https://developer.apple.com/videos/play/wwdc2019/410/) from WWDC 2019, or [Meet Swift Package plugins](https://developer.apple.com/videos/play/wwdc2022/110359/) from WWDC 2022.
+
+Then, if you'd like to let other members of the community use your open source package, [add it to the Swift Package Index](https://swiftpackageindex.com/add-a-package).
+
 ## Next Steps
 
 The package lists above show a selection of the broader Swift package ecosystem. The [Swift Package Index](https://swiftpackageindex.com/) is a community-run search engine for Swift packages with powerful filters to help you find the packages that work for your project. For example, you could search for packages that:
