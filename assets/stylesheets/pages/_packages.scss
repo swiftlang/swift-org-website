@@ -1,3 +1,41 @@
+.category-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+
+  .category {
+    border: 1px solid var(--color-fill-tertiary);
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+
+    &.featured {
+      grid-column: span 2;
+    }
+
+    @media only screen and(max-width: 767px) {
+    }
+
+    h3 {
+      line-height: 1.4;
+      font-size: 1.4rem;
+      padding-top: 0;
+    }
+
+    p {
+      flex-grow: 1;
+      color: var(--color-secondary-label);
+    }
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 nav.package-categories {
   label[for="category-select"],
   #category-select {
