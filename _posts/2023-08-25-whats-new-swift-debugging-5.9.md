@@ -16,14 +16,16 @@ Here are three changes that can help with your everyday debugging workflows.
 
 LLDB provides the shorthand `p` command alias to inspect variables and `po` to call the debugDescription property of objects. Originally, these were aliases for the rather heavyweight `expression` and `expression -O` commands. In Swift 5.9, the `p` and `po` command aliases have been redefined to the new `dwim-print` command. The `dwim-print` command prints values using the most user-friendly implementation. "DWIM" is an acronym for "Do What I Mean". Specifically, when printing variables, `dwim-print` will use the same implementation as `frame variable` or `v` instead of the more expensive expression evaluator.
 
-"In addition to being faster, using `p` no longer creates persistent result variables like `$R0`, which are often unused in debugging sessions. Persistent result variables not only incur overhead but also retain any objects they contain, which can be an unexpected side effect for the program execution. Users who want persistent results on occasion, can use `expression` (or a unique prefix such as `expr`) directly instead of `p`. To enable persistent results every time, the `p` alias can be redefined in the `~/.lldbinit` file:
+In addition to being faster, using `p` no longer creates persistent result variables like `$R0`, which are often unused in debugging sessions. Persistent result variables not only incur overhead but also retain any objects they contain, which can be an unexpected side effect for the program execution.
+
+Users who want persistent results on occasion, can use `expression` (or a unique prefix such as `expr`) directly instead of `p`. If you wish to enable persistent results every time, you can take advantage of LLDB's handy alias feature, by putting the following into the `~/.lldbinit` file:
 
 ```
 command unalias p
 command alias p dwim-print --persistent-result on --
 ```
 
-The `dwim-print` command also gives `po` new functionality. The `po` command can now print Swift objects by their *address*. When running `po <object-address>`, LLDB's embedded Swift compiler will automatically evaluate the expression `unsafeBitCast(<object-address>, to: AnyObject.self)` under the hood to produce the expected result.
+The `dwim-print` command also gives `po` new functionality. The `po` command can now print Swift objects even when only given a raw *address*. When running `po <object-address>`, LLDB's embedded Swift compiler will automatically evaluate the expression `unsafeBitCast(<object-address>, to: AnyObject.self)` under the hood to produce the expected result.
 
 Old behavior in Swift 5.8 and earlier:
 ```
