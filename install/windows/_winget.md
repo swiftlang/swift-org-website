@@ -7,7 +7,7 @@
    ~~~ batch
    winget install --id Git.Git -e
    winget install --id Python.Python.3.10 -e
-   winget install --id Microsoft.VisualStudio.2019.Community --exact -—force --custom "—add Microsoft.VisualStudio.Component.Windows10SDK.19041 —add Microsoft.VisualStudio.Component.VC.Tools.x86.x64"
+   winget install --id Microsoft.VisualStudio.2019.Community --exact -—force --custom "--add Microsoft.VisualStudio.Component.Windows10SDK.19041 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64"
    ~~~
 
    Start up a new command-line shell (eg. Command Prompt, Windows PowerShell) and install the Python library `six`.
