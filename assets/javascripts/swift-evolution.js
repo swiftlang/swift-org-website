@@ -295,7 +295,7 @@ function renderSearchBar () {
 
   if (implementedCheckboxIfPresent) {
     // Add an extra row of options to filter by language version
-    var versionRowHeader = html('h5', { id: 'version-options-label', className: 'hidden' }, 'Language Version')
+    var versionRowHeader = html('h5', { id: 'version-options-label', className: 'hidden' }, 'Swift Version')
     var versionRow = html('ul', { id: 'version-options', className: 'filter-list hidden' })
 
     var versionOptions = languageVersions.map(function (version) {
@@ -310,7 +310,7 @@ function renderSearchBar () {
           tabindex: '0',
           role: 'button',
           'for': 'filter-by-swift-' + _idSafeName(version)
-        }, 'Swift ' + version)
+        }, version)
       ])
     })
 
