@@ -167,6 +167,7 @@ jlettner:
 ericasadun:
   name: Erica Sadun
   twitter: ericasadun
+  github: erica
 
 xedin:
    name: Pavel Yaskevich
@@ -176,6 +177,7 @@ xedin:
 tanner:
    name: Tanner Nelson
    twitter: tanner0101
+   github: tanner0101
    about: "Tanner Nelson is member of the Swift Server Workgroup and creator of the Vapor web framework."
 
 stephentyrone:
@@ -286,6 +288,7 @@ tingbecker:
 
 ronavitzur:
     name: Ron Avitzur
+    github: RonAvitzur
     twitter: RonAvitzur
     about: "Ron Avitzur is the author of the Pacific Tech Graphing Calculator"
 
