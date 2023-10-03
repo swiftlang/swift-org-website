@@ -174,7 +174,7 @@
   url: https://github.com/apple/swift-service-context
 
 - name: Swift Distributed Tracing
-  description: A Distributed Tracing API for Swift
+  description: A distributed tracing API for Swift
   maturity: Incubating
   pitched: 2023-09-05
   accepted: 2023-10-03
