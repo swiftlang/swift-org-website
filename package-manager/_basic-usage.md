@@ -1,7 +1,7 @@
 ## Example Usage
 
-In [Getting Started](/getting-started#using-the-package-manager),
-a simple "Hello, world!" program is built with the Swift Package Manager.
+In [Getting Started](/getting-started/cli-swiftpm/),
+a simple command-line tool is built with the Swift Package Manager.
 
 To provide a more complete look at what the Swift Package Manager can do,
 the following example consists of four interdependent packages:

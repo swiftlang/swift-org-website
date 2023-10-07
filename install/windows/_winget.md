@@ -6,7 +6,7 @@
 
    ~~~ batch
    winget install --id Git.Git -e
-   winget install --id Python.Python.3.10 -e
+   winget install --id Python.Python.3.9 -e
    winget install --id Microsoft.VisualStudio.2022.Community --exact --force --custom "--add Microsoft.VisualStudio.Component.Windows11SDK.22000 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64"
    ~~~
 
