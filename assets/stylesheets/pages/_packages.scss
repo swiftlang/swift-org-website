@@ -54,6 +54,14 @@
 }
 
 .package-list {
+  nav {
+    padding-bottom: 20px;
+
+    a[rel="parent"]::before {
+      content: "← ";
+    }
+  }
+
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
