@@ -25,7 +25,7 @@ git clone https://github.com/apple/swift-nio.git
 cd swift-nio
 ```
 
-Once inside the project folder, use the following command to build the app though Docker and copy all build arifacts into `.build/install`. Since this example will be deploying to Ubuntu 18.04, the `-bionic` Docker image is used to build.
+Once inside the project folder, use the following command to build the app though Docker and copy all build artifacts into `.build/install`. Since this example will be deploying to Ubuntu 18.04, the `-bionic` Docker image is used to build.
 
 ```sh
 docker run --rm \
