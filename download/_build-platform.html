@@ -10,7 +10,7 @@
         <tr>
             <td class="download">
                 <span class="release">
-                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>{{ include.platform.xcode }}</a> <sup>1</sup>
+                    <a href="https://itunes.apple.com/app/xcode/id497799835" title="Download" download>{{ include.platform.xcode }}</a>
                 </span>
             </td>
             <td class="arch-tag"> 
@@ -27,12 +27,10 @@
         <tr>
             <td class="download">
                 <span class="release">
-                  
+                  <p title="Download" download>{{ platform.name }}</p>
                   {% if platform.name == "Windows 10" %}
-                    <p title="Download" download>{{ platform.name }} <sup>2</sup></p>
                     {% assign package_extension = 'exe' %}
                   {% else %}
-                    <p title="Download" download>{{ platform.name }}</p>
                     {% assign package_extension = 'tar.gz' %}
                   {% endif %}
                 </span>
@@ -52,7 +50,9 @@
                 {% endif %}
                 {% assign tag_downcase = include.platform.tag | downcase %}
                 <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.{{ package_extension }}">{{ arch }}</a>
+                {% if platform.name != "Windows 10" %}
                 <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.{{ package_extension }}.sig" title="PGP Signature" class="signature">Signature ({{ arch }})</a>
+                {% endif %}
             {% endfor %}
             </td>
             <td class="docker-tag">
@@ -66,6 +66,3 @@
         {% endfor %}
     </tbody>
 </table>
-
-<sup>1</sup> Swift {{ include.platform.name }} is available as part of <a href="https://itunes.apple.com/app/xcode/id497799835">{{ include.platform.xcode }}</a>.<br>
-<sup>2</sup> Swift {{ include.platform.name }} Windows 10 toolchain is provided by <a href="https://github.com/compnerd">Saleem Abdulrasool</a>. Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
