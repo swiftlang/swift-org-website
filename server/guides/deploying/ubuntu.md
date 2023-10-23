@@ -31,7 +31,7 @@ Once inside the project folder, use the following command to build the app thoug
 docker run --rm \
   -v "$PWD:/workspace" \
   -w /workspace \
-  swift:5.2-bionic  \
+  swift:5.7-bionic  \
   /bin/bash -cl ' \
      swift build && \
      rm -rf .build/install && mkdir -p .build/install && \
