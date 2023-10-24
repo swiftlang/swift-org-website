@@ -215,3 +215,17 @@
           name: communication
         - title: Community Participation
           name: community-participation
+# ------------------------------------------------------------------------------
+- header: Governance
+  pages:
+    - title: Code of Conduct
+      url: /code-of-conduct/
+    - title: License
+      url: /legal/license.html
+    - title: Security
+      url: /support/security.html
+      sections:
+        - title: Security Process
+          name: security-process
+        - title: Security Updates
+          name: security-updates

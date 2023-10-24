@@ -194,9 +194,8 @@ cite {
   border-bottom: 1px solid var(--color-nav-rule);
 
   .wrapper {
-    max-width: 76rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
   }
 }
