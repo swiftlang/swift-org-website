@@ -4,10 +4,6 @@ title: Download Swift
 ---
 
 {% assign xcode_development_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}
-{% assign ubuntu1510_development_builds = site.data.builds.development.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_development_builds = site.data.builds.development.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1604_development_builds = site.data.builds.development.ubuntu1604 | sort: 'date' | reverse %}
-{% assign ubuntu1610_development_builds = site.data.builds.development.ubuntu1610 | sort: 'date' | reverse %}
 {% assign ubuntu1804_development_builds = site.data.builds.development.ubuntu1804 | sort: 'date' | reverse %}
 {% assign ubuntu2004_development_builds = site.data.builds.development.ubuntu2004 | sort: 'date' | reverse %}
 {% assign ubuntu2004_aarch64_development_builds = site.data.builds.development.ubuntu2004-aarch64 | sort: 'date' | reverse %}
@@ -21,19 +17,6 @@ title: Download Swift
 {% assign windows10_development_builds = site.data.builds.development.windows10 | sort: 'date' | reverse %}
 {% assign ubi9_development_builds = site.data.builds.development.ubi9 | sort: 'date' | reverse %}
 {% assign ubi9_aarch64_development_builds = site.data.builds.development.ubi9-aarch64 | sort: 'date' | reverse %}
-
-{% assign xcode_5_8_builds = site.data.builds.swift-5_8-branch.xcode | sort: 'date' | reverse %}
-{% assign ubuntu1804_5_8_builds = site.data.builds.swift-5_8-branch.ubuntu1804 | sort: 'date' | reverse %}
-{% assign ubuntu2004_5_8_builds = site.data.builds.swift-5_8-branch.ubuntu2004 | sort: 'date' | reverse %}
-{% assign ubuntu2004_aarch64_5_8_builds = site.data.builds.swift-5_8-branch.ubuntu2004-aarch64 | sort: 'date' | reverse %}
-{% assign ubuntu2204_5_8_builds = site.data.builds.swift-5_8-branch.ubuntu2204 | sort: 'date' | reverse %}
-{% assign ubuntu2204_aarch64_5_8_builds = site.data.builds.swift-5_8-branch.ubuntu2204-aarch64 | sort: 'date' | reverse %}
-{% assign amazonlinux2_5_8_builds = site.data.builds.swift-5_8-branch.amazonlinux2 | sort: 'date' | reverse %}
-{% assign amazonlinux2_aarch64_5_8_builds = site.data.builds.swift-5_8-branch.amazonlinux2-aarch64 | sort: 'date' | reverse %}
-{% assign centos7_5_8_builds = site.data.builds.swift-5_8-branch.centos7 | sort: 'date' | reverse %}
-{% assign ubi9_5_8_builds = site.data.builds.swift-5_8-branch.ubi9 | sort: 'date' | reverse %}
-{% assign ubi9_aarch64_5_8_builds = site.data.builds.swift-5_8-branch.ubi9-aarch64 | sort: 'date' | reverse %}
-{% assign windows10_5_8_builds = site.data.builds.swift-5_8-branch.windows10 | sort: 'date' | reverse %}
 
 {% assign xcode_5_9_builds = site.data.builds.swift-5_9-branch.xcode | sort: 'date' | reverse %}
 {% assign ubuntu1804_5_9_builds = site.data.builds.swift-5_9-branch.ubuntu1804 | sort: 'date' | reverse %}
@@ -60,49 +43,7 @@ title: Download Swift
 {% assign ubi9_5_10_builds = site.data.builds.swift-5_10-branch.ubi9 | sort: 'date' | reverse %}
 {% assign ubi9_aarch64_5_10_builds = site.data.builds.swift-5_10-branch.ubi9-aarch64 | sort: 'date' | reverse %}
 
-
-{% assign xcode_2_2_builds = site.data.builds.swift-2_2-branch.xcode | sort: 'date' | reverse %}
-{% assign ubuntu1510_2_2_builds = site.data.builds.swift-2_2-branch.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_2_2_builds = site.data.builds.swift-2_2-branch.ubuntu1404 | sort: 'date' | reverse %}
-
-{% assign ubuntu1510_3_0_p1_builds = site.data.builds.swift-3_0-preview-1.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_p1_builds = site.data.builds.swift-3_0-preview-1.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1510_3_0_p2_builds = site.data.builds.swift-3_0-preview-2.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_p2_builds = site.data.builds.swift-3_0-preview-2.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1510_3_0_p3_builds = site.data.builds.swift-3_0-preview-3.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_p3_builds = site.data.builds.swift-3_0-preview-3.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1510_3_0_p4_builds = site.data.builds.swift-3_0-preview-4.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_p4_builds = site.data.builds.swift-3_0-preview-4.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1510_3_0_p5_builds = site.data.builds.swift-3_0-preview-5.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_p5_builds = site.data.builds.swift-3_0-preview-5.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1510_3_0_p6_builds = site.data.builds.swift-3_0-preview-6.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_p6_builds = site.data.builds.swift-3_0-preview-6.ubuntu1404 | sort: 'date' | reverse %}
-
-{% assign ubuntu1510_3_0_gmc_builds = site.data.builds.swift-3_0-GM-CANDIDATE.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_gmc_builds = site.data.builds.swift-3_0-GM-CANDIDATE.ubuntu1404 | sort: 'date' | reverse %}
-
-
-{% assign ubuntu1510_3_0_1_p1_builds = site.data.builds.swift-3_0_1-preview-1.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_1_p1_builds = site.data.builds.swift-3_0_1-preview-1.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1604_3_0_1_p1_builds = site.data.builds.swift-3_0_1-preview-1.ubuntu1604 | sort: 'date' | reverse %}
-{% assign ubuntu1510_3_0_1_p2_builds = site.data.builds.swift-3_0_1-preview-2.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_1_p2_builds = site.data.builds.swift-3_0_1-preview-2.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1604_3_0_1_p2_builds = site.data.builds.swift-3_0_1-preview-2.ubuntu1604 | sort: 'date' | reverse %}
-{% assign ubuntu1510_3_0_1_p3_builds = site.data.builds.swift-3_0_1-preview-3.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_1_p3_builds = site.data.builds.swift-3_0_1-preview-3.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1604_3_0_1_p3_builds = site.data.builds.swift-3_0_1-preview-3.ubuntu1604 | sort: 'date' | reverse %}
-
-{% assign ubuntu1510_3_0_1_gmc_builds = site.data.builds.swift-3_0_1-GM-CANDIDATE.ubuntu1510 | sort: 'date' | reverse %}
-{% assign ubuntu1404_3_0_1_gmc_builds = site.data.builds.swift-3_0_1-GM-CANDIDATE.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1604_3_0_1_gmc_builds = site.data.builds.swift-3_0_1-GM-CANDIDATE.ubuntu1604 | sort: 'date' | reverse %}
-
-{% assign ubuntu1604_3_0_2_p1_builds = site.data.builds.swift-3_0_2-preview-1.ubuntu1604 | sort: 'date' | reverse %}
-
-{% assign xcode_4_2_convergence_builds = site.data.builds.swift-4_2-convergence.xcode | sort: 'date' | reverse %}
-{% assign ubuntu1404_4_2_convergence_builds = site.data.builds.swift-4_2-convergence.ubuntu1404 | sort: 'date' | reverse %}
-{% assign ubuntu1604_4_2_convergence_builds = site.data.builds.swift-4_2-convergence.ubuntu1604 | sort: 'date' | reverse %}
-{% assign ubuntu1610_4_2_convergence_builds = site.data.builds.swift-4_2-convergence.ubuntu1610 | sort: 'date' | reverse %}
-{% assign ubuntu1804_4_2_convergence_builds = site.data.builds.swift-4_2-convergence.ubuntu1804 | sort: 'date' | reverse %}
+{% assign swift_5_9_1_release_build = site.data.builds | where: 'name', '5.9.1' | first %}
 
 
 ## Releases
@@ -243,4 +184,6 @@ but they have not gone through the full testing that is performed for official r
 {% include getting-started/_installing.md %}
 
 Swift is covered by the Swift License at [swift.org/LICENSE.txt](/LICENSE.txt).
+
+
 
