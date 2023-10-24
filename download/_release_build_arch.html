@@ -1,13 +1,12 @@
 <tr>
     <td class="download">
         <span class="release">
-          
-          {% if include.name contains "Windows" %}
-          <p title="Download" download>{{ include.name }}<sup> 2</sup></p>
-           
-          {% else %}
-          <p title="Download" download>{{ include.name }}</p>
-          {% endif %}
+          <p title="Download" download>
+            {{ include.name }}
+            {% if include.name contains "Windows" and include.build.date < "2023-10-19" %}
+              <sup> 2</sup>
+            {% endif %}
+          </p>
         </span>
     </td>
     {% if include.arch %}

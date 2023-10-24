@@ -50,7 +50,7 @@
                 {% endif %}
                 {% assign tag_downcase = include.platform.tag | downcase %}
                 <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.{{ package_extension }}">{{ arch }}</a>
-                {% unless platform.name contains "Windows" %}
+                {% unless platform.name contains "Windows" and include.platform.date >= "2023-10-19" %}
                 <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.{{ package_extension }}.sig" title="PGP Signature" class="signature">Signature ({{ arch }})</a>
                 {% endunless %}
             {% endfor %}
