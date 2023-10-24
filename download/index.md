@@ -53,7 +53,7 @@ title: Download Swift
 Date: {{ site.data.builds.swift_releases.last.date | date: '%B %-d, %Y' }}<br>
 Tag: [{{site.data.builds.swift_releases.last.tag}}](https://github.com/apple/swift/releases/tag/{{ site.data.builds.swift_releases.last.tag }})
 
-{% include_relative _build-release.html platform=site.data.builds.swift_releases.last %}
+{% include_relative _build-release.html release=site.data.builds.swift_releases.last %}
 
 <details class="download">
   <summary>Older Releases</summary>
@@ -64,7 +64,7 @@ Tag: [{{site.data.builds.swift_releases.last.tag}}](https://github.com/apple/swi
 	Date: {{ release.date | date: '%B %-d, %Y' }}<br>
 	Tag: <a href="https://github.com/apple/swift/releases/tag/{{ release.tag }}">{{ release.tag }}</a>
 
-	{% include_relative _build-release.html platform=release %}
+	{% include_relative _build-release.html release=release %}
 {% endunless %}
 
 {% endfor %}
@@ -100,7 +100,7 @@ but they have not gone through the full testing that is performed for official r
         {% include_relative _build-snapshot.html platform="Linux" build=centos7_development_builds.first name="CentOS 7" docker_tag="nightly-centos7" platform_dir="centos7" branch_dir="development" arch="x86_64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=amazonlinux2_development_builds.first build_2=amazonlinux2_aarch64_development_builds.first name="Amazon Linux 2" docker_tag="nightly-amazonlinux2" platform_dir="amazonlinux2" platform_dir_2="amazonlinux2-aarch64" branch_dir="development" arch="x86_64" arch_2="aarch64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=ubi9_development_builds.first build_2=ubi9_aarch64_development_builds.first name="Red Hat Universal Base Image 9" docker_tag="Coming Soon" platform_dir="ubi9" platform_dir_2="ubi9-aarch64" branch_dir="development" arch="x86_64" arch_2="aarch64" %}
-        {% include_relative _build-snapshot.html platform="windows" build=windows10_development_builds.first name="Windows 10" platform_dir="windows10" branch_dir="development" arch="x86_64" %}
+        {% include_relative _build-snapshot.html platform="Windows" build=windows10_development_builds.first name="Windows 10" platform_dir="windows10" branch_dir="development" arch="x86_64" %}
     </tbody>
 </table>
 
@@ -139,7 +139,7 @@ but they have not gone through the full testing that is performed for official r
         {% include_relative _build-snapshot.html platform="Linux" build=centos7_5_10_builds.first name="CentOS 7" docker_tag="nightly-5.10-centos7" platform_dir="centos7" branch_dir="swift-5.10-branch" arch="x86_64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=amazonlinux2_5_10_builds.first build_2=amazonlinux2_aarch64_5_10_builds.first name="Amazon Linux 2" docker_tag="nightly-5.10-amazonlinux2" platform_dir="amazonlinux2" platform_dir_2="amazonlinux2-aarch64" branch_dir="swift-5.10-branch" arch="x86_64" arch_2="aarch64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=ubi9_5_10_builds.first build_2=ubi9_aarch64_5_10_builds.first name="Red Hat Universal Base Image 9" docker_tag="nightly-5.10-rhel-ubi9" platform_dir="ubi9" platform_dir_2="ubi9-aarch64" branch_dir="swift-5.10-branch" arch="x86_64" arch_2="aarch64" %}
-        <!-- {% include_relative _build-snapshot.html platform="windows" build=windows10_5_10_builds.first name="Windows 10" platform_dir="windows10" branch_dir="swift-5.10-branch" arch="x86_64" %} -->
+        <!-- {% include_relative _build-snapshot.html platform="Windows" build=windows10_5_10_builds.first name="Windows 10" platform_dir="windows10" branch_dir="swift-5.10-branch" arch="x86_64" %} -->
     </tbody>
 </table>
 
@@ -173,7 +173,7 @@ but they have not gone through the full testing that is performed for official r
         {% include_relative _build-snapshot.html platform="Linux" build=centos7_5_9_builds.first name="CentOS 7" docker_tag="nightly-5.9-centos7" platform_dir="centos7" branch_dir="swift-5.9-branch" arch="x86_64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=amazonlinux2_5_9_builds.first build_2=amazonlinux2_aarch64_5_9_builds.first name="Amazon Linux 2" docker_tag="nightly-5.9-amazonlinux2" platform_dir="amazonlinux2" platform_dir_2="amazonlinux2-aarch64" branch_dir="swift-5.9-branch" arch="x86_64" arch_2="aarch64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=ubi9_5_9_builds.first build_2=ubi9_aarch64_5_9_builds.first name="Red Hat Universal Base Image 9" docker_tag="nightly-5.9-rhel-ubi9" platform_dir="ubi9" platform_dir_2="ubi9-aarch64" branch_dir="swift-5.9-branch" arch="x86_64" arch_2="aarch64" %}
-        {% include_relative _build-snapshot.html platform="windows" build=windows10_5_9_builds.first name="Windows 10" platform_dir="windows10" branch_dir="swift-5.9-branch" arch="x86_64" %}
+        {% include_relative _build-snapshot.html platform="Windows" build=windows10_5_9_builds.first name="Windows 10" platform_dir="windows10" branch_dir="swift-5.9-branch" arch="x86_64" %}
     </tbody>
 </table>
 

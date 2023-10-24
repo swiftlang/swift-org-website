@@ -4,7 +4,7 @@
             <p title="Download" download>
             {{ include.name }}
             {% assign build_date_string = include.build.date | date: '%Y-%m-%d' %}
-            {% if include.name contains "Windows" and build_date_string < swift_5_9_1_release_date_string %}
+            {% if include.platform == "Windows" and build_date_string < swift_5_9_1_release_date_string %}
                 <sup> 1</sup>
             {% endif %}
             </p>
