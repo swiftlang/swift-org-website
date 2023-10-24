@@ -61,7 +61,6 @@ footer[role="contentinfo"] aside i {
   display: block;
   float: right;
   height: var(--icon-size);
-  margin-left: 1em;
   width: var(--icon-size);
 }
 
