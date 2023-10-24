@@ -1,3 +1,8 @@
+- date: 2023-10-24 10:10:00-06:00
+  dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-10-24-a
+  download: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-10-24-a-amazonlinux2.tar.gz
+  download_signature: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-10-24-a-amazonlinux2.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2023-10-21 10:10:00-06:00
   dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-10-21-a
   download: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-10-21-a-amazonlinux2.tar.gz
