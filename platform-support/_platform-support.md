@@ -67,7 +67,7 @@ The table below list the available capabilities on each platform for running Swi
 | **CentOS**                        | ✓       | ✓   |
 | **Amazon Linux**                  | ✓       | ✓   |
 | **Red Hat Universal Base Image**  | ✓       | ✓   |
-| **Windows**                       | ✓       | ✓   |
+| **Windows**                       | ✓       |     |
 
 ## Platform Owners
 
