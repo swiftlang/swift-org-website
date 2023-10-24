@@ -2,7 +2,7 @@
     <td class="download">
         <span class="release">
           
-          {% if include.name == "Windows 10" %}
+          {% if include.name contains "Windows" %}
           <p title="Download" download>{{ include.name }}<sup> 2</sup></p>
            
           {% else %}

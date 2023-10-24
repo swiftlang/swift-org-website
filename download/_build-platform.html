@@ -28,7 +28,7 @@
             <td class="download">
                 <span class="release">
                   <p title="Download" download>{{ platform.name }}</p>
-                  {% if platform.name == "Windows 10" %}
+                  {% if platform.name contains "Windows" %}
                     {% assign package_extension = 'exe' %}
                   {% else %}
                     {% assign package_extension = 'tar.gz' %}
@@ -50,9 +50,9 @@
                 {% endif %}
                 {% assign tag_downcase = include.platform.tag | downcase %}
                 <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.{{ package_extension }}">{{ arch }}</a>
-                {% if platform.name != "Windows 10" %}
+                {% unless platform.name contains "Windows" %}
                 <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.{{ package_extension }}.sig" title="PGP Signature" class="signature">Signature ({{ arch }})</a>
-                {% endif %}
+                {% endunless %}
             {% endfor %}
             </td>
             <td class="docker-tag">

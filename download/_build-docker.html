@@ -2,7 +2,7 @@
     <td class="download">
         <span class="release">
           <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.download }}" title="Download" download>{{ include.name }}</a>
-          {% if include.name == "Windows 10" %}
+          {% if include.name contains "Windows" %}
            <sup>1</sup>
           {% endif %}
           {% if include.build.download_signature %}
