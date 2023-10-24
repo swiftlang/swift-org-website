@@ -77,7 +77,7 @@ Tag: [{{site.data.builds.swift_releases.last.tag}}](https://github.com/apple/swi
 
 ### Trunk Development (main)
 
-Development Snapshots are prebuilt binaries
+Development snapshots are prebuilt binaries
 that are automatically created from mainline development branches.
 These snapshots are not official releases.
 They have gone through automated unit testing,
@@ -106,7 +106,7 @@ but they have not gone through the full testing that is performed for official r
 
 {% assign windows10_development_build_date_string = windows10_development_builds.first.date | date: '%Y-%m-%d' %}
 {% if windows10_development_build_date_string < swift_5_9_1_release_date_string %}
-<sup>1</sup> Swift Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
+<sup>1</sup> This Swift Windows 10 development snapshot is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
 {% endif %}
 
 <details class="download">
@@ -116,7 +116,7 @@ but they have not gone through the full testing that is performed for official r
 
 ### Swift 5.10 Development
 
-Swift 5.10 Snapshots are prebuilt binaries
+Swift 5.10 snapshots are prebuilt binaries
 that are automatically created from `release/5.10` branch.
 These snapshots are not official releases.
 They have gone through automated unit testing,
@@ -150,7 +150,7 @@ but they have not gone through the full testing that is performed for official r
 
 ### Swift 5.9 Development
 
-Swift 5.9 Snapshots are prebuilt binaries
+Swift 5.9 snapshots are prebuilt binaries
 that are automatically created from `release/5.9` branch.
 These snapshots are not official releases.
 They have gone through automated unit testing,
@@ -179,7 +179,7 @@ but they have not gone through the full testing that is performed for official r
 
 {% assign windows10_5_9_build_date_string = windows10_5_9_builds.first.date | date: '%Y-%m-%d' %}
 {% if windows10_5_9_build_date_string < swift_5_9_1_release_date_string %}
-<sup>1</sup> Swift Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
+<sup>1</sup> This Swift 5.9 Windows 10 snapshot is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
 {% endif %}
 
 <details class="download">
