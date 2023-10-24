@@ -136,7 +136,7 @@ Amazon Linux 2
 
 Windows 10
 
-<table id="linux-builds" class="downloads">
+<table id="windows-builds" class="downloads">
     <thead>
         <tr>
             <th class="download">Download</th>
