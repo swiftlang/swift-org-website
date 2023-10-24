@@ -43,7 +43,8 @@ title: Download Swift
 {% assign ubi9_5_10_builds = site.data.builds.swift-5_10-branch.ubi9 | sort: 'date' | reverse %}
 {% assign ubi9_aarch64_5_10_builds = site.data.builds.swift-5_10-branch.ubi9-aarch64 | sort: 'date' | reverse %}
 
-{% assign swift_5_9_1_release_build = site.data.builds | where: 'name', '5.9.1' | first %}
+{% assign swift_5_9_1_release_build = site.data.builds.swift_releases | where: 'name', '5.9.1' | first %}
+{% assign swift_5_9_1_release_date_string = swift_5_9_1_release_build.date | date: '%Y-%m-%d' %}
 
 
 ## Releases
@@ -103,7 +104,10 @@ but they have not gone through the full testing that is performed for official r
     </tbody>
 </table>
 
+{% assign windows10_development_build_date_string = windows10_development_builds.first.date | date: '%Y-%m-%d' %}
+{% if windows10_development_build_date_string < swift_5_9_1_release_date_string %}
 <sup>1</sup> Swift Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
+{% endif %}
 
 <details class="download">
   <summary>Older Snapshots</summary>
@@ -173,7 +177,10 @@ but they have not gone through the full testing that is performed for official r
     </tbody>
 </table>
 
+{% assign windows10_5_9_build_date_string = windows10_5_9_builds.first.date | date: '%Y-%m-%d' %}
+{% if windows10_5_9_build_date_string < swift_5_9_1_release_date_string %}
 <sup>1</sup> Swift Windows 10 toolchain is provided by [Saleem Abdulrasool](https://github.com/compnerd). Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
+{% endif %}
 
 <details class="download">
   <summary>Older Snapshots</summary>

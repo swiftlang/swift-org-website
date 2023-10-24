@@ -27,12 +27,17 @@
         <tr>
             <td class="download">
                 <span class="release">
-                  <p title="Download" download>{{ platform.name }}</p>
-                  {% if platform.name contains "Windows" %}
-                    {% assign package_extension = 'exe' %}
-                  {% else %}
-                    {% assign package_extension = 'tar.gz' %}
-                  {% endif %}
+                    <p title="Download" download>
+                        {{ platform.name }}
+                        {% if platform.name contains "Windows" and include.platform.date < swift_5_9_1_release_build.date %}
+                            <sup> 1</sup>
+                        {% endif %}
+                    </p>
+                    {% if platform.name contains "Windows" %}
+                        {% assign package_extension = 'exe' %}
+                    {% else %}
+                        {% assign package_extension = 'tar.gz' %}
+                    {% endif %}
                 </span>
             </td>
             <td class="arch-tag"> 
@@ -50,7 +55,7 @@
                 {% endif %}
                 {% assign tag_downcase = include.platform.tag | downcase %}
                 <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.{{ package_extension }}">{{ arch }}</a>
-                {% unless platform.name contains "Windows" and include.platform.date >= "2023-10-19" %}
+                {% unless platform.name contains "Windows" and include.platform.date >= swift_5_9_1_release_build.date %}
                 <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.platform.tag}}/{{ include.platform.tag}}-{{ platform_name }}.{{ package_extension }}.sig" title="PGP Signature" class="signature">Signature ({{ arch }})</a>
                 {% endunless %}
             {% endfor %}
