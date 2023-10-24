@@ -1,38 +1,44 @@
-<nav role="navigation">
-  <div class="nav-menu-container">
-    <header class="menu-item logo-container" role="banner">
-      <h1 id="logo">
-        <a href="/" title="Swift.org" role="img" aria-label="Swift.org">
-          Swift.org
-        </a>
-      </h1>
-    </header>
-    <div id="menu-toggle" class="menu-item menu-toggle open"></div>
-  </div>
+<header class="site-navigation" role="navigation">
+  <div class="wrapper">
+    <h1 id="logo">
+      <a href="/" title="Swift.org">
+        <img src="/assets/images/swift.svg" alt="Swift Logo">
+      </a>
+    </h1>
+  
+    <nav>
+      <ul class="navigation-links">
+        <li>
+          <a href="/blog">Blog</a>
+        </li>
 
-  <div class="list-items">
-    {% for nav in site.data.navigation %}
-    {% if nav.header %}
-    <h2>{{ nav.header }}</h2>
-    {% endif %}
-    <ul>
-      {% for navpage in nav.pages %}
-      {% if page.url == navpage.url %}
-      <li class="active">
-      {% else %}
-      <li>
-      {% endif %}
-        <a href="{{ navpage.url }}">{{ navpage.title }}</a>
-        {% if page.url == navpage.url and navpage.sections %}
-        <ul>
-          {% for section in navpage.sections %}
-          <li><a href="{{ navpage.url }}#{{ section.name }}">{{ section.title }}</a></li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-    {% endfor %}
+        <li>
+          <a href="/getting-started">Getting Started</a>
+        </li>
+
+        {% for nav in site.data.navigation %}
+          <li class="nav-dropdown">
+            <span>{{ nav.header }} <i>&#9663;</i></span>
+            <ul class="nav-menu">
+              {% for navpage in nav.pages %}
+                {% if page.url == navpage.url %}
+                  <li class="active">
+                {% else %}
+                  <li>
+                {% endif %}
+                  <a href="{{ navpage.url }}">{{ navpage.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+    
+            {% endfor %}
+  
+        <li>
+          <a class="cta" href="/download">Download <strong>5.9.1</strong></a>
+        </li>
+      </ul>
+    </nav>
   </div>
-</nav>
+ 
+</header>
