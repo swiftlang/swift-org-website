@@ -71,3 +71,8 @@
         {% endfor %}
     </tbody>
 </table>
+
+{% assign windows10_platform = include.platform.platforms | where: 'name', 'Windows 10' | size %}
+{% if windows10_platform > 0 and include.platform.date < swift_5_9_1_release_build.date %}
+<sup>1</sup> Swift {{ include.platform.name }} Windows 10 toolchain is provided by <a href="https://github.com/compnerd">Saleem Abdulrasool</a>. Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>
+{% endif %}
