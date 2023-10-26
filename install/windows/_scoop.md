@@ -13,12 +13,12 @@ Invoke-RestMethod get.scoop.sh | Invoke-Expression
 
    ~~~ batch
    scoop bucket add versions
-   scoop install python310
+   scoop install python39
    ~~~
 
 0. Install platform dependencies:
 
-   The platform dependencies cannot be installed through Scoop as the install rules cannot install all required components. They will be installed through the Visual Studio installer.
+   The platform dependencies cannot be installed through Scoop as the install rules cannot install all required components. They will be installed through the Visual Studio 2022 Community installer. You may change the Visual Studio edition depending on your usage and team size.
 
    <div class="warning" markdown="1">
    This code snippet must be run in a traditional Command Prompt (`cmd.exe`).
