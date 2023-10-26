@@ -16,12 +16,6 @@ Invoke-RestMethod get.scoop.sh | Invoke-Expression
    scoop install python310
    ~~~
 
-   Start up a new command-line shell (eg. Command Prompt, Windows PowerShell) and install the Python library `six`.
-
-   ~~~ batch
-   pip install six
-   ~~~
-
 0. Install platform dependencies:
 
    The platform dependencies cannot be installed through Scoop as the install rules cannot install all required components. They will be installed through the Visual Studio installer.

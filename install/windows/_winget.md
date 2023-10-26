@@ -17,11 +17,3 @@
    ~~~ batch
    winget install --id Swift.Toolchain -e
    ~~~
-
-0. Install required Python libraries:
-
-   Start up a new command-line shell (eg. Command Prompt, Windows PowerShell) and install the Python library `six`.
-
-   ~~~ batch
-   pip install six
-   ~~~
