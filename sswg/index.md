@@ -13,18 +13,35 @@ Analogous to the [Core Team](/community#core-team) for Swift, the workgroup is r
 
 The current Swift Server workgroup consists of the following people:
 
-* Adam Fowler ([@adam-fowler](https://github.com/adam-fowler))
-* Dave Moser ([@dave-moser](https://github.com/dave-moser), Amazon)
-* Franz Busch ([@FranzBusch](https://github.com/FranzBusch), Apple)
-* Gwynne Raskind ([@gwynne](https://github.com/gwynne), Vapor)
-* Jimmy McDermott ([@jdmcd](https://github.com/jdmcd) , Transeo)
-* Joannis Orlandos ([@joannis](https://github.com/joannis))
-* Konrad Malawski ([@ktoso](https://github.com/ktoso), Apple)
-* Patrick Freed ([@patrickfreed](https://github.com/patrickfreed), MongoDB)
-* Simon Pilkington ([@tachyonics](https://github.com/tachyonics), Amazon)
-* Tim Condon ([@0xTim](https://github.com/0xTim), Vapor)
+{% assign people = site.data.server-workgroup.members | sort: "name" %}
+<ul>
+{% for person in people %}
+<li> {{ person.name }}
+{% if person.affiliation %}
+  , {{ person.affiliation }}
+{% endif %}
+{% if person.github %}
+  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+{% endif %}
+</li>
+{% endfor %}
+</ul>
 
-With Tom Doron ([@tomerd](https://github.com/tomerd), Apple) representing the Swift core team.
+We are grateful for the service of the following emeritus workgroup members:
+
+{% assign people = site.data.server-workgroup.emeriti | sort: "name" %}
+<ul>
+{% for person in people %}
+<li> {{ person.name }}
+{% if person.affiliation %}
+  , {{ person.affiliation }}
+{% endif %}
+{% if person.github %}
+  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+{% endif %}
+</li>
+{% endfor %}
+</ul>
 
 ## Communication
 
@@ -67,7 +84,7 @@ The Swift Server Workgroup has a [process](/sswg/incubation-process.html) which 
     </tr>
   </thead>
   <tbody>
-    {% for project in site.data.sswg.projects %}
+    {% for project in site.data.server-workgroup.projects %}
     <tr>
       <td><a href="{{ project.url }}">{{ project.name }}</a></td>
       <td>{{ project.description }}</td>
