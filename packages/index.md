@@ -13,7 +13,9 @@ Browse a small selection of interesting packages in popular categories from arou
 
 ## Create Your Own
 
-Creating a Swift package is a great way to modularise your code either for personal use, for use privately inside your company, or if you want to release an open source package for the rest of the Swift community to use. Start by reading [creating a Swift package](/getting-started/library-swiftpm/), or by watching [Creating Swift Packages](https://developer.apple.com/videos/play/wwdc2019/410/) from WWDC 2019, or [Meet Swift Package plugins](https://developer.apple.com/videos/play/wwdc2022/110359/) from WWDC 2022.
+Creating a Swift package is a great way to modularise your code either for personal use, for private use inside your company, or to release an open source package for the rest of the Swift community to use.
+
+Start by reading [creating a Swift package](/getting-started/library-swiftpm/), or by watching [Creating Swift Packages](https://developer.apple.com/videos/play/wwdc2019/410/) from WWDC 2019, or [Meet Swift Package plugins](https://developer.apple.com/videos/play/wwdc2022/110359/) from WWDC 2022.
 
 To make your package easier to find for other members of the community, [add it to the Swift Package Index](https://swiftpackageindex.com/add-a-package).
 
@@ -25,3 +27,5 @@ The [Swift Package Index](https://swiftpackageindex.com/) is a community-run pac
 - [Have compatibility with both iOS and macOS platforms](https://swiftpackageindex.com/search?query=swiftui+platform:ios,macos)
 - [Include an executable helper or tool](https://swiftpackageindex.com/search?query=swiftui+product:executable)
 - [Have been created by a specific author](https://swiftpackageindex.com/search?query=author:apple)
+
+Whether you use Swift packages to quickly add functionality to your project or you choose to create packages of your own, the Swift package ecosystem is a vibrant and growing part of improving your productivity as a developer.
