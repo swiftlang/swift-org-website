@@ -40,9 +40,8 @@ categories:
           Discussed on [Season 5 Episode 28 of Compile Swift](https://www.compileswift.com/podcast/s05e28/){:target='_blank'}
           podcast.
       - name: Automerge
-        description: Automerge-swift is a low-level library that provides an implementation
-          of Automerge in Swift. Automerge is a library of data structures for building
-          collaborative applications.
+        description: Automerge-swift is a low-level library that implements the Automerge
+          library of data structures for building collaborative applications in Swift.
         owner: Automerge
         swift_compatibility: 5.7+
         platform_compatibility:
@@ -104,8 +103,8 @@ categories:
     packages:
       - name: SwiftLint
         description: SwiftLint is a tool that enforces Swift style and conventions. It
-          uses AST representation of source files to provide accurate results and can
-          be integrated into Xcode projects and Swift packages.
+          uses the AST representation of source files to provide accurate results and
+          can be integrated into both Xcode projects and Swift packages.
         owner: Realm
         swift_compatibility: 5.7+
         platform_compatibility:
@@ -115,9 +114,9 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/realm/SwiftLint
       - name: swift-testing
-        description: A powerful new testing library for Swift, providing a modern and
-          flexible testing library for Swift with powerful and expressive capabilities.
-          It gives developers more confidence with less code.
+        description: A powerful testing library for Swift, providing a modern and flexible
+          testing library for Swift with powerful and expressive capabilities. It gives
+          developers more confidence with less code.
         owner: Apple
         swift_compatibility: 5.9+
         platform_compatibility:
@@ -129,9 +128,9 @@ categories:
         url: https://swiftpackageindex.com/apple/swift-testing
       - name: Verge
         description: Verge is a state management library for iOS development. It offers
-          a lightweight and efficient way to manage application state using a store-pattern,
-          supporting both UIKit and SwiftUI. Verge supports concurrent processing and
-          includes an ORM for efficient entity management.
+          a lightweight and efficient way to manage application state and supports both
+          UIKit and SwiftUI. It supports concurrent processing and includes an ORM for
+          efficient entity management.
         owner: VergeGroup
         swift_compatibility: 5.7+
         platform_compatibility:
@@ -141,8 +140,7 @@ categories:
         url: https://swiftpackageindex.com/VergeGroup/swift-Verge
       - name: CodableWrappers
         description: Simplify serialization with Property Wrappers. Customize encoding
-          and decoding for Codable types with annotations. Supports various coding strategies
-          and cross-platform usage.
+          and decoding for Codable types with annotations.
         owner: GottaGetSwifty
         swift_compatibility: 5.6+
         platform_compatibility:
@@ -153,9 +151,9 @@ categories:
         license: Apache 2.0
         url: https://swiftpackageindex.com/GottaGetSwifty/CodableWrappers
       - name: SwiftPowerAssert
-        description: Swift Power Assert is a library that provides descriptive assertion
-          messages for tests. It augments assertion failures with information about the
-          values produced during the evaluation of a condition.
+        description: Swift Power Assert provides descriptive assertion messages for tests.
+          It augments assertion failures with information about the values produced during
+          the evaluation of a condition.
         owner: Kishikawa Katsumi
         swift_compatibility: 5.9+
         platform_compatibility:
@@ -199,9 +197,8 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/vapor/vapor
       - name: swift-openapi-generator
-        description: Generate Swift client and server code from an OpenAPI document using
-          the Swift OpenAPI Generator package. Includes multiple repositories for extensibility
-          and supports various transports.
+        description: Generate Swift client and server code from an OpenAPI document. Includes
+          multiple repositories for extensibility and supports various transports.
         owner: Apple
         swift_compatibility: 5.8+
         platform_compatibility:
@@ -212,7 +209,7 @@ categories:
         url: https://swiftpackageindex.com/apple/swift-openapi-generator
       - name: MongoKitten
         description: MongoKitten is a fast, pure Swift MongoDB driver built for Server
-          Side Swift. It supports both MongoDB in server and embedded environments, and
+          Side Swift. It supports both MongoDB in server and embedded environments and
           can be used with Vapor or Hummingbird.
         owner: Orlandos Technologies - OpenSource
         swift_compatibility: 5.7+
@@ -273,8 +270,7 @@ categories:
       - name: Networking
         description: Networking is a Swift library for making network requests with a
           straightforward API. It supports faking requests, caching images, and various
-          types of authentication. It is lightweight, fully tested, and has no external
-          dependencies.
+          types of authentication.
         owner: Elvis
         swift_compatibility: 5.8+
         platform_compatibility:
@@ -285,7 +281,6 @@ categories:
       - name: Networking
         description: Networking is a Swift package that simplifies connecting to a JSON
           API by combining URLSession, async-await (or Combine), Decodable, and Generics.
-          It automates boilerplate code and provides a simple API for fetching data.
         owner: Fresh
         swift_compatibility: 5.6+
         platform_compatibility:
@@ -304,10 +299,8 @@ categories:
         url: https://swiftpackageindex.com/Jimmy-Prime/Networking
       - name: Networking
         description: Networking is a Swift library that provides a network abstraction
-          layer built on top of Alamofire. It offers features like making requests, supporting
-          various response types, cancelling requests, and handling errors. It also includes
-          features like endpoint customization, reachability monitoring, request adapting,
-          and automatic token refreshing.
+          layer built on top of Alamofire. It allows endpoint customization and includes
+          reachability monitoring, request adapting, and automatic token refreshing.
         owner: Ronas IT
         swift_compatibility: 5.6+
         platform_compatibility:
@@ -330,8 +323,7 @@ categories:
       - name: Alamofire
         description: Alamofire is an HTTP networking library written in Swift. It provides
           features such as request/response handling, parameter encoding, authentication,
-          progress tracking, and more. It also offers additional component libraries for
-          image handling and network activity indicator control.
+          progress tracking, and more.
         owner: Alamofire
         swift_compatibility: 5.6+
         platform_compatibility:
