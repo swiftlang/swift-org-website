@@ -9,95 +9,86 @@ categories:
       organised via [this thread in the Swift Forums](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168)
       and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
     packages:
-      - name: swift-composable-architecture
-        description: The Composable Architecture is a library for building applications
-          with state management, composition, side effects, and testing in mind. It can
-          be used with SwiftUI, UIKit, and more.
-        owner: Point-Free
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-composable-architecture
-        note: Featured on [Episode 159](https://www.empowerapps.show/159){:target='_blank'}
-          of the [Empower Apps podcast](https://www.empowerapps.show/){:target='_blank'}.
-      - name: Semaphore
-        description: Semaphore provides a Swift concurrency primitive for synchronizing
-          tasks. It allows tasks to suspend and resume using signals, preventing concurrent
-          execution and limiting resource access. Ideal for controlling task concurrency.
-        owner: "Gwendal Rou\xE9"
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/groue/Semaphore
-        note: Featured on [Episode 158](https://www.empowerapps.show/158){:target='_blank'}
-          of the [Empower Apps podcast](https://www.empowerapps.show/){:target='_blank'}.
-      - name: DataKit
-        description: DataKit is helps you read and write binary formatted data, providing
-          a simple and declarative interface for encoding and decoding data structures
-          into binary format.
-        owner: QuickBird
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/QuickBirdEng/DataKit
-        note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
-          of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
-          podcast.
-      - name: SwiftWhisper
-        description: SwiftWhisper provides an easy way to add transcription functionality
-          to your Swift app or package. It is powered by `whisper.cpp` and supports CoreML
-          and audio conversion.
-        owner: Aaron Taylor
+      - name: SwiftTUI
+        description: SwiftTUI is a library that brings SwiftUI-like functionality to the
+          terminal, allowing developers to build text-based user interfaces. It supports
+          many features from SwiftUI, such as property wrappers, view builders, and modifiers.
+        owner: Rens Breur
         swift_compatibility: 5.6+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
         license: MIT
-        url: https://swiftpackageindex.com/exPHAT/SwiftWhisper
-        note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
-          of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
+        url: https://swiftpackageindex.com/rensbreur/SwiftTUI
+        note:
+          Discussed on [Episode 163 of the Empower Apps Podcast](https://brightdigit.com/episodes/163-swiftly-tooling-with-pol-piella-abadia/){:target='_blank'}
           podcast.
-      - name: CleverBird
-        description: CleverBird simplifies interaction with OpenAI's chat APIs. It focuses
-          on chat-based interactions, supports async calls, token counting/encoding, customization,
-          and streaming responses.
-        owner: B.T. Franklin
+      - name: SwiftGodot
+        description: SwiftGodot provides Swift language bindings for the Godot game engine.
+          Developers can use it to build extensions or embed Godot directly into Swift
+          applications.
+        owner: Miguel de Icaza
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/migueldeicaza/SwiftGodot
+        note:
+          Discussed on [Season 5 Episode 28 of Compile Swift](https://www.compileswift.com/podcast/s05e28/){:target='_blank'}
+          podcast.
+      - name: Automerge
+        description: Automerge-swift is a low-level library that provides an implementation
+          of Automerge in Swift. Automerge is a library of data structures for building
+          collaborative applications.
+        owner: Automerge
         swift_compatibility: 5.7+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
         license: MIT
-        url: https://swiftpackageindex.com/btfranklin/CleverBird
-        note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
-          of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
-          podcast.
-      - name: Stores
-        description: Stores provides a typed key-value storage solution for Codable types,
-          supporting various persistence layers such as User Defaults, File System, Core
-          Data, and the Keychain.
-        owner: Omar Albeik
-        swift_compatibility: 5.7+
+        url: https://swiftpackageindex.com/automerge/automerge-swift
+        note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
+      - name: Grape
+        description: Grape is a Swift library for force simulation and graph visualization.
+          It provides classes for creating simulations and forces and supports both 2D
+          and 3D graphs.
+        owner: Zhen Li
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/omaralbeik/Stores
-        note: Featured on [Episode 32](https://share.transistor.fm/s/661ad422){:target='_blank'}
-          of the [Swift Package Indexing](https://swiftpackageindexing.transistor.fm/){:target='_blank'}
+        url: https://swiftpackageindex.com/li3zhen1/Grape
+        note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
+      - name: Firefly
+        description: Firefly is a pure Swift syntax highlighter for iOS and macOS. It
+          uses regular expressions to detect tokens and color them based on the current
+          theme. It supports line numbers, customizable themes, and multiple languages.
+        owner: Taylor Lineman
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (macOS)
+        license: MIT
+        url: https://swiftpackageindex.com/ActuallyTaylor/Firefly
+        note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
+      - name: Daily
+        description: An SDK for developing video applications on iOS with Daily's real-time
+          audio, video, and vision platform.
+        owner: Daily
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS)
+        license: BSD 2-Clause
+        url: https://swiftpackageindex.com/daily-co/daily-client-ios
+        note:
+          Discussed on [Episode 162 of the Empower Apps Podcast](https://brightdigit.com/episodes/162-building-a-video-sdk-with-marc-schwieterman/){:target='_blank'}
           podcast.
   - name: Packages with Macros
     slug: macros
@@ -181,7 +172,7 @@ categories:
         platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/stackotter/swift-macro-toolkit
-  - name: Swift on server
+  - name: Server
     slug: server
     brief: Do you need a hand putting together a Swift app for the server? Browse some
       packages that get you started.
