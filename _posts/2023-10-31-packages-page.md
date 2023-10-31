@@ -19,6 +19,6 @@ The package lists are powered by the [Swift Package Index](https://swiftpackagei
 
 In addition to finding common categories of packages, you can also browse new and interesting work from across the Swift package ecosystem with the [Community Showcase](/packages/showcase).
 
-The Community Showcase contains a rotating selection of packages being discussed by the Swift community. Anyone can nominate a package in [this forum thread](https://example.com/thread/not/posted/yet), and nominations will be reviewed monthly by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
+The Community Showcase contains a rotating selection of packages being discussed by the Swift community. Anyone can nominate a package in [this forum thread](https://example.com/thread/not/posted/yet), and nominations will be reviewed monthly by the [Swift Website Workgroup](/website-workgroup/).
 
 The new [Packages page](https://www.swift.org/packages) is an exciting step in growing a valuable and thriving package ecosystem for the benefit of all Swift developers.
