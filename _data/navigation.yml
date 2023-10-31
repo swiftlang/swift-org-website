@@ -44,8 +44,8 @@
           name: package-ecosystem
         - title: Create Your Own
           name: create-your-own
-        - title: Next Steps
-          name: next-steps
+        - title: Advanced Search
+          name: advanced-search
     - title: Platform Support
       url: /platform-support/
       sections:
