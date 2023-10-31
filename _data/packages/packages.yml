@@ -6,8 +6,8 @@ categories:
       packages for consideration in this section.
     description: This showcase celebrates new and interesting packages discussed by
       the Swift community. Package selection in this section is an editorial process
-      organised via [this thread in the Swift Forums](https://example.com/) and curated
-      by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
+      organised via [this thread in the Swift Forums](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168)
+      and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
     packages:
       - name: swift-composable-architecture
         description: The Composable Architecture is a library for building applications
