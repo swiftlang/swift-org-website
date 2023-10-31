@@ -27,5 +27,3 @@ The [Swift Package Index](https://swiftpackageindex.com/) is a community-run pac
 - [Have compatibility with both iOS and macOS platforms](https://swiftpackageindex.com/search?query=swiftui+platform:ios,macos)
 - [Include an executable helper or tool](https://swiftpackageindex.com/search?query=swiftui+product:executable)
 - [Have been created by a specific author](https://swiftpackageindex.com/search?query=author:apple)
-
-Whether you use Swift packages to quickly add functionality to your project or you choose to create packages of your own, the Swift package ecosystem is a vibrant and growing part of improving your productivity as a developer.
