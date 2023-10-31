@@ -67,7 +67,7 @@ The table below list the available capabilities on each platform for running Swi
 | **CentOS**                        | ✓       | ✓   |
 | **Amazon Linux**                  | ✓       | ✓   |
 | **Red Hat Universal Base Image**  | ✓       | ✓   |
-| **Windows**                       | ✓       | ✓   |
+| **Windows**                       | ✓       |     |
 
 ## Platform Owners
 
@@ -81,7 +81,7 @@ Platform owners help facilitate contributors to the Swift project to collaborate
 |:--------------------:|:-----------------------------------:|:-------------------------------------------------:|:----------------------------:|
 | **Apple platforms**  | [Docs](/getting-started/#on-macos)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
 | **Linux**            | [Docs](/getting-started/#on-linux)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
-| **Windows**          | [Docs](/getting-started/#on-windows)| [Saleem Abdulrasool](https://github.com/compnerd) | ✓                            |
+| **Windows**          | [Docs](/getting-started/#on-windows)| [Apple Inc.](https://www.apple.com)               | ✓                            |
 
 * Apple platforms includes macOS, iOS, tvOS, and watchOS.
 * Linux includes Ubuntu, CentOS, Amazon Linux and Red Hat Universal Base Image platforms.
