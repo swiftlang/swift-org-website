@@ -6,7 +6,7 @@ title: 'Introducing Packages on Swift.org'
 author: [daveverwer, svenaschmidt]
 ---
 
-Today, Swift.org gains a useful, new [top-level Packages page](https://www.swift.org/packages).
+Today, Swift.org gains a useful, new [top-level Packages page](/packages).
 
 The page provides a streamlined entry to exploring the Swift package ecosystem. It has common categories like [server](/packages/server), [networking](/packages/networking), [testing](/packages/testing), and [logging](/packages/logging), as well as categories of interest like [packages containing macros](/packages/macros). When you select a category, it provides a sample of some widely-used packages for that category, with information to help you explore further. It’s a great way to get a sense of the variety of packages available for Swift.
 
