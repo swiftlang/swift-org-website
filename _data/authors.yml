@@ -167,6 +167,7 @@ jlettner:
 ericasadun:
   name: Erica Sadun
   twitter: ericasadun
+  github: erica
 
 xedin:
    name: Pavel Yaskevich
@@ -176,6 +177,7 @@ xedin:
 tanner:
    name: Tanner Nelson
    twitter: tanner0101
+   github: tanner0101
    about: "Tanner Nelson is member of the Swift Server Workgroup and creator of the Vapor web framework."
 
 stephentyrone:
@@ -223,7 +225,7 @@ compnerd:
   email: compnerd@compnerd.org
   github: compnerd
   twitter: compnerd
-  about: "Saleem Abdulrasool is a member of the Swift Core Team and a software engineer at Google Brain."
+  about: "Saleem Abdulrasool is a member of the Swift Core Team and a Software Engineer at The Browser Company, and previously worked at Google Brain, Facebook, and Microsoft, and currently focuses on cross-platform and embedded Swift."
 
 hborla:
    name: Holly Borla
@@ -286,6 +288,7 @@ tingbecker:
 
 ronavitzur:
     name: Ron Avitzur
+    github: RonAvitzur
     twitter: RonAvitzur
     about: "Ron Avitzur is the author of the Pacific Tech Graphing Calculator"
 
@@ -394,3 +397,22 @@ FranzBusch:
    github: FranzBusch
    gravatar: 3b34dbe9f3870b0e9bf1f4cb0750fa3d
    about: "Franz Busch is a member of a team developing foundational server-side Swift libraries at Apple, and is a member of the SSWG."
+
+adrian-prantl:
+  name: Adrian Prantl
+  gravatar: 09d425d65431edfdb8ce3bbb2f2e2bf0
+  email: aprantl@apple.com
+  github: adrian-prantl
+  about: "Adrian Prantl manages the Debugger Compiler Integration team at Apple. He works on debug info in the compiler and the Swift plugin in LLDB."
+
+augustonoronha:
+  name: Augusto Noronha
+  email: anoronha@apple.com
+  github: augusto2112
+  about: "Augusto Noronha works on Swift debugging and is a member of the Debugger Compiler Integration team at Apple."
+
+kastiglione:
+  name: Dave Lee
+  email: davelee@apple.com
+  github: kastiglione
+  about: "Dave Lee works on Swift debugging as a member of the Debugger Compiler Integration team at Apple."

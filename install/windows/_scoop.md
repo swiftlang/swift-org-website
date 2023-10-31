@@ -31,8 +31,8 @@ Invoke-RestMethod get.scoop.sh | Invoke-Expression
    </div>
 
    ~~~ batch
-   curl -sOL https://aka.ms/vs/16/release/vs_community.exe
-   start /w vs_community.exe —passive —wait —norestart —nocache —add Microsoft.VisualStudio.Component.Windows10SDK.19041 —add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
+   curl -sOL https://aka.ms/vs/17/release/vs_community.exe
+   start /w vs_community.exe --passive --wait --norestart --nocache --add Microsoft.VisualStudio.Component.Windows11SDK.22000 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
    del /q vs_community.exe
    ~~~
 

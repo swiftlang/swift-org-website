@@ -71,7 +71,17 @@ Here's what the code does:
 2. Get the name from the parameters. By default, this returns a `String`. If you want to extract another type, such as `Int` or `UUID` you can write `req.parameters.require("id", as: UUID.self)` and Vapor will attempt to cast it to the type and automatically throw an error if it's unable to. This throws an error if the route hasn't been registered with the correct parameter name.
 3. Return the `Response`, in this case a `String`. Note that you don't need to set a status code, response body or any headers. Vapor handles this all for you, whilst allowing you to control the `Response` returned if needed.
 
-Save the file and build and run the app. Send a **GET** request to `http://localhost:8080/hello/tim`. You'll get the response back:
+Save the file and build and run the app:
+
+```bash
+$ swift run
+Building for debugging...
+...
+Build complete! (59.87s)
+[ NOTICE ] Server starting on http://127.0.0.1:8080
+```
+
+Send a **GET** request to `http://localhost:8080/hello/tim`. You'll get the response back:
 
 ```bash
 $ curl http://localhost:8080/hello/tim

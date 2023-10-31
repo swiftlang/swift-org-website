@@ -55,6 +55,13 @@ The current Core Team members are:
 {% for person in people %}* {{ person.name }}
 {% endfor %}
 
+We are grateful for the service of the following emeritus Core Team members:
+
+{% assign people = site.data.core_team_emeriti | sort: "name" %}
+{% for person in people %}* {{ person.name }}
+{% endfor %}
+
+
 #### Language Steering Group
 
 [Contact via Forums](https://forums.swift.org/new-message?groupname=language-workgroup)

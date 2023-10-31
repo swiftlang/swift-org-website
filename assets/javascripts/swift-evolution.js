@@ -50,6 +50,7 @@ const upcomingFeatureFlags = new Map([
   ['SE-0354', 'BareSlashRegexLiterals'],
   ['SE-0384', 'ImportObjcForwardDeclarations'],
   ['SE-0401', 'DisableOutwardActorInference'],
+  ['SE-0409', 'InternalImportsByDefault'],
 ])
 
 /** Storage for the user's current selection of filters when filtering is toggled off. */
@@ -295,7 +296,7 @@ function renderSearchBar () {
 
   if (implementedCheckboxIfPresent) {
     // Add an extra row of options to filter by language version
-    var versionRowHeader = html('h5', { id: 'version-options-label', className: 'hidden' }, 'Language Version')
+    var versionRowHeader = html('h5', { id: 'version-options-label', className: 'hidden' }, 'Swift Version')
     var versionRow = html('ul', { id: 'version-options', className: 'filter-list hidden' })
 
     var versionOptions = languageVersions.map(function (version) {
@@ -310,7 +311,7 @@ function renderSearchBar () {
           tabindex: '0',
           role: 'button',
           'for': 'filter-by-swift-' + _idSafeName(version)
-        }, 'Swift ' + version)
+        }, version)
       ])
     })
 

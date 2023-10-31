@@ -158,3 +158,24 @@
   pitched: 2023-01-19
   accepted: 2023-02-02
   url: https://github.com/apple/swift-cassandra-client
+
+- name: SQLite NIO
+  description: 🐬 Non-blocking, event-driven Swift client for SQLite
+  maturity: Sandbox
+  pitched: 2023-08-03
+  accepted: 2023-09-28
+  url: https://github.com/vapor/sqlite-nio
+
+- name: Swift Service Context
+  description: Minimal type-safe context propagation container
+  maturity: Incubating
+  pitched: 2023-09-05
+  accepted: 2023-10-03
+  url: https://github.com/apple/swift-service-context
+
+- name: Swift Distributed Tracing
+  description: A distributed tracing API for Swift
+  maturity: Incubating
+  pitched: 2023-09-05
+  accepted: 2023-10-03
+  url: https://github.com/apple/swift-distributed-tracing
