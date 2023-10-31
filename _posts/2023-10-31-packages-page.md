@@ -21,4 +21,4 @@ In addition to finding common categories of packages, you can also browse new an
 
 The Community Showcase contains a rotating selection of packages being discussed by the Swift community. Anyone can nominate a package in [this forum thread](https://example.com/thread/not/posted/yet), and nominations will be reviewed monthly by the [Swift Website Workgroup](/website-workgroup/).
 
-The new [Packages page](https://www.swift.org/packages) is an exciting step in growing a valuable and thriving package ecosystem for the benefit of all Swift developers.
+The new [Packages page](/packages) is an exciting step in growing a valuable and thriving package ecosystem for the benefit of all Swift developers.
