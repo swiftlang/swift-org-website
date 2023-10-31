@@ -1,9 +1,9 @@
 categories:
   - name: Community Showcase
     slug: showcase
-    brief: A hand-curated selection of new and interesting packages being discussed
-      by the Swift community. Browse the list to find out what's new and how to nominate
-      packages for consideration in this section.
+    brief: "A hand-curated selection of new and interesting packages being discussed
+      by the Swift community. Browse the list to find out what\u2019s new and how to
+      nominate packages for consideration in this section."
     description: This showcase celebrates new and interesting packages discussed by
       the Swift community. Package selection in this section is an editorial process
       organised via [this thread in the Swift Forums](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168)
@@ -77,8 +77,8 @@ categories:
         url: https://swiftpackageindex.com/ActuallyTaylor/Firefly
         note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
       - name: Daily
-        description: An SDK for developing video applications on iOS with Daily's real-time
-          audio, video, and vision platform.
+        description: "An SDK for developing video applications on iOS with Daily\u2019s
+          real-time audio, video, and vision platform."
         owner: Daily
         swift_compatibility: 5.6+
         platform_compatibility:
@@ -338,10 +338,10 @@ categories:
         url: https://swiftpackageindex.com/immobiliare/RealHTTP
   - name: Testing
     slug: testing
-    brief: If you want to level up your project's tests, take a look at a selection
-      of packages that might come in useful.
-    description: Whether you're looking for an extension on top of XCTest or a completely
-      different way to approach testing, these packages are here to help.
+    brief: "If you want to level up your project\u2019s tests, take a look at a selection
+      of packages that might come in useful."
+    description: "Whether you\u2019re looking for an extension on top of XCTest or a
+      completely different way to approach testing, these packages are here to help."
     more:
       title: More testing packages
       url: https://swiftpackageindex.com/keywords/testing
@@ -422,8 +422,8 @@ categories:
         url: https://swiftpackageindex.com/hamcrest/OCHamcrest
   - name: Debug logging
     slug: logging
-    brief: Are you looking for something more than Swift's built-in logging? Start with
-      this list of logging-related packages.
+    brief: "Are you looking for something more than Swift\u2019s built-in logging? Start
+      with this list of logging-related packages."
     description: Swift has [great logging built-in](https://developer.apple.com/documentation/os/logging),
       but start with this list of packages if you want to extend or find something specific
       to your needs.
