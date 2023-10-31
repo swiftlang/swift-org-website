@@ -267,47 +267,6 @@ categories:
       title: More networking packages
       url: https://swiftpackageindex.com/keywords/networking
     packages:
-      - name: Networking
-        description: Networking is a Swift library for making network requests with a
-          straightforward API. It supports faking requests, caching images, and various
-          types of authentication.
-        owner: Elvis
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: Unknown license
-        url: https://swiftpackageindex.com/3lvis/Networking
-      - name: Networking
-        description: Networking is a Swift package that simplifies connecting to a JSON
-          API by combining URLSession, async-await (or Combine), Decodable, and Generics.
-        owner: Fresh
-        swift_compatibility: 5.6+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/freshOS/Networking
-      - name: Networking
-        description: A lightweight URLSession wrapper for networking tasks.
-        owner: Jimmy Prime
-        swift_compatibility: 5.6+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/Jimmy-Prime/Networking
-      - name: Networking
-        description: Networking is a Swift library that provides a network abstraction
-          layer built on top of Alamofire. It allows endpoint customization and includes
-          reachability monitoring, request adapting, and automatic token refreshing.
-        owner: Ronas IT
-        swift_compatibility: 5.6+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
-        license: No license
-        url: https://swiftpackageindex.com/RonasIT/swift-networking
       - name: swift-nio
         description: SwiftNIO is a cross-platform networking framework for building high-performance
           protocol servers and clients. It uses non-blocking I/O for efficient handling
@@ -333,6 +292,50 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/Alamofire/Alamofire
+      - name: Moya
+        description: Moya is a network abstraction layer for Alamofire. It simplifies
+          network calls and provides compile-time checking for API endpoints.
+        owner: Moya
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/Moya/Moya
+      - name: Pulse
+        description: Pulse is a powerful logging system for Apple platforms. It records
+          and inspects logs and network requests, and allows for real-time viewing and
+          sharing.
+        owner: Alex Grebenyuk
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/kean/Pulse
+      - name: Socket
+        description: BlueSocket is a Socket framework for Swift. It provides functionality
+          for creating, closing, and listening on sockets.
+        owner: Kitura
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/Kitura/BlueSocket
+      - name: RealHTTP
+        description: RealHTTP is a lightweight, async-based HTTP library for Swift. It
+          aims to provide an easy-to-use, powerful HTTP client with features like async/await
+          support, request customization, response validation, and more.
+        owner: Immobiliare Labs
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/immobiliare/RealHTTP
   - name: Testing
     slug: testing
     brief: If you want to level up your project's tests, take a look at a selection
@@ -343,17 +346,6 @@ categories:
       title: More testing packages
       url: https://swiftpackageindex.com/keywords/testing
     packages:
-      - name: swift-composable-architecture
-        description: The Composable Architecture is a library for building applications
-          with state management, composition, side effects, and testing in mind. It can
-          be used with SwiftUI, UIKit, and more.
-        owner: Point-Free
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-composable-architecture
       - name: swift-snapshot-testing
         description: SnapshotTesting is a delightful Swift snapshot testing library. It
           allows you to easily compare snapshots of views, view controllers, URL requests,
@@ -368,18 +360,6 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
-      - name: SwifterSwift
-        description: SwifterSwift is a collection of over 500 Swift extensions for iOS,
-          macOS, tvOS, watchOS, and Linux. It provides handy methods and performance improvements
-          for a wide range of data types and UIKit and Cocoa classes.
-        owner: SwifterSwift
-        swift_compatibility: 5.6+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
-        license: MIT
-        url: https://swiftpackageindex.com/SwifterSwift/SwifterSwift
       - name: Quick
         description: Quick is a behavior-driven development framework for Swift and Objective-C.
           It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
@@ -406,17 +386,40 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Nimble
-      - name: ViewInspector
-        description: ViewInspector is a library for unit testing SwiftUI views. It allows
-          for traversing a view hierarchy at runtime and accessing the underlying `View`
-          structs.
-        owner: Alexey Naumov
-        swift_compatibility: 5.7+
+      - name: OCMockito
+        description: OCMockito is an Objective-C implementation of Mockito, allowing you
+          to create, verify, and stub mock objects. It has some key differences from other
+          mocking frameworks, making tests less fragile and more readable.
+        owner: Jon Reid
+        swift_compatibility: 5.6+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/nalexn/ViewInspector
+        url: https://swiftpackageindex.com/jonreid/OCMockito
+      - name: swift-custom-dump
+        description: A collection of tools for debugging, diffing, and testing data structures
+          in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
+          and `XCTAssertNoDifference` for test assertions.
+        owner: Point-Free
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
+      - name: OCHamcrest
+        description: OCHamcrest is an Objective-C module that provides a library of matchers
+          for creating flexible test assertions and user input validation.
+        owner: Hamcrest
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: BSD 2-Clause
+        url: https://swiftpackageindex.com/hamcrest/OCHamcrest
   - name: Debug logging
     slug: logging
     brief: Are you looking for something more than Swift's built-in logging? Start with
