@@ -13,7 +13,7 @@ The page provides a streamlined entry to exploring the Swift package ecosystem. 
 ![A screenshot of the packages page, showing four individual package cards in a grid](/assets/images/packages-page-blog/package-categories.png){:style="border: 1px solid #ddd;"}
 _The package lists give you relevant information at a glance._
 
-The package lists are powered by the [Swift Package Index](https://swiftpackageindex.com/), thanks to the [sponsorship and support of Apple](https://www.swift.org/blog/swift-package-index-developer-spotlight/).
+The package lists are powered by the [Swift Package Index](https://swiftpackageindex.com/), thanks to the [sponsorship and support of Apple](/blog/swift-package-index-developer-spotlight/).
 
 ## Community Showcase
 
