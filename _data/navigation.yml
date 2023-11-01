@@ -37,6 +37,15 @@
           name: snapshots
         - title: Installing Swift
           name: installing-swift
+    - title: Packages
+      url: /packages/
+      sections:
+        - title: Package Ecosystem
+          name: package-ecosystem
+        - title: Create Your Own
+          name: create-your-own
+        - title: Advanced Search
+          name: advanced-search
     - title: Platform Support
       url: /platform-support/
       sections:

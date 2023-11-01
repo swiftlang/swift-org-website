@@ -41,6 +41,13 @@ atom: true
         Read the docs
       </a>
     </li>
+
+    <li>
+      <a href="/packages">
+        <img src="/assets/images/landing-page/box.svg" />
+        Explore packages
+      </a>
+    </li>
   </ul>
 </div>
 
