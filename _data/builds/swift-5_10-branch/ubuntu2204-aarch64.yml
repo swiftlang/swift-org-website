@@ -1,3 +1,8 @@
+- date: 2023-11-01 10:10:00-06:00
+  dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-11-01-a
+  download: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-11-01-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-11-01-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2023-10-26 10:10:00-06:00
   dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-10-26-a
   download: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-10-26-a-ubuntu22.04-aarch64.tar.gz
