@@ -16,17 +16,35 @@ Analogous to the [Core Team](/community#core-team) for Swift, the workgroup is r
 
 The current website workgroup consists of the following people:
 
-* Alexander Sandberg ([@alexandersandberg](https://github.com/alexandersandberg))
-* Dave Verwer ([@daveverwer](https://github.com/daveverwer))
-* James Dempsey ([@dempseyatgithub](https://github.com/dempseyatgithub))
-* Mishal Shah ([@shahmishal](https://github.com/shahmishal), Apple)
-* Michael Schinis ([@mschinis](https://github.com/mschinis))
-* Paris Pittman ([@parispittman](https://github.com/parispittman), Apple)
-* Reda Lemeden ([@kaishin](https://github.com/kaishin))
-* Tim Condon ([@0xTim](https://github.com/0xTim), Vapor)
-* Tim Triemstra ([@TimTr](https://github.com/TimTr), Apple)
+{% assign people = site.data.website-workgroup.members | sort: "name" %}
+<ul>
+{% for person in people %}
+<li> {{ person.name }}
+{% if person.affiliation %}
+  , {{ person.affiliation }}
+{% endif %}
+{% if person.github %}
+  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+{% endif %}
+</li>
+{% endfor %}
+</ul>
 
-With Tom Doron ([@tomerd](https://github.com/tomerd), Apple) representing the Swift core team.
+We are grateful for the service of the following emeritus workgroup members:
+
+{% assign people = site.data.website-workgroup.emeriti | sort: "name" %}
+<ul>
+{% for person in people %}
+<li> {{ person.name }}
+{% if person.affiliation %}
+  , {{ person.affiliation }}
+{% endif %}
+{% if person.github %}
+  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+{% endif %}
+</li>
+{% endfor %}
+</ul>
 
 ## Charter
 

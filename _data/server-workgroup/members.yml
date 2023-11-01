@@ -1,0 +1,35 @@
+- name: Adam Fowler
+  github: adam-fowler
+  affiliation:
+
+- name: Franz Busch
+  github: FranzBusch
+  affiliation: Apple
+
+- name: Gwynne Raskind
+  github: gwynne
+  affiliation: Vapor
+
+- name: Joannis Orlandos
+  github: joannis
+  affiliation:
+
+- name: Konrad Malawski
+  github: ktoso
+  affiliation: Apple
+
+- name: Simon Pilkington
+  github: tachyonics
+  affiliation: Amazon
+
+- name: Tim Condon
+  github: 0xTim
+  affiliation: Vapor
+
+- name: Sebastien Stormacq
+  github: sebsto
+  affiliation: Amazon
+
+- name: Tom Doron
+  github: tomerd
+  affiliation: Apple, Core team rep

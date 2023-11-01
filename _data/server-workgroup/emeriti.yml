@@ -1,0 +1,51 @@
+- name: Paulo Faria
+  github: paulofaria
+  affiliation: Zewo
+
+- name: Steve Algernon
+  github: salgernon
+  affiliation: Apple
+
+- name: Ian Partridge
+  github: ianpartridge
+  affiliation: IBM
+
+- name: Chris Bailey
+  github: seabaylea
+  affiliation: IBM
+
+- name: Logan Wright
+  github: loganwright
+  affiliation: Vapor
+
+- name: Tanner Nelson
+  url: tanner0101
+  affiliation: Vapor
+
+- name: Johannes Weiss
+  github: weissi
+  affiliation: Apple
+
+- name: Fabian Fett
+  github: fabianfett
+  affiliation: Apple
+
+- name: Todd Varland
+  github: toddvarland
+  affiliation: Amazon
+
+- name: Kaitlin Mahar
+  github: kmahar
+  affiliation: MongoDB
+
+- name: Patrick Freed
+  github: patrickfreed
+  affiliation: MongoDB
+
+- name: Dave Moser
+  github: dave-moser
+  affiliation: Amazon
+
+- name: Jimmy McDermott
+  github: jdmcd
+  affiliation: Transeo
