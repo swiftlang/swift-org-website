@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2023-10-31 10:00:00
+date: 2023-11-01 10:30:00
 title: 'Introducing Packages on Swift.org'
 author: [daveverwer, svenaschmidt]
 ---
