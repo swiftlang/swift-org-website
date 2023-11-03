@@ -1,3 +1,8 @@
+secondary_sites:
+  swift_package_index:
+    title: The Swift Package Index
+    logo: swift_package_index.svg
+
 categories:
   - name: Community Showcase
     slug: showcase
@@ -20,7 +25,10 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
         license: MIT
-        url: https://swiftpackageindex.com/rensbreur/SwiftTUI
+        url: https://github.com/rensbreur/SwiftTUI
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/rensbreur/SwiftTUI
         note: Discussed on [Episode 163 of the Empower Apps Podcast](https://brightdigit.com/episodes/163-swiftly-tooling-with-pol-piella-abadia/){:target='_blank'}.
       - name: SwiftGodot
         description: SwiftGodot provides Swift language bindings for the Godot game engine.
@@ -33,7 +41,10 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
         license: MIT
-        url: https://swiftpackageindex.com/migueldeicaza/SwiftGodot
+        url: https://github.com/migueldeicaza/SwiftGodot
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/migueldeicaza/SwiftGodot
         note:
           Discussed on [Season 5 Episode 28 of Compile Swift](https://www.compileswift.com/podcast/s05e28/){:target='_blank'}
           podcast.
@@ -46,7 +57,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
         license: MIT
-        url: https://swiftpackageindex.com/automerge/automerge-swift
+        url: https://github.com/automerge/automerge-swift
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/automerge/automerge-swift
         note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
       - name: Grape
         description: Grape is a Swift library for force simulation and graph visualization.
@@ -60,7 +74,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/li3zhen1/Grape
+        url: https://github.com/li3zhen1/Grape
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/li3zhen1/Grape
         note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
       - name: Firefly
         description: Firefly is a syntax highlighter for iOS and macOS. It uses regular
@@ -72,7 +89,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (macOS)
         license: MIT
-        url: https://swiftpackageindex.com/ActuallyTaylor/Firefly
+        url: https://github.com/ActuallyTaylor/Firefly
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/ActuallyTaylor/Firefly
         note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
       - name: Daily
         description: "An SDK for developing video applications on iOS with Daily\u2019s
@@ -83,7 +103,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS)
         license: BSD 2-Clause
-        url: https://swiftpackageindex.com/daily-co/daily-client-ios
+        url: https://github.com/daily-co/daily-client-ios
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/daily-co/daily-client-ios
         note: Discussed on [Episode 162 of the Empower Apps Podcast](https://brightdigit.com/episodes/162-building-a-video-sdk-with-marc-schwieterman/){:target='_blank'}.
   - name: Packages with Macros
     slug: macros
@@ -108,7 +131,10 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
         license: MIT
-        url: https://swiftpackageindex.com/realm/SwiftLint
+        url: https://github.com/realm/SwiftLint
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/realm/SwiftLint
       - name: swift-testing
         description: A powerful testing library for Swift, providing a modern and flexible
           testing library for Swift with powerful and expressive capabilities. It gives
@@ -121,7 +147,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: Apache 2.0
-        url: https://swiftpackageindex.com/apple/swift-testing
+        url: https://github.com/apple/swift-testing
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/apple/swift-testing
       - name: Verge
         description: Verge is a state management library for iOS development. It offers
           a lightweight and efficient way to manage application state and supports both
@@ -133,7 +162,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
         license: MIT
-        url: https://swiftpackageindex.com/VergeGroup/swift-Verge
+        url: https://github.com/VergeGroup/swift-Verge
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/VergeGroup/swift-Verge
       - name: CodableWrappers
         description: Simplify serialization with Property Wrappers. Customize encoding
           and decoding for Codable types with annotations.
@@ -145,7 +177,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: Apache 2.0
-        url: https://swiftpackageindex.com/GottaGetSwifty/CodableWrappers
+        url: https://github.com/GottaGetSwifty/CodableWrappers
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/GottaGetSwifty/CodableWrappers
       - name: SwiftPowerAssert
         description: Swift Power Assert provides descriptive assertion messages for tests.
           It augments assertion failures with information about the values produced during
@@ -157,7 +192,10 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
         license: MIT
-        url: https://swiftpackageindex.com/kishikawakatsumi/swift-power-assert
+        url: https://github.com/kishikawakatsumi/swift-power-assert
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/kishikawakatsumi/swift-power-assert
       - name: swift-spyable
         description: Spyable is a powerful tool for Swift that automates the creation
           of spies for testing. It generates spy classes that track interactions with
@@ -170,7 +208,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/Matejkob/swift-spyable
+        url: https://github.com/Matejkob/swift-spyable
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/Matejkob/swift-spyable
   - name: Server
     slug: server
     brief: Do you need a hand putting together a Swift app for the server? Browse some
@@ -192,7 +233,10 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
         license: MIT
-        url: https://swiftpackageindex.com/vapor/vapor
+        url: https://github.com/vapor/vapor
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/vapor/vapor
       - name: swift-openapi-generator
         description: Generate Swift client and server code from an OpenAPI document. Includes
           multiple repositories for extensibility and supports various transports.
@@ -203,7 +247,10 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
         license: Apache 2.0
-        url: https://swiftpackageindex.com/apple/swift-openapi-generator
+        url: https://github.com/apple/swift-openapi-generator
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/apple/swift-openapi-generator
       - name: MongoKitten
         description: MongoKitten is a fast, pure Swift MongoDB driver built for Server
           Side Swift. It supports both MongoDB in server and embedded environments and
@@ -215,7 +262,10 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS) and Linux
         license: MIT
-        url: https://swiftpackageindex.com/orlandos-nl/MongoKitten
+        url: https://github.com/orlandos-nl/MongoKitten
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/orlandos-nl/MongoKitten
       - name: fluent
         description: Fluent helps you work with databases, providing a high-level, type-safe
           API for querying and manipulating data in Vapor apps.
@@ -227,7 +277,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/vapor/fluent
+        url: https://github.com/vapor/fluent
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/vapor/fluent
       - name: hummingbird
         description: Hummingbird is a lightweight, flexible server framework written in
           Swift. It consists of an HTTP server, a web application framework, and extension
@@ -239,7 +292,10 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (macOS, visionOS, tvOS) and Linux
         license: Apache 2.0
-        url: https://swiftpackageindex.com/hummingbird-project/hummingbird
+        url: https://github.com/hummingbird-project/hummingbird
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/hummingbird-project/hummingbird
       - name: jwt-kit
         description: JWTKit is a Swift library for signing and verifying JSON Web Tokens
           (JWTs) using various algorithms (HMAC, RSA, ECDSA, EdDSA). It supports parsing,
@@ -252,7 +308,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/vapor/jwt-kit
+        url: https://github.com/vapor/jwt-kit
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/vapor/jwt-kit
   - name: Networking
     slug: networking
     brief: Browse a selection of packages that can extend and enhance the Swift core
@@ -275,7 +334,10 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (macOS, visionOS, watchOS) and Linux
         license: Apache 2.0
-        url: https://swiftpackageindex.com/apple/swift-nio
+        url: https://github.com/apple/swift-nio
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/apple/swift-nio
       - name: Alamofire
         description: Alamofire is an HTTP networking library written in Swift. It provides
           features such as request/response handling, parameter encoding, authentication,
@@ -288,7 +350,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/Alamofire/Alamofire
+        url: https://github.com/Alamofire/Alamofire
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/Alamofire/Alamofire
       - name: Moya
         description: Moya is a network abstraction layer for Alamofire. It simplifies
           network calls and provides compile-time checking for API endpoints.
@@ -298,7 +363,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/Moya/Moya
+        url: https://github.com/Moya/Moya
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/Moya/Moya
       - name: Pulse
         description: Pulse is a powerful logging system for Apple platforms. It records
           and inspects logs and network requests, and allows for real-time viewing and
@@ -309,7 +377,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/kean/Pulse
+        url: https://github.com/kean/Pulse
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/kean/Pulse
       - name: Socket
         description: BlueSocket is a Socket framework for Swift. It provides functionality
           for creating, closing, and listening on sockets.
@@ -321,7 +392,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: Apache 2.0
-        url: https://swiftpackageindex.com/Kitura/BlueSocket
+        url: https://github.com/Kitura/BlueSocket
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/Kitura/BlueSocket
       - name: RealHTTP
         description: RealHTTP is a lightweight, async-based HTTP library for Swift. It
           aims to provide an easy-to-use, powerful HTTP client with features like async/await
@@ -332,7 +406,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/immobiliare/RealHTTP
+        url: https://github.com/immobiliare/RealHTTP
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/immobiliare/RealHTTP
   - name: Testing
     slug: testing
     brief: "If you want to level up your project\u2019s tests, take a look at a selection
@@ -356,7 +433,13 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
+        url: https://github.com/pointfreeco/swift-snapshot-testing
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
+        secondary_urls:
+          - key: test
+            value: wee
       - name: Quick
         description: Quick is a behavior-driven development framework for Swift and Objective-C.
           It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
@@ -369,7 +452,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: Apache 2.0
-        url: https://swiftpackageindex.com/Quick/Quick
+        url: https://github.com/Quick/Quick
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/Quick/Quick
       - name: Nimble
         description: Nimble is a testing library for Swift and Objective-C. It provides
           a more expressive way to write assertions and supports operator overloads and
@@ -382,7 +468,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: Apache 2.0
-        url: https://swiftpackageindex.com/Quick/Nimble
+        url: https://github.com/Quick/Nimble
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/Quick/Nimble
       - name: OCMockito
         description: OCMockito is an Objective-C implementation of Mockito, allowing you
           to create, verify, and stub mock objects. It has some key differences from other
@@ -393,7 +482,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/jonreid/OCMockito
+        url: https://github.com/jonreid/OCMockito
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/jonreid/OCMockito
       - name: swift-custom-dump
         description: A collection of tools for debugging, diffing, and testing data structures
           in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
@@ -406,7 +498,10 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
+        url: https://github.com/pointfreeco/swift-custom-dump
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
       - name: OCHamcrest
         description: OCHamcrest is an Objective-C module that provides a library of matchers
           for creating flexible test assertions and user input validation.
@@ -416,7 +511,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: BSD 2-Clause
-        url: https://swiftpackageindex.com/hamcrest/OCHamcrest
+        url: https://github.com/hamcrest/OCHamcrest
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/hamcrest/OCHamcrest
   - name: Debug logging
     slug: logging
     brief: "Are you looking for something more than Swift\u2019s built-in logging? Start
@@ -437,7 +535,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
         license: BSD 3-Clause
-        url: https://swiftpackageindex.com/CocoaLumberjack/CocoaLumberjack
+        url: https://github.com/CocoaLumberjack/CocoaLumberjack
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/CocoaLumberjack/CocoaLumberjack
       - name: Datadog
         description: This library provides Swift and Objective-C SDKs to interact with
           Datadog. It includes features for log collection, trace collection, and RUM
@@ -448,7 +549,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS)
         license: Apache 2.0
-        url: https://swiftpackageindex.com/DataDog/dd-sdk-ios
+        url: https://github.com/DataDog/dd-sdk-ios
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/DataDog/dd-sdk-ios
       - name: SwiftyBeaver
         description: SwiftyBeaver is a flexible, colorful, lightweight logging library
           for Swift. It supports console, file, and cloud destinations and is ideal for
@@ -460,7 +564,10 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
         license: MIT
-        url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
+        url: https://github.com/SwiftyBeaver/SwiftyBeaver
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
       - name: Pulse
         description: Pulse is a powerful logging system for Apple platforms. It records
           and inspects logs and network requests, and allows for real-time viewing and
@@ -471,7 +578,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/kean/Pulse
+        url: https://github.com/kean/Pulse
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/kean/Pulse
       - name: XCGLogger
         description: XCGLogger is a debug log module for Swift projects that allows you
           to log details to the console (and optionally a file) with additional information
@@ -482,7 +592,10 @@ categories:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/DaveWoodCom/XCGLogger
+        url: https://github.com/DaveWoodCom/XCGLogger
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/DaveWoodCom/XCGLogger
       - name: swift-log
         description: SwiftLog is a community-driven logging API package for server-side
           Swift applications. It provides easy logging of messages to a shared destination
@@ -494,4 +607,7 @@ categories:
           - Linux
         platform_compatibility_tooltip: Apple (macOS, visionOS, watchOS) and Linux
         license: Apache 2.0
-        url: https://swiftpackageindex.com/apple/swift-log
+        url: https://github.com/apple/swift-log
+        secondary_sites:
+          - key: swift_package_index
+            url: https://swiftpackageindex.com/apple/swift-log

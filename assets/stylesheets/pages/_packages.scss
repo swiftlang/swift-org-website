@@ -75,11 +75,7 @@
 
     li {
       display: grid;
-
-      &.with-note {
-        grid-template-rows: 5fr 1fr;
-        gap: 5px;
-      }
+      grid-template-rows: 1fr auto;
 
       > a {
         display: flex;
@@ -183,10 +179,22 @@
         }
       }
 
+      .secondary-sites {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 0;
+
+        img {
+          height: 25px;
+          width: 25px;
+        }
+      }
+
       .note {
         p {
           font-size: 12px;
-          margin-top: 10px;
           margin-bottom: 0;
           color: #666666;
         }

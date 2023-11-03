@@ -1,4 +1,5 @@
 {%- assign category = site.data.packages.packages.categories | where: "slug", include.category_slug | first %}
+{%- assign secondary_sites = site.data.packages.packages.secondary_sites %}
 
 <section class="package-list">
   <nav>
@@ -8,7 +9,7 @@
   {{ category.description | markdownify }}
   <ul>
     {% for package in category.packages %}
-    <li class="{% if package.note %}with-note{% endif %}">
+    <li>
       <a href="{{ package.url }}" target="_blank">
         <h4>
           <div class="name">{{ package.name }}</div>
@@ -30,6 +31,14 @@
           <div class="lozenge license" title="Package license"><span>{{ package.license }}</span></div>
         </section>
       </a>
+      <section class="secondary-sites">
+        {% for site in package.secondary_sites %}
+          {%- assign site_details = secondary_sites[site.key] %}
+          <a href="{{ site.url }}" target="_blank" title="View {{ package.name }} on {{ site_details.title }}">
+            <img src="/assets/images/packages/secondary-sites/{{ site_details.logo }}" />
+          </a>
+        {% endfor %}
+      </section>
       {% if package.note %}
       <section class="note">{{ package.note | markdownify }}</section>
       {% endif %}
