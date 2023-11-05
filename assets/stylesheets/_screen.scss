@@ -208,7 +208,7 @@ cite {
 
   li {
     display: inline-block;
-    padding-left: 1em;
+    margin-left: 1em;
 
     &.active {
       a {
@@ -225,6 +225,11 @@ cite {
       margin-bottom: .5rem;
       padding: 1rem 0 .5rem;
       border-bottom: 1px solid var(--color-nav-rule);
+    }
+
+    &.cta {
+      padding-bottom: .1rem;
+      border-bottom: 2px solid rgba(gray, .5);
     }
 
     & > a,
@@ -308,10 +313,6 @@ cite {
 .nav-menu li a:hover {
   background-color: rgba(gray, 0.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-.navigation-links .cta {
-  border-bottom: 2px solid var(--brand-color);
 }
 
 main {
