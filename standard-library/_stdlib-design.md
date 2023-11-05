@@ -13,7 +13,7 @@ repository][swift-repo], which is further subdivided into:
 
 * **Runtime**: The language support runtime (implemented in [stdlib/public/runtime](https://github.com/apple/swift/tree/main/stdlib/public/runtime)), which is layered between the compiler and the core standard library. It is responsible for implementing many of the dynamic features of the language, such as casting (e.g., for the `as!` and `as?` operators), type metadata (to support generics and reflection), and memory management (object allocation, reference counting, etc.). Unlike higher-level libraries, the runtime is written mostly in C++ or (where needed for interoperability) Objective-C.
 
-* **SDK Overlays**: Specific to Apple platforms, the SDK overlays (implemented in [stdlib/public/Darwin](https://github.com/apple/swift/tree/main/stdlib/public/Darwin)) provide Swift-specific additions and modifications to existing Objective-C frameworks to improve their mapping into Swift. In particular, the `Foundation` overlay provides additional support for interoperability with Objective-C code.
+* **SDK Overlays**: Specific to Apple platforms, the SDK overlays (implemented in [stdlib/public/Platform](https://github.com/apple/swift/tree/main/stdlib/public/Platform)) provide Swift-specific additions and modifications to existing Objective-C frameworks to improve their mapping into Swift. In particular, the `Foundation` overlay provides additional support for interoperability with Objective-C code.
 
 The Swift standard library is written in Swift, but because it is the lowest-level Swift code in the stack---responsible for implementing the core data types on which other Swift code is built---it is a bit different from normal Swift code. Some of the differences include:
 
