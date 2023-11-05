@@ -2,18 +2,14 @@
   <div class="wrapper">
     <h1 id="logo">
       <a href="/" title="Swift.org">
-        <img src="/assets/images/swift.svg" alt="Swift Logo">
+        {% include logo.html %}
       </a>
     </h1>
   
     <nav>
       <ul class="navigation-links">
         <li>
-          <a href="/blog">Blog</a>
-        </li>
-
-        <li>
-          <a href="/getting-started">Getting Started</a>
+          <a href="/getting-started">Get Started</a>
         </li>
 
         {% for nav in site.data.navigation %}
@@ -21,24 +17,30 @@
             <span>{{ nav.header }} <i>&#9663;</i></span>
             <ul class="nav-menu">
               {% for navpage in nav.pages %}
-                {% if page.url == navpage.url %}
-                  <li class="active">
+                {% if navpage.section %}
+                  <li class="nav-section">{{ navpage.section }}</li>
                 {% else %}
-                  <li>
+                  {% if page.url == navpage.url %}
+                    <li class="active">
+                  {% else %}
+                    <li>
+                  {% endif %}
+                    <a href="{{ navpage.url }}">{{ navpage.title }}</a>
+                  </li>
                 {% endif %}
-                  <a href="{{ navpage.url }}">{{ navpage.title }}</a>
-                </li>
               {% endfor %}
             </ul>
           </li>
-    
-            {% endfor %}
+        {% endfor %}
+
+        <li>
+          <a href="/blog">Blog</a>
+        </li>
   
         <li>
-          <a class="cta" href="/download">Download <strong>5.9.1</strong></a>
+          <a class="cta" href="/install">Download <strong>5.9.1</strong></a>
         </li>
       </ul>
     </nav>
   </div>
- 
-</header>
+ </header>

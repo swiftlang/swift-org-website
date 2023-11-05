@@ -177,13 +177,14 @@ cite {
 
 #logo {
   margin-bottom: 0;
+
   a {
     display: block;
     width: 120px;
   }
 
-  img {
-    fill: currentColor;
+  #logotype {
+    fill: var(--color-header-text);
   }
 }
 
@@ -210,10 +211,20 @@ cite {
     padding-left: 1em;
 
     &.active {
-      border-bottom: 1px solid var(--color-active-menu-group);
       a {
         font-weight: 700;
+        color: #F05138; // TODO: Use variable
       }
+    }
+
+    &.nav-section {
+      color: var(--color-nav-color);
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: .5rem;
+      padding: 1rem 0 .5rem;
+      border-bottom: 1px solid var(--color-nav-rule);
     }
 
     & > a,
@@ -320,8 +331,8 @@ footer[role="contentinfo"] {
     font-size: 0.625em;
     color: var(--color-nav-link-color);
     line-height: 1em;
-    margin-bottom: 1em;
     margin-bottom: var(--content-margin-bottom);
+
     &.privacy {
       a {
         color: var(--color-nav-link-color);
