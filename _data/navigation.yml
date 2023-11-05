@@ -102,6 +102,7 @@
           name: pull-request-testing
         - title: Building Projects
           name: building-projects
+
 # ------------------------------------------------------------------------------
 - header: Community
   pages:
@@ -215,9 +216,7 @@
           name: communication
         - title: Community Participation
           name: community-participation
-# ------------------------------------------------------------------------------
-- header: Governance
-  pages:
+    - section: Governance
     - title: Code of Conduct
       url: /code-of-conduct/
     - title: License
