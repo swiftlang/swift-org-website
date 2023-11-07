@@ -580,7 +580,7 @@ function addEventListeners() {
   var searchInput = document.querySelector('#search-filter')
 
   // Typing in the search field causes the filter to be reapplied.
-  searchInput.addEventListener('search', filterProposals)
+  searchInput.addEventListener('input', filterProposals)
 
   // Each of the individual statuses needs to trigger filtering as well
   ;[].forEach.call(document.querySelectorAll('.filter-list input'), function (element) {
