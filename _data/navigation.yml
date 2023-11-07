@@ -1,3 +1,17 @@
+- header: Packages
+  pages:
+    - title: Community Showcase
+      url: /packages/showcase
+    - title: Packages with Macros
+      url: /packages/macros
+    - title: Server
+      url: /packages/server
+    - title: Networking
+      url: /packages/networking
+    - title: Testing
+      url: /packages/testing
+    - title: Debug Logging
+      url: /packages/logging
 - header: Documentation
   pages:
     - title: Overview
