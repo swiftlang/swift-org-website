@@ -182,4 +182,23 @@
   --color-tutorial-hero-text: #{dark-color(figure-gray)};
   --color-tutorial-hero-background: #{dark-color(fill)};
   --color-evolution-secondary-fill: var(--color-figure-light-gray);
+
+  --color-term-normal: var(--color-text);
+  --color-term-background: var(--color-code-background);
+  --color-term-red: rgb(194,54,33);
+  --color-term-green: rgb(37,188,36);
+  --color-term-yellow: rgb(173,173,39);
+  --color-term-blue: rgb(73,46,225);
+  --color-term-magenta: rgb(211,56,211);
+  --color-term-cyan: rgb(51,187,200);
+  --color-term-white: rgb(175,175,175);
+  --color-term-gray: rgb(129,131,131);
+  --color-term-bright-red: rgb(252,57,31);
+  --color-term-bright-green: rgb(49,231,34);
+  --color-term-bright-yellow: rgb(234,236,35);
+  --color-term-bright-blue: rgb(88,51,255);
+  --color-term-bright-magenta: rgb(249,53,248);
+  --color-term-bright-cyan: rgb(20,200,200);
+  --color-term-bright-white: rgb(255,255,255);
+  --color-term-highlight-background: rgb(195,195,195);
 }

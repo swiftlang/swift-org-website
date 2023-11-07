@@ -75,4 +75,23 @@
   --color-syntax-type-declarations: rgb(107, 223, 255);
   --color-syntax-urls: rgb(102, 153, 255);
   --color-tutorial-background: var(--color-fill-tertiary);
+
+  --color-term-normal: var(--color-text);
+  --color-term-background: var(--color-code-background);
+  --color-term-red: rgb(194,54,33);
+  --color-term-green: rgb(37,188,36);
+  --color-term-yellow: rgb(173,173,39);
+  --color-term-blue: rgb(73,46,225);
+  --color-term-magenta: rgb(211,56,211);
+  --color-term-cyan: rgb(51,187,200);
+  --color-term-white: rgb(203,204,205);
+  --color-term-gray: rgb(129,131,131);
+  --color-term-bright-red: rgb(252,57,31);
+  --color-term-bright-green: rgb(49,231,34);
+  --color-term-bright-yellow: rgb(234,236,35);
+  --color-term-bright-blue: rgb(88,51,255);
+  --color-term-bright-magenta: rgb(249,53,248);
+  --color-term-bright-cyan: rgb(20,240,240);
+  --color-term-bright-white: rgb(233,235,235);
+  --color-term-highlight-background: rgb(30,30,30);
 }
