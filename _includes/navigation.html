@@ -14,7 +14,14 @@
 
         {% for nav in site.data.navigation %}
           <li class="nav-dropdown">
-            <span>{{ nav.header }} <i>&#9663;</i></span>
+            <span>
+              {% if nav.url %}
+                <a href="{{ nav.url }}">{{ nav.header }}</a>
+              {% else %}
+                {{ nav.header }}
+              {% endif %}
+              <i>&#9663;</i>
+            </span>
             <ul class="nav-menu">
               {% for navpage in nav.pages %}
                 {% if navpage.section %}

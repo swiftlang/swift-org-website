@@ -1,34 +1,21 @@
 - header: Packages
+  url: /packages/
   pages:
     - title: Community Showcase
-      url: /packages/showcase
+      url: /packages/showcase.html
     - title: Packages with Macros
-      url: /packages/macros
+      url: /packages/macros/
     - title: Server
-      url: /packages/server
+      url: /packages/server/
     - title: Networking
-      url: /packages/networking
+      url: /packages/networking/
     - title: Testing
-      url: /packages/testing
+      url: /packages/testing/
     - title: Debug Logging
-      url: /packages/logging
+      url: /packages/logging/
 - header: Documentation
+  url: /documentation/
   pages:
-    - title: Overview
-      url: /documentation/
-      sections:
-        - title: Swift Language
-          name: swift-language
-        - title: Standard Library
-          name: standard-library
-        - title: Packages
-          name: packages
-        - title: API Design Guidelines
-          name: api-design-guidelines
-        - title: C++ Interoperability
-          name: mixing-swift-and-c
-        - title: Tools
-          name: tools
     - title: Swift Compiler
       url: /swift-compiler/
       sections:
@@ -119,18 +106,8 @@
 
 # ------------------------------------------------------------------------------
 - header: Community
+  url: /community/
   pages:
-    - title: Overview
-      url: /community/
-      sections:
-        - title: Communication
-          name: communication
-        - title: Community Structure
-          name: community-structure
-        - title: License
-          name: license
-        - title: Forums
-          name: forums
     - title: Diversity
       url: /diversity/
       sections:
