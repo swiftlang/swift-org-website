@@ -51,6 +51,7 @@ const upcomingFeatureFlags = new Map([
   ['SE-0384', 'ImportObjcForwardDeclarations'],
   ['SE-0401', 'DisableOutwardActorInference'],
   ['SE-0409', 'InternalImportsByDefault'],
+  ['SE-0411', 'IsolatedDefaultValues'],
 ])
 
 /** Storage for the user's current selection of filters when filtering is toggled off. */
