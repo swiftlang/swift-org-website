@@ -2,6 +2,10 @@
   github: alexandersandberg
   affiliation:
 
+- name: Christopher Thielen
+  github: cthielen
+  affiliation: Apple
+
 - name: Dave Verwer
   github: daveverwer
   affiliation: Swift Package Index
