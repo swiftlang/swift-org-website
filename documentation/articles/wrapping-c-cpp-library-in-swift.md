@@ -1,11 +1,11 @@
 ---
 layout: page
 date: 2023-11-08 12:00:00
-title: Wrapping C/C++ Library in a Swift Package
+title: Wrapping C/C++ Library in Swift
 author: [etcwilde, ktoso, yim-lee]
 ---
 
-## Package Setup
+## Package
 
 1. If needed, create a new Swift package with `Package.swift`, `Sources` directory, etc.
 2. Create a new module/directory under `Sources` for the C/C++ library. Let's suppose it's named `CMyLib` in the rest of this section.

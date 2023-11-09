@@ -26,10 +26,10 @@
   thumbnail_url: /assets/images/getting-started/regular-expression-thumbnail.jpg
   release_date: 2022-06-07
   external: true
-- title: "Wrapping C/C++ Library in a Swift Package"
-  description: "This article describes how to wrap a C or C++ library in a Swift package."
+- title: "Wrapping C/C++ Library in Swift"
+  description: "This article describes how to wrap a C or C++ library in Swift."
   content_type: article
-  content_url: /documentation/articles/wrapping-c-cpp-library-in-swift-package.html
+  content_url: /documentation/articles/wrapping-c-cpp-library-in-swift.html
   thumbnail_url: #TBD
   release_date: 2023-11-08
   external: false
