@@ -23,23 +23,23 @@ author: [etcwilde, ktoso, yim-lee]
 
 	```swift
 	.target(
-    	name: "CMyLib",
-    	dependencies: [],
-    	exclude: [
-      	// Relative paths under 'CMyLib' of the files 
-      	// and/or directories to exclude. For example:
-      	// "./my-lib/src/CMakeLists.txt",
-      	// "./my-lib/tests",
-    	],
-    	sources: [
-      	// Relative paths under 'CMyLib' of the source 
-      	// files and/or directories. For example:
-      	// "./my-lib/src/foo.c",
-      	// "./my-lib/src/baz",
-    	],
-    	cSettings: [
-      	// .headerSearchPath("./my-lib/src"),
-    	]
+      name: "CMyLib",
+      dependencies: [],
+      exclude: [
+          // Relative paths under 'CMyLib' of the files 
+          // and/or directories to exclude. For example:
+          // "./my-lib/src/CMakeLists.txt",
+          // "./my-lib/tests",
+      ],
+      sources: [
+          // Relative paths under 'CMyLib' of the source 
+          // files and/or directories. For example:
+          // "./my-lib/src/foo.c",
+          // "./my-lib/src/baz",
+      ],
+      cSettings: [
+          // .headerSearchPath("./my-lib/src"),
+      ]
 	),
 	```
 
