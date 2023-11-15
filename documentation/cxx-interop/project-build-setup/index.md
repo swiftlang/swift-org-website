@@ -19,7 +19,7 @@ It also describes how
 enable C++ interoperability by describing how to use C++ interoperability
 when invoking Swift compiler directly.
 
-## Mixing Swift and C++ Using Swift Package Manager 
+## Mixing Swift and C++ Using Swift Package Manager
 
 The [Swift Package Manager](/package-manager/) allows Swift code to use
 C++ APIs in Swift. 
@@ -124,7 +124,7 @@ includes the other headers in the C++ target:
 // Header file `cxxLibrary.h`
 #pragma once
 
-#include <cxxLibrary/classImpl.h>
+#include <classImpl.h>
 ```
 
 The Swift code in the `swiftCLITool` can import `cxxLibrary` directly:
@@ -211,7 +211,7 @@ header:
 ```
 
 
-### Using C++ APIs of Imported Framework Target  
+### Using C++ APIs of Imported Framework Target
 
 The supported C++ functions and types declared in a **public** C++ header of
 an Xcode framework target can be used from Swift code in other targets.
@@ -260,7 +260,7 @@ This section describes how to enable and use C++ interoperability
 when invoking the Swift compiler directly. This allows other
 build systems to configure a mixed-language Swift and C++ project.
 
-### Enabling C++ Interoperability in the Swift Compiler 
+### Enabling C++ Interoperability in the Swift Compiler
 
 The **`-cxx-interoperability-mode=`** build flag is used to enable C++
 interoperability in the Swift compiler. It receives the interoperability
