@@ -52,6 +52,7 @@ const upcomingFeatureFlags = new Map([
   ['SE-0401', 'DisableOutwardActorInference'],
   ['SE-0409', 'InternalImportsByDefault'],
   ['SE-0411', 'IsolatedDefaultValues'],
+  ['SE-0413', 'FullTypedThrows'],
 ])
 
 /** Storage for the user's current selection of filters when filtering is toggled off. */
