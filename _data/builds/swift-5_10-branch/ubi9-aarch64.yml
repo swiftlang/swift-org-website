@@ -1,3 +1,8 @@
+- date: 2023-11-29 10:10:00-06:00
+  dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-11-29-a
+  download: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-11-29-a-ubi9-aarch64.tar.gz
+  download_signature: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-11-29-a-ubi9-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2023-11-28 10:10:00-06:00
   dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-11-28-a
   download: swift-5.10-DEVELOPMENT-SNAPSHOT-2023-11-28-a-ubi9-aarch64.tar.gz
