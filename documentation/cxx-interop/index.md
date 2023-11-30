@@ -1186,7 +1186,7 @@ takesVectorType(&vector) // 'vector' is not copied!
 
 The Swift compiler allows you to annotate some C++ types and import them as reference types (or `class` types) in Swift. Whether a C++ type should be imported as a reference type is a complex question, and there are two primary criteria that go into answering it.
 
-The first criterion is whether object identity is part of the "value" of the type. Is comparing the address of two objects just asking whether they're stored at the same location, or it is deciding whether they represent the "same object" in a more significant sense? 
+The first criterion is whether object identity is part of the "value" of the type. Is comparing the address of two objects just asking whether they're stored at the same location, or is it deciding whether they represent the "same object" in a more significant sense? 
 
 The second criterion whether objects of the C++ class are always passed around by reference.  Are objects predominantly passed around using a pointer or reference type, such as a raw pointer (`*`), C++ reference (`&` or `&&`), or a smart pointer (like `std::unique_ptr` or `std::shared_ptr`)?  When passed by raw pointer or reference, is there an expectation that that memory is stable and will continue to stay valid, or are receivers expected to copy the object if they need to keep the value alive independently?  If objects are generally allocated and remain at a stable address, even if that address is not semantically part of the "value" of an object, the class may be idiomatically a reference type. This will sometimes be a judgment call for the programmer.
 
