@@ -7,8 +7,8 @@ title: Going passwordless with Passkeys
 
 In this tutorial we will explore Passkeys. To be more specific, we'll explore how we can integrate the Swift WebAuthn library into a server-side Swift app. The process of registering and authenticating using Passkeys is pretty simple, but requires some back and forth between client and server. Therefore this tutorial is split into two separate parts:
 
-1. [Passkey Registration]()
-2. [Passkey Authentication]()
+1. Passkey Registration
+2. Passkey Authentication
 
 To avoid starting completely from scratch and turning this blog article into a whole book, I prepared a small starter project which you can [download here](https://github.com/brokenhandsio/swift-webauthn-guide).
 
