@@ -38,7 +38,6 @@ Passkeys are integrated into our browsers. Through a JavaScript api exposed by t
 *Another example - 1Password prompt:*
 ![](/assets/images/server-guides/1password_passkey_prompt.png)
 
-
 These two prompts are the result of calling `navigator.credentials.create(...)` and `navigator.credentials.get(...)`.
 
 To get a better understanding let's quickly play around with this API. Go to `https://swift.org`, open the developer panel of your browser and switch to the JavaScript console. Create the following variable:
