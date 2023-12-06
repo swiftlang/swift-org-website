@@ -15,7 +15,7 @@ of anyone who participates in the project
 by reading the [Community Overview](/community).
 If you're contributing code, you should also know how to build and run
 Swift from the repository,
-as described in [Source Code](/source-code).
+as described in [Source Code](/documentation/source-code).
 
 {% include_relative _answering-questions.md %}
 {% include_relative _reporting-bugs.md %}

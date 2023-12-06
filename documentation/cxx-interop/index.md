@@ -2,7 +2,7 @@
 layout: page
 title: Mixing Swift and C++
 official_url: https://swift.org/documentation/cxx-interop/
-redirect_from: 
+redirect_from:
 - /documentation/cxx-interop.html
 ---
 
@@ -13,6 +13,9 @@ redirect_from:
 {:toc}
 
 ## Introduction
+
+A development version of Swift has support for bidirectional interoperability with C++.
+A great variety of C++ APIs can be called directly from Swift, and select Swift APIs can be used from C++.
 
 This document is the reference guide describing how to mix Swift and C++. It
 describes how C++ APIs get imported into Swift, and provides examples showing
@@ -89,7 +92,7 @@ The Swift compiler embeds the [Clang](https://clang.llvm.org/) compiler.
 This allows Swift to import C++ header files using
 [Clang modules](https://clang.llvm.org/docs/Modules.html). Clang modules
 provide a more robust and efficient semantic model of C++ headers as
-compared to the preprocessor-based model of directly including the contents of 
+compared to the preprocessor-based model of directly including the contents of
 header files using the `#include` directive.
 
 > Swift currently cannot import
@@ -98,9 +101,9 @@ header files using the `#include` directive.
 
 ### Creating a Clang Module
 
-In order for Swift to import a Clang module, it needs to find a 
+In order for Swift to import a Clang module, it needs to find a
 `module.modulemap` file that describes how a collection of C++ headers maps
-to a Clang module. 
+to a Clang module.
 
 Some IDEs and build systems can generate a module map file for a
 C++ build target automatically.
@@ -129,11 +132,11 @@ module forestLib {
 
 The `export *` directive is another
 recommended addition to the module map.
-It ensures that the types from Clang modules imported 
+It ensures that the types from Clang modules imported
 into the `forestLib` module are visible to Swift as well.
 
 The module map file should be placed right next to the header files it
-references. 
+references.
 For example, in the `forestLib` library, the module map would
 go into the `include` directory:
 
@@ -149,8 +152,8 @@ forestLib
 
 Now that `forestLib` has a module map, Swift can import it when
 C++ interoperability is enabled. In order for Swift to find the `forestLib`
-module, the build system must pass the import path flag (`-I`) that 
-points to `forestLib/include` when it's invoking the Swift compiler. 
+module, the build system must pass the import path flag (`-I`) that
+points to `forestLib/include` when it's invoking the Swift compiler.
 
 For more information on the syntax and the semantics of module map files, please
 see Clang's
@@ -163,7 +166,7 @@ using Swift declarations once a Clang module is imported. This allows Swift code
 to use C++ types and functions as if they were Swift types and functions.
 
 For example, Swift can represent the following C++ enumeration and
-the following C++ class from the `forestLib` library: 
+the following C++ class from the `forestLib` library:
 
 ```c++
 enum class TreeKind {
@@ -209,7 +212,7 @@ let tree = Tree(.Oak)
 
 Swift uses C++ types and
 calls C++ functions directly, without any kind of indirection or wrapping.
-In the example shown above, 
+In the example shown above,
 Swift directly calls the C++ constructor for class `Tree`, and stores the
 resulting object directly into the `tree` variable.
 
@@ -330,8 +333,8 @@ types can be annotated in C++ to instruct the Swift compiler to map them to
 ### Constructing C++ Types from Swift
 
 Public constructors inside C++ structures and classes
-that aren't copy or move constructors 
-become initializers in Swift. 
+that aren't copy or move constructors
+become initializers in Swift.
 
 For example, all three constructors of the C++ `Color` class are
 available in Swift:
@@ -349,7 +352,7 @@ public:
 ```
 
 The `Color` constructors shown above become initializers in Swift.
-Swift code can call them to create a value of type `Color`: 
+Swift code can call them to create a value of type `Color`:
 
 ```swift
 let theEmptiness = Color()
@@ -416,7 +419,7 @@ of the instance pointed to by `this` and using the original value of such
 instance for the rest of the Swift code execution.
 
 C++ permits the mutation of `mutable` fields in constant member functions.
-Constant member functions in structures or classes with such fields 
+Constant member functions in structures or classes with such fields
 still become `nonmutating` methods in Swift. Swift doesn't know which
 constant functions mutate the object, and which don't, so for the sake
 of better API usability Swift still assumes that such functions do not
@@ -481,11 +484,11 @@ private:
 
 The two `getRootTree` member functions become methods in Swift. Swift
 renames the `mutating` method to avoid having two ambiguous methods with
-the same name and arguments, when it finds that the type already has a 
+the same name and arguments, when it finds that the type already has a
 `nonmutating` method with the same Swift name. The rename appends
 the `Mutating` suffix to the name of the `mutating` method.
 This rename is done before the safety of the method is taken into account.
-In the example shown above, 
+In the example shown above,
 the two `getRootTree` member functions become
 `__getRootTreeUnsafe` and `__getRootTreeMutatingUnsafe` methods in Swift,
 because they return a reference that points into the `Forest` object.
@@ -527,7 +530,7 @@ The `Fern` Swift structure gets an additional method named `water`, that
 calls member function `water` in the `Plant` C++ class:
 
 ```swift
-struct Plant { 
+struct Plant {
   mutating func water(_ amount: Float)
 }
 
@@ -614,10 +617,10 @@ type in Swift:
 using CustomString = std::string;
 ```
 
-### Using Class Templates 
+### Using Class Templates
 
 An instantiated specialization of a class or structure template is mapped
-to a distinct type in Swift. For example, the following uninstantiated 
+to a distinct type in Swift. For example, the following uninstantiated
 C++ class template is not available in Swift by itself:
 
 ```c++
@@ -662,7 +665,7 @@ print(magicNum.numerator, magicNum.denominator)
 ```
 
 A C++ type alias can refer to a specific specialization of a
-class template. For example, in order to construct 
+class template. For example, in order to construct
 `Fraction<int, float>` from Swift, you first want to create a
 C++ type alias that refers to such template specialization:
 
@@ -692,15 +695,15 @@ function using the `SWIFT_NAME` macro.
 
 The `<swift/bridging>` header defines the customization macros that can be used
 to annotate C++ functions and types. This header ships with the
-Swift toolchain. 
+Swift toolchain.
 
 > On Apple and Linux platforms both the system's C++ compiler and
 > the Swift compiler should find this header automatically.
 > On other platforms, like Windows, you might
 > need to add additional header search path flags (`-I`) to your C++ and Swift
-> compiler invocations to make sure that this header is found. 
+> compiler invocations to make sure that this header is found.
 
-This section describes just two of the customization macros from 
+This section describes just two of the customization macros from
 the `<swift/bridging>` header. The other customization macros and their
 behavior are documented in the subsequent sections in this document.
 The [complete list](#list-of-customization-macros-in-swiftbridging) of all the
@@ -748,7 +751,7 @@ class Tree {
 public:
   TreeKind getKind() const SWIFT_COMPUTED_PROPERTY;
   void setKind(TreeKind kind) SWIFT_COMPUTED_PROPERTY;
-  
+
   ...
 };
 ```
@@ -771,7 +774,7 @@ required for this transformation to work.
 
 Swift [extensions](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/extensions)
 can add new functionality to C++ types in Swift. They can also
-conform an existing C++ type to a Swift protocol. 
+conform an existing C++ type to a Swift protocol.
 
 > Extensions can add new functionality to a C++ type, but they can't override
 > existing functionality of a C++ type.
@@ -789,7 +792,7 @@ following use cases in Swift:
  can represent a conforming C++ value.
 
 For example, a Swift extension can add
-`Hashable` conformance to the C++ class `Tree`: 
+`Hashable` conformance to the C++ class `Tree`:
 
 ```swift
 extension Tree: Hashable {
@@ -855,7 +858,7 @@ do not conform to `Deserializable`.
 
 The `SWIFT_CONFORMS_TO` customization macro from the `<swift/bridging>`
 header can be used to conform all specializations of a class template to
-a Swift protocol automatically. For example, the 
+a Swift protocol automatically. For example, the
 definition of the `SerializedValue` class template can be annotated with
 `SWIFT_CONFORMS_TO`:
 
@@ -1041,7 +1044,7 @@ protocol.
 
 #### Conformance Rules for `CxxConvertibleToCollection` Protocol
 
-The following two conditions must be satisfied 
+The following two conditions must be satisfied
 in order for a C++ container type to automatically conform to
 `CxxConvertibleToCollection` in Swift:
 
@@ -1109,7 +1112,7 @@ to use C++ containers in Swift:
   use collection APIs like `map` or `filter`.
 - Use the subscript operator from the `CxxDictionary` protocol when looking
   up values in an associative C++ container.
-  
+
 #### Using C++ Containers in Performance Sensitive Swift Code
 
 Swift's current `for-in` loop makes a deep copy of the C++
@@ -1142,7 +1145,7 @@ You should use protocols like `CxxRandomAccessCollection`,
 instead of relying on C++ iterator APIs.
 
 Member functions inside of C++ container types that return C++ iterators are
-marked unsafe in Swift, just like 
+marked unsafe in Swift, just like
 [member functions that return references](#member-functions-returning-references-are-unsafe-by-default).
 Other C++ APIs, like top-level functions that take or return iterators could
 still be directly available in Swift.
@@ -1180,13 +1183,13 @@ func mutatesVectorType(_ : inout CxxVectorOfInt) {
 
 var vector = createCxxVectorOfInt()
 takesVectorType(&vector) // 'vector' is not copied!
-``` 
+```
 
 ## Mapping C++ Types to Swift Reference Types
 
 The Swift compiler allows you to annotate some C++ types and import them as reference types (or `class` types) in Swift. Whether a C++ type should be imported as a reference type is a complex question, and there are two primary criteria that go into answering it.
 
-The first criterion is whether object identity is part of the "value" of the type. Is comparing the address of two objects just asking whether they're stored at the same location, or it is deciding whether they represent the "same object" in a more significant sense? 
+The first criterion is whether object identity is part of the "value" of the type. Is comparing the address of two objects just asking whether they're stored at the same location, or it is deciding whether they represent the "same object" in a more significant sense?
 
 The second criterion whether objects of the C++ class are always passed around by reference.  Are objects predominantly passed around using a pointer or reference type, such as a raw pointer (`*`), C++ reference (`&` or `&&`), or a smart pointer (like `std::unique_ptr` or `std::shared_ptr`)?  When passed by raw pointer or reference, is there an expectation that that memory is stable and will continue to stay valid, or are receivers expected to copy the object if they need to keep the value alive independently?  If objects are generally allocated and remain at a stable address, even if that address is not semantically part of the "value" of an object, the class may be idiomatically a reference type. This will sometimes be a judgment call for the programmer.
 
@@ -1203,7 +1206,7 @@ customization macros from the `<swift/bridging>` header:
 
 The only reasonable thing Swift can do with immortal reference types is import them as unmanaged classes.  This is perfectly fine when objects are truly immortal.  If the object is arena-allocated, this is unsafe, but it's essentially an unavoidable level of unsafety given the choices of the C++ API.
 
-To specify that a C++ type is an immortal reference type, apply the `SWIFT_IMMORTAL_REFERENCE` attribute. Here's an example of `SWIFT_IMMORTAL_REFERENCE` being applied to the C++ type `LoggerSingleton`: 
+To specify that a C++ type is an immortal reference type, apply the `SWIFT_IMMORTAL_REFERENCE` attribute. Here's an example of `SWIFT_IMMORTAL_REFERENCE` being applied to the C++ type `LoggerSingleton`:
 ```c++
 class LoggerSingleton {
 public:
@@ -1218,7 +1221,7 @@ Now that `LoggerSingleton` is imported as a reference type in Swift, the program
 ```swift
 let logger = LoggerSingleton.getInstance()
 logger.log(123)
-``` 
+```
 
 ### Shared Reference Types
 
@@ -1256,12 +1259,12 @@ Now that `SharedObject` is imported as a reference type in Swift, the programmer
 let object = SharedObject.create()
 object.doSomething()
 // `object` will be released here.
-``` 
+```
 
 ### Unsafe Reference Types
 
 The `SWIFT_UNSAFE_REFERENCE` annotation macro has the same effect as `SWIFT_IMMORTAL_REFERENCE`
-annotation macro. However, it communicates different semantics: the type is intended to be used unsafely, rather than living for the duration of the program. 
+annotation macro. However, it communicates different semantics: the type is intended to be used unsafely, rather than living for the duration of the program.
 
 ### Unique Reference Types
 
@@ -1314,7 +1317,7 @@ let swiftString = String(cxxString)
 ```
 
 Swift does not convert C++ `std::string` type to Swift's `String` type
-automatically. 
+automatically.
 
 ## Working with C++ References and View Types in Swift
 
@@ -1333,7 +1336,7 @@ return dependent references or views, and which member functions return
 completely independent references or views.
 Therefore
 Swift assumes that any reference or any view
-type returned by a member function is dependent on the `this` object. 
+type returned by a member function is dependent on the `this` object.
 
 Dependent references and view types are unsafe in Swift, as the
 reference or view is not associated with its owning object. Thus the owning object
@@ -1463,7 +1466,7 @@ annotate your C++ code to instruct Swift to either:
   reference or view. Such member function is then assumed to be safe.
 - Assume that a particular C++ class or structure is **self contained**. All
   member functions that return such self contained types are then assumed to be safe.
-  
+
 #### Annotating Methods Returning Independent References or Views
 
 The `SWIFT_RETURNS_INDEPENDENT_VALUE` customization macro from the
@@ -1486,7 +1489,7 @@ public:
 ```
 
 #### Annotating C++ Structures or Classes as Self Contained
-  
+
 The `SWIFT_SELF_CONTAINED` customization macro from the
 `<swift/bridging>` header can be added to a C++ structure or class, to let
 Swift know that it's not a view type.  All member functions that return such self contained type are then assumed to be safe in Swift.
@@ -1573,8 +1576,8 @@ public struct MountainPeak {
   let name: String
   let height: Float
 
-  public init(name: String, height: Float) { 
-    self.name = name 
+  public init(name: String, height: Float) {
+    self.name = name
     self.height = height
   }
 }
@@ -1616,8 +1619,8 @@ generated header:
 public class MountainRange {
   let peaks: [MountainPeak]
 
-  public init(peaks: [MountainPeak]) { 
-    self.peaks = peaks 
+  public init(peaks: [MountainPeak]) {
+    self.peaks = peaks
   }
 }
 
@@ -1683,7 +1686,7 @@ public enum VolcanoStatus {
 A `VolcanoStatus` instance can be constructed from C++, by using
 `operator()` on one of its members that represents an enumeration case.
 You can also reference such member in the `case` condition inside of a
-`switch` statement in C++: 
+`switch` statement in C++:
 
 ```c++
 #include <Landscape-Swift.h>
@@ -1755,7 +1758,7 @@ auto newLandmarkId = LandmarkIdentifier::id(1234);
 
 ### Calling Swift Methods
 
-Swift methods become member functions in C++. 
+Swift methods become member functions in C++.
 
 Swift structures and enumerations have `mutating` and `nonmutating` methods.
 `Nonmutating` methods become constant member functions in C++.
@@ -1950,7 +1953,7 @@ void callMeOnThePhone() {
 This section contains additional tables and references for certain topics
 that are outlined in the documentation above.
 
-### List of Customization Macros in `<swift/bridging>` 
+### List of Customization Macros in `<swift/bridging>`
 
 | Macro                     | Documentation |
 | ------------------------- | ------------- |

@@ -163,6 +163,6 @@ $ swift run Hello `whoami`
 
 > To learn about the Swift Package Manager,
 > including how to build modules, import dependencies, and map system libraries,
-> see the [Swift Package Manager](/package-manager) section of the website.
+> see the [Swift Package Manager](/documentation/package-manager) section of the website.
 
 > To learn more about Package Plugins, see [Getting Started with Plugins](https://github.com/apple/swift-package-manager/blob/main/Documentation/Plugins.md#getting-started-with-plugins).

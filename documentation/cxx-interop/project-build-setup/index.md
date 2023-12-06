@@ -2,7 +2,7 @@
 layout: page
 title: Setting Up Mixed-Language Swift and C++ Projects
 official_url: https://swift.org/documentation/cxx-interop/project-build-setup/
-redirect_from: 
+redirect_from:
 - /documentation/cxx-interop/project-build-setup.html
 ---
 
@@ -19,10 +19,10 @@ It also describes how
 enable C++ interoperability by describing how to use C++ interoperability
 when invoking Swift compiler directly.
 
-## Mixing Swift and C++ Using Swift Package Manager 
+## Mixing Swift and C++ Using Swift Package Manager
 
-The [Swift Package Manager](/package-manager/) allows Swift code to use
-C++ APIs in Swift. 
+The [Swift Package Manager](/documentation/package-manager/) allows Swift code to use
+C++ APIs in Swift.
 
 > Swift Package Manager does not yet provide support for
 using Swift APIs in C++.
@@ -45,7 +45,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "libraryUsesCxx", 
+            name: "libraryUsesCxx",
             swiftSettings: [.interoperabilityMode(.Cxx)])
     ]
 )
@@ -65,7 +65,7 @@ that include the target's other public C++ headers.
 The supported C++ types and functions
 declared in the headers listed in the umbrella header can be used
 in Swift, once the Clang module represented by the generated module map is imported
-into Swift. 
+into Swift.
 
 The umbrella header used by the C++ target must:
 - Use the name of the C++ target (with an additional extension) as its file name
@@ -96,7 +96,7 @@ let package = Package(
         .target(
             name: "cxxLibrary"),
         .executableTarget(
-            name: "swiftCLITool", 
+            name: "swiftCLITool",
             dependencies: ["cxxLibrary"],
             swiftSettings: [.interoperabilityMode(.Cxx)])
     ]
@@ -140,7 +140,7 @@ will then be available in Swift.
 
 Enabling C++ interoperability for a Swift Package Manager target will
 need other targets that depend on such target to enable C++ interoperability
-as well. 
+as well.
 
 Enabling C++ interoperability is a breaking change for an existing package,
 and so it must be done only in a new major [semver](https://semver.org) version.
@@ -154,16 +154,16 @@ we recommend that you:
   interoperability when depending on targets from such package.
 - Clearly communicate to clients that your package relies on an unreleased
   version of Swift that is still in development.
-  
+
 ## Mixing Swift and C++ Using Xcode
 
 [Xcode 15](https://developer.apple.com/xcode/resources/) supports
 mixed-language Swift and C++ projects. This section describes
-how to use C++ APIs from Swift and Swift APIs from C++ in Xcode. 
+how to use C++ APIs from Swift and Swift APIs from C++ in Xcode.
 
 Check out the
 ["Mix Swift and C++"](https://developer.apple.com/videos/play/wwdc2023/10172/) WWDC session
-for more details on how to use C++ interoperability in Xcode. 
+for more details on how to use C++ interoperability in Xcode.
 The following two sample Xcode projects are available for download as well:
 
 - [Mix Swift and C++ within a single framework target](https://developer.apple.com/documentation/swift/mixingswiftandc++inanxcodeproject)
@@ -260,7 +260,7 @@ This section describes how to enable and use C++ interoperability
 when invoking the Swift compiler directly. This allows other
 build systems to configure a mixed-language Swift and C++ project.
 
-### Enabling C++ Interoperability in the Swift Compiler 
+### Enabling C++ Interoperability in the Swift Compiler
 
 The **`-cxx-interoperability-mode=`** build flag is used to enable C++
 interoperability in the Swift compiler. It receives the interoperability
@@ -268,7 +268,7 @@ compatibility version
 as its value. The only supported value right now is `default`. The `default`
 value implies that the interoperability
   compatibility version used by Swift matches the Swift language version.
-  
+
 ### Importing a C++ Clang Module When Invoking Compiler Directly
 
 The following build flag allows Swift to find the C++ headers:
@@ -277,7 +277,7 @@ The following build flag allows Swift to find the C++ headers:
   in the directory specified by the given path.
   This path should contain a `module.modulemap` file when you want to import
   a C++ Clang module into Swift.
-  
+
 The `-Xcc` flag is used to pass additional C++ build settings to the
 C++ Clang compiler embedded in the Swift compiler. For example, you can use
 Clang's `-std=` flag to import C++ headers that require C++20 into Swift:
