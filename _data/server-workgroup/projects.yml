@@ -179,3 +179,17 @@
   pitched: 2023-09-05
   accepted: 2023-10-03
   url: https://github.com/apple/swift-distributed-tracing
+
+- name: DiscordBM
+  description: A Swift library for making bots on the Discord API
+  maturity: Sandbox
+  pitched: 2023-05-05
+  accepted: 2023-10-04
+  url: https://github.com/apple/swift-distributed-tracing
+
+- name: Swift OpenAPI Generator
+  description: A Swift package plugin that can generate the ceremony code required to make API calls, or implement API servers
+  maturity: Sandbox
+  pitched: 2023-08-04
+  accepted: 2023-10-04
+  url: https://github.com/apple/swift-openapi-generator
