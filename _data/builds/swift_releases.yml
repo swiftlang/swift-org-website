@@ -1623,5 +1623,6 @@
         - aarch64
     - name: Windows 10
       platform: Windows
+      docker: 5.9.1-windowsservercore-ltsc2022
       archs:
         - x86_64
