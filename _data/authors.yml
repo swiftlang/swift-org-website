@@ -428,3 +428,10 @@ etcwilde:
   name: Evan Wilde
   email: ewilde@apple.com
   github: etcwilde
+
+hassila:
+  name: Joakim Hassila
+  email: jocke@ordo.one
+  gravatar: d6ff2f8e32e6155569a312295bce0ec8
+  github: hassila
+  about: "Joakim Hassila is the CTO of Ordo One, which builds high performance distributed trading systems written in Swift running on Linux and macOS."
