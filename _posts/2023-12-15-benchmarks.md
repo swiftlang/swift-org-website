@@ -112,6 +112,7 @@ Sample text output for a set of benchmarks:
 ### Key Benchmark workflows are supported
 
 * **[Automated Pull Request performance regression checks](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/comparingbenchmarksci)** by comparing the performance metrics of a pull request with the main branch and having the PR workflow check fail if there is a regression according to absolute or relative thresholds specified per benchmark
+* Automated Pull Request check vs. a pre-recorded *absolute baseline p90 threshold* (see e.g. [Swift Certificates](https://github.com/apple/swift-certificates/tree/main/Benchmarks) for such a workflow with [related Docker files](https://github.com/apple/swift-certificates/tree/main/docker)). Suitable for e.g. malloc regression tests.
 * **[Manual comparison of multiple performance baselines](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/creatingandcomparingbaselines)** for iterative or A/B performance work by an individual developer
 * **[Export of benchmark results in several formats](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/exportingbenchmarks)** for analysis or visualization
 
