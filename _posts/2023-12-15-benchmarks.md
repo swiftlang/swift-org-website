@@ -124,7 +124,7 @@ The Benchmark package has recently seen a wide community uptake as more projects
 Performance is a key non-functional feature for many software packages. Early and continuous benchmarking will 
 help you to ship software with consistent performance and controlled resource usage that delights your users.
 
-The [Benchmark package](https://github.com/ordo-one/package-benchmark) allows you to easily create sophisticated Swift performance benchmarks, with [full documentation being available online at the Swift Package Index](https://swiftpackageindex.com/ordo-one/package-benchmark/1.13.0/documentation/benchmark), it provides much of the scaffolding required for benchmarking:
+The [Benchmark package](https://github.com/ordo-one/package-benchmark) allows you to easily create sophisticated Swift performance benchmarks, with [full documentation being available online at the Swift Package Index](https://swiftpackageindex.com/ordo-one/package-benchmark/1.14.0/documentation/benchmark), it provides much of the scaffolding required for benchmarking:
 
 * Support for a wide range of performance metrics, not just CPU
 * Quickly run individual benchmarks from the command line during iterative development
