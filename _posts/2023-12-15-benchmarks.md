@@ -12,7 +12,7 @@ Incorporating benchmarking into the standard workflow and CI pipeline can assist
 
 Constructing a set of benchmarks and consistently running them provides an indication when something is not performing as expected. Typically, other more specialized tools are employed for a root-cause analysis to analyze and fix the problem (e.g., Instruments, DTrace, Heaptrack, Leaks, Sample, …).
 
-This parallels unit tests, where a failed test provides an indication that something is wrong, and other more specialized tools are used to fix the problem (e.g., a debugger, TSAN/ASAN, adding asserts, debug printouts, …)
+This is analogous with unit tests, where a failed test provides an indication that something is wrong, and other more specialized tools are used to fix the problem (e.g., a debugger, TSAN/ASAN, adding asserts, debug printouts, …)
 
 The open-source [Benchmark package](https://github.com/ordo-one/package-benchmark) helps you automate performance testing and makes it easy for individual developers to easily run a quick performance validation locally before pushing changes.
 
