@@ -14,20 +14,20 @@ Each new release of Swift adds features and capabilities. These changes go throu
 
 One important consideration for all changes to Swift is _source compatibility_. To be source compatible, existing Swift code must continue to compile and behave as expected with new versions of the compiler.
 
-To help meet this strong goal, the Swift project maintains an extensive [source compatibility test suite](/source-compatibility/). Proposed changes are tested to ensure they do not introduce source-breaking changes. In addition, each evolution proposal includes a discussion of source compatibility.
+To help meet this strong goal, the Swift project maintains an extensive [source compatibility test suite](/documentation/source-compatibility/). Proposed changes are tested to ensure they do not introduce source-breaking changes. In addition, each evolution proposal includes a discussion of source compatibility.
 
 On rare occasions, a proposed change that breaks source compatibility is considered important enough to be accepted. These source-breaking changes are not introduced immediately, but wait until the next major version of Swift.
 
 ## An Example: Regex Literals
 One example of a source-breaking change is the syntax for Regex literals introduced in Swift 5.7.
-  
+
 The desired literal syntax is to enclose the regex pattern in forward slashes, which is the convention for regular expressions in many different tools and languages:
 ```swift
 let regex = /[a-zA-Z_][0-9a-zA-Z_]*/
 ```
 However, there are cases where this new syntax would break existing code, as detailed in [the SE-0354 proposal](https://github.com/apple/swift-evolution/blob/main/proposals/0354-regex-literals.md#source-compatibility).
 
-Even though the source incompatibility would not affect many projects and is not likely to be a difficult fix in affected projects, it is still a breaking change. 
+Even though the source incompatibility would not affect many projects and is not likely to be a difficult fix in affected projects, it is still a breaking change.
 
 Therefore, in Swift 5.7, regex literals only support the extended literal delimiters:
 ```swift
@@ -57,7 +57,7 @@ For example, to enable the upcoming Regex literal syntax you would use:
 In Swift Package Manager manifests you specify these using a new `SwiftSetting`:
 ```swift
 .enableUpcomingFeature("BareSlashRegexLiterals")
-``` 
+```
 ### Checking For Features In Code
 
 SE-0362 also introduces a new `hasFeature()` compilation condition that checks whether a feature is enabled. This allows you to write code that uses a feature if present or uses alternate code if not present.
@@ -141,7 +141,7 @@ Use the [Swift Evolution Dashboard](/swift-evolution/) to find upcoming feature 
 
 - Filter to see all proposals with an upcoming feature flag
 - Search for upcoming feature flags by name
-- View upcoming feature flags for proposals that define one 
+- View upcoming feature flags for proposals that define one
 
 Each dashboard entry links to full Swift Evolution proposal where the upcoming feature flag is defined. Details on the changes that the flag enables are in the body of the proposal, typically in the _Source Compatibility_ section.
 
@@ -198,4 +198,3 @@ You can start looking into these features today in a low-risk way by creating a 
 Of course, on a team, code migration of this sort needs to be planned and communicated.
 
 These new capabilities in Swift 5.8 give you and your team additional lead time and flexibility to investigate, plan, and schedule any changes needed to adopt upcoming features.
-

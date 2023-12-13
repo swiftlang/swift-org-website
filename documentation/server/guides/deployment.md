@@ -4,13 +4,13 @@ title: Deploying to Servers or Public Cloud
 ---
 
 The following guides can help with the deployment to public cloud providers:
-* [AWS Lambda using the Serverless Application Model (SAM)](/server/guides/deploying/aws-sam-lambda.html)
-* [AWS Fargate with Vapor and MongoDB Atlas](/server/guides/deploying/aws-copilot-fargate-vapor-mongo.html)
-* [AWS EC2](/server/guides/deploying/aws.html)
-* [DigitalOcean](/server/guides/deploying/digital-ocean.html)
-* [Heroku](/server/guides/deploying/heroku.html)
-* [Kubernetes & Docker](/server/guides/packaging.html#docker)
-* [GCP](/server/guides/deploying/gcp.html)
+* [AWS Lambda using the Serverless Application Model (SAM)](/documentation/server/guides/deploying/aws-sam-lambda.html)
+* [AWS Fargate with Vapor and MongoDB Atlas](/documentation/server/guides/deploying/aws-copilot-fargate-vapor-mongo.html)
+* [AWS EC2](/documentation/server/guides/deploying/aws.html)
+* [DigitalOcean](/documentation/server/guides/deploying/digital-ocean.html)
+* [Heroku](/documentation/server/guides/deploying/heroku.html)
+* [Kubernetes & Docker](/documentation/server/guides/packaging.html#docker)
+* [GCP](/documentation/server/guides/deploying/gcp.html)
 * _Have a guides for other popular public clouds like Azure? Add it here!_
 
 If you are deploying to your own servers (e.g. bare metal, VMs or Docker) there are several strategies for packaging Swift applications for deployment, see the [Packaging Guide](/server/guides/packaging.html) for more information.

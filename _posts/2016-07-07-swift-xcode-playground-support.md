@@ -6,7 +6,7 @@ title: Xcode Playground Support
 author: k8stone
 ---
 
-We are delighted to introduce [Xcode Playground Support](/lldb/#xcode-playground-support)
+We are delighted to introduce [Xcode Playground Support](/documentation/lldb/#xcode-playground-support)
 as part of the Swift open source community!
 
 Swift developers can approach the language in many different ways. In

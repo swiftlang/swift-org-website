@@ -41,6 +41,11 @@ is printed.
 * TOC
 {:toc}
 
+## Introduction
+
+Delivering a clear, consistent developer experience when writing Swift code is largely defined by the names and idioms that appear in APIs.
+These design guidelines explain how to make sure that your code feels like a part of the larger Swift ecosystem.
+
 ## Fundamentals
 
 * **Clarity at the point of use** is your most important goal.
@@ -1062,4 +1067,3 @@ if (location.search.match(/[?&]expand=true\b/)) {
     show_or_hide_all();
 }
 </script>
-
