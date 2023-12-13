@@ -5,7 +5,7 @@ title: SSWG Incubation Process
 
 ## Overview
 
-As described on [the server page](/server), the goal of the Swift Server Work Group (SSWG) is to create a robust, healthy ecosystem for server application development with Swift. One avenue to achieve this goal is to encourage the development of high quality, well maintained libraries and tools that the community can comfortably lean on.
+As described on [the server page](/documentation/server), the goal of the Swift Server Work Group (SSWG) is to create a robust, healthy ecosystem for server application development with Swift. One avenue to achieve this goal is to encourage the development of high quality, well maintained libraries and tools that the community can comfortably lean on.
 
 The difference between the SSWG and the Swift Evolution process is that server-oriented libraries and tools that are produced as a result of work group efforts will exist outside of the Swift language project itself, and they will be distributed across different code bases.
 
@@ -13,7 +13,7 @@ The teams at Apple and Vapor have engineers that will actively participate in th
 
 The incubation process is designed to help nurture and mature projects ensuring standardization, quality, and longevity. It also seeks to increase the visibility of ideas, experiments, or other early work that can add value to the SSWG mission.
 The following document details this incubation process.
-The SSWG [steering group](/server/) has a similar role to the Swift Core Team and will make the final decision on moving pitches/proposals through the incubation process based on the feedback of the community.
+The SSWG [steering group](/documentation/server/) has a similar role to the Swift Core Team and will make the final decision on moving pitches/proposals through the incubation process based on the feedback of the community.
 Just like for Swift Evolution, pitches and proposals can be made by anyone, being part of the SSWG steering group is absolutely not a requirement.
 
 ## Process
@@ -117,7 +117,7 @@ To be accepted at Graduated level, a project must meet the [SSWG graduation requ
 
 ### Ecosystem Index
 
-All projects and their respective levels will be listed on the [Swift Server Ecosystem Index](/server/#projects).
+All projects and their respective levels will be listed on the [Swift Server Ecosystem Index](/documentation/server/#projects).
 In cases where more than one project solves a particular problem (e.g., two similar database drivers), they will be ordered by popularity.
 The SSWG reserves the right to define a singular solution for critical building blocks, such as Logging or Metrics APIs, where consistency across the ecosystem is of a critical nature.
 

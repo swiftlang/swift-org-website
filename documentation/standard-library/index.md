@@ -3,6 +3,9 @@ layout: page
 title: Standard Library
 ---
 
+The Swift standard library defines a base layer of functionality for writing Swift programs.
+Documentation for the standard library is presently hosted on the [Apple Developer website](https://developer.apple.com/documentation/swift/swift-standard-library).
+
 The Swift standard library, along with its tests and inline documentation,
 are a part of the [main Swift repository][swift-repo].
 
