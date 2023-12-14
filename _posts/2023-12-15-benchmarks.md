@@ -103,7 +103,7 @@ Importantly, the Benchmark package supports several of these metrics out-of-the-
 
 The default output is in a table format for human readability, but the package [supports a range of different output formats](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/exportingbenchmarks) with output suitable for analysis with other visualization tools.
 
-Sample text output for a set of benchmarks:
+Sample default output when running benchmarks:
 
 <img
   alt="Sample text output for benchmarks"
