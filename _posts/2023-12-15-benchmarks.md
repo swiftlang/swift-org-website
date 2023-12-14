@@ -107,7 +107,7 @@ Sample text output for a set of benchmarks:
 
 <img
   alt="Sample text output for benchmarks"
-  src="/assets/images/benchmark-blog/Benchmark.jpg" />
+  src="/assets/images/benchmark-blog/Benchmark.png" />
 
 ### Key Benchmark workflows are supported
 
