@@ -93,7 +93,7 @@ Now, this is primarily focused on the _CPU_ performance metric - but the CPU is 
 * Network bandwidth
 * I/O (syscalls as well as amount of data written)
 * Kernel (overall syscalls, thread scheduling, peak thread usage)
-* Custom performance metrics (for other contrained resources)
+* Custom performance metrics (for other constrained resources)
 
 Each one of these subsystems can constrain or be critical to the runtime performance of a given piece of software, and for certain kinds of foundational packages you may want to keep strict control on additional performance metrics (e.g. ensuring that you don't regress on malloc usage or memory footprint), not only runtime performance. 
 
