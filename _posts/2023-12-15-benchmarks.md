@@ -78,7 +78,7 @@ let benchmarks = {
 ```
 
 ### Performance metrics
-Performance is a key non-functional feature for many foundational packages and applications, both server-side and in the desktop/mobile space. 
+Performance is a key non-functional requirement for many foundational packages and applications, both server-side and in the desktop/mobile space. 
 
 Swift's ambitious aspirations is that the language should provide:
 
