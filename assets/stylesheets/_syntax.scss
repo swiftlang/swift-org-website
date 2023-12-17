@@ -118,37 +118,14 @@
 .language-console {
   color: var(--color-syntax-plain-text);
 }
-.language-cpp .cp {
-  color: var(--color-syntax-keywords);
-}
 
-.language-cpp .kt {
-  color: var(--color-syntax-keywords);
-}
-
-.language-cpp .nl {
-  color: var(--color-syntax-keywords);
-}
-
-.language-cpp .o {
-  color: var(--color-syntax-keywords);
-}
-
-
-
-
-.language-c\+\+ .cp {
-  color: var(--color-syntax-keywords);
-}
-
-.language-c\+\+ .kt {
-  color: var(--color-syntax-keywords);
-}
-
-.language-c\+\+ .nl {
-  color: var(--color-syntax-keywords);
-}
-
+.language-cpp .cp,
+.language-cpp .kt,
+.language-cpp .nl,
+.language-cpp .o,
+.language-c\+\+ .cp,
+.language-c\+\+ .kt,
+.language-c\+\+ .nl,
 .language-c\+\+ .o {
   color: var(--color-syntax-keywords);
 }
