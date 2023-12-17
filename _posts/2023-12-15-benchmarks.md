@@ -10,7 +10,7 @@ Have you ever encountered a _performance problem_ that slipped through to end us
 
 Incorporating benchmarking into the standard workflow and CI pipeline can assist you similarly to how automatic unit and integration testing helps in avoiding functional software defects.
 
-Constructing a set of benchmarks and consistently running them provides an indication when something is not performing as expected. Typically, other more specialized tools are employed for a root-cause analysis to analyze and fix the problem (e.g., Instruments, DTrace, Heaptrack, Leaks, Sample, …).
+Constructing a set of benchmarks and consistently running them provides an indication when something is not performing as expected. Typically, other more specialized tools are employed for root-cause analysis to analyze and fix the problem (e.g., Instruments, DTrace, Heaptrack, Leaks, Sample, …).
 
 This is analogous with unit tests, where a failed test provides an indication that something is wrong, and other more specialized tools are used to fix the problem (e.g., a debugger, TSAN/ASAN, adding asserts, debug printouts, …)
 
