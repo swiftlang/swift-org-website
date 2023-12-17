@@ -118,3 +118,18 @@
 .language-console {
   color: var(--color-syntax-plain-text);
 }
+.language-cpp .cp {
+  color: var(--color-syntax-keywords);
+}
+
+.language-cpp .kt {
+  color: var(--color-syntax-keywords);
+}
+
+.language-cpp .nl {
+  color: var(--color-syntax-keywords);
+}
+
+.language-cpp .o {
+  color: var(--color-syntax-keywords);
+}

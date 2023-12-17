@@ -8,6 +8,15 @@ This is a temporary page to test and solve #305
 ### C++
 
 ```cpp
+class Tree {
+  public:
+    Tree(TreeKind kind);
+  private:
+    TreeKind kind;
+}
+```
+
+```cpp
 #include <iostream>
 
 int main() {
