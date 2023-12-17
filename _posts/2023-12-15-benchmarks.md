@@ -89,13 +89,13 @@ Now, this is primarily focused on the _CPU_ performance metric, but the CPU is o
 * CPU
 * Memory allocator (number of allocations/frees, amount of memory allocated)
 * Memory management (ARC traffic)
-* Memory footprint (e.g. transient peak RSS/VSS)
+* Memory footprint (e.g., transient peak RSS/VSS)
 * Network bandwidth
 * I/O (syscalls as well as amount of data written)
 * Kernel (overall syscalls, thread scheduling, peak thread usage)
 * Custom performance metrics (for other constrained resources)
 
-Each one of these subsystems can constrain or be critical to the runtime performance of a given piece of software, and for certain kinds of foundational packages you may want to keep strict control on additional performance metrics (e.g. ensuring that you don't regress on malloc usage or memory footprint), not only runtime performance. 
+Each one of these subsystems can constrain or be critical to the runtime performance of a given piece of software, and for certain kinds of foundational packages you may want to keep strict control on additional performance metrics (e.g., ensuring that you don't regress on malloc usage or memory footprint), not only runtime performance. 
 
 Importantly, the Benchmark package supports several of these metrics out-of-the-box including some OS specific ones (i.e. on Linux/macOS).
 
@@ -112,13 +112,13 @@ Sample default output when running benchmarks:
 ### Key Benchmark workflows are supported
 
 * **[Automated Pull Request performance regression checks](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/comparingbenchmarksci)** by comparing the performance metrics of a pull request with the main branch and having the PR workflow check fail if there is a regression according to absolute or relative thresholds specified per benchmark
-* Automated Pull Request check vs. a pre-recorded *absolute baseline p90 threshold* (see e.g. [Swift Certificates](https://github.com/apple/swift-certificates/tree/main/Benchmarks) for such a workflow with [related Docker files](https://github.com/apple/swift-certificates/tree/main/docker)). Suitable for e.g. malloc regression tests.
+* Automated Pull Request check vs. a pre-recorded *absolute baseline p90 threshold* (see e.g., [Swift Certificates](https://github.com/apple/swift-certificates/tree/main/Benchmarks) for such a workflow with [related Docker files](https://github.com/apple/swift-certificates/tree/main/docker)). Suitable for e.g., malloc regression tests.
 * **[Manual comparison of multiple performance baselines](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/creatingandcomparingbaselines)** for iterative or A/B performance work by an individual developer
 * **[Export of benchmark results in several formats](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/exportingbenchmarks)** for analysis or visualization
 * Running the Instruments profiler [on the benchmark suite executable directly from Xcode](https://github.com/ordo-one/package-benchmark/releases/tag/1.11.0)
 
 ### Community Adoption
-The Benchmark package has recently seen a wide community uptake as more projects focus on performance, including e.g.
+The Benchmark package has recently seen a wide community uptake as more projects focus on performance, including e.g.,
 [SwiftNIO](https://github.com/apple/swift-nio), [Swift Foundation](https://github.com/apple/swift-foundation), [Google Flatbuffers](https://github.com/google/flatbuffers), [GRPC Swift](https://github.com/grpc/grpc-swift), [Swift ASN1](https://github.com/apple/swift-asn1), [Swift Certificates](https://github.com/apple/swift-certificates) and [Swift Kafka Client](https://github.com/swift-server/swift-kafka-client). 
 
 Discussions and questions are best directed to [the Swift forums section for Benchmark](https://forums.swift.org/c/related-projects/benchmark/105).
