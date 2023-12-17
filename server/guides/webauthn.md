@@ -65,7 +65,7 @@ const publicKeyCredentialCreationOptions = {
 };
 ```
 
-Don't worry, you don't have to understand it's content. In fact the Swift WebAuthn library will create this for you automatically. Now calling the Passkeys API with our newly created `publicKeyCredentialCreationOptions` will prompt you to create a new Passkey:
+Don't worry, you don't have to understand the content. In fact the Swift WebAuthn library will create this for you automatically. Now calling the Passkeys API with our newly created `publicKeyCredentialCreationOptions` will prompt you to create a new Passkey:
 
 ```JavaScript
 const credential = await navigator.credentials.create({
