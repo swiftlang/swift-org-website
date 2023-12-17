@@ -12,18 +12,18 @@ Incorporating benchmarking into the standard workflow and CI pipeline can assist
 
 Constructing a set of benchmarks and consistently running them provides an indication when something is not performing as expected. Typically, other more specialized tools are employed for root-cause analysis to analyze and fix the problem (e.g., Instruments, DTrace, Heaptrack, Leaks, Sample, …).
 
-This is analogous with unit tests, where a failed test provides an indication that something is wrong, and other more specialized tools are used to fix the problem (e.g., a debugger, TSAN/ASAN, adding asserts, debug printouts, …)
+This is analogous to unit tests, where a failed test indicates that something is wrong, and other more specialized tools are used to fix the problem (e.g., a debugger, TSAN/ASAN, adding asserts, debug printouts, …)
 
-The open-source [Benchmark package](https://github.com/ordo-one/package-benchmark) helps you automate performance testing and makes it easy for individual developers to easily run a quick performance validation locally before pushing changes.
+The open-source [Benchmark package](https://github.com/ordo-one/package-benchmark) helps you automate performance testing and makes it easy for individual developers to run a quick performance validation locally before pushing changes.
 
-It is suitable both for microbenchmarks mostly concerned with CPU usage as well as for more complex long-running benchmarks focused on [multiple performance metrics](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/metrics) and support measuring a wide ranges of samples over a long time thanks to using the [HDR Histogram](https://github.com/HdrHistogram/hdrhistogram-swift) package.
+It is suitable both for microbenchmarks mostly concerned with CPU usage as well as for more complex long-running benchmarks focused on [multiple performance metrics](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/metrics) and supports measuring a wide range of samples over a long time thanks to using the [HDR Histogram](https://github.com/HdrHistogram/hdrhistogram-swift) package.
 
 ### Benchmarking infrastructure
 The Benchmark package is implemented as a SwiftPM command plugin and adds a dedicated command to interact with benchmarks:
 
 > ```swift package benchmark``` 
 
-Introductionary getting started information is available both on the [package GitHub page](https://github.com/ordo-one/package-benchmark) as well as in the [Swift Package Index DocC documentation](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/gettingstarted)
+Introductory getting started information is available both on the [package GitHub page](https://github.com/ordo-one/package-benchmark) as well as in the [Swift Package Index DocC documentation](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/gettingstarted)
 
 ### A sample benchmark
 
@@ -84,7 +84,7 @@ Swift's ambitious aspirations is that the language should provide:
 
 > _Predictable and consistent performance that is on-par with C-based languages_
 
-Now, this is primarily focused on the _CPU_ performance metric - but the CPU is only one of several resources which are constrained, there are many more;
+Now, this is primarily focused on the _CPU_ performance metric, but the CPU is only one of several resources which are constrained — there are many more:
  
 * CPU
 * Memory allocator (number of allocations/frees, amount of memory allocated)
@@ -118,15 +118,14 @@ Sample default output when running benchmarks:
 * Running the Instruments profiler [on the benchmark suite executable directly from Xcode](https://github.com/ordo-one/package-benchmark/releases/tag/1.11.0)
 
 ### Community Adoption
-The Benchmark package has recently seen a wide community uptake as more projects focuses on performance, including e.g.
+The Benchmark package has recently seen a wide community uptake as more projects focus on performance, including e.g.
 [SwiftNIO](https://github.com/apple/swift-nio), [Swift Foundation](https://github.com/apple/swift-foundation), [Google Flatbuffers](https://github.com/google/flatbuffers), [GRPC Swift](https://github.com/grpc/grpc-swift), [Swift ASN1](https://github.com/apple/swift-asn1), [Swift Certificates](https://github.com/apple/swift-certificates) and [Swift Kafka Client](https://github.com/swift-server/swift-kafka-client). 
 
-Discussions and questions is best directed to [the Swift forums section for Benchmark](https://forums.swift.org/c/related-projects/benchmark/105).
+Discussions and questions are best directed to [the Swift forums section for Benchmark](https://forums.swift.org/c/related-projects/benchmark/105).
 
 ### Summary
 
-Performance is a key non-functional feature for many software packages. Early and continuous benchmarking will 
-help you to ship software with consistent performance and controlled resource usage that delights your users.
+Performance is a key non-functional feature for many software packages. Early and continuous benchmarking will help you to ship software with consistent performance and controlled resource usage that delights your users.
 
 The [Benchmark package](https://github.com/ordo-one/package-benchmark) allows you to easily create sophisticated Swift performance benchmarks, with [full documentation being available online at the Swift Package Index](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark), it provides much of the scaffolding required for benchmarking:
 
