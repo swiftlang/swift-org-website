@@ -233,7 +233,7 @@ Time to give it a try: Entering a username and clicking "Register" should trigge
 
 ### Verifying and persisting the Passkey
 
-After the browser created the Passkey we need to send it to our server, verify everything went smoothly and persist it somewhere.
+After the browser creates the Passkey we need to send it to our server, verify everything went smoothly and persist it somewhere.
 
 First, let's send the Passkey to our server. In our JavaScript code add this just below `const passkey = await create(parseCreationOptionsFromJSON(registerResponseJSON));` in the `registerForm` event listener:
 
