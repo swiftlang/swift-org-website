@@ -3,8 +3,6 @@ layout: page
 title: Going passwordless with Passkeys
 ---
 
-## Introduction:
-
 In this tutorial we will explore Passkeys. To be more specific, we'll explore how we can integrate the Swift WebAuthn library into a server-side Swift app. The process of registering and authenticating using Passkeys is pretty simple, but requires some back and forth between client and server. Therefore this tutorial is split into two separate parts:
 
 1. Passkey Registration
@@ -21,13 +19,11 @@ What are Passkeys? Others already did a good job at explaining this, so why rein
 
 To read more about Passkeys and how they work I recommend the following two resources:
 
-- Introduction: https://webauthn.guide/
-- Details: https://w3c.github.io/webauthn/
-- Apple Developer Documentation: https://developer.apple.com/passkeys/
+- Introduction: [https://webauthn.guide](https://webauthn.guide/)
+- Details: [https://w3c.github.io/webauthn](https://w3c.github.io/webauthn/)
+- Apple Developer Documentation: [https://developer.apple.com/passkeys](https://developer.apple.com/passkeys/)
 
-## Act 1 - Setup
-
-#### Setting up the frontend
+## Fundamentals
 
 Passkeys are integrated into our browsers. Through a JavaScript api exposed by the browsers we trigger the Passkey prompts.
 
@@ -42,7 +38,7 @@ These two prompts are the result of calling `navigator.credentials.create(...)` 
 
 To get a better understanding let's quickly play around with this API. Go to `https://swift.org`, open the developer panel of your browser and switch to the JavaScript console. Create the following variable:
 
-```JavaScript
+```html
 const publicKeyCredentialCreationOptions = {
     challenge: Uint8Array.from(
         "randomStringFromServer", c => c.charCodeAt(0)),
@@ -67,13 +63,15 @@ const publicKeyCredentialCreationOptions = {
 
 Don't worry, you don't have to understand the content. In fact the Swift WebAuthn library will create this for you automatically. Now calling the Passkeys API with our newly created `publicKeyCredentialCreationOptions` will prompt you to create a new Passkey:
 
-```JavaScript
+```html
 const credential = await navigator.credentials.create({
     publicKey: publicKeyCredentialCreationOptions
 });
 ```
 
-#### Setting up the Relying Party
+## Act 1 - Setup
+
+### Setting up the Relying Party
 
 If you haven't already downloaded the [demo project](https://github.com/brokenhandsio/swift-webauthn-guide), you should do so now. There's a `starter` and `final` project. Open the starter project and add the Swift WebAuthn library to your `Package.swift`:
 
@@ -118,7 +116,7 @@ extension Request {
 ```
 
 Here we configure 3 things:
-1. The `relyingPartyID` identifies your app based solely on the domain (not the scheme, port, or path) it can be accessed on. All created Passkeys will be scoped to this identifier. That means a Passkey created at `example.org` can only be used on the same domain. This prevents other websites from talking to random Passkeys. However this also means if you want to change your domain at some point all users need to re-create their Passkeys!
+1. The `relyingPartyID` identifies your app based solely on the domain (not the scheme, port, or path) it can be accessed on. All created Passkeys will be scoped to this identifier. That means a Passkey created at `example.org` can only be used on the same domain. Specifying a subdomain like `auth.example.org` will also allow Passkeys from e.g. `dev.auth.example.org`, but not `login.example.org`. This prevents other websites from talking to random Passkeys. However this also means if you want to change your domain at some point all users need to re-create their Passkeys!
 2. The `relyingPartyName` is just a friendly name shown to the user when registering or logging in.
 3. The `relyingPartyOrigin` works similar to the relying party id, but [serves as an additional layer of protection](https://w3c.github.io/webauthn/#sctn-validating-origin). Here we need to specify the whole origin. In our case it's the scheme `https://` + the relying party id + the port `:8080`
 
@@ -237,7 +235,7 @@ After the browser creates the Passkey we need to send it to our server, verify e
 
 First, let's send the Passkey to our server. In our JavaScript code add this just below `const passkey = await create(parseCreationOptionsFromJSON(registerResponseJSON));` in the `registerForm` event listener:
 
-```JS
+```html
 const createPasskeyResponse = await fetch('/passkeys', {
     method: 'POST',
     headers: {
@@ -289,7 +287,7 @@ Congratulations, you just built a Passkey registration! Entering a username and 
 Now that we have a Passkey we can use it to log in. The process is very similar to the registration process, except we don't need an input field for the username.
 Let's start with the frontend. Add a new HTML form below the registration in `Resources/Views/index.leaf`:
 
-```HTML
+```html
 </form>
 <!-- End of registration form -->
 
@@ -300,12 +298,12 @@ Let's start with the frontend. Add a new HTML form below the registration in `Re
 
 Next we need to import two additional helper from the GitHub WebAuthn wrapper. Update the import statement in the `<script>` tag to include `get` and `parseRequestOptionsFromJSON`:
 
-```JS
+```html
 import { create, get, parseCreationOptionsFromJSON, parseRequestOptionsFromJSON } from 'https://cdn.jsdelivr.net.....
 ```
 
 At the end of the script add the following code:
-```JS
+```html
 // ...
 //     location.href = "/private";
 // });
@@ -326,7 +324,7 @@ loginForm.addEventListener("submit", async function(event) {
 
 Similar to the registration we listen for the form's `submit` event. On submit we send a `/login` request to our backend. The response contains a handful of options and a randomly generated challenge. When passing this data to `get(parseRequestOptionsFromJSON(...))` the browser will prompt the user to log in using a Passkey. On success the challenge will be signed by the Passkey. This signed challenge is what we send back to the server in a second request. Add this just after `const loginAttempt = await get(parseRequestOptionsFromJSON(loginResponseJSON));`:
 
-```JS
+```html
 // Send passkey to Vapor app
 const loginAttemptResponse = await fetch('/login', {
     method: 'POST',
