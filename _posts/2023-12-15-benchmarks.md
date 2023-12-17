@@ -125,7 +125,7 @@ Discussions and questions are best directed to [the Swift forums section for Ben
 
 ### Summary
 
-Performance is a key non-functional feature for many software packages. Early and continuous benchmarking will help you to ship software with consistent performance and controlled resource usage that delights your users.
+Performance is a key non-functional requirement for many software packages. Early and continuous benchmarking will help you to ship software with consistent performance and controlled resource usage that delights your users.
 
 The [Benchmark package](https://github.com/ordo-one/package-benchmark) allows you to easily create sophisticated Swift performance benchmarks, with [full documentation being available online at the Swift Package Index](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark), it provides much of the scaffolding required for benchmarking:
 
