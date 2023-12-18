@@ -52,19 +52,21 @@
     <ul class="mobile-navigation-links">
       {% for nav in site.data.navigation %}
         <li class="nav-item">
+          <div class="link-container">
             {% if nav.url %}
               <a href="{{ nav.url }}">{{ nav.header }}</a>
-            {% else %}
+              {% else %}
               {{ nav.header }}
             {% endif %}
-
+            
             {% if nav.pages %}
-              <span>
-                <i>&#9663;</i>
-              </span>
+              <button class="section-toggle" aria-expanded="false">
+                &#9663;
+              </button>
             {% endif %}
-          {% comment %} {% if nav.pages %}
-            <ul class="nav-submenu">
+          </div>
+          {% if nav.pages %}
+            <ul class="section-menu">
               {% for navpage in nav.pages %}
                 {% if navpage.section %}
                   <li class="nav-section">{{ navpage.section }}</li>
@@ -79,7 +81,7 @@
                 {% endif %}
               {% endfor %}
             </ul>
-          {% endif %} {% endcomment %}
+          {% endif %}
         </li>
       {% endfor %}
 
