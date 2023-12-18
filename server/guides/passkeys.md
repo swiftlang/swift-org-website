@@ -3,10 +3,7 @@ layout: page
 title: Going passwordless with Passkeys
 ---
 
-In this tutorial we will explore Passkeys. To be more specific, we'll explore how we can integrate the [Swift WebAuthn library](https://github.com/swift-server/webauthn-swift) into a server-side Swift app. The process of registering and authenticating using Passkeys is pretty simple, but requires some back and forth between client and server. Therefore this tutorial is split into two separate parts:
-
-1. Passkey Registration
-2. Passkey Authentication
+In this tutorial we will explore Passkeys. To be more specific, we'll explore how we can integrate the [Swift WebAuthn library](https://github.com/swift-server/webauthn-swift) into a server-side Swift app. The process of registering and authenticating using Passkeys is pretty simple, but requires some back and forth between client and server. Therefore this tutorial is split into two separate parts: Passkey registration and Passkey authentication.
 
 To avoid starting completely from scratch and turning this blog article into a whole book, I prepared a small starter project which you can [download here](https://github.com/brokenhandsio/swift-webauthn-guide).
 
@@ -36,7 +33,7 @@ Passkeys are integrated into our browsers, which expose a JavaScript API that ca
 
 These two prompts are the result of calling `navigator.credentials.create(...)` and `navigator.credentials.get(...)`.
 
-To get a better understanding let's quickly play around with this API. Go to `https://swift.org`, open the developer panel of your browser and switch to the JavaScript console. Create the following variable:
+To get a better understanding let's quickly play around with this API. Open [Swift.org](https://swift.org) in a new tab, open the developer panel of your browser and switch to the JavaScript console. Create the following variable:
 
 ```js
 const publicKeyCredentialCreationOptions = {
