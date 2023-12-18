@@ -3,7 +3,7 @@ layout: page
 title: Going passwordless with Passkeys
 ---
 
-In this tutorial we will explore Passkeys. To be more specific, we'll explore how we can integrate the Swift WebAuthn library into a server-side Swift app. The process of registering and authenticating using Passkeys is pretty simple, but requires some back and forth between client and server. Therefore this tutorial is split into two separate parts:
+In this tutorial we will explore Passkeys. To be more specific, we'll explore how we can integrate the [Swift WebAuthn library](https://github.com/swift-server/webauthn-swift) into a server-side Swift app. The process of registering and authenticating using Passkeys is pretty simple, but requires some back and forth between client and server. Therefore this tutorial is split into two separate parts:
 
 1. Passkey Registration
 2. Passkey Authentication
@@ -25,20 +25,20 @@ To read more about Passkeys and how they work I recommend the following two reso
 
 ## Fundamentals
 
-Passkeys are integrated into our browsers. Through a JavaScript api exposed by the browsers we trigger the Passkey prompts.
+Passkeys are integrated into our browsers, which expose a JavaScript API that can be used to trigger the Passkey prompts.
 
 *Safari Passkey prompt:*
-![](/assets/images/server-guides/safari_passkey_prompt.png)
+<img alt="Screenshot of Safari browser prompting for a Passkey" src="/assets/images/server-guides/safari_passkey_prompt.png" style="img { max-width: 100%; height: auto; }">
 
 
 *Another example - 1Password prompt:*
-![](/assets/images/server-guides/1password_passkey_prompt.png)
+<img alt="Screenshot of Safari browser prompting for a Passkey through the 1Password extension" src="/assets/images/server-guides/1password_passkey_prompt.png" style="img { max-width: 100%; height: auto; }">
 
 These two prompts are the result of calling `navigator.credentials.create(...)` and `navigator.credentials.get(...)`.
 
 To get a better understanding let's quickly play around with this API. Go to `https://swift.org`, open the developer panel of your browser and switch to the JavaScript console. Create the following variable:
 
-```html
+```js
 const publicKeyCredentialCreationOptions = {
     challenge: Uint8Array.from(
         "randomStringFromServer", c => c.charCodeAt(0)),
@@ -63,7 +63,7 @@ const publicKeyCredentialCreationOptions = {
 
 Don't worry, you don't have to understand the content. In fact the Swift WebAuthn library will create this for you automatically. Now calling the Passkeys API with our newly created `publicKeyCredentialCreationOptions` will prompt you to create a new Passkey:
 
-```html
+```js
 const credential = await navigator.credentials.create({
     publicKey: publicKeyCredentialCreationOptions
 });
@@ -148,7 +148,7 @@ Before we jump into the business logic let's write down what we need:
 1. When a user clicks the "Register" button we will notify our server about a new registration attempt.
 2. The server will put together a few pieces of information and send these back to the client (the browser).
 3. The client will take this information and pass it into the `create(parseCreationOptionsFromJSON(...))` JavaScript function which will trigger the Passkey prompt. The returned value of this function is our brand new Passkey! Great!
-4. Before opening our first beer we quickly need to send our new Passkey back to the server, verify it and persist it in a database.
+4. Finally we send our new Passkey back to the server, verify it and persist it in a database.
 
 It sounds like a lot of work, but it's actually pretty simple.
 
@@ -156,7 +156,7 @@ It sounds like a lot of work, but it's actually pretty simple.
 
 Alright let's start with step one. Add this after the closing `</form>` tag from the previous step:
 
-```HTML
+```html
 <script type="module">
   // import WebAuthn wrapper
   import { create, parseCreationOptionsFromJSON } from 'https://cdn.jsdelivr.net/npm/@github/webauthn-json@2.1.1/dist/esm/webauthn-json.browser-ponyfill.js';
@@ -181,7 +181,7 @@ Alright let's start with step one. Add this after the closing `</form>` tag from
 </script>
 ```
 
-First we add a third-party script developed by GitHub which adds user-friendly wrappers on top of the original WebAuthn APIs `navigator.credentials.create` and `navigator.credentials.get`. This is just for convenience and not mandatory! If you don't want to use it you'll have to deserialise some of the `registrationOptions` properties since the original API expects a few "raw" byte arrays. Using the wrapper we can simply pass in the JSON response from our server - neat! The official WebAuthn API will [support this out of the box at some point](https://w3c.github.io/webauthn/#sctn-parseCreationOptionsFromJSON), but for now we depend on GitHub's "webauthn-json" library.
+First we add a third-party script developed by GitHub which adds user-friendly wrappers on top of the original WebAuthn APIs `navigator.credentials.create` and `navigator.credentials.get`. This is just for convenience and not mandatory! If you don't want to use it you'll have to deserialise some of the `registrationOptions` properties since the original API expects a few "raw" byte arrays. Using the wrapper we can simply pass in the JSON response from our server — neat! The official WebAuthn API will [support this out of the box at some point](https://w3c.github.io/webauthn/#sctn-parseCreationOptionsFromJSON), but for now we depend on GitHub's "webauthn-json" library.
 
 Our script will listen for the form's `submit` event. On submit it sends a `/register` request to our backend and passes the JSON response to `create(parseCreationOptionsFromJSON(...))` thus triggering the browsers Passkey prompt.
 
@@ -213,7 +213,7 @@ app.get("register") { req in
 
 On `/register` this creates a new user and calls the `beginRegistration` function with the newly created user. This will give us a set of options which we send back to the client. Additionally we store the challenge in a cookie because we'll need it later when verifying the new Passkey. If you inspect the returned options you'll notice that these are the options you manually entered in your browser's JavaScript console at the beginning of this blog post!
 
-The WebAuthn API expects the options inside a property named `publicKey`. That's why we return an instance of `CreateCredentialOptions` - a type which doesn't exist yet. So let's create and conform it to `AsyncResponseEncodable` so we can easily return it an a Vapor route handler:
+The WebAuthn API expects the options inside a property named `publicKey`. That's why we return an instance of `CreateCredentialOptions` — a type which doesn't exist yet. So let's create and conform it to `AsyncResponseEncodable` so we can easily return it an a Vapor route handler:
 
 ```swift
 struct CreateCredentialOptions: Encodable, AsyncResponseEncodable {
@@ -235,7 +235,7 @@ After the browser creates the Passkey we need to send it to our server, verify e
 
 First, let's send the Passkey to our server. In our JavaScript code add this just below `const passkey = await create(parseCreationOptionsFromJSON(registerResponseJSON));` in the `registerForm` event listener:
 
-```html
+```js
 const createPasskeyResponse = await fetch('/passkeys', {
     method: 'POST',
     headers: {
@@ -298,12 +298,12 @@ Let's start with the frontend. Add a new HTML form below the registration in `Re
 
 Next we need to import two additional helper from the GitHub WebAuthn wrapper. Update the import statement in the `<script>` tag to include `get` and `parseRequestOptionsFromJSON`:
 
-```html
+```js
 import { create, get, parseCreationOptionsFromJSON, parseRequestOptionsFromJSON } from 'https://cdn.jsdelivr.net.....
 ```
 
 At the end of the script add the following code:
-```html
+```js
 // ...
 //     location.href = "/private";
 // });
@@ -324,7 +324,7 @@ loginForm.addEventListener("submit", async function(event) {
 
 Similar to the registration we listen for the form's `submit` event. On submit we send a `/login` request to our backend. The response contains a handful of options and a randomly generated challenge. When passing this data to `get(parseRequestOptionsFromJSON(...))` the browser will prompt the user to log in using a Passkey. On success the challenge will be signed by the Passkey. This signed challenge is what we send back to the server in a second request. Add this just after `const loginAttempt = await get(parseRequestOptionsFromJSON(loginResponseJSON));`:
 
-```html
+```js
 // Send passkey to Vapor app
 const loginAttemptResponse = await fetch('/login', {
     method: 'POST',
@@ -366,7 +366,7 @@ app.post("login") { req in
 }
 ```
 
-To prevent attackers from reusing the challenge we delete it from the session right away. Read more about replay attacks [here](https://en.wikipedia.org/wiki/Replay_attack). To verify the login attempt we first decode it from the request body and try to find the corresponding Passkey in our database. If we find a Passkey we can continue and verify the login attempt. Add this below `req.session.data["authChallenge"] = nil`:
+To prevent attackers from reusing the challenge, using a so-called [Replay attack](https://en.wikipedia.org/wiki/Replay_attack), we delete it from the session right away. To verify the login attempt we first decode it from the request body and try to find the corresponding Passkey in our database. If we find a Passkey we can continue and verify the login attempt. Add this below `req.session.data["authChallenge"] = nil`:
 
 ```swift
 let authenticationCredential = try req.content.decode(AuthenticationCredential.self)
