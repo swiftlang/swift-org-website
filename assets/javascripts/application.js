@@ -35,8 +35,25 @@ layout: source
     }
     element.className = classString;
   }
+
   document.getElementById('menu-toggle').addEventListener('mousedown', function() {
     toggleClass(document.getElementById('menu-toggle'), 'open');
     toggleClass(document.querySelector('nav[role="mobile-navigation"]'), 'open');
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var sectionToggles = document.querySelectorAll('.section-toggle');
+
+    sectionToggles.forEach(function(toggle) {
+      toggle.addEventListener('mousedown', function() {
+        var navSubmenu = toggle.closest('.link-container').nextElementSibling;
+
+        if (navSubmenu) {
+          toggleClass(navSubmenu, 'open');
+          var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+        }
+      });
+    });
   });
 })();
