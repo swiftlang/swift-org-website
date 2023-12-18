@@ -37,6 +37,6 @@ layout: source
   }
   document.getElementById('menu-toggle').addEventListener('mousedown', function() {
     toggleClass(document.getElementById('menu-toggle'), 'open');
-    toggleClass(document.querySelector('nav[role="navigation"]'), 'open');
+    toggleClass(document.querySelector('nav[role="mobile-navigation"]'), 'open');
   });
 })();

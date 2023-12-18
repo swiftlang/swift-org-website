@@ -1,10 +1,18 @@
-@media  only screen and (max-width: 1080px) {
-    nav[role="navigation"] {
+@media only screen and (max-width: 68rem) {
+    .navigation-links {
+        display: none;
+    }
+
+    nav[role="mobile-navigation"] {
         display: none;
 
         &.open {
             display: block;
         }
+    }
+
+    .site-navigation {
+        // padding-bottom: 0;
     }
 
     .site-navigation .wrapper {

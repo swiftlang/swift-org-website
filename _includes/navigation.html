@@ -1,18 +1,15 @@
 <header class="site-navigation">
   <div class="wrapper">
-    <span class="spacer"></span>
     <h1 id="logo">
       <a href="/" title="Swift.org">
         {% include logo.html %}
       </a>
     </h1>
-      
-    <div id="menu-toggle" class="menu-item menu-toggle open"></div>
 
     <nav role="navigation">
       <ul class="navigation-links">
         {% for nav in site.data.navigation %}
-          <li class="nav-dropdown">
+          <li class="nav-item">
             <span>
               {% if nav.url %}
                 <a href="{{ nav.url }}">{{ nav.header }}</a>
@@ -47,6 +44,48 @@
           <a href="/install">Download <strong>5.9.1</strong></a>
         </li>
       </ul>
+      <div id="menu-toggle" class="menu-item menu-toggle open"></div>
     </nav>
   </div>
+
+  <nav role="mobile-navigation">
+    <ul class="mobile-navigation-links">
+      {% for nav in site.data.navigation %}
+        <li class="nav-item">
+            {% if nav.url %}
+              <a href="{{ nav.url }}">{{ nav.header }}</a>
+            {% else %}
+              {{ nav.header }}
+            {% endif %}
+
+            {% if nav.pages %}
+              <span>
+                <i>&#9663;</i>
+              </span>
+            {% endif %}
+          {% comment %} {% if nav.pages %}
+            <ul class="nav-submenu">
+              {% for navpage in nav.pages %}
+                {% if navpage.section %}
+                  <li class="nav-section">{{ navpage.section }}</li>
+                {% else %}
+                  {% if page.url == navpage.url %}
+                    <li class="active">
+                  {% else %}
+                    <li>
+                  {% endif %}
+                    <a href="{{ navpage.url }}">{{ navpage.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %} {% endcomment %}
+        </li>
+      {% endfor %}
+
+      <li class="cta">
+        <a href="/install">Download <strong>5.9.1</strong></a>
+      </li>
+    </ul>
+  </nav>
  </header>
