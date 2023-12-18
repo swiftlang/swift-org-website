@@ -6,7 +6,9 @@ title: Benchmarking in Swift
 author: [hassila]
 ---
 
-Have you ever encountered a _performance problem_ that slipped through to end users? Do you systematically measure and validate performance metrics when making changes to your Swift package?
+Have you ever encountered a _performance problem_ that slipped through to end users?
+
+Do you systematically measure and validate performance metrics when making changes to your Swift package?
 
 Incorporating benchmarking into the standard workflow and CI pipeline can assist you similarly to how automatic unit and integration testing helps in avoiding functional software defects.
 
