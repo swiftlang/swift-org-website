@@ -75,7 +75,7 @@ const credential = await navigator.credentials.create({
 
 If you haven't already downloaded the [demo project](https://github.com/brokenhandsio/swift-webauthn-guide), you should do so now. There's a `starter` and `final` project. Open the starter project and add the Swift WebAuthn library to your `Package.swift`:
 
-```Swift
+```swift
 dependencies: [
     // ...
     .package(url: "https://github.com/swift-server/webauthn-swift.git", from: "1.0.0-alpha")
