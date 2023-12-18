@@ -1,17 +1,16 @@
-<header class="site-navigation" role="navigation">
+<header class="site-navigation">
   <div class="wrapper">
+    <span class="spacer"></span>
     <h1 id="logo">
       <a href="/" title="Swift.org">
         {% include logo.html %}
       </a>
     </h1>
+      
+    <div id="menu-toggle" class="menu-item menu-toggle open"></div>
 
-    <nav>
+    <nav role="navigation">
       <ul class="navigation-links">
-        <li>
-          <a href="/getting-started">Get Started</a>
-        </li>
-
         {% for nav in site.data.navigation %}
           <li class="nav-dropdown">
             <span>
@@ -25,7 +24,7 @@
               {% endif %}
             </span>
             {% if nav.pages %}
-              <ul class="nav-menu">
+              <ul class="nav-submenu">
                 {% for navpage in nav.pages %}
                   {% if navpage.section %}
                     <li class="nav-section">{{ navpage.section }}</li>
@@ -43,10 +42,6 @@
             {% endif %}
           </li>
         {% endfor %}
-
-        <li>
-          <a href="/blog">Blog</a>
-        </li>
 
         <li class="cta">
           <a href="/install">Download <strong>5.9.1</strong></a>
