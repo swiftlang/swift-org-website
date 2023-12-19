@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2023-12-19 10:00:00
+date: 2023-12-21 10:00:00
 title: Benchmarking in Swift
 author: [hassila]
 ---
