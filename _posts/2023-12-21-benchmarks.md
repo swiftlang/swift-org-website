@@ -86,7 +86,7 @@ Swift's ambitious aspirations is that the language should provide:
 
 > _Predictable and consistent performance that is on-par with C-based languages_
 
-Now, this is primarily focused on the _CPU_ performance metric, but the CPU is only one of several resources which are constrained — there are many more:
+Performance is a function of how well we use the constrained machine resources to run our program - and there are several that directly impact the runtime of different applications and workloads:
  
 * CPU
 * Memory allocator (number of allocations/frees, amount of memory allocated)
@@ -97,7 +97,7 @@ Now, this is primarily focused on the _CPU_ performance metric, but the CPU is o
 * Kernel (overall syscalls, thread scheduling, peak thread usage)
 * Custom performance metrics (for other constrained resources)
 
-Each one of these subsystems can constrain or be critical to the runtime performance of a given piece of software, and for certain kinds of foundational packages you may want to keep strict control on additional performance metrics (e.g., ensuring that you don't regress on malloc usage or memory footprint), not only runtime performance. 
+Each one of these can be critical for a given piece of software. For certain kinds of foundational packages you may also want to keep strict control on certain performance metrics (e.g., ensuring that you don't regress on malloc usage or memory footprint), not only runtime performance. 
 
 Importantly, the Benchmark package supports several of these metrics out-of-the-box including some OS specific ones (i.e. on Linux/macOS).
 
