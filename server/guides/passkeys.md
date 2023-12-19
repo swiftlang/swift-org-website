@@ -29,7 +29,7 @@ Passkeys are integrated into our browsers, which expose a JavaScript API that ca
 
 
 *Another example - 1Password prompt:*
-<img alt="Screenshot of Safari browser prompting for a Passkey through the 1Password extension" src="/assets/images/server-guides/1password_passkey_prompt.png" style="img { max-width: 100%; height: auto; }">
+![Screenshot of Safari browser prompting for a Passkey through the 1Password extension](/assets/images/server-guides/1password_passkey_prompt.png)
 
 These two prompts are the result of calling `navigator.credentials.create(...)` and `navigator.credentials.get(...)`.
 
