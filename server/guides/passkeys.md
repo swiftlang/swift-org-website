@@ -25,7 +25,7 @@ To read more about Passkeys and how they work I recommend the following two reso
 Passkeys are integrated into our browsers, which expose a JavaScript API that can be used to trigger the Passkey prompts.
 
 *Safari Passkey prompt:*
-<img alt="Screenshot of Safari browser prompting for a Passkey" src="/assets/images/server-guides/safari_passkey_prompt.png" style="img { max-width: 100%; height: auto; }">
+![Screenshot of Safari browser prompting for a Passkey](/assets/images/server-guides/safari_passkey_prompt.png)
 
 
 *Another example - 1Password prompt:*
