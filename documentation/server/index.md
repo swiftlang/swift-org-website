@@ -33,7 +33,7 @@ It’s challenging to debug non-deterministic performance, and language-induced 
 
 ## Development guides
 
-The Swift Server Workgroup and Swift on Server community have developed a number of guides for using Swift on the server.
+The [Swift Server Workgroup](/sswg "Swift Server Workgroup") and Swift on Server community have developed a number of guides for using Swift on the server.
 They are designed to help teams and individuals running Swift Server applications on Linux and to provide orientation for those who want to start with such development.
 
 They focus on how to compile, test, deploy and debug such application and provides tips in those areas.
@@ -54,14 +54,3 @@ Additionally, there are specific guides for library developers:
 * [Adopting Swift Concurrency](/documentation/server/guides/libraries/concurrency-adoption-guidelines.html)
 
 _These guides are community effort, and all are invited to share their tips and know-how by submitting pull requests to the [Swift.org site](https://github.com/apple/swift-org-website)_.
-
-## Swift Server Workgroup
-
-The Swift Server workgroup is a steering team that promotes the use of Swift for developing and deploying server applications.
-The Swift Server workgroup:
-
-* Defines and prioritize efforts that address the needs of the Swift server community
-* Defines and run an incubation process for these efforts to reduce duplication of effort, increase compatibility and promote best practices
-* Channels feedback for Swift language features needed by the server development community to the Swift Core Team
-
-Read more about the workgroup and server incubator it runs [here](/sswg "Swift Server Workgroup").
