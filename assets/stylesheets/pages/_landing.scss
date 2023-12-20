@@ -6,6 +6,15 @@
   strong {
     font-weight: 600;
   }
+
+  span {
+    display: block;
+    padding-top: .5rem;
+  }
+
+  @media only screen and(max-width: 767px) { // same media query as in _mobile.css
+    font-size: 24px;
+  }
 }
 
 .featured-snippet {
