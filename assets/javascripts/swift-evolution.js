@@ -928,17 +928,18 @@ function _setProposalVisibility(matchingProposals) {
  *   fragment --> `#?` parameter-value-list
  *   parameter-value-list --> parameter-value-pair | parameter-value-pair `&` parameter-value-list
  *   parameter-value-pair --> parameter `=` value
- *   parameter --> `proposal` | `status` | `version` | `search`
+ *   parameter --> `proposal` | `status` | `version` | `upcoming` | `search`
  *   value --> ** Any URL-encoded text. **
  *
  * For example:
  *   /#?proposal=SE-0180,SE-0123
  *   /#?status=rejected&version=3&search=access
  *
- * Four types of parameters are supported:
+ * Five types of parameters are supported:
  * - proposal: A comma-separated list of proposal IDs. Treated as an 'or' search.
- * - filter: A comma-separated list of proposal statuses to apply as a filter.
+ * - status: A comma-separated list of proposal statuses to apply as a filter.
  * - version: A comma-separated list of Swift version numbers to apply as a filter.
+ * - upcoming: A value of 'true' to apply the Upcoming Feature Flag filter.
  * - search: Raw, URL-encoded text used to filter by individual term.
  *
  * @param {string} fragment - A URI fragment to use as the basis for a search.
