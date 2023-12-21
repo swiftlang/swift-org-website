@@ -988,18 +988,20 @@ function _applyFragment(fragment) {
     document.querySelector('#search-filter').value = actions.search
   }
 
+  let hasVersionSelections = false
   if (actions.version.length) {
     var versionSelections = actions.version.map(function (version) {
       return document.querySelector('#filter-by-swift-' + _idSafeName(version))
     }).filter(function (version) {
       return !!version
     })
+    hasVersionSelections = versionSelections.length > 0
 
     versionSelections.forEach(function (versionSelection) {
       versionSelection.checked = true
     })
 
-    if (versionSelections.length) {
+    if (hasVersionSelections) {
       document.querySelector(
         '#filter-by-' + states['.implemented'].className
       ).checked = true
@@ -1008,6 +1010,7 @@ function _applyFragment(fragment) {
 
   // Track this state specifically for toggling the version panel
   var implementedSelected = false
+  let hasStatusSelections = false
 
   // Update the filter selections in the nav
   if (actions.status.length) {
@@ -1025,6 +1028,7 @@ function _applyFragment(fragment) {
     }).filter(function (status) {
       return !!status
     })
+    hasStatusSelections = statusSelections.length > 0
 
     statusSelections.forEach(function (statusSelection) {
       statusSelection.checked = true
@@ -1032,7 +1036,7 @@ function _applyFragment(fragment) {
   }
 
   // The version panel needs to be activated if any are specified
-  if (actions.version.length || implementedSelected) {
+  if (hasVersionSelections || implementedSelected) {
     ;['#version-options', '#version-options-label'].forEach(function (selector) {
       document.querySelector('.filter-options')
         .querySelector(selector).classList
@@ -1041,7 +1045,7 @@ function _applyFragment(fragment) {
   }
 
   // Specifying any filter in the fragment should activate the filters in the UI
-  if (actions.version.length || actions.status.length) {
+  if (hasVersionSelections || hasStatusSelections) {
     toggleFilterPanel()
     toggleStatusFiltering()
   }
