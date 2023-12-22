@@ -6,15 +6,15 @@
     - title: Community Showcase
       url: /packages/showcase.html
     - title: Packages with Macros
-      url: /packages/macros/
+      url: /packages/macros.html
     - title: Server
-      url: /packages/server/
+      url: /packages/server.html
     - title: Networking
-      url: /packages/networking/
+      url: /packages/networking.html
     - title: Testing
-      url: /packages/testing/
+      url: /packages/testing.html
     - title: Debug Logging
-      url: /packages/logging/
+      url: /packages/logging.html
 # ------------------------------------------------------------------------------
 - header: Documentation
   url: /documentation/
