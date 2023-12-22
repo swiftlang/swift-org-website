@@ -1,5 +1,12 @@
 - header: Get Started
   url: /getting-started/
+# ------------------------------------------------------------------------------
+- header: Blog
+  url: /blog/
+# ------------------------------------------------------------------------------
+- header: Documentation
+  url: /documentation/
+# ------------------------------------------------------------------------------
 - header: Packages
   url: /packages/
   pages:
@@ -16,13 +23,11 @@
     - title: Debug Logging
       url: /packages/logging.html
 # ------------------------------------------------------------------------------
-- header: Documentation
-  url: /documentation/
-  pages:
-# ------------------------------------------------------------------------------
 - header: Community
   url: /community/
   pages:
+    - title: Swift Evolution
+      url: /swift-evolution/
     - title: Diversity
       url: /diversity/
       sections:
@@ -134,5 +139,3 @@
           name: security-process
         - title: Security Updates
           name: security-updates
-- header: Blog
-  url: /blog/
