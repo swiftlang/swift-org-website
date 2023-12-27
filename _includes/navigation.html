@@ -21,17 +21,17 @@
               {% endif %}
             </span>
             {% if nav.pages %}
-              <ul class="nav-submenu">
+              <ul class="nav-submenu" role="menu">
                 {% for navpage in nav.pages %}
                   {% if navpage.section %}
-                    <li class="nav-section">{{ navpage.section }}</li>
+                  <li class="nav-section">{{ navpage.section }}</li>
                   {% else %}
                     {% if page.url == navpage.url %}
-                      <li class="active">
+                    <li role="presentation" class="active">
                     {% else %}
-                      <li>
+                    <li role="presentation">
                     {% endif %}
-                      <a href="{{ navpage.url }}">{{ navpage.title }}</a>
+                      <a href="{{ navpage.url }}" role="menuitem">{{ navpage.title }}</a>
                     </li>
                   {% endif %}
                 {% endfor %}
@@ -48,7 +48,7 @@
     </nav>
   </div>
 
-  <nav role="mobile-navigation">
+  <nav class="mobile-navigation" role="navigation">
     <ul class="mobile-navigation-links">
       {% for nav in site.data.navigation %}
         <li class="nav-item">

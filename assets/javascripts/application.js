@@ -40,8 +40,7 @@ layout: source
     const menuToggle = document.getElementById('menu-toggle');
     toggleClass(menuToggle, 'open');
     menuToggle.setAttribute('aria-expanded', menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
-    toggleClass(document.querySelector('nav[role="mobile-navigation"]'), 'open');
-    
+    toggleClass(document.querySelector('nav.mobile-navigation'), 'open');
   });
 
   document.addEventListener('DOMContentLoaded', function() {
