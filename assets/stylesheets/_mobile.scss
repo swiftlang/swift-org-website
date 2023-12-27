@@ -16,7 +16,12 @@
     }
 
     .menu-toggle {
-        content: ' ';
+        display: block;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        background-color: transparent;
         height: 20px;
         width: 20px;
         background-image: var(--menu-icon-close);

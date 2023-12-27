@@ -37,8 +37,11 @@ layout: source
   }
 
   document.getElementById('menu-toggle').addEventListener('mousedown', function() {
-    toggleClass(document.getElementById('menu-toggle'), 'open');
+    const menuToggle = document.getElementById('menu-toggle');
+    toggleClass(menuToggle, 'open');
+    menuToggle.setAttribute('aria-expanded', menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
     toggleClass(document.querySelector('nav[role="mobile-navigation"]'), 'open');
+    
   });
 
   document.addEventListener('DOMContentLoaded', function() {
