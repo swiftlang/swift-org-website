@@ -119,14 +119,19 @@ web: Run serve --env production --hostname 0.0.0.0 --port $PORT
 
 ### Wrap-Up
 
-Now that we have added the `.swift-version` and `Procfile` files, make sure these are committed on `main` to be included in your deployment.
+Now that we have added the `.swift-version` and `Procfile` files, make sure these are committed on `main` to be included in your deployment:
+
+```bash
+git add .swift-version Procfile
+git commit -am "Add Swift version file and Procfile"
+```
 
 ## Deployment to Heroku
 
 When you're ready to deploy, run this from the terminal:
 
 ```bash
-git push heroku master
+git push heroku main
 ```
 
 This will take significantly longer than regular git operations as Heroku will build your project incl. all dependencies from scratch, verify and deploy it.
