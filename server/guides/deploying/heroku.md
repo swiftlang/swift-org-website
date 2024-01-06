@@ -5,7 +5,7 @@ title: Deploying to Heroku
 
 Heroku is a popular all-in-one hosting solution.
 
-For your Heroku application, you only need to select a virtual operating system ([stack](#stack-selection)) and preinstalled software packages ([buildpack](#buildback-selection)). After installing Heroku's CLI tools, you can use standard git commands to push your code to Heroku, where it will be built from source and deployed.
+For your Heroku application, you only need to select a virtual operating system ([stack](#stack-selection)) and preinstalled software packages ([buildpack](#buildpack-selection)). After installing Heroku's CLI tools, you can use standard git commands to push your code to Heroku, where it will be built from source and deployed.
 
 You can learn more at [heroku.com](https://heroku.com/).
 
@@ -74,7 +74,7 @@ As of December 2023, Heroku’s default stack is Heroku 22:
 heroku stack:set heroku-22 -a your-apps-name-here
 ```
 
-Currently available stacks are listed [here](https://devcenter.heroku.com/articles/stack#default-stack).
+Currently available stacks are listed [here](https://devcenter.heroku.com/articles/stack).
 
 ### Buildpack Selection
 
@@ -136,4 +136,4 @@ git push heroku main
 
 This will take significantly longer than regular git operations as Heroku will build your project incl. all dependencies from scratch, verify and deploy it.
 
-More information can be found on [here](https://devcenter.heroku.com/articles/git#deploying-code).
+More information can be found on [here](https://devcenter.heroku.com/articles/git#deploy-your-code).
