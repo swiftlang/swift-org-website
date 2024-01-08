@@ -25,7 +25,7 @@ The Benchmark package is implemented as a SwiftPM command plugin and adds a dedi
 
 > ```swift package benchmark``` 
 
-Introductory getting started information is available both on the [package GitHub page](https://github.com/ordo-one/package-benchmark) as well as in the [Swift Package Index DocC documentation](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/gettingstarted)
+Introductory getting started information is available both on the [package GitHub page](https://github.com/ordo-one/package-benchmark) as well as in the [Swift Package Index DocC documentation](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/gettingstarted).
 
 ### A sample benchmark
 
@@ -82,7 +82,7 @@ let benchmarks = {
 ### Performance metrics
 Performance is a key non-functional requirement for many foundational packages and applications, both server-side and in the desktop/mobile space. 
 
-Swift's ambitious aspirations is that the language should provide:
+Swift's ambitious aspirations are that the language should provide:
 
 > _Predictable and consistent performance that is on-par with C-based languages_
 
@@ -114,7 +114,7 @@ Sample default output when running benchmarks:
 ### Key Benchmark workflows are supported
 
 * **[Automated Pull Request performance regression checks](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/comparingbenchmarksci)** by comparing the performance metrics of a pull request with the main branch and having the PR workflow check fail if there is a regression according to absolute or relative thresholds specified per benchmark
-* Automated Pull Request check vs. a pre-recorded *absolute baseline p90 threshold* (see e.g., [Swift Certificates](https://github.com/apple/swift-certificates/tree/main/Benchmarks) for such a workflow with [related Docker files](https://github.com/apple/swift-certificates/tree/main/docker)). Suitable for e.g., malloc regression tests.
+* Automated Pull Request check vs. a pre-recorded *absolute baseline p90 threshold* (see e.g., [Swift Certificates](https://github.com/apple/swift-certificates/tree/main/Benchmarks) for such a workflow with [related Docker files](https://github.com/apple/swift-certificates/tree/main/docker)), suitable for e.g., malloc regression tests.
 * **[Manual comparison of multiple performance baselines](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/creatingandcomparingbaselines)** for iterative or A/B performance work by an individual developer
 * **[Export of benchmark results in several formats](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/exportingbenchmarks)** for analysis or visualization
 * Running the Instruments profiler [on the benchmark suite executable directly from Xcode](https://github.com/ordo-one/package-benchmark/releases/tag/1.11.0)
@@ -138,4 +138,4 @@ The [Benchmark package](https://github.com/ordo-one/package-benchmark) allows yo
 * Minimal boilerplate
 * Easy integration in your project 
 * Support for async benchmarks
-* Multiple output formats (console text format, markdown, JMH analytics, HDR histogram output, ...)
+* Multiple output formats supporting interoperability with other tools, e.g. JMH analytics and HDR histogram output.
