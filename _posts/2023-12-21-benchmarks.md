@@ -6,15 +6,17 @@ title: Benchmarking in Swift
 author: [hassila]
 ---
 
-Have you ever encountered a _performance problem_ that slipped through to end users?
+Have you ever encountered a _performance problem_ that slipped through to end users which resulted in a bug report? Do you systematically measure and validate performance metrics when making changes to your Swift package?
 
-Do you systematically measure and validate performance metrics when making changes to your Swift package?
+In the realm of professional trading software, the role of a comprehensive benchmarking framework integrated with Continuous Integration (CI) parallels the importance of unit and integration testing. Just as unit and integration tests are essential for ensuring the functional correctness of software, benchmarking within a CI pipeline is crucial for continuously validating the non-functional aspects, such as high throughput, low latency, predictable performance and consistent resource usage. This is vital for maintaining the competitive edge in a fast-paced financial environment where the extreme market data rates and performance requirements means that even small variations in response time - on the scale of microseconds - can significantly impact trade outcomes.
 
-Incorporating benchmarking into the standard workflow and CI pipeline can assist you similarly to how automatic unit and integration testing helps in avoiding functional software defects.
+After examining the existing infrastructure within the Swift ecosystem, we concluded that there were no existing solutions meeting our needs for multi-platform and rich metrics support, CI integration, and developer-friendliness. Therefore, we decided to develop a  [Benchmark package](https://github.com/ordo-one/package-benchmark) and open-source it, believing it could help advance performance for the Swift community and benefit all of us.
+
+### The role of benchmarks 
 
 Constructing a set of benchmarks and consistently running them provides an indication when something is not performing as expected. Typically, other more specialized tools are employed for root-cause analysis to analyze and fix the problem (e.g., Instruments, DTrace, Heaptrack, Leaks, Sample, …).
 
-This is analogous to unit tests, where a failed test indicates that something is wrong, and other more specialized tools are used to fix the problem (e.g., a debugger, TSAN/ASAN, adding asserts, debug printouts, …)
+This is analogous to unit tests, where a failed test indicates that something is wrong, and other more specialized tools are used to fix the problem (e.g., a debugger, TSAN/ASAN, adding asserts, debug printouts, …).
 
 The open-source [Benchmark package](https://github.com/ordo-one/package-benchmark) helps you automate performance testing and makes it easy for individual developers to run a quick performance validation locally before pushing changes.
 
@@ -114,7 +116,7 @@ Sample default output when running benchmarks:
 ### Key Benchmark workflows are supported
 
 * **[Automated Pull Request performance regression checks](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/comparingbenchmarksci)** by comparing the performance metrics of a pull request with the main branch and having the PR workflow check fail if there is a regression according to absolute or relative thresholds specified per benchmark
-* Automated Pull Request check vs. a pre-recorded *absolute baseline p90 threshold* (see e.g., [Swift Certificates](https://github.com/apple/swift-certificates/tree/main/Benchmarks) for such a workflow with [related Docker files](https://github.com/apple/swift-certificates/tree/main/docker)), suitable for e.g., malloc regression tests.
+* Automated Pull Request check vs. a pre-recorded *absolute baseline p90 threshold* (see e.g., [Swift Certificates](https://github.com/apple/swift-certificates/tree/main/Benchmarks) for such a workflow with [related Docker files](https://github.com/apple/swift-certificates/tree/main/docker)), suitable for e.g., malloc regression tests
 * **[Manual comparison of multiple performance baselines](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/creatingandcomparingbaselines)** for iterative or A/B performance work by an individual developer
 * **[Export of benchmark results in several formats](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/exportingbenchmarks)** for analysis or visualization
 * Running the Instruments profiler [on the benchmark suite executable directly from Xcode](https://github.com/ordo-one/package-benchmark/releases/tag/1.11.0)
@@ -129,7 +131,7 @@ Discussions and questions are best directed to [the Swift forums section for Ben
 
 Performance is a key non-functional requirement for many software packages. Early and continuous benchmarking will help you to ship software with consistent performance and controlled resource usage that delights your users.
 
-The [Benchmark package](https://github.com/ordo-one/package-benchmark) allows you to easily create sophisticated Swift performance benchmarks, with [full documentation being available online at the Swift Package Index](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark), it provides much of the scaffolding required for benchmarking:
+The [Benchmark package](https://github.com/ordo-one/package-benchmark) allows you to easily create sophisticated Swift performance benchmarks - with [full documentation being available online at the Swift Package Index](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark) - providing much of the scaffolding required for benchmarking:
 
 * Support for a wide range of performance metrics, not just CPU
 * Quickly run individual benchmarks from the command line during iterative development
@@ -138,4 +140,4 @@ The [Benchmark package](https://github.com/ordo-one/package-benchmark) allows yo
 * Minimal boilerplate
 * Easy integration in your project 
 * Support for async benchmarks
-* Multiple output formats supporting interoperability with other tools, e.g. JMH analytics and HDR histogram output.
+* Multiple output formats supporting interoperability with other tools, e.g. JMH analytics and HDR histogram output
