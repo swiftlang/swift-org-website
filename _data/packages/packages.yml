@@ -18,7 +18,7 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
+        platform_compatibility_tooltip: Apple (macOS, iOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/soto-project/soto
         note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/13).
