@@ -1,3 +1,8 @@
+- date: 2024-01-09 10:10:00-06:00
+  dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-01-09-a
+  download: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-01-09-a-centos7.tar.gz
+  download_signature: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-01-09-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2024-01-05 10:10:00-06:00
   dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-01-05-a
   download: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-01-05-a-centos7.tar.gz
