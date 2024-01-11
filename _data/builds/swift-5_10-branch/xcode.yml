@@ -1,3 +1,8 @@
+- date: 2024-01-10 10:10:00-06:00
+  debug_info: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-01-10-a-osx-symbols.pkg
+  dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-01-10-a
+  download: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-01-10-a-osx.pkg
+  name: Swift Development Snapshot
 - date: 2024-01-09 10:10:00-06:00
   debug_info: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-01-09-a-osx-symbols.pkg
   dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-01-09-a
