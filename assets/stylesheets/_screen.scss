@@ -237,8 +237,23 @@ cite {
     }
 
     &.cta {
-      padding-bottom: .1rem;
-      border-bottom: 2px solid rgba(gray, .5);
+      border: 2px solid var(--color-nav-rule);
+      border-radius: .5rem;
+      padding: .1em .4em;
+      cursor: pointer;
+      transition: border .2s ease;
+
+      a {
+        display: block;
+
+        span {
+          letter-spacing: 0;
+        }
+      }
+      
+      &:hover {
+        border-color: var(--color-link);
+      }
     }
 
     & a,
@@ -304,6 +319,7 @@ cite {
 
 .nav-item span i {
   display: inline-block;
+  margin-left: -0.6em;
   font-style: normal;
   font-weight: 100;
   opacity: 0.2;
