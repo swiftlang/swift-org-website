@@ -179,8 +179,12 @@ cite {
   margin-bottom: 0;
 
   a {
-    display: block;
+    display: flex;
     width: 120px;
+  }
+
+  svg {
+    flex: 1;
   }
 
   #logotype {
@@ -189,7 +193,7 @@ cite {
 }
 
 .site-navigation {
-  padding: .5rem 1rem;
+  padding: 1rem;
   background: var(--color-nav-background);
   border-bottom: 1px solid var(--color-nav-rule);
 

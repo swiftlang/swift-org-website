@@ -1,9 +1,9 @@
 - header: Overview
   pages:
-  - title: Language refrence (TSPL)
+  - title: Language Reference
     url: /documentation/tspl/
     description: |
-      The Swift Programming Language book is the authoritative reference for Swift,
+      The Swift Programming Language (TSPL) book is the authoritative reference for Swift,
       offering a guided tour, a comprehensive guide, and a formal reference of the language.
   - title: API Design Guidelines
     url: /documentation/api-design-guidelines/
@@ -27,7 +27,11 @@
   - title: REPL &  Debugger
     url: /documentation/lldb/
     description: |
-      - The LLDB debugger provides a rich REPL as well as the debugging environment for the Swift Language.
+      The LLDB debugger provides a rich REPL as well as the debugging environment for the Swift Language.
+  - title: About Swift
+    url: /about/
+    description: |
+      A summary of the core features of Swift, supported platforms, and open source projects.
 #----------------------------------------------------
 - header: Articles
   pages:
