@@ -282,8 +282,6 @@ nav[role="navigation"] {
 }
 
 main {
-    max-width: 798px;
-    min-width: 320px;
     margin-left: 250px;
     padding: 35px 30px 0;
     min-height: 100%;
@@ -351,6 +349,10 @@ footer[role="contentinfo"] {
 }
 
 article {
+    margin: auto;
+    max-width: 798px;
+    min-width: 320px;
+
     &:first-of-type {
         padding-bottom: 36px;
     }
