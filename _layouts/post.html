@@ -13,6 +13,8 @@ layout: base
       <div class="byline">
         {% if author.gravatar %}
           <img src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64&d=mp" alt="{{ author.name }}"/>
+        {% elsif author.github %}
+          <img src="https://www.github.com/{{ author.github }}.png?size=64" alt="{{ author.name }}"/>
         {% else %}
           <img src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y" alt="{{ author.name }}"/>
         {% endif %}
