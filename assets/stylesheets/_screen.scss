@@ -407,6 +407,28 @@ article {
             span {
                 padding-left: 42px;
             }
+
+            i {
+                &.github {
+                    background-image: url("/assets/images/icon-github.svg");
+                }
+
+                &.mastodon {
+                    background-image: url("/assets/images/icon-mastodon.svg");
+                }
+
+                &.twitter {
+                    background-image: url("/assets/images/icon-twitter.svg");
+                }
+
+                width: 16px;
+                height: 16px;
+                background-repeat: no-repeat;
+                background-size: 16px;
+                display: block;
+                margin-right: 1em;
+                float: right;
+            }
         }
 
         .about {

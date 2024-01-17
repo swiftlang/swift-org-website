@@ -20,14 +20,18 @@ layout: base
         {% endif %}
 
         <span class="author">
-          {% if author.github %}
-            <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github}}) on GitHub">{{ author.name }}</a>
-          {% elsif author.twitter %}
-            <a href="https://twitter.com/{{ author.twitter }}/" rel="nofollow" title="{{ author.name }} (@{{ author.twitter}}) on Twitter">{{ author.name }}</a>
-          {% else %}
-            {{ author.name }}
-          {% endif %}
+          {{ author.name }}
         </span>
+
+        {% if author.twitter %}
+          <a href="https://twitter.com/{{ author.twitter }}/" rel="nofollow" title="{{ author.name }} (@{{ author.twitter }}) on Twitter"><i class="twitter"></i></a>
+        {% endif %}
+        {% if author.mastodon %}
+          <a href="https://mastodon.social/@{{ author.mastodon }}/" rel="nofollow" title="{{ author.name }} (@{{ author.mastodon }}) on Mastodon"><i class="mastodon"></i></a>
+        {% endif %}
+        {% if author.github %}
+          <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github }}) on GitHub"><i class="github"></i></a>
+        {% endif %}
       </div>
       {% if page.about %}
         {% assign about = page.about %}

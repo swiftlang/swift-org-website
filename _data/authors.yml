@@ -224,6 +224,7 @@ compnerd:
   name: Saleem Abdulrasool
   email: compnerd@compnerd.org
   github: compnerd
+  mastodon: compnerd@fosstodon.org
   twitter: compnerd
   about: "Saleem Abdulrasool is a member of the Swift Core Team and a Software Engineer at The Browser Company, and previously worked at Google Brain, Facebook, and Microsoft, and currently focuses on cross-platform and embedded Swift."
 
