@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/libraries/concurrency-adoption-guidelines"
 layout: page
 title: Swift Concurrency Adoption Guidelines
 ---

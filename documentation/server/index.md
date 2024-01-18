@@ -1,5 +1,8 @@
 ---
-redirect_from: "/server-apis/"
+redirect_from:
+  - "/server/"
+  - "server/guides/"
+  - "/server-apis/"
 layout: page
 title: Swift on Server
 ---

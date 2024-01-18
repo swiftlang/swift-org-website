@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/libraries/log-levels"
 layout: page
 title: Log Levels
 ---

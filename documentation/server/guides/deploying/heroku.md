@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/deploying/heruko"
 layout: page
 title: Deploying to Heroku
 ---

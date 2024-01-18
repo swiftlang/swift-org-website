@@ -1,4 +1,5 @@
 ---
+redirect_from: "/standard-library/"
 layout: page
 title: Standard Library
 ---

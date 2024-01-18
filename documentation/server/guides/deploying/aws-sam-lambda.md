@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/deploying/aws-sam-lambda"
 layout: page
 title: Deploying to AWS Lambda using the Serverless Application Model (SAM)
 ---
@@ -170,7 +171,7 @@ CMD ["/var/task/lambdaExec"]
 
 ## Step 4: Update the Swift dependencies
 
-Your project requires 3 libraries. 
+Your project requires 3 libraries.
 - swift-aws-lambda-runtime
 - swift-aws-lambda-events
 - aws-sdk-swift
@@ -265,9 +266,9 @@ struct PutItemFunction: SimpleLambdaHandler {
 
     // Lambda Function handler
     func handle(_ event: APIGatewayV2Request, context: LambdaContext) async throws -> Item {
-        
+
         print("event received:\(event)")
-        
+
         // create a client to interact with DynamoDB
         let client = try await DynamoDBClient()
 
@@ -278,7 +279,7 @@ struct PutItemFunction: SimpleLambdaHandler {
 
         // decode data from APIGateway POST into a codable struct
         var item = try JSONDecoder().decode(
-            Item.self, 
+            Item.self,
             from: event.body!.data(using: .utf8)!
         )
 
@@ -319,9 +320,9 @@ struct GetItemsFunction: SimpleLambdaHandler {
 
     // Lambda Function handler
     func handle(_ event: APIGatewayV2Request, context: LambdaContext) async throws -> [Item] {
-        
+
         print("event received:\(event)")
-        
+
         // create a client to interact with DynamoDB
         let client = try await DynamoDBClient()
 
@@ -333,7 +334,7 @@ struct GetItemsFunction: SimpleLambdaHandler {
         // use SDK to retrieve items from table
         let input = ScanInput(tableName: tableName)
         let response = try await client.scan(input: input)
-        
+
         // return items in an array
         return response.items!.map() {i in
             var item = Item()

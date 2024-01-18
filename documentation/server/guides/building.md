@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/building"
 layout: page
 title: Build System
 ---

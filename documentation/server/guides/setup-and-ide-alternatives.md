@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/setup-and-ide-alternatives"
 layout: page
 title: Installing Swift and using with IDEs
 ---

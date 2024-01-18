@@ -1,4 +1,5 @@
 ---
+redirect_from: "/core-libraries/"
 layout: page
 title: Swift Core Libraries
 ---

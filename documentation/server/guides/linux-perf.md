@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/linux-perf"
 layout: page
 title: Linux perf
 ---

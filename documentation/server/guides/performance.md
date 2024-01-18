@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/performance"
 layout: page
 title: Debugging Performance Issues
 ---
