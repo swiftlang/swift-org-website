@@ -21,9 +21,6 @@ defaults:
             permalink: /blog/:title/
             layout: "post"
 
-gems:
-  - jekyll-redirect-from
-
 plugins:
   - jekyll-redirect-from
 
