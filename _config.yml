@@ -24,5 +24,8 @@ defaults:
 gems:
   - jekyll-redirect-from
 
+plugins:
+  - jekyll-redirect-from
+
 whitelist:
   - jekyll-redirect-from
