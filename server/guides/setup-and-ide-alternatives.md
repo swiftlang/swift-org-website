@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Installing Swift and using with IDEs
+excerpt: "Swift is supported on a number of platforms, integrated development environments (IDEs), and editors."
 ---
 
 ## Installing Swift

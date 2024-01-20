@@ -3,8 +3,7 @@ layout: page
 title: Debugging Memory Leaks and Usage
 ---
 
-There are many different tools for troubleshooting memory leaks both on Linux and macOS, each with different strengths and ease-of-use. One excellent tool is the Xcode's [Memory Graph Debugger](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-DontLinkElementID_1).
-[Instruments](https://help.apple.com/instruments/mac/10.0/#/dev022f987b) and `leaks` can also be very useful. If you cannot run or reproduce the problem on macOS, there are a number of server-side alternatives below.
+There are many different tools for troubleshooting memory leaks both on Linux and macOS, each with different strengths and ease-of-use. One excellent tool is the Xcode's [Memory Graph Debugger](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-DontLinkElementID_1). [Instruments](https://help.apple.com/instruments/mac/10.0/#/dev022f987b) and `leaks` can also be very useful. If you cannot run or reproduce the problem on macOS, there are a number of server-side alternatives below.
 
 ## Example program
 

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Download Swift
+excerpt: "Download both releases and development snapshots of Swift for all supported development platforms."
 ---
 
 {% assign xcode_development_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}

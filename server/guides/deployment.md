@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Deploying to Servers or Public Cloud
+excerpt: "Servers built with Swift can be deployed on a variety of public cloud providers. The guides listed on this page show you how."
 ---
 
 The following guides can help with the deployment to public cloud providers:

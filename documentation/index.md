@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Documentation
+excerpt: "Whether you are new to Swift or an experienced Swift developer, documentation like The Swift Programming Language book, API Guidelines, and reference documentation for tools and libraries, serves as an invaluable resource in discovering all that Swift has to offer. "
 ---
 
 If you are new to Swift, you may want to check out these additional resources.
