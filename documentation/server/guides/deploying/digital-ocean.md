@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/deploying/digital-ocean"
 layout: page
 title: Deploying to DigitalOcean
 ---

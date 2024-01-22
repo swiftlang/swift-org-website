@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/allocations"
 layout: page
 title: Allocations
 ---

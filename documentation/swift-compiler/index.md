@@ -1,8 +1,9 @@
 ---
+redirect_from:
+  - "/swift-compiler/"
+  - "/compiler-stdlib/"
 layout: page
 title: Swift Compiler
-redirect_from:
-  - /compiler-stdlib/
 ---
 
 The [main Swift repository][swift-repo] contains the source code for

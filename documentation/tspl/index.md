@@ -1,4 +1,5 @@
 ---
+redirect_from: "/tspl/"
 layout: page
 title: Language reference
 ---

@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/deploying/ubuntu"
 layout: page
 title: Deploying on Ubuntu
 ---

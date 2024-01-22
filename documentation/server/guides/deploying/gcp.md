@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/deploying/gcp"
 layout: page
 title: Deploying to Google Cloud Platform (GCP)
 ---

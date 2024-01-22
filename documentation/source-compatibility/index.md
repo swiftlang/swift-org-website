@@ -1,4 +1,5 @@
 ---
+redirect_from: "/source-compatibility/"
 layout: page
 title: Swift Source Compatibility
 ---

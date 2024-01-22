@@ -1,4 +1,5 @@
 ---
+redirect_from: "/source-code/"
 layout: page
 title: Source Code
 ---

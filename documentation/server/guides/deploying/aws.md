@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/deploying/aws"
 layout: page
 title: Deploying to AWS on Amazon Linux 2
 ---

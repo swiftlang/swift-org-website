@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/deployment"
 layout: page
 title: Deploying to Servers or Public Cloud
 ---

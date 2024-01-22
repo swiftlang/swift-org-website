@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/testing"
 layout: page
 title: Testing
 ---

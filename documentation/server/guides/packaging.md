@@ -1,4 +1,5 @@
 ---
+redirect_from: "server/guides/packaging"
 layout: page
 title: Packaging Applications for Deployment
 ---
