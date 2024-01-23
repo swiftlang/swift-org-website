@@ -1,38 +1,93 @@
-<nav role="navigation">
-  <div class="nav-menu-container">
-    <header class="menu-item logo-container" role="banner">
-      <h1 id="logo">
-        <a href="/" title="Swift.org" role="img" aria-label="Swift.org">
-          Swift.org
-        </a>
-      </h1>
-    </header>
-    <div id="menu-toggle" class="menu-item menu-toggle open"></div>
+<header class="site-navigation">
+  <div class="wrapper">
+    <h1 id="logo">
+      <a href="/" title="Swift.org">
+        {% include logo.html %}
+      </a>
+    </h1>
+
+    <nav role="navigation">
+      <ul class="navigation-links">
+        {% for nav in site.data.navigation %}
+          <li class="nav-item">
+            <span>
+              {% if nav.url %}
+                <a href="{{ nav.url }}">{{ nav.header }}</a>
+              {% else %}
+                {{ nav.header }}
+              {% endif %}
+              {% if nav.pages %}
+                <i>&#9663;</i>
+              {% endif %}
+            </span>
+            {% if nav.pages %}
+              <ul class="nav-submenu" role="menu">
+                {% for navpage in nav.pages %}
+                  {% if navpage.section %}
+                  <li class="nav-section">{{ navpage.section }}</li>
+                  {% else %}
+                    {% if page.url == navpage.url %}
+                    <li role="presentation" class="active">
+                    {% else %}
+                    <li role="presentation">
+                    {% endif %}
+                      <a href="{{ navpage.url }}" role="menuitem">{{ navpage.title }}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+
+        <li class="cta">
+          <a href="/install">Download <span>{{ site.data.builds.swift_releases.last.name }}</span></a>
+        </li>
+      </ul>
+      <button id="menu-toggle" class="menu-item menu-toggle open" aria-expanded="false" aria-label="Toggle Navigation Menu"></button>
+    </nav>
   </div>
 
-  <div class="list-items">
-    {% for nav in site.data.navigation %}
-    {% if nav.header %}
-    <h2>{{ nav.header }}</h2>
-    {% endif %}
-    <ul>
-      {% for navpage in nav.pages %}
-      {% if page.url == navpage.url %}
-      <li class="active">
-      {% else %}
-      <li>
-      {% endif %}
-        <a href="{{ navpage.url }}">{{ navpage.title }}</a>
-        {% if page.url == navpage.url and navpage.sections %}
-        <ul>
-          {% for section in navpage.sections %}
-          <li><a href="{{ navpage.url }}#{{ section.name }}">{{ section.title }}</a></li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </li>
+  <nav class="mobile-navigation" role="navigation">
+    <ul class="mobile-navigation-links">
+      {% for nav in site.data.navigation %}
+        <li class="nav-item">
+          <div class="link-container">
+            {% if nav.url %}
+              <a href="{{ nav.url }}">{{ nav.header }}</a>
+              {% else %}
+              {{ nav.header }}
+            {% endif %}
+            
+            {% if nav.pages %}
+              <button class="section-toggle" aria-expanded="false" aria-label="Toggle {{ nav.header }} Section">
+                &#9663;
+              </button>
+            {% endif %}
+          </div>
+          {% if nav.pages %}
+            <ul class="section-menu">
+              {% for navpage in nav.pages %}
+                {% if navpage.section %}
+                  <li class="nav-section">{{ navpage.section }}</li>
+                {% else %}
+                  {% if page.url == navpage.url %}
+                    <li class="active">
+                  {% else %}
+                    <li>
+                  {% endif %}
+                    <a href="{{ navpage.url }}">{{ navpage.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
       {% endfor %}
+
+      <li class="cta">
+        <a href="/install">Download <span>{{ site.data.builds.swift_releases.last.name }}</span></a>
+      </li>
     </ul>
-    {% endfor %}
-  </div>
-</nav>
+  </nav>
+ </header>

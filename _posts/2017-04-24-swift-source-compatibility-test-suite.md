@@ -13,7 +13,7 @@ to maintain source compatibility in future Swift releases.
 The source compatibility test suite is community driven, meaning open source
 project owners can submit their projects for inclusion in the suite.
 Instructions for adding open source projects to the test suite can be found in
-the [Swift Source Compatibility](/source-compatibility) section on Swift.org.
+the [Swift Source Compatibility](/documentation/source-compatibility) section on Swift.org.
 
 [Swift's continuous integration system](https://ci.swift.org) periodically
 builds projects included in the suite against development versions of Swift to
