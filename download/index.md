@@ -42,6 +42,7 @@ title: Download Swift
 {% assign centos7_5_10_builds = site.data.builds.swift-5_10-branch.centos7 | sort: 'date' | reverse %}
 {% assign ubi9_5_10_builds = site.data.builds.swift-5_10-branch.ubi9 | sort: 'date' | reverse %}
 {% assign ubi9_aarch64_5_10_builds = site.data.builds.swift-5_10-branch.ubi9-aarch64 | sort: 'date' | reverse %}
+{% assign windows10_5_10_builds = site.data.builds.swift-5_10-branch.windows10 | sort: 'date' | reverse %}
 
 {% assign swift_5_9_1_release_build = site.data.builds.swift_releases | where: 'name', '5.9.1' | first %}
 {% assign swift_5_9_1_release_date_string = swift_5_9_1_release_build.date | date: '%Y-%m-%d' %}
@@ -139,7 +140,7 @@ but they have not gone through the full testing that is performed for official r
         {% include_relative _build-snapshot.html platform="Linux" build=centos7_5_10_builds.first name="CentOS 7" docker_tag="nightly-5.10-centos7" platform_dir="centos7" branch_dir="swift-5.10-branch" arch="x86_64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=amazonlinux2_5_10_builds.first build_2=amazonlinux2_aarch64_5_10_builds.first name="Amazon Linux 2" docker_tag="nightly-5.10-amazonlinux2" platform_dir="amazonlinux2" platform_dir_2="amazonlinux2-aarch64" branch_dir="swift-5.10-branch" arch="x86_64" arch_2="aarch64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=ubi9_5_10_builds.first build_2=ubi9_aarch64_5_10_builds.first name="Red Hat Universal Base Image 9" docker_tag="nightly-5.10-rhel-ubi9" platform_dir="ubi9" platform_dir_2="ubi9-aarch64" branch_dir="swift-5.10-branch" arch="x86_64" arch_2="aarch64" %}
-        <!-- {% include_relative _build-snapshot.html platform="Windows" build=windows10_5_10_builds.first name="Windows 10" platform_dir="windows10" branch_dir="swift-5.10-branch" arch="x86_64" %} -->
+        {% include_relative _build-snapshot.html platform="Windows" build=windows10_5_10_builds.first name="Windows 10" platform_dir="windows10" branch_dir="swift-5.10-branch" arch="x86_64" %}
     </tbody>
 </table>
 
