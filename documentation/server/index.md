@@ -14,25 +14,9 @@ Most importantly, Swift is designed to make writing and maintaining correct prog
 
 ## Why Swift on Server?
 
-In addition to the characteristics of Swift that make it an excellent general-purpose programming language,
-it also has unique characteristics that make it specifically suitable for Server applications
+Learn why Swift is well suited to developing server-side applications that are elegant and performant.
 
-### Small footprint
-One of the main goals of a modern cloud platform is to maximize resource utilization by efficiently packing services into a single machine.
-Cloud services built with Swift have a small memory footprint (measured in MB)--especially when compared to other popular server languages with automatic memory management.
-Services built with Swift are also CPU-efficient, given the language’s focus on performance.
-
-### Quick startup time
-Swift-based applications start quickly since there are almost no warm up operations.
-This makes Swift a great fit for cloud services, which are often re-scheduled onto new VMs or containers to address platform formation changes.
-Using Swift also helps streamline continuous delivery pipelines, since you incur less wait time for new versions of the service fleet to come online.
-Finally, quick boot times make Swift a perfect fit for serverless applications such as Cloud Functions or Lambda with negligible cold start times.
-
-### Deterministic performance
-Swift’s use of ARC (instead of tracing garbage collection) and its lack of JIT gives it an important edge in the cloud services space.
-While tracing garbage collection technologies have vastly improved in the last few years, they still compete with the application for resources which triggers non-deterministic performance.
-The absence of JIT means no runtime optimization or de-optimization.
-It’s challenging to debug non-deterministic performance, and language-induced non-deterministic performance can both confuse and mask application-level performance issues that could otherwise be addressed.
+<a href="/documentation/server/why" class="cta-secondary">Learn more</a>
 
 ## Development guides
 

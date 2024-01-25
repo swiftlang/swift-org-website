@@ -1,0 +1,41 @@
+  .why-swift-on-server {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    padding: 0;
+  
+    li {
+      border: 1px solid var(--color-fill-tertiary);
+      border-radius: var(--border-radius);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+  
+      h3 {
+        line-height: 1.4;
+        font-size: 1.4rem;
+        padding-top: 0;
+      }
+  
+      p {
+        flex-grow: 1;
+        color: var(--color-secondary-label);
+        margin-bottom: 0;
+      }
+    }
+  
+    .cta-secondary {
+      margin-top: 1rem;
+    }
+  }
+  
+  .why-swift-on-server {
+    @media (min-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+  
+      li:nth-child(2n-1):nth-last-of-type(1) {
+        grid-column: span 2;
+      }
+    }
+  }
+  
