@@ -60,7 +60,7 @@
   - title: Swift Evolution
     url: /swift-evolution/
     description: |
-      Swift evolution governs how changes are introduced to the Swift langague.
+      Swift evolution governs how changes are introduced to the Swift language.
       The process details how ideas are proposed, discussed, reviewed, and eventually accepted into upcoming releases.
   - title: Source Code
     url: /documentation/source-code/
