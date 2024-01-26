@@ -7,7 +7,7 @@ title: macOS Installation Options
 
 ## Installation via Xcode
 
-Download [{{ site.data.builds.swift_releases.last.xcode }}](https://itunes.apple.com/app/xcode/id497799835) which contains the latest Swift release. 
+Download the [current version of Xcode](https://itunes.apple.com/app/xcode/id497799835) which contains the latest Swift release. 
 
 ## Installation via Swift.org package installer
 
