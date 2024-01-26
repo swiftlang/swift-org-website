@@ -1,10 +1,12 @@
 .preamble {
-  font-size: 28px;
+  font-size: 38px;
   line-height: 1.4;
   margin-bottom: 30px;
+  width: 46%;
 
   strong {
     font-weight: 600;
+    color: var(--color-figure-orange);
   }
 
   span {
@@ -12,27 +14,37 @@
     padding-top: .5rem;
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1280px) {
+    width: 100%;
     font-size: 24px;
   }
 }
 
 .featured-snippet {
   display: none;
+  min-height: 18rem;
+  width: 52%;
+  margin-left: 2%;
 
   &.visible {
     display: block;
   }
 
-  &.highlighter-rouge {
-    margin-left: 0px;
+  .highlight {
+    height: 100%;
   }
 
   pre {
     border: 1px solid var(--color-fill-tertiary);
     border-radius: 4px;
-    padding: 1.25rem 1.5rem;
+    padding: 1rem;
     margin: 0px;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    margin-left: 0;
+    width: 100%;
+    min-height: auto;
   }
 }
 
@@ -77,7 +89,7 @@
           justify-content: center;
         }
       }
-      
+
       &:hover {
         background-color: var(--color-text);
         color: var(--color-fill);
