@@ -129,7 +129,7 @@ test(\.name.firstName)
      ^
 ```
 
-If you’d like to learn more about the details of this project we recommend having a look at this excellend and [very detailed writeup written by Amritpan](https://docs.google.com/document/d/19hWKez1sx7W5XMDc9sh7fRDAlPdMP2FxYuIyGs7MCbI/edit).
+If you’d like to learn more about the details of this project we recommend having a look at this excellend and [very detailed writeup written by Amritpan](https://forums.swift.org/t/key-path-inference-and-diagnostic-improvements-an-update/69632) on the forums.
 
 ## Mentee impressions
 
