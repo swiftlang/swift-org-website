@@ -4,7 +4,8 @@ title: Welcome to Swift.org
 atom: true
 ---
 
-<h1 class="preamble">Swift is a <strong>general-purpose</strong> programming language that’s <strong>approachable</strong> for newcomers and <strong>powerful</strong> for experts. <span>It is <strong>fast</strong>, <strong>modern</strong>, <strong>safe</strong>, and a <strong>joy</strong> to write.</span></h1>
+<div class="callout" markdown="1">
+  <h1 class="preamble">Swift is a <strong>general-purpose</strong> programming language that’s <strong>approachable</strong> for newcomers and <strong>powerful</strong> for experts. <span>It is <strong>fast</strong>, <strong>modern</strong>, <strong>safe</strong>, and a <strong>joy</strong> to write.</span></h1>
 
 {% for snippet in site.data.featured_snippets %}
 ```swift
@@ -12,6 +13,7 @@ atom: true
 ```
 {: class="featured-snippet {% if forloop.first %}visible{% endif %}" }
 {% endfor %}
+</div>
 
 <div class="link-grid" markdown="1">
   <ul>
