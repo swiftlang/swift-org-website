@@ -570,21 +570,41 @@ article {
       padding-top: 0em;
     }
 
-    time {
-      display: block;
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 400;
-      color: var(--color-figure-gray-tertiary);
-      margin-right: 3em;
-      margin-bottom: 1.25em;
-    }
+    .subtitle {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1em;
 
-    .tags {
-      display: block;
-      font-size: 12px;
-      font-weight: 400;
-      margin-top: 0;
+      time {
+        flex-shrink: 0;
+        margin-top: 0.2em + 0.15em;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        font-weight: 400;
+        color: var(--color-figure-gray-tertiary);
+      }
+
+      .tags {
+        display: flex;
+        flex-direction: row;
+        /* Allow tags to wrap to additional lines */
+        flex-wrap: wrap;
+        /* Add a small gap between additional lines */
+        gap: 0.4em;
+        /* Align to trailing edge */
+        justify-content: flex-end;
+
+        .tag {
+          text-transform: uppercase;
+          font-size: 0.8em;
+          font-weight: 400;
+          margin-left: 0.5em; /* Adjust margin as needed for spacing between tags */
+          color: var(--color-figure-gray-tertiary);
+          border: 0.15em solid var(--color-nav-rule);
+          border-radius: 0.5rem;
+          padding: 0.15em 0.4em;
+        }
+      }
     }
   }
 
