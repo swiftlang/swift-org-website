@@ -10,7 +10,7 @@
       <ul class="navigation-links">
         {% for nav in site.data.navigation %}
           <li class="nav-item">
-            <span>
+            <span class="{% if page.url == nav.url %}active{% endif %}">
               {% if nav.url %}
                 <a href="{{ nav.url }}">{{ nav.header }}</a>
               {% else %}
@@ -55,7 +55,7 @@
           <div class="link-container">
             {% if nav.url %}
               <a href="{{ nav.url }}">{{ nav.header }}</a>
-              {% else %}
+            {% else %}
               {{ nav.header }}
             {% endif %}
             
@@ -86,7 +86,7 @@
       {% endfor %}
 
       <li class="cta">
-        <a href="/install">Download <span>{{ site.data.builds.swift_releases.last.name }}</span></a>
+        <a href="/install/">Download <span>{{ site.data.builds.swift_releases.last.name }}</span></a>
       </li>
     </ul>
   </nav>
