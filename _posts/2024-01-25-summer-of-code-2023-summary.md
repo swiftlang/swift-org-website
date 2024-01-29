@@ -16,9 +16,9 @@ The projects in this edition were:
 * Incremental Parsing in SwiftParser
 * KeyPath inference and diagnostic improvements
 
-We’d like to extend our sincere thanks to the participants and mentors for completing these awesome project, and use this post to highlight their work to the wider community. Below, each project is described in a small summary.
+We’d like to extend our sincere thanks to the participants and mentors for completing these awesome projects, and use this post to highlight their work to the wider community. Below, each project is described in a small summary.
 
-We are always looking for ideas, mentors, and general input about how we can make Swift’s ecosystem more inclusive and easier to participate in. If you have some ideas, would like to become a mentor in future editions, or if you’re just curious about other project ideas that were floated during previous editions, we visit the [dedicated GSoC category](https://forums.swift.org/c/development/gsoc/98)on the Swift forums. You can also check out [last year’s GSoC summary blog post](https://www.swift.org/blog/swift-summer-of-code-2022-summary/), where we highlighted last year’s projects. 
+We are always looking for ideas, mentors, and general input about how we can make Swift’s ecosystem more inclusive and easier to participate in. If you have some ideas, would like to become a mentor in future editions, or if you’re just curious about other project ideas that were floated during previous editions, visit the [dedicated GSoC category](https://forums.swift.org/c/development/gsoc/98) on the Swift forums. You can also check out [last year’s GSoC summary blog post](https://www.swift.org/blog/swift-summer-of-code-2022-summary/), where we highlighted last year’s projects. 
 
 If you’re interested in participating as a Mentee, keep an eye on the official [GSoC schedule](https://summerofcode.withgoogle.com/) and on the Swift forum’s [GSoC category](https://forums.swift.org/c/development/gsoc/98).
 
@@ -66,9 +66,9 @@ If you’d like to learn more about this project and Delkhaz’s experience, hea
 * Mentee: [Ziyang Huang](https://github.com/StevenWong12) 
 * Mentor: [Alex Hoppen](https://github.com/ahoppen)
 
-The project improved performance of SwiftParser in editor contexts like syntax highlighting where minor edits are applied to the file, by incrementally parsing the source files and re-using parts of the syntax tree that remain unchanged. At the same time it made sure that it did not incur too much performance loss when incremental parsing is not used, for example in the context of the compiler.
+The project improved the performance of SwiftParser in editor contexts like syntax highlighting where minor edits are applied to the file, by incrementally parsing the source files and re-using parts of the syntax tree that remain unchanged. At the same time, performance loss during normal parsing, for example in the context of the compiler, was kept to a minimum.
 
-The most challenging part of this project is that we need to make sure we parse the source files correctly. Considering the code snippet below:
+The most challenging part of this project was to make sure we parse the source files correctly. Considering the code snippet below:
 
 ```swift
 foo() {}
@@ -83,7 +83,7 @@ To solve this problem, we collect some additional information for every syntax n
 
 The implementation speeds up parsing by about **10x** when we parse source incrementally while **only incurring a 2~3% of performance loss** during normal parsing. 
 
-If you’d like to read more about this project and Ziyang’s experience his own words, head over to this post on the Swift forums: [[GSoC 2023] My GSoC Experience](https://forums.swift.org/t/gsoc-2023-my-gsoc-experience/67340).
+If you’d like to read more about this project and Ziyang’s experience in his own words, head over to [his GSoC experience post](https://forums.swift.org/t/gsoc-2023-my-gsoc-experience/67340) on the Swift forums.
 
 ### Key Path inference and diagnostic improvements
 
@@ -121,7 +121,7 @@ There are multiple issues with this error diagnostic - contextual type is actual
 
 To address these and other issues we explored a different design for key path literal expression type-checking: infer the root type of the key path first and propagate that information to the components and infer capability based on the components before setting the type for the key path expression which made it a lot easier to diagnose contextual type failures and support previously failing conversions. This approach improves the performance as well because literal is resolved only if context expects a key path and root type is either provided by the developer explicitly or is inferable from the context. 
 
-With new approach implemented the compiler now produces the following diagnostic:
+With the new approach implemented the compiler now produces the following diagnostic:
 
 ```swift
 error: cannot convert value of type 'KeyPath<User, String>' to expected argument type 'WritableKeyPath<User, String>'
@@ -129,7 +129,7 @@ test(\.name.firstName)
      ^
 ```
 
-If you’d like to learn more about the details of this project we recommend having a look at this excellend and [very detailed writeup written by Amritpan](https://forums.swift.org/t/key-path-inference-and-diagnostic-improvements-an-update/69632) on the forums.
+If you’d like to learn more about the details of this project we recommend having a look at this excellent and [very detailed writeup written by Amritpan](https://forums.swift.org/t/key-path-inference-and-diagnostic-improvements-an-update/69632) on the forums.
 
 ## Mentee impressions
 
@@ -159,7 +159,7 @@ Here’s a few impressions of the mentees about their experience:
 
 > I enjoyed working on this project this year, primarily because it was a challenge that allowed me to deepen my understanding of the solver implementation, utilize improvements I made last year to the debug output, and make more impactful changes to the compiler codebase. 
 > 
-> Refactoring the debug output last year helped me understand how the various pieces of information that the type checker collected were then evaluated to assign types from context. Taking a look at key path expression type checking failures revealed some of the fallibilites of the constraint system and solver and how various design decisions choices could solve certain issues while causing others.
+> Refactoring the debug output last year helped me understand how the various pieces of information that the type checker collected were then evaluated to assign types from context. Taking a look at key path expression type checking failures revealed some of the fallibilities of the constraint system and solver and how various design decision choices could solve certain issues while causing others.
 > 
 
 We hope that these notes inspire you to apply to work with us on the Swift project in future Google Summer of Code editions!
