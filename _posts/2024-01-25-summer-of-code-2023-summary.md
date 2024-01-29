@@ -59,7 +59,7 @@ After finishing the foundational work to implement the `get` and `set` commands,
 
 The new `MemcacheConnection` type lays the ground work to implement a higher level `MemcacheClient` that offers additional functionality such as connection pooling, retries, key distribution across nodes and more. However, implementing such a client was out of scope for this year’s GSoC project.
 
-If you’d like to learn more about this project and Delkhaz’s experience, head over to this summary post in the summary post of the  [[GSoC 2023] swift-memcache-gsoc Project Kickoff ****](https://forums.swift.org/t/gsoc-2023-swift-memcache-gsoc-project-kickoff/64932)Swift forums thread.
+If you’d like to learn more about this project and Delkhaz’s experience, head over to the project kickoff thread's last [project summary post](https://forums.swift.org/t/gsoc-2023-swift-memcache-gsoc-project-kickoff/64932) on the Swift forums.
 
 ### Implement Incremental Re-Parsing in SwiftParser
 
@@ -119,7 +119,7 @@ test(\.name.firstName)
 
 There are multiple issues with this error diagnostic - contextual type is actually `WritableKeyPath`  and key path should be inferred as read-only, the source information is lost and compiler is enable to point out a problem with an argument to a call to the function `test`.
 
-To address these and other issues we explored a different design for key path literal expression type-checking: infer the root type of the key path first and propagate that information to the components and infer capability based on the components before setting the type for the key path expression which made it a lot easier to diagnose contextual type failures and support previously failing conversions. This approach improves the performance as well because literal is resolved only if context expects a key path and root type is either provided by the developer explicitly or is inferable from the context. 
+To address these and other issues we explored a different design for key path literal expression type-checking: infer the root type of the key path first and propagate that information to the components and infer capability based on the components before setting the type for the key path expression. This made it a lot easier to diagnose contextual type failures and support previously failing conversions. This approach improves the performance as well because literal is resolved only if the context expects a key path and root type is either provided by the developer explicitly or is able to be inferred from the context. 
 
 With the new approach implemented the compiler now produces the following diagnostic:
 
