@@ -3,7 +3,7 @@ layout: post
 published: true
 date: 2022-12-05 10:00:00
 title: Swift Google Summer of Code 2023 Summary
-author: [ktoso]
+author: [ktoso, FranzBusch, ahoppen, xedin]
 ---
 
 The Swift project regularly participates in Google Summer of Code in order to help people new to the open source ecosystem dip their toes in contributing to Swift and its wide ecosystem.
