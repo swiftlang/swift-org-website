@@ -9,7 +9,7 @@ excerpt_separator: <!--read more-->
 
 We’re happy to announce the stable 1.0 release of [Swift OpenAPI Generator][swift-openapi-generator-repo]!
 
-[OpenAPI][openapi] is an open standard for describing the behavior of HTTP services with a rich ecosystem of tooling. One thing OpenAPI is particularly known for is tooling to generate _interactive_ documentation. But the core motivation of OpenAPI is _code-generation_, which allows adopters to use an API-first approach to server development and, because many existing services document their API in this format, allows client developers to generate type-safe, idomatic to call these APIs.
+[OpenAPI][openapi] is an open standard for describing the behavior of HTTP services with a rich ecosystem of tooling. One thing OpenAPI is particularly known for is tooling to generate _interactive_ documentation. But the core motivation of OpenAPI is _code-generation_, which allows adopters to use an API-first approach to server development and, because many existing services document their API in this format, allows client developers to generate type-safe, idiomatic to call these APIs.
 
 <!--read more-->
 
@@ -87,7 +87,7 @@ Swift OpenAPI Generator can be configured to generate:
 
 The generated code provides a type, named `Client`, which provides a method for each operation defined in the OpenAPI document and can be used with any HTTP library that provides an integration package for Swift OpenAPI Generator.
 
-The plugin produces the generated code at build time in a location determined by the build system. To use the genearted code in your project, simply create a `Client` by providing the server URL and HTTP transport you'd like to use.
+The plugin produces the generated code at build time in a location determined by the build system. To use the generated code in your project, simply create a `Client` by providing the server URL and HTTP transport you'd like to use.
 
 The following example creates a Greeting Service client that uses URLSession to make the underlying HTTP requests.
 
