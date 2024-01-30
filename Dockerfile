@@ -8,7 +8,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-FROM ruby:3.3
+FROM ruby:3.2
 LABEL PURPOSE="This image is configured to build and run swift website"
 
 RUN mkdir -p /src
