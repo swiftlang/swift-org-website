@@ -155,6 +155,8 @@ You can also experiment with [example projects][examples] that use Swift OpenAPI
 
 Or if you prefer to watch a video, check out [Meet Swift OpenAPI Generator](https://developer.apple.com/wwdc23/10171) from WWDC23.
 
+To ask a question, request a feature, or report a bug, [reach out to us on Github][file-an-issue] 👋.
+
 [openapi]: https://openapis.org
 [previous-blog-post]: https://www.swift.org/blog/introducing-swift-openapi-generator
 [documentation]: https://swiftpackageindex.com/apple/swift-openapi-generator/documentation
@@ -167,3 +169,4 @@ Or if you prefer to watch a video, check out [Meet Swift OpenAPI Generator](http
 [swift-openapi-async-http-client-repo]: https://github.com/swift-server/swift-openapi-async-http-client
 [swift-openapi-vapor-repo]: https://github.com/swift-server/swift-openapi-vapor
 [swift-openapi-hummingbird-repo]: https://github.com/swift-server/swift-openapi-hummingbird
+[file-an-issue]: https://github.com/apple/swift-openapi-generator/issues/new/choose
