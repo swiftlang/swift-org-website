@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 title: Mixing Swift and C++
 official_url: https://swift.org/documentation/cxx-interop/
 redirect_from:
@@ -869,7 +869,7 @@ public:
   using ValueType = T;
   T deserialize() const;
 
-  ...  
+  ...
 } SWIFT_CONFORMS_TO(Serialization.Deserializable);
 ```
 
@@ -884,7 +884,7 @@ extension Deserializable {
   // All specializations of the `SerializedValue` template now have
   // `deserializedDescription` property in Swift.
   var deserializedDescription: String {
-    "serialized value \(deserialize().description)"  
+    "serialized value \(deserialize().description)"
   }
 }
 ```

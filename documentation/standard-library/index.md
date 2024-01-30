@@ -1,6 +1,6 @@
 ---
 redirect_from: "/standard-library/"
-layout: page
+layout: list
 title: Standard Library
 ---
 

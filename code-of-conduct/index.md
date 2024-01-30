@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 title: Code of Conduct
 ---
 

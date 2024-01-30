@@ -1,11 +1,11 @@
 ---
-layout: article
+layout: list
 date: 2023-11-08 12:00:00
 title: Wrapping C/C++ Library in Swift
 author: [etcwilde, ktoso, yim-lee]
 ---
 
-There are many great libraries out there that are written in C/C++. It is possible to 
+There are many great libraries out there that are written in C/C++. It is possible to
 make use of these libraries in your Swift code without having to rewrite any of them
 in Swift. This article will explain a couple of ways to acheive this and best practices
 when working with C/C++ in Swift.
@@ -17,7 +17,7 @@ when working with C/C++ in Swift.
     - One convention is to prefix the module name with `C`. For example, `CDataStaxDriver`.
 3. Add the C/C++ library's source code directory as Git submodule under `Sources/CMyLib`.
     - If set up properly, there should be a `.gitmodules` file in the Swift package's root directory with contents like this:
-  
+
 	```
 	[submodule "my-lib"]
         	path = Sources/CMyLib/my-lib
@@ -31,13 +31,13 @@ when working with C/C++ in Swift.
       name: "CMyLib",
       dependencies: [],
       exclude: [
-          // Relative paths under 'CMyLib' of the files 
+          // Relative paths under 'CMyLib' of the files
           // and/or directories to exclude. For example:
           // "./my-lib/src/CMakeLists.txt",
           // "./my-lib/tests",
       ],
       sources: [
-          // Relative paths under 'CMyLib' of the source 
+          // Relative paths under 'CMyLib' of the source
           // files and/or directories. For example:
           // "./my-lib/src/foo.c",
           // "./my-lib/src/baz",
@@ -129,7 +129,7 @@ This example downloads zlib v1.3 from GitHub, and builds it. Since we have set a
     * Finds the library and header from the sysroot. By default, CMake will look at the root of your OS as the sysroot, but can be isolated to other sysroots for cross-compilation.
     * This option is good for picking up system dependencies from the base system or sysroot, or giving the distributor of your project the option of using a prebuilt project with the use of `<PackageName>_ROOT`.
     * More details are available at [https://cmake.org/cmake/help/v3.27/command/find_package.html](https://cmake.org/cmake/help/v3.27/command/find_package.html)
-    
+
  The example of wrapping an existing C library in Swift using CMake will use `find_package`, a custom module-map file, and a Virtual Filesystem (VFS) overlay, as well as a helper layer to migrate parts of the SQLite codebase to something that Swift can import.
 
 ### Getting started

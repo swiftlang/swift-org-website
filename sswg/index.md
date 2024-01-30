@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 title: Swift Server Workgroup (SSWG)
 ---
 

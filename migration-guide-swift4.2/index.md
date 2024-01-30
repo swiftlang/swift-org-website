@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 title: Migrating to Swift 4.2
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 title: Project Ideas for GSoC 2019
 ---
 

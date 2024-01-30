@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 title: Build an iOS app with SwiftUI
 ---
 
@@ -202,7 +202,7 @@ struct ContentView: View {
     var activities = ["Archery", "Baseball", "Basketball", "Bowling", "Boxing", "Cricket", "Curling", "Fencing", "Golf", "Hiking", "Lacrosse", "Rugby", "Squash"]
 
     var selected = "Archery"
-    
+
     var body: some View {
         // ...
     }
@@ -314,7 +314,7 @@ This means modifying the `selected` property like so:
 ```
 
 Second, rather than always showing a blue background, we can pick a random color each time. This takes two steps, starting with a new property of all the colors we want to select from – put this next to the `activities` property:
-    
+
 ```swift
 var colors: [Color] = [.blue, .cyan, .gray, .green, .indigo, .mint, .orange, .pink, .purple, .red]
 ```

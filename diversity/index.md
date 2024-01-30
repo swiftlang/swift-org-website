@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 title: Diversity in Swift
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: list
 title: Linux Installation Options
 ---
 

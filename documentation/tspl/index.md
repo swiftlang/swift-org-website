@@ -1,6 +1,6 @@
 ---
 redirect_from: "/tspl/"
-layout: page
+layout: list
 title: Language reference
 ---
 
