@@ -9,8 +9,6 @@ excerpt_separator: <!--read more-->
 
 We’re happy to announce the stable 1.0 release of [Swift OpenAPI Generator][swift-openapi-generator-repo]!
 
-Since the initial [0.1.0 release][previous-blog-post], the project received over 300 pull requests, from more than 25 contributors, and has gained several new features and a simpler API.
-
 <!--read more-->
 
 [OpenAPI][openapi] is a specification for documenting HTTP services. An OpenAPI document is written in either YAML or JSON, which can be read by tools to help automate workflows, such as generating code for sending and receiving HTTP requests.
@@ -18,6 +16,8 @@ Since the initial [0.1.0 release][previous-blog-post], the project received over
 Swift OpenAPI Generator is a Swift package plugin that can generate the ceremony code required to make API calls, or implement API servers.
 
 The code is generated at build-time, so it's always in sync with the OpenAPI document and doesn't need to be committed to your source repository.
+
+Since the initial [release][previous-blog-post] six months ago, the project received over 250 pull requests, from more than 20 contributors, and has gained several new features and a simpler API.
 
 To get started, check out one of the [example projects][examples] or follow a [step-by-step tutorial][tutorials].
 
