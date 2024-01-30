@@ -4,6 +4,7 @@ layout: base
 
 <main role="main">
   <article class="page">
+    {% include anchor_headings.html html=content anchorBody="#" beforeHeading=true anchorAttrs='id="anchor"'%}
     {{ content }}
   </article>
 </main>

@@ -27,6 +27,10 @@ body {
   }
 }
 
+#anchor {
+  color: var(--color-header-text);
+}
+
 a {
   &:link {
     color: var(--color-link);
