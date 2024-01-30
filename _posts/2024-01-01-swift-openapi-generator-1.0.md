@@ -138,6 +138,8 @@ struct Handler: APIProtocol {
 
 ### Package ecosystem
 
+The Swift OpenAPI Generator project is split across multiple repositories to enable extensibility and minimize dependencies in your project.
+
 * [apple/swift-openapi-generator][swift-openapi-generator-repo]: Swift package plugin and CLI.
 * [apple/swift-openapi-runtime][swift-openapi-runtime-repo]: Runtime library used by the generated code.
 * [apple/swift-openapi-urlsession][swift-openapi-urlsession-repo]: Client transport using URLSession.
