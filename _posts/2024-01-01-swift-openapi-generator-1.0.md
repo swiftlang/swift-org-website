@@ -19,8 +19,6 @@ Swift OpenAPI Generator is a Swift package plugin that generates the code requir
 
 Since the initial [release][previous-blog-post] six months ago, the project received over 250 pull requests, from more than 20 contributors, and has gained several new features and a simpler API.
 
-To get started, check out one of the [example projects][examples] or follow a [step-by-step tutorial][tutorials].
-
 ## Feature highlights
 
 * Works with OpenAPI Specification versions 3.0 and 3.1.
