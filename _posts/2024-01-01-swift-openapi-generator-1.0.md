@@ -78,14 +78,18 @@ components:
         - message
 ```
 
-Swift OpenAPI Generator is a Swift package plugin that can be used to generate one or both of the following:
+Swift OpenAPI Generator can be configured to generate:
 
-* Client code to make type-safe requests to an API server with any HTTP client library.
-* Server code that bootstraps an API server using any web framework, using business logic for the API operations that you provide, which are simple functions using network-free types for input and output.
+* Code to make type-safe requests to an API server with any HTTP client library.
+* Code to bootstrap an HTTP server with any web framework using business logic that is decoupled from the network requests.
 
 ### Generated client API
 
-The generated `Client` type provides a method for each HTTP operation defined in the OpenAPI document and can be used with any HTTP library that provides an implementation of `ClientTransport`.
+The generated code provides a type, named `Client`, which provides a method for each operation defined in the OpenAPI document and can be used with any HTTP library that provides an integration package for Swift OpenAPI Generator.
+
+The plugin produces the generated code at build time in a location determined by the build system. To use the genearted code in your project, simply create a `Client` by providing the server URL and HTTP transport you'd like to use.
+
+The following example creates a Greeting Service client that uses URLSession to make the underlying HTTP requests.
 
 ```swift
 import OpenAPIURLSession
@@ -101,9 +105,13 @@ print(try response.ok.body.json.message)
 
 ### Generated server API stubs
 
-To implement a server, define a type that conforms to the generated `APIProtocol`, providing a method for each HTTP operation defined in the OpenAPI document.
+The generated code provides a Swift protocol, named `APIProtocol`, which defines a method requirement for each operation defined in the OpenAPI document, and is designed to work with any web framework that provides an integration package for Swift OpenAPI Generator.
 
-The server can be used with any web framework that provides an implementation of `ServerTransport`, which allows you to register your API handlers with the HTTP server, using the generated `registerHandlers` function.
+To implement an API server, define a type that conforms to `APIProtocol`, providing just the business logic for each operation.
+
+To start the API server, use the generated `registerHandlers` function to configure the HTTP server to route the HTTP requests to your handler.
+
+The following example implements the Greeting Service API in a type named `Handler` and configures a Vapor web server to serve the HTTP requests.
 
 ```swift
 import OpenAPIRuntime
@@ -117,7 +125,7 @@ struct Handler: APIProtocol {
     }
 }
 
-@main struct HelloWorldVaporServer {
+@main struct Server {
     static func main() async throws {
         let app = Vapor.Application()
         let transport = VaporTransport(routesBuilder: app)
