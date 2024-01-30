@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 title: Documentation
 ---
 
@@ -18,7 +18,7 @@ If you are new to Swift, you may want to check out these additional resources.
   {%- for entry in category.pages %}
     <div>
     <a href="{{ entry.url }}">{{ entry.title }}</a>{% if entry.description %}: {{ entry.description }}{% endif %}
-    </div>  
+    </div>
     <br/>
   {% endfor %}
   </div>

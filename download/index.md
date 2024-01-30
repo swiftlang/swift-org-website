@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: list
 title: Download Swift
 ---
 
@@ -50,7 +50,7 @@ title: Download Swift
 
 ## Releases
 
-### Swift {{ site.data.builds.swift_releases.last.name }}  
+### Swift {{ site.data.builds.swift_releases.last.name }}
 Date: {{ site.data.builds.swift_releases.last.date | date: '%B %-d, %Y' }}<br>
 Tag: [{{site.data.builds.swift_releases.last.tag}}](https://github.com/apple/swift/releases/tag/{{ site.data.builds.swift_releases.last.tag }})
 
