@@ -149,7 +149,7 @@ The Swift OpenAPI Generator project is split across multiple repositories to ena
 
 ## Next steps
 
-To get started, check out the [documentation][documentation], which contains [step-by-step tutorials][tutorials].
+To get started, check out the [documentation], which contains [step-by-step tutorials][tutorials].
 
 You can also experiment with [example projects][examples] that use Swift OpenAPI Generator and integrate with other packages in the ecosystem.
 
