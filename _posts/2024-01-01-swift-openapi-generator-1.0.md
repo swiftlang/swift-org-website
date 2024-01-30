@@ -147,7 +147,7 @@ The Swift OpenAPI Generator project is split across multiple repositories to ena
 * [swift-server/swift-openapi-vapor][swift-openapi-vapor-repo]: Server transport using Vapor web framework.
 * [swift-server/swift-openapi-hummingbird][swift-openapi-hummingbird-repo]: Server transport using Hummingbird web framework.
 
-## Documentation and example projects
+## Next steps
 
 To get started, check out the [documentation][documentation], which contains [step-by-step tutorials][tutorials].
 
