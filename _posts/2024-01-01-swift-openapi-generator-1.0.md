@@ -28,6 +28,56 @@ Since the initial [release][previous-blog-post] six months ago, the project rece
 
 ## A quick look
 
+Consider a fictitious HTTP server that provides a single API endpoint to return a personalized greeting:
+
+```console
+% curl 'https://example.com/api/greet?name=Jane'
+{
+    "message": "Hello, Jane"
+}
+```
+
+This service can be described using the following OpenAPI document:
+
+```yaml
+openapi: '3.1.0'
+info:
+  title: GreetingService
+  version: 1.0.0
+servers:
+  - url: https://example.com/api
+    description: Example service deployment.
+paths:
+  /greet:
+    get:
+      operationId: getGreeting
+      parameters:
+        - name: name
+          required: false
+          in: query
+          description: The name used in the returned greeting.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A success response with a greeting.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Greeting'
+components:
+  schemas:
+    Greeting:
+      type: object
+      description: A value with the greeting contents.
+      properties:
+        message:
+          type: string
+          description: The string representation of the greeting.
+      required:
+        - message
+```
+
 Swift OpenAPI Generator is a Swift package plugin that can be used to generate one or both of the following:
 
 * Client code to make type-safe requests to an API server with any HTTP client library.
@@ -35,7 +85,7 @@ Swift OpenAPI Generator is a Swift package plugin that can be used to generate o
 
 ### Generated client API
 
-The generated `Client` type provides a method for each HTTP operation defined in the OpenAPI document[^footnote-example-openapi-document] and can be used with any HTTP library that provides an implementation of `ClientTransport`.
+The generated `Client` type provides a method for each HTTP operation defined in the OpenAPI document and can be used with any HTTP library that provides an implementation of `ClientTransport`.
 
 ```swift
 import OpenAPIURLSession
@@ -51,7 +101,7 @@ print(try response.ok.body.json.message)
 
 ### Generated server API stubs
 
-To implement a server, define a type that conforms to the generated `APIProtocol`, providing a method for each HTTP operation defined in the OpenAPI document[^footnote-example-openapi-document].
+To implement a server, define a type that conforms to the generated `APIProtocol`, providing a method for each HTTP operation defined in the OpenAPI document.
 
 The server can be used with any web framework that provides an implementation of `ServerTransport`, which allows you to register your API handlers with the HTTP server, using the generated `registerHandlers` function.
 
@@ -94,9 +144,6 @@ To get started, check out the [documentation][documentation], which contains [st
 You can also experiment with [example projects][examples] that use Swift OpenAPI Generator and integrate with other packages in the ecosystem.
 
 Or if you prefer to watch a video, check out [Meet Swift OpenAPI Generator](https://developer.apple.com/wwdc23/10171) from WWDC23.
-
----
-[^footnote-example-openapi-document]: The code in this blog post has been generated from this [example OpenAPI document][example-openapi-document].
 
 [openapi]: https://openapis.org
 [previous-blog-post]: https://www.swift.org/blog/introducing-swift-openapi-generator
