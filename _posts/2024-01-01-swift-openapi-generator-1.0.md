@@ -26,7 +26,7 @@ Since the initial [release][previous-blog-post] six months ago, the project rece
 * Support for common content types, including JSON, multipart, URL-encoded form, base64, plain text, and raw bytes; all represented as value types with type-safe properties.
 * Flexible client, server, and middleware abstractions, decoupling the generated code from the HTTP client library and web framework.
 
-## A look at the generated API
+## A quick look
 
 Swift OpenAPI Generator is a Swift package plugin that can be used to generate one or both of the following:
 
