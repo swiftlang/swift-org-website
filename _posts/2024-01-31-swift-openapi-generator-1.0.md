@@ -19,14 +19,14 @@ Swift OpenAPI Generator is a Swift package plugin that generates the code requir
 
 Since the initial [release][previous-blog-post] six months ago, the project received over 250 pull requests, from more than 20 contributors, and has gained several new features and a simpler API.
 
-## Feature highlights
+## Feature Highlights
 
 * Works with OpenAPI Specification versions 3.0 and 3.1.
 * Streaming request and response bodies, backed by AsyncSequence, enabling use cases such as JSON event streams, and large payloads without buffering.
 * Support for common content types, including JSON, multipart, URL-encoded form, base64, plain text, and raw bytes; all represented as value types with type-safe properties.
 * Flexible client, server, and middleware abstractions, decoupling the generated code from the HTTP client library and web framework.
 
-## A quick look
+## A Quick Look
 
 Consider a fictitious HTTP server that provides a single API endpoint to return a personalized greeting:
 
@@ -83,7 +83,7 @@ Swift OpenAPI Generator can be configured to generate:
 * Code to make type-safe requests to an API server with any HTTP client library.
 * Code to bootstrap an HTTP server with any web framework using business logic that is decoupled from the network requests.
 
-### Generated client API
+### Generated Client API
 
 The generated code provides a type, named `Client`, which provides a method for each operation defined in the OpenAPI document and can be used with any HTTP library that provides an integration package for Swift OpenAPI Generator.
 
@@ -103,7 +103,7 @@ let response = try await client.getGreeting()
 print(try response.ok.body.json.message)
 ```
 
-### Generated server API stubs
+### Generated Server API Stubs
 
 The generated code provides a Swift protocol, named `APIProtocol`, which defines a method requirement for each operation defined in the OpenAPI document, and is designed to work with any web framework that provides an integration package for Swift OpenAPI Generator.
 
@@ -136,7 +136,7 @@ struct Handler: APIProtocol {
 }
 ```
 
-### Package ecosystem
+### Package Ecosystem
 
 The Swift OpenAPI Generator project is split across multiple repositories to enable extensibility and minimize dependencies in your project.
 
@@ -147,7 +147,7 @@ The Swift OpenAPI Generator project is split across multiple repositories to ena
 * [swift-server/swift-openapi-vapor][swift-openapi-vapor-repo]: Server transport using Vapor web framework.
 * [swift-server/swift-openapi-hummingbird][swift-openapi-hummingbird-repo]: Server transport using Hummingbird web framework.
 
-## Next steps
+## Next Steps
 
 To get started, check out the [documentation], which contains [step-by-step tutorials][tutorials].
 
