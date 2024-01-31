@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2024-01-31 11:00:00
+date: 2024-01-31 12:00:00
 title: Swift OpenAPI Generator 1.0 Released
 author: [simonjbeaumont, honzadvorsky]
 excerpt_separator: <!--read more-->
