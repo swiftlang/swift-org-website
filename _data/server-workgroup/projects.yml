@@ -193,3 +193,10 @@
   pitched: 2023-08-04
   accepted: 2023-10-04
   url: https://github.com/apple/swift-openapi-generator
+
+- name: MongoKitten
+  description: Native MongoDB driver for Swift, written in Swift
+  maturity: Incubating
+  pitched: 2024-01-03
+  accepted: 2024-01-18
+  url: https://github.com/orlandos-nl/MongoKitten
