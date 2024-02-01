@@ -385,6 +385,16 @@ main {
   max-width: var(--content-mobile-breakpoint);
   padding: 4rem 0 0;
   margin: auto;
+
+  .post, .list {
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @media only screen and (max-width: 767px) {
+      padding: 0;
+    }
+  }
 }
 
 footer[role="contentinfo"] {
