@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: Swift.org website workgroup (SWWG)
 ---
 

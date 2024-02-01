@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: Swift Server Workgroup Survey 2023
 ---
 
