@@ -9,7 +9,7 @@ excerpt_separator: <!--read more-->
 
 We’re happy to announce the stable 1.0 release of [Swift OpenAPI Generator][swift-openapi-generator-repo]!
 
-[OpenAPI][openapi] is an open standard for describing the behavior of HTTP services with a rich ecosystem of tooling. One thing OpenAPI is particularly known for is tooling to generate _interactive_ documentation. But the core motivation of OpenAPI is _code-generation_, which allows adopters to use an API-first approach to server development and, because many existing services document their API in this format, allows client developers to generate type-safe, idiomatic to call these APIs.
+[OpenAPI][openapi] is an open standard for describing the behavior of HTTP services with a rich ecosystem of tooling. One thing OpenAPI is particularly known for is tooling to generate _interactive_ documentation. But the core motivation of OpenAPI is _code-generation_, which allows adopters to use an API-first approach to server development and, because many existing services document their API in this format, allows client developers to generate type-safe, idiomatic code to call these APIs.
 
 <!--read more-->
 
