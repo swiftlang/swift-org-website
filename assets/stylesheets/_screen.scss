@@ -105,6 +105,10 @@ h6 {
   color: var(--color-header-text);
 }
 
+div.highlighter-rouge {
+  margin-left: 13px;
+}
+
 pre {
   font-size: 14px;
   line-height: 1.6em;
@@ -381,28 +385,6 @@ main {
   max-width: var(--content-mobile-breakpoint);
   padding: 4rem 0 0;
   margin: auto;
-
-  .callout {
-    display: flex;
-
-    @media only screen and (max-width: 1280px) {
-      display: block;
-    }
-  }
-
-  .post, .list {
-    max-width: 50em;
-    margin: 0 auto;
-    padding: 0 30px;
-
-    @media only screen and (max-width: 767px) {
-      padding: 0;
-    }
-  }
-
-  @media only screen and (max-width: 1280px) {
-    padding: 4rem 30px 0;
-  }
 }
 
 footer[role="contentinfo"] {
@@ -469,11 +451,7 @@ article {
   }
 
   h2 {
-    padding-top: 0.6em;
-
-    &:first-of-type {
-      padding-top: 0;
-    }
+    padding-top: 1.1em;
   }
 
   h3 {
@@ -1097,7 +1075,7 @@ article {
   .byline {
     font-size: 14px;
     margin-bottom: 1em;
-  
+
     img {
       width: 32px;
       height: 32px;
@@ -1107,12 +1085,12 @@ article {
       margin-right: 0.25em;
       margin-top: -6px;
     }
-  
+
     span {
       padding-left: 42px;
     }
   }
-  
+
   .about {
     float: none;
     clear: both;
