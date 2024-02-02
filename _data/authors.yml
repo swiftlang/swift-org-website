@@ -433,4 +433,4 @@ ahoppen:
   name: Alex Hoppen
   email: ahoppen@apple.com
   github: ahoppen
-  about: "Alex Hoppen is an engineer on the Swift team at Apple. He works on developer tools for Swift, including sourcekit-lsp, swift-syntax, and code completion."
+  about: Alex Hoppen works on the Swift team at Apple, focusing on parsing-related technologies like SourceKit, swift-syntax and code completion.
