@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2024-02-05 10:00:00
+date: 2024-02-12 10:00:00
 title: Swift Summer of Code 2023 Summary
 author: [ktoso, FranzBusch, ahoppen, xedin]
 ---
