@@ -53,7 +53,7 @@ p {
 
 h1 {
   margin-bottom: 0.5em;
-  font-size: 3em;
+  font-size: 2.75em;
   font-weight: 300;
   line-height: 1;
   &.active + .main-nav {
@@ -63,7 +63,7 @@ h1 {
 
 h2 {
   margin-bottom: 0.5em;
-  font-size: 2.5em;
+  font-size: 2.25em;
   font-weight: 300;
   line-height: 1;
 }
@@ -481,40 +481,13 @@ article {
   header {
     width: 100%;
     display: inline-block;
-    padding-bottom: 1.5em;
 
     h1 {
       padding-bottom: 0.125em;
     }
 
-    .byline {
-      font-size: 14px;
-      margin-bottom: 1em;
-
-      img {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        border: 1px var(--color-fill-gray) solid;
-        position: absolute;
-        margin-right: 0.25em;
-        margin-top: -6px;
-      }
-
-      span {
-        padding-left: 42px;
-      }
-    }
-
-    .about {
-      float: none;
-      clear: both;
-      font-size: 14px;
-      font-weight: 400;
-      color: var(--color-figure-gray-tertiary);
-      border-left: 1px var(--color-figure-gray-tertiary) solid;
-      margin: 23px 3em 23px 0;
-      padding: 4px 0 4px 10px;
+    h2 {
+      padding-top: 0em;
     }
 
     time {
@@ -1097,32 +1070,34 @@ article {
   text-align: center;
 }
 
-.article-byline {
-  font-size: 14px;
-  margin-bottom: 1em;
-
-  img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px var(--color-fill-gray) solid;
-    position: absolute;
-    margin-right: 0.25em;
-    margin-top: -6px;
+.authors {
+  .byline {
+    font-size: 14px;
+    margin-bottom: 1em;
+  
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px var(--color-fill-gray) solid;
+      position: absolute;
+      margin-right: 0.25em;
+      margin-top: -6px;
+    }
+  
+    span {
+      padding-left: 42px;
+    }
   }
-
-  span {
-    padding-left: 42px;
+  
+  .about {
+    float: none;
+    clear: both;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-figure-gray-tertiary);
+    border-left: 1px var(--color-figure-gray-tertiary) solid;
+    margin: 23px 3em 23px 0;
+    padding: 4px 0 4px 10px;
   }
-}
-
-.article-about {
-  float: none;
-  clear: both;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--color-figure-gray-tertiary);
-  border-left: 1px var(--color-figure-gray-tertiary) solid;
-  margin: 23px 3em 23px 0;
-  padding: 4px 0 4px 10px;
 }

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 date: 2023-11-08 12:00:00
 title: Wrapping C/C++ Library in Swift
 author: [etcwilde, ktoso, yim-lee]
@@ -352,51 +352,3 @@ public struct WriteOptions: ~Copyable {
 
 The downside of non-copyable types is that currently they cannot be used in all contexts. For example in Swift 5.9 it is not possible to store a non-copyable type as a field, or pass them through closures (as the closure could be used many times, which would break the uniqueness that a non-copyable type needs to guarantee). The upside is that, unlike classes, no reference counting is performed on non-copyable types.
 
-
-<style>
-@media only print {
-  nav { display: none; }
-
-  article header h1::after {
-    content: "DRAFT POST for Swift.org";
-    display: block;
-    font-size: 1.75rem;
-    margin-top: .5em;
-    color: crimson;
-    font-weight: 600;
-  }
-}
-</style>
-
-<hr>
-Contributed by
-    {% for page_author in page.author %}
-{% assign author = site.data.authors[page_author] %}
-{% if author.name %}
-  <div class="article-byline">
-    {% if author.gravatar %}
-      <img src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64&d=mp" alt="{{ author.name }}"/>
-    {% else %}
-      <img src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y" alt="{{ author.name }}"/>
-    {% endif %}
-
-    <span class="author">
-      {% if author.twitter %}
-        <a href="https://twitter.com/{{ author.twitter }}/" rel="nofollow" title="{{ author.name }} (@{{ author.twitter}}) on Twitter">{{ author.name }}</a>
-      {% elsif author.github %}
-        <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github}}) on GitHub">{{ author.name }}</a>
-      {% else %}
-        {{ author.name }}
-      {% endif %}
-    </span>
-  </div>
-  {% if page.about %}
-    {% assign about = page.about %}
-  {% elsif author.about %}
-    {% assign about = author.about %}
-  {% endif %}
-  {% if about %}
-  <div class="article-about">{{ about }}</div>
-  {% endif %}
-{% endif %}
-{% endfor %}

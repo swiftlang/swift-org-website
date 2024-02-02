@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 date: 2023-04-29 12:00:00
 title: Value And Reference Types In Swift
 author: [jamesdempsey]
@@ -133,50 +133,3 @@ This means a struct can contain an array of structs, maybe a dictionary of key v
 ### Conclusion
 Understanding what value types and reference types are and the differences in how they behave is an important part of learning Swift and being able to reason about your code. The choice between the two often comes down to a choice between declaring a type as a `struct` or a `class`. You can learn more about structures and class in the [Structures and Classes](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures) chapter of *The Swift Programming Language*.
 
-<style>
-@media only print {
-  nav { display: none; }
-
-  article header h1::after {
-    content: "DRAFT POST for Swift.org";
-    display: block;
-    font-size: 1.75rem;
-    margin-top: .5em;
-    color: crimson;
-    font-weight: 600;
-  }
-}
-</style>
-
-<hr>
-Contributed by
-    {% for page_author in page.author %}
-{% assign author = site.data.authors[page_author] %}
-{% if author.name %}
-  <div class="article-byline">
-    {% if author.gravatar %}
-      <img src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64&d=mp" alt="{{ author.name }}"/>
-    {% else %}
-      <img src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y" alt="{{ author.name }}"/>
-    {% endif %}
-
-    <span class="author">
-      {% if author.twitter %}
-        <a href="https://twitter.com/{{ author.twitter }}/" rel="nofollow" title="{{ author.name }} (@{{ author.twitter}}) on Twitter">{{ author.name }}</a>
-      {% elsif author.github %}
-        <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github}}) on GitHub">{{ author.name }}</a>
-      {% else %}
-        {{ author.name }}
-      {% endif %}
-    </span>
-  </div>
-  {% if page.about %}
-    {% assign about = page.about %}
-  {% elsif author.about %}
-    {% assign about = author.about %}
-  {% endif %}
-  {% if about %}
-  <div class="article-about">{{ about }}</div>
-  {% endif %}
-{% endif %}
-{% endfor %}
