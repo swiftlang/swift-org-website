@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: Build an iOS app with SwiftUI
 ---
 

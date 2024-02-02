@@ -2,7 +2,7 @@
 redirect_from:
   - "/swift-compiler/"
   - "/compiler-stdlib/"
-layout: list
+layout: page
 title: Swift Compiler
 ---
 

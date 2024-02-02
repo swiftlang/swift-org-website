@@ -6,7 +6,7 @@ module Jekyll
         category_page = PageWithoutAFile.new(site, site.source, "packages", "#{category['slug']}.md")
         category_page.data = {
           # Front matter
-          'layout' => 'page',
+          'layout' => 'page-wide',
           'title' => category['name']
         }
         category_page.content = "{% include_relative _package-list.html category_slug=\"#{category['slug']}\" %}"
