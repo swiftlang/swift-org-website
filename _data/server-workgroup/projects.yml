@@ -198,5 +198,5 @@
   description: Native MongoDB driver for Swift, written in Swift
   maturity: Incubating
   pitched: 2024-01-03
-  accepted: 2024-01-18
+  accepted: 2024-02-01
   url: https://github.com/orlandos-nl/MongoKitten
