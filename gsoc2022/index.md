@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: Project Ideas for GSoC 2022
 ---
 

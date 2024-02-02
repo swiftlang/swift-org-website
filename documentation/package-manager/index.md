@@ -1,6 +1,6 @@
 ---
 redirect_from: "/package-manager/"
-layout: list
+layout: page
 title: Package Manager
 ---
 

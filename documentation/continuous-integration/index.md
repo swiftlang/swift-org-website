@@ -1,6 +1,6 @@
 ---
 redirect_from: "/continuous-integration/"
-layout: list
+layout: page
 title: Swift Continuous Integration
 ---
 

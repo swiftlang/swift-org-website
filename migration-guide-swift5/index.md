@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: Migrating to Swift 5
 redirect_from: "/migration-guide/"
 ---

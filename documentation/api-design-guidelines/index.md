@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: API Design Guidelines
 official_url: https://swift.org/documentation/api-design-guidelines/
 redirect_from: /documentation/api-design-guidelines.html

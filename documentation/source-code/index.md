@@ -1,6 +1,6 @@
 ---
 redirect_from: "/source-code/"
-layout: list
+layout: page
 title: Source Code
 ---
 

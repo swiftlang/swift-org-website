@@ -3,7 +3,7 @@ redirect_from:
   - "/server/"
   - "server/guides/"
   - "/server-apis/"
-layout: list
+layout: page
 title: Swift on Server
 ---
 

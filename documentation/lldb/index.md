@@ -1,6 +1,6 @@
 ---
 redirect_from: "/lldb/"
-layout: list
+layout: page
 title: REPL and Debugger
 ---
 

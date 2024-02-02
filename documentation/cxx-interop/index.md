@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: Mixing Swift and C++
 official_url: https://swift.org/documentation/cxx-interop/
 redirect_from:
