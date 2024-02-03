@@ -3,8 +3,6 @@ layout: page
 title: Windows Installation Options
 ---
 
-# Windows Installation Options
-
 ## Dependencies
 
 Swift has the following general dependencies:
