@@ -3,8 +3,6 @@ layout: page
 title: macOS Installation Options
 ---
 
-# macOS Installation Options
-
 ## Installation via Xcode
 
 Download the [current version of Xcode](https://itunes.apple.com/app/xcode/id497799835) which contains the latest Swift release.

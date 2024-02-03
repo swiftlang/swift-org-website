@@ -3,8 +3,6 @@ layout: page
 title: Install Swift
 ---
 
-# Install Swift
-
 Follow the instructions below to install the latest version of Swift on a [supported platform](/platform-support).
 
 You can also [download nightly snapshots and older releases](/download).
