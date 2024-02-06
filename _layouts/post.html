@@ -10,7 +10,8 @@ layout: base
     {% include authors.html authors=page.author %}
   </header>
 
-  {{ content }}
+  {% include anchor_headings.html html=content anchorBody="#" beforeHeading=false anchorAttrs='id="anchor"'%}
+
 
   {% if page.previous or page.next %}
   <footer>

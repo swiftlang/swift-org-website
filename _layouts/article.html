@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-{{ content }}
+{% include anchor_headings.html html=content anchorBody="#" beforeHeading=false anchorAttrs='id="anchor"'%}
 <hr>
 <p>Contributed by</p>
 {% include authors.html authors=page.author %}
