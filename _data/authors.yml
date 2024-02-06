@@ -33,21 +33,18 @@ twostraws:
    gravatar: a16d66fdf58b8ac3738db189a9f5b222
    email: paul@hackingwithswift.com
    github: twostraws
-   twitter: twostraws
    about: "Paul Hudson is the creator of Hacking with Swift, and a member of the Diversity in Swift workgroup."
 
 seabaylea:
    name: Chris Bailey
    email: BAILEYC@uk.ibm.com
    github: seabaylea
-   twitter: Chris__Bailey
    gravatar: 8d00f5acbaa7d24e0900e5045462e008
 
 k8stone:
    name: Kate Stone
    email: k8stone@apple.com
    github: k8stone
-   twitter: k8stone
 
 eeckstein:
    name: Erik Eckstein
@@ -71,20 +68,17 @@ aciid:
    name: Ankit Aggarwal
    email: ankit_aggarwal@apple.com
    github: aciidb0mb3r
-   twitter: aciidb0mb3r
    gravatar: 9b923f8f8e522c67e81454756fc027e9
 
 nkcsgexi:
    name: Xi Ge
    email: xi_ge@apple.com
    github: nkcsgexi
-   twitter: xge_apple
 
 natecook1000:
     name: Nate Cook
     email: natecook@apple.com
     github: natecook1000
-    twitter: nnnnnnnn
     gravatar: 5f463dd4e7af28b64ad8f0e032ee82dc
     about: "Nate Cook is a member of the Swift standard library team at Apple."
 
@@ -92,13 +86,11 @@ kubamracek:
    name: Kuba Mracek
    email: mracek@apple.com
    github: kubamracek
-   twitter: kubamracek
 
 airspeedswift:
    name: Ben Cohen
    email: ben_cohen@apple.com
    github: airspeedswift
-   twitter: airspeedswift
 
 rudkx:
    name: Mark Lacey
@@ -109,7 +101,6 @@ shahmishal:
    name: Mishal Shah
    email: mishal_shah@apple.com
    github: shahmishal
-   twitter: mishaldshah
    gravatar: 231cec2cc45a272aa5b341b413fdc2ed
    about: "Mishal Shah is an engineer on the Swift Infrastructure team at Apple."
 
@@ -117,21 +108,18 @@ mikeash:
    name: Mike Ash
    email: mikeash@apple.com
    github: mikeash
-   twitter: mikeash
    gravatar: 9245f9f7df459c19a735740e281aeae2
 
 jrose:
    name: Jordan Rose
    email: jordan_rose@apple.com
    github: jrose-apple
-   twitter: UINT_MIN
    gravatar: c4fe988326eed161b989d0c5521cb105
 
 milseman:
    name: Michael Ilseman
    email: milseman@apple.com
    github: milseman
-   twitter: ilseman
    gravatar: e54661d4315ba730cb1c49bac05e1145
    about: "Michael Ilseman is an engineer on the Swift Standard Library team at Apple."
 
@@ -139,7 +127,6 @@ lorentey:
    name: Karoy Lorentey
    email: klorentey@apple.com
    github: lorentey
-   twitter: lorentey
    about: "Karoy Lorentey is an engineer on the Swift Standard Library team at Apple."
 
 atrick:
@@ -157,7 +144,6 @@ jckarter:
    name: Joe Groff
    email: jgroff@apple.com
    github: jckarter
-   twitter: jckarter
 
 jlettner:
    name: Julian Lettner
@@ -166,7 +152,6 @@ jlettner:
 
 ericasadun:
   name: Erica Sadun
-  twitter: ericasadun
   github: erica
 
 xedin:
@@ -176,7 +161,6 @@ xedin:
 
 tanner:
    name: Tanner Nelson
-   twitter: tanner0101
    github: tanner0101
    about: "Tanner Nelson is member of the Swift Server Workgroup and creator of the Vapor web framework."
 
@@ -208,7 +192,6 @@ tomerd:
   name: Tom Doron
   email: tomer@apple.com
   github: tomerd
-  twitter: tomerdoron
   gravatar: 3cb408ef512103925c4fe709bf3f3b11
   about: "Tom Doron is a member of the Swift Core Team and the Swift Server Workgroup. He manages a team working on server-side Swift libraries at Apple."
 
@@ -216,7 +199,6 @@ ktoso:
   name: Konrad ‘ktoso’ Malawski
   email: ktoso@apple.com
   github: ktoso
-  twitter: ktosopl
   gravatar: 03cb20b97f6a14701c24c4e088b6af87
   about: "Konrad Malawski is a member of a team developing foundational server-side Swift libraries at Apple, with focus on distributed systems and concurrency."
 
@@ -224,21 +206,18 @@ compnerd:
   name: Saleem Abdulrasool
   email: compnerd@compnerd.org
   github: compnerd
-  twitter: compnerd
   about: "Saleem Abdulrasool is a member of the Swift Core Team and a Software Engineer at The Browser Company, and previously worked at Google Brain, Facebook, and Microsoft, and currently focuses on cross-platform and embedded Swift."
 
 hborla:
    name: Holly Borla
    email: hborla@apple.com
    github: hborla
-   twitter: hollyborla
    gravatar: b3e284dd808123c26f476d75da0b5b3c
    about: "Holly Borla is an engineer on the Apple Swift team, and a member of the Swift Core Team, Language Steering Group, and Diversity in Swift workgroup."
 
 krstnfx:
    name: Kristina Fox
    github: krstnfx
-   twitter: krstnfx
    gravatar: 5e142f580e63beae5db6a7ba25e9162c
    about: "Kristina Fox is an iOS engineering manager on the health team at Apple, and a member of the Diversity in Swift and Swift.org website workgroups."
 
@@ -270,54 +249,46 @@ diversity-workgroup:
   name: Tim Condon
   email: tim@brokenhands.io
   github: 0xTim
-  twitter: 0xTim
   gravatar: c8678b78a2c1c113302ce686f13435d1
   about: "Tim Condon sits on the SSWG (Swift Server Workgroup) and is part of the Vapor Core Team"
 
 devanshimodha:
   name: Devanshi Modha
   github: devanshimodha
-  twitter: devanshimodha
   about: "Devanshi is an iOS engineer and a member of the Diversity in Swift workgroup."
 
 tingbecker:
   name: Ting Becker
   github: teekachu
-  twitter: teekachu1
   about: "Ting (Tee) is a self-taught developer and an iOS engineer on the Retail Store Apps team at Apple."
 
 ronavitzur:
     name: Ron Avitzur
     github: RonAvitzur
-    twitter: RonAvitzur
     about: "Ron Avitzur is the author of the Pacific Tech Graphing Calculator"
 
 fbernutz:
    name: Feli Bernutz
    gravatar: 97e98bcaf45715adc2fedabd3c5c1289
    github: fbernutz
-   twitter: felibe444
    about: "Feli Bernutz is an iOS engineer at Spotify."
 
 hishnash:
    name: Matthaus Woolard
    gravatar: e64eb1d7af21b8a05976f003f2d70b20
    github: hishnash
-   twitter: hishnash
    about: "Matthaus Woolard is a data scientist, software engineer and co-founder of Nil Coalescing."
 
 natpanferova:
    name: Natalia Panferova
    gravatar: 0cac4017be2dd8a7d8f7b1d276395a92
    github: nataliapanferova
-   twitter: natpanferova
    about: "Natalia Panferova is an iOS and macOS engineer and co-founder of Nil Coalescing."
    
 adam-fowler:
   name: Adam Fowler
   email: adamfowler71@gmail.com
   github: adam-fowler
-  twitter: o_aberration
   about: "Adam Fowler is an open source developer and is a member of the SSWG (Swift Server Workgroup)."
 
 danieleggert:
@@ -330,7 +301,6 @@ danieleggert:
 rjmccall:
    name: John McCall
    github: rjmccall
-   twitter: pathofshrines
    about: "John McCall is an engineer on the Apple Swift team and member of the Language Steering Group."
 
 amartini:
@@ -356,7 +326,6 @@ alexandersandberg:
   gravatar: 3a1582c3f0a9ef8455b504bb3e1106a7
   email: hi@alexandersandberg.com
   github: alexandersandberg
-  twitter: alexandberg
   about: "Alexander Sandberg is an iOS and macOS developer and a member of the Swift Website Workgroup."
 
 jamesdempsey:
@@ -364,7 +333,6 @@ jamesdempsey:
   gravatar: 15947d27758dc90df81fd42c4a387bbb
   email: dempsey@tapas-software.net
   github: dempseyatgithub
-  twitter: jamesdempsey
   about: "James Dempsey is an iOS and macOS developer, technical trainer, and a member of the Swift Website Workgroup."
 
 honzadvorsky:
