@@ -117,7 +117,13 @@ h2:hover #anchor,
 h3:hover #anchor,
 h4:hover #anchor,
 h5:hover #anchor,
-h6:hover #anchor {
+h6:hover #anchor,
+h1:focus #anchor,
+h2:focus #anchor,
+h3:focus #anchor,
+h4:focus #anchor,
+h5:focus #anchor,
+h6:focus #anchor {
   display: inline;
   cursor: pointer;
 }
