@@ -366,7 +366,7 @@ function renderProposals() {
                   target: "_blank",
                   className: "proposal-title",
                 },
-                [proposal.title]
+                [proposal.title.trim()]
               ),
             ]),
           ]),
