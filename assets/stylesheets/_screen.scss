@@ -219,11 +219,9 @@ cite {
     display: inline-block;
     margin-left: .5em;
 
-    &.active {
-      a {
-        font-weight: 700;
-        color: #F05138; // TODO: Use variable
-      }
+    .active a{
+      font-weight: 700;
+      color: var(--color-active-nav-item); 
     }
 
     &.nav-section {
