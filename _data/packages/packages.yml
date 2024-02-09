@@ -235,10 +235,10 @@ categories:
         platform_compatibility_tooltip: Apple (macOS, watchOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
-      - name: console-kit
-        description: ConsoleKit provides a set of tools and utilities for working with
-          the command-line interface (CLI) in Swift applications. It includes features
-          such as input handling, output formatting, and command execution.
+      - name: multipart-kit
+        description: MultipartKit is a Swift library for parsing and serializing multipart
+          form data. It provides Codable support and streaming callbacks for multipart
+          parsing.
         owner: Vapor
         swift_compatibility: 5.7+
         platform_compatibility:
@@ -247,7 +247,7 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/vapor/console-kit
+        url: https://swiftpackageindex.com/vapor/multipart-kit
   - name: Networking
     slug: networking
     brief: Browse a selection of packages that can extend and enhance the Swift core
@@ -401,19 +401,16 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/jonreid/OCMockito
-      - name: swift-testing
-        description: A powerful testing library for Swift, providing a modern and flexible
-          testing library for Swift with powerful and expressive capabilities. It gives
-          developers more confidence with less code.
-        owner: Apple
-        swift_compatibility: 5.9+
+      - name: OCHamcrest
+        description: OCHamcrest is an Objective-C module that provides a library of matchers
+          for creating flexible test assertions and user input validation.
+        owner: Hamcrest
+        swift_compatibility: 5.6+
         platform_compatibility:
           - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/apple/swift-testing
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: BSD 2-Clause
+        url: https://swiftpackageindex.com/hamcrest/OCHamcrest
   - name: Debug logging
     slug: logging
     brief: "Are you looking for something more than Swift\u2019s built-in logging? Start
