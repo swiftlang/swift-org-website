@@ -26,6 +26,41 @@ Potential mentors, please feel free to propose project ideas to this page direct
 
 You can browse previous year's project ideas here: [2023](https://www.swift.org/gsoc2023/), [2022](https://www.swift.org/gsoc2022/), [2021](https://www.swift.org/gsoc2021/), [2020](https://www.swift.org/gsoc2020/), [2019](https://www.swift.org/gsoc2019/).
 
+#### Lexical scopes for swift-syntax
+
+**Project size**: Medium
+
+**Recommended skills**
+
+- Basic proficiency in Swift, willingness to read C++ for inspiration
+- Interest in parsers and compilers
+
+**Description**
+
+Swift source code is organized into a set of scopes, each of which can introduce names that can be found in that scope and other scopes nested within it. For example, in a function like this:
+
+```swift
+func f(a: Int, b: Int?) -> Int {
+  if let b = b {
+    return a + b
+  }
+
+  return a
+}
+```
+
+There is a scope for the outermost curly braces of the function, in which the parameters `a` and `b` are visible. There's another scope introduced for the `if let` inside of that scope, which introduces a new name `b` (different from the parameter `b`) that is only visible within that `if let`. A lot of aspects of a compilers and compiler-like tools depend on walking the scopes to find interesting things---for example, to figure out what names are introduced there (for name lookup, i.e., what do `a` and `b` refer to the in the first `return` statement?), determine where `break` or `continue` go to, where a thrown error can be caught, and so on.
+
+This project involves implementing a notion of lexical scopes as part of [swift-syntax](https://github.com/apple/swift-syntax), with APIs to answer questions like "what does `b` refer to in `return a + b`?" or "what construct does this `break` escape out of?". These APIs can form the basis of IDE features like "edit all in scope" and are an important step toward replacing the [C++ implementation of scopes](https://github.com/apple/swift/blob/main/include/swift/AST/ASTScope.h) within the Swift compiler.
+
+**Expected outcomes/benefits/deliverables**
+
+Introduce a new library for the swift-syntax package with an API to implement name lookup for a given syntax node, with lots of tests for all of the fun corner cases in Swift (e.g, `guard let`, implicit names like `self`, `error` in a catch block, `newValue in a setter) `error`, . From there, the sky's the limit: there are many scope-based queries to build APIs for, or you could start building on top of these APIs for something like IDE support in [SourceKit-LSP](https://github.com/apple/sourcekit-lsp).
+
+**Potential mentors**
+
+- [Doug Gregor](https://github.com/DougGregor)
+
 ### Project topic proposal template 
 
 #### Project name
@@ -51,5 +86,4 @@ This will be the basis for passing the Summer of Code assignment and the final s
 
 - Your name (and link to github, or other means of reaching you)
 - Optionally: additional mentors
-
 
