@@ -118,7 +118,7 @@ You can read more about tracing in the documentation of these libraries: [swift-
 
 **Potential mentors**
 
-- [Konrad 'ktoso' Malawski](https://github.com/DougGregor)
+- [Konrad 'ktoso' Malawski](https://github.com/ktoso)
 
 ### Re-implement property wrappers with macros
 
