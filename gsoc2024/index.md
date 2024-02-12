@@ -26,9 +26,11 @@ Potential mentors, please feel free to propose project ideas to this page direct
 
 You can browse previous year's project ideas here: [2023](https://www.swift.org/gsoc2023/), [2022](https://www.swift.org/gsoc2022/), [2021](https://www.swift.org/gsoc2021/), [2020](https://www.swift.org/gsoc2020/), [2019](https://www.swift.org/gsoc2019/).
 
-#### Lexical scopes for swift-syntax
+### Lexical scopes for swift-syntax
 
-**Project size**: Medium
+**Project size**: 175 hours
+
+**Difficulty**: Intermediate
 
 **Recommended skills**
 
@@ -61,11 +63,71 @@ Introduce a new library for the swift-syntax package with an API to implement na
 
 - [Doug Gregor](https://github.com/DougGregor)
 
+
+### Introduce Swift Distributed Tracing support to AsyncHTTPClient
+
+**Project size**: 90 hours
+
+**Difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift and Swift Concurrency
+- Basic proficiency in HTTP concepts
+
+**Description**
+
+During an earlier Summer of Code edition, the [swift-distributed-tracing](https://github.com/apple/swift-distributed-tracing) library was kicked off. The development on the library continued ever since, and now we'd like to include support for tracing in some of the core server libraries.
+
+The recommended HTTP client for server applications in Swift is [async-http-client](https://github.com/swift-server/async-http-client), and this project is about introducing first class support for distributed tracing inside this project. The work needed to be done is going to be [similar to the work done in swift-grpc](https://github.com/grpc/grpc-swift/pull/1756).
+
+Distributed tracing allows correlating "spans" (start time, end time, and additional information) of traces, made across nodes in a distributed system. In HTTP, this means attaching extra trace headers to outgoing HTTP requests. 
+
+As an end result, the following code should emit trace information to the configured backend:
+
+```swift
+import AsyncHTTPClient
+import Tracing
+
+let httpClient = HTTPClient(eventLoopGroupProvider: .singleton)
+
+try await tracer.withSpan("Prepare dinner") { span in
+  let carrotsRequest = HTTPClientRequest(url: "https://example.com/shop/vegetable/carrot?count=2")
+  let carrots = try await httpClient.execute(request, timeout: .seconds(30))
+
+  let meatRequest = HTTPClientRequest(url: "https://example.com/shop/meat?count=1")
+  let meat = try await httpClient.execute(request, timeout: .seconds(30))
+
+  print("Dinner ready: \(makeDinner(carrots, meat))")
+}
+```
+
+The above should result in 3 spans being recorded:
+- the overall "Prepare dinner" span
+- one client span for the duration of the carrots HTTP request
+- one client span for the duration of the meat HTTP request
+
+You can read more about tracing in the documentation of these libraries: [swift-distributed-tracing](https://github.com/apple/swift-distributed-tracing), [swift-otel](https://github.com/slashmo/swift-otel).
+
+
+**Expected outcomes/benefits/deliverables**
+
+- Introduce built-in support for distributed tracing in AsyncHTTPClient
+- It should be possible to bootstrap a tracing backend and have the HTTP client pick trace headers and propagate them in any requests made.
+- In addition, there should be a small "demo" docker example prepared, such that developers can quickly try out the functionality.
+
+**Potential mentors**
+
+- [Konrad 'ktoso' Malawski](https://github.com/DougGregor)
+
+
 ### Project topic proposal template 
 
-#### Project name
+### Project name
 
-**Project size**: Small / Medium
+**Project size**: 90 hours / 175 hours / 350 hours
+
+**Estimated difficulty**: Easy / Intermediate / Hard
 
 **Recommended skills**
 
