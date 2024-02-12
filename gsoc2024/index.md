@@ -57,7 +57,7 @@ This project involves implementing a notion of lexical scopes as part of [swift-
 
 **Expected outcomes/benefits/deliverables**
 
-Introduce a new library for the swift-syntax package with an API to implement name lookup for a given syntax node, with lots of tests for all of the fun corner cases in Swift (e.g, `guard let`, implicit names like `self`, `error` in a catch block, `newValue in a setter) `error`, . From there, the sky's the limit: there are many scope-based queries to build APIs for, or you could start building on top of these APIs for something like IDE support in [SourceKit-LSP](https://github.com/apple/sourcekit-lsp).
+Introduce a new library for the swift-syntax package with an API to implement name and scope lookup for a given syntax node, with lots of tests for all of the fun corner cases in Swift (e.g, `guard let`, implicit names like `self`, `error` in a catch block, `newValue` in a setter). From there, the sky's the limit: there are many scope-based queries to build APIs for, or you could start building on top of these APIs for something like IDE support in [SourceKit-LSP](https://github.com/apple/sourcekit-lsp).
 
 **Potential mentors**
 
