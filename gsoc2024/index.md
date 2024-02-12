@@ -120,6 +120,38 @@ You can read more about tracing in the documentation of these libraries: [swift-
 
 - [Konrad 'ktoso' Malawski](https://github.com/DougGregor)
 
+### etcd client
+
+**Project size**: 175 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift and Swift Concurrency
+- Basic proficiency with gRPC
+- Optional: Experience with using etcd
+
+**Description**
+
+`etcd` is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node. Furthermore, `etcd` is a [CNCF graduated](https://www.cncf.io/projects/) project powering Kubernetes which stores all cluster information in `etcd`.
+
+Swift is a great programming language to implement complex distributed systems and having an `etcd` client enables such systems to store their data in a reliable manner. The latest revisions of `etcd` exposes a [gRPC](https://grpc.io) API that clients can use to communicate with the `etcd` server to update and query stored data. 
+
+**Expected outcomes/benefits/deliverables**
+
+- Create a brand new `swift-etcd-client` package
+- Connect and communicate with an etcd server using [etcd gRPC APIs](https://etcd.io/docs/v3.5/learning/api/)
+- Implement the following etcd APIs
+  - [Authentication](https://etcd.io/docs/v3.5/learning/design-auth-v3/) to the etcd server
+  - [Key value operations](https://etcd.io/docs/v3.5/learning/api/#key-value-api)
+  - [Watch operations(https://etcd.io/docs/v3.5/learning/api/#watch-api) for monitoring changes to keys
+  - Strech goal [lease operations](https://etcd.io/docs/v3.5/learning/api/#lease-api)
+- All publicly exposed APIs should feel native to Swift and use Concurrency concepts such as `AsyncSequence`
+
+**Potential mentors**
+
+- [Franz Busch](https://github.com/FranzBusch)
 
 ### Project topic proposal template 
 
