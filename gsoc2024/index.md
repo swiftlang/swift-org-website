@@ -178,6 +178,45 @@ Swift is a great programming language to implement complex distributed systems a
 
 - [Franz Busch](https://github.com/FranzBusch)
 
+### Improve Swift plugins for your editor of choice
+
+**Project size**: 175 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency with LSP
+- Experience writing vim, emacs, or other editor plugins
+
+**Description**
+
+Diverse support for users' preferred editors is an important part of a good developer experience. Currently the swift community has built integrations for a number of editors with a variety of features and support. This project involves creating or extending an existing editor plugin with integration with [sourcekit-lsp](https://github.com/apple/sourcekit-lsp). 
+
+The editor integration should provide a simple way for users to get started, support Swift Packages, and standard IDE tools such as code completion and jump to definition subject to editor capabilities.  
+
+Some suggested editors to improve integration with are: [vim](https://www.vim.org), [emacs](https://www.gnu.org/software/emacs/), [Sublime Text](https://www.sublimetext.com), [Zed](https://zed.dev), etc.
+
+**Expected outcomes/benefits/deliverables**
+
+- Create or improve an existing editor plugin
+- Leverage sourcekit-lsp to provide the following features subject to editor support
+  - Code highlighting
+  - Code completion
+  - Jump to definition
+  - Refactoring
+  - Running SwiftPM commands (build, test, plugins)
+  - Build diagnostic overlays
+  - Inline type hints
+  - Custom toolchain selection
+  - User configurable compilation flags
+- Simple setup instructions
+- Link from swift.org to editor integration
+
+**Potential mentors**
+
+- ???
+
 ### Project topic proposal template 
 
 ### Project name
