@@ -66,7 +66,7 @@ Introduce a new library for the swift-syntax package with an API to implement na
 
 ### Introduce Swift Distributed Tracing support to AsyncHTTPClient
 
-**Project size**: 175 hours
+**Project size**: 90 hours
 
 **Difficulty**: Intermediate
 
