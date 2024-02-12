@@ -63,6 +63,34 @@ Introduce a new library for the swift-syntax package with an API to implement na
 
 - [Doug Gregor](https://github.com/DougGregor)
 
+### Code Completion for Keywords using swift-syntax
+
+**Project size**: 175 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Proficiency in Swift
+- Knowledge of C++ is advantageous but not required
+
+**Description**
+
+The swift-syntax tree has structural information about Swift’s grammar. For example, it knows all the different declaration nodes and which keywords they start with. This should allow us to perform code completion of keywords (such as `struct`) and punctuation (such as `->`) by determining the cursor’s position in the syntax tree and figuring out the possible keywords at that position by iterating the syntax tree’s structure. For example, when invoking code completion at the top level, code completion should determine that a declaration is allowed at the top level, iterate over all the declaration nodes and collect the keywords they start with. 
+
+The tricky part is that the SwiftSyntax tree is an over-approximation of the Swift language. For example, accessors such as `get { 42 }` are modelled as declarations, but are only valid inside accessor blocks. We should need to perform some filtering and prevent `get` from being suggested at the top level.
+
+[apple/swift-syntax#1014](https://github.com/apple/swift-syntax/pull/1014) is a draft pull request that implements the collection of possible keywords but performs none of the filtering. The project’s goal is to determine the contextual filters that need to be added to get good results with few or no invalid suggestions. Additionally, it should connect the new keyword completion implementation with [sourcekitd](https://github.com/apple/swift/tree/main/tools/SourceKit) to provide these results to Xcode, SourceKit-LSP.
+
+The advantage of keyword completion based on swift-syntax is that its results are produced by the syntax tree’s and are thus guaranteed to be complete. It removes the need to manually maintain a [list of keyword completions](https://github.com/apple/swift/blob/72486c975f0e69e642db53482c9c15329aefa139/lib/IDE/CodeCompletion.cpp#L662-L1119) and provide previously missing completions like `->` after the parameters in a function declaration.
+
+**Expected outcomes/benefits/deliverables**
+
+Provide all keyword or punctuator completions that are valid at a certain position in a SwiftSyntax tree with a very low ratio of invalid completions.
+
+**Potential mentors**
+
+- [Alex Hoppen](https://github.com/ahoppen)
 
 ### Introduce Swift Distributed Tracing support to AsyncHTTPClient
 
