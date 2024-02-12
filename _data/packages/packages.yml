@@ -70,7 +70,7 @@ categories:
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: Unknown license
+        license: MIT
         url: https://swiftpackageindex.com/twostraws/Vortex
         note: Discussed on [Episode 40 of Swift Package Indexing](https://share.transistor.fm/s/a452cfcd).
       - name: SwiftSummarize
@@ -236,9 +236,9 @@ categories:
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
       - name: multipart-kit
-        description: MultipartKit is a Swift library for parsing and serializing multipart
-          form data. It provides Codable support and streaming callbacks for multipart
-          parsing.
+        description: MultipartKit is a multipart parsing and serializing library. It provides
+          Codable support for the special case of the multipart/form-data media type and
+          delivers its output as it is parsed through callbacks suitable for streaming.
         owner: Vapor
         swift_compatibility: 5.7+
         platform_compatibility:
@@ -352,6 +352,19 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
+      - name: swift-custom-dump
+        description: A collection of tools for debugging, diffing, and testing data structures
+          in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
+          and `XCTAssertNoDifference` for test assertions.
+        owner: Point-Free
+        swift_compatibility: 5.6+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
       - name: Quick
         description: Quick is a behavior-driven development framework for Swift and Objective-C.
           It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
@@ -377,19 +390,6 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Nimble
-      - name: swift-custom-dump
-        description: A collection of tools for debugging, diffing, and testing data structures
-          in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
-          and `XCTAssertNoDifference` for test assertions.
-        owner: Point-Free
-        swift_compatibility: 5.6+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
       - name: OCMockito
         description: OCMockito is an Objective-C implementation of Mockito, allowing you
           to create, verify, and stub mock objects. It has some key differences from other
