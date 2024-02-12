@@ -118,7 +118,32 @@ You can read more about tracing in the documentation of these libraries: [swift-
 
 **Potential mentors**
 
-- [Konrad 'ktoso' Malawski](https://github.com/DougGregor)
+- [Konrad 'ktoso' Malawski](https://github.com/ktoso)
+
+### Re-implement property wrappers with macros
+
+**Project size**: 350 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Proficiency in Swift and C++
+
+**Description**
+
+[Property wrappers](https://github.com/apple/swift-evolution/blob/main/proposals/0258-property-wrappers.md) feature is currently implemented purely within the compiler but with addition of [Swift Macros](https://github.com/apple/swift-evolution/blob/main/proposals/0389-attached-macros.md) and [init accessors](https://github.com/apple/swift-evolution/blob/main/proposals/0400-init-accessors.md) it's now possible to remove all ad-hoc code from the compiler and implement property wrappers by using existing features.
+
+This work would remove a lot of property wrapper specific code throughout the compiler - parsing, semantic analysis, SIL generation etc. which brings great benefits by facilitating code reuse, cleaning up the codebase and potentially fixing implementation corner cases. Macros and init accessors in their current state might not be sufficient to cover all of the property wrapper uses scenarios, so the project is most likely going to require improving and expanding aforementioned features as well.
+
+
+**Expected outcomes/benefits/deliverables**
+
+The outcome of this project is the complete removal of all property wrappers specific code from the compiler. This benefits the Swift project in multiple areas - stability, testability and code health.
+
+**Potential mentors**
+
+- [Pavel Yaskevich](https://github.com/xedin)
 
 
 ### Project topic proposal template 
