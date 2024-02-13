@@ -396,3 +396,9 @@ etcwilde:
   name: Evan Wilde
   email: ewilde@apple.com
   github: etcwilde
+
+ahoppen:
+  name: Alex Hoppen
+  email: ahoppen@apple.com
+  github: ahoppen
+  about: Alex Hoppen works on the Swift team at Apple, focusing on parsing-related technologies like SourceKit, swift-syntax and code completion.
