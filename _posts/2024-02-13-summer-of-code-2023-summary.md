@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2024-02-12 10:00:00
+date: 2024-02-13 10:00:00
 title: Swift Summer of Code 2023 Summary
 author: [ktoso, FranzBusch, ahoppen, xedin]
 ---
@@ -25,7 +25,7 @@ Let's take a look at each project, in the words of the mentees and mentors thems
 * Mentee: [Delkhaz Ibrahimi](https://github.com/dkz2)
 * Mentor: [Franz Busch](https://github.com/FranzBusch)
 
-The goal of the project was to develop a native [Memcached](https://memcached.org) connection abstraction for the Swift on Server ecosystem. This connection was implemented using `SwiftNIO,` offers native Swift Concurrency APIs and integrates well with the rest of the server ecosystem. The benefit of using Swift Concurrency for building such client is that it can make use of [Structured Concurrency](https://developer.apple.com/videos/play/wwdc2023/10170/) which brings cancellation, executor awareness, and simple integration with [distributed tracing](https://github.com/apple/swift-distributed-tracing) in the future. 
+The goal of the project was to develop a native [Memcached](https://memcached.org) connection abstraction for the Swift on Server ecosystem. This connection was implemented using `SwiftNIO,` offers native Swift Concurrency APIs and integrates well with the rest of the server ecosystem. The benefit of using Swift Concurrency for building such client is that it can make use of [structured concurrency](https://developer.apple.com/videos/play/wwdc2023/10170/) which brings cancellation, executor awareness, and simple integration with [distributed tracing](https://github.com/apple/swift-distributed-tracing) in the future. 
 
 The focus during the project was implementing the Memcache [meta command protocol](https://github.com/memcached/memcached/wiki/MetaCommands) and offering basic `get` and `set` functionalities. 
 
@@ -164,4 +164,4 @@ We hope this writeup inspires you to either apply to work with us or become a me
 
 We are always looking for ideas, mentors, and general input about how we can make Swift’s ecosystem more inclusive and easier to participate in. If you have some ideas, would like to become a mentor in future editions, or if you’re just curious about other project ideas that were floated during previous editions, visit the [dedicated GSoC category](https://forums.swift.org/c/development/gsoc/98) on the Swift forums. You can also check out [last year’s GSoC summary blog post](https://www.swift.org/blog/swift-summer-of-code-2022-summary/), where we highlighted last year’s projects. 
 
-If you’re interested in participating as a Mentee, keep an eye on the official [GSoC schedule](https://summerofcode.withgoogle.com/) and on the Swift forum’s [GSoC category](https://forums.swift.org/c/development/gsoc/98).
+If you’re interested in participating as a mentee, keep an eye on the official [GSoC schedule](https://summerofcode.withgoogle.com/) and on the Swift forum’s [GSoC category](https://forums.swift.org/c/development/gsoc/98).
