@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <article class="page">
   {% unless page.hideTitle %}
     {% if page.title %}
@@ -11,4 +10,9 @@ layout: default
     {% endif %}
   {% endunless %}
   {{ content }}
+  {% if page.author %}
+    <hr>
+    <p>Contributed by</p>
+    {% include authors.html authors=page.author %}
+  {% endif %}
 </article>
