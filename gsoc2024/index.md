@@ -198,7 +198,7 @@ Swift is a great programming language to implement complex distributed systems a
 - Implement the following etcd APIs
   - [Authentication](https://etcd.io/docs/v3.5/learning/design-auth-v3/) to the etcd server
   - [Key value operations](https://etcd.io/docs/v3.5/learning/api/#key-value-api)
-  - [Watch operations(https://etcd.io/docs/v3.5/learning/api/#watch-api) for monitoring changes to keys
+  - [Watch operations](https://etcd.io/docs/v3.5/learning/api/#watch-api) for monitoring changes to keys
   - Strech goal [lease operations](https://etcd.io/docs/v3.5/learning/api/#lease-api)
 - All publicly exposed APIs should feel native to Swift and use Concurrency concepts such as `AsyncSequence`
 
