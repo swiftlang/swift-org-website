@@ -206,6 +206,43 @@ Swift is a great programming language to implement complex distributed systems a
 
 - [Franz Busch](https://github.com/FranzBusch)
 
+### Add a `deploy` SPM plugin and a Swift-based DSL to the Swift runtime for AWS Lambda  
+
+**Project size**: 90 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Proficiency in Swift
+
+**Description**
+
+[AWS SAM](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) templates provide a short-hand syntax, optimized for defining Infrastructure as Code (IaC) for serverless applications.
+
+I [started exploring the possibilities](https://github.com/swift-server/swift-aws-lambda-runtime/pull/291) to represent a SAM template in Swift, using a DSL. The current code has three component:
+
+- a [set of data structures](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptor.swift) to represent a YAML SAM template
+- a [DSL definition](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptorBuilder.swift) (build with `@resultBuilder`) to express a SAM template using the Swift programming language
+- a [SPM plugin](https://github.com/sebsto/swift-aws-lambda-runtime/tree/sebsto/deployerplugin_dsl/Plugins/AWSLambdaDeployer) allowing to generate a SAM template and deploy it to the cloud.
+
+The existing code has a significant challenge: to be useful for developers, the set of data structures and DSL must be aligned with the SAM template definition. 
+
+This project is aimed at simplifying the alignement with an ever-evolving SAM template defintion by writing a code generator. The code generator will consume [the SAM template definition](https://github.com/aws/serverless-application-model/blob/develop/samtranslator/validator/sam_schema/schema.json) and generate an API-stable set of Swift data structures. As a second step, a manually designed and coded DSL would consume these data structures to generate the YAML SAM template from the DSL.
+
+**Expected outcomes/benefits/deliverables**
+
+- a Swift data structure generator. This new, yet-to-be-created piece of code will read and parse the [JSON SAM template definition](https://github.com/aws/serverless-application-model/blob/develop/samtranslator/validator/sam_schema/schema.json) and generate a set of API-stable Swift `Codable` data structures to generate a valid SAM YAML template. The generated code must be similar to [these existing data structures](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptor.swift) (these were created manually)
+
+- a manually designed and coded Swift-based DSL that exposes in a developer-friendly way the SAM template definition (it can/should be based on [this exsiting code](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptorBuilder.swift))
+
+- these two components must be callable from [an existing SPM plugin](https://github.com/sebsto/swift-aws-lambda-runtime/tree/sebsto/deployerplugin_dsl/Plugins/AWSLambdaDeployer)
+
+**Potential mentors**
+
+- [Sebastien Stormacq](mailto:stormacq@amazon.com) | ([GitHub](https://github.com/sebsto)
+
+
 ### Project topic proposal template 
 
 ### Project name
