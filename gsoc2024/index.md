@@ -240,7 +240,7 @@ This project is aimed at simplifying the alignement with an ever-evolving SAM te
 
 **Potential mentors**
 
-- [Sebastien Stormacq](mailto:stormacq@amazon.com) | ([GitHub](https://github.com/sebsto))
+- [Sebastien Stormacq](mailto:stormacq@amazon.com), ([GitHub](https://github.com/sebsto))
 
 ### Building Swift Macros with WebAssembly
 
