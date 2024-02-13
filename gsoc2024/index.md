@@ -242,6 +242,34 @@ This project is aimed at simplifying the alignement with an ever-evolving SAM te
 
 - [Sebastien Stormacq](mailto:stormacq@amazon.com) | ([GitHub](https://github.com/sebsto)
 
+### Swift NIO on Windows
+
+**Project size**: 400 hours
+
+**Estimated difficulty**: Hard
+
+**Recommended skills**
+
+- Proficiency in Swift
+- Knowledge of NIO
+- Knowledge of Windows, in particular Windows APIs [TODO: which ones]
+- Knowledge of networking APIs [TODO: which ones]
+
+**Description**
+
+The Swift NIO networking library is a foundational layer of the Swift on Server ecosystem and bringing it Windows is an important step for establishing the Swift package ecosystem on Windows. This project would build on previous attempts [TODO: link?] and port Swift NIO to Windows.
+
+In order to limit the scope of the project, the port would only target Windows 11. It would also only aim to implement the [TODO: describe the simpler, less performant runloop mechanism].
+
+**Expected outcomes/benefits/deliverables**
+
+- Port Swift NIO to Windows 11 with the mimimal runloop
+- Demonstrate its functionality via a client application
+
+**Potential mentors**
+
+- [Saleem Abdulrasool](https://github.com/compnerd)
+
 
 ### Project topic proposal template 
 
