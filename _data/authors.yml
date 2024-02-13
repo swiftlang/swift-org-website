@@ -158,6 +158,7 @@ xedin:
    name: Pavel Yaskevich
    email: pyaskevich@apple.com
    github: xedin
+   about: "Pavel Yaskevich works on the Swift team at Apple, focusing on semantic analysis."
 
 tanner:
    name: Tanner Nelson
