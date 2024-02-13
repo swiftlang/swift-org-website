@@ -240,7 +240,32 @@ This project is aimed at simplifying the alignement with an ever-evolving SAM te
 
 **Potential mentors**
 
-- [Sebastien Stormacq](mailto:stormacq@amazon.com) | ([GitHub](https://github.com/sebsto)
+- [Sebastien Stormacq](mailto:stormacq@amazon.com) | ([GitHub](https://github.com/sebsto))
+
+### Building Swift Macros with WebAssembly
+
+**Project size**: 350 hours
+
+**Difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift, C++
+- Interest in compilers and WebAssembly
+
+**Description**
+
+Swift [macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros) are built as host programs that make use of the [swift-syntax](https://github.com/apple/swift-syntax) package to process Swift syntax and produce new syntax. One of the downsides of this approach is that the build process for each macro can take a significant amount of time, and pre-building macro binaries is complicated by the fact that the binaries need to be built for multiple host platforms (e.g., Linux, Windows, and macOS) and architectures (e.g., x86 and ARM). Moreover, macros are aggressively sandboxed to prevent errors in macros from affecting the Swift compiler itself.
+
+[WebAssembly](https://webassembly.org/) provides a portable compilation target that can be executed on any platform and architecture. [SwiftWasm](https://swiftwasm.org/) can compile Swift to WebAsssembly, and [WasmKit](https://github.com/swiftwasm/WasmKit) provides a runtime that can execute WebAssembly programs. WebAssembly could provide a way to build Swift macros into binaries that can be distributed and run anywhere, eliminating the need to rebuild them continually. This project involves getting swift-syntax and macros implemented on top of it building to WebAssembly, teach the Swift compiler to communicate with these macro implementations, and extending the [Swift Package Manager](https://github.com/apple/swift-package-manager) with support for building and using macros with WebAssembly.
+
+**Expected outcomes/benefits/deliverables**
+
+The ideal outcome of this project would be for Swift macros to be able to opt in to being built with WebAssembly, and have the Swift Package Manager do so without further intervention from the user.
+
+**Potential mentors**
+
+- [Doug Gregor](https://github.com/DougGregor)
 
 
 ### Project topic proposal template 
