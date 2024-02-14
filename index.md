@@ -158,16 +158,6 @@ No matter how you want to get involved, we ask that you first learn what’s exp
   </li>
 </ul>
 
-## What's New
-
-Stay up-to-date with the latest in the Swift community.
-
-<div class="links links-list-nostyle" markdown="1">
-  - [Visit the Swift.org blog](/blog/)
-  - [Visit the Swift forums](https://forums.swift.org)
-  - [Follow @swiftlang on X (formerly Twitter)](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
-</div>
-
 <script>
   var featuredSnippets = document.querySelectorAll('.featured-snippet');
   var visibleSnippet = document.querySelector('.featured-snippet.visible');
