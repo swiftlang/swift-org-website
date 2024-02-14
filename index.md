@@ -89,6 +89,45 @@ atom: true
   </li>
 </ul>
 
+## Community
+
+<ul class="community" markdown="1">
+  <li>
+    <h3>Connect</h3>
+    <p>Stay up-to-date with the latest in the Swift community.</p>
+    <ul class="connect-list">
+      <li>
+        <a href="/blog/">
+          <img src="/assets/images/icon-swift.svg" /><span>Visit the Swift.org blog</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://forums.swift.org">
+          <img src="/assets/images/icon-swift.svg" /><span>Visit the Swift forums</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/swiftlang" class="link-external">
+          <img src="/assets/images/icon-x.svg" class="with-invert" /><span>Follow @swiftlang on X (formerly Twitter)</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3>Events</h3>
+    <p>Check the upcoming Swift related events.</p>
+    <ul class="event-list">
+      <li>
+        <h4>
+          <a href="#">Conference name</a>
+        </h4>
+        <time>Conference date</time>
+        <p>Conference description</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 ## Getting Involved
 
 Everyone is welcome to contribute to Swift. Contributing doesn’t just mean writing code or submitting pull request — there are many different ways for you to get involved, including answering questions on the forums, reporting or triaging bugs, and participating in the Swift evolution process.
