@@ -131,7 +131,7 @@ the `DeckOfPlayingCards` package must declare their packages as dependencies
 in its `Package.swift` manifest file.
 
 ~~~ swift
-// swift-tools-version:4.0
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
@@ -187,7 +187,7 @@ However, because the Swift Package Manager automatically resolves transitive dep
 you only need to declare the `DeckOfPlayingCards` package as a dependency.
 
 ~~~ swift
-// swift-tools-version:4.0
+// swift-tools-version:5.5
 
 import PackageDescription
 
