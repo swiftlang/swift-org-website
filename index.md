@@ -91,41 +91,49 @@ atom: true
 
 ## Community
 
-<ul class="community" markdown="1">
+<ul class="community {% unless site.data.events.size > 0 %}connect-only{% endunless %}" markdown="1">
   <li>
     <h3>Connect</h3>
     <p>Stay up-to-date with the latest in the Swift community.</p>
-    <ul class="connect-list">
-      <li>
-        <a href="/blog/">
-          <img src="/assets/images/icon-swift.svg" /><span>Visit the Swift.org blog</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://forums.swift.org">
-          <img src="/assets/images/icon-swift.svg" /><span>Visit the Swift forums</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/swiftlang" class="link-external">
-          <img src="/assets/images/icon-x.svg" class="with-invert" /><span>Follow @swiftlang on X (formerly Twitter)</span>
-        </a>
-      </li>
-    </ul>
+    <div class="link-grid">
+      <ul>
+        <li>
+          <a href="/blog/">
+            <img src="/assets/images/icon-swift.svg" /><span>Visit the Swift.org blog</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://forums.swift.org">
+            <img src="/assets/images/icon-swift.svg" /><span>Visit the Swift forums</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/swiftlang" class="link-external">
+            <img src="/assets/images/icon-x.svg" class="with-invert" /><span>Follow @swiftlang on X</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </li>
-  <li>
-    <h3>Events</h3>
-    <p>Check the upcoming Swift related events.</p>
-    <ul class="event-list">
-      <li>
-        <h4>
-          <a href="#">Conference name</a>
-        </h4>
-        <time>Conference date</time>
-        <p>Conference description</p>
-      </li>
-    </ul>
-  </li>
+  {% if site.data.events.size > 0 %}
+    <li>
+      <h3>Events</h3>
+      <p>Check the upcoming Swift related events.</p>
+      <ul class="event-list">
+        {% for event in site.data.events %}
+          <li>
+            <h4>
+              <a href="#">{{ event.name }}</a>
+            </h4>
+            <time pubdate datetime="{{ event.date | date_to_xmlschema }}">
+              {{ event.date | date: "%B %-d, %Y" }}
+            </time>
+            <p>{{ event.description }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endif %}
 </ul>
 
 ## Getting Involved
