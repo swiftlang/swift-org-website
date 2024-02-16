@@ -14,8 +14,6 @@ title: Swift on Server
 
 Various companies and organizations have adopted Vapor and Hummingbird to power their production services.
 
-Swift on Server is also used to power high-performance production services like [Amazon Prime Video](https://www.amazon.com/b/?node=2858778011).
-
 ## Why Swift on Server?
 
 Swift on Server provides developers with a modern, safe, and efficient option for writing server-side code. Swift combines the simplicity and readability of a high-level language with the performance and safety features of a compiled language, allowing developers to leverage their existing Swift skills to build complete end-to-end solutions using a single programming language.
