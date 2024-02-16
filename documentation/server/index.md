@@ -35,7 +35,7 @@ Swift’s performance is comparable to languages like C++ and Objective-C, makin
 These characteristics make Swift ideal for using modern cloud platforms when maximizing resource utilization is needed.
 
 ### Quick start-up time
-Swift-based applications quickly start since there are almost no warm-up operations, making Swift a fit for cloud services, which are often rescheduled onto new virtual machines (VMs) or containers to address platform formation changes.
+Swift-based applications quickly start since there are almost no warm-up operations, making Swift an ideal fit for cloud services, which are often rescheduled onto new virtual machines (VMs) or containers to address platform formation changes.
 
 - Quick boot times make Swift ideal for serverless applications such as [Google Cloud Functions](https://cloud.google.com/functions#) or [AWS Lambda](https://aws.amazon.com/lambda/) with negligible cold start times. Additionally, the quick start-up time and low memory advantages make Swift a good choice for micro services that scale in the cloud.
 - Using Swift helps streamline continuous delivery pipelines, incurring less wait time for new versions of the service fleet to go online.
