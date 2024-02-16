@@ -12,7 +12,7 @@ title: Swift on Server
 
 **Swift on Server** refers to the ability to use the Swift programming language for server-side development. To deploy Swift applications on the server, developers can make use of web frameworks such as [Vapor](https://vapor.codes/) and [Hummingbird](https://swiftpackageindex.com/hummingbird-project/hummingbird) which provide a variety of tools and libraries to streamline the development process. These frameworks handle important aspects like routing, database integration, and request handling, allowing developers to focus on building the business logic of their applications.
 
-Various companies and organizations have adopted Vapor and Hummingbird's server-side Swift web framework to power their production services.
+Various companies and organizations have adopted Vapor and Hummingbird to power their production services.
 
 Swift on Server is also used to power high-performance production services like [Amazon Prime Video](https://www.amazon.com/b/?node=2858778011).
 
