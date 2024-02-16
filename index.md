@@ -91,7 +91,8 @@ atom: true
 
 ## Community
 
-<ul class="community {% unless site.data.events.size > 0 %}connect-only{% endunless %}" markdown="1">
+{% assign events = site.data.events | where_exp:"event", "event.date > site.time" %}
+<ul class="community {% unless events.size > 0 %}connect-only{% endunless %}" markdown="1">
   <li>
     <h3>Connect</h3>
     <p>Stay up-to-date with the latest in the Swift community.</p>
@@ -115,12 +116,12 @@ atom: true
       </ul>
     </div>
   </li>
-  {% if site.data.events.size > 0 %}
+  {% if events.size > 0 %}
     <li>
       <h3>Events</h3>
       <p>Check the upcoming Swift related events.</p>
       <ul class="event-list">
-        {% for event in site.data.events %}
+        {%- for event in events %}
           <li>
             <h4>
               <a href="#">{{ event.name }}</a>
