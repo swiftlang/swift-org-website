@@ -52,6 +52,10 @@ Swift enforces type-safety, optionals, and memory safety features that help prev
 
 Swift provides [built-in support for concurrency](https://developer.apple.com/documentation/swift/concurrency/), allowing developers to write scalable and responsive server applications. Swift’s concurrency model makes it suitable for developing highly concurrent server applications.
 
+Swift's concurrency model introduces new language features and constructs to make it easier and safer to write concurrent code. The **Sendable** attribute is used to annotate types that are known to be safe to pass between tasks. By designating a type as Sendable, Swift ensures that it is safe to share and access that type across multiple concurrent tasks without causing data corruption or synchronization issues. This helps to prevent common concurrency problems, such as race conditions or access to stale data.
+
+The Sendable attribute is particularly useful in the context of Swift on the server, where concurrency and parallelism are frequently utilized. It provides a way to declare and enforce the safety of data accessed by multiple tasks simultaneously, helping to avoid data corruption and maintain data integrity. However, it's important to note that while Sendable helps ensure data safety within the context of Swift's concurrency model, it does not provide guarantees about the broader aspects of data safety, such as durability, consistency, or fault tolerance. Data safety in terms of resilience and durability of storage is typically handled through other mechanisms and configurations in Swift, such as data replication and redundancy.
+
 ### Supported ecosystem
 Apple develops the Swift language, development environment, and library ecosystem. The Swift on Server ecosystem is growing, with the availability of frameworks, libraries, and tools specifically designed for server-side development.
 
