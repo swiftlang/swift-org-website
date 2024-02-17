@@ -81,7 +81,7 @@ To use custom implementation instead of what comes with the C/C++ library:
 
 ## CMake
 
-This example is geared toward importing a C library into Swift. You'll need to obtain the library, provide a modulemap so that Swift can import it, and then link against it. The mechanics are largely the same for C++, and an example of how to bi-directionally interop with a C++ library built as part of a single project is available in the bidirectional cxx interop project in the [Swift-CMake examples repository](http:// https://github.com/apple/swift-cmake-examples/tree/main/3_bidirectional_cxx_interop).
+This example is geared toward importing a C library into Swift. You'll need to obtain the library, provide a modulemap so that Swift can import it, and then link against it. The mechanics are largely the same for C++, and an example of how to bi-directionally interop with a C++ library built as part of a single project is available in the bidirectional cxx interop project in the [Swift-CMake examples repository](https://github.com/apple/swift-cmake-examples/tree/main/3_bidirectional_cxx_interop).
 
 
 ### Obtaining the library
