@@ -34,7 +34,7 @@ One of the main goals of a modern cloud platform is to maximize resource utiliza
 
 While Java, PHP, Python, and JavaScript have their strengths and use cases, Swift offers several advantages over other programming languages. For example, Swift’s performance is comparable to languages like C and C++, making it well-suited for building high-performance server applications. Thanks to the progressive and efficient design of the language, Swift server-side applications can handle large-scale workloads with high performance and low resource consumption.
 
-These characteristics make Swift ideal for using modern cloud platforms when maximizing resource utilization is needed.
+These characteristics make Swift ideal for use in modern cloud platforms when maximizing resource utilization is needed.
 
 ### Quick start-up time
 Swift-based applications quickly start since there are almost no warm-up operations, making Swift an ideal fit for cloud services, which are often rescheduled onto new virtual machines (VMs) or containers to address platform formation changes. Other considerations include:
