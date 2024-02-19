@@ -26,7 +26,7 @@ In addition to the characteristics of Swift that make it an excellent general-pu
 - Supported ecosystem
 
 ### Performance
-Swift offers fast performance and a low memory footprint. Instead of tracing garbage collection, it uses [Automatic Reference Counting (ARC)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/) and ownership features, which allows precise control over resources. Swift’s use of ARC and its lack of just-in-time (JIT) compilation provides an edge in the cloud services space. The absence of JIT means no runtime optimization or de-optimization. 
+Swift offers fast performance and a low memory footprint. Instead of tracing garbage collection, it uses [Automatic Reference Counting (ARC)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/) and ownership features, which allows precise control over resources. Swift’s use of ARC and its lack of just-in-time (JIT) compilation provides an edge in the cloud services space.
 
 While tracing garbage collection technologies have improved, they still compete with the application for resources, triggering non-deterministic performance. Debugging non-deterministic performance and language-induced non-deterministic performance can confuse and mask application-level performance issues that can otherwise be addressed.
 
