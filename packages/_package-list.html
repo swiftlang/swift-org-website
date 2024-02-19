@@ -6,6 +6,19 @@
   </nav>
 
   {{ category.description | markdownify }}
+
+  <!-- Only shown on the showcase page -->
+
+  {% if category.slug == "showcase" %}
+  <p class="cta">
+    <strong>Get involved!</strong> Packages in this showcase came from from community nominations from people like you.
+    Did you find a new or interesting package, or maybe you have one you've been using that you love. The only
+    restriction on nominations is that the package must be written by someone else.
+    <a href="https://forums.swift.org/t/68168">Nominate packages through this thread in the Swift forums</a>
+    and you could see them featured here next month!
+  </p>
+  {% endif %}
+
   <ul>
     {% for package in category.packages %}
     <li class="{% if package.note %}with-note{% endif %}">
