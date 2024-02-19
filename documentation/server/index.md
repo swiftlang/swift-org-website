@@ -54,7 +54,7 @@ Swift's concurrency model introduces new language features and constructs to mak
 The Sendable attribute is particularly useful in the context of Swift on the server, where concurrency and parallelism are frequently utilized. It provides a way to declare and enforce the safety of data accessed by multiple tasks simultaneously, helping to avoid data corruption and maintain data integrity.
 
 ### Supported ecosystem
-Apple develops the Swift language, development environment, and library ecosystem. The Swift on Server ecosystem is growing, with the availability of frameworks, libraries, and tools specifically designed for server-side development.
+The Swift ecosystem contains many useful libraries and tools specifically designed for server-side development.
 
 Overall, Swift on Server opens up new opportunities for developers to build fast, scalable, and secure backend services. Swift's combination of performance, readability, interoperability, safety, and modern language features make it a compelling choice for many developers, particularly for Apple platform development.
 
