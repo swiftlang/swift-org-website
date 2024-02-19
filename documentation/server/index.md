@@ -32,7 +32,7 @@ While tracing garbage collection technologies have improved, they still compete 
 
 One of the main goals of a modern cloud platform is to maximize resource utilization by efficiently packing services into a single machine. Cloud services built with Swift have a small memory footprint (measured in MB), especially compared to other popular server languages with automatic memory management. Services built with Swift are also CPU-efficient, given the language’s focus on performance.
 
-While Java, PHP, Python, and JavaScript have their strengths and use cases, Swift offers several advantages over other programming languages. For example, Swift’s performance is comparable to languages like C++ and Objective-C, making it well-suited for building high-performance server applications. Thanks to the progressive and efficient design of the language, Swift server-side applications can handle large-scale workloads with high performance and low resource consumption.
+While Java, PHP, Python, and JavaScript have their strengths and use cases, Swift offers several advantages over other programming languages. For example, Swift’s performance is comparable to languages like C and C++, making it well-suited for building high-performance server applications. Thanks to the progressive and efficient design of the language, Swift server-side applications can handle large-scale workloads with high performance and low resource consumption.
 
 These characteristics make Swift ideal for using modern cloud platforms when maximizing resource utilization is needed.
 
