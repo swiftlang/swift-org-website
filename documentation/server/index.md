@@ -43,7 +43,6 @@ Swift-based applications quickly start since there are almost no warm-up operati
 - Using Swift helps streamline continuous delivery pipelines, incurring less wait time for new versions of the service fleet to go online.
 - Swift allows you to rapidly respond to the need to scale up where services can dynamically adjust their number of instances.
 
-Note: Because Swift is an open-source object storage system, it does not charge for services (directly) like a cloud provider. However, underlying infrastructures like Google Cloud and AWS Lambda, on which Swift runs, may have associated costs.
 
 ### Expressive and safe
 Swift enforces type-safety, optionals, and memory safety features that help prevent common programming errors and improve code reliability. Swift on Server benefits from these robust language features, making it less prone to crashes and security vulnerabilities.
