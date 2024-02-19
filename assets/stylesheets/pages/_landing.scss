@@ -1,12 +1,11 @@
 .preamble {
   font-size: 38px;
   line-height: 1.4;
-  margin-bottom: 30px;
-  width: 46%;
+  width: 42%;
 
   strong {
     font-weight: 600;
-    color: var(--color-figure-orange);
+    text-decoration: underline;
   }
 
   span {
@@ -23,8 +22,8 @@
 .featured-snippet {
   display: none;
   min-height: 18rem;
-  width: 52%;
-  margin-left: 2%;
+  width: 56%;
+  margin-left: 1%;
 
   &.visible {
     display: block;
