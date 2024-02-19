@@ -56,7 +56,7 @@ The Sendable attribute is particularly useful in the context of Swift on the ser
 ### Supported ecosystem
 The Swift ecosystem contains many useful libraries and tools specifically designed for server-side development.
 
-Overall, Swift on Server opens up new opportunities for developers to build fast, scalable, and secure backend services. Swift's combination of performance, readability, interoperability, safety, and modern language features make it a compelling choice for many developers, particularly for Apple platform development.
+Overall, Swift on Server opens up new opportunities for developers to build fast, scalable, and secure backend services. Swift's combination of performance, readability, interoperability, safety, and modern language features make it a compelling choice for many developers.
 
 Developers unfamiliar with Swift may want to [start with the basics](https://developer.apple.com/swift/).
 
