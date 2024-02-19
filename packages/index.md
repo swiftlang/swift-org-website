@@ -10,6 +10,8 @@ The Swift package ecosystem has thousands of packages to help you with all kinds
 Browse a small selection of interesting packages in popular categories from around the community, as well as a hand-picked selection of new and notable packages.
 
 {% include_relative _package-lists.html %}
+{% include_relative _get-involved.html %}
+
 
 ## Create Your Own
 
