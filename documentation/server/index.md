@@ -58,7 +58,6 @@ The Swift ecosystem contains many useful libraries and tools specifically design
 
 Overall, Swift on Server opens up new opportunities for developers to build fast, scalable, and secure backend services. Swift's combination of performance, readability, interoperability, safety, and modern language features make it a compelling choice for many developers.
 
-Developers unfamiliar with Swift may want to [start with the basics](https://developer.apple.com/swift/).
 
 ## Development guides
 
