@@ -21,7 +21,8 @@ module Jekyll
         history_page = PageWithoutAFile.new(site, site.source, "packages/showcase", "#{month['slug']}.md")
         history_page.data = {
           'layout' => 'page-wide',
-          'title' => "Community Showcase for #{month['name']}"
+          'title' => "Community Showcase Archive",
+          'subtitle' => month['name']
         }
         history_page.content = "{% include_relative _history.html month_slug=\"#{month['slug']}\" %}"
         site.pages << history_page

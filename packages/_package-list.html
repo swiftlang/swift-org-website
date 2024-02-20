@@ -12,37 +12,24 @@
   {% endif %}
 
   <ul>
-    {% for package in category.packages %}
-    <li class="{% if package.note %}with-note{% endif %}">
-      <a href="{{ package.url }}" target="_blank">
-        <h4>
-          <div class="name">{{ package.name }}</div>
-          <div class="owner">by {{ package.owner }}</div>
-        </h4>
-        <section class="description">{{ package.description | markdownify }}</section>
-        <section class="metadata">
-          {% if package.platform_compatibility %}
-          <div class="lozenge platform-compatibility" title="{{ package.platform_compatibility_tooltip }}">
-            {% for platform in package.platform_compatibility %}
-            <span>{{ platform }}</span>
-            {% endfor %}
-          </div>
-          {% endif %} {% if package.swift_compatibility %}
-          <div class="lozenge swift-compatibility" title="Swift version compatibility">
-            <span>{{ package.swift_compatibility }}</span>
-          </div>
-          {% endif %}
-          <div class="lozenge license" title="Package license"><span>{{ package.license }}</span></div>
-        </section>
-      </a>
-      {% if package.note %}
-      <section class="note">{{ package.note | markdownify }}</section>
-      {% endif %}
-    </li>
+    {%- for package in category.packages %}
+    {% include_relative _package.html package=package %}
     {%- endfor %}
   </ul>
 
   {% if category.more %}
   <a class="cta-secondary" href="{{ category.more.url }}" target="_blank">{{ category.more.title }} &rsaquo;</a>
   {% endif %}
+
+  {% if category.slug == "showcase" %}
+  <p>
+    {%- for month in site.data.packages.history.months %}
+      {%- assign url = "packages/showcase/" | append: month.slug | append: ".md" %}
+      {%- if forloop.last %} and {%- else %} , {%- endif %}
+      <a href="{% link {{ url }} %}"> {{ month.name }} </a>
+    {% endfor %}
+  </p>
+  {% endif %}
+
+  The Community Showcase <a href="">launched in November 2023</a>.
 </section>
