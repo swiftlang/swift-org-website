@@ -403,3 +403,19 @@ ahoppen:
   email: ahoppen@apple.com
   github: ahoppen
   about: Alex Hoppen works on the Swift team at Apple, focusing on parsing-related technologies like SourceKit, swift-syntax and code completion.
+
+dkoski:
+  name: David Koski
+  email: dkoski@apple.com
+  github: davidkoski
+
+ahannun:
+  name: Awni Hannun
+  email: awni@apple.com
+  github: awni
+
+
+rcollobert:
+  name: Ronan Collobert
+  email: collobert@apple.com
+  github: andresy
