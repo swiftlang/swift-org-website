@@ -1,0 +1,15 @@
+{%- assign month = site.data.packages.history.months | where: "slug", include.month_slug | first %}
+
+<section class="package-list">
+    <nav>
+      <a href="{% link packages/showcase.md %}" rel="parent">View this month's package showcase</a>
+    </nav>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis modi aliquam rem aut neque nihil error non. Similique, eaque perferendis perspiciatis officia optio voluptate vel. Magni officiis temporibus porro ut!</p>
+
+    <ul>
+      {%- for package in month.packages %}
+      {% include_relative _package.html package=package %}
+      {%- endfor %}
+    </ul>
+</section>
