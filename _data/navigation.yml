@@ -10,6 +10,8 @@
 - header: Packages
   url: /packages/
   pages:
+    - title: Overview
+      url: /packages/
     - title: Community Showcase
       url: /packages/showcase.html
     - title: Packages with Macros
@@ -26,6 +28,8 @@
 - header: Community
   url: /community/
   pages:
+    - title: Overview
+      url: /community/
     - title: Swift Evolution
       url: /swift-evolution/
     - title: Diversity

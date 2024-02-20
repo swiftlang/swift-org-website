@@ -14,7 +14,7 @@ redirect_from:
 
 ## Introduction
 
-A development version of Swift has support for bidirectional interoperability with C++.
+C++ interoperability is a new feature in Swift 5.9. 
 A great variety of C++ APIs can be called directly from Swift, and select Swift APIs can be used from C++.
 
 This document is the reference guide describing how to mix Swift and C++. It
@@ -22,12 +22,6 @@ describes how C++ APIs get imported into Swift, and provides examples showing
 how various C++ APIs can be used in Swift. It also describes how Swift APIs
 get exposed to C++, and provides examples showing how the exposed Swift APIs
 can be used from C++.
-
-C++ interoperability is a new feature in the upcoming Swift 5.9 release.
-A
-pre-release Swift toolchain that supports C++ interoperability
-can be downloaded on the
-[Swift website](/download/#swift-59-development).
 
 * * *
 
