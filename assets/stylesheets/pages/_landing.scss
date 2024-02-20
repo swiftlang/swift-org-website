@@ -1,7 +1,7 @@
 .preamble {
   font-size: 38px;
   line-height: 1.4;
-  width: 42%;
+  width: 50%;
 
   strong {
     font-weight: 600;
@@ -22,8 +22,7 @@
 .featured-snippet {
   display: none;
   min-height: 18rem;
-  width: 56%;
-  margin-left: 1%;
+  width: 50%;
 
   &.visible {
     display: block;
@@ -31,6 +30,9 @@
 
   .highlight {
     height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
   }
 
   pre {
