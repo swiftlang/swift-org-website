@@ -1,11 +1,11 @@
 - |
-  struct ScientificName: Codable {
+  struct Binomial: Codable {
       var genus: String
       var species: String
       var subspecies: String?
   }
 
-  let momiji = ScientificName(genus: "Pin", species: "oak")
+  let momiji = Binomial(genus: "Pin", species: "oak")
   let jsonData = try JSONEncoder().encode(momiji)
 
   // {"genus":"Pin","species":"oak"}
@@ -18,7 +18,7 @@
       var description: String {
           var text = "\(genus) \(species)"
           if let subspecies {
-              // subspecies is guaranteed to be non-nil.
+              // subspecies guaranteed to be non-nil.
               text += "subsp. \(subspecies)"
           }
           return text
