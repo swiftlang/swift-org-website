@@ -56,6 +56,7 @@ const upcomingFeatureFlags = new Map([
   ['SE-0411', 'IsolatedDefaultValues'],
   ['SE-0413', 'FullTypedThrows'],
   ['SE-0418', 'InferSendableFromCaptures'],
+  ['SE-0423', 'DynamicActorIsolation'],
 ])
 
 /** Storage for the user's current selection of filters when filtering is toggled off. */
