@@ -1093,6 +1093,10 @@ article {
   gap: 1.25em;
   margin-bottom: 2em;
 
+  @media only screen and (max-width: 767px) {
+    gap: 0.75em;
+  }
+
   &.compact {
     flex-direction: row;
   }
