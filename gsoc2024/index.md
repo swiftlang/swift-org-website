@@ -206,7 +206,7 @@ Swift is a great programming language to implement complex distributed systems a
 
 - [Franz Busch](https://github.com/FranzBusch)
 
-### Add a `deploy` SPM plugin and a Swift-based DSL to the Swift runtime for AWS Lambda  
+### Add a `deploy` SwiftPM plugin and a Swift-based DSL to the Swift runtime for AWS Lambda  
 
 **Project size**: 90 hours
 
@@ -224,7 +224,7 @@ I [started exploring the possibilities](https://github.com/swift-server/swift-aw
 
 - a [set of data structures](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptor.swift) to represent a YAML SAM template
 - a [DSL definition](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptorBuilder.swift) (build with `@resultBuilder`) to express a SAM template using the Swift programming language
-- a [SPM plugin](https://github.com/sebsto/swift-aws-lambda-runtime/tree/sebsto/deployerplugin_dsl/Plugins/AWSLambdaDeployer) allowing to generate a SAM template and deploy it to the cloud.
+- a [SwiftPM plugin](https://github.com/sebsto/swift-aws-lambda-runtime/tree/sebsto/deployerplugin_dsl/Plugins/AWSLambdaDeployer) allowing to generate a SAM template and deploy it to the cloud.
 
 The existing code has a significant challenge: to be useful for developers, the set of data structures and DSL must be aligned with the SAM template definition. 
 
@@ -236,7 +236,7 @@ This project is aimed at simplifying the alignement with an ever-evolving SAM te
 
 - a manually designed and coded Swift-based DSL that exposes in a developer-friendly way the SAM template definition (it can/should be based on [this exsiting code](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptorBuilder.swift))
 
-- these two components must be callable from [an existing SPM plugin](https://github.com/sebsto/swift-aws-lambda-runtime/tree/sebsto/deployerplugin_dsl/Plugins/AWSLambdaDeployer)
+- these two components must be callable from [an existing SwiftPM plugin](https://github.com/sebsto/swift-aws-lambda-runtime/tree/sebsto/deployerplugin_dsl/Plugins/AWSLambdaDeployer)
 
 **Potential mentors**
 
