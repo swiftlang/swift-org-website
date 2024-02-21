@@ -5,8 +5,8 @@
       var subspecies: String?
   }
 
-  let momiji = Binomial(genus: "Pin", species: "oak")
-  let jsonData = try JSONEncoder().encode(momiji)
+  let tree = Binomial(genus: "Pin", species: "oak")
+  let jsonData = try JSONEncoder().encode(tree)
 
   // {"genus":"Pin","species":"oak"}
 - |
@@ -18,7 +18,7 @@
       var description: String {
           var text = "\(genus) \(species)"
           if let subspecies {
-              // subspecies guaranteed to be non-nil.
+              // subspecies guaranteed to be non-nil
               text += "subsp. \(subspecies)"
           }
           return text

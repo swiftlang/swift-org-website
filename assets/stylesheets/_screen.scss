@@ -382,7 +382,9 @@ main {
   padding: 4rem 0 0;
 
   .callout {
-    display: flex;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
 
     @media only screen and (max-width: 1280px) {
       display: block;
@@ -848,7 +850,6 @@ code {
 }
 pre code {
   white-space: inherit;
-  font-size: 1.2em;
 }
 
 pre code .graphic {
