@@ -16,8 +16,8 @@ The current Swift Server workgroup consists of the following people:
 {% assign people = site.data.server-workgroup.members | sort: "name" %}
 <ul>
 {% for person in people %}
-<li> {{ person.name }}
-{% if person.affiliation %}
+<li>{{ person.name }}
+{%- if person.affiliation -%}
   , {{ person.affiliation }}
 {% endif %}
 {% if person.github %}
@@ -32,8 +32,8 @@ We are grateful for the service of the following emeritus workgroup members:
 {% assign people = site.data.server-workgroup.emeriti | sort: "name" %}
 <ul>
 {% for person in people %}
-<li> {{ person.name }}
-{% if person.affiliation %}
+<li>{{ person.name }}
+{%- if person.affiliation -%}
   , {{ person.affiliation }}
 {% endif %}
 {% if person.github %}
