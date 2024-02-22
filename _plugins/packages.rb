@@ -17,7 +17,7 @@ module Jekyll
   class CommunityShowcaseHistoryGenerator < Generator
     def generate(site)
       # Generate one page per month for previous Community Showcase lists in the Packages page
-      site.data.dig('packages', 'history', 'months').each do |month|
+      site.data.dig('packages', 'showcase-history', 'months').each do |month|
         history_page = PageWithoutAFile.new(site, site.source, "packages", "showcase-#{month['slug']}.md")
         history_page.data = {
           'layout' => 'page-wide',
