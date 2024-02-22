@@ -12,7 +12,6 @@ Browse a small selection of interesting packages in popular categories from arou
 {% include_relative _package-lists.html %}
 {% include_relative _get-involved.html %}
 
-
 ## Create Your Own
 
 Creating a Swift package is a great way to modularise your code either for personal use, for private use inside your company, or to release an open source package for the rest of the Swift community to use.

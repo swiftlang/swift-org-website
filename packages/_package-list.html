@@ -5,8 +5,11 @@
     <a href="{% link packages/index.md %}#package-ecosystem" rel="parent">Explore the Swift package ecosystem</a>
   </nav>
 
-  {{ category.description | markdownify }} {% if category.slug == "showcase" %} {% include_relative _get-involved.html
-  %} {% endif %}
+  {{ category.description | markdownify }}
+
+  {% if category.slug == "showcase" %}
+  {% include_relative _get-involved.html %}
+  {% endif %}
 
   <ul>
     {% for package in category.packages %}
