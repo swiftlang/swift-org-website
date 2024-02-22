@@ -37,6 +37,7 @@ var languageVersions = [
   '5.9',
   '5.9.2',
   '5.10',
+  '6.0',
   'Next'
 ]
 
