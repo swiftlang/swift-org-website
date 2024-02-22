@@ -12,9 +12,7 @@
   {% endif %}
 
   <ul>
-    {%- for package in category.packages %}
-    {% include_relative _package.html package=package %}
-    {%- endfor %}
+    {%- for package in category.packages %} {% include_relative _package.html package=package %} {%- endfor %}
   </ul>
 
   {% if category.more %}
@@ -23,13 +21,17 @@
 </section>
 
 {% if category.slug == "showcase" %}
-<p>The Community Showcase <a href="">launched in November 2023</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dignissimos ut ducimus, consequatur dolorem totam assumenda eligendi aperiam consequuntur molestias? Neque officia sed magni voluptatem fuga ratione corrupti veritatis iste:</p>
+<h2>Archive</h2>
+<p>
+  The Community Showcase <a href="{% post_url 2023-10-31-packages-page %}">launched in November 2023</a> and features a
+  new set of packages every month. Browse the archive below to see the history of featured Community Showcase packages:
+</p>
 <ul>
-    {%- for month in site.data.packages.history.months %}
-      {%- assign url = "packages/showcase-" | append: month.slug | append: ".md" %}
-      <li>
-        <a href="{% link {{ url }} %}"> {{ month.name }} </a>
-      </li>
-    {% endfor %}
+  {%- for month in site.data.packages.history.months %}
+  {%- assign url = "packages/showcase-" | append: month.slug | append: ".md" %}
+  <li>
+    <a href="{% link {{ url }} %}"> {{ month.name }} </a>
+  </li>
+  {% endfor %}
 </ul>
 {% endif %}

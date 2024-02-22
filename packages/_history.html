@@ -1,15 +1,18 @@
 {%- assign month = site.data.packages.history.months | where: "slug", include.month_slug | first %}
 
 <section class="package-list">
-    <nav>
-      <a href="{% link packages/showcase.md %}" rel="parent">View this month's package showcase</a>
-    </nav>
+  <nav>
+    <a href="{% link packages/showcase.md %}" rel="parent">View this month’s Community Showcase</a>
+  </nav>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis modi aliquam rem aut neque nihil error non. Similique, eaque perferendis perspiciatis officia optio voluptate vel. Magni officiis temporibus porro ut!</p>
+  <p>
+    The Community Showcase of Swift packages features packages from around the Swift community nominated via
+    <a href="https://forums.swift.org/t/68168">this thread on the Swift forums</a> and voted on by the
+    <a href="https://swift.org/website-workgroup/">Swift Website Workgroup</a>.
+    <strong>This list is an archive of the Community Showcase from {{ month.name }}</strong>.
+  </p>
 
-    <ul>
-      {%- for package in month.packages %}
-      {% include_relative _package.html package=package %}
-      {%- endfor %}
-    </ul>
+  <ul>
+    {%- for package in month.packages %} {% include_relative _package.html package=package %} {%- endfor %}
+  </ul>
 </section>
