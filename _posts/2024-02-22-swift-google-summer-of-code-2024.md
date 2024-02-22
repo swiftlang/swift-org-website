@@ -7,7 +7,7 @@ author: [ktoso]
 excerpt_separator: <!--read more-->
 ---
 
-We're happy to announce that Swift will be joining Google Summer of Code 2024!
+We're happy to announce that Swift will be joining [Google Summer of Code 2024][gsoc]!
 
 Summer of Code is an annual program organized by Google, which helps provide hands-on experience with contributing
 to open source projects to newcomers. Participants usually are students, although not necessarily so.
