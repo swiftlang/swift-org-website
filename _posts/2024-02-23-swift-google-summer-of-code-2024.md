@@ -22,13 +22,13 @@ If you are [eligible](https://summerofcode.withgoogle.com/get-started), and woul
 this year's GSoC, these are the steps to take:
 
 1. Check out the existing [project ideas page](https://www.swift.org/gsoc2024/).
-2. If a project excites you, [proceed to the forums dedicated GSoC category](https://forums.swift.org/c/development/gsoc/98) to discuss the project.
+2. If a project excites you, [proceed to the GSoC category on the Swift forums](https://forums.swift.org/c/development/gsoc/98) to discuss the project.
 3. Once you are confident in your understanding of the project and how to approach it, [write an official proposal](https://google.github.io/gsocguides/student/writing-a-proposal) and submit it to the [GSoC website](https://summerofcode.withgoogle.com).
 
 You can also come up with your own project ideas. To do so, you'll need to start a discussion thread [on the forums](https://forums.swift.org/c/development/gsoc/98) and pitch the idea similar to how the existing
 ideas are listed on the ideas page. Proposing new ideas is exciting, but more difficult as you'll have to ensure the project gets a mentor willing to take it on.
 
-The forums are also a great resource of past GSoC discussions and projects. In addition to that, you should also read through the [GSoC Contributor Guide](https://google.github.io/gsocguides/student/index), to get a good grasp of what participating in the program entails.
+The forums are also a great resource of past GSoC discussions and projects. You can also read the [GSoC Contributor Guide](https://google.github.io/gsocguides/student/index) to get a good grasp of what participating in the program entails.
 
 Official proposal applications need to be sent through the Summer of Code website. 
 Applications start on March 18, 2024, and end on April 2, 2024 at 18:00 UTC.
