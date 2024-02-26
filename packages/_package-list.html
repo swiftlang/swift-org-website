@@ -27,7 +27,7 @@
   new set of packages every month. Browse the archive below to see the history of featured Community Showcase packages:
 </p>
 <ul>
-  {%- for month in site.data.packages.history.months %}
+  {%- for month in site.data.packages.showcase-history.months %}
   {%- assign url = "packages/showcase-" | append: month.slug | append: ".md" %}
   <li>
     <a href="{% link {{ url }} %}"> {{ month.name }} </a>
