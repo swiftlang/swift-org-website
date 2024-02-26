@@ -6,6 +6,11 @@
   </nav>
 
   {{ category.description | markdownify }}
+
+  {% if category.slug == "showcase" %}
+  {% include_relative _get-involved.html %}
+  {% endif %}
+
   <ul>
     {% for package in category.packages %}
     <li class="{% if package.note %}with-note{% endif %}">
