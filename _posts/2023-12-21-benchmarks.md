@@ -123,7 +123,7 @@ Sample default output when running benchmarks:
 
 ### Community Adoption
 The Benchmark package has recently seen a wide community uptake as more projects focus on performance, including e.g.,
-[SwiftNIO](https://github.com/apple/swift-nio), [Swift Foundation](https://github.com/apple/swift-foundation), [Google Flatbuffers](https://github.com/google/flatbuffers), [GRPC Swift](https://github.com/grpc/grpc-swift), [Swift ASN1](https://github.com/apple/swift-asn1), [Swift Certificates](https://github.com/apple/swift-certificates) and [Swift Kafka Client](https://github.com/swift-server/swift-kafka-client). 
+[SwiftNIO](https://github.com/apple/swift-nio), [Swift Foundation](https://github.com/apple/swift-foundation), [Swift Package Manager](https://github.com/apple/swift-package-manager), [Google Flatbuffers](https://github.com/google/flatbuffers), [GRPC Swift](https://github.com/grpc/grpc-swift), [Swift ASN1](https://github.com/apple/swift-asn1), [Swift Certificates](https://github.com/apple/swift-certificates) and [Swift Kafka Client](https://github.com/swift-server/swift-kafka-client). 
 
 Discussions and questions are best directed to [the Swift forums section for Benchmark](https://forums.swift.org/c/related-projects/benchmark/105).
 
