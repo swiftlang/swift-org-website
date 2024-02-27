@@ -12,37 +12,26 @@
   {% endif %}
 
   <ul>
-    {% for package in category.packages %}
-    <li class="{% if package.note %}with-note{% endif %}">
-      <a href="{{ package.url }}" target="_blank">
-        <h4>
-          <div class="name">{{ package.name }}</div>
-          <div class="owner">by {{ package.owner }}</div>
-        </h4>
-        <section class="description">{{ package.description | markdownify }}</section>
-        <section class="metadata">
-          {% if package.platform_compatibility %}
-          <div class="lozenge platform-compatibility" title="{{ package.platform_compatibility_tooltip }}">
-            {% for platform in package.platform_compatibility %}
-            <span>{{ platform }}</span>
-            {% endfor %}
-          </div>
-          {% endif %} {% if package.swift_compatibility %}
-          <div class="lozenge swift-compatibility" title="Swift version compatibility">
-            <span>{{ package.swift_compatibility }}</span>
-          </div>
-          {% endif %}
-          <div class="lozenge license" title="Package license"><span>{{ package.license }}</span></div>
-        </section>
-      </a>
-      {% if package.note %}
-      <section class="note">{{ package.note | markdownify }}</section>
-      {% endif %}
-    </li>
-    {%- endfor %}
+    {%- for package in category.packages %} {% include_relative _package.html package=package %} {%- endfor %}
   </ul>
 
   {% if category.more %}
   <a class="cta-secondary" href="{{ category.more.url }}" target="_blank">{{ category.more.title }} &rsaquo;</a>
   {% endif %}
 </section>
+
+{% if category.slug == "showcase" %}
+<h2>Archive</h2>
+<p>
+  The Community Showcase <a href="{% post_url 2023-10-31-packages-page %}">launched in November 2023</a> and features a
+  new set of packages every month. Browse the archive below to see the history of featured Community Showcase packages:
+</p>
+<ul>
+  {%- for month in site.data.packages.showcase-history.months %}
+  {%- assign url = "packages/showcase-" | append: month.slug | append: ".md" %}
+  <li>
+    <a href="{% link {{ url }} %}"> {{ month.name }} </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

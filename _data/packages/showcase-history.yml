@@ -1,0 +1,240 @@
+months:
+  - name: January 2024
+    slug: january-2024
+    packages:
+      - name: soto
+        description: Soto for AWS is a Swift language SDK for Amazon Web Services (AWS).
+          It provides access to all AWS services via a direct mapping of the REST APIs
+          Amazon publishes for each of its services.
+        owner: Soto for AWS
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/soto-project/soto
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/13){:target='_blank'}.
+      - name: Pow
+        description: Pow provides delightful SwiftUI animations and effects for your app.
+          It includes transitions and change effects which can trigger every time a value
+          is updated.
+        owner: Emerge Tools
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+        license: MIT
+        url: https://swiftpackageindex.com/EmergeTools/Pow
+        note: Discussed on [Episode 38 of Swift Package Indexing](https://share.transistor.fm/s/f744b457){:target='_blank'}.
+      - name: OpenAPIKit
+        description: OpenAPIKit allows encoding and decoding of OpenAPI 3.0.x and 3.1.x
+          documents and their components in Swift.
+        owner: Mathew Polzin
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/mattpolzin/OpenAPIKit
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/12){:target='_blank'}.
+      - name: Benchmark
+        description: Benchmark helps measure and track performance metrics for apps and
+          frameworks. It supports automated regression checks, manual comparisons, and
+          benchmark result exports in multiple formats.
+        owner: Ordo One
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS) and Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/ordo-one/package-benchmark
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/11){:target='_blank'}.
+      - name: Typhoon
+        description: "Typhoon provides retry policies for handling errors in asynchronous
+          operations. It offers three retry strategy options: constant, exponential, and
+          exponential with jitter."
+        owner: Space Code
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/space-code/typhoon
+        note: Discussed on [Episode 37 of Swift Package Indexing](https://share.transistor.fm/s/de52cb62){:target='_blank'}.
+      - name: SwiftUICoreImage
+        description: Provides a convenient way to chain multiple Core Image filters to
+          CIImage instances and render them into SwiftUI or any other context. It can
+          also be used without SwiftUI.
+        owner: Dan Wood
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+        license: MIT
+        url: https://swiftpackageindex.com/danwood/SwiftUICoreImage
+        note: Discussed on [Episode 38 of Swift Package Indexing](https://share.transistor.fm/s/f744b457){:target='_blank'}.
+  - name: December 2023
+    slug: december-2023
+    packages:
+      - name: swift-composable-architecture
+        description: The Composable Architecture is a library for building applications
+          with state management, composition, side effects, and testing in mind. It can
+          be used with SwiftUI, UIKit, and more.
+        owner: Point-Free
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/pointfreeco/swift-composable-architecture
+        note: Linked from [this Swift forums post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/3){:target='_blank'}.
+      - name: Time
+        description: Time simplifies working with calendars in Swift, providing type-safe
+          APIs for retrieving and formatting time values. It also allows converting between
+          time zones and calculating differences between dates.
+        owner: Dave DeLong
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/davedelong/time
+        note: Linked from [this Swift forums post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/7){:target='_blank'}.
+      - name: BluetoothLinux
+        description: BluetoothLinux makes working with Bluetooth from Swift easier without
+          needing to wrap underlying libraries from other languages.
+        owner: PureSwift
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/PureSwift/BluetoothLinux
+        note: Linked from [this Swift forums post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/4){:target='_blank'}.
+      - name: MemberwiseInit
+        description: MemberwiseInit is a Swift Macro that enhances automatic memberwise
+          initializers, reducing boilerplate code. It supports customizable parameter
+          labels and inferring types from property initialization expressions.
+        owner: "Galen O\u2019Hanlon"
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/gohanlon/swift-memberwise-init-macro
+        note: Discussed in [Episode 37 of Swift Package Indexing](https://share.transistor.fm/s/de52cb62){:target='_blank'}.
+      - name: SwiftyGPIO
+        description: SwiftyGPIO is a Swift library for interacting with external sensors
+          and devices on Linux/ARM boards. It supports GPIOs, SPI, I2C, PWM, UART, and
+          1-Wire interfaces. It is specifically designed for Raspberry Pis and other ARM
+          boards running Linux.
+        owner: uraimo
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/uraimo/SwiftyGPIO
+        note: Linked from [this Swift forums post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/4){:target='_blank'}.
+      - name: Variablur
+        description: Variablur creates variable blur effects in a SwiftUI view using a
+          mask. It supports gradient or progressive blurs, vignettes, and more.
+        owner: Dale Price
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/daprice/Variablur
+        note: Linked in [Issue 637 of iOS Dev Weekly](https://iosdevweekly.com/issues/637#txS8ASr){:target='_blank'}.
+  - name: November 2023
+    slug: november-2023
+    packages:
+      - name: SwiftTUI
+        description: SwiftTUI is a library that brings SwiftUI-like functionality to the
+          terminal, allowing developers to build text-based user interfaces. It supports
+          many features from SwiftUI, such as property wrappers, view builders, and modifiers.
+        owner: Rens Breur
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/rensbreur/SwiftTUI
+        note: Discussed on [Episode 163 of the Empower Apps Podcast](https://brightdigit.com/episodes/163-swiftly-tooling-with-pol-piella-abadia/){:target='_blank'}.
+      - name: SwiftGodot
+        description: SwiftGodot provides Swift language bindings for the Godot game engine.
+          Developers can use it to build extensions or embed Godot directly into Swift
+          applications.
+        owner: Miguel de Icaza
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (macOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/migueldeicaza/SwiftGodot
+        note:
+          Discussed on [Season 5 Episode 28 of Compile Swift](https://www.compileswift.com/podcast/s05e28/){:target='_blank'}
+          podcast.
+      - name: Automerge
+        description: Automerge-swift is a low-level library that implements the Automerge
+          library of data structures for building collaborative applications in Swift.
+        owner: Automerge
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/automerge/automerge-swift
+        note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
+      - name: Grape
+        description: Grape is a Swift library for force simulation and graph visualization.
+          It provides classes for creating simulations and forces and supports both 2D
+          and 3D graphs.
+        owner: Zhen Li
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/li3zhen1/Grape
+        note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
+      - name: Firefly
+        description: Firefly is a syntax highlighter for iOS and macOS. It uses regular
+          expressions to detect tokens and color them based on the current theme and supports
+          line numbers, customizable themes, and multiple languages.
+        owner: Taylor Lineman
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (macOS)
+        license: MIT
+        url: https://swiftpackageindex.com/ActuallyTaylor/Firefly
+        note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
+      - name: Daily
+        description: "An SDK for developing video applications on iOS with Daily\u2019s
+          real-time audio, video, and vision platform."
+        owner: Daily
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS)
+        license: BSD 2-Clause
+        url: https://swiftpackageindex.com/daily-co/daily-client-ios
+        note: Discussed on [Episode 162 of the Empower Apps Podcast](https://brightdigit.com/episodes/162-building-a-video-sdk-with-marc-schwieterman/){:target='_blank'}.
