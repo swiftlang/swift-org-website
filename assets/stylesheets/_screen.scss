@@ -379,13 +379,30 @@ cite {
 }
 
 main {
-  padding: 4rem 30px 0;
   margin: auto;
+  padding: 4rem 0 0;
+
+  .callout {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: 1280px) {
+      display: block;
+    }
+  }
 
   .page-wide {
     max-width: var(--content-mobile-breakpoint);
     padding: 0;
     margin: auto;
+
+    @media only screen and (max-width: 1280px) {
+      padding: 30px 30px 0;
+    }
   }
 
   .post, .page {
@@ -393,9 +410,17 @@ main {
     margin: 0 auto;
     padding: 0 30px;
 
-    @media only screen and (max-width: 767px) {
-      padding: 0;
+    @media only screen and (max-width: 1280px) {
+      padding-top: 30px;
     }
+
+    @media only screen and (max-width: 767px) {
+      padding: 30px 30px 0;
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
   }
 }
 

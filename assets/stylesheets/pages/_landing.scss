@@ -1,7 +1,7 @@
 .preamble {
-  font-size: 28px;
+  font-size: 40px;
   line-height: 1.4;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 
   strong {
     font-weight: 600;
@@ -9,20 +9,51 @@
 
   span {
     display: block;
-    padding-top: .5rem;
+    padding-top: 2rem;
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1280px) {
     width: 100%;
     font-size: 24px;
+    margin-bottom: 1.6rem;
+
+    span {
+      display: block;
+      padding-top: .5rem;
+    }
   }
 }
 
 .featured-snippet {
   display: none;
+  min-height: 18rem;
+  max-width: 536px;
 
   &.visible {
     display: block;
+  }
+
+  .highlight {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  pre code {
+    font-size: 1.2em;
+    line-height: 1.6em;
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 1em;
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
   }
 }
 
