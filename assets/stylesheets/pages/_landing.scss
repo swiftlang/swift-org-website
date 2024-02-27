@@ -40,12 +40,16 @@
     flex-direction: column;
   }
 
-  pre code {
-    font-size: 1.2em;
-    line-height: 1.6em;
+  pre {
+    margin: 0;
 
-    @media only screen and (max-width: 1280px) {
-      font-size: 1em;
+    code {
+      font-size: 1.2em;
+      line-height: 1.6em;
+
+      @media only screen and (max-width: 1280px) {
+        font-size: 1em;
+      }
     }
   }
 
