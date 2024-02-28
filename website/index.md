@@ -5,13 +5,13 @@ title: Swift.org website
 
 Swift.org website goals include:
 
-* Welcome newcomers with friendly information about Swift
-* Help visitors of all skill levels get started developing with Swift
-* Document the language, libraries, and best practices
-* Announce new features, APIs, and tooling improvements
-* Provide a safe, friendly place to interact with fellow Swift developers
-* Promote activities occurring anywhere within the community
-* Support collaboration and evolution in building the Swift ecosystem
+* Welcome newcomers with friendly information about Swift.
+* Help visitors of all skill levels get started developing with Swift.
+* Document the language, libraries, and best practices.
+* Announce new features, APIs, and tooling improvements.
+* Provide a safe, friendly place to interact with fellow Swift developers.
+* Promote activities occurring anywhere within the community.
+* Support collaboration and evolution in building the Swift ecosystem.
 
 ## Community Participation
 
@@ -23,9 +23,9 @@ Everyone is welcome to contribute to the Swift.org website in the following ways
     * Proposing broad changes to how content is organized in the website (information design).
     * Proposing broad changes to how the website looks (UX/UI design).
     * Proposing broad changes to the technical infrastructure that powers the website.
-* Participating in design discussions
-* Asking or answering questions on the forums
-* Reporting or triaging bugs
+* Participating in design discussions.
+* Asking or answering questions on the forums.
+* Reporting or triaging bugs.
 
 See [`CONTRIBUTING.md`](https://github.com/apple/swift-org-website/blob/main/CONTRIBUTING.md) for additional information about the website's contribution guidelines.
 

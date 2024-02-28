@@ -9,11 +9,11 @@ documentation experience for Swift.
 The Documentation Workgroup will:
 
 * Define and prioritize efforts that address the documentation needs of the
-  Swift community
-* Actively guide development for documentation tooling such as Swift-DocC
+  Swift community.
+* Actively guide development for documentation tooling such as Swift-DocC.
 * Define processes that govern contributions to Swift’s documentation
-  experience
-* Channel feedback to Swift Core Team about the needs of the Swift community
+  experience.
+* Channel feedback to Swift Core Team about the needs of the Swift community.
 
 The current Documentation Workgroup consists of the following people:
 
@@ -67,10 +67,10 @@ The Core Team also selects one member of the workgroup as the chair. The chair
 has no special authority over the workgroup, but they are responsible for
 ensuring its smooth functioning, including by:
 
-* Organizing and leading regular meetings
-* Ensuring that the workgroup communicates effectively with the community
+* Organizing and leading regular meetings.
+* Ensuring that the workgroup communicates effectively with the community.
 * Coordinating meetings between workgroup representatives and the Core Team
-  when issues need to be raised to the Core Team
+  when issues need to be raised to the Core Team.
 
 Workgroup members will try to make a decision independently by consensus
 whenever possible, and will raise issues to the Core Team when there are particular
@@ -90,11 +90,11 @@ experience and the Documentation Workgroup’s initiatives. If you’d like to
 contribute, consider:
 
 * Joining the Documentation Workgroup’s open meetings on WebEx (reach out to
-    `@swift-documentation-workgroup` in forums for details)
+    `@swift-documentation-workgroup` in forums for details).
 * Discussing ideas in the Swift Forums, for example in the [Swift-DocC
   forum](https://forums.swift.org/c/development/swift-docc) for
-  Swift-DocC–related ideas
+  Swift-DocC–related ideas.
 * Opening issues to track enhancements and bugs for the projects governed by the Documentation Workgroup:
-  [Swift-DocC](https://github.com/apple/swift-docc/issues), [The Swift Programming Language book](https://github.com/apple/swift-book/issues)
+  [Swift-DocC](https://github.com/apple/swift-docc/issues), [The Swift Programming Language book](https://github.com/apple/swift-book/issues).
 * Participating in the [Swift Mentorship
-  Program](/mentorship)
+  Program](/mentorship).

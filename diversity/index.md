@@ -47,9 +47,9 @@ The Diversity in Swift workgroup will include posts on the Swift.org blog that r
 
 Everyone is welcome to participate in Diversity in Swift! Below are a few specific ways to contribute:
 
-* Joining community groups that you identify with
-* Proposing new community groups or programs
-* Sharing Swift content on the [Community Showcase](https://forums.swift.org/c/community-showcase)
-* Encouraging participation and highlighting work from developers who are currently underrepresented in the community
+* Joining community groups that you identify with.
+* Proposing new community groups or programs.
+* Sharing Swift content on the [Community Showcase](https://forums.swift.org/c/community-showcase).
+* Encouraging participation and highlighting work from developers who are currently underrepresented in the community.
 
 Anybody can work toward making the Swift community even more approachable. Members of the community can help newcomers overcome barriers by [answering questions on the Swift Forums](/contributing/#answering-questions), improving [open source Swift documentation](https://github.com/apple/swift/blob/main/docs/README.md), searching for or creating [good first issues](/contributing/#good-first-issues), and more.
