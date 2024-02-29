@@ -8,9 +8,11 @@ author: [hborla]
 
 Swift 5.10 is now available!
 
-Swift 5.10 accomplishes full data isolation in the concurrency language model. The concurrency model was introduced in Swift 5.5 including `async`/`await`, actors, and structured concurrency, and Swift 5.7 introduced `Sendable` as the fundamental concept for state that is safe to be shared across isolation domains. Data isolation enforcement at compile time is gated behind complete concurrency checking, and the programming model with full data isolation covering all areas of the language has taken years of active development over many releases of Swift. Swift 5.10 reaches this important milestone.
+Swift 5.10 accomplishes full data isolation in the concurrency language model. This important milestone has taken years of active development over many releases. The concurrency model was introduced in Swift 5.5 including `async`/`await`, actors, and structured concurrency. Swift 5.7 introduced `Sendable` as the fundamental concept for thread-safe types whose values can be shared across arbitrary concurrent contexts without introducing a risk of data races. And now, in Swift 5.10, full data isolation is enforced at compile time in all areas of the language when the complete concurrency checking option is enabled.
 
-Full data isolation in Swift 5.10 is the precursor to Swift 6. Swift 6 will enforce full data isolation by default, and we will embark upon the transition to eliminate data races across the Swift ecosystem.
+Full data isolation in Swift 5.10 sets the stage for the next major release, Swift 6. Swift 6 will enforce full data isolation by default, and we will embark upon the transition to eliminate data races across the Swift ecosystem.
+
+Swift 5.10 enforces full data isolation conservatively, meaning there are some false positive reports of data races. A major focus of language development for the Swift 6 release is improving the usability of strict concurrency checking by mitigating false positive concurrency errors in common code patterns that are proven to be safe.
 
 Read on to learn about full data isolation in Swift 5.10, new unsafe opt-outs for actor isolation checking, and the remaining concurrency evolution ahead of Swift 6.
 
@@ -95,8 +97,6 @@ Note that without correct implementation of a synchronization mechanism to achie
 The complete concurrency model in Swift 5.10 is conservative. Several Swift Evolution proposals are in active development to improve the usability of full data isolation by removing false postive data race errors. This work includes lifting limitations on passing non-`Sendable` values across isolation boundaries when the compiler determines there is no potential for concurrent access, and more effective `Sendable` inference. You can find the set of proposals that will round out Swift 6 at [Swift.org/swift-evolution](https://www.swift.org/swift-evolution/).
 
 Your feedback on using full data isolation in Swift 5.10 will help shape the Swift 6 migration guide, which will be made available on Swift.org ahead of Swift 6.
-
-
 
 ### Downloads
 
