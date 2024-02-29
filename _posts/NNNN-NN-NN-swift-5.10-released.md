@@ -12,13 +12,13 @@ Swift 5.10 accomplishes full data isolation in the concurrency language model. T
 
 Full data isolation in Swift 5.10 is the precursor to Swift 6. Swift 6 will enforce full data isolation by default, and we will embark upon the transition to eliminate data races across the Swift ecosystem.
 
-Read on to learn about full data isolation in Swift 5.10, new unsafe opt outs for actor isolation checking, and the remaining concurrency evolution ahead of Swift 6.
+Read on to learn about full data isolation in Swift 5.10, new unsafe opt-outs for actor isolation checking, and the remaining concurrency evolution ahead of Swift 6.
 
 ## Data-race safety
 
 ### Full data isolation
 
-Swift 5.10 rounds out the data-race safety semantics in all corners of the language, and fixes numerous bugs in `Sendable` and actor isolation checking to strengthen the guarantees of complete concurrency checking. When writing code against `-strict-concurrency=complete`, Swift 5.10 will diagnose the potential for data races at compile time except where an explicit unsafe opt out, such as `nonisolated(unsafe)` or `@unchecked Sendable`, is used.
+Swift 5.10 rounds out the data-race safety semantics in all corners of the language, and fixes numerous bugs in `Sendable` and actor isolation checking to strengthen the guarantees of complete concurrency checking. When writing code against `-strict-concurrency=complete`, Swift 5.10 will diagnose the potential for data races at compile time except where an explicit unsafe opt-out, such as `nonisolated(unsafe)` or `@unchecked Sendable`, is used.
 
 For example, in Swift 5.9, the following code fails an isolation assertion at runtime due to a `@MainActor`-isolated initializer being evaluated outside the actor, but it was not diagnosed under `-strict-concurrency=complete`:
 
@@ -50,11 +50,11 @@ The above code admits data races. `MyModel.shared` is a `@MainActor`-isolated st
 
 You can find more details about the changes and additions to the full data isolation programming model in the [Swift 5.10 release notes](https://github.com/apple/swift/blob/release/5.10/CHANGELOG.md).
 
-### Unsafe opt outs
+### Unsafe opt-outs
 
 Swift 5.10 introduces a new `nonisolated(unsafe)` keyword to opt out of actor isolation checking for stored properties and variables. `nonisolated(unsafe)` can be used on any form of storage, including stored properties, local variables, and static or global variables.
 
-`nonisolated(unsafe)` can be used as a more granular opt out for `Sendable` checking, eliminating the need for `@unchecked Sendable` wrapper types in many use cases:
+`nonisolated(unsafe)` can be used as a more granular opt-out for `Sendable` checking, eliminating the need for `@unchecked Sendable` wrapper types in many use cases:
 
 ```swift
 import Dispatch
