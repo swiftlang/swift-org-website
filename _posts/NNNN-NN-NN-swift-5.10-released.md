@@ -54,6 +54,8 @@ You can find more details about the changes and additions to the full data isola
 
 ### Unsafe opt-outs
 
+Unsafe opt-outs, such as `@unchecked Sendable` conformances, are important for communicating that code is safe from data-races when it cannot be proven automatically by the compiler. These tools are necessary in cases where synchronization is implemented in a way that the compiler cannot reason about, such as through OS-specific primitives or when working with thread-safe types implemented in C/C++/Objective-C. However, `@unchecked Sendable` conformances are difficult to use correctly, because they opt the entire type out of data-race safety checking. In many cases, only one specific property in a type needs the opt-out, while the rest of the implementation adheres to static concurrency safety.
+
 Swift 5.10 introduces a new `nonisolated(unsafe)` keyword to opt out of actor isolation checking for stored properties and variables. `nonisolated(unsafe)` can be used on any form of storage, including stored properties, local variables, and static or global variables.
 
 `nonisolated(unsafe)` can be used as a more granular opt-out for `Sendable` checking, eliminating the need for `@unchecked Sendable` wrapper types in many use cases:
