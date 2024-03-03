@@ -94,7 +94,11 @@ Note that without correct implementation of a synchronization mechanism to achie
 
 ### Try out complete concurrency ahead of Swift 6
 
-**The next release of Swift will be Swift 6.** Swift 5.10 is a critical call-to-action in the Swift community; complete concurrency checking in Swift 5.10 conservatively closes all known holes in the data race safety model, and we need your help finding any remaining soundness holes. Please [try out complete concurrency checking](/documentation/concurrency/) in your project and [report issues](https://github.com/apple/swift/issues/new/choose) if you find corner cases where complete concurrency checking does not diagnose a data race at compile time.
+**The next release of Swift will be Swift 6.** You can help shape the transition to the Swift 6 language mode by [trying out complete concurrency checking](/documentation/concurrency/) in your project and providing feedback on your experience.
+
+If you find any remaining soundness holes, including any corner cases where complete concurrency checking does not diagnose a data race at compile time, please [report an issue](https://github.com/apple/swift/issues/new/choose).
+
+You can also provide feedback that helps improve the concurrency documentation, compiler error messages, and the upcoming Swift 6 migration guide. If you encounter a case where the compiler diagnoses a data-race warning that you don't understand or you're not sure how to resolve a given data-race warning, please start a [discussion thread on the Swift forums](https://forums.swift.org/tags/c/swift-users/15/concurrency) using the `concurrency` tag.
 
 The complete concurrency model in Swift 5.10 is conservative. Several Swift Evolution proposals are in active development to improve the usability of full data isolation by removing false postive data race errors. This work includes lifting limitations on passing non-`Sendable` values across isolation boundaries when the compiler determines there is no potential for concurrent access, and more effective `Sendable` inference. You can find the set of proposals that will round out Swift 6 at [Swift.org/swift-evolution](https://www.swift.org/swift-evolution/).
 
