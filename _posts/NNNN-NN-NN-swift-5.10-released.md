@@ -29,7 +29,7 @@ For example, in Swift 5.9, the following code fails an isolation assertion at ru
 ```swift
 @MainActor
 class MyModel {
-  init() {
+  private init() {
     MainActor.assertIsolated()
   }
 
@@ -43,7 +43,7 @@ func useShared() async {
 await useShared()
 ```
 
-The above code admits data races. `MyModel.shared` is a `@MainActor`-isolated static variable, which evaluates a `@MainActor`-isolated initial value upon first access. `MainActor.shared` is accessed synchronously from a `nonisolated` context inside the `useShared()` function, so the initial value is computed off the main actor. In Swift 5.10, compiling the code with `-strict-concurrency=complete` produces a warning that the access must be done asynchronously:
+The above code admits data races. `MyModel.shared` is a `@MainActor`-isolated static variable, which evaluates a `@MainActor`-isolated initial value upon first access. `MyModel.shared` is accessed synchronously from a `nonisolated` context inside the `useShared()` function, so the initial value is computed off the main actor. In Swift 5.10, compiling the code with `-strict-concurrency=complete` produces a warning that the access must be done asynchronously:
 
   ```
   warning: expression is 'async' but is not marked with 'await'
@@ -51,6 +51,8 @@ The above code admits data races. `MyModel.shared` is a `@MainActor`-isolated st
                 ^~~~~~~~~~~~~~
                 await
   ```
+
+The possible fixes for resolving the data race are 1) access `MyModel.shared` asynchronously using `await`, 2) make `MyModel.init` and `MyModel.shared` both `nonisolated` and move the code that requires the main actor into a separate isolated method, or 3) isolated `useShared()` to `@MainActor`.
 
 You can find more details about the changes and additions to the full data isolation programming model in the [Swift 5.10 release notes](https://github.com/apple/swift/blob/release/5.10/CHANGELOG.md).
 
@@ -60,7 +62,7 @@ Unsafe opt-outs, such as `@unchecked Sendable` conformances, are important for c
 
 Swift 5.10 introduces a new `nonisolated(unsafe)` keyword to opt out of actor isolation checking for stored properties and variables. `nonisolated(unsafe)` can be used on any form of storage, including stored properties, local variables, and static or global variables.
 
-`nonisolated(unsafe)` can be used as a more granular opt-out for `Sendable` checking, eliminating the need for `@unchecked Sendable` wrapper types in many use cases:
+`nonisolated(unsafe)` can be used as a more granular opt-out for `Sendable` checking, eliminating the need for `@unchecked Sendable` conformances in many use cases. For example, the following code defines a `MyModel` class that contains a non-`Sendable` stored property `protectedState` with all access to `protectedState` guarded by a dispatch queue. `MyModel` can still use a checked `Sendable` conformance by applying `nonisolated(unsafe)` to `protectedState` so that all other properties are checked by the compiler:
 
 ```swift
 import Dispatch
