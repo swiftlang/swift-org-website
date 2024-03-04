@@ -60,21 +60,38 @@ You can find more details about the changes and additions to the full data isola
 
 Unsafe opt-outs, such as `@unchecked Sendable` conformances, are important for communicating that code is safe from data-races when it cannot be proven automatically by the compiler. These tools are necessary in cases where synchronization is implemented in a way that the compiler cannot reason about, such as through OS-specific primitives or when working with thread-safe types implemented in C/C++/Objective-C. However, `@unchecked Sendable` conformances are difficult to use correctly, because they opt the entire type out of data-race safety checking. In many cases, only one specific property in a type needs the opt-out, while the rest of the implementation adheres to static concurrency safety.
 
-Swift 5.10 introduces a new `nonisolated(unsafe)` keyword to opt out of actor isolation checking for stored properties and variables. `nonisolated(unsafe)` can be used on any form of storage, including stored properties, local variables, and static or global variables.
+Swift 5.10 introduces a new `nonisolated(unsafe)` keyword to opt out of actor isolation checking for stored properties and variables. `nonisolated(unsafe)` can be used on any form of storage, including stored properties, local variables, and global/static variables.
 
-`nonisolated(unsafe)` can be used as a more granular opt-out for `Sendable` checking, eliminating the need for `@unchecked Sendable` conformances in many use cases. For example, the following code defines a `MyModel` class that contains a non-`Sendable` stored property `protectedState` with all access to `protectedState` guarded by a dispatch queue. `MyModel` can still use a checked `Sendable` conformance by applying `nonisolated(unsafe)` to `protectedState` so that all other properties are checked by the compiler:
+For example, global and static variables can be accessed from anywhere in your code, so they are required to either be immutable and `Sendable`, or isolated to a global actor:
 
 ```swift
 import Dispatch
 
-// 'MutableData' is not 'Sendable'
-class MutableData { ... }
+struct MyData {
+  static let cacheQueue = DispatchQueue(...)
+  // All access to 'globalCache' is guarded by 'cacheQueue'
+  static var globalCache: [MyData] = []
+}
+```
 
-final class MyModel: Sendable {
-  private let queue = DispatchQueue(...)
+When building the above code with `-strict-concurrency=complete`, the compiler emits a warning:
 
-  // 'protectedState' is manually isolated by 'queue'
-  nonisolated(unsafe) private var protectedState: MutableData
+```
+warning: static property 'globalCache' is not concurrency-safe because it is non-isolated global shared mutable state
+  static var globalCache: [MyData] = []
+             ^
+note: isolate 'globalCache' to a global actor, or convert it to a 'let' constant and conform it to 'Sendable'
+```
+
+All uses of `globalCache` are guarded by `cacheQueue.async { ... }`, so this code is free of data races in practice. In this case, `nonisolated(unsafe)` can be applied to the static variable to silence the concurrency warning:
+
+```swift
+import Dispatch
+
+struct MyData {
+  static let cacheQueue = DispatchQueue(...)
+  // All access to 'globalCache' is guarded by 'cacheQueue'
+  nonisolated(unsafe) static var globalCache: [MyData] = []
 }
 ```
 
