@@ -12,7 +12,7 @@ A major goals of Swift's concurrency model is to define away the undefined behav
 
 **Swift 5.10 accomplishes full data isolation in the concurrency language model.** This important milestone has taken years of active development over many releases. The concurrency model was introduced in Swift 5.5 including `async`/`await`, actors, and structured concurrency. Swift 5.7 introduced `Sendable` as the fundamental concept for thread-safe types whose values can be shared across arbitrary concurrent contexts without introducing a risk of data races. And now, in Swift 5.10, full data isolation is enforced at compile time in all areas of the language when the complete concurrency checking option is enabled.
 
-Full data isolation in Swift 5.10 sets the stage for the next major release, Swift 6. Swift 6 will enforce full data isolation by default, and we will embark upon the transition to eliminate data races across the Swift ecosystem.
+Full data isolation in Swift 5.10 sets the stage for the next major release, Swift 6. The Swift 6.0 compiler will offer a new, opt-in Swift 6 language mode that will enforce full data isolation by default, and we will embark upon the transition to eliminate data races across the Swift ecosystem.
 
 Swift 5.10 enforces full data isolation conservatively, meaning there are some false positive reports of data races. A major focus of language development for the Swift 6 release is improving the usability of strict concurrency checking by mitigating false positive concurrency errors in common code patterns that are proven to be safe.
 
