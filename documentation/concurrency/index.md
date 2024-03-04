@@ -55,7 +55,7 @@ When using Swift 6.0 tools or later, use [`SwiftSetting.enableUpcomingFeature`](
 
 ## Using Xcode
 
-To enable complete concurrency checking in an Xcode project, set the "Swift Strict Concurrency" setting to "Complete" in the Xcode build settings. Alternatively, you can set `SWIFT_STRICT_CONCURRENCY` to `complete` in an xcconfig file:
+To enable complete concurrency checking in an Xcode project, set the "Strict Concurrency Checking" setting to "Complete" in the Xcode build settings. Alternatively, you can set `SWIFT_STRICT_CONCURRENCY` to `complete` in an xcconfig file:
 
 ```
 // In a Settings.xcconfig
