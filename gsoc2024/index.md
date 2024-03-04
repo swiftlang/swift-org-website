@@ -18,6 +18,12 @@ The Swift forums are powered by discourse, a discussion forums platform which al
 
 If you would like to reach out to a mentor privately, rather than making a public forums post, and the forums are not allowing you to send private messages (yet), please reach out to Konrad Malawski at `ktoso AT apple.com` directly via email with the `[gsoc2024]` tag in the email subject and describe the project you would like to work on – and we'll route you to the appropriate mentor.
 
+## Writing a proposal
+
+Getting familiar with the codebase you are interested in working on during GSoC helps to write a good proposal because it helps you get a better understanding of how everything works and how you might best approach the project you are interested in. How you want to do that is really up to you and your style of learning. You could just clone the repository and read through the source code and follow the execution path of a test case by setting a breakpoint and stepping through the different instructions, read the documentation that’s available or try to fix a simple bug in the codebase. The latter is how many open source contributors got started, but it’s really up to you. If you do want to go and fix a simple bug, our repositories contain a label “good first issue” that marks issues that should be easy to fix and doable by newcomers to the project.
+
+When it comes to writing the proposal, the [Google Summer of Code Guide](https://google.github.io/gsocguides/student/writing-a-proposal) contains general, good advice.
+
 ## Potential Projects
 
 We are currently collecting project ideas on the forums in the dedicated [GSoC](https://forums.swift.org/tag/gsoc-2024).
