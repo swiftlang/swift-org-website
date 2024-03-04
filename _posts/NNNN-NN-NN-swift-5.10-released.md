@@ -8,13 +8,13 @@ author: [hborla]
 
 Swift was designed to be safe by default, preventing entire categories of programming mistakes at compile time. Sources of undefined behavior in C-based languages, such as using variables before they're initialized or a use-after-free, are defined away in Swift.
 
-A major goals of Swift's concurrency model is to define away the undefined behavior that results from accessing memory from one thread at the same time that another thread is writing to the same memory. This kind of unsafety is called a _data race_, and data races make concurrent programs exceptionally difficult to write correctly. Swift solves this problem through _data isolation_ provided by actors and tasks, which guarantees mutually exclusive access to shared mutable state. Data isolation enforcement has been under active development since the initial release of Swift concurrency.
+An increasingly important source of undefined behavior is concurrent code that inadvertently accesses memory from one thread at the same time that another thread is writing to the same memory. This kind of unsafety is called a _data race_, and data races make concurrent programs exceptionally difficult to write correctly. Swift solves this problem through _data isolation_ provided by actors and tasks, which guarantees mutually exclusive access to shared mutable state. Data isolation enforcement has been under active development since 2020 when the [Swift concurrency roadmap](https://forums.swift.org/t/swift-concurrency-roadmap/41611) was posted.
 
 **Swift 5.10 accomplishes full data isolation in the concurrency language model.** This important milestone has taken years of active development over many releases. The concurrency model was introduced in Swift 5.5 including `async`/`await`, actors, and structured concurrency. Swift 5.7 introduced `Sendable` as the fundamental concept for thread-safe types whose values can be shared across arbitrary concurrent contexts without introducing a risk of data races. And now, in Swift 5.10, full data isolation is enforced at compile time in all areas of the language when the complete concurrency checking option is enabled.
 
-Full data isolation in Swift 5.10 sets the stage for the next major release, Swift 6. The Swift 6.0 compiler will offer a new, opt-in Swift 6 language mode that will enforce full data isolation by default, and we will embark upon the transition to eliminate data races across the Swift ecosystem.
+Full data isolation in Swift 5.10 sets the stage for the next major release, Swift 6. The Swift 6.0 compiler will offer a new, opt-in Swift 6 language mode that will enforce full data isolation by default, and we will embark upon the transition to eliminate data races across all software written in Swift.
 
-Swift 5.10 enforces full data isolation conservatively, meaning there are some false positive reports of data races. A major focus of language development for the Swift 6 release is improving the usability of strict concurrency checking by mitigating false positive concurrency errors in common code patterns that are proven to be safe.
+Swift 5.10 will produce data-race warnings in some circumstances where the code could be proven safe with additional compiler analysis. A major focus of language development for the Swift 6 release is improving the usability of strict concurrency checking by mitigating false positive concurrency errors in common code patterns that are proven to be safe.
 
 Read on to learn about full data isolation in Swift 5.10, new unsafe opt-outs for actor isolation checking, and the remaining concurrency evolution ahead of Swift 6.
 
@@ -22,7 +22,7 @@ Read on to learn about full data isolation in Swift 5.10, new unsafe opt-outs fo
 
 ### Full data isolation
 
-Swift 5.10 rounds out the data-race safety semantics in all corners of the language, and fixes numerous bugs in `Sendable` and actor isolation checking to strengthen the guarantees of complete concurrency checking. When writing code against `-strict-concurrency=complete`, Swift 5.10 will diagnose the potential for data races at compile time except where an explicit unsafe opt-out, such as `nonisolated(unsafe)` or `@unchecked Sendable`, is used.
+Swift 5.10 rounds out the data-race safety semantics in all corners of the language, and fixes numerous bugs in `Sendable` and actor isolation checking to strengthen the guarantees of complete concurrency checking. When building code with the compiler flag `-strict-concurrency=complete`, Swift 5.10 will diagnose the potential for data races at compile time except where an explicit unsafe opt-out, such as `nonisolated(unsafe)` or `@unchecked Sendable`, is used.
 
 For example, in Swift 5.9, the following code fails an isolation assertion at runtime due to a `@MainActor`-isolated initializer being evaluated outside the actor, but it was not diagnosed under `-strict-concurrency=complete`:
 
@@ -52,7 +52,7 @@ The above code admits data races. `MyModel.shared` is a `@MainActor`-isolated st
                 await
   ```
 
-The possible fixes for resolving the data race are 1) access `MyModel.shared` asynchronously using `await`, 2) make `MyModel.init` and `MyModel.shared` both `nonisolated` and move the code that requires the main actor into a separate isolated method, or 3) isolated `useShared()` to `@MainActor`.
+The possible fixes for resolving the data race are 1) access `MyModel.shared` asynchronously using `await`, 2) make `MyModel.init` and `MyModel.shared` both `nonisolated` and move the code that requires the main actor into a separate isolated method, or 3) isolate `useShared()` to `@MainActor`.
 
 You can find more details about the changes and additions to the full data isolation programming model in the [Swift 5.10 release notes](https://github.com/apple/swift/blob/release/5.10/CHANGELOG.md).
 
@@ -96,7 +96,7 @@ Note that without correct implementation of a synchronization mechanism to achie
 
 ## Language evolution ahead of Swift 6
 
-**The next release of Swift will be Swift 6.** The complete concurrency model in Swift 5.10 is conservative, and several Swift Evolution proposals are in active development to improve the usability of full data isolation by removing false postive data race errors. This work includes [lifting limitations on passing non-`Sendable` values across isolation boundaries](https://github.com/apple/swift-evolution/blob/main/proposals/0414-region-based-isolation.md) when the compiler determines there is no potential for concurrent access, [more effective `Sendable` inference for functions and key-paths](https://github.com/apple/swift-evolution/blob/main/proposals/0418-inferring-sendable-for-methods.md), and more. You can find the set of proposals that will round out Swift 6 at [Swift.org/swift-evolution](https://www.swift.org/swift-evolution/#?version=6.0).
+**The next release of Swift will be Swift 6.** The complete concurrency model in Swift 5.10 is overly restrictive, and several Swift Evolution proposals are in active development to improve the usability of full data isolation by removing false postive data-race errors. This work includes [lifting limitations on passing non-`Sendable` values across isolation boundaries](https://github.com/apple/swift-evolution/blob/main/proposals/0414-region-based-isolation.md) when the compiler determines there is no potential for concurrent access, [more effective `Sendable` inference for functions and key-paths](https://github.com/apple/swift-evolution/blob/main/proposals/0418-inferring-sendable-for-methods.md), and more. You can find the set of proposals that will round out Swift 6 at [Swift.org/swift-evolution](https://www.swift.org/swift-evolution/#?version=6.0).
 
 ## Next Steps
 
@@ -104,7 +104,7 @@ Note that without correct implementation of a synchronization mechanism to achie
 
 You can help shape the transition to the Swift 6 language mode by [trying out complete concurrency checking](/documentation/concurrency/) in your project and providing feedback on your experience.
 
-If you find any remaining soundness holes, including any corner cases where complete concurrency checking does not diagnose a data race at compile time, please [report an issue](https://github.com/apple/swift/issues/new/choose).
+If you find any remaining compiler bugs where complete concurrency checking does not diagnose a data race at compile time, please [report an issue](https://github.com/apple/swift/issues/new/choose).
 
 You can also provide feedback that helps improve the concurrency documentation, compiler error messages, and the upcoming Swift 6 migration guide. If you encounter a case where the compiler diagnoses a data-race warning that you don't understand or you're not sure how to resolve a given data-race warning, please start a [discussion thread on the Swift forums](https://forums.swift.org/tags/c/swift-users/15/concurrency) using the `concurrency` tag.
 
