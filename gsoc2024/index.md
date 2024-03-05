@@ -32,6 +32,35 @@ Potential mentors, please feel free to propose project ideas to this page direct
 
 You can browse previous year's project ideas here: [2023](https://www.swift.org/gsoc2023/), [2022](https://www.swift.org/gsoc2022/), [2021](https://www.swift.org/gsoc2021/), [2020](https://www.swift.org/gsoc2020/), [2019](https://www.swift.org/gsoc2019/).
 
+### Create Real-World Swift Macro Examples
+
+**Project size**: 90 hours
+
+**Estimated difficulty**: Easy
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+- Basic knowledge of SwiftSyntax.
+- Optional: Experience with documentation tools, particularly Swift's DocC.
+
+**Description**
+
+Swift Macros offer a powerful way to transform source code during compilation, streamlining the code generation process and minimizing repetitive manual tasks. The swift-syntax repository features [several examples](https://github.com/apple/swift-syntax/tree/main/Examples/Sources/MacroExamples) showcasing Swift Macros. These serve as a foundational starting point, illustrating various types of macros. However, they often present scenarios that may not directly align with everyday use cases encountered in real-world applications. Additionally, there is notable variability in how these examples handle diagnostics, with some macros requiring more detailed feedback mechanisms for incorrect usage. This situation highlights a valuable area for enhancement, aiming to provide more comprehensive guidance and practical applications for developers.
+
+This project is set to enrich the Swift community by enhancing the current suite of Swift Macro examples with real-world applicability and by introducing new, meticulously crafted examples. It will expand upon the foundational work in the swift-syntax repository, infusing it with comprehensive documentation and interactive tutorials created using DocC. Each example, both new and enhanced, will be carefully designed to showcase the use of different types of Swift Macros, equipped with practical diagnostics, unit tests, and detailed documentation. The initiative will also include the creation of DocC tutorials for some of the most sought-after and impactful Macros, providing an invaluable educational resource for the Swift community. Our aim is to illuminate the diverse capabilities of Swift Macros, highlighting their power and flexibility while sharing best practices for diagnostics, error handling, and testing. By building upon the existing examples and introducing new insights and techniques, this project promises to elevate the collective knowledge and utility of Swift Macros, fostering innovation and excellence within the ecosystem.
+
+**Expected outcomes/benefits/deliverables**
+
+- A comprehensive set of real-world Swift Macro examples, demonstrating practical applications across different types of Macros.
+- Detailed documentation for each example, including the rationale for using Macros, the problems they solve, and guides to their implementation, with an emphasis on diagnostics and error handling.
+- A series of high-quality DocC tutorials covering the creation and application of popular and useful Macros, offering an interactive and engaging learning experience.
+
+**Potential mentors**
+
+- [Alex Hoppen](https://github.com/ahoppen)
+- [Mateusz Bąk](https://github.com/Matejkob)
+
 ### Lexical scopes for swift-syntax
 
 **Project size**: 175 hours
