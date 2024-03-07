@@ -54,6 +54,10 @@
     description: |
       DocC is a documentation compiler that makes it easy for you to produce documentation for your Swift frameworks and packages.
       The compiler builds your documentation by combining the comments you write in source with extension files, articles, and tutorials that live alongside your package's source code.
+  - title: Enabling Complete Concurrency Checking
+    url: /documentation/concurrency/
+    description: |
+        Prepare for Swift 6 by enabling complete concurrency checking in your SwiftPM packages, Xcode projects, and CI scripts.
 #----------------------------------------------------
 - header: Contributing
   pages:
