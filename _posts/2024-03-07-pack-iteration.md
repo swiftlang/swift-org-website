@@ -27,9 +27,9 @@ The Swift standard library provided comparison operators for tuples up to only 6
 ```swift
 func == (lhs: (), rhs: ()) -> Bool
 
-func == <A, B>(lhs: (A, B), rhs: (A, B)) -> Bool where A: Comparable, B: Comparable
+func == <A, B>(lhs: (A, B), rhs: (A, B)) -> Bool where A: Equatable, B: Equatable
 
-func == <A, B, C>(lhs: (A, B, C), rhs: (A, B, C)) -> Bool where A: Comparable, B: Comparable, C: Comparable
+func == <A, B, C>(lhs: (A, B, C), rhs: (A, B, C)) -> Bool where A: Equatable, B: Equatable, C: Equatable
 
 // and so on, up to 6-element tuples
 ```
@@ -41,12 +41,12 @@ Parameter packs added the ability to abstract a function over a variable number 
 This means that we can lift the 6-element limit using an `==` operator written like this:
 
 ```swift
-func == <each Element: Comparable>(lhs: (repeat each Element), rhs: (repeat each Element)) -> Bool
+func == <each Element: Equatable>(lhs: (repeat each Element), rhs: (repeat each Element)) -> Bool
 ```
 
 Let's break down the types we see in the above signature: 
 
-- Note `each Element` in the list of generic parameters. The `each` keyword indicates that `Element` is a *type parameter pack*, meaning that it can accept any number of generic arguments. Just like with non-pack (*scalar*) generic parameters, we can declare a conformance requirement on the type parameter pack. In this case, we require each `Element` type to conform to the `Comparable` protocol. 
+- Note `each Element` in the list of generic parameters. The `each` keyword indicates that `Element` is a *type parameter pack*, meaning that it can accept any number of generic arguments. Just like with non-pack (*scalar*) generic parameters, we can declare a conformance requirement on the type parameter pack. In this case, we require each `Element` type to conform to the `Equatable` protocol. 
 - This function takes in two tuples, `lhs` and `rhs`, as arguments. In both cases, the tuple's element type is `repeat each Element`. This is called the *pack expansion type*, which consists of a `repeat` keyword followed by a *repetition pattern*, which has to contain a pack reference. In our case, the repetition pattern is `each Element`. 
 - At the call site, the user provides *value parameter packs* for each tuple that will be substituted into their corresponding type parameter packs. At runtime, the repetition pattern will be repeated for each element in the substituted pack.
 
