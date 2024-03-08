@@ -15,7 +15,7 @@ This post will show you how to make the best use of pack iteration.
 First, let's review parameter packs. Consider the following code:
 
 ```swift
-let areEqual = (1, true, "hello") == (1, 2.0, false)
+let areEqual = (1, true, "hello") == (1, false, "hello")
 print(areEqual)
 // false
 ```
@@ -53,13 +53,13 @@ Let's break down the types we see in the above signature:
 With the tuple equality operator implemented using parameter packs, let's look at the call site again to understand these concepts better.
 
 ```swift
-let areEqual = (1, true, "hello") == (1, 2.0, false)
+let areEqual = (1, true, "hello") == (1, false, "hello")
 print(areEqual)
 // false
 ```
 
-The call to `==` substitutes the type pack `{Int, Bool, String}` for `Element` type pack of `lhs`, and `{Int, Double, Bool}` for `Element` type pack of `rhs`. Note that the length of these two packs must match for the substitution to succeed.
-Finally, the function `==` is called with value packs `{1, true, "hello"}` for the value pack of the `lhs` tuple and `{1, 2.0, false}` for the value pack of the `rhs` tuple.
+The call to `==` substitutes the type pack `{Int, Bool, String}` for the `Element` type pack. Note that both `lhs` and `rhs` have the same type.
+Finally, the function `==` is called with value packs `{1, true, "hello"}` for the value pack of the `lhs` tuple and `{1, false, "hello"}` for the value pack of the `rhs` tuple.
 
 ## Why Pack Iteration?
 
