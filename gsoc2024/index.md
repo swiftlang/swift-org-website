@@ -332,6 +332,37 @@ The ideal outcome of this project would be for Swift macros to be able to opt in
 
 - [Doug Gregor](https://github.com/DougGregor)
 
+### Introduce a Swift Adjancency-Graph Package
+
+**Project size**: 175 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Proficiency in Swift, willingness to read C++ for inspiration
+- Interest in Graph algorithms
+
+**Description**
+
+Graphs are ubiquitous abstract objects that model relationships between entities. It is therefore not surprising that practical applications of graph algorithms can be found almost everywhere: network relationships, acceleration structures, entity component systems, built dependencies of a project, graph neural networks, to name but a few. You may already be using a specific implementation of a graph, or you may have a query that could be solved by the proper use of a graph algorithm. Currently, Swift lacks a portable way to reuse structured graph traversal without repeating code. This can be a burden if you need to adapt your graph algorithm to a different data structure.
+
+Efficient graph algorithms can be implemented based on existing protocol requirements from the Swift standard library. This project aims to introduce a new (Adjacency) Graph package, which lifts graph algorithms from the underlying data structures. One idea to achieve this is to provide a new AdjacencyGraph protocol as a random-access collection of collections. To be ready for use, this proposal includes the addition of reusable components for graph algorithms such as structured traversal, as well as an adjancency Graph that is not a trivial composition of Swift Collections as a basic example. This package complements the [Swift Collections](https://github.com/apple/swift-collections) and [Swift Algorithms](https://github.com/apple/swift-algorithms) packages. 
+
+
+**Expected outcomes/benefits/deliverables**
+
+- Create a brand new `swift-adjacency-graph` package
+- Find a balance between the minimal requirements for a adjacency graph protocol in Swift and practical use cases.
+- Implement structured traversal of graphs independent of the underlying data structure, e.g. breadth-first, depth-first traversals
+- Implement Dijkstra shortest path, Bellman-Ford shortest path, Topological sorting algorithms.
+We expect that this project will pave the way for an asynchronous version of portable graph algorithms, just like Swift Algorithms did for Swift Async Algorithms.
+We hope to inspire other contributors to use this Package in the future to create querying tools in [Swift Package Manager](https://github.com/apple/swift-package-manager). Something like [Bazel queries](https://bazel.build/query/guide#miscellaneous-uses) to trace dependencies inside a Swift project.
+
+**Potential mentors**
+
+- [Karoy Lorentey](https://github.com/lorentey)
+- [Stephen Canon](https://github.com/stephentyrone)
 
 ### Project topic proposal template 
 
