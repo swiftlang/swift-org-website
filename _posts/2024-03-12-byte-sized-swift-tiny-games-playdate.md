@@ -434,6 +434,6 @@ However, with the issues now resolved, creating Playdate games in Swift is a str
 
 You can find all the code examples mentioned in this post in the [swift-playdate-examples](https://github.com/apple/swift-playdate-examples) repository with accompanying "Getting Started" documentation.
 
-I hope this post encourages you to explore the possibilities of using Swift in unconventional environments. Feel free to reach out with your experiences, questions, or game ideas on the [Swift Forums](https://forums.swift.org)!
+I hope this post encourages you to explore the possibilities of using Swift in unconventional environments. Feel free to reach out with your experiences, questions, or game ideas on the [Swift Forums](https://forums.swift.org/t/byte-sized-swift-building-tiny-games-for-the-playdate/70615)!
 
 Happy coding! 🎮
