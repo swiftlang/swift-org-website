@@ -1,0 +1,31 @@
+<div class="authors">
+  {% for page_author in include.authors %}
+    {% assign author = site.data.authors[page_author] %}
+    {% if author.name %}
+      <div class="byline">
+        {% if author.gravatar %}
+          <img src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64&d=mp" alt="{{ author.name }}"/>
+        {% elsif author.github %}
+          <img src="https://www.github.com/{{ author.github }}.png?size=64" alt="{{ author.name }}"/>
+        {% else %}
+          <img src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y" alt="{{ author.name }}"/>
+        {% endif %}
+        <span class="author">
+          {% if author.github %}
+            <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github}}) on GitHub">{{ author.name }}</a>
+          {% else %}
+            {{ author.name }}
+          {% endif %}
+        </span>
+      </div>
+      {% if page.about %}
+        {% assign about = page.about %}
+      {% elsif author.about %}
+        {% assign about = author.about %}
+      {% endif %}
+      {% if about %}
+        <div class="about">{{ about }}</div>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>

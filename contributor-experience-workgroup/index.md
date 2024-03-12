@@ -32,6 +32,7 @@ The current workgroup members with their respective Swift Forums usernames:
 * Anthony Latsis ([@anthonylatsis](https://forums.swift.org/u/anthonylatsis))
 * Devanshi Modha (Diversity in Swift champion) ([@devanshimodha](https://forums.swift.org/u/devanshimodha))
 * Egor Zhdan ([@egor.zhdan](https://forums.swift.org/u/egor.zhdan))
+* Harshita Pathipati ([@hpathipati](https://forums.swift.org/u/hpathipati))
 * Holly Borla ([@hborla](https://forums.swift.org/u/hborla))
 * Luciano Almeida ([@LucianoPAlmeida](https://forums.swift.org/u/LucianoPAlmeida))
 * Max Desiatov ([@Max_Desiatov](https://forums.swift.org/u/max_desiatov))

@@ -1,3 +1,198 @@
+- date: 2024-03-07 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-03-07-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-03-07-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-03-07-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-03-06 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-03-06-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-03-06-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-03-06-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-03-05 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-03-05-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-03-05-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-03-05-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-03-04 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-03-04-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-03-04-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-03-04-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-03-03 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-03-03-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-03-03-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-03-03-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-03-01 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-03-01-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-03-01-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-03-01-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-29 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-29-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-29-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-29-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-15 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-15-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-15-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-15-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-14 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-14-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-14-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-14-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-13 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-13-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-13-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-13-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-12 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-12-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-12-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-12-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-11 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-11-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-11-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-11-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-10 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-10-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-10-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-10-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-08 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-08-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-08-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-08-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-07 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-07-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-07-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-07-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-05 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-05-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-05-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-05-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-04 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-04-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-04-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-04-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-03 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-03-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-03-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-03-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-02-02 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-02-02-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-02-02-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-02-02-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-30 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-30-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-30-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-30-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-22 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-22-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-22-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-22-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-21 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-21-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-21-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-21-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-20 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-20-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-20-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-20-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-19 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-19-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-19-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-19-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-18 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-18-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-18-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-18-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-17 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-17-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-17-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-17-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-16 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-16-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-16-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-16-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-15 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-15-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-15-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-15-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-14 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-14-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-14-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-14-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-13 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-13-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-13-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-13-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-11 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-11-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-11-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-11-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-08 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-08-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-08-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-08-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-07 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-07-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-07-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-07-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-06 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-06-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-06-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-06-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-04 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-04-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-04-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-04-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-01-03 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-01-03-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-01-03-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-01-03-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-12-21 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-12-21-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-12-21-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-12-21-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-12-17 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-12-17-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-12-17-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-12-17-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2023-12-15 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2023-12-15-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2023-12-15-a-centos7.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2023-12-15-a-centos7.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2023-12-07 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2023-12-07-a
   download: swift-DEVELOPMENT-SNAPSHOT-2023-12-07-a-centos7.tar.gz

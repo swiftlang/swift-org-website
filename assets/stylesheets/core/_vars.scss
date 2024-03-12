@@ -1,6 +1,8 @@
 :root {
- --border-radius: 4px;
- --content-margin-bottom: 1em;
+  --border-radius: 4px;
+  --content-margin-bottom: 1em;
+  --navigation-mobile-breakpoint: 68rem;
+  --content-mobile-breakpoint: 68rem;
 }
 
 @mixin vars-light() {

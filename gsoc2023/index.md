@@ -129,7 +129,7 @@ SwiftPM currently supports a handful of hardcoded templates that can act as a st
 
 **Recommended skills**
 
-- Basic proficiency with Swift 
+- Basic proficiency with Swift
 - Familiarity with SwiftNIO or other event loop systems
 
 **Description**
@@ -145,11 +145,11 @@ The goal is to support the fundamental commands and expose as an asynchronous-fi
 - [Franz Bunsh](https://github.com/FranzBusch)
 
 
-### Swift-DocC 
+### Swift-DocC
 
 #### Swift-DocC Authoring Localization Support
 
-**Project Size**: Medium 
+**Project Size**: Medium
 
 **Recommended skills**
 
@@ -170,4 +170,4 @@ Technical design and implementation for authoring localized documentation.
 **Potential mentors**
 
 - [Bina Maniar](https://github.com/binamaniar)
-- [Marina Aísa](https://github.com/marinaaisa) 
+- [Marina Aísa](https://github.com/marinaaisa)

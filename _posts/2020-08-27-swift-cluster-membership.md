@@ -33,13 +33,13 @@ At a high level, SWIM works like this:
 * If those pings fail, the origin peer would receive `.nack` ("negative acknowledgement") messages back, and due to lack of `.ack`s resulting in the peer being marked as `.suspect`.
 
 
-![image](/assets/images/swim-blog/ping_pingreq_cycle.png)
+![SWIM ping diagram](/assets/images/swim-blog/ping_pingreq_cycle.png)
 
 The above mechanism, serves not only as a failure detection mechanism, but also as a gossip mechanism, which carries information about known members of the cluster. This way members eventually learn about the status of their peers, even without having them all listed upfront. It is worth pointing out however that this membership view is *[weakly-consistent](https://en.wikipedia.org/wiki/Weak_consistency)*, which means there is no guarantee (or way to know, without additional information) if all members have the same exact view on the membership at any given point in time. However, it is an excellent building block for higher-level tools and systems to build their stronger guarantees on top.
 
 Once the failure detection mechanism detects an unresponsive node, it eventually is marked as  `.dead` resulting in its irrevocable removal from the cluster. Our implementation offers an optional extension, adding an `.unreachable` state to the possible states, however most users will not find it necessary and it is disabled by default. For details and rules about legal status transitions refer to [`SWIM.Status`](https://github.com/apple/swift-cluster-membership/blob/main/Sources/SWIM/Status.swift#L18-L39) or the following diagram:
 
-![image](/assets/images/swim-blog/swim_lifecycle.png)
+![SWIM lifecycle diagram](/assets/images/swim-blog/swim_lifecycle.png)
 
 The way Swift Cluster Membership implements protocols, is by offering “*Instances*” of them. For example, the SWIM implementation is encapsulated in the runtime agnostic `SWIM.Instance` which needs to be “driven” or “interpreted” by some glue code between a networking runtime and the instance itself. We call those glue pieces of an implementation “*Shells*”, and the library ships with a `SWIMNIOShell` implemented using [SwiftNIO](https://www.github.com/apple/swift-nio)’s `DatagramChannel` that performs all messaging asynchronously over [UDP](https://searchnetworking.techtarget.com/definition/UDP-User-Datagram-Protocol). Alternative implementations can use completely different transports, or piggy back SWIM messages on some other existing gossip system etc.
 

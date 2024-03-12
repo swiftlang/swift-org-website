@@ -5,7 +5,7 @@ title: Wrapping C/C++ Library in Swift
 author: [etcwilde, ktoso, yim-lee]
 ---
 
-There are many great libraries out there that are written in C/C++. It is possible to 
+There are many great libraries out there that are written in C/C++. It is possible to
 make use of these libraries in your Swift code without having to rewrite any of them
 in Swift. This article will explain a couple of ways to acheive this and best practices
 when working with C/C++ in Swift.
@@ -17,7 +17,7 @@ when working with C/C++ in Swift.
     - One convention is to prefix the module name with `C`. For example, `CDataStaxDriver`.
 3. Add the C/C++ library's source code directory as Git submodule under `Sources/CMyLib`.
     - If set up properly, there should be a `.gitmodules` file in the Swift package's root directory with contents like this:
-  
+
 	```
 	[submodule "my-lib"]
         	path = Sources/CMyLib/my-lib
@@ -31,13 +31,13 @@ when working with C/C++ in Swift.
       name: "CMyLib",
       dependencies: [],
       exclude: [
-          // Relative paths under 'CMyLib' of the files 
+          // Relative paths under 'CMyLib' of the files
           // and/or directories to exclude. For example:
           // "./my-lib/src/CMakeLists.txt",
           // "./my-lib/tests",
       ],
       sources: [
-          // Relative paths under 'CMyLib' of the source 
+          // Relative paths under 'CMyLib' of the source
           // files and/or directories. For example:
           // "./my-lib/src/foo.c",
           // "./my-lib/src/baz",
@@ -81,7 +81,7 @@ To use custom implementation instead of what comes with the C/C++ library:
 
 ## CMake
 
-This example is geared toward importing a C library into Swift. You'll need to obtain the library, provide a modulemap so that Swift can import it, and then link against it. The mechanics are largely the same for C++, and an example of how to bi-directionally interop with a C++ library built as part of a single project is available in the bidirectional cxx interop project in the [Swift-CMake examples repository](http:// https://github.com/apple/swift-cmake-examples/tree/main/3_bidirectional_cxx_interop).
+This example is geared toward importing a C library into Swift. You'll need to obtain the library, provide a modulemap so that Swift can import it, and then link against it. The mechanics are largely the same for C++, and an example of how to bi-directionally interop with a C++ library built as part of a single project is available in the bidirectional cxx interop project in the [Swift-CMake examples repository](https://github.com/apple/swift-cmake-examples/tree/main/3_bidirectional_cxx_interop).
 
 
 ### Obtaining the library
@@ -129,7 +129,7 @@ This example downloads zlib v1.3 from GitHub, and builds it. Since we have set a
     * Finds the library and header from the sysroot. By default, CMake will look at the root of your OS as the sysroot, but can be isolated to other sysroots for cross-compilation.
     * This option is good for picking up system dependencies from the base system or sysroot, or giving the distributor of your project the option of using a prebuilt project with the use of `<PackageName>_ROOT`.
     * More details are available at [https://cmake.org/cmake/help/v3.27/command/find_package.html](https://cmake.org/cmake/help/v3.27/command/find_package.html)
-    
+
  The example of wrapping an existing C library in Swift using CMake will use `find_package`, a custom module-map file, and a Virtual Filesystem (VFS) overlay, as well as a helper layer to migrate parts of the SQLite codebase to something that Swift can import.
 
 ### Getting started
@@ -352,51 +352,3 @@ public struct WriteOptions: ~Copyable {
 
 The downside of non-copyable types is that currently they cannot be used in all contexts. For example in Swift 5.9 it is not possible to store a non-copyable type as a field, or pass them through closures (as the closure could be used many times, which would break the uniqueness that a non-copyable type needs to guarantee). The upside is that, unlike classes, no reference counting is performed on non-copyable types.
 
-
-<style>
-@media only print {
-  nav { display: none; }
-
-  article header h1::after {
-    content: "DRAFT POST for Swift.org";
-    display: block;
-    font-size: 1.75rem;
-    margin-top: .5em;
-    color: crimson;
-    font-weight: 600;
-  }
-}
-</style>
-
-<hr>
-Contributed by
-    {% for page_author in page.author %}
-{% assign author = site.data.authors[page_author] %}
-{% if author.name %}
-  <div class="article-byline">
-    {% if author.gravatar %}
-      <img src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64&d=mp" alt="{{ author.name }}"/>
-    {% else %}
-      <img src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y" alt="{{ author.name }}"/>
-    {% endif %}
-
-    <span class="author">
-      {% if author.twitter %}
-        <a href="https://twitter.com/{{ author.twitter }}/" rel="nofollow" title="{{ author.name }} (@{{ author.twitter}}) on Twitter">{{ author.name }}</a>
-      {% elsif author.github %}
-        <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github}}) on GitHub">{{ author.name }}</a>
-      {% else %}
-        {{ author.name }}
-      {% endif %}
-    </span>
-  </div>
-  {% if page.about %}
-    {% assign about = page.about %}
-  {% elsif author.about %}
-    {% assign about = author.about %}
-  {% endif %}
-  {% if about %}
-  <div class="article-about">{{ about }}</div>
-  {% endif %}
-{% endif %}
-{% endfor %}

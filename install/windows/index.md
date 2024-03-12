@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: page
 title: Windows Installation Options
 ---
-
-# Windows Installation Options
 
 ## Dependencies
 

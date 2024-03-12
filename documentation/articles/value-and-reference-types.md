@@ -102,7 +102,7 @@ In this case, you can’t fully understand what is going on in one part of your 
 
 One advantage of using value types is that you can be certain no other place in your program can affect the value. You can reason about the code in front of you without needing to know what else is happening elsewhere.
 
-This makes your code easier to understand and prevents bugs from accidental or unexpected changes to shared mutable state. 
+This makes your code easier to understand and prevents bugs from accidental or unexpected changes to shared mutable state.
 
 ### Choosing Value or Reference Types
 Going back to the example of sharing a document, it can be very useful for both you and your friend to be able to see and edit the same document.
@@ -126,57 +126,9 @@ You might have a type that is a more complex struct that contains an instance of
 ### Collections are Value Types
 But in Swift, composing value types doesn’t stop with structures and enumerations.
 
-Although in many languages, collections such as arrays and dictionaries are reference types, in Swift the standard collections `Array`, `Dictionary` and `String` are all value types. 
+Although in many languages, collections such as arrays and dictionaries are reference types, in Swift the standard collections `Array`, `Dictionary` and `String` are all value types.
 
 This means a struct can contain an array of structs, maybe a dictionary of key value pairs, a set of enums. As long as everything is composed of value types, an instance of even a complex type is treated as a value.
 
 ### Conclusion
 Understanding what value types and reference types are and the differences in how they behave is an important part of learning Swift and being able to reason about your code. The choice between the two often comes down to a choice between declaring a type as a `struct` or a `class`. You can learn more about structures and class in the [Structures and Classes](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures) chapter of *The Swift Programming Language*.
-
-<style>
-@media only print {
-  nav { display: none; }
-
-  article header h1::after {
-    content: "DRAFT POST for Swift.org";
-    display: block;
-    font-size: 1.75rem;
-    margin-top: .5em;
-    color: crimson;
-    font-weight: 600;
-  }
-}
-</style>
-
-<hr>
-Contributed by
-    {% for page_author in page.author %}
-{% assign author = site.data.authors[page_author] %}
-{% if author.name %}
-  <div class="article-byline">
-    {% if author.gravatar %}
-      <img src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64&d=mp" alt="{{ author.name }}"/>
-    {% else %}
-      <img src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y" alt="{{ author.name }}"/>
-    {% endif %}
-
-    <span class="author">
-      {% if author.twitter %}
-        <a href="https://twitter.com/{{ author.twitter }}/" rel="nofollow" title="{{ author.name }} (@{{ author.twitter}}) on Twitter">{{ author.name }}</a>
-      {% elsif author.github %}
-        <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github}}) on GitHub">{{ author.name }}</a>
-      {% else %}
-        {{ author.name }}
-      {% endif %}
-    </span>
-  </div>
-  {% if page.about %}
-    {% assign about = page.about %}
-  {% elsif author.about %}
-    {% assign about = author.about %}
-  {% endif %}
-  {% if about %}
-  <div class="article-about">{{ about }}</div>
-  {% endif %}
-{% endif %}
-{% endfor %}

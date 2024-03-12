@@ -1,11 +1,18 @@
 ---
 layout: default
 ---
-
 <article class="page">
-  <header>
-    <h1>{{ page.title }}</h1>
-  </header>
-
+  {% unless page.hideTitle %}
+    {% if page.title %}
+      <header>
+        <h1>{{ page.title }}</h1>
+      </header>
+    {% endif %}
+  {% endunless %}
   {{ content }}
+  {% if page.author %}
+    <hr>
+    <p>Contributed by</p>
+    {% include authors.html authors=page.author %}
+  {% endif %}
 </article>

@@ -65,8 +65,6 @@
   --color-code-background: var(--color-fill-secondary);
   --color-code-collapsible-background: var(--color-fill-tertiary);
   --color-code-collapsible-text: var(--color-figure-gray-secondary-alt);
-  --color-code-line-highlight: #{change-color(light-color(figure-blue), $alpha: 0.08)};
-  --color-code-line-highlight-border: var(--color-figure-blue);
   --color-code-plain: var(--color-figure-gray);
   --color-content-table-content-color: var(--color-fill-secondary);
   --color-dropdown-background: #{transparentize(light-color(fill), 0.2)};

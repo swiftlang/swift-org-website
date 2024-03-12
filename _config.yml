@@ -21,7 +21,7 @@ defaults:
             permalink: /blog/:title/
             layout: "post"
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 whitelist:

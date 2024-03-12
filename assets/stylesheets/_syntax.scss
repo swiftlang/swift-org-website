@@ -1,4 +1,4 @@
-.highlight {
+pre.highlight {
   background: var(--color-code-background);
 
   .c,   /* Comment */
@@ -117,4 +117,18 @@
 
 .language-console {
   color: var(--color-syntax-plain-text);
+}
+
+
+// Explicit syntax highlighting for C++ code blocks:
+
+.language-cpp .cp,
+.language-cpp .kt,
+.language-cpp .nl,
+.language-cpp .o,
+.language-c\+\+ .cp,
+.language-c\+\+ .kt,
+.language-c\+\+ .nl,
+.language-c\+\+ .o {
+  color: var(--color-syntax-keywords);
 }

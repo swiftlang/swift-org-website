@@ -74,4 +74,4 @@ list](/community/#swift-evolution).
 [swift-3-api-guidelines-repo]: https://github.com/apple/swift-3-api-guidelines-review  "Swift 3 API Design Guidelines review repository"
 [objc-cocoa-guidelines]: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html  "Objective-C Coding Guidelines for Cocoa"
 [swift-evolution]: /contributing/#evolution-process  "Swift evolution process"
-[core-libraries]: /core-libraries  "Swift core libraries"
+[core-libraries]: /documentation/core-libraries  "Swift core libraries"
