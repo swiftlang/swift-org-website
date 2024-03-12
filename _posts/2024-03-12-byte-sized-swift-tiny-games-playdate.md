@@ -146,7 +146,7 @@ I started by locating the Playdate C header files:
 $ ls $HOME/Developer/PlaydateSDK/C_API/
 Examples     buildsupport pd_api       pd_api.h
 
-$ ls $HOME/Developer/PlaydateSDK/C_API/
+$ ls $HOME/Developer/PlaydateSDK/C_API/pd_api
 pd_api_display.h     pd_api_gfx.h         pd_api_lua.h         pd_api_sound.h       pd_api_sys.h
 pd_api_file.h        pd_api_json.h        pd_api_scoreboards.h pd_api_sprite.h
 ```
