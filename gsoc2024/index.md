@@ -16,7 +16,11 @@ When posting on the forums about GSoC this year, please use the [`gsoc-2024` tag
 
 The Swift forums are powered by discourse, a discussion forums platform which also has a number of spam avoidance mechanisms built-in. If this is your first time joining the forums, you _may_ not be able to send mentors a direct-message, as this requires a minimum amount of prior participation before the "send private message" feature is automatically enabled.
 
-If you would like to reach out to a mentor privately, rather than making a public forums post, and the forums are not allowing you to send private messages (yet), please reach out to Konrad Malawski at `ktoso AT apple.com` directly via email with the `[gsoc2024]` tag in the email subject and describe the project you would like to work on – and we'll route you to the appropriate mentor.
+To start things off, we recommend starting a new thread, or joining an existing discussion about the project you are interested in on the dedicated [GSoC forums category](https://www.swift.org/gsoc2024/). You should also _tag_ your thread with the `gsoc-2024` tag. It is best if you start a thread after having explore the topic a little bit already, and come with specific questions about parts of the project you are not sure about. For example, you may have tried to build the project, but not sure where a functionality would be implemented; or you may not be sure about the scope of the project.
+
+Please use the forums to tag and communicate with the project's mentor to figure out the details of the project, such that when it comes to writing the official proposal plan, and submitting it on the Summer of Code website, you have a firm understanding of the project and can write a good, detailed proposal (see next section about hints on that).
+
+If you would like to reach out to a mentor privately, rather than making a public forums post, and the forums are not allowing you to send private messages (yet), please reach out to Konrad Malawski at `ktoso AT apple.com` directly via email with the `[gsoc2024]` tag in the email subject and describe the project you would like to work on – and we'll route you to the appropriate mentor. In general public communications on the forums are preferred though, as this is closer to the normal open-source way of getting things done in the Swift project.
 
 ## Writing a proposal
 
