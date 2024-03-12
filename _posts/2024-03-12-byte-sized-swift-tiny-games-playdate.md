@@ -8,7 +8,9 @@ author: [rauhul]
 
 I'm excited to share [swift-playdate-examples](https://github.com/apple/swift-playdate-examples), a technical demonstration of using Swift to build games for [Playdate](https://play.date/), a handheld game system by [Panic](https://panic.com).
 
-![A screencapture of Swift Break running on Playdate hardware mirrored to a Mac.](/assets/images/2024-03-12-byte-sized-swift-tiny-games-playdate/playdate-mirror-video-swiftbreak.mp4){: style="border-radius: 15px;"}
+<video title="A screencapture of Swift Break running on Playdate hardware mirrored to a Mac." autoplay loop muted style="width: 100%; border-radius: 15px;">
+  <source src="{{site.url}}/assets/images/2024-03-12-byte-sized-swift-tiny-games-playdate/playdate-mirror-video-swiftbreak.mp4" type="video/mp4">
+</video>
 
 ## Why Swift?
 
@@ -296,7 +298,9 @@ For some reason, when the frame-update function pointer was called, the game wou
 
 Once again, I deployed my game to the Playdate and ... it actually worked! You can see the game in action below:
 
-![A video of Conway's Game of Life running on Playdate hardware mirrored to a Mac.](/assets/images/2024-03-12-byte-sized-swift-tiny-games-playdate/playdate-mirror-video-life.mp4){: style="border-radius: 15px;"}
+<video title="A video of Conway's Game of Life running on Playdate hardware mirrored to a Mac." autoplay loop muted style="width: 100%; border-radius: 15px;">
+  <source src="{{site.url}}/assets/images/2024-03-12-byte-sized-swift-tiny-games-playdate/playdate-mirror-video-life.mp4" type="video/mp4">
+</video>
 
 I then integrated my manual compilation steps into the Makefiles found in the Playdate SDK, going through a number of options before landing on the final solution found in `swift-playdate-examples`. The result of this effort was a single `make` command to build a `pdx` compatible with both the simulator and hardware!
 
@@ -365,7 +369,9 @@ I nailed down the basics pretty quickly, but couldn't resist adding extra featur
 
 This feature required calculating a normal vector relative to a hypothetical curve representing a rounded paddle and then reflecting the ball's velocity about the normal. Here's a visualization of the intended behavior:
 
-![A Desmos geometric animation of Swift Break ball bouncing logic.](/assets/images/2024-03-12-byte-sized-swift-tiny-games-playdate/desmos-ball-bounce.mp4){: style="border-radius: 15px;"}
+<video title="A Desmos geometric animation of Swift Break ball bouncing logic." autoplay loop muted style="width: 100%; border-radius: 15px;">
+  <source src="{{site.url}}/assets/images/2024-03-12-byte-sized-swift-tiny-games-playdate/desmos-ball-bounce.mp4" type="video/mp4">
+</video>
 
 > Note: Making the animation for this post ironically helped me root cause a bug in the bouncing logic. Under some combinations of entry angle and normal angle, the current design can cause the ball to bounce _down_ into the paddle instead of up.
 
@@ -424,7 +430,9 @@ $ swiftc \
 
 With these adjustments, I attempted once more, and _finally_ "Swift Break" successfully ran on the Playdate hardware! I've included a brief video showcasing the game below:
 
-![A video of Swift Break running on Playdate hardware mirrored to a Mac.](/assets/images/2024-03-12-byte-sized-swift-tiny-games-playdate/playdate-mirror-video-swiftbreak.mp4){: style="border-radius: 15px;"}
+<video title="A screencapture of Swift Break running on Playdate hardware mirrored to a Mac." autoplay loop muted style="width: 100%; border-radius: 15px;">
+  <source src="{{site.url}}/assets/images/2024-03-12-byte-sized-swift-tiny-games-playdate/playdate-mirror-video-swiftbreak.mp4" type="video/mp4">
+</video>
 
 ## Wrapping Up
 
