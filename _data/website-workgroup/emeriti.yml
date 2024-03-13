@@ -9,3 +9,11 @@
 - name: Michael Schinis
   github: mschinis
   affiliation:
+
+- name: Tim Triemstra
+  github: TimTr
+  affiliation: Apple
+
+- name: Tom Doron
+  github: tomerd
+  affiliation: Apple
