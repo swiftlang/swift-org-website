@@ -1,5 +1,5 @@
-# - name: "ServerSide.swift Conference"
+# - name: "Title Text"
 #   description: "Description Text"
 #   date: YYYY-MM-DD HH:MM:SS
-#   location: "Location Text"
 #   link: "URL"
+#   external: true

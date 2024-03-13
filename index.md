@@ -91,12 +91,22 @@ atom: true
 
 ## Community
 
+{% assign socials = site.data.socials %}
 {% assign events = site.data.events | where_exp:"event", "event.date > site.time" %}
 <ul class="community {% unless events.size > 0 %}connect-only{% endunless %}" markdown="1">
-  <li>
-    <h3>Connect</h3>
-    <p>Stay up-to-date with the latest in the Swift community.</p>
-    <div class="link-grid">
+  <li class="{% unless socials.size > 0 and events.size > 0 %}no-grid{% endunless %}">
+    <div>
+      <h3>Connect</h3>
+      <p>Stay up-to-date with the latest in the Swift community.</p>
+    </div>
+    {% if socials.size > 0 %}
+      <ul class="article-list">
+        {%- for social in socials %}
+          {% include list-element.html element=social %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <div class="link-grid {% unless socials.size > 0 %}link-grid-only{% endunless %} {% if socials.size > 0 %}link-grid-small{% endif %}">
       <ul>
         <li>
           <a href="/blog/">
@@ -105,11 +115,11 @@ atom: true
         </li>
         <li>
           <a href="https://forums.swift.org">
-            <img src="/assets/images/icon-swift.svg" /><span>Visit the Swift forums</span>
+            <img src="/assets/images/icon-discourse.svg" /><span>Visit the Swift forums</span>
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/swiftlang" class="link-external">
+          <a target="_blank" href="https://twitter.com/swiftlang" class="link-external">
             <img src="/assets/images/icon-x.svg" class="with-invert" /><span>Follow @swiftlang on X</span>
           </a>
         </li>
@@ -122,15 +132,7 @@ atom: true
       <p>Check the upcoming Swift related events.</p>
       <ul class="event-list">
         {%- for event in events %}
-          <li>
-            <h4>
-              <a href="#">{{ event.name }}</a>
-            </h4>
-            <time pubdate datetime="{{ event.date | date_to_xmlschema }}">
-              {{ event.date | date: "%B %-d, %Y" }}
-            </time>
-            <p>{{ event.description }}</p>
-          </li>
+          {% include list-element.html element=event %}
         {% endfor %}
       </ul>
     </li>

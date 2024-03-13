@@ -172,10 +172,15 @@
 
 .community {
   list-style: none;
-  display: grid;
   gap: 1rem;
   padding: 0;
+  display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+
+  p {
+    color: var(--color-secondary-label);
+  }
 
   @media only screen and (max-width: 767px) {
     h4 {
@@ -191,17 +196,53 @@
     }
   }
 
+  .article-list {
+    flex-grow: 1;
+    padding-bottom: 2rem;
+
+    li {
+      padding-top: 1.6rem;
+
+      &:first-child {
+        p {
+          font-size: 18px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &.connect-only {
     display: block;
 
-    .link-grid {
-      ul {
-        @media (min-width: 1000px) {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
+    & > li {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
 
-          li {
-            padding-top: 0;
+    .article-list {
+      grid-column: span 2;
+    }
+
+    .no-grid {
+      display: block;
+    }
+
+    .link-grid {
+      &.link-grid-only {
+        ul {
+          @media (min-width: 1000px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            li {
+              padding-top: 0;
+            }
           }
         }
       }
@@ -217,6 +258,45 @@
 
         a {
           padding: 1rem 0;
+        }
+      }
+    }
+
+    &.link-grid-small {
+      ul {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+          padding: 0;
+
+          a {
+            padding: 0;
+            border: 0;
+
+            img {
+              width: 32px;
+              height: 32px;
+            }
+
+            &:hover {
+              background-color: initial;
+
+              img {
+                filter: var(--icon-filter);
+              }
+            }
+
+            &.link-external {
+              &:after {
+                content: none;
+              }
+            }
+
+            span {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -279,7 +359,13 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         text-overflow: ellipsis;
+        margin-bottom: 0;
       }
+    }
+
+    .location {
+      font-size: 12px;
+      color: var(--color-secondary-label);
     }
   }
 
@@ -293,10 +379,14 @@
   h4 {
     border: 0;
     padding: 0;
+    margin-bottom: 0;
+  }
+
+  .date {
+    margin-bottom: .4em;
   }
 
   time {
-    display: block;
     text-transform: uppercase;
     font-size: 12px;
     color: var(--color-figure-gray-tertiary);

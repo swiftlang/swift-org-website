@@ -1,0 +1,16 @@
+<li>
+  <h4>
+    <a target="{% if include.element.external == true %}_blank{% endif %}" href="{{ include.element.link }}">{{ include.element.name }}</a>
+  </h4>
+  <div class="date">
+    <time pubdate datetime="{{ include.element.date | date_to_xmlschema }}">
+      {{ include.element.date | date: "%B %-d, %Y" }}
+    </time>
+    {% if include.element.location and include.element.location != "" %}
+      <span class="location"> - {{ include.element.location }}</span>
+    {% endif %}
+  </div>
+  {% if include.element.description and include.element.description != "" %}
+    <p>{{ include.element.description }}</p>
+  {% endif %}
+</li>
