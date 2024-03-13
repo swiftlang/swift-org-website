@@ -26,7 +26,7 @@ Over the holiday season, I read about building Playdate games in C and became cu
 
 While most Playdate games are written in Lua for ease of development, they can run into performance problems that necessitate the added complexity of using C. Swift's combination of high-level ergonomics with low-level performance, as well as its strong support for interoperating with C, make it seem like a good match for the Playdate. However, the typical Swift application and runtime exceed the device's tight resource constraints.
 
-Regardless, I still wanted to create a game in Swift and I had good idea for the approach.
+Regardless, I still wanted to create a game in Swift and I had a good idea for the approach.
 
 ### The Embedded Language Mode
 
