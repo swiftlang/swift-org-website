@@ -162,7 +162,7 @@ To demangle the Swift symbols in the stack traces, run the `swift demangle` comm
 ```
 swift demangle <mangled_symbol>
 ```
-Replace `<mangled_symbol>` with the mangled symbol name shown in the stack trace. 
+Replace `<mangled_symbol>` with the mangled symbol name shown in the stack trace. For example, `<swift demangle $s4test12MemoryLeakerCACycfC>`
 
  Note: `swift demangle` is a command-line utility that comes with Swift and should be available if you have the Swift toolchain installed.
 
@@ -271,7 +271,7 @@ In this example, the allocation that leaked is coming from:
 
 A GUI front-end analyzer `heaptrack_gui` is available in addition to command line access. The analyzer allows for diffing between two different runs of your application to troubleshoot variations in `malloc` behavior between the `feature branch` and `main`.
 
-Using a different example, here’s a short how-to using [Ubuntu 20.04](https://www.swift.org/download/) to analyze transient usage.
+Using a different example, here’s a short how-to using [Ubuntu](https://www.swift.org/download/) to analyze transient usage.
 1. Install `heaptrack` by running this command:
 
 ```
@@ -295,7 +295,7 @@ Heaptrack finished! Now run the following to investigate the data:
 
 ```
 
-3. Then run it a second time for the `feature branch`:
+3. Then run it a second time for the `feature branch` by changing the branch and recompiling.
 
 
 ```
@@ -375,7 +375,7 @@ NIO.URing._debugPrint(@autoclosure () -> Swift.String) -> ()
 
 ```
 
-Since the code will be removed before final integration of the `feature branch`, the diff will also disappear.
+In this example, the debug prints are only for testing and would be removed from the code before the branch is merged.
 
 > Tip: Heaptrack can also be [installed on an RPM-based distribution](https://rhel.pkgs.org/8/epel-x86_64/heaptrack-1.2.0-7.el8.x86_64.rpm.html) to debug transient memory usage. You may need to consult the distribution's documentation for the specific repository setup steps. When Heaptrack is installed correctly, it should display its version and usage information.
 
