@@ -146,8 +146,7 @@ p {
     word-break: break-word;
     padding: 0.1em 0.4em;
     border-radius: 4px;
-    border: 1px solid var(--color-code-border);
-    background: var(--color-code-background);
+    background: var(--color-inline-code-background);
   }
 }
 
@@ -223,7 +222,7 @@ cite {
 
     .active a {
       font-weight: 700;
-      color: var(--color-active-nav-item); 
+      color: var(--color-active-nav-item);
     }
 
     &.nav-section {
