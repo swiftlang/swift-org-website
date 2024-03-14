@@ -6,8 +6,6 @@ title: "Writing GNOME Apps with Swift"
 author: [davidswift]
 ---
 
-# Writing GNOME Apps with Swift
-
 Swift is a popular programming language particularly well-suited for creating user interfaces thanks to the clean syntax, static typing, and special features making code easier to write.
 [Result builders](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/advancedoperators/#Result-Builders), combined with Swift's [closure expression syntax](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/#Closure-Expression-Syntax), can significantly enhance code readability. 
 
