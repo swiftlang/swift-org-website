@@ -78,7 +78,7 @@ For MacOS:
 2. [Install Homebrew](https://brew.sh/) if you haven't already. 
 3. Once `Homebrew` is installed, run this command to install `valgrind`:
 
-```
+```bash
 brew install valgrind
 ```
 
