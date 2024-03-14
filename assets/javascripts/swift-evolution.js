@@ -9,10 +9,10 @@
 // ===---------------------------------------------------------------------===//
 'use strict'
 
-let EVOLUTION_METADATA_URL = 'https://download.swift.org/swift-evolution/proposals.json'
-let GITHUB_BASE_URL = 'https://github.com/'
-let REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
-let UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
+const EVOLUTION_METADATA_URL = 'https://download.swift.org/swift-evolution/proposals.json'
+const GITHUB_BASE_URL = 'https://github.com/'
+const REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
+const UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
 
 /** Holds the primary data used on this page: metadata about Swift Evolution proposals. */
 var proposals
