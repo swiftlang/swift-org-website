@@ -20,10 +20,10 @@ Swift on Server provides developers with a modern, safe, and efficient option fo
 
 In addition to the characteristics of Swift that make it an excellent general-purpose programming language, it also has unique characteristics that make it specifically suitable for server applications due to its:
 
-- Performance
-- Quick start-up time
-- Expressiveness and safety
-- Supported ecosystem
+- Performance.
+- Quick start-up time.
+- Expressiveness and safety.
+- Supported ecosystem.
 
 ### Performance
 Swift offers fast performance and a low memory footprint. Instead of tracing garbage collection, it uses [Automatic Reference Counting (ARC)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/) and ownership features, which allows precise control over resources. Swift’s use of ARC and its lack of just-in-time (JIT) compilation provides an edge in the cloud services space.
@@ -39,7 +39,7 @@ These characteristics make Swift ideal for use in modern cloud platforms when ma
 ### Quick start-up time
 Swift-based applications quickly start since there are almost no warm-up operations, making Swift an ideal fit for cloud services, which are often rescheduled onto new virtual machines (VMs) or containers to address platform formation changes. Other considerations include:
 
-- Quick boot times make Swift ideal for serverless applications such as [Google Cloud Functions](https://cloud.google.com/functions#) or [AWS Lambda](https://aws.amazon.com/lambda/) with negligible cold start times. Additionally, the quick start-up time and low memory advantages make Swift a good choice for microservices that scale in the cloud. 
+- Quick boot times make Swift ideal for serverless applications such as [Google Cloud Functions](https://cloud.google.com/functions#) or [AWS Lambda](https://aws.amazon.com/lambda/) with negligible cold start times. Additionally, the quick start-up time and low memory advantages make Swift a good choice for microservices that scale in the cloud.
 - Using Swift helps streamline continuous delivery pipelines, incurring less wait time for new versions of the service fleet to go online.
 - Swift allows you to rapidly respond to the need to scale up where services can dynamically adjust their number of instances.
 
@@ -66,20 +66,20 @@ They are designed to help teams and individuals running server-side Swift applic
 
 The following guides focus on how to compile, test, deploy, and debug applications and provide tips in those areas:
 
-- [Setup and code editing](/documentation/server/guides/setup-and-ide-alternatives.html)
-- [Building](/documentation/server/guides/building.html)
-- [Testing](/documentation/server/guides/testing.html)
-- [Debugging Memory leaks](/documentation/server/guides/memory-leaks-and-usage.html)
-- [Performance troubleshooting and analysis](/documentation/server/guides/performance.html)
-- [Optimizing allocations](/documentation/server/guides/allocations.html)
-- [Debugging multithreading issues and memory checks](/documentation/server/guides/llvm-sanitizers.html)
-- [Deployment](/documentation/server/guides/deployment.html)
-- [Packaging](/documentation/server/guides/packaging.html)
+- [Setup and code editing](/documentation/server/guides/setup-and-ide-alternatives.html).
+- [Building](/documentation/server/guides/building.html).
+- [Testing](/documentation/server/guides/testing.html).
+- [Debugging Memory leaks](/documentation/server/guides/memory-leaks-and-usage.html).
+- [Performance troubleshooting and analysis](/documentation/server/guides/performance.html).
+- [Optimizing allocations](/documentation/server/guides/allocations.html).
+- [Debugging multithreading issues and memory checks](/documentation/server/guides/llvm-sanitizers.html).
+- [Deployment](/documentation/server/guides/deployment.html).
+- [Packaging](/documentation/server/guides/packaging.html).
 
 Additionally, specific guides exist for library developers:
 
-* [Log Levels](/documentation/server/guides/libraries/log-levels.html)
-* [Adopting Swift Concurrency](/documentation/server/guides/libraries/concurrency-adoption-guidelines.html)
+* [Log Levels](/documentation/server/guides/libraries/log-levels.html).
+* [Adopting Swift Concurrency](/documentation/server/guides/libraries/concurrency-adoption-guidelines.html).
 
 _These guides are a community effort. Anyone is invited to share their tips and know-how by submitting pull requests to the [Swift.org site](https://github.com/apple/swift-org-website)_.
 

@@ -18,9 +18,9 @@ We welcome reports from everyone, including security researchers, developers, an
 
 To report a security or privacy vulnerability, please send an email to [cve@forums.swift.org](mailto:cve@forums.swift.org) that includes:
 
-* The specific project and software version(s) which you believe are affected
-* A description of the behavior you observed as well as the behavior that you expected
-* A numbered list of steps required to reproduce the issue and/or a video demonstration, if the steps may be hard to follow
+* The specific project and software version(s) which you believe are affected.
+* A description of the behavior you observed as well as the behavior that you expected.
+* A numbered list of steps required to reproduce the issue and/or a video demonstration, if the steps may be hard to follow.
 
 Please use [Swift.org's CVE PGP key](/keys/cve-signing-key-1.asc) to encrypt sensitive information that you send by email.
 

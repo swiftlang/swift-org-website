@@ -21,22 +21,22 @@ A core principle for the Swift project is that the community is an open and incl
 
 ### Swift Users
 [Using Swift]: #using-swift
-**[Using Swift](https://forums.swift.org/c/swift-users)** - For newcomers or those primarily interested in using the Swift language, it is best to start by engaging within the Using Swift category.  This area is intended for users to get help with or ask questions about Swift or its related tools and is not for discussion about work being done to the language itself. This category will accept email sent to: swift+swift-users@forums.swift.org
+**[Using Swift](https://forums.swift.org/c/swift-users)** - For newcomers or those primarily interested in using the Swift language, it is best to start by engaging within the Using Swift category.  This area is intended for users to get help with or ask questions about Swift or its related tools and is not for discussion about work being done to the language itself. This category will accept email sent to: swift+swift-users@forums.swift.org.
 
 ### Development
 [Development]: #development
 
-**[Compiler](https://forums.swift.org/c/development/compiler)** - For developers to discuss the development and implementation of the Swift compiler, low-level runtime, and SourceKit.  This category will accept email sent to: swift+compiler@forums.swift.org
+**[Compiler](https://forums.swift.org/c/development/compiler)** - For developers to discuss the development and implementation of the Swift compiler, low-level runtime, and SourceKit.  This category will accept email sent to: swift+compiler@forums.swift.org.
 
-**[Standard Library](http://forums.swift.org/c/development/stdlib)** - For developers to discuss the implementation of the Swift standard library.  This category will accept email sent to: swift+stdlib@forums.swift.org
+**[Standard Library](http://forums.swift.org/c/development/stdlib)** - For developers to discuss the implementation of the Swift standard library.  This category will accept email sent to: swift+stdlib@forums.swift.org.
 
-**[Core Libraries](http://forums.swift.org/c/development/corelibs)** - For developers to discuss the implementation of the Swift core libraries.  This category will accept email sent to: swift+corelibs@forums.swift.org
+**[Core Libraries](http://forums.swift.org/c/development/corelibs)** - For developers to discuss the implementation of the Swift core libraries.  This category will accept email sent to: swift+corelibs@forums.swift.org.
 
-**[LLDB](http://forums.swift.org/c/development/lldb)** - For developers to discuss the implementation of the Swift REPL and Swift-specific aspects of LLDB. This category will accept email sent to: swift+lldb@forums.swift.org
+**[LLDB](http://forums.swift.org/c/development/lldb)** - For developers to discuss the implementation of the Swift REPL and Swift-specific aspects of LLDB. This category will accept email sent to: swift+lldb@forums.swift.org.
 
-**[Package Manager](http://forums.swift.org/c/development/SwiftPM)** - For developers to discuss the implementation of the Swift package manager. This category will accept email sent to: swift+swiftpm@forums.swift.org
+**[Package Manager](http://forums.swift.org/c/development/SwiftPM)** - For developers to discuss the implementation of the Swift package manager. This category will accept email sent to: swift+swiftpm@forums.swift.org.
 
-**[LLBuild](http://forums.swift.org/c/development/llbuild)** - For developers to discuss the implementation of the low level build system (llbuild). This category will accept email sent to: swift+llbuild@forums.swift.org
+**[LLBuild](http://forums.swift.org/c/development/llbuild)** - For developers to discuss the implementation of the low level build system (llbuild). This category will accept email sent to: swift+llbuild@forums.swift.org.
 
 **[Announcements](http://forums.swift.org/c/development/dev-announce)** - For announcements relevant to developers such as release announcements, branching, and infrastructure updates.
 
@@ -49,11 +49,11 @@ Please see the [Swift evolution repository](https://github.com/apple/swift-evolu
 
 **[Announcements](https://forums.swift.org/c/evolution/announce)** - For announcements of Swift evolution proposal reviews and results. All discussion and review of evolution proposals occurs on the swift-evolution mailing list.
 
-**[Pitches](https://forums.swift.org/c/evolution/pitches)** - For proposals for the evolution of Swift including new language features, new standard library APIs, and so on before they enter the review phase. This category will accept email sent to: swift+pitches@forums.swift.org
+**[Pitches](https://forums.swift.org/c/evolution/pitches)** - For proposals for the evolution of Swift including new language features, new standard library APIs, and so on before they enter the review phase. This category will accept email sent to: swift+pitches@forums.swift.org.
 
-**[Proposal Reviews](https://forums.swift.org/c/evolution/proposal-reviews)** - Posting and commentary on proposals in the review phase. This category will accept email sent to: swift+proposal-reviews@forums.swift.org
+**[Proposal Reviews](https://forums.swift.org/c/evolution/proposal-reviews)** - Posting and commentary on proposals in the review phase. This category will accept email sent to: swift+proposal-reviews@forums.swift.org.
 
-**[Discussion](https://forums.swift.org/c/evolution/discuss)** - For general discussion of the evolution of Swift. This category will accept email sent to: swift+evolution-discuss@forums.swift.org
+**[Discussion](https://forums.swift.org/c/evolution/discuss)** - For general discussion of the evolution of Swift. This category will accept email sent to: swift+evolution-discuss@forums.swift.org.
 
 ### Server
 [Server]: #server
