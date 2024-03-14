@@ -35,7 +35,7 @@ Basic troubleshooting steps include:
     4. Choose the **Diagnostics** tab.
     5. Under **Memory Management**, check the box next to **Enable Zombie Objects**.
     
-    **On server Linux**, Swift has built-in LeakSanitizer support that can be enabled using the `-sanitize=leak` compiler flag.
+    **On Linux**, Swift has built-in LeakSanitizer support that can be enabled using the `-sanitize=leak` compiler flag.
 
 ### Troubleshooting
 
