@@ -9,6 +9,11 @@
 // ===---------------------------------------------------------------------===//
 'use strict'
 
+const EVOLUTION_METADATA_URL = 'https://download.swift.org/swift-evolution/proposals.json'
+const GITHUB_BASE_URL = 'https://github.com/'
+const REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
+const UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
+
 /** Holds the primary data used on this page: metadata about Swift Evolution proposals. */
 var proposals
 
@@ -64,10 +69,6 @@ const upcomingFeatureFlags = new Map([
 var filterSelection = []
 
 var upcomingFeatureFlagFilterEnabled = false
-
-var GITHUB_BASE_URL = 'https://github.com/'
-var REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
-var UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
 
 /**
  * `name`: Mapping of the states in the proposals JSON to human-readable names.
@@ -196,7 +197,7 @@ function init() {
   })
 
   document.querySelector('#proposals-count-number').innerHTML = 'Loading…'
-  req.open('get', 'https://download.swift.org/swift-evolution/proposals.json')
+  req.open('get', EVOLUTION_METADATA_URL)
   req.send()
 }
 
