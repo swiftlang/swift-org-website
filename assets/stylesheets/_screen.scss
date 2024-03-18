@@ -22,7 +22,7 @@ body {
 
   pre,
   code {
-    font-family: "SF Mono", Menlo, Consolas, Monaco, "Courier New", monospace,
+    font-family: "SF Mono", ui-monospace, Menlo, Consolas, Monaco, "Courier New", monospace,
       serif;
   }
 }
@@ -105,16 +105,13 @@ h6 {
   color: var(--color-header-text);
 }
 
-div.highlighter-rouge {
-  margin-left: 13px;
-}
-
 pre {
   font-size: 14px;
   line-height: 1.6em;
-  border-left: 5px solid var(--color-code-line-highlight-border);
-  margin: 0.5em 0 1.5em 10px;
-  padding: 4px 0 2px 10px;
+  border: 1px solid var(--color-fill-tertiary);
+  border-radius: 4px;
+  margin: 0.5em 0 1.5em;
+  padding: 1.25em 1.5em;
   overflow: scroll;
 }
 
@@ -147,6 +144,10 @@ p {
   & > code {
     white-space: pre-wrap;
     word-break: break-word;
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    border: 1px solid var(--color-fill-tertiary);
+    background: var(--color-code-background);
   }
 }
 
@@ -220,11 +221,9 @@ cite {
     display: inline-block;
     margin-left: .5em;
 
-    &.active {
-      a {
-        font-weight: 700;
-        color: #F05138; // TODO: Use variable
-      }
+    .active a {
+      font-weight: 700;
+      color: var(--color-active-nav-item);
     }
 
     &.nav-section {
@@ -382,13 +381,30 @@ cite {
 }
 
 main {
-  padding: 4rem 30px 0;
   margin: auto;
+  padding: 4rem 0 0;
+
+  .callout {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: 1280px) {
+      display: block;
+    }
+  }
 
   .page-wide {
     max-width: var(--content-mobile-breakpoint);
     padding: 0;
     margin: auto;
+
+    @media only screen and (max-width: 1280px) {
+      padding: 30px 30px 0;
+    }
   }
 
   .post, .page {
@@ -396,9 +412,17 @@ main {
     margin: 0 auto;
     padding: 0 30px;
 
-    @media only screen and (max-width: 767px) {
-      padding: 0;
+    @media only screen and (max-width: 1280px) {
+      padding-top: 30px;
     }
+
+    @media only screen and (max-width: 767px) {
+      padding: 30px 30px 0;
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    padding: 0;
   }
 }
 
@@ -830,6 +854,7 @@ article {
 code {
   white-space: pre-line;
 }
+
 pre code {
   white-space: inherit;
 }

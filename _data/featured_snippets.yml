@@ -1,14 +1,14 @@
 - |
-  struct ScientificName: Codable {
+  struct Binomial: Codable {
       var genus: String
       var species: String
       var subspecies: String?
   }
 
-  let momiji = ScientificName(genus: "Acer", species: "palmatum")
-  let jsonData = try JSONEncoder().encode(momiji)
+  let tree = Binomial(genus: "Pin", species: "oak")
+  let jsonData = try JSONEncoder().encode(tree)
 
-  // {"genus":"Acer","species":"palmatum"}
+  // {"genus":"Pin","species":"oak"}
 - |
   struct ScientificName {
       var genus: String
@@ -18,35 +18,26 @@
       var description: String {
           var text = "\(genus) \(species)"
           if let subspecies {
-              // subspecies is guaranteed to be non-nil here.
+              // subspecies guaranteed to be non-nil
               text += "subsp. \(subspecies)"
           }
           return text
       }
   }
 - |
-  func squareWave(phase: Float, overtones: UInt) -> Float {
-      return (0...overtones)
-          .map {
-              let harmonic = Float($0 * 2 + 1)
-              return sinf(phase * harmonic) / harmonic
-          }
-          .reduce(0, +)
-  }
-- |
   let hello = "Hello, world!"
   let multilineString = """
-                    @@@         
-        @@          @@@@       
-      @@  @@@         @@@@@     
-      @@@@@@@@@       @@@@@    
-        @@@@@@@@@@    @@@@@@   
-          @@@@@@@@@@  @@@@@@   
-            @@@@@@@@@@@@@@@@@  
-  @           @@@@@@@@@@@@@@@  
-  @@@@@@        @@@@@@@@@@@@@  
-    @@@@@@@@@@@@@@@@@@@@@@@@@@ 
-      @@@@@@@@@@@@@@@@@@@@@@@@ 
-          @@@@@@@@@@@@@     @ 
+                    @@@
+        @@          @@@@
+      @@  @@@         @@@@@
+      @@@@@@@@@       @@@@@
+        @@@@@@@@@@    @@@@@@
+          @@@@@@@@@@  @@@@@@
+            @@@@@@@@@@@@@@@@@
+  @           @@@@@@@@@@@@@@@
+  @@@@@@        @@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@@@@@
+      @@@@@@@@@@@@@@@@@@@@@@@@
+          @@@@@@@@@@@@@     @
                         \(hello)
   """

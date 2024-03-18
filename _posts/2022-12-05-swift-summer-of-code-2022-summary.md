@@ -116,7 +116,7 @@ Interactive mode will be included in a future ArgumentParser release, but you ca
 
 This feature creates a fast and accessible way to navigate and discover symbols in Swift-DocC documentation websites, similar to Open Quickly in Xcode.
 
-![image]({{ site.url }}/assets/images/gsoc-2022/quick-navigation.png)
+![Swift-DocC quick navigation](/assets/images/gsoc-2022/quick-navigation.png)
 
 ### Key features
 

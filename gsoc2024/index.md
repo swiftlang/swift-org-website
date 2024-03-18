@@ -14,9 +14,19 @@ When posting on the forums about GSoC this year, please use the [`gsoc-2024` tag
 
 ## Tips for contacting mentors
 
-The Swift forums are powered by discourse, a discussion forums platform which also has a number of spam avoidance mechanisms built-in. If this is your first time joining the forums, you _may_ not be able to send mentors a direct-message, as this requires a minimum amount of prior participation before the "send private message" feature is automatically enabled.
+The Swift forums are powered by discourse, a discussion forums platform with spam avoidance mechanisms built-in. If this is your first time joining the forums, you _may_ not be able to send mentors a direct message, as this requires a minimum amount of prior participation before the "send private message" feature is automatically enabled.
 
-If you would like to reach out to a mentor privately, rather than making a public forums post, and the forums are not allowing you to send private messages (yet), please reach out to Konrad Malawski at `ktoso AT apple.com` directly via email with the `[gsoc2024]` tag in the email subject and describe the project you would like to work on – and we'll route you to the appropriate mentor.
+To start things off, we recommend starting a new thread or joining an existing discussion about the project you are interested in on the dedicated [GSoC forums category](https://www.swift.org/gsoc2024/). You should also _tag_ your thread with the `gsoc-2024` tag. It is best if you start a thread after having explored the topic a little bit already, and come up with specific questions about parts of the project you are not sure about. For example, you may have tried to build the project, but not sure where a functionality would be implemented; or you may not be sure about the scope of the project.
+
+Please use the forums to tag and communicate with the project's mentor to figure out the details of the project, such that when it comes to writing the official proposal plan, and submitting it on the Summer of Code website, you have a firm understanding of the project and can write a good, detailed proposal (see next section about hints on that).
+
+If you would like to reach out to a mentor privately rather than making a public forum post, and the forums are not allowing you to send private messages yet, please reach out to Konrad Malawski at `ktoso AT apple.com` directly via email with the `[gsoc2024]` tag in the email subject and describe the project you would like to work on. We will route you to the appropriate mentor. In general, public communications on the forums are preferred though, as this is closer to the normal open-source way of getting things done in the Swift project.
+
+## Writing a proposal
+
+Getting familiar with the codebase you are interested in working on during GSoC helps to write a good proposal because it helps you get a better understanding of how everything works and how you might best approach the project you are interested in. How you want to do that is really up to you and your style of learning. You could just clone the repository, read through the source code and follow the execution path of a test case by setting a breakpoint and stepping through the different instructions, read the available documentation or try to fix a simple bug in the codebase. The latter is how many open-source contributors got started, but it’s really up to you. If you do want to go and fix a simple bug, our repositories contain a label “good first issue” that marks issues that should be easy to fix and doable by newcomers to the project.
+
+When it comes to writing the proposal, the [Google Summer of Code Guide](https://google.github.io/gsocguides/student/writing-a-proposal) contains general, good advice.
 
 ## Potential Projects
 
@@ -25,6 +35,35 @@ We are currently collecting project ideas on the forums in the dedicated [GSoC](
 Potential mentors, please feel free to propose project ideas to this page directly, by [opening a pull request](https://github.com/apple/swift-org-website/edit/main/gsoc2024/index.md) to the Swift website. 
 
 You can browse previous year's project ideas here: [2023](https://www.swift.org/gsoc2023/), [2022](https://www.swift.org/gsoc2022/), [2021](https://www.swift.org/gsoc2021/), [2020](https://www.swift.org/gsoc2020/), [2019](https://www.swift.org/gsoc2019/).
+
+### Create Real-World Swift Macro Examples
+
+**Project size**: 90 hours
+
+**Estimated difficulty**: Easy
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+- Basic knowledge of SwiftSyntax.
+- Optional: Experience with documentation tools, particularly Swift's DocC.
+
+**Description**
+
+Swift Macros offer a powerful way to transform source code during compilation, streamlining the code generation process and minimizing repetitive manual tasks. The swift-syntax repository features [several examples](https://github.com/apple/swift-syntax/tree/main/Examples/Sources/MacroExamples) showcasing Swift Macros. These serve as a foundational starting point, illustrating various types of macros. However, they often present scenarios that may not directly align with everyday use cases encountered in real-world applications. Additionally, there is notable variability in how these examples handle diagnostics, with some macros requiring more detailed feedback mechanisms for incorrect usage. This situation highlights a valuable area for enhancement, aiming to provide more comprehensive guidance and practical applications for developers.
+
+This project is set to enrich the Swift community by enhancing the current suite of Swift Macro examples with real-world applicability and by introducing new, meticulously crafted examples. It will expand upon the foundational work in the swift-syntax repository, infusing it with comprehensive documentation and interactive tutorials created using DocC. Each example, both new and enhanced, will be carefully designed to showcase the use of different types of Swift Macros, equipped with practical diagnostics, unit tests, and detailed documentation. The initiative will also include the creation of DocC tutorials for some of the most sought-after and impactful Macros, providing an invaluable educational resource for the Swift community. Our aim is to illuminate the diverse capabilities of Swift Macros, highlighting their power and flexibility while sharing best practices for diagnostics, error handling, and testing. By building upon the existing examples and introducing new insights and techniques, this project promises to elevate the collective knowledge and utility of Swift Macros, fostering innovation and excellence within the ecosystem.
+
+**Expected outcomes/benefits/deliverables**
+
+- A comprehensive set of real-world Swift Macro examples, demonstrating practical applications across different types of Macros.
+- Detailed documentation for each example, including the rationale for using Macros, the problems they solve, and guides to their implementation, with an emphasis on diagnostics and error handling.
+- A series of high-quality DocC tutorials covering the creation and application of popular and useful Macros, offering an interactive and engaging learning experience.
+
+**Potential mentors**
+
+- [Alex Hoppen](https://github.com/ahoppen)
+- [Mateusz Bąk](https://github.com/Matejkob)
 
 ### Lexical scopes for swift-syntax
 
@@ -51,9 +90,9 @@ func f(a: Int, b: Int?) -> Int {
 }
 ```
 
-There is a scope for the outermost curly braces of the function, in which the parameters `a` and `b` are visible. There's another scope introduced for the `if let` inside of that scope, which introduces a new name `b` (different from the parameter `b`) that is only visible within that `if let`. A lot of aspects of a compilers and compiler-like tools depend on walking the scopes to find interesting things---for example, to figure out what names are introduced there (for name lookup, i.e., what do `a` and `b` refer to the in the first `return` statement?), determine where `break` or `continue` go to, where a thrown error can be caught, and so on.
+There is a scope for the outermost curly braces of the function, in which the parameters `a` and `b` are visible. There's another scope introduced for the `if let` inside of that scope, which introduces a new name `b` (different from the parameter `b`) that is only visible within that `if let`. A lot of aspects of compilers and compiler-like tools depend on walking the scopes to find interesting things---for example, to figure out what names are introduced there (for name lookup, i.e., what do `a` and `b` refer to in the first `return` statement?), determine where `break` or `continue` go to, where a thrown error can be caught, and so on.
 
-This project involves implementing a notion of lexical scopes as part of [swift-syntax](https://github.com/apple/swift-syntax), with APIs to answer questions like "what does `b` refer to in `return a + b`?" or "what construct does this `break` escape out of?". These APIs can form the basis of IDE features like "edit all in scope" and are an important step toward replacing the [C++ implementation of scopes](https://github.com/apple/swift/blob/main/include/swift/AST/ASTScope.h) within the Swift compiler.
+This project involves implementing a notion of lexical scopes as part of [swift-syntax](https://github.com/apple/swift-syntax), with APIs to answer questions like "What does `b` refer to in `return a + b`?" or "What construct does this `break` escape out of?". These APIs can form the basis of IDE features like "edit all in scope" and are an important step toward replacing the [C++ implementation of scopes](https://github.com/apple/swift/blob/main/include/swift/AST/ASTScope.h) within the Swift compiler.
 
 **Expected outcomes/benefits/deliverables**
 
@@ -92,6 +131,36 @@ Provide all keyword or punctuator completions that are valid at a certain positi
 
 - [Alex Hoppen](https://github.com/ahoppen)
 
+### Expansion of Swift Macros in Visual Studio Code
+
+**Project size**: 175 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Proficiency in Swift
+- Proficiency in TypeScript and JavaScript
+- Experience in writing Visual Studio Code extensions is beneficial but not required
+
+**Description**
+
+Swift Macros allow the generation of source code at compile time. While this provides concise code and avoids repetition of common paradigms, understanding the source code can become harder if it is unknown what the macro expands to. 
+
+Visual Studio Code using the [Swift Extension](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang) currently has limited ability to show the code generated by a macro by invoking a code action that replaces the macro by its generated code inside the current source file. 
+
+The project's goal is to implement a code action to show the macro-generated code without modifying the current source file. This includes the implementation of a request in [sourcekit-lsp](https://github.com/apple/sourcekit-lsp) to compute the contents of the macro expansion and support in the Visual Studio Swift Extension to display that content. Some initial discussion of how the design could look like can be found in [this thread](https://github.com/apple/sourcekit-lsp/pull/892#discussion_r1358428808).
+
+As a stretch goal, Visual Studio Code should also offer semantic functionality like jump-to-definition inside the macro expansion and allow the expansion of nested macros.
+
+**Expected outcomes/benefits/deliverables**
+
+An end-to-end implementation that allows the display of a macro’s contents in Visual Studio Code.
+
+**Potential mentors**
+
+- [Alex Hoppen](https://github.com/ahoppen) and [Adam Fowler](https://github.com/adam-fowler)
+
 ### Introduce Swift Distributed Tracing support to AsyncHTTPClient
 
 **Project size**: 90 hours
@@ -105,9 +174,9 @@ Provide all keyword or punctuator completions that are valid at a certain positi
 
 **Description**
 
-During an earlier Summer of Code edition, the [swift-distributed-tracing](https://github.com/apple/swift-distributed-tracing) library was kicked off. The development on the library continued ever since, and now we'd like to include support for tracing in some of the core server libraries.
+During an earlier Summer of Code edition, the [swift-distributed-tracing](https://github.com/apple/swift-distributed-tracing) library was kicked off. The development of the library continued ever since, and now we'd like to include support for tracing in some of the core server libraries.
 
-The recommended HTTP client for server applications in Swift is [async-http-client](https://github.com/swift-server/async-http-client), and this project is about introducing first class support for distributed tracing inside this project. The work needed to be done is going to be [similar to the work done in swift-grpc](https://github.com/grpc/grpc-swift/pull/1756).
+The recommended HTTP client for server applications in Swift is [async-http-client](https://github.com/swift-server/async-http-client), and this project is about introducing first-class support for distributed tracing inside this project. The work needed to be done is going to be [similar to the work done in swift-grpc](https://github.com/grpc/grpc-swift/pull/1756).
 
 Distributed tracing allows correlating "spans" (start time, end time, and additional information) of traces, made across nodes in a distributed system. In HTTP, this means attaching extra trace headers to outgoing HTTP requests. 
 
@@ -160,14 +229,14 @@ You can read more about tracing in the documentation of these libraries: [swift-
 
 **Description**
 
-[Property wrappers](https://github.com/apple/swift-evolution/blob/main/proposals/0258-property-wrappers.md) feature is currently implemented purely within the compiler but with addition of [Swift Macros](https://github.com/apple/swift-evolution/blob/main/proposals/0389-attached-macros.md) and [init accessors](https://github.com/apple/swift-evolution/blob/main/proposals/0400-init-accessors.md) it's now possible to remove all ad-hoc code from the compiler and implement property wrappers by using existing features.
+[Property wrappers](https://github.com/apple/swift-evolution/blob/main/proposals/0258-property-wrappers.md) feature is currently implemented purely within the compiler but with the addition of [Swift Macros](https://github.com/apple/swift-evolution/blob/main/proposals/0389-attached-macros.md) and [init accessors](https://github.com/apple/swift-evolution/blob/main/proposals/0400-init-accessors.md) it's now possible to remove all ad-hoc code from the compiler and implement property wrappers by using existing features.
 
-This work would remove a lot of property wrapper specific code throughout the compiler - parsing, semantic analysis, SIL generation etc. which brings great benefits by facilitating code reuse, cleaning up the codebase and potentially fixing implementation corner cases. Macros and init accessors in their current state might not be sufficient to cover all of the property wrapper uses scenarios, so the project is most likely going to require improving and expanding aforementioned features as well.
+This work would remove a lot of property wrapper-specific code throughout the compiler - parsing, semantic analysis, SIL generation etc. which brings great benefits by facilitating code reuse, cleaning up the codebase and potentially fixing implementation corner cases. Macros and init accessors in their current state might not be sufficient to cover all of the property wrapper use scenarios, so the project is most likely going to require improving and expanding the aforementioned features as well.
 
 
 **Expected outcomes/benefits/deliverables**
 
-The outcome of this project is the complete removal of all property wrappers specific code from the compiler. This benefits the Swift project in multiple areas - stability, testability and code health.
+The outcome of this project is the complete removal of all property wrappers-specific code from the compiler. This benefits the Swift project in multiple areas - stability, testability and code health.
 
 **Potential mentors**
 
@@ -189,14 +258,14 @@ The outcome of this project is the complete removal of all property wrappers spe
 
 `etcd` is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network partitions and can tolerate machine failure, even in the leader node. Furthermore, `etcd` is a [CNCF graduated](https://www.cncf.io/projects/) project powering Kubernetes which stores all cluster information in `etcd`.
 
-Swift is a great programming language to implement complex distributed systems and having an `etcd` client enables such systems to store their data in a reliable manner. The latest revisions of `etcd` exposes a [gRPC](https://grpc.io) API that clients can use to communicate with the `etcd` server to update and query stored data. 
+Swift is a great programming language for implementing complex distributed systems and having an `etcd` client enables such systems to store their data reliably. The latest revisions of `etcd` exposes a [gRPC](https://grpc.io) API that clients can use to communicate with the `etcd` server to update and query stored data. 
 
 **Expected outcomes/benefits/deliverables**
 
 - Create a brand new `swift-etcd-client` package
-- Connect and communicate with an etcd server using [etcd gRPC APIs](https://etcd.io/docs/v3.5/learning/api/)
-- Implement the following etcd APIs
-  - [Authentication](https://etcd.io/docs/v3.5/learning/design-auth-v3/) to the etcd server
+- Connect and communicate with an `etcd` server using [etcd gRPC APIs](https://etcd.io/docs/v3.5/learning/api/)
+- Implement the following `etcd` APIs
+  - [Authentication](https://etcd.io/docs/v3.5/learning/design-auth-v3/) to the `etcd` server
   - [Key value operations](https://etcd.io/docs/v3.5/learning/api/#key-value-api)
   - [Watch operations](https://etcd.io/docs/v3.5/learning/api/#watch-api) for monitoring changes to keys
   - Strech goal [lease operations](https://etcd.io/docs/v3.5/learning/api/#lease-api)
@@ -206,7 +275,7 @@ Swift is a great programming language to implement complex distributed systems a
 
 - [Franz Busch](https://github.com/FranzBusch)
 
-### Add a `deploy` SPM plugin and a Swift-based DSL to the Swift runtime for AWS Lambda  
+### Add a `deploy` SwiftPM plugin and a Swift-based DSL to the Swift runtime for AWS Lambda  
 
 **Project size**: 90 hours
 
@@ -224,19 +293,19 @@ I [started exploring the possibilities](https://github.com/swift-server/swift-aw
 
 - a [set of data structures](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptor.swift) to represent a YAML SAM template
 - a [DSL definition](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptorBuilder.swift) (build with `@resultBuilder`) to express a SAM template using the Swift programming language
-- a [SPM plugin](https://github.com/sebsto/swift-aws-lambda-runtime/tree/sebsto/deployerplugin_dsl/Plugins/AWSLambdaDeployer) allowing to generate a SAM template and deploy it to the cloud.
+- a [SwiftPM plugin](https://github.com/sebsto/swift-aws-lambda-runtime/tree/sebsto/deployerplugin_dsl/Plugins/AWSLambdaDeployer) allowing to generate a SAM template and deploy it to the cloud.
 
 The existing code has a significant challenge: to be useful for developers, the set of data structures and DSL must be aligned with the SAM template definition. 
 
-This project is aimed at simplifying the alignement with an ever-evolving SAM template defintion by writing a code generator. The code generator will consume [the SAM template definition](https://github.com/aws/serverless-application-model/blob/develop/samtranslator/validator/sam_schema/schema.json) and generate an API-stable set of Swift data structures. As a second step, a manually designed and coded DSL would consume these data structures to generate the YAML SAM template from the DSL.
+This project is aimed at simplifying the alignment with an ever-evolving SAM template definition by writing a code generator. The code generator will consume [the SAM template definition](https://github.com/aws/serverless-application-model/blob/develop/samtranslator/validator/sam_schema/schema.json) and generate an API-stable set of Swift data structures. As a second step, a manually designed and coded DSL would consume these data structures to generate the YAML SAM template from the DSL.
 
 **Expected outcomes/benefits/deliverables**
 
 - a Swift data structure generator. This new, yet-to-be-created piece of code will read and parse the [JSON SAM template definition](https://github.com/aws/serverless-application-model/blob/develop/samtranslator/validator/sam_schema/schema.json) and generate a set of API-stable Swift `Codable` data structures to generate a valid SAM YAML template. The generated code must be similar to [these existing data structures](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptor.swift) (these were created manually)
 
-- a manually designed and coded Swift-based DSL that exposes in a developer-friendly way the SAM template definition (it can/should be based on [this exsiting code](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptorBuilder.swift))
+- a manually designed and coded Swift-based DSL that exposes in a developer-friendly way the SAM template definition (it can/should be based on [this existing code](https://github.com/sebsto/swift-aws-lambda-runtime/blob/sebsto/deployerplugin_dsl/Sources/AWSLambdaDeploymentDescriptor/DeploymentDescriptorBuilder.swift))
 
-- these two components must be callable from [an existing SPM plugin](https://github.com/sebsto/swift-aws-lambda-runtime/tree/sebsto/deployerplugin_dsl/Plugins/AWSLambdaDeployer)
+- these two components must be callable from [an existing SwiftPM plugin](https://github.com/sebsto/swift-aws-lambda-runtime/tree/sebsto/deployerplugin_dsl/Plugins/AWSLambdaDeployer)
 
 **Potential mentors**
 
@@ -257,11 +326,11 @@ This project is aimed at simplifying the alignement with an ever-evolving SAM te
 
 Swift [macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros) are built as host programs that make use of the [swift-syntax](https://github.com/apple/swift-syntax) package to process Swift syntax and produce new syntax. One of the downsides of this approach is that the build process for each macro can take a significant amount of time, and pre-building macro binaries is complicated by the fact that the binaries need to be built for multiple host platforms (e.g., Linux, Windows, and macOS) and architectures (e.g., x86 and ARM). Moreover, macros are aggressively sandboxed to prevent errors in macros from affecting the Swift compiler itself.
 
-[WebAssembly](https://webassembly.org/) provides a portable compilation target that can be executed on any platform and architecture. [SwiftWasm](https://swiftwasm.org/) can compile Swift to WebAsssembly, and [WasmKit](https://github.com/swiftwasm/WasmKit) provides a runtime that can execute WebAssembly programs. WebAssembly could provide a way to build Swift macros into binaries that can be distributed and run anywhere, eliminating the need to rebuild them continually. This project involves getting swift-syntax and macros implemented on top of it building to WebAssembly, teach the Swift compiler to communicate with these macro implementations, and extending the [Swift Package Manager](https://github.com/apple/swift-package-manager) with support for building and using macros with WebAssembly.
+[WebAssembly](https://webassembly.org/) provides a portable compilation target that can be executed on any platform and architecture. [SwiftWasm](https://swiftwasm.org/) can compile Swift to WebAsssembly, and [WasmKit](https://github.com/swiftwasm/WasmKit) provides a runtime that can execute WebAssembly programs. WebAssembly could provide a way to build Swift macros into binaries that can be distributed and run anywhere, eliminating the need to rebuild them continually. This project involves getting swift-syntax and macros implemented on top of it building to WebAssembly, teaching the Swift compiler to communicate with these macro implementations, and extending the [Swift Package Manager](https://github.com/apple/swift-package-manager) with support for building and using macros with WebAssembly.
 
 **Expected outcomes/benefits/deliverables**
 
-The ideal outcome of this project would be for Swift macros to be able to opt in to being built with WebAssembly, and have the Swift Package Manager do so without further intervention from the user.
+The ideal outcome of this project would be for Swift macros to be able to opt into being built with WebAssembly and have the Swift Package Manager do so without further intervention from the user.
 
 **Potential mentors**
 
@@ -288,11 +357,11 @@ Brief description of the project, its goals and what areas of the Swift project 
 
 **Expected outcomes/benefits/deliverables**
 
-Description of expected outcomes. Like some specific feature being implemented, or a performance improvement, or guide being written.
+Description of expected outcomes, like some specific feature being implemented, a performance improvement, or a guide being written.
 This will be the basis for passing the Summer of Code assignment and the final submission of the project. 
 
 **Potential mentors**
 
-- Your name (and link to github, or other means of reaching you)
+- Your name (and link to GitHub, or other means of reaching you)
 - Optionally: additional mentors
 

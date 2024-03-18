@@ -2,7 +2,7 @@
   --color-nav-background: var(--color-fill-tertiary);
   --color-nav-rule: #{dark-color(fill-gray-tertiary)};
   --color-active-menu-group: #{light-color(fill-tertiary)};
-
+  --color-active-nav-item: #{light-color(figure-orange)};
   --color-fill: #{dark-color(fill)};
   --color-fill-secondary: #{dark-color(fill-secondary)};
   --color-fill-tertiary: #{dark-color(fill-tertiary)};
@@ -25,7 +25,6 @@
 
   --color-article-body-background: rgb(17, 17, 17);
   --color-button-background-active: #{dark-color(fill-blue)};
-  --color-code-line-highlight: #{change-color(dark-color(figure-blue), $alpha: 0.08)};
   --color-dropdown-background: var(--color-dropdown-dark-background);
   --color-dropdown-border: var(--color-dropdown-dark-border);
   --color-dropdown-option-text: var(--color-dropdown-dark-option-text);

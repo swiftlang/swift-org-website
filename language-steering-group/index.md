@@ -8,15 +8,15 @@ The Swift Language Steering Group guides the development of the Swift language a
 # Charter
 
 The Swift Language Steering Group:
-* works with the [Swift Core Team](/community/#community-structure) to define a roadmap for the focus areas of language and library development in the upcoming releases of Swift;
-* works with the Swift Core Team and other workgroups to define, document, and develop the Swift evolution process;
+* works with the [Swift Core Team](/community/#community-structure) to define a roadmap for the focus areas of language and library development in the upcoming releases of Swift.
+* works with the Swift Core Team and other workgroups to define, document, and develop the Swift evolution process.
 * implements the evolution process for the Swift language and library by:
-  * soliciting, writing, and approving feature roadmaps,
-  * guiding evolution discussion,
-  * keeping evolution discussion collegial and inclusive,
-  * deciding whether and when to run a review for an evolution proposal,
-  * running evolution reviews, and
-  * making decisions about proposals; and
+  * soliciting, writing, and approving feature roadmaps.
+  * guiding evolution discussion.
+  * keeping evolution discussion collegial and inclusive.
+  * deciding whether and when to run a review for an evolution proposal.
+  * running evolution reviews.
+  * making decisions about proposals.
 * keeps the community informed about changes to the project roadmap, the status of accepted proposals, and the availability of new features.
 
 ## Membership
@@ -25,10 +25,10 @@ The Language Steering Group is made up of Swift community members with a variety
 
 The Core Team also selects one member of the workgroup as the chair. The chair has no special authority over the workgroup, but they are responsible for ensuring its smooth functioning, including by:
 
-* organizing and leading regular meetings,
-* ensuring that proposals have an assigned review manager sufficiently in advance of when they will be reviewed,
-* ensuring that the workgroup discusses and reaches a conclusion promptly after a proposal has been reviewed,
-* ensuring that the workgroup communicates effectively with the community, and
+* organizing and leading regular meetings.
+* ensuring that proposals have an assigned review manager sufficiently in advance of when they will be reviewed.
+* ensuring that the workgroup discusses and reaches a conclusion promptly after a proposal has been reviewed.
+* ensuring that the workgroup communicates effectively with the community.
 * coordinating meetings between workgroup representatives and the Core Team when issues need to be raised to the Core Team.
 
 The current members of the Language Steering Group are:
@@ -54,10 +54,10 @@ The Language Steering Group communicates with the community primarily using the 
 
 The workgroup is responsible for the following regular communication with the broader Swift community:
 
-* Announcing (and running) evolution proposal reviews for language and library proposals
-* Announcing decisions about evolution proposal reviews for language and library proposals
-* After every release of Swift, describing the language and library evolution proposals newly implemented in that release
-* After every release of Swift, describing the current language and library evolution roadmap for the next few upcoming releases (a 1–2 year timeline)
+* Announcing (and running) evolution proposal reviews for language and library proposals.
+* Announcing decisions about evolution proposal reviews for language and library proposals.
+* After every release of Swift, describing the language and library evolution proposals newly implemented in that release.
+* After every release of Swift, describing the current language and library evolution roadmap for the next few upcoming releases (a 1–2 year timeline).
 
 The workgroup is also partially responsible for the content of language and library documentation:
 
@@ -73,8 +73,8 @@ These limits on the evolution authority of the Language Steering Group are not m
 
 As a major client of the evolution process, the Language Steering Group works closely with the Core Team to define and improve that process, such as by:
 
-* clearly defining how proposals are pitched and reviewed,
-* providing guidelines for participating in the evolution process in various roles, and
+* clearly defining how proposals are pitched and reviewed.
+* providing guidelines for participating in the evolution process in various roles.
 * regularly updating the process and guidelines to make the process work better.
 
 Any change to the evolution process is ultimately up to the discretion of the Core Team.
