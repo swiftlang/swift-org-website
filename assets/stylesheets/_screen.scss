@@ -219,7 +219,7 @@ cite {
 
     .active a {
       font-weight: 700;
-      color: var(--color-active-nav-item); 
+      color: var(--color-active-nav-item);
     }
 
     &.nav-section {
@@ -362,6 +362,8 @@ cite {
 
     &.cta {
       border-bottom: 1px solid var(--color-nav-rule);
+      padding: 0;
+      border-radius: 0;
     }
 
     & a {
