@@ -1,10 +1,4 @@
-{% if include.authors.size > 2 %}
-  {% assign compact = true %}
-{% else %}
-  {% assign compact = false %}
-{% endif %}
-
-<div class="authors{% if compact %} compact{% endif %}">
+<div class="authors{% if include.compact %} compact{% endif %}">
   {% for page_author in include.authors %}
     {% assign author = site.data.authors[page_author] %}
     {% if author.name %}
@@ -19,7 +13,7 @@
               src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y"
             {% endif %}
             alt="{{ author.name }}"
-            title="{% if compact %}{{ author.about }}{% endif %}"
+            title="{% if include.compact %}{{ author.about }}{% endif %}"
             />
           <span class="author">
             {% if author.github %}
@@ -29,7 +23,7 @@
             {% endif %}
           </span>
         </div>
-        {% unless compact %}
+        {% unless include.compact %}
           {% if page.about %}
             {% assign about = page.about %}
           {% elsif author.about %}
