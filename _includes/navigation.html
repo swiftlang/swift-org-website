@@ -9,17 +9,21 @@
     <nav role="navigation">
       <ul class="navigation-links">
         {% for nav in site.data.navigation %}
-          <li class="nav-item">
-            <span class="{% if page.url == nav.url %}active{% endif %}">
-              {% if nav.url %}
-                <a href="{{ nav.url }}">{{ nav.header }}</a>
-              {% else %}
-                {{ nav.header }}
-              {% endif %}
-              {% if nav.pages %}
-                <i>&#9663;</i>
-              {% endif %}
-            </span>
+          <li class="nav-item{% if nav.isCta %} cta{% endif %}">
+            {% if nav.isCta and nav.url %}
+              <a href="{{ nav.url }}">{{ nav.header }}</a>
+            {% else %}
+              <span class="{% if page.url == nav.url %}active{% endif %}">
+                {% if nav.url %}
+                  <a href="{{ nav.url }}">{{ nav.header }}</a>
+                {% else %}
+                  {{ nav.header }}
+                {% endif %}
+                {% if nav.pages %}
+                  <i>&#9663;</i>
+                {% endif %}
+              </span>
+            {% endif %}
             {% if nav.pages %}
               <ul class="nav-submenu" role="menu">
                 {% for navpage in nav.pages %}
@@ -39,10 +43,6 @@
             {% endif %}
           </li>
         {% endfor %}
-
-        <li class="cta">
-          <a href="/install">Download</span></a>
-        </li>
       </ul>
       <button id="menu-toggle" class="menu-item menu-toggle open" aria-expanded="false" aria-label="Toggle Navigation Menu"></button>
     </nav>
@@ -51,14 +51,14 @@
   <nav class="mobile-navigation" role="navigation">
     <ul class="mobile-navigation-links">
       {% for nav in site.data.navigation %}
-        <li class="nav-item {% if page.url == nav.url %}active{% endif %}">
+        <li class="nav-item {% if page.url == nav.url %}active{% endif %}{% if nav.isCta %} cta{% endif %}">
           <div class="link-container">
             {% if nav.url %}
               <a href="{{ nav.url }}">{{ nav.header }}</a>
               {% else %}
               {{ nav.header }}
             {% endif %}
-            
+
             {% if nav.pages %}
               <button class="section-toggle" aria-expanded="false" aria-label="Toggle {{ nav.header }} Section">
                 &#9663;
@@ -84,10 +84,6 @@
           {% endif %}
         </li>
       {% endfor %}
-
-      <li class="cta">
-        <a href="/install">Download <span>{{ site.data.builds.swift_releases.last.name }}</span></a>
-      </li>
     </ul>
   </nav>
  </header>
