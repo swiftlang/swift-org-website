@@ -2,6 +2,8 @@
 
 [Windows Package Manager](https://docs.microsoft.com/windows/package-manager/) (aka WinGet) comes pre-installed with Windows 11 (21H2 and later). It can also be found in the [Microsoft Store](https://www.microsoft.com/p/app-installer/9nblggh4nns1) or be [installed directly](ms-appinstaller:?source=https://aka.ms/getwinget).
 
+0. Setup all needed [dependencies](/install/windows/#dependencies).
+
 0. Install required Visual Studio components:
 
    Install the latest MSVC toolset and Windows 11 SDK (10.0.22000) through Visual Studio 2022 Community installer. You may change the Visual Studio edition depending on your usage and team size.
