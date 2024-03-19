@@ -10,7 +10,7 @@ Memory leaks occur when memory is allocated but not properly deallocated, leadin
 
 It’s important to note, however, that a gradual increase in memory usage over time doesn’t always indicate a leak. Instead, it may be the memory profile of the application. For example, when an application’s cache gradually fills over time it shows the same gradual increase in memory. Accordingly, configuring the cache so it doesn’t expand beyond a designated limit will cause the memory usage to plateau. Additionally, allocator libraries don't always immediately return memory feedback to the system due to performance or other reasons. But it will stabilize over time.
 
-Debugging memory leaks in Swift on both macOS and Linux environments can be done using different tools and techniques, each with distinct strengths and usability. 
+Debugging memory leaks in Swift on macOS and Linux environments can be done using different tools and techniques, each with distinct strengths and usability. 
 
 Basic troubleshooting steps include:
 
@@ -42,7 +42,6 @@ Basic troubleshooting steps include:
 This section aims to provide you with helpful server-side troubleshooting techniques to debug leaks and usage using **Valgrind**, **LeakSanitizer**, and **Heaptrack**.
 
 The following **example program** leaks memory. We are using it as an *example only* to illustrate the various troubleshooting methods mentioned below. 
-
 ```
 public class MemoryLeaker {
    var closure: () -> Void = { () }
@@ -73,7 +72,7 @@ Valgrind is an open-source framework for debugging and profiling Linux applicati
 
 To debug memory leaks using Valgrind, install it on your system. 
 
-For MacOS:
+**For MacOS**:
 1. Open a Terminal session.
 2. [Install Homebrew](https://brew.sh/) if you haven't already. 
 3. Once `Homebrew` is installed, run this command to install `valgrind`:
@@ -82,28 +81,25 @@ For MacOS:
 brew install valgrind
 ```
 
-4. Enter your password if prompted to authorize the software installation and allow Homebrew to complete the installation process. Confirm the installation when asked.
+4. Enter your password if prompted to authorize the software installation and allow Homebrew to complete the installation process. Confirm the installation when requested.
 
 Valgrind should be successfully installed on your system using the system package manager.
 
-5. Run this `valgrind` command to enable full leak checking:
-
+5. Once you've compiled your program (in this case, a binary named `test`), run the following `valgrind` command to enable full leak checking:
 ```
 valgrind --leak-check=full ./test
 ```
 
-For Swift on Linux:
+**For Swift on Linux**:
 
 1. Install Swift on your Linux system. You can download and install Swift from the [official website](https://swift.org/download/).
 
 2. Install Valgrind on your Linux system by using your package manager. For example, if you are using Ubuntu, you can run the following command:
-
 ```
 sudo apt-get install valgrind
 ```
 
 3. Once Valgrind is installed, run the following command:
-
 ```
 valgrind --leak-check=full swift run
 ```
@@ -140,10 +136,9 @@ The `valgrind` command analyzes the program for any memory leaks and shows the r
 ==1==
 ==1== For counts of detected and suppressed errors, rerun with: -v
 ==1== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
-
 ```
-The following trace block (from above) indicates a memory leak.
 
+The following trace block (from above) indicates a memory leak.
 ```
 ==1== 32 bytes in 1 blocks are definitely lost in loss record 1 of 4
 ==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
@@ -152,22 +147,22 @@ The following trace block (from above) indicates a memory leak.
 ==1==    by 0x108E58: $s4test12MemoryLeakerCACycfC (in /tmp/test)
 ==1==    by 0x10900E: $s4test28myFunctionDoingTheAllocationyyF (in /tmp/test)
 ==1==    by 0x108CA3: main (in /tmp/test)
-
 ```
 
 However, since Swift uses name mangling for function and symbol names, the stack traces may not be straightforward to understand. 
 
 To demangle the Swift symbols in the stack traces, run the `swift demangle` command:
-
 ```
 swift demangle <mangled_symbol>
 ```
-Replace `<mangled_symbol>` with the mangled symbol name shown in the stack trace. For example, `<swift demangle $s4test12MemoryLeakerCACycfC>`
 
- Note: `swift demangle` is a command-line utility that comes with Swift and should be available if you have the Swift toolchain installed.
+Replace `<mangled_symbol>` with the mangled symbol name shown in the stack trace. For example:
+
+`swift demangle $s4test12MemoryLeakerCACycfC`
+
+> Note: `swift demangle` is a Swift command line utility and should be available if you have the Swift toolchain installed.
 
 The utility will demangle the symbol and display a human-readable version as follows:
-
 ```
 ==1== 32 bytes in 1 blocks are definitely lost in loss record 1 of 4
 ==1==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
@@ -176,42 +171,35 @@ The utility will demangle the symbol and display a human-readable version as fol
 ==1==    by 0x108E58: test.MemoryLeaker.__allocating_init() -> test.MemoryLeaker (in /tmp/test)
 ==1==    by 0x10900E: test.myFunctionDoingTheAllocation() -> () (in /tmp/test)
 ==1==    by 0x108CA3: main (in /tmp/test)
-
 ```
+
 By analyzing the demangled symbols, we can understand which part of the code is responsible for the memory leak. In this example, the `valgrind` command indicates the allocation that leaked is coming from:
 
-`test.myFunctionDoingTheAllocation`
-
-calling
-
-`test.MemoryLeaker.__allocating_init()`
+`test.myFunctionDoingTheAllocation` calling `test.MemoryLeaker.__allocating_init()`
 
 ###  Limitations
 
-* The `valgrind` command doesn’t understand the bit-packing used in many Swift data types like `String` or when `enums` are created with associated values. Consequently, using the `valgrind` command sometimes reports memory errors or leaks that do not actually exist, and false negatives occur when it fails to detect actual issues.
+* The `valgrind` command doesn’t understand the bit-packing used in many Swift data types like `String` or when `enums` are created with associated values. Consequently, using the `valgrind` command sometimes reports memory errors or leaks that do not exist, and false negatives occur when it fails to detect actual issues.
 * The `valgrind` command makes your program run exceptionally slow (possibly 100x slower), which may hinder your ability to reproduce the problem and analyze the performance.
 * Valgrind is primarily supported on Linux. Its support for other platforms, such as macOS or iOS, may be limited or nonexistent.
 
 ## Debugging leaks with LeakSanitizer
-LeakSanitizer is a memory leak detector which is integrated into [AddressSanitizer](https://developer.apple.com/documentation/xcode/diagnosing-memory-thread-and-crash-issues-early). To debug memory leaks using LeakSanitizer with Address Sanitizer enabled on Swift, you will need to set the appropriate environment variable, compile your Swift package with the necessary options, and then run your application.
+LeakSanitizer is a memory leak detector that is integrated into [AddressSanitizer](https://developer.apple.com/documentation/xcode/diagnosing-memory-thread-and-crash-issues-early). To debug memory leaks using LeakSanitizer with Address Sanitizer enabled on Swift, you will need to set the appropriate environment variable, compile your Swift package with the necessary options, and then run your application.
 
 Here are the steps:
 
 1. Open a terminal session and navigate to your Swift package directory.
 2. Set the `ASAN_OPTIONS` environment variable to enable AddressSanitizer and configure its behavior. You can do this by running the command:
-
 ```
 export ASAN_OPTIONS=detect_leaks=1
 ```
 
 3. Run `swift build` with the additional option to enable [Address Sanitizer](https://developer.apple.com/documentation/xcode/diagnosing-memory-thread-and-crash-issues-early):
-
 ```
 swift build --sanitize=address
 ```
 
 The build process will compile your code with AddressSanitizer enabled, which automatically looks for leaked memory blocks. If any memory leaks during the build are detected, it will output the information (similar to Valgrind) as shown in the example below:
-
 ```
 =================================================================
 ==478==ERROR: LeakSanitizer: detected memory leaks
@@ -224,62 +212,55 @@ Direct leak of 32 byte(s) in 1 object(s) allocated from:
     #4 0x7f7e43aecb96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
 
 SUMMARY: AddressSanitizer: 32 byte(s) leaked in 1 allocation(s).
-
 ```
-Unfortunately, the output doesn’t provide a human-readable representation of the function names because [LeakSanitizer doesn't symbolicate stack traces on Linux](https://bugs.swift.org/browse/SR-12601). 
+Currently, the output doesn’t provide a human-readable representation of the function names because [LeakSanitizer doesn't symbolicate stack traces on Linux](https://github.com/apple/swift/issues/55046). 
 
 However, you can symbolicate it using `llvm-symbolizer` or `addr2line` if you have `binutils` installed.
 
 To install `binutils` for Swift on a server running Linux, follow these steps:
 1. Connect to your Swift server through SSH using a terminal.
 2. Update the package lists by running the following command:
-
 ```
 sudo apt update
 ```
 
 3. Install `binutils` by running the following command:
-
 ```
 sudo apt install binutils
 ```
+
 4.  This will install `binutils` and its related tools for working with binaries, object files, and libraries, which can be useful for developing and debugging Swift applications on Linux.
 
 You can now run the following command to demangle the symbols in the stack traces:
-
 ```
 # /tmp/test+0xc62ce
 addr2line -e /tmp/test -a 0xc62ce -ipf | swift demangle 
 ```
 
 In this example, the allocation that leaked is coming from:
-
 ```
 0x00000000000c62ce: test.myFunctionDoingTheAllocation() -> () at crtstuff.c:?
-
 ```
 
 ### Limitations
 
 * LeakSanitizer may not be as effective in detecting and reporting all types of memory leaks in Swift code compared to languages like C or C++.
-* False positives occur when LeakSanitizer reports a memory leak that does not actually exist. 
+* False positives occur when LeakSanitizer reports a memory leak that does not exist. 
 * LeakSanitizer is primarily supported on macOS and Linux. While it is possible to use LeakSanitizer on iOS or other platforms that support Swift, there may be limitations or platform-specific issues that need to be considered.
 * Enabling Address Sanitizer and LeakSanitizer in your Swift project can have a performance impact. It is recommended to use LeakSanitizer for targeted analysis and debugging rather than continuously running it in production environments.
 
 ## Debugging transient memory usage with Heaptrack
-[Heaptrack](https://github.com/KDE/heaptrack) is an open-source heap memory profiler tool that is helpful for finding and analyzing memory leaks and usage with less overhead than Valgrind. It also allows for analyzing and debugging transient memory usage in your application. However, it may significantly impact performance by overloading the allocator.
+[Heaptrack](https://github.com/KDE/heaptrack) is an open-source heap memory profiler tool that helps find and analyze memory leaks and usage with less overhead than Valgrind. It also allows for analyzing and debugging transient memory usage in your application. However, it may significantly impact performance by overloading the allocator.
 
 A GUI front-end analyzer `heaptrack_gui` is available in addition to command line access. The analyzer allows for diffing between two different runs of your application to troubleshoot variations in `malloc` behavior between the `feature branch` and `main`.
 
 Using a different example, here’s a short how-to using [Ubuntu](https://www.swift.org/download/) to analyze transient usage.
 1. Install `heaptrack` by running this command:
-
 ```
 sudo apt-get install heaptrack
 ```
 
 2. Run the binary twice using `heaptrack`. The first run provides a baseline for `main`.
-
 ```
 > heaptrack .build/x86_64-unknown-linux-gnu/release/test_1000_autoReadGetAndSet
 heaptrack output will be written to "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84341.gz"
@@ -292,12 +273,9 @@ heaptrack stats:
 Heaptrack finished! Now run the following to investigate the data:
 
   heaptrack --analyze "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84341.gz"
-
 ```
 
 3. Then run it a second time for the `feature branch` by changing the branch and recompiling.
-
-
 ```
 > heaptrack .build/x86_64-unknown-linux-gnu/release/test_1000_autoReadGetAndSet
 heaptrack output will be written to "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84372.gz"
@@ -311,22 +289,18 @@ Heaptrack finished! Now run the following to investigate the data:
 
   heaptrack --analyze "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84372.gz"
 ubuntu@ip-172-31-25-161 /t/.nio_alloc_counter_tests_GRusAy>
-
 ```
 
 The output shows 673989 allocations in the `feature branch` version and 319347 in `main`, indicating a regression.
 
 4. Run the following command to analyze the output as a diff from these runs using `heaptrack_print` and pipe it through `swift demangle` for readability:
-
 ```
 heaptrack_print -T -d heaptrack.test_1000_autoReadGetAndSet.84341.gz heaptrack.test_1000_autoReadGetAndSet.84372.gz | swift demangle
-
 ```
 
 > Note: `-T` outputs the temporary allocations, providing transient allocations and not leaks. If leaks are detected, remove `-T`.
 
 Scroll down to see the transient allocations (output may be long):
-
 ```
 MOST TEMPORARY ALLOCATIONS
 307740 temporary allocations of 290324 allocations in total (106.00%) from
@@ -362,17 +336,14 @@ swift_slowAlloc
       at /home/ubuntu/swiftnio/swift-nio/Sources/NIO/LinuxURing.swift:297
 ...
 22196 temporary allocations of 22276 allocations in total (99.64%) from:
-
 ```
 
 Looking at the output above, we can see the extra transient allocations were due to extra debug printing and querying of environment variables as shown below:
-
 ```
 NIO.URing.getEnvironmentVar(Swift.String) -> Swift.String?
   at /home/ubuntu/swiftnio/swift-nio/Sources/NIO/LinuxURing.swift:291
   in /tmp/.nio_alloc_counter_tests_GRusAy/.build/x86_64-unknown-linux-gnu/release/test_1000_autoReadGetAndSet
 NIO.URing._debugPrint(@autoclosure () -> Swift.String) -> ()
-
 ```
 
 In this example, the debug prints are only for testing and would be removed from the code before the branch is merged.
