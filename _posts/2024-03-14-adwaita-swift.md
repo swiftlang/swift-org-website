@@ -6,7 +6,7 @@ title: "Writing GNOME Apps with Swift"
 author: [davidswift]
 ---
 
-Swift is a popular programming language particularly well-suited for creating user interfaces thanks to the clean syntax, static typing, and special features making code easier to write.
+Swift is well-suited for creating user interfaces thanks to the clean syntax, static typing, and special features making code easier to write.
 [Result builders](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/advancedoperators/#Result-Builders), combined with Swift's [closure expression syntax](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/#Closure-Expression-Syntax), can significantly enhance code readability. 
 
 [Adwaita for Swift](https://github.com/AparokshaUI/adwaita-swift) leverages these Swift features to provide an intuitive interface for developing applications for the [GNOME](https://www.gnome.org/) platform.
@@ -44,14 +44,14 @@ Note that the view's content can be modified from outside that view.
 This means that the single view can be implemented in different ways and the results can vary.
 The screenshot shows one simple possibility.
 
-![A screenshot of the counter example app.](/assets/images/2024-03-14-adwaita-swift/demo.png)
+![A screenshot of the counter example app.](/assets/images/2024-03-14-adwaita-swift/demo.png){:style="max-width: 100%; height: auto; width: unset; margin: auto auto; display: block;"}
 
 ## Motivation
 The primary motivation for this package is to enable the use of Swift when writing GNOME apps, for all the reasons outlined above. But there are a few additional reasons:
 
 ### Declarative
 While there are already libadwaita and GTK bindings for numerous modern programming languages, including Rust, Python, and JavaScript, all official bindings follow an _imperative_ coding style. 
-This means that user interfaces are constructed using a series of commands.
+This can be verbose and harder to follow than a declarative style as user interfaces are constructed using a series of commands.
 The following Python code serves as an illustration of this.
 ```python
 class Counter(Gtk.Box):
@@ -117,13 +117,11 @@ var view: Body {
 ```
 
 ### Cross-Platform App Development
-This project could be interesting for people wanting to port a macOS app to Linux or Windows.
-They can keep their backend written in Swift and define the user interface in a familiar way.
+Adwaita for Swift is useful in a number of ways:
 
-### GNOME App Development
-It hopefully attracts people currently working in the iOS or macOS space to contribute to the GNOME project.
-Swift is one of the most popular programming languages and a joy to write, so it's important to provide a solution for people writing Swift that are interested in GNOME. 
-This project could also make Swift more approachable to existing GNOME developers. 
+- You can write apps that run on Linux, macOS and Windows with a single codebase.
+- You can share backend Swift code between SwiftUI apps and GNOME apps.
+- You can create entirely new GNOME apps using Swift, achieving great code readability and memory safety.
 
 ## Publish Apps
 
@@ -139,7 +137,7 @@ Learn how to publish your apps [in the Adwaita for Swift documentation](https://
 Each contribution to this project is highly appreciated.
 
 You can:
-- Create an app! Use the [template repository](https://github.com/AparokshaUI/AdwaitaTemplate) as a starting point and refer to the [tutorial](https://david-swift.gitbook.io/adwaita/gettingstarted). Feel free to showcase your project in the [discussions](https://github.com/AparokshaUI/adwaita-swift/discussions/categories/show-and-tell). You get the best libadwaita experience with Linux. In case you're on a newer MacBook, take a look at [Asahi Linux](https://asahilinux.org/fedora/?ref=upstract.com).
+- Create an app! Use the [template repository](https://github.com/AparokshaUI/AdwaitaTemplate) as a starting point and refer to the [tutorial](https://david-swift.gitbook.io/adwaita/gettingstarted). Feel free to showcase your project in the [discussions](https://github.com/AparokshaUI/adwaita-swift/discussions/categories/show-and-tell). Note that libadwaita works best on Linux. If you're on a newer Mac and interested in Linux, check out [Asahi Linux](https://asahilinux.org/fedora/?ref=upstract.com).
 - Open [issues](https://github.com/AparokshaUI/adwaita-swift/issues) if you find any problems or if you have an idea, or participate in the [dicussions](https://github.com/AparokshaUI/adwaita-swift/discussions) by asking questions, dicussing ideas, or informing others about your work.
 - Write [documentation](https://david-swift.gitbook.io/adwaita/) to help others understand Adwaita for Swift.
 - Simply star the [repository](https://github.com/AparokshaUI/adwaita-swift) to improve its discoverability.
