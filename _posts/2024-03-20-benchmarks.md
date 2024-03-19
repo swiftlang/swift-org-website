@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2024-03-14 10:00:00
+date: 2024-03-20 10:00:00
 title: "Introducing Swift's Benchmark Package: Complementing Unit Tests with Performance Checks"
 author: [hassila]
 ---
