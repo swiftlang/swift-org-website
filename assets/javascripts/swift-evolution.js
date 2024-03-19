@@ -158,8 +158,16 @@ function init() {
   var req = new window.XMLHttpRequest()
 
   req.addEventListener('load', function() {
-    proposals = JSON.parse(req.responseText)
-
+    let evolutionMetadata = JSON.parse(req.responseText, flattenStatus)
+    
+    // Temporary conditional to allow script to work with old and new schemas
+    if (Array.isArray(evolutionMetadata)) { // current schema
+      proposals = evolutionMetadata
+    } else { // new schema
+      proposals = evolutionMetadata.proposals
+      languageVersions = evolutionMetadata.implementationVersions
+    }
+    
     // Don't display malformed proposals
     proposals = proposals.filter(function (proposal) {
       return !proposal.errors
@@ -199,6 +207,18 @@ function init() {
   document.querySelector('#proposals-count-number').innerHTML = 'Loading…'
   req.open('get', EVOLUTION_METADATA_URL)
   req.send()
+}
+
+/** 
+ * Reviver function passed to JSON.parse() to convert new status field structure to old structure.
+ */
+function flattenStatus(key, value) {
+  if (key == "status" && value !== "" && !value.state) {
+    let [subkey, subvalue] = Object.entries(value)[0]
+    subvalue.state = "." + subkey
+    return subvalue
+  }
+  return value
 }
 
 /**
