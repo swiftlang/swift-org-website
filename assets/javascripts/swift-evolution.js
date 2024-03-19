@@ -168,6 +168,11 @@ function init() {
       languageVersions = evolutionMetadata.implementationVersions
     }
     
+    // Don't display malformed proposals
+    proposals = proposals.filter(function (proposal) {
+      return !proposal.errors
+    })
+    
     // Add upcomingFeatureFlag to proposal if present in mapping.
     // Temporary until upcomingFeatureFlag property is returned in proposals.json. 
     for (var proposal of proposals) {
