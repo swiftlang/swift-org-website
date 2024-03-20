@@ -28,12 +28,12 @@ Debugging memory leaks in Swift on macOS and Linux environments can be done usin
     
 **On macOS**, you can enable Zombie Objects using Xcode or use [MallocStackLogging](https://developer.apple.com/videos/play/wwdc2022/10106/) to detect over-released or accessed deallocated objects.
     
-    To enable Zombie Objects: 
-    1. Open your Xcode project.
-    2. Go to the **Edit Scheme** menu by clicking on the scheme dropdown in the toolbar. 
-    3. In the scheme editor window, select the **Run** tab.
-    4. Choose the **Diagnostics** tab.
-    5. Under **Memory Management**, check the box next to **Enable Zombie Objects**.
+To enable Zombie Objects: 
+1. Open your Xcode project.
+2. Go to the **Edit Scheme** menu by clicking on the scheme dropdown in the toolbar. 
+3. In the scheme editor window, select the **Run** tab.
+4. Choose the **Diagnostics** tab.
+5. Under **Memory Management**, check the box next to **Enable Zombie Objects**.
     
 **On Linux**, Swift has built-in LeakSanitizer support that can be enabled using the `-sanitize=leak` compiler flag.
 
