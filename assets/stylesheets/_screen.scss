@@ -219,11 +219,24 @@ cite {
 
   li {
     display: inline-block;
-    margin-left: 0.5em;
+    margin-left: .3em;
 
     .active a {
       font-weight: 700;
       color: var(--color-active-nav-item);
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    a::before {
+      display: block;
+      content: attr(data-text);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
     }
 
     &.nav-section {
@@ -245,6 +258,7 @@ cite {
 
       a {
         display: block;
+        text-align: center;
 
         span {
           letter-spacing: 0;
