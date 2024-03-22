@@ -11,11 +11,11 @@
         {% for nav in site.data.navigation %}
           <li class="nav-item{% if nav.isCta %} cta{% endif %}">
             {% if nav.isCta and nav.url %}
-              <a href="{{ nav.url }}">{{ nav.header }}</a>
+              <a href="{{ nav.url }}" data-text="{{ nav.header }}"">{{ nav.header }}</a>
             {% else %}
               <span class="{% if page.url == nav.url %}active{% endif %}">
                 {% if nav.url %}
-                  <a href="{{ nav.url }}">{{ nav.header }}</a>
+                  <a href="{{ nav.url }}" data-text="{{ nav.header }}">{{ nav.header }}</a>
                 {% else %}
                   {{ nav.header }}
                 {% endif %}
