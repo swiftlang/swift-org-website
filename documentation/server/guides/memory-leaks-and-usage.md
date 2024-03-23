@@ -67,7 +67,6 @@ func myFunctionDoingTheAllocation() {
 }
 
 myFunctionDoingTheAllocation()
-
 ```
 
 ## Debugging leaks with Valgrind
@@ -92,7 +91,6 @@ Valgrind should be successfully installed on your system using the system packag
 
 ```
 valgrind --leak-check=full ./test
-
 ```
 
 **For Swift on Linux**:
@@ -103,14 +101,12 @@ valgrind --leak-check=full ./test
 
 ```
 sudo apt-get install valgrind
-
 ```
 
 3. Once Valgrind is installed, run the following command:
 
 ```
 valgrind --leak-check=full swift run
-
 ```
 
 The `valgrind` command analyzes the program for any memory leaks and shows the relevant information about the leak, including the stack trace where the allocation occurred as shown  below:
@@ -145,7 +141,6 @@ The `valgrind` command analyzes the program for any memory leaks and shows the r
 ==1==
 ==1== For counts of detected and suppressed errors, rerun with: -v
 ==1== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
-
 ```
 
 The following trace block (from above) indicates a memory leak.
@@ -158,7 +153,6 @@ The following trace block (from above) indicates a memory leak.
 ==1==    by 0x108E58: $s4test12MemoryLeakerCACycfC (in /tmp/test)
 ==1==    by 0x10900E: $s4test28myFunctionDoingTheAllocationyyF (in /tmp/test)
 ==1==    by 0x108CA3: main (in /tmp/test)
-
 ```
 
 However, since Swift uses name mangling for function and symbol names, the stack traces may not be straightforward to understand. 
@@ -167,7 +161,6 @@ To demangle the Swift symbols in the stack traces, run the `swift demangle` comm
 
 ```
 swift demangle <mangled_symbol>
-
 ```
 
 Replace `<mangled_symbol>` with the mangled symbol name shown in the stack trace. For example:
@@ -186,7 +179,6 @@ The utility will demangle the symbol and display a human-readable version as fol
 ==1==    by 0x108E58: test.MemoryLeaker.__allocating_init() -> test.MemoryLeaker (in /tmp/test)
 ==1==    by 0x10900E: test.myFunctionDoingTheAllocation() -> () (in /tmp/test)
 ==1==    by 0x108CA3: main (in /tmp/test)
-
 ```
 
 By analyzing the demangled symbols, we can understand which part of the code is responsible for the memory leak. In this example, the `valgrind` command indicates the allocation that leaked is coming from:
@@ -209,14 +201,12 @@ Here are the steps:
 
 ```
 export ASAN_OPTIONS=detect_leaks=1
-
 ```
 
 3. Run `swift build` with the additional option to enable [Address Sanitizer](https://developer.apple.com/documentation/xcode/diagnosing-memory-thread-and-crash-issues-early):
 
 ```
 swift build --sanitize=address
-
 ```
 
 The build process will compile your code with AddressSanitizer enabled, which automatically looks for leaked memory blocks. If any memory leaks during the build are detected, it will output the information (similar to Valgrind) as shown in the example below:
@@ -233,7 +223,6 @@ Direct leak of 32 byte(s) in 1 object(s) allocated from:
     #4 0x7f7e43aecb96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
 
 SUMMARY: AddressSanitizer: 32 byte(s) leaked in 1 allocation(s).
-
 ```
 
 Currently, the output doesn’t provide a human-readable representation of the function names because [LeakSanitizer doesn't symbolicate stack traces on Linux](https://github.com/apple/swift/issues/55046). 
@@ -246,14 +235,12 @@ To install `binutils` for Swift on a server running Linux, follow these steps:
 
 ```
 sudo apt update
-
 ```
 
 3. Install `binutils` by running the following command:
 
 ```
 sudo apt install binutils
-
 ```
 
 4.  This will install `binutils` and its related tools for working with binaries, object files, and libraries, which can be useful for developing and debugging Swift applications on Linux.
@@ -263,14 +250,12 @@ You can now run the following command to demangle the symbols in the stack trace
 ```
 # /tmp/test+0xc62ce
 addr2line -e /tmp/test -a 0xc62ce -ipf | swift demangle
-
 ```
 
 In this example, the allocation that leaked is coming from:
 
 ```
 0x00000000000c62ce: test.myFunctionDoingTheAllocation() -> () at crtstuff.c:?
-
 ```
 
 ### Limitations
@@ -290,7 +275,6 @@ Using a different example, here’s a short how-to using [Ubuntu](https://www.sw
 
 ```
 sudo apt-get install heaptrack
-
 ```
 
 2. Run the binary twice using `heaptrack`. The first run provides a baseline for `main`.
@@ -307,7 +291,6 @@ heaptrack stats:
 Heaptrack finished! Now run the following to investigate the data:
 
   heaptrack --analyze "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84341.gz"
-  
 ```
 
 3. Then run it a second time for the `feature branch` by changing the branch and recompiling.
@@ -325,7 +308,6 @@ Heaptrack finished! Now run the following to investigate the data:
 
   heaptrack --analyze "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84372.gz"
 ubuntu@ip-172-31-25-161 /t/.nio_alloc_counter_tests_GRusAy>
-
 ```
 
 The output shows 673989 allocations in the `feature branch` version and 319347 in `main`, indicating a regression.
@@ -334,7 +316,6 @@ The output shows 673989 allocations in the `feature branch` version and 319347 i
 
 ```
 heaptrack_print -T -d heaptrack.test_1000_autoReadGetAndSet.84341.gz heaptrack.test_1000_autoReadGetAndSet.84372.gz | swift demangle
-
 ```
 
 **Note:** `-T` outputs the temporary allocations, providing transient allocations and not leaks. If leaks are detected, remove `-T`.
@@ -376,7 +357,6 @@ swift_slowAlloc
       at /home/ubuntu/swiftnio/swift-nio/Sources/NIO/LinuxURing.swift:297
 ...
 22196 temporary allocations of 22276 allocations in total (99.64%) from:
-
 ```
 
 Looking at the output above, we can see the extra transient allocations were due to extra debug printing and querying of environment variables as shown below:
@@ -386,7 +366,6 @@ NIO.URing.getEnvironmentVar(Swift.String) -> Swift.String?
   at /home/ubuntu/swiftnio/swift-nio/Sources/NIO/LinuxURing.swift:291
   in /tmp/.nio_alloc_counter_tests_GRusAy/.build/x86_64-unknown-linux-gnu/release/test_1000_autoReadGetAndSet
 NIO.URing._debugPrint(@autoclosure () -> Swift.String) -> ()
-
 ```
 
 In this example, the debug prints are only for testing and would be removed from the code before the branch is merged.
