@@ -158,7 +158,7 @@ function init() {
   var req = new window.XMLHttpRequest()
 
   req.addEventListener('load', function() {
-    let evolutionMetadata = JSON.parse(req.responseText, flattenStatus)
+    let evolutionMetadata = JSON.parse(req.responseText, adjustStatusValue)
     
     // Temporary conditional to allow script to work with old and new schemas
     if (Array.isArray(evolutionMetadata)) { // current schema
@@ -210,13 +210,11 @@ function init() {
 }
 
 /** 
- * Reviver function passed to JSON.parse() to convert new status field structure to old structure.
+ * Reviver function passed to JSON.parse() to convert new status field value to old value.
  */
-function flattenStatus(key, value) {
-  if (key == "status" && value !== "" && !value.state) {
-    let [subkey, subvalue] = Object.entries(value)[0]
-    subvalue.state = "." + subkey
-    return subvalue
+function adjustStatusValue(key, value) {
+  if (key == "state" && value !== "" && !value.startsWith(".")) {
+    return "." + value
   }
   return value
 }
