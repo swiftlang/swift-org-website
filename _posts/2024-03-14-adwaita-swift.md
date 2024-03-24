@@ -40,8 +40,9 @@ struct Counter: View {
 ```
 
 A view can be nested within other views or added as the child of a window.
-Note that the view's content can be modified from outside that view.
-This means that the single view can be implemented in different ways and the results can vary.
+
+Its content can be modified from outside that view and is influenced by its position in the view hierarchy. 
+This makes it easier to compose views to produce different results.
 The screenshot shows one simple possibility.
 
 ![A screenshot of the counter example app.](/assets/images/2024-03-14-adwaita-swift/demo.png){:style="max-width: 100%; height: auto; width: unset; margin: auto auto; display: block;"}
