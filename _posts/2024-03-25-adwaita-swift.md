@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2024-03-14 20:00:00
+date: 2024-03-25 10:00:00
 title: "Writing GNOME Apps with Swift"
 author: [davidswift]
 ---
