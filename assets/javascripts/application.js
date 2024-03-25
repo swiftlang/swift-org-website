@@ -63,15 +63,15 @@ layout: source
     if (archiveYears.length > 0) {
       archiveYears.forEach(function(year) {
         year.addEventListener('click', function(e) {
-          const activeYear = document.querySelector('.archive .year.active');
+          const activeYear = document.querySelector('.archive .year[aria-pressed="true"]');
           const activeMonth = document.querySelector('.archive .months.active');
           const months = document.querySelector(`.archive .months[data-year='${year.textContent}']`);
 
           if (activeYear) {
-            activeYear.classList.remove('active');
+            activeYear.setAttribute('aria-pressed', 'false');
           }
 
-          e.currentTarget.classList.add('active')
+          e.currentTarget.setAttribute('aria-pressed', 'true');
 
           if (activeMonth) {
             activeMonth.classList.remove('active');

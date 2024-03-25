@@ -29,11 +29,11 @@
 <div class="archive">
   <ul class="years">
     {%- for year in site.data.packages.showcase-history.years %}
-      <button class="year">{{ year.name }}</button>
+      <button aria-pressed="{% if forloop.index == 1 %}true{% else %}false{% endif %}" class="year">{{ year.name }}</button>
     {% endfor %}
   </ul>
   {%- for year in site.data.packages.showcase-history.years %}
-    <ul class="months" data-year="{{ year.name }}">
+    <ul class="months {% if forloop.index == 1 %}active{% endif %}" data-year="{{ year.name }}">
       {%- for month in year.months %}
         {%- assign url = "packages/showcase-" | append: month.slug | append: "-" | append: year.name | append: ".md" %}
         <li class="month">

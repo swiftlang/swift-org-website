@@ -1175,7 +1175,7 @@ article {
       padding: .5rem;
       text-align: center;
 
-      &:hover, &.active {
+      &:hover, &[aria-pressed="true"] {
         background-color: var(--color-text);
         color: var(--color-fill);
         text-decoration: none;
