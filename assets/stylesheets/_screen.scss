@@ -1158,3 +1158,36 @@ article {
     padding: 4px 0 4px 10px;
   }
 }
+
+.archive {
+  .years {
+    display: flex;
+    padding: 0;
+
+    .year {
+      cursor: pointer;
+      margin-right: 1rem;
+      background-color: transparent;
+      border-radius: var(--border-radius);
+      border: 1px solid var(--color-text);
+      color: var(--color-text);
+      display: block;
+      padding: .5rem;
+      text-align: center;
+
+      &:hover, &.active {
+        background-color: var(--color-text);
+        color: var(--color-fill);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .months {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
