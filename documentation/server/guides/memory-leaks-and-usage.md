@@ -230,9 +230,9 @@ sudo apt update
 sudo apt install binutils
 ```
 
-4. This will install `binutils` and its related tools for working with binaries, object files, and libraries, which can be useful for developing and debugging Swift applications on Linux.
+This will install `binutils` and its related tools for working with binaries, object files, and libraries, which can be useful for developing and debugging Swift applications on Linux.
 
-You can now run the following command to demangle the symbols in the stack traces:
+4. You can now run the following command to demangle the symbols in the stack traces:
 ```
 # /tmp/test+0xc62ce
 addr2line -e /tmp/test -a 0xc62ce -ipf | swift demangle
