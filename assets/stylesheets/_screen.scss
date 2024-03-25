@@ -236,20 +236,11 @@ cite {
       border-bottom: 1px solid var(--color-nav-rule);
     }
 
-    &.cta {
+    &.nav-cta a {
       border: 2px solid var(--color-nav-rule);
       border-radius: .5rem;
-      padding: .1em .4em;
-      cursor: pointer;
+      padding: .8em .9em;
       transition: border .2s ease;
-
-      a {
-        display: block;
-
-        span {
-          letter-spacing: 0;
-        }
-      }
 
       &:hover {
         border-color: var(--color-link);
