@@ -349,6 +349,10 @@ cite {
     border-top: 1px solid var(--color-nav-rule);
     display: block;
 
+    &:last-child {
+      border-bottom: 1px solid var(--color-nav-rule);
+    }
+
     &.active {
       a {
         font-weight: 700;
@@ -363,12 +367,6 @@ cite {
       letter-spacing: 1px;
       margin-bottom: .5rem;
       padding: 1rem 1rem .5rem;
-    }
-
-    &.cta {
-      border-bottom: 1px solid var(--color-nav-rule);
-      padding: 0;
-      border-radius: 0;
     }
 
     & a {
