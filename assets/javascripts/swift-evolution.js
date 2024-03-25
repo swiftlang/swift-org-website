@@ -9,6 +9,11 @@
 // ===---------------------------------------------------------------------===//
 'use strict'
 
+const EVOLUTION_METADATA_URL = 'https://download.swift.org/swift-evolution/proposals.json'
+const GITHUB_BASE_URL = 'https://github.com/'
+const REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
+const UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
+
 /** Holds the primary data used on this page: metadata about Swift Evolution proposals. */
 var proposals
 
@@ -64,10 +69,6 @@ const upcomingFeatureFlags = new Map([
 var filterSelection = []
 
 var upcomingFeatureFlagFilterEnabled = false
-
-var GITHUB_BASE_URL = 'https://github.com/'
-var REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
-var UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
 
 /**
  * `name`: Mapping of the states in the proposals JSON to human-readable names.
@@ -157,8 +158,16 @@ function init() {
   var req = new window.XMLHttpRequest()
 
   req.addEventListener('load', function() {
-    proposals = JSON.parse(req.responseText)
-
+    let evolutionMetadata = JSON.parse(req.responseText, adjustStatusValue)
+    
+    // Temporary conditional to allow script to work with old and new schemas
+    if (Array.isArray(evolutionMetadata)) { // current schema
+      proposals = evolutionMetadata
+    } else { // new schema
+      proposals = evolutionMetadata.proposals
+      languageVersions = evolutionMetadata.implementationVersions
+    }
+    
     // Don't display malformed proposals
     proposals = proposals.filter(function (proposal) {
       return !proposal.errors
@@ -196,8 +205,18 @@ function init() {
   })
 
   document.querySelector('#proposals-count-number').innerHTML = 'Loading…'
-  req.open('get', 'https://download.swift.org/swift-evolution/proposals.json')
+  req.open('get', EVOLUTION_METADATA_URL)
   req.send()
+}
+
+/** 
+ * Reviver function passed to JSON.parse() to convert new status field value to old value.
+ */
+function adjustStatusValue(key, value) {
+  if (key == "state" && value !== "" && !value.startsWith(".")) {
+    return "." + value
+  }
+  return value
 }
 
 /**

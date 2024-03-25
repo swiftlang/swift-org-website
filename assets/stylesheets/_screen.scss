@@ -144,6 +144,10 @@ p {
   & > code {
     white-space: pre-wrap;
     word-break: break-word;
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    border: 1px solid var(--color-fill-tertiary);
+    background: var(--color-code-background);
   }
 }
 
@@ -219,7 +223,7 @@ cite {
 
     .active a {
       font-weight: 700;
-      color: var(--color-active-nav-item); 
+      color: var(--color-active-nav-item);
     }
 
     &.nav-section {
@@ -362,6 +366,8 @@ cite {
 
     &.cta {
       border-bottom: 1px solid var(--color-nav-rule);
+      padding: 0;
+      border-radius: 0;
     }
 
     & a {
@@ -850,6 +856,7 @@ article {
 code {
   white-space: pre-line;
 }
+
 pre code {
   white-space: inherit;
 }

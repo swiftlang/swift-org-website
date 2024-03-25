@@ -1,0 +1,15 @@
+- date: 2024-03-23 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-03-23-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-03-23-a-ubi9-aarch64.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-03-23-a-ubi9-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-03-22 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-03-22-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-03-22-a-ubi9-aarch64.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-03-22-a-ubi9-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-03-21 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-03-21-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-03-21-a-ubi9-aarch64.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-03-21-a-ubi9-aarch64.tar.gz.sig
+  name: Swift Development Snapshot

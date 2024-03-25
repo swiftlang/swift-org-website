@@ -128,3 +128,7 @@
           name: security-process
         - title: Security Updates
           name: security-updates
+# ------------------------------------------------------------------------------
+- header: Download
+  url: /install/
+  isCta: true
