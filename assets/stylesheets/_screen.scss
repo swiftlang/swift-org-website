@@ -309,6 +309,7 @@ cite {
     display: block;
     padding: 0;
     margin: 0;
+    text-align: left;
 
     a {
       display: block;
@@ -338,10 +339,12 @@ cite {
 
 .nav-item span i {
   display: inline-block;
-  margin-left: -0.6em;
+  margin-left: -0.75em;
   font-style: normal;
   font-weight: 100;
   opacity: 0.2;
+  line-height: 1em;
+  padding-top: .2em;
 }
 
 .nav-item:hover > span {
