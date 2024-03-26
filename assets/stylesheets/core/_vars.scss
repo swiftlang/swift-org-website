@@ -6,17 +6,17 @@
 }
 
 @mixin vars-light() {
-  --logo-reference: url('/assets/images/swift.svg');
-  --menu-icon: url('/assets/images/icon-menu.svg');
-  --menu-icon-close: url('/assets/images/icon-close.svg');
+  --logo-reference: url("/assets/images/swift.svg");
+  --menu-icon: url("/assets/images/icon-menu.svg");
+  --menu-icon-close: url("/assets/images/icon-close.svg");
   --icon-filter: none;
   --icon-filter-hover: invert(1);
 }
 
 @mixin vars-dark() {
-  --logo-reference: url('/assets/images/swift~dark.svg');
-  --menu-icon: url('/assets/images/icon-menu~dark.svg');
-  --menu-icon-close: url('/assets/images/icon-close~dark.svg');
+  --logo-reference: url("/assets/images/swift~dark.svg");
+  --menu-icon: url("/assets/images/icon-menu~dark.svg");
+  --menu-icon-close: url("/assets/images/icon-close~dark.svg");
   --icon-filter: invert(1);
   --icon-filter-hover: none;
 }

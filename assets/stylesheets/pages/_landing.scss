@@ -19,7 +19,7 @@
 
     span {
       display: block;
-      padding-top: .5rem;
+      padding-top: 0.5rem;
     }
   }
 }
@@ -84,7 +84,7 @@
       border: 1px solid var(--color-text);
       color: var(--color-text);
       display: block;
-      padding: .5rem 0;
+      padding: 0.5rem 0;
       text-align: center;
       flex-grow: 1;
 
@@ -132,14 +132,15 @@
 
 .latest-release-container {
   span {
-    padding: .2rem .5rem;
+    padding: 0.2rem 0.5rem;
     border: 2px solid currentColor;
     font-weight: bold;
     border-radius: 4px;
   }
 }
 
-.use-cases, .getting-involved {
+.use-cases,
+.getting-involved {
   list-style: none;
   display: grid;
   gap: 1rem;
@@ -181,7 +182,7 @@
 }
 
 .getting-involved,
-.why-swift-list  {
+.why-swift-list {
   @media (min-width: 1000px) {
     grid-template-columns: repeat(3, 1fr);
   }

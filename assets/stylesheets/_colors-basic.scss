@@ -1,5 +1,7 @@
 // reset
-ul, menu, dir {
+ul,
+menu,
+dir {
   padding-inline-start: 0;
 }
 
@@ -8,7 +10,8 @@ body {
   color: var(--color-text-light);
 }
 
-nav[role="navigation"], footer[role="contentinfo"] {
+nav[role="navigation"],
+footer[role="contentinfo"] {
   background: var(--color-nav-background-light);
   color: var(--color-nav-text-light);
 }
@@ -21,7 +24,7 @@ footer[role="contentinfo"] p.privacy a {
 
 @media (prefers-color-scheme: dark) {
   #logo a {
-    background-image: url('/assets/images/swift~dark.svg');
+    background-image: url("/assets/images/swift~dark.svg");
   }
 
   body {
@@ -29,12 +32,14 @@ footer[role="contentinfo"] p.privacy a {
     color: var(--color-text-dark);
   }
 
-  nav[role="navigation"], footer[role="contentinfo"] {
+  nav[role="navigation"],
+  footer[role="contentinfo"] {
     background: var(--color-nav-background-dark);
     color: var(--color-nav-text-dark);
   }
 
-  .title a:link, .title a:visited  {
+  .title a:link,
+  .title a:visited {
     color: var(--color-text-dark);
   }
 
