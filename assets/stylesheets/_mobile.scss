@@ -1,216 +1,221 @@
 @media only screen and (max-width: 62rem) {
-    .navigation-links {
-        display: none;
+  .navigation-links {
+    display: none;
+  }
+
+  .mobile-navigation {
+    display: none;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  .site-navigation .wrapper {
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background-color: transparent;
+    height: 20px;
+    width: 20px;
+    background-image: var(--menu-icon-close);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+
+    &.open {
+      background-image: var(--menu-icon);
+    }
+  }
+
+  .section-toggle {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.5;
+
+    &[aria-expanded="false"] {
+      transform: rotate(0deg);
     }
 
-    .mobile-navigation {
-        display: none;
+    &[aria-expanded="true"] {
+      transform: rotate(180deg);
+    }
+  }
 
-        &.open {
-            display: block;
-        }
+  .section-menu {
+    display: none;
+
+    &.open {
+      display: block;
     }
 
-    .site-navigation .wrapper {
-        justify-content: space-between;
+    li a {
+      display: block;
+      padding: 0.5rem 2rem;
+      font-size: 0.6em;
+      opacity: 0.8;
+    }
+  }
+
+  .link-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    a {
+      flex: 1 1 auto;
     }
 
-    .menu-toggle {
-        display: block;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        border: none;
-        background-color: transparent;
-        height: 20px;
-        width: 20px;
-        background-image: var(--menu-icon-close);
-        background-repeat: no-repeat;
-        background-position: center center;
-        cursor: pointer;
-
-        &.open {
-            background-image: var(--menu-icon);
-        }
+    button {
+      flex: 0 0 auto;
+      padding: 1rem;
     }
-
-    .section-toggle {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        border: none;
-        background-color: transparent;
-        padding: 0;
-        margin: 0;
-        font-size: .8rem;
-        opacity: .5;
-
-        &[aria-expanded="false"] {
-            transform: rotate(0deg);
-        }
-
-        &[aria-expanded="true"] {
-            transform: rotate(180deg);
-        }
-    }
-
-    .section-menu {
-        display: none;
-
-        &.open {
-            display: block;
-        }
-
-        li a {
-            display: block;
-            padding: .5rem 2rem;
-            font-size: .6em;
-            opacity: .8;
-        }
-    }
-
-    .link-container {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-
-        a {
-            flex: 1 1 auto;
-        }
-
-        button {
-            flex: 0 0 auto;
-            padding: 1rem;
-        }
-    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    main {
-        max-width: 100%;
-        min-width: 320px;
-        margin-left: 0;
+  main {
+    max-width: 100%;
+    min-width: 320px;
+    margin-left: 0;
+  }
+
+  footer[role="contentinfo"] {
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+  .footer-other {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--content-margin-bottom);
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.1;
+  }
+
+  h4 {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  h5 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  h6 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  article {
+    blockquote {
+      margin-left: 0.5em;
+    }
+  }
+
+  table.downloads {
+    border: 1px var(--color-dropdown-border) solid;
+
+    &,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block !important;
     }
 
-    footer[role="contentinfo"] {
-        margin-left: 0;
-        flex-direction: column;
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
     }
 
-    .footer-other {
-      display: flex;
-      justify-content: space-between;
-      margin-top: var(--content-margin-bottom);
+    tr {
+      border: 1px solid var(--color-dropdown-border);
     }
 
-    h1 {
-        font-size: 48px;
-        font-weight: 300;
-        line-height: 1;
+    td {
+      border-left: none !important;
+      border-right: none !important;
+      border-bottom: 1px solid var(--color-dropdown-border) !important;
+      position: relative;
+      padding-left: 35%;
+      width: 100% !important;
     }
 
-    h2 {
-        font-size: 40px;
-        font-weight: 300;
-        line-height: 1.1;
+    td:before {
+      position: absolute;
+      top: 0.5em;
+      left: 0.5em;
+      width: 27.5%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: right;
     }
 
-    h3 {
-        font-size: 38px;
-        font-weight: 300;
-        line-height: 1.1;
+    td.platform:before {
+      content: "Platform";
     }
 
-    h4 {
-        font-size: 36px;
-        font-weight: 300;
-        line-height: 1.2;
+    td.download:before {
+      content: "Download";
+      top: 1em;
     }
 
-    h5 {
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 1.4;
+    td.date:before {
+      content: "Date";
     }
 
-    h6 {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.5;
+    td.toolchain:before {
+      content: "Toolchain";
+      top: 1em;
     }
 
-    article {
-        blockquote {
-            margin-left: 0.5em;
-        }
+    td.github-tag:before {
+      content: "GitHub Tag";
     }
 
-    table.downloads {
-        border: 1px var(--color-dropdown-border) solid;
-
-        &, thead, tbody, th, td, tr {
-            display: block !important;
-        }
-
-        thead tr {
-            position: absolute;
-            top: -9999px;
-            left: -9999px;
-        }
-
-        tr {
-            border: 1px solid var(--color-dropdown-border);
-        }
-
-        td {
-            border-left: none !important;
-            border-right: none !important;
-            border-bottom: 1px solid var(--color-dropdown-border) !important;
-            position: relative;
-            padding-left: 35%;
-            width: 100% !important;
-        }
-
-        td:before {
-            position: absolute;
-            top: 0.5em;
-            left: 0.5em;
-            width: 27.5%;
-            padding-right: 10px;
-            white-space: nowrap;
-            text-align: right;
-        }
-
-        td.platform:before {
-            content: "Platform";
-        }
-
-        td.download:before {
-            content: "Download";
-            top: 1em;
-        }
-
-        td.date:before {
-            content: "Date";
-        }
-
-        td.toolchain:before {
-            content: "Toolchain";
-            top: 1em;
-        }
-
-        td.github-tag:before {
-            content: "GitHub Tag";
-        }
-
-        td.docker-tag:before {
-            content: "Docker Tag";
-        }
-
-        td.arch-tag:before {
-            content: "Architecture";
-        }
+    td.docker-tag:before {
+      content: "Docker Tag";
     }
+
+    td.arch-tag:before {
+      content: "Architecture";
+    }
+  }
 }
 
 .nav-menu-container {

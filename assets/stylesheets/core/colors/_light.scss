@@ -61,7 +61,9 @@
   --color-changes-deprecated-hover: var(--color-figure-light-gray);
   --color-changes-modified: var(--color-figure-light-gray);
   --color-changes-modified-hover: var(--color-figure-light-gray);
-  --color-changes-modified-previous-background: var(--color-fill-gray-secondary);
+  --color-changes-modified-previous-background: var(
+    --color-fill-gray-secondary
+  );
   --color-code-background: var(--color-fill-secondary);
   --color-code-collapsible-background: var(--color-fill-tertiary);
   --color-code-collapsible-text: var(--color-figure-gray-secondary-alt);
@@ -72,7 +74,10 @@
   --color-dropdown-option-text: #{light-color(figure-gray-secondary)};
   --color-dropdown-text: #{light-color(figure-gray)};
   --color-dropdown-dark-background: #{transparentize(light-color(fill), 0.9)};
-  --color-dropdown-dark-border: #{transparentize(light-color(fill-gray-tertiary), 0.8)};
+  --color-dropdown-dark-border: #{transparentize(
+      light-color(fill-gray-tertiary),
+      0.8
+    )};
   --color-dropdown-dark-option-text: #{dark-color(figure-gray-secondary)};
   --color-dropdown-dark-text: #{dark-color(figure-gray)};
   --color-eyebrow: var(--color-figure-gray-secondary);
@@ -89,7 +94,10 @@
   --color-link: var(--color-figure-blue);
   --color-loading-placeholder-background: var(--color-fill);
   --color-nav-color: #{light-color(figure-gray-secondary-alt)};
-  --color-nav-current-link: #{change-color(light-color(figure-gray), $alpha: 0.6)};
+  --color-nav-current-link: #{change-color(
+      light-color(figure-gray),
+      $alpha: 0.6
+    )};
   --color-nav-expanded: #{light-color(fill)};
   --color-nav-hierarchy-collapse-background: #{light-color(fill-gray-tertiary)};
   --color-nav-hierarchy-collapse-borders: #{dark-color(figure-gray-secondary)};
@@ -100,31 +108,59 @@
   --color-nav-outlines: #{light-color(fill-gray)};
   // --color-nav-rule: #{change-color(light-color(fill-gray-tertiary), $alpha: 0.5)};
   --color-nav-solid-background: #{light-color(fill)};
-  --color-nav-sticking-expanded-keyline: #{change-color(light-color(figure-gray), $alpha: 0.1)};
+  --color-nav-sticking-expanded-keyline: #{change-color(
+      light-color(figure-gray),
+      $alpha: 0.1
+    )};
   --color-nav-stuck: #{change-color(light-color(fill), $alpha: 0.9)};
   --color-nav-uiblur-expanded: #{change-color(light-color(fill), $alpha: 0.9)};
   --color-nav-uiblur-stuck: #{change-color(light-color(fill), $alpha: 0.7)};
   --color-nav-root-subhead: var(--color-tutorials-teal);
-  --color-nav-dark-border-top-color: #{change-color(light-color(fill), $alpha: 0.4)};
+  --color-nav-dark-border-top-color: #{change-color(
+      light-color(fill),
+      $alpha: 0.4
+    )};
   --color-nav-dark-color: #{dark-color(figure-gray-secondary-alt)};
-  --color-nav-dark-current-link: #{change-color(dark-color(figure-gray), $alpha: 0.6)};
+  --color-nav-dark-current-link: #{change-color(
+      dark-color(figure-gray),
+      $alpha: 0.6
+    )};
   --color-nav-dark-expanded: #{dark-color(fill-tertiary)};
-  --color-nav-dark-hierarchy-collapse-background: #{dark-color(fill-gray-tertiary)};
-  --color-nav-dark-hierarchy-collapse-borders: #{light-color(figure-gray-secondary)};
+  --color-nav-dark-hierarchy-collapse-background: #{dark-color(
+      fill-gray-tertiary
+    )};
+  --color-nav-dark-hierarchy-collapse-borders: #{light-color(
+      figure-gray-secondary
+    )};
   --color-nav-dark-hierarchy-item-borders: #{dark-color(fill-gray-tertiary)};
-  --color-nav-dark-keyline: #{change-color(dark-color(fill-gray-tertiary), $alpha: 0.95)};
+  --color-nav-dark-keyline: #{change-color(
+      dark-color(fill-gray-tertiary),
+      $alpha: 0.95
+    )};
   --color-nav-dark-link-color: #{dark-color(figure-gray)};
   --color-nav-dark-link-color-hover: #{dark-color(figure-blue)};
   --color-nav-dark-outlines: #{dark-color(fill-gray)};
   --color-nav-dark-rule: #{dark-color(fill-gray)};
   --color-nav-dark-solid-background: #{dark-color(fill)};
-  --color-nav-dark-sticking-expanded-keyline: #{change-color(dark-color(fill-gray-tertiary), $alpha: 0.7)};
+  --color-nav-dark-sticking-expanded-keyline: #{change-color(
+      dark-color(fill-gray-tertiary),
+      $alpha: 0.7
+    )};
   --color-nav-dark-stuck: #{change-color(dark-color(fill-tertiary), $alpha: 0.9)};
-  --color-nav-dark-uiblur-expanded: #{change-color(dark-color(fill-tertiary), $alpha: 0.9)};
-  --color-nav-dark-uiblur-stuck: #{change-color(dark-color(fill-tertiary), $alpha: 0.7)};
+  --color-nav-dark-uiblur-expanded: #{change-color(
+      dark-color(fill-tertiary),
+      $alpha: 0.9
+    )};
+  --color-nav-dark-uiblur-stuck: #{change-color(
+      dark-color(fill-tertiary),
+      $alpha: 0.7
+    )};
   --color-nav-dark-root-subhead: #{dark-color(tutorials-teal)};
   --color-runtime-preview-background: var(--color-fill-tertiary);
-  --color-runtime-preview-disabled-text: #{change-color(light-color(figure-gray-secondary), $alpha: 0.6)};
+  --color-runtime-preview-disabled-text: #{change-color(
+      light-color(figure-gray-secondary),
+      $alpha: 0.6
+    )};
   --color-runtime-preview-text: var(--color-figure-gray-secondary);
   --color-secondary-label: var(--color-figure-gray-secondary);
   --color-step-background: var(--color-fill-secondary);
@@ -174,7 +210,9 @@
   --color-tutorials-overview-eyebrow: #{dark-color(figure-gray-secondary)};
   --color-tutorials-overview-icon: #{dark-color(figure-light-gray)};
   --color-tutorials-overview-link: #{dark-color(figure-blue)};
-  --color-tutorials-overview-navigation-link: #{dark-color(figure-gray-secondary)};
+  --color-tutorials-overview-navigation-link: #{dark-color(
+      figure-gray-secondary
+    )};
   --color-tutorials-overview-navigation-link-active: #{dark-color(figure-gray)};
   --color-tutorials-overview-navigation-link-hover: #{dark-color(figure-gray)};
   --color-tutorial-hero-text: #{dark-color(figure-gray)};
@@ -183,20 +221,20 @@
 
   --color-term-normal: var(--color-text);
   --color-term-background: var(--color-code-background);
-  --color-term-red: rgb(194,54,33);
-  --color-term-green: rgb(37,188,36);
-  --color-term-yellow: rgb(173,173,39);
-  --color-term-blue: rgb(73,46,225);
-  --color-term-magenta: rgb(211,56,211);
-  --color-term-cyan: rgb(51,187,200);
-  --color-term-white: rgb(175,175,175);
-  --color-term-gray: rgb(129,131,131);
-  --color-term-bright-red: rgb(252,57,31);
-  --color-term-bright-green: rgb(49,231,34);
-  --color-term-bright-yellow: rgb(234,236,35);
-  --color-term-bright-blue: rgb(88,51,255);
-  --color-term-bright-magenta: rgb(249,53,248);
-  --color-term-bright-cyan: rgb(20,200,200);
-  --color-term-bright-white: rgb(255,255,255);
-  --color-term-highlight-background: rgb(195,195,195);
+  --color-term-red: rgb(194, 54, 33);
+  --color-term-green: rgb(37, 188, 36);
+  --color-term-yellow: rgb(173, 173, 39);
+  --color-term-blue: rgb(73, 46, 225);
+  --color-term-magenta: rgb(211, 56, 211);
+  --color-term-cyan: rgb(51, 187, 200);
+  --color-term-white: rgb(175, 175, 175);
+  --color-term-gray: rgb(129, 131, 131);
+  --color-term-bright-red: rgb(252, 57, 31);
+  --color-term-bright-green: rgb(49, 231, 34);
+  --color-term-bright-yellow: rgb(234, 236, 35);
+  --color-term-bright-blue: rgb(88, 51, 255);
+  --color-term-bright-magenta: rgb(249, 53, 248);
+  --color-term-bright-cyan: rgb(20, 200, 200);
+  --color-term-bright-white: rgb(255, 255, 255);
+  --color-term-highlight-background: rgb(195, 195, 195);
 }

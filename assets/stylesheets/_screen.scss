@@ -22,8 +22,8 @@ body {
 
   pre,
   code {
-    font-family: "SF Mono", ui-monospace, Menlo, Consolas, Monaco, "Courier New", monospace,
-      serif;
+    font-family: "SF Mono", ui-monospace, Menlo, Consolas, Monaco, "Courier New",
+      monospace, serif;
   }
 }
 
@@ -219,7 +219,7 @@ cite {
 
   li {
     display: inline-block;
-    margin-left: .5em;
+    margin-left: 0.5em;
 
     .active a {
       font-weight: 700;
@@ -228,20 +228,20 @@ cite {
 
     &.nav-section {
       color: var(--color-nav-color);
-      font-size: .7rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: .5rem;
-      padding: 1rem 0 .5rem;
+      margin-bottom: 0.5rem;
+      padding: 1rem 0 0.5rem;
       border-bottom: 1px solid var(--color-nav-rule);
     }
 
     &.cta {
       border: 2px solid var(--color-nav-rule);
-      border-radius: .5rem;
-      padding: .1em .4em;
+      border-radius: 0.5rem;
+      padding: 0.1em 0.4em;
       cursor: pointer;
-      transition: border .2s ease;
+      transition: border 0.2s ease;
 
       a {
         display: block;
@@ -279,7 +279,9 @@ cite {
   background-color: var(--color-nav-background);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(5px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   border: 1px solid var(--color-nav-rule);
   min-width: 160px;
@@ -301,7 +303,9 @@ cite {
 
       &:hover {
         background-color: rgba(gray, 0.1);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.08);
+        box-shadow:
+          0 8px 16px rgba(0, 0, 0, 0.05),
+          0 1px 3px rgba(0, 0, 0, 0.08);
       }
     }
   }
@@ -352,17 +356,17 @@ cite {
     .link-container.active {
       a {
         font-weight: 700;
-        color: #F05138; // TODO: Use variable
+        color: #f05138; // TODO: Use variable
       }
     }
 
     &.nav-section {
       color: var(--color-nav-color);
-      font-size: .7rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: .5rem;
-      padding: 1rem 1rem .5rem;
+      margin-bottom: 0.5rem;
+      padding: 1rem 1rem 0.5rem;
     }
 
     &.cta {
@@ -410,7 +414,8 @@ main {
     }
   }
 
-  .post, .page {
+  .post,
+  .page {
     max-width: 50em;
     margin: 0 auto;
     padding: 0 30px;
@@ -1037,7 +1042,9 @@ article {
       content: "Less detail";
     }
     input.detail[type="checkbox"] + .more {
-      transition: 0.5s opacity ease, 0.5s max-height ease;
+      transition:
+        0.5s opacity ease,
+        0.5s max-height ease;
     }
 
     input.detail[type="checkbox"]:checked + .more {
