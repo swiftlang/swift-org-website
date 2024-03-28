@@ -7,15 +7,15 @@ The Contributor Experience Workgroup supports contributors to the Swift project,
 
 ## Charter
 
-The Contributor Experience Workgroup is devoted to
-- improving the mechanics and ergonomics of contributing to the Swift compiler and related open source repositories by
-  - providing guidance and setting expectations for the GitHub pull request and issue workflows
-  - maintaining onboarding documentation
-  - adding and managing GitHub labels
-- providing support systems and facilitating collaboration amongst contributors through
-  - the Swift Mentorship Program
-  - community groups
-  - collaboration tools and spaces to connect with other contributors
+The Contributor Experience Workgroup is devoted to:
+- improving the mechanics and ergonomics of contributing to the Swift compiler and related open source repositories by:
+  - providing guidance and setting expectations for the GitHub pull request and issue workflows.
+  - maintaining onboarding documentation.
+  - adding and managing GitHub labels.
+- providing support systems and facilitating collaboration amongst contributors through:
+  - the Swift Mentorship Program.
+  - community groups.
+  - collaboration tools and spaces to connect with other contributors.
 
 ### Diversity
 
@@ -32,6 +32,7 @@ The current workgroup members with their respective Swift Forums usernames:
 * Anthony Latsis ([@anthonylatsis](https://forums.swift.org/u/anthonylatsis))
 * Devanshi Modha (Diversity in Swift champion) ([@devanshimodha](https://forums.swift.org/u/devanshimodha))
 * Egor Zhdan ([@egor.zhdan](https://forums.swift.org/u/egor.zhdan))
+* Harshita Pathipati ([@hpathipati](https://forums.swift.org/u/hpathipati))
 * Holly Borla ([@hborla](https://forums.swift.org/u/hborla))
 * Luciano Almeida ([@LucianoPAlmeida](https://forums.swift.org/u/LucianoPAlmeida))
 * Max Desiatov ([@Max_Desiatov](https://forums.swift.org/u/max_desiatov))

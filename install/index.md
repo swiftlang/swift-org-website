@@ -1,12 +1,11 @@
 ---
-layout: default
+layout: page
 title: Install Swift
 ---
 
-# Install Swift
+Follow the instructions below to install the latest version of Swift on a [supported platform](/platform-support).
 
-Swift development is officially supported on Apple platforms, Linux, and Windows.
-More details about [platform support](/platform-support).
+You can also [download nightly snapshots and older releases](/download).
 
 ### Latest Release: Swift {{ site.data.builds.swift_releases.last.name }}
 

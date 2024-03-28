@@ -76,8 +76,8 @@ a great head start for Linux support that you can try right now! There
 is still plenty of work to be done, so we hope to see you [contribute to
 Swift] to make the Linux port even more complete.
 
-[Standard Library]: /compiler-stdlib/
-[Core Libraries]: /core-libraries/
+[Standard Library]: /documentation/standard-library/
+[Core Libraries]: /documentation/core-libraries/
 [libdispatch project on GitHub]: https://github.com/apple/swift-corelibs-libdispatch
 [download pre-built binaries for Ubuntu]: /download/
 [contribute to Swift]: /contributing/

@@ -36,6 +36,8 @@
 
 # The following lines are used by GitHub to automatically recommend reviewers.
 
-* @0xTim @alexandersandberg @daveverwer @dempseyatgithub @parispittman @kaishin @mschinis @shahmishal @TimTr @tomerd @cthielen
+* @0xTim @alexandersandberg @daveverwer @dempseyatgithub @parispittman @kaishin @shahmishal @cthielen @federicobucchi
 
 /_posts/* @cthielen @TimTr @tkremenek @tomerd
+
+/gsoc*/ @ktoso

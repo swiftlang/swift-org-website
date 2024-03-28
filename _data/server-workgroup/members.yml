@@ -33,3 +33,7 @@
 - name: Tom Doron
   github: tomerd
   affiliation: Apple, Core team rep
+
+- name: Sven A. Schmidt
+  github: finestructure
+  affliation: Swift Package Index

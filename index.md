@@ -1,10 +1,12 @@
 ---
-layout: default
+layout: page-wide
 title: Welcome to Swift.org
+hideTitle: true
 atom: true
 ---
 
-<h1 class="preamble">Swift is a <strong>general-purpose</strong> programming language that's <strong>approachable</strong> for newcomers and <strong>powerful</strong> for experts. It is <strong>fast</strong>, <strong>modern</strong>, <strong>safe</strong>, and a <strong>joy</strong> to write.</h1>
+<div class="callout" markdown="1">
+  <h1 class="preamble">Swift is a <strong>general-purpose</strong> programming language that’s <strong>approachable</strong> for newcomers and <strong>powerful</strong> for experts. <span>It is <strong>fast</strong>, <strong>modern</strong>, <strong>safe</strong>, and a <strong>joy</strong> to write.</span></h1>
 
 {% for snippet in site.data.featured_snippets %}
 ```swift
@@ -12,8 +14,9 @@ atom: true
 ```
 {: class="featured-snippet {% if forloop.first %}visible{% endif %}" }
 {% endfor %}
+</div>
 
-<div class="link-grid" markdown="1">
+<div class="link-grid">
   <ul>
     <li>
       <a href="/install">
@@ -82,7 +85,7 @@ atom: true
       SwiftNIO and Swift's dynamic server ecosystem bring joy to developing networked applications.
     </p>
 
-    <a href="/server" class="cta-secondary">Learn more</a>
+    <a href="/documentation/server" class="cta-secondary">Learn more</a>
   </li>
 </ul>
 
@@ -90,7 +93,7 @@ atom: true
 
 Everyone is welcome to contribute to Swift. Contributing doesn’t just mean writing code or submitting pull request — there are many different ways for you to get involved, including answering questions on the forums, reporting or triaging bugs, and participating in the Swift evolution process.
 
-No matter how you want to get involved, we ask that you first learn what’s expected of anyone who participates in the project by reading the [Community Overview](/community/). If you’re contributing code, you should also know how to build and run Swift from the repository, as described in [Source Code](/source-code/).
+No matter how you want to get involved, we ask that you first learn what’s expected of anyone who participates in the project by reading the [Community Overview](/community/). If you’re contributing code, you should also know how to build and run Swift from the repository, as described in [Source Code](/documentation/source-code/).
 
 <ul class="getting-involved">
   <li>

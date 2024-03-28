@@ -1623,5 +1623,96 @@
         - aarch64
     - name: Windows 10
       platform: Windows
+      docker: 5.9.1-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+- name: 5.9.2
+  tag: swift-5.9.2-RELEASE
+  xcode: Xcode 15.1
+  xcode_release: true
+  date: 2023-12-11
+  platforms:
+    - name: Ubuntu 18.04
+      platform: Linux
+      archs:
+        - x86_64
+    - name: Ubuntu 20.04
+      platform: Linux
+      docker: 5.9.2-focal
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 5.9.2-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: CentOS 7
+      platform: Linux
+      docker: 5.9.2-centos7
+      archs:
+        - x86_64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 5.9.2-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 5.9.2-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 5.9.2-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+- name: "5.10"
+  tag: swift-5.10-RELEASE
+  xcode: Xcode 15.3
+  xcode_release: true
+  date: 2024-03-05
+  platforms:
+    - name: Ubuntu 18.04
+      platform: Linux
+      archs:
+        - x86_64
+    - name: Ubuntu 20.04
+      platform: Linux
+      docker: 5.10-focal
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 5.10-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: CentOS 7
+      platform: Linux
+      docker: 5.10-centos7
+      archs:
+        - x86_64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 5.10-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 5.10-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 5.10-windowsservercore-ltsc2022
       archs:
         - x86_64

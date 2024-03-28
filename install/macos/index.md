@@ -1,13 +1,11 @@
 ---
-layout: default
+layout: page
 title: macOS Installation Options
 ---
 
-# macOS Installation Options
-
 ## Installation via Xcode
 
-Download [{{ site.data.builds.swift_releases.last.xcode }}](https://itunes.apple.com/app/xcode/id497799835) which contains the latest Swift release. 
+Download the [current version of Xcode](https://itunes.apple.com/app/xcode/id497799835) which contains the latest Swift release.
 
 ## Installation via Swift.org package installer
 
@@ -25,9 +23,9 @@ toolchain. However, when Xcode is not installed, the functionality of the Swift
 Package Manager may be limited due to some [outstanding issues](https://github.com/apple/swift-package-manager/issues/4396).
 </div>
 
-0. Download a latest Swift release 
+0. Download a latest Swift release
    ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases))
-   or development [snapshot](/download/#snapshots) package. 
+   or development [snapshot](/download/#snapshots) package.
    Make sure that your system meets the aforecited requirements for
    this package.
 
@@ -35,7 +33,7 @@ Package Manager may be limited due to some [outstanding issues](https://github.c
    which will install an Xcode toolchain into
    `/Library/Developer/Toolchains/`.
 
-   An Xcode toolchain (`.xctoolchain`) includes a copy of the compiler, LLDB, 
+   An Xcode toolchain (`.xctoolchain`) includes a copy of the compiler, LLDB,
    and other related tools needed to provide a cohesive development experience
    for working in a specific version of Swift.
 

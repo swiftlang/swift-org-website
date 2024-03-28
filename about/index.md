@@ -29,12 +29,11 @@ The features of Swift are designed to work together to create a language that is
 * Powerful error handling built-in
 * Advanced control flow with `do`, `guard`, `defer`, and `repeat` keywords
 
-
 ### Safety
 
 Swift was designed from the outset to be safer than C-based languages, and eliminates entire classes of unsafe code. Variables are always initialized before use, arrays and integers are checked for overflow, and memory is managed automatically. Syntax is tuned to make it easy to define your intent — for example, simple three-character keywords define a variable (`var`) or constant (`let`).
 
 Another safety feature is that by default Swift objects can never be `nil`, and trying to make or use a `nil` object results in a compile-time error. This makes writing code much cleaner and safer, and prevents a common cause of runtime crashes. However, there are cases where `nil` is appropriate, and for these situations Swift has an innovative feature known as **optionals**. An optional may contain `nil`, but Swift syntax forces you to safely deal with it using ``?`` to indicate to the compiler you understand the behavior and will handle it safely.
 
-{% include_relative _open-source.md %}
 {% include_relative _platform-support.md %}
+{% include_relative _open-source.md %}

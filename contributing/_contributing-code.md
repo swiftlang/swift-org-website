@@ -150,12 +150,12 @@ People depend on Swift to create their production software.  This means that a b
 
 Additionally, the committer is responsible for addressing any problems found in the future that the change may cause. This responsibility means that you may need to update your change in order to:
 
-* Ensure the code compiles cleanly on all primary platforms
-* Fix any correctness regressions found in other test suites
-* Fix any major performance regressions
-* Fix any performance or correctness regressions in the downstream Swift tools
-* Fix any performance or correctness regressions that result in customer code that uses Swift
-* Address any bugs that appear in the bug tracker as a result from your change
+* Ensure the code compiles cleanly on all primary platforms.
+* Fix any correctness regressions found in other test suites.
+* Fix any major performance regressions.
+* Fix any performance or correctness regressions in the downstream Swift tools.
+* Fix any performance or correctness regressions that result in customer code that uses Swift.
+* Address any bugs that appear in the bug tracker as a result from your change.
 
 We prefer that these issues be handled before submission, but we understand that it isn’t possible to test all of this for every submission. Our continuous integration (CI) infrastructure normally finds these problems. We recommend watching the CI infrastructure throughout the next day to look for regressions. The CI infrastructure will directly email you if a group of commits that included yours caused a failure. You are expected to check those messages to see whether they are your fault and, if so, fix the breakage.
 

@@ -69,7 +69,7 @@ The current members and initiatives of the Diversity in Swift Workgroup will be 
 
 Over the coming weeks, the Swift project will add two new groups to provide support in areas of growing momentum in the Swift project.  This overall picture of groups will look as follows:
 
-![Swift Workgroups Diagram]({{ site.url }}/assets/images/evolving-workgroups-blog/community-structure.png)
+![Swift Workgroups Diagram](/assets/images/evolving-workgroups-blog/community-structure.png)
 
 ### Ecosystem Steering Group
 
@@ -89,7 +89,7 @@ This shift in stewardship will enable the Diversity in Swift champions to focus 
 
 The new Contributor Experience workgroup will explore providing community members with the best support system and mechanics. Some example investments from this new workgroup will be improvements to the process and documentation for contributing code, bug reports, discussion on the Swift Forums, and more.
 
-For more details, please see the [Contributor Experience Workgroup Charter]({{ site.url }}/contributor-experience-workgroup).
+For more details, please see the [Contributor Experience Workgroup Charter](/contributor-experience-workgroup).
 
 ## Next Steps and You
 

@@ -1,15 +1,16 @@
 ---
-layout: page
+layout: page-wide
 title: Packages
 ---
 
-The Swift package ecosystem has thousands of packages to help you with all kinds of tasks across your projects. You'll find networking, testing, UI helpers, logging, animation, and many more packages that work with the [Swift Package Manager]({% link package-manager/index.md %}) (SwiftPM).
+The Swift package ecosystem has thousands of packages to help you with all kinds of tasks across your projects. You'll find networking, testing, UI helpers, logging, animation, and many more packages that work with the [Swift Package Manager]({% link documentation/package-manager/index.md %}) (SwiftPM).
 
 ## Package Ecosystem
 
 Browse a small selection of interesting packages in popular categories from around the community, as well as a hand-picked selection of new and notable packages.
 
 {% include_relative _package-lists.html %}
+{% include_relative _get-involved.html %}
 
 ## Create Your Own
 

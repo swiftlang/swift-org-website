@@ -1,6 +1,6 @@
 // This source file is part of the Swift.org open source project
 //
-// Copyright (c) 2014 - 2023 Apple Inc. and the Swift project authors
+// Copyright (c) 2014 - 2024 Apple Inc. and the Swift project authors
 // Licensed under Apache License v2.0 with Runtime Library Exception
 //
 // See http://swift.org/LICENSE.txt for license information
@@ -8,6 +8,11 @@
 //
 // ===---------------------------------------------------------------------===//
 'use strict'
+
+const EVOLUTION_METADATA_URL = 'https://download.swift.org/swift-evolution/proposals.json'
+const GITHUB_BASE_URL = 'https://github.com/'
+const REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
+const UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
 
 /** Holds the primary data used on this page: metadata about Swift Evolution proposals. */
 var proposals
@@ -18,13 +23,13 @@ var proposals
  */
 var languageVersions = [
   '2.2',
-  '3',
+  '3.0',
   '3.0.1',
   '3.1',
-  '4',
+  '4.0',
   '4.1',
   '4.2',
-  '5',
+  '5.0',
   '5.1',
   '5.2',
   '5.3',
@@ -35,7 +40,9 @@ var languageVersions = [
   '5.7',
   '5.8',
   '5.9',
+  '5.9.2',
   '5.10',
+  '6.0',
   'Next'
 ]
 
@@ -48,21 +55,20 @@ const upcomingFeatureFlags = new Map([
   ['SE-0286', 'ForwardTrailingClosures'],
   ['SE-0335', 'ExistentialAny'],
   ['SE-0354', 'BareSlashRegexLiterals'],
+  ['SE-0383', 'DeprecateApplicationMain'],
   ['SE-0384', 'ImportObjcForwardDeclarations'],
   ['SE-0401', 'DisableOutwardActorInference'],
   ['SE-0409', 'InternalImportsByDefault'],
   ['SE-0411', 'IsolatedDefaultValues'],
   ['SE-0413', 'FullTypedThrows'],
+  ['SE-0418', 'InferSendableFromCaptures'],
+  ['SE-0423', 'DynamicActorIsolation'],
 ])
 
 /** Storage for the user's current selection of filters when filtering is toggled off. */
 var filterSelection = []
 
 var upcomingFeatureFlagFilterEnabled = false
-
-var GITHUB_BASE_URL = 'https://github.com/'
-var REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
-var UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
 
 /**
  * `name`: Mapping of the states in the proposals JSON to human-readable names.
@@ -152,8 +158,16 @@ function init() {
   var req = new window.XMLHttpRequest()
 
   req.addEventListener('load', function() {
-    proposals = JSON.parse(req.responseText)
-
+    let evolutionMetadata = JSON.parse(req.responseText, adjustStatusValue)
+    
+    // Temporary conditional to allow script to work with old and new schemas
+    if (Array.isArray(evolutionMetadata)) { // current schema
+      proposals = evolutionMetadata
+    } else { // new schema
+      proposals = evolutionMetadata.proposals
+      languageVersions = evolutionMetadata.implementationVersions
+    }
+    
     // Don't display malformed proposals
     proposals = proposals.filter(function (proposal) {
       return !proposal.errors
@@ -191,8 +205,18 @@ function init() {
   })
 
   document.querySelector('#proposals-count-number').innerHTML = 'Loading…'
-  req.open('get', 'https://download.swift.org/swift-evolution/proposals.json')
+  req.open('get', EVOLUTION_METADATA_URL)
   req.send()
+}
+
+/** 
+ * Reviver function passed to JSON.parse() to convert new status field value to old value.
+ */
+function adjustStatusValue(key, value) {
+  if (key == "state" && value !== "" && !value.startsWith(".")) {
+    return "." + value
+  }
+  return value
 }
 
 /**
@@ -363,7 +387,7 @@ function renderProposals() {
                   target: "_blank",
                   className: "proposal-title",
                 },
-                [proposal.title]
+                [proposal.title.trim()]
               ),
             ]),
           ]),
@@ -926,17 +950,18 @@ function _setProposalVisibility(matchingProposals) {
  *   fragment --> `#?` parameter-value-list
  *   parameter-value-list --> parameter-value-pair | parameter-value-pair `&` parameter-value-list
  *   parameter-value-pair --> parameter `=` value
- *   parameter --> `proposal` | `status` | `version` | `search`
+ *   parameter --> `proposal` | `status` | `version` | `upcoming` | `search`
  *   value --> ** Any URL-encoded text. **
  *
  * For example:
  *   /#?proposal=SE-0180,SE-0123
  *   /#?status=rejected&version=3&search=access
  *
- * Four types of parameters are supported:
+ * Five types of parameters are supported:
  * - proposal: A comma-separated list of proposal IDs. Treated as an 'or' search.
- * - filter: A comma-separated list of proposal statuses to apply as a filter.
+ * - status: A comma-separated list of proposal statuses to apply as a filter.
  * - version: A comma-separated list of Swift version numbers to apply as a filter.
+ * - upcoming: A value of 'true' to apply the Upcoming Feature Flag filter.
  * - search: Raw, URL-encoded text used to filter by individual term.
  *
  * @param {string} fragment - A URI fragment to use as the basis for a search.
@@ -986,18 +1011,20 @@ function _applyFragment(fragment) {
     document.querySelector('#search-filter').value = actions.search
   }
 
+  let hasVersionSelections = false
   if (actions.version.length) {
     var versionSelections = actions.version.map(function (version) {
       return document.querySelector('#filter-by-swift-' + _idSafeName(version))
     }).filter(function (version) {
       return !!version
     })
+    hasVersionSelections = versionSelections.length > 0
 
     versionSelections.forEach(function (versionSelection) {
       versionSelection.checked = true
     })
 
-    if (versionSelections.length) {
+    if (hasVersionSelections) {
       document.querySelector(
         '#filter-by-' + states['.implemented'].className
       ).checked = true
@@ -1006,6 +1033,7 @@ function _applyFragment(fragment) {
 
   // Track this state specifically for toggling the version panel
   var implementedSelected = false
+  let hasStatusSelections = false
 
   // Update the filter selections in the nav
   if (actions.status.length) {
@@ -1023,6 +1051,7 @@ function _applyFragment(fragment) {
     }).filter(function (status) {
       return !!status
     })
+    hasStatusSelections = statusSelections.length > 0
 
     statusSelections.forEach(function (statusSelection) {
       statusSelection.checked = true
@@ -1030,7 +1059,7 @@ function _applyFragment(fragment) {
   }
 
   // The version panel needs to be activated if any are specified
-  if (actions.version.length || implementedSelected) {
+  if (hasVersionSelections || implementedSelected) {
     ;['#version-options', '#version-options-label'].forEach(function (selector) {
       document.querySelector('.filter-options')
         .querySelector(selector).classList
@@ -1039,7 +1068,7 @@ function _applyFragment(fragment) {
   }
 
   // Specifying any filter in the fragment should activate the filters in the UI
-  if (actions.version.length || actions.status.length) {
+  if (hasVersionSelections || hasStatusSelections) {
     toggleFilterPanel()
     toggleStatusFiltering()
   }
