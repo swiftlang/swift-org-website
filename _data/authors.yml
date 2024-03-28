@@ -442,3 +442,8 @@ davidswift:
   name: david-swift
   github: david-swift
   about: "David is a student interested in Swift and the GNOME Project."
+
+joannis:
+  name: Joannis Orlandos
+  github: joannis
+  about: Joannis is a member of the Swift Server Workgroup and maintainer of multiple open source Swift projects.
