@@ -27,19 +27,79 @@ Members of the workgroup are volunteers working towards improving the contributo
 
 To facilitate turnover within the workgroup, there will be an annual check-in for participation to provide an opportunity to step down from the workgroup, and a Call for Participation for new people to join will be announced on the Swift Forums.
 
-The current workgroup members with their respective Swift Forums usernames:
-* Alex Hoppen ([@ahoppen](https://forums.swift.org/u/ahoppen))
-* Anthony Latsis ([@anthonylatsis](https://forums.swift.org/u/anthonylatsis))
-* Devanshi Modha (Diversity in Swift champion) ([@devanshimodha](https://forums.swift.org/u/devanshimodha))
-* Egor Zhdan ([@egor.zhdan](https://forums.swift.org/u/egor.zhdan))
-* Harshita Pathipati ([@hpathipati](https://forums.swift.org/u/hpathipati))
-* Holly Borla ([@hborla](https://forums.swift.org/u/hborla))
-* Luciano Almeida ([@LucianoPAlmeida](https://forums.swift.org/u/LucianoPAlmeida))
-* Max Desiatov ([@Max_Desiatov](https://forums.swift.org/u/max_desiatov))
-* Mishal Shah ([@mishal_shah](https://forums.swift.org/u/mishal_shah))
-* Paris Pittman ([@parispittman](https://forums.swift.org/u/parispittman))
-* Pavel Yaskevich (chair) ([@xedin](https://forums.swift.org/u/xedin))
-* Suyash Srijan ([@suyashsrijan](https://forums.swift.org/u/suyashsrijan))
+The current members of the workgroup are:
+
+<table>
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th>Swift forums</th>
+      <th>GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alex Hoppen</td>
+      <td><a href="https://forums.swift.org/u/ahoppen">@ahoppen</a></td>
+      <td><a href="https://github.com/ahoppen">@ahoppen</a></td>
+    </tr>
+    <tr>
+      <td>Anthony Latsis</td>
+      <td><a href="https://forums.swift.org/u/anthonylatsis">@anthonylatsis</a></td>
+      <td><a href="https://github.com/AnthonyLatsis">@AnthonyLatsis</a></td>
+    </tr>
+    <tr>
+      <td>Devanshi Modha (Diversity in Swift champion)</td>
+      <td><a href="https://forums.swift.org/u/devanshimodha">@devanshimodha</a></td>
+      <td><a href="https://github.com/devanshimodha">@devanshimodha</a></td>
+    </tr>
+    <tr>
+      <td>Egor Zhdan</td>
+      <td><a href="https://forums.swift.org/u/egor.zhdan">@egor.zhdan</a></td>
+      <td><a href="https://github.com/egorzhdan">@egorzhdan</a></td>
+    </tr>
+    <tr>
+      <td>Harshita Pathipati</td>
+      <td><a href="https://forums.swift.org/u/hpathipati">@hpathipati</a></td>
+      <td><a href="https://github.com/harshitapath">@harshitapath</a></td>
+    </tr>
+    <tr>
+      <td>Holly Borla</td>
+      <td><a href="https://forums.swift.org/u/hborla">@hborla</a></td>
+      <td><a href="https://github.com/hborla">@hborla</a></td>
+    </tr>
+    <tr>
+      <td>Luciano Almeida</td>
+      <td><a href="https://forums.swift.org/u/LucianoPAlmeida">@LucianoPAlmeida</a></td>
+      <td><a href="https://github.com/LucianoPAlmeida">@LucianoPAlmeida</a></td>
+    </tr>
+    <tr>
+      <td>Max Desiatov</td>
+      <td><a href="https://forums.swift.org/u/max_desiatov">@max_desiatov</a></td>
+      <td><a href="https://github.com/MaxDesiatov">@MaxDesiatov</a></td>
+    </tr>
+    <tr>
+      <td>Mishal Shah</td>
+      <td><a href="https://forums.swift.org/u/mishal_shah">@mishal_shah</a></td>
+      <td><a href="https://github.com/shahmishal">@shahmishal</a></td>
+    </tr>
+    <tr>
+      <td>Paris Pittman</td>
+      <td><a href="https://forums.swift.org/u/parispittman">@parispittman</a></td>
+      <td><a href="https://github.com/parispittman">@parispittman</a></td>
+    </tr>
+    <tr>
+      <td>Pavel Yaskevich (chair)</td>
+      <td><a href="https://forums.swift.org/u/xedin">@xedin</a></td>
+      <td><a href="https://github.com/xedin">@xedin</a></td>
+    </tr>
+    <tr>
+      <td>Suyash Srijan</td>
+      <td><a href="https://forums.swift.org/u/suyashsrijan">@suyashsrijan</a></td>
+      <td><a href="https://github.com/theblixguy">@theblixguy</a></td>
+    </tr>
+  </tbody>
+</table>
 
 Members of the workgroup serve at the discretion of the Swift Core Team and the Swift project lead, who has the ultimate authority over the workgroup decisions.
 
