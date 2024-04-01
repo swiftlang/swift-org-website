@@ -96,6 +96,21 @@
           name: evolution-process
         - title: Community participation
           name: community-participation
+    - title: Platform Steering Group
+      url: /platform-steering-group/
+      sections:
+        - title: Charter
+          name: charter
+        - title: Membership
+          name: membership
+        - title: Evolution
+          name: evolution
+        - title: Communication
+          name: communication
+        - title: Platform Evolution process
+          name: platform-evolution-process
+        - title: Community participation
+          name: community-participation
     - title: C++ Interoperability
       url: /cxx-interop-workgroup/
       sections:
