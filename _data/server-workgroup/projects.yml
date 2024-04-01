@@ -200,3 +200,10 @@
   pitched: 2024-01-03
   accepted: 2024-02-01
   url: https://github.com/orlandos-nl/MongoKitten
+
+- name: JWTKit
+  description: JWTs are an extremely powerful and popular tool used for safe data transfer between two parties in a distributed system and any modern server-side ecosystem provides its users with a JWT library.
+  maturity: Graduated
+  pitched: 2024-03-12
+  accepted: 2024-03-26
+  url: https://github.com/vapor/jwt-kit
