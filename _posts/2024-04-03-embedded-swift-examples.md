@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2024-04-02 10:00:00
+date: 2024-04-03 10:00:00
 title: "Get Started with Embedded Swift on ARM and RISC-V Microcontrollers"
 author: [kubamracek]
 ---
