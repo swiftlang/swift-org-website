@@ -202,7 +202,7 @@
   url: https://github.com/orlandos-nl/MongoKitten
 
 - name: JWTKit
-  description: JWTs are an extremely powerful and popular tool used for safe data transfer between two parties in a distributed system and any modern server-side ecosystem provides its users with a JWT library.
+  description: Native Swift library for signing and verifying JSON Web Tokens
   maturity: Graduated
   pitched: 2024-03-12
   accepted: 2024-03-26
