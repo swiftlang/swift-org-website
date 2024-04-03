@@ -30,4 +30,4 @@ If you'd like to try out the existing example projects, visit the repository at 
 
 To use these examples, be sure to install the latest [development snapshot toolchain](https://www.swift.org/download/#snapshots). As an experimental mode, Embedded Swift is not yet available in release versions of Swift.
 
-If you have any questions or want to share your experiences and ideas, please reach out on the [Swift Forums](https://forums.swift.org/). Your feedback will help bring Embedded Swift into a future release.
+If you have any questions or want to share your experiences and ideas, please reach out on the [Swift Forums](https://forums.swift.org/t/embedded-swift-example-projects-for-arm-and-risc-v-microcontrollers/71066). Your feedback will help bring Embedded Swift into a future release.
