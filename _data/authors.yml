@@ -86,6 +86,7 @@ kubamracek:
    name: Kuba Mracek
    email: mracek@apple.com
    github: kubamracek
+   about: "Kuba Mracek is a member of Apple's compiler team, focusing on Embedded Swift and using Swift for systems programming."
 
 airspeedswift:
    name: Ben Cohen
