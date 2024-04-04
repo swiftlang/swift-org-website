@@ -200,3 +200,10 @@
   pitched: 2024-01-03
   accepted: 2024-02-01
   url: https://github.com/orlandos-nl/MongoKitten
+
+- name: JWTKit
+  description: Native Swift library for signing and verifying JSON Web Tokens
+  maturity: Graduated
+  pitched: 2024-03-12
+  accepted: 2024-03-26
+  url: https://github.com/vapor/jwt-kit

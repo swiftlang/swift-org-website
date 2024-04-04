@@ -30,7 +30,7 @@
 ///
 @function map-deep-get($map, $keys, $default: null) {
   @each $key in $keys {
-    @if(not $map or not is-map($map)){
+    @if (not $map or not is-map($map)) {
       $map: ();
     }
     $map: map-get($map, $key);

@@ -5,7 +5,8 @@ pre.highlight {
   .cm,  /* Comment.Multiline */
   .cp,  /* Comment.Preproc */
   .c1,  /* Comment.Single */
-  .cs { /* Comment.Special */
+  .cs {
+    /* Comment.Special */
     color: var(--color-syntax-comments);
   }
 
@@ -15,12 +16,14 @@ pre.highlight {
   .kp,  /* Keyword.Pseudo */
   .kr,
   .kt   /* Keyword.Reserved */
-  .nb { /* Name.Builtin */
+  .nb {
+    /* Name.Builtin */
     color: var(--color-syntax-keywords);
   }
 
   .nv,  /* Name.Variable */
-  .nf { /* Name.Function */
+  .nf {
+    /* Name.Function */
     color: color(--color-syntax-project-constants);
   }
 
@@ -33,11 +36,13 @@ pre.highlight {
   .sh,  /* Literal.String.Heredoc */
   .si,  /* Literal.String.Interpol */
   .s1,  /* Literal.String.Single */
-  .sx { /* Literal.String.Other */
+  .sx {
+    /* Literal.String.Other */
     color: var(--color-syntax-strings);
   }
 
-  .na { /* Name.Attribute */
+  .na {
+    /* Name.Attribute */
     color: var(--color-syntax-attributes);
   }
 
@@ -46,14 +51,16 @@ pre.highlight {
   .no,  /* Name.Constant */
   .vc,  /* Name.Variable.Class */
   .vg,  /* Name.Variable.Global */
-  .vi { /* Name.Variable.Instance */
+  .vi {
+    /* Name.Variable.Instance */
     color: var(--color-syntax-other-type-names);
   }
 
   .err, /* Error */
   .gr,  /* Generic.Error */
   .gt,  /* Generic.Traceback */
-  .ne { /* Name.Exception */
+  .ne {
+    /* Name.Exception */
     color: var(--color-syntax-strings);
   }
 
@@ -62,32 +69,38 @@ pre.highlight {
   .mh,  /* Literal.Number.Hex */
   .mi,  /* Literal.Number.Integer */
   .il,  /* Literal.Number.Integer.Long */
-  .mo { /* Literal.Number.Oct */
+  .mo {
+    /* Literal.Number.Oct */
     color: var(--color-syntax-numbers);
   }
 
   .o,   /* Operator */
   .ow,  /* Operator.Word */
-  .gs { /* Generic.Strong */
-    font-weight:bold;
+  .gs {
+    /* Generic.Strong */
+    font-weight: bold;
   }
 
-  .ge { /* Generic.Emph */
-    font-style:italic;
+  .ge {
+    /* Generic.Emph */
+    font-style: italic;
   }
 
-  .nt { /* Name.Tag */
+  .nt {
+    /* Name.Tag */
     color: var(--color-syntax-characters);
   }
 
   .gd,     /* Generic.Deleted */
-  .gd .x { /* Generic.Deleted.Specific */
+  .gd .x {
+    /* Generic.Deleted.Specific */
     color: var(--color-syntax-plain-text);
     background-color: var(--color-fill-red-secondary);
   }
 
   .gi,     /* Generic.Inserted */
-  .gi .x { /* Generic.Inserted.Specific */
+  .gi .x {
+    /* Generic.Inserted.Specific */
     color: var(--color-syntax-plain-text);
     background-color: color(--color-fill-green-secondary);
   }
@@ -97,28 +110,30 @@ pre.highlight {
   .go, /* Generic.Output */
   .gp, /* Generic.Prompt */
   .gu, /* Generic.Subheading */
-  .w { /* Text.Whitespace */
+  .w {
+    /* Text.Whitespace */
     color: var(--color-syntax-comments);
   }
 
-  .nn { /* Name.Namespace */
+  .nn {
+    /* Name.Namespace */
     color: var(--color-syntax-other-declarations);
   }
 
-  .sr { /* Literal.String.Regex */
+  .sr {
+    /* Literal.String.Regex */
     color: var(--color-figure-green);
   }
 
-  .ss { /* Literal.String.Symbol */
+  .ss {
+    /* Literal.String.Symbol */
     color: var(--color-syntax-heading);
   }
-
 }
 
 .language-console {
   color: var(--color-syntax-plain-text);
 }
-
 
 // Explicit syntax highlighting for C++ code blocks:
 

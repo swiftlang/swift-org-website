@@ -1,55 +1,96 @@
 html {
-    font-size: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-fill);
-    color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-fill);
+  color: var(--color-text);
 }
 
-ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, hgroup, p, blockquote, figure,
-form, fieldset, input, legend, pre, abbr {
-    margin: 0;
-    padding: 0
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+p,
+blockquote,
+figure,
+form,
+fieldset,
+input,
+legend,
+pre,
+abbr {
+  margin: 0;
+  padding: 0;
 }
 
-pre, code, address, caption, th, figcaption {
-    font-size: 1em;
-    font-weight: normal;
-    font-style: normal
+pre,
+code,
+address,
+caption,
+th,
+figcaption {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
 }
 
-fieldset, iframe, img {
-    width: 100%;
-    border: none
+fieldset,
+iframe,
+img {
+  width: 100%;
+  border: none;
 }
 
-caption, th {
-    text-align: left
+caption,
+th {
+  text-align: left;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-article, aside, footer, header, nav, main, section, summary, details,
-hgroup, figure, figcaption {
-    display: block
+article,
+aside,
+footer,
+header,
+nav,
+main,
+section,
+summary,
+details,
+hgroup,
+figure,
+figcaption {
+  display: block;
 }
 
-audio, canvas, video, progress {
-    display: inline-block;
-    vertical-align: baseline
+audio,
+canvas,
+video,
+progress {
+  display: inline-block;
+  vertical-align: baseline;
 }
 
 button {
-    font: inherit;
-    vertical-align: middle
+  font: inherit;
+  vertical-align: middle;
 }
 
 nav {

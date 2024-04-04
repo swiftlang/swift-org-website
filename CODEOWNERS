@@ -24,20 +24,12 @@
 # E: kremenek@apple.com
 # D: Apple, Swift core team
 
-# N: Tim Triemstra
-# E: timt@apple.com
-# D: Apple
-
-# N: Tom Doron
-# E: tomer@apple.com
-# D: Apple, Swift core team
-
 ###
 
 # The following lines are used by GitHub to automatically recommend reviewers.
 
 * @0xTim @alexandersandberg @daveverwer @dempseyatgithub @parispittman @kaishin @shahmishal @cthielen @federicobucchi
 
-/_posts/* @cthielen @TimTr @tkremenek @tomerd
+/_posts/* @cthielen @tkremenek @shahmishal
 
 /gsoc*/ @ktoso

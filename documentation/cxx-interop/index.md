@@ -996,9 +996,7 @@ type to automatically conform to `RandomAccessCollection` in Swift:
   [`RandomAccessIterator`]( https://en.cppreference.com/w/cpp/named_req/RandomAccessIterator)
   C++ requirement. It must be possible to advance it using `operator +=` in C++
   and also to subscript into it using `operator []` in C++.
-- The C++ iterator type must be comparable using `operator ==`. Swift
-  currently doesn't support templated `operator ==`, so it must operate on
-  the concrete iterator type used by the container.
+- The C++ iterator type must be comparable using `operator ==`.
 
 When these conditions are satisfied, Swift conforms the Swift structure
 that represents the underlying C++ container type to
@@ -1048,9 +1046,7 @@ in order for a C++ container type to automatically conform to
   [`InputIterator`](https://en.cppreference.com/w/cpp/named_req/InputIterator) C++ requirement.
   It must be possible to increment it using `operator ++` in C++ and also to
   dereference it using `operator *` in C++.
-- The C++ iterator type must be comparable using `operator ==`. Swift
-  currently doesn't support templated `operator ==`, so it must operate on
-  the concrete iterator type used by the container.
+- The C++ iterator type must be comparable using `operator ==`.
 
 ### Using Associative Container C++ Types in Swift
 

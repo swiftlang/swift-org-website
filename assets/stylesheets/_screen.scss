@@ -22,8 +22,8 @@ body {
 
   pre,
   code {
-    font-family: "SF Mono", ui-monospace, Menlo, Consolas, Monaco, "Courier New", monospace,
-      serif;
+    font-family: "SF Mono", ui-monospace, Menlo, Consolas, Monaco, "Courier New",
+      monospace, serif;
   }
 }
 
@@ -219,27 +219,42 @@ cite {
 
   li {
     display: inline-block;
-    margin-left: .5em;
+    margin-left: 0.3em;
+    text-align: center;
 
     .active a {
       font-weight: 700;
       color: var(--color-active-nav-item);
     }
 
+    a {
+      display: inline-block;
+    }
+
+    a::before {
+      display: block;
+      content: attr(data-text);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
     &.nav-section {
       color: var(--color-nav-color);
-      font-size: .7rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: .5rem;
-      padding: 1rem 0 .5rem;
+      margin-bottom: 0.5rem;
+      padding: 1rem 0 0.5rem;
       border-bottom: 1px solid var(--color-nav-rule);
     }
 
     &.nav-cta a {
       border: 2px solid var(--color-nav-rule);
-      border-radius: .5rem;
-      padding: .8em .9em;
+      border-radius: 0.5rem;
+      padding: 0.8em 0.9em;
+      text-align: center;
 
       &:hover {
         border-color: var(--color-link);
@@ -282,6 +297,7 @@ cite {
     display: block;
     padding: 0;
     margin: 0;
+    text-align: left;
 
     a {
       display: block;
@@ -291,7 +307,8 @@ cite {
 
       &:hover {
         background-color: rgba(gray, 0.1);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05),
+          0 1px 3px rgba(0, 0, 0, 0.08);
       }
     }
   }
@@ -310,10 +327,12 @@ cite {
 
 .nav-item span i {
   display: inline-block;
-  margin-left: -0.6em;
+  margin-left: -0.75em;
   font-style: normal;
   font-weight: 100;
   opacity: 0.2;
+  line-height: 1em;
+  padding-top: 0.2em;
 }
 
 .nav-item:hover > span {
@@ -343,20 +362,21 @@ cite {
       border-bottom: 1px solid var(--color-nav-rule);
     }
 
-    &.active {
+    &.active,
+    .link-container.active {
       a {
         font-weight: 700;
-        color: #F05138; // TODO: Use variable
+        color: #f05138; // TODO: Use variable
       }
     }
 
     &.nav-section {
       color: var(--color-nav-color);
-      font-size: .7rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: .5rem;
-      padding: 1rem 1rem .5rem;
+      margin-bottom: 0.5rem;
+      padding: 1rem 1rem 0.5rem;
     }
 
     & a {
@@ -398,7 +418,8 @@ main {
     }
   }
 
-  .post, .page {
+  .post,
+  .page {
     max-width: 50em;
     margin: 0 auto;
     padding: 0 30px;

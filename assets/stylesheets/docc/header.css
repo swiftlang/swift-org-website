@@ -19,15 +19,8 @@
   --icon-menu-url: var(--icon-menu-url-light);
   --logo-url: var(--logo-url-light);
 
-  font-family:
-    -apple-system,
-  BlinkMacSystemFont,
-  "SF Hello",
-  "Helvetica Neue",
-  Helvetica,
-  Arial,
-  Verdana,
-  sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Hello", "Helvetica Neue",
+    Helvetica, Arial, Verdana, sans-serif;
 }
 
 :host([data-color-scheme="dark"]) {
@@ -53,7 +46,6 @@ header {
   min-height: 52px;
 }
 
-
 a,
 a:active,
 a:hover,
@@ -76,7 +68,6 @@ a:hover {
   padding: 0 var(--padding-x);
   width: 980px;
 }
-
 
 #logo {
   --height: 25px;
@@ -117,13 +108,13 @@ a:hover {
 
 .links li:first-child a {
   padding-left: 0;
- }
+}
 
 .links li:last-child a {
   padding-right: 0;
 }
 
-@supports (padding:calc(max(0px))) {
+@supports (padding: calc(max(0px))) {
   .container {
     padding-left: calc(max(var(--padding-x), env(safe-area-inset-left)));
     padding-right: calc(max(var(--padding-x), env(safe-area-inset-right)));
@@ -179,7 +170,7 @@ a:hover {
     margin: 20px 0 30px 0;
   }
 
- [data-small-menu-is-expanded] .links li {
+  [data-small-menu-is-expanded] .links li {
     border-bottom: 1px solid var(--color-menu-border);
     display: block;
   }
