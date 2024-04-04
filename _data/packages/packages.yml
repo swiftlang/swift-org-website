@@ -14,6 +14,10 @@ categories:
           offering an API similar to SwiftUI, focusing on simplicity and extensive widget
           support.
         owner: Aparoksha
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Linux
+        platform_compatibility_tooltip: Linux
         license: MIT
         url: https://swiftpackageindex.com/AparokshaUI/adwaita-swift
         note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/30){:target='_blank'}.
@@ -139,9 +143,9 @@ categories:
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+        platform_compatibility_tooltip: Apple (iOS, macOS)
         license: MIT
-        url: https://swiftpackageindex.com/VergeGroup/swift-Verge
+        url: https://swiftpackageindex.com/VergeGroup/swift-verge
       - name: SwiftLint
         description: SwiftLint is a tool that enforces Swift style and conventions. It
           uses the AST representation of source files to provide accurate results and
@@ -286,6 +290,16 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-nio
+      - name: Moya
+        description: Moya is a network abstraction layer for Alamofire. It simplifies
+          network calls and provides compile-time checking for API endpoints.
+        owner: Moya
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/Moya/Moya
       - name: Pulse
         description: Pulse is a powerful logging system for Apple platforms. It records
           and inspects logs and network requests, and allows for real-time viewing and
@@ -297,16 +311,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
-      - name: Moya
-        description: Moya is a network abstraction layer for Alamofire. It simplifies
-          network calls and provides compile-time checking for API endpoints.
-        owner: Moya
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/Moya/Moya
       - name: Networking
         description: Networking is a Swift package that simplifies connecting to a JSON
           API by combining URLSession, async-await (or Combine), Decodable, and Generics.
@@ -378,6 +382,19 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Quick
+      - name: swift-testing
+        description: A powerful testing library for Swift, providing a modern and flexible
+          testing library for Swift with powerful and expressive capabilities. It gives
+          developers more confidence with less code.
+        owner: Apple
+        swift_compatibility: 5.10+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/apple/swift-testing
       - name: Nimble
         description: Nimble is a testing library for Swift and Objective-C. It provides
           a more expressive way to write assertions and supports operator overloads and
@@ -391,19 +408,6 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Nimble
-      - name: swift-testing
-        description: A powerful testing library for Swift, providing a modern and flexible
-          testing library for Swift with powerful and expressive capabilities. It gives
-          developers more confidence with less code.
-        owner: Apple
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/apple/swift-testing
       - name: OCMockito
         description: OCMockito is an Objective-C implementation of Mockito, allowing you
           to create, verify, and stub mock objects. It has some key differences from other
@@ -436,17 +440,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
         license: BSD 3-Clause
         url: https://swiftpackageindex.com/CocoaLumberjack/CocoaLumberjack
-      - name: Pulse
-        description: Pulse is a powerful logging system for Apple platforms. It records
-          and inspects logs and network requests, and allows for real-time viewing and
-          sharing.
-        owner: Alex Grebenyuk
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/kean/Pulse
       - name: swift-log
         description: SwiftLog is a community-driven logging API package for server-side
           Swift applications. It provides easy logging of messages to a shared destination
@@ -465,12 +458,31 @@ categories:
           Datadog. It includes features for log collection, trace collection, and RUM
           events collection.
         owner: Datadog, Inc.
-        swift_compatibility: 5.7+
+        swift_compatibility: 5.10+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, visionOS, tvOS)
         license: Apache 2.0
         url: https://swiftpackageindex.com/DataDog/dd-sdk-ios
+      - name: Pulse
+        description: Pulse is a powerful logging system for Apple platforms. It records
+          and inspects logs and network requests, and allows for real-time viewing and
+          sharing.
+        owner: Alex Grebenyuk
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/kean/Pulse
+      - name: Wormholy
+        description: Wormholy is a debugging tool for iOS network calls. It records app
+          traffic, reveals request and response content, and helps with debugging and
+          bug fixing. It works with NSURLSession and external libraries like Alamofire
+          and AFNetworking.
+        owner: Paolo Musolino
+        license: MIT
+        url: https://swiftpackageindex.com/pmusolino/Wormholy
       - name: SwiftyBeaver
         description: SwiftyBeaver is a flexible, colorful, lightweight logging library
           for Swift. It supports console, file, and cloud destinations and is ideal for
@@ -483,14 +495,3 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
-      - name: XCGLogger
-        description: XCGLogger is a debug log module for Swift projects that allows you
-          to log details to the console (and optionally a file) with additional information
-          such as date, function name, and line number.
-        owner: Dave Wood
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/DaveWoodCom/XCGLogger
