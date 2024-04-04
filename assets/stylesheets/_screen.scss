@@ -250,14 +250,18 @@ cite {
       border-bottom: 1px solid var(--color-nav-rule);
     }
 
-    &.nav-cta a {
-      border: 2px solid var(--color-nav-rule);
-      border-radius: 0.5rem;
-      padding: 0.8em 0.9em;
-      text-align: center;
+    &.nav-cta {
+      margin-left: 1em;
 
-      &:hover {
-        border-color: var(--color-link);
+      a {
+        border: 2px solid var(--color-nav-rule);
+        border-radius: 0.5rem;
+        padding: 0.8em 0.9em;
+        text-align: center;
+
+        &:hover {
+          border-color: var(--color-link);
+        }
       }
     }
 
