@@ -9,83 +9,77 @@ categories:
       organised via [this thread in the Swift Forums](https://forums.swift.org/t/68168)
       and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
     packages:
-      - name: Adwaita
-        description: Adwaita for Swift enables the creation of user interfaces for GNOME,
-          offering an API similar to SwiftUI, focusing on simplicity and extensive widget
-          support.
-        owner: Aparoksha
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Linux
-        platform_compatibility_tooltip: Linux
-        license: MIT
-        url: https://swiftpackageindex.com/AparokshaUI/adwaita-swift
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/30){:target='_blank'}.
-      - name: Time
-        description: Time simplifies working with calendars in Swift, providing type-safe
-          APIs for retrieving and formatting time values. It also allows converting between
-          time zones and calculating differences between dates.
-        owner: Dave DeLong
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/davedelong/time
-        note:
-          Nominated via two posts in the Swift forums ([1](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/7){:target='_blank'},
-          [2](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/35){:target='_blank'}).
-      - name: Fork
-        description: Fork allows for parallelizing multiple async functions. It takes
-          a single input and splits it into two separate async functions that return different
-          outputs that can be merged back into a single output.
-        owner: Zach
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/0xLeif/Fork
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/29){:target='_blank'}.
-      - name: Nuke
-        description: Loads and displays images from various sources with advanced processing
-          capabilities and a robust caching system. Optimized for performance, customizable,
-          and extensively tested for reliability.
-        owner: Alex Grebenyuk
+      - name: Lottie
+        description: Enables real-time rendering of vector-based animations from JSON,
+          designed for cross-platform use, enhancing app visuals without heavy manual
+          coding.
+        owner: Airbnb
         swift_compatibility: 5.7+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/kean/Nuke
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/airbnb/lottie-ios
         note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/27){:target='_blank'}.
-      - name: Prefire
-        description: Prefire automates generation of SwiftUI Preview Playbook views and
-          Snapshot tests, enhancing UI component, screen, and flow visualization and testing.
-        owner: BarredEwe
+      - name: Citadel
+        description: Facilitates easy SSH client and server operations, TCP-IP forwarding,
+          command execution, and SFTP functionality with Swift NIOSSH enhancing its capabilities.
+        owner: Orlandos Technologies - OpenSource
         swift_compatibility: 5.8+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS)
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/BarredEwe/Prefire
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/33){:target='_blank'}.
-      - name: Model3DView
-        description: Enables effortless rendering and manipulation of 3D models within
-          SwiftUI applications, supporting features like glTF, interactive camera controls,
-          and environment-based lighting.
-        owner: Freek
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/orlandos-nl/Citadel
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/44){:target='_blank'}.
+      - name: FlyingFox
+        description: FlyingFox enables the creation of lightweight, concurrent HTTP servers
+          with support for WebSockets and static file serving. It uses non blocking BSD
+          sockets to handle each connection with Swift concurrency.
+        owner: Simon Whitty
         swift_compatibility: 5.7+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
         license: MIT
-        url: https://swiftpackageindex.com/frzi/swiftui-model3dview
-        note: Discussed on [Episode 38 of Swift Package Indexing](https://share.transistor.fm/s/f744b457){:target='_blank'}.
+        url: https://swiftpackageindex.com/swhitty/FlyingFox
+        note: Discussed on [Episode 41 of Swift Package Indexing](https://share.transistor.fm/s/861890bb){:target='_blank'}.
+      - name: AcknowList
+        description: Creates an acknowledgements screen for your app that displays a list
+          of licenses from your CocoaPods or Swift Package Manager dependencies.
+        owner: Vincent Tourraine
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/vtourraine/AcknowList
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/39){:target='_blank'}.
+      - name: swift-markdown-ui
+        description: MarkdownUI is a powerful library for displaying and customizing Markdown
+          text in SwiftUI. It is compatible with GitHub Flavored Markdown and can display
+          images, headings, lists, blockquotes, code blocks, tables, and more.
+        owner: Guille Gonzalez
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/gonzalezreal/swift-markdown-ui
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/24){:target='_blank'}.
+      - name: Threadcrumb
+        description: Threadcrumb enhances traceability by simplifying the process of embedding
+          and logging metadata within threads for improved debugging and diagnostic capabilities.
+        owner: Alexander Cohen
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/naftaly/Threadcrumb
+        note: Discussed on [Episode 41 of Swift Package Indexing](https://share.transistor.fm/s/861890bb){:target='_blank'}.
   - name: Packages with Macros
     slug: macros
     brief: New in Swift 5.9, Swift packages can include macro targets. Browse a selection
