@@ -370,7 +370,7 @@ cite {
     .link-container.active {
       a {
         font-weight: 700;
-        color: #f05138; // TODO: Use variable
+        color: var(--color-active-nav-item);
       }
     }
 
