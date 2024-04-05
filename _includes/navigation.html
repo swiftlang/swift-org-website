@@ -9,9 +9,9 @@
     <nav role="navigation">
       <ul class="navigation-links">
         {% for nav in site.data.navigation %}
-          <li class="nav-item{% if nav.isCta %} cta{% endif %}">
+          <li class="nav-item{% if nav.isCta %} nav-cta{% endif %}">
             {% if nav.isCta and nav.url %}
-              <a href="{{ nav.url }}" data-text="{{ nav.header }}"">{{ nav.header }}</a>
+              <a href="{{ nav.url }}" data-text="{{ nav.header }}">{{ nav.header }}</a>
             {% else %}
               <span class="{% if page.url == nav.url %}active{% endif %}">
                 {% if nav.url %}
@@ -51,7 +51,7 @@
   <nav class="mobile-navigation" role="navigation">
     <ul class="mobile-navigation-links">
       {% for nav in site.data.navigation %}
-        <li class="nav-item{% if nav.isCta %} cta{% endif %}">
+        <li class="nav-item">
           <div class="link-container{% if page.url == nav.url %} active{% endif %}">
             {% if nav.url %}
               <a href="{{ nav.url }}">{{ nav.header }}</a>

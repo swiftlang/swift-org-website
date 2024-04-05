@@ -219,7 +219,7 @@ cite {
 
   li {
     display: inline-block;
-    margin-left: .3em;
+    margin-left: 0.3em;
     text-align: center;
 
     .active a {
@@ -250,24 +250,18 @@ cite {
       border-bottom: 1px solid var(--color-nav-rule);
     }
 
-    &.cta {
-      border: 2px solid var(--color-nav-rule);
-      border-radius: 0.5rem;
-      padding: 0.1em 0.4em;
-      cursor: pointer;
-      transition: border 0.2s ease;
+    &.nav-cta {
+      margin-left: 1em;
 
       a {
-        display: block;
+        border: 2px solid var(--color-nav-rule);
+        border-radius: 0.5rem;
+        padding: 0.8em 0.9em;
         text-align: center;
 
-        span {
-          letter-spacing: 0;
+        &:hover {
+          border-color: var(--color-link);
         }
-      }
-
-      &:hover {
-        border-color: var(--color-link);
       }
     }
 
@@ -294,9 +288,7 @@ cite {
   background-color: var(--color-nav-background);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(5px);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   border: 1px solid var(--color-nav-rule);
   min-width: 160px;
@@ -319,8 +311,7 @@ cite {
 
       &:hover {
         background-color: rgba(gray, 0.1);
-        box-shadow:
-          0 8px 16px rgba(0, 0, 0, 0.05),
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05),
           0 1px 3px rgba(0, 0, 0, 0.08);
       }
     }
@@ -334,6 +325,7 @@ cite {
 }
 
 .nav-item span {
+  display: inline-block;
   cursor: pointer;
 }
 
@@ -344,7 +336,7 @@ cite {
   font-weight: 100;
   opacity: 0.2;
   line-height: 1em;
-  padding-top: .2em;
+  padding-top: 0.2em;
 }
 
 .nav-item:hover > span {
@@ -370,6 +362,10 @@ cite {
     border-top: 1px solid var(--color-nav-rule);
     display: block;
 
+    &:last-child {
+      border-bottom: 1px solid var(--color-nav-rule);
+    }
+
     &.active,
     .link-container.active {
       a {
@@ -385,12 +381,6 @@ cite {
       letter-spacing: 1px;
       margin-bottom: 0.5rem;
       padding: 1rem 1rem 0.5rem;
-    }
-
-    &.cta {
-      border-bottom: 1px solid var(--color-nav-rule);
-      padding: 0;
-      border-radius: 0;
     }
 
     & a {
@@ -1060,9 +1050,7 @@ article {
       content: "Less detail";
     }
     input.detail[type="checkbox"] + .more {
-      transition:
-        0.5s opacity ease,
-        0.5s max-height ease;
+      transition: 0.5s opacity ease, 0.5s max-height ease;
     }
 
     input.detail[type="checkbox"]:checked + .more {
