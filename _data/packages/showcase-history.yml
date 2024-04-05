@@ -1,4 +1,84 @@
 months:
+  - name: March 2024
+    slug: march-2024
+    packages:
+      - name: Adwaita
+        description: Adwaita for Swift enables the creation of user interfaces for GNOME,
+          offering an API similar to SwiftUI, focusing on simplicity and extensive widget
+          support.
+        owner: Aparoksha
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Linux
+        platform_compatibility_tooltip: Linux
+        license: MIT
+        url: https://swiftpackageindex.com/AparokshaUI/adwaita-swift
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/30){:target='_blank'}.
+      - name: Time
+        description: Time simplifies working with calendars in Swift, providing type-safe
+          APIs for retrieving and formatting time values. It also allows converting between
+          time zones and calculating differences between dates.
+        owner: Dave DeLong
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/davedelong/time
+        note:
+          Nominated via two posts in the Swift forums ([1](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/7){:target='_blank'},
+          [2](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/35){:target='_blank'}).
+      - name: Fork
+        description: Fork allows for parallelizing multiple async functions. It takes
+          a single input and splits it into two separate async functions that return different
+          outputs that can be merged back into a single output.
+        owner: Zach
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/0xLeif/Fork
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/29){:target='_blank'}.
+      - name: Nuke
+        description: Loads and displays images from various sources with advanced processing
+          capabilities and a robust caching system. Optimized for performance, customizable,
+          and extensively tested for reliability.
+        owner: Alex Grebenyuk
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/kean/Nuke
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/27){:target='_blank'}.
+      - name: Prefire
+        description: Prefire automates generation of SwiftUI Preview Playbook views and
+          Snapshot tests, enhancing UI component, screen, and flow visualization and testing.
+        owner: BarredEwe
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS)
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/BarredEwe/Prefire
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/33){:target='_blank'}.
+      - name: Model3DView
+        description: Enables effortless rendering and manipulation of 3D models within
+          SwiftUI applications, supporting features like glTF, interactive camera controls,
+          and environment-based lighting.
+        owner: Freek
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+        license: MIT
+        url: https://swiftpackageindex.com/frzi/swiftui-model3dview
+        note: Discussed on [Episode 38 of Swift Package Indexing](https://share.transistor.fm/s/f744b457){:target='_blank'}.
   - name: February 2024
     slug: february-2024
     packages:
