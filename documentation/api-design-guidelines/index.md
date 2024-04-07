@@ -346,14 +346,14 @@ These design guidelines explain how to make sure that your code feels like a par
   {{detail}}
   ~~~swift
   x.insert(y, at: z)          <span class="commentary">“x, insert y at z”</span>
-  x.subViews(havingColor: y)  <span class="commentary">“x's subviews having color y”</span>
+  x.subviews(havingColor: y)  <span class="commentary">“x's subviews having color y”</span>
   x.capitalizingNouns()       <span class="commentary">“x, capitalizing nouns”</span>
   ~~~
   {:.good}
 
   ~~~swift
   x.insert(y, position: z)
-  x.subViews(color: y)
+  x.subviews(color: y)
   x.nounCapitalize()
   ~~~
   {:.bad}
