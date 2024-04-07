@@ -201,6 +201,13 @@
   accepted: 2024-02-01
   url: https://github.com/orlandos-nl/MongoKitten
 
+- name: Oracle NIO
+  description: Native, non-blocking Oracle driver for Swift, written in Swift
+  maturity: Sandbox
+  pitched: 2024-01-17
+  accepted: 2024-02-15
+  url: https://github.com/lovetodream/oracle-nio
+
 - name: JWTKit
   description: Native Swift library for signing and verifying JSON Web Tokens
   maturity: Graduated
