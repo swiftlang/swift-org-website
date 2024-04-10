@@ -207,9 +207,21 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/orlandos-nl/MongoKitten
+      - name: SwiftyBeaver
+        description: SwiftyBeaver is a flexible, colorful, lightweight logging library
+          for Swift. It supports console, file, and cloud destinations and is ideal for
+          server-side Swift.
+        owner: SwiftyBeaver
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
       - name: fluent
         description: Fluent helps you work with databases, providing a high-level, type-safe
           API for querying and manipulating data in Vapor apps.
@@ -234,19 +246,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
-      - name: jwt-kit
-        description: Enables SwiftCrypto-based signing and verification of JSON Web Tokens
-          using various algorithms such as HMAC, RSA, ECDSA, and EdDSA. Supports custom
-          headers, key management, and predefined claims.
-        owner: Vapor
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/vapor/jwt-kit
   - name: Networking
     slug: networking
     brief: Browse a selection of packages that can extend and enhance the Swift core
@@ -305,6 +304,17 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
+      - name: RxAlamofire
+        description: RxAlamofire is a wrapper around Alamofire that adds RxSwift functionality,
+          simplifying network requests and allowing responses to be composed in a more
+          streamlined way.
+        owner: RxSwift Community
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/RxSwiftCommunity/RxAlamofire
       - name: Networking
         description: Networking is a Swift package that simplifies connecting to a JSON
           API by combining URLSession, async-await (or Combine), Decodable, and Generics.
@@ -315,18 +325,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/freshOS/Networking
-      - name: Socket
-        description: BlueSocket is a Socket framework for Swift. It provides functionality
-          for creating, closing, and listening on sockets.
-        owner: Kitura
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/Kitura/BlueSocket
   - name: Testing
     slug: testing
     brief: "If you want to level up your project\u2019s tests, take a look at a selection
@@ -434,6 +432,18 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
         license: BSD 3-Clause
         url: https://swiftpackageindex.com/CocoaLumberjack/CocoaLumberjack
+      - name: SwiftyBeaver
+        description: SwiftyBeaver is a flexible, colorful, lightweight logging library
+          for Swift. It supports console, file, and cloud destinations and is ideal for
+          server-side Swift.
+        owner: SwiftyBeaver
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
       - name: swift-log
         description: SwiftLog is a community-driven logging API package for server-side
           Swift applications. It provides easy logging of messages to a shared destination
@@ -469,23 +479,14 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
-      - name: Wormholy
-        description: Wormholy is a debugging tool for iOS network calls. It records app
-          traffic, reveals request and response content, and helps with debugging and
-          bug fixing. It works with NSURLSession and external libraries like Alamofire
-          and AFNetworking.
-        owner: Paolo Musolino
-        license: MIT
-        url: https://swiftpackageindex.com/pmusolino/Wormholy
-      - name: SwiftyBeaver
-        description: SwiftyBeaver is a flexible, colorful, lightweight logging library
-          for Swift. It supports console, file, and cloud destinations and is ideal for
-          server-side Swift.
-        owner: SwiftyBeaver
+      - name: XCGLogger
+        description: XCGLogger is a debug log module for Swift projects that allows you
+          to log details to the console (and optionally a file) with additional information
+          such as date, function name, and line number.
+        owner: Dave Wood
         swift_compatibility: 5.7+
         platform_compatibility:
           - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
+        url: https://swiftpackageindex.com/DaveWoodCom/XCGLogger
