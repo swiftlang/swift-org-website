@@ -9,10 +9,13 @@ layout: default
       </header>
     {% endif %}
   {% endunless %}
+
   {{ content }}
+
   {% if page.author %}
-    <hr>
-    <p>Contributed by</p>
-    {% include authors.html authors=page.author %}
+    <footer>
+      <p>Contributed by</p>
+      {% include authors.html authors=page.author %}
+    </footer>
   {% endif %}
 </article>
