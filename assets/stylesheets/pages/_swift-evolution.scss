@@ -228,8 +228,13 @@
     color: var(--color-text);
   }
 
-  .authors a {
-    white-space: nowrap;
+  .authors {
+    display: block;
+    margin: 0;
+
+    a {
+      white-space: nowrap;
+    }
   }
 
   .bug-list a,
