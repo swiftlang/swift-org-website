@@ -26,12 +26,21 @@
   The Community Showcase <a href="{% post_url 2023-10-31-packages-page %}">launched in November 2023</a> and features a
   new set of packages every month. Browse the archive below to see the history of featured Community Showcase packages:
 </p>
-<ul>
-  {%- for month in site.data.packages.showcase-history.months %}
-  {%- assign url = "packages/showcase-" | append: month.slug | append: ".md" %}
-  <li>
-    <a href="{% link {{ url }} %}"> {{ month.name }} </a>
-  </li>
+<div class="archive">
+  <ul class="years">
+    {%- for year in site.data.packages.showcase-history.years %}
+      <button aria-pressed="{% if forloop.index == 1 %}true{% else %}false{% endif %}" class="year">{{ year.year }}</button>
+    {% endfor %}
+  </ul>
+  {%- for year in site.data.packages.showcase-history.years %}
+    <ul class="months {% if forloop.index == 1 %}active{% endif %}" data-year="{{ year.year }}">
+      {%- for month in year.months %}
+        {%- assign url = "packages/showcase-" | append: month.slug | append: "-" | append: year.year | append: ".md" %}
+        <li class="month">
+          <a href="{% link {{ url }} %}">{{ month.month }}</a>
+        </li>
+      {% endfor %}
+    </ul>
   {% endfor %}
-</ul>
+</div>
 {% endif %}

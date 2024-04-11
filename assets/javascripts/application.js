@@ -57,5 +57,29 @@ layout: source
         }
       });
     });
+
+    const archiveYears = document.querySelectorAll('.archive .years .year');
+
+    if (archiveYears.length > 0) {
+      archiveYears.forEach(function(year) {
+        year.addEventListener('click', function(e) {
+          const activeYear = document.querySelector('.archive .year[aria-pressed="true"]');
+          const activeMonth = document.querySelector('.archive .months.active');
+          const months = document.querySelector(`.archive .months[data-year='${year.textContent}']`);
+
+          if (activeYear) {
+            activeYear.setAttribute('aria-pressed', 'false');
+          }
+
+          e.currentTarget.setAttribute('aria-pressed', 'true');
+
+          if (activeMonth) {
+            activeMonth.classList.remove('active');
+          }
+
+          months.classList.add('active');
+        });
+      });
+    }
   });
 })();
