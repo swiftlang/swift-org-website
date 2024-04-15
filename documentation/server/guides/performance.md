@@ -71,6 +71,7 @@ To generate flame graphs in Swift on Linux, you can use various tools such as `p
     ```
     swift build -c release
     ```
+
     This command compiles the code in release mode, optimizing the build for performance.
     
     d. After the build process completes successfully, you can find the compiled binary in the `.build/release/` directory within your Swift package’s directory.
