@@ -85,7 +85,7 @@ To generate flame graphs in Swift on Linux, you can use various tools such as `p
 3. Clone the repository in the `~/FlameGraph` directory using this command:
 
 ```
-https://github.com/brendangregg/FlameGraph
+git clone https://github.com/brendangregg/FlameGraph
 ```
 
 4. Run this command to record the stack frames with a 99 Hz sampling frequency:
