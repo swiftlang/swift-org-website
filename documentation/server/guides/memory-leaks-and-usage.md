@@ -74,26 +74,7 @@ myFunctionDoingTheAllocation()
 ### Debugging leaks with Valgrind
 Valgrind is an open-source framework for debugging and profiling Linux applications. It provides several tools, including Memcheck, which can detect memory leaks, invalid memory accesses, and other memory errors. Although Valgrind is primarily focused on C/C++ applications, it can also be used with Swift on Linux.
 
-To debug memory leaks using Valgrind, install it on your system. 
-
-**For MacOS**:
-1. Open a Terminal session.
-2. [Install Homebrew](https://brew.sh/) if you haven't already. 
-3. Once `Homebrew` is installed, run this command to install `valgrind`:
-```bash
-brew install valgrind
-```
-
-4. Enter your password if prompted to authorize the software installation and allow Homebrew to complete the installation process. Confirm the installation when requested.
-
-Valgrind should be successfully installed on your system using the system package manager.
-
-5. Once you've compiled your program (in this case, a binary named `test`), run the following `valgrind` command to enable full leak checking:
-```
-valgrind --leak-check=full ./test
-```
-
-**For Swift on Linux**:
+To debug memory leaks for Swift on Linux using Valgrind, install it on your system. 
 
 1. Install Swift on your Linux system. You can download and install Swift from the [official website](https://swift.org/download/).
 
