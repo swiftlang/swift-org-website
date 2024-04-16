@@ -10,7 +10,7 @@ title: Build a Web Service with Vapor
 ## Choosing a web framework
 
 Over the years, the Swift community created several web frameworks designed to help building web services.
-This guide focuses on the [Vapor](https://vapor.codes) web framework, a popular choice with the community.
+This guide focuses on the [Vapor](https://vapor.codes) web framework, a popular choice within the community.
 
 ## Installing Vapor
 
