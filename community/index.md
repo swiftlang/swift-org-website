@@ -28,12 +28,12 @@ Advancing the Swift programming language with a coherent, clear view of its evol
 * __[Contributor](/contributing/#contributing-code)__ is anyone that contributes a patch or helps with code review.
 * __Workgroups__
    * __[C++ Interoperability Workgroup](/cxx-interop-workgroup)__ is a team that works on adding the support for the bidirectional interoperability between Swift and C++.
-   * __[Contributor Experience Workgroup](/contributor-experience-workgroup)__ is a steering team that supports contributors to the Swift project, including contributions on the Swift Forums.
-   * __[Documentation Workgroup](/documentation-workgroup)__ is a steering team that helps guide the documentation experience for Swift.
+   * __[Contributor Experience Workgroup](/contributor-experience-workgroup)__ is a team that supports contributors to the Swift project, including contributions on the Swift Forums.
+   * __[Documentation Workgroup](/documentation-workgroup)__ is a team that helps guide the documentation experience for Swift.
    * __[Language Steering Group](#language-steering-group)__ is a small group of experts that drive the Swift language forward in a coherent direction.
    * __[Platforms Steering Group](/platform-steering-group)__ is a small group of experts that enables the Swift language and its tools to be used in new environments.
-   * __[Swift on Server Workgroup](/sswg)__ is a steering team that promotes the use of Swift for developing and deploying server applications.
-   * __[Website Workgroup](/website-workgroup/)__ is a steering team that helps guide the evolution on the Swift.org website.
+   * __[Swift on Server Workgroup](/sswg)__ is a team that promotes the use of Swift for developing and deploying server applications.
+   * __[Website Workgroup](/website-workgroup/)__ is a team that helps guide the evolution on the Swift.org website.
 
 Most importantly, everyone that uses Swift is a valued member of our extended community.
 
