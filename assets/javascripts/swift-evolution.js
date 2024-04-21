@@ -51,18 +51,18 @@ var languageVersions = [
  * Temporary until upcomingFeatureFlag property is returned in proposals.json. 
  */
 const upcomingFeatureFlags = new Map([
-  ['SE-0274', 'ConciseMagicFile'],
-  ['SE-0286', 'ForwardTrailingClosures'],
-  ['SE-0335', 'ExistentialAny'],
-  ['SE-0354', 'BareSlashRegexLiterals'],
-  ['SE-0383', 'DeprecateApplicationMain'],
-  ['SE-0384', 'ImportObjcForwardDeclarations'],
-  ['SE-0401', 'DisableOutwardActorInference'],
-  ['SE-0409', 'InternalImportsByDefault'],
-  ['SE-0411', 'IsolatedDefaultValues'],
-  ['SE-0413', 'FullTypedThrows'],
-  ['SE-0418', 'InferSendableFromCaptures'],
-  ['SE-0423', 'DynamicActorIsolation'],
+  ['SE-0274', { "flag": 'ConciseMagicFile' }],
+  ['SE-0286', { "flag": 'ForwardTrailingClosures' }],
+  ['SE-0335', { "flag": 'ExistentialAny' }],
+  ['SE-0354', { "flag": 'BareSlashRegexLiterals' }],
+  ['SE-0383', { "flag": 'DeprecateApplicationMain' }],
+  ['SE-0384', { "flag": 'ImportObjcForwardDeclarations' }],
+  ['SE-0401', { "flag": 'DisableOutwardActorInference' }],
+  ['SE-0409', { "flag": 'InternalImportsByDefault' }],
+  ['SE-0411', { "flag": 'IsolatedDefaultValues' }],
+  ['SE-0413', { "flag": 'FullTypedThrows' }],
+  ['SE-0418', { "flag": 'InferSendableFromCaptures' }],
+  ['SE-0423', { "flag": 'DynamicActorIsolation' }],
 ])
 
 /** Storage for the user's current selection of filters when filtering is toggled off. */
@@ -402,7 +402,7 @@ function renderProposals() {
       if (state === '.implemented') detailNodes.push(renderVersion(proposal.status.version))
       if (state === '.previewing') detailNodes.push(renderPreview())
       if (proposal.implementation) detailNodes.push(renderImplementation(proposal.implementation))
-      if (proposal.upcomingFeatureFlag) detailNodes.push(renderUpcomingFeatureFlag(proposal.upcomingFeatureFlag))
+      if (proposal.upcomingFeatureFlag) detailNodes.push(renderUpcomingFeatureFlag(proposal.upcomingFeatureFlag.flag))
       if (state === '.acceptedWithRevisions') detailNodes.push(renderStatus(proposal.status))
 
       if (state === '.activeReview' || state === '.scheduledForReview') {
