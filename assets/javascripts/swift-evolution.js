@@ -15,36 +15,10 @@ const REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/ma
 const UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
 
 /** Holds the primary data used on this page: metadata about Swift Evolution proposals. */
-var proposals
+let proposals
 
-/**
- * To be updated when proposals are confirmed to have been implemented
- * in a new language version.
- */
-var languageVersions = [
-  '2.2',
-  '3.0',
-  '3.0.1',
-  '3.1',
-  '4.0',
-  '4.1',
-  '4.2',
-  '5.0',
-  '5.1',
-  '5.2',
-  '5.3',
-  '5.4',
-  '5.5',
-  '5.5.2',
-  '5.6',
-  '5.7',
-  '5.8',
-  '5.9',
-  '5.9.2',
-  '5.10',
-  '6.0',
-  'Next'
-]
+/** Array of language versions in which proposals have been implemented. */
+let languageVersions
 
 /** 
  * Mapping of proposal ids to upcoming feature flags. 
@@ -66,9 +40,9 @@ const upcomingFeatureFlags = new Map([
 ])
 
 /** Storage for the user's current selection of filters when filtering is toggled off. */
-var filterSelection = []
+let filterSelection = []
 
-var upcomingFeatureFlagFilterEnabled = false
+let upcomingFeatureFlagFilterEnabled = false
 
 /**
  * `name`: Mapping of the states in the proposals JSON to human-readable names.
@@ -159,14 +133,8 @@ function init() {
 
   req.addEventListener('load', function() {
     let evolutionMetadata = JSON.parse(req.responseText, adjustStatusValue)
-    
-    // Temporary conditional to allow script to work with old and new schemas
-    if (Array.isArray(evolutionMetadata)) { // current schema
-      proposals = evolutionMetadata
-    } else { // new schema
-      proposals = evolutionMetadata.proposals
-      languageVersions = evolutionMetadata.implementationVersions
-    }
+    proposals = evolutionMetadata.proposals
+    languageVersions = evolutionMetadata.implementationVersions
     
     // Don't display malformed proposals
     proposals = proposals.filter(function (proposal) {
