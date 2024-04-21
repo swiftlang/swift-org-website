@@ -20,25 +20,6 @@ let proposals
 /** Array of language versions in which proposals have been implemented. */
 let languageVersions
 
-/** 
- * Mapping of proposal ids to upcoming feature flags. 
- * Temporary until upcomingFeatureFlag property is returned in proposals.json. 
- */
-const upcomingFeatureFlags = new Map([
-  ['SE-0274', { "flag": 'ConciseMagicFile' }],
-  ['SE-0286', { "flag": 'ForwardTrailingClosures' }],
-  ['SE-0335', { "flag": 'ExistentialAny' }],
-  ['SE-0354', { "flag": 'BareSlashRegexLiterals' }],
-  ['SE-0383', { "flag": 'DeprecateApplicationMain' }],
-  ['SE-0384', { "flag": 'ImportObjcForwardDeclarations' }],
-  ['SE-0401', { "flag": 'DisableOutwardActorInference' }],
-  ['SE-0409', { "flag": 'InternalImportsByDefault' }],
-  ['SE-0411', { "flag": 'IsolatedDefaultValues' }],
-  ['SE-0413', { "flag": 'FullTypedThrows' }],
-  ['SE-0418', { "flag": 'InferSendableFromCaptures' }],
-  ['SE-0423', { "flag": 'DynamicActorIsolation' }],
-])
-
 /** Storage for the user's current selection of filters when filtering is toggled off. */
 let filterSelection = []
 
@@ -140,14 +121,6 @@ function init() {
     proposals = proposals.filter(function (proposal) {
       return !proposal.errors
     })
-    
-    // Add upcomingFeatureFlag to proposal if present in mapping.
-    // Temporary until upcomingFeatureFlag property is returned in proposals.json. 
-    for (var proposal of proposals) {
-      if (upcomingFeatureFlags.has(proposal.id)) {
-        proposal.upcomingFeatureFlag = upcomingFeatureFlags.get(proposal.id)
-      }
-    }
 
     // Descending numeric sort based the numeric nnnn in a proposal ID's SE-nnnn
     proposals.sort(function compareProposalIDs (p1, p2) {
