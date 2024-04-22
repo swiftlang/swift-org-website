@@ -338,7 +338,7 @@ function renderProposals() {
       var detailNodes = []
       detailNodes.push(renderAuthors(proposal.authors))
 
-      if (proposal.reviewManager.name) detailNodes.push(renderReviewManager(proposal.reviewManager))
+      if (proposal.reviewManagers.length > 0) detailNodes.push(renderReviewManagers(proposal.reviewManagers))
       if (proposal.trackingBugs) detailNodes.push(renderTrackingBugs(proposal.trackingBugs))
       if (state === '.implemented') detailNodes.push(renderVersion(proposal.status.version))
       if (state === '.previewing') detailNodes.push(renderPreview())
@@ -370,34 +370,37 @@ function renderProposals() {
 
 /** Authors have a `name` and optional `link`. */
 function renderAuthors(authors) {
-  var authorNodes = authors.map(function (author) {
-    if (author.link.length > 0) {
-      return html('a', { href: author.link, target: '_blank' }, author.name)
-    } else {
-      return document.createTextNode(author.name)
-    }
-  })
-
-  authorNodes = _joinNodes(authorNodes, ', ')
-
   return html('div', { className: 'authors proposal-detail' }, [
     html('div', { className: 'proposal-detail-label' },
       authors.length > 1 ? 'Authors: ' : 'Author: '
     ),
-    html('div', { className: 'proposal-detail-value' }, authorNodes)
+    html('div', { className: 'proposal-detail-value' },
+      personNodesForPersonArray(authors))
   ])
 }
 
 /** Review managers have a `name` and optional `link`. */
-function renderReviewManager(reviewManager) {
-  return html('div', { className: 'review-manager proposal-detail' }, [
-    html('div', { className: 'proposal-detail-label' }, 'Review Manager: '),
-    html('div', { className: 'proposal-detail-value' }, [
-      reviewManager.link
-        ? html('a', { href: reviewManager.link, target: '_blank' }, reviewManager.name)
-        : reviewManager.name
-    ])
+function renderReviewManagers(reviewManagers) {
+  return html('div', { className: 'review-managers proposal-detail' }, [
+    html('div', { className: 'proposal-detail-label' },
+      reviewManagers.length > 1 ? 'Review Managers: ' : 'Review Manager: '
+    ),
+    html('div', { className: 'proposal-detail-value' }, 
+      personNodesForPersonArray(reviewManagers))
   ])
+}
+
+/** Create nodes for arrays of authors and review managers. */
+function personNodesForPersonArray(personArray) {
+  let personNodes = personArray.map(function (person) {
+    if (person.link.length > 0) {
+      return html('a', { href: person.link, target: '_blank' }, person.name)
+    } else {
+      return document.createTextNode(person.name)
+    }
+  })
+  
+  return _joinNodes(personNodes, ', ')
 }
 
 /** Tracking bugs linked in a proposal are updated via GitHub Issues. */
@@ -742,7 +745,7 @@ function _searchProposals(filterText) {
   var searchableProperties = [
       ['id'],
       ['title'],
-      ['reviewManager', 'name'],
+      ['reviewManagers', 'name'],
       ['status', 'state'],
       ['status', 'version'],
       ['authors', 'name'],
