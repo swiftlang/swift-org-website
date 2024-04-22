@@ -27,17 +27,17 @@ let upcomingFeatureFlagFilterEnabled = false
 
 /** Proposal state string constants */
 const State = Object.freeze({
-  "awaitingReview": '.awaitingReview',
-  "scheduledForReview": '.scheduledForReview',
-  "activeReview": '.activeReview',
-  "returnedForRevision": '.returnedForRevision',
-  "withdrawn": '.withdrawn',
-  "accepted": '.accepted',
-  "acceptedWithRevisions": '.acceptedWithRevisions',
-  "rejected": '.rejected',
-  "implemented": '.implemented',
-  "previewing": '.previewing',
-  "error": '.error',
+  "awaitingReview": 'awaitingReview',
+  "scheduledForReview": 'scheduledForReview',
+  "activeReview": 'activeReview',
+  "returnedForRevision": 'returnedForRevision',
+  "withdrawn": 'withdrawn',
+  "accepted": 'accepted',
+  "acceptedWithRevisions": 'acceptedWithRevisions',
+  "rejected": 'rejected',
+  "implemented": 'implemented',
+  "previewing": 'previewing',
+  "error": 'error',
 })
 
 /**
@@ -130,7 +130,7 @@ function init() {
   var req = new window.XMLHttpRequest()
 
   req.addEventListener('load', function() {
-    let evolutionMetadata = JSON.parse(req.responseText, adjustStatusValue)
+    let evolutionMetadata = JSON.parse(req.responseText)
     proposals = evolutionMetadata.proposals
     languageVersions = evolutionMetadata.implementationVersions
     
@@ -165,16 +165,6 @@ function init() {
   document.querySelector('#proposals-count-number').innerHTML = 'Loading…'
   req.open('get', EVOLUTION_METADATA_URL)
   req.send()
-}
-
-/** 
- * Reviver function passed to JSON.parse() to convert new status field value to old value.
- */
-function adjustStatusValue(key, value) {
-  if (key == "state" && value !== "" && !value.startsWith(".")) {
-    return "." + value
-  }
-  return value
 }
 
 /**
