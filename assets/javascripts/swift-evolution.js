@@ -25,7 +25,24 @@ let filterSelection = []
 
 let upcomingFeatureFlagFilterEnabled = false
 
+/** Proposal state string constants */
+const State = Object.freeze({
+  "awaitingReview": '.awaitingReview',
+  "scheduledForReview": '.scheduledForReview',
+  "activeReview": '.activeReview',
+  "returnedForRevision": '.returnedForRevision',
+  "withdrawn": '.withdrawn',
+  "accepted": '.accepted',
+  "acceptedWithRevisions": '.acceptedWithRevisions',
+  "rejected": '.rejected',
+  "implemented": '.implemented',
+  "previewing": '.previewing',
+  "error": '.error',
+})
+
 /**
+ * property names: Proposal state string constants
+ *
  * `name`: Mapping of the states in the proposals JSON to human-readable names.
  *
  * `shortName`:  Mapping of the states in the proposals JSON to short human-readable names.
@@ -34,71 +51,71 @@ let upcomingFeatureFlagFilterEnabled = false
  * `className`: Mapping of states in the proposals JSON to the CSS class names used
  * to manipulate and display proposals based on their status.
  *
- * `count`: Number of proposals that determine after all proposals is loaded
+ * `count`: Number of proposals with that state. Calculated after proposals are loaded.
  */
-var states = {
-  '.awaitingReview': {
+const states = {
+  [State.awaitingReview]: {
     name: 'Awaiting Review',
     shortName: 'Awaiting Review',
     className: 'awaiting-review',
     count: 0
   },
-  '.scheduledForReview': {
+  [State.scheduledForReview]: {
     name: 'Scheduled for Review',
     shortName: 'Scheduled',
     className: 'scheduled-for-review',
     count: 0
   },
-  '.activeReview': {
+  [State.activeReview]: {
     name: 'Active Review',
     shortName: 'Active Review',
     statusPrefix: 'In ',
     className: 'active-review',
     count: 0
   },
-  '.returnedForRevision': {
+  [State.returnedForRevision]: {
     name: 'Returned for Revision',
     shortName: 'Returned',
     className: 'returned-for-revision',
     count: 0
   },
-  '.withdrawn': {
+  [State.withdrawn]: {
     name: 'Withdrawn',
     shortName: 'Withdrawn',
     className: 'withdrawn',
     count: 0
   },
-  '.accepted': {
+  [State.accepted]: {
     name: 'Accepted',
     shortName: 'Accepted',
     className: 'accepted',
     count: 0
   },
-  '.acceptedWithRevisions': {
+  [State.acceptedWithRevisions]: {
     name: 'Accepted with revisions',
     shortName: 'Accepted',
     className: 'accepted-with-revisions',
     count: 0
   },
-  '.rejected': {
+  [State.rejected]: {
     name: 'Rejected',
     shortName: 'Rejected',
     className: 'rejected',
     count: 0
   },
-  '.implemented': {
+  [State.implemented]: {
     name: 'Implemented',
     shortName: 'Implemented',
     className: 'implemented',
     count: 0
   },
-  '.previewing': {
+  [State.previewing]: {
     name: 'Previewing',
     shortName: 'Previewing',
     className: 'previewing',
     count: 0
   },
-  '.error': {
+  [State.error]: {
     name: 'Error',
     shortName: 'Error',
     className: 'error',
@@ -209,7 +226,7 @@ function determineNumberOfProposals(proposals) {
 
   // .acceptedWithRevisions proposals are combined in the filtering UI
   // with .accepted proposals.
-  states['.accepted'].count += states['.acceptedWithRevisions'].count
+  states[State.accepted].count += states[State.acceptedWithRevisions].count
 }
 
 /**
@@ -232,8 +249,8 @@ function renderSearchBar () {
   // .acceptedWithRevisions proposals are combined in the filtering UI
   // with .accepted proposals.
   var checkboxes = [
-    '.awaitingReview', '.scheduledForReview', '.activeReview', '.accepted',
-    '.previewing', '.implemented', '.returnedForRevision', '.rejected', '.withdrawn'
+    State.awaitingReview, State.scheduledForReview, State.activeReview, State.accepted,
+    State.previewing, State.implemented, State.returnedForRevision, State.rejected, State.withdrawn
   ].map(function (state) {
     var className = states[state].className
 
@@ -258,7 +275,7 @@ function renderSearchBar () {
 
   // The 'Implemented' filter selection gets an extra row of options if selected.
   var implementedCheckboxIfPresent = checkboxes.filter(function (cb) {
-    return cb.querySelector(`#filter-by-${states['.implemented'].className}`)
+    return cb.querySelector(`#filter-by-${states[State.implemented].className}`)
   })[0]
 
   if (implementedCheckboxIfPresent) {
@@ -300,8 +317,8 @@ function renderProposals() {
   var proposalAttachPoint = article.querySelector('.proposals-list')
 
   var proposalPresentationOrder = [
-    '.awaitingReview', '.scheduledForReview', '.activeReview', '.accepted', '.acceptedWithRevisions',
-    '.previewing', '.implemented', '.returnedForRevision', '.rejected', '.withdrawn'
+    State.awaitingReview, State.scheduledForReview, State.activeReview, State.accepted, State.acceptedWithRevisions,
+    State.previewing, State.implemented, State.returnedForRevision, State.rejected, State.withdrawn
   ]
 
   proposalPresentationOrder.map(function (state) {
@@ -340,18 +357,18 @@ function renderProposals() {
 
       if (proposal.reviewManagers.length > 0) detailNodes.push(renderReviewManagers(proposal.reviewManagers))
       if (proposal.trackingBugs) detailNodes.push(renderTrackingBugs(proposal.trackingBugs))
-      if (state === '.implemented') detailNodes.push(renderVersion(proposal.status.version))
-      if (state === '.previewing') detailNodes.push(renderPreview())
+      if (state === State.implemented) detailNodes.push(renderVersion(proposal.status.version))
+      if (state === State.previewing) detailNodes.push(renderPreview())
       if (proposal.implementation) detailNodes.push(renderImplementation(proposal.implementation))
       if (proposal.upcomingFeatureFlag) detailNodes.push(renderUpcomingFeatureFlag(proposal.upcomingFeatureFlag.flag))
-      if (state === '.acceptedWithRevisions') detailNodes.push(renderStatus(proposal.status))
+      if (state === State.acceptedWithRevisions) detailNodes.push(renderStatus(proposal.status))
 
-      if (state === '.activeReview' || state === '.scheduledForReview') {
+      if (state === State.activeReview || state === State.scheduledForReview) {
         detailNodes.push(renderStatus(proposal.status))
         detailNodes.push(renderReviewPeriod(proposal.status))
       }
 
-      if (state === '.returnedForRevision') {
+      if (state === State.returnedForRevision) {
         detailNodes.push(renderStatus(proposal.status))
       }
 
@@ -847,7 +864,7 @@ function _applyStatusFilter(matchingProposals) {
       matchingProposals = matchingProposals
         .filter(function (proposal) {
           return selectedStates.some(function (state) {
-            if (!(proposal.status.state === '.implemented')) return true // only filter among Implemented (N.N.N)
+            if (!(proposal.status.state === State.implemented)) return true // only filter among Implemented (N.N.N)
             if (state === 'swift-swift-Next' && proposal.status.version === 'Next') return true // special case
 
             var version = state.split(/\D+/).filter(function (s) { return s.length }).join('.')
@@ -969,7 +986,7 @@ function _applyFragment(fragment) {
 
     if (hasVersionSelections) {
       document.querySelector(
-        '#filter-by-' + states['.implemented'].className
+        '#filter-by-' + states[State.implemented].className
       ).checked = true
     }
   }
@@ -988,7 +1005,7 @@ function _applyFragment(fragment) {
       if (!stateName) return // fragment contains a nonexistent state
       var state = states[stateName]
 
-      if (stateName === '.implemented') implementedSelected = true
+      if (stateName === State.implemented) implementedSelected = true
 
       return document.querySelector('#filter-by-' + state.className)
     }).filter(function (status) {
@@ -1061,7 +1078,7 @@ function _updateURIFragment() {
   // .implemented is redundant if any specific implementation versions are selected.
   if (actions.version.length) {
     statuses = statuses.filter(function (status) {
-      return status !== states['.implemented'].className
+      return status !== states[State.implemented].className
     })
   }
 
@@ -1171,9 +1188,9 @@ function addNumberToState (state, count) {
 */
 function descriptionForSelectedStatuses(selectedOptions) {
   let allStateOptions = [
-      '.awaitingReview', '.scheduledForReview', '.activeReview', '.accepted',
-      '.previewing', '.implemented', '.returnedForRevision', '.rejected', '.withdrawn'
-   ]
+    State.awaitingReview, State.scheduledForReview, State.activeReview, State.accepted,
+    State.previewing, State.implemented, State.returnedForRevision, State.rejected, State.withdrawn
+  ]
   let selectedCount = selectedOptions.length
   let totalCount = allStateOptions.length
   let ALL_EXCEPT_MAX_COUNT = 3
