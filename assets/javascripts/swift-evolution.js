@@ -27,17 +27,17 @@ let upcomingFeatureFlagFilterEnabled = false
 
 /** Proposal state string constants */
 const State = Object.freeze({
-  "awaitingReview": 'awaitingReview',
-  "scheduledForReview": 'scheduledForReview',
-  "activeReview": 'activeReview',
-  "returnedForRevision": 'returnedForRevision',
-  "withdrawn": 'withdrawn',
-  "accepted": 'accepted',
-  "acceptedWithRevisions": 'acceptedWithRevisions',
-  "rejected": 'rejected',
-  "implemented": 'implemented',
-  "previewing": 'previewing',
-  "error": 'error',
+  awaitingReview: 'awaitingReview',
+  scheduledForReview: 'scheduledForReview',
+  activeReview: 'activeReview',
+  returnedForRevision: 'returnedForRevision',
+  withdrawn: 'withdrawn',
+  accepted: 'accepted',
+  acceptedWithRevisions: 'acceptedWithRevisions',
+  rejected: 'rejected',
+  implemented: 'implemented',
+  previewing: 'previewing',
+  error: 'error',
 })
 
 /**
