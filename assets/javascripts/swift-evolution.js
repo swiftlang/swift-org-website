@@ -392,12 +392,11 @@ function renderReviewManagers(reviewManagers) {
 
 /** Create nodes for arrays of authors and review managers. */
 function personNodesForPersonArray(personArray) {
-  let personNodes = personArray.map(function (person) {
+  const personNodes = personArray.map(function (person) {
     if (person.link.length > 0) {
       return html('a', { href: person.link, target: '_blank' }, person.name)
-    } else {
-      return document.createTextNode(person.name)
     }
+    return document.createTextNode(person.name)
   })
   
   return _joinNodes(personNodes, ', ')
