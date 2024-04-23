@@ -247,7 +247,8 @@ sudo apt-get install heaptrack
 ```
 
 2. Run the binary twice using `heaptrack`. The first run provides a baseline for `main`.
-```heaptrack .build/x86_64-unknown-linux-gnu/release/test_1000_autoReadGetAndSet
+```
+heaptrack .build/x86_64-unknown-linux-gnu/release/test_1000_autoReadGetAndSet
 heaptrack output will be written to "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84341.gz"
 starting application, this might take some time...
 ...
@@ -261,7 +262,8 @@ Heaptrack finished! Now run the following to investigate the data:
 ```
 
 3. Then run it a second time for the `feature branch` by changing the branch and recompiling.
-```heaptrack .build/x86_64-unknown-linux-gnu/release/test_1000_autoReadGetAndSet
+```
+heaptrack .build/x86_64-unknown-linux-gnu/release/test_1000_autoReadGetAndSet
 heaptrack output will be written to "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84372.gz"
 starting application, this might take some time...
 ...
@@ -278,7 +280,8 @@ ubuntu@ip-172-31-25-161 /t/.nio_alloc_counter_tests_GRusAy>
 The output shows `673989` allocations in the `feature branch` version and `319347` in `main`, indicating a regression.
 
 4. Run the following command to analyze the output as a diff from these runs using `heaptrack_print` and pipe it through `swift demangle` for readability:
-```heaptrack_print -T -d heaptrack.test_1000_autoReadGetAndSet.84341.gz heaptrack.test_1000_autoReadGetAndSet.84372.gz | swift demangle
+```
+heaptrack_print -T -d heaptrack.test_1000_autoReadGetAndSet.84341.gz heaptrack.test_1000_autoReadGetAndSet.84372.gz | swift demangle
 ```
 
 **Note:** `-T` outputs the temporary allocations, providing transient allocations and not leaks. If leaks are detected, remove `-T`.
