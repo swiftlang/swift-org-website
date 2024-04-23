@@ -177,7 +177,7 @@ cite {
   }
 }
 
-h2.with-anchor {
+h2.header-with-anchor {
   &:hover {
     a {
       display: inline-block;
@@ -185,8 +185,8 @@ h2.with-anchor {
   }
 
   a {
-    color: var(--color-text);
     display: none;
+    color: var(--color-text);
     margin-left: .2em;
     text-decoration: none;
   }
