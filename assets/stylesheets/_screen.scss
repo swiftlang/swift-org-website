@@ -189,6 +189,10 @@ h2.header-with-anchor {
     color: var(--color-text);
     margin-left: .2em;
     text-decoration: none;
+
+    svg {
+      filter: var(--icon-filter);
+    }
   }
 }
 
