@@ -203,20 +203,22 @@ SUMMARY: AddressSanitizer: 32 byte(s) leaked in 1 allocation(s).
 Currently, the output doesn’t provide a human-readable representation of the function names because [LeakSanitizer doesn't symbolicate stack traces on Linux](https://github.com/apple/swift/issues/55046). However, you can symbolicate it using `llvm-symbolizer` or `addr2line` if you have `binutils` installed.
 
 To install `binutils` for Swift on a server running Linux, follow these steps:
-1. Connect to your Swift server through SSH using a terminal.
-2. Update the package lists by running the following command:
+
+Step 1: Connect to your Swift server through SSH using a terminal.
+
+Step 2: Update the package lists by running the following command:
 ```
 sudo apt update
 ```
 
-3. Install `binutils` by running the following command:
+Step 3: Install `binutils` by running the following command:
 ```
 sudo apt install binutils
 ```
 
 This will install `binutils` and its related tools for working with binaries, object files, and libraries, which can be useful for developing and debugging Swift applications on Linux.
 
-4. You can now run the following command to demangle the symbols in the stack traces:
+You can now run the following command to demangle the symbols in the stack traces:
 ```
 # /tmp/test+0xc62ce
 addr2line -e /tmp/test -a 0xc62ce -ipf | swift demangle
@@ -241,12 +243,13 @@ A GUI front-end analyzer `heaptrack_gui` is available in addition to command lin
 
 Using a different example, here’s a short how-to using [Ubuntu](https://www.swift.org/download/) to analyze transient usage.
 
-1. Install `heaptrack` by running this command:
+Step 1: Install `heaptrack` by running this command:
 ```
 sudo apt-get install heaptrack
 ```
 
-2. Run the binary twice using `heaptrack`. The first run provides a baseline for `main`.
+Step 2: Run the binary twice using `heaptrack`. The first run provides a baseline for `main`.
+
 ```
 heaptrack .build/x86_64-unknown-linux-gnu/release/test_1000_autoReadGetAndSet
 heaptrack output will be written to "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84341.gz"
@@ -261,7 +264,8 @@ Heaptrack finished! Now run the following to investigate the data:
   heaptrack --analyze "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84341.gz"
 ```
 
-3. Then run it a second time for the `feature branch` by changing the branch and recompiling.
+Step 3: Then run it a second time for the `feature branch` by changing the branch and recompiling.
+
 ```
 heaptrack .build/x86_64-unknown-linux-gnu/release/test_1000_autoReadGetAndSet
 heaptrack output will be written to "/tmp/.nio_alloc_counter_tests_GRusAy/heaptrack.test_1000_autoReadGetAndSet.84372.gz"
@@ -279,7 +283,7 @@ ubuntu@ip-172-31-25-161 /t/.nio_alloc_counter_tests_GRusAy>
 
 The output shows `673989` allocations in the `feature branch` version and `319347` in `main`, indicating a regression.
 
-4. Run the following command to analyze the output as a diff from these runs using `heaptrack_print` and pipe it through `swift demangle` for readability:
+Step 4: Run the following command to analyze the output as a diff from these runs using `heaptrack_print` and pipe it through `swift demangle` for readability:
 ```
 heaptrack_print -T -d heaptrack.test_1000_autoReadGetAndSet.84341.gz heaptrack.test_1000_autoReadGetAndSet.84372.gz | swift demangle
 ```
