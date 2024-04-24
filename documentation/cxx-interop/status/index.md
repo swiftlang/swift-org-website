@@ -98,6 +98,7 @@ Swift supports calling most non-templated:
 - Top-level functions
 - Functions inside of namespaces
 - Member functions, both instance and static
+- Virtual member functions of C++ types that become reference types
 - Constructors
 - Operators
   - Arithmetic operators, like `operator+`, `operator-`, `operator*`
@@ -107,8 +108,6 @@ Swift supports calling most non-templated:
 
 Functions and constructors that use r-value reference types are not
 yet available in Swift. 
-
-Virtual member functions are not yet available in Swift.
 
 Swift supports calling some C++ function templates. Any function or
 function template that uses a dependent type in its signature, or a universal
@@ -120,6 +119,12 @@ A C++ function whose return type is
 not supported in Swift, or with a parameter whose type is
 not supported in Swift is not available in Swift.
 
+If a parameter of a C++ function has a default value, the parameter will also have a default value in Swift if:
+- The function is not a constructor
+- The parameter is not `inout` in Swift
+- The parameter is not a pointer
+- The parameter is not a const reference 
+
 ### C++ Types Supported in Swift
 
 The following C++ types can be used in Swift:
@@ -129,11 +134,7 @@ The following C++ types can be used in Swift:
 - C++ references, excluding r-value reference / universal reference parameters
 - Type aliases, only when the underlying type is supported in Swift
 - Copyable structures and classes
-  - Swift currently does not support C++ structures and classes that have a deleted
-    copy constructor, including move-only structures and classes.
-    - The only exception are the non-copyable C++ structures and classes that
-      have been explicitly
-      [mapped to Swift reference types](/documentation/cxx-interop#mapping-c-types-to-swift-reference-types).
+- Movable non-copyable structures and classes
 - Enumerations, including scoped enumerations (`enum class`)
 
 C++ types that become value types in Swift can be constructed and passed around
@@ -157,11 +158,11 @@ type of such data member is supported in Swift.
 
 The following C++ standard library types are supported in Swift:
 
-- `std::string`, `std::u16string`
+- `std::string`, `std::u16string`, `std::u32string`
 - Specializations of `std::pair`
 - Specializations of `std::vector`
 - Specializations of `std::map` and `std::unordered_map`
-- Specializations of `std::set` and `std::unordered_set`
+- Specializations of `std::set`, `std::multiset` and `std::unordered_set`
 - Specializations of `std::optional`
 - Specializations of `std::shared_ptr`
 - Specializations of `std::array`
