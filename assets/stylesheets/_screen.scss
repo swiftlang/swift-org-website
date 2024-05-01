@@ -1171,30 +1171,22 @@ article {
   }
 }
 
-.archive {
-  .years {
+.interactive-tabs {
+  .tabs {
     display: flex;
     padding: 0;
 
-    .year {
+    button {
       cursor: pointer;
       margin-right: 1rem;
       background-color: transparent;
       border-radius: var(--border-radius);
       border: 1px solid var(--color-text);
       color: var(--color-text);
-      display: block;
       padding: .5rem;
-      text-align: center;
-      border-radius: var(--border-radius);
-      border: 1px solid var(--color-text);
-      color: var(--color-text);
       display: block;
-      padding: 0.5rem 0;
       text-align: center;
-      flex-grow: 1;
       grid-template-columns: repeat(3, 1fr);
-      
 
       &:hover, &[aria-pressed="true"] {
         background-color: var(--color-text);
@@ -1204,11 +1196,19 @@ article {
     }
   }
 
-  .months {
+  .content {
     display: none;
 
     &.active {
       display: block;
+    }
+  }
+}
+
+.interactive-tabs.os {
+  .tabs {
+    button {
+      width: 100%;
     }
   }
 }
