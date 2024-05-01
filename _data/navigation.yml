@@ -144,6 +144,6 @@
         - title: Security Updates
           name: security-updates
 # ------------------------------------------------------------------------------
-- header: Download
+- header: Install
   url: /install/
   isCta: true
