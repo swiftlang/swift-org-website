@@ -1,6 +1,6 @@
 ## Installing Swift
 
-Kickstart your journey, [install Swift](/install) to begin using it on **macOS**, **Linux**, or **Windows**. 
+To kickstart your journey, [install Swift](/install) to begin using it on **macOS**, **Linux**, or **Windows**. 
 
 > Tip: To test that you have Swift installed, run `swift --version` from your shell or terminal app.
 
