@@ -25,22 +25,18 @@ If you want a more customized development experience for working in a specific v
 
 While Xcode already includes a release of Swift that is supported by Apple, you can experiment with a version that is still in development by downloading one of the packages from the [download](/download) page. 
 
-<div class="warning" markdown="1">
 To submit to the App Store you must build your app using the version of Swift that comes included within Xcode.
-</div>
 
-<div class="warning" markdown="1">
 Xcode is not required to run the package installer or use an installed
 toolchain. However, when Xcode is not installed, the functionality of the Swift
 Package Manager may be limited due to some [outstanding issues](https://github.com/apple/swift-package-manager/issues/4396).
-</div>
 
 Follow the instructions below to stay up-to-date with the latest features and improvements in Swift, and tailor your development environment to your specific needs.
 
-1. Download a latest Swift release
+1. Download the latest Swift release
    ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases))
    or development [snapshot](/download/#snapshots) package.
-   Make sure that your system meets the aforecited requirements for
+   Make sure that your system meets the aforementioned requirements for
    this package.
 
 2. Run the package installer,
@@ -79,7 +75,7 @@ Follow the instructions below to stay up-to-date with the latest features and im
 ### Code Signing on macOS
 
 The macOS `.pkg` files are digitally signed
-by the developer ID of the Swift open source project
+by the developer ID of the Swift open-source project
 to allow verification that they have not been tampered with.
 All binaries in the package are signed as well.
 
@@ -91,7 +87,7 @@ The signature should be produced by
 
 <div class="warning" markdown="1">
 If the lock is not displayed
-or the signature is not produced by the Swift open source developer ID,
+or the signature is not produced by the Swift open-source developer ID,
 do not proceed with the installation.
 Instead, quit the installer
 and email <swift-infrastructure@forums.swift.org>
@@ -107,11 +103,11 @@ Although Swift is primarily used for app development, it can also be used for se
 
 A basic configuration is essential for setting up your development environment, ensuring proper project structure, and preparing your workflow for smooth app development. Here are the general steps:
 
-1. Set up your workspace: Create a new folder for your project or open an existing Swift project folder in [anchor](#visual-studio-code)Visual Studio Code.
+1. Set up your workspace: Create a new folder for your project or open an existing Swift project folder in [Visual Studio Code](#visual-studio-code).
 2. Configure Swift development tools: You may need to [download and install Xcode](https://itunes.apple.com/app/xcode/id497799835) on your macOS for Swift development. Make sure your Swift toolchain is properly set up. 
 3. Create a new Swift file: To create a new Swift file, open **Xcode** > go to the **File** menu > click **New File** > and **Save** it with the **.swift** extension.
 4. Write your Swift code: Start coding your Swift program in the editor.
-5. Run your Swift code: To run your Swift code, you can use a Swift compiler like [anchor](#swift-repl)Swift REPL (Read-Eval-Print Loop) or Xcode’s build and run feature as explained below.
+5. Run your Swift code: To run your Swift code, you can use a Swift compiler like [Swift REPL](#swift-repl) (Read-Eval-Print Loop) or Xcode’s build and run feature as explained below.
 6. Debugging: Utilize the debugging features in Visual Studio Code to troubleshoot issues in your Swift code.
 
 ### Visual Studio Code
