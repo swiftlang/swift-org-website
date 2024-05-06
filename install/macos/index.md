@@ -9,10 +9,10 @@ Installing Swift on macOS offers a compelling environment for developing native 
 
 To start using Swift, follow these steps to install Xcode on macOS:
 
-0. Download the [current version of Xcode](https://itunes.apple.com/app/xcode/id497799835) which contains the latest Swift release.
-0. Once the download is complete, open the downloaded package.
-0. Follow the on-screen instructions to install Swift on your macOS system.
-0. After the installation is complete, you can verify the installation by opening Terminal and running the following command:
+1. Download the [current version of Xcode](https://itunes.apple.com/app/xcode/id497799835) which contains the latest Swift release.
+2. Once the download is complete, open the downloaded package.
+3. Follow the on-screen instructions to install Swift on your macOS system.
+4. After the installation is complete, you can verify the installation by opening Terminal and running the following command:
 ```
 $ swift —version
 ```
@@ -37,13 +37,13 @@ Package Manager may be limited due to some [outstanding issues](https://github.c
 
 Follow the instructions below to stay up-to-date with the latest features and improvements in Swift, and tailor your development environment to your specific needs.
 
-0. Download a latest Swift release
+1. Download a latest Swift release
    ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases))
    or development [snapshot](/download/#snapshots) package.
    Make sure that your system meets the aforecited requirements for
    this package.
 
-0. Run the package installer,
+2. Run the package installer,
    which will install an Xcode toolchain into
    `/Library/Developer/Toolchains/`.
 
@@ -103,15 +103,15 @@ so that we can investigate the problem.
 
 Although Swift is primarily used for app development, it can also be used for server-side programming, command-line tool development, and more. Follow these basic configuration steps and use the tools outlined below.
 
-### Basic configuration steps
+### Basic configuration
 
-Basic configuration steps are essential for setting up your development environment, ensuring proper project structure, and preparing your workflow for smooth app development. 
+A basic configuration is essential for setting up your development environment, ensuring proper project structure, and preparing your workflow for smooth app development. Here are the general steps:
 
-1. Set up your workspace: Create a new folder for your project or open an existing Swift project folder in Visual Studio Code.
+1. Set up your workspace: Create a new folder for your project or open an existing Swift project folder in [anchor](#visual-studio-code)Visual Studio Code.
 2. Configure Swift development tools: You may need to [download and install Xcode](https://itunes.apple.com/app/xcode/id497799835) on your macOS for Swift development. Make sure your Swift toolchain is properly set up. 
 3. Create a new Swift file: To create a new Swift file, open **Xcode** > go to the **File** menu > click **New File** > and **Save** it with the **.swift** extension.
 4. Write your Swift code: Start coding your Swift program in the editor.
-5. Run your Swift code: To run your Swift code, you can use a Swift compiler like Swift REPL (Read-Eval-Print Loop) or Xcode’s build and run feature as explained below.
+5. Run your Swift code: To run your Swift code, you can use a Swift compiler like [anchor](#swift-repl)Swift REPL (Read-Eval-Print Loop) or Xcode’s build and run feature as explained below.
 6. Debugging: Utilize the debugging features in Visual Studio Code to troubleshoot issues in your Swift code.
 
 ### Visual Studio Code
@@ -121,6 +121,7 @@ Visual Studio Code (VSCode) provides a versatile environment for writing and run
 1. Go to the [Visual Studio Code](https://code.visualstudio.com/) website and download the installer for macOS.
 2. Run the installer and follow the on-screen instructions to complete the installation process.
 3. Once installed, launch Visual Studio Code.
+4. You can use the **Swift extension** with VSCode as explained below.
 
 ### Swift extension
 
@@ -144,11 +145,11 @@ To run Swift REPL, follow these steps:
 4. You can then start typing Swift code directly into the REPL prompt and press **Enter** to see the output of the code.
 5. To exit the Swift REPL, type `:q` and press **Enter**.
 
-### Xcode’s build and run feature
+### Xcode’s build-and-run feature
 
-Xcode's build and run feature is helpful for compiling and executing Swift projects, especially for iOS, macOS, watchOS, and tvOS app development. It provides a comprehensive development environment with tools for coding, testing, debugging, and running your Swift applications.
+Xcode's build-and-run feature helps compile and execute Swift projects, especially for iOS, macOS, watchOS, and tvOS app development. It provides a comprehensive development environment with tools for coding, testing, debugging, and running your Swift applications.
 
-To use Xcode's build and run feature to compile and execute Swift code in a project, follow these steps:
+To use Xcode's build-and-run feature to compile and execute Swift code in a project, follow these steps:
 1. Launch Xcode on your macOS system.
 2. Create a New Project or Open an Existing Project:
 
@@ -170,8 +171,6 @@ To use Xcode's build and run feature to compile and execute Swift code in a proj
 **Vapor** - [Vapor](https://www.swift.org/getting-started/vapor-web-server/) is a popular server-side Swift framework that provides tools and libraries for building web servers and APIs in Swift. It offers features like routing, middleware, and template engines, making it easier to develop server-side applications in Swift.
 
 **Hummingbird** - [Hummingbird](https://swiftpackageindex.com/hummingbird-project/hummingbird) is also a server-side Swift framework that provides a variety of tools and libraries to streamline the development process. 
-
-**Perfect** - [Perfect](https://www.prefect.io/) is another server-side Swift framework that is designed to build high-performance web applications and REST APIs. It provides features like request routing, database integration, and security features for building server-side applications in Swift.
 
 **Command-line tools** - You can build a [command line tool](https://www.swift.org/getting-started/cli-swiftpm/) or use [Xcode](https://itunes.apple.com/app/xcode/id497799835), or any text editor to write Swift scripts. Compile and run Swift scripts directly in the Terminal using the swiftc command. Swift scripts are useful for automating tasks, processing data, or creating utilities on the command line. 
 
@@ -213,15 +212,15 @@ $ git clone https://github.com/apple/swift.git
     
     b. You can also build and run individual parts of the Swift project within Xcode for experimentation or learning purposes.
     
-3. Use the [Getting started with Xcode](https://developer.apple.com/videos/play/wwdc2019/404/) tutorial to learn how to develop a working SwiftUI app.
+3. Follow the [Getting started with Xcode](https://developer.apple.com/videos/play/wwdc2019/404/) tutorial to learn how to develop a working SwiftUI app.
 
 ### Swift Playgrounds
 
-Swift Playgrounds offers an environment where you can explore and learn application development at your own pace, making it an ideal starting point for beginners. Use [this tutorial](https://www.swift.org/getting-started/swiftui/) to build your first app in Swift Playgrounds.
+Swift Playgrounds offers an environment where you can explore and learn application development at your own pace, making it an ideal starting point for beginners. Follow the [Build an iOS app with SwiftUI tutorial](https://www.swift.org/getting-started/swiftui/) to create your first app in Swift Playgrounds.
 
 ### Swift with Vapor
 
-If you're looking to build a web service using the Vapor framework, you can follow [these instructions](https://www.swift.org/getting-started/vapor-web-server/) to create a new project, set up routes, and send and receive JSON. These steps will help you get started on creating a powerful and efficient web service that can handle your application's needs.
+If you're looking to build a web service using the Vapor framework, you can follow the [Build a Web Service with Vapor instructions](https://www.swift.org/getting-started/vapor-web-server/) to create a new project, set up routes, and send and receive JSON. These steps will help you get started on creating a powerful and efficient web service that can handle your application's needs.
 
 ## What's next
 
