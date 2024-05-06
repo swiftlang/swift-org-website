@@ -8,7 +8,7 @@ Whether you are a beginner or an experienced programmer, learning and using Swif
 Follow these general steps to start using Swift:
 
 1. Choose your development platform below and follow the instructions to install the latest version of Swift. See [supported platform](/platform-support) for the level of help for each platform.
-2. After the installation is complete, you can verify the installation by running the swift —version command.
+2. After the installation is complete, you can verify the installation by running `swift —version`.
 
 > Tip: You can also [download nightly snapshots and older releases](/download).
 
