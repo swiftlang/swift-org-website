@@ -177,13 +177,7 @@ cite {
   }
 }
 
-h2.header-with-anchor {
-  &:hover {
-    a {
-      display: inline-block;
-    }
-  }
-
+.header-with-anchor {
   a {
     display: none;
     color: var(--color-text);
@@ -192,6 +186,14 @@ h2.header-with-anchor {
 
     svg {
       filter: var(--icon-filter);
+    }
+  }
+}
+
+h2.header-with-anchor {
+  &:hover {
+    a {
+      display: inline-block;
     }
   }
 }
