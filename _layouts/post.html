@@ -13,8 +13,10 @@ layout: base
   {{ content }}
 
   <footer>
-    <p>Written by</p>
-    {% include authors.html authors=page.author %}
+    {% if page.author %}
+      <p>Written by</p>
+      {% include authors.html authors=page.author %}
+    {% endif %}
 
     {% if page.previous or page.next %}
     <nav>
