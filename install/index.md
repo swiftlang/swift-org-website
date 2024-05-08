@@ -9,11 +9,11 @@ Follow the instructions below to install the latest version of Swift on a [suppo
 
 <div class="interactive-tabs os">
   <div class="tabs">
-    <button aria-pressed="true">macOS</button>
+    <button aria-pressed="">macOS</button>
     <button aria-pressed="">Linux</button>
     <button aria-pressed="">Windows</button>
   </div>
-<div markdown="1" class="content active" data-tab="macOS">
+<div markdown="1" class="content" data-tab="macOS">
 ## Latest Release (Swift {{ site.data.builds.swift_releases.last.name }})
 
   <ul class="install-instruction">
@@ -85,3 +85,5 @@ Follow the instructions below to install the latest version of Swift on a [suppo
 <!-- {% include_relative macos/_macos.md %}
 {% include_relative linux/_linux.md %}
 {% include_relative windows/_windows.md %} -->
+
+<script src="/assets/javascripts/install.js"></script>
