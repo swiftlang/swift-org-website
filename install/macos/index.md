@@ -160,18 +160,6 @@ To use Xcode's build-and-run feature to compile and execute Swift code in a proj
 7. Debugging: Xcode provides powerful debugging tools to help you identify and fix problems. You can set breakpoints, inspect variables, and step through your code with the debugger.
 8. Stop Execution: To stop the execution of your Swift project, click the **Stop** button in Xcode.
 
-### Server-side programming and command-line tool development
-
-**Swift Package Manager (SwiftPM)** - [Swift Package Manager](https://www.swift.org/documentation/package-manager/) is a command-line tool for managing the distribution of Swift code. It is integrated with the Swift compiler and allows you to easily add dependencies and build Swift packages. SwiftPM is commonly used for managing dependencies in Swift server-side projects and command-line tools.
-
-**Vapor** - [Vapor](https://www.swift.org/getting-started/vapor-web-server/) is a popular server-side Swift framework that provides tools and libraries for building web servers and APIs in Swift. It offers features like routing, middleware, and template engines, making it easier to develop server-side applications in Swift.
-
-**Hummingbird** - [Hummingbird](https://swiftpackageindex.com/hummingbird-project/hummingbird) is also a server-side Swift framework that provides a variety of tools and libraries to streamline the development process. 
-
-**Command-line tools** - You can build a [command line tool](https://www.swift.org/getting-started/cli-swiftpm/) or use [Xcode](https://itunes.apple.com/app/xcode/id497799835), or any text editor to write Swift scripts. Compile and run Swift scripts directly in the Terminal using the swiftc command. Swift scripts are useful for automating tasks, processing data, or creating utilities on the command line. 
-
-**Docker and Swift images** - You can run Swift applications within [Docker containers](https://www.swift.org/install/linux/) using [Swift Docker images](https://hub.docker.com/_/swift/). Docker provides a way to package, distribute, and run Swift applications consistently across different environments.
-
 ## Build your first app
 
 To start creating apps, let’s first clone the Swift repository. Then, we’ll explore examples using Swift with Xcode, Swift Playgrounds, and Vapor. 
