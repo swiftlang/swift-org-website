@@ -214,3 +214,17 @@
   pitched: 2024-03-12
   accepted: 2024-03-26
   url: https://github.com/vapor/jwt-kit
+
+- name: Hummingbird
+  description: Lightweight, modular, modern, extensible HTTP server framework written in Swift.
+  maturity: Sandbox
+  pitched: 2024-03-23
+  accepted: 2024-05-01
+  url: https://github.com/hummingbird-project/hummingbird
+
+- name: Vapor
+  description: Vapor is a framework for building server applications, APIs and backends in Swift.
+  maturity: Graduated
+  pitched: 2024-03-23
+  accepted: 2024-05-01
+  url: https://github.com/vapor/vapor
