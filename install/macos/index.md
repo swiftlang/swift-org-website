@@ -33,8 +33,7 @@ Package Manager may be limited due to some [outstanding issues](https://github.c
 
 Follow the instructions below to stay up-to-date with the latest features and improvements in Swift, and tailor your development environment to your specific needs.
 
-1. Download the latest Swift release
-   ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases))
+1. Download the latest [Swift release](/download/#releases)
    or development [snapshot](/download/#snapshots) package.
    Make sure that your system meets the aforementioned requirements for
    this package.
