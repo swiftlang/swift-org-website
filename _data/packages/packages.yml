@@ -116,6 +116,19 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-dependencies
+      - name: swift-testing
+        description: A powerful testing library for Swift, providing a modern and flexible
+          testing library for Swift with powerful and expressive capabilities. It gives
+          developers more confidence with less code.
+        owner: Apple
+        swift_compatibility: 5.10+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/apple/swift-testing
       - name: swift-case-paths
         description: CasePaths extends the functionality of key paths to enum cases, allowing
           for the extraction, modification, and testing of associated values in enums.
@@ -152,18 +165,6 @@ categories:
         platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/realm/SwiftLint
-      - name: SwiftGodot
-        description: SwiftGodot provides Swift language bindings for the Godot game engine.
-          Developers can use it to build extensions or embed Godot directly into Swift
-          applications.
-        owner: Miguel de Icaza
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
-        license: MIT
-        url: https://swiftpackageindex.com/migueldeicaza/SwiftGodot
   - name: Server
     slug: server
     brief: Do you need a hand putting together a Swift app for the server? Browse some
@@ -179,14 +180,24 @@ categories:
         description: Vapor is an HTTP web framework for Swift, providing an expressive
           and easy-to-use foundation for websites, APIs, and cloud projects.
         owner: Vapor
-        swift_compatibility: 5.7+
+        swift_compatibility: 5.8+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/vapor/vapor
+      - name: fluent
+        description: Fluent helps you work with databases, providing a high-level, type-safe
+          API for querying and manipulating data in Vapor apps.
+        owner: Vapor
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/vapor/fluent
       - name: swift-openapi-generator
         description: Generate Swift client and server code from an OpenAPI document. Includes
           multiple repositories for extensibility and supports various transports.
@@ -222,18 +233,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
-      - name: fluent
-        description: Fluent helps you work with databases, providing a high-level, type-safe
-          API for querying and manipulating data in Vapor apps.
-        owner: Vapor
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/vapor/fluent
       - name: hummingbird
         description: Hummingbird is a lightweight, flexible server framework written in
           Swift. It consists of an HTTP server, a web application framework, and extension
@@ -275,7 +274,7 @@ categories:
           protocol servers and clients. It uses non-blocking I/O for efficient handling
           of multiple connections.
         owner: Apple
-        swift_compatibility: 5.7+
+        swift_compatibility: 5.8+
         platform_compatibility:
           - Apple
           - Linux
@@ -283,16 +282,6 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-nio
-      - name: Moya
-        description: Moya is a network abstraction layer for Alamofire. It simplifies
-          network calls and provides compile-time checking for API endpoints.
-        owner: Moya
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/Moya/Moya
       - name: Pulse
         description: Pulse is a powerful logging system for Apple platforms. It records
           and inspects logs and network requests, and allows for real-time viewing and
@@ -304,6 +293,16 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
+      - name: Moya
+        description: Moya is a network abstraction layer for Alamofire. It simplifies
+          network calls and provides compile-time checking for API endpoints.
+        owner: Moya
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/Moya/Moya
       - name: RxAlamofire
         description: RxAlamofire is a wrapper around Alamofire that adds RxSwift functionality,
           simplifying network requests and allowing responses to be composed in a more
@@ -362,18 +361,6 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
-      - name: Quick
-        description: Quick is a behavior-driven development framework for Swift and Objective-C.
-          It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
-          framework for tests.
-        owner: Quick
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/Quick/Quick
       - name: swift-testing
         description: A powerful testing library for Swift, providing a modern and flexible
           testing library for Swift with powerful and expressive capabilities. It gives
@@ -387,6 +374,18 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-testing
+      - name: Quick
+        description: Quick is a behavior-driven development framework for Swift and Objective-C.
+          It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
+          framework for tests.
+        owner: Quick
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/Quick/Quick
       - name: Nimble
         description: Nimble is a testing library for Swift and Objective-C. It provides
           a more expressive way to write assertions and supports operator overloads and
@@ -429,9 +428,20 @@ categories:
         swift_compatibility: 5.7+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: BSD 3-Clause
         url: https://swiftpackageindex.com/CocoaLumberjack/CocoaLumberjack
+      - name: Pulse
+        description: Pulse is a powerful logging system for Apple platforms. It records
+          and inspects logs and network requests, and allows for real-time viewing and
+          sharing.
+        owner: Alex Grebenyuk
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/kean/Pulse
       - name: SwiftyBeaver
         description: SwiftyBeaver is a flexible, colorful, lightweight logging library
           for Swift. It supports console, file, and cloud destinations and is ideal for
@@ -462,23 +472,12 @@ categories:
           Datadog. It includes features for log collection, trace collection, and RUM
           events collection.
         owner: Datadog, Inc.
-        swift_compatibility: 5.10+
+        swift_compatibility: 5.7+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, visionOS, tvOS)
         license: Apache 2.0
         url: https://swiftpackageindex.com/DataDog/dd-sdk-ios
-      - name: Pulse
-        description: Pulse is a powerful logging system for Apple platforms. It records
-          and inspects logs and network requests, and allows for real-time viewing and
-          sharing.
-        owner: Alex Grebenyuk
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/kean/Pulse
       - name: XCGLogger
         description: XCGLogger is a debug log module for Swift projects that allows you
           to log details to the console (and optionally a file) with additional information
@@ -487,6 +486,6 @@ categories:
         swift_compatibility: 5.7+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/DaveWoodCom/XCGLogger
