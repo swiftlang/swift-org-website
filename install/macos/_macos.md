@@ -13,4 +13,4 @@
 **Additional install options for macOS:** 
 
 * [Package Installer](/install/macos#installation-via-swiftorg-package-installer) - *Package installers (.pkg) are available on download page.*
-* [Basic guidelines](/install/macos#installation-via-swiftorg-package-installer) - *Cloning a repo, configuration steps, installation tools, and other helpful resources.*
+* [Basic guidelines](/install/macos#install-tools) - *Cloning a repository, configuring and installing tools to write, edit, and execute code, and other helpful resources.*
