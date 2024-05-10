@@ -10,8 +10,8 @@ categories:
       and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
     packages:
       - name: GodotVision
-        description: Enables creation of shared-space experiences in Godot for visionOS,
-          integrating Godot's headless mode with RealityKit for 3D content mirroring.
+        description: Create shared-space experiences in Godot for visionOS, integrating
+          Godot's headless mode with RealityKit for 3D content mirroring.
         owner: Kevin Watters
         license: MIT
         url: https://swiftpackageindex.com/kevinw/GodotVision
@@ -28,8 +28,8 @@ categories:
         url: https://swiftpackageindex.com/argmaxinc/WhisperKit
         note: Discussed on [Episode 42 of Swift Package Indexing](https://share.transistor.fm/s/c118cc9c){:target='_blank'}.
       - name: GeoURI
-        description: Implements the geo URI scheme in Swift for identifying physical locations
-          via URI, compliant with RFC 5870, including CoreLocation integration.
+        description: Implements the geo URI scheme in Swift for identifying RFC 5870 compliant
+          physical locations via URI, including CoreLocation integration.
         owner: Designed by Clowns
         swift_compatibility: 5.9+
         platform_compatibility:
@@ -51,8 +51,7 @@ categories:
         note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/24){:target='_blank'}.
       - name: AsyncChannels
         description: Enables performant, typed communication across Swift async tasks,
-          inspired by Go's channels, including buffered and un-buffered operations and
-          supporting `AsyncSequence`.
+          inspired by Go's channels, including buffered and un-buffered operations.
         owner: Brian Floersch
         swift_compatibility: 5.7+
         platform_compatibility:
