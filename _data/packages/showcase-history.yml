@@ -117,7 +117,7 @@ years:
               provides a compile-time confident SQL syntax and intent, with features like
               type-safe SQL expression builder, query layer, data access, and more.
             owner: Stephen Celis
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -173,7 +173,7 @@ years:
             swift_compatibility: 5.7+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (macOS, tvOS)
+            platform_compatibility_tooltip: Apple (iOS, macOS, tvOS)
             license: Apache 2.0
             url: https://swiftpackageindex.com/soto-project/soto
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/13){:target='_blank'}.
@@ -207,11 +207,11 @@ years:
               and frameworks. It supports automated regression checks, manual comparisons,
               and benchmark result exports in multiple formats.
             owner: Ordo One
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS) and Linux
+            platform_compatibility_tooltip: Apple (macOS) and Linux
             license: Apache 2.0
             url: https://swiftpackageindex.com/ordo-one/package-benchmark
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/11){:target='_blank'}.
