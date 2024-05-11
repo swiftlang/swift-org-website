@@ -9,76 +9,70 @@ categories:
       organised via [this thread in the Swift Forums](https://forums.swift.org/t/68168)
       and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
     packages:
-      - name: Lottie
-        description: Enables real-time rendering of vector-based animations from JSON,
-          designed for cross-platform use, enhancing app visuals without heavy manual
-          coding.
-        owner: Airbnb
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/airbnb/lottie-ios
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/27){:target='_blank'}.
-      - name: Citadel
-        description: Facilitates easy SSH client and server operations, TCP-IP forwarding,
-          command execution, and SFTP functionality with Swift NIOSSH enhancing its capabilities.
-        owner: Orlandos Technologies - OpenSource
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+      - name: GodotVision
+        description: Create shared-space experiences in Godot for visionOS, integrating
+          Godot's headless mode with RealityKit for 3D content mirroring.
+        owner: Kevin Watters
         license: MIT
-        url: https://swiftpackageindex.com/orlandos-nl/Citadel
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/44){:target='_blank'}.
-      - name: FlyingFox
-        description: FlyingFox enables the creation of lightweight, concurrent HTTP servers
-          with support for WebSockets and static file serving. It uses non blocking BSD
-          sockets to handle each connection with Swift concurrency.
-        owner: Simon Whitty
-        swift_compatibility: 5.7+
+        url: https://swiftpackageindex.com/kevinw/GodotVision
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/28){:target='_blank'}.
+      - name: whisperkit
+        description: Integrates OpenAI's Whisper speech recognition model with CoreML
+          for efficient, local inference on Apple devices.
+        owner: argmax, inc.
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS)
         license: MIT
-        url: https://swiftpackageindex.com/swhitty/FlyingFox
-        note: Discussed on [Episode 41 of Swift Package Indexing](https://share.transistor.fm/s/861890bb){:target='_blank'}.
-      - name: AcknowList
-        description: Creates an acknowledgements screen for your app that displays a list
-          of licenses from your CocoaPods or Swift Package Manager dependencies.
-        owner: Vincent Tourraine
-        swift_compatibility: 5.7+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/vtourraine/AcknowList
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/39){:target='_blank'}.
-      - name: swift-markdown-ui
-        description: MarkdownUI is a powerful library for displaying and customizing Markdown
-          text in SwiftUI. It is compatible with GitHub Flavored Markdown and can display
-          images, headings, lists, blockquotes, code blocks, tables, and more.
-        owner: Guille Gonzalez
-        swift_compatibility: 5.7+
+        url: https://swiftpackageindex.com/argmaxinc/WhisperKit
+        note: Discussed on [Episode 42 of Swift Package Indexing](https://share.transistor.fm/s/c118cc9c){:target='_blank'}.
+      - name: GeoURI
+        description: Implements the geo URI scheme in Swift for identifying RFC 5870 compliant
+          physical locations via URI, including CoreLocation integration.
+        owner: Designed by Clowns
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/gonzalezreal/swift-markdown-ui
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/24){:target='_blank'}.
-      - name: Threadcrumb
-        description: Threadcrumb enhances traceability by simplifying the process of embedding
-          and logging metadata within threads for improved debugging and diagnostic capabilities.
-        owner: Alexander Cohen
+        license: The Unlicense
+        url: https://swiftpackageindex.com/designedbyclowns/GeoURI
+        note: Discussed on [Episode 43 of Swift Package Indexing](https://share.transistor.fm/s/2d4b1ba7){:target='_blank'}.
+      - name: swift-perception
+        description: Offers observation tools for earlier versions of Swift, mimicking
+          `@Observable` and providing compatibility with newer Swift observation features.
+        owner: Point-Free
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/naftaly/Threadcrumb
+        url: https://swiftpackageindex.com/pointfreeco/swift-perception
+        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/24){:target='_blank'}.
+      - name: AsyncChannels
+        description: Enables performant, typed communication across Swift async tasks,
+          inspired by Go's channels, including buffered and un-buffered operations.
+        owner: Brian Floersch
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/gh123man/Async-Channels
+        note: Discussed on [Episode 42 of Swift Package Indexing](https://share.transistor.fm/s/c118cc9c){:target='_blank'}.
+      - name: ExpectToEventuallyEqual
+        description: Provides an XCTest assertion for testing asynchronous code by repeatedly
+          evaluating conditions until they are met or time out.
+        owner: Jon Reid
+        swift_compatibility: 5.7+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/jonreid/ExpectToEventuallyEqual
         note: Discussed on [Episode 41 of Swift Package Indexing](https://share.transistor.fm/s/861890bb){:target='_blank'}.
   - name: Packages with Macros
     slug: macros
