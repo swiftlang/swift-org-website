@@ -5,15 +5,13 @@ title: Allocations
 ---
 
 ## Overview
+In server-side Swift applications, memory allocations are fundamental for various tasks like creating objects, manipulating data structures, and managing resources. Swift allocates memory resources as needed and provides built-in memory management mechanisms, such as automatic reference counting (ARC), to handle allocations, deallocations, and memory ownership.
 
-In server-side Swift applications, memory allocations are fundamental for various tasks like, creating objects, manipulating data structures, and managing resources. Swift allocates memory resources as needed and provides built-in memory management mechanisms, such as automatic reference counting (ARC), to handle allocations, deallocations, and memory ownership.
-
-Allocations aid in optimizing memory usage by allocating the precise amount of memory required for each object or data structure, reducing memory wastage and improving the overall performance of the application. However, Swift allocations can be padded to enforce memory alignment requirements for data types or structures that need to be accessed efficiently by the hardware, reducing the risk of misaligned memory access issues and improving performance. 
+Allocations aid in optimizing memory usage by allocating the precise amount of memory required for each object or data structure, reducing memory wastage and improving application performance. However, Swift allocations can be padded to enforce memory alignment requirements for data types or structures that need to be accessed efficiently by the hardware, reducing the risk of misaligned memory access issues and improving performance. 
 
 Additionally, proper allocation management prevents memory leaks and ensures that memory is released when it is no longer needed. This helps in maintaining the stability and reliability of server applications.
 
 ## Heaps and stacks
-
 Generally speaking, Swift has two fundamental locations for memory allocations: **Heaps** and **Stacks**. 
 
 Swift automatically allocates memory in either the heap or the stack data structure. 
@@ -26,26 +24,18 @@ For high-performance software in Swift, understanding the source of your heap al
 > Note: While heap allocations can be relatively expensive regarding computational overhead, they provide flexibility and dynamic memory management capabilities essential for tasks like working with variable-sized or dynamic data structures.
 
 ## Profiling
-
 You can use different tools and techniques to profile your Swift code, depending on the specific requirements of your project. Some commonly used profiling techniques include:
 - Using OS vendor-supplied profiling tools like [Instruments](https://help.apple.com/instruments/mac/current/#/dev7b09c84f5) on macOS or [`perf`](https://www.swift.org/server/guides/linux-perf.html) on Linux.
 - Adding manual timing measurements using techniques like adding timestamps before and after critical code sections.
-- Leveraging performance profiling libraries and frameworks for Swift, such as [SwiftMetrics](https://swiftpackageregistry.com/RuntimeTools/SwiftMetrics) or [XCGLogger](https://github.com/XCGLogger/). 
+- Leveraging performance profiling libraries and frameworks for Swift, such as [SwiftMetrics](https://swiftpackageregistry.com/RuntimeTools/SwiftMetrics) or [XCGLogger](https://github.com/XCGLogger/).
 
-For macOS, you can use the [Allocations instrument](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Profile-your-app-using-the-Allocations-instrument), in [Xcode](https://developer.apple.com/xcode/) Instruments to help you analyze and optimize memory usage in your apps. The Allocations instrument tracks the size and number of all heap and anonymous virtual memory allocations and organizes them by category. 
+For macOS, you can use the [Allocations instrument](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Profile-your-app-using-the-Allocations-instrument), in [Xcode](https://developer.apple.com/xcode/) Instruments to help you analyze and optimize memory usage in your apps. The Allocations instrument tracks the size and number of all heap and anonymous virtual memory allocations and organizes them by category.
 
 *This document mainly focuses on the number of heap allocations and not their size.*
 
-In the Allocation instrument, there are two categories of allocations: 
-
-1. **Live Allocations** refer to the memory allocations that are currently in use by your application. These allocations are active and have not been deallocated yet. This metric helps you understand the real-time memory usage of your application and identify any memory-related issues, such as excessive memory usage or memory leaks.
-2. **Transient Allocations** are allocations that are short-lived and temporary in nature. These allocations are typically created and deallocated frequently during the execution of your application. Monitoring and analyzing Transient Allocations is helpful in understanding the memory usage patterns of your application and can be useful for identifying areas where memory optimizations can be applied.
-
-> Important: When using Instruments, checking whether allocations are temporary or have already been freed is crucial for effective memory management and avoiding memory-related issues such as memory leaks.
 If your production workloads run on Linux instead of macOS, the number of allocations can differ significantly, depending on your setup.
 
 ## Get started
-
 Swift’s optimizer produces faster code and allocates less memory in `release` mode. By profiling your Swift code in the `release` mode and optimizing based on the results, you can achieve better performance and efficiency in your applications. 
 
 Follow the steps below:
@@ -82,7 +72,6 @@ docker run -it --rm \
 By visually highlighting the most frequently called functions or the functions consuming the most processing time, you can focus your optimization efforts on improving the performance of critical code paths.
 
 ## Tools
-
 You can identify areas for optimization and make informed decisions to improve the performance and efficiency of your Swift server code using the [Linux `perf`](https://perf.wiki.kernel.org/index.php/Main_Page) tool.
 
 The `perf` tool is a performance profiling and analysis tool available on Linux systems. Although it is not specific to Swift, it can be valuable for profiling Swift code on the server for the following reasons:
@@ -90,25 +79,26 @@ The `perf` tool is a performance profiling and analysis tool available on Linux 
 - **Low overhead** which means it can collect performance data with minimal impact on the execution of your Swift code.
 - **Rich set of features** like CPU profiling, memory profiling, and event-based sampling.
 - **Flame graph generation** to help you understand the relative time spent in different areas of your code and identify performance bottlenecks.
-- **System-level profiling** gathers performance data at the kernel level, analyze system-wide events, and understand the impact of other processes or system components on the performance of your Swift application.
-- **Flexibility and extensibility** allows you to customize the types of events you want to profile, set sampling rates, specify filters, and more.
+- **System-level profiling** gathers performance data at the kernel level, analyzes system-wide events, and understands the impact of other processes or system components on the performance of your Swift application.
+- **Flexibility and extensibility** allow you to customize the types of events you want to profile, set sampling rates, specify filters, and more.
 
 > Tip: If you’re running `perf` in a Docker container, you will need a privileged container to provide the necessary permissions and access to the tool to gather performance data.
 > Tip: Prefix the commands with `sudo` if you need `root` access.
 See [Getting `perf` to work](https://www.swift.org/server/guides/linux-perf.html) for more information.
 
 ## Installing a perf user probe
-
 As previously mentioned, this document's example programs focus on counting the *number* of allocations. 
 
-Most allocations use the `malloc` function from a Swift program on Linux. Installing `perf` user probes on the allocation function provides information about when an allocation function is called. 
+Most allocations use a Swift program's `malloc` function on Linux. Installing `perf` user probes on the allocation function provides information about when an allocation function is called. 
 
-In this instance, a user probe was installed for all allocation functions because Swift uses other allocation functions like `calloc` and `posix_memalign`.
+In this instance, a user probe was installed for all allocation functions because Swift uses other functions like `calloc` and `posix_memalign`.
 ```
 # figures out the path to libc
 libc_path=$(readlink -e /lib64/libc.so.6 /lib/x86_64-linux-gnu/libc.so.6)
+
 # delete all existing user probes on libc (instead of * you can also list them individually)
 perf probe --del 'probe_libc:*'
+
 # installs a probe on `malloc`, `calloc`, and `posix_memalign`
 perf probe -x "$libc_path" --add malloc --add calloc --add posix_memalign
 ```
@@ -121,6 +111,7 @@ Added new events:
   probe_libc:malloc    (on malloc in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
   probe_libc:calloc    (on calloc in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
   probe_libc:posix_memalign (on posix_memalign in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+
 [...]
 ```
 
@@ -134,9 +125,13 @@ perf stat -e probe_libc:malloc -- bash -c 'echo Hello World'
 The output should look similar to this:
 ```
 Hello World
+
  Performance counter stats for 'bash -c echo Hello World':
+
               1021      probe_libc:malloc
+
        0.003840500 seconds time elapsed
+
        0.000000000 seconds user
        0.003867000 seconds sys
 ```
@@ -146,11 +141,9 @@ In this case, it appears the user probe called the allocation functions 1021 tim
 > Important: If the probe called the allocation functions 0 times, it would indicate an error.
 
 ## Running allocation analysis
-
 By running allocation analysis, you can gain a better understanding of the memory usage patterns in your application and identify and fix memory issues such as leaks or inefficient usage, ultimately improving the performance and stability of your code.
 
 ### Example program
-
 Once you’ve confirmed the user probe on `malloc` is working, you can analyze the allocations of a program. For instance, you can analyze a program that performs ten subsequent HTTP requests using [AsyncHTTPClient](https://github.com/swift-server/async-http-client). 
 
 Analyzing a program using AsyncHTTPClient can help optimize its performance, improve error handling, ensure proper concurrency and threading, enhance code readability and maintainability, and assess scalability considerations.
@@ -158,9 +151,9 @@ Analyzing a program using AsyncHTTPClient can help optimize its performance, imp
 Here’s an example of the program source code with the following dependencies:
 ```
 dependencies: [
-.package(url: "https://github.com/swift-server/async-http-client.git", from: "1.3.0"),
-.package(url: "https://github.com/apple/swift-nio.git", from: "2.29.0"),
-.package(url: "https://github.com/apple/swift-log.git", from: "1.4.2"),
+    .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.3.0"),
+    .package(url: "https://github.com/apple/swift-nio.git", from: "2.29.0"),
+    .package(url: "https://github.com/apple/swift-log.git", from: "1.4.2"),
 ],
 ```
 
@@ -169,54 +162,62 @@ An example program using AsyncHTTPClient can be written as:
 import AsyncHTTPClient
 import NIO
 import Logging
+
 let urls = Array(repeating:"http://httpbin.org/get", count: 10)
 var logger = Logger(label: "ahc-alloc-demo")
+
 logger.info("running HTTP requests", metadata: ["count": "\(urls.count)"])
 MultiThreadedEventLoopGroup.withCurrentThreadAsEventLoop { eventLoop in
-let httpClient = HTTPClient(eventLoopGroupProvider: .shared(eventLoop),
-backgroundActivityLogger: logger)
-func doRemainingRequests(_ remaining: ArraySlice<String>,
-overallResult: EventLoopPromise<Void>,
-eventLoop: EventLoop) {
-var remaining = remaining
-if let first = remaining.popFirst() {
-httpClient.get(url: first, logger: logger).map { [remaining] _ in
-eventLoop.execute { // for shorter stacks
-doRemainingRequests(remaining, overallResult: overallResult, eventLoop: eventLoop)
+    let httpClient = HTTPClient(eventLoopGroupProvider: .shared(eventLoop),
+                                backgroundActivityLogger: logger)
+
+    func doRemainingRequests(_ remaining: ArraySlice<String>,
+                             overallResult: EventLoopPromise<Void>,
+                             eventLoop: EventLoop) {
+        var remaining = remaining
+        if let first = remaining.popFirst() {
+            httpClient.get(url: first, logger: logger).map { [remaining] _ in
+                eventLoop.execute { // for shorter stacks
+                    doRemainingRequests(remaining, overallResult: overallResult, eventLoop: eventLoop)
+                }
+            }.whenFailure { error in
+                overallResult.fail(error)
+            }
+        } else {
+            return overallResult.succeed(())
+        }
+    }
+
+    let promise = eventLoop.makePromise(of: Void.self)
+    // Kick off the process
+    doRemainingRequests(urls[...],
+                        overallResult: promise,
+                        eventLoop: eventLoop)
+
+    promise.futureResult.whenComplete { result in
+        switch result {
+        case .success:
+            logger.info("all HTTP requests succeeded")
+        case .failure(let error):
+            logger.error("HTTP request failure", metadata: ["error": "\(error)"])
+        }
+
+        httpClient.shutdown { maybeError in
+            if let error = maybeError {
+                logger.error("AHC shutdown failed", metadata: ["error": "\(error)"])
+            }
+            eventLoop.shutdownGracefully { maybeError in
+                if let error = maybeError {
+                    logger.error("EventLoop shutdown failed", metadata: ["error": "\(error)"])
+                }
+            }
+        }
+    }
 }
-}.whenFailure { error in
-overallResult.fail(error)
-}
-} else {
-return overallResult.succeed(())
-}
-}
-let promise = eventLoop.makePromise(of: Void.self)
-// Kick off the process
-doRemainingRequests(urls[...],
-overallResult: promise,
-eventLoop: eventLoop)
-promise.futureResult.whenComplete { result in
-switch result {
-case .success:
-logger.info("all HTTP requests succeeded")
-case .failure(let error):
-logger.error("HTTP request failure", metadata: ["error": "\(error)"])
-}
-httpClient.shutdown { maybeError in
-if let error = maybeError {
-logger.error("AHC shutdown failed", metadata: ["error": "\(error)"])
-}
-eventLoop.shutdownGracefully { maybeError in
-if let error = maybeError {
-logger.error("EventLoop shutdown failed", metadata: ["error": "\(error)"])
-}
-}
-}
-}
-}
+
 logger.info("exiting")
 ```
+
 If running a program as a Swift package, compile it in the `release` mode first, using this command: 
 ```
 swift build -c release
@@ -225,7 +226,6 @@ swift build -c release
 A binary called `.build/release/your-program-name` should render and can be analyzed to get the number of allocations.
 
 ### Counting allocations
-
 Counting allocations and visualizing them as a graph can help you analyze memory utilization, profile memory usage, optimize performance, refactor and optimize code, and debug memory-related issues in your program. 
 
 Before visualizing the allocations as a flame graph, start with an analysis using the binary to get the number of allocations by running the command:
@@ -256,7 +256,6 @@ It's important to note that the `-e probe_libc:*` command is used instead of ind
 > Tip: This approach assumes you don’t have *other* `perf` user probes installed. If other `perf` user probes are installed, you need to specify each event you want to use individually.
 
 ### Collecting raw data
-
 Collecting raw data is crucial for obtaining an accurate representation of the system's behavior, performing detailed performance analysis and debugging, analyzing trends, enabling profiling flexibility, and guiding performance optimization efforts.
 
 The `perf` command doesn’t allow for creating live graphs while the program is running. However, the [Linux Perf tool](https://perf.wiki.kernel.org/index.php/Main_Page) provides a `perf record`  utility command that captures performance events for later analysis. The collected data can then be transformed into a graph.
@@ -291,7 +290,6 @@ By placing user probes at strategic points in your codebase, you can track and l
 > Important: If the `perf` output returns `lost chunks` and makes a `check the IO/CPU overload!` request, see [Overcoming lost chunks of data](#Overcoming-lost-chunks-of-data).
 
 ### Creating flame graphs
-
 Once you’ve successfully recorded data using `perf record`, you can invoke the following command to produce an SVG file with the flame graph:
 ```
 perf script | \
@@ -300,6 +298,7 @@ perf script | \
     /FlameGraph/flamegraph.pl --countname allocations \
 --width 1600 > out.svg
 ```
+
 Here’s a break down of this command construct:
 
 - The `perf` script command places the binary information into a textual form that `perf record` captured.
@@ -309,13 +308,14 @@ Here’s a break down of this command construct:
 
 Once the command has been completed, an SVG file is generated that you can open in your browser. 
 
-> Note: Lengthy run-times may result, depending on the data size, algorithm complexity, resource limitations such as CPU power or memory, poorly optimized or inefficient code, external services, APIs, or network latency, causing a slowdown.
+> Note: Lengthy run times may result, depending on the data size, algorithm complexity, resource limitations such as CPU power or memory, poorly optimized or inefficient code, external services, APIs, or network latency, causing a slowdown.
 
 ### Reading flame graphs
+This flame graph is a direct result of the example program in this section. Hover over the stack frames to get more information, or click on any stack frame to zoom in on a sub-tree.
 
-This flame graph is a direct result of the example program in this section. Hover over the stack frames to get more information, or click on any stack frame to zoom-in on a sub tree.
+<p><img src="/assets/images/server-guides/perf-malloc-full.svg" alt="Flame graph" /></p>
 
-![Flamegraph](perf-malloc-full)
+<h2 id="allocation-flame-graphs-on-macos">Allocation flame graphs on macOS</h2>
 
 - When interpreting flame *graphs*, the X-axis means the **count** and not time. The arrangement of the stack (left or right) is not determined by when that stack was live, unlike flame *charts*.
 
@@ -325,13 +325,13 @@ This flame graph is a direct result of the example program in this section. Hove
     - For example, `BaseSocketChannel.readable` is a wide frame, but its function does not allocate directly. Instead, it called other functions, such as other parts of SwiftNIO and AsyncHTTPClient, that allocated considerably.
 
 ### Allocation flame graphs on macOS
-
 Although much of this tutorial focuses on the `perf` tool, you can create the same graphs using macOS. 
 
 To get started, collect the raw data using the [DTrace](https://en.wikipedia.org/wiki/DTrace) framework by running this command:
 ```
 sudo dtrace -n 'pid$target::malloc:entry,pid$target::posix_memalign:entry,pid$target::calloc:entry,pid$target::malloc_zone_malloc:entry,pid$target::malloc_zone_calloc:entry,pid$target::malloc_zone_memalign:entry { @s[ustack(100)] = count(); } ::END { printa(@s); }' -c .build/release/your-program > raw.stacks
 ```
+
 Similar to Linux's `perf` user probes, DTrace also uses probes. The previous command instructs `dtrace` to aggregate the number of calls to the allocation function equivalents: 
 
 - `malloc`
@@ -347,7 +347,7 @@ cat raw.stacks |\
     /FlameGraph/stackcollapse.pl - | \
     swift demangle --simplified | \
     /FlameGraph/flamegraph.pl --countname allocations \
---width 1600 > out.svg
+        --width 1600 > out.svg
 ```
 
 You will notice this command is similar to the `perf` invocation, except:
@@ -357,7 +357,6 @@ You will notice this command is similar to the `perf` invocation, except:
 ## Other `perf` tricks
 
 ### Swift’s allocation patterns
-
 Optimizing memory allocations and improving code efficiency based on the information provided by the flame graph can help make your Swift code more performant and visually appealing. The shape of allocations in Swift can vary depending on the type of memory being allocated and the way it is used.
 
 Some common shapes of allocations in Swift include: 
@@ -372,7 +371,6 @@ Some common shapes of allocations in Swift include:
 For example, a class instance (which allocates) calls `swift_allocObject`, which calls `swift_slowAlloc`, which calls `malloc` that contains the user probe. 
 
 ### “Prettifying” allocation patterns
-
 To make your flame graph look good (after demangling the collapsed stacks) insert the following code into the Linux `perf script` code (above) by:
 - Removing `specialized` and replacing it with `swift_allocObject`.
 - Calling `swift_slowAlloc`, which calls `malloc`.
@@ -396,7 +394,6 @@ perf script | \
 ```
 
 ## Overcoming lost chunks of data
-
 When using perf with the DWARF call stack unwinding, you may encounter this issue:
 ```
 [ perf record: Woken up 189 times to write data ]
