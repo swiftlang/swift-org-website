@@ -1,6 +1,33 @@
 ## Installation via Tarball
 
-0. Install required dependencies:
+Using Tarballs for installing dependencies in Swift development has several advantages, including offline availability, customization, security, reliability, efficiency, portability, and more. This approach can effectively manage dependencies in Swift projects. Especially, in cases of limited internet connectivity or specific version requirements.
+
+### Install Ubuntu 18.04
+
+If you are using **Ubuntu 18.04** with [Swift 5.10](https://www.swift.org/blog/swift-5.10-released/) or older toolchains, click on the drop-down for more information.
+
+Although support for Ubuntu 18.04 is no longer available, installing this release can be beneficial for developers who prioritize stability, compatibility, and consistency in their Swift development workflows, especially when working on legacy projects or requiring specific toolchain versions for development tasks.
+
+Step 1: Install the required Ubuntu 18.04 dependencies for a stable Linux distribution. 
+
+<table>
+  <thead>
+    <tr>
+      <th>Ubuntu 18.04</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 0; vertical-align: top">{% include linux/ubuntu1804.html %}</td>
+    </tr>
+  </tbody>
+</table>
+
+Step 2: Follow the instruction in the **Install dependencies** section to download the latest binary release and Swift packages using Tarball.
+
+### Install dependencies
+
+Install the required dependencies from the table below for the following Linux distributions.
 
 {% include linux/table.html %}
 
