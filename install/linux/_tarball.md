@@ -9,8 +9,7 @@
    The `swift-<VERSION>-<PLATFORM>.tar.gz` file is the toolchain itself.
    The `.sig` file is the digital signature.
 
-0. If you are downloading Swift packages **for the first time**, import the PGP
-   keys into your keyring:
+0. If you are downloading Swift packages **for the first time**, use one of the following commands to import the Pretty Good Privacy (PGP) keys into your keyring. *You can skip this step if you have imported the keys in the past.*
 
 {% assign all_keys_file = 'all-keys.asc' %}
 {% assign automatic_signing_key_file = 'automatic-signing-key-4.asc' %}
@@ -31,30 +30,27 @@
          'E813 C892 820A 6FA1 3755  B268 F167 DF1A CF9C E069'
    ~~~
 
-   or:
+   Or use this command:
 
    ~~~ shell
    $ wget -q -O - https://swift.org/keys/{{ all_keys_file }} | \
      gpg --import -
    ~~~
 
-   Skip this step if you have imported the keys in the past.
+0. Verify the PGP signature to ensure the authenticity and integrity of the key or keyring.
 
-0. Verify the PGP signature.
-
-   The `.tar.gz` archives for Linux are signed using GnuPG
+   The `.tar.gz` archives for Linux are signed using GNU Privacy Guard (GPG)
    with one of the keys of the Swift open source project.
-   Everyone is strongly encouraged to verify the signatures
-   before using the software.
+   We strongly encouraged you to verify the signatures
+   before using the software by following these steps:
 
-   First, refresh the keys to download new key revocation certificates,
-   if any are available:
+   a: Run the following command to refresh the keys to download new key revocation certificates (if available):
 
    ~~~ shell
    $ gpg --keyserver hkp://keyserver.ubuntu.com --refresh-keys Swift
    ~~~
 
-   Then, use the signature file to verify that the archive is intact:
+   b: Use the signature file to verify the archive is intact by running this command:
 
    ~~~ shell
    $ gpg --verify swift-<VERSION>-<PLATFORM>.tar.gz.sig
@@ -62,39 +58,32 @@
    gpg: Good signature from "Swift Automatic Signing Key #4 <swift-infrastructure@forums.swift.org>"
    ~~~
 
-   If `gpg` fails to verify because you don't have the public key (`gpg: Can't
-   check signature: No public key`), please follow the instructions in
-   [Active Signing Keys](#active-signing-keys) below to
-   import the keys into your keyring.
+   <div class="warning" markdown="1">
+If you get the error `gpg: Can't check signature: No public key` while using `gpg` to verify a signature, you need to import the required keys into your keyring. Follow the instructions in the [Active Signing Keys](https://www.swift.org/install/windows/#active-signing-keys) documentation to do this. After importing the keys, you should be able to verify the signature without any issues.
+    </div>
 
-   You might see a warning:
+   If you get the following warning message that states there is no path in the Web of Trust between the key and you, it means there is no established trust between the two. However, this warning can be safely ignored if you followed the necessary steps to retrieve the key from a trusted source. By doing so, you can ensure that the key is authentic and secure for your use.
 
    ~~~ shell
    gpg: WARNING: This key is not certified with a trusted signature!
    gpg:          There is no indication that the signature belongs to the owner.
    ~~~
 
-   This warning means that there is no path in the Web of Trust between this
-   key and you.  The warning is harmless as long as you have followed the steps
-   above to retrieve the key from a trusted source.
 
    <div class="warning" markdown="1">
-   If `gpg` fails to verify and reports "BAD signature",
-   do not use the downloaded toolchain.
-   Instead, please email <swift-infrastructure@forums.swift.org>
-   with as much detail as possible,
-   so that we can investigate the problem.
+   If `gpg` fails to verify and reports a *BAD signature* error,
+   **do not** use the downloaded toolchain.
+   Instead, send an email to <swift-infrastructure@forums.swift.org>
+   with all the relevant details of the error. Our team will investigate the problem and provide you with a solution as soon as possible.
    </div>
 
-0. Extract the archive with the following command:
+0. To create a `usr/` directory in the location of the archive, extract the archive using the following command:
 
    ~~~ shell
    $ tar xzf swift-<VERSION>-<PLATFORM>.tar.gz
    ~~~
 
-   This creates a `usr/` directory in the location of the archive.
-
-0. Add the Swift toolchain to your path as follows:
+0. Add the Swift toolchain to your path by running this command:
 
    ~~~ shell
    $ export PATH=/path/to/usr/bin:"${PATH}"
