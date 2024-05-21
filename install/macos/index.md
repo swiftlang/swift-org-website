@@ -15,9 +15,9 @@ If you want a more customized development experience for working in a specific v
 
 While Xcode already includes a release of Swift that is supported by Apple, you can experiment with a version that is still in development by downloading one of the packages from the [download](/download) page. 
 
-> Note 1: To submit to the App Store you must build your app using the version of Swift that comes included within Xcode.
+> Important: To submit to the App Store you must build your app using the version of Swift that comes included within Xcode.
 
-> Note 2: Xcode is not required to run the package installer or use an installed
+> Tip: Xcode is not required to run the package installer or use an installed
 toolchain. However, when Xcode is not installed, the functionality of the Swift
 Package Manager may be limited due to some [outstanding issues](https://github.com/apple/swift-package-manager/issues/4396).
 
