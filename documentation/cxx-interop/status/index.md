@@ -99,6 +99,11 @@ Swift supports calling most non-templated:
 - Functions inside of namespaces
 - Member functions, both instance and static
 - Constructors
+- Operators
+  - Arithmetic operators, like `operator+`, `operator-`, `operator*`
+  - Pre-increment operator `operator++` is represented as `func successor() -> Self`
+  - Call operator `T operator(Param p)` is represented as `func callAsFunction(p: Param) -> T`
+  - Bool literal conversion operator `operator bool` is represented as a convenience initializer `Bool(fromCxx:)`
 
 Functions and constructors that use r-value reference types are not
 yet available in Swift. 
