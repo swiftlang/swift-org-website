@@ -6,11 +6,11 @@ Although Swift is primarily used for app development, it can also be used for se
 
 A basic configuration is essential for setting up your development environment, ensuring proper project structure, and preparing your workflow for smooth app development. Here are the general steps:
 
-1. Set up your workspace: Create a new folder for your project or open an existing Swift project folder in [anchor](#visual-studio-code)Visual Studio Code.
+1. Set up your workspace: Create a new folder for your project or open an existing Swift project folder in [Visual Studio Code](#visual-studio-code).
 2. Configure Swift development tools: You may need to [download and install Xcode](https://itunes.apple.com/app/xcode/id497799835) on your macOS for Swift development. Make sure your Swift toolchain is properly set up. 
 3. Create a new Swift file: To create a new Swift file, open **Xcode** > go to the **File** menu > click **New File** > and **Save** it with the **.swift** extension.
 4. Write your Swift code: Start coding your Swift program in the editor.
-5. Run your Swift code: To run your Swift code, you can use a Swift compiler like [anchor](#swift-repl)Swift REPL (Read-Eval-Print Loop) or the [anchor](#xcode-build-and-run-feature)Xcode’s build-and-run feature as explained below.
+5. Run your Swift code: To run your Swift code, you can use a Swift compiler like [Swift REPL (Read-Eval-Print Loop)](#swift-repl) or the [Xcode’s build-and-run feature](#xcode-build-and-run-feature) as explained below.
 6. Debugging: Utilize the debugging features in Visual Studio Code to troubleshoot issues in your Swift code.
 
 ### Visual Studio Code
