@@ -1,0 +1,54 @@
+.tool-list {
+  $grid-breakpoint: 1000px;
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 1rem;
+
+  .tool {
+    border: 1px solid var(--color-fill-tertiary);
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      line-height: 1.4;
+      font-size: 1.4rem;
+      padding-top: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    p {
+      flex-grow: 1;
+      color: var(--color-secondary-label);
+    }
+
+    img {
+      width: 26px;
+    }
+
+    .supported {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      border: 1px #f05138 solid;
+      font-size: 12px;
+      line-height: 1;
+      white-space: nowrap;
+      color: #f05138;
+      padding: 4px 5px;
+
+      &.community {
+        border: 1px #3ea639 solid;
+        color: #3ea639;
+      }
+    }
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

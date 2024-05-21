@@ -1,0 +1,24 @@
+- name: Xcode
+  description: Xcode helps improve your productivity by simplifying Swift development on macOS.
+  link: https://xcode.apple.com
+  officially-supported: true
+- name: Visual Studio Code
+  description: Visual Studio Code provides a modern development environment for Swift through the Swift extension.
+  link: https://code.visualstudio.com
+  guide: /documentation/articles/getting-started-with-vscode-swift.html
+  officially-supported: true
+- name: Emacs
+  description: Emacs provides a flexible and powerful environment for writing Swift code.
+  link: https://www.gnu.org/software/emacs/
+  community-supported: true
+  guide: /documentation/articles/zero-to-swift-emacs.html
+- name: Neovim
+  description: Neovim is a robust and adaptable editing environment that boosts productivity and efficiency for Swift development.
+  link: https://neovim.io/
+  guide: /documentation/articles/zero-to-swift-nvim.html
+  community-supported: true
+- name: Other Editors
+  description: Any editor that supports the Language Server Protocol (LSP) can use SourceKit-LSP to provide Swift support.
+  link: https://github.com/apple/sourcekit-lsp/tree/main/Editors#other-editors
+  officially-supported: true
+  guide: /documentation/articles/other-swift-editors.html
