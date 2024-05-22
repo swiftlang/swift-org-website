@@ -1,6 +1,6 @@
 ## Installation via Windows Package Manager
 
-Here are the general steps for installing Swift using the Windows Package Manager. 
+Below are the general steps for installing Swift using the Windows Package Manager. 
 
 0. **Install Windows Package Manager.** [Windows Package Manager](https://docs.microsoft.com/windows/package-manager/), also known as WinGet, comes pre-installed with Windows 11 (21H2 and later). It can also be found in the [Microsoft Store](https://www.microsoft.com/p/app-installer/9nblggh4nns1) or be installed directly.
 0. **Turn on developer mode.** Enable developer mode to develop applications, particularly with the Swift Package Manager. 
