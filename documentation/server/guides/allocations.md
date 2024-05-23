@@ -158,7 +158,7 @@ Analyzing a program using AsyncHTTPClient can help optimize its performance, imp
 
 Here’s an example of the program source code with the following dependencies:
 
-```
+```swift
 dependencies: [
     .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.3.0"),
     .package(url: "https://github.com/apple/swift-nio.git", from: "2.29.0"),
