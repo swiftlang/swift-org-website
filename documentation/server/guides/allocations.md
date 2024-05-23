@@ -307,7 +307,7 @@ By placing user probes at strategic points in your codebase, you can track and l
 ### Creating flame graphs
 Once you’ve successfully recorded data using `perf record`, you can invoke the following command to produce an SVG file with the flame graph:
 
-```
+```bash
 perf script | \
     /FlameGraph/stackcollapse-perf.pl - | \
     swift demangle --simplified | \
