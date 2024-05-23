@@ -3,11 +3,8 @@ layout: page
 title: Platform Steering Group
 ---
 
-The Platform Steering Group enables the Swift language and its tools to be used in new environments. The Platform Steering Group’s primary goal is to **drive development work that brings the Swift toolchain and language runtime to a variety of platforms**
+The Platform Steering Group enables the Swift language and its tools to be used in new environments. The Platform Steering Group’s primary goal is to **drive development work that brings the Swift toolchain and language runtime to a variety of platforms**. Specifically, the Platform Steering Group will:
 
-# Charter
-
-Specifically, the Platform Steering Group will:
 * work with the Swift Core Team to define a roadmap for toolchain improvements and expanded platform support,
 * work with the (to be formed) Ecosystem Steering Group to improve the experience of setting up a Swift development environment on all supported platforms,
 * work with the Language Steering Group to define Swift language support in specific environments,
@@ -29,9 +26,27 @@ The current members of the Platform Steering Group are:
 
 ## Evolution
 
-The Platform Steering Group has [evolution authority](/charter-drafts/steering-group.md#evolution) over low-level tools in the Swift toolchain, including the SwiftPM build system, the debugger, and the linker, and libraries, such as the sanitizers. It also has evolution authority over the mechanics of the Swift runtime, including ABI stability and availability of runtime functionality based on platform constraints. Proposals or vision documents that define subsets of the Swift language for specific platforms will be reviewed in collaboration with the Language Steering Group, because they have direct impact on program semantics and the overall programming model.
+The Platform Steering Group has [evolution authority](/charter-drafts/steering-group.md#evolution) over low-level tools in the Swift toolchain, including:
 
-Evolution authority of the Platform Steering Group does not extend to development tools that help programmers read and write code on various platforms; developer tools such as IDE extensions, SourceKit LSP, DocC, the SwiftPM dependency management and distribution features, and similar tools are under the purview of the (to be formed) Ecosystem Steering Group.
+* The SwiftPM build system
+* The debugger
+* The linker
+* Libraries, such as the sanitizers
+* The mechanics of the Swift runtime
+* ABI stability, and
+* Runtime API availability based on platform constraints
+
+Proposals or vision documents that define subsets of the Swift language for specific platforms will be reviewed in collaboration with the Language Steering Group, because they have direct impact on program semantics and the overall programming model.
+
+Evolution authority of the Platform Steering Group does not extend to
+
+* Tools that help programmers read and write code on various platforms
+* IDE extensions
+* SourceKit LSP
+* DocC, or
+* The SwiftPM dependency management and distribution features
+
+All of these are under the purview of the (to be formed) Ecosystem Steering Group.
 
 Not all changes driven by the Platform Steering Group will under go evolution review. Evolution review is critical for defining new platform support and new features of existing platforms that have major implications on ABI stability and toolchain compatibility. The Platform Steering Group will also participate in standard processes of related communities, such as submitting proposals for the DWARF Debugging Standard in support of LLDB. The evolution process only concerns itself with implementation details where they interact with the underlying platform. It is also not necessary for day-to-day engineering work for reaching a higher support tier for a particular platform, general bug fixes, performance improvements, and other quality-of-life changes.
 
@@ -59,7 +74,7 @@ The Steering Group is presently working on defining a Platform Evolution process
 
 The Platform Steering Group is not separate from the Swift community. Steering Group members participate in platform evolution discussions and propose changes just like any other member of the community.  When the Steering Group develops a new idea about a proposal in the course of its internal deliberations, a Steering Group member is expected to bring that idea to the community for discussion before the review is considered complete.
 
-Proposals or feedback about Swift platform support, the Platform Evolution process, a specific Platform Evolution proposal, or any other topic under the purview of the Platform Steering Group are always welcome.  The primary way to communicate with the Platform Steering Group is simply to post in the Platform category on the Swift forums, either by adding a reply to an existing review, pitch, or other discussion thread, or by creating a new thread in [Platform > Discussion](https://forums.swift.org/c/platform/discuss) or [Platform > Pitches](https://forums.swift.org/c/platform/pitches).  Community members may also reach out privately to members of the Platform Steering Group by email or private message on the forums.
+Proposals or feedback about Swift platform support, the Platform Evolution process, a specific Platform Evolution proposal, or any other topic under the purview of the Platform Steering Group are always welcome.  The primary way to communicate with the Platform Steering Group is simply to post in the Evolution category on the Swift forums, either by adding a reply to an existing review, pitch, or other discussion thread, or by creating a new thread in [Evolution > Discussion](https://forums.swift.org/c/evolution/discuss) or [Evolution > Pitches](https://forums.swift.org/c/evolution/pitches).  Community members may also reach out privately to members of the Platform Steering Group by email or private message on the forums.
 
 The Platform Steering Group follows the [Swift Code of Conduct](https://www.swift.org/code-of-conduct/).  Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported by contacting the Steering Group chair or a member of the [Swift Core Team](https://www.swift.org/community/#community-structure) or by flagging the behavior for moderation, whether you are the target of that behaviour or not.
 
