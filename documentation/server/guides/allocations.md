@@ -97,7 +97,7 @@ Most allocations use a Swift program's `malloc` function on Linux. Installing `p
 
 In this instance, a user probe was installed for all allocation functions because Swift uses other functions like `calloc` and `posix_memalign`.
 
-```
+```bash
 # figures out the path to libc
 libc_path=$(readlink -e /lib64/libc.so.6 /lib/x86_64-linux-gnu/libc.so.6)
 
@@ -112,7 +112,7 @@ Subsequently, an event in `perf` will trigger whenever one of the allocation fun
 
 The output should look like this:
 
-```
+```bash
 Added new events:
   probe_libc:malloc    (on malloc in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
   probe_libc:calloc    (on calloc in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
@@ -134,7 +134,7 @@ The output should look similar to this:
 ```
 Hello World
 
- Performance counter stats for 'bash -c echo Hello World':
+ Performance counter stats for ' -c echo Hello World':
 
               1021      probe_libc:malloc
 
@@ -307,19 +307,19 @@ By placing user probes at strategic points in your codebase, you can track and l
 ### Creating flame graphs
 Once you’ve successfully recorded data using `perf record`, you can invoke the following command to produce an SVG file with the flame graph:
 
-```bash
+```
 perf script | \
     /FlameGraph/stackcollapse-perf.pl - | \
     swift demangle --simplified | \
     /FlameGraph/flamegraph.pl --countname allocations \
---width 1600 > out.svg
+        --width 1600 > out.svg
 ```
 
-Here’s a break down of this command construct:
+Here’s a breakdown of this command construct:
 
 - The `perf` script command places the binary information into a textual form that `perf record` captured.
 - The `stackcollapse-perf` command transforms the stacks that `perf script` generated into the correct format for flame graphs.
-- The `swift demangle --simplified` command converts the symbol names to a human readable format.
+- The `swift demangle --simplified` command converts the symbol names to a human-readable format.
 - The last two commands create the flame graph based on the number of allocations.
 
 Once the command has been completed, an SVG file is generated that you can open in your browser. 
@@ -349,14 +349,14 @@ To get started, collect the raw data using the [DTrace](https://en.wikipedia.org
 sudo dtrace -n 'pid$target::malloc:entry,pid$target::posix_memalign:entry,pid$target::calloc:entry,pid$target::malloc_zone_malloc:entry,pid$target::malloc_zone_calloc:entry,pid$target::malloc_zone_memalign:entry { @s[ustack(100)] = count(); } ::END { printa(@s); }' -c .build/release/your-program > raw.stacks
 ```
 
-Similar to Linux's `perf` user probes, DTrace also uses probes. The previous command instructs `dtrace` to aggregate the number of calls to the allocation function equivalents: 
+Like Linux's `perf` user probes, DTrace also uses probes. The previous command instructs `dtrace` to aggregate the number of calls to the allocation function equivalents: 
 
 - `malloc`
 - `posix_memalign`
 - `calloc`
 - `malloc_zone_*`
 
-On Apple platforms, Swift uses a slightly larger number of allocation functions than Linux. Therefore, specifying a few more functions is required.
+> Note: On Apple platforms, Swift uses a slightly larger number of allocation functions than Linux.
 
 Once the data is collected, run this command to create an SVG file:
 
