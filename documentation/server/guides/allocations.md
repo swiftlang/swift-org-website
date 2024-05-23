@@ -29,11 +29,11 @@ You can use different tools and techniques to profile your Swift code, depending
 - Adding manual timing measurements using techniques like adding timestamps before and after critical code sections.
 - Leveraging performance profiling libraries and frameworks for Swift, such as [SwiftMetrics](https://swiftpackageregistry.com/RuntimeTools/SwiftMetrics) or [XCGLogger](https://github.com/XCGLogger/).
 
-For macOS, you can use the [Allocations instrument](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Profile-your-app-using-the-Allocations-instrument), in [Xcode](https://developer.apple.com/xcode/) Instruments to help you analyze and optimize memory usage in your apps. The Allocations instrument tracks the size and number of all heap and anonymous virtual memory allocations and organizes them by category.
+For macOS, you can use the [Allocations instrument](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Profile-your-app-using-the-Allocations-instrument) in [Xcode](https://developer.apple.com/xcode/) Instruments to help you analyze and optimize memory usage in your apps. The Allocations instrument tracks the size and number of all heap and anonymous virtual memory allocations and organizes them by category.
+
+If your production workloads run on Linux instead of macOS, the number of allocations can differ significantly depending on your setup.
 
 *This document mainly focuses on the number of heap allocations and not their size.*
-
-If your production workloads run on Linux instead of macOS, the number of allocations can differ significantly, depending on your setup.
 
 ## Get started
 Swift’s optimizer produces faster code and allocates less memory in `release` mode. By profiling your Swift code in the `release` mode and optimizing based on the results, you can achieve better performance and efficiency in your applications. 
@@ -41,6 +41,7 @@ Swift’s optimizer produces faster code and allocates less memory in `release` 
 Follow the steps below:
 
 1. **Build your code** in `release` mode by running this command: 
+
 ```
 swift run -c release
 ```
@@ -56,11 +57,13 @@ Generating a flame graph visualization helps you quickly identify hotspots in th
 To generate a flame graph, you will need to clone the [`FlameGraph`](https://github.com/brendangregg/FlameGraph) repository on your machine or into a container, making it available at `~/FlameGraph`. 
 
 Run this command to clone the `https://github.com/brendangregg/FlameGraph` repository in `~/FlameGraph`:
+
 ```
 git clone https://github.com/brendangregg/FlameGraph
 ```
 
 When running in Docker, use this command to bind-mount the `FlameGraph` repository into the container:
+
 ```
 docker run -it --rm \
            --privileged \
@@ -82,8 +85,9 @@ The `perf` tool is a performance profiling and analysis tool available on Linux 
 - **System-level profiling** gathers performance data at the kernel level, analyzes system-wide events, and understands the impact of other processes or system components on the performance of your Swift application.
 - **Flexibility and extensibility** allow you to customize the types of events you want to profile, set sampling rates, specify filters, and more.
 
-> Tip: If you’re running `perf` in a Docker container, you will need a privileged container to provide the necessary permissions and access to the tool to gather performance data.
-> Tip: Prefix the commands with `sudo` if you need `root` access.
+> Tip 1: If you’re running `perf` in a Docker container, you will need a privileged container to provide the necessary permissions and access to the tool to gather performance data.
+
+> Tip 2: Prefix the commands with `sudo` if you need `root` access.
 See [Getting `perf` to work](https://www.swift.org/server/guides/linux-perf.html) for more information.
 
 ## Installing a perf user probe
@@ -92,6 +96,7 @@ As previously mentioned, this document's example programs focus on counting the 
 Most allocations use a Swift program's `malloc` function on Linux. Installing `perf` user probes on the allocation function provides information about when an allocation function is called. 
 
 In this instance, a user probe was installed for all allocation functions because Swift uses other functions like `calloc` and `posix_memalign`.
+
 ```
 # figures out the path to libc
 libc_path=$(readlink -e /lib64/libc.so.6 /lib/x86_64-linux-gnu/libc.so.6)
@@ -106,6 +111,7 @@ perf probe -x "$libc_path" --add malloc --add calloc --add posix_memalign
 Subsequently, an event in `perf` will trigger whenever one of the allocation functions is called. 
 
 The output should look like this:
+
 ```
 Added new events:
   probe_libc:malloc    (on malloc in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
@@ -118,11 +124,13 @@ Added new events:
 Here, you can see that `perf` triggers new events `probe_libc:malloc`; `probe_libc:calloc` each time the respective function is called.
 
 To confirm the user probe `probe_libc:malloc` works, run this command:
+
 ```
 perf stat -e probe_libc:malloc -- bash -c 'echo Hello World'
 ```
 
 The output should look similar to this:
+
 ```
 Hello World
 
@@ -149,6 +157,7 @@ Once you’ve confirmed the user probe on `malloc` is working, you can analyze t
 Analyzing a program using AsyncHTTPClient can help optimize its performance, improve error handling, ensure proper concurrency and threading, enhance code readability and maintainability, and assess scalability considerations.
 
 Here’s an example of the program source code with the following dependencies:
+
 ```
 dependencies: [
     .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.3.0"),
@@ -158,6 +167,7 @@ dependencies: [
 ```
 
 An example program using AsyncHTTPClient can be written as:
+
 ```
 import AsyncHTTPClient
 import NIO
@@ -219,6 +229,7 @@ logger.info("exiting")
 ```
 
 If running a program as a Swift package, compile it in the `release` mode first, using this command: 
+
 ```
 swift build -c release
 ```
@@ -229,6 +240,7 @@ A binary called `.build/release/your-program-name` should render and can be anal
 Counting allocations and visualizing them as a graph can help you analyze memory utilization, profile memory usage, optimize performance, refactor and optimize code, and debug memory-related issues in your program. 
 
 Before visualizing the allocations as a flame graph, start with an analysis using the binary to get the number of allocations by running the command:
+
 ```
 perf stat -e 'probe_libc:*' -- .build/release/your-program-name
 ```
@@ -236,6 +248,7 @@ perf stat -e 'probe_libc:*' -- .build/release/your-program-name
 This command instructs `perf` to run your program and count the number of times the user probe `probe_libc:malloc` was hit or allocated memory within your application.
 
 The output should look similar to this:
+
 ```
 Performance counter stats for '.build/release/your-program-name':
                 68      probe_libc:posix_memalign
@@ -261,6 +274,7 @@ Collecting raw data is crucial for obtaining an accurate representation of the s
 The `perf` command doesn’t allow for creating live graphs while the program is running. However, the [Linux Perf tool](https://perf.wiki.kernel.org/index.php/Main_Page) provides a `perf record`  utility command that captures performance events for later analysis. The collected data can then be transformed into a graph.
 
 In general, the command `perf record` can be used to run the program and `libc_probe:malloc` to collect information, as shown here:
+
 ```
 perf record --call-graph dwarf,16384 \
      -m 50000 \
@@ -279,6 +293,7 @@ Breaking down this command provides the following construct:
     - The fire event occurs when the probe is triggered or executed, capturing relevant information about the allocation for further analysis and debugging. 
 
 Your program output should look similar to this: 
+
 ```
 <your program's output>
 [ perf record: Woken up 2 times to write data ]
@@ -287,10 +302,11 @@ Your program output should look similar to this:
 
 By placing user probes at strategic points in your codebase, you can track and log allocation events to gain insights into memory allocation patterns, identify potential performance issues or memory leaks, and analyze memory usage in your application.
 
-> Important: If the `perf` output returns `lost chunks` and makes a `check the IO/CPU overload!` request, see [Overcoming lost chunks of data](#Overcoming-lost-chunks-of-data).
+> Important: If the `perf` output returns `lost chunks` and makes a `check the IO/CPU overload!` request, see **Overcoming lost chunks of data** below.
 
 ### Creating flame graphs
 Once you’ve successfully recorded data using `perf record`, you can invoke the following command to produce an SVG file with the flame graph:
+
 ```
 perf script | \
     /FlameGraph/stackcollapse-perf.pl - | \
@@ -308,7 +324,7 @@ Here’s a break down of this command construct:
 
 Once the command has been completed, an SVG file is generated that you can open in your browser. 
 
-> Note: Lengthy run times may result, depending on the data size, algorithm complexity, resource limitations such as CPU power or memory, poorly optimized or inefficient code, external services, APIs, or network latency, causing a slowdown.
+> Note: Lengthy run times may result depending on the data size, algorithm complexity, resource limitations such as CPU power or memory, poorly optimized or inefficient code, external services, APIs, or network latency causing a slowdown.
 
 ### Reading flame graphs
 This flame graph is a direct result of the example program in this section. Hover over the stack frames to get more information, or click on any stack frame to zoom in on a sub-tree.
@@ -328,6 +344,7 @@ This flame graph is a direct result of the example program in this section. Hove
 Although much of this tutorial focuses on the `perf` tool, you can create the same graphs using macOS. 
 
 To get started, collect the raw data using the [DTrace](https://en.wikipedia.org/wiki/DTrace) framework by running this command:
+
 ```
 sudo dtrace -n 'pid$target::malloc:entry,pid$target::posix_memalign:entry,pid$target::calloc:entry,pid$target::malloc_zone_malloc:entry,pid$target::malloc_zone_calloc:entry,pid$target::malloc_zone_memalign:entry { @s[ustack(100)] = count(); } ::END { printa(@s); }' -c .build/release/your-program > raw.stacks
 ```
@@ -342,6 +359,7 @@ Similar to Linux's `perf` user probes, DTrace also uses probes. The previous com
 On Apple platforms, Swift uses a slightly larger number of allocation functions than Linux. Therefore, specifying a few more functions is required.
 
 Once the data is collected, run this command to create an SVG file:
+
 ```
 cat raw.stacks |\
     /FlameGraph/stackcollapse.pl - | \
@@ -372,17 +390,20 @@ For example, a class instance (which allocates) calls `swift_allocObject`, which
 
 ### “Prettifying” allocation patterns
 To make your flame graph look good (after demangling the collapsed stacks) insert the following code into the Linux `perf script` code (above) by:
+
 - Removing `specialized` and replacing it with `swift_allocObject`.
 - Calling `swift_slowAlloc`, which calls `malloc`.
 - Using an `A` for allocation.
 
 These changes should look like this:
+
 ```
 sed -e 's/specialized //g' \
     -e 's/;swift_allocObject;swift_slowAlloc;__libc_malloc/;A/g'
 ```
 
 To produce a visually appealing SVG file flame graph when analyzing memory allocations in Swift, use the complete command:
+
 ```
 perf script | \
     /FlameGraph/stackcollapse-perf.pl - | \
@@ -395,6 +416,7 @@ perf script | \
 
 ## Overcoming lost chunks of data
 When using perf with the DWARF call stack unwinding, you may encounter this issue:
+
 ```
 [ perf record: Woken up 189 times to write data ]
 Warning:
