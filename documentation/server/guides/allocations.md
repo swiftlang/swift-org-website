@@ -134,7 +134,7 @@ The output should look similar to this:
 ```
 Hello World
 
- Performance counter stats for ' -c echo Hello World':
+ Performance counter stats for 'bash -c echo Hello World':
 
               1021      probe_libc:malloc
 
