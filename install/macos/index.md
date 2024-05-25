@@ -1,86 +1,73 @@
 ---
 layout: page
-title: macOS Installation Options
+title: Install Swift
 ---
 
-## Installation via Xcode
+{% include install/_os_tabs.md macos="true" %}
 
-Download the [current version of Xcode](https://itunes.apple.com/app/xcode/id497799835) which contains the latest Swift release.
+## Latest Release (Swift {{ site.data.builds.swift_releases.last.name }})
 
-## Installation via Swift.org package installer
+<ul class="install-instruction">
+    <li class="resource">
+      <h3>Xcode</h3>
+      <p class="description">
+        Download the current version of Xcode which contains the latest Swift release.
+      </p>
+      <a href="https://itunes.apple.com/app/xcode/id497799835" class="cta-secondary external">Install Xcode</a>
+    </li>
+    <li class="resource">
+      <h3>Package Installer</h3>
+      <p class="description">
+        Toolchain package installer (.pkg)
+      </p>
+      <a href="https://download.swift.org/{{ site.data.builds.swift_releases.last.tag | downcase }}/xcode/{{ site.data.builds.swift_releases.last.tag }}/{{ site.data.builds.swift_releases.last.tag }}-osx.pkg" class="cta-secondary">Download Toolchain</a> 
+      <a href="/install/macos/package_installer" class="cta-secondary">Instructions</a>
+    </li>
+  </ul>
 
-Xcode includes a release of Swift that is supported by Apple.
-You can try out a version that is still in development
-by downloading one of the packages from [download](/download) page.
+<hr>
 
-<div class="warning" markdown="1">
-To submit to the App Store you must build your app using the version of Swift that comes included within Xcode.
-</div>
+## Development Snapshots
 
-<div class="warning" markdown="1">
-Xcode is not required to run the package installer or use an installed
-toolchain. However, when Xcode is not installed, the functionality of the Swift
-Package Manager may be limited due to some [outstanding issues](https://github.com/apple/swift-package-manager/issues/4396).
-</div>
+Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.
 
-0. Download a latest Swift release
-   ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases))
-   or development [snapshot](/download/#snapshots) package.
-   Make sure that your system meets the aforecited requirements for
-   this package.
-
-0. Run the package installer,
-   which will install an Xcode toolchain into
-   `/Library/Developer/Toolchains/`.
-
-   An Xcode toolchain (`.xctoolchain`) includes a copy of the compiler, LLDB,
-   and other related tools needed to provide a cohesive development experience
-   for working in a specific version of Swift.
-
-* To select the installed toolchain in Xcode, navigate to `Xcode > Toolchains`.
-
-  Xcode uses the selected toolchain for building Swift code, debugging, and
-  even code completion and syntax coloring. You'll see a new toolchain
-  indicator in Xcode's toolbar when Xcode is using an installed toolchain.
-  Select the default toolchain to go back to Xcode's built-in tools.
-
-* Selecting a toolchain in Xcode affects the IDE only. To use the installed
-  toolchain with
-  * `xcrun`, pass the `--toolchain swift` option. For example:
-
-    ~~~ shell
-    xcrun --toolchain swift swift --version
-    ~~~
-
-  * `xcodebuild`, pass the `-toolchain swift` option.
-
-  Alternatively, you may select the toolchain on the command line by exporting
-  the `TOOLCHAINS` environment variable as follows:
-
-  ~~~ shell
-  export TOOLCHAINS=$(plutil -extract CFBundleIdentifier raw /Library/Developer/Toolchains/<toolchain name>.xctoolchain/Info.plist)
-  ~~~
+{% assign xcode_dev_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}
+{% assign xcode_6_0_builds = site.data.builds.swift-6_0-branch.xcode | sort: 'date' | reverse %}
 
 
-### Code Signing on macOS
-
-The macOS `.pkg` files are digitally signed
-by the developer ID of the Swift open source project
-to allow verification that they have not been tampered with.
-All binaries in the package are signed as well.
-
-The Swift toolchain installer on macOS
-should display a lock icon on the right side of the title bar.
-Clicking the lock brings up detailed information about the signature.
-The signature should be produced by
-`Developer ID Installer: Swift Open Source (V9AUD2URP3)`.
-
-<div class="warning" markdown="1">
-If the lock is not displayed
-or the signature is not produced by the Swift open source developer ID,
-do not proceed with the installation.
-Instead, quit the installer
-and please email <swift-infrastructure@forums.swift.org>
-with as much detail as possible,
-so that we can investigate the problem.
-</div>
+  <ul class="install-instruction">
+    <li class="resource">
+      <h3>main</h3>
+      <p class="description" style="font-size: 14px;">
+      <time datetime="{{ xcode_dev_builds.first.date | date_to_xmlschema }}" title="{{ xcode_dev_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ xcode_dev_builds.first.date | date: '%B %-d, %Y' }}</time>
+    </p>
+      <p class="description"> 
+        Toolchain package installer (.pkg)
+        <ul>
+          <li><a href="https://download.swift.org/development/xcode/{{ xcode_dev_builds.first.dir }}/{{ xcode_dev_builds.first.debug_info }}">Debugging Symbols</a>  </li>
+        </ul>  
+              </p>
+      <a href="https://download.swift.org/development/xcode/{{ xcode_dev_builds.first.dir }}/{{ xcode_dev_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
+    </li>    <li class="resource">
+      <h3>release/6.0</h3>
+      <p class="description" style="font-size: 14px;">
+      <time datetime="{{ xcode_6_0_builds.first.date | date_to_xmlschema }}" title="{{ xcode_6_0_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ xcode_dev_builds.first.date | date: '%B %-d, %Y' }}</time>
+    </p>
+      <p class="description"> 
+        Toolchain package installer (.pkg)
+        <ul>
+          <li><a href="https://download.swift.org/swift-6.0-branch/xcode/{{ xcode_6_0_builds.first.dir }}/{{ xcode_6_0_builds.first.debug_info }}">Debugging Symbols</a>  </li>
+        </ul>    
+      </p>
+      <a href="https://download.swift.org/swift-6.0-branch/xcode/{{ xcode_6_0_builds.first.dir }}/{{ xcode_6_0_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
+    </li>
+  </ul>
+<a href="/install/macos/package_installer" class="cta-secondary">Instructions</a>
+  <details class="download">
+    <summary>Older Snapshots (main)</summary>
+    {% include_relative _older-development-snapshots.md %}
+  </details>
+   <details class="download">
+    <summary>Older Snapshots (release/6.0)</summary>
+    {% include_relative _older-6_0-snapshots.md %}
+  </details>

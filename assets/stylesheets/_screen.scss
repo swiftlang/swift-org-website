@@ -258,6 +258,8 @@ cite {
         border-radius: 0.5rem;
         padding: 0.8em 0.9em;
         text-align: center;
+        color: rgb(255, 255, 255);
+        background-color: var(--color-active-nav-item);
 
         &:hover {
           border-color: var(--color-link);
@@ -1176,7 +1178,7 @@ article {
     display: flex;
     padding: 0;
 
-    button {
+    button, a {
       cursor: pointer;
       margin-right: 1rem;
       background-color: transparent;
@@ -1194,6 +1196,7 @@ article {
         text-decoration: none;
       }
     }
+
   }
 
   .content {
@@ -1207,8 +1210,9 @@ article {
 
 .interactive-tabs.os {
   .tabs {
-    button {
+    button, a {
       width: 100%;
+      align-content: center;
     }
   }
 }

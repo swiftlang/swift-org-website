@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Linux Installation Options
+title: Install Swift
 ---
 
-{% include_relative _docker.md %}
-{% include_relative _tarball.md %}
-{% include_relative _rpms.md %}
+{% include install/_os_tabs.md linux="true" %}
+
+{% include install/_linux_platforms_tabs.md %}
