@@ -1,9 +1,9 @@
 const { userAgentData, userAgent } = window.navigator;
 
 const osToOsRegex = {
-  Windows: /win/,
-  macOS: /macintosh/,
-  Linux: /linux/,
+  windows: /win/,
+  macos: /macintosh/,
+  linux: /linux/,
 }
 
 const osToPage = {
