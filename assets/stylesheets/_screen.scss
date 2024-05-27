@@ -177,6 +177,27 @@ cite {
   }
 }
 
+.header-with-anchor {
+  a {
+    display: none;
+    color: var(--color-text);
+    margin-left: .2em;
+    text-decoration: none;
+
+    svg {
+      filter: var(--icon-filter);
+    }
+  }
+}
+
+h2.header-with-anchor {
+  &:hover {
+    a {
+      display: inline-block;
+    }
+  }
+}
+
 #logo {
   margin-bottom: 0;
 
