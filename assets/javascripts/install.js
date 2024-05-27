@@ -7,11 +7,11 @@ const osToOsRegex = {
 }
 
 const osToPage = {
-  Windows: '/install/windows/',
-  macOS: '/install/macos/',
-  Linux: '/install/linux/',
+  windows: '/install/windows/',
+  macos: '/install/macos/',
+  linux: '/install/linux/',
 }
 
-const OS = Object.keys(osToOsRegex).find(os => osToOsRegex[os].test(userAgent.toLowerCase())) || 'macOS';
+const OS = Object.keys(osToOsRegex).find(os => osToOsRegex[os].test(userAgent.toLowerCase())) || 'macos';
 
 window.location.replace(OS);
