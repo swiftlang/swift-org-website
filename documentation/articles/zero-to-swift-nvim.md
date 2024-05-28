@@ -1,35 +1,36 @@
 # From Zero to Swift | Getting started with Swift in Neovim
 
 Neovim is a modern reimplementation of vi, with a lot of new functionality piled
-on top including asynchronous operations and lua bindings for a snappy editing
-experience. We'll look at configuring a new install of Neovim for Swift
-development on Ubuntu 22.04. I have preinstalled the Solarized theme so the
+on top including asynchronous operations and Lua bindings for a snappy editing
+experience. We will look at configuring a new install of Neovim for Swift
+development on Ubuntu 22.04. I have pre-installed the Solarized theme so the
 colors may not match yours exactly.
 
-We will start by installing Neovim and Swift and then install `Lazy.nvim` to
-manage our plugins. Then we'll configure the SourceKit LSP server, setup
-LSP-driven autocompletion with `nvim-cmp`, and snippets with `LuaSnip`. Then
-we'll finish with some autocommands that are useful if you need to read
-swiftinterface files or find yourself reading SIL. If you already have Neovim,
-Swift, and a package manager installed, you can skip down to setting up
-[Language Server support](#language-server-support).
+We will start by installing Neovim and Swift and then install `lazy.nvim` to
+manage our plugins. Then we'll configure the SourceKit-LSP server, setup
+Language-Server-driven autocompletion with `nvim-cmp`, and snippets with
+`LuaSnip`.
 
 - [Prerequisites](#prerequisites)
 - [Package Management](#packaging-with-lazy)
-- [Language Server](#language-server-support)
+- [Language Server Support](#language-server-support)
     - [File Updates](#file-updating)
 - [Autocomplete](#auto-complete)
 - [Snippets](#Snippets)
-- [Autocommands](#auto-commands)
+
+If you already have Neovim, Swift, and a package manager installed, you can skip
+down to setting up [Language Server support](#language-server-support).
 
 ## Prerequisites
 
-We will want the Lua APIs exposed in fairly recent versions of Neovim, and we'll
-need a Swift toolchain. I'm running Ubuntu 22.04 on an X86 machine, so the
-commands you use may need to vary depending on your OS. Recent versions of
-Neovim have better LSP support, but this means that we need a newer version than
-what is in the Ubuntu 22.04 repository. For this install, I used `snap` to
-install Neovim v0.9.4.
+To get started, you'll need to install Neovim and a Swift toolchain. The Lua
+APIs exposed by Neovim are under rapid development. We will want to take
+advantage of the recent improvements in the integrated support for Language
+Server Protocol (LSP), so we will need a fairly recent version
+of Neovim. I'm running Ubuntu 22.04 on an `x86_64` machine. Unfortunately, the
+version of Neovim shipped in the Ubuntu 22.04 `apt` repository is too old to
+support many of the APIs that we will be using. For this install, I used `snap`
+to install Neovim v0.9.4.
 
 ```sh
  $  sudo snap install nvim --classic
@@ -45,14 +46,18 @@ Compilation: /usr/bin/cc -O2 -g -Og -g -Wall -Wextra -pedantic -Wno-unused-pa...
 Run :checkhealth for more info
 ```
 
-Alternatively, the neovim github repository has downloadable packages with the
-latest versions. Instructions are available at
-https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-download
+You may need to adjust the commands you use based on what distribution and
+operating system you are using.
+Alternatively, the Neovim GitHub repository has downloadable packages with the latest versions.
+See
+[install from download](https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-download)
+for more information.
 
-Once we have neovim installed, we'll install a Swift toolchain. Go over to
-the download page on [swift.org](download.swift.org) and download the release
-Swift tarball. This package contains the runtime libraries, compilers, debugger,
-and IDE tools needed for a Swift development experience.
+Once we have Neovim installed, we'll install a Swift toolchain. Go over to the
+download page on [swift.org](download.swift.org) and download the release Swift
+tarball. This package contains the runtime libraries, compilers, debugger, and
+integrated development environment (IDE) tools needed for a Swift development
+experience.
 
 ```sh
  $  cd ~/Downloads
@@ -60,7 +65,7 @@ and IDE tools needed for a Swift development experience.
  $  tar xf swift-5.10-RELEASE-ubuntu22.04.tar.gz
 ```
 
-That drops a `swift-5.10-RELEASE-ubuntu22.04/usr` directory in our Downloads
+That drops a `swift-5.10-RELEASE-ubuntu22.04/usr` directory in our `~/Downloads`
 directory. The downloads folder isn't a great place to keep things permanently,
 but should be fine for now. We'll need to add the compiler and tools to our
 path.
@@ -76,15 +81,16 @@ Target: x86_64-unknown-linux-gnu
 
 ## Getting Started
 
-We have working copies of neovim and Swift on our path. While we can start with
-a `vimrc` file, Neovim is pushing away from the vimscript over to using lua. Lua
-is easier to find documentation for since it's an actual language, tends to run
-faster, and pulls your configuration out of the main runloop so your editor
-stays nice and snappy. You can still use a `vimrc` with vimscript, but we'll use
-lua.
+We have working copies of Neovim and Swift on our path. While we can start with
+a `vimrc` file, Neovim is transitioning from using vimscript to Lua. Lua
+is easier to find documentation for since it's an actual programming language,
+tends to run faster, and pulls your configuration out of the main runloop so
+your editor stays nice and snappy.
+You can still use a `vimrc` with vimscript, but we'll use Lua.
 
-The main lua Neovim configuration file goes in `~/.config/nvim`. The other lua
-files go in `~/.config/nvim/lua`. Go ahead and create an `init.lua` now;
+The main Neovim configuration file goes in `~/.config/nvim`. The other Lua files
+go in `~/.config/nvim/lua`. Go ahead and create an `init.lua` now;
+
 ```sh
  $  mkdir -p ~/.config/nvim/lua && cd ~/.config/nvim
  $  nvim init.lua
@@ -94,11 +100,11 @@ files go in `~/.config/nvim/lua`. Go ahead and create an `init.lua` now;
 
 https://github.com/folke/lazy.nvim
 
-While it's possible to set everything up by hand, using a package manager helps
+While it's possible to set everything up manually, using a package manager helps
 keep your packages up-to-date, and ensures that everything is installed
-correctly when copy your configuration to a new computer. Neovim has a builtin
-plugin management support, but I have found `lazy.nvim` to work well, so we'll
-start with a little bootstrapping script to install lazy if it isn't already,
+correctly when copy your configuration to a new computer. Neovim also has a
+built-in plugin manager, but I have found `lazy.nvim` to work well, so we'll
+start with a little bootstrapping script to install `lazy` if it isn't already,
 add it to our runtime path, and finally configure our packages.
 
 At the top of your `init.lua` write:
@@ -125,7 +131,7 @@ specs.
 require("lazy").setup("plugins")
 ```
 
-This configures lazy to look in a `plugins/` directory under our `lua/`
+This configures `lazy` to look in a `plugins/` directory under our `lua/`
 directory for each plugin. We'll also want a place to put our own non-plugin
 related configurations, so we'll stick it in `config/`. Go ahead and create
 those directories now.
@@ -134,29 +140,34 @@ those directories now.
  $  mkdir lua/plugins lua/config
 ```
 
-You can read more about setting up Lazy on their github page;
-https://github.com/folke/lazy.nvim?tab=readme-ov-file#%EF%B8%8F-configuration.
+See [lazy.nvim Configuration](https://github.com/folke/lazy.nvim?tab=readme-ov-file#%EF%B8%8F-configuration) for details on configuring `Lazy`.
 
 ![Lazy package manger](/assets/images/zero-to-swift-nvim/Lazy.png)
 
-Note that your configuration won't look exactly like this. It will likely only
-list `lazy.nvim` since that is all that is installed right now, which isn't very
-exciting to look at, so I've added a few plugins to make it look more appealing.
+Note that your configuration won't look exactly like this.
+Since we have only installed `lazy.nvim`, that's all that `Lazy` will list.
+That's not very exciting to look at, so I've added a few additional plugins to
+make it look more appealing.
 
-To check that it's working, launch neovim. You should first see an error saying
+To check that it's working, launch Neovim. You should first see an error saying
 that there were no specs found for module plugins. This just means that we don't
-have any plugins. Press <ENTER>, and then type `:Lazy`. Lazy will list the
-plugins loaded. There should only be one right now, "lazy.nvim". This is Lazy
-tracking and updating itself.
+have any plugins. Press <ENTER>, and then type `:Lazy`.
+`Lazy` will list the plugins loaded.
+There should only be one right now, "lazy.nvim".
+This is Lazy tracking and updating itself.
+From the `Lazy` menu, pressing `I` will install new plugins, `U` will update the
+plugins, and `X` will delete any plugins that Lazy installed, but are no longer
+being tracked.
 
 ## Language Server Support
 
 https://github.com/neovim/nvim-lspconfig
 
 Language servers respond to editor requests providing language-specific support.
-Neovim has builtin LSP support, so you don't need an external package for LSP,
-but adding a configuration for each LSP server manually is a lot of work. Neovim
-has a package for this.
+Neovim has support for Language Server Protocol (LSP) built-in, so you don't
+need an external package for LSP, but adding a configuration for each LSP server
+manually is a lot of work.
+Neovim has a package for this.
 
 Go ahead and create a new file under `lua/plugins/lsp.lua`. In it, we'll start
 by adding the following snippet.
@@ -164,7 +175,7 @@ by adding the following snippet.
 ```lua
 return {
     {
-        "neovim/nvim-lspconfig"
+        "neovim/nvim-lspconfig",
         config = function()
             local lspconfig = require('lspconfig')
             lspconfig.sourcekit.setup {}
@@ -198,24 +209,24 @@ end,
 
 ![LSP powered live error messages](/assets/images/zero-to-swift-nvim/LSP-Error.png)
 
-I've created a little example Swift package that computes Fibonacci numbers
-asynchronously. Pressing `shift` + `k` on one of the references to the
-`fibonacci` function shows the documentation for that function, along with the
-function signature. The LSP integration is also showing that we have an error in
-the code.
+I've created a little example Swift package that computes [Fibonacci
+numbers](https://oeis.org/A000045) asynchronously.
+Pressing `shift` + `k` on one of the references to the `fibonacci` function
+shows the documentation for that function, along with the function signature.
+The LSP integration is also showing that we have an error in the code.
 
 ### File Updating
 
-SourceKit-LSP is increasingly relying on the editor informing the server when
-certain files change. This need is communicated through "dynamic registration".
+SourceKit-LSP increasingly relies on the editor informing the server when
+certain files change. This need is communicated through _dynamic registration_.
 You don't have to understand what that means, but Neovim doesn't implement
 dynamic registration. You'll notice this when you update your package manifest,
 or add new files to your compile-commands file and LSP doesn't work without
-restarting neovim.
+restarting Neovim.
 
 Instead, we know that SourceKit-LSP needs this functionality, so we'll enable it
-statically. We'll update our sourcekit setup configuration to manually set the
-`didChangeWatchedFiles` request.
+statically. We'll update our `sourcekit` setup configuration to manually set the
+`didChangeWatchedFiles` capability.
 
 ```lua
 lspconfig.sourcekit.setup {
@@ -253,11 +264,15 @@ return {
 }
 ```
 
-`nvim-cmp` doesn't come with completion sources to start with, those are
-additional plugins. We'll add the LSP source as a dependency to provide
-LSP-powered completions, and tell Lazy that the completions depend on it so that
-those also get loaded when we enable auto-completions. I'm also a fan of having
-path expansions and expansions from text in the same buffer.
+Next, we'll configure some completion sources to provide autocompletion results.
+`nvim-cmp` doesn't come with completion sources, those are additional plugins.
+For this configuration, I want results based on LSP, filepath completion, and
+the text in my current buffer. For more, the `nvim-cmp` Wiki has a [list of
+sources](https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources).
+
+To start, we will tell `Lazy` about the new plugins and that `nvim-cmp` depends
+on them.
+This ensures that `Lazy` will initialize each of them when `nvim-cmp` is loaded.
 
 ```lua
 -- lua/plugins/autocomplete.lua
@@ -278,11 +293,13 @@ return {
 }
 ```
 
-Now that we have our plugins set, lets configure the plugin. The `nvim-cmp`
-plugin hides a lot of the inner workings, so configuring it is a little
-different than the other plugins, specifically around keybindings. We start out
-by requiring the module from within its own configuration function and will call
-the setup function explicitly.
+Now we need to configure `nvim-cmp` to take advantage of the auto-completion
+sources.
+Unlike many other plugins, `nvim-cmp` hides many of its inner-workings, so
+configuring it is a little different from other plugins. Specifically, you'll
+notice the differences around setting key-bindings. We start out by requiring
+the module from within its own configuration function and will call the setup
+function explicitly.
 
 ```lua
 {
@@ -300,7 +317,8 @@ the setup function explicitly.
             -- Where to get completion results from
             sources = cmp.config.sources {
                 { name = "nvim_lsp" },
-                { name = "path" }
+                { name = "buffer"},
+                { name = "path" },
             },
             -- Make 'enter' key select the completion
             mapping = cmp.mapping.preset.insert({
@@ -385,6 +403,7 @@ Now we'll wire the LuaSnippet expansions into `nvim-cmp`. First, we'll add
             -- Where to get completion results from
             sources = cmp.config.sources {
                 { name = "nvim_lsp" },
+                { name = "buffer"},
                 { name = "path" },
             },
             mapping = cmp.mapping.preset.insert({
@@ -421,15 +440,17 @@ Now we'll wire the LuaSnippet expansions into `nvim-cmp`. First, we'll add
 },
 ```
 
-Now our tab key is thoroughly overloaded in super-tab fashion; if the
-completion window is open, pressing tab selects the next item in the list. If
-you press tab over a snippet, the snippet will expand and continuing to press
-tab results in jumping to the next insertion point. Finally, if you're neither
-auto-completing nor expanding a snippet, it will behave like a normal `tab` key.
+Now our tab-key is thoroughly overloaded in super-tab fashion.
+ - If the completion window is open, pressing tab selects the next item in the
+   list.
+ - If you press tab over a snippet, the snippet will expand, and continuing to
+   press tab moves the cursor to the next selection point.
+ - If you're neither auto-completing nor expanding a snippet, it will behave
+   like a normal `tab` key.
 
 Now we need to write up some snippets. LuaSnip supports several snippet formats,
-including the popular TextMate format, VSCode format, its own Lua-based API, and
-snippets coming from an LSP server.
+including a subset of the popular SnipMate format, Visual Studio Code snippet
+format, its own Lua-based API, and snippets coming from an LSP server.
 
 Here are some snippets that I've found to be useful:
 
@@ -483,57 +504,17 @@ snippet main
   }$0
 ```
 
-Another popular snippet plugin worth mentioning is UltiSnips which allows you to
-use inline Python while defining the snippet, greatly improving what kinds of
-snippets you can write.
-
-## Auto Commands
-
-Sometimes you'll want to open swift interface files or SIL files. By default,
-you won't get much assistance. We'll use autocommands to configure your editing
-experience now.
-
-Create a new file for you autocommand configurations.
-
-```lua
--- lua/config/autocmds.lua
-
-local augroup = vim.api.nvim_create_augroup
-local autocmd = vim.api.nvim_create_autocmd
-
--- Filetypes
-augroup("SetFileTypes", { clear = true })
-autocmd({'Bufread', 'Bufnewfile'}, {
-    group = 'SetFileTypes',
-    pattern = "*.swiftinterface",
-    command = 'setlocal ft=swift tw = 0',
-})
-
-autocmd({'Bufread', 'Bufnewfile'}, {
-    group = 'SetFileTypes',
-    pattern = "*.sil",
-    command = 'setlocal ft=sil',
-})
-```
-
-Then include that in your `init.lua`.
-
-```
--- init.lua
-...
-require('config.autocmds')
-```
-
-Restarting vim, you will have syntax highlighting for swift interface and SIL
-files.
+Another popular snippet plugin worth mentioning is
+[UltiSnips](https://github.com/SirVer/ultisnips) which allows you to use inline
+Python while defining the snippet, allowing you to write some very powerful
+snippets.
 
 # Conclusion
 
-Swift development with Neovim is a solid experience once you have things
-configured correctly. This should give you foundation for building your
-development experience.
-
-TODO: Finish this
+Swift development with Neovim is a solid experience once everything is
+configured correctly. There are thousands of plugins for you to explore, this
+article gives you a solid foundation for building up your Swift development
+experience in Neovim.
 
 # Files
 
@@ -572,7 +553,6 @@ require("lazy").setup("plugins", {
     },
   },
 })
-require("config.autocmds")
 
 vim.opt.wildmenu = true
 vim.opt.wildmode = "list:longest,list:full" -- don't insert, show options
@@ -590,26 +570,6 @@ vim.opt.tw = 80
 -- vim.cmd.background = "dark"
 -- vim.cmd.colorscheme("solarized")
 -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-```
-
-```lua
--- lua/config/autocmds.lua
-local augroup = vim.api.nvim_create_augroup
-local autocmd = vim.api.nvim_create_autocmd
-
--- Filetypes
-augroup("SetFileTypes", { clear = true })
-autocmd({'Bufread', 'Bufnewfile'}, {
-    group = 'SetFileTypes',
-    pattern = "*.swiftinterface",
-    command = 'setlocal ft=swift tw = 0',
-})
-
-autocmd({'Bufread', 'Bufnewfile'}, {
-    group = 'SetFileTypes',
-    pattern = "*.sil",
-    command = 'setlocal ft=sil',
-})
 ```
 
 ```lua
