@@ -96,6 +96,8 @@ go in `~/.config/nvim/lua`. Go ahead and create an `init.lua` now;
  $  nvim init.lua
 ```
 
+> Note: The examples below contain a GitHub link to the plugin to help you readily access the documentation. You can also explore the plugin itself.
+
 ## Packaging with Lazy
 
 https://github.com/folke/lazy.nvim
