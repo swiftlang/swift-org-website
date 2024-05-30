@@ -1,9 +1,10 @@
 # From Zero to Swift | Getting started with Swift in Emacs
 
-Emacs is a highly customizable text editor that has its
-origins in a macro package for the DEC TECO editor.  A number of
-Emacs-like editors and derivatives have existed over the
-years, but this guide will focus on GNU Emacs.
+Emacs is a highly customizable text editor that has its origins in a
+macro package for the Digital Equipment Corporation TECO editor.
+A number of Emacs-like editors and derivatives have existed over the
+years, but this guide will focus on [GNU
+Emacs](https://www.gnu.org/software/emacs/).
 
 This guide will walk you through setting up a new install of Emacs for
 Swift development; it does not assume any particular operating system,
@@ -20,9 +21,9 @@ instructions are given below for some common platforms.
 
 ### macOS
 
-The [Emacs for OSX](https://emacsformacosx.com) website provides
+The [Emacs for Mac OS X](https://emacsformacosx.com) website provides
 universal binaries in a standard Mac disk image.  Downloading the
-image from that site, opening it and dragging it to your Applications
+image from that site, opening it and dragging it to your `Applications`
 folder is the easiest way to install a native Emacs for macOS
 development.
 
@@ -76,9 +77,7 @@ that then you won't be able to submit applications to the App Store
 
 ### Microsoft Windows
 
-There is [a Windows installer on the Swift
-website](https://www.swift.org/download/#releases); downloading and
-executing that should set you up for using Swift.
+Use [the Windows installer from the Swift website](https://www.swift.org/download/#releases); that should set up everything you need to get going with Swift.
 
 ### Linux
 
@@ -100,102 +99,21 @@ depends on which shell you're using, but typically you'll want to edit
 your `.bashrc` or `.zshrc` to add
 
 ```shell
-$ export PATH=/usr/local/swift/usr/bin
+export PATH=/usr/local/swift/usr/bin
 ```
 
 or similar.
 
-Before using Swift, you will need to install some dependencies; the
-exact list depends on your distribution; some examples are given below.
-
-#### Ubuntu 18.04
-
-```shell
-$ apt-get install         \
-          binutils        \
-          git             \
-          libc6-dev       \
-          libcurl4        \
-          libedit2        \
-          libgcc-5-dev    \
-          libpython2.7    \
-          libsqlite3-0    \
-          libstdc++-5-dev \
-          libxml2         \
-          pkg-config      \
-          tzdata          \
-          zlib1g-dev
-```
-
-### Ubuntu 20.04
-
-```shell
-$ apt-get install         \
-          binutils        \
-          git             \
-          gnupg2          \
-          libc6-dev       \
-          libcurl4        \
-          libedit2        \
-          libgcc-9-dev    \
-          libpython2.7    \
-          libsqlite3-0    \
-          libstdc++-9-dev \
-          libxml2         \
-          libz3-dev       \
-          pkg-config      \
-          tzdata          \
-          uuid-dev        \
-          zlib1g-dev
-```
-
-### Ubuntu 22.04
-
-```shell
-$ apt-get install              \
-          binutils             \
-          git                  \
-          gnupg2               \
-          libc6-dev            \
-          libcurl4-openssl-dev \
-          libedit2             \
-          libgcc-9-dev         \
-          libpython3.8         \
-          libsqlite3-0         \
-          libstdc++-9-dev      \
-          libxml2-dev          \
-          libz3-dev            \
-          pkg-config           \
-          tzdata               \
-          unzip                \
-          zlib1g-dev
-```
-
-### RedHat
-
-```shell
-$ dnf -y install       \
-         git           \
-         gcc-c++       \
-         libcurl-devel \
-         libedit-devel \
-         libuuid-devel \
-         libxml2-devel \
-         ncurses-devel \
-         python3-devel \
-         rsync         \
-         sqlite-devel  \
-         unzip         \
-         zip
-```
+Before using Swift, you will need to install some dependencies; there is [a set of canned commands for various distributions here](https://www.swift.org/install/linux/#installation-via-tarball).  (Note: the table scrolls left and right.)
 
 ## Configuring Emacs
 
 Emacs veterans probably remember downloading and installing Lisp
 packages manually, but these days it's best to use a package manager.
-We'll also configure MELPA, which is a popular package repository for
-Emacs.  To do this, open Emacs, enter `C-x C-f ~/.emacs` and hit
-enter.  Then add the following to your `.emacs` file:
+We'll also configure [MELPA](https://melpa.org), which is a popular
+package repository for Emacs.  To do this, open Emacs, enter `C-x C-f
+~/.emacs` and hit enter.  Then add the following to your `.emacs`
+file:
 
 ```lisp
 ;;; Add MELPA as a package source
