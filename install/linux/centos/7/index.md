@@ -9,7 +9,7 @@ title: Install Swift
 
 {% include install/_os_versions_tabs.md os_versions=site.data.install.centos  name="CentOS" pressed="CentOS 7" %}
 
-{% include install/_build_release.md platform="CentOS 7" docker_tag="centos7" %}
+{% include install/_build_release.md platform="CentOS 7" docker_tag="centos7" rpm="true" %}
 
 {% include install/_build_snapshot.md platform="CentOS 7" 
 branch_dir="development" 

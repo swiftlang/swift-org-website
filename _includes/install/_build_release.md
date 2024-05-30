@@ -34,4 +34,16 @@
   </li>
 </ul>
 
+  {% if include.rpm %}
+  <ul class="install-instruction">
+  <li class="resource featured">
+    <h3>RPM</h3>
+    <p class="description">
+      RPM Package Manager (Experimental use only)
+    </p>
+    <a href="/install/linux/rpm" class="cta-secondary">Instructions</a>
+  </li>
+  </ul>
+  {% endif %}
+
 <hr>
