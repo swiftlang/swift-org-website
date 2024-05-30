@@ -98,16 +98,16 @@ go in `~/.config/nvim/lua`. Go ahead and create an `init.lua` now;
 
 > Note: The examples below contain a GitHub link to the plugin to help you readily access the documentation. You can also explore the plugin itself.
 
-## Packaging with Lazy
+## Packaging with _lazy.nvim_
 
 https://github.com/folke/lazy.nvim
 
 While it's possible to set everything up manually, using a package manager helps
 keep your packages up-to-date, and ensures that everything is installed
 correctly when copy your configuration to a new computer. Neovim also has a
-built-in plugin manager, but I have found `lazy.nvim` to work well, so we'll
-start with a little bootstrapping script to install `lazy` if it isn't already,
-add it to our runtime path, and finally configure our packages.
+built-in plugin manager, but I have found _lazy.nvim_ to work well. We will
+start with a little bootstrapping script to install _lazy.nvim_ if it isn't
+installed already, add it to our runtime path, and finally configure our packages.
 
 At the top of your `init.lua` write:
 ```lua
@@ -125,15 +125,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 ```
 
-This snippet clones `lazy` if it doesn't already exist, and then adds it to the
-runtime path. Now we initialize lazy and tell it where to look for the plugin
+This snippet clones _lazy.nvim_ if it doesn't already exist, and then adds it to the
+runtime path. Now we initialize _lazy.nvim_ and tell it where to look for the plugin
 specs.
 
 ```lua
 require("lazy").setup("plugins")
 ```
 
-This configures `lazy` to look in a `plugins/` directory under our `lua/`
+This configures _lazy.nvim_ to look in a `plugins/` directory under our `lua/`
 directory for each plugin. We'll also want a place to put our own non-plugin
 related configurations, so we'll stick it in `config/`. Go ahead and create
 those directories now.
@@ -142,24 +142,25 @@ those directories now.
  $  mkdir lua/plugins lua/config
 ```
 
-See [lazy.nvim Configuration](https://github.com/folke/lazy.nvim?tab=readme-ov-file#%EF%B8%8F-configuration) for details on configuring `Lazy`.
+See [lazy.nvim Configuration](https://github.com/folke/lazy.nvim?tab=readme-ov-file#%EF%B8%8F-configuration) for details on configuring _lazy.nvim_.
 
-![Lazy package manger](/assets/images/zero-to-swift-nvim/Lazy.png)
+![_lazy.nvim_ package manger](/assets/images/zero-to-swift-nvim/Lazy.png)
 
 Note that your configuration won't look exactly like this.
-Since we have only installed `lazy.nvim`, that's all that `Lazy` will list.
+We have only installed _lazy.nvim_, so that is the only plugin that is listed on
+your configuration at the moment.
 That's not very exciting to look at, so I've added a few additional plugins to
 make it look more appealing.
 
 To check that it's working, launch Neovim. You should first see an error saying
 that there were no specs found for module plugins. This just means that we don't
-have any plugins. Press <ENTER>, and then type `:Lazy`.
-`Lazy` will list the plugins loaded.
+have any plugins. Press `Enter`, and then type `:Lazy`.
+_lazy.nvim_ will list the plugins loaded.
 There should only be one right now, "lazy.nvim".
-This is Lazy tracking and updating itself.
-From the `Lazy` menu, pressing `I` will install new plugins, `U` will update the
-plugins, and `X` will delete any plugins that Lazy installed, but are no longer
-being tracked.
+This is _lazy.nvim_ tracking and updating itself.
+From the _lazy.nvim_ menu, pressing `I` will install new plugins, `U` will update the
+plugins, and `X` will delete any plugins that _lazy.nvim_ installed, but are no longer
+being tracked in your configuration.
 
 ## Language Server Support
 
@@ -252,7 +253,7 @@ https://github.com/hrsh7th/nvim-cmp
 ![LSP-driven autocomplete completing the Foundation module](/assets/images/zero-to-swift-nvim/LSP-Autocomplete.png)
 
 We will use `nvim-cmp` to act as the autocomplete mechanism. We'll start by
-telling Lazy to download the package and to load it lazily when we enter insert
+telling _lazy.nvim_ to download the package and to load it lazily when we enter insert
 mode since you don't need autocompletion if you're not editing the file.
 
 ```lua
@@ -272,9 +273,9 @@ For this configuration, I want results based on LSP, filepath completion, and
 the text in my current buffer. For more, the `nvim-cmp` Wiki has a [list of
 sources](https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources).
 
-To start, we will tell `Lazy` about the new plugins and that `nvim-cmp` depends
+To start, we will tell _lazy.nvim_ about the new plugins and that `nvim-cmp` depends
 on them.
-This ensures that `Lazy` will initialize each of them when `nvim-cmp` is loaded.
+This ensures that _lazy.nvim_ will initialize each of them when `nvim-cmp` is loaded.
 
 ```lua
 -- lua/plugins/autocomplete.lua
