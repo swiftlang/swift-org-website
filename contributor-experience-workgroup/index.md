@@ -98,6 +98,11 @@ The current members of the workgroup are:
       <td><a href="https://forums.swift.org/u/suyashsrijan">@suyashsrijan</a></td>
       <td><a href="https://github.com/theblixguy">@theblixguy</a></td>
     </tr>
+    <tr>
+      <td>Timirah James</td>
+      <td><a href="https://forums.swift.org/u/timirahj">@timirahj</a></td>
+      <td><a href="https://github.com/timirahj">@timirahj</a></td>
+    </tr>
   </tbody>
 </table>
 
