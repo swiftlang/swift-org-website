@@ -24,6 +24,10 @@ title: Download Swift
 {% assign ubuntu2004_aarch64_5_10_builds = site.data.builds.swift-5_10-branch.ubuntu2004-aarch64 | sort: 'date' | reverse %}
 {% assign ubuntu2204_5_10_builds = site.data.builds.swift-5_10-branch.ubuntu2204 | sort: 'date' | reverse %}
 {% assign ubuntu2204_aarch64_5_10_builds = site.data.builds.swift-5_10-branch.ubuntu2204-aarch64 | sort: 'date' | reverse %}
+{% assign ubuntu2310_5_10_builds = site.data.builds.swift-5_10-branch.ubuntu2310 | sort: 'date' | reverse %}
+{% assign ubuntu2310_aarch64_5_10_builds = site.data.builds.swift-5_10-branch.ubuntu2310-aarch64 | sort: 'date' | reverse %}
+{% assign ubuntu2404_5_10_builds = site.data.builds.swift-5_10-branch.ubuntu2404 | sort: 'date' | reverse %}
+{% assign ubuntu2404_aarch64_5_10_builds = site.data.builds.swift-5_10-branch.ubuntu2404-aarch64 | sort: 'date' | reverse %}
 {% assign amazonlinux2_5_10_builds = site.data.builds.swift-5_10-branch.amazonlinux2 | sort: 'date' | reverse %}
 {% assign amazonlinux2_aarch64_5_10_builds = site.data.builds.swift-5_10-branch.amazonlinux2-aarch64 | sort: 'date' | reverse %}
 {% assign centos7_5_10_builds = site.data.builds.swift-5_10-branch.centos7 | sort: 'date' | reverse %}
@@ -175,6 +179,8 @@ but they have not gone through the full testing that is performed for official r
         {% include_relative _build-snapshot.html platform="Linux" build=ubuntu1804_5_10_builds.first name="Ubuntu 18.04" docker_tag="nightly-5.10-bionic" platform_dir="ubuntu1804" branch_dir="swift-5.10-branch" arch="x86_64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=ubuntu2004_5_10_builds.first build_2=ubuntu2004_aarch64_5_10_builds.first name="Ubuntu 20.04" docker_tag="nightly-5.10-focal" platform_dir="ubuntu2004" platform_dir_2="ubuntu2004-aarch64" branch_dir="swift-5.10-branch" arch="x86_64" arch_2="aarch64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=ubuntu2204_5_10_builds.first build_2=ubuntu2204_aarch64_5_10_builds.first name="Ubuntu 22.04" docker_tag="nightly-5.10-jammy" platform_dir="ubuntu2204" platform_dir_2="ubuntu2204-aarch64" branch_dir="swift-5.10-branch" arch="x86_64" arch_2="aarch64" %}
+        {% include_relative _build-snapshot.html platform="Linux" build=ubuntu2310_5_10_builds.first build_2=ubuntu2310_aarch64_5_10_builds.first name="Ubuntu 23.10" docker_tag="Coming Soon" platform_dir="ubuntu2310" platform_dir_2="ubuntu2310-aarch64" branch_dir="swift-5.10-branch" arch="x86_64" arch_2="aarch64" %}
+        {% include_relative _build-snapshot.html platform="Linux" build=ubuntu2404_5_10_builds.first build_2=ubuntu2404_aarch64_5_10_builds.first name="Ubuntu 24.04" docker_tag="Coming Soon" platform_dir="ubuntu2404" platform_dir_2="ubuntu2404-aarch64" branch_dir="swift-5.10-branch" arch="x86_64" arch_2="aarch64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=centos7_5_10_builds.first name="CentOS 7" docker_tag="nightly-5.10-centos7" platform_dir="centos7" branch_dir="swift-5.10-branch" arch="x86_64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=amazonlinux2_5_10_builds.first build_2=amazonlinux2_aarch64_5_10_builds.first name="Amazon Linux 2" docker_tag="nightly-5.10-amazonlinux2" platform_dir="amazonlinux2" platform_dir_2="amazonlinux2-aarch64" branch_dir="swift-5.10-branch" arch="x86_64" arch_2="aarch64" %}
         {% include_relative _build-snapshot.html platform="Linux" build=ubi9_5_10_builds.first build_2=ubi9_aarch64_5_10_builds.first name="Red Hat Universal Base Image 9" docker_tag="nightly-5.10-rhel-ubi9" platform_dir="ubi9" platform_dir_2="ubi9-aarch64" branch_dir="swift-5.10-branch" arch="x86_64" arch_2="aarch64" %}
