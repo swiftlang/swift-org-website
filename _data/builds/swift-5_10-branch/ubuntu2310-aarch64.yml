@@ -1,0 +1,5 @@
+- date: 2024-05-31 10:10:00-06:00
+  dir: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-05-31-a
+  download: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-05-31-a-ubuntu23.10-aarch64.tar.gz
+  download_signature: swift-5.10-DEVELOPMENT-SNAPSHOT-2024-05-31-a-ubuntu23.10-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
