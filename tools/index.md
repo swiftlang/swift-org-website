@@ -3,6 +3,6 @@ layout: page-wide
 title: Tools
 ---
 
-Developers can use Swift editing tools to create and maintain Swift code more efficiently, leading to better outcomes and higher-quality software applications.
+Your favorite editor likely already supports Swift. Below are setup guides for some popular choices.
 
 {% include_relative _editors.md %}
