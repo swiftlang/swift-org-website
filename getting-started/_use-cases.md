@@ -55,6 +55,17 @@ Here are some examples of the many use cases of Swift, in case you want to jump 
 
     <a href="/getting-started/swiftui" class="cta-secondary">Start tutorial</a>
   </li>
+
+  <li class="use-case">
+    <h3>Embedded Application for a Microcontroller</h3>
+    <p class="description">
+      Learn how to create an application in Embedded Swift will run on an embedded device or in a simulator.
+      <br><br>
+      This guide requires macOS or Linux.
+    </p>
+
+    <a href="/getting-started/embedded-swift" class="cta-secondary">Start tutorial</a>
+  </li>
 </ul>
 
 ---
