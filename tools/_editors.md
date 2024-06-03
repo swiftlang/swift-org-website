@@ -1,7 +1,5 @@
 ## Editors
 
-The listed text editors provide code completion and navigation, syntax highlighting, debugging, and build system integration enhancing code quality and productivity for Swift developers.
-
 <ul class="tool-list">
   {%- for editor in site.data.tools.editors %}
     <li class="tool">
