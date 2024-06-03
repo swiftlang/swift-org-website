@@ -44,7 +44,7 @@ layout: source
   });
 
   document.addEventListener('DOMContentLoaded', function() {
-    var sectionToggles = document.querySelectorAll('.section-toggle');
+    const sectionToggles = document.querySelectorAll('.section-toggle');
 
     sectionToggles.forEach(function(toggle) {
       toggle.addEventListener('mousedown', function() {

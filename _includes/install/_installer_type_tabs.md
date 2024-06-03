@@ -1,5 +1,4 @@
-
-Select installer option: 
+Select installer option:
 
 <div class="interactive-tabs os">
   <div class="tabs">

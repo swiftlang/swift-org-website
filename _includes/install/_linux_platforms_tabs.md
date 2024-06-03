@@ -1,4 +1,4 @@
-To install a specific toolchain, select platform below: 
+To install a specific toolchain, select platform below:
 
 <div class="interactive-tabs os">
   <div class="tabs">

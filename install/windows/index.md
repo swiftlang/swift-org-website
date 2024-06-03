@@ -33,13 +33,13 @@ title: Install Swift
   <li class="resource">
     <h3>Docker</h3>
     <p class="description">
-    	The offical Docker images for Swift. 
+      The offical Docker images for Swift.
     </p>
     <a href="https://hub.docker.com/_/swift" class="cta-secondary external">{{ site.data.builds.swift_releases.last.name }}-windowsservercore-ltsc2022</a>
   </li>
 </ul>
 
-<hr> 
+<hr>
 
 ## Development Snapshots
 
@@ -48,32 +48,32 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
 {% assign windows_dev_builds = site.data.builds.development.windows10 | sort: 'date' | reverse %}
 {% assign windows10_6_0_builds = site.data.builds.swift-6_0-branch.windows10 | sort: 'date' | reverse %}
 
-
-  <ul class="install-instruction">
-    <li class="resource">
-      <h3>main</h3>
-      <p class="description" style="font-size: 14px;">
+<ul class="install-instruction">
+  <li class="resource">
+    <h3>main</h3>
+    <p class="description" style="font-size: 14px;">
       <time datetime="{{ windows_dev_builds.first.date | date_to_xmlschema }}" title="{{ windows_dev_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ windows_dev_builds.first.date | date: '%B %-d, %Y' }}</time>
     </p>
-      <p class="description">
-        Package installers (.exe).
-      </p>
-      <a href="https://download.swift.org/development/windows10/{{ windows_dev_builds.first.dir }}/{{ windows_dev_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
-    </li>    <li class="resource">
-      <h3>release/6.0</h3>
-      <p class="description" style="font-size: 14px;">
+    <p class="description">
+      Package installers (.exe).
+    </p>
+    <a href="https://download.swift.org/development/windows10/{{ windows_dev_builds.first.dir }}/{{ windows_dev_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
+  </li>
+  <li class="resource">
+    <h3>release/6.0</h3>
+    <p class="description" style="font-size: 14px;">
       <time datetime="{{ windows10_6_0_builds.first.date | date_to_xmlschema }}" title="{{ windows10_6_0_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ windows10_6_0_builds.first.date | date: '%B %-d, %Y' }}</time>
     </p>
-      <p class="description">
-        Package installers (.exe). 
-      </p>
-      <a href="https://download.swift.org/swift-6.0-branch/windows10/{{ windows10_6_0_builds.first.dir }}/{{ windows10_6_0_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
-    </li>
-  </ul>
+    <p class="description">
+      Package installers (.exe).
+    </p>
+    <a href="https://download.swift.org/swift-6.0-branch/windows10/{{ windows10_6_0_builds.first.dir }}/{{ windows10_6_0_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
+  </li>
+</ul>
 <a href="/install/macos/package_installer" class="cta-secondary">Instructions</a>
+<details class="download">
+  <summary>Older Snapshots (main)</summary>
+</details>
   <details class="download">
-    <summary>Older Snapshots (main)</summary>
-  </details>
-   <details class="download">
-    <summary>Older Snapshots (release/6.0)</summary>
-  </details>
+  <summary>Older Snapshots (release/6.0)</summary>
+</details>

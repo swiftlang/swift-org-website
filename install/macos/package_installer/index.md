@@ -70,12 +70,11 @@ The signature should be produced by
 `Developer ID Installer: Swift Open Source (V9AUD2URP3)`.
 
 <div class="warning" markdown="1">
-If the lock is not displayed
-or the signature is not produced by the Swift open source developer ID,
-do not proceed with the installation.
-Instead, quit the installer
-and please email <swift-infrastructure@forums.swift.org>
-with as much detail as possible,
-so that we can investigate the problem.
+  If the lock is not displayed
+  or the signature is not produced by the Swift open source developer ID,
+  do not proceed with the installation.
+  Instead, quit the installer
+  and please email <swift-infrastructure@forums.swift.org>
+  with as much detail as possible,
+  so that we can investigate the problem.
 </div>
-

@@ -78,7 +78,7 @@ The following commands must be run in PowerShell.
 
 0. If you are downloading Swift packages **for the first time**, import the PGP keys into your keyring:
 
-{% assign all_keys_file = 'all-keys.asc' %}   
+{% assign all_keys_file = 'all-keys.asc' %}
 
    ~~~ powershell
    $ gpg.exe —keyserver hkp://keyserver.ubuntu.com `
@@ -125,5 +125,5 @@ The following commands must be run in PowerShell.
    This warning means that there is no path in the Web of Trust between this key and you. The warning is harmless as long as you have followed the steps above to retrieve the key from a trusted source.
 
 <div class="warning" markdown="1">
-If `gpg` fails to verify and reports "BAD signature", do not run the downloaded installer. Instead, please email <swift-infrastructure@forums.swift.org> with as much detail as possible, so that we can investigate the problem.
+  If `gpg` fails to verify and reports "BAD signature", do not run the downloaded installer. Instead, please email <swift-infrastructure@forums.swift.org> with as much detail as possible, so that we can investigate the problem.
 </div>

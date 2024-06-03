@@ -33,7 +33,7 @@ The following keys are being used to sign toolchain packages:
         'E813 C892 820A 6FA1 3755  B268 F167 DF1A CF9C E069'
   ~~~
 
-  Or 
+  Or
 
    ~~~ shell
   $ wget -q -O - https://swift.org/keys/{{ automatic_signing_key_file }} | \
@@ -66,4 +66,3 @@ The following keys are being used to sign toolchain packages:
   $ wget -q -O - https://swift.org/keys/release-key-swift-5.x.asc | \
     gpg --import -
   ~~~
-
