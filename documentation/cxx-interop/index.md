@@ -850,11 +850,11 @@ In the example above `SerializedInt` conforms to the `Deserializable` protocol.
 However, other specializations of the class template, like `SerializedFloat`,
 do not conform to `Deserializable`.
 
-The `SWIFT_CONFORMS_TO` customization macro from the `<swift/bridging>`
+The `SWIFT_CONFORMS_TO_PROTOCOL` customization macro from the `<swift/bridging>`
 header can be used to conform all specializations of a class template to
 a Swift protocol automatically. For example, the
 definition of the `SerializedValue` class template can be annotated with
-`SWIFT_CONFORMS_TO`:
+`SWIFT_CONFORMS_TO_PROTOCOL`:
 
 ```c++
 template<class T>
@@ -864,10 +864,10 @@ public:
   T deserialize() const;
 
   ...
-} SWIFT_CONFORMS_TO(Serialization.Deserializable);
+} SWIFT_CONFORMS_TO_PROTOCOL(Serialization.Deserializable);
 ```
 
-The `SWIFT_CONFORMS_TO` annotation makes all specializations,
+The `SWIFT_CONFORMS_TO_PROTOCOL` annotation makes all specializations,
 like `SerializedInt` and `SerializedFloat`,
 conform to `Deserializable` automatically in Swift. This makes it possible
 to add functionality to all specializations of a class
@@ -1949,7 +1949,7 @@ that are outlined in the documentation above.
 | ------------------------- | ------------- |
 | `SWIFT_NAME`                | [Renaming C++ APIs in Swift](#renaming-c-apis-in-swift)       |
 | `SWIFT_COMPUTED_PROPERTY`   | [Mapping Getters and Setters to Computed Properties](#mapping-getters-and-setters-to-computed-properties)        |
-| `SWIFT_CONFORMS_TO`   | [Conforming Class Template to Swift Protocol](#conforming-class-template-to-swift-protocol)        |
+| `SWIFT_CONFORMS_TO_PROTOCOL` | [Conforming Class Template to Swift Protocol](#conforming-class-template-to-swift-protocol)        |
 | `SWIFT_IMMORTAL_REFERENCE` | [Immortal Reference Types](#immortal-reference-types) |
 | `SWIFT_SHARED_REFERENCE` | [Shared Reference Types](#shared-reference-types) |
 | `SWIFT_UNSAFE_REFERENCE` | [Unsafe Reference Types](#unsafe-reference-types) |
