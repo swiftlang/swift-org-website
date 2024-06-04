@@ -105,12 +105,11 @@ go in `~/.config/nvim/lua`. Go ahead and create an `init.lua` now;
 
 ## Packaging with _lazy.nvim_
 
-https://github.com/folke/lazy.nvim
-
 While it's possible to set everything up manually, using a package manager helps
 keep your packages up-to-date, and ensures that everything is installed
 correctly when copy your configuration to a new computer. Neovim also has a
-built-in plugin manager, but I have found _lazy.nvim_ to work well. We will
+built-in plugin manager, but I have found
+[_lazy.nvim_](https://github.com/folke/lazy.nvim) to work well. We will
 start with a little bootstrapping script to install _lazy.nvim_ if it isn't
 installed already, add it to our runtime path, and finally configure our packages.
 
@@ -169,13 +168,11 @@ being tracked in your configuration.
 
 ## Language Server Support
 
-https://github.com/neovim/nvim-lspconfig
-
 Language servers respond to editor requests providing language-specific support.
 Neovim has support for Language Server Protocol (LSP) built-in, so you don't
 need an external package for LSP, but adding a configuration for each LSP server
-manually is a lot of work.
-Neovim has a package for this.
+manually is a lot of work. Neovim has a package for configuring LSP servers,
+[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
 
 Go ahead and create a new file under `lua/plugins/lsp.lua`. In it, we'll start
 by adding the following snippet.
@@ -253,12 +250,10 @@ https://github.com/neovim/neovim/issues/13634
 
 ## Auto Complete
 
-https://github.com/hrsh7th/nvim-cmp
-
 ![LSP-driven autocomplete completing the Foundation module](/assets/images/zero-to-swift-nvim/LSP-Autocomplete.png)
 
-We will use `nvim-cmp` to act as the autocomplete mechanism. We'll start by
-telling _lazy.nvim_ to download the package and to load it lazily when we enter insert
+We will use [_nvim-cmp_](https://github.com/hrsh7th/nvim-cmp) to act as the autocomplete mechanism.
+We'll start by telling _lazy.nvim_ to download the package and to load it lazily when we enter insert
 mode since you don't need autocompletion if you're not editing the file.
 
 ```lua
@@ -368,10 +363,8 @@ isn't visible.
 
 ## Snippets
 
-https://github.com/L3MON4D3/LuaSnip
-
 Snippets are a great way to improve your workflow by expanding short pieces of
-text into anything you like. Lets hook those up now. We'll use `LuaSnip` as our
+text into anything you like. Lets hook those up now. We'll use [_LuaSnip_](https://github.com/L3MON4D3/LuaSnip) as our
 snippet plugin.
 
 Create a new file in your plugins directory for configuring the snippet plugin.
@@ -389,7 +382,7 @@ return {
 }
 ```
 
-Now we'll wire the LuaSnippet expansions into `nvim-cmp`. First, we'll add
+Now we'll wire the snippet expansions into `nvim-cmp`. First, we'll add
 `LuaSnip` as a dependency of `nvim-cmp` to ensure that it gets loaded before
 `nvim-cmp`. Then we'll wire it into the tab key expansion behavior.
 
@@ -457,8 +450,11 @@ Now our tab-key is thoroughly overloaded in super-tab fashion.
    like a normal `tab` key.
 
 Now we need to write up some snippets. LuaSnip supports several snippet formats,
-including a subset of the popular SnipMate format, Visual Studio Code snippet
-format, its own Lua-based API, and snippets coming from an LSP server.
+including a subset of the popular
+[TextMate](https://macromates.com/textmate/manual/snippets),
+[Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets) snippet format,
+its own [Lua-based](https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua) API,
+and snippets coming from an [LSP server](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#snippet_syntax).
 
 Here are some snippets that I've found to be useful:
 
