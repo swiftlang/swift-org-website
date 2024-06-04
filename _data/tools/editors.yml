@@ -7,14 +7,14 @@
   link: https://code.visualstudio.com
   guide: /documentation/articles/getting-started-with-vscode-swift.html
 - name: Emacs
-  description: Emacs is an extensible cross-platform text editor. Swift editing support can be enabled through community provided packages.
+  description: Emacs is an extensible cross-platform text editor. Swift editing support can be enabled through community-provided packages.
   link: https://www.gnu.org/software/emacs/
   guide: /documentation/articles/zero-to-swift-emacs.html
 - name: Neovim
-  description: Neovim is an extensible cross-platform text editor. Swift editing support can be enabled through your pick of community provided plugins.
+  description: Neovim is an extensible cross-platform text editor. Swift editing support can be enabled through your pick of community-provided plugins.
   link: https://neovim.io/
   guide: /documentation/articles/zero-to-swift-nvim.html
 - name: Other Editors
   description: Any editor that supports the Language Server Protocol (LSP) can use SourceKit-LSP to provide intelligent editor functionality for Swift.
-  link: https://github.com/apple/sourcekit-lsp/tree/main/Editors#other-editors
-  guide: https://github.com/apple/sourcekit-lsp/tree/main/Editors#other-editors
+  link: https://github.com/apple/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md
+  guide: https://github.com/apple/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md
