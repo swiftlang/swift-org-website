@@ -125,7 +125,7 @@ Here, you can see that `perf` triggers new events `probe_libc:malloc`; `probe_li
 
 To confirm the user probe `probe_libc:malloc` works, run this command:
 
-```
+```bash
 perf stat -e probe_libc:malloc -- bash -c 'echo Hello World'
 ```
 
