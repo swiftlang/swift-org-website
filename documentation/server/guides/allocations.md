@@ -42,7 +42,7 @@ Follow the steps below:
 
 1. **Build your code** in `release` mode by running this command: 
 
-```
+```bash
 swift run -c release
 ```
 
@@ -58,13 +58,13 @@ To generate a flame graph, you will need to clone the [`FlameGraph`](https://git
 
 Run this command to clone the `https://github.com/brendangregg/FlameGraph` repository in `~/FlameGraph`:
 
-```
+```bash
 git clone https://github.com/brendangregg/FlameGraph
 ```
 
 When running in Docker, use this command to bind-mount the `FlameGraph` repository into the container:
 
-```
+```bash
 docker run -it --rm \
            --privileged \
            -v "/path/to/FlameGraphOnYourMachine:/FlameGraph:ro" \
@@ -125,7 +125,7 @@ Here, you can see that `perf` triggers new events `probe_libc:malloc`; `probe_li
 
 To confirm the user probe `probe_libc:malloc` works, run this command:
 
-```
+```bash
 perf stat -e probe_libc:malloc -- bash -c 'echo Hello World'
 ```
 
@@ -230,7 +230,7 @@ logger.info("exiting")
 
 If running a program as a Swift package, compile it in the `release` mode first, using this command: 
 
-```
+```bash
 swift build -c release
 ```
 
@@ -241,7 +241,7 @@ Counting allocations and visualizing them as a graph can help you analyze memory
 
 Before visualizing the allocations as a flame graph, start with an analysis using the binary to get the number of allocations by running the command:
 
-```
+```bash
 perf stat -e 'probe_libc:*' -- .build/release/your-program-name
 ```
 
@@ -277,7 +277,7 @@ The `perf` command doesn’t allow for creating live graphs while the program is
 
 In general, the command `perf record` can be used to run the program and `libc_probe:malloc` to collect information, as shown here:
 
-```
+```bash
 perf record --call-graph dwarf,16384 \
      -m 50000 \
      -e 'probe_libc:*' -- \
@@ -347,7 +347,7 @@ Although much of this tutorial focuses on the `perf` tool, you can create the sa
 
 To get started, collect the raw data using the [DTrace](https://en.wikipedia.org/wiki/DTrace) framework by running this command:
 
-```
+```bash
 sudo dtrace -n 'pid$target::malloc:entry,pid$target::posix_memalign:entry,pid$target::calloc:entry,pid$target::malloc_zone_malloc:entry,pid$target::malloc_zone_calloc:entry,pid$target::malloc_zone_memalign:entry { @s[ustack(100)] = count(); } ::END { printa(@s); }' -c .build/release/your-program > raw.stacks
 ```
 
@@ -399,14 +399,14 @@ To make your flame graph look good (after demangling the collapsed stacks) inser
 
 These changes should look like this:
 
-```
+```bash
 sed -e 's/specialized //g' \
     -e 's/;swift_allocObject;swift_slowAlloc;__libc_malloc/;A/g'
 ```
 
 To produce a visually appealing SVG file flame graph when analyzing memory allocations in Swift, use the complete command:
 
-```
+```bash
 perf script | \
     /FlameGraph/stackcollapse-perf.pl - | \
     swift demangle --simplified | \
