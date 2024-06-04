@@ -16,7 +16,7 @@ The `.sig` file is the digital signature.
 
 **3. Import and verify the PGP signature:**
 
-Skip this step if you have imported the keys in the past.
+Skip this step if you have imported the keys in the past. This does not apply to verify.
 
 <details class="download" style="margin-bottom: 0;">
   <summary>Import PGP keys details</summary>
