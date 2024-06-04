@@ -125,7 +125,7 @@ Here, you can see that `perf` triggers new events `probe_libc:malloc`; `probe_li
 
 To confirm the user probe `probe_libc:malloc` works, run this command:
 
-```bash
+```
 perf stat -e probe_libc:malloc -- bash -c 'echo Hello World'
 ```
 
@@ -251,10 +251,12 @@ The output should look similar to this:
 
 ```
 Performance counter stats for '.build/release/your-program-name':
+
                 68      probe_libc:posix_memalign
                 35      probe_libc:calloc_1
                  0      probe_libc:calloc
               2977      probe_libc:malloc
+
 [...]
 ```
 
@@ -421,7 +423,9 @@ When using perf with the DWARF call stack unwinding, you may encounter this issu
 [ perf record: Woken up 189 times to write data ]
 Warning:
 Processed 4346 events and lost 144 chunks!
+
 Check IO/CPU overload!
+
 [ perf record: Captured and wrote 30.868 MB perf.data (3817 samples) ]
 ```
 
