@@ -28,24 +28,6 @@
     img {
       width: 26px;
     }
-
-    .supported {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      border: 1px #f05138 solid;
-      font-size: 12px;
-      line-height: 1;
-      white-space: nowrap;
-      color: #f05138;
-      padding: 4px 5px;
-
-      &.community {
-        border: 1px #3ea639 solid;
-        color: #3ea639;
-      }
-    }
   }
 
   @media (min-width: 1000px) {
