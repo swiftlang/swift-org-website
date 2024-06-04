@@ -112,7 +112,7 @@ Subsequently, an event in `perf` will trigger whenever one of the allocation fun
 
 The output should look like this:
 
-```bash
+```
 Added new events:
   probe_libc:malloc    (on malloc in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
   probe_libc:calloc    (on calloc in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
@@ -125,7 +125,7 @@ Here, you can see that `perf` triggers new events `probe_libc:malloc`; `probe_li
 
 To confirm the user probe `probe_libc:malloc` works, run this command:
 
-```bash
+```
 perf stat -e probe_libc:malloc -- bash -c 'echo Hello World'
 ```
 
@@ -168,7 +168,7 @@ dependencies: [
 
 An example program using AsyncHTTPClient can be written as:
 
-```
+```swift
 import AsyncHTTPClient
 import NIO
 import Logging
@@ -307,7 +307,7 @@ By placing user probes at strategic points in your codebase, you can track and l
 ### Creating flame graphs
 Once you’ve successfully recorded data using `perf record`, you can invoke the following command to produce an SVG file with the flame graph:
 
-```
+```bash
 perf script | \
     /FlameGraph/stackcollapse-perf.pl - | \
     swift demangle --simplified | \
@@ -360,7 +360,7 @@ Like Linux's `perf` user probes, DTrace also uses probes. The previous command i
 
 Once the data is collected, run this command to create an SVG file:
 
-```
+```bash
 cat raw.stacks |\
     /FlameGraph/stackcollapse.pl - | \
     swift demangle --simplified | \
