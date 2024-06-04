@@ -1,4 +1,9 @@
-# From Zero to Swift | Getting started with Swift in Neovim
+---
+layout: page
+date: 2024-06-04 15:13:07
+title: Getting Started with Swift in Neovim
+author: [etcwilde]
+---
 
 Neovim is a modern reimplementation of vi, with a lot of new functionality piled
 on top including asynchronous operations and Lua bindings for a snappy editing
