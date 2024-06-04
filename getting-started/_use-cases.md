@@ -59,7 +59,7 @@ Here are some examples of the many use cases of Swift, in case you want to jump 
   <li class="use-case">
     <h3>Embedded Application for a Microcontroller</h3>
     <p class="description">
-      Learn how to create an application in Embedded Swift will run on an embedded device or in a simulator.
+      Learn how to create an application using Embedded Swift that will run on an embedded device or in a simulator.
       <br><br>
       This guide requires macOS or Linux.
     </p>
