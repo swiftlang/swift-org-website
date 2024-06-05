@@ -8,18 +8,18 @@ title: Debugging Performance Issues
 
 This document aims to help you debug performance issues in Swift by identifying and resolving any bottlenecks or inefficiencies in the code that may cause the application to run slow or consume excessive system resources. By debugging performance issues, you can optimize your code and improve the overall speed and efficiency of your Swift application.
 
-Outlined below are some basic tools and methods to debug performance issues in Swift:
+Here are some basic methods and tools to debug performance issues in Swift:
 
 1. **Measure performance**: [Xcode’s Instruments](https://help.apple.com/instruments/mac/current/) and [Linux perf](https://www.swift.org/documentation/server/guides/linux-perf.html) provide profiling tools to track the performance of your application and help identify areas that consume excessive CPU, memory, or energy. For example, profiling and flame graphs show the consumption of CPU, and memory graphs the consumption of memory. It’s important to note that each platform manages the measuring of your application’s performance differently.
 
     - For macOS, see [Getting Started with Instruments](https://developer.apple.com/videos/play/wwdc2019/411/).
     - For Linux, see [perf: Linux profiling with performance counters](https://perf.wiki.kernel.org/index.php/Main_Page).
     
-2. Profile memory usage: Use Xcode’s [Memory Graph Debugger](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use) to identify and fix memory-related issues.
+2. **Profile memory usage**: Use Xcode’s [Memory Graph Debugger](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use) to identify and fix memory-related issues.
 
-3. Benchmark and measure improvements: Continue to iterate and optimize until the desired performance is achieved.
+3. **Benchmark and measure improvements**: Continue to iterate and optimize until the desired performance is achieved.
 
-> Tip: We recommend compiling your Swift code in release mode to ensure optimal performance. The performance difference between debug and release builds is significant. You can do this by running the command `swift build -c release` before configuring your code to collect data.
+> Tip: We recommend compiling your Swift code in `release` mode to ensure optimal performance. The performance difference between debug and release builds is significant. You can do this by running the command `swift build -c release` before configuring your code to collect data.
 
 ## Tools
 
