@@ -73,7 +73,9 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
 <a href="/install/windows/traditional/" class="cta-secondary">Instructions</a>
 <details class="download" style="margin-bottom: 0;">
   <summary>Older Snapshots (main)</summary>
+  {% include install/_older_snapshots.md builds=windows_dev_builds name="windows" platform_dir="windows10" branch_dir="development" %}
 </details>
-  <details class="download" style="margin-bottom: 0;">
+<details class="download" style="margin-bottom: 0;">
   <summary>Older Snapshots (release/6.0)</summary>
+  {% include install/_older_snapshots.md builds=windows10_6_0_builds name="windows" platform_dir="windows10" branch_dir="swift-6.0-branch" %}
 </details>
