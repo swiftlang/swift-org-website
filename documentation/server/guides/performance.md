@@ -243,9 +243,8 @@ Here are some specialized memory allocation libraries designed to address perfor
 
 Other `malloc` implementations exist and can typically be enabled using LD_PRELOAD:
 
-```
-> LD_PRELOAD=/usr/bin/libmimalloc.so  myprogram
-```
+```bash
+> LD_PRELOAD=/usr/bin/libjemalloc.so  myprogram
 
 The choice between these libraries depends on the specific performance needs and characteristics of the application or system.
 
