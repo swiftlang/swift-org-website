@@ -207,6 +207,7 @@ Other `malloc` implementations exist and can typically be enabled using LD_PRELO
 
 ```bash
 > LD_PRELOAD=/usr/bin/libjemalloc.so  myprogram
+```
 
 The choice between these libraries depends on the specific performance needs and characteristics of the application or system.
 
