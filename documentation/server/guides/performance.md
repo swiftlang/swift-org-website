@@ -10,7 +10,7 @@ This document aims to help you debug performance issues in Swift by identifying 
 
 Outlined below are some basic tools and methods to debug performance issues in Swift:
 
-1. **Measure performance**: Use [Xcode’s Instruments](https://help.apple.com/instruments/mac/current/) and [Linux perf](https://www.swift.org/documentation/server/guides/linux-perf.html) provide profiling tools to track the performance of your application and help identify areas that consume excessive CPU, memory, or energy. For example, time profiling and flame graphs show the consumption of CPU, and memory graphs the consumption of memory. It’s important to note that each platform manages the measuring of your application’s performance differently.
+1. **Measure performance**: [Xcode’s Instruments](https://help.apple.com/instruments/mac/current/) and [Linux perf](https://www.swift.org/documentation/server/guides/linux-perf.html) provide profiling tools to track the performance of your application and help identify areas that consume excessive CPU, memory, or energy. For example, time profiling and flame graphs show the consumption of CPU, and memory graphs the consumption of memory. It’s important to note that each platform manages the measuring of your application’s performance differently.
 
     - For macOS, see [Getting Started with Instruments](https://developer.apple.com/videos/play/wwdc2019/411/).
     - For Linux, see [perf: Linux profiling with performance counters](https://perf.wiki.kernel.org/index.php/Main_Page).
