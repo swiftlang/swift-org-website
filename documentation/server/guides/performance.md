@@ -192,9 +192,7 @@ We can see in the flame graph that `isFavouriteNumber` consumes most of the runt
 
 ### Malloc libraries
 
-In Swift, memory allocation and deallocation are primarily managed by the [automatic reference counting (ARC)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/) mechanism. However, there might be cases where you need to interface with C or other languages that utilize malloc libraries or if you require fine-grained control over memory management.
-
-For example, you can use a custom malloc library for workloads that put significant pressure on the memory allocation subsystem. Although no changes are required to the code, interposing it with an environment variable is necessary before running your server.
+In Swift, memory allocation and deallocation are primarily managed by the [automatic reference counting (ARC)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/) mechanism. In certain cases, you may need to interface with C or other languages using *malloc* libraries or if you require finer control over memory management. For example, you can use a custom malloc library for workloads that put significant pressure on the memory allocation subsystem. Although no changes are required to the code, interposing it with an environment variable is necessary before running your server.
 
 > Tip: You may want to benchmark the default and a custom memory allocator to see how much it helps for the specified workload.
 
@@ -209,6 +207,6 @@ Other `malloc` implementations exist and can typically be enabled using LD_PRELO
 > LD_PRELOAD=/usr/bin/libjemalloc.so  myprogram
 ```
 
-The choice between these libraries depends on the specific performance needs and characteristics of the application or system.
+The choice between these libraries depends on the specific performance needs and characteristics of the application or system. 
 
 In summary, using performance tools for debugging Swift server applications helps optimize performance, enhance user experience, plan for scalability, and ensure the efficient operation of server applications in production environments.
