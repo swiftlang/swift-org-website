@@ -28,7 +28,7 @@ title: Install Swift
     <p class="description">
       Install Swift via Scoop.
     </p>
-    <a href="/install/windows#installation-via-scoop" class="cta-secondary">Instructions</a>
+    <a href="/install/windows/scoop" class="cta-secondary">Instructions</a>
   </li>
   <li class="resource">
     <h3>Docker</h3>
