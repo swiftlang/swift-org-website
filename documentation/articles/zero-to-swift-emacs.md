@@ -1,4 +1,9 @@
-# From Zero to Swift | Getting started with Swift in Emacs
+---
+layout: page
+date: 2024-06-05 12:00:00
+title: From Zero to Swift | Getting started with Swift in Emacs
+author: [al45tair]
+---
 
 Emacs is a highly customizable text editor that has its origins in a
 macro package for the Digital Equipment Corporation TECO editor.
