@@ -57,11 +57,11 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
       </p>
   </li>
 </ul>
-<details class="download">
+<details class="download" style="margin-bottom: 0;">
   <summary>Older Snapshots ({{ include.development }})</summary>
   {% include install/_older_snapshots.md builds=development_builds name=include.platform platform_dir=platform_name_url branch_dir=include.branch_dir %}
 </details>
-<details class="download">
+<details class="download" style="margin-bottom: 0;">
   <summary>Older Snapshots ({{ include.development_2 }})</summary>
   {% include install/_older_snapshots.md builds=development_builds_2 name=include.platform platform_dir=platform_name_url branch_dir=include.branch_dir_2 %}
 </details>

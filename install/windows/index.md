@@ -71,9 +71,9 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
   </li>
 </ul>
 <a href="/install/macos/package_installer" class="cta-secondary">Instructions</a>
-<details class="download">
+<details class="download" style="margin-bottom: 0;">
   <summary>Older Snapshots (main)</summary>
 </details>
-  <details class="download">
+  <details class="download" style="margin-bottom: 0;">
   <summary>Older Snapshots (release/6.0)</summary>
 </details>
