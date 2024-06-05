@@ -17,9 +17,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     <p class="description" style="font-size: 14px;">
       <time datetime="{{ development_builds.first.date | date_to_xmlschema }}" title="{{ development_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ development_builds.first.date | date: '%B %-d, %Y' }}</time>
     </p>
-    <p class="description" style="font-size: 12px;">
-        Tarball (tar.gz)
-    </p>
+    <h4>Tarball (tar.gz)</h4>
     {% if include.aarch64 %}
     <ul class="install-instruction">
       <a href="https://download.swift.org/{{ include.branch_dir }}/{{ platform_name_url }}/{{ development_builds.first.dir }}/{{ development_builds.first.download }}" class="cta-secondary">Download (x86_64)</a>
@@ -28,9 +26,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     {% else %}
     <a href="https://download.swift.org/{{ include.branch_dir }}/{{ platform_name_url }}/{{ development_builds.first.dir }}/{{ development_builds.first.download }}" class="cta-secondary">Download (x86_64)</a>
     {% endif %}
-    <p class="description" style="font-size: 12px;">
-      Docker
-    </p>
+    <h4>Docker</h4>
     <a href="https://hub.docker.com/r/swiftlang/swift/tags" class="cta-secondary external">{{ include.docker_tag }}</a>
     <p class="description">
       <ul>
@@ -43,7 +39,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     <p class="description" style="font-size: 14px;">
       <time datetime="{{ development_builds_2.first.date | date_to_xmlschema }}" title="{{ development_builds_2.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ development_builds_2.first.date | date: '%B %-d, %Y' }}</time>
     </p>
-    <p class="description" style="font-size: 12px;">Tarball (tar.gz)</p>
+    <h4>Tarball (tar.gz)</h4>
       {% if include.aarch64 %}
       <ul class="install-instruction">
         <a href="https://download.swift.org/{{ include.branch_dir_2 }}/{{ platform_name_url }}/{{ development_builds_2.first.dir }}/{{ development_builds_2.first.download }}" class="cta-secondary">Download (x86_64)</a>
@@ -52,7 +48,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
       {% else %}
       <a href="https://download.swift.org/{{ include.branch_dir_2 }}/{{ platform_name_url }}/{{ development_builds_2.first.dir }}/{{ development_builds_2.first.download }}" class="cta-secondary">Download (x86_64)</a>
       {% endif %}
-      <p class="description" style="font-size: 12px;">Docker</p>
+      <h4>Docker</h4>
       <a href="https://hub.docker.com/r/swiftlang/swift/tags" class="cta-secondary external">{{ include.docker_tag_2 }}</a>
       <p class="description">
         <ul>
