@@ -155,7 +155,7 @@ lrwxr-xr-x   1 root  wheel     1B Jan  1 12:00 Macintosh HD@ -> /
 drwx------   1 kuba  staff    16K Dec 31  1969 RPI-RP2/
 ```
 
-Simply copy the UF2 file to this volume:
+Copy the UF2 file to this volume:
 
 ```shell
 $ cp build/blinky.uf2 /Volumes/RPI-RP2
