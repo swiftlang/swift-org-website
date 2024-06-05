@@ -69,7 +69,7 @@ See
 for more information.
 
 Once we have Neovim installed, we'll install a Swift toolchain. Go over to the
-download page on [swift.org](download.swift.org) and download the release Swift
+download page on [swift.org](https://download.swift.org) and download the release Swift
 tarball. This package contains the runtime libraries, compilers, debugger, and
 integrated development environment (IDE) tools needed for a Swift development
 experience.
@@ -93,6 +93,9 @@ path.
 Swift version 5.10 (swift-5.10-RELEASE)
 Target: x86_64-unknown-linux-gnu
 ```
+
+For more information on installing Swift for your operating system, check out
+the [Swift installation](https://www.swift.org/install/) page.
 
 ## Getting Started
 
