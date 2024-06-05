@@ -5,7 +5,7 @@ title: Getting Started with Swift in Neovim
 author: [etcwilde]
 ---
 
-Neovim is a modern reimplementation of vi, with a lot of new functionality piled
+Neovim is a modern reimplementation of the *vi text editor*, with a lot of new functionality piled
 on top including asynchronous operations and Lua bindings for a snappy editing
 experience. We will look at configuring a new install of Neovim for Swift
 development on Ubuntu 22.04. I have pre-installed the Solarized theme so the
