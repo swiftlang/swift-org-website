@@ -4,21 +4,45 @@ layout: page
 title: Debugging Performance Issues
 ---
 
-First of all, it's very important to make sure that you compiled your Swift code in _release mode_. The performance difference between debug and release builds is huge in Swift. You can compile your Swift code in release mode using
+## Overview
 
-    swift build -c release
+This document aims to help you debug performance issues in Swift by identifying and resolving any bottlenecks or inefficiencies in the code that may cause the application to run slow or consume excessive system resources. By debugging performance issues, you can optimize your code and improve the overall speed and efficiency of your Swift application.
 
-## Instruments
+Here are some basic methods and tools to debug performance issues in Swift:
 
-If you can reproduce your performance issue on macOS, you probably want to check out Instrument's [Time Profiler](https://developer.apple.com/videos/play/wwdc2016/418/).
+1. **Measure performance**: [Xcode’s Instruments](https://help.apple.com/instruments/mac/current/) and [Linux perf](https://www.swift.org/documentation/server/guides/linux-perf.html) provide profiling tools to track the performance of your application and help identify areas that consume excessive CPU, memory, or energy. For example, profiling and flame graphs show the consumption of CPU, and memory graphs the consumption of memory. It’s important to note that each platform manages the measuring of your application’s performance differently.
 
-## Flamegraphs
+    - For macOS, see [Getting Started with Instruments](https://developer.apple.com/videos/play/wwdc2019/411/).
+    - For Linux, see [perf: Linux profiling with performance counters](https://perf.wiki.kernel.org/index.php/Main_Page).
+    
+2. **Profile memory usage**: Use Xcode’s [Memory Graph Debugger](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use) to identify and fix memory-related issues.
 
-[Flamegraphs](http://www.brendangregg.com/flamegraphs.html) are a nice way to visualise what stack frames were running for what percentage of the time. That often helps pinpointing the areas of your program that need improvement. Flamegraphs can be created on most platforms, in this document we will focus on Linux.
+3. **Benchmark and measure improvements**: Continue to iterate and optimize until the desired performance is achieved.
 
-### Flamegraphs on Linux
+> Tip: We recommend compiling your Swift code in `release` mode to ensure optimal performance. The performance difference between debug and release builds is significant. You can do this by running the command `swift build -c release` before configuring your code to collect data.
 
-To have something to discuss, let's use a program that has a pretty big performance problem:
+## Tools
+
+Debugging performance issues can sometimes be a complex and iterative process. It requires a combination of techniques, tools, and analysis. We’ve compiled some tools and methods to help you identify and resolve bottlenecks effectively, such as:
+
+- **Flame graphs**
+- **Malloc libraries**
+    
+### Flame graphs
+
+[Flame graphs](https://www.brendangregg.com/flamegraphs.html) are a helpful tool for analyzing program performance. They show which parts of your program are taking up the most time which can help you find areas that need improvement. 
+
+#### Flame graphs in Xcode
+
+While there isn’t a built-in tool in Xcode specifically designed for creating flame graphs like Linux `perf`, you can use external tools to generate flame graphs for some apps developed using Xcode. 
+
+One commonly used tool for creating flame graphs is Instruments, which is part of Xcode. You can use the Time Profiler instrument in Instruments to capture stacks and convert the captured data into a flame graph using tools like [flamegraph.pl](https://github.com/brendangregg/FlameGraph/blob/master/flamegraph.pl). Running the app with Instruments using the Time Profiler and then converting the collected data into a flame graph can give you insights into your application's performance profile.
+
+#### Flame graphs in Linux
+
+Flame graphs can be created on most platforms, including Swift on Linux. In this section, we will focus on Linux.
+
+For discussion, here’s an *example flame graph program* on Linux that utilizes the `TerribleArray` data structure, leading to inefficient *O(n)* appends instead of the expected *O(1)* amortized time complexity for `Array`. This can cause performance issues and impact the overall efficiency of the program.
 
 ```swift
 /* a terrible data structure which has a subset of the operations that Swift's
@@ -105,42 +129,84 @@ for f in 0..<2_000 {
 }
 ```
 
-The above program contains the `TerribleArray` data structure which has _O(n)_ appends and not the amortised _O(1)_ that users are used to from `Array`.
+**Generating a flame graph**
 
-We will assume, that you have Linux's `perf` installed and configured, documentation on how to install `perf` can be found in [this guide](/server/guides/linux-perf.html).
+To generate flame graphs in Swift on Linux, you can use various tools such as `perf` combined with `FlameGraph` scripts to collect data on CPU utilization and stack traces. They can then be visualized using flame graph tools to gain insights into the performance characteristics of the application as follows:
 
-Let's assume we have compiled the above code using `swift build -c release` into a binary called `./slow`. We also assume that the `https://github.com/brendangregg/FlameGraph` repository is cloned in `~/FlameGraph`:
+1. [Install and configure](https://www.swift.org/server/guides/linux-perf.html) `perf` for Linux to collect performance data.
+2. Compile the code using `swift build -c release` into a binary called `./slow` by using these steps:
 
-```
-# Step 1: Record the stack frames with a 99 Hz sampling frequency
-sudo perf record -F 99 --call-graph dwarf -- ./slow
-# Alternatively, to attach to an existing process use
-#     sudo perf record -F 99 --call-graph dwarf -p PID_OF_SLOW
-# or if you don't know the pid, you can try (assuming your binary name is "slow")
-#     sudo perf record -F 99 --call-graph dwarf -p $(pgrep slow)
+   a. Open your Terminal and navigate to the directory containing your Swift code, typically the root directory of your Swift package.
 
-# Step 2: Export the recording into `out.perf`
-sudo perf script > out.perf
+   b. Run the following command to compile the code in release mode, optimizing the build for performance:
+    ```
+    swift build -c release
+    ```
+        
+    After the build process completes successfully, you can find the compiled binary in the `.build/release/` directory within your Swift package’s directory.
 
-# Step 3: Aggregate the recorded stacks and demangle the symbols
-~/FlameGraph/stackcollapse-perf.pl out.perf | swift demangle > out.folded
+    c. Copy the compiled binary to the current directory and rename it to `slow` using the following command:
+    ```
+    cp .build/release/YourExecutableName ./slow
+    ```
+    
+    Replace `YourExecutableName` with the actual name of your compiled binary.
+    
+3. Clone the repository in the `~/FlameGraph` directory using this command:
+    ```
+    git clone https://github.com/brendangregg/FlameGraph
+    ```
 
-# Step 4: Export the result into a SVG file.
-~/FlameGraph/flamegraph.pl out.folded > out.svg # Produce
-```
+4. Run this command to record the stack frames with a 99 Hz sampling frequency:
+    ```
+    sudo perf record -F 99 --call-graph dwarf -- ./slow
+    ```
 
-The resulting file will look something like:
+Alternatively, to attach to an existing process use:
+    ```
+    sudo perf record -F 99 --call-graph dwarf -p PID_OF_SLOW
+    ```
+
+5. Export the recording into `out.perf` by running this command:
+    ```
+    sudo perf script > out.perf
+    ```
+
+6. Aggregate the recorded stacks and demangle the symbols using this command:
+    ```
+    ~/FlameGraph/stackcollapse-perf.pl out.perf | swift demangle > out.folded
+    ```
+
+7. Export the result into an SVG file to visually represent the functions and their relative CPU usage using the following command:
+    ```
+    ~/FlameGraph/flamegraph.pl out.folded > out.svg # Produce
+    ```
+
+The resulting Flamegraph file should look similar to the one below:
 
 ![Flame graph](/assets/images/server-guides/perf-issues-flamegraph.svg)
 
-And we can see that almost all of our runtime is spent in `isFavouriteNumber` which is invoked from `addFavouriteNumber`. That should be a very good hint to the programmer on where to look for improvements. Maybe after all, we should use `Set<Int>` to store the favourite numbers, that should get is an answer to if a number is a favourite number in constant time (_O(1)_).
+We can see in the flame graph that `isFavouriteNumber` consumes most of the runtime, invoked from `addFavouriteNumber`. This outcome indicates where to look for improvements.
 
-## Alternate `malloc` libraries
-For some workloads putting serious pressure on the memory allocation subsystem, it may be beneficial with a custom `malloc` library.
-It requires no changes to the code, but needs interposing with e.g. an environment variable before running your server.
-It is worth benchmarking with the default and with a custom memory allocator to see how much it helps for the specific workload.
-There are many `malloc` implementations out there, but a portable and well-performing one is [Microsofts mimalloc](https://github.com/microsoft/mimalloc).
+> Note: If you use `Set<Int>` to store the `FavouriteNumber`, the by-product should indicate if a number is a `FavouriteNumber` in constant time *(O(1)*).
 
-Typically these are simply enabled by using LD_PRELOAD:
+### Malloc libraries
 
-`> LD_PRELOAD=/usr/bin/libmimalloc.so  myprogram`
+In Swift, memory allocation and deallocation are primarily managed by the [automatic reference counting (ARC)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/) mechanism. In certain cases, you may need to interface with C or other languages using *malloc* libraries or if you require finer control over memory management. For example, you can use a custom malloc library for workloads that put significant pressure on the memory allocation subsystem. Although no changes are required to the code, interposing it with an environment variable is necessary before running your server.
+
+> Tip: You may want to benchmark the default and a custom memory allocator to see how much it helps for the specified workload.
+
+Here are some specialized memory allocation libraries designed to address performance concerns, especially in multi-threaded environments:
+
+- [TCMalloc](https://github.com/google/tcmalloc) is tailored for speed and scalability within Google’s environments.
+- [Jemalloc](https://jemalloc.net/) emphasizes fragmentation reduction and efficiency for a wider range of applications.
+
+Other `malloc` implementations exist and can typically be enabled using LD_PRELOAD:
+
+```bash
+> LD_PRELOAD=/usr/bin/libjemalloc.so  myprogram
+```
+
+The choice between these libraries depends on the specific performance needs and characteristics of the application or system. 
+
+In summary, using performance tools for debugging Swift server applications helps optimize performance, enhance user experience, plan for scalability, and ensure the efficient operation of server applications in production environments.
