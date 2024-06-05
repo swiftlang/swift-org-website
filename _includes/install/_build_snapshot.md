@@ -57,6 +57,10 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
       </p>
   </li>
 </ul>
+<ul class="install-instruction">
+  <a href="/install/linux/tarball" class="cta-secondary">Instructions (Tarball)</a>
+  <a href="/install/linux/docker" class="cta-secondary">Instructions (Docker)</a>
+</ul>
 <details class="download" style="margin-bottom: 0;">
   <summary>Older Snapshots ({{ include.development }})</summary>
   {% include install/_older_snapshots.md builds=development_builds name=include.platform platform_dir=platform_name_url branch_dir=include.branch_dir %}

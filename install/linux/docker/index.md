@@ -3,7 +3,7 @@ layout: page
 title: Linux Installation via Docker
 ---
 
-Swift official Docker images are hosted on [hub.docker.com/\_/swift](https://hub.docker.com/_/swift/). Nightly builds and previews of Swift using Docker images under the `swiftlang` namespace are available in the Swift Docker repository on Docker Hub. 
+Swift official Docker images are hosted on [hub.docker.com/\_/swift](https://hub.docker.com/_/swift/). Nightly builds and previews of Swift using Docker images under the [swiftlang](https://hub.docker.com/r/swiftlang/swift/tags) namespace are available in the Swift Docker repository on Docker Hub.
 
 Swift Dockerfiles are located on [swift-docker](https://github.com/apple/swift-docker) repository.
 
