@@ -10,49 +10,31 @@ This document aims to help you debug performance issues in Swift by identifying 
 
 Outlined below are some basic tools and methods to debug performance issues in Swift:
 
-1. **Measure performance**: [Xcode’s Instruments](https://help.apple.com/instruments/mac/current/) and [Linux perf](https://www.swift.org/documentation/server/guides/linux-perf.html) provide profiling tools to track the performance of your application and help identify areas that consume excessive CPU, memory, or energy. For example, time profiling and flame graphs show the consumption of CPU, and memory graphs the consumption of memory. It’s important to note that each platform manages the measuring of your application’s performance differently.
+1. **Measure performance**: [Xcode’s Instruments](https://help.apple.com/instruments/mac/current/) and [Linux perf](https://www.swift.org/documentation/server/guides/linux-perf.html) provide profiling tools to track the performance of your application and help identify areas that consume excessive CPU, memory, or energy. For example, profiling and flame graphs show the consumption of CPU, and memory graphs the consumption of memory. It’s important to note that each platform manages the measuring of your application’s performance differently.
 
     - For macOS, see [Getting Started with Instruments](https://developer.apple.com/videos/play/wwdc2019/411/).
     - For Linux, see [perf: Linux profiling with performance counters](https://perf.wiki.kernel.org/index.php/Main_Page).
     
-2. [Xcode’s Time Profiler](https://help.apple.com/instruments/mac/current/#/dev44b2b437): The tool profiles Swift applications during development, including server applications. It helps identify performance bottlenecks and provides a detailed timeline view of CPU usage to pinpoint and optimize problems.
+2. Profile memory usage: Use Xcode’s [Memory Graph Debugger](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use) to identify and fix memory-related issues.
 
-> Important: For server-specific performance analysis, you may need to explore other profiling tools and techniques that are better suited for server-side environments.
+3. Benchmark and measure improvements: Continue to iterate and optimize until the desired performance is achieved.
 
-3. Profile memory usage: Use Xcode’s [Memory Graph Debugger](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use) to identify and fix memory-related issues.
-
-4. Benchmark and measure improvements: Continue to iterate and optimize until desired performance is achieved.
-
-> Tip: For starters, we recommend compiling your Swift code in release mode to ensure optimal performance. The performance difference between debug and release builds is significant. You can do this by running the command `swift build -c release` before configuring your code to collect data.
+> Tip: We recommend compiling your Swift code in release mode to ensure optimal performance. The performance difference between debug and release builds is significant. You can do this by running the command `swift build -c release` before configuring your code to collect data.
 
 ## Tools
 
 Debugging performance issues can sometimes be a complex and iterative process. It requires a combination of techniques, tools, and analysis. We’ve compiled some tools and methods to help you identify and resolve bottlenecks effectively, such as:
 
-- **Xcode Instruments Time Profiler**
 - **Flame graphs**
-- **[Malloc libraries**
+- **Malloc libraries**
     
-### Xcode Instruments Time Profiler
-
-Xcode Instruments [Time Profiler](https://developer.apple.com/videos/play/wwdc2019/411/) helps you analyze and optimize the performance of your code by identifying performance bottlenecks and areas for improvement. You can use Time Profiler to reproduce your performance issues on macOS. However, Xcode’s Time Profiler tool is primarily designed for profiling and optimizing performance in macOS and iOS applications during development.
-
-Here are some limitations and considerations when profiling Swift code running on the server:
-
-- Compatibility — Xcode’s Time Profiler tool is intended to work with applications running on macOS and iOS platforms. For server-side Swift applications, especially those running on Linux-based servers, using the Time Profiler directly may not be feasible.
-- Remote Profiling — If you deployed your Swift server application on a remote server, you typically cannot directly use Xcode’s Time Profiler to profile its performance.
-- Alternative Profiling Tools — To profile the performance of a Swift server application running on a remote server, you may need to use alternative profiling tools specifically designed for server-side performance analysis, like Instruments or specialized server-side profiling tools more suitable for this scenario.
-- Server Profiling Considerations — Dedicated server profiling tools can provide insights for analyzing network latency, database queries, server configuration, and concurrency issues and may not be directly available in Xcode’s Time Profiler.
-
 ### Flame graphs
 
 [Flame graphs](https://www.brendangregg.com/flamegraphs.html) are a helpful tool for analyzing program performance. They show which parts of your program are taking up the most time which can help you find areas that need improvement. 
 
 #### Flame graphs in Xcode
 
-While there isn’t a built-in tool in Xcode specifically designed for creating flame graphs like Linux `perf`, you can use external tools to generate flame graphs for some apps developed using Xcode.
-
-One commonly used tool for creating flame graphs is **Instruments**, which is part of Xcode. You can use the **Time Profiler** instrument in Instruments to capture stacks and convert the captured data into a flame graph using tools like [flamegraph.pl](https://github.com/brendangregg/FlameGraph/blob/master/flamegraph.pl).
+While there isn’t a built-in tool in Xcode specifically designed for creating flame graphs like Linux `perf`, you can use external tools to generate flame graphs for some apps developed using Xcode. One commonly used tool for creating flame graphs is **Instruments**, which is part of Xcode. You can use the **Time Profiler** instrument in Instruments to capture stacks and convert the captured data into a flame graph using tools like [flamegraph.pl](https://github.com/brendangregg/FlameGraph/blob/master/flamegraph.pl).
 
 Running the app with Instruments using the Time Profiler and then converting the collected data into a flame graph can give you insights into your application's performance profile.
 
@@ -82,12 +64,10 @@ struct TerribleArray<T: Comparable> {
      */
     private var storage: Array<(Int, T)> = Array()
 
-
     /* oh my */
     private func maximumIndex() -> Int {
         return (self.storage.map { $0.0 }.max()) ?? -1
     }
-
 
     /* expectation: amortised O(1) but implementation is O(n) */
     public mutating func append(_ value: T) {
@@ -95,7 +75,6 @@ struct TerribleArray<T: Comparable> {
         self.storage.append((maxIdx + 1, value))
         assert(self.storage.count == maxIdx + 2)
     }
-
 
     /* expectation: O(1) but implementation is O(n) */
     public subscript(index: Int) -> T? {
@@ -105,19 +84,16 @@ struct TerribleArray<T: Comparable> {
     }
 }
 
-
 protocol FavouriteNumbers {
     func addFavouriteNumber(_ number: Int)
     func isFavouriteNumber(_ number: Int) -> Bool
 }
-
 
 public class MyFavouriteNumbers: FavouriteNumbers {
     private var storage: TerribleArray<Int>
     public init() {
         self.storage = TerribleArray<Int>()
     }
-
 
     /* - user's expectation: O(n)
      * - reality O(n^2) because of TerribleArray */
@@ -138,7 +114,6 @@ public class MyFavouriteNumbers: FavouriteNumbers {
         return found
     }
 
-
     /* - user's expectation: amortised O(1)
      * - reality O(n) because of TerribleArray */
     public func addFavouriteNumber(_ number: Int) {
@@ -147,37 +122,30 @@ public class MyFavouriteNumbers: FavouriteNumbers {
     }
 }
 
-
 let x: FavouriteNumbers = MyFavouriteNumbers()
-
 
 for f in 0..<2_000 {
     x.addFavouriteNumber(f)
 }
 ```
 
-*Generating a flame graph*
+**Generating a flame graph**
 
 To generate flame graphs in Swift on Linux, you can use various tools such as `perf` combined with `FlameGraph` scripts to collect data on CPU utilization and stack traces. They can then be visualized using flame graph tools to gain insights into the performance characteristics of the application by following these steps:
 
 1. [Install and configure](https://www.swift.org/server/guides/linux-perf.html) `perf` for Linux to collect performance data.
-2. Compile the code using `swift build -c release` into a binary called `./slow`:
-    a. Open Terminal.
+2. Compile the code using `swift build -c release` into a binary called `./slow` by following these steps:
 
-    b. Navigate to the directory containing your Swift code, typically the root directory of your Swift package.
+   a. Open your Terminal and navigate to the directory containing your Swift code, typically the root directory of your Swift package.
 
-    c. Run the following command:
-    
+   b. Run the following command to compile the code in release mode, optimizing the build for performance:
     ```
     swift build -c release
     ```
+        
+    After the build process completes successfully, you can find the compiled binary in the `.build/release/` directory within your Swift package’s directory.
 
-    This command compiles the code in release mode, optimizing the build for performance.
-    
-    d. After the build process completes successfully, you can find the compiled binary in the `.build/release/` directory within your Swift package’s directory.
-
-    e. Copy the compiled binary to the current directory and rename it to slow using the following command:
-    
+    c. Copy the compiled binary to the current directory and rename it to `slow` using the following command:
     ```
     cp .build/release/YourExecutableName ./slow
     ```
@@ -185,40 +153,34 @@ To generate flame graphs in Swift on Linux, you can use various tools such as `p
     Replace `YourExecutableName` with the actual name of your compiled binary.
     
 3. Clone the repository in the `~/FlameGraph` directory using this command:
-
-```
-git clone https://github.com/brendangregg/FlameGraph
-```
+    ```
+    git clone https://github.com/brendangregg/FlameGraph
+    ```
 
 4. Run this command to record the stack frames with a 99 Hz sampling frequency:
-
-```
-sudo perf record -F 99 --call-graph dwarf -- ./slow
-```
+    ```
+    sudo perf record -F 99 --call-graph dwarf -- ./slow
+    ```
 
 Alternatively, to attach to an existing process use:
-
-```
-sudo perf record -F 99 --call-graph dwarf -p PID_OF_SLOW
-```
+    ```
+    sudo perf record -F 99 --call-graph dwarf -p PID_OF_SLOW
+    ```
 
 5. Export the recording into `out.perf` by running this command:
-
-```
-sudo perf script > out.perf
-```
+    ```
+    sudo perf script > out.perf
+    ```
 
 6. Aggregate the recorded stacks and demangle the symbols using this command:
-
-```
-~/FlameGraph/stackcollapse-perf.pl out.perf | swift demangle > out.folded
-```
+    ```
+    ~/FlameGraph/stackcollapse-perf.pl out.perf | swift demangle > out.folded
+    ```
 
 7. Export the result into an SVG file to visually represent the functions and their relative CPU usage using the following command:
-    
-```
-~/FlameGraph/flamegraph.pl out.folded > out.svg # Produce
-```
+    ```
+    ~/FlameGraph/flamegraph.pl out.folded > out.svg # Produce
+    ```
 
 The resulting Flamegraph file should look similar to the one below:
 
