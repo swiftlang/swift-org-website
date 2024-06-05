@@ -13,7 +13,7 @@ title: Install Swift
     <p class="description">
       Download the current version of Xcode which contains the latest Swift release.
     </p>
-    <a href="https://itunes.apple.com/app/xcode/id497799835" class="cta-secondary external">Install Xcode</a>
+    <a href="https://developer.apple.com/xcode/" class="cta-secondary external">Install Xcode</a>
   </li>
   <li class="resource">
     <h3>Package Installer</h3>
