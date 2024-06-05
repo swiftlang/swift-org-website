@@ -44,7 +44,7 @@ layout: source
   });
 
   document.addEventListener('DOMContentLoaded', function() {
-    var sectionToggles = document.querySelectorAll('.section-toggle');
+    const sectionToggles = document.querySelectorAll('.section-toggle');
 
     sectionToggles.forEach(function(toggle) {
       toggle.addEventListener('mousedown', function() {
@@ -58,28 +58,34 @@ layout: source
       });
     });
 
-    const archiveYears = document.querySelectorAll('.archive .years .year');
+    const interactiveTabs = document.querySelectorAll('.interactive-tabs');
 
-    if (archiveYears.length > 0) {
-      archiveYears.forEach(function(year) {
-        year.addEventListener('click', function(e) {
-          const activeYear = document.querySelector('.archive .year[aria-pressed="true"]');
-          const activeMonth = document.querySelector('.archive .months.active');
-          const months = document.querySelector(`.archive .months[data-year='${year.textContent}']`);
+    if (interactiveTabs.length > 0) {
+      interactiveTabs.forEach(function(interactiveTab) {
+        const tabButtons = interactiveTab.querySelectorAll('.interactive-tabs button');
 
-          if (activeYear) {
-            activeYear.setAttribute('aria-pressed', 'false');
-          }
+        if (tabButtons.length > 0) {
+          tabButtons.forEach(function(tabButton) {
+            tabButton.addEventListener('click', function(e) {
+              const activeTabButton = interactiveTab.querySelector('button[aria-pressed="true"]');
+              const activeContent = interactiveTab.querySelector('.content.active');
+              const content = interactiveTab.querySelector(`.content[data-tab='${tabButton.textContent}']`);
 
-          e.currentTarget.setAttribute('aria-pressed', 'true');
+              if (activeTabButton) {
+                activeTabButton.setAttribute('aria-pressed', 'false');
+              }
 
-          if (activeMonth) {
-            activeMonth.classList.remove('active');
-          }
+              e.currentTarget.setAttribute('aria-pressed', 'true');
 
-          months.classList.add('active');
-        });
-      });
+              if (activeContent) {
+                activeContent.classList.remove('active');
+              }
+
+              content.classList.add('active');
+            });
+          });
+        }
+      })
     }
   });
 })();

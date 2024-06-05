@@ -1192,21 +1192,23 @@ article {
   }
 }
 
-.archive {
-  .years {
+.interactive-tabs {
+  .tabs {
     display: flex;
+    flex-direction: row;
+    gap: 1rem;
     padding: 0;
 
-    .year {
+    button, a {
       cursor: pointer;
-      margin-right: 1rem;
       background-color: transparent;
       border-radius: var(--border-radius);
       border: 1px solid var(--color-text);
       color: var(--color-text);
-      display: block;
       padding: .5rem;
+      display: block;
       text-align: center;
+      grid-template-columns: repeat(3, 1fr);
 
       &:hover, &[aria-pressed="true"] {
         background-color: var(--color-text);
@@ -1214,13 +1216,27 @@ article {
         text-decoration: none;
       }
     }
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }
 
-  .months {
+  .content {
     display: none;
 
     &.active {
       display: block;
+    }
+  }
+}
+
+.interactive-tabs.os {
+  .tabs {
+    button, a {
+      width: 100%;
+      align-content: center;
     }
   }
 }

@@ -24,6 +24,13 @@
       padding-top: 0;
     }
 
+    h4 {
+      font-size: 0.8rem;
+      color: var(--color-secondary-label);
+      border: none;
+      padding: 0.5rem 0 0.125rem;
+    }
+
     .description {
       flex-grow: 1;
       color: var(--color-secondary-label);
@@ -86,6 +93,7 @@ a.cta-secondary {
   display: block;
   padding: 0.5rem 0;
   text-align: center;
+  margin-bottom: 0.5rem;
 
   &:hover {
     background-color: var(--color-text);

@@ -1,8 +1,3 @@
----
-layout: page
-title: Windows Installation Options
----
-
 ## Dependencies
 
 Swift has the following general dependencies:
@@ -20,7 +15,3 @@ Swift on Windows has the following additional platform specific dependencies:
 ## Developer Mode
 
 In order to develop applications, particularly with the Swift Package Manager, you will need to enable developer mode. Please see Microsoft’s [documentation](https://docs.microsoft.com/windows/apps/get-started/enable-your-device-for-development) for instructions about how to enable developer mode.
-
-{% include_relative _winget.md %}
-{% include_relative _scoop.md %}
-{% include_relative _traditional.md %}
