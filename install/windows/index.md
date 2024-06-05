@@ -70,7 +70,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     <a href="https://download.swift.org/swift-6.0-branch/windows10/{{ windows10_6_0_builds.first.dir }}/{{ windows10_6_0_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
   </li>
 </ul>
-<a href="/install/macos/package_installer" class="cta-secondary">Instructions</a>
+<a href="/install/windows/traditional/" class="cta-secondary">Instructions</a>
 <details class="download" style="margin-bottom: 0;">
   <summary>Older Snapshots (main)</summary>
 </details>
