@@ -34,9 +34,9 @@ Debugging performance issues can sometimes be a complex and iterative process. I
 
 #### Flame graphs in Xcode
 
-While there isn’t a built-in tool in Xcode specifically designed for creating flame graphs like Linux `perf`, you can use external tools to generate flame graphs for some apps developed using Xcode. One commonly used tool for creating flame graphs is **Instruments**, which is part of Xcode. You can use the **Time Profiler** instrument in Instruments to capture stacks and convert the captured data into a flame graph using tools like [flamegraph.pl](https://github.com/brendangregg/FlameGraph/blob/master/flamegraph.pl).
+While there isn’t a built-in tool in Xcode specifically designed for creating flame graphs like Linux `perf`, you can use external tools to generate flame graphs for some apps developed using Xcode. 
 
-Running the app with Instruments using the Time Profiler and then converting the collected data into a flame graph can give you insights into your application's performance profile.
+One commonly used tool for creating flame graphs is Instruments, which is part of Xcode. You can use the Time Profiler instrument in Instruments to capture stacks and convert the captured data into a flame graph using tools like [flamegraph.pl](https://github.com/brendangregg/FlameGraph/blob/master/flamegraph.pl). Running the app with Instruments using the Time Profiler and then converting the collected data into a flame graph can give you insights into your application's performance profile.
 
 #### Flame graphs in Linux
 
@@ -131,10 +131,10 @@ for f in 0..<2_000 {
 
 **Generating a flame graph**
 
-To generate flame graphs in Swift on Linux, you can use various tools such as `perf` combined with `FlameGraph` scripts to collect data on CPU utilization and stack traces. They can then be visualized using flame graph tools to gain insights into the performance characteristics of the application by following these steps:
+To generate flame graphs in Swift on Linux, you can use various tools such as `perf` combined with `FlameGraph` scripts to collect data on CPU utilization and stack traces. They can then be visualized using flame graph tools to gain insights into the performance characteristics of the application as follows:
 
 1. [Install and configure](https://www.swift.org/server/guides/linux-perf.html) `perf` for Linux to collect performance data.
-2. Compile the code using `swift build -c release` into a binary called `./slow` by following these steps:
+2. Compile the code using `swift build -c release` into a binary called `./slow` by using these steps:
 
    a. Open your Terminal and navigate to the directory containing your Swift code, typically the root directory of your Swift package.
 
