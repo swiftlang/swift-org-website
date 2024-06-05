@@ -1195,11 +1195,12 @@ article {
 .interactive-tabs {
   .tabs {
     display: flex;
+    flex-direction: row;
+    gap: 1rem;
     padding: 0;
 
     button, a {
       cursor: pointer;
-      margin-right: 1rem;
       background-color: transparent;
       border-radius: var(--border-radius);
       border: 1px solid var(--color-text);
@@ -1216,6 +1217,10 @@ article {
       }
     }
 
+    @media (max-width: 480px) {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }
 
   .content {
