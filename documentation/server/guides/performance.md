@@ -44,7 +44,7 @@ Flame graphs can be created on most platforms, including Swift on Linux. In this
 
 For discussion, here’s an *example flame graph program* on Linux that utilizes the `TerribleArray` data structure, leading to inefficient *O(n)* appends instead of the expected *O(1)* amortized time complexity for `Array`. This can cause performance issues and impact the overall efficiency of the program.
 
-```
+```swift
 /* a terrible data structure which has a subset of the operations that Swift's
  * array does:
  *  - retrieving elements by index
