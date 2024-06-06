@@ -41,14 +41,14 @@ Swift’s optimizer produces faster code and allocates less memory in `release` 
 
 Follow the steps below:
 
-1. **Build your code** in `release` mode by running this command: 
+Step 1. **Build your code** in `release` mode by running this command: 
 ```bash
 swift run -c release
 ```
 
-2. [**Install `perf`**](https://www.swift.org/server/guides/linux-perf.html) to profile your code for your environment to gather performance-related data and optimize the performance of your Swift server applications.
+Step 2. [**Install `perf`**](https://www.swift.org/server/guides/linux-perf.html) to profile your code for your environment to gather performance-related data and optimize the performance of your Swift server applications.
 
-3. **Clone the FlameGraph project** to generate a flame graph visualization that helps you quickly identify hotspots in the codebase, visualize call paths, understand the flow of execution, and optimize performance. To generate a flame graph, you will need to clone the [`FlameGraph`](https://github.com/brendangregg/FlameGraph) repository on your machine or into a container, making it available at `~/FlameGraph`. 
+Step 3. **Clone the FlameGraph project** to generate a flame graph visualization that helps you quickly identify hotspots in the codebase, visualize call paths, understand the flow of execution, and optimize performance. To generate a flame graph, you will need to clone the [`FlameGraph`](https://github.com/brendangregg/FlameGraph) repository on your machine or into a container, making it available at `~/FlameGraph`. 
 
 Run this command to clone the `https://github.com/brendangregg/FlameGraph` repository in `~/FlameGraph`:
 ```bash
@@ -335,7 +335,7 @@ This flame graph is a direct result of the example program in this section. Hove
 ## Allocation flame graphs on macOS
 Although much of this tutorial focuses on the `perf` tool, you can create the same graphs using macOS. 
 
-1. To get started, collect the raw data using the [DTrace](https://en.wikipedia.org/wiki/DTrace) framework by running this command:
+Step 1. To get started, collect the raw data using the [DTrace](https://en.wikipedia.org/wiki/DTrace) framework by running this command:
 
     ```bash
     sudo dtrace -n 'pid$target::malloc:entry,pid$target::posix_memalign:entry,pid$target::calloc:entry,pid$target::malloc_zone_malloc:entry,pid$target::malloc_zone_calloc:entry,pid$target::malloc_zone_memalign:entry { @s[ustack(100)] = count(); } ::END { printa(@s); }' -c .build/release/your-program > raw.stacks
@@ -350,7 +350,7 @@ Although much of this tutorial focuses on the `perf` tool, you can create the sa
 
     > Note: On Apple platforms, Swift uses a slightly larger number of allocation functions than Linux.
 
-2. Once the data is collected, run this command to create an SVG file:
+Step 2. Once the data is collected, run this command to create an SVG file:
 
     ```bash
     cat raw.stacks |\
