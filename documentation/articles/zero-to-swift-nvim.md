@@ -17,7 +17,7 @@ experience.
 It is not a tutorial on how to use Neovim and assumes some familiarity
 with modal text editors like _Neovim_, _vim_, or _vi_.
 
-Although this article references Ubuntu 22.04, the configuration itself works on
+Although the article references Ubuntu 22.04, the configuration itself works on
 any operating system where a recent version of Neovim and a Swift toolchain is
 available. 
 
@@ -38,8 +38,9 @@ The following sections are provided to help guide you through the setup:
 - [Autocomplete](#auto-complete)
 - [Snippets](#Snippets)
 
-> Note: If you already have Neovim, Swift, and a package manager installed, you can skip to setting up [Language Server support](#language-server-support). If you
-are bypassing the [prerequisites](#prerequisites) section, make sure your
+> Tip: If you already have Neovim, Swift, and a package manager installed, you can skip to setting up [Language Server support](#language-server-support).
+
+> Note: If you are bypassing the [Prerequisites](#prerequisites) section, make sure your
 copy of Neovim is version v0.9.4 or higher, or you may experience issues with some
 of the Language Server Protocol (LSP) Lua APIs.
 
