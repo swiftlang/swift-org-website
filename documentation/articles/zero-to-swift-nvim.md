@@ -5,23 +5,31 @@ title: From Zero to Swift | Configuring Neovim for Swift Development
 author: [etcwilde]
 ---
 
-Neovim is a modern reimplementation of _vim_, a popular terminal-based text
+Neovim is a modern reimplementation of _Vi IMproved (vim)_, a popular terminal-based text
 editor.
 Neovim adds new features like asynchronous operations and powerful Lua bindings
-for a snappy editing experience in addition to the improvements _vim_ brought to
+for a snappy editing experience, in addition to the improvements _vim_ brings to
 the original _vi_ editor.
+
 This article walks you through configuring Neovim for Swift development,
 providing configurations for various plugins to build a working Swift editing
 experience.
-It is not a tutorial on how to use Neovim and I am assuming some familiarity
+It is not a tutorial on how to use Neovim and assumes some familiarity
 with modal text editors like _Neovim_, _vim_, or _vi_.
 
-I am writing this article on Ubuntu 22.04, but the configuration itself works on
-any operating system where a recent version of Neovim and a Swift toolchain are
-available. We will start by installing Neovim and Swift and then install
-`lazy.nvim` to manage our plugins. Then we'll configure the SourceKit-LSP
-server, setup Language-Server-driven autocompletion with `nvim-cmp`, and
-snippets with `LuaSnip`.
+Although this article references Ubuntu 22.04, the configuration itself works on
+any operating system where a recent version of Neovim and a Swift toolchain is
+available. 
+
+Basic setup and configuration includes:
+
+1. Installing Neovim and Swift.
+2. Installing `lazy.nvim` to manage our plugins.
+3. Configuring the SourceKit-LSP server.
+4. Setting up Language-Server-driven autocompletion with `nvim-cmp`.
+5. Setting up snippets with `LuaSnip`.
+
+The following sections are provided to help guide you through the setup:
 
 - [Prerequisites](#prerequisites)
 - [Package Management](#packaging-with-lazy)
@@ -30,10 +38,9 @@ snippets with `LuaSnip`.
 - [Autocomplete](#auto-complete)
 - [Snippets](#Snippets)
 
-If you already have Neovim, Swift, and a package manager installed, you can skip
-down to setting up [Language Server support](#language-server-support). If you
-are skipping over the [prerequisites](#prerequisites) section, ensure that your
-copy of Neovim is at least version v0.9.4 or you may run into issues with some
+> Note: If you already have Neovim, Swift, and a package manager installed, you can skip to setting up [Language Server support](#language-server-support). If you
+are bypassing the [prerequisites](#prerequisites) section, make sure your
+copy of Neovim is version v0.9.4 or higher, or you may experience issues with some
 of the Language Server Protocol (LSP) Lua APIs.
 
 ## Prerequisites
