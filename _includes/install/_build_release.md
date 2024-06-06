@@ -1,4 +1,4 @@
-## Latest Release (Swift {{ site.data.builds.swift_releases.last.name }})
+## Latest Release (Swift {{ site.data.builds.swift_releases.last.name }}) {#latest}
 
 {% assign tag = site.data.builds.swift_releases.last.tag %}
 {% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
