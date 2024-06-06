@@ -40,7 +40,7 @@ You can then install the Swift extension from the
 [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang)
 or from within the VS Code extensions view:
 
-![Install the vscode-swift extension](/assets/images/getting-started-with-vscode-swift/vscode-swift.png)
+![Install the vscode-swift extension](/assets/images/getting-started-with-vscode-swift/installation.png)
 
 ## Creating a new Swift project
 
