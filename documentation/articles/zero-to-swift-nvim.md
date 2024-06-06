@@ -268,8 +268,8 @@ lspconfig.sourcekit.setup {
 
 If you're interested in reading more about this issue, the conversations in the
 following issues describe the issue in more detail:
- - https://github.com/neovim/neovim/issues/13634
- - https://github.com/microsoft/vscode-eslint/pull/1307
+ - [LSP: Implement dynamicRegistration](https://github.com/neovim/neovim/issues/13634)
+ - [add documentFormattingProvider to server capabilities response](https://github.com/microsoft/vscode-eslint/pull/1307)
 
 ## Auto Complete
 
