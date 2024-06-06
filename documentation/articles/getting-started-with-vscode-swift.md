@@ -185,12 +185,12 @@ filtered list of tests can be run, or debugged.
 <div class="warning" markdown="1">
 This is an advanced feature used to configure VS Code with a toolchain other
 than the default on your machine. It is recommended to use `xcode-select` on
-macOS or `swiftly` on Linux to switch between toolchains.
+macOS or `swiftly` on Linux to switch between toolchains globally.
 </div>
 
 The Swift extension will automatically detect your installed Swift toolchain.
 However, it also provides a command called `Swift: Select Tooclhain...` which
-can be used to select between toolchains if you have multiple installed.
+can be used to select between toolchains if you have multiple installed:
 
 ![Toolchain selection](/assets/images/getting-started-with-vscode-swift/toolchain-selection/dialog.png)
 
