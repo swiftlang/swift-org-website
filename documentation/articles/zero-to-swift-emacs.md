@@ -44,14 +44,14 @@ will install Emacs and set up some shortcuts for you.
 
 From a prompt, enter
 
-```shell
+```console
 $ sudo apt-get install emacs
 ```
 
 or if you are doing this on a server system or in a container where
 you have no plans to use the GUI,
 
-```shell
+```console
 $ sudo apt-get install emacs-nox
 ```
 
@@ -59,7 +59,7 @@ $ sudo apt-get install emacs-nox
 
 From a prompt, enter
 
-```shell
+```console
 $ sudo dnf install emacs
 ```
 
@@ -92,7 +92,7 @@ website.  You can un-tar that in a location of your choice,
 e.g. `/usr/local`.  You may also wish to make a symbolic link to make
 it easier to remember where things are.
 
-```shell
+```console
 $ curl -L -O https://download.swift.org/swift-5.10-release/ubuntu2204/swift-5.10-RELEASE/swift-5.10-RELEASE-ubuntu22.04.tar.gz
 $ cd /usr/local
 $ sudo tar xvzf ~/swift-5.10-RELEASE-ubuntu22.04.tar.gz
