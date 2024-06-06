@@ -55,7 +55,7 @@ version of Neovim shipped in the Ubuntu 22.04 `apt` repository is too old to
 support many of the APIs that we will be using. For this install, I used `snap`
 to install Neovim v0.9.4.
 
-```bash
+```console
  $  sudo snap install nvim --classic
  $  nvim --version
 NVIM v0.9.4
@@ -82,7 +82,7 @@ tarball. This package contains the runtime libraries, compilers, debugger, and
 integrated development environment (IDE) tools needed for a Swift development
 experience.
 
-```bash
+```console
  $  cd ~/Downloads
  $  wget https://download.swift.org/swift-5.10-release/ubuntu2204/swift-5.10-RELEASE/swift-5.10-RELEASE-ubuntu22.04.tar.gz
  $  tar xf swift-5.10-RELEASE-ubuntu22.04.tar.gz
@@ -93,7 +93,7 @@ directory. The downloads folder isn't a great place to keep things permanently,
 but should be fine for now. We'll need to add the compiler and tools to our
 path.
 
-```bash
+```console
  $  export PATH="$PWD/swift-5.10-RELEASE-ubuntu22.04/usr/bin:$PATH"
  $  which swiftc
 /home/ewilde/Downloads/swift-5.10-RELEASE-ubuntu22.04/usr/bin/swiftc
@@ -117,7 +117,7 @@ You can still use a `vimrc` with vimscript, but we'll use Lua.
 The main Neovim configuration file goes in `~/.config/nvim`. The other Lua files
 go in `~/.config/nvim/lua`. Go ahead and create an `init.lua` now;
 
-```bash
+```console
  $  mkdir -p ~/.config/nvim/lua && cd ~/.config/nvim
  $  nvim init.lua
 ```
@@ -163,7 +163,7 @@ directory for each plugin. We'll also want a place to put our own non-plugin
 related configurations, so we'll stick it in `config/`. Go ahead and create
 those directories now.
 
-```bash
+```console
  $  mkdir lua/plugins lua/config
 ```
 
