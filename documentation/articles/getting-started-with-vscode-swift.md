@@ -53,19 +53,19 @@ search for the `Swift: Create New Project...` command which will guide you
 through the process. You will first be asked to select from a list of project
 types:
 
-![Create new project](/assets/images/getting-started-with-vscode-swift/create_new_swift_project.png)
+![Select a project template](/assets/images/getting-started-with-vscode-swift/create-new-project/select-project-template.png)
 
 Then you will have to select a directory where the project will be stored in and
 give it a name:
 
-![Name the new project](/assets/images/getting-started-with-vscode-swift/name_the_swift_project.png)
+![Name the new project](/assets/images/getting-started-with-vscode-swift/create-new-project/name-the-project.png)
 
 Finally, the extension will ask you if you want to open the project in the
 current window, a new window, or add it to the current workspace. The default
 behaviour can be configured by using the `swift.openAfterCreateNewProject`
 setting:
 
-![Open newly created project](/assets/images/getting-started-with-vscode-swift/open_newly_created_project.png)
+![Open newly created project](/assets/images/getting-started-with-vscode-swift/create-new-project/open-project.png)
 
 ## Language Features
 
@@ -76,7 +76,7 @@ You **must** run a build before Swift language features will be available.
 The Swift extension uses [SourceKit LSP](https://github.com/apple/sourcekit-lsp)
 to power language features.
 
-![Package swift actions](/assets/images/getting-started-with-vscode-swift/package_swift_actions.png)
+![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
 
 ## Swift Tasks
 
@@ -110,7 +110,7 @@ The above task is configured to be in the `build` group. This means it will
 appear in the `run build tasks` menu that can be opened with `CMD + Shift + B`
 on macOS or `Ctrl + Shift + B` on other platforms:
 
-![Run build task menu](/assets/images/getting-started-with-vscode-swift/build_task_menu.png)
+![Run build task menu](/assets/images/getting-started-with-vscode-swift/tasks/build-tasks.png)
 
 ## Debugging
 
@@ -120,7 +120,7 @@ time you launch VS Code. You will need to either apply the configuration
 globally (user settings) or to your workspace (workspace settings) for the
 debugger to work properly.
 
-![Configure the Debugger](/assets/images/getting-started-with-vscode-swift/debugger-configuration.png)
+![Configure the Debugger](/assets/images/getting-started-with-vscode-swift/debugging/configure-lldb.png)
 
 </div>
 
@@ -151,21 +151,24 @@ environment variables, etc:
 }
 ```
 
-![Debugging](/assets/images/getting-started-with-vscode-swift/debugging.png)
+![Debugging](/assets/images/getting-started-with-vscode-swift/debugging/debugging.png)
 
 ## Test Explorer
 
 VS Code provides a Test Explorer view in the left sidebar which can be used to
-view, run, and debug tests. The extension supports [XCTest](https://developer.apple.com/documentation/xctest)
-as well as [swift-testing](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing) tests. As you write tests
-they are automatically added to the Test Explorer.
+view, run, and debug tests. The extension supports
+[XCTest](https://developer.apple.com/documentation/xctest) as well as
+[swift-testing](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing)
+tests. As you write tests they are automatically added to the Test Explorer.
 
-![Inline test errors](/assets/images/getting-started-with-vscode-swift/inline_assertion_failures.png)
+![Inline test errors](/assets/images/getting-started-with-vscode-swift/testing/inline_assertion_failures.png)
 
-Swift-testing tests annotated with [tags](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing/addingtags)
-can be filtered in the Test Explorer using `@TestTarget:tagName`, and then this filtered list of tests can be run, or debugged.
+Swift-testing tests annotated with
+[tags](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing/addingtags)
+can be filtered in the Test Explorer using `@TestTarget:tagName`, and then this
+filtered list of tests can be run, or debugged.
 
-![Filtering tests by custom tags](/assets/images/getting-started-with-vscode-swift/filtering_tests_by_custom_tags.png)
+![Filtering tests by custom tags](/assets/images/getting-started-with-vscode-swift/testing/filtering_tests_by_custom_tags.png)
 
 ## Advanced Toolchain Selection
 
@@ -179,16 +182,16 @@ The Swift extension will automatically detect your installed Swift toolchain.
 However, it also provides a command called `Swift: Select Tooclhain...` which
 can be used to select between toolchains if you have multiple installed.
 
-![Toolchain selection](/assets/images/getting-started-with-vscode-swift/toolchain_selection.png)
+![Toolchain selection](/assets/images/getting-started-with-vscode-swift/toolchain-selection/dialog.png)
 
 You may be prompted to select where to configure this new path. The options are
 to save it in User Settings or Workspace Settings. Keep in mind that Workspace
 Settings take precedence over User Settings:
 
-![Settings selection](/assets/images/getting-started-with-vscode-swift/settings_selection.png)
+![Settings selection](/assets/images/getting-started-with-vscode-swift/toolchain-selection/configuration.png)
 
 The Swift extension will then prompt you to reload the extension in order to
 pick up the new toolchain. You must do so otherwise the extension will not
 function correctly:
 
-![Swift path change warning](/assets/images/getting-started-with-vscode-swift/swift_path_change.png)
+![Reload VS Code warning](/assets/images/getting-started-with-vscode-swift/toolchain-selection/reload.png)
