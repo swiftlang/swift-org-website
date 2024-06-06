@@ -42,29 +42,27 @@ Swift’s optimizer produces faster code and allocates less memory in `release` 
 Follow the steps below:
 
 1. **Build your code** in `release` mode by running this command: 
-    ```bash
-    swift run -c release
-    ```
+```bash
+swift run -c release
+```
 
 2. [**Install `perf`**](https://www.swift.org/server/guides/linux-perf.html) to profile your code for your environment to gather performance-related data and optimize the performance of your Swift server applications.
 
 3. **Clone the FlameGraph project** to generate a flame graph visualization that helps you quickly identify hotspots in the codebase, visualize call paths, understand the flow of execution, and optimize performance. To generate a flame graph, you will need to clone the [`FlameGraph`](https://github.com/brendangregg/FlameGraph) repository on your machine or into a container, making it available at `~/FlameGraph`. 
 
-    Run this command to clone the `https://github.com/brendangregg/FlameGraph` repository in `~/FlameGraph`:
+Run this command to clone the `https://github.com/brendangregg/FlameGraph` repository in `~/FlameGraph`:
+```bash
+git clone https://github.com/brendangregg/FlameGraph
+```
 
-    ```bash
-    git clone https://github.com/brendangregg/FlameGraph
-    ```
-
-    When running in Docker, use this command to bind-mount the `FlameGraph` repository into the container:
-
-    ```bash
-    docker run -it --rm \
+When running in Docker, use this command to bind-mount the `FlameGraph` repository into the container:
+```bash
+docker run -it --rm \
            --privileged \
            -v "/path/to/FlameGraphOnYourMachine:/FlameGraph:ro" \
            -v "$PWD:PWD" -w "$PWD" \
            swift:latest
-    ```
+```
 
 By visually highlighting the most frequently called functions or the functions consuming the most processing time, you can focus your optimization efforts on improving the performance of critical code paths.
 
