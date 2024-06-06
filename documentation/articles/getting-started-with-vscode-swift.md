@@ -94,7 +94,7 @@ build all of your Swift targets in release mode:
   "tasks": [
     {
       "type": "swift",
-      "label": "Swift Build All (Release)",
+      "label": "Swift Build All - Release",
       "detail": "swift build --build-tests",
       "args": ["build", "--build-tests", "-c", "release"],
       "env": {},
@@ -130,9 +130,9 @@ The Swift extension relies on the
 [Code-LLDB extension](https://github.com/vadimcn/vscode-lldb) to enable
 debugging support.
 
-By default, the extension will create a launch configuration for any binaries in
-your Swift package that you can configure yourelf to add command line arguments,
-environment variables, etc:
+By default, the extension will create a launch configuration for each executable
+target in your Swift package. You may configure these yourself to add command
+line arguments, environment variables, etc:
 
 ```json
 {
@@ -150,6 +150,16 @@ environment variables, etc:
   ]
 }
 ```
+
+You can launch a debugging session via the Debug view in VS Code. Select the
+launch configuration you wish to debug and then click on the green play button
+to launch it. The executable will be launched and you can set breakpoints in
+your Swift code that will be hit.
+
+The screenshot below depicts an example of debugging a hello world program. It
+is paused on a breakpoint and you can see that the Debug View shows the values
+of variables in scope. You can also hover over identifiers in the editor to see
+their variable values:
 
 ![Debugging](/assets/images/getting-started-with-vscode-swift/debugging/debugging.png)
 
