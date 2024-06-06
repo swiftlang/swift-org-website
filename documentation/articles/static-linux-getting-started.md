@@ -160,9 +160,7 @@ Building for debugging...
 [8/8] Linking hello
 Build complete! (2.00s)
 $ file .build/aarch64-swift-linux-musl/debug/hello
-.build/aarch64-swift-linux-musl/debug/hello: ELF 64-bit LSB
-executable, ARM aarch64, version 1 (SYSV), statically linked, with
-debug_info, not stripped
+.build/aarch64-swift-linux-musl/debug/hello: ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), statically linked, with debug_info, not stripped
 ```
 
 These can be copied to an appropriate Linux-based system and executed:

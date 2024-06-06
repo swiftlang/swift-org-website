@@ -58,6 +58,11 @@
     url: /documentation/concurrency/
     description: |
         Prepare for Swift 6 by enabling complete concurrency checking in your SwiftPM packages, Xcode projects, and CI scripts.
+  - title: Getting Started with the Static Linux SDK
+    url: /documentation/articles/static-linux-getting-started.html
+    description: |
+      Learn how to get started building binaries for Linux with no system dependencies (not even the Swift runtime or C library).
+      Even better, you can do this from any system with a Swift toolchain, allowing you to develop on macOS or Windows and easily deploy to Linux when you go to production.
 #----------------------------------------------------
 - header: Contributing
   pages:
