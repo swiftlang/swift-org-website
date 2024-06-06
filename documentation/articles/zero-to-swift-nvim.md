@@ -26,8 +26,8 @@ Basic setup and configuration includes:
 1. Installing Neovim and Swift.
 2. Installing `lazy.nvim` to manage our plugins.
 3. Configuring the SourceKit-LSP server.
-4. Setting up Language-Server-driven autocompletion with `nvim-cmp`.
-5. Setting up snippets with `LuaSnip`.
+4. Setting up Language-Server-driven autocompletion with _nvim-cmp_.
+5. Setting up snippets with _LuaSnip_.
 
 The following sections are provided to help guide you through the setup:
 
@@ -291,14 +291,14 @@ return {
 ```
 
 Next, we'll configure some completion sources to provide autocompletion results.
-`nvim-cmp` doesn't come with completion sources, those are additional plugins.
+_nvim-cmp_ doesn't come with completion sources, those are additional plugins.
 For this configuration, I want results based on LSP, filepath completion, and
-the text in my current buffer. For more, the `nvim-cmp` Wiki has a [list of
+the text in my current buffer. For more, the _nvim-cmp_ Wiki has a [list of
 sources](https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources).
 
-To start, we will tell _lazy.nvim_ about the new plugins and that `nvim-cmp` depends
+To start, we will tell _lazy.nvim_ about the new plugins and that _nvim-cmp_ depends
 on them.
-This ensures that _lazy.nvim_ will initialize each of them when `nvim-cmp` is loaded.
+This ensures that _lazy.nvim_ will initialize each of them when _nvim-cmp_ is loaded.
 
 ```lua
 -- lua/plugins/autocomplete.lua
@@ -319,9 +319,9 @@ return {
 }
 ```
 
-Now we need to configure `nvim-cmp` to take advantage of the auto-completion
+Now we need to configure _nvim-cmp_ to take advantage of the auto-completion
 sources.
-Unlike many other plugins, `nvim-cmp` hides many of its inner-workings, so
+Unlike many other plugins, _nvim-cmp_ hides many of its inner-workings, so
 configuring it is a little different from other plugins. Specifically, you'll
 notice the differences around setting key-bindings. We start out by requiring
 the module from within its own configuration function and will call the setup
@@ -405,9 +405,9 @@ return {
 }
 ```
 
-Now we'll wire the snippet expansions into `nvim-cmp`. First, we'll add
-`LuaSnip` as a dependency of `nvim-cmp` to ensure that it gets loaded before
-`nvim-cmp`. Then we'll wire it into the tab key expansion behavior.
+Now we'll wire the snippet expansions into _nvim-cmp_. First, we'll add
+_LuaSnip_ as a dependency of _nvim-cmp_ to ensure that it gets loaded before
+_nvim-cmp_. Then we'll wire it into the tab key expansion behavior.
 
 ```lua
 {
@@ -472,7 +472,7 @@ Now our tab-key is thoroughly overloaded in super-tab fashion.
  - If you're neither auto-completing nor expanding a snippet, it will behave
    like a normal `tab` key.
 
-Now we need to write up some snippets. LuaSnip supports several snippet formats,
+Now we need to write up some snippets. _LuaSnip_ supports several snippet formats,
 including a subset of the popular
 [TextMate](https://macromates.com/textmate/manual/snippets),
 [Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets) snippet format,
