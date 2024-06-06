@@ -11,4 +11,5 @@
     {% endfor %}
   </div>
 </div>
-<br>  
+
+<hr>
