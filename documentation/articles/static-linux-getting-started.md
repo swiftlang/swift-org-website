@@ -100,21 +100,21 @@ here](https://www.swift.org/install/macos/#installation-via-swiftorg-package-ins
 One that is out of the way, actually installing the Static Linux SDK
 is easy; at a prompt, enter
 
-```shell
-swift sdk install <insert-URL-here>
+```console
+$ swift sdk install <insert-URL-here>
 ```
 
 Swift will download and install the SDK on your system.  You can get a
 list of installed SDKs with
 
-```shell
-swift sdk list
+```console
+$ swift sdk list
 ```
 
 and it's also possible to remove them using
 
-```shell
-swift sdk remove <name-of-SDK>
+```console
+$ swift sdk remove <name-of-SDK>
 ```
 
 ### Your first statically linked Linux program
@@ -151,7 +151,8 @@ $ swift build --sdk x86_64-swift-linux-musl
 Building for debugging...
 [8/8] Linking hello
 Build complete! (2.04s)
-$ .build/x86_64-swift-linux-musl/debug/hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, with debug_info, not stripped
+$ file .build/x86_64-swift-linux-musl/debug/hello
+.build/x86_64-swift-linux-musl/debug/hello: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, with debug_info, not stripped
 ```
 
 ```console
