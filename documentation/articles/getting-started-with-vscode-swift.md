@@ -156,12 +156,14 @@ environment variables, etc:
 ## Test Explorer
 
 VS Code provides a Test Explorer view in the left sidebar which can be used to
-view, run, and debug tests. The Swift extension will automatically populate this
-view with any tests that it finds in your project:
+view, run, and debug tests. The extension supports [XCTest](https://developer.apple.com/documentation/xctest)
+as well as [swift-testing](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing) tests. As you write tests
+they are automatically added to the Test Explorer.
 
 ![Inline test errors](/assets/images/getting-started-with-vscode-swift/inline_assertion_failures.png)
 
-You can also filter tests by tags:
+Swift-testing tests annotated with [tags](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing/addingtags)
+can be filtered in the Test Explorer using `@TestTarget:tagName`, and then this filtered list of tests can be run, or debugged.
 
 ![Filtering tests by custom tags](/assets/images/getting-started-with-vscode-swift/filtering_tests_by_custom_tags.png)
 
