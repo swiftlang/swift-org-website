@@ -2,7 +2,7 @@
 layout: page
 date: 2024-05-28 12:00:00
 title: Getting started with Swift in VS Code
-author: [matthewbastien]
+author: [matthewbastien, plemarquand]
 ---
 
 Visual Studio Code (VS Code) is a powerful editing tool that provides a modern
