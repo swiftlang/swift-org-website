@@ -1,0 +1,51 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  configurationVersion: 0.2.0
+  assertions:
+    - resource: Microsoft.Windows.Developer/OsVersion
+      directives:
+        description: Verify minimum OS version requirement
+        allowPrerelease: true
+      settings:
+        MinVersion: '10.0.19041'
+  resources:
+    - resource: Microsoft.Windows.Developer/DeveloperMode
+      directives:
+        description: Enable Developer Mode
+        allowPrerelease: true
+      settings:
+        Ensure: Present
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: vsPackage
+      directives:
+        description: Install Visual Studio {{ include.vs_version }} {{ include.vs_edition }}
+        allowPrerelease: true
+      settings:
+        id: Microsoft.VisualStudio.{{ include.vs_version }}.{{ include.vs_edition }}
+        source: winget
+    - resource: Microsoft.VisualStudio.DSC/VSComponents
+      dependsOn:
+        - vsPackage
+      directives:
+        description: Install required VS workloads
+        allowPrerelease: true
+        securityContext: elevated
+      settings:
+        productId: Microsoft.VisualStudio.Product.{{ include.vs_edition }}
+        channelId: VisualStudio.{{ include.vs_release }}.Release
+        Components:
+          - Microsoft.VisualStudio.Component.VC.Tools.x86.x64
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Windows SDK {{ include.windows_sdk_version }}
+        allowPrerelease: true
+      settings:
+        id: Microsoft.WindowsSDK.{{ include.windows_sdk_version }}
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      directives:
+        description: Install Swift
+        allowPrerelease: true
+      settings:
+        id: Swift.Toolchain
+        source: winget
