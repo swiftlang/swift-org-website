@@ -169,8 +169,7 @@ To debug a test, set a breakpoint and then run the test, suite, or entire test t
 The `Run Test with Coverage` profile instruments the code under test and opens a
 code coverage report when the test run completes. As you browse covered files line numbers
 that were executed during a test appear green, and those that were missed appear red. Hovering
-over a line number shows how many times covered lines were executed. To always show this
-information toggle the `Test: Show Inline Coverage` command.
+over a line number shows how many times covered lines were executed. Line execution counts can be shown or hidden using the `Test: Show Inline Coverage` command.
 
 
 Swift-testing tests annotated with
