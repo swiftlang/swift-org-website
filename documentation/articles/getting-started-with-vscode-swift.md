@@ -25,24 +25,25 @@ The Swift extension for VS Code supports the following project types
 
 ## Installation
 
-You must have Swift installed for the extension to function. See the
+1. Install Swift.
+   - You must have Swift installed for the extension to function. See the
 [Getting Started Guide on Swift.org](https://www.swift.org/getting-started/) for
-details on how to install Swift on your system. You will also need to download
-and install [Visual Studio Code](https://code.visualstudio.com/Download).
+details on how to install Swift on your system.
+2. Download and install [Visual Studio Code](https://code.visualstudio.com/Download).
+3. Install the Swift extension from the
+[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang).
+You can also install it directly from within VS Code from the extensions pane.
 
-You can then install the Swift extension from the
-[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang)
-or from within the VS Code extensions view:
-
-![Install the vscode-swift extension](/assets/images/getting-started-with-vscode-swift/installation.png)
+![Installing the vscode-swift extension from the extensions pane](/assets/images/getting-started-with-vscode-swift/installation.png)
 
 ## Creating a new Swift project
 
-You can use the `Swift: Create New Project...` command provided by the Swift
-extension to create a new Swift project. Simply open the Command Palette
-(`CMD + Shift + P` on macOS and `Ctrl + Shift + P` on other platforms) and
-search for the `Swift: Create New Project...` command which will guide you
-through the process.
+To create a new Swift project, you can use the `Swift: Create New Project...` command in 
+the Swift extension to guide you through the process. You can find this command by opening 
+the Command Palette and following the instructions below.
+
+- For macOS: CMD + Shift + P
+- Other platforms: Ctrl + Shift + P
 
 ![Create New Project command showing available project templates](/assets/images/getting-started-with-vscode-swift/create-new-project/select-project-template.png)
 
@@ -58,7 +59,7 @@ through the process.
 
 The Swift extension uses [SourceKit LSP](https://github.com/apple/sourcekit-lsp)
 to power language features. SourceKit LSP provides the following features in the
-editor. Follow the links to see the VS Code documentation on the subject:
+editor. Use these links to see the VS Code documentation for each topic:
 
 - [Code completion](https://code.visualstudio.com/docs/editor/intellisense)
 - [Go to definition](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-definition)
@@ -85,9 +86,9 @@ project either on the command line or using a task in VS Code. This populates th
 
 ## Swift Tasks
 
-VS Code provides tasks as a way to run external tools. You can read more about
-how tasks work in
-[the VS Code Documentation](https://code.visualstudio.com/docs/editor/tasks).
+Visual Studio Code provides tasks as a way to run external tools. See the
+[Integrate with External Tools via Tasks](https://code.visualstudio.com/docs/editor/tasks).
+documentation to learn more.
 
 The Swift extension provides some built-in tasks that you can use to build via
 Swift Package Manager. You can also configure custom tasks by creating a
@@ -123,9 +124,10 @@ diagnostics from the previous build task.
 
 ## Debugging
 
-Visual Studio Code provides a rich debugging experience that you can read about
-in
-[the VS Code Documentation](https://code.visualstudio.com/docs/editor/debugging).
+Visual Studio Code provides a rich debugging experience. See the
+[Debugging](https://code.visualstudio.com/docs/editor/debugging) documentation for
+more information.
+
 The Swift extension relies on the
 [Code-LLDB extension](https://github.com/vadimcn/vscode-lldb) to enable
 debugging support.
@@ -162,9 +164,12 @@ target in your Swift package. You may configure these yourself by adding a
 }
 ```
 
-You can launch a debugging session via the Debug view in VS Code. Select the
-launch configuration you wish to debug and then click on the green play button
-to launch it. The executable will be launched and you can set breakpoints in
+You can launch a debugging session via the Debug view in VS Code. 
+
+1. Select the launch configuration you wish to debug
+2. Click on the green play button to lauch a debugging session.
+
+The executable will be launched and you can set breakpoints in
 your Swift code that will be hit as code executes.
 
 The screenshot below shows an example of debugging a Hello World program. It
@@ -177,18 +182,23 @@ their variable values:
 ## Test Explorer
 
 Visual Studio Code provides a Test Explorer view in the left sidebar which can
-be used to navigate to, run, and debug tests. The Swift extension supports
-[XCTest](https://developer.apple.com/documentation/xctest) as well as
+be used:
+- To navigate to tests
+- To run tests
+- Debug tests.
+
+The Swift extension supports [XCTest](https://developer.apple.com/documentation/xctest) as well as
 [swift-testing](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing)
 tests. As you write tests they are automatically added to the Test Explorer.
 
 ![Inline test errors](/assets/images/getting-started-with-vscode-swift/testing/inline_assertion_failures.png)
 
-To debug a test, set a breakpoint and then run the test, suite, or entire test
-target with the `Debug Test` profile.
+To debug a test:
+1. Set a breakpoint
+2. Run the test, suite, or entire test target with the `Debug Test` profile.
 
 The `Run Test with Coverage` profile instruments the code under test and opens a
-code coverage report when the test run completes. As you browse covered files
+code coverage report when the test run completes. As you browse covered files,
 line numbers that were executed during a test appear green, and those that were
 missed appear red. Hovering over a line number shows how many times covered
 lines were executed. Line execution counts can be shown or hidden using the
@@ -196,8 +206,8 @@ lines were executed. Line execution counts can be shown or hidden using the
 
 Swift Testing tests annotated with
 [tags](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing/addingtags)
-can be filtered in the Test Explorer using `@TestTarget:tagName`, and then this
-filtered list of tests can be run, or debugged.
+can be filtered in the Test Explorer using `@TestTarget:tagName`. You can then
+run or debug the filtered list of tests.
 
 <div class="warning" markdown="1">
 The Swift VS Code extension does not support running Swift Testing tests in Swift 5.10 or earlier.
@@ -226,7 +236,7 @@ Keep in mind that Workspace Settings take precedence over User Settings:
 ![Settings selection](/assets/images/getting-started-with-vscode-swift/toolchain-selection/configuration.png)
 
 The Swift extension will then prompt you to reload the extension in order to
-pick up the new toolchain. You must do so otherwise the extension will not
+pick up the new toolchain. You must do so, otherwise the extension will not
 function correctly:
 
 ![Reload VS Code warning](/assets/images/getting-started-with-vscode-swift/toolchain-selection/reload.png)
