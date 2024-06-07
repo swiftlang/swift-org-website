@@ -241,7 +241,7 @@ type can be represented in C++ only when:
 
 - it is a supported Swift structure / class / enumeration that is defined
   in the same Swift module.
-- or, it is a C++ structure, class or enumeration.
+- or, it is a C++ structure / class / enumeration that is not annotated as a reference type.
 - or, it is one of the
   [supported Swift standard library types](#supported-swift-standard-library-types).
   - if it's a generic type, like `Array`, its generic parameters must be bound
@@ -286,6 +286,8 @@ Swift is able to represent the following Swift standard library types in C++:
 For more details on using Swift types like `String` in C++, check out
 the section that describes how to
 [use Swift standard library types from C++](/documentation/cxx-interop#using-swift-standard-library-types-from-c).
+
+Note that Swift tuples are not currently supported in C++.
 
 ### List Of Primitive Swift Types Supported by C++
 
