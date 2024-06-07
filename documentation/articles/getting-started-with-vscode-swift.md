@@ -170,11 +170,14 @@ code coverage report when the test run completes. As you browse covered files li
 that were executed during a test appear green, and those that were missed appear red. Hovering
 over a line number shows how many times covered lines were executed. Line execution counts can be shown or hidden using the `Test: Show Inline Coverage` command.
 
-
 Swift-testing tests annotated with
 [tags](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing/addingtags)
 can be filtered in the Test Explorer using `@TestTarget:tagName`, and then this
 filtered list of tests can be run, or debugged.
+
+<div class="warning" markdown="1">
+The Swift VS Code extension does not support running swift-testing tests in Swift 5.10 or earlier.
+</div>
 
 ## Advanced Toolchain Selection
 
