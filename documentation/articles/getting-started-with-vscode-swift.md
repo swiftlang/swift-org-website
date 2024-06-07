@@ -91,7 +91,6 @@ Swift Package Manager. You can also configure custom tasks by creating a `tasks.
       "args": ["build", "--build-tests", "-c", "release"],
       "env": {},
       "cwd": "${workspaceFolder}",
-      "problemMatcher": ["$swiftc"],
       "group": "build"
     }
   ]
