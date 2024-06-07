@@ -5,13 +5,8 @@ title: Getting started with Swift in VS Code
 author: [matthewbastien, plemarquand]
 ---
 
-Visual Studio Code (VS Code) is a powerful editing tool that provides a modern
-and feature-rich development environment suitable for developers working with
-Swift and other programming languages. It strikes a balance between usability,
-flexibility, and performance. In addition, VS Code offers IDE features,
-cross-platform support, and benefits from active community support.
-
-Installing the Swift extension adds Swift language features to VS Code. Its aim
+Visual Studio Code (VS Code) is a popular general-purpose editor that supports a variety 
+of languages. The Swift VS Code extension adds Swift language features to the editor. Its aim
 is to provide a first-class, feature complete extension to make developing Swift
 applications on all platforms a seamless experience.
 
@@ -61,10 +56,6 @@ through the process.
 
 ## Language Features
 
-<div class="warning" markdown="1">
-You **must** run a build before Swift language features will be available.
-</div>
-
 The Swift extension uses [SourceKit LSP](https://github.com/apple/sourcekit-lsp)
 to power language features. SourceKit LSP provides the following features in the
 editor. Follow the links to see the VS Code documentation on the subject:
@@ -78,7 +69,7 @@ editor. Follow the links to see the VS Code documentation on the subject:
 
 ![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
 
-It also provides code actions to automate common tasks. Code actions in VS Code
+SourceKit LSP also provides code actions to automate common tasks. Code actions in VS Code
 appear as a light bulb near the editor margin (see the above screenshot for an
 example of this). Clicking on the light bulb will show you the available actions
 which can include:
@@ -87,13 +78,18 @@ which can include:
 - Converting JSON to protocols
 - Adding documentation to your functions
 
+<div class="warning" markdown="1">
+Before language features can be used you must perform a `swift build` command on your 
+project either on the command line or using a task in VS Code. This populates the index in sourcekit-lsp.
+</div>
+
 ## Swift Tasks
 
 VS Code provides tasks as a way to run external tools. You can read more about
 how tasks work in
 [the VS Code Documentation](https://code.visualstudio.com/docs/editor/tasks).
 
-The Swift extension provides some basic tasks that you can use to build via
+The Swift extension provides some built-in tasks that you can use to build via
 Swift Package Manager. You can also configure custom tasks by creating a
 `tasks.json` file in the root folder of your project. For example, this
 `tasks.json` builds of your Swift targets in release mode:
@@ -171,7 +167,7 @@ launch configuration you wish to debug and then click on the green play button
 to launch it. The executable will be launched and you can set breakpoints in
 your Swift code that will be hit as code executes.
 
-The screenshot below depicts an example of debugging a Hello World program. It
+The screenshot below shows an example of debugging a Hello World program. It
 is paused on a breakpoint and you can see that the Debug View shows the values
 of variables in scope. You can also hover over identifiers in the editor to see
 their variable values:
@@ -198,13 +194,13 @@ missed appear red. Hovering over a line number shows how many times covered
 lines were executed. Line execution counts can be shown or hidden using the
 `Test: Show Inline Coverage` command.
 
-Swift-testing tests annotated with
+Swift Testing tests annotated with
 [tags](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing/addingtags)
 can be filtered in the Test Explorer using `@TestTarget:tagName`, and then this
 filtered list of tests can be run, or debugged.
 
 <div class="warning" markdown="1">
-The Swift VS Code extension does not support running swift-testing tests in Swift 5.10 or earlier.
+The Swift VS Code extension does not support running Swift Testing tests in Swift 5.10 or earlier.
 </div>
 
 ## Advanced Toolchain Selection
