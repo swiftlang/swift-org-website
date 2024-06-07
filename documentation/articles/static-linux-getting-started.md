@@ -9,9 +9,9 @@ It's well known that Swift can be used to build software for Apple
 platforms such as macOS or iOS, but Swift is also supported on other
 platforms, including Linux and Windows.
 
-Building for Linux is especially interesting because historically
+Building for Linux is especially interesting because, historically,
 Linux programs written in Swift needed to ensure that a copy of the
-Swift runtime --- and all of its dependencies --- was installed on the
+Swift runtime---and all of its dependencies---was installed on the
 target system.  Additionally, a program built for a particular
 distribution, or even a particular major version of a particular
 distribution, would not necessarily run on any other distribution or
@@ -57,7 +57,7 @@ against a library that you do not actually use, a traditional static
 linker will completely discard that library and not include any code
 from it in your final binary.
 
-In practice things can be more complicated --- the static linker may
+In practice, things can be more complicated---the static linker may
 actually work on the basis of individual _sections_ or _atoms_ from
 your object files, so it may in fact be able to discard individual
 functions or pieces of data rather than just whole objects.
@@ -90,19 +90,25 @@ and can be installed by simply copying.
 
 ### Installing the SDK
 
-Before you start, **you will need to [install an Open Source toolchain
-from swift.org](https://www.swift.org/install/)**.  You cannot use the
-toolchain provided with Xcode to build programs using the SDK.  If you
-are using macOS, you will also need to ensure that you use the Swift
-compiler from this toolchain by [following the instructions
-here](https://www.swift.org/install/macos/#installation-via-swiftorg-package-installer).
+Before you start, it's important to note:
 
-> **Note**: The toolchain must match the version of the Static Linux
-> SDK that you install.  The Static Linux SDK includes the
-> corresponding Swift version in its filename to help identify the
-> correct version of the SDK.
+* You will need to [install an Open Source toolchain from
+  swift.org](https://www.swift.org/install/).
 
-One that is out of the way, actually installing the Static Linux SDK
+* You cannot use the toolchain provided with Xcode to build programs
+  using the SDK.
+
+* If you are using macOS, you will also need to ensure that you use
+  the Swift compiler from this toolchain by [following the
+  instructions
+  here](https://www.swift.org/install/macos/#installation-via-swiftorg-package-installer).
+
+* The toolchain must match the version of the Static Linux SDK that
+  you install.  The Static Linux SDK includes the corresponding Swift
+  version in its filename to help identify the correct version of the
+  SDK.
+
+Once that is out of the way, actually installing the Static Linux SDK
 is easy; at a prompt, enter
 
 ```console
@@ -235,14 +241,14 @@ import ucrt
 #endif
 ```
 
-Very occasionally there might be a difference between the way a C
-library type gets imported between Musl and Glibc; this sometimes
-happens if someone has added nullability annotations, or where a
-pointer type is using a forward-declared `struct` for which no actual
-definition is ever provided.  Usually the problem will be obvious ---
-a function argument or result will be `Optional` in one case and
-non-`Optional` in another, or a pointer type will be imported as
-`OpaquePointer` rather than `UnsafePointer<FOO>`.
+Occasionally there might be a difference between the way a C library
+type gets imported between Musl and Glibc; this sometimes happens if
+someone has added nullability annotations, or where a pointer type is
+using a forward-declared `struct` for which no actual definition is
+ever provided.  Usually the problem will be obvious---a function
+argument or result will be `Optional` in one case and non-`Optional`
+in another, or a pointer type will be imported as `OpaquePointer`
+rather than `UnsafePointer<FOO>`.
 
 If you do find yourself needing to make these kinds of adjustments,
 you can make your local copy of the package dependency editable by
