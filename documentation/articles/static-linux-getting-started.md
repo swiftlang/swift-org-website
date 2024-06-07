@@ -93,7 +93,7 @@ and can be installed by simply copying.
 Before you start, it's important to note:
 
 * You will need to [install an Open Source toolchain from
-  swift.org](https://www.swift.org/install/).
+  swift.org](/install/).
 
 * You cannot use the toolchain provided with Xcode to build programs
   using the SDK.
@@ -101,7 +101,7 @@ Before you start, it's important to note:
 * If you are using macOS, you will also need to ensure that you use
   the Swift compiler from this toolchain by [following the
   instructions
-  here](https://www.swift.org/install/macos/#installation-via-swiftorg-package-installer).
+  here](/install/macos/package_installer/).
 
 * The toolchain must match the version of the Static Linux SDK that
   you install.  The Static Linux SDK includes the corresponding Swift
