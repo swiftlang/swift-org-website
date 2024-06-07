@@ -67,7 +67,7 @@ You **must** run a build before Swift language features will be available.
 </div>
 
 The Swift extension uses [SourceKit LSP](https://github.com/apple/sourcekit-lsp)
-to power language features.
+to provide language features.
 
 ![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
 
