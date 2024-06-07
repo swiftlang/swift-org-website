@@ -97,6 +97,11 @@ are using macOS, you will also need to ensure that you use the Swift
 compiler from this toolchain by [following the instructions
 here](https://www.swift.org/install/macos/#installation-via-swiftorg-package-installer).
 
+> **Note**: The toolchain must match the version of the Static Linux
+> SDK that you install.  The Static Linux SDK includes the
+> corresponding Swift version in its filename to help identify the
+> correct version of the SDK.
+
 One that is out of the way, actually installing the Static Linux SDK
 is easy; at a prompt, enter
 
