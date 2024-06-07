@@ -19,7 +19,6 @@ This guide will help you get set up with the following features:
 
 - Language features such as code completion, jump to definition, find all
   references, etc.
-- Package dependency view
 - VS Code tasks for Swift Package Manager
 - Debugging Swift code
 - Running tests
