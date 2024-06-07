@@ -157,12 +157,21 @@ their variable values:
 ## Test Explorer
 
 Visual Studio Code provides a Test Explorer view in the left sidebar which can be used to
-view, run, and debug tests. The Swift extension supports
+navigate to, run, and debug tests. The Swift extension supports
 [XCTest](https://developer.apple.com/documentation/xctest) as well as
 [swift-testing](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing)
 tests. As you write tests they are automatically added to the Test Explorer.
 
 ![Inline test errors](/assets/images/getting-started-with-vscode-swift/testing/inline_assertion_failures.png)
+
+To debug a test, set a breakpoint and then run the test, suite, or entire test target with the `Debug Test` profile.
+
+The `Run Test with Coverage` profile instruments the code under test and opens a
+code coverage report when the test run completes. As you browse covered files line numbers
+that were executed during a test appear green, and those that were missed appear red. Hovering
+over a line number shows how many times covered lines were executed. To always show this
+information toggle the `Test: Show Inline Coverage` command.
+
 
 Swift-testing tests annotated with
 [tags](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing/addingtags)
