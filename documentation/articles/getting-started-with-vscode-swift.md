@@ -5,14 +5,14 @@ title: Getting started with Swift in VS Code
 author: [matthewbastien]
 ---
 
-Visual Studio Code (VS Code) is a powerful editing tool that provides a modern and
-feature-rich development environment suitable for developers working with Swift
-and other programming languages. It strikes a balance between usability,
+Visual Studio Code (VS Code) is a powerful editing tool that provides a modern
+and feature-rich development environment suitable for developers working with
+Swift and other programming languages. It strikes a balance between usability,
 flexibility, and performance. In addition, VS Code offers IDE features,
 cross-platform support, and benefits from active community support.
 
-Installing the Swift extension adds Swift language features to VS Code. Its aim is to
-provide a first-class, feature complete extension to make developing Swift
+Installing the Swift extension adds Swift language features to VS Code. Its aim
+is to provide a first-class, feature complete extension to make developing Swift
 applications on all platforms a seamless experience.
 
 This guide will help you get set up with the following features:
@@ -55,10 +55,10 @@ through the process.
 1. Choose the type of project you'd like to create from the list of templates.
 2. Choose the directory where the project will be stored.
 3. Give your project a name.
-4. Open the newly created project. You will be prompted to open the project in the
-   current window, a new window, or add it to the current workspace. The default
-   behaviour can be configured by using the `swift.openAfterCreateNewProject`
-   setting.
+4. Open the newly created project. You will be prompted to open the project in
+   the current window, a new window, or add it to the current workspace. The
+   default behaviour can be configured by using the
+   `swift.openAfterCreateNewProject` setting.
 
 ## Language Features
 
@@ -67,9 +67,26 @@ You **must** run a build before Swift language features will be available.
 </div>
 
 The Swift extension uses [SourceKit LSP](https://github.com/apple/sourcekit-lsp)
-to provide language features.
+to power language features. SourceKit LSP provides the following features in the
+editor. Follow the links to see the VS Code documentation on the subject:
+
+- [Code completion](https://code.visualstudio.com/docs/editor/intellisense)
+- [Go to definition](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-definition)
+- [Find all references](https://code.visualstudio.com/Docs/editor/editingevolved#_peek)
+- [Rename refactoring](https://code.visualstudio.com/docs/editor/refactoring#_rename-symbol)
+- [Diagnostics](https://code.visualstudio.com/docs/editor/editingevolved#_errors-warnings)
+- [Quick Fixes](https://code.visualstudio.com/docs/editor/editingevolved#_code-action)
 
 ![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
+
+It also provides code actions for common tasks. Code actions in VS Code appear
+as light bulb near the editor margin (see the above screenshot for an example of
+this). Clicking on the light bulb will show you the available code actions. Some
+of the code actions include:
+
+- Adding targets to your `Package.swift`
+- Converting JSON to protocols
+- Adding documentation to your functions
 
 ## Swift Tasks
 
@@ -78,7 +95,9 @@ how tasks work in
 [the VS Code Documentation](https://code.visualstudio.com/docs/editor/tasks).
 
 The Swift extension provides some basic tasks that you can use to build via
-Swift Package Manager. You can also configure custom tasks by creating a `tasks.json` file in the root folder of your project. For example, this `tasks.json` builds of your Swift targets in release mode:
+Swift Package Manager. You can also configure custom tasks by creating a
+`tasks.json` file in the root folder of your project. For example, this
+`tasks.json` builds of your Swift targets in release mode:
 
 ```json
 {
@@ -105,7 +124,8 @@ on macOS or `Ctrl + Shift + B` on other platforms:
 
 ## Debugging
 
-Visual Studio Code provides a rich debugging experience that you can read about in
+Visual Studio Code provides a rich debugging experience that you can read about
+in
 [the VS Code Documentation](https://code.visualstudio.com/docs/editor/debugging).
 The Swift extension relies on the
 [Code-LLDB extension](https://github.com/vadimcn/vscode-lldb) to enable
@@ -122,7 +142,9 @@ debugger to work properly.
 </div>
 
 By default, the extension creates a launch configuration for each executable
-target in your Swift package. You may configure these yourself by adding a `launch.json` file to the root folder of your project. For example, this `launch.json` launches a Swift executable with custom arguments:
+target in your Swift package. You may configure these yourself by adding a
+`launch.json` file to the root folder of your project. For example, this
+`launch.json` launches a Swift executable with custom arguments:
 
 ```json
 {
@@ -155,20 +177,23 @@ their variable values:
 
 ## Test Explorer
 
-Visual Studio Code provides a Test Explorer view in the left sidebar which can be used to
-navigate to, run, and debug tests. The Swift extension supports
+Visual Studio Code provides a Test Explorer view in the left sidebar which can
+be used to navigate to, run, and debug tests. The Swift extension supports
 [XCTest](https://developer.apple.com/documentation/xctest) as well as
 [swift-testing](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing)
 tests. As you write tests they are automatically added to the Test Explorer.
 
 ![Inline test errors](/assets/images/getting-started-with-vscode-swift/testing/inline_assertion_failures.png)
 
-To debug a test, set a breakpoint and then run the test, suite, or entire test target with the `Debug Test` profile.
+To debug a test, set a breakpoint and then run the test, suite, or entire test
+target with the `Debug Test` profile.
 
 The `Run Test with Coverage` profile instruments the code under test and opens a
-code coverage report when the test run completes. As you browse covered files line numbers
-that were executed during a test appear green, and those that were missed appear red. Hovering
-over a line number shows how many times covered lines were executed. Line execution counts can be shown or hidden using the `Test: Show Inline Coverage` command.
+code coverage report when the test run completes. As you browse covered files
+line numbers that were executed during a test appear green, and those that were
+missed appear red. Hovering over a line number shows how many times covered
+lines were executed. Line execution counts can be shown or hidden using the
+`Test: Show Inline Coverage` command.
 
 Swift-testing tests annotated with
 [tags](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing/addingtags)
@@ -191,7 +216,8 @@ than the default on your machine. It is recommended to use `xcode-select` on
 macOS or `swiftly` on Linux to switch between toolchains globally.
 </div>
 
-You may be prompted to select where to configure this new path. Your options are to:
+You may be prompted to select where to configure this new path. Your options are
+to:
 
 - Save it in User Settings
 - Save it in Workspace Settings
