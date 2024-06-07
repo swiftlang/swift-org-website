@@ -23,10 +23,10 @@ This guide will help you get set up with the following features:
 - Debugging Swift code
 - Running tests
 
-<div class="warning" markdown="1">
-The Swift extension for Visual Studio Code only supports Swift Package Manager
-projects.
-</div>
+The Swift extension for VS Code supports the following project types
+
+- Swift Package Manager projects (e.g. using a `Package.swift`)
+- Projects that can generate a `compile_commands.json` (e.g. using CMake)
 
 ## Installation
 
