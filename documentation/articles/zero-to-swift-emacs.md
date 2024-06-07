@@ -18,6 +18,11 @@ started.  It also is not intended to teach you to use Emacs; if you
 want to learn Emacs, try this resource: [Emacs
 Tour](https://www.gnu.org/software/emacs/tour/).
 
+We assume for the purposes of this guide that you have already
+installed Swift; if not, please [follow the installation instructions
+for your platform on the Swift website](https://www.swift.org/install)
+before continuing.
+
 ## Installing Emacs
 
 There are generic [installation instructions on the GNU Emacs
@@ -65,51 +70,6 @@ $ sudo dnf install emacs
 
 (On older builds you may need to use `yum` rather than `dnf`, but the
 latter is the newer, better option if it's available.)
-
-## Installing Swift
-
-There are [instructions on the Swift
-website](https://swift.org/install).  Again, specific instructions are
-given below for some common platforms.
-
-### macOS
-
-On macOS, it's probably easiest to [install Xcode from the App
-Store](https://itunes.apple.com/app/xcode/id497799835).  It is
-possible to install a packaged toolchain from Swift.org, but if you do
-that then you won't be able to submit applications to the App Store
-(assuming that is something you want to do).
-
-### Microsoft Windows
-
-Use [the Windows installer from the Swift website](https://www.swift.org/download/#releases); that should set up everything you need to get going with Swift.
-
-### Linux
-
-Start by downloading [the tarball for your
-distribution](https://www.swift.org/download/#releases) from the Swift
-website.  You can un-tar that in a location of your choice,
-e.g. `/usr/local`.  You may also wish to make a symbolic link to make
-it easier to remember where things are.
-
-```console
-$ curl -L -O https://download.swift.org/swift-5.10-release/ubuntu2204/swift-5.10-RELEASE/swift-5.10-RELEASE-ubuntu22.04.tar.gz
-$ cd /usr/local
-$ sudo tar xvzf ~/swift-5.10-RELEASE-ubuntu22.04.tar.gz
-$ sudo ln -s swift-5.10-RELEASE-ubuntu22.04 swift
-```
-
-You'll also want to add Swift to your `PATH`.  Exactly how to do this
-depends on which shell you're using, but typically you'll want to edit
-your `.bashrc` or `.zshrc` to add
-
-```shell
-export PATH=/usr/local/swift/usr/bin
-```
-
-or similar.
-
-Before using Swift, you will need to install some dependencies; there is [a set of canned commands for various distributions here](https://www.swift.org/install/linux/#installation-via-tarball).  (Note: the table scrolls left and right.)
 
 ## Configuring Emacs
 
