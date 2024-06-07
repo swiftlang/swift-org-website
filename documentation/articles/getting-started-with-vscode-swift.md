@@ -16,7 +16,7 @@ The Swift extension includes:
 - Code navigation features such as Go to Definition and Find All References
 - Refactoring and quick fixes to code
 - Package management and tasks with support for Swift Package Manager
-- Rich support for debugging  
+- Rich support for debugging
 - Testing with XCTest or Swift Testing frameworks
 
 The Swift extension is designed to support the following projects:
@@ -27,18 +27,18 @@ The Swift extension is designed to support the following projects:
 ## Install the Extension
 
 1. First, install Swift. If you do not already have Swift installed on your system, see the
-[Getting Started Guide on Swift.org](https://www.swift.org/getting-started/).
+   [Getting Started Guide on Swift.org](https://www.swift.org/getting-started/).
 2. Download and install [Visual Studio Code](https://code.visualstudio.com/Download).
 3. Install the Swift extension from the
-[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang)
-or directly from within the VS Code extensions pane.
+   [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang)
+   or directly from within the VS Code extensions pane.
 
 ![Installing the vscode-swift extension from the extensions pane](/assets/images/getting-started-with-vscode-swift/installation.png)
 
 ## Creating a new Swift project
 
-To create a new Swift project, you can use the `Swift: Create New Project...` command in 
-the Swift extension to guide you through the process. You can find this command by opening 
+To create a new Swift project, you can use the `Swift: Create New Project...` command in
+the Swift extension to guide you through the process. You can find this command by opening
 the Command Palette and following the instructions below.
 
 - For macOS: `CMD + Shift + P`
@@ -67,16 +67,16 @@ editor. Use these links to see the VS Code documentation for each topic:
 - [Diagnostics](https://code.visualstudio.com/docs/editor/editingevolved#_errors-warnings)
 - [Quick Fixes](https://code.visualstudio.com/docs/editor/editingevolved#_code-action)
 
-![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
-
 SourceKit LSP also provides code actions to automate common tasks. Code actions in VS Code
-appear as a light bulb near the editor margin (see the above screenshot for an
+appear as a light bulb near the editor margin (see the below screenshot for an
 example of this). Clicking on the light bulb will show you the available actions
 which can include:
 
 - Adding targets to your `Package.swift`
 - Converting JSON to protocols
 - Adding documentation to your functions
+
+![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
 
 <div class="warning" markdown="1">
 Before language features can be used you must perform a `swift build` command on your 
@@ -163,10 +163,10 @@ target in your Swift package. You may configure these yourself by adding a
 }
 ```
 
-You can launch a debugging session via the Debug view in VS Code. 
+You can launch a debugging session via the Debug view in VS Code.
 
-1. Select the launch configuration you wish to debug
-2. Click on the green play button to lauch a debugging session.
+1. Select the launch configuration you wish to debug.
+2. Click on the green play button to launch a debugging session.
 
 The executable will be launched and you can set breakpoints in
 your Swift code that will be hit as code executes.
@@ -182,6 +182,7 @@ their variable values:
 
 Visual Studio Code provides a Test Explorer view in the left sidebar which can
 be used:
+
 - To navigate to tests
 - To run tests
 - To Debug tests
@@ -193,6 +194,7 @@ As you write tests they are automatically added to the Test Explorer.
 ![Inline test errors](/assets/images/getting-started-with-vscode-swift/testing/inline_assertion_failures.png)
 
 To debug a test:
+
 1. Set a breakpoint
 2. Run the test, suite, or entire test target with the `Debug Test` profile.
 
