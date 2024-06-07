@@ -5,20 +5,21 @@ title: Getting started with Swift in VS Code
 author: [matthewbastien, plemarquand]
 ---
 
-Visual Studio Code (VS Code) is a popular general-purpose editor that supports a variety 
-of languages. The Swift VS Code extension adds Swift language features to the editor. Its aim
-is to provide a first-class, feature complete extension to make developing Swift
-applications on all platforms a seamless experience.
+Visual Studio Code (VS Code) is a popular general purpose editor that supports a
+variety of languages through extensibility. The Swift extension brings Swift
+language-specific features to the editor, providing a seamless experience for
+developing Swift applications on all platforms.
 
-This guide will help you get set up with the following features:
+The Swift extension includes:
 
-- Language features such as code completion, jump to definition, find all
-  references, etc.
-- VS Code tasks for Swift Package Manager
-- Debugging Swift code
-- Running tests
+- Syntax highlighting and code completion
+- Code navigation features such as Go to Definition and Find All References
+- Refactoring and quick fixes to code
+- Package management and tasks with support for Swift Package Manager
+- Rich support for debugging  
+- Testing with XCTest or Swift Test
 
-The Swift extension for VS Code supports the following project types
+The Swift extension is designed to support the following projects:
 
 - Swift Package Manager projects (e.g. using a `Package.swift`)
 - Projects that can generate a `compile_commands.json` (e.g. using CMake)
