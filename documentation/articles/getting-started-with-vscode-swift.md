@@ -121,6 +121,10 @@ on macOS or `Ctrl + Shift + B` on other platforms:
 
 ![Run build task menu](/assets/images/getting-started-with-vscode-swift/tasks/build-tasks.png)
 
+Any errors that occur during a build appear in the editor as diagnostics
+alongside those provided by SourceKit-LSP. Running another build task clears the
+diagnostics from the previous build task.
+
 ## Debugging
 
 Visual Studio Code provides a rich debugging experience that you can read about
