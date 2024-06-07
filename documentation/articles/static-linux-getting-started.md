@@ -106,8 +106,20 @@ One that is out of the way, actually installing the Static Linux SDK
 is easy; at a prompt, enter
 
 ```console
-$ swift sdk install <insert-URL-here>
+$ swift sdk install <URL-or-filename-here>
 ```
+
+giving the URL or filename at which the SDK can be found.
+
+For instance, assuming you have installed the
+`swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-06-a` toolchain, you would
+need to enter
+
+```console
+$ swift sdk install https://download.swift.org/development/static-sdk/swift-DEVELOPMENT-SNAPSHOT-2024-06-06-a/swift-DEVELOPMENT-SNAPSHOT-2024-06-06-a_static-linux-0.0.1.artifactbundle.tar.gz
+```
+
+to install the corresponding Static Linux SDK.
 
 Swift will download and install the SDK on your system.  You can get a
 list of installed SDKs with
