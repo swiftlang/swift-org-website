@@ -20,7 +20,7 @@ title: Install Swift
     <p class="description">
       Package installers (.exe).
     </p>
-    <a href="https://download.swift.org/{{ site.data.builds.swift_releases.last.tag | downcase }}/windows10/{{ site.data.builds.swift_releases.last.tag }}/{{ site.data.builds.swift_releases.last.tag }}-windows10.exe" class="cta-secondary">Download Toolchain (x86_64)</a>
+    <a href="https://download.swift.org/{{ site.data.builds.swift_releases.last.tag | downcase }}/windows10/{{ site.data.builds.swift_releases.last.tag }}/{{ site.data.builds.swift_releases.last.tag }}-windows10.exe" class="cta-secondary">Download (x86_64)</a>
     <a href="/install/windows/traditional" class="cta-secondary">Instructions</a>
   </li>
   <li class="resource">
@@ -71,7 +71,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     <p class="description">
       Package installers (.exe).
     </p>
-    <a href="https://download.swift.org/swift-6.0-branch/windows10/{{ windows10_6_0_builds.first.dir }}/{{ windows10_6_0_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
+    <a href="https://download.swift.org/swift-6.0-branch/windows10/{{ windows10_6_0_builds.first.dir }}/{{ windows10_6_0_builds.first.download }}" class="cta-secondary">Download (x86_64)</a>
   </li>
 </ul>
 <a href="/install/windows/traditional/" class="cta-secondary">Instructions</a>
