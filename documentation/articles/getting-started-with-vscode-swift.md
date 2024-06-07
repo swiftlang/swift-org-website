@@ -78,10 +78,10 @@ editor. Follow the links to see the VS Code documentation on the subject:
 
 ![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
 
-It also provides code actions for common tasks. Code actions in VS Code appear
-as light bulb near the editor margin (see the above screenshot for an example of
-this). Clicking on the light bulb will show you the available code actions. Some
-of the code actions include:
+It also provides code actions to automate common tasks. Code actions in VS Code
+appear as a light bulb near the editor margin (see the above screenshot for an
+example of this). Clicking on the light bulb will show you the available actions
+which can include:
 
 - Adding targets to your `Package.swift`
 - Converting JSON to protocols
