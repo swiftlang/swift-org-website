@@ -53,11 +53,15 @@ To get started, you'll need to install Neovim. The Lua
 APIs exposed by Neovim are under rapid development. We will want to take
 advantage of the recent improvements in the integrated support for Language
 Server Protocol (LSP), so we will need a fairly recent version
-of Neovim. I'm running Ubuntu 22.04 on an `x86_64` machine. Unfortunately, the
+of Neovim.
+
+I'm running Ubuntu 22.04 on an `x86_64` machine. Unfortunately, the
 version of Neovim shipped in the Ubuntu 22.04 `apt` repository is too old to
-support many of the APIs that we will be using. For this install, I used `snap`
-to install Neovim v0.9.4. Ubuntu 24.04 has a new enough version of Neovim, so a
-normal `apt install neovim` invocation will work.
+support many of the APIs that we will be using.
+
+For this install, I used `snap` to install Neovim v0.9.4.
+Ubuntu 24.04 has a new enough version of Neovim, so a normal
+`apt install neovim` invocation will work.
 For installing Neovim on other operating systems and Linux distributions,
 please see the
 [Neovim install page](https://github.com/neovim/neovim/blob/master/INSTALL.md).
@@ -101,9 +105,11 @@ While it's possible to set everything up manually, using a package manager helps
 keep your packages up-to-date, and ensures that everything is installed
 correctly when copy your configuration to a new computer. Neovim also has a
 built-in plugin manager, but I have found
-[_lazy.nvim_](https://github.com/folke/lazy.nvim) to work well. We will
-start with a little bootstrapping script to install _lazy.nvim_ if it isn't
-installed already, add it to our runtime path, and finally configure our packages.
+[_lazy.nvim_](https://github.com/folke/lazy.nvim) to work well.
+
+We will start with a little bootstrapping script to install _lazy.nvim_ if it
+isn't installed already, add it to our runtime path, and finally configure our
+packages.
 
 At the top of your `init.lua` write:
 ```lua
@@ -148,15 +154,22 @@ your configuration at the moment.
 That's not very exciting to look at, so I've added a few additional plugins to
 make it look more appealing.
 
-To check that it's working, launch Neovim. You should first see an error saying
-that there were no specs found for module plugins. This just means that we don't
-have any plugins. Press `Enter`, and then type `:Lazy`.
-_lazy.nvim_ will list the plugins loaded.
-There should only be one right now, "lazy.nvim".
-This is _lazy.nvim_ tracking and updating itself.
-From the _lazy.nvim_ menu, pressing `I` will install new plugins, `U` will update the
-plugins, and `X` will delete any plugins that _lazy.nvim_ installed, but are no longer
-being tracked in your configuration.
+To check that it's working:
+ - Launch Neovim.
+
+   You should first see an error saying that there were no specs found for
+   module plugins. This just means that there aren't any plugins.
+
+ - Press Enter and type, `:Lazy`.
+
+   _lazy.nvim_ lists the plugins installed. There should only be one right now:
+   "lazy.nvim". This is _lazy.nvim_ tracking and updating itself.
+
+ - We can manage our plugins through the _lazy.nvim_ menu.
+    - Pressing `I` will install new plugins.
+    - Pressing `U` will update installed plugins.
+    - Pressing `X` will delete any plugins that _lazy.nvim_ installed, but are
+      no longer tracked in your configuration.
 
 ## Language Server Support
 
