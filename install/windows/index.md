@@ -46,6 +46,7 @@ title: Install Swift
 Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.
 
 {% assign windows_dev_builds = site.data.builds.development.windows10 | sort: 'date' | reverse %}
+{% assign windows_arm64_dev_builds = site.data.builds.development.windows10-arm64 | sort: 'date' | reverse %}
 {% assign windows10_6_0_builds = site.data.builds.swift-6_0-branch.windows10 | sort: 'date' | reverse %}
 
 <ul class="install-instruction">
@@ -57,7 +58,10 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     <p class="description">
       Package installers (.exe).
     </p>
-    <a href="https://download.swift.org/development/windows10/{{ windows_dev_builds.first.dir }}/{{ windows_dev_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
+    <ul class="install-instruction">
+    <a href="https://download.swift.org/development/windows10/{{ windows_dev_builds.first.dir }}/{{ windows_dev_builds.first.download }}" class="cta-secondary">Download (x86_64)</a>
+    <a href="https://download.swift.org/development/windows10-arm64/{{ windows_arm64_dev_builds.first.dir }}/{{ windows_arm64_dev_builds.first.download }}" class="cta-secondary">Download (arm64)</a>
+    </ul>
   </li>
   <li class="resource">
     <h3>release/6.0</h3>
