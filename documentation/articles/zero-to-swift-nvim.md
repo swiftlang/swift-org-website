@@ -5,11 +5,11 @@ title: From Zero to Swift | Configuring Neovim for Swift Development
 author: [etcwilde]
 ---
 
-Neovim is a modern reimplementation of _Vi IMproved (vim)_, a popular terminal-based text
+Neovim is a modern reimplementation of _Vim_, a popular terminal-based text
 editor.
 Neovim adds new features like asynchronous operations and powerful Lua bindings
-for a snappy editing experience, in addition to the improvements _vim_ brings to
-the original _vi_ editor.
+for a snappy editing experience, in addition to the improvements _Vim_ brings to
+the original _Vi_ editor.
 
 This article walks you through configuring Neovim for Swift development,
 providing configurations for various plugins to build a working Swift editing
