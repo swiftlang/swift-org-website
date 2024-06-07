@@ -56,9 +56,9 @@ through the process.
 2. Choose the directory where the project will be stored.
 3. Give your project a name.
 4. Open the newly created project. You will be prompted to open the project in the
-current window, a new window, or add it to the current workspace. The default
-behaviour can be configured by using the `swift.openAfterCreateNewProject`
-setting.
+   current window, a new window, or add it to the current workspace. The default
+   behaviour can be configured by using the `swift.openAfterCreateNewProject`
+   setting.
 
 ## Language Features
 
@@ -107,7 +107,7 @@ on macOS or `Ctrl + Shift + B` on other platforms:
 ## Debugging
 
 Visual Studio Code provides a rich debugging experience that you can read about in
-[the VS Code Documentation](https://code.visualstudio.com/docs/editor/debugging). 
+[the VS Code Documentation](https://code.visualstudio.com/docs/editor/debugging).
 The Swift extension relies on the
 [Code-LLDB extension](https://github.com/vadimcn/vscode-lldb) to enable
 debugging support.
@@ -121,7 +121,6 @@ debugger to work properly.
 ![Configure the Debugger](/assets/images/getting-started-with-vscode-swift/debugging/configure-lldb.png)
 
 </div>
-
 
 By default, the extension creates a launch configuration for each executable
 target in your Swift package. You may configure these yourself by adding a `launch.json` file to the root folder of your project. For example, this `launch.json` launches a Swift executable with custom arguments:
@@ -170,15 +169,11 @@ Swift-testing tests annotated with
 can be filtered in the Test Explorer using `@TestTarget:tagName`, and then this
 filtered list of tests can be run, or debugged.
 
-![Filtering tests by custom tags](/assets/images/getting-started-with-vscode-swift/testing/filtering_tests_by_custom_tags.png)
-
 ## Advanced Toolchain Selection
 
 The Swift extension automatically detects your installed Swift toolchain.
 However, it also provides a command called `Swift: Select Tooclhain...` which
-can be used to select between toolchains if you have multiple installed:
-
-![Toolchain selection](/assets/images/getting-started-with-vscode-swift/toolchain-selection/dialog.png)
+can be used to select between toolchains if you have multiple installed.
 
 <div class="warning" markdown="1">
 This is an advanced feature used to configure VS Code with a toolchain other
