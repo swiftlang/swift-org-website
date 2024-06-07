@@ -17,7 +17,7 @@ The Swift extension includes:
 - Refactoring and quick fixes to code
 - Package management and tasks with support for Swift Package Manager
 - Rich support for debugging  
-- Testing with XCTest or Swift Test
+- Testing with XCTest or Swift Testing frameworks
 
 The Swift extension is designed to support the following projects:
 
