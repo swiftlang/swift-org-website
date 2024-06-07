@@ -40,8 +40,8 @@ To create a new Swift project, you can use the `Swift: Create New Project...` co
 the Swift extension to guide you through the process. You can find this command by opening 
 the Command Palette and following the instructions below.
 
-- For macOS: CMD + Shift + P
-- Other platforms: Ctrl + Shift + P
+- For macOS: `CMD + Shift + P`
+- Other platforms: `Ctrl + Shift + P`
 
 ![Create New Project command showing available project templates](/assets/images/getting-started-with-vscode-swift/create-new-project/select-project-template.png)
 
@@ -183,11 +183,11 @@ Visual Studio Code provides a Test Explorer view in the left sidebar which can
 be used:
 - To navigate to tests
 - To run tests
-- Debug tests.
+- To Debug tests
 
 The Swift extension supports [XCTest](https://developer.apple.com/documentation/xctest) as well as
-[swift-testing](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing)
-tests. As you write tests they are automatically added to the Test Explorer.
+[swift-testing](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing).
+As you write tests they are automatically added to the Test Explorer.
 
 ![Inline test errors](/assets/images/getting-started-with-vscode-swift/testing/inline_assertion_failures.png)
 
