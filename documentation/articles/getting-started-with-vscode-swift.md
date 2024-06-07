@@ -23,16 +23,14 @@ The Swift extension for VS Code supports the following project types
 - Swift Package Manager projects (e.g. using a `Package.swift`)
 - Projects that can generate a `compile_commands.json` (e.g. using CMake)
 
-## Installation
+## Install the Extension
 
-1. Install Swift.
-   - You must have Swift installed for the extension to function. See the
-[Getting Started Guide on Swift.org](https://www.swift.org/getting-started/) for
-details on how to install Swift on your system.
+1. First, install Swift. If you do not already have Swift installed on your system, see the
+[Getting Started Guide on Swift.org](https://www.swift.org/getting-started/).
 2. Download and install [Visual Studio Code](https://code.visualstudio.com/Download).
 3. Install the Swift extension from the
-[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang).
-You can also install it directly from within VS Code from the extensions pane.
+[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang)
+or directly from within the VS Code extensions pane.
 
 ![Installing the vscode-swift extension from the extensions pane](/assets/images/getting-started-with-vscode-swift/installation.png)
 
