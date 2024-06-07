@@ -56,7 +56,11 @@ Server Protocol (LSP), so we will need a fairly recent version
 of Neovim. I'm running Ubuntu 22.04 on an `x86_64` machine. Unfortunately, the
 version of Neovim shipped in the Ubuntu 22.04 `apt` repository is too old to
 support many of the APIs that we will be using. For this install, I used `snap`
-to install Neovim v0.9.4.
+to install Neovim v0.9.4. Ubuntu 24.04 has a new enough version of Neovim, so a
+normal `apt install neovim` invocation will work.
+For installing Neovim on other operating systems and Linux distributions,
+please see the
+[Neovim install page](https://github.com/neovim/neovim/blob/master/INSTALL.md).
 
 ```console
  $  sudo snap install nvim --classic
@@ -71,13 +75,6 @@ Compilation: /usr/bin/cc -O2 -g -Og -g -Wall -Wextra -pedantic -Wno-unused-pa...
 
 Run :checkhealth for more info
 ```
-
-You may need to adjust the commands you use based on what distribution and
-operating system you are using.
-Alternatively, the Neovim GitHub repository has downloadable packages with the latest versions.
-See
-[install from download](https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-download)
-for more information.
 
 ## Getting Started
 
