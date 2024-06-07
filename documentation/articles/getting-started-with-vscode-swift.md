@@ -25,7 +25,7 @@ This guide will help you get set up with the following features:
 
 <div class="warning" markdown="1">
 The Swift extension for Visual Studio Code only supports Swift Package Manager
-projects and will not work with projects based on .xcodeproj files.
+projects.
 </div>
 
 ## Installation
