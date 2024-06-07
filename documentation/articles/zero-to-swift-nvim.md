@@ -15,15 +15,18 @@ This article walks you through configuring Neovim for Swift development,
 providing configurations for various plugins to build a working Swift editing
 experience.
 It is not a tutorial on how to use Neovim and assumes some familiarity
-with modal text editors like _Neovim_, _vim_, or _vi_.
+with modal text editors like _Neovim_, _Vim_, or _Vi_.
+We are also assuming that you have already installed a Swift toolchain on your
+computer. If not, please see the
+[Swift installation instructions](https://www.swift.org/install).
 
 Although the article references Ubuntu 22.04, the configuration itself works on
 any operating system where a recent version of Neovim and a Swift toolchain is
-available. 
+available.
 
 Basic setup and configuration includes:
 
-1. Installing Neovim and Swift.
+1. Installing Neovim.
 2. Installing `lazy.nvim` to manage our plugins.
 3. Configuring the SourceKit-LSP server.
 4. Setting up Language-Server-driven autocompletion with _nvim-cmp_.
@@ -46,7 +49,7 @@ of the Language Server Protocol (LSP) Lua APIs.
 
 ## Prerequisites
 
-To get started, you'll need to install Neovim and a Swift toolchain. The Lua
+To get started, you'll need to install Neovim. The Lua
 APIs exposed by Neovim are under rapid development. We will want to take
 advantage of the recent improvements in the integrated support for Language
 Server Protocol (LSP), so we will need a fairly recent version
@@ -75,35 +78,6 @@ Alternatively, the Neovim GitHub repository has downloadable packages with the l
 See
 [install from download](https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-download)
 for more information.
-
-Once we have Neovim installed, we'll install a Swift toolchain. Go over to the
-download page on [swift.org](https://download.swift.org) and download the release Swift
-tarball. This package contains the runtime libraries, compilers, debugger, and
-integrated development environment (IDE) tools needed for a Swift development
-experience.
-
-```console
- $  cd ~/Downloads
- $  wget https://download.swift.org/swift-5.10-release/ubuntu2204/swift-5.10-RELEASE/swift-5.10-RELEASE-ubuntu22.04.tar.gz
- $  tar xf swift-5.10-RELEASE-ubuntu22.04.tar.gz
-```
-
-That drops a `swift-5.10-RELEASE-ubuntu22.04/usr` directory in our `~/Downloads`
-directory. The downloads folder isn't a great place to keep things permanently,
-but should be fine for now. We'll need to add the compiler and tools to our
-path.
-
-```console
- $  export PATH="$PWD/swift-5.10-RELEASE-ubuntu22.04/usr/bin:$PATH"
- $  which swiftc
-/home/ewilde/Downloads/swift-5.10-RELEASE-ubuntu22.04/usr/bin/swiftc
- $  swiftc --version
-Swift version 5.10 (swift-5.10-RELEASE)
-Target: x86_64-unknown-linux-gnu
-```
-
-For more information on installing Swift for your operating system, check out
-the [Swift installation](https://www.swift.org/install/) page.
 
 ## Getting Started
 
