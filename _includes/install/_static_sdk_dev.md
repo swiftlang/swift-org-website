@@ -23,10 +23,10 @@
     <p class="description">
       Static Linux SDK - Cross compile to Linux
       <ul>
-        <li><a href="https://download.swift.org/development/static-sdk/{{ static_sdk_6_0_builds.first.dir }}/{{ static_sdk_6_0_builds.first.download_signature }}">Signature (PGP)</a></li>
+        <li><a href="https://download.swift.org/swift-6.0-branch/static-sdk/{{ static_sdk_6_0_builds.first.dir }}/{{ static_sdk_6_0_builds.first.download_signature }}">Signature (PGP)</a></li>
       </ul>
     </p>
-    <a href="https://download.swift.org/development/static-sdk/{{ static_sdk_6_0_builds.first.dir }}/{{ static_sdk_6_0_builds.first.download }}" class="cta-secondary">Download Linux Static SDK</a>
+    <a href="https://download.swift.org/swift-6.0-branch/static-sdk/{{ static_sdk_6_0_builds.first.dir }}/{{ static_sdk_6_0_builds.first.download }}" class="cta-secondary">Download Linux Static SDK</a>
   </li>
 </ul>
 <a href="/documentation/articles/static-linux-getting-started.html" class="cta-secondary">Instructions (Static Linux SDK)</a>
