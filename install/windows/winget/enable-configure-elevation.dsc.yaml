@@ -5,6 +5,7 @@ properties:
     - resource: Microsoft.WinGet.DSC/WinGetUserSettings
       directives:
         description: Enable self-elevation in WinGet Configuration
+        allowPrerelease: true
       settings:
         Settings:
           experimentalFeatures:
