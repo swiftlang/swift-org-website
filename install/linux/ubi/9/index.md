@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-wide
 title: Install Swift
 ---
 
@@ -13,12 +13,12 @@ title: Install Swift
 
 {% include install/_build_snapshot.md platform="ubi 9"
 aarch64="true"
-branch_dir="development" 
-development="main" 
-docker_tag="nightly-rhel-ubi9" 
-development_builds=site.data.builds.development.ubi9 
+branch_dir="development"
+development="main"
+docker_tag="nightly-rhel-ubi9"
+development_builds=site.data.builds.development.ubi9
 aarch64_development_builds=site.data.builds.development.ubi9-aarch64
-development_2="release/6.0" 
-docker_tag_2="nightly-6.0-rhel-ubi9" 
-development_builds_2=site.data.builds.swift-6_0-branch.ubi9 aarch64_development_builds_2=site.data.builds.swift-6_0-branch.ubi9-aarch64 
+development_2="release/6.0"
+docker_tag_2="nightly-6.0-rhel-ubi9"
+development_builds_2=site.data.builds.swift-6_0-branch.ubi9 aarch64_development_builds_2=site.data.builds.swift-6_0-branch.ubi9-aarch64
 branch_dir_2="swift-6.0-branch"%}
