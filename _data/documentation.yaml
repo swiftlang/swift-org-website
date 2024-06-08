@@ -39,6 +39,10 @@
     url: /documentation/server/
     description: |
       Swift is a general-purpose programming language with unique characteristics that make it specifically suitable for Server applications.
+  - title: Embedded development
+    url: /getting-started/embedded-swift/
+    description: |
+      Introduction to embedded development using Swift. Learn how to get started.
   - title: Mixing Swift and C++
     url: /documentation/cxx-interop/
     description: |
