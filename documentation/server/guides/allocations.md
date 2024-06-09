@@ -346,7 +346,7 @@ Like Linux's `perf` user probes, DTrace also uses probes. The previous command i
 - `malloc`
 - `posix_memalign`
 - `calloc`
- - `malloc_zone_*`
+- `malloc_zone_*`
 
 > Note: On Apple platforms, Swift uses a slightly larger number of allocation functions than Linux.
 
