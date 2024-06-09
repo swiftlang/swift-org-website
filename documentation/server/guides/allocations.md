@@ -337,32 +337,33 @@ Although much of this tutorial focuses on the `perf` tool, you can create the sa
 
 Step 1. To get started, collect the raw data using the [DTrace](https://en.wikipedia.org/wiki/DTrace) framework by running this command:
 
-    ```bash
-    sudo dtrace -n 'pid$target::malloc:entry,pid$target::posix_memalign:entry,pid$target::calloc:entry,pid$target::malloc_zone_malloc:entry,pid$target::malloc_zone_calloc:entry,pid$target::malloc_zone_memalign:entry { @s[ustack(100)] = count(); } ::END { printa(@s); }' -c .build/release/your-program > raw.stacks
-    ```
+```bash
+sudo dtrace -n 'pid$target::malloc:entry,pid$target::posix_memalign:entry,pid$target::calloc:entry,pid$target::malloc_zone_malloc:entry,pid$target::malloc_zone_calloc:entry,pid$target::malloc_zone_memalign:entry { @s[ustack(100)] = count(); } ::END { printa(@s); }' -c .build/release/your-program > raw.stacks
+```
 
-    Like Linux's `perf` user probes, DTrace also uses probes. The previous command instructs `dtrace` to aggregate the number of calls to the allocation function equivalents: 
+Like Linux's `perf` user probes, DTrace also uses probes. The previous command instructs `dtrace` to aggregate the number of calls to the allocation function equivalents: 
 
-    - `malloc`
-    - `posix_memalign`
-    - `calloc`
-    - `malloc_zone_*`
+- `malloc`
+- `posix_memalign`
+- `calloc`
+ - `malloc_zone_*`
 
-    > Note: On Apple platforms, Swift uses a slightly larger number of allocation functions than Linux.
+> Note: On Apple platforms, Swift uses a slightly larger number of allocation functions than Linux.
 
 Step 2. Once the data is collected, run this command to create an SVG file:
 
-    ```bash
-    cat raw.stacks |\
-        /FlameGraph/stackcollapse.pl - | \
-        swift demangle --simplified | \
-        /FlameGraph/flamegraph.pl --countname allocations \
-            --width 1600 > out.svg
-    ```
+```bash
+cat raw.stacks |\
+    /FlameGraph/stackcollapse.pl - | \
+    swift demangle --simplified | \
+    /FlameGraph/flamegraph.pl --countname allocations \
 
-    You will notice this command is similar to the `perf` invocation, except:
-    - The command `cat raw.stacks` replaces the `perf script` command since `dtrace` already includes a textual data file.
-    - The command `stackcollapse.pl`, which parses `dtrace` aggregation output, replaces the `stackcollapse-perf.pl` command, which parses the `perf script` output.
+        --width 1600 > out.svg
+```
+
+You will notice this command is similar to the `perf` invocation, except:
+- The command `cat raw.stacks` replaces the `perf script` command since `dtrace` already includes a textual data file.
+- The command `stackcollapse.pl`, which parses `dtrace` aggregation output, replaces the `stackcollapse-perf.pl` command, which parses the `perf script` output.
 
 ## Other `perf` tricks
 
