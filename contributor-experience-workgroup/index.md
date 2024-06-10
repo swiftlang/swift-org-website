@@ -23,7 +23,7 @@ Fostering an inclusive community is critical to ensure that everybody in the Swi
 
 
 ## Membership
-Members of the workgroup are volunteers working towards improving the contributor experience. If you are interested in joining the workgroup, please send a message to [`@contributor-experience-workgroup`](https://forums.swift.org/g/contributor-experience-workgroup) on the Swift Forums, and mention why you’re interested in joining and how you envision supporting contributors to the Swift project!
+Members of the workgroup are volunteers working towards improving the contributor experience. If you are interested in joining the workgroup, please send a message to [@contributor-experience-workgroup](https://forums.swift.org/g/contributor-experience-workgroup) on the Swift Forums, and mention why you’re interested in joining and how you envision supporting contributors to the Swift project!
 
 To facilitate turnover within the workgroup, there will be an annual check-in for participation to provide an opportunity to step down from the workgroup, and a Call for Participation for new people to join will be announced on the Swift Forums.
 
@@ -111,7 +111,7 @@ Members of the workgroup serve at the discretion of the Swift Core Team and the 
 
 ## Communication
 
-The Contributor Experience Workgroup communicates with the broader Swift community using the Development forum for general discussions and questions about the contributor experience. The workgroup can be reached privately on the Swift Forums by messaging [`@contributor-experience-workgroup`](https://forums.swift.org/g/contributor-experience-workgroup).
+The Contributor Experience Workgroup communicates with the broader Swift community using the Development forum for general discussions and questions about the contributor experience. The workgroup can be reached privately on the Swift Forums by messaging [@contributor-experience-workgroup](https://forums.swift.org/g/contributor-experience-workgroup).
 
 ## Community Participation
 
