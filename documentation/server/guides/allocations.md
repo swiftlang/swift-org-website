@@ -365,7 +365,7 @@ You will notice this command is similar to the `perf` invocation, except:
 - The command `cat raw.stacks` replaces the `perf script` command since `dtrace` already includes a textual data file.
 - The command `stackcollapse.pl`, which parses `dtrace` aggregation output, replaces the `stackcollapse-perf.pl` command, which parses the `perf script` output.
 
-## Other `perf` tricks
+## Other perf tricks
 
 ### Swift’s allocation patterns
 Optimizing memory allocations and improving code efficiency based on the information provided by the flame graph can help make your Swift code more performant and visually appealing. The shape of allocations in Swift can vary depending on the type of memory being allocated and the way it is used.
