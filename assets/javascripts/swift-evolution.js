@@ -11,7 +11,7 @@
 
 const EVOLUTION_METADATA_URL = 'https://download.swift.org/swift-evolution/v1/evolution.json'
 const GITHUB_BASE_URL = 'https://github.com/'
-const REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'apple/swift-evolution/blob/main/proposals'
+const REPO_PROPOSALS_BASE_URL = GITHUB_BASE_URL + 'swiftlang/swift-evolution/blob/main/proposals'
 const UFF_INFO_URL = '/blog/using-upcoming-feature-flags/'
 
 /** Holds the primary data used on this page: metadata about Swift Evolution proposals. */
