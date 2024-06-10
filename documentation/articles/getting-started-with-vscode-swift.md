@@ -56,7 +56,7 @@ the Command Palette and following the instructions below.
 
 ## Language Features
 
-The Swift extension uses [SourceKit LSP](https://github.com/apple/sourcekit-lsp)
+The Swift extension uses [SourceKit-LSP](https://github.com/apple/sourcekit-lsp)
 to power language features. SourceKit LSP provides the following features in the
 editor. Use these links to see the VS Code documentation for each topic:
 
@@ -67,7 +67,7 @@ editor. Use these links to see the VS Code documentation for each topic:
 - [Diagnostics](https://code.visualstudio.com/docs/editor/editingevolved#_errors-warnings)
 - [Quick Fixes](https://code.visualstudio.com/docs/editor/editingevolved#_code-action)
 
-SourceKit LSP also provides code actions to automate common tasks. Code actions in VS Code
+SourceKit-LSP also provides code actions to automate common tasks. Code actions in VS Code
 appear as a light bulb near the editor margin (see the below screenshot for an
 example of this). Clicking on the light bulb will show you the available actions
 which can include:
@@ -80,17 +80,17 @@ which can include:
 
 <div class="warning" markdown="1">
 Before language features can be used you must perform a `swift build` command on your 
-project either on the command line or using a task in VS Code. This populates the index in sourcekit-lsp.
+project either on the command line or using a task in VS Code. This populates the index in SourceKit-LSP.
 </div>
 
 ## Swift Tasks
 
-Visual Studio Code provides tasks as a way to run external tools. See the
-[Integrate with External Tools via Tasks](https://code.visualstudio.com/docs/editor/tasks).
+VS Code provides tasks as a way to run external tools. See the
+[Integrate with External Tools via Tasks](https://code.visualstudio.com/docs/editor/tasks)
 documentation to learn more.
 
-The Swift extension provides some built-in tasks that you can use to build via
-Swift Package Manager. You can also configure custom tasks by creating a
+The Swift extension provides some built-in tasks that you can use to build your project via
+the Swift Package Manager. You can also configure custom tasks by creating a
 `tasks.json` file in the root folder of your project. For example, this
 `tasks.json` builds of your Swift targets in release mode:
 
@@ -123,7 +123,7 @@ diagnostics from the previous build task.
 
 ## Debugging
 
-Visual Studio Code provides a rich debugging experience. See the
+VS Code provides a rich debugging experience. See the
 [Debugging](https://code.visualstudio.com/docs/editor/debugging) documentation for
 more information.
 
@@ -180,7 +180,7 @@ their variable values:
 
 ## Test Explorer
 
-Visual Studio Code provides a Test Explorer view in the left sidebar which can
+VS Code provides a Test Explorer view in the left sidebar which can
 be used:
 
 - To navigate to tests
@@ -211,7 +211,7 @@ can be filtered in the Test Explorer using `@TestTarget:tagName`. You can then
 run or debug the filtered list of tests.
 
 <div class="warning" markdown="1">
-The Swift VS Code extension does not support running Swift Testing tests in Swift 5.10 or earlier.
+The Swift extension does not support running Swift Testing tests in Swift 5.10 or earlier.
 </div>
 
 ## Advanced Toolchain Selection
