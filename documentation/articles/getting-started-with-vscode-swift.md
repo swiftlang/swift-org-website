@@ -27,7 +27,7 @@ The Swift extension is designed to support the following projects:
 ## Install the Extension
 
 1. First, install Swift. If you do not already have Swift installed on your system, see the
-   [Getting Started Guide on Swift.org](https://www.swift.org/getting-started/).
+   [Getting Started Guide on Swift.org](/getting-started/).
 2. Download and install [Visual Studio Code](https://code.visualstudio.com/Download).
 3. Install the Swift extension from the
    [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang)
@@ -245,4 +245,4 @@ function correctly:
 ## Contributors
 
 The extension is developed by members of the Swift Community and maintained by
-the [Swift Server Working Group](https://www.swift.org/sswg/).
+the [Swift Server Working Group](/sswg/).
