@@ -343,7 +343,7 @@ Conditional conformance is available today on the Swift 4.1 development toolchai
 can [download the latest snapshot][Download] and try it out!
 
 [GenericsManifesto]: https://github.com/apple/swift/blob/master/docs/GenericsManifesto.md
-[SE-0143]: https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md
+[SE-0143]: https://github.com/swiftlang/swift-evolution/blob/master/proposals/0143-conditional-conformances.md
 [Optional.map]: https://developer.apple.com/documentation/swift/optional/#topics
 [Issue]: https://github.com/apple/swift/issues/49240
 [EvolutionProcess]: https://www.swift.org/swift-evolution

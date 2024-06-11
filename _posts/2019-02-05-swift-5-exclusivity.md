@@ -51,7 +51,7 @@ against exclusivity violations and to allow the introduction of
 language features that depend on safety guarantees, exclusivity
 enforcement was first introduced in Swift 4.0: [SE-0176: Enforce
 Exclusive Access to
-Memory](https://github.com/apple/swift-evolution/blob/master/proposals/0176-enforce-exclusive-access-to-memory.md).
+Memory](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0176-enforce-exclusive-access-to-memory.md).
 
 Compile-time (static) diagnostics catch many common exclusivity
 violations, but run-time (dynamic) diagnostics are also required to
@@ -87,7 +87,7 @@ Exclusivity enforcement in Swift 5 may affect an existing project in two ways:
 
 1. If the project source violates Swift's exclusivity rules (see
    [SE-0176: Enforce Exclusive Access to
-   Memory](https://github.com/apple/swift-evolution/blob/master/proposals/0176-enforce-exclusive-access-to-memory.md),
+   Memory](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0176-enforce-exclusive-access-to-memory.md),
    and Debug testing failed to exercise the invalid code, then
    executing the Release binary could trigger a runtime trap. The
    crash will produce a diagnostic message with the string:
@@ -380,7 +380,7 @@ moveNames(from: oldNames, to: newNames)
 ~~~
 
 [SE-0176: Enforce Exclusive Access to
-Memory](https://github.com/apple/swift-evolution/blob/master/proposals/0176-enforce-exclusive-access-to-memory.md)
+Memory](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0176-enforce-exclusive-access-to-memory.md)
 describes the problem in more depth.
 
 2\. Enforcement eliminates an unspecified behavior rule from the

@@ -163,7 +163,7 @@ await ...
 let err = errno // BAD, we are most likely on a different thread here (!)
 ```
 
-Please take care when interacting with any thread-local API from Swift Concurrency. If your library had used thread local storage before, you will want to move them to use [task-local values](https://github.com/apple/swift-evolution/blob/main/proposals/0311-task-locals.md) instead as they work correctly with Swift’s structured concurrency tasks.
+Please take care when interacting with any thread-local API from Swift Concurrency. If your library had used thread local storage before, you will want to move them to use [task-local values](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0311-task-locals.md) instead as they work correctly with Swift’s structured concurrency tasks.
 
 Another tricky situation is with imported C code. There may be no good way to annotate the imported types as Sendable (or it would be too troublesome to do so by hand). Swift is likely to gain improved support for imported code and potentially allow ignoring some of the concurrency safety checks on imported code.
 
@@ -209,5 +209,5 @@ Both Swift and SwiftNIO are not planning to do “vast amounts of change”, so 
 As soon as Swift 6 comes out, we recommend using the latest Swift 6 toolchains, even if using the Swift 5.5.n language mode (which may yield only warnings rather than hard failures on failed Sendability checks). This will result in better warnings and compiler hints, than just using a 5.5 toolchain.
 
 [sendable-staging]: https://github.com/DougGregor/swift-evolution/blob/sendable-staging/proposals/nnnn-sendable-staging.md
-[SE-0302]: https://github.com/apple/swift-evolution/blob/main/proposals/0302-concurrent-value-and-concurrent-closures.md
-[SE-0311]: https://github.com/apple/swift-evolution/blob/main/proposals/0311-task-locals.md
+[SE-0302]: https://github.com/swiftlang/swift-evolution/blob/main/proposals/0302-concurrent-value-and-concurrent-closures.md
+[SE-0311]: https://github.com/swiftlang/swift-evolution/blob/main/proposals/0311-task-locals.md

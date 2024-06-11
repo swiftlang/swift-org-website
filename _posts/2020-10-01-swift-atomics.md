@@ -27,7 +27,7 @@ You may have noticed that the atomic operations in this example do not follow th
 
 This is enabled by [SE-0282], a recently accepted Swift Evolution proposal that explicitly adopted a C/C++-style memory model for Swift, and (informally) described how regular Swift code interoperates with atomic operations. In fact, most APIs in this new package come from previous incarnations of the SE-0282 proposal: they were originally developed by an extremely productive collaborative effort on the [Evolution forum][pitch]. I am deeply grateful to all contributors to these discussions, and I hope the package will continue the collaboration in similarly high spirits!
 
-[SE-0282]: https://github.com/apple/swift-evolution/blob/master/proposals/0282-atomics.md
+[SE-0282]: https://github.com/swiftlang/swift-evolution/blob/master/proposals/0282-atomics.md
 [pitch]: https://forums.swift.org/t/low-level-atomic-operations/34683
 
 ## Proceed at Your Own Risk
@@ -69,7 +69,7 @@ Atomic access is implemented in terms of dedicated atomic storage representation
 - it enables certain atomic values to use a custom storage representation separate from their regular layout (such as the one used by atomic strong references), and
 - it is a better fit with the standard C atomics library that is used under the hood to implement the actual operations.
 
-[SE-0282]: https://github.com/apple/swift-evolution/blob/master/proposals/0282-atomics.md
+[SE-0282]: https://github.com/swiftlang/swift-evolution/blob/master/proposals/0282-atomics.md
 
 While the underlying pointer-based atomic operations are exposed as static methods on the corresponding `AtomicStorage` types, we strongly recommend the use of higher-level atomic wrappers to manage the details of preparing/disposing atomic storage. This version of the library provides two wrapper types:
 

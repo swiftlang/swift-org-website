@@ -1158,7 +1158,7 @@ takesVectorType(vector) // 'vector' is copied here.
 ```
 
 Swift's upcoming
-[parameter ownership modifiers](https://github.com/apple/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md),
+[parameter ownership modifiers](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md),
 which will be provided in an upcoming Swift release, will let you avoid copies
 when passing immutable values to functions. Mutable values can be passed
 by `inout` to a Swift function, which lets you avoid a deep copy of
@@ -1422,7 +1422,7 @@ extension Forest {
 ```
 
 The `borrowing` ownership modifier used above is a
-[new addition](https://github.com/apple/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md)
+[new addition](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md)
 in Swift 5.9. Some development versions of Swift 5.9 might not allow you to
 use `borrowing` for copyable C++ types like `Forest`. In such cases, prior
 to the release of Swift 5.9, you can

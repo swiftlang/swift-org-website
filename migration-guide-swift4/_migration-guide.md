@@ -47,7 +47,7 @@ The two most prevalent SDK changes are moving global constants into static type 
 
 `String` has new APIs in Swift 4, some of which now return `Substring` or `String`. To ease this transition, the Migrator will insert explicit initializer conversions when an API now expects a different type.
 
-> For more information about the new `String` and `Substring` APIs, see the [Swift Evolution Document for SE-0163](https://github.com/apple/swift-evolution/blob/main/proposals/0163-string-revision-1.md).
+> For more information about the new `String` and `Substring` APIs, see the [Swift Evolution Document for SE-0163](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0163-string-revision-1.md).
 
 #### SE-0110: Distinguish between single-tuple and multiple-argument function types
 
@@ -71,7 +71,7 @@ func foo(_: ((Int, Int) -> ()) {}
 foo { let (x, y) = $0; print(x + y) }
 ```
 
-> For more information about this language change, see the [Swift Evolution Document for SE-0110](https://github.com/apple/swift-evolution/blob/main/proposals/0110-distinguish-single-tuple-arg.md).
+> For more information about this language change, see the [Swift Evolution Document for SE-0110](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0110-distinguish-single-tuple-arg.md).
 
 #### Default parameter values must be public
 

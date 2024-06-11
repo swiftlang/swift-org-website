@@ -50,7 +50,7 @@ Property wrappers are a powerful feature in Swift for abstracting common propert
 
 See also:
 
-- Future directions section of the Property Wrappers Swift Evolution proposal: [Referencing the enclosing 'self' in a wrapper type](https://github.com/apple/swift-evolution/blob/main/proposals/0258-property-wrappers.md#referencing-the-enclosing-self-in-a-wrapper-type)
+- Future directions section of the Property Wrappers Swift Evolution proposal: [Referencing the enclosing 'self' in a wrapper type](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0258-property-wrappers.md#referencing-the-enclosing-self-in-a-wrapper-type)
 
 **Skills required**
 Proficient with Swift. Familiarity with property wrappers is a plus!

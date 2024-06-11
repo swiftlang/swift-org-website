@@ -45,7 +45,7 @@ A core principle for the Swift project is that the community is an open and incl
 ### Swift Evolution
 [Evolution]: #evolution
 
-Please see the [Swift evolution repository](https://github.com/apple/swift-evolution) to learn about Swift's evolution process and which proposals are actively being discussed.
+Please see the [Swift evolution repository](https://github.com/swiftlang/swift-evolution) to learn about Swift's evolution process and which proposals are actively being discussed.
 
 **[Announcements](https://forums.swift.org/c/evolution/announce)** - For announcements of Swift evolution proposal reviews and results. All discussion and review of evolution proposals occurs on the swift-evolution mailing list.
 

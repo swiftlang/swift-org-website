@@ -14,7 +14,7 @@ title: UnsafeRawPointer Migration
 
 Swift 3 introduces an `UnsafeRawPointer` type and enforces type safety with respect to unsafe pointer conversion.
 
-[Proposal SE-0107](https://github.com/apple/swift-evolution/blob/main/proposals/0107-unsaferawpointer.md) made the following change:
+[Proposal SE-0107](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0107-unsaferawpointer.md) made the following change:
 
   An `Unsafe[Mutable]RawPointer` type has been introduced. It
   replaces `Unsafe[Mutable]Pointer<Void>`. Conversion from
@@ -23,7 +23,7 @@ Swift 3 introduces an `UnsafeRawPointer` type and enforces type safety with resp
   memory access and an API for binding memory to a type. Binding
   memory allows for safe conversion between pointer types.
 
-To understand the language rules codified by this change, see the [Swift memory model](https://github.com/apple/swift-evolution/blob/main/proposals/0107-unsaferawpointer.md#memory-model-explanation) section of the proposal.
+To understand the language rules codified by this change, see the [Swift memory model](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0107-unsaferawpointer.md#memory-model-explanation) section of the proposal.
 
 Some Swift 2 code contains UnsafePointer initialization such as:
 
@@ -229,7 +229,7 @@ let rawPtr = mmap(nil, numFloats * MemoryLayout<Float>.stride, ...);
 let floatPtr = rawPtr.bindMemory(to: Float.self, capacity: numFloats)
 ~~~
 
-`bindMemory` even supports implementing custom allocators, as described in [SE-0107](https://github.com/apple/swift-evolution/blob/main/proposals/0107-unsaferawpointer.md#custom-memory-allocation)
+`bindMemory` even supports implementing custom allocators, as described in [SE-0107](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0107-unsaferawpointer.md#custom-memory-allocation)
 
 ### unsafeBitCast of pointers
 
@@ -378,7 +378,7 @@ write their own wrappers that take the correct raw pointer type.
 
 ### UnsafeRawBufferPointer API proposal
 
-The [UnsafeRawBufferPointer proposal](https://github.com/apple/swift-evolution/blob/main/proposals/0138-unsaferawbufferpointer.md) describes a data type that adds convenience in some typical
+The [UnsafeRawBufferPointer proposal](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0138-unsaferawbufferpointer.md) describes a data type that adds convenience in some typical
 UnsafePointer migration scenarios. Although this proposed API is not currently
 included with the language, it is possible for developers to copy all
 or part of the proposed implementation into their own project, or at

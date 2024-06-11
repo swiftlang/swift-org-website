@@ -19,7 +19,7 @@ We are most interested in general feedback, thoughts about use cases, and potent
 
 Soon, we will also provide a more complete “reference guide,” examples, and article-style guides.  These materials, to be authored using the [recently open-sourced DocC](/blog/swift-docc/) documentation compiler, will teach about the specific patterns and use-cases this library enables.
 
-These proposed language features–as all language features–will go through a proper [Swift Evolution process](https://github.com/apple/swift-evolution/blob/main/process.md) before lifting their experimental status. We invite the community to participate and help us shape the language and APIs through review, contributions, and sharing experiences. Thank you very much in advance!
+These proposed language features–as all language features–will go through a proper [Swift Evolution process](https://github.com/swiftlang/swift-evolution/blob/main/process.md) before lifting their experimental status. We invite the community to participate and help us shape the language and APIs through review, contributions, and sharing experiences. Thank you very much in advance!
 
 
 > This project is released as "early preview" and all of its APIs are subject to change, or even removal without any prior warning.
@@ -85,9 +85,9 @@ _ = try await worker.work(item: "work-item-32")
 let result = try await Worker.resolve(worker.id, using: otherTransport)
 ~~~
 
-This post summarizes the distributed actor feature at a very high level. We encourage those interested to read the full proposal available in [Swift Evolution](https://github.com/apple/swift-evolution/pulls?q=is%3Apr+is%3Aopen+distributed), and provide feedback or ask questions in the [Distributed Actors category on the Swift Forums](https://forums.swift.org/c/server/distributed-actors/79).
+This post summarizes the distributed actor feature at a very high level. We encourage those interested to read the full proposal available in [Swift Evolution](https://github.com/swiftlang/swift-evolution/pulls?q=is%3Apr+is%3Aopen+distributed), and provide feedback or ask questions in the [Distributed Actors category on the Swift Forums](https://forums.swift.org/c/server/distributed-actors/79).
 
-You can follow along and provide feedback on the `distributed actor` language proposal on the Swift forums and [Swift Evolution](https://github.com/apple/swift-evolution/pulls?q=is%3Apr+is%3Aopen+distributed). The [current, complete draft](https://github.com/apple/swift-evolution/pull/1433) is also available for review, though we expect to make significant changes to it shortly.
+You can follow along and provide feedback on the `distributed actor` language proposal on the Swift forums and [Swift Evolution](https://github.com/swiftlang/swift-evolution/pulls?q=is%3Apr+is%3Aopen+distributed). The [current, complete draft](https://github.com/swiftlang/swift-evolution/pull/1433) is also available for review, though we expect to make significant changes to it shortly.
 
 We would love to hear your feedback and see you participate in the Swift Evolution reviews of this exciting new feature!
 
@@ -328,6 +328,6 @@ So, other than the system initialization (configuring node discovery), this real
 
 ### Resources
 
-* [Swift Evolution: Distributed Actors Pitch, revision #1](https://github.com/apple/swift-evolution/pull/1433)
+* [Swift Evolution: Distributed Actors Pitch, revision #1](https://github.com/swiftlang/swift-evolution/pull/1433)
 * [Swift Distributed Actors Library repository](https://github.com/apple/swift-distributed-actors)
 * [Distributed Actors category on Swift Forums](https://forums.swift.org/c/server/distributed-actors/79)
