@@ -54,9 +54,9 @@ Packages like Swift Algorithms (and [Swift Numerics](https://github.com/apple/sw
 * Solicit feedback informed by real-world usage
 * Coherently tackle large tracts of missing functionality
 
-The `Algorithms` package is, in part, a response to the lengthy [SE-0270](https://github.com/apple/swift-evolution/blob/main/proposals/0270-rangeset-and-collection-operations.md) review and follow-up [Evolution process discussion](https://forums.swift.org/t/evolution-process-discussion/33272). With SE-0270, we faced a tension in providing a proposal small enough to make effective use of the Swift discussion forums, but large enough to motivate and ensure the consistency of the additions. Going forward, we plan to experiment with chopping up families of related algorithms into multiple, smaller Evolution proposals, using the presence of the `Algorithms` package to provide additional context.
+The `Algorithms` package is, in part, a response to the lengthy [SE-0270](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0270-rangeset-and-collection-operations.md) review and follow-up [Evolution process discussion](https://forums.swift.org/t/evolution-process-discussion/33272). With SE-0270, we faced a tension in providing a proposal small enough to make effective use of the Swift discussion forums, but large enough to motivate and ensure the consistency of the additions. Going forward, we plan to experiment with chopping up families of related algorithms into multiple, smaller Evolution proposals, using the presence of the `Algorithms` package to provide additional context.
 
-However, just because an addition might be a good candidate for inclusion in the `Algorithms` package, it doesn't need to begin its life there. This is _not_ a change to the [Swift Evolution process](https://github.com/apple/swift-evolution/blob/main/process.md). Well-supported pitches will continue to be considered, as always.
+However, just because an addition might be a good candidate for inclusion in the `Algorithms` package, it doesn't need to begin its life there. This is _not_ a change to the [Swift Evolution process](https://github.com/swiftlang/swift-evolution/blob/main/process.md). Well-supported pitches will continue to be considered, as always.
 
 ## Contribution Criteria
 

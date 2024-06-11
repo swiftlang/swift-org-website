@@ -9,5 +9,5 @@ See the [Swift evolution review schedule][swift-evolution-reviews]
 for current and upcoming proposal reviews.
 
 [swift-evolution-forums]: /community/#swift-evolution  "Swift Evolution forums"
-[swift-evolution-process]: https://github.com/apple/swift-evolution/blob/main/process.md  "Swift Evolution process"
+[swift-evolution-process]: https://github.com/swiftlang/swift-evolution/blob/main/process.md  "Swift Evolution process"
 [swift-evolution-reviews]: /swift-evolution  "Swift Evolution reviews"

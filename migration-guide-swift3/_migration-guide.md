@@ -36,25 +36,25 @@ If you need to apply any workarounds, discard the changes that you accepted from
 
 ## Swift 3 Migration Changes Overview
 
-There have been many significant changes for Swift 3, which the migrator will help you with. You can see an overview of the Swift 3 evolution proposals here: [https://github.com/apple/swift-evolution](https://github.com/apple/swift-evolution)
+There have been many significant changes for Swift 3, which the migrator will help you with. You can see an overview of the Swift 3 evolution proposals here: [https://github.com/swiftlang/swift-evolution](https://github.com/swiftlang/swift-evolution)
 
 Here is a brief overview of the more impactful source-breaking changes:
 
 ### API Design Guidelines
 
-The Objective-C APIs are imported into Swift 3 according to the new [Swift API design guidelines](/documentation/api-design-guidelines). This affects both how the SDKs are imported and the Objective-C user frameworks. The Swift Standard Library also has many changes for adhering to the guidelines. For more details you can refer to proposal [SE-0005 - Better Translation of Objective-C APIs Into Swift](https://github.com/apple/swift-evolution/blob/main/proposals/0005-objective-c-name-translation.md).
+The Objective-C APIs are imported into Swift 3 according to the new [Swift API design guidelines](/documentation/api-design-guidelines). This affects both how the SDKs are imported and the Objective-C user frameworks. The Swift Standard Library also has many changes for adhering to the guidelines. For more details you can refer to proposal [SE-0005 - Better Translation of Objective-C APIs Into Swift](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0005-objective-c-name-translation.md).
 The migrator is lowercasing enums declared by the user, to match them with the new guidelines.
 
 ### SDK
 
 Certain frameworks like CoreGraphics and Dispatch, and other types from Foundation, are no longer getting imported as a set of global functions and variables but as member functions and properties on the respective Swift types.
-For details see proposals [SE-0044 - Import as member](https://github.com/apple/swift-evolution/blob/main/proposals/0044-import-as-member.md), [SE-0088 - Modernize libdispatch for Swift 3 naming conventions](https://github.com/apple/swift-evolution/blob/main/proposals/0088-libdispatch-for-swift3.md).
+For details see proposals [SE-0044 - Import as member](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0044-import-as-member.md), [SE-0088 - Modernize libdispatch for Swift 3 naming conventions](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0088-libdispatch-for-swift3.md).
 
-The 'NS' prefix from key Foundation types is getting removed in Swift 3, see [SE-0086 - Drop NS Prefix in Swift Foundation](https://github.com/apple/swift-evolution/blob/main/proposals/0086-drop-foundation-ns.md).
+The 'NS' prefix from key Foundation types is getting removed in Swift 3, see [SE-0086 - Drop NS Prefix in Swift Foundation](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0086-drop-foundation-ns.md).
 
 ### Swift Standard Library
 
-The Collection indexing model has changed dramatically in Swift 3, for more details see [SE-0065 - A New Model for Collections and Indices](https://github.com/apple/swift-evolution/blob/main/proposals/0065-collections-move-indices.md).
+The Collection indexing model has changed dramatically in Swift 3, for more details see [SE-0065 - A New Model for Collections and Indices](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0065-collections-move-indices.md).
 The most visible change is that indexes no longer have `successor()`, `predecessor()`, `advancedBy(_:)`, `advancedBy(_:limit:)`, or `distanceTo(_:)` methods. Instead, those operations are moved to the collection, which is now responsible for incrementing and decrementing its indices.
 
 ~~~
@@ -81,12 +81,12 @@ Range(r) // converts to Range<Int>
 
 ### Language
 - **Consistent first argument labels**
-The first argument label in functions is now considered API by default, see [SE-0046 - Establish consistent label behavior across all parameters including first labels](https://github.com/apple/swift-evolution/blob/main/proposals/0046-first-label.md).
+The first argument label in functions is now considered API by default, see [SE-0046 - Establish consistent label behavior across all parameters including first labels](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0046-first-label.md).
 The migrator adds underscore labels to preserve the existing APIs:
 
         func foo(bar: Int) => func foo(_ bar: Int)
 - **Changes with handling of UnsafePointer\<T\>**
-In Swift 3, the nullability of non-object pointer types is now represented explicitly using optionals, such as `UnsafePointer<Int>?`, see [SE-0055 - Make unsafe pointer nullability explicit using Optional](https://github.com/apple/swift-evolution/blob/main/proposals/0055-optional-unsafe-pointers.md). This means that the types `UnsafePointer`, `UnsafeMutablePointer`, `AutoreleasingUnsafeMutablePointer`, `OpaquePointer`, `Selector`, and `NSZone` now represent non-nullable pointers, i.e. pointers that are never `nil`. Code working with these types may have to make several changes:
+In Swift 3, the nullability of non-object pointer types is now represented explicitly using optionals, such as `UnsafePointer<Int>?`, see [SE-0055 - Make unsafe pointer nullability explicit using Optional](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0055-optional-unsafe-pointers.md). This means that the types `UnsafePointer`, `UnsafeMutablePointer`, `AutoreleasingUnsafeMutablePointer`, `OpaquePointer`, `Selector`, and `NSZone` now represent non-nullable pointers, i.e. pointers that are never `nil`. Code working with these types may have to make several changes:
 
     - To set a pointer to `nil`, it must be optional. The migrator will handle some simple cases here, but in general you must decide whether your pointers should be optional just like your object references.
     - Results from C functions that return nullable pointers must be explicitly unwrapped before accessing the `pointee` property (formerly `memory`) or subscript elements. Optional chaining syntax works well here, e.g. `result?.pointee = sum`.
@@ -94,7 +94,7 @@ In Swift 3, the nullability of non-object pointer types is now represented expli
     - Due to compiler limitations, passing a pointer through a function that uses C variadics (such as NSLog) is not allowed. As a workaround, please use the following idiom to pass it as a pointer-sized integer value instead: `Int(bitPattern: nullablePointer)`.
 
 - **Objective-C lightweight generic classes are now imported as generic types**
-[SE-0057 - Importing Objective-C Lightweight Generics](https://github.com/apple/swift-evolution/blob/main/proposals/0057-importing-objc-generics.md)
+[SE-0057 - Importing Objective-C Lightweight Generics](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0057-importing-objc-generics.md)
 Because Objective-C generics are not represented at runtime,  there are some limitations on what can be done with them in Swift:
   - If an Objective-C generic class is used in a checked `as?`, `as!`, or `is` cast, the generic parameters are not checked at runtime. The cast succeeds if the operand is an instance of the Objective-C class, regardless of parameters.
 
@@ -125,21 +125,21 @@ Because Objective-C generics are not represented at runtime,  there are some lim
   - Foundation container classes `NS[Mutable]Array`, `NS[Mutable]Set`, and  `NS[Mutable]Dictionary` are still imported as nongeneric classes for the time being.
 
 - **Objective-C id is imported as as Swift Any type**
-[SE-0116 - Import Objective-C id as Swift Any type](https://github.com/apple/swift-evolution/blob/main/proposals/0116-id-as-any.md)
+[SE-0116 - Import Objective-C id as Swift Any type](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0116-id-as-any.md)
 Objective-C interfaces that use `id` and untyped collections will be imported into Swift as taking the `Any` type instead of `AnyObject`.
 
 - **Changes with handling of ImplicitlyUnwrappedOptional**
-[SE-0054 - Abolish ImplicitlyUnwrappedOptional type](https://github.com/apple/swift-evolution/blob/main/proposals/0054-abolish-iuo.md)
+[SE-0054 - Abolish ImplicitlyUnwrappedOptional type](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0054-abolish-iuo.md)
 Variable bindings which previously had inferred type `T!` from their binding on the right-hand side will now have type `T?`. The compiler will emit an error at sites where those bound variables are used in a context that demands a non-optional type and suggest that the value be forced with the `!` operator.
 Explicitly written nested IUO types (like `[Int!]`) will have to be rewritten to use the corresponding optional type (`[Int?]`) or non-optional type (`[Int]`) depending on what's more appropriate for the context. However, most declarations with non-nested IUO type will continue to work as they did before.
 Unsugared use of the `ImplicitlyUnwrappedOptional` type will have to be replaced with the postfix `!` notation.
 
 - **Closures are non-escaping by default**
-[SE-0103 - Make non-escaping closures the default](https://github.com/apple/swift-evolution/blob/main/proposals/0103-make-noescape-default.md)
+[SE-0103 - Make non-escaping closures the default](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0103-make-noescape-default.md)
 The default for closures was switched and they require an `@escaping` annotation if a closure argument can escape the function body.
 
 - **UnsafeRawPointer type was introduced to enforce type safety with respect to unsafe pointer conversion.**
-[SE-0107 - UnsafeRawPointer API](https://github.com/apple/swift-evolution/blob/main/proposals/0107-unsaferawpointer.md)
+[SE-0107 - UnsafeRawPointer API](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0107-unsaferawpointer.md)
 An `Unsafe[Mutable]RawPointer` type has been introduced. It replaces `Unsafe[Mutable]Pointer<Void>`. Conversion from `UnsafePointer<T>` to `UnsafePointer<U>` has been disallowed. `Unsafe[Mutable]RawPointer` provides an API for untyped memory access and an API for binding memory to a type. Binding memory allows for safe conversion between pointer types.
 For detailed instructions on how to migrate your code to the new API refer to the [UnsafeRawPointer migration guide](/migration-guide-swift3/se-0107-migrate.html).
 

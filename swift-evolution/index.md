@@ -12,11 +12,11 @@ it becomes a release goal,
 and is tracked as a feature of an upcoming version of Swift.
 
 To support this process,
-the [Swift Evolution repository](https://github.com/apple/swift-evolution)
+the [Swift Evolution repository](https://github.com/swiftlang/swift-evolution)
 collects the goals for the upcoming major and minor releases
 (as defined by the [core team](/community/#core-team))
 as well as proposals for changes to Swift.
-The [Swift evolution process](https://github.com/apple/swift-evolution/blob/main/process.md) document details how ideas are
+The [Swift evolution process](https://github.com/swiftlang/swift-evolution/blob/main/process.md) document details how ideas are
 proposed, discussed, reviewed, and eventually accepted into upcoming releases.
 
 Below is a list of all the current and upcoming proposal reviews.

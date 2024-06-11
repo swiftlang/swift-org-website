@@ -35,22 +35,22 @@ The standard library in Swift 5 includes the following new features:
 
 Swift 5 implements the following Standard Library proposals from the Swift Evolution process:
 
-* [SE-0200 Enhancing String Literals Delimiters to Support Raw Text](https://github.com/apple/swift-evolution/blob/master/proposals/0200-raw-string-escaping.md)
-* [ SE-0211 Add Unicode Properties to Unicode.Scalar](https://github.com/apple/swift-evolution/blob/master/proposals/0211-unicode-scalar-properties.md)
-* [ SE-0214 Renaming the DictionaryLiteral type to KeyValuePairs](https://github.com/apple/swift-evolution/blob/master/proposals/0214-DictionaryLiteral.md)
-* [ SE-0215 Conform Never to Equatable and Hashable](https://github.com/apple/swift-evolution/blob/master/proposals/0215-conform-never-to-hashable-and-equatable.md)
-* [ SE-0218 Introduce compactMapValues to Dictionary](https://github.com/apple/swift-evolution/blob/master/proposals/0218-introduce-compact-map-values.md)
-* [ SE-0221 Character Properties](https://github.com/apple/swift-evolution/blob/master/proposals/0221-character-properties.md)
-* [SE-0225 Adding isMultiple to BinaryInteger](https://github.com/apple/swift-evolution/blob/master/proposals/0225-binaryinteger-iseven-isodd-ismultiple.md)
-* [SE-0228 Fix ExpressibleByStringInterpolation](https://github.com/apple/swift-evolution/blob/master/proposals/0228-fix-expressiblebystringinterpolation.md)
-* [SE-0229 SIMD Vectors](https://github.com/apple/swift-evolution/blob/master/proposals/0229-simd.md)
-* [SE-0232 Remove Some Customization Points from the Standard Library's Collection Hierarchy](https://github.com/apple/swift-evolution/blob/master/proposals/0232-remove-customization-points.md)
-* [SE-0233 Make Numeric Refine a new AdditiveArithmetic Protocol](https://github.com/apple/swift-evolution/blob/master/proposals/0233-additive-arithmetic-protocol.md)
-* [SE-0234 Remove Sequence.SubSequence](https://github.com/apple/swift-evolution/blob/master/proposals/0234-remove-sequence-subsequence.md)
-* [SE-0235 Add Result to the Standard Library](https://github.com/apple/swift-evolution/blob/master/proposals/0235-add-result.md)
-* [SE-0237 Introduce withContiguous{Mutable}StorageIfAvailable methods](https://github.com/apple/swift-evolution/blob/master/proposals/0237-contiguous-collection.md)
-* [ SE-0239 Add Codable conformance to Range types](https://github.com/apple/swift-evolution/blob/master/proposals/0239-codable-range.md)
-* [SE-0241 Deprecate String Index Encoded Offsets](https://github.com/apple/swift-evolution/blob/master/proposals/0241-string-index-explicit-encoding-offset.md)
+* [SE-0200 Enhancing String Literals Delimiters to Support Raw Text](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0200-raw-string-escaping.md)
+* [ SE-0211 Add Unicode Properties to Unicode.Scalar](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0211-unicode-scalar-properties.md)
+* [ SE-0214 Renaming the DictionaryLiteral type to KeyValuePairs](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0214-DictionaryLiteral.md)
+* [ SE-0215 Conform Never to Equatable and Hashable](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0215-conform-never-to-hashable-and-equatable.md)
+* [ SE-0218 Introduce compactMapValues to Dictionary](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0218-introduce-compact-map-values.md)
+* [ SE-0221 Character Properties](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0221-character-properties.md)
+* [SE-0225 Adding isMultiple to BinaryInteger](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0225-binaryinteger-iseven-isodd-ismultiple.md)
+* [SE-0228 Fix ExpressibleByStringInterpolation](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0228-fix-expressiblebystringinterpolation.md)
+* [SE-0229 SIMD Vectors](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0229-simd.md)
+* [SE-0232 Remove Some Customization Points from the Standard Library's Collection Hierarchy](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0232-remove-customization-points.md)
+* [SE-0233 Make Numeric Refine a new AdditiveArithmetic Protocol](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0233-additive-arithmetic-protocol.md)
+* [SE-0234 Remove Sequence.SubSequence](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0234-remove-sequence-subsequence.md)
+* [SE-0235 Add Result to the Standard Library](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0235-add-result.md)
+* [SE-0237 Introduce withContiguous{Mutable}StorageIfAvailable methods](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0237-contiguous-collection.md)
+* [ SE-0239 Add Codable conformance to Range types](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0239-codable-range.md)
+* [SE-0241 Deprecate String Index Encoded Offsets](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0241-string-index-explicit-encoding-offset.md)
 
 #### Additional Language and Compiler Updates
 
@@ -58,12 +58,12 @@ Swift 5 defaults to enforcing exclusive access to memory for both debug and rele
 
 Swift 5 also implements the following language proposals from the Swift Evolution process:
 
-* [SE-0192 Handling Future Enum Cases](https://github.com/apple/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md)
-* [SE-0213 Literal initialization via coercion](https://github.com/apple/swift-evolution/blob/master/proposals/0213-literal-init-via-coercion.md)
-* [ SE-0216 Introduce user-defined dynamically "callable" types](https://github.com/apple/swift-evolution/blob/master/proposals/0216-dynamic-callable.md)
-* [SE-0224 Support 'less than' operator in compilation conditions](https://github.com/apple/swift-evolution/blob/master/proposals/0224-ifswift-lessthan-operator.md)
-* [ SE-0227 Identity key path](https://github.com/apple/swift-evolution/blob/master/proposals/0227-identity-keypath.md)
-* [ SE-0230 Flatten nested optionals resulting from 'try?'](https://github.com/apple/swift-evolution/blob/master/proposals/0230-flatten-optional-try.md)
+* [SE-0192 Handling Future Enum Cases](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md)
+* [SE-0213 Literal initialization via coercion](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0213-literal-init-via-coercion.md)
+* [ SE-0216 Introduce user-defined dynamically "callable" types](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0216-dynamic-callable.md)
+* [SE-0224 Support 'less than' operator in compilation conditions](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0224-ifswift-lessthan-operator.md)
+* [ SE-0227 Identity key path](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0227-identity-keypath.md)
+* [ SE-0230 Flatten nested optionals resulting from 'try?'](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0230-flatten-optional-try.md)
 
 
 ### Package Manager Updates
@@ -72,9 +72,9 @@ Swift Package Manager includes a number of new features in Swift 5, including de
 
 Swift 5 implements the following Package Manager proposals from the Swift Evolution process:
 
-* [ SE-0219 Package Manager Dependency Mirroring](https://github.com/apple/swift-evolution/blob/master/proposals/0219-package-manager-dependency-mirroring.md)
-* [SE-0236 Package Manager Platform Deployment Settings](https://github.com/apple/swift-evolution/blob/master/proposals/0236-package-manager-platform-deployment-settings.md)
-* [ SE-0238 Package Manager Target Specific Build Settings](https://github.com/apple/swift-evolution/blob/master/proposals/0238-package-manager-build-settings.md)
+* [ SE-0219 Package Manager Dependency Mirroring](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0219-package-manager-dependency-mirroring.md)
+* [SE-0236 Package Manager Platform Deployment Settings](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0236-package-manager-platform-deployment-settings.md)
+* [ SE-0238 Package Manager Target Specific Build Settings](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0238-package-manager-build-settings.md)
 
 ### Migrating to Swift 5
 

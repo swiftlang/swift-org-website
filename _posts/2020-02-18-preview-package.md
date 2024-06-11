@@ -5,11 +5,11 @@ author: natecook1000
 date: 2020-02-18 09:00:00
 ---
 
-I'm excited to announce a new open-source package and an enhancement to the Swift Evolution process: the [Standard Library Preview package](https://github.com/apple/swift-standard-library-preview)! The preview package provides access to functionality that has been accepted into the Swift standard library through the [Swift Evolution process](https://github.com/apple/swift-evolution/blob/master/process.md), but has not yet shipped as part of an official Swift release. This will allow us to incorporate feedback informed by real-world usage and remove many of the technical obstacles to contributing to the standard library.
+I'm excited to announce a new open-source package and an enhancement to the Swift Evolution process: the [Standard Library Preview package](https://github.com/apple/swift-standard-library-preview)! The preview package provides access to functionality that has been accepted into the Swift standard library through the [Swift Evolution process](https://github.com/swiftlang/swift-evolution/blob/master/process.md), but has not yet shipped as part of an official Swift release. This will allow us to incorporate feedback informed by real-world usage and remove many of the technical obstacles to contributing to the standard library.
 
-We've seeded the preview package with the functionality from the recently approved [SE-0270](https://github.com/apple/swift-evolution/blob/master/proposals/0270-rangeset-and-collection-operations.md) proposal, which includes operations on subranges of collections, such as `subranges(where:)` and `moveSubranges(_:to:)`, as well as the supporting `RangeSet` type.
+We've seeded the preview package with the functionality from the recently approved [SE-0270](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0270-rangeset-and-collection-operations.md) proposal, which includes operations on subranges of collections, such as `subranges(where:)` and `moveSubranges(_:to:)`, as well as the supporting `RangeSet` type.
 
-> **Note**: The Standard Library Preview package itself is a product of the Swift Evolution process! For more information, including the criteria for inclusion in the preview package, see [SE-0264](https://github.com/apple/swift-evolution/blob/master/proposals/0264-stdlib-preview-package.md).
+> **Note**: The Standard Library Preview package itself is a product of the Swift Evolution process! For more information, including the criteria for inclusion in the preview package, see [SE-0264](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0264-stdlib-preview-package.md).
 
 ## Using the Preview Package
 
@@ -83,7 +83,7 @@ numbers.moveSubranges(negatives, to: 0)
 
 We require each standard library feature proposal to include a full implementation before the review process begins. However, we realize that not everyone has the time and resources to build the whole stack—including LLVM, Clang, and the Swift compiler—just to change a part of the standard library.
 
-Going forward, you can provide your implementation as a standalone SwiftPM package by opening a pull request against the new [Swift Evolution staging](https://github.com/apple/swift-evolution-staging) repository. This more approachable way of proposing a feature should eliminate many of the technical obstacles to contributing to the standard library.
+Going forward, you can provide your implementation as a standalone SwiftPM package by opening a pull request against the new [Swift Evolution staging](https://github.com/swiftlang/swift-evolution-staging) repository. This more approachable way of proposing a feature should eliminate many of the technical obstacles to contributing to the standard library.
 
 Once a proposal is approved, it will be made available as part of the Standard Library Preview package in order to garner feedback before being included in an official Swift release.
 

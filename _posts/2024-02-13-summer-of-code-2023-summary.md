@@ -88,7 +88,7 @@ If you’d like to read more about this project and Ziyang’s experience in his
 * Mentee: [Amritpan Kaur](https://github.com/amritpan)
 * Mentor: [Pavel Yaskevich](https://github.com/xedin?tab=repositories) 
 
-This project was focused on performance and diagnostic improvements to type-checking of key path literal expressions as well as improvements to new features such as keypaths-as-functions introduced to the language by [SE-0249](https://github.com/apple/swift-evolution/blob/main/proposals/0249-key-path-literal-function-expressions.md).
+This project was focused on performance and diagnostic improvements to type-checking of key path literal expressions as well as improvements to new features such as keypaths-as-functions introduced to the language by [SE-0249](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0249-key-path-literal-function-expressions.md).
 
 During compilation, the key path expression root and value were type-checked sequentially to resolve a key path type from this context. However, the design of the type-checker's evaluation of key path component types, their relationships to each other, and key path capabilities results in hard to understand compiler errors and even failures to type-check some valid Swift code. 
 

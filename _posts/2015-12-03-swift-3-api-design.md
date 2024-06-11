@@ -67,10 +67,10 @@ repository][swift-3-api-guidelines-repo], then join the discussion on
 the [swift-evolution mailing
 list](/community/#swift-evolution).
 
-[swift-3-goals]: https://github.com/apple/swift-evolution/blob/master/README.md  "Swift 3 goals"
+[swift-3-goals]: https://github.com/swiftlang/swift-evolution/blob/master/README.md  "Swift 3 goals"
 [swift-api-guidelines]: /documentation/api-design-guidelines/  "Swift API Design Guidelines"
 [swift-stdlib-update]: https://github.com/apple/swift/tree/swift-3-api-guidelines  "Swift 3 Standard Library updates"
-[clang-importer-proposal]: https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md  "Better Translation of Objective-C APIs into Swift proposal"
+[clang-importer-proposal]: https://github.com/swiftlang/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md  "Better Translation of Objective-C APIs into Swift proposal"
 [swift-3-api-guidelines-repo]: https://github.com/apple/swift-3-api-guidelines-review  "Swift 3 API Design Guidelines review repository"
 [objc-cocoa-guidelines]: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html  "Objective-C Coding Guidelines for Cocoa"
 [swift-evolution]: /contributing/#evolution-process  "Swift evolution process"

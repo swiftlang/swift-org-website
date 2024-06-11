@@ -336,8 +336,8 @@ in the Swift Evolution proposals for the
 
 [Dictionary]: https://developer.apple.com/documentation/swift/dictionary
 [Set]: https://developer.apple.com/documentation/swift/set
-[SE-0165]: https://github.com/apple/swift-evolution/blob/master/proposals/0165-dict.md
-[SE-0154]: https://github.com/apple/swift-evolution/blob/master/proposals/0154-dictionary-key-and-value-collections.md
+[SE-0165]: https://github.com/swiftlang/swift-evolution/blob/master/proposals/0165-dict.md
+[SE-0154]: https://github.com/swiftlang/swift-evolution/blob/master/proposals/0154-dictionary-key-and-value-collections.md
 
 <style type="text/css">
 img.dictionary-blog {
