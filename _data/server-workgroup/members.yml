@@ -36,7 +36,11 @@
 
 - name: Dianna Ma
   github: tayloraswift
-  affiliation:
+  affiliation: 
+
+- name: Tibor Bödecs
+  github: tib
+  affiliation: Binary Birds
 
 - name: Ben Cohen
   github: airspeedswift
