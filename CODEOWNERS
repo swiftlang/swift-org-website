@@ -28,8 +28,8 @@
 
 # The following lines are used by GitHub to automatically recommend reviewers.
 
-* @0xTim @alexandersandberg @daveverwer @dempseyatgithub @parispittman @kaishin @shahmishal @cthielen @federicobucchi
+* @0xTim @alexandersandberg @daveverwer @dempseyatgithub @parispittman @kaishin @shahmishal @timsneath @federicobucchi
 
-/_posts/* @cthielen @tkremenek @shahmishal
+/_posts/* @timsneath @tkremenek @shahmishal
 
 /gsoc*/ @ktoso
