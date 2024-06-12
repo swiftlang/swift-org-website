@@ -170,7 +170,7 @@ But with the Static Linux SDK installed, you can also build Linux
 binaries for x86-64 and ARM64 machines:
 
 ```console
-$ swift build --sdk x86_64-swift-linux-musl
+$ swift build --swift-sdk x86_64-swift-linux-musl
 Building for debugging...
 [8/8] Linking hello
 Build complete! (2.04s)
@@ -179,7 +179,7 @@ $ file .build/x86_64-swift-linux-musl/debug/hello
 ```
 
 ```console
-$ swift build --sdk aarch64-swift-linux-musl
+$ swift build --swift-sdk aarch64-swift-linux-musl
 Building for debugging...
 [8/8] Linking hello
 Build complete! (2.00s)
