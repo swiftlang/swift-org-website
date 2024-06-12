@@ -16,6 +16,10 @@ atom: true
 {% endfor %}
 </div>
 
+<div class="banner">
+  <p>Get ready for the Swift 6 language mode with the <a href="https://www.swift.org/migration/documentation/migrationguide/">official migration guide</a></p>
+</div>
+
 <div class="link-grid">
   <ul>
     <li>
