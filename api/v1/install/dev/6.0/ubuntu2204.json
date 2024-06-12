@@ -1,0 +1,6 @@
+---
+layout: none
+---
+{ "x86_64": {{ site.data.builds.swift-6_0-branch.ubuntu2204 | jsonify }},
+  "aarch64": {{ site.data.builds.swift-6_0-branch.ubuntu2204-aarch64 | jsonify}}
+}

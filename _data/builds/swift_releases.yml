@@ -1,4 +1,4 @@
-- name: 2.2
+- name: "2.2"
   tag: swift-2.2-RELEASE
   date: 2016-03-21
   xcode: Xcode 7.3
@@ -13,7 +13,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 2.2.1
+- name: "2.2.1"
   tag: swift-2.2.1-RELEASE
   xcode: Xcode 7.3.1
   xcode_release: true
@@ -28,7 +28,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 3.0
+- name: "3.0"
   tag: swift-3.0-RELEASE
   xcode: Xcode 8
   xcode_release: true
@@ -42,7 +42,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 3.0.1
+- name: "3.0.1"
   tag: swift-3.0.1-RELEASE
   xcode: Xcode 8.1
   xcode_release: true
@@ -60,7 +60,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 3.0.2
+- name: "3.0.2"
   tag: swift-3.0.2-RELEASE
   xcode: Xcode 8.2
   xcode_release: true
@@ -74,7 +74,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 3.1
+- name: "3.1"
   tag: swift-3.1-RELEASE
   xcode: Xcode 8.3
   xcode_release: true
@@ -92,7 +92,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 3.1.1
+- name: "3.1.1"
   tag: swift-3.1.1-RELEASE
   xcode: Xcode 8.3.2
   xcode_release: true
@@ -110,7 +110,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.0
+- name: "4.0"
   tag: swift-4.0-RELEASE
   xcode: Xcode 9
   xcode_release: true
@@ -128,7 +128,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.0.2
+- name: "4.0.2"
   tag: swift-4.0.2-RELEASE
   xcode: Xcode 9.1
   xcode_release: true
@@ -146,7 +146,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.0.3
+- name: "4.0.3"
   tag: swift-4.0.3-RELEASE
   xcode: Xcode 9.2
   xcode_release: true
@@ -164,7 +164,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.1
+- name: "4.1"
   tag: swift-4.1-RELEASE
   xcode: Xcode 9.3
   xcode_release: true
@@ -182,7 +182,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.1.1
+- name: "4.1.1"
   tag: swift-4.1.1-RELEASE
   xcode: Xcode 9.3
   linux_only: true
@@ -200,7 +200,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.1.2
+- name: "4.1.2"
   tag: swift-4.1.2-RELEASE
   xcode: Xcode 9.4
   xcode_release: true
@@ -218,7 +218,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.1.3
+- name: "4.1.3"
   tag: swift-4.1.3-RELEASE
   xcode: Xcode 9.4
   xcode_release: false
@@ -236,7 +236,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.2
+- name: "4.2"
   tag: swift-4.2-RELEASE
   xcode: Xcode 10
   xcode_release: true
@@ -254,7 +254,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.2.1
+- name: "4.2.1"
   tag: swift-4.2.1-RELEASE
   xcode: Xcode 10.1
   xcode_release: true
@@ -272,7 +272,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.2.2
+- name: "4.2.2"
   tag: swift-4.2.2-RELEASE
   xcode: Xcode 10.1
   xcode_release: false
@@ -290,7 +290,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.2.3
+- name: "4.2.3"
   tag: swift-4.2.3-RELEASE
   xcode: Xcode 10.1
   xcode_release: false
@@ -308,7 +308,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 4.2.4
+- name: "4.2.4"
   tag: swift-4.2.4-RELEASE
   xcode: Xcode 10.1
   xcode_release: false
@@ -327,7 +327,7 @@
       platform: Linux
       archs:
         - x86_64
-- name: 5.0
+- name: "5.0"
   tag: swift-5.0-RELEASE
   xcode: Xcode 10.2
   xcode_release: true
@@ -347,7 +347,7 @@
       docker: 5.0-bionic
       archs:
         - x86_64
-- name: 5.0.1
+- name: "5.0.1"
   tag: swift-5.0.1-RELEASE
   xcode: Xcode 10.2.1
   xcode_release: true
@@ -367,7 +367,7 @@
       docker: 5.0.1-bionic
       archs:
         - x86_64
-- name: 5.0.2
+- name: "5.0.2"
   tag: swift-5.0.2-RELEASE
   xcode: Xcode 10.2.1
   xcode_release: false
@@ -387,7 +387,7 @@
       docker: 5.0.2-bionic
       archs:
         - x86_64
-- name: 5.0.3
+- name: "5.0.3"
   tag: swift-5.0.3-RELEASE
   xcode: Xcode 10.2.1
   xcode_release: false
@@ -407,7 +407,7 @@
       docker: 5.0.3-bionic
       archs:
         - x86_64
-- name: 5.1
+- name: "5.1"
   tag: swift-5.1-RELEASE
   xcode: Xcode 11
   xcode_release: true
@@ -427,7 +427,7 @@
       docker: 5.1-bionic
       archs:
         - x86_64
-- name: 5.1.1
+- name: "5.1.1"
   tag: swift-5.1.1-RELEASE
   xcode: Xcode 11
   xcode_release: false
@@ -447,7 +447,7 @@
       docker: 5.1.1-bionic
       archs:
         - x86_64
-- name: 5.1.2
+- name: "5.1.2"
   tag: swift-5.1.2-RELEASE
   xcode: Xcode 11.2
   xcode_release: true
@@ -467,7 +467,7 @@
       docker: 5.1.2-bionic
       archs:
         - x86_64
-- name: 5.1.3
+- name: "5.1.3"
   tag: swift-5.1.3-RELEASE
   xcode: Xcode 11.3
   xcode_release: true
@@ -487,7 +487,7 @@
       docker: 5.1.3-bionic
       archs:
         - x86_64
-- name: 5.1.4
+- name: "5.1.4"
   tag: swift-5.1.4-RELEASE
   xcode: Xcode 11.3
   xcode_release: false
@@ -507,7 +507,7 @@
       docker: 5.1.4-bionic
       archs:
         - x86_64
-- name: 5.1.5
+- name: "5.1.5"
   tag: swift-5.1.5-RELEASE
   xcode: Xcode 11.3
   xcode_release: false
@@ -527,7 +527,7 @@
       docker: 5.1.5-bionic
       archs:
         - x86_64
-- name: 5.2
+- name: "5.2"
   tag: swift-5.2-RELEASE
   xcode: Xcode 11.4
   xcode_release: true
@@ -543,7 +543,7 @@
       docker: 5.2-bionic
       archs:
         - x86_64
-- name: 5.2.1
+- name: "5.2.1"
   tag: swift-5.2.1-RELEASE
   xcode: Xcode 11.4
   xcode_release: false
@@ -559,7 +559,7 @@
       docker: 5.2.1-bionic
       archs:
         - x86_64
-- name: 5.2.2
+- name: "5.2.2"
   tag: swift-5.2.2-RELEASE
   xcode: Xcode 11.4.1
   xcode_release: true
@@ -575,7 +575,7 @@
       docker: 5.2.2-bionic
       archs:
         - x86_64
-- name: 5.2.3
+- name: "5.2.3"
   tag: swift-5.2.3-RELEASE
   xcode: Xcode 11.4.1
   xcode_release: false
@@ -591,7 +591,7 @@
       docker: 5.2.3-bionic
       archs:
         - x86_64
-- name: 5.2.4
+- name: "5.2.4"
   tag: swift-5.2.4-RELEASE
   xcode: Xcode 11.5
   xcode_release: true
@@ -622,7 +622,7 @@
       docker: 5.2.4-centos8
       archs:
         - x86_64
-- name: 5.2.5
+- name: "5.2.5"
   tag: swift-5.2.5-RELEASE
   xcode: Xcode 11.5
   xcode_release: false
@@ -658,7 +658,7 @@
       docker: 5.2.5-centos8
       archs:
         - x86_64
-- name: 5.3
+- name: "5.3"
   tag: swift-5.3-RELEASE
   xcode: Xcode 12
   xcode_release: true
@@ -698,7 +698,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.3.1
+- name: "5.3.1"
   tag: swift-5.3.1-RELEASE
   xcode: Xcode 12.2
   xcode_release: true
@@ -738,7 +738,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.3.2
+- name: "5.3.2"
   tag: swift-5.3.2-RELEASE
   xcode: Xcode 12.3
   xcode_release: true
@@ -778,7 +778,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.3.3
+- name: "5.3.3"
   tag: swift-5.3.3-RELEASE
   xcode: Xcode 12.3
   xcode_release: false
@@ -818,7 +818,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.4
+- name: "5.4"
   tag: swift-5.4-RELEASE
   xcode: Xcode 12.5
   xcode_release: true
@@ -858,7 +858,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.4.1
+- name: "5.4.1"
   tag: swift-5.4.1-RELEASE
   xcode: Xcode 12.5
   xcode_release: false
@@ -898,7 +898,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.4.2
+- name: "5.4.2"
   tag: swift-5.4.2-RELEASE
   xcode: Xcode 12.5.1
   xcode_release: true
@@ -938,7 +938,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.4.3
+- name: "5.4.3"
   tag: swift-5.4.3-RELEASE
   xcode: Xcode 12.5.1
   xcode_release: false
@@ -978,7 +978,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.5
+- name: "5.5"
   tag: swift-5.5-RELEASE
   xcode: Xcode 13
   xcode_release: true
@@ -1018,7 +1018,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.5.1
+- name: "5.5.1"
   tag: swift-5.5.1-RELEASE
   xcode: Xcode 13
   xcode_release: false
@@ -1058,7 +1058,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.5.2
+- name: "5.5.2"
   tag: swift-5.5.2-RELEASE
   xcode: Xcode 13.2
   xcode_release: true
@@ -1098,7 +1098,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.5.3
+- name: "5.5.3"
   tag: swift-5.5.3-RELEASE
   xcode: Xcode 13.2
   xcode_release: false
@@ -1137,7 +1137,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.6
+- name: "5.6"
   tag: swift-5.6-RELEASE
   xcode: Xcode 13.3
   xcode_release: false
@@ -1174,7 +1174,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.6.1
+- name: "5.6.1"
   tag: swift-5.6.1-RELEASE
   xcode: Xcode 13.3
   xcode_release: false
@@ -1206,7 +1206,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.6.2
+- name: "5.6.2"
   tag: swift-5.6.2-RELEASE
   xcode: Xcode 13.3
   xcode_release: false
@@ -1238,7 +1238,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.6.3
+- name: "5.6.3"
   tag: swift-5.6.3-RELEASE
   xcode: Xcode 13.3
   xcode_release: false
@@ -1270,39 +1270,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.7
-  tag: swift-5.7-RELEASE
-  xcode: Xcode 14
-  xcode_release: false
-  date: 2022-09-12
-  platforms:
-    - name: Ubuntu 18.04
-      platform: Linux
-      docker: 5.7-bionic
-      archs:
-        - x86_64
-    - name: Ubuntu 20.04
-      platform: Linux
-      docker: 5.7-focal
-      archs:
-        - x86_64
-        - aarch64
-    - name: Amazon Linux 2
-      platform: Linux
-      docker: 5.7-amazonlinux2
-      archs:
-        - x86_64
-        - aarch64
-    - name: CentOS 7
-      platform: Linux
-      docker: 5.7-centos7
-      archs:
-        - x86_64
-    - name: Windows 10
-      platform: Windows
-      archs:
-        - x86_64
-- name: 5.7
+- name: "5.7"
   tag: swift-5.7-RELEASE
   xcode: Xcode 14
   xcode_release: true
@@ -1340,7 +1308,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.7.1
+- name: "5.7.1"
   tag: swift-5.7.1-RELEASE
   xcode: Xcode 14.1
   xcode_release: true
@@ -1378,7 +1346,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.7.2
+- name: "5.7.2"
   tag: swift-5.7.2-RELEASE
   xcode: Xcode 14.2
   xcode_release: true
@@ -1416,7 +1384,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.7.3
+- name: "5.7.3"
   tag: swift-5.7.3-RELEASE
   xcode: Xcode 14.2
   xcode_release: false
@@ -1454,7 +1422,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.8
+- name: "5.8"
   tag: swift-5.8-RELEASE
   xcode: Xcode 14.3
   xcode_release: false
@@ -1492,7 +1460,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.8.1
+- name: "5.8.1"
   tag: swift-5.8.1-RELEASE
   xcode: Xcode 14.3.1
   xcode_release: true
@@ -1537,7 +1505,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.9
+- name: "5.9"
   tag: swift-5.9-RELEASE
   xcode: Xcode 15
   xcode_release: true
@@ -1581,7 +1549,7 @@
       platform: Windows
       archs:
         - x86_64
-- name: 5.9.1
+- name: "5.9.1"
   tag: swift-5.9.1-RELEASE
   xcode: Xcode 15
   xcode_release: false
@@ -1626,7 +1594,7 @@
       docker: 5.9.1-windowsservercore-ltsc2022
       archs:
         - x86_64
-- name: 5.9.2
+- name: "5.9.2"
   tag: swift-5.9.2-RELEASE
   xcode: Xcode 15.1
   xcode_release: true

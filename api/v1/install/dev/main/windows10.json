@@ -1,0 +1,4 @@
+---
+layout: none
+---
+{ "x86_64": {{ site.data.builds.development.windows10 | jsonify }}}
