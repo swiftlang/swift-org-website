@@ -57,7 +57,7 @@ the Command Palette and following the instructions below.
 ## Language Features
 
 The Swift extension uses [SourceKit-LSP](https://github.com/apple/sourcekit-lsp)
-to power language features. SourceKit LSP provides the following features in the
+to power language features. SourceKit-LSP provides the following features in the
 editor. Use these links to see the VS Code documentation for each topic:
 
 - [Code completion](https://code.visualstudio.com/docs/editor/intellisense)
@@ -85,7 +85,7 @@ project either on the command line or using a task in VS Code. This populates th
 
 ## Swift Tasks
 
-VS Code provides tasks as a way to run external tools. See the
+Visual Studio Code provides tasks as a way to run external tools. See the
 [Integrate with External Tools via Tasks](https://code.visualstudio.com/docs/editor/tasks)
 documentation to learn more.
 
@@ -123,7 +123,7 @@ diagnostics from the previous build task.
 
 ## Debugging
 
-VS Code provides a rich debugging experience. See the
+Visual Studio Code provides a rich debugging experience. See the
 [Debugging](https://code.visualstudio.com/docs/editor/debugging) documentation for
 more information.
 
@@ -180,7 +180,7 @@ their variable values:
 
 ## Test Explorer
 
-VS Code provides a Test Explorer view in the left sidebar which can
+Visual Studio Code provides a Test Explorer view in the left sidebar which can
 be used:
 
 - To navigate to tests
