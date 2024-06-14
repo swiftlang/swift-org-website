@@ -24,6 +24,9 @@
   --color-figure-red: #{light-color(figure-red)};
   --color-tutorials-teal: #{light-color(tutorials-teal)};
 
+  --color-banner-foreground: rgb(222, 75, 52);
+  --color-banner-background: rgb(222, 75, 52, 0.1);
+  --color-banner-detail: rgb(222, 75, 52, 0.5);
   --color-article-background: var(--color-fill-tertiary);
   --color-article-body-background: var(--color-fill);
   --color-aside-deprecated: var(--color-figure-gray);
