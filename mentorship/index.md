@@ -11,23 +11,23 @@ If the mentee has not contributed to the project before, they will first work wi
 
 ## Current Program
 
-### 2023 Timeline
+### 2024 Timeline
 
 | Date               | Event                            |
 |:-------------------|:---------------------------------|
-| **June 12th**      |  Mentor Interest surveys open    |
-| **June 26th**      |  Mentor Interest survey deadline |
-| **July 3rd**       |  Mentee Interest surveys open    |
-| **July 10th**      |  Mentee Interest survey deadline |
-| **July 24th**      |  Mentorship pairings announced   |
-| **July 31st**      |  12-week cohort begins           |
-| **September 4th**  |  Halfway checkpoint              |
-| **October 20th**   |  12-week cohort ends             |
-| **October 27th**   |  Feedback deadline               |
+| **June 17th**      |  Mentor Interest surveys open    |
+| **July 1st**       |  Mentor Interest survey deadline |
+| **July 8th**       |  Mentee Interest surveys open    |
+| **July 15th**      |  Mentee Interest survey deadline |
+| **July 29th**      |  Mentorship pairings announced   |
+| **August 5th**     |  10-week cohort begins           |
+| **September 9th**  |  Halfway checkpoint              |
+| **October 14th**   |  10-week cohort ends             |
+| **October 21st**   |  Feedback deadline               |
 
 ### Interest Surveys
 
-The 2023 mentor interest survey submissions are open from June 12th - June 26th. If you are interested in participating as a mentor, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_9vEcwfZtSblGYjs).
+The 2024 mentor interest survey submissions are open from June 17th - July 1st. If you are interested in participating as a mentor, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ).
 
 The mentee interest survey is not an application; but rather it will tell the Diversity in Swift workgroup about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the workgroup may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
 
@@ -77,7 +77,7 @@ Most communication is expected to happen asynchronously on the Swift Forums. The
 <details class="download">
   <summary>How long is the program term?</summary>
 
-12 weeks.
+10 weeks.
 </details>
 
 <details class="download">
