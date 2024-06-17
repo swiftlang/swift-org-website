@@ -27,7 +27,7 @@ Everyone is welcome to contribute to the Swift.org website in the following ways
 * Asking or answering questions on the forums.
 * Reporting or triaging bugs.
 
-See [`CONTRIBUTING.md`](https://github.com/apple/swift-org-website/blob/main/CONTRIBUTING.md) for additional information about the website's contribution guidelines.
+See [`CONTRIBUTING.md`](https://github.com/swiftlang/swift-org-website/blob/main/CONTRIBUTING.md) for additional information about the website's contribution guidelines.
 
 
 ## Governance

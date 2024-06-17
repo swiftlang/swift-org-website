@@ -31,7 +31,7 @@ As an open source project, the website goals have grown. The site should:
 The Swift Website Workgroup (SWWG) will have the charter to work across any tools and platforms necessary to create a truly great web experience that achieves the goals stated above.
 This includes work on the main website, as well as the forums, and documentation.
 
-Anyone is welcome to contribute to the Swift.org website. All they need to do is create a pull request with a fix or improvement to the [repository](https://github.com/apple/swift-org-website/) for the site.
+Anyone is welcome to contribute to the Swift.org website. All they need to do is create a pull request with a fix or improvement to the [repository](https://github.com/swiftlang/swift-org-website/) for the site.
 The maintenance of the project, and approvals for community PRs, will be handled by the SWWG, composed of people from the broad Swift community.
 There is also a [forum for folks to talk](https://forums.swift.org/c/swift-website) about the project.
 
@@ -64,8 +64,8 @@ Significant changes to blog posts after publication should be infrequent — for
 
 ## Repository on GitHub
 
-The Swift.org website is now publicly [available on GitHub](https://github.com/apple/swift-org-website/).
-The website repository will also use [GitHub Issues](https://github.com/apple/swift-org-website/issues) for issue tracking.
+The Swift.org website is now publicly [available on GitHub](https://github.com/swiftlang/swift-org-website/).
+The website repository will also use [GitHub Issues](https://github.com/swiftlang/swift-org-website/issues) for issue tracking.
 We hope this will make it even easier for people to participate, and be a testbed for the rest of the Swift project to move to Issues in the future.
 
 

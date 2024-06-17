@@ -81,7 +81,7 @@ Additionally, specific guides exist for library developers:
 * [Log Levels](/documentation/server/guides/libraries/log-levels.html).
 * [Adopting Swift Concurrency](/documentation/server/guides/libraries/concurrency-adoption-guidelines.html).
 
-_These guides are a community effort. Anyone is invited to share their tips and know-how by submitting pull requests to the [Swift.org site](https://github.com/apple/swift-org-website)_.
+_These guides are a community effort. Anyone is invited to share their tips and know-how by submitting pull requests to the [Swift.org site](https://github.com/swiftlang/swift-org-website)_.
 
 ## Swift Server Workgroup
 

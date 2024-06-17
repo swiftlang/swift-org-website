@@ -18,4 +18,4 @@ The guides cover a number of useful topics:
 
 The guides also include a section for library authors, covering best practices for log levels and approaches for adopting Swift concurrency.
 
-If you'd like to contribute to the guides, you can [create an issue](https://github.com/apple/swift-org-website/issues/new/choose) or post on [the forums](https://forums.swift.org).
+If you'd like to contribute to the guides, you can [create an issue](https://github.com/swiftlang/swift-org-website/issues/new/choose) or post on [the forums](https://forums.swift.org).

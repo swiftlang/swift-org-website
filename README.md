@@ -28,7 +28,7 @@ Requirements
 To run the site locally, enter the following commands into a terminal window:
 
 ```shell
-git clone https://github.com/apple/swift-org-website.git
+git clone https://github.com/swiftlang/swift-org-website.git
 cd swift-org-website
 bundle install
 LC_ALL=en_us.UTF-8 bundle exec jekyll serve

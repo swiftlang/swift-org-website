@@ -65,7 +65,7 @@ file](https://github.com/apple/swift/blob/main/README.md).
 
 ## Swift.org Website
 
-[swift-org-website](https://github.com/apple/swift-org-website)
+[swift-org-website](https://github.com/swiftlang/swift-org-website)
 : The source code for the Swift.org website.
 
 ## Cloned Repositories
