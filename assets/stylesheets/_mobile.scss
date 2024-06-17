@@ -218,6 +218,17 @@
   }
 }
 
+@media only screen and (max-width: 480px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    hyphens: auto;
+  }
+}
+
 .nav-menu-container {
   display: grid;
   grid-template-columns: 1fr;

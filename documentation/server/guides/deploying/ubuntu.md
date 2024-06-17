@@ -77,7 +77,7 @@ You can now start the executable. Supply the desired IP address and port. Bindin
 ./hello-world/NIOHTTP1Server <server_ip> 8080
 ```
 
-You may need to install additional system libraries like `libxml` or `tzdata` if your app uses Foundation. The system dependencies installed by Swift's slim docker images are a [good reference](https://github.com/apple/swift-docker/blob/master/5.2/ubuntu/18.04/slim/Dockerfile).
+You may need to install additional system libraries like `libxml` or `tzdata` if your app uses Foundation. The system dependencies installed by Swift's slim docker images are a [good reference](https://github.com/swiftlang/swift-docker/blob/master/5.2/ubuntu/18.04/slim/Dockerfile).
 
 Finally, visit your server's IP via browser or local terminal and you should see a response.
 

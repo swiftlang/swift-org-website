@@ -263,12 +263,12 @@ Please feel free to ask questions about this post in the [associated thread][ann
 [ordereddictionary-overview]: https://github.com/apple/swift-collections/blob/main/Documentation/OrderedDictionary.md
 
 [challenges]: https://forums.swift.org/t/circular-buffer/34534/25
-[swift-evoluton-process]: https://github.com/apple/swift-evolution/blob/main/process.md
+[swift-evoluton-process]: https://github.com/swiftlang/swift-evolution/blob/main/process.md
 [c++-containers]: https://en.cppreference.com/w/cpp/container
 [java-collections]: https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/doc-files/coll-overview.html
 [log-log]: https://en.wikipedia.org/wiki/Log–log_plot
 [sip-hash]: https://en.wikipedia.org/wiki/SipHash
-[se-206]: https://github.com/apple/swift-evolution/blob/main/proposals/0206-hashable-enhancements.md
+[se-206]: https://github.com/swiftlang/swift-evolution/blob/main/proposals/0206-hashable-enhancements.md
 
 [benchmark-code]: https://github.com/apple/swift-collections/tree/main/Documentation/Announcement-benchmarks
 [swift-collections-benchmark]: https://github.com/apple/swift-collections-benchmark

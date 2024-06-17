@@ -2,7 +2,7 @@
 
 Swift official Docker images are hosted on [hub.docker.com/\_/swift](https://hub.docker.com/_/swift/).
 
-Swift Dockerfiles are located on [swift-docker](https://github.com/apple/swift-docker) repository.
+Swift Dockerfiles are located on [swift-docker](https://github.com/swiftlang/swift-docker) repository.
 
 #### Using Docker Images
 

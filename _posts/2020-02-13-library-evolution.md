@@ -316,7 +316,7 @@ The compiler enforces an important restriction on `@inlinable` function bodies; 
 
 From a binary compatibility standpoint, `@usableFromInline` declarations are effectively the same as public declarations, which is why we always talk about the concept of _ABI-public declarations_, encompassing both. Once published, a `@usableFromInline` declaration must never be removed or undergo any incompatible changes to its interface.
 
-Inlinable functions are described in more detail in a Swift evolution proposal, [SE-0193 Cross-module inlining and specialization](https://github.com/apple/swift-evolution/blob/master/proposals/0193-cross-module-inlining-and-specialization.md).
+Inlinable functions are described in more detail in a Swift evolution proposal, [SE-0193 Cross-module inlining and specialization](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0193-cross-module-inlining-and-specialization.md).
 
 ### Frozen structs
 
@@ -377,7 +377,7 @@ Keep in mind that `@frozen` only proposes that the set of stored property member
 
 A final caveat is that actually adding or removing `@frozen` on a struct is a binary _incompatible_ change; structs must be "born frozen", or remain forever resilient!
 
-More details about frozen structs can be found in a Swift evolution proposal, [SE-0260 Library evolution for stable ABIs](https://github.com/apple/swift-evolution/blob/master/proposals/0260-library-evolution.md).
+More details about frozen structs can be found in a Swift evolution proposal, [SE-0260 Library evolution for stable ABIs](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0260-library-evolution.md).
 
 ### Frozen enums
 
@@ -387,7 +387,7 @@ As with frozen structs, the compiler can manipulate frozen enum values more effi
 
 A `switch` over a frozen enum is considered exhaustive if all cases are covered by the switch, whereas a switch over a non-frozen enum must always provide a default or `@unknown` case. This is the singular _source_ incompatibility introduced by enabling library evolution support.
 
-The behavior of switch exhaustiveness is detailed in a Swift evolution proposal, [SE-0192 Non-exhaustive enums](https://github.com/apple/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md).
+The behavior of switch exhaustiveness is detailed in a Swift evolution proposal, [SE-0192 Non-exhaustive enums](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md).
 
 ## Platform support
 
@@ -501,8 +501,8 @@ The list below collects various links found earlier in this document:
 - Blog post: [ABI stability and more](/blog/abi-stability-and-more/)
 - WWDC talk: [Binary frameworks in Swift](https://developer.apple.com/wwdc19/416)
 - Specification document: [LibraryEvolution.rst](https://github.com/apple/swift/blob/master/docs/LibraryEvolution.rst)
-- Evolution proposal: [SE-0193 Cross-module inlining and specialization](https://github.com/apple/swift-evolution/blob/master/proposals/0193-cross-module-inlining-and-specialization.md)
-- Evolution proposal: [SE-0260 Library evolution for stable ABIs](https://github.com/apple/swift-evolution/blob/master/proposals/0260-library-evolution.md)
-- Evolution proposal: [SE-0192 Non-exhaustive enums](https://github.com/apple/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md)
+- Evolution proposal: [SE-0193 Cross-module inlining and specialization](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0193-cross-module-inlining-and-specialization.md)
+- Evolution proposal: [SE-0260 Library evolution for stable ABIs](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0260-library-evolution.md)
+- Evolution proposal: [SE-0192 Non-exhaustive enums](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md)
 - Evolution pitch: [Modify accessors](https://forums.swift.org/t/modify-accessors/31872)
 - LLVM Developer's Meeting talk: [Implementing Swift generics](https://www.youtube.com/watch?v=ctS8FzqcRug)

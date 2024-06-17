@@ -1,3 +1,33 @@
+- date: 2024-06-13 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-13-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-13-a-ubuntu20.04.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-13-a-ubuntu20.04.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-06-12 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-12-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-12-a-ubuntu20.04.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-12-a-ubuntu20.04.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-06-11 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-11-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-11-a-ubuntu20.04.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-11-a-ubuntu20.04.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-06-08 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-08-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-08-a-ubuntu20.04.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-08-a-ubuntu20.04.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-06-07 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-07-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-07-a-ubuntu20.04.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-07-a-ubuntu20.04.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-06-06 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-06-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-06-a-ubuntu20.04.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-06-a-ubuntu20.04.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2024-06-05 10:10:00-06:00
   dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-05-a
   download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-05-a-ubuntu20.04.tar.gz

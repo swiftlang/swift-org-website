@@ -44,7 +44,7 @@ In all, the work included 9 PRs to the Swift project:
 
 Swift CI has moved to use Docker to build and qualify the new Linux distributions. A Dockerfile has been created for each one of the supported distributions, and CI jobs have been created to build, test and create a signed toolchain.
 
-Linux build Dockerfiles are managed in  [Swift's Docker repository](https://github.com/apple/swift-docker) with the goal of evolving them in the open with the community. Our plan is to continue and grow the number of Linux distributions we support, with CentOS 7, Debian and Fedora the most likely candidates to be added next.
+Linux build Dockerfiles are managed in  [Swift's Docker repository](https://github.com/swiftlang/swift-docker) with the goal of evolving them in the open with the community. Our plan is to continue and grow the number of Linux distributions we support, with CentOS 7, Debian and Fedora the most likely candidates to be added next.
 
 It is important to note that the new distributions do not run automatically as part of PR testing - we continue to automatically test PRs on Ubuntu 16.04 - but you can “summon” them using the following commands:
 
@@ -57,4 +57,4 @@ It is important to note that the new distributions do not run automatically as p
 
 If you are interested in building Swift on Linux, come and get involved!
 
-The [source is available](https://github.com/apple/swift-docker), and we encourage contributions from the open source community. If you have feedback, questions or would like to discuss the project, please feel free to chat on the [Swift forums](https://forums.swift.org/c/server). If you would like to report bugs, please use [the GitHub issue tracker](https://github.com/apple/swift-docker/issues). We look forward to working with you, and helping move the industry forward to a better, safer programming future.
+The [source is available](https://github.com/swiftlang/swift-docker), and we encourage contributions from the open source community. If you have feedback, questions or would like to discuss the project, please feel free to chat on the [Swift forums](https://forums.swift.org/c/server). If you would like to report bugs, please use [the GitHub issue tracker](https://github.com/swiftlang/swift-docker/issues). We look forward to working with you, and helping move the industry forward to a better, safer programming future.

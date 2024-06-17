@@ -202,6 +202,6 @@ Updates resulting in a version bump require a super-majority vote from the SSWG.
 
 ## Resources and References
 
-* https://github.com/apple/swift-evolution
+* https://github.com/swiftlang/swift-evolution
 * https://github.com/cncf/toc/tree/main/process
 * https://incubator.apache.org

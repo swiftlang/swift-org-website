@@ -129,6 +129,17 @@ pre.highlight {
     /* Literal.String.Symbol */
     color: var(--color-syntax-heading);
   }
+
+  /* Make prompts non-selectable, to make it easy to copy and paste */
+  .gp {
+    -webkit-user-select: none;
+    user-select: none;
+
+    & + .w {
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  }
 }
 
 .language-console {

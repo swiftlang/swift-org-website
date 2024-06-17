@@ -27,4 +27,4 @@ Before filing an issue requesting a new language feature, see the [Swift Evoluti
 
 [bugtracker]: http://github.com/apple/swift/issues
 [apple-bugtracker]: https://bugreport.apple.com
-[evolution-repo]: https://github.com/apple/swift-evolution "Link to the Swift evolution repository on GitHub"
+[evolution-repo]: https://github.com/swiftlang/swift-evolution "Link to the Swift evolution repository on GitHub"

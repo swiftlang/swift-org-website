@@ -315,9 +315,7 @@ constructor, Swift will use it when a value of such type is copied in
 Swift. And if the C++ type has a destructor, Swift will call the destructor when
 a Swift value of such type is destroyed.
 
-Currently C++ structures and classes with a deleted copy constructor
-are not available in Swift. Non-copyable C++ structures or classes that also
-have a move constructor will be available in a future version of Swift.
+C++ structures and classes with a deleted copy constructor are represented as non-copyable Swift types (`~Copyable`).
 
 Some C++ types are always passed around using a pointer or a reference in C++.
 As such it might not make sense to map them to value types in Swift. These
@@ -1160,7 +1158,7 @@ takesVectorType(vector) // 'vector' is copied here.
 ```
 
 Swift's upcoming
-[parameter ownership modifiers](https://github.com/apple/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md),
+[parameter ownership modifiers](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md),
 which will be provided in an upcoming Swift release, will let you avoid copies
 when passing immutable values to functions. Mutable values can be passed
 by `inout` to a Swift function, which lets you avoid a deep copy of
@@ -1424,7 +1422,7 @@ extension Forest {
 ```
 
 The `borrowing` ownership modifier used above is a
-[new addition](https://github.com/apple/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md)
+[new addition](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md)
 in Swift 5.9. Some development versions of Swift 5.9 might not allow you to
 use `borrowing` for copyable C++ types like `Forest`. In such cases, prior
 to the release of Swift 5.9, you can

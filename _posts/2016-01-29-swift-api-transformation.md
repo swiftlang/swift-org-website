@@ -60,10 +60,10 @@ path.fillWith(kCGBlendModeMultiply, alpha: 0.7)
 
 We've put three parts of this proposed transformation up for public
 review in [Swift's evolution group](/community/#mailing-lists):
-[changes to how Cocoa is imported](https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md),
-[changes to the surface of the standard library](https://github.com/apple/swift-evolution/blob/master/proposals/0006-apply-api-guidelines-to-the-standard-library.md),
+[changes to how Cocoa is imported](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md),
+[changes to the surface of the standard library](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0006-apply-api-guidelines-to-the-standard-library.md),
 and the
-[API guidelines](https://github.com/apple/swift-evolution/blob/master/proposals/0023-api-guidelines.md)
+[API guidelines](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0023-api-guidelines.md)
 that tie this all together. Suggestions for improvement have already
 started coming in
 from participants, and we're able to see how they
@@ -96,7 +96,7 @@ language and frameworks,
 [join the discussion](/contributing/#participating-in-the-swift-evolution-process).
 The proposals and associated review threads are here:
 
-* [API Design Guidelines](https://github.com/apple/swift-evolution/blob/master/proposals/0023-api-guidelines.md) — [discussion](http://news.gmane.org/find-root.php?message_id=ABB71FFD%2d1AE8%2d43D3%2dB3F5%2d58225A2BAD66%40apple.com)
-* [Better Translation of Objective-C APIs Into Swift](https://github.com/apple/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md) — [discussion](http://news.gmane.org/find-root.php?message_id=CC036592%2d085D%2d4095%2d8D73%2d1DA9FC90A07B%40apple.com)
-* [Apply API Guidelines to the Standard Library](https://github.com/apple/swift-evolution/blob/master/proposals/0006-apply-api-guidelines-to-the-standard-library.md) — [discussion](http://news.gmane.org/find-root.php?message_id=73E699B0%2dFAD2%2d46DA%2dB74E%2d849445A2F38A%40apple.com)
+* [API Design Guidelines](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0023-api-guidelines.md) — [discussion](http://news.gmane.org/find-root.php?message_id=ABB71FFD%2d1AE8%2d43D3%2dB3F5%2d58225A2BAD66%40apple.com)
+* [Better Translation of Objective-C APIs Into Swift](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0005-objective-c-name-translation.md) — [discussion](http://news.gmane.org/find-root.php?message_id=CC036592%2d085D%2d4095%2d8D73%2d1DA9FC90A07B%40apple.com)
+* [Apply API Guidelines to the Standard Library](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0006-apply-api-guidelines-to-the-standard-library.md) — [discussion](http://news.gmane.org/find-root.php?message_id=73E699B0%2dFAD2%2d46DA%2dB74E%2d849445A2F38A%40apple.com)
 

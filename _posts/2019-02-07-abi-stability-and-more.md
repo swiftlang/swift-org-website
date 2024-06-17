@@ -50,7 +50,7 @@ This feature is *library evolution support:* shipping a new version of a library
 
 In this example, the app is built against the original version of the framework, in yellow. With support for library evolution, it will run on systems that have the yellow version available, but also the newer, improved red version.
 
-Swift already has an implementation of support for library evolution, informally termed "resilience". It's an opt-in feature for libraries that need it, and it uses not-yet-finalized annotations to strike a balance between performance and future flexibility, which you can see in the source code for the standard library. The first of these to go through the Swift Evolution Process was `@inlinable`, added in Swift 4.2 ([SE-0193](https://github.com/apple/swift-evolution/blob/master/proposals/0193-cross-module-inlining-and-specialization.md)). Look for more proposals about library evolution support in the future.
+Swift already has an implementation of support for library evolution, informally termed "resilience". It's an opt-in feature for libraries that need it, and it uses not-yet-finalized annotations to strike a balance between performance and future flexibility, which you can see in the source code for the standard library. The first of these to go through the Swift Evolution Process was `@inlinable`, added in Swift 4.2 ([SE-0193](https://github.com/swiftlang/swift-evolution/blob/master/proposals/0193-cross-module-inlining-and-specialization.md)). Look for more proposals about library evolution support in the future.
 
 [fragile base class problem]: https://en.wikipedia.org/wiki/Fragile_base_class
 

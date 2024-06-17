@@ -11,7 +11,7 @@ The code for the Swift project is divided into several open-source repositories,
 [swift](https://github.com/apple/swift)
 : The main Swift repository, which contains the source code for the Swift compiler, standard library, and SourceKit.
 
-[swift-evolution](https://github.com/apple/swift-evolution)
+[swift-evolution](https://github.com/swiftlang/swift-evolution)
 : Documents related to the continued evolution of Swift, including goals for upcoming releases proposals for changes to and extensions of Swift.
 
 Directions for building the Swift compiler and standard library, along

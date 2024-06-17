@@ -32,7 +32,7 @@ There are two kinds of groups:
 
 The purpose of workgroups is to provide structure to help support contributors in organizing and driving activity.  However, workgroups are only one of the ways to organize and contribute to Swift.  Most contributions and community activities begin and grow organically.  Once an effort reaches sufficient momentum and size where it could benefit from support from the Swift project, forming a workgroup for that effort makes sense.
 
-Note that the [evolution workgroups](https://github.com/apple/swift-evolution/blob/main/process.md) as described in the Swift Evolution process, can either be steering groups or workgroups.  Evolution workgroups are groups that utilize or manage the Swift Evolution process in some way to achieve their core charter.
+Note that the [evolution workgroups](https://github.com/swiftlang/swift-evolution/blob/main/process.md) as described in the Swift Evolution process, can either be steering groups or workgroups.  Evolution workgroups are groups that utilize or manage the Swift Evolution process in some way to achieve their core charter.
 
 ### Adopting the "Groups" Terminology
 

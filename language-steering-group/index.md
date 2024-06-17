@@ -3,7 +3,7 @@ layout: page
 title: Language Steering Group
 ---
 
-The Swift Language Steering Group guides the development of the Swift language and standard libraries through the [Swift evolution process](https://github.com/apple/swift-evolution/blob/main/process.md).
+The Swift Language Steering Group guides the development of the Swift language and standard libraries through the [Swift evolution process](https://github.com/swiftlang/swift-evolution/blob/main/process.md).
 
 # Charter
 
@@ -67,7 +67,7 @@ The workgroup is also partially responsible for the content of language and libr
 
 ## Evolution process
 
-The Language Steering Group is an evolution workgroup which uses the [Swift evolution process](https://github.com/apple/swift-evolution/blob/main/process.md) to guide proposals through evolution review. The Language Steering Group has evolution authority over the Swift language and standard library. Authority over the language includes authority over the language configuration, such as compiler flags for language options, diagnostic options, and similar settings with a direct impact on the language or a programmer's experience using the language. This authority does not extend to other compiler flags, such as optimization or code generation settings, or to tools such as build systems and package managers.
+The Language Steering Group is an evolution workgroup which uses the [Swift evolution process](https://github.com/swiftlang/swift-evolution/blob/main/process.md) to guide proposals through evolution review. The Language Steering Group has evolution authority over the Swift language and standard library. Authority over the language includes authority over the language configuration, such as compiler flags for language options, diagnostic options, and similar settings with a direct impact on the language or a programmer's experience using the language. This authority does not extend to other compiler flags, such as optimization or code generation settings, or to tools such as build systems and package managers.
 
 These limits on the evolution authority of the Language Steering Group are not meant to be limits on the scope of evolution proposals. Swift workgroups are expected to collaborate to ensure that proposals offer a satisfactory solution across the entire Swift project. If a proposal impacts parts of the project under the authority of multiple workgroups, those workgroups must work together to bring the proposal through the evolution process.
 

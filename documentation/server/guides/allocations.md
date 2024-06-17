@@ -25,6 +25,7 @@ For high-performance software in Swift, understanding the source of your heap al
 
 ## Profiling
 You can use different tools and techniques to profile your Swift code, depending on the specific requirements of your project. Some commonly used profiling techniques include:
+
 - Using OS vendor-supplied profiling tools like [Instruments](https://help.apple.com/instruments/mac/current/#/dev7b09c84f5) on macOS or [`perf`](https://www.swift.org/server/guides/linux-perf.html) on Linux.
 - Adding manual timing measurements using techniques like adding timestamps before and after critical code sections.
 - Leveraging performance profiling libraries and frameworks for Swift, such as [SwiftMetrics](https://swiftpackageregistry.com/RuntimeTools/SwiftMetrics) or [XCGLogger](https://github.com/XCGLogger/).
@@ -35,35 +36,26 @@ If your production workloads run on Linux instead of macOS, the number of alloca
 
 *This document mainly focuses on the number of heap allocations and not their size.*
 
-## Get started
+## Getting started
 Swift’s optimizer produces faster code and allocates less memory in `release` mode. By profiling your Swift code in the `release` mode and optimizing based on the results, you can achieve better performance and efficiency in your applications. 
 
 Follow the steps below:
 
-1. **Build your code** in `release` mode by running this command: 
-
+Step 1. **Build your code** in `release` mode by running this command: 
 ```bash
 swift run -c release
 ```
 
-2. **Install `perf`**
+Step 2. [**Install `perf`**](https://www.swift.org/server/guides/linux-perf.html) to profile your code for your environment to gather performance-related data and optimize the performance of your Swift server applications.
 
-To profile your code, [install Linux `perf`](https://www.swift.org/server/guides/linux-perf.html) for your environment to gather performance-related data and optimize the performance of your Swift server applications.
-
-3. **Clone the FlameGraph project**
-
-Generating a flame graph visualization helps you quickly identify hotspots in the codebase, visualize call paths, understand the flow of execution, and optimize performance.
-
-To generate a flame graph, you will need to clone the [`FlameGraph`](https://github.com/brendangregg/FlameGraph) repository on your machine or into a container, making it available at `~/FlameGraph`. 
+Step 3. **Clone the FlameGraph project** to generate a flame graph visualization that helps you quickly identify hotspots in the codebase, visualize call paths, understand the flow of execution, and optimize performance. To generate a flame graph, you will need to clone the [`FlameGraph`](https://github.com/brendangregg/FlameGraph) repository on your machine or into a container, making it available at `~/FlameGraph`. 
 
 Run this command to clone the `https://github.com/brendangregg/FlameGraph` repository in `~/FlameGraph`:
-
 ```bash
 git clone https://github.com/brendangregg/FlameGraph
 ```
 
 When running in Docker, use this command to bind-mount the `FlameGraph` repository into the container:
-
 ```bash
 docker run -it --rm \
            --privileged \
@@ -333,8 +325,6 @@ This flame graph is a direct result of the example program in this section. Hove
 
 <p><img src="/assets/images/server-guides/perf-malloc-full.svg" alt="Flame graph" /></p>
 
-<h2 id="allocation-flame-graphs-on-macos">Allocation flame graphs on macOS</h2>
-
 - When interpreting flame *graphs*, the X-axis means the **count** and not time. The arrangement of the stack (left or right) is not determined by when that stack was live, unlike flame *charts*.
 
 - This flame graph is not a CPU flame graph but an allocation flame graph, where one sample indicates one allocation and not time spent on the CPU. 
@@ -342,10 +332,10 @@ This flame graph is a direct result of the example program in this section. Hove
 
     - For example, `BaseSocketChannel.readable` is a wide frame, but its function does not allocate directly. Instead, it called other functions, such as other parts of SwiftNIO and AsyncHTTPClient, that allocated considerably.
 
-### Allocation flame graphs on macOS
+## Allocation flame graphs on macOS
 Although much of this tutorial focuses on the `perf` tool, you can create the same graphs using macOS. 
 
-To get started, collect the raw data using the [DTrace](https://en.wikipedia.org/wiki/DTrace) framework by running this command:
+Step 1. To get started, collect the raw data using the [DTrace](https://en.wikipedia.org/wiki/DTrace) framework by running this command:
 
 ```bash
 sudo dtrace -n 'pid$target::malloc:entry,pid$target::posix_memalign:entry,pid$target::calloc:entry,pid$target::malloc_zone_malloc:entry,pid$target::malloc_zone_calloc:entry,pid$target::malloc_zone_memalign:entry { @s[ustack(100)] = count(); } ::END { printa(@s); }' -c .build/release/your-program > raw.stacks
@@ -360,13 +350,14 @@ Like Linux's `perf` user probes, DTrace also uses probes. The previous command i
 
 > Note: On Apple platforms, Swift uses a slightly larger number of allocation functions than Linux.
 
-Once the data is collected, run this command to create an SVG file:
+Step 2. Once the data is collected, run this command to create an SVG file:
 
 ```bash
 cat raw.stacks |\
     /FlameGraph/stackcollapse.pl - | \
     swift demangle --simplified | \
     /FlameGraph/flamegraph.pl --countname allocations \
+
         --width 1600 > out.svg
 ```
 
@@ -374,7 +365,7 @@ You will notice this command is similar to the `perf` invocation, except:
 - The command `cat raw.stacks` replaces the `perf script` command since `dtrace` already includes a textual data file.
 - The command `stackcollapse.pl`, which parses `dtrace` aggregation output, replaces the `stackcollapse-perf.pl` command, which parses the `perf script` output.
 
-## Other `perf` tricks
+## Other perf tricks
 
 ### Swift’s allocation patterns
 Optimizing memory allocations and improving code efficiency based on the information provided by the flame graph can help make your Swift code more performant and visually appealing. The shape of allocations in Swift can vary depending on the type of memory being allocated and the way it is used.

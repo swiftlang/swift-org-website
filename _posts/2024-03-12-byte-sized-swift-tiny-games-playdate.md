@@ -32,7 +32,7 @@ Regardless, I still wanted to create a game in Swift and I had a good idea for t
 
 Recently, the Swift project began developing a new embedded language mode to support highly constrained platforms. This mode utilizes generic specialization, inlining, and dead code stripping to produce tiny binaries, while retaining the core features of Swift.
 
-> Note: The embedded language mode is actively evolving and is helping drive the development of language features such as: [non-copyable types](https://github.com/apple/swift-evolution/blob/main/proposals/0390-noncopyable-structs-and-enums.md), [typed throws](https://github.com/apple/swift-evolution/blob/main/proposals/0413-typed-throws.md), etc. It is available now in [nightly toolchains](https://www.swift.org/download/) and if you're curious to learn more, check out the [Vision for Embedded Swift](https://github.com/apple/swift-evolution/blob/main/visions/embedded-swift.md).
+> Note: The embedded language mode is actively evolving and is helping drive the development of language features such as: [non-copyable types](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0390-noncopyable-structs-and-enums.md), [typed throws](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0413-typed-throws.md), etc. It is available now in [nightly toolchains](https://www.swift.org/download/) and if you're curious to learn more, check out the [Vision for Embedded Swift](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md).
 
 These defining characteristics make the embedded language mode a great solution for shrinking Swift to fit the Playdate's constraints.
 

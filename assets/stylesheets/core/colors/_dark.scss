@@ -23,6 +23,9 @@
   --color-figure-red: #{dark-color(figure-red)};
   --color-tutorials-teal: #{dark-color(tutorials-teal)};
 
+  --color-banner-foreground: rgb(240, 81, 56);
+  --color-banner-background: rgb(240, 81, 56, 0.1);
+  --color-banner-detail: rgb(240, 81, 56, 0.5);
   --color-article-body-background: rgb(17, 17, 17);
   --color-button-background-active: #{dark-color(fill-blue)};
   --color-dropdown-background: var(--color-dropdown-dark-background);
