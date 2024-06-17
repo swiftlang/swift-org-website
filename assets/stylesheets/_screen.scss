@@ -8,7 +8,10 @@
 
 html,
 body {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
 }
 
 body {
@@ -417,7 +420,6 @@ h2.header-with-anchor {
 }
 
 main {
-  margin: auto;
   padding: 4rem 0 0;
 
   .callout {
@@ -469,6 +471,7 @@ footer[role="contentinfo"] {
   color: var(--color-nav-color);
   padding: 20px 30px;
   min-height: 74px;
+  margin-top: auto;
 
   p {
     font-size: 0.625em;
