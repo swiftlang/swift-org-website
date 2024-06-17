@@ -10,7 +10,7 @@ author: [fbernutz, hishnash, natpanferova]
 
 > See the [sketchnote in full resolution](/assets/images/swift-language-updates-from-wwdc22-blog/wwdc22-swift-updates-sketch.jpeg)
 
-Swift has evolved significantly during the past year, and we've seen two large updates to the language. [Swift 5.6](https://apple.github.io/swift-evolution/#?version=5.6) was released in March 2022 and introduced major improvements to the type system, concurrency model and Swift ecosystem. It laid the groundwork for further updates in [Swift 5.7](https://apple.github.io/swift-evolution/#?version=5.7), which is included in [beta versions of Xcode 14](https://developer.apple.com/download/applications/) and available on the [Swift.org downloads page](/download/#swift-57-development).
+Swift has evolved significantly during the past year, and we've seen two large updates to the language. [Swift 5.6](https://www.swift.org/swift-evolution/#?version=5.6) was released in March 2022 and introduced major improvements to the type system, concurrency model and Swift ecosystem. It laid the groundwork for further updates in [Swift 5.7](https://www.swift.org/swift-evolution/#?version=5.7), which is included in [beta versions of Xcode 14](https://developer.apple.com/download/applications/) and available on the [Swift.org downloads page](/download/#swift-57-development).
 
 Many Swift updates were rightfully celebrated during WWDC22, with sessions focusing on language changes, tooling improvements, additions to Swift packages and more. The [
 What's new in Swift](https://developer.apple.com/videos/play/wwdc2022/110354/) video provides a great overview of Swift news for the past year. In this post we would like to share our highlights about the Swift ecosystem from WWDC.
