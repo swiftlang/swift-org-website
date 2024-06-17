@@ -27,7 +27,7 @@ If the mentee has not contributed to the project before, they will first work wi
 
 ### Interest Surveys
 
-The 2024 mentor interest survey submissions are open from June 10th - June 24th. If you are interested in participating as a mentor, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ).
+The 2024 mentor interest survey submissions are open from June 17th - July 01st. If you are interested in participating as a mentor, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ).
 
 The mentee interest survey is not an application; but rather it will tell the Diversity in Swift workgroup about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the workgroup may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
 
