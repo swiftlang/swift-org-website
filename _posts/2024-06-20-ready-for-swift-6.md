@@ -14,7 +14,7 @@ The Swift Package Index’s new “[Ready for Swift 6](https://swiftpackageindex
 
 The Swift Package Index has been running these checks using Swift 6 nightly toolchains since early May, and you can already see the [number of packages without data race errors increasing](https://swiftpackageindex.com/ready-for-swift-6#total-zero-errors). Then, for the past week since the first beta version of Xcode 16 was unveiled the Swift Package Index build machines have been runing fresh builds with the advantage of platform SDKs that have more Sendable conformance, bringing the total percentage of packages with zero data race errors to over 43%! That's a really great start for being only one week into the Xcode 16 beta process.
 
-![Chart showing the number of packages with no data race errors increasing over time from May this year](/assets/images/ready-for-swift-6-blog/packages-with-no-data-race-errors.png){:width="100%"}
+![Chart showing the number of packages with no data race errors increasing over time from May this year](/assets/images/ready-for-swift-6-blog/packages-with-no-data-race-errors.png)
 
 While packages can opt-in to Swift 6 language mode at their convenience, the chart shows the number of packages that would pass those checks if all strict concurrency checks were explicitly enabled for a package.
 
@@ -24,13 +24,13 @@ Over time, successful adoption of Swift 6 language mode in the package ecosystem
 
 When evaluating a package, it is be helpful to know if that package has any reported data race safety issues. To assist with this, the Swift Package Index now displays a “Safe from data races” label alongside other package metadata when packages compile with zero errors using `complete` strict concurrency checks.
 
-![Package metadata shown on the Swift Package Index showing that the package has no data race errors](/assets/images/ready-for-swift-6-blog/package-showing-safe-from-data-races.png){:width="100%"}
+![Package metadata shown on the Swift Package Index showing that the package has no data race errors](/assets/images/ready-for-swift-6-blog/package-showing-safe-from-data-races.png)
 
 ### Compatibility vs Data Race Safety
 
 During the transition to Swift 6, you will likely see packages that show a green tick against Swift 6 in Swift Package Index’s platform and Swift version compatibility matrix while also showing that the package has data race safety errors:
 
-![A Swift Package Index compatibility matrix showing a green tick against Swift 6 compatibility](/assets/images/ready-for-swift-6-blog/package-compatibility-with-swift-6.png){:width="100%"}
+![A Swift Package Index compatibility matrix showing a green tick against Swift 6 compatibility](/assets/images/ready-for-swift-6-blog/package-compatibility-with-swift-6.png)
 
 When compiling packages to check compatibility with Swift 6, the Swift Package Index uses whichever language mode the package author specifies. A package can be compatible with Swift 6 before it adopts the Swift 6 language mode and strict concurrency checks.
 
