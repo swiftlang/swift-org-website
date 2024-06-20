@@ -22,7 +22,7 @@ Over time, successful adoption of Swift 6 language mode in the package ecosystem
 
 ## Data Race Safety Indicators
 
-When evaluating a package, it is be helpful to know if that package has any reported data race safety issues. To assist with this, the Swift Package Index now displays a “Safe from data races” label alongside other package metadata when packages compile with zero errors using `complete` strict concurrency checks.
+When evaluating a package, it is helpful to know if that package has any reported data race safety issues. To assist with this, the Swift Package Index now displays a “Safe from data races” label alongside other package metadata when packages compile with zero errors using `complete` strict concurrency checks.
 
 ![Package metadata shown on the Swift Package Index showing that the package has no data race errors](/assets/images/ready-for-swift-6-blog/package-showing-safe-from-data-races.png)
 
