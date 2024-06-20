@@ -55,7 +55,7 @@ port install cmake ninja
 * Clone Swift repository
 
 ~~~bash
-git clone git@github.com:apple/swift.git
+git clone git@github.com:swiftlang/swift.git
 ~~~
 * Clone other required repositories
 
@@ -133,7 +133,7 @@ TOOLCHAIN_BIN_DIR=$PWD/toolchain/usr/bin
 * Clone Swift repository:
 
 ~~~bash
-git clone git@github.com:apple/swift.git
+git clone git@github.com:swiftlang/swift.git
 ~~~
 * Clone other required repositories:
 
@@ -188,7 +188,7 @@ git clone git@github.com:apple/swift.git
 * Clone Swift repository
 
 ~~~bash
-git clone git@github.com:apple/swift.git
+git clone git@github.com:swiftlang/swift.git
 ~~~
 * Clone other required repositories
 
