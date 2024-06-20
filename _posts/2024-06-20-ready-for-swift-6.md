@@ -16,8 +16,6 @@ The Swift Package Index has been running these checks using Swift 6 nightly tool
 
 ![Chart showing the number of packages with no data race errors increasing over time from May this year](/assets/images/ready-for-swift-6-blog/packages-with-no-data-race-errors.png)
 
-While packages can opt-in to Swift 6 language mode at their convenience, the chart shows the number of packages that would pass those checks if all strict concurrency checks were explicitly enabled for a package.
-
 Over time, successful adoption of Swift 6 language mode in the package ecosystem will come from two directions. First, as more packages opt into these checks, package authors will fix potential data races highlighted by the compiler, increasing compatibility and reducing errors. Second, compiler iterations will refine data race checking and consolidate error diagnostics.
 
 ## Data Race Safety Indicators
