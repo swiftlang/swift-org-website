@@ -25,4 +25,4 @@ The Swift standard library is written in Swift, but because it is the lowest-lev
 
 * **Testing is tightly coupled with the compiler**: The standard library and the compiler evolve together and are tightly coupled. Changes in core data types (e.g., `Array` or `Int`) can require compiler-side changes, and vice-versa, so the standard library test suite is stored within the same directory structure as the compiler, in [test/stdlib](https://github.com/apple/swift/tree/main/test/stdlib) and [validation-test/stdlib](https://github.com/apple/swift/tree/main/validation-test/stdlib).
 
-[swift-repo]: https://github.com/apple/swift "Swift repository"
+[swift-repo]: https://github.com/swiftlang/swift "Swift repository"
