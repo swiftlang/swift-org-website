@@ -1,5 +1,5 @@
 ---
-layout: page-wide
+layout: page
 title: Welcome to Swift.org
 hideTitle: true
 atom: true

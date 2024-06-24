@@ -5,7 +5,7 @@ module Jekyll
       site.data.dig('packages', 'packages', 'categories').each do |category|
         category_page = PageWithoutAFile.new(site, site.source, "packages", "#{category['slug']}.md")
         category_page.data = {
-          'layout' => 'page-wide',
+          'layout' => 'page',
           'title' => category['name']
         }
         category_page.content = "{% include_relative _package-list.html category_slug=\"#{category['slug']}\" %}"
@@ -21,7 +21,7 @@ module Jekyll
         year['months'].each do |month|
           history_page = PageWithoutAFile.new(site, site.source, "packages", "showcase-#{month['slug']}-#{year['year']}.md")
           history_page.data = {
-            'layout' => 'page-wide',
+            'layout' => 'page',
             'title' => "Community Showcase: #{month['month']} #{year['year']}"
           }
           history_page.content = "{% include_relative _history.html year=\"#{year['year']}\" month_slug=\"#{month['slug']}\" %}"
