@@ -1,0 +1,114 @@
+.grid-level-0 {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+}
+
+.grid-level-1 {
+  background-color: var(--color-fill-secondary);
+  border: 1px solid var(--color-fill-tertiary);
+  border-radius: var(--border-radius);
+  
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (prefers-contrast: more) {
+    background-color: transparent;
+    border: 1px solid var(--color-text);
+  }
+
+  // FIXME: no inset from container
+  .hero {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-fill-tertiary);
+    margin-bottom: 1rem;
+  }
+
+  // Card Title
+  h3 {
+    line-height: 1.4;
+    font-size: 1.4rem;
+    padding-top: 0;
+  }
+
+  // Card Caption
+  h4 {
+    font-size: 0.8rem;
+    color: var(--color-secondary-label);
+    border: none;
+    padding: 0.5rem 0 0.125rem;
+  }
+
+  p {
+    flex-grow: 1;
+    color: var(--color-secondary-label);
+    margin-bottom: 0;
+  }
+
+  // avoid extra space between a caption and button needed by install page
+  h4 + .cta-secondary {
+    margin-top: 0rem;
+  }
+}
+
+// Used by Packages page.
+.grid-level-1.selectable {
+  h3 {
+    color: var(--color-link);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: var(--color-fill-tertiary);
+    border: 1px solid var(--color-fill-quaternary);
+
+    @media (prefers-contrast: more) {
+      background-color: var(--color-text);
+      p {
+        color: var(--color-fill);
+      }
+    }
+  }
+}
+
+// Button typically embedded in a grid-level-1
+a.cta-secondary {
+  background-color: var(--color-fill-tertiary);
+  border: 1px solid var(--color-fill-quaternary);
+  border-radius: var(--border-radius);
+
+
+  color: var(--color-text);
+  text-decoration: none;
+
+  display: block;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  text-align: center;
+
+  @media (prefers-contrast: more) {
+    background-color: transparent;
+    border: 1px solid var(--color-text);
+  }
+
+  &:hover {
+    color: var(--color-link);
+    background-color: var(--color-fill-quaternary);
+   
+    text-decoration: none;
+
+    @media (prefers-contrast: more) {
+      background-color: var(--color-text);
+      color: var(--color-fill);
+    }
+  }
+
+  &.external:after {
+    content: " ↗";
+  }
+}

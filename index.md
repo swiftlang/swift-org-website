@@ -60,8 +60,8 @@ atom: true
 
 ## Use Cases
 
-<ul class="use-cases">
-  <li>
+<ul class="grid-level-0 grid-layout-use-cases">
+  <li class="grid-level-1">
     <h3>Apple Platforms</h3>
     <p>
       Swift is a powerful and intuitive programming language optimized when running on iOS, macOS, and other Apple platforms.
@@ -70,7 +70,7 @@ atom: true
     </p>
     <a href="https://developer.apple.com/swift/resources/" class="cta-secondary">Learn more</a>
   </li>
-  <li>
+  <li class="grid-level-1">
     <h3>Cross-platform Command-line</h3>
     <p>
       Writing Swift is interactive and fun, the syntax is concise yet expressive.
@@ -81,7 +81,7 @@ atom: true
 
     <a href="/getting-started/cli-swiftpm" class="cta-secondary">Learn more</a>
   </li>
-  <li>
+  <li class="grid-level-1">
     <h3>Server and Networking</h3>
     <p>
       Swift's small memory footprint, quick startup time, and deterministic performance make it a great choice for server and other networked applications.
@@ -99,22 +99,22 @@ Everyone is welcome to contribute to Swift. Contributing doesn’t just mean wri
 
 No matter how you want to get involved, we ask that you first learn what’s expected of anyone who participates in the project by reading the [Community Overview](/community/). If you’re contributing code, you should also know how to build and run Swift from the repository, as described in [Source Code](/documentation/source-code/).
 
-<ul class="getting-involved">
-  <li>
+<ul class="grid-level-0 grid-layout-3-column">
+  <li class="grid-level-1">
     <h3>Design</h3>
     <p>
       Help shape the future of Swift by participating in <em>the Swift evolution process</em>.
     </p>
     <a href="/contributing/#swift-evolution" class="cta-secondary">Learn more</a>
   </li>
-  <li>
+  <li class="grid-level-1">
     <h3>Code</h3>
     <p>
       Contribute to the Swift compiler, standard library, and other core components of the project.
     </p>
     <a href="/contributing/#contributing-code" class="cta-secondary">Learn more</a>
   </li>
-  <li>
+  <li class="grid-level-1">
     <h3>Troubleshoot</h3>
     <p>
       Help improve the quality of Swift by reporting and triaging bugs.

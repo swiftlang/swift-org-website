@@ -7,15 +7,15 @@ title: Install Swift
 
 ## Latest Release (Swift {{ site.data.builds.swift_releases.last.name }})
 
-<ul class="install-instruction">
-  <li class="resource">
+<ul class="grid-level-0 grid-layout-2-column">
+  <li class="grid-level-1">
     <h3>Xcode</h3>
     <p class="description">
       Download the current version of Xcode which contains the latest Swift release.
     </p>
     <a href="https://developer.apple.com/xcode/" class="cta-secondary external">Install Xcode</a>
   </li>
-  <li class="resource">
+  <li class="grid-level-1">
     <h3>Package Installer</h3>
     <p class="description">
       Toolchain package installer (.pkg)
@@ -37,8 +37,8 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
 {% assign xcode_6_0_builds = site.data.builds.swift-6_0-branch.xcode | sort: 'date' | reverse %}
 
 <h3>Toolchain</h3>
-<ul class="install-instruction">
-  <li class="resource">
+<ul class="grid-level-0 grid-layout-2-column">
+  <li class="grid-level-1">
     <h3>main</h3>
     <p class="description" style="font-size: 14px;">
       <time datetime="{{ xcode_dev_builds.first.date | date_to_xmlschema }}" title="{{ xcode_dev_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ xcode_dev_builds.first.date | date: '%B %-d, %Y' }}</time>
@@ -51,7 +51,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     </p>
     <a href="https://download.swift.org/development/xcode/{{ xcode_dev_builds.first.dir }}/{{ xcode_dev_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
   </li>
-  <li class="resource">
+  <li class="grid-level-1">
     <h3>release/6.0</h3>
     <p class="description" style="font-size: 14px;">
       <time datetime="{{ xcode_6_0_builds.first.date | date_to_xmlschema }}" title="{{ xcode_6_0_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ xcode_6_0_builds.first.date | date: '%B %-d, %Y' }}</time>
