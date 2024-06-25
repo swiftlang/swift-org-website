@@ -215,7 +215,7 @@ Hooray! Our first *host-side* Embedded Swift program is working!
 - The [Embedded Swift Vision Document](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md) will give you an overview of the approaches and goals of Embedded Swift, and also what exactly is in the Embedded Swift language subset.
 - The [collection of Embedded Swift example projects](https://github.com/apple/swift-embedded-examples) on GitHub shows on which embedded devices can Swift work today, and the examples can also be used as templates for your own projects.
 - The [Embedded Swift User Manual](https://github.com/apple/swift/blob/main/docs/EmbeddedSwift/UserManual.md) describes how to use the Embedded Swift compilation mode and how to interact with the compiler.
-- You might want to set up [Swift editor integration via SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp) to get features like indexing, autocomplete, jump-to-definition, show declarations/documentations, etc. to work in your favorite editor or IDE.
+- The [Tools page](https://www.swift.org/tools/#editors) has guides for setting up Swift integration in your editor to enable features like indexing, autocomplete, jump-to-definition, and others.
 - The [Swift forums](https://forums.swift.org/) are the best place to ask questions, give feedback or share your cool projects.
 
 ---
