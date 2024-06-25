@@ -6,7 +6,7 @@
   --color-fill: #{light-color(fill)};
   --color-fill-secondary: #{light-color(fill-secondary)};
   --color-fill-tertiary: #{light-color(fill-tertiary)};
-  --color-fill-quaternary: #{base-color(fill-quaternary)};
+  --color-fill-quaternary: #{light-color(fill-quaternary)};
   --color-fill-blue: #{light-color(fill-blue)};
   --color-fill-gray: #{light-color(fill-gray)};
   --color-fill-gray-secondary: #{light-color(fill-gray-secondary)};
@@ -16,7 +16,6 @@
   --color-figure-blue: #{light-color(figure-blue)};
   --color-figure-gray: #{light-color(figure-gray)};
   --color-figure-gray-secondary: #{light-color(figure-gray-secondary)};
-  --color-figure-gray-secondary-alt: #{light-color(figure-gray-secondary-alt)};
   --color-figure-gray-tertiary: #{light-color(figure-gray-tertiary)};
   --color-figure-green: #{light-color(figure-green)};
   --color-figure-light-gray: #{light-color(figure-light-gray)};
@@ -69,7 +68,7 @@
   );
   --color-code-background: var(--color-fill-secondary);
   --color-code-collapsible-background: var(--color-fill-tertiary);
-  --color-code-collapsible-text: var(--color-figure-gray-secondary-alt);
+  --color-code-collapsible-text: var(--color-figure-gray-tertiary);
   --color-code-plain: var(--color-figure-gray);
   --color-content-table-content-color: var(--color-fill-secondary);
   --color-dropdown-background: #{transparentize(light-color(fill), 0.2)};
@@ -96,7 +95,7 @@
   --color-hero-eyebrow: #{dark-color(figure-gray-secondary)};
   --color-link: var(--color-figure-blue);
   --color-loading-placeholder-background: var(--color-fill);
-  --color-nav-color: #{light-color(figure-gray-secondary-alt)};
+  --color-nav-color: #{light-color(figure-gray-tertiary)};
   --color-nav-current-link: #{change-color(
       light-color(figure-gray),
       $alpha: 0.6
@@ -123,7 +122,7 @@
       light-color(fill),
       $alpha: 0.4
     )};
-  --color-nav-dark-color: #{dark-color(figure-gray-secondary-alt)};
+  --color-nav-dark-color: #{dark-color(figure-gray-tertiary)};
   --color-nav-dark-current-link: #{change-color(
       dark-color(figure-gray),
       $alpha: 0.6
