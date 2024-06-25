@@ -32,7 +32,7 @@ file](https://github.com/apple/swift/blob/main/README.md).
 
 ## Package Manager
 
-[swift-package-manager](https://github.com/apple/swift-package-manager)
+[swift-package-manager](https://github.com/swiftlang/swift-package-manager)
 : The source code for the Swift package manager.
 
 [swift-llbuild](https://github.com/apple/swift-llbuild)
@@ -48,18 +48,18 @@ file](https://github.com/apple/swift/blob/main/README.md).
 
 ## Source Tooling
 
-[swift-syntax](https://github.com/apple/swift-syntax)
+[swift-syntax](https://github.com/swiftlang/swift-syntax)
 : The source code for SwiftSyntax, which enables Swift tools to parse, inspect, generate, and transform Swift source code.
 
-[swift-format](https://github.com/apple/swift-format)
+[swift-format](https://github.com/swiftlang/swift-format)
 : The source code for the formatting technology for Swift source code.
 
 ## SourceKit-LSP Service
 
-[sourcekit-lsp](https://github.com/apple/sourcekit-lsp)
+[sourcekit-lsp](https://github.com/swiftlang/sourcekit-lsp)
 : The source code for the SourceKit-LSP language service.
 
-[indexstore-db](https://github.com/apple/indexstore-db)
+[indexstore-db](https://github.com/swiftlang/indexstore-db)
 : The source code for the index database library.
 
 

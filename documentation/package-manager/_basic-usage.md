@@ -263,7 +263,7 @@ $ ./.build/debug/Dealer
 * * *
 
 For more information about using the Swift Package Manager,
-see the documentation provided in the [Swift Package Manager project on GitHub](https://github.com/apple/swift-package-manager).
+see the documentation provided in the [Swift Package Manager project on GitHub](https://github.com/swiftlang/swift-package-manager).
 
 
 [PlayingCard]: https://github.com/apple/example-package-playingcard
