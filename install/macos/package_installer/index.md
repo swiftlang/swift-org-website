@@ -14,7 +14,7 @@ To submit to the App Store you must build your app using the version of Swift th
 <div class="warning" markdown="1">
 Xcode is not required to run the package installer or use an installed
 toolchain. However, when Xcode is not installed, the functionality of the Swift
-Package Manager may be limited due to some [outstanding issues](https://github.com/apple/swift-package-manager/issues/4396).
+Package Manager may be limited due to some [outstanding issues](https://github.com/swiftlang/swift-package-manager/issues/4396).
 </div>
 
 0. Download a latest Swift release

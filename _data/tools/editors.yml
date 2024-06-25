@@ -16,5 +16,5 @@
   guide: /documentation/articles/zero-to-swift-nvim.html
 - name: Other Editors
   description: Any editor that supports the Language Server Protocol (LSP) can use SourceKit-LSP to provide intelligent editor functionality for Swift.
-  link: https://github.com/apple/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md
-  guide: https://github.com/apple/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md
+  link: https://github.com/swiftlang/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md
+  guide: https://github.com/swiftlang/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md

@@ -56,7 +56,7 @@ the Command Palette and following the instructions below.
 
 ## Language Features
 
-The Swift extension uses [SourceKit-LSP](https://github.com/apple/sourcekit-lsp)
+The Swift extension uses [SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp)
 to power language features. SourceKit-LSP provides the following features in the
 editor. Use these links to see the VS Code documentation for each topic:
 
