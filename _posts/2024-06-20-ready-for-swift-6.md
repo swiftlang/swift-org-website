@@ -6,7 +6,7 @@ title: Plotting a Path to a Package Ecosystem without Data Race Errors
 author: [daveverwer, svenaschmidt]
 ---
 
-Swift 6 introduces compile-time data race safety checking for any code that [opts in to use the Swift 6 language mode](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/swift6mode). While individual modules can adopt this mode incrementally and independently of their dependencies, the full benefit of runtime data race safety is only realized when all modules have opted in. Therefore, the quick adoption of Swift 6 language mode across the ecosystem of open-source packages will play a key role in advancing data race safety across the entire Swift ecosystem.
+Swift 6 introduces [compile-time data race safety checking](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/dataracesafety) for any code that [opts in to use the Swift 6 language mode](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/swift6mode). While individual modules can adopt this mode incrementally and independently of their dependencies, the full benefit of runtime data race safety is only realized when all modules have opted in. Therefore, the quick adoption of Swift 6 language mode across the ecosystem of open-source packages will play a key role in advancing data race safety across the entire Swift ecosystem.
 
 ## Tracking Swift 6 Readiness and Progress
 
