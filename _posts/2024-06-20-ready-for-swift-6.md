@@ -26,9 +26,9 @@ When evaluating a package, it is helpful to know if that package has any reporte
 
 ### Compatibility vs Data Race Safety
 
-During the transition to Swift 6, you will likely see packages that show a green tick against Swift 6 in Swift Package Index’s platform and Swift version compatibility matrix while also showing that the package has data race safety errors:
+During the transition to Swift 6, you will likely see packages that show a green checkmark against Swift 6 in Swift Package Index’s platform and Swift version compatibility matrix while also showing that the package has data race safety errors:
 
-![A Swift Package Index compatibility matrix showing a green tick against Swift 6 compatibility](/assets/images/ready-for-swift-6-blog/package-compatibility-with-swift-6.png)
+![A Swift Package Index compatibility matrix showing a green checkmark against Swift 6 compatibility](/assets/images/ready-for-swift-6-blog/package-compatibility-with-swift-6.png)
 
 When compiling packages to check compatibility with Swift 6, the Swift Package Index uses whichever language mode the package author specifies. A package can be compatible with Swift 6 before it adopts the Swift 6 language mode and strict concurrency checks.
 
