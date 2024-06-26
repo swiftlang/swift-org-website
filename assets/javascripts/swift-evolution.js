@@ -763,7 +763,7 @@ function _searchProposals(filterText) {
       ['trackingBugs', 'status'],
       ['trackingBugs', 'id'],
       ['trackingBugs', 'assignee'],
-      ['upcomingFeatureFlag']
+      ['upcomingFeatureFlag', 'flag']
   ]
 
   // Reflect over the proposals and find ones with matching properties
