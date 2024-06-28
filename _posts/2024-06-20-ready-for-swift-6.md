@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2024-06-20 12:00:00
+date: 2024-06-28 12:00:00
 title: Plotting a Path to a Package Ecosystem without Data Race Errors
 author: [daveverwer, svenaschmidt]
 ---
