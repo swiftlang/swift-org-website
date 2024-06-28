@@ -32,7 +32,7 @@ During the transition to Swift 6, you will likely see packages that show a green
 
 ![A Swift Package Index compatibility matrix showing a green checkmark against Swift 6 compatibility](/assets/images/ready-for-swift-6-blog/package-compatibility-with-swift-6.png)
 
-When compiling packages to check compatibility with Swift 6, the Swift Package Index uses whichever language mode the package author specifies. A package can be compatible with Swift 6 before it adopts the Swift 6 language mode and strict concurrency checks.
+When compiling packages to check compatibility with Swift 6, the Swift Package Index uses whichever language mode the package author specifies. A package can be compatible with Swift 6 before it adopts the Swift 6 language mode and strict concurrency checks and the matrix only ever shows compatibility. Whether you adopt a package with potential data race safety issues is yours to make.
 
 ## Call to Action: Adopt the Swift 6 Language Mode
 
