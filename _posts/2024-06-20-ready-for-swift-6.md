@@ -12,9 +12,9 @@ Data races can lead to crashes, inconsistent behaviour, and performance issues i
 
 ## Tracking Swift 6 Readiness and Progress
 
-The Swift Package Index’s new “[Ready for Swift 6](https://swiftpackageindex.com/ready-for-swift-6)” page tracks progress toward data race safety across the entire package ecosystem. While packages can opt in to Swift 6 language mode at their convenience, this page shows the number of packages that would pass those checks if all strict concurrency checks were enabled for all packages.
+The Swift Package Index’s new [Ready for Swift 6](https://swiftpackageindex.com/ready-for-swift-6) page tracks progress toward data race safety across the entire package ecosystem. While packages can opt in to Swift 6 language mode at their convenience, this page shows the number of packages that would pass those checks if all strict concurrency checks were enabled for all packages.
 
-The Swift Package Index has been running these checks using Swift 6 nightly toolchains since early May, and there has already been a steady reduction in the [number of packages with data race errors](https://swiftpackageindex.com/ready-for-swift-6#total-zero-errors). For the past week, the Swift Package Index build machines have been running fresh builds with the advantage of platform SDKs with more `Sendable` conformance, bringing the total percentage of packages with zero data race errors to over 43%!That's a really great start for being only one week into the Swift 6 beta process.
+The Swift Package Index has been running these checks using Swift 6 nightly toolchains since early May, and there has already been a steady reduction in the [number of packages with data race errors](https://swiftpackageindex.com/ready-for-swift-6#total-zero-errors). For the past week, the Swift Package Index build machines have been running fresh builds with the advantage of platform SDKs with more `Sendable` conformance, bringing the total percentage of packages with zero data race errors to over 43%! That's a really great start for being only one week into the Swift 6 beta process.
 
 ![Chart showing the number of packages with no data race errors increasing over time from May this year](/assets/images/ready-for-swift-6-blog/packages-with-no-data-race-errors.png)
 
