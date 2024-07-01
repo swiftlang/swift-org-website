@@ -200,8 +200,10 @@ Changes to the incubation process must be documented and published publicly and 
 
 Updates resulting in a version bump require a super-majority vote from the SSWG. Trivial changes, such as fixing typos or formatting, do not require a version bump.
 
+
 ## Resources and References
 
-* https://github.com/swiftlang/swift-evolution
-* https://github.com/cncf/toc/tree/main/process
-* https://incubator.apache.org
+- [Incubated packages](/sswg/incubated-packages)
+* [Swift Evolution](https://www.swift.org/swift-evolution/)
+* [CNCF Project Lifecycle & Process](https://github.com/cncf/toc/tree/main/process)
+* [The Apache Incubator](https://incubator.apache.org)
