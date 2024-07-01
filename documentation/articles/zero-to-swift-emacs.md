@@ -1,7 +1,7 @@
 ---
 layout: page
 date: 2024-06-05 12:00:00
-title: From Zero to Swift | Getting started with Swift in Emacs
+title: Configuring Emacs for Swift Development
 author: [al45tair]
 ---
 

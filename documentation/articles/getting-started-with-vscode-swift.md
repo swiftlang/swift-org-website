@@ -1,11 +1,11 @@
 ---
 layout: page
 date: 2024-05-28 12:00:00
-title: Getting started with Swift in VS Code
+title: Configuring VS Code for Swift Development
 author: [matthewbastien, plemarquand]
 ---
 
-Visual Studio Code (VS Code) is a popular general purpose editor that supports a
+[Visual Studio Code](https://code.visualstudio.com/) (VS Code) is a popular general purpose editor that supports a
 variety of languages through extensibility. The Swift extension brings Swift
 language-specific features to the editor, providing a seamless experience for
 developing Swift applications on all platforms.
@@ -79,7 +79,7 @@ which can include:
 ![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
 
 <div class="warning" markdown="1">
-Before language features can be used you must perform a `swift build` command on your 
+Before language features can be used you must perform a `swift build` command on your
 project either on the command line or using a task in VS Code. This populates the index in SourceKit-LSP.
 </div>
 
