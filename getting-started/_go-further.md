@@ -2,20 +2,23 @@
 
 Ready to dive deeper? Here are some hand-picked resources covering various Swift features.
 
-<ul class="go-further-list">
+<ul class="grid-level-0 grid-layout-2-column">
   {% for resource in site.data.go_further %}
-  <li class="resource{% if resource.featured %} featured{% endif %}">
+  <li class="grid-level-1">
       {% if resource.thumbnail_url %}
-        <img class="thumbnail" src="{{ resource.thumbnail_url }}"/>
+        <img class="hero" src="{{ resource.thumbnail_url }}"/>
       {% elsif resource.content_type == "article" %}
-        <img class="thumbnail" src="/assets/images/getting-started/article-thumbnail.jpg"/>
+        <img class="hero" src="/assets/images/getting-started/article-thumbnail.jpg"/>
       {% endif %}
 
-      <h3>{{ resource.title }}</h3>
-      <div class="description">
+      <h3>
+        {{ resource.title }}
+      </h3>
+
+      <p class="description">
         {{ resource.description | markdownify }}
-      </div>
-      
+      </p>
+
       <a href="{{ resource.content_url }}" class="cta-secondary{% if resource.external %} external" target="_blank"{% else %}"{% endif %}>
         {% if resource.content_type == "video" %}
         Watch video

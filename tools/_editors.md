@@ -1,8 +1,8 @@
 ## Editors
 
-<ul class="tool-list">
+<ul class="grid-level-0 grid-layout-2-column">
   {%- for editor in site.data.tools.editors %}
-    <li class="tool">
+    <li class="grid-level-1">
       <h3>
         <a target="_blank" href="{{ editor.link }}">
           {{ editor.name }}

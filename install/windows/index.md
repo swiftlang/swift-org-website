@@ -7,15 +7,15 @@ title: Install Swift
 
 ## Latest Release (Swift {{ site.data.builds.swift_releases.last.name }})
 
-<ul class="install-instruction">
-  <li class="resource">
+<ul class="grid-level-0 grid-layout-2-column">
+  <li class="grid-level-1">
     <h3>Package Manager</h3>
     <p class="description">
       Install Swift via Windows Package Manager (aka WinGet).
     </p>
     <a href="/install/windows/winget" class="cta-secondary">Instructions</a>
   </li>
-  <li class="resource">
+  <li class="grid-level-1">
     <h3>Package Installer</h3>
     <p class="description">
       Package installers (.exe).
@@ -23,14 +23,14 @@ title: Install Swift
     <a href="https://download.swift.org/{{ site.data.builds.swift_releases.last.tag | downcase }}/windows10/{{ site.data.builds.swift_releases.last.tag }}/{{ site.data.builds.swift_releases.last.tag }}-windows10.exe" class="cta-secondary">Download Toolchain (x86_64)</a>
     <a href="/install/windows/traditional" class="cta-secondary">Instructions</a>
   </li>
-  <li class="resource">
+  <li class="grid-level-1">
     <h3>Scoop</h3>
     <p class="description">
       Install Swift via Scoop.
     </p>
     <a href="/install/windows/scoop" class="cta-secondary">Instructions</a>
   </li>
-  <li class="resource">
+  <li class="grid-level-1">
     <h3>Docker</h3>
     <p class="description">
       The offical Docker images for Swift.
@@ -48,8 +48,8 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
 {% assign windows_dev_builds = site.data.builds.development.windows10 | sort: 'date' | reverse %}
 {% assign windows10_6_0_builds = site.data.builds.swift-6_0-branch.windows10 | sort: 'date' | reverse %}
 
-<ul class="install-instruction">
-  <li class="resource">
+<ul class="grid-level-0 grid-layout-2-column">
+  <li class="grid-level-1">
     <h3>main</h3>
     <p class="description" style="font-size: 14px;">
       <time datetime="{{ windows_dev_builds.first.date | date_to_xmlschema }}" title="{{ windows_dev_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ windows_dev_builds.first.date | date: '%B %-d, %Y' }}</time>
@@ -59,7 +59,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     </p>
     <a href="https://download.swift.org/development/windows10/{{ windows_dev_builds.first.dir }}/{{ windows_dev_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
   </li>
-  <li class="resource">
+  <li class="grid-level-1">
     <h3>release/6.0</h3>
     <p class="description" style="font-size: 14px;">
       <time datetime="{{ windows10_6_0_builds.first.date | date_to_xmlschema }}" title="{{ windows10_6_0_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ windows10_6_0_builds.first.date | date: '%B %-d, %Y' }}</time>
