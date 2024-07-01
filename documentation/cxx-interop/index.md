@@ -1588,7 +1588,7 @@ void createMountainRange() {
 Swift classes that are exposed to C++ become C++ classes in the
 generated header. Top-level classes are placed in the C++ `namespace`
 that represents the Swift module. The exposed initializers, methods and
-properties defined inside of the Swift structure become members of the
+properties defined inside of the Swift class become members of the
 C++ class.
 
 The C++ class that represents a Swift class is copyable and movable.
