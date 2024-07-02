@@ -1,3 +1,8 @@
+- date: 2024-07-01 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-07-01-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-07-01-a-ubi9-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-07-01-a-ubi9-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2024-06-30 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2024-06-30-a
   download: swift-DEVELOPMENT-SNAPSHOT-2024-06-30-a-ubi9-aarch64.tar.gz
