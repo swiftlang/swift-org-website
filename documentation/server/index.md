@@ -58,6 +58,10 @@ The Swift ecosystem contains many useful libraries and tools specifically design
 
 Overall, Swift on Server opens up new opportunities for developers to build fast, scalable, and secure backend services. Swift's combination of performance, readability, interoperability, safety, and modern language features make it a compelling choice for many developers.
 
+### Development guides
+
+The Swift Server Workgroup and Swift on Server community have developed a number of [guides](/documentation/server/guides/) for using Swift on the server. They are designed to help teams and individuals running Swift Server applications on Linux and to provide orientation for those who want to start with such development.
+
 
 ## Swift Server Workgroup
 
@@ -69,3 +73,4 @@ The workgroup:
 * Channels feedback for Swift language features needed by the server development community to the Swift Core Team.
 
 Read more about the [workgroup](/sswg "Swift Server Workgroup") and server incubator it runs [here](/sswg/incubation-process "SSWG Incubation Process").
+
