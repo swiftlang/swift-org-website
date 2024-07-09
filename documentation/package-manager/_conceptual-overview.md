@@ -26,10 +26,10 @@ rather than reimplementing the same functionality yourself.
 
 ### Packages
 
-A _package_ consists of Swift source files and a manifest file.
-The manifest file, called `Package.swift`,
-defines the package's name and its contents
-using the `PackageDescription` module.
+A _package_ consists of Swift source files and a manifest file.
+The manifest must be located in the root of the package's repository and be
+named `Package.swift`, defining the package's name and other metadata
+using the `PackageDescription` module.
 
 {% comment %}
     TODO: "You can find API documentation for the `PackageDescription` module here: ..."
