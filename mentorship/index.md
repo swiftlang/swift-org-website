@@ -25,9 +25,9 @@ If the mentee has not contributed to the project before, they will first work wi
 | **October 14th**   |  10-week cohort ends             |
 | **October 21st**   |  Feedback deadline               |
 
-### Interest Surveys
+### Participation
 
-The 2024 mentor interest survey submissions are open from June 17th - July 1st. If you are interested in participating as a mentor, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ).
+The 2024 interest survey submissions will be open in accordance with the above timeline. If you are interested in participating as a mentor, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ).
 
 The mentee interest survey is not an application; but rather it will tell the Contributor Experience workgroup about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the workgroup may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
 
@@ -65,7 +65,7 @@ You can expect your mentor to help guide you as you make contributions to an ope
 <details class="download">
   <summary>What is the expected time commitment?</summary>
 
-Mentors are expected to meet with their mentees at least 2 hours per month. The mentorship pair can decide how to distribute that time throughout the month. Mentees are expected to spend at least an additional 2 hours per month working on their contributions.
+Mentors are expected to allocate at least a half hour per week to meet with their mentees. The mentorship pair can decide how to distribute that time throughout the program. Mentees are expected to spend at least an additional half hour per week working on their contributions.
 </details>
 
 <details class="download">
@@ -89,7 +89,7 @@ If the mentee does not have any ideas in mind, project maintainers and mentors m
 <details class="download">
   <summary>Is there an evaluation at the end of the program?</summary>
 
-There is no formal evaluation at the end of the mentorship program. However, there will be an exit survey for all participants. There will also be a post on the Swift.org blog to highlight mentees’ contributions and their learnings.
+There is no formal evaluation at the end of the mentorship program. However, there will be an opt-in exit survey for all participants. There will also be a post on the Swift.org blog to highlight mentees’ contributions and their learnings.
 </details>
 
 <details class="download">
