@@ -58,6 +58,8 @@ example-package-playingcard
 └── Package.swift
 ~~~
 
+When creating a library package intended for use by other projects, the `Package.swift` manifest must reside at the top level/root of the package directory structure.
+
 Because the `PlayingCard` target does not produce an executable,
 it can be described as a _library_.
 A library is a target that builds a module which can be imported by other packages.
