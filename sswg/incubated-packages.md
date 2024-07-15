@@ -3,7 +3,7 @@ layout: page
 title: SSWG Incubated packages
 ---
 
-The Swift Server Workgroup ([SSWG](/sswg/)) has a [process](/sswg/incubation-process/) which allows a project to go through incubation stages until it graduates and becomes a recommended project.
+The Swift Server Workgroup ([SSWG](/sswg/)) has a [process](/sswg/incubation-process.html) which allows a project to go through incubation stages until it graduates and becomes a recommended project.
 
 <table>
   <thead>

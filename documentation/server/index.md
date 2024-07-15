@@ -72,5 +72,5 @@ The workgroup:
 * Defines and runs an incubation process for these efforts to reduce duplication of effort, increase compatibility, and promote best practices.
 * Channels feedback for Swift language features needed by the server development community to the Swift Core Team.
 
-Read more about the [workgroup](/sswg "Swift Server Workgroup") and server incubator it runs [here](/sswg/incubation-process "SSWG Incubation Process").
+Read more about the [workgroup](/sswg "Swift Server Workgroup") and server incubator it runs [here](/sswg/incubation-process.html "SSWG Incubation Process").
 
