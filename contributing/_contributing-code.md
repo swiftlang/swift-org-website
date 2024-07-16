@@ -111,6 +111,34 @@ For C or C++ source or header files, the code header should look this:
 
 The divider lines should be exactly 80 characters wide to aid in adherence to the code style guidelines.  The bottom section contains an optional description intended for generated documentation (these lines begin with `///` rather than `//`).  If there is no description, this area can be skipped.
 
+### Release Branch Pull Requests
+
+A pull request targeting a release branch (`release/x.y` or `swift/release/x.y`)
+cannot be merged without a GitHub approval by a corresponding branch manager.
+In order for a change to be considered for inclusion in a release branch, the
+pull request must have:
+
+* A title starting with a designation containing the release version number of
+  the target branch.
+
+* [This][form] form filled out in its description. An item that is not
+  applicable may be left blank or completed with an indication thereof, but must
+  not be omitted altogether.
+
+  To switch to this template when drafting a pull request in a
+  [swiftlang][swiftlang] repository in a browser, append the
+  `template=release.md` query parameter to the current URL and refresh.
+  For example:
+  ```diff
+  -https://github.com/swiftlang/swift/compare/main...my-branch?quick_pull=1
+  +https://github.com/swiftlang/swift/compare/main...my-branch?quick_pull=1&template=release.md
+  ```
+
+[Here](https://github.com/apple/swift/pull/73697) is an example.
+
+[swiftlang]: https://github.com/swiftlang
+[form]: https://github.com/swiftlang/.github/blob/main/PULL_REQUEST_TEMPLATE/release.md?plain=1
+
 ### Code Review
 
 The Swift project relies heavily on code review to improve software quality:
