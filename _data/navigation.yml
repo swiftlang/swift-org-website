@@ -63,6 +63,37 @@
           name: adding-external-library-dependencies
         - title: LLVM and Swift
           name: llvm-and-swift
+    - section: Steering Groups
+    - title: Language
+      url: /language-steering-group/
+      sections:
+        - title: Charter
+          name: charter
+        - title: Membership
+          name: membership
+        - title: Decision making
+          name: decision-making
+        - title: Communication
+          name: communication
+        - title: Evolution process
+          name: evolution-process
+        - title: Community participation
+          name: community-participation
+    - title: Platform
+      url: /platform-steering-group/
+      sections:
+        - title: Charter
+          name: charter
+        - title: Membership
+          name: membership
+        - title: Evolution
+          name: evolution
+        - title: Communication
+          name: communication
+        - title: Platform Evolution process
+          name: platform-evolution-process
+        - title: Community participation
+          name: community-participation
     - section: Workgroups
     - title: Contributor Experience
       url: /contributor-experience-workgroup/
@@ -84,36 +115,6 @@
           name: governance
         - title: Website workgroup
           name: website-workgroup
-    - title: Language Steering Group
-      url: /language-steering-group/
-      sections:
-        - title: Charter
-          name: charter
-        - title: Membership
-          name: membership
-        - title: Decision making
-          name: decision-making
-        - title: Communication
-          name: communication
-        - title: Evolution process
-          name: evolution-process
-        - title: Community participation
-          name: community-participation
-    - title: Platform Steering Group
-      url: /platform-steering-group/
-      sections:
-        - title: Charter
-          name: charter
-        - title: Membership
-          name: membership
-        - title: Evolution
-          name: evolution
-        - title: Communication
-          name: communication
-        - title: Platform Evolution process
-          name: platform-evolution-process
-        - title: Community participation
-          name: community-participation
     - title: C++ Interoperability
       url: /cxx-interop-workgroup/
       sections:
