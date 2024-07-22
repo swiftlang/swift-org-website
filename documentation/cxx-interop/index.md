@@ -38,7 +38,7 @@ as the Swift community gathers feedback from real world adoption of C++
 interoperability in mixed Swift and C++ codebases.
 Please provide the feedback that you have on the
 [Swift forums](https://forums.swift.org/c/development/c-interoperability/), or
-by filing an [issue on GitHub](https://github.com/apple/swift/issues/new/choose).
+by filing an [issue on GitHub](https://github.com/swiftlang/swift/issues/new/choose).
 Future changes to the design or functionality of C++ interoperability will not
 break code in existing codebases [by default](#source-stability-guarantees-for-mixed-language-codebases).
 </div>
@@ -422,7 +422,7 @@ that mutate `mutable` fields from Swift, unless they're explicitly annotated wit
 > yet available in a downloadable Swift 5.9 toolchain. This macro will
 > allow you to explicitly annotate constant member functions that do mutate the
 > object. Such functions with then become `mutating` methods in Swift. The
-> following [GitHub issue](https://github.com/apple/swift/issues/66322)
+> following [GitHub issue](https://github.com/swiftlang/swift/issues/66322)
 > tracks the status of `SWIFT_MUTATING` support in Swift.
 
 #### Member Functions Returning References Are Unsafe by Default
@@ -536,7 +536,7 @@ struct Fern {
 The exact rules that determine when members from inherited base types
 are introduced to the Swift type that represents the C++ structure or class
 are not yet finalized in Swift 5.9. The following
-[GitHub issue](https://github.com/apple/swift/issues/66323)
+[GitHub issue](https://github.com/swiftlang/swift/issues/66323)
 tracks their finalization in Swift 5.9.
 
 ### Using C++ Enumerations

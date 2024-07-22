@@ -200,7 +200,7 @@ Direct leak of 32 byte(s) in 1 object(s) allocated from:
 SUMMARY: AddressSanitizer: 32 byte(s) leaked in 1 allocation(s).
 ```
 
-Currently, the output doesn’t provide a human-readable representation of the function names because [LeakSanitizer doesn't symbolicate stack traces on Linux](https://github.com/apple/swift/issues/55046). However, you can symbolicate it using `llvm-symbolizer` or `addr2line` if you have `binutils` installed.
+Currently, the output doesn’t provide a human-readable representation of the function names because [LeakSanitizer doesn't symbolicate stack traces on Linux](https://github.com/swiftlang/swift/issues/55046). However, you can symbolicate it using `llvm-symbolizer` or `addr2line` if you have `binutils` installed.
 
 To install `binutils` for Swift on a server running Linux, follow these steps:
 
