@@ -11,76 +11,135 @@ needs to be listed here.
 
 ### Contributors
 
-- AG <acgarland@apple.com>
-- Alex Blewitt <alex.blewitt@gmail.com>
+- 38elements <38elements@users.noreply.github.com>
+- Adam Fowler <adamfowler71@gmail.com>
+- Adrian Prantl <adrian-prantl@users.noreply.github.com>
+- Alastair Houghton <ahoughton@apple.com>
+- Alex Hoppen <ahoppen@apple.com>
+- Alex Hoppen <alex@alexhoppen.de>
+- Alex Lorenz <arphaman@gmail.com>
 - Alex Martini <amartini@apple.com>
-- Allen Denison <allendenison@apple.com>
-- Andrew Trick <atrick@apple.com>
-- Ankit Aggarwal <ankit_aggarwal@apple.com>
-- Argyrios Kyrtzidis <kyrtzidis@apple.com>
-- Ben Cohen <airspeedswift@users.noreply.github.com>
-- Ben Waldie <benwaldie@apple.com>
-- Benjamin Scholtysik (Reimold) <bereimol@microsoft.com>
-- Bob Wilson <bob.wilson@apple.com>
+- Alexander <45719053+KeoFoxy@users.noreply.github.com>
+- Alexander Sandberg <hi@alexandersandberg.com>
+- Anthony Latsis <aqamoss3fan2010@gmail.com>
+- Ben Langmuir <blangmuir@apple.com>
+- Ben Rimmington <me@benrimmington.com>
+- BenedictSt <52418145+BenedictSt@users.noreply.github.com>
+- Benjamin Barnard <44757473+barnard-b@users.noreply.github.com>
 - Boris Bügling <bbuegling@apple.com>
-- Brian Lanier <blanier@apple.com>
-- Chris Bieneman <beanz@apple.com>
-- Chris Lattner <clattner@apple.com>
+- Brian Henry <BrianHenryIE@gmail.com>
+- Charlie Le <3375195+CharlieTLe@users.noreply.github.com>
+- Christopher Thielen <77445+cthielen@users.noreply.github.com>
+- Christopher Thielen <c_thielen@apple.com>
 - Cory Benfield <lukasa@apple.com>
-- Dan Liew <dan@su-root.co.uk>
-- Daniel Dunbar <daniel_dunbar@apple.com>
-- Dave Abrahams <dabrahams@apple.com>
-- David Farler <dfarler@apple.com>
-- Dmitri Gribenko <gribozavr@gmail.com>
-- Dobromir Hristov <dobromir92@gmail.com>
+- Dan Smith <smitty825@hotmail.com>
+- Daniel Jalkut <jalkut@red-sweater.com>
+- Danny Mösch <danny.moesch@icloud.com>
+- Dave Verwer <dave.verwer@gmail.com>
+- David Hart <david@hartbit.com>
+- David Moser <54151448+dave-moser@users.noreply.github.com>
+- David Rönnqvist <david.ronnqvist@gmail.com>
+- Devanshi <devanshimodha@yahoo.com>
 - Doug Gregor <dgregor@apple.com>
-- EMatejska <ematejska@apple.com>
-- Erik Eckstein <eeckstein@apple.com>
-- Ewa Matejska <ematejska@apple.com>
+- Egor Zhdan <e_zhdan@apple.com>
+- Ethan Kusters <ekusters@apple.com>
+- Eugene Gubin <hemet.mail@gmail.com>
+- Evan Wilde <etceterawilde@gmail.com>
+- Evan Zacks <zackse@gmail.com>
+- Federico Bucchi <b.federico@gmail.com>
+- Feli Bernutz <felizia.bernutz@gmx.de>
 - Franklin Schrans <fschrans@apple.com>
-- George Barnett <gbarnett@apple.com>
-- Graydon Hoare <ghoare@apple.com>
+- Franz Busch <f.busch@apple.com>
+- François Lamboley <Frizlab@users.noreply.github.com>
+- Guoye Zhang <guoye@d0g.cc>
 - Holly Borla <hborla@apple.com>
-- Johannes Weiss <johannesweiss@apple.com>
-- Jordan Rose <jordan_rose@apple.com>
-- Julian Lettner <yln@users.noreply.github.com>
-- Karoy Lorentey <klorentey@apple.com>
-- Kate Stone <k8stone@apple.com>
-- Katherine Poulter <4055522+katpoulter@users.noreply.github.com>
+- Honza Dvorsky <czechboy0@gmail.com>
+- Ishaan Bedi <bediishaan6@gmail.com>
+- Jakub Cabak <jakubcabak@gmail.com>
+- James Dempsey <dempsey@tapas-software.net>
+- Javier Hernández <jaherhi@users.noreply.github.com>
+- Jess <40612124+Namejess@users.noreply.github.com>
+- Joakim Hassila <jocke@ordo.one>
+- Joannis Orlandos <joannis@orlandos.nl>
+- John McCall <rjmccall@gmail.com>
+- Keith Smiley <keithbsmiley@gmail.com>
 - Konrad `ktoso` Malawski <ktoso@apple.com>
+- Kris Schneider <101912712+Zliced13@users.noreply.github.com>
+- Kristina Fox <1186874+krstnfx@users.noreply.github.com>
 - Kuba (Brecka) Mracek <mracek@apple.com>
-- Kyle Macomber <kmacomber@apple.com>
+- Kyle <43724855+Kyle-Ye@users.noreply.github.com>
+- Kyle <kyle201817146@gmail.com>
 - Kyle Murray <kyle_murray@apple.com>
-- Luke Larson <llarson@apple.com>
-- Marcus Ortiz <212918+mportiz08@users.noreply.github.com>
-- Mark Lacey <rudkx@users.noreply.github.com>
-- Mattt Thompson <mattt.thompson@apple.com>
-- Max Howell <mxcl@me.com>
-- Max Moiseev <moiseev@users.noreply.github.com>
-- Michael Ilseman <milseman@apple.com>
-- Mike Ash <mike@mikeash.com>
-- Mirza Garibovic <garibovic@apple.com>
+- LamTrinh.Dev <me@lamtrinh.dev>
+- Laszlo Teveli <tevelee@users.noreply.github.com>
+- Linus <67926131+libewa@users.noreply.github.com>
+- Louis Qian <qianyu021026@163.com>
+- Magnus Wissler <gmw@wittyname.net>
+- Mahdi Bahrami <github@mahdibm.com>
+- Marius Seufzer <44228394+marius-se@users.noreply.github.com>
+- Martin Grider <mgrider@gmail.com>
+- Mateusz Bąk <bakmatthew@icloud.com>
+- Matthew Bastien <matthew_bastien@apple.com>
+- Matthias Bartelmeß <mba@fourplusone.de>
+- Mauricio Paternina <49292621+trsplms@users.noreply.github.com>
+- Mauro Paternina <49292621+patternina@users.noreply.github.com>
+- Max Desiatov <m_desiatov@apple.com>
+- Max Desiatov <max@desiatov.com>
+- Meet Balani <74920401+shrudge@users.noreply.github.com>
+- Michael McGuire <Michael.McGuire@gmail.com>
+- Mihail Verenich <97mik@mail.ru>
+- Misha Causur <60923960+mishacausur@users.noreply.github.com>
 - Mishal Shah <mishal_shah@apple.com>
-- Nate Cook <natecook@apple.com>
-- Nathan Hawes <nhawes@apple.com>
-- Nicole Jacque <jacque@apple.com>
+- Mitchell Salomon <85707581+Mitchman215@users.noreply.github.com>
+- Natalia Panferova <natalia.panferova.pro@gmail.com>
+- Natik Gadzhi <natik@respawn.io>
+- Nicholas <101022772+alsonick@users.noreply.github.com>
+- Ole Begemann <ole@oleb.net>
+- Pablo Cornejo <40843954+pablocornejo@users.noreply.github.com>
+- Paris <paris_pittman@apple.com>
+- Paul <44974737+paulober@users.noreply.github.com>
+- Paul Hudson <paul.hudson@gmail.com>
+- Paul LeMarquand <plemarquand@apple.com>
+- Paul Toffoloni <69189821+ptoffy@users.noreply.github.com>
 - Pavel Yaskevich <pyaskevich@apple.com>
-- Rick Ballard <rballard@apple.com>
-- Rintaro Ishizaki <rishizaki@apple.com>
+- Philip Turner <philipturner.AR@gmail.com>
+- Rauhul Varma <rauhul.varma@gmail.com>
+- Rauhul Varma <rauhul@apple.com>
+- Reda Lemeden <git@redalemeden.com>
+- RobinBateman808 <157847969+RobinBateman808@users.noreply.github.com>
+- SHILPEE GUPTA <78029920+shilpeegupta14@users.noreply.github.com>
 - Saleem Abdulrasool <compnerd@compnerd.org>
-- Sam Page <page.sam.c@gmail.com>
-- Slava Pestov <spestov@apple.com>
-- Swift Automation <swift_jenkins@apple.com>
-- Swift Jenkins <swift_jenkins@apple.com>
+- Sebastian Hagedorn <shagedorn.cgn@icloud.com>
+- Si Beaumont <simonjbeaumont@gmail.com>
+- Siemen Sikkema <siemensikkema@users.noreply.github.com>
+- Sima Nerush <51447912+simanerush@users.noreply.github.com>
+- Soham Kalburgi <73813549+not-soham@users.noreply.github.com>
+- Sven A. Schmidt <sas@finestructure.co>
+- Sébastien Stormacq <sebastien.stormacq@gmail.com>
 - Ted Kremenek <kremenek@apple.com>
+- Tibor Bödecs <mail.tib@gmail.com>
+- Tim Condon <0xTim@users.noreply.github.com>
+- Tim Sneath <timsneath@apple.com>
+- Ting Chen <cht@bupt.cn>
 - Tom Doron <tomer@apple.com>
-- Varun Gandhi <varun_gandhi@apple.com>
-- Xi Ge <xi_ge@apple.com>
-- adrian-prantl <adrian-prantl@users.noreply.github.com>
-- dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
-- eeckstein <eeckstein@apple.com>
-- ematejska <ematejska@apple.com>
-- katpoulter <4055522+katpoulter@users.noreply.github.com>
-- seabaylea <baileyc@uk.ibm.com>
+- Tony Parker <anthony.parker@apple.com>
+- Ty Hopp <tyhopp@users.noreply.github.com>
+- Unbinilium <15633984+Unbinilium@users.noreply.github.com>
+- Valeriy Van <github@w7software.com>
+- Victor Ilyukevich <ilyukevich.victor@gmail.com>
+- Will Field-Thompson <WFT@users.noreply.github.com>
+- Willie Abrams <willie@pobox.com>
+- YR Chen <stevapple@icloud.com>
+- Yim Lee <yim_lee@apple.com>
+- Zane Enders <39070793+zaneenders@users.noreply.github.com>
+- Zhen Li <45376537+li3zhen1@users.noreply.github.com>
+- Zoe Carver <z.zoelec2@gmail.com>
+- akashhansda <99724223+akashhansda@users.noreply.github.com>
+- danny1113 <55360046+danny1113@users.noreply.github.com>
+- david-swift <106754840+david-swift@users.noreply.github.com>
+- neilhamilton <neil@offshootinc.com>
+- shiz <35151927+stzn@users.noreply.github.com>
 - swift Jenkins <swift_jenkins@apple.com>
-- swift-ci <swift-ci@users.noreply.github.com>
+- taylorswift (dianna) <kelvin13ma@gmail.com>
+- xavgru12 <117173294+xavgru12@users.noreply.github.com>
+
