@@ -8,7 +8,7 @@ The code for the Swift project is divided into several open-source repositories,
 
 ## Compiler and Standard Library
 
-[swift](https://github.com/apple/swift)
+[swift](https://github.com/swiftlang/swift)
 : The main Swift repository, which contains the source code for the Swift compiler, standard library, and SourceKit.
 
 [swift-evolution](https://github.com/swiftlang/swift-evolution)
@@ -17,7 +17,7 @@ The code for the Swift project is divided into several open-source repositories,
 Directions for building the Swift compiler and standard library, along
 with its prerequisites, are provided by the [main Swift repository's
 README
-file](https://github.com/apple/swift/blob/main/README.md).
+file](https://github.com/swiftlang/swift/blob/main/README.md).
 
 ## Core Libraries
 
@@ -35,10 +35,10 @@ file](https://github.com/apple/swift/blob/main/README.md).
 [swift-package-manager](https://github.com/swiftlang/swift-package-manager)
 : The source code for the Swift package manager.
 
-[swift-llbuild](https://github.com/apple/swift-llbuild)
+[swift-llbuild](https://github.com/swiftlang/swift-llbuild)
 : The source code for llbuild, a low-level build system used by the Swift package manager.
 
-[swift-tools-support-core](https://github.com/apple/swift-tools-support-core)
+[swift-tools-support-core](https://github.com/swiftlang/swift-tools-support-core)
 : Contains common infrastructural code for both SwiftPM and llbuild.
 
 ## Xcode Playground Support
@@ -78,7 +78,7 @@ changes and are merged regularly from their upstream sources. For more informati
 [llvm-project](https://github.com/apple/llvm-project)
 : The source code for [LLVM](http://llvm.org), with a handful of Swift-specific additions. Merged regularly from the [LLVM sources at llvm.org](https://github.com/llvm/llvm-project).
 
-[swift-cmark](https://github.com/apple/swift-cmark)
+[swift-cmark](https://github.com/swiftlang/swift-cmark)
 : The source code for [CommonMark](https://github.com/jgm/cmark), which is used in the Swift compiler.
 
 Directions
