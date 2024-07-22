@@ -62,7 +62,7 @@ following steps:
 1. Ensure the project builds successfully at a chosen commit against
    the current Swift GM version.
 2. Create a pull request against the [source compatibility suite
-   repository](https://github.com/apple/swift-source-compat-suite),
+   repository](https://github.com/swiftlang/swift-source-compat-suite),
    modifying **projects.json** to include a reference to the project being added
    to the test suite.
 
