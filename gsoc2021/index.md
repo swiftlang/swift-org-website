@@ -182,7 +182,7 @@ Alex Hoppen
 
 **Skills required**
 
-Knowledge of Swift, Cursory knowledge of [SIL](https://github.com/apple/swift/blob/main/docs/SIL.rst)
+Knowledge of Swift, Cursory knowledge of [SIL](https://github.com/swiftlang/swift/blob/main/docs/SIL.rst)
 
 **Potential mentor(s)**
 

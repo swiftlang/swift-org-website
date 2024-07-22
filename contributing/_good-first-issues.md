@@ -5,7 +5,7 @@ for contributors that are new to working on the Swift project, and even new to
 the patterns and concepts behind subprojects such as the Swift compiler.
 Good first issues are decorated with a corresponding label and are most easily
 found by visiting `github.com/apple/<repository>/contribute`, e.g.
-[github.com/apple/swift/contribute](https://github.com/apple/swift/contribute)
+[github.com/apple/swiftlang/contribute](https://github.com/swiftlang/swift/contribute)
 for the main Swift repository.
 They are expected to be low-priority and of modest scope, and not require
 excessive refactoring, research, or debugging — rather, they should encourage

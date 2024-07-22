@@ -228,7 +228,7 @@ export PATH=$HOME/bin/sccache-0.2.8-x86_64-apple-darwin:$PATH
 
 The Swift project uses GitHub Issues for tracking bugs, ideas, and tasks. For
 example, the issues for the Swift compiler repository can be found on its
-[issues dashboard](http://github.com/apple/swift/issues). Beginner-friendly
+[issues dashboard](http://github.com/swiftlang/swift/issues). Beginner-friendly
 issues are decorated with the `good first issue` label and can be found by
 visiting `https://github.com/apple/<repository>/contribute`.
 

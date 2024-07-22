@@ -134,7 +134,7 @@ pull request must have:
   +https://github.com/swiftlang/swift/compare/main...my-branch?quick_pull=1&template=release.md
   ```
 
-[Here](https://github.com/apple/swift/pull/73697) is an example.
+[Here](https://github.com/swiftlang/swift/pull/73697) is an example.
 
 [swiftlang]: https://github.com/swiftlang
 [form]: https://github.com/swiftlang/.github/blob/main/PULL_REQUEST_TEMPLATE/release.md?plain=1

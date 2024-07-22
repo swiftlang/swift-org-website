@@ -103,4 +103,4 @@ Swift community members can propose adding new platforms to the tables by reques
 [Swift Package Manager]: https://github.com/swiftlang/swift-package-manager
 [IndexStoreDB]: https://github.com/swiftlang/indexstore-db
 [SourceKit-LSP]: https://github.com/swiftlang/sourcekit-lsp
-[LLBuild]: https://github.com/apple/swift-llbuild
+[LLBuild]: https://github.com/swiftlang/swift-llbuild
