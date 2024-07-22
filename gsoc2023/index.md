@@ -33,11 +33,11 @@ If you would like to reach out to a mentor privately, rather than making a publi
 
 **Description**
 
-The Swift parser written in C++ was able to incrementally re-parse a syntax tree after an edit, re-using syntax nodes that have not changed. This functionality was not implemented when we [re-implemented the parser to Swift](https://github.com/apple/swift-syntax/tree/main/Sources/SwiftParser).
+The Swift parser written in C++ was able to incrementally re-parse a syntax tree after an edit, re-using syntax nodes that have not changed. This functionality was not implemented when we [re-implemented the parser to Swift](https://github.com/swiftlang/swift-syntax/tree/main/Sources/SwiftParser).
 
 The goal of this project is to port the old incremental re-parsing design to Swift, set up unit tests that make sure incremental re-parsing produces the same result as parsing the tree from scratch, and to expand the old incremental re-parsing design to re-use more syntax nodes.
 
-Note that the ability to incrementally re-parse a syntax tree has been removed from the C++ code base after SwiftParser was implemented. Check out the release/5.6 branch to view the last version of incremental parsing. This [pull request](https://github.com/apple/swift/pull/16340) initially implemented incremental parsing in C++.
+Note that the ability to incrementally re-parse a syntax tree has been removed from the C++ code base after SwiftParser was implemented. Check out the release/5.6 branch to view the last version of incremental parsing. This [pull request](https://github.com/swiftlang/swift/pull/16340) initially implemented incremental parsing in C++.
 
 **Expected outcomes/benefits/deliverables**
 
