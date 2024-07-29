@@ -45,7 +45,7 @@ docker-compose run build
 
 Then you can run the site:
 
-```
+```bash
 docker-compose up website
 ```
 
