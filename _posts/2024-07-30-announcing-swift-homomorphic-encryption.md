@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-date: 2024-07-30 14:00:00
+published: true
+date: 2024-07-30 10:00:00
 title: Announcing Swift Homomorphic Encryption
 author: [fabian-boemer, karl-tarbe, rehan-rishi]
 ---
@@ -18,7 +18,7 @@ that the client can decrypt. During the execution of the request, the server
 itself never decrypts the original data or even has access to the decryption
 key. Such an approach presents new opportunities for cloud services to operate
 while protecting the privacy and security of a user's data, which is obviously
-highly attractive for many scenarios. 
+highly attractive for many scenarios.
 
 At Apple, we’re using homomorphic encryption in our own work, including in
 Private Cloud Compute; we're therefore delighted to share this Swift
@@ -63,20 +63,47 @@ A typical workflow for homomorphic encryption might be as follows:
 
 The Swift implementation of homomorphic encryption implements the
 Brakerski-Fan-Vercauteren (BFV) HE scheme
-([https://eprint.iacr.org/2012/078.pdf](https://eprint.iacr.org/2012/078.pdf),
-[https://eprint.iacr.org/2012/144](https://eprint.iacr.org/2012/078.pdf)). BFV
+([https://eprint.iacr.org/2012/078](https://eprint.iacr.org/2012/078),
+[https://eprint.iacr.org/2012/144](https://eprint.iacr.org/2012/144)). BFV
 is based on the ring learning with errors (RLWE) hardness problem, which is
-quantum resistant. 
+quantum resistant.
 
-In line with Apple’s [transition](https://security.apple.com/blog/imessage-pq3/)
-to post-quantum security, the Live Caller ID feature requires BFV parameters
-with post-quantum 128-bit security.
+The Live Caller ID Lookup feature requires BFV parameters
+with post-quantum 128-bit security, to provide strong security against both classical and
+potential future quantum attacks, previously explained in https://security.apple.com/blog/imessage-pq3/.
 
 ## Using Homomorphic Encryption
 We believe developers will find homomorphic encryption useful for a wide variety
 of standalone privacy-preserving applications both inside and outside the Apple
 ecosystem, including private set intersection, secure aggregation, and machine
 learning.
+
+Below is a basic example for how to use Swift Homomorphic Encryption.
+```swift
+import HomomorphicEncryption
+
+// We start by choosing some encryption parameters for the Bfv<UInt64> scheme.
+// *These encryption parameters are insecure, suitable for testing only.*
+let encryptParams =
+    try EncryptionParameters<Bfv<UInt64>>(from: .insecure_n_8_logq_5x18_logt_5)
+// Perform pre-computation for HE computation with these parameters.
+let context = try Context(encryptionParameters: encryptParams)
+
+// We encode N values using coefficient encoding.
+let values: [UInt64] = [8, 5, 12, 12, 15, 0, 8, 5]
+let plaintext: Bfv<UInt64>.CoeffPlaintext = try context.encode(
+    values: values,
+    format: .coefficient)
+
+// We generate a secret key and use it to encrypt the plaintext.
+let secretKey = try context.generateSecretKey()
+let ciphertext = try plaintext.encrypt(using: secretKey)
+
+// Decrypting the plaintext yields the original values.
+let decrypted = try ciphertext.decrypt(using: secretKey)
+let decoded: [UInt64] = try decrypted.decode(format: .coefficient)
+precondition(decoded == values)
+```
 
 We look forward to working with others to enhance this package: you can read more about contributing at the repositories on GitHub.
 We also encourage you to file issues to [swift-homomorphic-encryption](https://github.com/apple/swift-homomorphic-encryption/issues) and [live-caller-id-lookup-examples](https://github.com/apple/live-caller-id-lookup-example/issues) if you encounter any problems or have suggestions for improvements.
