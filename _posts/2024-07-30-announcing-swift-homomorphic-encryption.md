@@ -70,7 +70,7 @@ quantum resistant.
 
 The Live Caller ID Lookup feature requires BFV parameters
 with post-quantum 128-bit security, to provide strong security against both classical and
-potential future quantum attacks, previously explained in https://security.apple.com/blog/imessage-pq3/.
+potential future quantum attacks, previously explained in [https://security.apple.com/blog/imessage-pq3/](https://security.apple.com/blog/imessage-pq3/).
 
 ## Using Homomorphic Encryption
 We believe developers will find homomorphic encryption useful for a wide variety
