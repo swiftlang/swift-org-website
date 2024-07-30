@@ -91,7 +91,7 @@ If you're not building a C library alongside your Swift library, you'll need to 
 * ExternalProject
     * Runs at build-time and has most limited configurability, but also isolates the build of the C/C++ library from your build.
     * This is good when coupling between your project and the dependency is low, and the library is unlikely to be installed where your project is expected to run, or when you need some level of configurability over the dependency build.
-    * More details are available at [https://cmake.org/cmake/help/v3.27/module/ExternalProject.html](https://cmake.org/cmake/help/v3.27/module/ExternalProject.html)
+    * More details are available at [External Project](https://cmake.org/cmake/help/latest/module/ExternalProject.html).
 
 
 ```cmake
@@ -122,13 +122,13 @@ This example downloads zlib v1.3 from GitHub, and builds it. Since we have set a
 * `FetchContent`
     * Runs at configuration time and results in a merged build graph. This is best for pulling in external pieces that are implementation details of your library. Note that because the build graph is merged, variable names and targets need to be namespaced appropriately or they will collide and things may not build as expected.
     * This is good when there is tight coupling between your project and the dependency. Since the build graphs are merged, your project can depend on individual build targets in the dependency, instead of on the project as a whole, which can improve build performance.
-    * More details are available at [https://cmake.org/cmake/help/v3.27/module/FetchContent.html](https://cmake.org/cmake/help/v3.27/module/FetchContent.html)
+    * More details are available at [FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html).
 
 
 * `find_package`
     * Finds the library and header from the sysroot. By default, CMake will look at the root of your OS as the sysroot, but can be isolated to other sysroots for cross-compilation.
     * This option is good for picking up system dependencies from the base system or sysroot, or giving the distributor of your project the option of using a prebuilt project with the use of `<PackageName>_ROOT`.
-    * More details are available at [https://cmake.org/cmake/help/v3.27/command/find_package.html](https://cmake.org/cmake/help/v3.27/command/find_package.html)
+    * More details are available at [find_package](https://cmake.org/cmake/help/latest/command/find_package.html).
 
  The example of wrapping an existing C library in Swift using CMake will use `find_package`, a custom module-map file, and a Virtual Filesystem (VFS) overlay, as well as a helper layer to migrate parts of the SQLite codebase to something that Swift can import.
 
@@ -157,12 +157,12 @@ Once found, CMake defines the following variables:
 * `SQLite3_VERSION` — The version of sqlite3 found
 * `SQLite3_FOUND` — Used to tell `find_package` that SQLite was found. Note that if we did not mark it as a `REQUIRED` package, we could later check this variable to see if it was found, and fall back on `ExternalProject` to build it separately if it was not.
 
-CMake will also define the `SQLite::SQLite3` build target, which we will use later to make it easier to propagate dependency and search location information through our build graph. Documentation on the SQLite3 package is available here: [https://cmake.org/cmake/help/v3.27/module/FindSQLite3.html](https://cmake.org/cmake/help/v3.27/module/FindSQLite3.html)
+CMake will also define the `SQLite::SQLite3` build target, which we will use later to make it easier to propagate dependency and search location information through our build graph. Documentation on the SQLite3 package is available here: [FindSQLite3](https://cmake.org/cmake/help/latest/module/FindSQLite3.html).
 
 
 ### Importing SQLite into Swift
 
-Swift can't import header files directly. Some tools like SwiftPM and Xcode can sometimes generate a modulemap for a bridging header, but others, like CMake, do not. Manually writing modulemaps can give you a bit more control over how a C library is imported into Swift. Details on how to write a module map file are available at [https://clang.llvm.org/docs/Modules.html#module-map-language](https://clang.llvm.org/docs/Modules.html#module-map-language).
+Swift can't import header files directly. Some tools like SwiftPM and Xcode can sometimes generate a modulemap for a bridging header, but others, like CMake, do not. Manually writing modulemaps can give you a bit more control over how a C library is imported into Swift. Details on how to write a module map file are available on the [Module Map Language](https://clang.llvm.org/docs/Modules.html#module-map-language) specification.
 
 For our example, we only need to expose the `sqlite3.h` header file to Swift.
 
