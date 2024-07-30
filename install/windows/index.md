@@ -48,6 +48,8 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
 {% assign windows_dev_builds = site.data.builds.development.windows10 | sort: 'date' | reverse %}
 {% assign windows_arm64_dev_builds = site.data.builds.development.windows10-arm64 | sort: 'date' | reverse %}
 {% assign windows10_6_0_builds = site.data.builds.swift-6_0-branch.windows10 | sort: 'date' | reverse %}
+{% assign windows10_arm64_6_0_builds = site.data.builds.swift-6_0-branch.windows10-arm64 | sort: 'date' | reverse %}
+
 
 <ul class="install-instruction">
   <li class="resource">
@@ -71,7 +73,10 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     <p class="description">
       Package installers (.exe).
     </p>
+    <ul class="install-instruction">
     <a href="https://download.swift.org/swift-6.0-branch/windows10/{{ windows10_6_0_builds.first.dir }}/{{ windows10_6_0_builds.first.download }}" class="cta-secondary">Download (x86_64)</a>
+    <a href="https://download.swift.org/swift-6.0-branch/windows10-arm64/{{ windows10_arm64_6_0_builds.first.dir }}/{{ windows10_arm64_6_0_builds.first.download }}" class="cta-secondary">Download (arm64)</a>
+    </ul>
   </li>
 </ul>
 <a href="/install/windows/traditional/" class="cta-secondary">Instructions</a>
