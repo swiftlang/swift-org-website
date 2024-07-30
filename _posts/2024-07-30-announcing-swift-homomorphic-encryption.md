@@ -13,16 +13,16 @@ encryption in Swift:
 Homomorphic encryption (HE) is a cryptographic technique that enables
 computation on encrypted data _without_ revealing the underlying unencrypted
 data to the operating process. It provides a means for clients to send encrypted
-data to a server, which operates on that encrypted data and returns an result
+data to a server, which operates on that encrypted data and returns a result
 that the client can decrypt. During the execution of the request, the server
 itself never decrypts the original data or even has access to the decryption
 key. Such an approach presents new opportunities for cloud services to operate
 while protecting the privacy and security of a user's data, which is obviously
 highly attractive for many scenarios.
 
-At Apple, we’re using homomorphic encryption in our own work, including in
-Private Cloud Compute; we're therefore delighted to share this Swift
-implementation in the community for others to use and contribute to.
+At Apple, we’re using homomorphic encryption in our own work; we're therefore
+delighted to share this Swift implementation in the community for others to use
+and contribute to.
 
 One example of how we're using this implementation in iOS 18, is the new [Live
 Caller ID
