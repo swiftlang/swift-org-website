@@ -74,11 +74,6 @@ The current members of the workgroup are:
       <td><a href="https://github.com/LucianoPAlmeida">@LucianoPAlmeida</a></td>
     </tr>
     <tr>
-      <td>Max Desiatov</td>
-      <td><a href="https://forums.swift.org/u/max_desiatov">@max_desiatov</a></td>
-      <td><a href="https://github.com/MaxDesiatov">@MaxDesiatov</a></td>
-    </tr>
-    <tr>
       <td>Mishal Shah</td>
       <td><a href="https://forums.swift.org/u/mishal_shah">@mishal_shah</a></td>
       <td><a href="https://github.com/shahmishal">@shahmishal</a></td>
