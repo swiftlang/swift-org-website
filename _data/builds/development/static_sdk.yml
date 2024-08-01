@@ -2,6 +2,7 @@
   dir: swift-DEVELOPMENT-SNAPSHOT-2024-07-02-a
   download: swift-DEVELOPMENT-SNAPSHOT-2024-07-02-a_static-linux-0.0.1.artifactbundle.tar.gz
   download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-07-02-a_static-linux-0.0.1.artifactbundle.tar.gz.sig
+  checksum: e334e0068613b14538238a8be81952169c6fc780094f582505383cd9f5fe1c4c
 - date: 2024-06-13 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2024-06-13-a
   download: swift-DEVELOPMENT-SNAPSHOT-2024-06-13-a_static-linux-0.0.1.artifactbundle.tar.gz

@@ -10,7 +10,10 @@
     <p class="description">
       Static Linux SDK - Cross compile to Linux
       <ul>
-        <li><a href="https://download.swift.org/development/static-sdk/{{ static_sdk_dev_builds.first.dir }}/{{ static_sdk_dev_builds.first.download_signature }}">Signature (PGP)</a></li>
+        <li><a href="https://download.swift.org/development/static-sdk/{{ static_sdk_dev_builds.first.dir }}/{{ static_sdk_dev_builds.first.download_signature }}">Signature (PGP)</a>
+        </li>
+        <li>
+          Checksum: <code>{{ static_sdk_dev_builds.first.checksum }}</code></li>
       </ul>
     </p>
     <a href="https://download.swift.org/development/static-sdk/{{ static_sdk_dev_builds.first.dir }}/{{ static_sdk_dev_builds.first.download }}" class="cta-secondary">Download Linux Static SDK</a>
@@ -24,6 +27,7 @@
       Static Linux SDK - Cross compile to Linux
       <ul>
         <li><a href="https://download.swift.org/swift-6.0-branch/static-sdk/{{ static_sdk_6_0_builds.first.dir }}/{{ static_sdk_6_0_builds.first.download_signature }}">Signature (PGP)</a></li>
+        <li>Checksum: <code>{{ static_sdk_6_0_builds.first.checksum }}</code></li>
       </ul>
     </p>
     <a href="https://download.swift.org/swift-6.0-branch/static-sdk/{{ static_sdk_6_0_builds.first.dir }}/{{ static_sdk_6_0_builds.first.download }}" class="cta-secondary">Download Linux Static SDK</a>
