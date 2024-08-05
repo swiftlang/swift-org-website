@@ -119,7 +119,7 @@ is easy; at a prompt, enter
 $ swift sdk install <URL-or-filename-here> [--checksum <checksum-for-archive-URL>]
 ```
 
-giving the URL (and corresponding checksum) or filename at which the SDK can be found.
+giving the URL (and a corresponding checksum) or filename at which the SDK can be found.
 
 For instance, assuming you have installed the
 `swift-6.0-DEVELOPMENT-SNAPSHOT-2024-07-02-a` toolchain, you would
