@@ -108,21 +108,25 @@ Before you start, it's important to note:
   version in its filename to help identify the correct version of the
   SDK.
 
+* When installing Swift SDKs from remote URLs, you have to pass a
+  `--checksum` option with the corresponding checksum provided by the
+  author of the Swift SDK.
+
 Once that is out of the way, actually installing the Static Linux SDK
 is easy; at a prompt, enter
 
 ```console
-$ swift sdk install <URL-or-filename-here>
+$ swift sdk install <URL-or-filename-here> [--checksum <checksum-for-archive-URL>]
 ```
 
-giving the URL or filename at which the SDK can be found.
+giving the URL (and a corresponding checksum) or filename at which the SDK can be found.
 
 For instance, assuming you have installed the
-`swift-6.0-DEVELOPMENT-SNAPSHOT-2024-06-06-a` toolchain, you would
+`swift-6.0-DEVELOPMENT-SNAPSHOT-2024-07-02-a` toolchain, you would
 need to enter
 
 ```console
-$ swift sdk install https://download.swift.org/development/static-sdk/swift-DEVELOPMENT-SNAPSHOT-2024-06-06-a/swift-DEVELOPMENT-SNAPSHOT-2024-06-06-a_static-linux-0.0.1.artifactbundle.tar.gz
+$ swift sdk install https://download.swift.org/swift-6.0-branch/static-sdk/swift-6.0-DEVELOPMENT-SNAPSHOT-2024-07-02-a/swift-6.0-DEVELOPMENT-SNAPSHOT-2024-07-02-a_static-linux-0.0.1.artifactbundle.tar.gz --checksum 42a361e1a240e97e4bb3a388f2f947409011dcd3d3f20b396c28999e9736df36
 ```
 
 to install the corresponding Static Linux SDK.
