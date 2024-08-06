@@ -1,0 +1,4 @@
+---
+layout: none
+---
+{{ site.data.builds.development.static_sdk | jsonify }}
