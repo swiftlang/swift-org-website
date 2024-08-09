@@ -1,6 +1,80 @@
 years:
   - year: 2024
     months:
+      - month: July
+        slug: july
+        packages:
+          - name: hummingbird
+            description: Hummingbird is a lightweight, flexible server framework written
+              in Swift. It consists of an HTTP server, a web application framework, and
+              extension modules.
+            owner: Hummingbird
+            swift_compatibility: 5.8+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: Apache 2.0
+            url: https://swiftpackageindex.com/hummingbird-project/hummingbird
+            note: Discussed on [Episode 45 of Swift Package Indexing](https://share.transistor.fm/s/53ee9157){:target='_blank'}.
+          - name: ContrastKit
+            description: Colour contrast handling and accessibility helpers by generating
+              colour shades and determining readable contrast colours according to accessibility
+              standards.
+            owner: Mark Battistella
+            swift_compatibility: 5.10+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            license: MIT
+            url: https://swiftpackageindex.com/markbattistella/ContrastKit
+            note: Discussed on [Episode 45 of Swift Package Indexing](https://share.transistor.fm/s/53ee9157){:target='_blank'}.
+          - name: node-swift
+            description: Write Swift code that talks to Node.js libraries, and vice versa,
+              targeting cross-platform development with memory safety and idiomatic integration.
+            owner: Kabir Oberai
+            swift_compatibility: 5.10+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
+            license: MIT
+            url: https://swiftpackageindex.com/kabiroberai/node-swift
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/60){:target='_blank'}.
+          - name: AcmeSwift
+            description: Let's Encrypt certificate management handling account creation,
+              order submission, and certificate issuance with ACME v2. Requires external
+              challenge verification.
+            owner: Matthieu Barthelemy
+            swift_compatibility: 5.8+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/m-barthelemy/AcmeSwift
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/63){:target='_blank'}.
+          - name: BlurHashViews
+            description: Decodes BlurHash strings into SwiftUI views, offering customization
+              like contrast control, detail level, and color space adjustments for native
+              placeholders. Supports animations and custom transitions.
+            owner: Dale Price
+            license: MIT
+            url: https://swiftpackageindex.com/daprice/BlurHashViews
+            note: Linked to in [Issue 666 of iOS Dev Weekly](https://iosdevweekly.com/issues/666#aCUCaK0){:target='_blank'}.
+          - name: CodableDatastore
+            description: Database-like persistent storage for apps, supporting single-write-multiple-read
+              environments, with a focus on Codable structs for data modeling and indexing.
+            owner: Mochi Development, Inc.
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/mochidev/CodableDatastore
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/63){:target='_blank'}.
       - month: June
         slug: june
         packages:
