@@ -1,0 +1,11 @@
+.grid-layout-2-column {
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-layout-3-column {
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

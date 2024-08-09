@@ -5,8 +5,8 @@
 {% assign platform_name_url = include.platform | remove: '.' | remove: ' ' | downcase %}
 {% assign platform_name = include.platform | remove : ' ' | downcase %}
 
-<ul class="install-instruction">
-  <li class="resource">
+<ul class="grid-level-0 grid-layout-2-column">
+  <li class="grid-level-1">
     <h3>Docker</h3>
     <p class="description">
       The offical Docker images for Swift.
@@ -14,7 +14,7 @@
     <a href="https://hub.docker.com/_/swift" class="cta-secondary external">{{ site.data.builds.swift_releases.last.name }}-{{include.docker_tag}}</a>
     <a href="/install/linux/docker" class="cta-secondary">Instructions</a>
   </li>
-  <li class="resource">
+  <li class="grid-level-1">
     <h3>Tarball</h3>
     <p class="description">
       Tarball packages (.tar.gz)
@@ -23,7 +23,7 @@
       </ul>
     </p>
     {% if include.aarch64 %}
-    <ul class="install-instruction">
+    <ul class="grid-level-0 grid-layout-2-column">
       <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ tag }}/{{ tag }}-{{ platform_name }}.tar.gz" class="cta-secondary">Download (x86_64)</a>
       <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}-aarch64/{{ tag }}/{{ tag }}-{{ platform_name }}-aarch64.tar.gz" class="cta-secondary">Download (aarch64)</a>
     </ul>
@@ -35,8 +35,8 @@
 </ul>
 
 {% if include.rpm %}
-  <ul class="install-instruction">
-    <li class="resource featured">
+  <ul class="grid-level-0 grid-layout-2-column">
+    <li class="grid-level-1 featured">
       <h3>RPM</h3>
       <p class="description">
         RPM Package Manager (Experimental use only)
