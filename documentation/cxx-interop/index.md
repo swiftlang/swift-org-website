@@ -1249,6 +1249,23 @@ object.doSomething()
 // `object` will be released here.
 ```
 
+#### Exposing C++ Shared Reference Types back from Swift
+
+C++ can call into Swift APIs that take or return C++ Shared Reference Types. Objects of these types are always created on the C++ side,
+but their references can be passed back and forth between Swift and C++. This section explains the conventions of incrementing and decrementing
+the reference counts when passing such references across the language boundaries. Consider the following Swift APIs:
+
+```swift
+public func takeSharedObject(_ x : SharedObject) { ... }
+
+public func returnSharedObject() -> SharedObject { ... }
+```
+
+In case of the `takeSharedObject` function, the compiler will automatically insert calls to retain and release for `x` as necessary to satisfy the semantics of
+owned/guaranteed calling conventions. The C++ callers must guarantee that `x` is alive for the duration of the call.
+Note that functions returning a shared reference type such as `returnSharedObject` transfer the ownership to the caller.
+The C++ caller of this function is responsible for releasing the object.
+
 ### Unsafe Reference Types
 
 The `SWIFT_UNSAFE_REFERENCE` annotation macro has the same effect as `SWIFT_IMMORTAL_REFERENCE`
