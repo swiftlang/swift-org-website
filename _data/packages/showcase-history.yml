@@ -52,7 +52,8 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (macOS) and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
             license: MIT
             url: https://swiftpackageindex.com/swiftwasm/WasmKit
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/53){:target='_blank'}.
@@ -161,7 +162,7 @@ years:
               designed for cross-platform use, enhancing app visuals without heavy manual
               coding.
             owner: Airbnb
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
@@ -175,8 +176,7 @@ years:
             swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
-              - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/orlandos-nl/Citadel
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/44){:target='_blank'}.
@@ -189,7 +189,8 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
             license: MIT
             url: https://swiftpackageindex.com/swhitty/FlyingFox
             note: Discussed on [Episode 41 of Swift Package Indexing](https://share.transistor.fm/s/861890bb){:target='_blank'}.
@@ -401,7 +402,7 @@ years:
             swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, tvOS)
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
             license: Apache 2.0
             url: https://swiftpackageindex.com/soto-project/soto
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/13){:target='_blank'}.
