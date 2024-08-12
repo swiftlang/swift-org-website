@@ -315,7 +315,10 @@ constructor, Swift will use it when a value of such type is copied in
 Swift. And if the C++ type has a destructor, Swift will call the destructor when
 a Swift value of such type is destroyed.
 
-C++ structures and classes with a deleted copy constructor are represented as non-copyable Swift types (`~Copyable`).
+C++ structures and classes with a deleted copy constructor are represented as
+non-copyable Swift types (`~Copyable`). If a C++ type has a valid copy
+constructor, it is still possible to make it non-copyable in Swift by annotating
+it with a `SWIFT_NONCOPYABLE` macro.
 
 Some C++ types are always passed around using a pointer or a reference in C++.
 As such it might not make sense to map them to value types in Swift. These
@@ -418,12 +421,9 @@ of better API usability Swift still assumes that such functions do not
 mutate the object. You should avoid calling constant member functions
 that mutate `mutable` fields from Swift, unless they're explicitly annotated with a `SWIFT_MUTATING` macro.
 
-> Swift 5.9 will ship with a `SWIFT_MUTATING` customization macro. However, it's not
-> yet available in a downloadable Swift 5.9 toolchain. This macro will
-> allow you to explicitly annotate constant member functions that do mutate the
-> object. Such functions with then become `mutating` methods in Swift. The
-> following [GitHub issue](https://github.com/swiftlang/swift/issues/66322)
-> tracks the status of `SWIFT_MUTATING` support in Swift.
+The `SWIFT_MUTATING` macro allows you to explicitly annotate constant member
+functions that do mutate the object. Such functions then become `mutating`
+methods in Swift.
 
 #### Member Functions Returning References Are Unsafe by Default
 
@@ -1952,11 +1952,25 @@ that are outlined in the documentation above.
 | `SWIFT_SHARED_REFERENCE` | [Shared Reference Types](#shared-reference-types) |
 | `SWIFT_UNSAFE_REFERENCE` | [Unsafe Reference Types](#unsafe-reference-types) |
 | `SWIFT_RETURNS_INDEPENDENT_VALUE` | [Annotating Methods Returning Independent References or Views](#annotating-methods-returning-independent-references-or-views) |
+| `SWIFT_MUTATING` | [Constant Member Functions Must Not Mutate the Object](#constant-member-functions-must-not-mutate-the-object) |
+| `SWIFT_NONCOPYABLE` | [C++ Structures and Classes are Value Types by Default](#c-structures-and-classes-are-value-types-by-default) |
 | `SWIFT_SELF_CONTAINED` | [Annotating C++ Structures or Classes as Self Contained](#annotating-c-structures-or-classes-as-self-contained) |
 
 ## Document Revision History
 
 This section lists the recent changes made to this reference guide.
+
+**2024-08-12**
+
+- Added several customization macros from `<swift/bridging>` to the list.
+
+**2024-06-11**
+
+- Non-copyable C++ types are now available in Swift.
+
+**2024-03-26**
+
+- Updated the status of C++ templated operator support in Swift.
 
 **2023-06-05**
 
