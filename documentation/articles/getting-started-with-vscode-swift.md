@@ -217,7 +217,7 @@ The Swift extension does not support running Swift Testing tests in Swift 5.10 o
 ## Advanced Toolchain Selection
 
 The Swift extension automatically detects your installed Swift toolchain.
-However, it also provides a command called `Swift: Select Tooclhain...` which
+However, it also provides a command called `Swift: Select Toolchain...` which
 can be used to select between toolchains if you have multiple installed.
 
 <div class="warning" markdown="1">
