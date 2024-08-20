@@ -505,14 +505,6 @@ footer[role="contentinfo"] {
     max-width: 700px;
 
     i {
-      &.twitter {
-        background-image: url("/assets/images/icon-twitter.svg");
-      }
-
-      &.feed {
-        background-image: url("/assets/images/icon-feed.svg");
-      }
-
       width: 16px;
       height: 16px;
       background-repeat: no-repeat;
@@ -520,6 +512,14 @@ footer[role="contentinfo"] {
       display: block;
       margin-left: 1em;
       float: right;
+
+      &.twitter {
+        background-image: url("/assets/images/icon-twitter.svg");
+      }
+
+      &.feed {
+        background-image: url("/assets/images/icon-feed.svg");
+      }
     }
   }
 }
