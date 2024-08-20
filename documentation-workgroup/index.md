@@ -95,6 +95,7 @@ contribute, consider:
 
 * Joining the Documentation Workgroup’s open meetings on WebEx (reach out to
     `@swift-documentation-workgroup` in forums for details).
+   * Meeting notes are available on the [forums.swift.org](https://forums.swift.org/c/swift-documentation/workgroup-updates/93).
 * Discussing ideas in the Swift Forums, for example in the [Swift-DocC
   forum](https://forums.swift.org/c/development/swift-docc) for
   Swift-DocC–related ideas.

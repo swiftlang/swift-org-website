@@ -77,4 +77,4 @@ In various situations the SSWG shall hold a vote. These votes can happen on the 
 
 ## Meeting Time
 
-The SSWG meets biweekly on Wednesday at 2:00PM PT (USA Pacific). The meetings take place in the weeks with the [odd week numbers](http://www.whatweekisit.org).
+The SSWG meets biweekly on Wednesday at 2:00PM PT (USA Pacific). The meetings take place in the weeks with the [odd week numbers](http://www.whatweekisit.org). Meeting notes are available on the [forums.swift.org](https://forums.swift.org/c/server/workgroup-meeting-notes/46).

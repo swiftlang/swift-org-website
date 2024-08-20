@@ -85,3 +85,8 @@ In various situations the workgroup shall hold a vote. These votes can happen on
 
 The Swift website workgroup uses the [Swift.org website forum](https://forums.swift.org/c/swift-website/) for general discussions.
 It can also be contacted privately by messaging [@swift-website-workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup) on the Swift Forums.
+
+
+## Meeting Time
+
+The Swift website workgroup meets biweekly on Tuesday at 11:00AM PT (USA Pacific). The meetings take place in the weeks with the [odd week numbers](http://www.whatweekisit.org). Meeting notes are available on the [forums.swift.org](https://forums.swift.org/c/swift-website/workgroup-meeting-notes/91).
