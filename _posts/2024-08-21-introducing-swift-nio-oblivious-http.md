@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2024-08-16 00:00:00
+date: 2024-08-21 10:00:00
 title: Introducing Oblivious HTTP support in Swift
 author: [corybenfield]
 ---
