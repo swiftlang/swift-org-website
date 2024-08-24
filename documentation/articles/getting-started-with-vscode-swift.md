@@ -44,12 +44,14 @@ the Command Palette and following the instructions below.
 - For macOS: `CMD + Shift + P`
 - Other platforms: `Ctrl + Shift + P`
 
+1. In the command pallette, search for the `Swift: Create New Project...` command.
+2. Choose the type of project you'd like to create from the list of templates.
+
 ![Create New Project command showing available project templates](/assets/images/getting-started-with-vscode-swift/create-new-project/select-project-template.png)
 
-1. Choose the type of project you'd like to create from the list of templates.
-2. Choose the directory where the project will be stored.
-3. Give your project a name.
-4. Open the newly created project. You will be prompted to open the project in
+3. Choose the directory where the project will be stored.
+4. Give your project a name.
+5. Open the newly created project. You will be prompted to open the project in
    the current window, a new window, or add it to the current workspace. The
    default behaviour can be configured by using the
    `swift.openAfterCreateNewProject` setting.
