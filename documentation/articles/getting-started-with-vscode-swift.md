@@ -44,7 +44,7 @@ the Command Palette and following the instructions below.
 - For macOS: `CMD + Shift + P`
 - Other platforms: `Ctrl + Shift + P`
 
-1. In the command pallette, search for the `Swift: Create New Project...` command.
+1. In the command palette, search for the `Swift: Create New Project...` command.
 2. Choose the type of project you'd like to create from the list of templates.
 
 ![Create New Project command showing available project templates](/assets/images/getting-started-with-vscode-swift/create-new-project/select-project-template.png)
