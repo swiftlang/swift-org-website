@@ -59,7 +59,7 @@ title: Download Swift
 
 ### Swift {{ site.data.builds.swift_releases.last.name }}
 Date: {{ site.data.builds.swift_releases.last.date | date: '%B %-d, %Y' }}<br>
-Tag: [{{site.data.builds.swift_releases.last.tag}}](https://github.com/apple/swift/releases/tag/{{ site.data.builds.swift_releases.last.tag }})
+Tag: [{{site.data.builds.swift_releases.last.tag}}](https://github.com/swiftlang/swift/releases/tag/{{ site.data.builds.swift_releases.last.tag }})
 
 {% include_relative _build-release.html release=site.data.builds.swift_releases.last %}
 
@@ -70,7 +70,7 @@ Tag: [{{site.data.builds.swift_releases.last.tag}}](https://github.com/apple/swi
 {% unless forloop.first %}
 	<h3>Swift {{ release.name }}</h3>
 	Date: {{ release.date | date: '%B %-d, %Y' }}<br>
-	Tag: <a href="https://github.com/apple/swift/releases/tag/{{ release.tag }}">{{ release.tag }}</a>
+	Tag: <a href="https://github.com/swiftlang/swift/releases/tag/{{ release.tag }}">{{ release.tag }}</a>
 
 	{% include_relative _build-release.html release=release %}
 {% endunless %}

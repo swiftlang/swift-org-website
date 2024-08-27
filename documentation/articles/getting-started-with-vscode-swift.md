@@ -1,11 +1,11 @@
 ---
 layout: page
 date: 2024-05-28 12:00:00
-title: Getting started with Swift in VS Code
+title: Configuring VS Code for Swift Development
 author: [matthewbastien, plemarquand]
 ---
 
-Visual Studio Code (VS Code) is a popular general purpose editor that supports a
+[Visual Studio Code](https://code.visualstudio.com/) (VS Code) is a popular general purpose editor that supports a
 variety of languages through extensibility. The Swift extension brings Swift
 language-specific features to the editor, providing a seamless experience for
 developing Swift applications on all platforms.
@@ -44,19 +44,21 @@ the Command Palette and following the instructions below.
 - For macOS: `CMD + Shift + P`
 - Other platforms: `Ctrl + Shift + P`
 
+1. In the command palette, search for the `Swift: Create New Project...` command.
+2. Choose the type of project you'd like to create from the list of templates.
+
 ![Create New Project command showing available project templates](/assets/images/getting-started-with-vscode-swift/create-new-project/select-project-template.png)
 
-1. Choose the type of project you'd like to create from the list of templates.
-2. Choose the directory where the project will be stored.
-3. Give your project a name.
-4. Open the newly created project. You will be prompted to open the project in
+3. Choose the directory where the project will be stored.
+4. Give your project a name.
+5. Open the newly created project. You will be prompted to open the project in
    the current window, a new window, or add it to the current workspace. The
    default behaviour can be configured by using the
    `swift.openAfterCreateNewProject` setting.
 
 ## Language Features
 
-The Swift extension uses [SourceKit-LSP](https://github.com/apple/sourcekit-lsp)
+The Swift extension uses [SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp)
 to power language features. SourceKit-LSP provides the following features in the
 editor. Use these links to see the VS Code documentation for each topic:
 
@@ -79,7 +81,7 @@ which can include:
 ![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
 
 <div class="warning" markdown="1">
-Before language features can be used you must perform a `swift build` command on your 
+Before language features can be used you must perform a `swift build` command on your
 project either on the command line or using a task in VS Code. This populates the index in SourceKit-LSP.
 </div>
 
@@ -217,7 +219,7 @@ The Swift extension does not support running Swift Testing tests in Swift 5.10 o
 ## Advanced Toolchain Selection
 
 The Swift extension automatically detects your installed Swift toolchain.
-However, it also provides a command called `Swift: Select Tooclhain...` which
+However, it also provides a command called `Swift: Select Toolchain...` which
 can be used to select between toolchains if you have multiple installed.
 
 <div class="warning" markdown="1">

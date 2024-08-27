@@ -286,7 +286,7 @@ natpanferova:
    gravatar: 0cac4017be2dd8a7d8f7b1d276395a92
    github: nataliapanferova
    about: "Natalia Panferova is an iOS and macOS engineer and co-founder of Nil Coalescing."
-   
+
 adam-fowler:
   name: Adam Fowler
   email: adamfowler71@gmail.com
@@ -456,3 +456,18 @@ matthewbastien:
 plemarquand:
   name: Paul LeMarquand
   github: plemarquand
+
+fabian-boemer:
+  name: Fabian Boemer
+  github: fboemer
+  about: "Fabian Boemer is on the team at Apple working on Swift Homomorphic Encryption and other privacy-preserving technologies."
+
+rehan-rishi:
+  name: Rehan Rishi
+  github: rehanrishi21
+  about: "Rehan Rishi is the engineering manager for the team at Apple working on Swift Homomorphic Encryption and other privacy-preserving technologies."
+
+karl-tarbe:
+  name: Karl Tarbe
+  github: karulont
+  about: "Karl Tarbe is on the team at Apple working on Swift Homomorphic Encryption and other privacy-preserving technologies."

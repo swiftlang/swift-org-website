@@ -19,12 +19,12 @@ When opening an issue, please include the following:
 - **A description of the environment that reproduces the problem.**
   Include information about the Swift compiler's version, the deployment target (if explicitly set) and your platform.
 
-Because Swift is under very active development, we receive a lot of bug reports. Before opening a new issue, take a moment to browse our [existing issues](https://github.com/apple/swift/issues) to reduce the chance of reporting a duplicate.
+Because Swift is under very active development, we receive a lot of bug reports. Before opening a new issue, take a moment to browse our [existing issues](https://github.com/swiftlang/swift/issues) to reduce the chance of reporting a duplicate.
 
 <div class="warning" markdown="1">
 Before filing an issue requesting a new language feature, see the [Swift Evolution Process section](#participating-in-the-swift-evolution-process).
 </div>
 
-[bugtracker]: http://github.com/apple/swift/issues
+[bugtracker]: http://github.com/swiftlang/swift/issues
 [apple-bugtracker]: https://bugreport.apple.com
 [evolution-repo]: https://github.com/swiftlang/swift-evolution "Link to the Swift evolution repository on GitHub"

@@ -19,7 +19,7 @@ Swift.org uses [Jekyll](https://jekyllrb.com), a blog-aware, static site generat
 
 Requirements
 - Git
-- Ruby 3.2 or higher
+- Ruby 3.3 or higher
   _(a Ruby installation manager, such as
   [rbenv](https://github.com/sstephenson/rbenv) or
   [RVM](https://rvm.io) is recommended, but not required)_
@@ -28,7 +28,7 @@ Requirements
 To run the site locally, enter the following commands into a terminal window:
 
 ```shell
-git clone https://github.com/apple/swift-org-website.git
+git clone https://github.com/swiftlang/swift-org-website.git
 cd swift-org-website
 bundle install
 LC_ALL=en_us.UTF-8 bundle exec jekyll serve
@@ -45,7 +45,7 @@ docker-compose run build
 
 Then you can run the site:
 
-```
+```bash
 docker-compose up website
 ```
 

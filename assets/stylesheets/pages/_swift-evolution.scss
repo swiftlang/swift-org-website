@@ -151,11 +151,12 @@
   }
 
   #status-filter-subhead {
+    line-height: 1rem;
+    margin-bottom: 1.3rem;
+
     &.hidden {
       display: none;
     }
-    line-height: 1rem;
-    margin-bottom: 1.3rem;
   }
 
   #status-filter-description {

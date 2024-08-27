@@ -26,7 +26,7 @@ There are several ways in which you can interact with the swift.org CI system:
 * Integration job status - you can view the build and test status of all integration jobs at  [https://ci.swift.org](https://ci.swift.org).
 * Tests on pull requests - when making a change via pull request, your changes will be tested before being integrated, and results will be posted back inline to the pull request.
 
-More usage documentation can be found [here](https://github.com/apple/swift/blob/main/docs/ContinuousIntegration.md).
+More usage documentation can be found [here](https://github.com/swiftlang/swift/blob/main/docs/ContinuousIntegration.md).
 
 ### Pull Request Testing
 
@@ -55,6 +55,6 @@ The Swift project welcomes proposals from the community for adding support for o
 
 ### Swift Community-Hosted Continuous Integration
 
-Community members can volunteer to host nodes for additional platforms on [Swift Community-Hosted Continuous Integration](https://ci-external.swift.org), and are responsible for maintaining the host system.  New nodes can be initiated by creating a pull request at: [Swift Community-Hosted CI Repository](https://github.com/apple/swift-community-hosted-continuous-integration).  Further information about the process is documented in the [README.md](https://github.com/apple/swift-community-hosted-continuous-integration/blob/main/README.md).
+Community members can volunteer to host nodes for additional platforms on [Swift Community-Hosted Continuous Integration](https://ci-external.swift.org), and are responsible for maintaining the host system.  New nodes can be initiated by creating a pull request at: [Swift Community-Hosted CI Repository](https://github.com/swiftlang/swift-community-hosted-continuous-integration).  Further information about the process is documented in the [README.md](https://github.com/swiftlang/swift-community-hosted-continuous-integration/blob/main/README.md).
 
 The Swift community-hosted CI allows un-supported platforms to be moved over to a supported platform on a case by case basis. Depending on the number of nodes provided, @swift-ci pull request testing can be integrated with the community-hosted CI as well.

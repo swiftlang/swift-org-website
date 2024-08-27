@@ -11,6 +11,10 @@ $base-colors: (
     light: rgb(102, 102, 102),
     dark: rgb(204, 204, 204),
   ),
+  figure-gray-tertiary: (
+    light: rgb(102, 102, 102),
+    dark: rgb(176, 176, 176),
+  ),
   figure-blue: (
     light: rgb(51, 102, 255),
     dark: rgb(0, 153, 255),
@@ -27,18 +31,13 @@ $base-colors: (
     light: rgb(240, 240, 240),
     dark: rgb(42, 42, 42),
   ),
-  fill-quaternary: rgb(40, 40, 40),
+  fill-quaternary: (
+    light: rgb(220, 220, 220),
+    dark: rgb(66, 66, 66),
+  ),
   fill-gray-tertiary: (
     light: rgb(240, 240, 240),
     dark: rgb(66, 66, 66),
-  ),
-  figure-gray-tertiary: (
-    light: rgb(102, 102, 102),
-    dark: rgb(176, 176, 176),
-  ),
-  figure-gray-secondary-alt: (
-    light: rgb(102, 102, 102),
-    dark: rgb(176, 176, 176),
   ),
   fill-gray: (
     light: rgb(204, 204, 204),

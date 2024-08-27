@@ -12,7 +12,7 @@ needs to be listed here.
 ### Auto-populated List
 
 Names below this line are automatically generated from the repository logs of
-the Swift open source project at https://github.com/apple/swift.
+the Swift open source project at https://github.com/swiftlang/swift.
 It contains the information about the committer that was publicly present
 when the commit was made, and merges duplicate entries into one line per person.
 If your name or email has been incorrectly merged, please open a pull request

@@ -55,7 +55,7 @@ port install cmake ninja
 * Clone Swift repository
 
 ~~~bash
-git clone git@github.com:apple/swift.git
+git clone git@github.com:swiftlang/swift.git
 ~~~
 * Clone other required repositories
 
@@ -133,7 +133,7 @@ TOOLCHAIN_BIN_DIR=$PWD/toolchain/usr/bin
 * Clone Swift repository:
 
 ~~~bash
-git clone git@github.com:apple/swift.git
+git clone git@github.com:swiftlang/swift.git
 ~~~
 * Clone other required repositories:
 
@@ -188,7 +188,7 @@ git clone git@github.com:apple/swift.git
 * Clone Swift repository
 
 ~~~bash
-git clone git@github.com:apple/swift.git
+git clone git@github.com:swiftlang/swift.git
 ~~~
 * Clone other required repositories
 
@@ -228,7 +228,7 @@ export PATH=$HOME/bin/sccache-0.2.8-x86_64-apple-darwin:$PATH
 
 The Swift project uses GitHub Issues for tracking bugs, ideas, and tasks. For
 example, the issues for the Swift compiler repository can be found on its
-[issues dashboard](http://github.com/apple/swift/issues). Beginner-friendly
+[issues dashboard](http://github.com/swiftlang/swift/issues). Beginner-friendly
 issues are decorated with the `good first issue` label and can be found by
 visiting `https://github.com/apple/<repository>/contribute`.
 

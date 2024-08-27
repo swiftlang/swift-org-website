@@ -100,7 +100,7 @@ Platform owners will build and sign the toolchain before providing it to Apple. 
 
 Swift community members can propose adding new platforms to the tables by requesting a review on forums.swift.org. The Swift Core team will review such proposals.
 
-[Swift Package Manager]: https://github.com/apple/swift-package-manager
-[IndexStoreDB]: https://github.com/apple/indexstore-db
-[SourceKit-LSP]: https://github.com/apple/sourcekit-lsp
-[LLBuild]: https://github.com/apple/swift-llbuild
+[Swift Package Manager]: https://github.com/swiftlang/swift-package-manager
+[IndexStoreDB]: https://github.com/swiftlang/indexstore-db
+[SourceKit-LSP]: https://github.com/swiftlang/sourcekit-lsp
+[LLBuild]: https://github.com/swiftlang/swift-llbuild

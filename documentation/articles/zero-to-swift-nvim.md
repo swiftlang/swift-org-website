@@ -1,11 +1,11 @@
 ---
 layout: page
 date: 2024-06-04 15:13:07
-title: From Zero to Swift | Configuring Neovim for Swift Development
+title: Configuring Neovim for Swift Development
 author: [etcwilde]
 ---
 
-Neovim is a modern reimplementation of _Vim_, a popular terminal-based text
+[Neovim](https://neovim.io) is a modern reimplementation of _Vim_, a popular terminal-based text
 editor.
 Neovim adds new features like asynchronous operations and powerful Lua bindings
 for a snappy editing experience, in addition to the improvements _Vim_ brings to
@@ -14,6 +14,8 @@ the original _Vi_ editor.
 This article walks you through configuring Neovim for Swift development,
 providing configurations for various plugins to build a working Swift editing
 experience.
+The configuration files are built up step by step and the end of the article contains the
+fully assembled versions of those files.
 It is not a tutorial on how to use Neovim and assumes some familiarity
 with modal text editors like _Neovim_, _Vim_, or _Vi_.
 We are also assuming that you have already installed a Swift toolchain on your
@@ -29,7 +31,7 @@ Basic setup and configuration includes:
 1. Installing Neovim.
 2. Installing `lazy.nvim` to manage our plugins.
 3. Configuring the SourceKit-LSP server.
-4. Setting up Language-Server-driven autocompletion with _nvim-cmp_.
+4. Setting up Language-Server-driven code completion with _nvim-cmp_.
 5. Setting up snippets with _LuaSnip_.
 
 The following sections are provided to help guide you through the setup:
@@ -38,8 +40,9 @@ The following sections are provided to help guide you through the setup:
 - [Package Management](#packaging-with-lazy)
 - [Language Server Support](#language-server-support)
     - [File Updates](#file-updating)
-- [Autocomplete](#auto-complete)
+- [Code Completion](#code-completion)
 - [Snippets](#Snippets)
+- [Fully Assembled Configuration Files](#files)
 
 > Tip: If you already have Neovim, Swift, and a package manager installed, you can skip to setting up [Language Server support](#language-server-support).
 
@@ -194,10 +197,10 @@ return {
 }
 ```
 
-While this gives us LSP support through sourcekit-lsp, there are no keybindings,
-so it's not very practical. Lets hook those up now.
+While this gives us LSP support through SourceKit-LSP, there are no keybindings,
+so it's not very practical. Let's hook those up now.
 
-We'll set up an auto command that fires when LSP attaches in the `config`
+We'll set up an auto command that fires when an LSP server attaches in the `config`
 function under where we set up the `sourcekit` server. The keybindings are
 applied to all LSP servers so you end up with a consistent experience across
 languages.
@@ -231,7 +234,7 @@ SourceKit-LSP increasingly relies on the editor informing the server when
 certain files change. This need is communicated through _dynamic registration_.
 You don't have to understand what that means, but Neovim doesn't implement
 dynamic registration. You'll notice this when you update your package manifest,
-or add new files to your compile-commands file and LSP doesn't work without
+or add new files to your `compile_commands.json` file and LSP doesn't work without
 restarting Neovim.
 
 Instead, we know that SourceKit-LSP needs this functionality, so we'll enable it
@@ -255,16 +258,16 @@ following issues describe the issue in more detail:
  - [LSP: Implement dynamicRegistration](https://github.com/neovim/neovim/issues/13634)
  - [add documentFormattingProvider to server capabilities response](https://github.com/microsoft/vscode-eslint/pull/1307)
 
-## Auto Complete
+## Code Completion
 
 ![LSP-driven autocomplete completing the Foundation module](/assets/images/zero-to-swift-nvim/LSP-Autocomplete.png)
 
-We will use [_nvim-cmp_](https://github.com/hrsh7th/nvim-cmp) to act as the autocomplete mechanism.
+We will use [_nvim-cmp_](https://github.com/hrsh7th/nvim-cmp) to act as the code completion mechanism.
 We'll start by telling _lazy.nvim_ to download the package and to load it lazily when we enter insert
-mode since you don't need autocompletion if you're not editing the file.
+mode since you don't need code completion if you're not editing the file.
 
 ```lua
--- lua/plugins/autocomplete.lua
+-- lua/plugins/codecompletion.lua
 return {
     {
         "hrsh7th/nvim-cmp",
@@ -274,7 +277,7 @@ return {
 }
 ```
 
-Next, we'll configure some completion sources to provide autocompletion results.
+Next, we'll configure some completion sources to provide code completion results.
 _nvim-cmp_ doesn't come with completion sources, those are additional plugins.
 For this configuration, I want results based on LSP, filepath completion, and
 the text in my current buffer. For more, the _nvim-cmp_ Wiki has a [list of
@@ -285,7 +288,7 @@ on them.
 This ensures that _lazy.nvim_ will initialize each of them when _nvim-cmp_ is loaded.
 
 ```lua
--- lua/plugins/autocomplete.lua
+-- lua/plugins/codecompletion.lua
 return {
     {
         "hrsh7th/nvim-cmp",
@@ -303,7 +306,7 @@ return {
 }
 ```
 
-Now we need to configure _nvim-cmp_ to take advantage of the auto-completion
+Now we need to configure _nvim-cmp_ to take advantage of the code completion
 sources.
 Unlike many other plugins, _nvim-cmp_ hides many of its inner-workings, so
 configuring it is a little different from other plugins. Specifically, you'll
@@ -453,15 +456,14 @@ Now our tab-key is thoroughly overloaded in super-tab fashion.
    list.
  - If you press tab over a snippet, the snippet will expand, and continuing to
    press tab moves the cursor to the next selection point.
- - If you're neither auto-completing nor expanding a snippet, it will behave
+ - If you're neither code completing nor expanding a snippet, it will behave
    like a normal `tab` key.
 
 Now we need to write up some snippets. _LuaSnip_ supports several snippet formats,
 including a subset of the popular
 [TextMate](https://macromates.com/textmate/manual/snippets),
 [Visual Studio Code](https://code.visualstudio.com/docs/editor/userdefinedsnippets) snippet format,
-its own [Lua-based](https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua) API,
-and snippets coming from an [LSP server](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#snippet_syntax).
+and its own [Lua-based](https://github.com/L3MON4D3/LuaSnip/blob/master/Examples/snippets.lua) API.
 
 Here are some snippets that I've found to be useful:
 
@@ -584,7 +586,7 @@ vim.opt.tw = 80
 ```
 
 ```lua
--- lua/plugins/autocomplete.lua
+-- lua/plugins/codecompletion.lua
 return {
   {
     "hrsh7th/nvim-cmp",

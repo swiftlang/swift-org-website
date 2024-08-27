@@ -6,7 +6,7 @@ title: Swift Server Workgroup (SSWG)
 The Swift Server workgroup is a steering team that promotes the use of Swift for developing and deploying server applications. The Swift Server workgroup will:
 
 * Define and prioritize efforts that address the needs of the Swift server community.
-* Define and run an incubation process for these efforts to reduce duplication of effort, increase compatibility and promote best practices.
+* Define and run an [incubation process](/sswg/incubation-process.html) for these efforts to reduce duplication of effort, increase compatibility and promote best practices.
 * Channel feedback for Swift language features needed by the server development community to the Swift Core Team.
 
 Analogous to the [Core Team](/community#core-team) for Swift, the workgroup is responsible for providing overall technical direction and establishing the standards by which libraries and tools are proposed, developed and eventually recommended. Membership of the workgroup is contribution-based and is expected to evolve over time.
@@ -74,37 +74,6 @@ Inactive members that do not participate in four consecutive workgroup meetings 
 ## Voting
 
 In various situations the SSWG shall hold a vote. These votes can happen on the phone, email, or via a voting service, when appropriate. SSWG members can either respond "agree, yes, +1", "disagree, no, -1", or "abstain". A vote passes with two-thirds vote of votes cast based on the SSWG charter. An abstain vote equals not voting at all.
-
-## Incubation Process
-
-The Swift Server Workgroup has a [process](/sswg/incubation-process.html) which allows a project to go through incubation stages until it graduates and becomes a recommended project.
-
-## Projects
-
-<table>
-  <thead>
-    <tr>
-      <th>Project</th>
-      <th>Description</th>
-      <th>Maturity Level</th>
-      <th>Pitched</th>
-      <th>Accepted</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for project in site.data.server-workgroup.projects %}
-    <tr>
-      <td><a href="{{ project.url }}">{{ project.name }}</a></td>
-      <td>{{ project.description }}</td>
-      <td>{{ project.maturity }}</td>
-      <td>{{ project.pitched }}</td>
-      <td>{{ project.accepted }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
-The SSWG publishes a [package collection](/blog/package-collections/) that contains the projects incubated by the workgroup. The collection is available at `https://swiftserver.group/collection/sswg.json`.
 
 ## Meeting Time
 

@@ -338,7 +338,7 @@ standard library that can be represented in C++:
 ## Constraints and Limitations
 
 Swift has some known limitations related to C++ interoperability support.
-They're currently [listed on GitHub](https://github.com/apple/swift/issues/66159).
+They're currently [listed on GitHub](https://github.com/swiftlang/swift/issues/66159).
 
 ### Swift Package Manager Constraints
 
@@ -347,7 +347,7 @@ A Swift target that enables C++ interoperability in Swift Package Manager
 its dependencies to enable C++ interoperability as well.
 A Swift GitHub issue tracks the status of this constraint:
 
-- [Swift should provide support for internal imports and resilience for all platforms (that can be enabled in SwiftPM) to allow Swift modules to depend on C++ modules without requiring that the clients enable C++ interoperability](https://github.com/apple/swift/issues/66156)
+- [Swift should provide support for internal imports and resilience for all platforms (that can be enabled in SwiftPM) to allow Swift modules to depend on C++ modules without requiring that the clients enable C++ interoperability](https://github.com/swiftlang/swift/issues/66156)
 
 ### Performance Constraints
 
@@ -359,7 +359,7 @@ collection when it's used in a `for-in` loop in Swift.
 
 The following issue tracks the status of this performance constraint:
 
-- [Swift should provide language affordances that make it possible to avoid copying a C++ container when traversing through it in a for-in loop, or when using collection methods like map and filter](https://github.com/apple/swift/issues/66158)
+- [Swift should provide language affordances that make it possible to avoid copying a C++ container when traversing through it in a for-in loop, or when using collection methods like map and filter](https://github.com/swiftlang/swift/issues/66158)
 
 ### Compatibility with Existing Codebases That Use C or Objective-C APIs in Swift
 

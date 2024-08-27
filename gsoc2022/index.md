@@ -35,7 +35,7 @@ If you would like to reach out to a mentor privately, rather than making a publi
 
 **Description**:
 
-[SwiftSyntax](http://github.com/apple/swift-syntax) heavily relies on code-generation for its syntax node definitions. These files are currently being generated using gyb, a Python-based code generation tool developed as part of the Swift compiler. SwiftSyntax itself also has code generation capabilities, which have recently been significantly improved by the introduction of [SwiftSyntaxBuilder](https://github.com/apple/swift-syntax/tree/main/Sources/SwiftSyntaxBuilder).
+[SwiftSyntax](http://github.com/swiftlang/swift-syntax) heavily relies on code-generation for its syntax node definitions. These files are currently being generated using gyb, a Python-based code generation tool developed as part of the Swift compiler. SwiftSyntax itself also has code generation capabilities, which have recently been significantly improved by the introduction of [SwiftSyntaxBuilder](https://github.com/swiftlang/swift-syntax/tree/main/Sources/SwiftSyntaxBuilder).
 
 During the Google Summer of Code project, the student will migrate the current gyb-based code generation to use SwiftSyntaxBuilder, dogfooding SwiftSyntaxBuilder inside SwiftSyntax itself. To perform the migration, the student will also make further improvements to SwiftSyntaxBuilder, with the goal of transitioning SwiftSyntaxBuilder from its current development state to be production-ready.
 

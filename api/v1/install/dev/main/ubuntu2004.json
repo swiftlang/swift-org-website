@@ -1,0 +1,6 @@
+---
+layout: none
+---
+{ "x86_64": {{ site.data.builds.development.ubuntu2004 | jsonify }},
+  "aarch64": {{ site.data.builds.development.ubuntu2004-aarch64 | jsonify}}
+}

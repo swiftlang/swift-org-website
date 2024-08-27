@@ -1,6 +1,233 @@
 years:
   - year: 2024
     months:
+      - month: July
+        slug: july
+        packages:
+          - name: hummingbird
+            description: Hummingbird is a lightweight, flexible server framework written
+              in Swift. It consists of an HTTP server, a web application framework, and
+              extension modules.
+            owner: Hummingbird
+            swift_compatibility: 5.8+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: Apache 2.0
+            url: https://swiftpackageindex.com/hummingbird-project/hummingbird
+            note: Discussed on [Episode 45 of Swift Package Indexing](https://share.transistor.fm/s/53ee9157){:target='_blank'}.
+          - name: ContrastKit
+            description: Colour contrast handling and accessibility helpers by generating
+              colour shades and determining readable contrast colours according to accessibility
+              standards.
+            owner: Mark Battistella
+            swift_compatibility: 5.10+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            license: MIT
+            url: https://swiftpackageindex.com/markbattistella/ContrastKit
+            note: Discussed on [Episode 45 of Swift Package Indexing](https://share.transistor.fm/s/53ee9157){:target='_blank'}.
+          - name: node-swift
+            description: Write Swift code that talks to Node.js libraries, and vice versa,
+              targeting cross-platform development with memory safety and idiomatic integration.
+            owner: Kabir Oberai
+            swift_compatibility: 5.10+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
+            license: MIT
+            url: https://swiftpackageindex.com/kabiroberai/node-swift
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/60){:target='_blank'}.
+          - name: AcmeSwift
+            description: Let's Encrypt certificate management handling account creation,
+              order submission, and certificate issuance with ACME v2. Requires external
+              challenge verification.
+            owner: Matthieu Barthelemy
+            swift_compatibility: 5.8+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/m-barthelemy/AcmeSwift
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/63){:target='_blank'}.
+          - name: BlurHashViews
+            description: Decodes BlurHash strings into SwiftUI views, offering customization
+              like contrast control, detail level, and color space adjustments for native
+              placeholders. Supports animations and custom transitions.
+            owner: Dale Price
+            license: MIT
+            url: https://swiftpackageindex.com/daprice/BlurHashViews
+            note: Linked to in [Issue 666 of iOS Dev Weekly](https://iosdevweekly.com/issues/666#aCUCaK0){:target='_blank'}.
+          - name: CodableDatastore
+            description: Database-like persistent storage for apps, supporting single-write-multiple-read
+              environments, with a focus on Codable structs for data modeling and indexing.
+            owner: Mochi Development, Inc.
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/mochidev/CodableDatastore
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/63){:target='_blank'}.
+      - month: June
+        slug: june
+        packages:
+          - name: rabbitmq-nio
+            description: Implements the AMQP 0.9.1 protocol in Swift, providing decoder,
+              encoder, and a non-blocking client for asynchronous messaging operations,
+              with ongoing development for stability and feature enhancements.
+            owner: Krzysztof Majk
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: Apache 2.0
+            url: https://swiftpackageindex.com/funcmike/rabbitmq-nio
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/48){:target='_blank'}.
+          - name: Pack
+            description: Serialization and deserialization of binary data, not based on
+              key/value pairs, offering an alternative to `Codable` for efficient storage.
+            owner: Matt Cox
+            swift_compatibility: 5.8+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/mattcox/Pack
+            note: Discussed on [Episode 43 of Swift Package Indexing](https://share.transistor.fm/s/2d4b1ba7){:target='_blank'}.
+          - name: HandShadows
+            description: Make better demo videos for your apps by enabling shadows of a
+              hand hovering over the screen performing taps and gestures while using your
+              app.
+            owner: Adam Wulf
+            swift_compatibility: 5.8+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, visionOS)
+            license: MIT
+            url: https://swiftpackageindex.com/adamwulf/HandShadows
+            note: Linked to in [Issue 645 of iOS Dev Weekly](https://iosdevweekly.com/issues/645#AEv9Pwx){:target='_blank'}.
+          - name: WasmKit
+            description: WasmKit enables standalone and embeddable WebAssembly runtime execution,
+              supporting command line use and integration as a library, with partial WebAssembly
+              and WASI spec implementation.
+            owner: SwiftWasm
+            swift_compatibility: 5.8+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/swiftwasm/WasmKit
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/53){:target='_blank'}.
+          - name: Fit
+            description: Automates SwiftUI view layouts into lines with customizable alignments,
+              spacings, and line-breaking without manual grouping or measuring.
+            owner: Oleh Korchytskyi
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            license: MIT
+            url: https://swiftpackageindex.com/OlehKorchytskyi/Fit
+            note: Discussed on [Episode 43 of Swift Package Indexing](https://share.transistor.fm/s/2d4b1ba7){:target='_blank'}.
+          - name: swift-security
+            description: Enhances Apple's Security framework usage with compile-time checks
+              and consistent behavior across different platforms, focusing on Keychain,
+              cryptography, and shared web credentials.
+            owner: Dmitriy Zharov
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            license: MIT
+            url: https://swiftpackageindex.com/dm-zharov/swift-security
+            note: Discussed on [Episode 43 of Swift Package Indexing](https://share.transistor.fm/s/2d4b1ba7){:target='_blank'}.
+      - month: May
+        slug: may
+        packages:
+          - name: GodotVision
+            description: Create shared-space experiences in Godot for visionOS, integrating
+              Godot's headless mode with RealityKit for 3D content mirroring.
+            owner: Kevin Watters
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (visionOS)
+            license: MIT
+            url: https://swiftpackageindex.com/kevinw/GodotVision
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/28){:target='_blank'}.
+          - name: whisperkit
+            description: Integrates OpenAI's Whisper speech recognition model with CoreML
+              for efficient, local inference on Apple devices.
+            owner: argmax, inc.
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS)
+            license: MIT
+            url: https://swiftpackageindex.com/argmaxinc/WhisperKit
+            note: Discussed on [Episode 42 of Swift Package Indexing](https://share.transistor.fm/s/c118cc9c){:target='_blank'}.
+          - name: GeoURI
+            description: Implements the geo URI scheme in Swift for identifying RFC 5870
+              compliant physical locations via URI, including CoreLocation integration.
+            owner: Designed by Clowns
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            license: The Unlicense
+            url: https://swiftpackageindex.com/designedbyclowns/GeoURI
+            note: Discussed on [Episode 43 of Swift Package Indexing](https://share.transistor.fm/s/2d4b1ba7){:target='_blank'}.
+          - name: swift-perception
+            description: Offers observation tools for earlier versions of Swift, mimicking
+              `@Observable` and providing compatibility with newer Swift observation features.
+            owner: Point-Free
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/pointfreeco/swift-perception
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/24){:target='_blank'}.
+          - name: AsyncChannels
+            description: Enables performant, typed communication across Swift async tasks,
+              inspired by Go's channels, including buffered and un-buffered operations.
+            owner: Brian Floersch
+            swift_compatibility: 5.8+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/gh123man/Async-Channels
+            note: Discussed on [Episode 42 of Swift Package Indexing](https://share.transistor.fm/s/c118cc9c){:target='_blank'}.
+          - name: ExpectToEventuallyEqual
+            description: Provides an XCTest assertion for testing asynchronous code by repeatedly
+              evaluating conditions until they are met or time out.
+            owner: Jon Reid
+            swift_compatibility: 5.8+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/jonreid/ExpectToEventuallyEqual
+            note: Discussed on [Episode 41 of Swift Package Indexing](https://share.transistor.fm/s/861890bb){:target='_blank'}.
       - month: April
         slug: april
         packages:
@@ -9,7 +236,7 @@ years:
               designed for cross-platform use, enhancing app visuals without heavy manual
               coding.
             owner: Airbnb
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
@@ -17,15 +244,13 @@ years:
             url: https://swiftpackageindex.com/airbnb/lottie-ios
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/27){:target='_blank'}.
           - name: Citadel
-            description: Facilitates easy SSH client and server operations, TCP-IP forwarding,
-              command execution, and SFTP functionality with Swift NIOSSH enhancing its
-              capabilities.
+            description: Easy SSH client and server operations, TCP-IP forwarding, command
+              execution, and SFTP functionality with Swift NIOSSH enhancing its capabilities.
             owner: Orlandos Technologies - OpenSource
             swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
-              - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/orlandos-nl/Citadel
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/44){:target='_blank'}.
@@ -34,11 +259,12 @@ years:
               servers with support for WebSockets and static file serving. It uses non blocking
               BSD sockets to handle each connection with Swift concurrency.
             owner: Simon Whitty
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
             license: MIT
             url: https://swiftpackageindex.com/swhitty/FlyingFox
             note: Discussed on [Episode 41 of Swift Package Indexing](https://share.transistor.fm/s/861890bb){:target='_blank'}.
@@ -46,10 +272,10 @@ years:
             description: Creates an acknowledgements screen for your app that displays a
               list of licenses from your CocoaPods or Swift Package Manager dependencies.
             owner: Vincent Tourraine
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/vtourraine/AcknowList
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/39){:target='_blank'}.
@@ -59,7 +285,7 @@ years:
               can display images, headings, lists, blockquotes, code blocks, tables, and
               more.
             owner: Guille Gonzalez
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -98,7 +324,7 @@ years:
               APIs for retrieving and formatting time values. It also allows converting
               between time zones and calculating differences between dates.
             owner: Dave DeLong
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
@@ -114,7 +340,7 @@ years:
               a single input and splits it into two separate async functions that return
               different outputs that can be merged back into a single output.
             owner: Zach
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
@@ -128,7 +354,7 @@ years:
               capabilities and a robust caching system. Optimized for performance, customizable,
               and extensively tested for reliability.
             owner: Alex Grebenyuk
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
@@ -152,7 +378,7 @@ years:
               SwiftUI applications, supporting features like glTF, interactive camera controls,
               and environment-based lighting.
             owner: Freek
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
@@ -168,7 +394,7 @@ years:
               for JSON and property list formats. Suitable for handling complex types in
               storage.
             owner: Jonathan Rothwell
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
@@ -182,7 +408,7 @@ years:
               It looks similar to the Apple Calendar app out-of-the-box, while allowing
               customization when needed.
             owner: Richard Topchii
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, tvOS)
@@ -209,7 +435,7 @@ years:
               can display images, headings, lists, blockquotes, code blocks, tables, and
               more.
             owner: Guille Gonzalez
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -232,7 +458,7 @@ years:
             description: The easiest way to create a summary from a String. Internally it's
               a simple wrapper around CoreServices SKSummary.
             owner: Stef Kors
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (macOS, visionOS)
@@ -247,10 +473,10 @@ years:
               It provides access to all AWS services via a direct mapping of the REST APIs
               Amazon publishes for each of its services.
             owner: Soto for AWS
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, tvOS)
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
             license: Apache 2.0
             url: https://swiftpackageindex.com/soto-project/soto
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/13){:target='_blank'}.
@@ -259,10 +485,10 @@ years:
               app. It includes transitions and change effects which can trigger every time
               a value is updated.
             owner: Emerge Tools
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/EmergeTools/Pow
             note: Discussed on [Episode 38 of Swift Package Indexing](https://share.transistor.fm/s/f744b457){:target='_blank'}.
@@ -270,7 +496,7 @@ years:
             description: OpenAPIKit allows encoding and decoding of OpenAPI 3.0.x and 3.1.x
               documents and their components in Swift.
             owner: Mathew Polzin
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
@@ -288,7 +514,7 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (macOS) and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS) and Linux
             license: Apache 2.0
             url: https://swiftpackageindex.com/ordo-one/package-benchmark
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/11){:target='_blank'}.
@@ -297,7 +523,7 @@ years:
               operations. It offers three retry strategy options: constant, exponential,
               and exponential with jitter."
             owner: Space Code
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
@@ -311,10 +537,10 @@ years:
               to CIImage instances and render them into SwiftUI or any other context. It
               can also be used without SwiftUI.
             owner: Dan Wood
-            swift_compatibility: 5.7+
+            swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+            platform_compatibility_tooltip: Apple (visionOS)
             license: MIT
             url: https://swiftpackageindex.com/danwood/SwiftUICoreImage
             note: Discussed on [Episode 38 of Swift Package Indexing](https://share.transistor.fm/s/f744b457){:target='_blank'}.
@@ -328,7 +554,7 @@ years:
               with state management, composition, side effects, and testing in mind. It
               can be used with SwiftUI, UIKit, and more.
             owner: Point-Free
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -340,7 +566,7 @@ years:
               APIs for retrieving and formatting time values. It also allows converting
               between time zones and calculating differences between dates.
             owner: Dave DeLong
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
@@ -353,7 +579,7 @@ years:
             description: BluetoothLinux makes working with Bluetooth from Swift easier without
               needing to wrap underlying libraries from other languages.
             owner: PureSwift
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
@@ -381,7 +607,7 @@ years:
               1-Wire interfaces. It is specifically designed for Raspberry Pis and other
               ARM boards running Linux.
             owner: uraimo
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
@@ -409,7 +635,7 @@ years:
               supports many features from SwiftUI, such as property wrappers, view builders,
               and modifiers.
             owner: Rens Breur
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
@@ -436,11 +662,10 @@ years:
             description: Automerge-swift is a low-level library that implements the Automerge
               library of data structures for building collaborative applications in Swift.
             owner: Automerge
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
-              - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS) and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
             license: MIT
             url: https://swiftpackageindex.com/automerge/automerge-swift
             note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
@@ -461,7 +686,7 @@ years:
               expressions to detect tokens and color them based on the current theme and
               supports line numbers, customizable themes, and multiple languages.
             owner: Taylor Lineman
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (macOS)
@@ -472,7 +697,7 @@ years:
             description: "An SDK for developing video applications on iOS with Daily\u2019s
               real-time audio, video, and vision platform."
             owner: Daily
-            swift_compatibility: 5.7+
+            swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS)

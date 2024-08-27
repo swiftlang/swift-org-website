@@ -21,14 +21,18 @@ The current Documentation Workgroup consists of the following people:
 * [Dave Verwer](https://github.com/daveverwer)
 * [David Rönnqvist](https://github.com/d-ronnqvist)
 * [Dianna Ma](https://github.com/tayloraswift)
-* [Ethan Kusters](https://github.com/ethan-kusters)
 * [Franklin Schrans](https://github.com/franklinsch) (chair)
 * [Joe Heck](https://github.com/heckj)
-* [Kyle Murray](https://github.com/krilnon)
 * [Kyle Ye](https://github.com/Kyle-Ye)
-* [Max Obermeier](https://github.com/theMomax)
+* [Sofía Rodríguez Morales](https://github.com/sofiaromorales)
 * [Sven Schmidt](https://github.com/finestructure)
-* [Victoria Mitchell](https://github.com/QuietMisdreavus)
+* [Vera Mitchell](https://github.com/QuietMisdreavus)
+
+We are grateful for the service of the following emeritus workgroup members:
+
+* [Ethan Kusters](https://github.com/ethan-kusters)
+* [Kyle Murray](https://github.com/krilnon)
+* [Max Obermeier](https://github.com/theMomax)
 
 ## Charter
 
@@ -95,6 +99,6 @@ contribute, consider:
   forum](https://forums.swift.org/c/development/swift-docc) for
   Swift-DocC–related ideas.
 * Opening issues to track enhancements and bugs for the projects governed by the Documentation Workgroup:
-  [Swift-DocC](https://github.com/apple/swift-docc/issues), [The Swift Programming Language book](https://github.com/apple/swift-book/issues).
+  [Swift-DocC](https://github.com/swiftlang/swift-docc/issues), [The Swift Programming Language book](https://github.com/apple/swift-book/issues).
 * Participating in the [Swift Mentorship
   Program](/mentorship).

@@ -39,5 +39,5 @@ Get involved with an existing translation project, or start a new one.
 
 <div class="info" markdown="1">
 If you know of a quality translation project underway,
-please let us know on the [Swift.org repository](https://github.com/apple/swift-org-website) by opening an issue or submitting a Pull Request.
+please let us know on the [Swift.org repository](https://github.com/swiftlang/swift-org-website) by opening an issue or submitting a Pull Request.
 </div>

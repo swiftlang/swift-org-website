@@ -18,6 +18,6 @@ existing compiler driver.
 
 {% include_relative _compiler-architecture.md %}
 
-[bugtracker]:  https://github.com/apple/swift/issues
-[swift-repo]: https://github.com/apple/swift "Swift repository"
-[swift-driver-repo]: https://github.com/apple/swift-driver "Swift driver repository"
+[bugtracker]:  https://github.com/swiftlang/swift/issues
+[swift-repo]: https://github.com/swiftlang/swift "Swift repository"
+[swift-driver-repo]: https://github.com/swiftlang/swift-driver "Swift driver repository"

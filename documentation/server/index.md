@@ -58,30 +58,10 @@ The Swift ecosystem contains many useful libraries and tools specifically design
 
 Overall, Swift on Server opens up new opportunities for developers to build fast, scalable, and secure backend services. Swift's combination of performance, readability, interoperability, safety, and modern language features make it a compelling choice for many developers.
 
+### Development guides
 
-## Development guides
+The Swift Server Workgroup and Swift on Server community have developed a number of [guides](/documentation/server/guides/) for using Swift on the server. They are designed to help teams and individuals running Swift Server applications on Linux and to provide orientation for those who want to start with such development.
 
-The Swift Server Workgroup and Swift on Server community have developed several guides for using Swift on the server.
-They are designed to help teams and individuals running server-side Swift applications on Linux, including orientation for those who want to start developing with Swift.
-
-The following guides focus on how to compile, test, deploy, and debug applications and provide tips in those areas:
-
-- [Setup and code editing](/documentation/server/guides/setup-and-ide-alternatives.html).
-- [Building](/documentation/server/guides/building.html).
-- [Testing](/documentation/server/guides/testing.html).
-- [Debugging Memory leaks](/documentation/server/guides/memory-leaks-and-usage.html).
-- [Performance troubleshooting and analysis](/documentation/server/guides/performance.html).
-- [Optimizing allocations](/documentation/server/guides/allocations.html).
-- [Debugging multithreading issues and memory checks](/documentation/server/guides/llvm-sanitizers.html).
-- [Deployment](/documentation/server/guides/deployment.html).
-- [Packaging](/documentation/server/guides/packaging.html).
-
-Additionally, specific guides exist for library developers:
-
-* [Log Levels](/documentation/server/guides/libraries/log-levels.html).
-* [Adopting Swift Concurrency](/documentation/server/guides/libraries/concurrency-adoption-guidelines.html).
-
-_These guides are a community effort. Anyone is invited to share their tips and know-how by submitting pull requests to the [Swift.org site](https://github.com/apple/swift-org-website)_.
 
 ## Swift Server Workgroup
 
@@ -92,4 +72,5 @@ The workgroup:
 * Defines and runs an incubation process for these efforts to reduce duplication of effort, increase compatibility, and promote best practices.
 * Channels feedback for Swift language features needed by the server development community to the Swift Core Team.
 
-Read more about the workgroup and server incubator it runs [here](/sswg "Swift Server Workgroup").
+Read more about the [workgroup](/sswg "Swift Server Workgroup") and server incubator it runs [here](/sswg/incubation-process.html "SSWG Incubation Process").
+
