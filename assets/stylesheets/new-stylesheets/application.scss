@@ -2,21 +2,5 @@
 layout: source
 ---
 
-@import "colors";
-@import "font";
-@import "structure";
-
-html, body {
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    background-color: $white;
-    font-family: $font-family-base;
-    line-height: $font-line-height-base;
-    font-size: $font-size-base;
-    font-weight: $font-weight-base;
-    margin: $margins-layout;
-    width: $width-layout;
-}
+@import "layout";
+@import "includes";
