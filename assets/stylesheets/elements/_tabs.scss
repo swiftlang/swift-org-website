@@ -11,19 +11,18 @@
       border: 1px solid var(--color-fill-tertiary);
       border-radius: var(--border-radius);
       color: var(--color-text);
-
-      // FIXME: Sink prefers-contrast lower into the color stack so each element doesn't need to
-      @media (prefers-contrast: more) {
-        background-color: transparent;
-        border: 1px solid var(--color-text);
-      }
-
       cursor: pointer;
       padding: .5rem;
       display: block;
       text-align: center;
       width: 100%;
       grid-template-columns: repeat(3, 1fr);
+
+      // FIXME: Sink prefers-contrast lower into the color stack so each element doesn't need to
+      @media (prefers-contrast: more) {
+        background-color: transparent;
+        border: 1px solid var(--color-text);
+      }
 
       &:hover {
         color: var(--color-link);
@@ -37,13 +36,12 @@
       &:hover, &[aria-pressed="true"] {
         background-color: var(--color-fill-tertiary);
         border: 1px solid var(--color-fill-quaternary);
+        text-decoration: none;
 
         @media (prefers-contrast: more) {
           background-color: var(--color-text);
           color: var(--color-fill);
         }
-
-        text-decoration: none;
       }
     }
 
