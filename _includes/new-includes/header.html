@@ -1,0 +1,45 @@
+<header class="site-navigation">
+    <div class="wrapper">
+        <a href="/" title="Swift logo" id="logo"></a>
+
+        <nav role="navigation">
+            <ul class="navigation-links">
+                {% for nav in site.data.navigation %}
+                <li class="nav-item{% if nav.isCta %} nav-cta{% endif %}">
+                    {% if nav.isCta and nav.url %}
+                    <a href="{{ nav.url }}" data-text="{{ nav.header }}">{{ nav.header }}</a>
+                    {% else %}
+                    <span class="{% if page.url == nav.url %}active{% endif %}">
+                        {% if nav.url %}
+                        <a href="{{ nav.url }}" data-text="{{ nav.header }}">{{ nav.header }}</a>
+                        {% else %}
+                        {{ nav.header }}
+                        {% endif %}
+                        {% if nav.pages %}
+                        <i>&#9663;</i>
+                        {% endif %}
+                    </span>
+                    {% endif %}
+                    {% if nav.pages %}
+                    <ul class="nav-submenu" role="menu">
+                        {% for navpage in nav.pages %}
+                        {% if navpage.section %}
+                        <li class="nav-section">{{ navpage.section }}</li>
+                        {% else %}
+                        {% if page.url == navpage.url %}
+                        <li role="presentation" class="active">
+                            {% else %}
+                        <li role="presentation">
+                            {% endif %}
+                            <a href="{{ navpage.url }}" role="menuitem">{{ navpage.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
