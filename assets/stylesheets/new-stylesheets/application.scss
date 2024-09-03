@@ -1,6 +1,9 @@
 ---
+layout: source
 ---
 
+@import "colors";
+
 body {
-    background-color: #ffffff;
+    background-color: $white;
 }
