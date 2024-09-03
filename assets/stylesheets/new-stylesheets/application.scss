@@ -3,7 +3,15 @@ layout: source
 ---
 
 @import "colors";
+@import "structure";
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
 
 body {
     background-color: $white;
+    margin: $margins-layout;
+    width: $width-layout;
 }
