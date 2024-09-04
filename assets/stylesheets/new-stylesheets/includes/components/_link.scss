@@ -1,0 +1,32 @@
+.link {
+    text-decoration: none;
+    color: $black;
+
+    &.button {
+        border-radius: $border-radius-button;
+        opacity: 1;
+        background: $white;
+        padding: 20px;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        font-weight: $font-weight-heavy;
+
+        &.orange,
+        &.black {
+            color: $white;
+        }
+
+        &.orange {
+            background-image: linear-gradient(0deg, $orange, $orange-light);
+        }
+
+        &.black {
+            background: $black;
+        }
+    }
+
+    &.text {
+        color: $black;
+    }
+}
