@@ -56,6 +56,10 @@ Everyone is welcome to contribute to the Swift.org website in the following ways
 * Asking or answering questions on the forums
 * Reporting or triaging bugs
 
+## Contribution for website redesign
+
+Please [check this document](https://hackmd.io/@federicobucchi/rkIJGqfo0).
+
 ## Making pull requests
 
 See `README.md` for instructions for installing a local developer environment and testing changes.
