@@ -1,0 +1,15 @@
+{::nomarkdown}
+
+{% if include.link %}
+<a class="box-link" href="{{ include.link }}" target="{{ include.target }}">
+{% endif %}
+
+<div class="box {{ include.type }} {{ include.style }} {{ include.image }}">
+    {{ include.content }}
+</div>
+
+{% if include.link %}
+</a>
+{% endif %}
+
+{:/}
