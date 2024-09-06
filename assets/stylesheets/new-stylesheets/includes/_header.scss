@@ -1,6 +1,7 @@
 $height-header: 50px;
 
 header {
+    @include section-width($width-layout, $margins-layout);
     height: $height-header;
     padding: 1rem;
 

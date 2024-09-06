@@ -11,3 +11,8 @@ $width-column-small: 320px;
     grid-template-columns: repeat(auto-fill, minmax($col-width, 1fr));
     gap: $gap;
 }
+
+@mixin section-width($width, $margins) {
+    margin: $margins;
+    width: $width;
+}
