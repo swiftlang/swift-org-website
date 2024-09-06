@@ -59,6 +59,10 @@ years:
               like contrast control, detail level, and color space adjustments for native
               placeholders. Supports animations and custom transitions.
             owner: Dale Price
+            swift_compatibility: 6.0+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/daprice/BlurHashViews
             note: Linked to in [Issue 666 of iOS Dev Weekly](https://iosdevweekly.com/issues/666#aCUCaK0){:target='_blank'}.
@@ -247,10 +251,12 @@ years:
             description: Easy SSH client and server operations, TCP-IP forwarding, command
               execution, and SFTP functionality with Swift NIOSSH enhancing its capabilities.
             owner: Orlandos Technologies - OpenSource
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
             license: MIT
             url: https://swiftpackageindex.com/orlandos-nl/Citadel
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/44){:target='_blank'}.
@@ -259,7 +265,7 @@ years:
               servers with support for WebSockets and static file serving. It uses non blocking
               BSD sockets to handle each connection with Swift concurrency.
             owner: Simon Whitty
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -673,13 +679,13 @@ years:
             description: Grape is a Swift library for force simulation and graph visualization.
               It provides classes for creating simulations and forces and supports both
               2D and 3D graphs.
-            owner: Zhen Li
+            owner: Swift Graphs
             swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
             license: MIT
-            url: https://swiftpackageindex.com/li3zhen1/Grape
+            url: https://swiftpackageindex.com/SwiftGraphs/Grape
             note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
           - name: Firefly
             description: Firefly is a syntax highlighter for iOS and macOS. It uses regular
