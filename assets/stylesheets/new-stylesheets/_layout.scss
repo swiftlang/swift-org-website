@@ -5,6 +5,8 @@
 html, body {
     height: 100%;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -13,8 +15,6 @@ body {
     line-height: $font-line-height-base;
     font-size: $font-size-base;
     font-weight: $font-weight-base;
-    margin: $margins-layout;
-    width: $width-layout;
 }
 
 h1, h2, h3, h4, h5, h6, p {

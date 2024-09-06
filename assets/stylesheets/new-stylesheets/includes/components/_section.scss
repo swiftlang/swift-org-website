@@ -1,0 +1,19 @@
+.section {
+    background-color: $white;
+    color: $black;
+    padding: 20px 0;
+
+    &.orange {
+        background-color: $orange;
+        color: $white;
+    }
+
+    &.purple {
+        background-color: $purple;
+        color: $white;
+    }
+
+    .content {
+        @include section-width($width-layout, $margins-layout);
+    }
+}
