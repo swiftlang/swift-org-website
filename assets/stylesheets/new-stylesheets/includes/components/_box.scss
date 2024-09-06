@@ -8,13 +8,11 @@
     width: 100%;
     color: $black;
     text-decoration: none;
+    padding: 20px;
+    box-sizing: border-box;
 
     h2, h3, h4, h5, h6 {
         margin-bottom: 20px;
-    }
-
-    &.content {
-        padding: 20px;
     }
 
     &.orange {

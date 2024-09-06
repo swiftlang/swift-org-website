@@ -5,3 +5,9 @@ $width-layout: 1080px;
 $width-column: 540px;
 $width-column-medium: 470px;
 $width-column-small: 320px;
+
+@mixin grid($col-width, $gap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($col-width, 1fr));
+    gap: $gap;
+}
