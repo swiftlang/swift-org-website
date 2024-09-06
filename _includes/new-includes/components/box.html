@@ -1,5 +1,3 @@
-{::nomarkdown}
-
 {% if include.link %}
 <a class="box-link" href="{{ include.link }}" target="{{ include.target }}">
 {% endif %}
@@ -12,4 +10,6 @@
 </a>
 {% endif %}
 
-{:/}
+{% if include.has-markdown %}
+    {:/}
+{% endif %}
