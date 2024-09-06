@@ -1,6 +1,83 @@
 years:
   - year: 2024
     months:
+      - month: August
+        slug: august
+        packages:
+          - name: DiscordBM
+            description: A multiplatform Discord library, primarily for making bots. It
+              has full support for Swift concurrency and type-safe APIs with abstractions
+              for easier testability.
+            owner: DiscordBM
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+            license: Apache 2.0
+            url: https://swiftpackageindex.com/DiscordBM/DiscordBM
+            note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/74){:target='_blank'}.
+          - name: swift-testing-revolutionary
+            description: A tool to convert XCTest cases to swift-testing format. It includes
+              an Xcode plugin, Swift package plugin, and a command line tool.
+            owner: Kohki Miki
+            swift_compatibility: 5.10+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/giginet/swift-testing-revolutionary
+            note: Discussed on [Episode 46 of Swift Package Indexing](https://share.transistor.fm/s/08c0a3f9){:target='_blank'}.
+          - name: swiftly
+            description: Manages Swift toolchain installations, allowing users to easily
+              install, switch between, and update various Swift versions and development
+              snapshots.
+            owner: The Swift Programming Language
+            swift_compatibility: 5.10+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (macOS)
+            license: Apache 2.0
+            url: https://swiftpackageindex.com/swiftlang/swiftly
+            note: Discussed on [Episode 45 of Swift Package Indexing](https://share.transistor.fm/s/53ee9157){:target='_blank'}.
+          - name: SwiftFormats
+            description: Expands `FormatStyle` implementations for various types, enabling
+              advanced formatting and parsing for strings, including extensions for string
+              interpolation.
+            owner: Jonathan Wight
+            swift_compatibility: 5.10+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            license: BSD 3-Clause
+            url: https://swiftpackageindex.com/schwa/SwiftFormats
+            note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/67){:target='_blank'}.
+          - name: WhatsNewKit
+            description: WhatsNewKit enables showcasing new app features with full customization,
+              supporting automatic and manual presentation modes across various platforms
+              and frameworks.
+            owner: Sven Tiigi
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+            license: MIT
+            url: https://swiftpackageindex.com/SvenTiigi/WhatsNewKit
+            note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/59){:target='_blank'}.
+          - name: swift-dom
+            description: Generate HTML and related formats using a memory-efficient, cross-platform,
+              efficient, expressive DSL.
+            owner: taylorswift
+            swift_compatibility: 5.10+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: Apache 2.0
+            url: https://swiftpackageindex.com/tayloraswift/swift-dom
+            note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/66){:target='_blank'}.
       - month: July
         slug: july
         packages:
