@@ -1,0 +1,202 @@
+pre.highlight {
+    background: $white;
+
+    .c,
+    /* Comment */
+    .cm,
+    /* Comment.Multiline */
+    .cp,
+    /* Comment.Preproc */
+    .c1,
+    /* Comment.Single */
+    .cs {
+        /* Comment.Special */
+        color: $gray;
+    }
+
+    .k,
+    /* Keyword */
+    .kc,
+    /* Keyword.Constant */
+    .kd,
+    /* Keyword.Declaration */
+    .kp,
+    /* Keyword.Pseudo */
+    .kr,
+    .kt
+
+    /* Keyword.Reserved */
+    .nb {
+        /* Name.Builtin */
+        color: $orange;
+    }
+
+    .nv,
+    /* Name.Variable */
+    .nf {
+        /* Name.Function */
+        color: $black;
+    }
+
+    .s,
+    /* Literal.String */
+    .sb,
+    /* Literal.String.Backtick */
+    .sc,
+    /* Literal.String.Char >> --color-syntax-characters */
+    .sd,
+    /* Literal.String.Doc */
+    .s2,
+    /* Literal.String.Double */
+    .se,
+    /* Literal.String.Escape */
+    .sh,
+    /* Literal.String.Heredoc */
+    .si,
+    /* Literal.String.Interpol */
+    .s1,
+    /* Literal.String.Single */
+    .sx {
+        /* Literal.String.Other */
+        color: $purple;
+    }
+
+    .na {
+        /* Name.Attribute */
+        color: $black;
+    }
+
+    .nc,
+    /* Name.Class */
+    .ni,
+    /* Name.Entity */
+    .no,
+    /* Name.Constant */
+    .vc,
+    /* Name.Variable.Class */
+    .vg,
+    /* Name.Variable.Global */
+    .vi {
+        /* Name.Variable.Instance */
+        color: $brown-light;
+    }
+
+    .err,
+    /* Error */
+    .gr,
+    /* Generic.Error */
+    .gt,
+    /* Generic.Traceback */
+    .ne {
+        /* Name.Exception */
+        color: $brown-light;
+    }
+
+    .m,
+    /* Literal.Number */
+    .mf,
+    /* Literal.Number.Float */
+    .mh,
+    /* Literal.Number.Hex */
+    .mi,
+    /* Literal.Number.Integer */
+    .il,
+    /* Literal.Number.Integer.Long */
+    .mo {
+        /* Literal.Number.Oct */
+        color: $black;
+    }
+
+    .o,
+    /* Operator */
+    .ow,
+    /* Operator.Word */
+    .gs {
+        /* Generic.Strong */
+        font-weight: bold;
+    }
+
+    .ge {
+        /* Generic.Emph */
+        font-style: italic;
+    }
+
+    .nt {
+        /* Name.Tag */
+        color: $orange;
+    }
+
+    .gd,
+    /* Generic.Deleted */
+    .gd .x {
+        /* Generic.Deleted.Specific */
+        color: $black;
+        background-color: $pink;
+    }
+
+    .gi,
+    /* Generic.Inserted */
+    .gi .x {
+        /* Generic.Inserted.Specific */
+        color: $black;
+        background-color: $pink;
+    }
+
+    .gh,
+    /* Generic.Heading */
+    .bp,
+    /* Name.Builtin.Pseudo */
+    .go,
+    /* Generic.Output */
+    .gp,
+    /* Generic.Prompt */
+    .gu,
+    /* Generic.Subheading */
+    .w {
+        /* Text.Whitespace */
+        color: $black;
+    }
+
+    .nn {
+        /* Name.Namespace */
+        color: $orange;
+    }
+
+    .sr {
+        /* Literal.String.Regex */
+        color: $green;
+    }
+
+    .ss {
+        /* Literal.String.Symbol */
+        color: $black;
+    }
+
+    /* Make prompts non-selectable, to make it easy to copy and paste */
+    .gp {
+        -webkit-user-select: none;
+        user-select: none;
+
+        &+.w {
+            -webkit-user-select: none;
+            user-select: none;
+        }
+    }
+}
+
+.language-console {
+    color: $gray;
+}
+
+// Explicit syntax highlighting for C++ code blocks:
+
+.language-cpp .cp,
+.language-cpp .kt,
+.language-cpp .nl,
+.language-cpp .o,
+.language-c\+\+ .cp,
+.language-c\+\+ .kt,
+.language-c\+\+ .nl,
+.language-c\+\+ .o {
+    color: $orange;
+}
