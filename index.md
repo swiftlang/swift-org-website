@@ -141,3 +141,4 @@ Stay up-to-date with the latest in the Swift community.
   visibleSnippet?.classList.remove('visible');
   featuredSnippets[randomIndex]?.classList.add('visible');
 </script>
+=======
