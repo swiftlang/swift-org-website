@@ -69,6 +69,16 @@ The current members of the workgroup are:
       <td><a href="https://github.com/hborla">@hborla</a></td>
     </tr>
     <tr>
+      <td>James Dempsey</td>
+      <td><a href="https://forums.swift.org/u/James_Dempsey">@James_Dempsey</a></td>
+      <td><a href="https://github.com/dempseyatgithub">@dempseyatgithub</a></td>
+    </tr>
+    <tr>
+      <td>Joseph Heck</td>
+      <td><a href="https://forums.swift.org/u/Joseph_Heck">@Joseph_Heck</a></td>
+      <td><a href="https://github.com/heckj">@heckj</a></td>
+    </tr>
+    <tr>
       <td>Luciano Almeida</td>
       <td><a href="https://forums.swift.org/u/LucianoPAlmeida">@LucianoPAlmeida</a></td>
       <td><a href="https://github.com/LucianoPAlmeida">@LucianoPAlmeida</a></td>
