@@ -27,6 +27,8 @@ Members of the workgroup are volunteers working towards improving the contributo
 
 To facilitate turnover within the workgroup, there will be an annual check-in for participation to provide an opportunity to step down from the workgroup, and a Call for Participation for new people to join will be announced on the Swift Forums.
 
+Members of the workgroup serve at the discretion of the Swift Core Team and the Swift project lead, who has the ultimate authority over the workgroup decisions.
+
 The current members of the workgroup are:
 
 <table>
@@ -111,7 +113,9 @@ The current members of the workgroup are:
   </tbody>
 </table>
 
-Members of the workgroup serve at the discretion of the Swift Core Team and the Swift project lead, who has the ultimate authority over the workgroup decisions.
+We are grateful for the service of the following emeritus workgroup member:
+
+* [Max Desiatov](https://github.com/MaxDesiatov)
 
 
 ## Communication
