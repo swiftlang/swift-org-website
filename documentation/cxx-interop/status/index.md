@@ -87,6 +87,27 @@ building C++ code for Ubuntu.
 Mixed Swift and C++ code must use
 the same C++ standard library.
 
+Using C++ interoperability requires a compiler with enabled support for the
+C++14 standard or a newer version. Swift allows you to change which version of
+the C++ standard it uses; however, the C++ library headers used from Swift must
+also conform to the selected C++ standard. When using bidirectional
+interoperability, programs need to be compiled with C++14 support, since the
+generated C++ interface for a Swift module uses C++14 features.
+
+#### Customizing the C++ Standard Version
+
+Here's how to set the version of the C++ standard used for interoperability
+by the Swift compiler:
+
+- When compiling package dependencies, the C++ standard version can be
+  customized in `Package.swift` using the `cxxLanguageStandard` parameter in
+  your `Package(...)`.
+- For Xcode targets, you can choose the C++ standard used from the C++ Language
+  Dialect setting in the Build Settings tab.
+- If you're using a different build system or invoking the `swiftc` Swift
+  compiler directly from the command line, you can specify a C++ standard
+  version with the `-Xcc -std=` option, for example, `-Xcc -std=c++20`.
+
 ## Supported C++ APIs
 
 This section describes which C++ APIs are supported in Swift.
