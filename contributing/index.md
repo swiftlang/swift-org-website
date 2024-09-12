@@ -24,9 +24,3 @@ as described in [Source Code](/documentation/source-code).
 {% include_relative _swift-evolution-process.md %}
 {% include_relative _good-first-issues.md %}
 {% include_relative _contributing-code.md %}
-{% comment %}{% include_relative _contributing-documentation.md %}{% endcomment %}
-{% include_relative _adding-library-dependencies.md %}
-
-* * *
-
-{% include_relative _llvm.md %}
