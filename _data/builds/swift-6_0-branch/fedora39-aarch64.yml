@@ -1,0 +1,5 @@
+- date: 2024-09-11 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-09-11-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-09-11-a-fedora39-aarch64.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-09-11-a-fedora39-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
