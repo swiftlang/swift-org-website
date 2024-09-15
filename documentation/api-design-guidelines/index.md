@@ -820,7 +820,9 @@ func move(from **start**: Point, to **end**: Point)
   `#fileID` saves space and protects developers’ privacy. Use `#filePath` in
   APIs that are never run by end users (such as test helpers and scripts) if
   the full path will simplify development workflows or be used for file I/O.
-  Use `#file` to preserve source compatibility with Swift 5.2 or earlier.
+  Prefer `#file` in the Swift 6 language mode or later, where it has the same
+  behavior as `#fileID`, or to preserve source compatibility with Swift 5.2
+  or earlier.
 
 ### Argument Labels
 
