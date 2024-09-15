@@ -11,6 +11,8 @@ Swift.org website goals include:
 
 See [website overview](/website) for more information about the Swift.org website goals, content governance and contribution guidelines.
 
+If you want to contribute to the Swift.org redesign, [check here](https://hackmd.io/3Jzov14DT5iLMbBqpG2AVQ)
+
 ## Technical
 
 Swift.org uses [Jekyll](https://jekyllrb.com), a blog-aware, static site generator in Ruby.

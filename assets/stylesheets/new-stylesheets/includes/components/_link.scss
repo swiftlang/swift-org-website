@@ -11,6 +11,7 @@
         display: inline-block;
         text-align: center;
         font-weight: $font-weight-heavy;
+        box-sizing: border-box;
 
         &.orange,
         &.black {
