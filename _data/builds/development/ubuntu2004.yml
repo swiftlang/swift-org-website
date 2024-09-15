@@ -1,3 +1,8 @@
+- date: 2024-09-14 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-09-14-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-09-14-a-ubuntu20.04.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2024-09-14-a-ubuntu20.04.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2024-09-13 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2024-09-13-a
   download: swift-DEVELOPMENT-SNAPSHOT-2024-09-13-a-ubuntu20.04.tar.gz
