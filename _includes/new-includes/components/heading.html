@@ -1,11 +1,11 @@
 <div class="heading {{ include.for }}-component">
-  <{{ include.type }}>
   {{ include.title }}
-  </{{ include.type }}>
 
   <hr />
 
+  {% if include.text %}
   <p class="text">
       {{ include.text }}
   </p>
+  {% endif %}
 </div>

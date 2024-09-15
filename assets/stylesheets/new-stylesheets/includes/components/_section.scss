@@ -13,6 +13,11 @@
         color: $white;
     }
 
+    &.yellow {
+        background-color: $yellow-dark;;
+        color: $black;
+    }
+
     .content {
         @include section-width($width-layout, $margins-layout);
     }
