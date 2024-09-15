@@ -2,7 +2,7 @@
 <a class="box-link" href="{{ include.link }}" target="{{ include.target }}">
 {% endif %}
 
-<div class="box {{ include.type }} {{ include.style }} {{ include.image }}" markdown="1">
+<div class="box {{ include.type }} {{ include.style }} {{ include.image }}" {% if include.css %}style="{{ include.css }}"{% endif %} markdown="1">
     {% if include.type == "code" %}
 {% include new-includes/components/code.html language=include.language code=include.content%}
     {% else %}

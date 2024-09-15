@@ -21,14 +21,18 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
+.grid-1-col {
+    @include grid($width-layout, 0)
+}
+
 .grid-2-cols {
-    @include grid(500px, 40px)
+    @include grid($width-column, $gap-column)
 }
 
 .grid-3-cols {
-    @include grid(320px, 40px)
+    @include grid($width-column-medium, $gap-column-medium)
 }
 
 .grid-4-cols {
-    @include grid(260px, 13px)
+    @include grid($width-column-small, $gap-column-small)
 }

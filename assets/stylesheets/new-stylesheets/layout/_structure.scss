@@ -1,10 +1,14 @@
 $border-radius-button: 10px;
 $border-radius-box: 16px;
+$gap-column: 30px;
+$gap-column-big: 80px;
+$gap-column-medium: 30px;
+$gap-column-small: 20px;
 $margins-layout: 0 auto;
 $width-layout: 1080px;
-$width-column: 540px;
-$width-column-medium: 470px;
-$width-column-small: 320px;
+$width-column: 500px;
+$width-column-medium: 340px;
+$width-column-small: 240px;
 
 @mixin grid($col-width, $gap) {
     display: grid;
