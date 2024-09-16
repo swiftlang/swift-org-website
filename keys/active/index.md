@@ -66,3 +66,30 @@ The following keys are being used to sign toolchain packages:
   $ wget -q -O - https://swift.org/keys/release-key-swift-5.x.asc | \
     gpg --import -
   ~~~
+
+
+ * `Swift 6.x Release Signing Key <swift-infrastructure@forums.swift.org>`
+
+  Download
+  : <https://swift.org/keys/release-key-swift-6.x.asc>
+
+  Fingerprint
+  : `52BB 7E3D E28A 71BE 22EC 05FF EF80 A866 B47A 981F`
+
+  Long ID
+  : `EF80A866B47A981F`
+
+  To import the key, run:
+
+  ~~~ shell
+  $ gpg --keyserver hkp://keyserver.ubuntu.com \
+        --recv-keys \
+        '52BB 7E3D E28A 71BE 22EC 05FF EF80 A866 B47A 981F'
+  ~~~
+
+  Or:
+
+  ~~~ shell
+  $ wget -q -O - https://swift.org/keys/release-key-swift-6.x.asc | \
+    gpg --import -
+  ~~~
