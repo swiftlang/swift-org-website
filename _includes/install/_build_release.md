@@ -33,6 +33,7 @@
     <a href="/install/linux/tarball" class="cta-secondary">Instructions</a>
   </li>
 </ul>
+{% include install/_static_sdk_release.md %}
 
 {% if include.rpm %}
   <ul class="install-instruction">
