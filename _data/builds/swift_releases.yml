@@ -1753,3 +1753,57 @@
       docker: 5.10.1-windowsservercore-ltsc2022
       archs:
         - x86_64
+- name: "6.0"
+  tag: swift-6.0-RELEASE
+  xcode: Xcode 16
+  xcode_release: true
+  date: 2024-09-16
+  platforms:
+    - name: Ubuntu 20.04
+      platform: Linux
+      docker: 6.0-focal
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 6.0-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 24.04
+      platform: Linux
+      docker: 6.0-noble
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 12
+      platform: Linux
+      docker: 6.0-bookworm
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 39
+      platform: Linux
+      docker: 6.0-fedora39
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 6.0-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 6.0-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 6.0-windowsservercore-ltsc2022
+      archs:
+        - x86_64
