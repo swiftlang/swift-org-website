@@ -35,7 +35,7 @@ title: Install Swift
     <p class="description">
       The offical Docker images for Swift.
     </p>
-    <a href="https://hub.docker.com/_/swift" class="cta-secondary external">{{ site.data.builds.swift_releases.last.name }}-windowsservercore-ltsc2022</a>
+    <a href="https://hub.docker.com/_/swift" class="cta-secondary external">Coming Soon</a>
   </li>
 </ul>
 
