@@ -1,7 +1,7 @@
 <a
     class="link {{ include.type }} {{ include.style }}"
     href="{{ include.url }}"
-    {% if include.css %}style="{{ include.css }}"{% endif %}
-    target="{{ include.target }}">
+    target="{{ include.target }}"
+    {% if include.css %}style="{{ include.css }}"{% endif %}>
         {{ include.text }}
 </a>
