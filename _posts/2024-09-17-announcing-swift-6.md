@@ -66,7 +66,7 @@ When given a closure that throws `ParseError`, `map` will throw `ParseError`. Wh
 
 ### Ownership
 
-Swift 5.9 introduced non-copyable types with the `~Copyable` syntax, which are great for modeling resources with unique ownership, and writing performance-conscious code by eliminating the runtime overhead associated with copying. Swift 6 now supports these types with the generics system, making it possible to write generic code that works with both copyable and non-copyable types.
+Swift 5.9 introduced non-copyable types with the `~Copyable` syntax for modeling resources with unique ownership, and writing performance-conscious code by eliminating the runtime overhead associated with copying. Swift 6 now supports these types with the generics system, making it possible to write generic code that works with both copyable and non-copyable types.
 
 For example:
 
