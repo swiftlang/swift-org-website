@@ -9,7 +9,7 @@ title: Install Swift
 
 {% include install/_os_versions_tabs.md os_versions=site.data.install.ubi  name="Red Hat Universal Base Image" pressed="Red Hat Universal Base Image 9" %}
 
-{% include install/_build_release.md platform="UBI 9" docker_tag="rhel-ubi9" aarch64="true"%}
+{% include install/_build_release.md platform="UBI 9" docker_tag="rhel-ubi9" %}
 
 {% include install/_build_snapshot.md platform="ubi 9"
 aarch64="true"
