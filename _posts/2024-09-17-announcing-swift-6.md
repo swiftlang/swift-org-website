@@ -6,8 +6,6 @@ title: Announcing Swift 6
 author: [hborla]
 ---
 
-## Extended Memory Safety, Embedded and Cross-Platform Support, and Swift Testing
-
 We're delighted to announce the general availability of Swift 6. This is a major new release that expands Swift to more platforms and domains.
 
 Many people know of Swift as a language for app development, with a million apps on the App Store. But Swift is great for more than just apps. Swift’s safety, speed, and approachability make it a great choice for many other use cases including libraries, internet-scale services, and the most performance-critical and secure code.
