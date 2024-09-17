@@ -10,7 +10,7 @@ author: [hborla]
 
 We're delighted to announce the general availability of Swift 6. This is a major new release that expands Swift to more platforms and domains.
 
-Many people know of Swift as a language for app development, with a million apps on the App Store. But Swift is great for more than just apps. Swift’s safety, speed, and approachability make Swift a great choice for many other use cases including libraries, internet-scale services, and the most performance-critical and secure code.
+Many people know of Swift as a language for app development, with a million apps on the App Store. But Swift is great for more than just apps. Swift’s safety, speed, and approachability make it a great choice for many other use cases including libraries, internet-scale services, and the most performance-critical and secure code.
 
 Swift 6 scales even further through new low-level programming features, an embedded Swift language subset, expanded Linux and Windows support, new cross-platform APIs including the new Swift Testing library, and more.
 
