@@ -25,6 +25,8 @@ title: Install Swift
   </li>
 </ul>
 
+{% include install/_static_sdk_release.md %}
+
 <hr>
 
 ## Development Snapshots
