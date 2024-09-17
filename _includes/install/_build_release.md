@@ -4,6 +4,10 @@
 {% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
 {% assign platform_name_url = include.platform | remove: '.' | remove: ' ' | downcase %}
 {% assign platform_name = include.platform | remove : ' ' | downcase %}
+{% assign platform = site.data.builds.swift_releases.last.platforms | where: 'dir', include.platform_name_url | first %}
+{% unless platform %}
+  {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', include.platform | first %}
+{% endunless %}
 
 <ul class="install-instruction">
   <li class="resource">
@@ -19,17 +23,21 @@
     <p class="description">
       Tarball packages (.tar.gz)
       <ul>
-        <li>Signature (PGP): <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ tag }}/{{ tag }}-{{ platform_name }}.tar.gz.sig" >x86_64</a>{% if include.aarch64 %} | <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}-aarch64/{{ tag }}/{{ tag }}-{{ platform_name }}-aarch64.tar.gz.sig">aarch64</a>{% endif %}</li>
+        <li>Signature (PGP):{{ ' ' }}
+          {%- for arch in platform.archs -%}
+          {%- unless forloop.first %} | {% endunless -%}
+          <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}{% if arch != "x86_64" %}-{{ arch }}{% endif %}/{{ tag }}/{{ tag }}-{{ platform_name }}{% if arch != "x86_64" %}-{{ arch }}{% endif %}.tar.gz.sig" >
+            {{- arch -}}
+          </a>
+          {%- endfor -%}
+        </li>
       </ul>
     </p>
-    {% if include.aarch64 %}
     <ul class="install-instruction">
-      <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ tag }}/{{ tag }}-{{ platform_name }}.tar.gz" class="cta-secondary">Download (x86_64)</a>
-      <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}-aarch64/{{ tag }}/{{ tag }}-{{ platform_name }}-aarch64.tar.gz" class="cta-secondary">Download (aarch64)</a>
+      {% for arch in platform.archs %}
+      <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}{% if arch != "x86_64" %}-{{ arch }}{% endif %}/{{ tag }}/{{ tag }}-{{ platform_name }}{% if arch != "x86_64" %}-{{ arch }}{% endif %}.tar.gz" class="cta-secondary">Download ({{ arch }})</a>
+      {% endfor %}
     </ul>
-    {% else %}
-    <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ tag }}/{{ tag }}-{{ platform_name }}.tar.gz" class="cta-secondary">Download (x86_64)</a>
-    {% endif %}
     <a href="/install/linux/tarball" class="cta-secondary">Instructions</a>
   </li>
 </ul>

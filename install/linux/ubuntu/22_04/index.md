@@ -9,7 +9,7 @@ title: Install Swift
 
 {% include install/_os_versions_tabs.md os_versions=site.data.install.ubuntu  name="Ubuntu" pressed="Ubuntu 22.04" %}
 
-{% include install/_build_release.md platform="Ubuntu 22.04" docker_tag="jammy" aarch64="true"%}
+{% include install/_build_release.md platform="Ubuntu 22.04" docker_tag="jammy" %}
 
 {% include install/_build_snapshot.md platform="Ubuntu 22.04"
 aarch64="true"

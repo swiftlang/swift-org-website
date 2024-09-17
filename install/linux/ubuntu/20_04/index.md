@@ -9,7 +9,7 @@ title: Install Swift
 
 {% include install/_os_versions_tabs.md os_versions=site.data.install.ubuntu  name="Ubuntu" pressed="Ubuntu 20.04" %}
 
-{% include install/_build_release.md platform="Ubuntu 20.04" docker_tag="focal" aarch64="true"%}
+{% include install/_build_release.md platform="Ubuntu 20.04" docker_tag="focal" %}
 
 {% include install/_build_snapshot.md platform="Ubuntu 20.04"
 aarch64="true"

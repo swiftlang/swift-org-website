@@ -9,4 +9,4 @@ title: Install Swift
 
 {% include install/_os_versions_tabs.md os_versions=site.data.install.fedora  name="Fedora" pressed="Fedora 39" %}
 
-{% include install/_build_release.md platform="Fedora 39" docker_tag="fedora39" aarch64="true" %}
+{% include install/_build_release.md platform="Fedora 39" docker_tag="fedora39" %}

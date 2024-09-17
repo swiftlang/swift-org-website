@@ -1807,6 +1807,7 @@
       docker: Coming Soon #6.0-windowsservercore-ltsc2022
       archs:
         - x86_64
+        - arm64
     - name: Static SDK
       platform: static-sdk
       checksum: 7984c2cf175bde52ba6ea1fcbe27fc4a148a6237c41c719209c9288ed3ceb652

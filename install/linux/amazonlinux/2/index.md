@@ -9,7 +9,7 @@ title: Install Swift
 
 {% include install/_os_versions_tabs.md os_versions=site.data.install.amazonlinux  name="Amazon Linux" pressed="Amazon Linux 2" %}
 
-{% include install/_build_release.md platform="Amazon Linux 2" docker_tag="amazonlinux2" aarch64="true" rpm="true"%}
+{% include install/_build_release.md platform="Amazon Linux 2" docker_tag="amazonlinux2" rpm="true"%}
 
 {% include install/_build_snapshot.md platform="Amazon Linux 2"
 aarch64="true"
