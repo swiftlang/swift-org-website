@@ -7,6 +7,9 @@ title: Install Swift
 
 ## Latest Release (Swift {{ site.data.builds.swift_releases.last.name }})
 
+{% assign tag = site.data.builds.swift_releases.last.tag %}
+{% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Windows 10' | first %}
+
 <ul class="install-instruction">
   <li class="resource">
     <h3>Package Manager</h3>
@@ -20,7 +23,11 @@ title: Install Swift
     <p class="description">
       Package installers (.exe).
     </p>
-    <a href="https://download.swift.org/{{ site.data.builds.swift_releases.last.tag | downcase }}/windows10/{{ site.data.builds.swift_releases.last.tag }}/{{ site.data.builds.swift_releases.last.tag }}-windows10.exe" class="cta-secondary">Download (x86_64)</a>
+    <ul class="install-instruction">
+      {% for arch in platform.archs %}
+      <a href="https://download.swift.org/{{ tag | downcase }}/windows10{% if arch != "x86_64" %}-{{ arch }}{% endif %}/{{ tag }}/{{ tag }}-windows10{% if arch != "x86_64" %}-{{ arch }}{% endif %}.exe" class="cta-secondary">Download ({{ arch }})</a>
+      {% endfor %}
+    </ul>
     <a href="/install/windows/traditional" class="cta-secondary">Instructions</a>
   </li>
   <li class="resource">
