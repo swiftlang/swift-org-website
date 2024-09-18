@@ -26,7 +26,7 @@ The current members of the Platform Steering Group are:
 
 ## Evolution
 
-The Platform Steering Group has [evolution authority](/charter-drafts/steering-group.md#evolution) over low-level tools in the Swift toolchain, including:
+The Platform Steering Group has evolution authority over low-level tools in the Swift toolchain, including:
 
 * The SwiftPM build system
 * The debugger
