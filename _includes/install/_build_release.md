@@ -41,10 +41,11 @@
     <a href="/install/linux/tarball" class="cta-secondary">Instructions</a>
   </li>
 </ul>
-{% include install/_static_sdk_release.md %}
 
-{% if include.rpm %}
-  <ul class="grid-level-0 grid-layout-2-column">
+<ul class="grid-level-0">
+  {% include install/_static_sdk_release.md %}
+
+  {% if include.rpm %}
     <li class="grid-level-1 featured">
       <h3>RPM</h3>
       <p class="description">
@@ -52,7 +53,7 @@
       </p>
       <a href="/install/linux/rpm" class="cta-secondary">Instructions</a>
     </li>
-  </ul>
-{% endif %}
+  {% endif %}
+</ul>
 
 <hr>

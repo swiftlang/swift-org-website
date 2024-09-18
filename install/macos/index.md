@@ -25,7 +25,9 @@ title: Install Swift
   </li>
 </ul>
 
-{% include install/_static_sdk_release.md %}
+<ul class="grid-level-0">
+  {% include install/_static_sdk_release.md %}
+</ul>
 
 <hr>
 
