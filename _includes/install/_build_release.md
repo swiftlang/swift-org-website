@@ -15,7 +15,7 @@
     <p class="description">
       The offical Docker images for Swift.
     </p>
-    <a href="https://hub.docker.com/_/swift" class="cta-secondary external">Coming Soon</a>
+    <a href="https://hub.docker.com/_/swift" class="cta-secondary external">{{ site.data.builds.swift_releases.last.name }}-{{include.docker_tag}}</a>
     <a href="/install/linux/docker" class="cta-secondary">Instructions</a>
   </li>
   <li class="grid-level-1">
