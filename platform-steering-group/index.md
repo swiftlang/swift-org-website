@@ -17,12 +17,20 @@ The Platform Steering Group is made up of Swift community members who have techn
 
 The current members of the Platform Steering Group are:
 
-* [Saleem Abdulrasool](https://github.com/compnerd) (Core Team Representative & member)
-* [Alastair Houghton](https://github.com/al45tair) (chair)
-* [Danielle Lancashire](https://github.com/endocrimes)
-* [Frederic Riss](https://github.com/fredriss)
-* [Kuba Mracek](https://github.com/kubamracek)
-* [Rokhini Prabhu](https://github.com/rokhinip)
+{% assign people = site.data['platform-steering-group'].members | sort: "name" %}
+<ul>
+{% for person in people %}
+<li>{{ person.name }}
+{%- if person.affiliation -%}
+  , {{ person.affiliation }}
+{% endif %}
+{% if person.github %}
+  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+
 
 ## Evolution
 
