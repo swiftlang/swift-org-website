@@ -2,7 +2,7 @@
 
 ### Getting Started
 
-It is highly recommended that you become familiar with using Swift in your own projects before contributing directly to the language itself. We put together handy [Getting Started][get_started] guides with step-by-step instructions to get you up and running. You should also know how to build Swift [from source](https://www.swift.org/documentation/source-code)
+It is highly recommended that you become familiar with using Swift in your own projects before contributing directly to the language itself. We put together handy [Getting Started][get_started] guides with step-by-step instructions to get you up and running.
 
 ### Process
 
