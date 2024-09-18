@@ -1,6 +1,6 @@
-<ul class="category-list">
+<ul class="grid-level-0 grid-layout-category-list">
   {%- for category in site.data.packages.packages.categories %}
-  <li class="category">
+  <li class="grid-level-1 selectable">
     {%- assign url = "packages/" | append: category.slug | append: ".md" %}
     <a href="{% link {{ url }} %}">
       <h3>{{ category.name }}</h3>
@@ -14,6 +14,6 @@
       <a href="https://swiftpackageindex.com" target="_blank">Swift Package Index</a>, along with all the metadata you
       need to make better decisions about your dependencies.
     </p>
-    <a href="https://swiftpackageindex.com" target="_blank" class="cta-secondary">Browse more packages</a>
+    <a href="https://swiftpackageindex.com" target="_blank" class="cta-secondary external">Browse more packages</a>
   </li>
 </ul>
