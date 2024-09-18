@@ -5,7 +5,7 @@ title: Language Steering Group
 
 The Swift Language Steering Group guides the development of the Swift language and standard libraries through the [Swift evolution process](https://github.com/swiftlang/swift-evolution/blob/main/process.md).
 
-# Charter
+## Charter
 
 The Swift Language Steering Group:
 * works with the [Swift Core Team](/community/#community-structure) to define a roadmap for the focus areas of language and library development in the upcoming releases of Swift.
