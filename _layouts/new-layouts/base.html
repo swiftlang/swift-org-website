@@ -18,9 +18,11 @@
 
 <body>
     {% include new-includes/header.html %}
-    <main>
+    <main class="{{ page.label }}">
         {{content}}
     </main>
     {% include new-includes/footer.html %}
+
+    <script src="/assets/javascripts/new-javascripts/application.js"></script>
 </body>
 </html>

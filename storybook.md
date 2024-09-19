@@ -6,18 +6,73 @@ atom: true
 
 # Swift.org Storybook
 
+## Classes
+* [Grid](#grid)
+
+## Components
+
 * [Banner](#banner)
 * [Box](#box)
 * [Code](#code)
 * [Heading](#heading)
+* [Link](#link)
+* [Section](#section)
 
 <br />
 
 ---
 
+## Classes
+
 <br />
 
-## Banner
+### Grid
+
+<br />
+
+#### Code example
+
+<br />
+
+{% raw %}
+    <div class="grid-1-col">
+        <div>content</div>
+    </div>
+
+    <div class="grid-2-cols">
+        <div>content</div>
+        <div>content</div>
+    </div>
+{% endraw %}
+
+<br />
+
+#### attributes
+
+<br />
+
+#### Render
+
+<br />
+
+<div class="grid-1-col">
+    <div>content</div>
+</div>
+
+<div class="grid-2-cols">
+    <div>content</div>
+    <div>content</div>
+</div>
+
+<br />
+
+---
+
+## Components
+
+<br />
+
+### Banner
 
 <br />
 
@@ -70,7 +125,7 @@ atom: true
 
 <br />
 
-## Box
+### Box
 
 <br />
 
@@ -106,7 +161,8 @@ atom: true
 
 * css (optional) = custom css
 
-* image (optional) = path to image to use in box
+* image (optional) = name of image to use
+    * values: "globe"
 
 * language (optional) = language of code
 
@@ -140,7 +196,7 @@ atom: true
 
 <br />
 
-## Code
+### Code
 
 <br />
 
@@ -191,7 +247,7 @@ atom: true
 
 <br />
 
-## Heading
+### Heading
 
 <br />
 
@@ -246,7 +302,7 @@ atom: true
 
 <br />
 
-## Link
+### Link
 
 <br />
 
@@ -309,7 +365,7 @@ atom: true
 
 <br />
 
-## Section
+### Section
 
 <br />
 

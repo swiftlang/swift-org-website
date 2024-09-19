@@ -1,5 +1,7 @@
 footer {
-    @include section-width($width-layout, $margins-layout);
     line-height: $font-line-height-small;
     font-size: $font-size-small;
+    padding: 20px 0;
+
+    @include section-width($width-layout, $margins-layout);
 }

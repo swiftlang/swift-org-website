@@ -1,6 +1,7 @@
 ---
 layout: new-layouts/base
 title: Welcome to Swift.org
+label: homepage
 atom: true
 ---
 
@@ -15,11 +16,11 @@ atom: true
 {% endcapture %}
 {% capture claim-section %}
 <div class="grid-2-cols">
-    <div>
-        <h2>
+    <div class="claim">
+        <h1>
             Fast, modern, safe, and a joy to write.
-        </h2>
-        <p>
+        </h1>
+        <p class="text">
             Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
         </p>
 
@@ -53,27 +54,30 @@ atom: true
 {% capture fast-safe-expressive-section %}
 <div class="grid-3-cols">
     <div>
-        <h2>
-            Fast, modern, safe, and a joy to write.
-        </h2>
+        <img src="/assets/images/new-images/icon-fast.png" />
+        <h3>
+            Fast
+        </h3>
         <p>
-            Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
+            Swift aims to replace C-based languages and match their performance, while maintaining consistency and predictability.
         </p>
     </div>
     <div>
-        <h2>
-            Fast, modern, safe, and a joy to write.
-        </h2>
+        <img src="/assets/images/new-images/icon-safe.png" />
+        <h3>
+            Safe
+        </h3>
         <p>
-            Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
+            Swift prioritizes safety and clarity, ensuring that code behaves in a safe manner while also promoting good practices.
         </p>
     </div>
     <div>
-        <h2>
-            Fast, modern, safe, and a joy to write.
-        </h2>
+        <img src="/assets/images/new-images/icon-expressive.png" />
+        <h3>
+            Expressive
+        </h3>
         <p>
-            Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
+            Swift builds upon decades of advancements in computer science, providing a modern syntax that is a joy to use.
         </p>
     </div>
 </div>
@@ -85,28 +89,34 @@ atom: true
 
 {% capture use-cases-section %}
 <div class="grid-3-cols">
+    {% capture content %}
+<div>
+    <h3>Server & <br /> Networking</h3>
+    <p>
+        Small memory footprint, quick startup time, and deterministic performance.
+    </p>
+</div>
+    {% endcapture %}
+    {% include new-includes/components/box.html
+        content=content
+        link="#"
+        image="globe"
+    %}
+
     <div>
-        <h2>
-            Fast, modern, safe, and a joy to write.
-        </h2>
+        <h3>
+            Apple <br /> Platforms
+        </h3>
         <p>
-            Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
+            Optimized when running on iOS, macOS, and other Apple platforms.
         </p>
     </div>
     <div>
-        <h2>
-            Fast, modern, safe, and a joy to write.
-        </h2>
+        <h3>
+            Cross-platform <br /> Command-line
+        </h3>
         <p>
-            Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
-        </p>
-    </div>
-    <div>
-        <h2>
-            Fast, modern, safe, and a joy to write.
-        </h2>
-        <p>
-            Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
+            Produces software that runs lightning-fast on all supported platforms.
         </p>
     </div>
 </div>
@@ -140,20 +150,40 @@ atom: true
 {% capture community-section %}
 <div class="grid-2-cols">
     <div>
-        <h2>
-            Fast, modern, safe, and a joy to write.
-        </h2>
-        <p>
-            Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
-        </p>
+        <div>
+            <h3>
+                Announcing Swift Homomorphic Encryption
+            </h3>
+            <p>
+                We’re excited to announce a new open source Swift package for homomorphic encryption in Swift: swift-homomorphic-encryption.
+            </p>
+        </div>
+        <div>
+            <h3>
+                Announcing Swift Homomorphic Encryption
+            </h3>
+            <p>
+                We’re excited to announce a new open source Swift package for homomorphic encryption in Swift: swift-homomorphic-encryption.
+            </p>
+        </div>
     </div>
     <div>
-        <h2>
-            Fast, modern, safe, and a joy to write.
-        </h2>
-        <p>
-            Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
-        </p>
+        <div>
+            <h3>
+                Announcing Swift Homomorphic Encryption
+            </h3>
+            <p>
+                We’re excited to announce a new open source Swift package for homomorphic encryption in Swift: swift-homomorphic-encryption.
+            </p>
+        </div>
+        <div>
+            <h3>
+                Announcing Swift Homomorphic Encryption
+            </h3>
+            <p>
+                We’re excited to announce a new open source Swift package for homomorphic encryption in Swift: swift-homomorphic-encryption.
+            </p>
+        </div>
     </div>
 </div>
 {% endcapture %}
@@ -164,17 +194,17 @@ atom: true
 {% capture community-section %}
 <div class="grid-2-cols">
     <div>
-        <h2>
+        <h3>
             Fast, modern, safe, and a joy to write.
-        </h2>
+        </h3>
         <p>
             Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
         </p>
     </div>
     <div>
-        <h2>
+        <h3>
             Fast, modern, safe, and a joy to write.
-        </h2>
+        </h3>
         <p>
             Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
         </p>
@@ -188,17 +218,17 @@ atom: true
 {% capture case-studies-section %}
 <div class="grid-2-cols">
     <div>
-        <h2>
+        <h3>
             Fast, modern, safe, and a joy to write.
-        </h2>
+        </h3>
         <p>
             Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
         </p>
     </div>
     <div>
-        <h2>
+        <h3>
             Fast, modern, safe, and a joy to write.
-        </h2>
+        </h3>
         <p>
             Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
         </p>
