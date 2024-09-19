@@ -17,22 +17,64 @@ body {
     font-weight: $font-weight-base;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, pre {
     margin: 0;
 }
 
+h1 {
+    font-size: $font-size-big;
+    line-height: 1.2em;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: $font-size-medium;
+    line-height: 1.2em;
+    margin-bottom: 14px;
+}
+
+h3 {
+    font-size: $font-size-medium-small;
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
 .grid-1-col {
-    @include grid($width-layout, 0)
+    @include grid($width-layout, 0);
+
+    @media (max-width: 1080px) {
+        display: block;
+    }
 }
 
 .grid-2-cols {
-    @include grid($width-column, $gap-column)
+    @include grid($width-column, $gap-column);
+
+    @media (max-width: 1080px) {
+        display: block;
+    }
 }
 
 .grid-3-cols {
-    @include grid($width-column-medium, $gap-column-medium)
+    @include grid($width-column-medium, $gap-column-medium);
+
+    @media (max-width: 1080px) {
+        display: block;
+    }
 }
 
 .grid-4-cols {
-    @include grid($width-column-small, $gap-column-small)
+    @include grid($width-column-small, $gap-column-small);
+
+    @media (max-width: 1080px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 320px) {
 }

@@ -29,4 +29,11 @@
             color: $orange;
         }
     }
+
+    &.globe {
+        background-image: url("/assets/images/new-images/image-globe.png");
+        background-repeat: no-repeat;
+        background-size: 182px 185px;
+        background-position: top -40px right -40px;
+    }
 }

@@ -1,15 +1,23 @@
 $height-header: 50px;
 
 header {
-    @include section-width($width-layout, $margins-layout);
     height: $height-header;
     padding: 1rem;
 
+    @include section-width($width-layout, $margins-layout);
+
+    @media (max-width: 1080px) {
+        height: auto;
+    }
+
     .wrapper {
-        align-items: center;
         display: flex;
         justify-content: space-between;
         margin: auto;
+
+        @media (max-width: 1080px) {
+            flex-direction: column;
+        }
 
         .navigation-links {
             list-style: none;
@@ -17,116 +25,55 @@ header {
             padding: 0;
 
             li {
-              display: inline-block;
-              margin-left: 0.3em;
-              text-align: center;
-
-              .active a {
-                font-weight: 700;
-              }
-
-              a {
                 display: inline-block;
-              }
+                margin-left: 0.3em;
+                text-align: center;
 
-              a::before {
-                display: block;
-                content: attr(data-text);
-                font-weight: bold;
-                height: 0;
-                overflow: hidden;
-                visibility: hidden;
-              }
-
-              &.nav-section {
-                font-size: 0.7rem;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                margin-bottom: 0.5rem;
-                padding: 1rem 0 0.5rem;
-              }
-
-              &.nav-cta {
-                margin-left: 1em;
-
-                a {
-                  border-radius: 0.5rem;
-                  padding: 0.8em 0.9em;
-                  text-align: center;
+                .active a {
+                    font-weight: 700;
                 }
-              }
-            }
-        }
-
-        .nav-submenu {
-            display: none;
-            position: absolute;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(5px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
-            min-width: 160px;
-            z-index: 1;
-            list-style: none;
-            padding: 1rem;
-            animation: fade-in-down 0.3s;
-
-            li {
-                display: block;
-                padding: 0;
-                margin: 0;
-                text-align: left;
 
                 a {
-                display: block;
-                padding: 0.7em;
-                border-radius: 8px;
-                transition: all 0.1s ease;
+                    display: inline-block;
+                }
 
-                    &:hover {
-                        background-color: rgba(gray, 0.1);
-                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05),
-                        0 1px 3px rgba(0, 0, 0, 0.08);
+                a::before {
+                    display: block;
+                    content: attr(data-text);
+                    font-weight: bold;
+                    height: 0;
+                    overflow: hidden;
+                    visibility: hidden;
+                }
+
+                &.nav-section {
+                    font-size: 0.7rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-bottom: 0.5rem;
+                    padding: 1rem 0 0.5rem;
+                }
+
+                &.nav-cta {
+                    margin-left: 1em;
+
+                    a {
+                        border-radius: 0.5rem;
+                        padding: 0.8em 0.9em;
+                        text-align: center;
                     }
                 }
             }
-
-            hr {
-                border: none;
-                border-top: 1px solid gray;
-                margin: 0.5rem 0;
-            }
-        }
-
-        .nav-item span {
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .nav-item span i {
-            display: inline-block;
-            margin-left: -0.75em;
-            font-style: normal;
-            font-weight: 100;
-            opacity: 0.2;
-            line-height: 1em;
-            padding-top: 0.2em;
-        }
-
-        .nav-item:hover .nav-submenu,
-        .nav-item:focus-within .nav-submenu {
-            display: block;
         }
     }
 
     #logo {
-        background-image: url("/assets/images/new-images/swift.svg");
-        background-position: -9px 13px;
+        background-image: url("/assets/images/new-images/logo-swift.png");
         background-repeat: no-repeat;
-        background-size: 100px 25px;
+        background-size: 160px 50px;
         display: block;
-        height: 52px;
+        height: 50px;
         text-indent: -9999px;
-        width: 100px;
+        width: 160px;
     }
 }

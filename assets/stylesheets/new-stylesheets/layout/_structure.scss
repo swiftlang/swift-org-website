@@ -19,4 +19,10 @@ $width-column-small: 240px;
 @mixin section-width($width, $margins) {
     margin: $margins;
     width: $width;
+
+    @media (max-width: 1080px) {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
 }
