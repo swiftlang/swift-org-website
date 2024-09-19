@@ -33,16 +33,19 @@ The Core Team also selects one member of the workgroup as the chair. The chair h
 
 The current members of the Language Steering Group are:
 
-* [Tony Allevato](https://github.com/allevato/)
-* [Holly Borla](https://github.com/hborla/)
-* [Steve Canon](https://github.com/stephentyrone/)
-* [Ben Cohen](https://github.com/airspeedswift/)
-* [Doug Gregor](https://github.com/DougGregor/)
-* [Joe Groff](https://github.com/jckarter/)
-* [Freddy Kellison-Linn](https://github.com/Jumhyn/)
-* [John McCall](https://github.com/rjmccall/) (chair)
-* [Becca Royal-Gordon](https://github.com/beccadax/)
-* [Xiaodi Wu](https://github.com/xwu/)
+{% assign people = site.data['language-steering-group'].members | sort: "name" %}
+<ul>
+{% for person in people %}
+<li>{{ person.name }}
+{%- if person.affiliation -%}
+  , {{ person.affiliation }}
+{% endif %}
+{% if person.github %}
+  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+{% endif %}
+</li>
+{% endfor %}
+</ul>
 
 ## Decision making
 
