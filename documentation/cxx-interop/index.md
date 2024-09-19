@@ -1322,6 +1322,44 @@ unOwned.doSomething()
 Note that the Swift compiler will automatically infer the ownership conventons for Swift functions returning `SWIFT_SHARED_REFERENCE` types.
 See [Exposing C++ Shared Reference Types back from Swift](#exposing-c-shared-reference-types-back-from-swift) for calling Swift functions returning `SWIFT_SHARED_REFERENCE` types from C++.
 
+### Calling conventions when passing Shared Reference Types from Swift to C++
+
+If a C++ shared reference type is passed as an argument to a C++ API from Swift, the Swift compiler guarantees that the passed value would be alive. 
+Swift also retains the ownership of the value.
+In other words, the argument is passed at `+0` and there is no transfer of ownership.
+The C++ function should not assume that it has the ownership of the value and should do necessary retain operations if it is needs to take ownership.
+The C++ function is responsible for ensuring that the value pointed to by the parameter is alive during and at the end of the function call.
+
+
+```swift
+var obj = SharedObject.create()
+receiveSharedObject(obj) // Swift guarantees that obj is alive and it is passed at +0
+```
+
+```c++
+void receiveSharedObject(SharedObject *sobj) {
+  ...
+  // Swift assumes that sobj is a valid, non-null object at the end of this function
+}
+```
+
+Note that if the argument is an inout (non-const reference) as shown below:
+
+```c++
+void takeSharedObjectAsInout(SharedObject *& x) { ... }
+```
+
+which would be imported in Swift as
+
+```swift
+func takeSharedObjectAsInout(_ x: inout SharedObject) { ... }
+```
+
+The C++ function can overwrite the value of the argument with the new value.
+However, the C++ function is responsible for releasing the old value, and ensuring that the new value is properly retained so that the Swift caller has ownership of the new value when the function returns.
+Adhering to these rules is necessary to safely and correctly pass around `SWIFT_SHARED_REFERENCE` between Swift and C++.
+These rules are also generally recommended conventions to manage shared objects that use reference counting.
+
 ### Inheritance and Virtual Member Functions
 
 Similar to value types, casting an instance of a derived reference type to a
@@ -1330,7 +1368,7 @@ base reference type, or vice versa, is not yet supported by Swift.
 If a reference type has virtual methods, you can call those methods from Swift.
 This includes pure virtual methods.
 
-#### Exposing C++ Shared Reference Types back from Swift
+### Exposing C++ Shared Reference Types back from Swift
 
 C++ can call into Swift APIs that take or return C++ Shared Reference Types. Objects of these types are always created on the C++ side,
 but their references can be passed back and forth between Swift and C++. This section explains the conventions of incrementing and decrementing
