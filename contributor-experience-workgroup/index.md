@@ -31,92 +31,35 @@ Members of the workgroup serve at the discretion of the Swift Core Team and the 
 
 The current members of the workgroup are:
 
-<table>
-  <thead>
-    <tr>
-      <th>Member</th>
-      <th>Swift forums</th>
-      <th>GitHub</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Alex Hoppen</td>
-      <td><a href="https://forums.swift.org/u/ahoppen">@ahoppen</a></td>
-      <td><a href="https://github.com/ahoppen">@ahoppen</a></td>
-    </tr>
-    <tr>
-      <td>Anthony Latsis</td>
-      <td><a href="https://forums.swift.org/u/anthonylatsis">@anthonylatsis</a></td>
-      <td><a href="https://github.com/AnthonyLatsis">@AnthonyLatsis</a></td>
-    </tr>
-    <tr>
-      <td>Devanshi Modha (Diversity in Swift champion)</td>
-      <td><a href="https://forums.swift.org/u/devanshimodha">@devanshimodha</a></td>
-      <td><a href="https://github.com/devanshimodha">@devanshimodha</a></td>
-    </tr>
-    <tr>
-      <td>Egor Zhdan</td>
-      <td><a href="https://forums.swift.org/u/egor.zhdan">@egor.zhdan</a></td>
-      <td><a href="https://github.com/egorzhdan">@egorzhdan</a></td>
-    </tr>
-    <tr>
-      <td>Harshita Pathipati</td>
-      <td><a href="https://forums.swift.org/u/hpathipati">@hpathipati</a></td>
-      <td><a href="https://github.com/harshitapath">@harshitapath</a></td>
-    </tr>
-    <tr>
-      <td>Holly Borla</td>
-      <td><a href="https://forums.swift.org/u/hborla">@hborla</a></td>
-      <td><a href="https://github.com/hborla">@hborla</a></td>
-    </tr>
-    <tr>
-      <td>James Dempsey</td>
-      <td><a href="https://forums.swift.org/u/James_Dempsey">@James_Dempsey</a></td>
-      <td><a href="https://github.com/dempseyatgithub">@dempseyatgithub</a></td>
-    </tr>
-    <tr>
-      <td>Joseph Heck</td>
-      <td><a href="https://forums.swift.org/u/Joseph_Heck">@Joseph_Heck</a></td>
-      <td><a href="https://github.com/heckj">@heckj</a></td>
-    </tr>
-    <tr>
-      <td>Luciano Almeida</td>
-      <td><a href="https://forums.swift.org/u/LucianoPAlmeida">@LucianoPAlmeida</a></td>
-      <td><a href="https://github.com/LucianoPAlmeida">@LucianoPAlmeida</a></td>
-    </tr>
-    <tr>
-      <td>Mishal Shah</td>
-      <td><a href="https://forums.swift.org/u/mishal_shah">@mishal_shah</a></td>
-      <td><a href="https://github.com/shahmishal">@shahmishal</a></td>
-    </tr>
-    <tr>
-      <td>Paris Pittman</td>
-      <td><a href="https://forums.swift.org/u/parispittman">@parispittman</a></td>
-      <td><a href="https://github.com/parispittman">@parispittman</a></td>
-    </tr>
-    <tr>
-      <td>Pavel Yaskevich (chair)</td>
-      <td><a href="https://forums.swift.org/u/xedin">@xedin</a></td>
-      <td><a href="https://github.com/xedin">@xedin</a></td>
-    </tr>
-    <tr>
-      <td>Suyash Srijan</td>
-      <td><a href="https://forums.swift.org/u/suyashsrijan">@suyashsrijan</a></td>
-      <td><a href="https://github.com/theblixguy">@theblixguy</a></td>
-    </tr>
-    <tr>
-      <td>Timirah James</td>
-      <td><a href="https://forums.swift.org/u/timirahj">@timirahj</a></td>
-      <td><a href="https://github.com/timirahj">@timirahj</a></td>
-    </tr>
-  </tbody>
-</table>
+{% assign people = site.data['contributer-experience-workgroup'].members | sort: "name" %}
+<ul>
+{% for person in people %}
+<li>{{ person.name }}
+{%- if person.affiliation -%}
+  , {{ person.affiliation }}
+{% endif %}
+{% if person.github %}
+  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+{% endif %}
+</li>
+{% endfor %}
+</ul>
 
 We are grateful for the service of the following emeritus workgroup member:
 
-* [Max Desiatov](https://github.com/MaxDesiatov)
-
+{% assign people = site.data['contributer-experience-workgroup'].emeriti | sort: "name" %}
+<ul>
+{% for person in people %}
+<li>{{ person.name }}
+{%- if person.affiliation -%}
+  , {{ person.affiliation }}
+{% endif %}
+{% if person.github %}
+  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+{% endif %}
+</li>
+{% endfor %}
+</ul>
 
 ## Communication
 
