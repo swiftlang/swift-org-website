@@ -39,7 +39,7 @@ They will be joined on the Language Workgroup by the following individuals:
 
 **Steve Canon** is a member of the Apple Swift team, author of several Swift Evolution proposals, and frequent contributor to the standard library. Previously he worked for over a decade on numerics libraries and the language and hardware features that support them.
 
-**Tony Allevato**  is an engineer at Google who maintains their developer tooling for engineers using Swift. His Swift contributions include [Equatable/Hashable synthesis](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0185-synthesize-equatable-hashable.md) and [`swift-format`](https://github.com/apple/swift-format). Previously he was a computer science educator, which drives his interest in Swift and in making it a language that is equally approachable to newcomers and experienced developers.
+**Tony Allevato**  is an engineer at Google who maintains their developer tooling for engineers using Swift. His Swift contributions include [Equatable/Hashable synthesis](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0185-synthesize-equatable-hashable.md) and [`swift-format`](https://github.com/swiftlang/swift-format). Previously he was a computer science educator, which drives his interest in Swift and in making it a language that is equally approachable to newcomers and experienced developers.
 
 **Xiaodi Wu** is a longtime member of the Swift community. He is a contributor to various Swift Evolution proposals as well as the standard library, with a focus on generic integer and floating-point implementations. Xiaodi comes to language design from the broader science community with a sensibility for ease of use by the non-specialist.
 

@@ -141,7 +141,7 @@ Post in the [swift forums](https://forums.swift.org/c/development/compiler/9), w
 
 **Description**
 
-[SourceKit-LSP](https://github.com/apple/sourcekit-lsp) is an implementation of the Language Server Protocol for Swift and C-based languages. There is a [proposal](https://github.com/microsoft/vscode-languageserver-node/blob/324d1039fef2b9622a9784c5cc49d9f6dfc11b65/protocol/src/protocol.sematicTokens.proposed.ts) to add semantic highlighting support to the protocol.  The project is to implement the new semantic highlighting API  in SourceKit-LSP using the semantic highlighting support from sourcekitd for Swift.
+[SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp) is an implementation of the Language Server Protocol for Swift and C-based languages. There is a [proposal](https://github.com/microsoft/vscode-languageserver-node/blob/324d1039fef2b9622a9784c5cc49d9f6dfc11b65/protocol/src/protocol.sematicTokens.proposed.ts) to add semantic highlighting support to the protocol.  The project is to implement the new semantic highlighting API  in SourceKit-LSP using the semantic highlighting support from sourcekitd for Swift.
 
 **Expected outcomes/benefits/deliverables**
 

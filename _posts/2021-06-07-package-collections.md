@@ -64,7 +64,7 @@ Package collections are simple JSON documents. As JSON files, they are easy to p
 
 **Creating the collection**
 
-The recommended way is to use the new [package collection generator](https://github.com/apple/swift-package-collection-generator/tree/main/Sources/PackageCollectionGenerator) tool.  The tool takes a list of package URLs and generates a more complete metadata set for them by parsing the packages manifest file and obtaining metadata from the SCM system where possible.
+The recommended way is to use the new [package collection generator](https://github.com/swiftlang/swift-package-collection-generator/tree/main/Sources/PackageCollectionGenerator) tool.  The tool takes a list of package URLs and generates a more complete metadata set for them by parsing the packages manifest file and obtaining metadata from the SCM system where possible.
 
 Given the following `packages.json`
 
@@ -130,7 +130,7 @@ It’s that easy!
 
 When generating package collections, they can be signed to establish authenticity and protect their integrity. Signing the collection is optional and users can use non-signed collections, but will be prompted for confirmation before doing so.
 
-The recommended way to sign a collection is to use the [package collection signer](https://github.com/apple/swift-package-collection-generator/tree/main/Sources/PackageCollectionSigner) tool which uses a code-signing certificate to sign the collection with.
+The recommended way to sign a collection is to use the [package collection signer](https://github.com/swiftlang/swift-package-collection-generator/tree/main/Sources/PackageCollectionSigner) tool which uses a code-signing certificate to sign the collection with.
 
 For example, using the `collection.json` we created in the previous step as input with a code-signing certificate and its private key, running the following command will create a signed version of the collection as the  `collection-signed.json` file, having the signature embedded in the output file itself.
 
@@ -142,7 +142,7 @@ $ package-collection-sign \
     /certs/signing.cer
 ~~~
 
-You can find more detailed information about generating and signing collections on [SwiftPM’s documentation on the subject](https://github.com/apple/swift-package-manager/blob/main/Documentation/PackageCollections.md).
+You can find more detailed information about generating and signing collections on [SwiftPM’s documentation on the subject](https://github.com/swiftlang/swift-package-manager/blob/main/Documentation/PackageCollections.md).
 
 Once your collection is ready, you can choose how to distribute it. For sharing with students or a small group of collaborators, emailing the collection as an attachment could suffice. Blog authors may choose to host it on their web server and share a link. A large development team may decide to push it to their SCM system and access it from there.
 

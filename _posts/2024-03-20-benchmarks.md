@@ -154,7 +154,7 @@ Sample default output when running benchmarks:
 
 ### Closing Thoughts
 
-The Swift community, including major public projects like [Swift Foundation](https://github.com/apple/swift-foundation), [SwiftPM](https://github.com/apple/swift-package-manager), [SwiftNIO](https://github.com/apple/swift-nio), and [Google Flatbuffers](https://github.com/google/flatbuffers), has recently embraced the Benchmark package to focus on performance optimization. 
+The Swift community, including major public projects like [Swift Foundation](https://github.com/swiftlang/swift-foundation), [SwiftPM](https://github.com/swiftlang/swift-package-manager), [SwiftNIO](https://github.com/apple/swift-nio), and [Google Flatbuffers](https://github.com/google/flatbuffers), has recently embraced the Benchmark package to focus on performance optimization. 
 
  Discover how to leverage this tool for your own Swift applications by exploring [the extensive documentation](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark) and join the [conversation on the Swift forums](https://forums.swift.org/c/related-projects/benchmark) to share insights and get answers to your questions. Or why not provide a PR to your favourite open source package that lacks performance tests?
  

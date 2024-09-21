@@ -13,7 +13,7 @@ Today, we have some exciting announcements for the future of Foundation.
 ## Going Open
 When Swift [began life as an open source project]({% post_url 2015-12-03-welcome %}), we wanted to open not just the language itself, but the ecosystem around it. Foundation has been instrumental in the success of decades of software and has been an integral part of the Swift developer experience from the beginning, and we knew it had to be included in the open source offering.
 
-The [swift-corelibs-foundation](https://github.com/apple/swift-corelibs-foundation) project helped launch the open source Swift version of Foundation in 2016, wrapping a Swift layer around the preexisting, open source C implementation of Foundation.
+The [swift-corelibs-foundation](https://github.com/swiftlang/swift-corelibs-foundation) project helped launch the open source Swift version of Foundation in 2016, wrapping a Swift layer around the preexisting, open source C implementation of Foundation.
 
 In the intervening years, Swift has grown both technologically (e.g. ABI stability), as well as socially, attracting a diverse community of participants bound together by their interest in Swift.
 

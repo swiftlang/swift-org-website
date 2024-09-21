@@ -82,7 +82,7 @@ try fd.closeAfter {
 
 `System` is a multi-platform library, not a cross-platform one. It provides a separate set of APIs and behaviors on every supported platform, closely reflecting the underlying OS interfaces. A single `import` will pull in the native platform interfaces specific for the targeted OS.
 
-Our immediate goal is to simplify building cross-platform libraries and applications such as [SwiftNIO](https://github.com/apple/swift-nio) and the [Swift Package Manager](https://github.com/apple/swift-package-manager). `System` does not eliminate the need for `#if os()` conditionals to implement cross-platform abstractions, but it does make it safer and more expressive to fill out the platform-specific parts.
+Our immediate goal is to simplify building cross-platform libraries and applications such as [SwiftNIO](https://github.com/apple/swift-nio) and the [Swift Package Manager](https://github.com/swiftlang/swift-package-manager). `System` does not eliminate the need for `#if os()` conditionals to implement cross-platform abstractions, but it does make it safer and more expressive to fill out the platform-specific parts.
 
 ## What's Next?
 

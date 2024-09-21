@@ -16,4 +16,4 @@ implementation, but has been built to be completely independent of the
 Objective-C runtime.  Because of this, it is a substantial reimplementation of
 the same API, using pure Swift code layered on top of these common underlying
 libraries.  Much more information about this work is available on our
-[GitHub project page](http://www.github.com/apple/swift-corelibs-foundation).
+[GitHub project page](http://www.github.com/swiftlang/swift-corelibs-foundation).

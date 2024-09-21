@@ -23,7 +23,7 @@ To shine a light on their exceptional work and to inspire future participants, l
 > Author: [Fredrik Wieczerkowski](https://github.com/fwcd) <br/>
 > Mentor: [Alex Hoppen](https://github.com/ahoppen)
 
-[The `SwiftSyntax` library](https://github.com/apple/swift-syntax), which lets users represent, parse, and generate Swift source code using Swift, received major updates. The result builder-based `SwiftSyntaxBuilder` Domain-Specific Language (DSL) was improved and inconveniences in the API surface were fixed and thoroughly tested.
+[The `SwiftSyntax` library](https://github.com/swiftlang/swift-syntax), which lets users represent, parse, and generate Swift source code using Swift, received major updates. The result builder-based `SwiftSyntaxBuilder` Domain-Specific Language (DSL) was improved and inconveniences in the API surface were fixed and thoroughly tested.
 
 During this process, the templates that generated part of `SwiftSyntaxBuilder`'s sources were ported from [`gyb`](https://github.com/apple/swift/blob/main/utils/gyb.py) to type-safe Swift code based on `SwiftSyntaxBuilder`. In other words, the library now **uses itself** to generate its own code!
 

@@ -166,7 +166,7 @@ Robert Widmann
 
 
 ### Show Swift inferred types in VSCode using SourceKit-LSP
-Some IDEs have capability to show inferred types inline within the source code. Recently, similar support has been added for Rust inside VSCode by [rust-analyser](https://github.com/rust-analyzer/rust-analyzer). We would like to offer similar functionality also for Swift. In the project, the student will extend SourceKit-LSP to offer functionality as described in [this LSP proposal](https://github.com/microsoft/language-server-protocol/issues/956). Furthermore, they will extend the [SourceKit-LSP VSCode plugin](https://github.com/apple/sourcekit-lsp/tree/main/Editors/vscode) to show the type hints in the editor. The changes to the editor can follow the same approach as the [rust-analyzer implementation](https://github.com/rust-analyzer/rust-analyzer/blob/master/editors/code/src/inlay_hints.ts).
+Some IDEs have capability to show inferred types inline within the source code. Recently, similar support has been added for Rust inside VSCode by [rust-analyser](https://github.com/rust-analyzer/rust-analyzer). We would like to offer similar functionality also for Swift. In the project, the student will extend SourceKit-LSP to offer functionality as described in [this LSP proposal](https://github.com/microsoft/language-server-protocol/issues/956). Furthermore, they will extend the [SourceKit-LSP VSCode plugin](https://github.com/swiftlang/sourcekit-lsp/tree/main/Editors/vscode) to show the type hints in the editor. The changes to the editor can follow the same approach as the [rust-analyzer implementation](https://github.com/rust-analyzer/rust-analyzer/blob/master/editors/code/src/inlay_hints.ts).
 
 **Skills required**
 
