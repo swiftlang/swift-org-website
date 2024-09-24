@@ -55,7 +55,7 @@ Workgroup members will try to make a decision independently by consensus wheneve
 
 ## Communication 
 
-The Foundation Workgroup communicates with the broader Swift community using the [forum link](https://forums.swift.org/c/related-projects/foundation/99) for general discussions.
+The Foundation Workgroup communicates with the broader Swift community using the [forum](https://forums.swift.org/c/related-projects/foundation/99) for general discussions.
 
 The workgroup can also be contacted privately by messaging [@foundation-workgroup](https://forums.swift.org/new-message?groupname=foundation-workgroup) on the Swift Forums.
 
