@@ -4,7 +4,7 @@ In [Getting Started](/getting-started/cli-swiftpm/),
 a simple command-line tool is built with the Swift Package Manager.
 
 To provide a more complete look at what the Swift Package Manager can do,
-the following example consists of four interdependent packages:
+the following example consists of three interdependent packages:
 
 * [PlayingCard][PlayingCard] - Defines `PlayingCard`, `Suit`, and `Rank` types.
 * [DeckOfPlayingCards][DeckOfPlayingCards] - Defines a `Deck` type that shuffles and deals an array of `PlayingCard` values.
