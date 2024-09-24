@@ -12,18 +12,22 @@ The Foundation Workgroup will:
 * Define processes that govern contributions to Foundation and its related projects
 * Channel feedback to Swift Core Team about the needs of the Swift community.
 
-The current Foundation Workgroup consists of the following people:
+The current members of the Foundation Workgroup are:
 
-* Adam Fowler (@adam-fowler)
-* Charles Hu (@icharleshu)
-* Cory Benfield (@lukasa)
-* Ellen Shapiro (@designatednerd)
-* Jeremy Schonfeld (@jmschonfeld)
-* Karoy Lorentey (@lorentey)
-* Steve Canon (@scanon)
-* Tina Liu (@itingliu), Chair 
-* Tom Doron (@tomerd)
-* Tony Parker (@Tony_Parker)
+{% assign people = site.data['foundation-workgroup'].members | sort: "name" %}
+<ul>
+{% for person in people %}
+<li>{{ person.name }}
+{%- if person.affiliation -%}
+, {{ person.affiliation }}
+{% endif %}
+{% if person.handle %}
+(<a href="https://forums.swift.org/new-message?username={{person.handle}}">@{{person.handle}}</a>)
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+
 
 ## Charter 
 
