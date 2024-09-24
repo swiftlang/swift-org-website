@@ -39,7 +39,7 @@ The workgroup meets quarterly, and also when the review period ends to accept or
 
 ### Evolution Process
 
-The Foundation Workgroup follows an evolution process that is documented in the [Foundation GitHub repo](https://github.com/swiftlang/swift-foundation/blob/main/Evolution.md).
+The Foundation Workgroup follows an evolution process that is documented in the [Foundation GitHub repository](https://github.com/swiftlang/swift-foundation/blob/main/Evolution.md).
 
 ### Membership 
 
@@ -61,7 +61,7 @@ The workgroup can also be contacted privately by messaging [@foundation-workgrou
 
 ## Community Participation 
 
-Foundation welcomes contributions from the community, including bug fixes, tests, documentation, and ports to new platforms. Please see the [CONTRIBUTING](https://github.com/apple/swift-foundation/blob/main/CONTRIBUTING.md) document for more information, including the process for accepting community contributions for new API in Foundation. We would also love your comments and reviews in the community API approval process and evolution processes linked above.
+Foundation welcomes contributions from the community, including bug fixes, tests, documentation, and ports to new platforms. Please see the [`CONTRIBUTING`](https://github.com/apple/swift-foundation/blob/main/CONTRIBUTING.md) document for more information, including the process for accepting community contributions for new API in Foundation. We would also love your comments and reviews in the community API approval process and evolution processes linked above.
 
 Discussion about general topics that are not code specific takes place on the [forum](https://forums.swift.org/c/related-projects/foundation/99). You can also reach out to the workgroup by sending messages to [@foundation-workgroup](https://forums.swift.org/new-message?groupname=foundation-workgroup) . The chair brings the list of outstanding issues and topics to the workgroup during regular workgroup meetings. The workgroup decides the actions for the issues. 
 
