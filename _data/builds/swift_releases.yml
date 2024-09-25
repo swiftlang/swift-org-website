@@ -1814,3 +1814,64 @@
       archs:
         - x86_64
         - arm64
+- name: "6.0.1"
+  tag: swift-6.0.1-RELEASE
+  xcode: Xcode 16
+  xcode_release: false
+  date: 2024-09-24
+  platforms:
+    - name: Ubuntu 20.04
+      platform: Linux
+      docker: 6.0.1-focal
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 6.0.1-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 24.04
+      platform: Linux
+      docker: 6.0.1-noble
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 12
+      platform: Linux
+      docker: 6.0.1-bookworm
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 39
+      platform: Linux
+      docker: 6.0.1-fedora39
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 6.0.1-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 6.0.1-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 6.0.1-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+        - arm64
+    - name: Static SDK
+      platform: static-sdk
+      checksum: d4f46ba40e11e697387468e18987ee622908bc350310d8af54eb5e17c2ff5481
+      archs:
+        - x86_64
+        - arm64
