@@ -135,6 +135,8 @@
           name: communication
         - title: Community Participation
           name: community-participation
+    - title: Foundation
+      url: /foundation-workgroup/
     - section: Governance
     - title: Code of Conduct
       url: /code-of-conduct/
