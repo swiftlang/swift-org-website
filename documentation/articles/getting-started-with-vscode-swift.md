@@ -190,7 +190,7 @@ be used:
 - To Debug tests
 
 The Swift extension supports [XCTest](https://developer.apple.com/documentation/xctest) as well as
-[Swift Testing](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing).
+[Swift Testing](https://swiftpackageindex.com/swiftlang/swift-testing/main/documentation/testing).
 As you write tests they are automatically added to the Test Explorer.
 
 ![Inline test errors](/assets/images/getting-started-with-vscode-swift/testing/inline_assertion_failures.png)
@@ -208,7 +208,7 @@ lines were executed. Line execution counts can be shown or hidden using the
 `Test: Show Inline Coverage` command.
 
 Swift Testing tests annotated with
-[tags](https://swiftpackageindex.com/apple/swift-testing/main/documentation/testing/addingtags)
+[tags](https://swiftpackageindex.com/swiftlang/swift-testing/main/documentation/testing/addingtags)
 can be filtered in the Test Explorer using `@TestTarget:tagName`. You can then
 run or debug the filtered list of tests.
 

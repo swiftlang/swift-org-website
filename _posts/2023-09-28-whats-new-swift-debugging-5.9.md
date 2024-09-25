@@ -58,7 +58,7 @@ Running `po T.self`, when stopped in `use`, will print `Int` when coming in thro
 
 In addition to displaying the concrete type of the generic, you can use this to set conditions that look for concrete types. For example, if you add the condition `T.self == String.self` to the above breakpoint, `use` will only stop when the variable `t` is a `String`. (Note this last example only works on nightly builds of the Swift 5.9 toolchain.)
 
-More details about the implementation of this feature can be found in the original [LLDB pull request](https://github.com/apple/llvm-project/pull/5715).
+More details about the implementation of this feature can be found in the original [LLDB pull request](https://github.com/swiftlang/llvm-project/pull/5715).
 
 ### Fine-grained scope information
 

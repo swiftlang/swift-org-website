@@ -22,12 +22,12 @@ For some ideas of what you can write about, see the project’s [GitHub issues p
 **Improve DocC support for long-form content.**
 There are more opportunities to contribute to an improved documentation experience, like adding support for interactive and offline content, and support for tested code listings.  For more ideas, see the GitHub issues pages for [TSPL][tspl-issues] and [DocC][docc-issues].
 
-[contrib]: https://github.com/apple/swift-book/blob/main/CONTRIBUTING.md
-[docc-issues]: https://github.com/apple/swift-docc/issues
-[docc]: https://github.com/apple/swift-docc
+[contrib]: https://github.com/swiftlang/swift-book/blob/main/CONTRIBUTING.md
+[docc-issues]: https://github.com/swiftlang/swift-docc/issues
+[docc]: https://github.com/swiftlang/swift-docc
 [forum]: https://forums.swift.org/c/92
 [oss-tspl]: https://forums.swift.org/t/59989
 [translation]: https://www.swift.org/documentation/tspl/#translations
-[tspl-issues]: https://github.com/apple/swift-book/milestone/2
+[tspl-issues]: https://github.com/swiftlang/swift-book/milestone/2
 [tspl]: https://docs.swift.org/swift-book/documentation/the-swift-programming-language/
 [se]: https://www.swift.org/swift-evolution/

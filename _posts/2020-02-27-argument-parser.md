@@ -226,12 +226,12 @@ In addition to what we've seen so far, `ArgumentParser` supports `--flag` argume
 
 You can also explore the Swift project's in-flight adoption of `ArgumentParser`:
 
-* [`indexstore-db`](https://github.com/apple/indexstore-db/pull/72) is a simple utility with two commands.
-* [`swift-format`](https://github.com/apple/swift-format/pull/154) uses some advanced features, like custom option values and hidden flags.
+* [`indexstore-db`](https://github.com/swiftlang/indexstore-db/pull/72) is a simple utility with two commands.
+* [`swift-format`](https://github.com/swiftlang/swift-format/pull/154) uses some advanced features, like custom option values and hidden flags.
 
 ## What's Next?
 
-In the near term, there are a couple additional features that need to be added so that SwiftPM can adopt `ArgumentParser` without regressing in functionality — you can find those features tracked as [issues in the repository](https://github.com/apple/swift-argument-parser/issues). Once SwiftPM adoption is complete, we'd like to adopt the library in the [Swift rewrite of the Swift compiler driver](https://github.com/apple/swift-driver), as well.
+In the near term, there are a couple additional features that need to be added so that SwiftPM can adopt `ArgumentParser` without regressing in functionality — you can find those features tracked as [issues in the repository](https://github.com/apple/swift-argument-parser/issues). Once SwiftPM adoption is complete, we'd like to adopt the library in the [Swift rewrite of the Swift compiler driver](https://github.com/swiftlang/swift-driver), as well.
 
 Along with those integrations, we'd like to work with the community toward defining the requirements of a 1.0 release. What other features are critical for widespread adoption in a variety of environments, such as on the server, Windows, and other platforms? What other customization points are most important? The more people using `ArgumentParser`, the better we'll be able to answer these questions together.
 

@@ -7,7 +7,7 @@ author: lplarson
 ---
 
 We are pleased to announce the release of a new [Swift source compatibility test
-suite](https://github.com/apple/swift-source-compat-suite) as part of the effort
+suite](https://github.com/swiftlang/swift-source-compat-suite) as part of the effort
 to maintain source compatibility in future Swift releases.
 
 The source compatibility test suite is community driven, meaning open source

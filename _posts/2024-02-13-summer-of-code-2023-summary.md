@@ -64,7 +64,7 @@ If you’d like to learn more about this project and Delkhaz’s experience, see
 * Mentee: [Ziyang Huang](https://github.com/StevenWong12) 
 * Mentor: [Alex Hoppen](https://github.com/ahoppen)
 
-This project aimed to improve the performance of the [SwiftParser](https://github.com/apple/swift-syntax/tree/main/Sources/SwiftParser) for scenarios like editor syntax highlighting, where minor edits are applied to the file. By adding incremental parsing and re-using parts of the syntax tree that remain unchanged, large performance improvements can be made.
+This project aimed to improve the performance of the [SwiftParser](https://github.com/swiftlang/swift-syntax/tree/main/Sources/SwiftParser) for scenarios like editor syntax highlighting, where minor edits are applied to the file. By adding incremental parsing and re-using parts of the syntax tree that remain unchanged, large performance improvements can be made.
 
 The most challenging part of this project was to make sure we parse the source files correctly. Considering the code snippet below:
 

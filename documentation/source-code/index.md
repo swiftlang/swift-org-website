@@ -21,13 +21,13 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 
 ## Core Libraries
 
-[swift-corelibs-foundation](https://github.com/apple/swift-corelibs-foundation)
+[swift-corelibs-foundation](https://github.com/swiftlang/swift-corelibs-foundation)
 : The source code for Foundation, which provides common functionality for all applications.
 
 [swift-corelibs-libdispatch](https://github.com/apple/swift-corelibs-libdispatch)
 : The source code for libdispatch, which provides concurrency primitives for working on multicore hardware.
 
-[swift-corelibs-xctest](https://github.com/apple/swift-corelibs-xctest)
+[swift-corelibs-xctest](https://github.com/swiftlang/swift-corelibs-xctest)
 : The source code for XCTest, which provides fundamental testing infrastructure for Swift apps and libraries.
 
 ## Package Manager
@@ -75,7 +75,7 @@ Swift builds upon several other open-source projects, most notably
 the repositories of those open-source projects contain Swift-specific
 changes and are merged regularly from their upstream sources. For more information about the clone of LLVM repository, see the section on [LLVM and Swift](/contributing/#llvm-and-swift).
 
-[llvm-project](https://github.com/apple/llvm-project)
+[llvm-project](https://github.com/swiftlang/llvm-project)
 : The source code for [LLVM](http://llvm.org), with a handful of Swift-specific additions. Merged regularly from the [LLVM sources at llvm.org](https://github.com/llvm/llvm-project).
 
 [swift-cmark](https://github.com/swiftlang/swift-cmark)
@@ -87,4 +87,4 @@ README file][lldb-readme].
 
 * * *
 
-[lldb-readme]: https://github.com/apple/llvm-project/blob/next/lldb/README.md "LLDB README"
+[lldb-readme]: https://github.com/swiftlang/llvm-project/blob/next/lldb/README.md "LLDB README"

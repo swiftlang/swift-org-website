@@ -31,13 +31,13 @@ In all, the work included 9 PRs to the Swift project:
 
 * <https://github.com/apple/swift/pull/29581>
 * <https://github.com/apple/swift/pull/30155>
-* <https://github.com/apple/swift-corelibs-foundation/pull/2716>
-* <https://github.com/apple/swift-corelibs-foundation/pull/2737>
-* <https://github.com/apple/swift-package-manager/pull/2642>
-* <https://github.com/apple/swift-package-manager/pull/2647>
-* <https://github.com/apple/swift-tools-support-core/pull/59>
-* <https://github.com/apple/swift-tools-support-core/pull/60>
-* <https://github.com/apple/swift-llbuild/pull/644>
+* <https://github.com/swiftlang/swift-corelibs-foundation/pull/2716>
+* <https://github.com/swiftlang/swift-corelibs-foundation/pull/2737>
+* <https://github.com/swiftlang/swift-package-manager/pull/2642>
+* <https://github.com/swiftlang/swift-package-manager/pull/2647>
+* <https://github.com/swiftlang/swift-tools-support-core/pull/59>
+* <https://github.com/swiftlang/swift-tools-support-core/pull/60>
+* <https://github.com/swiftlang/swift-llbuild/pull/644>
 
 
 ## How Downloadable Images are Built

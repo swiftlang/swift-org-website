@@ -43,7 +43,7 @@ Medium/Hard
 
 **Description**
 
-[SourceKit-LSP](https://github.com/apple/sourcekit-lsp) is an implementation of the Language Server Protocol for Swift and C-based languages. The protocol defines range-based code-formatting functionality which is missing from SourceKit-LSP. The task is to add code-formatting using one of the available swift-syntax based code-formatters, like [swift-format](https://github.com/google/swift/tree/format), for Swift.
+[SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp) is an implementation of the Language Server Protocol for Swift and C-based languages. The protocol defines range-based code-formatting functionality which is missing from SourceKit-LSP. The task is to add code-formatting using one of the available swift-syntax based code-formatters, like [swift-format](https://github.com/google/swift/tree/format), for Swift.
 
 **Expected outcomes/benefits/deliverables**
 
@@ -68,7 +68,7 @@ Easy/Medium
 
 **Description**
 
-[SourceKit-LSP](https://github.com/apple/sourcekit-lsp) provides full-fledged language support for Swift and C-based languages, for editors that support the LSP protocol, like VSCode and SublimeText. It supports SwiftPM projects and clang's compilation database. The Swift Standard Library has a custom build process that prevents StdLib authors from utilizing SourceKit-LSP for their developement experience. The task is to make the necessary changes and allow SourceKit-LSP to provide first-class support for authoring the Swift Standard Library.
+[SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp) provides full-fledged language support for Swift and C-based languages, for editors that support the LSP protocol, like VSCode and SublimeText. It supports SwiftPM projects and clang's compilation database. The Swift Standard Library has a custom build process that prevents StdLib authors from utilizing SourceKit-LSP for their developement experience. The task is to make the necessary changes and allow SourceKit-LSP to provide first-class support for authoring the Swift Standard Library.
 
 **Expected outcomes/benefits/deliverables**
 

@@ -54,14 +54,14 @@ can be integrated with other build systems such as SwiftPM. The open source
 project is composed of several components, some of which may be interesting in
 their own right for building other developer tools. The components include:
 
-- [**Swift-DocC**](https://github.com/apple/swift-docc) — the documentation compiler tool that processes source file
+- [**Swift-DocC**](https://github.com/swiftlang/swift-docc) — the documentation compiler tool that processes source file
 comments, standalone Markdown files, and related assets to produce a
 machine-readable JSON archive.
-- [**Swift-DocC-Render**](https://github.com/apple/swift-docc-render) — a JavaScript-based web application that renders
+- [**Swift-DocC-Render**](https://github.com/swiftlang/swift-docc-render) — a JavaScript-based web application that renders
 compiled DocC archives.
-- [**Swift-Markdown**](https://github.com/apple/swift-markdown) — a library that makes it easy to parse Markdown syntax in
+- [**Swift-Markdown**](https://github.com/swiftlang/swift-markdown) — a library that makes it easy to parse Markdown syntax in
 Swift.
-- [**SymbolKit**](https://github.com/apple/swift-docc-symbolkit) — a Swift library that parses the symbol graph files emitted by
+- [**SymbolKit**](https://github.com/swiftlang/swift-docc-symbolkit) — a Swift library that parses the symbol graph files emitted by
 the Swift compiler. These files encapsulate information about a module’s APIs,
 including their documentation comments.
 
@@ -128,7 +128,7 @@ documenting and teaching Swift.
 
 Your experience, feedback, and contributions are greatly encouraged!
 
-* Get started by trying out [Swift-DocC on GitHub](https://github.com/apple/swift-docc)
+* Get started by trying out [Swift-DocC on GitHub](https://github.com/swiftlang/swift-docc)
 * Read the Swift-DocC documentation on [swift.org/documentation](/documentation/docc) (written using Swift-DocC!)
 * Get help with using Swift-DocC in the [Using Swift forum](https://forums.swift.org/c/swift-users/15)
 * Discuss the implementation and development of Swift-DocC in the [Swift-DocC forum](https://forums.swift.org/c/development/swift-docc)
@@ -138,7 +138,7 @@ Your experience, feedback, and contributions are greatly encouraged!
     * [Elevate your DocC documentation in Xcode](https://developer.apple.com/videos/play/wwdc2021/10167/)
     * [Build interactive tutorials using DocC](https://developer.apple.com/videos/play/wwdc2021/10235/)
 * [File a bug report](https://bugs.swift.org/) for problems you find, or ideas for improvements
-* And as always, [pull requests](https://github.com/apple/swift-docc/pulls) are welcome!
+* And as always, [pull requests](https://github.com/swiftlang/swift-docc/pulls) are welcome!
 
 ### Questions?
 
