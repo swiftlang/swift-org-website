@@ -11,7 +11,7 @@ title: Install Swift
   <li class="grid-level-1">
     <h3>Xcode</h3>
     <p class="description">
-      Download the current version of Xcode which contains the latest Swift release.
+      Download the latest version of Xcode, which is regularly refreshed with the latest Swift toolchain.
     </p>
     <a href="https://developer.apple.com/xcode/" class="cta-secondary external">Install Xcode</a>
   </li>
