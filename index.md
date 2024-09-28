@@ -20,7 +20,7 @@ atom: true
         <h1>
             Fast, modern, safe, and a joy to write.
         </h1>
-        <p class="text">
+        <p class="text" markdown=1>
             Swift is a general-purpose programming language that’s approachable for newcomers and powerful for experts.
         </p>
 
