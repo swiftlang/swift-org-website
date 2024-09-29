@@ -20,3 +20,9 @@ $yellow: #F9D969;
 $yellow-dark: #F0B138;
 $yellow-light: #F9E2AB;
 $yellow-very-light: #FBECCF;
+
+@mixin isDarkTheme() {
+    body:has(#theme-toggle:checked) {
+        @content;
+    }
+}
