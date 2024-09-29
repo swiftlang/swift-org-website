@@ -1,10 +1,13 @@
 ---
-layout: page
-title: Community Overview
+layout: new-layouts/base
+title: Community
+label: community
+atom: true
 ---
 
+{% capture banner-section %}
+<div class="grid-1-col" markdown=1>
 The Swift.org community has the singular goal of making the world's best general purpose programming language.  Collectively we will develop the language in the open, with contributions from anyone who wishes to participate.  This guideline document describes how the Swift community is organized so that we can work together to add amazing new capabilities to Swift, and make it available to even more developers across more platforms.
-
 
 ## Communication
 
@@ -106,3 +109,8 @@ The current Language Steering Group members are:
 [bugtracker]:  http://github.com/swiftlang/swift/issues
 
 [swift-apple]: https://developer.apple.com/swift  "Apple developer home page for Swift"
+</div>
+{% endcapture %}
+{% include new-includes/components/section.html
+    content=banner-section
+%}
