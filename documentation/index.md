@@ -1,25 +1,15 @@
 ---
-layout: page
+layout: new-layouts/base
 title: Documentation
+label: documentation
+atom: true
 ---
 
-If you are new to Swift, you may want to check out these additional resources.
-
-<div class="links links-list-nostyle" markdown="1">
-- [Getting started guide](/getting-started/)
-- [Swift resources on developer.apple.com](https://developer.apple.com/swift/resources/){:target="_blank" class="link-external"}
+{% capture banner-section %}
+<div class="grid-1-col" markdown=1>
+  <h1>Documentation</h1>
 </div>
-
-{%- for category in site.data.documentation %}
-  <h2>
-  {{ category.header }}
-  </h2>
-  <div>
-  {%- for entry in category.pages %}
-    <div>
-    <a href="{{ entry.url }}">{{ entry.title }}</a>{% if entry.description %}: {{ entry.description }}{% endif %}
-    </div>
-    <br/>
-  {% endfor %}
-  </div>
-{% endfor %}
+{% endcapture %}
+{% include new-includes/components/section.html
+    content=banner-section
+%}
