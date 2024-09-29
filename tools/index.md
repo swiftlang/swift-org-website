@@ -1,8 +1,15 @@
 ---
-layout: page-wide
+layout: new-layouts/base
 title: Tools
+label: tools
+atom: true
 ---
 
-Your favorite editor likely already supports Swift. Below are setup guides for some popular choices.
-
-{% include_relative _editors.md %}
+{% capture banner-section %}
+<div class="grid-1-col" markdown=1>
+  <h1>Tools</h1>
+</div>
+{% endcapture %}
+{% include new-includes/components/section.html
+    content=banner-section
+%}
