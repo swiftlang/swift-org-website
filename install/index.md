@@ -1,10 +1,17 @@
 ---
 redirect_from:
   - "/download/"
-layout: page-wide
+layout: new-layouts/base
 title: Install Swift
+label: install
+atom: true
 ---
 
-{% include install/_os_tabs.md %}
-
-<script src="/assets/javascripts/install.js"></script>
+{% capture banner-section %}
+<div class="grid-1-col" markdown=1>
+  <h1>Install Swift</h1>
+</div>
+{% endcapture %}
+{% include new-includes/components/section.html
+    content=banner-section
+%}
