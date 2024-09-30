@@ -1,90 +1,90 @@
 @media only print {
-    html body {
-      background: white;
-      font-size: 12pt;
-      padding: 0.5in;
+  html body {
+    background: white;
+    font-size: 12pt;
+    padding: 0.5in;
 
-      * {
-        -webkit-print-color-adjust: exact;
-      }
+    * {
+      -webkit-print-color-adjust: exact;
     }
+  }
 
-    a {
-      color: black !important;
-      text-decoration: underline !important;
+  a {
+    color: black !important;
+    text-decoration: underline !important;
 
-      &[href^="http://"]:after
-      {
-        content: " (" attr(href) ") ";
-        color: #444;
-      }
+    &[href^="http://"]:after
+    {
+      content: " (" attr(href) ") ";
+      color: #444;
     }
+  }
 
-    h1,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  article > div,
+  pre,
+  table {
+    page-break-inside: avoid;
+  }
+
+  details:not([open]) {
+    visibility: visible;
+  }
+
+  details:not([open]) summary {
+    display: none !important;
+  }
+
+  details:not([open]) > *,
+  details:not([open]) {
+    display: block;
+  }
+
+  .alert {
+    margin: 1.5em 0;
+  }
+
+  main {
+    width: auto;
+    padding: 0;
+    border: 0;
+    float: none !important;
+    color: black;
+    background: transparent;
+    margin: 0;
+    max-width: 100%;
+    min-height: 1in;
+  }
+
+  nav[role="navigation"] {
+    background: transparent;
+    border: none;
+    width: auto;
+    position: static;
+    padding: 0;
+
     h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    article > div,
-    pre,
-    table {
-      page-break-inside: avoid;
-    }
-
-    details:not([open]) {
-      visibility: visible;
-    }
-
-    details:not([open]) summary {
-      display: none !important;
-    }
-
-    details:not([open]) > *,
-    details:not([open]) {
-      display: block;
-    }
-
-    .alert {
-      margin: 1.5em 0;
-    }
-
-    main {
-      width: auto;
-      padding: 0;
-      border: 0;
-      float: none !important;
-      color: black;
-      background: transparent;
-      margin: 0;
-      max-width: 100%;
-      min-height: 1in;
-    }
-
-    nav[role="navigation"] {
-      background: transparent;
-      border: none;
-      width: auto;
-      position: static;
-      padding: 0;
-
-      h2,
-      ul {
-        display: none;
-      }
-
-      #logo {
-        position: static;
-        margin-bottom: 1.5em;
-
-        a {
-          background-position: -15px;
-        }
-      }
-    }
-
-    footer[role="contentinfo"] {
+    ul {
       display: none;
     }
+
+    #logo {
+      position: static;
+      margin-bottom: 1.5em;
+
+      a {
+        background-position: -15px;
+      }
+    }
+  }
+
+  footer[role="contentinfo"] {
+    display: none;
+  }
 }

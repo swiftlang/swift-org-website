@@ -1,21 +1,21 @@
 .heading {
-    text-align: center;
-    position: relative;
+  text-align: center;
+  position: relative;
+
+  hr {
+    width: 60px;
+  }
+
+  .text {
+    padding-top: 20px;
+  }
+
+  &.box-component {
+    text-align: left;
 
     hr {
-        width: 60px;
+      position: absolute;
+      left: 0;
     }
-
-    .text {
-        padding-top: 20px;
-    }
-
-    &.box-component {
-        text-align: left;
-
-        hr {
-            position: absolute;
-            left: 0;
-        }
-    }
+  }
 }

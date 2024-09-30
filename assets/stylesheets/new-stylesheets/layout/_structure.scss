@@ -11,18 +11,18 @@ $width-column-medium: 340px;
 $width-column-small: 240px;
 
 @mixin grid($col-width, $gap) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax($col-width, 1fr));
-    gap: $gap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($col-width, 1fr));
+  gap: $gap;
 }
 
 @mixin section-width($width, $margins) {
-    margin: $margins;
-    width: $width;
+  margin: $margins;
+  width: $width;
 
-    @media (max-width: 1080px) {
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
+  @media (max-width: 1080px) {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
 }

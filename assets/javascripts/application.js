@@ -1,10 +1,10 @@
----
-layout: source
----
-
 (function () {
-  var navbarElement = document.querySelectorAll('nav[role="navigation"] > .list-items > ul li.active ul li a');
-  var headerElement = document.querySelectorAll('nav[role="navigation"] > .list-items > ul li.active ul li');
+  var navbarElement = document.querySelectorAll(
+    'nav[role="navigation"] > .list-items > ul li.active ul li a',
+  );
+  var headerElement = document.querySelectorAll(
+    'nav[role="navigation"] > .list-items > ul li.active ul li',
+  );
 
   var activeClass = "active";
 
@@ -27,65 +27,80 @@ layout: source
     if (!element || !className) {
       return;
     }
-    var classString = element.className, nameIndex = classString.indexOf(className);
+    var classString = element.className,
+      nameIndex = classString.indexOf(className);
     if (nameIndex == -1) {
       classString += " " + className;
     } else {
-      classString = classString.substr(0, nameIndex) + classString.substr(nameIndex + className.length);
+      classString =
+        classString.substr(0, nameIndex) +
+        classString.substr(nameIndex + className.length);
     }
     element.className = classString;
   }
 
-  document.getElementById('menu-toggle').addEventListener('mousedown', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    toggleClass(menuToggle, 'open');
-    menuToggle.setAttribute('aria-expanded', menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
-    toggleClass(document.querySelector('nav.mobile-navigation'), 'open');
-  });
+  document
+    .getElementById("menu-toggle")
+    .addEventListener("mousedown", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      toggleClass(menuToggle, "open");
+      menuToggle.setAttribute(
+        "aria-expanded",
+        menuToggle.getAttribute("aria-expanded") === "true" ? "false" : "true",
+      );
+      toggleClass(document.querySelector("nav.mobile-navigation"), "open");
+    });
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const sectionToggles = document.querySelectorAll('.section-toggle');
+  document.addEventListener("DOMContentLoaded", function () {
+    const sectionToggles = document.querySelectorAll(".section-toggle");
 
-    sectionToggles.forEach(function(toggle) {
-      toggle.addEventListener('mousedown', function() {
-        var navSubmenu = toggle.closest('.link-container').nextElementSibling;
+    sectionToggles.forEach(function (toggle) {
+      toggle.addEventListener("mousedown", function () {
+        var navSubmenu = toggle.closest(".link-container").nextElementSibling;
 
         if (navSubmenu) {
-          toggleClass(navSubmenu, 'open');
-          var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-          toggle.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+          toggleClass(navSubmenu, "open");
+          var isExpanded = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", isExpanded ? "false" : "true");
         }
       });
     });
 
-    const interactiveTabs = document.querySelectorAll('.interactive-tabs');
+    const interactiveTabs = document.querySelectorAll(".interactive-tabs");
 
     if (interactiveTabs.length > 0) {
-      interactiveTabs.forEach(function(interactiveTab) {
-        const tabButtons = interactiveTab.querySelectorAll('.interactive-tabs button');
+      interactiveTabs.forEach(function (interactiveTab) {
+        const tabButtons = interactiveTab.querySelectorAll(
+          ".interactive-tabs button",
+        );
 
         if (tabButtons.length > 0) {
-          tabButtons.forEach(function(tabButton) {
-            tabButton.addEventListener('click', function(e) {
-              const activeTabButton = interactiveTab.querySelector('button[aria-pressed="true"]');
-              const activeContent = interactiveTab.querySelector('.content.active');
-              const content = interactiveTab.querySelector(`.content[data-tab='${tabButton.textContent}']`);
+          tabButtons.forEach(function (tabButton) {
+            tabButton.addEventListener("click", function (e) {
+              const activeTabButton = interactiveTab.querySelector(
+                'button[aria-pressed="true"]',
+              );
+              const activeContent =
+                interactiveTab.querySelector(".content.active");
+              const content = interactiveTab.querySelector(
+                `.content[data-tab='${tabButton.textContent}']`,
+              );
 
               if (activeTabButton) {
-                activeTabButton.setAttribute('aria-pressed', 'false');
+                activeTabButton.setAttribute("aria-pressed", "false");
               }
 
-              e.currentTarget.setAttribute('aria-pressed', 'true');
+              e.currentTarget.setAttribute("aria-pressed", "true");
 
               if (activeContent) {
-                activeContent.classList.remove('active');
+                activeContent.classList.remove("active");
               }
 
-              content.classList.add('active');
+              content.classList.add("active");
             });
           });
         }
-      })
+      });
     }
   });
 })();

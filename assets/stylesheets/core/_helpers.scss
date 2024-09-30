@@ -14,7 +14,9 @@
 
 @mixin nav-link-style {
   color: var(--color-nav-link-color);
-  transition: color 0.2s ease, border 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border 0.2s ease;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8rem;

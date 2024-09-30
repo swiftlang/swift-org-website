@@ -1,21 +1,16 @@
 ---
 layout: default
 ---
+
 <article class="page">
-  {% unless page.hideTitle %}
-    {% if page.title %}
-      <header>
-        <h1>{{ page.title }}</h1>
-      </header>
-    {% endif %}
-  {% endunless %}
-
-  {{ content }}
-
-  {% if page.author %}
-    <footer>
-      <p>Contributed by</p>
-      {% include authors.html authors=page.author %}
-    </footer>
+  {% unless page.hideTitle %} {% if page.title %}
+  <header>
+    <h1>{{ page.title }}</h1>
+  </header>
+  {% endif %} {% endunless %} {{ content }} {% if page.author %}
+  <footer>
+    <p>Contributed by</p>
+    {% include authors.html authors=page.author %}
+  </footer>
   {% endif %}
 </article>

@@ -1,24 +1,24 @@
 .section {
-    background-color: $white;
+  background-color: $white;
+  color: $black;
+  padding: 20px 0;
+
+  &.orange {
+    background-color: $orange;
+    color: $white;
+  }
+
+  &.purple {
+    background-color: $purple;
+    color: $white;
+  }
+
+  &.yellow {
+    background-color: $yellow-dark;
     color: $black;
-    padding: 20px 0;
+  }
 
-    &.orange {
-        background-color: $orange;
-        color: $white;
-    }
-
-    &.purple {
-        background-color: $purple;
-        color: $white;
-    }
-
-    &.yellow {
-        background-color: $yellow-dark;;
-        color: $black;
-    }
-
-    .content {
-        @include section-width($width-layout, $margins-layout);
-    }
+  .content {
+    @include section-width($width-layout, $margins-layout);
+  }
 }

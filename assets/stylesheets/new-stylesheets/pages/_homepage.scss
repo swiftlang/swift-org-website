@@ -1,20 +1,20 @@
 .homepage {
-    .claim {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+  .claim {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-        .text {
-            font-size: $font-size-medium-small;
-            line-height: $font-line-height-base;
-        }
-
-        .button {
-            margin-top: auto;
-        }
+    .text {
+      font-size: $font-size-medium-small;
+      line-height: $font-line-height-base;
     }
 
-    img {
-        max-height: 118px;
+    .button {
+      margin-top: auto;
     }
+  }
+
+  img {
+    max-height: 118px;
+  }
 }
