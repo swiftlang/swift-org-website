@@ -8,6 +8,7 @@ header {
 
   @media (max-width: 1080px) {
     height: auto;
+    padding: 1rem;
   }
 
   .wrapper {
@@ -17,9 +18,28 @@ header {
 
     @media (max-width: 1080px) {
       flex-direction: column;
+
+      #menu-toggle,
+      #menu-toggle + label {
+        display: block!important;
+      }
+
+      .navigation-links {
+        display: none!important;
+      }
+
+      #menu-toggle:checked + label + .navigation-links {
+        display: block!important;
+      }
+    }
+
+    #menu-toggle,
+    #menu-toggle + label {
+      display: none;
     }
 
     .navigation-links {
+      display: block;
       list-style: none;
       margin: 0;
       padding: 0;
