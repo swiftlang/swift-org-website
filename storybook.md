@@ -17,6 +17,7 @@ atom: true
 * [Heading](#heading)
 * [Link](#link)
 * [Section](#section)
+* [Tabs](#tabs)
 
 <br />
 
@@ -442,6 +443,59 @@ atom: true
     include new-includes/components/section.html
     style="orange"
     content=test-section
+%}
+
+<br />
+
+---
+
+<br />
+
+### Tabs
+
+<br />
+
+#### Code example
+
+<br />
+
+{% raw %}
+
+    {%
+        include new-includes/components/tabs.html
+
+        group="1"
+
+        tabs=site.data.new-data.install.os
+
+    %}
+
+{% endraw %}
+
+<br />
+
+#### attributes
+
+<br />
+
+{% raw %}
+
+* tabs = list of tabs
+  * name (required)
+  * link (optional, only if content is missing)
+  * content (optional, only if link is missing)
+
+{% endraw %}
+
+<br />
+
+#### Render
+
+<br />
+
+{% include new-includes/components/tabs.html
+    group="1"
+    tabs=site.data.new-data.install.os
 %}
 
 <br />
