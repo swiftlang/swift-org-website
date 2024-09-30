@@ -3,7 +3,9 @@
     {
       "files": [
         "**/*.css",
-        "**/*.scss"
+        "**/*.scss",
+        "**/*.html",
+        "**/*.js"
       ],
       "options": {
         "tabWidth": 2,

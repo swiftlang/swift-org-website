@@ -1,79 +1,79 @@
 $height-header: 50px;
 
 header {
-    height: $height-header;
-    padding: 1rem;
+  height: $height-header;
+  padding: 1rem;
 
-    @include section-width($width-layout, $margins-layout);
+  @include section-width($width-layout, $margins-layout);
+
+  @media (max-width: 1080px) {
+    height: auto;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
 
     @media (max-width: 1080px) {
-        height: auto;
+      flex-direction: column;
     }
 
-    .wrapper {
-        display: flex;
-        justify-content: space-between;
-        margin: auto;
+    .navigation-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
-        @media (max-width: 1080px) {
-            flex-direction: column;
+      li {
+        display: inline-block;
+        margin-left: 0.3em;
+        text-align: center;
+
+        .active a {
+          font-weight: 700;
         }
 
-        .navigation-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-
-            li {
-                display: inline-block;
-                margin-left: 0.3em;
-                text-align: center;
-
-                .active a {
-                    font-weight: 700;
-                }
-
-                a {
-                    display: inline-block;
-                }
-
-                a::before {
-                    display: block;
-                    content: attr(data-text);
-                    font-weight: bold;
-                    height: 0;
-                    overflow: hidden;
-                    visibility: hidden;
-                }
-
-                &.nav-section {
-                    font-size: 0.7rem;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    margin-bottom: 0.5rem;
-                    padding: 1rem 0 0.5rem;
-                }
-
-                &.nav-cta {
-                    margin-left: 1em;
-
-                    a {
-                        border-radius: 0.5rem;
-                        padding: 0.8em 0.9em;
-                        text-align: center;
-                    }
-                }
-            }
+        a {
+          display: inline-block;
         }
-    }
 
-    #logo {
-        background-image: url("/assets/images/new-images/logo-swift.png");
-        background-repeat: no-repeat;
-        background-size: 160px 50px;
-        display: block;
-        height: 50px;
-        text-indent: -9999px;
-        width: 160px;
+        a::before {
+          display: block;
+          content: attr(data-text);
+          font-weight: bold;
+          height: 0;
+          overflow: hidden;
+          visibility: hidden;
+        }
+
+        &.nav-section {
+          font-size: 0.7rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 0.5rem;
+          padding: 1rem 0 0.5rem;
+        }
+
+        &.nav-cta {
+          margin-left: 1em;
+
+          a {
+            border-radius: 0.5rem;
+            padding: 0.8em 0.9em;
+            text-align: center;
+          }
+        }
+      }
     }
+  }
+
+  #logo {
+    background-image: url("/assets/images/new-images/logo-swift.png");
+    background-repeat: no-repeat;
+    background-size: 160px 50px;
+    display: block;
+    height: 50px;
+    text-indent: -9999px;
+    width: 160px;
+  }
 }

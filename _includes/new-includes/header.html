@@ -1,25 +1,27 @@
 <header class="site-navigation">
-    <div class="wrapper">
-        <a href="/" title="Swift logo" id="logo"></a>
+  <div class="wrapper">
+    <a href="/" title="Swift logo" id="logo"></a>
 
-        <nav role="navigation">
-            <ul class="navigation-links">
-                {% for nav in site.data.navigation %}
-                    <li class="nav-item{% if nav.isCta %} nav-cta{% endif %}">
-                        {% if nav.isCta and nav.url %}
-                            <a href="{{ nav.url }}" data-text="{{ nav.header }}">{{ nav.header }}</a>
-                        {% else %}
-                            <span class="{% if page.url == nav.url %}active{% endif %}">
-                                {% if nav.url %}
-                                    <a href="{{ nav.url }}" data-text="{{ nav.header }}">{{ nav.header }}</a>
-                                {% else %}
-                                    {{ nav.header }}
-                                {% endif %}
-                            </span>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav>
-    </div>
+    <nav role="navigation">
+      <ul class="navigation-links">
+        {% for nav in site.data.navigation %}
+        <li class="nav-item{% if nav.isCta %} nav-cta{% endif %}">
+          {% if nav.isCta and nav.url %}
+          <a href="{{ nav.url }}" data-text="{{ nav.header }}"
+            >{{ nav.header }}</a
+          >
+          {% else %}
+          <span class="{% if page.url == nav.url %}active{% endif %}">
+            {% if nav.url %}
+            <a href="{{ nav.url }}" data-text="{{ nav.header }}"
+              >{{ nav.header }}</a
+            >
+            {% else %} {{ nav.header }} {% endif %}
+          </span>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
 </header>

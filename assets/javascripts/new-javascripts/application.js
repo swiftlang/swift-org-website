@@ -1,6 +1,1 @@
----
-layout: source
----
-
-(function () {
-})()
+(function () {})();

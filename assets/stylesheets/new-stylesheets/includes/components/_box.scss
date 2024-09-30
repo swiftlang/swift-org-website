@@ -1,39 +1,47 @@
 .box-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .box {
-    border: 1px solid $black;
-    border-radius: $border-radius-box;
-    width: 100%;
-    color: $black;
-    text-decoration: none;
-    padding: 20px;
-    box-sizing: border-box;
+  border: 1px solid $black;
+  border-radius: $border-radius-box;
+  width: 100%;
+  color: $black;
+  text-decoration: none;
+  padding: 20px;
+  box-sizing: border-box;
 
-    h2, h3, h4, h5, h6 {
-        margin-bottom: 20px;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 20px;
+  }
+
+  &.orange {
+    border: 0;
+    background-color: $orange;
+    color: $white;
+  }
+
+  &.white {
+    border-color: $pink;
+    color: $gray;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $orange;
     }
+  }
 
-    &.orange {
-        border: 0;
-        background-color: $orange;
-        color: $white;
-    }
-
-    &.white {
-        border-color: $pink;
-        color: $gray;
-
-        h2, h3, h4, h5, h6 {
-            color: $orange;
-        }
-    }
-
-    &.globe {
-        background-image: url("/assets/images/new-images/image-globe.png");
-        background-repeat: no-repeat;
-        background-size: 182px 185px;
-        background-position: top -40px right -40px;
-    }
+  &.globe {
+    background-image: url("/assets/images/new-images/image-globe.png");
+    background-repeat: no-repeat;
+    background-size: 182px 185px;
+    background-position: top -40px right -40px;
+  }
 }

@@ -1,23 +1,23 @@
 .banner {
-    border-radius: $border-radius-box;
-    width: 100%;
-    color: $white;
-    text-align: center;
-    box-sizing: border-box;
+  border-radius: $border-radius-box;
+  width: 100%;
+  color: $white;
+  text-align: center;
+  box-sizing: border-box;
 
-    p {
-        margin: 10px;
+  p {
+    margin: 10px;
+  }
+
+  &.purple {
+    border: 2px solid $purple-light;
+    border-radius: $border-radius-button;
+    background: $purple-very-light;
+    color: $green;
+
+    a {
+      color: $purple;
+      font-weight: $font-weight-heavy;
     }
-
-    &.purple {
-        border: 2px solid $purple-light;
-        border-radius: $border-radius-button;
-        background: $purple-very-light;
-        color: $green;
-
-        a {
-            color: $purple;
-            font-weight: $font-weight-heavy;
-        }
-    }
+  }
 }

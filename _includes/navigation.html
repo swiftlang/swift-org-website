@@ -1,89 +1,90 @@
 <header class="site-navigation">
   <div class="wrapper">
     <h1 id="logo">
-      <a href="/" title="Swift.org">
-        {% include logo.html %}
-      </a>
+      <a href="/" title="Swift.org"> {% include logo.html %} </a>
     </h1>
 
     <nav role="navigation">
       <ul class="navigation-links">
         {% for nav in site.data.navigation %}
-          <li class="nav-item{% if nav.isCta %} nav-cta{% endif %}">
-            {% if nav.isCta and nav.url %}
-              <a href="{{ nav.url }}" data-text="{{ nav.header }}">{{ nav.header }}</a>
-            {% else %}
-              <span class="{% if page.url == nav.url %}active{% endif %}">
-                {% if nav.url %}
-                  <a href="{{ nav.url }}" data-text="{{ nav.header }}">{{ nav.header }}</a>
-                {% else %}
-                  {{ nav.header }}
-                {% endif %}
-                {% if nav.pages %}
-                  <i>&#9663;</i>
-                {% endif %}
-              </span>
+        <li class="nav-item{% if nav.isCta %} nav-cta{% endif %}">
+          {% if nav.isCta and nav.url %}
+          <a href="{{ nav.url }}" data-text="{{ nav.header }}"
+            >{{ nav.header }}</a
+          >
+          {% else %}
+          <span class="{% if page.url == nav.url %}active{% endif %}">
+            {% if nav.url %}
+            <a href="{{ nav.url }}" data-text="{{ nav.header }}"
+              >{{ nav.header }}</a
+            >
+            {% else %} {{ nav.header }} {% endif %} {% if nav.pages %}
+            <i>&#9663;</i>
             {% endif %}
-            {% if nav.pages %}
-              <ul class="nav-submenu" role="menu">
-                {% for navpage in nav.pages %}
-                  {% if navpage.section %}
-                  <li class="nav-section">{{ navpage.section }}</li>
-                  {% else %}
-                    {% if page.url == navpage.url %}
-                    <li role="presentation" class="active">
-                    {% else %}
-                    <li role="presentation">
-                    {% endif %}
-                      <a href="{{ navpage.url }}" role="menuitem">{{ navpage.title }}</a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
+          </span>
+          {% endif %} {% if nav.pages %}
+          <ul class="nav-submenu" role="menu">
+            {% for navpage in nav.pages %} {% if navpage.section %}
+            <li class="nav-section">{{ navpage.section }}</li>
+            {% else %} {% if page.url == navpage.url %}
+            <li role="presentation" class="active">{% else %}</li>
+
+            <li role="presentation">
+              {% endif %}
+              <a href="{{ navpage.url }}" role="menuitem"
+                >{{ navpage.title }}</a
+              >
+            </li>
+            {% endif %} {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
         {% endfor %}
       </ul>
-      <button id="menu-toggle" class="menu-item menu-toggle open" aria-expanded="false" aria-label="Toggle Navigation Menu"></button>
+      <button
+        id="menu-toggle"
+        class="menu-item menu-toggle open"
+        aria-expanded="false"
+        aria-label="Toggle Navigation Menu"
+      ></button>
     </nav>
   </div>
 
   <nav class="mobile-navigation" role="navigation">
     <ul class="mobile-navigation-links">
       {% for nav in site.data.navigation %}
-        <li class="nav-item">
-          <div class="link-container{% if page.url == nav.url %} active{% endif %}">
-            {% if nav.url %}
-              <a href="{{ nav.url }}">{{ nav.header }}</a>
-              {% else %}
-              {{ nav.header }}
-            {% endif %}
-
-            {% if nav.pages %}
-              <button class="section-toggle" aria-expanded="false" aria-label="Toggle {{ nav.header }} Section">
-                &#9663;
-              </button>
-            {% endif %}
-          </div>
-          {% if nav.pages %}
-            <ul class="section-menu">
-              {% for navpage in nav.pages %}
-                {% if navpage.section %}
-                  <li class="nav-section">{{ navpage.section }}</li>
-                {% else %}
-                  {% if page.url == navpage.url %}
-                    <li class="active">
-                  {% else %}
-                    <li>
-                  {% endif %}
-                    <a href="{{ navpage.url }}">{{ navpage.title }}</a>
-                  </li>
-                {% endif %}
-              {% endfor %}
-            </ul>
+      <li class="nav-item">
+        <div
+          class="link-container{% if page.url == nav.url %} active{% endif %}"
+        >
+          {% if nav.url %}
+          <a href="{{ nav.url }}">{{ nav.header }}</a>
+          {% else %} {{ nav.header }} {% endif %} {% if nav.pages %}
+          <button
+            class="section-toggle"
+            aria-expanded="false"
+            aria-label="Toggle {{ nav.header }} Section"
+          >
+            &#9663;
+          </button>
           {% endif %}
-        </li>
+        </div>
+        {% if nav.pages %}
+        <ul class="section-menu">
+          {% for navpage in nav.pages %} {% if navpage.section %}
+          <li class="nav-section">{{ navpage.section }}</li>
+          {% else %} {% if page.url == navpage.url %}
+          <li class="active">{% else %}</li>
+
+          <li>
+            {% endif %}
+            <a href="{{ navpage.url }}">{{ navpage.title }}</a>
+          </li>
+          {% endif %} {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
       {% endfor %}
     </ul>
   </nav>
- </header>
+</header>

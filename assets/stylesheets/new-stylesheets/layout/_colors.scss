@@ -1,28 +1,28 @@
 $black: #000000;
-$brown: #6A4E19;
-$brown-light: #C18E2D;
+$brown: #6a4e19;
+$brown-light: #c18e2d;
 $gray: #474747;
 $gray-light: #979797;
 $green: #285927;
-$orange: #F05138;
-$orange-dark: #C1412D;
-$orange-light: #F79E90;
-$pink: #FBD5CF;
-$pink-light: #FFF2F0;
-$purple: #6852F0;
-$purple-dark: #2E246A;
+$orange: #f05138;
+$orange-dark: #c1412d;
+$orange-light: #f79e90;
+$pink: #fbd5cf;
+$pink-light: #fff2f0;
+$purple: #6852f0;
+$purple-dark: #2e246a;
 $purple-light: rgba(218, 213, 251, 0.4);
-$purple-medium: #5442C1;
-$purple-very-dark: #231C51;
-$purple-very-light: #DAD5FB;
+$purple-medium: #5442c1;
+$purple-very-dark: #231c51;
+$purple-very-light: #dad5fb;
 $white: #ffffff;
-$yellow: #F9D969;
-$yellow-dark: #F0B138;
-$yellow-light: #F9E2AB;
-$yellow-very-light: #FBECCF;
+$yellow: #f9d969;
+$yellow-dark: #f0b138;
+$yellow-light: #f9e2ab;
+$yellow-very-light: #fbeccf;
 
 @mixin isDarkTheme() {
-    body:has(#theme-toggle:checked) {
-        @content;
-    }
+  body:has(#theme-toggle:checked) {
+    @content;
+  }
 }

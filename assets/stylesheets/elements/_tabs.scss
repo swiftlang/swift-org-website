@@ -6,13 +6,14 @@
     padding: 0;
 
     // "a" used on install page, "button" used on packages package
-    a, button {
+    a,
+    button {
       background-color: var(--color-fill-secondary);
       border: 1px solid var(--color-fill-tertiary);
       border-radius: var(--border-radius);
       color: var(--color-text);
       cursor: pointer;
-      padding: .5rem;
+      padding: 0.5rem;
       display: block;
       text-align: center;
       width: 100%;
@@ -33,7 +34,8 @@
         font-weight: 500;
       }
 
-      &:hover, &[aria-pressed="true"] {
+      &:hover,
+      &[aria-pressed="true"] {
         background-color: var(--color-fill-tertiary);
         border: 1px solid var(--color-fill-quaternary);
         text-decoration: none;

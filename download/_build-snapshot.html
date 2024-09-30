@@ -1,0 +1,69 @@
+<tr>
+  <td class="download">
+    <span class="release">
+      <p title="Download" download>
+        {{ include.name }} {% assign build_date_string = include.build.date |
+        date: '%Y-%m-%d' %} {% if include.platform == "Windows" and
+        build_date_string < swift_5_9_1_release_date_string %}
+        <sup> 1</sup>
+        {% endif %}
+      </p>
+    </span>
+  </td>
+  <td class="date">
+    <time
+      datetime="{{ include.build.date | date_to_xmlschema }}"
+      title="{{ include.build.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}"
+      >{{ include.build.date | date: '%B %-d, %Y' }}</time
+    >
+  </td>
+  {% if include.arch %}
+  <td class="arch-tag">
+    <a
+      href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.download }}"
+      >{{ include.arch }}</a
+    >
+    {% if include.build.download_signature %}
+    <a
+      href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.download_signature }}"
+      title="PGP Signature"
+      class="signature"
+      >Signature ({{ include.arch }})</a
+    >
+    {% endif %} {% if include.build.debug_info %}
+    <a
+      href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.debug_info }}"
+      title="Debugging Symbols"
+      class="debug"
+      >Debugging Symbols</a
+    >
+    {% endif %} {% if include.arch_2 %}
+    <a
+      href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir_2 }}/{{ include.build_2.dir }}/{{ include.build_2.download }}"
+      >{{ include.arch_2 }}</a
+    >
+    {% if include.build_2.download_signature %}
+    <a
+      href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir_2 }}/{{ include.build_2.dir }}/{{ include.build_2.download_signature }}"
+      title="PGP Signature"
+      class="signature"
+      >Signature ({{ include.arch_2 }})</a
+    >
+    {% endif %} {% if include.build_2.debug_info %}
+    <a
+      href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir_2 }}/{{ include.build_2.dir }}/{{ include.build2.debug_info }}"
+      title="Debugging Symbols"
+      class="debug"
+      >Debugging Symbols</a
+    >
+    {% endif %} {% endif %}
+  </td>
+  {% endif %}
+  <td class="docker-tag">
+    {% if include.docker_tag %}
+    <a href="https://hub.docker.com/r/swiftlang/swift/tags"
+      >{{ include.docker_tag }}</a
+    >
+    {% else %} Unavailable {% endif %}
+  </td>
+</tr>

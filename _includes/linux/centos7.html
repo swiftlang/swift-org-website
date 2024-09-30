@@ -1,18 +1,5 @@
-{% highlight bash %}
-$ yum install \
-      binutils \
-      gcc \
-      git \
-      glibc-static \
-      libbsd-devel \
-      libedit \
-      libedit-devel \
-      libicu-devel \
-      libstdc++-static \
-      pkg-config \
-      python2 \
-      sqlite
-
-      # __block conflicts with clang's __block qualifier
-      sed -i -e 's/\*__block/\*__libc_block/g' /usr/include/unistd.h
-{% endhighlight %}
+{% highlight bash %} $ yum install \ binutils \ gcc \ git \ glibc-static \
+libbsd-devel \ libedit \ libedit-devel \ libicu-devel \ libstdc++-static \
+pkg-config \ python2 \ sqlite # __block conflicts with clang's __block qualifier
+sed -i -e 's/\*__block/\*__libc_block/g' /usr/include/unistd.h {% endhighlight
+%}

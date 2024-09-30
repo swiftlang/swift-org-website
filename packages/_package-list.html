@@ -1,46 +1,60 @@
-{%- assign category = site.data.packages.packages.categories | where: "slug", include.category_slug | first %}
+{%- assign category = site.data.packages.packages.categories | where: "slug",
+include.category_slug | first %}
 
 <section class="package-list">
   <nav>
-    <a href="{% link packages/index.md %}#package-ecosystem" rel="parent">Explore the Swift package ecosystem</a>
+    <a href="{% link packages/index.md %}#package-ecosystem" rel="parent"
+      >Explore the Swift package ecosystem</a
+    >
   </nav>
 
-  {{ category.description | markdownify }}
-
-  {% if category.slug == "showcase" %}
-  {% include_relative _get-involved.html %}
-  {% endif %}
+  {{ category.description | markdownify }} {% if category.slug == "showcase" %}
+  {% include_relative _get-involved.html %} {% endif %}
 
   <ul>
-    {%- for package in category.packages %} {% include_relative _package.html package=package %} {%- endfor %}
+    {%- for package in category.packages %} {% include_relative _package.html
+    package=package %} {%- endfor %}
   </ul>
 
   {% if category.more %}
-  <a class="cta-secondary" href="{{ category.more.url }}" target="_blank">{{ category.more.title }} &rsaquo;</a>
+  <a class="cta-secondary" href="{{ category.more.url }}" target="_blank"
+    >{{ category.more.title }} &rsaquo;</a
+  >
   {% endif %}
 </section>
 
 {% if category.slug == "showcase" %}
 <h2 id="archive">Archive</h2>
 <p>
-  The Community Showcase <a href="{% post_url 2023-10-31-packages-page %}">launched in November 2023</a> and features a
-  new set of packages every month. Browse the archive below to see the history of featured Community Showcase packages:
+  The Community Showcase
+  <a href="{% post_url 2023-10-31-packages-page %}"
+    >launched in November 2023</a
+  >
+  and features a new set of packages every month. Browse the archive below to
+  see the history of featured Community Showcase packages:
 </p>
 <div class="interactive-tabs">
   <div class="tabs">
     {%- for year in site.data.packages.showcase-history.years %}
-      <button aria-pressed="{% if forloop.index == 1 %}true{% else %}false{% endif %}">{{ year.year }}</button>
+    <button
+      aria-pressed="{% if forloop.index == 1 %}true{% else %}false{% endif %}"
+    >
+      {{ year.year }}
+    </button>
     {% endfor %}
   </div>
   {%- for year in site.data.packages.showcase-history.years %}
-    <ul class="content {% if forloop.index == 1 %}active{% endif %}" data-tab="{{ year.year }}">
-      {%- for month in year.months %}
-        {%- assign url = "packages/showcase-" | append: month.slug | append: "-" | append: year.year | append: ".md" %}
-        <li>
-          <a href="{% link {{ url }} %}">{{ month.month }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+  <ul
+    class="content {% if forloop.index == 1 %}active{% endif %}"
+    data-tab="{{ year.year }}"
+  >
+    {%- for month in year.months %} {%- assign url = "packages/showcase-" |
+    append: month.slug | append: "-" | append: year.year | append: ".md" %}
+    <li>
+      <a href="{% link {{ url }} %}">{{ month.month }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endfor %}
 </div>
 {% endif %}

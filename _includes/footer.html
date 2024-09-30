@@ -1,8 +1,12 @@
 <footer role="contentinfo">
   <div class="footer-content">
     {{ include.licenseinfo }}
-    <p class="copyright">Copyright © {{ site.time | date: '%Y' }} Apple Inc. All rights reserved.</p>
-    <p class="trademark">Swift and the Swift logo are trademarks of Apple Inc.</p>
+    <p class="copyright">
+      Copyright © {{ site.time | date: '%Y' }} Apple Inc. All rights reserved.
+    </p>
+    <p class="trademark">
+      Swift and the Swift logo are trademarks of Apple Inc.
+    </p>
     <p class="privacy">
       <a href="//www.apple.com/privacy/privacy-policy/">Privacy Policy</a>
       <a href="//www.apple.com/legal/privacy/en-ww/cookies/">Cookies</a>
@@ -17,21 +21,43 @@
     >
       <legend class="visuallyhidden">Color scheme preference</legend>
       <label for="scheme-light">
-        <input id="scheme-light" type="radio" name="color-scheme-preference" value="light">
+        <input
+          id="scheme-light"
+          type="radio"
+          name="color-scheme-preference"
+          value="light"
+        />
         <span class="color-scheme-toggle-label">Light</span>
       </label>
       <label for="scheme-dark">
-        <input id="scheme-dark" type="radio" name="color-scheme-preference" value="dark">
+        <input
+          id="scheme-dark"
+          type="radio"
+          name="color-scheme-preference"
+          value="dark"
+        />
         <span class="color-scheme-toggle-label">Dark</span>
       </label>
       <label for="scheme-auto" id="scheme-auto-wrapper">
-        <input id="scheme-auto" type="radio" name="color-scheme-preference" value="auto">
+        <input
+          id="scheme-auto"
+          type="radio"
+          name="color-scheme-preference"
+          value="auto"
+        />
         <span class="color-scheme-toggle-label">Auto</span>
       </label>
     </form>
     <aside>
-      <a href="https://twitter.com/swiftlang" rel="nofollow" title="Follow @SwiftLang on Twitter"><i class="twitter"></i></a>
-      <a href="/atom.xml" title="Subscribe to Site Updates"><i class="feed"></i></a>
+      <a
+        href="https://twitter.com/swiftlang"
+        rel="nofollow"
+        title="Follow @SwiftLang on Twitter"
+        ><i class="twitter"></i
+      ></a>
+      <a href="/atom.xml" title="Subscribe to Site Updates"
+        ><i class="feed"></i
+      ></a>
     </aside>
   </div>
 </footer>
