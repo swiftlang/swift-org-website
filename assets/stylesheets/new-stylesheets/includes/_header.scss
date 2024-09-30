@@ -21,15 +21,15 @@ header {
 
       #menu-toggle,
       #menu-toggle + label {
-        display: block!important;
+        display: block !important;
       }
 
       .navigation-links {
-        display: none!important;
+        display: none !important;
       }
 
       #menu-toggle:checked + label + .navigation-links {
-        display: block!important;
+        display: block !important;
       }
     }
 
