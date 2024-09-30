@@ -73,15 +73,12 @@
   --color-code-collapsible-text: var(--color-figure-gray-tertiary);
   --color-code-plain: var(--color-figure-gray);
   --color-content-table-content-color: var(--color-fill-secondary);
-  --color-dropdown-background: #{transparentize(light-color(fill), 0.2)};
+  --color-dropdown-background: hsl(hue(light-color(fill)), saturation(light-color(fill)), lightness(light-color(fill)) - 20%);
   --color-dropdown-border: #{light-color(fill-gray)};
   --color-dropdown-option-text: #{light-color(figure-gray-secondary)};
   --color-dropdown-text: #{light-color(figure-gray)};
-  --color-dropdown-dark-background: #{transparentize(light-color(fill), 0.9)};
-  --color-dropdown-dark-border: #{transparentize(
-      light-color(fill-gray-tertiary),
-      0.8
-    )};
+  --color-dropdown-dark-background: hsl(hue($fill-light), saturation($fill-light), lightness($fill-light) - 90%);
+  --color-dropdown-dark-border: hsl(hue($fill-gray-tertiary-light), saturation($fill-gray-tertiary-light), lightness($fill-gray-tertiary-light) - 80%);
   --color-dropdown-dark-option-text: #{dark-color(figure-gray-secondary)};
   --color-dropdown-dark-text: #{dark-color(figure-gray)};
   --color-eyebrow: var(--color-figure-gray-secondary);
