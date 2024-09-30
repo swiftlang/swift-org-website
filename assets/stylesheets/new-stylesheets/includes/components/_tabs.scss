@@ -1,0 +1,37 @@
+.tabs {
+  position: relative;
+  min-height: 200px;
+  margin: 25px 0;
+  display: flex;
+}
+
+.tab label {
+  background: $gray-light;
+  padding: 10px;
+  margin-left: -1px;
+  position: relative;
+  left: 1px;
+}
+
+.tab [type="radio"] {
+  display: none;
+}
+
+.tab-content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: $white;
+  right: 0;
+  bottom: 0;
+  padding: 20px 0;
+}
+
+[type="radio"]:checked ~ label {
+  background: $white;
+  z-index: 2;
+}
+
+[type="radio"]:checked ~ label ~ .tab-content {
+  z-index: 1;
+}
