@@ -1,41 +1,45 @@
 <div class="authors{% if include.compact %} compact{% endif %}">
-  {% for page_author in include.authors %}
-    {% assign author = site.data.authors[page_author] %}
-    {% if author.name %}
-      <div class="author">
-        <div class="byline">
-          <img
-            {% if author.gravatar %}
-              src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64&d=mp"
-            {% elsif author.github %}
-              src="https://www.github.com/{{ author.github }}.png?size=64"
-            {% else %}
-              src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y"
-            {% endif %}
-            alt="{{ author.name }}"
-            title="{% if include.compact %}{{ author.about }}{% endif %}"
-            />
-          <span class="author">
-            {% if author.github %}
-              <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github}}) on GitHub">{{ author.name }}</a>
-            {% else %}
-              {{ author.name }}
-            {% endif %}
-          </span>
-        </div>
-        {% unless include.compact %}
-          {% if page.about %}
-            {% assign about = page.about %}
-          {% elsif author.about %}
-            {% assign about = author.about %}
-          {% else %}
-            {% assign about = false %}
-          {% endif %}
-          {% if about %}
-            <div class="about">{{ about }}</div>
-          {% endif %}
-        {% endunless %}
-      </div>
-    {% endif %}
-  {% endfor %}
+  {% for page_author in include.authors %} {% assign author =
+  site.data.authors[page_author] %} {% if author.name %}
+  <div class="author">
+    <div class="byline">
+      <img
+        {%
+        if
+        author.gravatar
+        %}
+        src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64&d=mp"
+        {%
+        elsif
+        author.github
+        %}
+        src="https://www.github.com/{{ author.github }}.png?size=64"
+        {%
+        else
+        %}
+        src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y"
+        {%
+        endif
+        %}
+        alt="{{ author.name }}"
+        title="{% if include.compact %}{{ author.about }}{% endif %}"
+      />
+      <span class="author">
+        {% if author.github %}
+        <a
+          href="https://github.com/{{ author.github }}/"
+          rel="nofollow"
+          title="{{ author.name }} (@{{ author.github}}) on GitHub"
+          >{{ author.name }}</a
+        >
+        {% else %} {{ author.name }} {% endif %}
+      </span>
+    </div>
+    {% unless include.compact %} {% if page.about %} {% assign about =
+    page.about %} {% elsif author.about %} {% assign about = author.about %} {%
+    else %} {% assign about = false %} {% endif %} {% if about %}
+    <div class="about">{{ about }}</div>
+    {% endif %} {% endunless %}
+  </div>
+  {% endif %} {% endfor %}
 </div>

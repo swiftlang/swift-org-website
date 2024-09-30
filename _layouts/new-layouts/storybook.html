@@ -1,24 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>{{ site.title }} - {{ page.title | escape }}</title>
     {% if jekyll.environment == 'stage' %}
-        <meta name="robots" content="noindex" />
+    <meta name="robots" content="noindex" />
     {% endif %}
     <meta name="author" content="Apple Inc." />
     <meta name="viewport" content="width=device-width initial-scale=1" />
     {% if page.excerpt %}
-        <meta name="description" content="{{ page.excerpt | strip_html | escape }}">
+    <meta
+      name="description"
+      content="{{ page.excerpt | strip_html | escape }}"
+    />
     {% endif %}
     <link rel="license" href="/LICENSE.txt" />
-    <link rel="stylesheet" media="all" href="/assets/stylesheets/new-stylesheets/application.css" />
-    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon" href="/favicon.ico" />
-</head>
+    <link
+      rel="stylesheet"
+      media="all"
+      href="/assets/stylesheets/new-stylesheets/application.css"
+    />
+    <link
+      rel="shortcut icon"
+      sizes="16x16 24x24 32x32 48x48 64x64"
+      type="image/vnd.microsoft.icon"
+      href="/favicon.ico"
+    />
+  </head>
 
-<body>
-    <main style="padding: 20px;">
-        {{content}}
-    </main>
-</body>
+  <body>
+    <main style="padding: 20px">{{content}}</main>
+  </body>
 </html>

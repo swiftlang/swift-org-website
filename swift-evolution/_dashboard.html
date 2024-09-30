@@ -1,42 +1,126 @@
 <section class="evolution-dashboard">
   <div class="search-bar">
-    <input id="search-filter" class="filter" title="Search proposals" placeholder="Search" type="search" />
-    
+    <input
+      id="search-filter"
+      class="filter"
+      title="Search proposals"
+      placeholder="Search"
+      type="search"
+    />
+
     <div class="filter-container">
-      <span role="button" id="status-filter-button" class="filter-button" aria-label="Toggle status filtering options" aria-pressed="false" tabindex="0" title="Toggle proposal status filter">
-        <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="filter-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1.381818, 0.400000)">
-                <ellipse class="icon-circle" id="filter-icon-circle" stroke="#888" cx="8.92443193" cy="9.85624994" rx="8.90625" ry="8.90625"></ellipse>
-                <path d="M3.38221606,6.64717725 L14.3694355,6.64717725" class="icon-line" id="line-top" stroke="#888" stroke-linecap="square"></path>
-                <path d="M5.25846596,10.2124999 L12.7515909,10.2124999" class="icon-line" id="line-middle" stroke="#888" stroke-linecap="square"></path>
-                <path d="M6.9967741,13.7749999 L11.1173991,13.7749999" class="icon-line" id="line-bottom" stroke="#888" stroke-linecap="square"></path>  
-            </g>
-        </svg>
-      </span>
-      <span role="button" id="flag-filter-button" class="filter-button" aria-label="Toggle upcoming feature flag filtering" aria-pressed="false" tabindex="0" title="Toggle upcoming feature flag filter">
-        <svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
-            <circle class="icon-circle" cx="8.906" cy="8.906" r="8.906" stroke="#888"/>
-            <path class="icon-flag" fill="#888" fill-rule="nonzero" d="m14.32 3.534.126 7.247-.36.11-.55.155-.516.128c-.355.083-.7.153-1.03.205a7.416 7.416 0 0 1-1.012.098c-.576.01-1.03-.094-1.958-.388l-.551-.168-.287-.078a2.703 2.703 0 0 0-.743-.097 6.77 6.77 0 0 0-1.445.185l-.051.012.057 3.55.006.5-1 .013-.006-.5-.13-9.254-.021-1.249.425-.148c.063-.02.14-.042.23-.066l.305-.073a7.727 7.727 0 0 1 1.504-.176c.362-.006.66.034 1.102.151l.363.103.846.261c.557.165.877.223 1.229.216a6.38 6.38 0 0 0 .879-.087 16.682 16.682 0 0 0 1.67-.373l.093-.027.825-.25Zm-8.298 1.16-.158.035.01.736.078 4.45.251-.05a8.07 8.07 0 0 1 .904-.107l.314-.012c.362-.006.659.034 1.101.151l.363.104.65.202.373.11c.45.125.74.17 1.053.165.249-.005.544-.035.874-.087.302-.048.625-.113.957-.19.252-.06.495-.122.719-.184l-.08.02-.09-5.176-.43.107c-.353.083-.696.152-1.023.204-.375.06-.716.094-1.018.1-.575.01-1.029-.095-1.957-.39l-.403-.124-.18-.052-.306-.081a2.627 2.627 0 0 0-.694-.085c-.458.008-.9.065-1.308.154Z"/>
+      <span
+        role="button"
+        id="status-filter-button"
+        class="filter-button"
+        aria-label="Toggle status filtering options"
+        aria-pressed="false"
+        tabindex="0"
+        title="Toggle proposal status filter"
+      >
+        <svg
+          viewBox="0 0 20 20"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g
+            id="filter-icon"
+            stroke="none"
+            stroke-width="1"
+            fill="none"
+            fill-rule="evenodd"
+            transform="translate(1.381818, 0.400000)"
+          >
+            <ellipse
+              class="icon-circle"
+              id="filter-icon-circle"
+              stroke="#888"
+              cx="8.92443193"
+              cy="9.85624994"
+              rx="8.90625"
+              ry="8.90625"
+            ></ellipse>
+            <path
+              d="M3.38221606,6.64717725 L14.3694355,6.64717725"
+              class="icon-line"
+              id="line-top"
+              stroke="#888"
+              stroke-linecap="square"
+            ></path>
+            <path
+              d="M5.25846596,10.2124999 L12.7515909,10.2124999"
+              class="icon-line"
+              id="line-middle"
+              stroke="#888"
+              stroke-linecap="square"
+            ></path>
+            <path
+              d="M6.9967741,13.7749999 L11.1173991,13.7749999"
+              class="icon-line"
+              id="line-bottom"
+              stroke="#888"
+              stroke-linecap="square"
+            ></path>
           </g>
         </svg>
       </span>
-      <a role="button" tabindex="0" class="filter-panel-toggle hidden" aria-pressed="false">Show Filters</a>
+      <span
+        role="button"
+        id="flag-filter-button"
+        class="filter-button"
+        aria-label="Toggle upcoming feature flag filtering"
+        aria-pressed="false"
+        tabindex="0"
+        title="Toggle upcoming feature flag filter"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+            <circle
+              class="icon-circle"
+              cx="8.906"
+              cy="8.906"
+              r="8.906"
+              stroke="#888"
+            />
+            <path
+              class="icon-flag"
+              fill="#888"
+              fill-rule="nonzero"
+              d="m14.32 3.534.126 7.247-.36.11-.55.155-.516.128c-.355.083-.7.153-1.03.205a7.416 7.416 0 0 1-1.012.098c-.576.01-1.03-.094-1.958-.388l-.551-.168-.287-.078a2.703 2.703 0 0 0-.743-.097 6.77 6.77 0 0 0-1.445.185l-.051.012.057 3.55.006.5-1 .013-.006-.5-.13-9.254-.021-1.249.425-.148c.063-.02.14-.042.23-.066l.305-.073a7.727 7.727 0 0 1 1.504-.176c.362-.006.66.034 1.102.151l.363.103.846.261c.557.165.877.223 1.229.216a6.38 6.38 0 0 0 .879-.087 16.682 16.682 0 0 0 1.67-.373l.093-.027.825-.25Zm-8.298 1.16-.158.035.01.736.078 4.45.251-.05a8.07 8.07 0 0 1 .904-.107l.314-.012c.362-.006.659.034 1.101.151l.363.104.65.202.373.11c.45.125.74.17 1.053.165.249-.005.544-.035.874-.087.302-.048.625-.113.957-.19.252-.06.495-.122.719-.184l-.08.02-.09-5.176-.43.107c-.353.083-.696.152-1.023.204-.375.06-.716.094-1.018.1-.575.01-1.029-.095-1.957-.39l-.403-.124-.18-.052-.306-.081a2.627 2.627 0 0 0-.694-.085c-.458.008-.9.065-1.308.154Z"
+            />
+          </g>
+        </svg>
+      </span>
+      <a
+        role="button"
+        tabindex="0"
+        class="filter-panel-toggle hidden"
+        aria-pressed="false"
+        >Show Filters</a
+      >
     </div>
   </div>
   <section class="proposals">
     <div id="proposals-list-header">
       <div id="proposals-count">
-        <span id="proposals-count-number"></span><span id="flag-filter-description"></span>
+        <span id="proposals-count-number"></span
+        ><span id="flag-filter-description"></span>
       </div>
       <div id="status-filter-subhead" class="hidden">
         <span id="status-filter-description"></span>
       </div>
     </div>
     <ul class="proposals-list">
-        <!-- {proposals} -->
+      <!-- {proposals} -->
     </ul>
   </section>
-  
+
   <script src="/assets/javascripts/swift-evolution.js"></script>
 </section>
