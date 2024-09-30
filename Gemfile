@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'base64'
 gem 'csv'
+gem "html-proofer"
 
 gem 'jekyll', '~> 4.3.3'
 gem 'jekyll-redirect-from'
