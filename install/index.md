@@ -19,3 +19,19 @@ atom: true
 {% include new-includes/components/section.html
   content=banner-section
 %}
+<script>
+  const { userAgentData, userAgent } = window.navigator;
+
+  const osToOsRegex = {
+    windows: /win/,
+    macos: /macintosh/,
+    linux: /linux/,
+  };
+
+  const OS =
+    Object.keys(osToOsRegex).find((os) =>
+      osToOsRegex[os].test(userAgent.toLowerCase()),
+    ) || 'macos';
+
+  window.location.replace(OS);
+</script>
