@@ -11,5 +11,5 @@ atom: true
 </div>
 {% endcapture %}
 {% include new-includes/components/section.html
-    content=banner-section
+  content=banner-section
 %}
