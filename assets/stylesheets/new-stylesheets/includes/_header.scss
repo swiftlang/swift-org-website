@@ -19,7 +19,6 @@ header {
     @media (max-width: 1080px) {
       flex-direction: column;
 
-      #menu-toggle,
       #menu-toggle + label {
         display: block !important;
       }
@@ -33,7 +32,6 @@ header {
       }
     }
 
-    #menu-toggle,
     #menu-toggle + label {
       display: none;
     }
