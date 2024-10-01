@@ -18,6 +18,7 @@ atom: true
 * [Link](#link)
 * [Section](#section)
 * [Tabs](#tabs)
+* [Toggle](#toggle)
 
 <br />
 
@@ -534,7 +535,9 @@ atom: true
 
 {% raw %}
 
-TODO
+* id = toggle id attribute value
+* imgon = toggle image for active state
+* imgoff = toggle image for non-active state
 
 {% endraw %}
 

@@ -29,7 +29,6 @@
                   <li class="nav-section">{{ navpage.section }}</li>
                 {% else %}
                   <li role="presentation" class="{% if page.url == navpage.url %}active{% endif %}">
-                {% endif %}
                     <a href="{{ navpage.url }}" role="menuitem">{{ navpage.title }}</a>
                   </li>
                 {% endif %}
