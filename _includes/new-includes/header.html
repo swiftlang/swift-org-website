@@ -3,14 +3,11 @@
     <a href="/" title="Swift logo" id="logo"></a>
 
     <nav role="navigation">
-      <input
-        type="checkbox"
+      {% include new-includes/components/toggle-button.html
         id="menu-toggle"
-        class="menu-toggle"
-        aria-expanded="false"
-        aria-label="Toggle Navigation Menu"
-      />
-      <label for="menu-toggle" class="menu-item open">Toggle Menu</label>
+        imgon="/assets/images/new-images/icon-close.svg"
+        imgoff="/assets/images/new-images/icon-menu.svg"
+      %}
       <ul class="navigation-links">
         {% for nav in site.data.navigation %}
         <li class="nav-item{% if nav.isCta %} nav-cta{% endif %}">

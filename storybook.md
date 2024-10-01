@@ -499,3 +499,55 @@ atom: true
 %}
 
 <br />
+
+---
+
+<br />
+
+### Toggle
+
+<br />
+
+#### Code example
+
+<br />
+
+{% raw %}
+
+    {%
+        include new-includes/components/toggle-button.html
+
+        id="my-toggle"
+
+        imgon="/assets/images/new-images/icon-close.svg"
+
+        imgoff="/assets/images/new-images/icon-menu.svg"
+    %}
+
+{% endraw %}
+
+<br />
+
+#### attributes
+
+<br />
+
+{% raw %}
+
+TODO
+
+{% endraw %}
+
+<br />
+
+#### Render
+
+<br />
+
+{% include new-includes/components/toggle-button.html
+    id="my-toggle"
+    imgon="/assets/images/new-images/icon-close.svg"
+    imgoff="/assets/images/new-images/icon-menu.svg"
+%}
+
+<br />
