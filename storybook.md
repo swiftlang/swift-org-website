@@ -485,6 +485,11 @@ atom: true
   * name (required)
   * link (optional, only if content is missing)
   * content (optional, only if link is missing)
+* group = start from 1 and increases for more groups
+
+--
+
+* default (optional) = default selected tab
 
 {% endraw %}
 

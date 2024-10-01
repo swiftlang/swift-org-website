@@ -1,3 +1,6 @@
 - name: macOS
+  link: /install/macos
 - name: Linux
+  link: /install/linux
 - name: Windows
+  link: /install/windows
