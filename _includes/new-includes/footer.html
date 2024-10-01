@@ -23,8 +23,11 @@
         ><i class="feed"></i
       ></a>
       <div class="theme-switch">
-        <input type="checkbox" id="theme-toggle" />
-        <label for="theme-toggle">Dark Theme</label>
+        {% include new-includes/components/toggle-button.html
+          id="theme-toggle"
+          imgon="/assets/images/new-images/icon-theme.svg"
+          imgoff="/assets/images/new-images/icon-theme.svg"
+        %}
       </div>
     </aside>
   </div>
