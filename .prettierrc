@@ -4,7 +4,6 @@
       "files": [
         "**/*.css",
         "**/*.scss",
-        "**/*.html",
         "**/*.js"
       ],
       "options": {

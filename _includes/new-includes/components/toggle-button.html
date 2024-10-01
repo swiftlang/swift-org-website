@@ -1,0 +1,28 @@
+<style>
+    input#{{ include.id }}:checked + label .on {
+        display: block;
+    }
+
+    input#{{ include.id }}:checked + label .off {
+        display: none;
+    }
+
+    .on {
+        display: none;
+    }
+
+    .off {
+        display: block;
+    }
+</style>
+
+<input
+    type="checkbox"
+    id="{{ include.id }}"
+    class="toggle-button"
+    aria-expanded="false"
+/>
+<label for="{{ include.id }}">
+    <img src="{{ include.imgon }}" class="on" alt="On">
+    <img src="{{ include.imgoff }}" class="off" alt="Off">
+</label>
