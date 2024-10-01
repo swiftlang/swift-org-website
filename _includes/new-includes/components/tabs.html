@@ -3,13 +3,13 @@
     <div class="tab">
       <input type="radio" id="tab-{{ forloop.index }}" name="tab-group-{{ include.group }}" {% if forloop.first %}checked{% endif %} />
       {% if tab.link %}
-      <a href="{{ tab.link }}">{{ tab.name }}</a>
+        <a href="{{ tab.link }}">{{ tab.name }}</a>
       {% else %}
-      <label for="tab-{{ forloop.index }}">{{ tab.name }}</label>
+        <label for="tab-{{ forloop.index }}">{{ tab.name }}</label>
       {% endif %}
       {% if tab.content %}
         <div class="tab-content">{{ tab.content }}</div>\
-        {% endif %}
+      {% endif %}
     </div>
   {% endfor %}
 </div>

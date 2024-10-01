@@ -1,23 +1,15 @@
 {% if include.link %}
 <a class="box-link" href="{{ include.link }}" target="{{ include.target }}">
-  {% endif %}
+{% endif %}
 
-  <div
-    class="box {{ include.type }} {{ include.style }} {{ include.image }}"
-    {%
-    if
-    include.css
-    %}style="{{ include.css }}"
-    {%
-    endif
-    %}
-    markdown="1"
-  >
-    {% if include.type == "code" %} {% include new-includes/components/code.html
-    language=include.language code=include.content%} {% else %} {{
-    include.content }} {% endif %}
+  <div class="box {{ include.type }} {{ include.style }} {{ include.image }}" {% if include.css %}style="{{ include.css }}" {% endif %} markdown="1">
+    {% if include.type == "code" %}
+      {% include new-includes/components/code.html language=include.language code=include.content %}
+    {% else %}
+      {{ include.content }}
+    {% endif %}
   </div>
 
-  {% if include.link %}
-</a>
+{% if include.link %}
+  </a>
 {% endif %}

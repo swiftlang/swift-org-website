@@ -10,37 +10,33 @@
       %}
       <ul class="navigation-links">
         {% for nav in site.data.navigation %}
-        <li class="nav-item{% if nav.isCta %} nav-cta{% endif %}">
-          {% if nav.isCta and nav.url %}
-          <a href="{{ nav.url }}" data-text="{{ nav.header }}"
-            >{{ nav.header }}</a
-          >
-          {% else %}
-          <span class="{% if page.url == nav.url %}active{% endif %}">
-            {% if nav.url %}
-            <a href="{{ nav.url }}" data-text="{{ nav.header }}"
-              >{{ nav.header }}</a
-            >
-            {% else %} {{ nav.header }} {% endif %}
-          </span>
-          {% endif %}
-          {% if nav.pages %}
-          <ul class="nav-submenu" role="menu">
-            {% for navpage in nav.pages %} {% if navpage.section %}
-            <li class="nav-section">{{ navpage.section }}</li>
-            {% else %} {% if page.url == navpage.url %}
-            <li role="presentation" class="active">{% else %}</li>
-
-            <li role="presentation">
-              {% endif %}
-              <a href="{{ navpage.url }}" role="menuitem"
-                >{{ navpage.title }}</a
-              >
-            </li>
-            {% endif %} {% endfor %}
-          </ul>
-          {% endif %}
-        </li>
+          <li class="nav-item{% if nav.isCta %} nav-cta{% endif %}">
+            {% if nav.isCta and nav.url %}
+              <a href="{{ nav.url }}" data-text="{{ nav.header }}">{{ nav.header }}</a>
+            {% else %}
+              <span class="{% if page.url == nav.url %}active{% endif %}">
+                {% if nav.url %}
+                  <a href="{{ nav.url }}" data-text="{{ nav.header }}">{{ nav.header }}</a>
+                {% else %}
+                  {{ nav.header }}
+                {% endif %}
+              </span>
+            {% endif %}
+            {% if nav.pages %}
+            <ul class="nav-submenu" role="menu">
+              {% for navpage in nav.pages %}
+                {% if navpage.section %}
+                  <li class="nav-section">{{ navpage.section }}</li>
+                {% else %}
+                  <li role="presentation" class="{% if page.url == navpage.url %}active{% endif %}">
+                {% endif %}
+                    <a href="{{ navpage.url }}" role="menuitem">{{ navpage.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
         {% endfor %}
       </ul>
     </nav>
