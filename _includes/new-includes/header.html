@@ -24,6 +24,22 @@
             {% else %} {{ nav.header }} {% endif %}
           </span>
           {% endif %}
+          {% if nav.pages %}
+          <ul class="nav-submenu" role="menu">
+            {% for navpage in nav.pages %} {% if navpage.section %}
+            <li class="nav-section">{{ navpage.section }}</li>
+            {% else %} {% if page.url == navpage.url %}
+            <li role="presentation" class="active">{% else %}</li>
+
+            <li role="presentation">
+              {% endif %}
+              <a href="{{ navpage.url }}" role="menuitem"
+                >{{ navpage.title }}</a
+              >
+            </li>
+            {% endif %} {% endfor %}
+          </ul>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
