@@ -4,4 +4,14 @@ footer {
   padding: 20px 0;
 
   @include section-width($width-layout, $margins-layout);
+
+  .theme-switch {
+    img {
+      width: 32px;
+    }
+
+    .on {
+      filter: invert(1);
+    }
+  }
 }
