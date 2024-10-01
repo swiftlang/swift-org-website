@@ -5,7 +5,8 @@
   display: flex;
 }
 
-.tab label {
+.tab label,
+.tab a {
   background: $gray-light;
   padding: 10px;
   margin-left: -1px;
@@ -27,7 +28,8 @@
   padding: 20px 0;
 }
 
-[type="radio"]:checked ~ label {
+[type="radio"]:checked ~ label,
+[type="radio"]:checked ~ a {
   background: $white;
   z-index: 2;
 }
