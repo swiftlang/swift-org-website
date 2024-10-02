@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2023-07-10 10:00:00
 title: Introducing Swift HTTP Types
@@ -10,7 +10,7 @@ We're excited to announce a new open source package called [Swift HTTP Types](ht
 
 Building upon insights from Swift on server, app developers, and the broader Swift community, Swift HTTP Types is designed to provide a shared set of currency types for client/server HTTP operations in Swift.
 
-## HTTP in Swift 
+## HTTP in Swift
 
 Networking in Swift is ubiquitous for many use cases today, spanning clients, servers, intermediaries, and many other participants across the internet and other networks. HTTP is among the most popular networking technologies, powering daily experiences across the world.
 
@@ -33,7 +33,7 @@ The new currency types are designed to be suitable for use in any HTTP scenario 
 ## Example Usage
 
 The API is designed to offer ergonomic ways to perform the most common HTTP operations, while scaling cleanly to represent advanced use cases.
- 
+
 At their core, HTTP requests are comprised of a method, a scheme, an authority, and a path:
 
 ```swift

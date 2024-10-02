@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2020-05-29 10:00:00
 title: Introducing Swift AWS Lambda Runtime

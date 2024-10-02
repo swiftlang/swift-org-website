@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 title: Announcing ArgumentParser
 author: natecook1000
 date: 2020-02-27 09:00:00

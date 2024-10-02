@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2020-09-25 9:00:00
 title: Swift System is Now Open Source
 author: milseman

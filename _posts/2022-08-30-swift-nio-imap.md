@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2022-08-30 13:00:00
 title: Announcing SwiftNIO IMAP

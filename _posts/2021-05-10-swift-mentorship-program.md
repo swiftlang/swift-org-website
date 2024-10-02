@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2021-05-10 10:00:00
 title: Announcing the Swift Mentorship Program
 author: diversity-workgroup

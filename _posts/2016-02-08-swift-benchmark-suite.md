@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2016-02-08 18:00:00
 title: Swift Benchmark Suite now Available

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2023-11-01 10:30:00
 title: 'Introducing Packages on Swift.org'

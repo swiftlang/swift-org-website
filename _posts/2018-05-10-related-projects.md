@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2018-05-10 10:00:00
 title: Introducing Related Projects to Swift Forums
 author: tkremenek

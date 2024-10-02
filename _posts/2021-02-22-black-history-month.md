@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2021-02-22 10:00:00
 title: Celebrating Black History Month
 author: [hborla, krstnfx]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2016-1-29
 title: "It's Coming: the Great Swift API Transformation"

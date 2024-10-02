@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2022-03-15 9:00:00
 title: Swift.org Website is Now Open Source
 author: tomerd
