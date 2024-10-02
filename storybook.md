@@ -22,8 +22,16 @@ atom: true
 * [Toggle](#toggle)
 
 <br />
+<br />
+<br />
+<br />
 
 ---
+
+<br />
+<br />
+<br />
+<br />
 
 ## Classes
 
@@ -52,6 +60,8 @@ atom: true
 
 #### attributes
 
+none
+
 <br />
 
 #### Render
@@ -68,8 +78,16 @@ atom: true
 </div>
 
 <br />
+<br />
+<br />
+<br />
 
 ---
+
+<br />
+<br />
+<br />
+<br />
 
 ## Components
 
@@ -118,6 +136,7 @@ atom: true
 
 ---
 
+<br />
 <br />
 
 ### Banner
@@ -168,9 +187,11 @@ atom: true
 %}
 
 <br />
+<br />
 
 ---
 
+<br />
 <br />
 
 ### Box
@@ -239,9 +260,11 @@ atom: true
 %}
 
 <br />
+<br />
 
 ---
 
+<br />
 <br />
 
 ### Code
@@ -290,9 +313,11 @@ atom: true
 %}
 
 <br />
+<br />
 
 ---
 
+<br />
 <br />
 
 ### Heading
@@ -346,9 +371,11 @@ atom: true
 %}
 
 <br />
+<br />
 
 ---
 
+<br />
 <br />
 
 ### Link
@@ -409,9 +436,11 @@ atom: true
 %}
 
 <br />
+<br />
 
 ---
 
+<br />
 <br />
 
 ### Section
@@ -494,9 +523,11 @@ atom: true
 %}
 
 <br />
+<br />
 
 ---
 
+<br />
 <br />
 
 ### Tabs
@@ -552,9 +583,11 @@ atom: true
 %}
 
 <br />
+<br />
 
 ---
 
+<br />
 <br />
 
 ### Toggle
