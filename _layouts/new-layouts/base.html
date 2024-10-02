@@ -14,6 +14,27 @@
     <link rel="license" href="/LICENSE.txt" />
     <link rel="stylesheet" media="all" href="/assets/stylesheets/new-stylesheets/application.css"/>
     <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+    {% include new-includes/touch-icon.html %}
+    <link
+      rel="mask-icon"
+      href="/assets/images/icon-swift.svg"
+      color="#F05339"
+    />
+    {% if page.atom %}
+      <link
+        rel="alternate"
+        type="application/atom+xml"
+        title="Swift.org (Atom Feed)"
+        href="/atom.xml"
+      />
+    {% endif %}
+    {% if page.url %}
+      <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    {% endif %}
+    {% if page.robots %}
+      <meta name="robots" content="{{page.robots}}" />
+    {% endif %}
+    {% include new-includes/meta-social.html %}
   </head>
 
   <body>
