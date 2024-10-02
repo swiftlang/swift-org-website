@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <title>{{ site.title }} - {{ page.title | escape }}</title>
     {% if jekyll.environment == 'stage' %}
-    <meta name="robots" content="noindex" />
+      <meta name="robots" content="noindex" />
     {% endif %}
     <meta name="author" content="Apple Inc." />
     <meta name="viewport" content="width=device-width initial-scale=1" />
     {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt | strip_html | escape }}"/>
+      <meta name="description" content="{{ page.excerpt | strip_html | escape }}"/>
     {% endif %}
     <link rel="license" href="/LICENSE.txt" />
     <link rel="stylesheet" media="all" href="/assets/stylesheets/new-stylesheets/application.css"/>
@@ -17,6 +17,10 @@
   </head>
 
   <body>
+    {% if jekyll.environment != 'stage' %}
+      {% include new-includes/components/ribbon.html text="STAGING" %}
+    {% endif %}
+
     {% include new-includes/header.html %}
     <main class="{{ page.label }}">{{content}}</main>
     {% include new-includes/footer.html %}
