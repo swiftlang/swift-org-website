@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2020-12-16 9:59:00
 title: Accessibility and Inclusion in the Swift Community
 author: diversity-workgroup

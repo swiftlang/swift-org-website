@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-03-12 10:00:00
 title: "Byte-sized Swift: Building Tiny Games for the Playdate"

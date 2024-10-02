@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2019-10-17 10:00:00
 title: New Diagnostic Architecture Overview

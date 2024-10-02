@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2019-02-07 10:00:00
 title: ABI Stability and More
 author: jrose

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2020-10-01 14:00:00
 title: Introducing Swift Atomics
 author: lorentey

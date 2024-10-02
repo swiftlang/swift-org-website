@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2023-04-26 10:30:00
 title: Foundation Package Preview Now Available
@@ -66,10 +66,10 @@ Quality and performance are our two most important goals for the project. Theref
 
 As a secondary goal, the project requests community proposals to add new APIs with focused scope to round out existing API functionality in Foundation. This will pave the way to explore how to add significant new APIs as the project progresses. In 2023, we aim to accept a small number of proposals with corresponding Swift implementations. The experience from reviewing and accepting those new APIs will help to refine the API proposal process and facilitate scaling up to more API contributions in the future.
 
-Later this year, the porting will continue with high-quality Swift implementations of additional Foundation API such as `URL`, `Bundle`, `FileManager`, `FileHandle`, `Process`, `SortDescriptor`, `SortComparator` and more. 
+Later this year, the porting will continue with high-quality Swift implementations of additional Foundation API such as `URL`, `Bundle`, `FileManager`, `FileHandle`, `Process`, `SortDescriptor`, `SortComparator` and more.
 
 ## Contributions
 
 Foundation welcomes contributions from the community. The project uses the [Swift forums for discussion](https://forums.swift.org/c/related-projects/foundation/99) and [GitHub Issues](https://github.com/swiftlang/swift-foundation/issues) for tracking bugs, feature requests, and other work. Please see the [CONTRIBUTING](https://github.com/swiftlang/swift-foundation/blob/main/CONTRIBUTING.md) document for more information, including the process for accepting community contributions for new API in Foundation.
 
-I'm excited to start this new chapter in the development of Foundation. 
+I'm excited to start this new chapter in the development of Foundation.

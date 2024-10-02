@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2023-06-12 11:00:00
 title: Introducing Swift OpenAPI Generator

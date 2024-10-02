@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2018-01-08 12:00:00
 title: Conditional Conformance in the Standard Library

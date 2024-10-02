@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2017-1-26 10:00:00
 title: Faster Mix-and-Match Builds with Precompiled Bridging Headers

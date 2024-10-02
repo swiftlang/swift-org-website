@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2022-12-09 08:00:00
 title: The Future of Foundation

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-02-23 10:00:00
 title: Swift joins Google Summer of Code 2024
@@ -30,7 +30,7 @@ ideas are listed on the ideas page. Proposing new ideas is exciting, but more di
 
 The forums are also a great resource of past GSoC discussions and projects. You can also read the [GSoC Contributor Guide](https://google.github.io/gsocguides/student/index) to get a good grasp of what participating in the program entails.
 
-Official proposal applications need to be sent through the Summer of Code website. 
+Official proposal applications need to be sent through the Summer of Code website.
 Applications start on March 18, 2024, and end on April 2, 2024 at 18:00 UTC.
 
 We look forward to working with you all again this year!

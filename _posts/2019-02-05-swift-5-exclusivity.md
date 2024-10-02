@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2019-02-05 10:00:00
 title: Swift 5 Exclusivity Enforcement
 author: atrick

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2022-12-05 10:00:00
 title: Swift Summer of Code 2022 Summary

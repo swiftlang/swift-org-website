@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2017-06-21 09:45:00
 title: Swift Package Manager Manifest API Redesign

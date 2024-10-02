@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2019-02-11 10:00:00
 title: Evolving Swift On Apple Platforms After ABI Stability
 author: jckarter

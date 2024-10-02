@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 title: Swift-DocC is Now Open Source
 author: franklinsch
 date: 2021-10-13 10:00:00

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2018-05-03 9:00:00
 title: Swift Community-Hosted Continuous Integration

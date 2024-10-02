@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2023-10-13 10:00:00
 title: "Swift Everywhere: Using Interoperability to Build on Windows"

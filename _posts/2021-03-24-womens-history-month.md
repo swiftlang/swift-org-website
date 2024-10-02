@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2021-03-24 10:00:00
 title: Celebrating Women’s History Month
 author: [hborla, twostraws]

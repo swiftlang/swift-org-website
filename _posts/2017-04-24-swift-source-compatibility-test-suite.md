@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2017-04-24 13:01:01
 title: Swift Source Compatibility Test Suite Now Available

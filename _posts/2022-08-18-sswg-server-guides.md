@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2022-08-18 13:00:00
 title: Server Guides Now on Swift.org

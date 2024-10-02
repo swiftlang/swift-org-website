@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2020-02-13 09:00:00
 title: Library Evolution in Swift
 author: slavapestov
