@@ -1,0 +1,473 @@
+dabrahams:
+    name: Dave Abrahams
+    email: dabrahams@apple.com
+    gravatar: 5b45540ae377ec54a071f313b7193a27
+    github: dabrahams
+
+lplarson:
+    name: Luke Larson
+    email: llarson@apple.com
+    gravatar: aee6117015b8d1ce941e47e98d08ec8c
+    github: lplarson
+
+najacque:
+    name: Nicole Jacque
+    email: nicole_jacque@apple.com
+    gravatar: 91a5d491b5dc3852952dcbdf55b628ff
+    github: najacque
+
+tkremenek:
+    name: Ted Kremenek
+    gravatar: b6520643611a05fd040d0abcee3c883c
+    email: kremenek@apple.com
+    github: tkremenek
+    about: "Ted Kremenek is a member of the Swift Core Team and manages the Languages and Runtimes group at Apple."
+
+ematejska:
+    name: Ewa Matejska
+    email:  ematejska@apple.com
+    github: ematejska
+
+twostraws:
+   name: Paul Hudson
+   gravatar: a16d66fdf58b8ac3738db189a9f5b222
+   email: paul@hackingwithswift.com
+   github: twostraws
+   about: "Paul Hudson is the creator of Hacking with Swift, and a member of the Diversity in Swift workgroup."
+
+seabaylea:
+   name: Chris Bailey
+   email: BAILEYC@uk.ibm.com
+   github: seabaylea
+   gravatar: 8d00f5acbaa7d24e0900e5045462e008
+
+k8stone:
+   name: Kate Stone
+   email: k8stone@apple.com
+   github: k8stone
+
+eeckstein:
+   name: Erik Eckstein
+   email: eeckstein@apple.com
+   github: eeckstein
+   about: "Erik Eckstein is member of the Swift team at Apple.  He has worked on various aspects of the Swift compiler's optimization pipeline."
+
+krilnon:
+   name: Kyle Murray
+   email: kyle_murray@apple.com
+   gravatar: 3d990ea970403d31eed634851f480386
+   github: krilnon
+
+graydon:
+   name: Graydon Hoare
+   email: ghoare@apple.com
+   gravatar: f1bc67b53f1a5512d778426cf447c5ab
+   github: graydon
+
+aciid:
+   name: Ankit Aggarwal
+   email: ankit_aggarwal@apple.com
+   github: aciidb0mb3r
+   gravatar: 9b923f8f8e522c67e81454756fc027e9
+
+nkcsgexi:
+   name: Xi Ge
+   email: xi_ge@apple.com
+   github: nkcsgexi
+
+natecook1000:
+    name: Nate Cook
+    email: natecook@apple.com
+    github: natecook1000
+    gravatar: 5f463dd4e7af28b64ad8f0e032ee82dc
+    about: "Nate Cook is a member of the Swift standard library team at Apple."
+
+kubamracek:
+   name: Kuba Mracek
+   email: mracek@apple.com
+   github: kubamracek
+   about: "Kuba Mracek is a member of Apple's compiler team, focusing on Embedded Swift and using Swift for systems programming."
+
+airspeedswift:
+   name: Ben Cohen
+   email: ben_cohen@apple.com
+   github: airspeedswift
+
+rudkx:
+   name: Mark Lacey
+   email: mark.lacey@apple.com
+   github: rudkx
+
+shahmishal:
+   name: Mishal Shah
+   email: mishal_shah@apple.com
+   github: shahmishal
+   gravatar: 231cec2cc45a272aa5b341b413fdc2ed
+   about: "Mishal Shah is an engineer on the Swift Infrastructure team at Apple."
+
+mikeash:
+   name: Mike Ash
+   email: mikeash@apple.com
+   github: mikeash
+   gravatar: 9245f9f7df459c19a735740e281aeae2
+
+jrose:
+   name: Jordan Rose
+   email: jordan_rose@apple.com
+   github: jrose-apple
+   gravatar: c4fe988326eed161b989d0c5521cb105
+
+milseman:
+   name: Michael Ilseman
+   email: milseman@apple.com
+   github: milseman
+   gravatar: e54661d4315ba730cb1c49bac05e1145
+   about: "Michael Ilseman is an engineer on the Swift Standard Library team at Apple."
+
+lorentey:
+   name: Karoy Lorentey
+   email: klorentey@apple.com
+   github: lorentey
+   about: "Karoy Lorentey is an engineer on the Swift Standard Library team at Apple."
+
+atrick:
+   name: Andrew Trick
+   email: atrick@apple.com
+   github: atrick
+
+nathawes:
+   name: Nathan Hawes
+   email: nhawes@apple.com
+   github: nathawes
+   gravatar: d5da511fd75bfa72c70fbea84914c88c
+
+jckarter:
+   name: Joe Groff
+   email: jgroff@apple.com
+   github: jckarter
+
+jlettner:
+   name: Julian Lettner
+   email: lettner@apple.com
+   github: yln
+
+ericasadun:
+  name: Erica Sadun
+  github: erica
+
+xedin:
+   name: Pavel Yaskevich
+   email: pyaskevich@apple.com
+   github: xedin
+   about: "Pavel Yaskevich works on the Swift team at Apple, focusing on semantic analysis."
+
+tanner:
+   name: Tanner Nelson
+   github: tanner0101
+   about: "Tanner Nelson is member of the Swift Server Workgroup and creator of the Vapor web framework."
+
+stephentyrone:
+   name: Steve Canon
+   github: stephentyrone
+   about: "Steve Canon is a member of Apple’s Swift Standard Library team. Previously he spent a decade working on Apple’s math library and the Accelerate framework."
+
+bitjammer:
+  name: Ashley Garland
+  email: acgarland@apple.com
+  github: bitjammer
+  gravatar: 16d6907db8e31495729e94a232d159fd
+  about: "Ashley Garland is a member of Apple's Developer Publications Authoring Tools team.  She previously worked on the Swift Standard Library and Compiler, including Markup, Reflection, Syntax, and Migrator libraries."
+
+corybenfield:
+  name: Cory Benfield
+  email: lukasa@apple.com
+  github: Lukasa
+  about: "Cory Benfield is a member of a team developing foundational server-side Swift libraries as part of Apple‘s Cloud Services division, and is a core developer on SwiftNIO."
+
+slavapestov:
+  name: Slava Pestov
+  email: spestov
+  github: slavapestov
+  about: "Slava Pestov is a member of the Swift compiler team at Apple."
+
+tomerd:
+  name: Tom Doron
+  email: tomer@apple.com
+  github: tomerd
+  gravatar: 3cb408ef512103925c4fe709bf3f3b11
+  about: "Tom Doron is a member of the Swift Core Team and the Swift Server Workgroup. He manages a team working on server-side Swift libraries at Apple."
+
+ktoso:
+  name: Konrad ‘ktoso’ Malawski
+  email: ktoso@apple.com
+  github: ktoso
+  gravatar: 03cb20b97f6a14701c24c4e088b6af87
+  about: "Konrad Malawski is a member of a team developing foundational server-side Swift libraries at Apple, with focus on distributed systems and concurrency."
+
+compnerd:
+  name: Saleem Abdulrasool
+  email: compnerd@compnerd.org
+  github: compnerd
+  about: "Saleem Abdulrasool is a member of the Swift Core Team and a Software Engineer at The Browser Company, and previously worked at Google Brain, Facebook, and Microsoft, and currently focuses on cross-platform and embedded Swift."
+
+hborla:
+   name: Holly Borla
+   email: hborla@apple.com
+   github: hborla
+   gravatar: b3e284dd808123c26f476d75da0b5b3c
+   about: "Holly Borla is a member of the Swift Core Team and Language Steering Group, and the engineering manager of the Swift language team at Apple."
+
+krstnfx:
+   name: Kristina Fox
+   github: krstnfx
+   gravatar: 5e142f580e63beae5db6a7ba25e9162c
+   about: "Kristina Fox is an iOS engineering manager on the health team at Apple, and a member of the Diversity in Swift and Swift.org website workgroups."
+
+yim-lee:
+   name: Yim Lee
+   email: yim.lee@apple.com
+   github: yim-lee
+   gravatar: 6c6eb474fd49bcafa7a8ba7d91ad06e0
+   about: "Yim Lee is an engineer on the Swift team at Apple, developing foundational server-side technologies with focus on distributed systems."
+
+franklinsch:
+   name: Franklin Schrans
+   email: fschrans@apple.com
+   github: franklinsch
+   gravatar: 0207e0cc0ed5247a65e635fa4d1ed5b9
+   about: "Franklin Schrans is a member of the Swift-DocC team at Apple."
+
+parkera:
+   name: Tony Parker
+   email: anthony.parker@apple.com
+   github: parkera
+   about: "Tony Parker manages teams at Apple working on Foundation, Swift packages, and the Swift Standard Library."
+
+diversity-workgroup:
+   name: The Diversity in Swift workgroup
+   about: "The Diversity in Swift workgroup is a group of volunteers working to make our community more approachable and inclusive."
+
+0xTim:
+  name: Tim Condon
+  email: tim@brokenhands.io
+  github: 0xTim
+  gravatar: c8678b78a2c1c113302ce686f13435d1
+  about: "Tim Condon sits on the SSWG (Swift Server Workgroup) and is part of the Vapor Core Team"
+
+devanshimodha:
+  name: Devanshi Modha
+  github: devanshimodha
+  about: "Devanshi is an iOS engineer and a member of the Diversity in Swift workgroup."
+
+tingbecker:
+  name: Ting Becker
+  github: teekachu
+  about: "Ting (Tee) is a self-taught developer and an iOS engineer on the Retail Store Apps team at Apple."
+
+ronavitzur:
+    name: Ron Avitzur
+    github: RonAvitzur
+    about: "Ron Avitzur is the author of the Pacific Tech Graphing Calculator"
+
+fbernutz:
+   name: Feli Bernutz
+   gravatar: 97e98bcaf45715adc2fedabd3c5c1289
+   github: fbernutz
+   about: "Feli Bernutz is an iOS engineer at Spotify."
+
+hishnash:
+   name: Matthaus Woolard
+   gravatar: e64eb1d7af21b8a05976f003f2d70b20
+   github: hishnash
+   about: "Matthaus Woolard is a data scientist, software engineer and co-founder of Nil Coalescing."
+
+natpanferova:
+   name: Natalia Panferova
+   gravatar: 0cac4017be2dd8a7d8f7b1d276395a92
+   github: nataliapanferova
+   about: "Natalia Panferova is an iOS and macOS engineer and co-founder of Nil Coalescing."
+
+adam-fowler:
+  name: Adam Fowler
+  email: adamfowler71@gmail.com
+  github: adam-fowler
+  about: "Adam Fowler is an open source developer and is a member of the SSWG (Swift Server Workgroup)."
+
+danieleggert:
+  name: Daniel Eggert
+  email: deggert@apple.com
+  gravatar: dcda0a6799a6cf53879fca308db01edf
+  github: danieleggert
+  about: "Daniel Eggert is a member of the team at Apple working on Mail for iOS and macOS."
+
+rjmccall:
+   name: John McCall
+   github: rjmccall
+   about: "John McCall is an engineer on the Apple Swift team and member of the Language Steering Group."
+
+amartini:
+  name: Alex Martini
+  email: amartini@apple.com
+  github: amartini51
+  about: "Alex Martini is a member of the Developer Publications team at Apple."
+
+daveverwer:
+  name: Dave Verwer
+  gravatar: 8a70777dc92ec5cacc67ae417edc4be9
+  github: daveverwer
+  about: "Dave Verwer is the author of iOS Dev Weekly and co-founder of the Swift Package Index."
+
+svenaschmidt:
+  name: Sven A. Schmidt
+  gravatar: 291bc7d4b4d1aa0624248398074f5b24
+  github: finestructure
+  about: "Sven A. Schmidt is an independent software developer and the co-creator of the Swift Package Index."
+
+alexandersandberg:
+  name: Alexander Sandberg
+  gravatar: 3a1582c3f0a9ef8455b504bb3e1106a7
+  email: hi@alexandersandberg.com
+  github: alexandersandberg
+  about: "Alexander Sandberg is an iOS and macOS developer and a member of the Swift Website Workgroup."
+
+jamesdempsey:
+  name: James Dempsey
+  gravatar: 15947d27758dc90df81fd42c4a387bbb
+  email: dempsey@tapas-software.net
+  github: dempseyatgithub
+  about: "James Dempsey is an iOS and macOS developer, technical trainer, and a member of the Swift Website Workgroup."
+
+honzadvorsky:
+  name: Honza Dvorsky
+  email: honza@apple.com
+  github: czechboy0
+  about: "Honza Dvorsky is a member of a team working on developer tools and services as part of Apple’s Services Engineering division, and is a core developer on Swift OpenAPI Generator."
+
+simonjbeaumont:
+  name: Si Beaumont
+  email: beaumont@apple.com
+  github: simonjbeaumont
+  about: "Si Beaumont is a member of a team developing foundational server-side Swift libraries as part of Apple’s Services Engineering division, and is a core developer on Swift OpenAPI Generator."
+
+guoyezhang:
+  name: Guoye Zhang
+  email: guoye_zhang@apple.com
+  github: guoye-zhang
+  about: "Guoye Zhang is a member of the team at Apple working on Foundation networking, HTTP, and other internet technologies."
+
+erickinnear:
+  name: Eric Kinnear
+  email: ekinnear@apple.com
+  github: ekinnear
+  about: "Eric Kinnear is a member of the team at Apple working on Foundation networking, HTTP, and other internet technologies."
+
+al45tair:
+  name: Alastair Houghton
+  email: ahoughton@apple.com
+  gravatar: 4481fa93eb8710047ed4e11a3ac533c8
+  github: al45tair
+  about: "Alastair Houghton works on the Swift and Objective-C language runtimes at Apple."
+
+FranzBusch:
+   name: Franz Busch
+   email: f.busch@apple.com
+   github: FranzBusch
+   gravatar: 3b34dbe9f3870b0e9bf1f4cb0750fa3d
+   about: "Franz Busch is a member of a team developing foundational server-side Swift libraries at Apple, and is a member of the SSWG."
+
+adrian-prantl:
+  name: Adrian Prantl
+  gravatar: 09d425d65431edfdb8ce3bbb2f2e2bf0
+  email: aprantl@apple.com
+  github: adrian-prantl
+  about: "Adrian Prantl manages the Debugger Compiler Integration team at Apple. He works on debug info in the compiler and the Swift plugin in LLDB."
+
+augustonoronha:
+  name: Augusto Noronha
+  email: anoronha@apple.com
+  github: augusto2112
+  about: "Augusto Noronha works on Swift debugging and is a member of the Debugger Compiler Integration team at Apple."
+
+kastiglione:
+  name: Dave Lee
+  email: davelee@apple.com
+  github: kastiglione
+  about: "Dave Lee works on Swift debugging as a member of the Debugger Compiler Integration team at Apple."
+
+etcwilde:
+  name: Evan Wilde
+  email: ewilde@apple.com
+  github: etcwilde
+
+ahoppen:
+  name: Alex Hoppen
+  email: ahoppen@apple.com
+  github: ahoppen
+  about: Alex Hoppen works on the Swift team at Apple, focusing on parsing-related technologies like SourceKit, swift-syntax and code completion.
+
+dkoski:
+  name: David Koski
+  email: dkoski@apple.com
+  github: davidkoski
+
+ahannun:
+  name: Awni Hannun
+  email: awni@apple.com
+  github: awni
+
+rcollobert:
+  name: Ronan Collobert
+  email: collobert@apple.com
+  github: andresy
+
+simanerush:
+   name: Sima Nerush
+   email: simanerush@gmail.com
+   github: simanerush
+   about: "Sima Nerush is an incoming engineer on the Apple SwiftUI team. She is an experienced iOS Engineer, Swift Compiler contributor, and a computer science student."
+
+rauhul:
+  name: Rauhul Varma
+  email: rauhul@apple.com
+  github: rauhul
+  about: "Rauhul Varma works on Advanced Prototyping in the Platform Architecture group at Apple."
+
+hassila:
+  name: Joakim Hassila
+  email: jocke@ordo.one
+  gravatar: d6ff2f8e32e6155569a312295bce0ec8
+  github: hassila
+  about: "Joakim Hassila is the CTO of Ordo One, which builds high performance distributed trading systems written in Swift running on Linux and macOS."
+
+davidswift:
+  name: david-swift
+  github: david-swift
+  about: "David is a student interested in Swift and the GNOME Project."
+
+joannis:
+  name: Joannis Orlandos
+  github: joannis
+  about: Joannis is a member of the Swift Server Workgroup and maintainer of multiple open source Swift projects.
+
+matthewbastien:
+  name: Matthew Bastien
+  github: matthewbastien
+
+plemarquand:
+  name: Paul LeMarquand
+  github: plemarquand
+
+fabian-boemer:
+  name: Fabian Boemer
+  github: fboemer
+  about: "Fabian Boemer is on the team at Apple working on Swift Homomorphic Encryption and other privacy-preserving technologies."
+
+rehan-rishi:
+  name: Rehan Rishi
+  github: rehanrishi21
+  about: "Rehan Rishi is the engineering manager for the team at Apple working on Swift Homomorphic Encryption and other privacy-preserving technologies."
+
+karl-tarbe:
+  name: Karl Tarbe
+  github: karulont
+  about: "Karl Tarbe is on the team at Apple working on Swift Homomorphic Encryption and other privacy-preserving technologies."

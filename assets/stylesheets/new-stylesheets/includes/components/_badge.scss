@@ -1,0 +1,23 @@
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  margin-bottom: 2em;
+
+  .badge {
+    display: flex;
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px $gray solid;
+    }
+
+    .name {
+      font-size: 14px;
+      font-weight: 400;
+      padding: 4px 0 4px 10px;
+    }
+  }
+}
