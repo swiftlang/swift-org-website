@@ -1,0 +1,23 @@
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@SwiftLang" />
+{% if page.id %}
+  <meta name="twitter:title" content="{{ page.title | escape }}" />
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html | escape }}" />
+{% else %}
+  <meta name="twitter:title" content="{{ site.title }}" />
+  <meta name="twitter:description" content="{{ site.description | strip_html | escape}}" />
+{% endif %}
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:image" content="{{ site.url }}/apple-touch-icon-180x180.png" />
+{% if page.id %}
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:description" content="{{ page.excerpt | strip_html | escape }}" />
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+  <meta property="article:modified_time" content="{{ site.time | date_to_xmlschema }}" />
+{% else %}
+  <meta property="og:title" content="{{ site.title }}" />
+  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:description" content="{{ site.description | strip_html | escape}}" />
+{% endif %}
