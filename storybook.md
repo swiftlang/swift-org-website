@@ -17,6 +17,7 @@ atom: true
 * [Code](#code)
 * [Heading](#heading)
 * [Link](#link)
+* [Ribbon](#ribbon)
 * [Section](#section)
 * [Tabs](#tabs)
 * [Toggle](#toggle)
@@ -434,6 +435,56 @@ none
     url="#"
     text="Click Me"
 %}
+
+<br />
+<br />
+
+---
+
+<br />
+<br />
+
+### Ribbon
+
+<br />
+
+#### Code example
+
+<br />
+
+{% raw %}
+
+    <div style="position: relative;">
+
+        {% include new-includes/components/ribbon.html text="STAGING" %}
+
+    </div>
+
+{% endraw %}
+
+<br />
+
+#### attributes
+
+<br />
+
+{% raw %}
+
+* text = text of the ribbon
+
+{% endraw %}
+
+<br />
+
+#### Render
+
+<br />
+
+<div style="position: relative; height: 180px;">
+
+    {% include new-includes/components/ribbon.html text="STAGING" %}
+
+</div>
 
 <br />
 <br />
