@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2023-03-24 8:00:00
 title: Swift Package Index gains Apple sponsorship

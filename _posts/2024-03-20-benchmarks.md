@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-03-20 10:00:00
 title: "Introducing the Benchmark Package: Complementing Unit Tests with Performance Checks"
@@ -14,9 +14,9 @@ Performance is an important part of the overall product regardless of the applic
 
 After examining the existing infrastructure within the Swift ecosystem, we concluded that there were no existing solutions meeting our needs for multi-platform and rich metrics support, CI integration, and developer-friendliness. Therefore, we decided to develop a [Benchmark package](https://github.com/ordo-one/package-benchmark) and open source it, believing it could help advance performance for the Swift community and benefit all of us.
 
-### The Role Of Benchmarks 
+### The Role Of Benchmarks
 
-Have you ever encountered a _performance problem_ that slipped through to end users which resulted in a bug report? Do you systematically measure and validate performance metrics when making changes to your Swift package? 
+Have you ever encountered a _performance problem_ that slipped through to end users which resulted in a bug report? Do you systematically measure and validate performance metrics when making changes to your Swift package?
 
 Swift aims for performance that rivals C-based languages, emphasizing predictable and consistent execution. Achieving this involves optimizing the use of constrained resources like CPU, memory, and network bandwidth, which significantly influence application workloads across server-side, desktop, and mobile environments. Key performance metrics include CPU usage, memory allocation and management, network I/O, and system calls, among others. These metrics are essential for foundational software, where controlling resource usage and minimizing footprint are as critical as maintaining runtime performance. The Benchmark package readily supports these metrics, along with OS-specific ones for Linux and macOS, providing a comprehensive toolkit for Swift developers to monitor and enhance their applications' efficiency.
 
@@ -30,7 +30,7 @@ The open-source [Benchmark package](https://github.com/ordo-one/package-benchmar
 
 The Benchmark package is implemented as a SwiftPM command plugin and adds a dedicated command to interact with benchmarks:
 
-> ```swift package benchmark``` 
+> ```swift package benchmark```
 
 Introductory getting started information is available both on the [package GitHub page](https://github.com/ordo-one/package-benchmark) as well as in the [Swift Package Index DocC documentation](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark/gettingstarted).
 
@@ -45,7 +45,7 @@ let benchmarks = {
         for _ in benchmark.scaledIterations {
             blackHole(Foundation.Date())
         }
-    } 
+    }
 }
 ```
 
@@ -98,7 +98,7 @@ let benchmarks = {
         for _ in benchmark.scaledIterations {
             blackHole(Foundation.Date())
         }
-    } 
+    }
 
     // Slightly more complex with some customization
     let customBenchmarkConfiguration: Benchmark.Configuration = .init(
@@ -115,7 +115,7 @@ let benchmarks = {
     Benchmark("ValueAtPercentile", configuration: customBenchmarkConfiguration) { benchmark in
         let maxValue: UInt64 = 1_000_000
 
-        var histogram = Histogram<UInt64>(highestTrackableValue: maxValue, 
+        var histogram = Histogram<UInt64>(highestTrackableValue: maxValue,
                                           numberOfSignificantValueDigits: .three)
 
         for _ in 0 ..< 10_000 {
@@ -154,8 +154,8 @@ Sample default output when running benchmarks:
 
 ### Closing Thoughts
 
-The Swift community, including major public projects like [Swift Foundation](https://github.com/swiftlang/swift-foundation), [SwiftPM](https://github.com/swiftlang/swift-package-manager), [SwiftNIO](https://github.com/apple/swift-nio), and [Google Flatbuffers](https://github.com/google/flatbuffers), has recently embraced the Benchmark package to focus on performance optimization. 
+The Swift community, including major public projects like [Swift Foundation](https://github.com/swiftlang/swift-foundation), [SwiftPM](https://github.com/swiftlang/swift-package-manager), [SwiftNIO](https://github.com/apple/swift-nio), and [Google Flatbuffers](https://github.com/google/flatbuffers), has recently embraced the Benchmark package to focus on performance optimization.
 
  Discover how to leverage this tool for your own Swift applications by exploring [the extensive documentation](https://swiftpackageindex.com/ordo-one/package-benchmark/documentation/benchmark) and join the [conversation on the Swift forums](https://forums.swift.org/c/related-projects/benchmark) to share insights and get answers to your questions. Or why not provide a PR to your favourite open source package that lacks performance tests?
- 
+
  Take the first step to improve your software today, by adding its first benchmark to check performance!

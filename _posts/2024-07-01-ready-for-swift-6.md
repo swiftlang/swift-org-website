@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-07-01 09:00:00
 title: Plotting a Path to a Package Ecosystem without Data Race Errors

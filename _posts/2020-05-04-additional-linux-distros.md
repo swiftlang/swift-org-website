@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2020-05-05 10:00:00
 title: Additional Linux Distributions

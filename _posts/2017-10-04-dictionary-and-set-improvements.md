@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2017-10-04 12:00:00
 title: Dictionary and Set Improvements in Swift 4.0

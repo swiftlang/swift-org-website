@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-08-21 10:00:00
 title: Introducing Oblivious HTTP support in Swift

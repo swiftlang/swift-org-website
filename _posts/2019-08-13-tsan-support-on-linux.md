@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2019-08-13 10:00:00
 title: Thread Sanitizer for Swift on Linux

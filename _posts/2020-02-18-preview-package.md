@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 title: Standard Library Preview Package
 author: natecook1000
 date: 2020-02-18 09:00:00

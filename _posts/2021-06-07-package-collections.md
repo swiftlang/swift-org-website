@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2021-06-07 9:00:00
 title: Package Collections
 author: tomerd

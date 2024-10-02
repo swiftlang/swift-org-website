@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2022-06-21 10:00:00
 title: "Exploring Swift: Property wrappers in the wild"

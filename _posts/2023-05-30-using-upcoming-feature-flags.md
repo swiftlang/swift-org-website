@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2023-05-30 10:00:00
 title: Using Upcoming Feature Flags

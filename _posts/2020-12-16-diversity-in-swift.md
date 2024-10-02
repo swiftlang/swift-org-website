@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2020-12-16 10:00:00
 title: Diversity in Swift
 author: diversity-workgroup

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2022-06-15 09:20:00
 title: Announcing the Language Workgroup

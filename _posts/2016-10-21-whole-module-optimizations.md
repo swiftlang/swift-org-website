@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2016-10-21 10:00:00
 title: Whole-Module Optimization in Swift 3

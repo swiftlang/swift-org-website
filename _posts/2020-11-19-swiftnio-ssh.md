@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2020-11-19 9:00:00
 title: Introducing SwiftNIO SSH
 author: corybenfield

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2017-01-18 12:01:01
 title: Swift Evolution Status Page Now Available

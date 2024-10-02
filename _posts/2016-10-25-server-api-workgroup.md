@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2016-10-25 9:00:00
 title: Server APIs Work Group

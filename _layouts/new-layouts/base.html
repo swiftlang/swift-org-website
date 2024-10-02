@@ -38,7 +38,7 @@
   </head>
 
   <body>
-    {% if jekyll.environment != 'stage' %}
+    {% if jekyll.environment == 'stage' %}
       {% include new-includes/components/ribbon.html text="STAGING" %}
     {% endif %}
 

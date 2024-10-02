@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-06-10 10:00:00
 title: "New GitHub Organization for the Swift Project"

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-01-31 12:00:00
 title: Swift OpenAPI Generator 1.0 Released

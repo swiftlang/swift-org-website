@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-03-07 10:30:00
 title: Iterate Over Parameter Packs in Swift 6.0
@@ -33,21 +33,21 @@ func == <A, B, C>(lhs: (A, B, C), rhs: (A, B, C)) -> Bool where A: Equatable, B:
 
 // and so on, up to 6-element tuples
 ```
-In each of the generic functions above, every element of the input tuple has to have its type declared in the generic parameter list of the function. 
-Thus, we need to add a new element to the generic parameter list any time we want to support a larger tuple size. 
-Because of this, the artificial limit of 6-element tuples was imposed. 
+In each of the generic functions above, every element of the input tuple has to have its type declared in the generic parameter list of the function.
+Thus, we need to add a new element to the generic parameter list any time we want to support a larger tuple size.
+Because of this, the artificial limit of 6-element tuples was imposed.
 
-Parameter packs added the ability to abstract a function over a variable number of type parameters. 
+Parameter packs added the ability to abstract a function over a variable number of type parameters.
 This means that we can lift the 6-element limit using an `==` operator written like this:
 
 ```swift
 func == <each Element: Equatable>(lhs: (repeat each Element), rhs: (repeat each Element)) -> Bool
 ```
 
-Let's break down the types we see in the above signature: 
+Let's break down the types we see in the above signature:
 
-- Note `each Element` in the list of generic parameters. The `each` keyword indicates that `Element` is a *type parameter pack*, meaning that it can accept any number of generic arguments. Just like with non-pack (*scalar*) generic parameters, we can declare a conformance requirement on the type parameter pack. In this case, we require each `Element` type to conform to the `Equatable` protocol. 
-- This function takes in two tuples, `lhs` and `rhs`, as arguments. In both cases, the tuple's element type is `repeat each Element`. This is called the *pack expansion type*, which consists of a `repeat` keyword followed by a *repetition pattern*, which has to contain a pack reference. In our case, the repetition pattern is `each Element`. 
+- Note `each Element` in the list of generic parameters. The `each` keyword indicates that `Element` is a *type parameter pack*, meaning that it can accept any number of generic arguments. Just like with non-pack (*scalar*) generic parameters, we can declare a conformance requirement on the type parameter pack. In this case, we require each `Element` type to conform to the `Equatable` protocol.
+- This function takes in two tuples, `lhs` and `rhs`, as arguments. In both cases, the tuple's element type is `repeat each Element`. This is called the *pack expansion type*, which consists of a `repeat` keyword followed by a *repetition pattern*, which has to contain a pack reference. In our case, the repetition pattern is `each Element`.
 - At the call site, the user provides *value parameter packs* for each tuple that will be substituted into their corresponding type parameter packs. At runtime, the repetition pattern will be repeated for each element in the substituted pack.
 
 With the tuple equality operator implemented using parameter packs, let's look at the call site again to understand these concepts better.
@@ -69,7 +69,7 @@ Feel free to take a moment to think about this.
 It turns out that there is just no concise way of implementing the function prior to Swift 6.0.
 One solution involves creating a local function that compares a pair of elements from the two tuples, and then using pack expansion to call that function for every pair of elements, like this:
 
-```swift  
+```swift
 struct NotEqual: Error {}
 
 func == <each Element: Equatable>(lhs: (repeat each Element), rhs: (repeat each Element)) -> Bool {
@@ -78,7 +78,7 @@ func == <each Element: Equatable>(lhs: (repeat each Element), rhs: (repeat each 
     if left == right {
       return
     }
-    
+
     throw NotEqual()
   }
 
@@ -96,11 +96,11 @@ func == <each Element: Equatable>(lhs: (repeat each Element), rhs: (repeat each 
 The above code doesn't look great, right? To simply check a condition for each pair of elements, we need to declare a local function `isEqual`, that just compares the given elements.
 However, this is not enough to make the function return early since the local `isEqual` function will still be called on every pair of elements in the parameter packs `lhs` and `rhs` when expanding them.
 Because of this, `isEqual` has to be marked `throws` and throw an error once a pair of mismatched elements is found.
-Then, we catch the error in a `catch` block to return `false`. 
+Then, we catch the error in a `catch` block to return `false`.
 
 ## Introducing Pack Iteration
 
-Swift 6.0 greatly simplifies this task with the introduction of pack iteration using the familiar `for`-`in` loop syntax. 
+Swift 6.0 greatly simplifies this task with the introduction of pack iteration using the familiar `for`-`in` loop syntax.
 
 More specifically, with pack iteration, the body of the `==` tuple comparison operator simplifies down to a simple `for`-`in repeat` loop:
 
@@ -114,7 +114,7 @@ func == <each Element: Equatable>(lhs: (repeat each Element), rhs: (repeat each 
 }
 ```
 
-In the above code, we are able to utilize the `for`-`in` loop capability to iterate over the tuples pairwise. 
+In the above code, we are able to utilize the `for`-`in` loop capability to iterate over the tuples pairwise.
 
 Note that when iterating over packs, we use the new `for`-`in repeat` syntax, followed by a value parameter pack that we are iterating over.
 At every iteration, the loop binds each element of the value parameter pack to a local variable.
@@ -162,11 +162,11 @@ protocol ValueProducer {
 }
 ```
 
-The above protocol `ValueProducer` requires the `evaluate()` method that's return type is the associated type `Value` that conforms to `Codable` protocol. 
+The above protocol `ValueProducer` requires the `evaluate()` method that's return type is the associated type `Value` that conforms to `Codable` protocol.
 
 Suppose you get a parameter pack of values of type `Result<ValueProducer, Error>`, and you need to iterate only over the `success` elements and call the `evaluate()` method on its value.
 Also, suppose you need to save the result of each call into an array.
-Pack iteration makes this task super easy! 
+Pack iteration makes this task super easy!
 
 ```swift
 func evaluateAll<each V: ValueProducer, each E: Error>(result: repeat Result<each V, each E>) -> [any Codable] {
@@ -231,4 +231,4 @@ print(evaluateAll(result:
 ## Summary
 
 We are excited to bring pack iteration to Swift 6.0!
-As seen in this article, pack iteration makes interacting with value parameter packs significantly more straightforward, making such an advanced feature more accessible and intuitive to incorporate into your Swift code. 
+As seen in this article, pack iteration makes interacting with value parameter packs significantly more straightforward, making such an advanced feature more accessible and intuitive to incorporate into your Swift code.

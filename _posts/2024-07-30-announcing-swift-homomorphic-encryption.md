@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-07-30 10:00:00
 title: Announcing Swift Homomorphic Encryption

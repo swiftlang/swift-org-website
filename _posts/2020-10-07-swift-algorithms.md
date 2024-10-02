@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2020-10-07 9:00:00
 title: Announcing Swift Algorithms
 author: natecook1000

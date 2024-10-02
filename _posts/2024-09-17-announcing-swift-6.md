@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-09-17 10:00:00
 title: Announcing Swift 6
@@ -33,8 +33,8 @@ Swift 6 enables functions to specify the type of error that they throw as part o
 For example:
 
 ```swift
-func parseRecord(from string: String) throws(ParseError) -> Record { 
-  // ... 
+func parseRecord(from string: String) throws(ParseError) -> Record {
+  // ...
 }
 ```
 
@@ -54,8 +54,8 @@ Typed throws can also be used in generic functions to propagate error types from
 
 ```swift
 extension Sequence {
-  func map<T, E>(_ body: (Element) throws(E) -> T) throws(E) -> [T] { 
-    // ... 
+  func map<T, E>(_ body: (Element) throws(E) -> T) throws(E) -> [T] {
+    // ...
   }
 }
 ```
@@ -120,7 +120,7 @@ You can find a complete list of language proposals that were accepted through th
 
 ## Debugging
 
-### Custom LLDB summaries with `@DebugDescription`
+### Custom LLDB summaries with @DebugDescription
 
 Swift 6 provides a new debugging macro to easily customize how an object is displayed in LLDB when using the `p` command, and in the variables view in Xcode and VSCode, by using a formatting scheme that does not run arbitrary code.
 
@@ -146,7 +146,7 @@ struct Organization: CustomDebugStringConvertible {
 
 ```
 (lldb) p myOrg
-(Organization) myOrg = "`#100 Worldwide Travel [Jonathan Swift]`" 
+(Organization) myOrg = "`#100 Worldwide Travel [Jonathan Swift]`"
 ```
 
 ### Improved startup performance with explicit modules
@@ -184,7 +184,7 @@ func mentionedContinents(videoName: String) async throws {
 
 Swift Testing takes full advantage of macros. Its `@Test` and `@Suite` attached macros declare test functions and suite types respectively, and they accept arguments (known as traits) to customize various behaviors. The `#expect` and `#require` expression macros validate expected behaviors, and capture rich representation of expressions and their sub-values to produce detailed failure messages.
 
-Since Swift Testing is included directly in Swift 6 toolchains, you can `import Testing` without needing to declare a package dependency. This means your tests do not need to build Swift Testing or its dependencies (including swift-syntax), and its macro implementation comes prebuilt. The package manager in Swift 6 automatically builds and runs Swift Testing tests in addition to XCTests (if present), and shows results from both libraries in log output. Swift Testing supports all platforms that Swift officially supports, including all Apple platforms, Linux, and Windows. 
+Since Swift Testing is included directly in Swift 6 toolchains, you can `import Testing` without needing to declare a package dependency. This means your tests do not need to build Swift Testing or its dependencies (including swift-syntax), and its macro implementation comes prebuilt. The package manager in Swift 6 automatically builds and runs Swift Testing tests in addition to XCTests (if present), and shows results from both libraries in log output. Swift Testing supports all platforms that Swift officially supports, including all Apple platforms, Linux, and Windows.
 
 To learn more about this new open source project, visit the [swift-testing](https://github.com/swiftlang/swift-testing) repository on GitHub, and get involved with its ongoing development [on the forums](https://forums.swift.org/c/related-projects/swift-testing/103).
 

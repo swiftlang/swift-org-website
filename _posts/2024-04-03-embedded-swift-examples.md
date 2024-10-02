@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-04-03 10:00:00
 title: "Get Started with Embedded Swift on ARM and RISC-V Microcontrollers"

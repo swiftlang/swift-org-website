@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2015-12-03 11:01:01
 title: The Swift Linux Port

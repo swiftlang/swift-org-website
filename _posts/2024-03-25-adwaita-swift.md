@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 published: true
 date: 2024-03-25 10:00:00
 title: "Writing GNOME Apps with Swift"
@@ -7,7 +7,7 @@ author: [davidswift]
 ---
 
 Swift is well-suited for creating user interfaces thanks to the clean syntax, static typing, and special features making code easier to write.
-[Result builders](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/advancedoperators/#Result-Builders), combined with Swift's [closure expression syntax](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/#Closure-Expression-Syntax), can significantly enhance code readability. 
+[Result builders](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/advancedoperators/#Result-Builders), combined with Swift's [closure expression syntax](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/#Closure-Expression-Syntax), can significantly enhance code readability.
 
 [Adwaita for Swift](https://github.com/AparokshaUI/adwaita-swift) leverages these Swift features to provide an intuitive interface for developing applications for the [GNOME](https://www.gnome.org/) platform.
 GNOME is a popular, open source desktop environment for Linux, known for its emphasis on simplicity and accessibility.
@@ -15,7 +15,7 @@ It offers an intuitive user interface, with a vast app ecosystem built using its
 Explore a collection of great apps under [Apps for GNOME](https://apps.gnome.org).
 
 Let's look at a code example of using Adwaita for Swift.
-The following code snippet defines a _view_, which represents a part of the user interface inside a window. 
+The following code snippet defines a _view_, which represents a part of the user interface inside a window.
 
 ```swift
 struct Counter: View {
@@ -41,7 +41,7 @@ struct Counter: View {
 
 A view can be nested within other views or added as the child of a window.
 
-Its content can be modified from outside that view and is influenced by its position in the view hierarchy. 
+Its content can be modified from outside that view and is influenced by its position in the view hierarchy.
 This makes it easier to compose views to produce different results.
 The screenshot shows one simple possibility.
 
@@ -51,7 +51,7 @@ The screenshot shows one simple possibility.
 The primary motivation for this package is to enable the use of Swift when writing GNOME apps, for all the reasons outlined above. But there are a few additional reasons:
 
 ### Declarative
-While there are already libadwaita and GTK bindings for numerous modern programming languages, including Rust, Python, and JavaScript, all official bindings follow an _imperative_ coding style. 
+While there are already libadwaita and GTK bindings for numerous modern programming languages, including Rust, Python, and JavaScript, all official bindings follow an _imperative_ coding style.
 This can be verbose and harder to follow than a declarative style as user interfaces are constructed using a series of commands.
 The following Python code serves as an illustration of this.
 ```python

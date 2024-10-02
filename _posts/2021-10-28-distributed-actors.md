@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/blog
 date: 2021-10-28 9:00:00
 title: Introducing Swift Distributed Actors
 author: ktoso
