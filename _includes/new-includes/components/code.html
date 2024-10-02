@@ -1,4 +1,6 @@
-{% capture markdown_content %} ```{{ include.language }}
-{{ include.code }}```
+{% capture markdown_content %}
+```{{ include.language }}
+{{ include.code }}
+```
 {% endcapture %}
 {{ markdown_content | markdownify }}

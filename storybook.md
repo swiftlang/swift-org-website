@@ -11,6 +11,7 @@ atom: true
 
 ## Components
 
+* [Badge](#badge)
 * [Banner](#banner)
 * [Box](#box)
 * [Code](#code)
@@ -71,6 +72,51 @@ atom: true
 ---
 
 ## Components
+
+<br />
+
+### Badge
+
+<br />
+
+#### Code example
+
+<br />
+
+{% raw %}
+    {%
+        include new-includes/components/badge.html
+
+        authors='lplarson'
+    %}
+{% endraw %}
+
+<br />
+
+#### attributes
+
+<br />
+
+{% raw %}
+
+* authors = list of authors
+
+{% endraw %}
+
+<br />
+
+#### Render
+
+<br />
+
+{%
+    include new-includes/components/badge.html
+    authors='lplarson'
+%}
+
+<br />
+
+---
 
 <br />
 
@@ -300,6 +346,7 @@ atom: true
 %}
 
 <br />
+
 ---
 
 <br />
