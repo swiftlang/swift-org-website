@@ -120,6 +120,11 @@ none
 
 * authors = list of authors
 
+--
+
+* showabout (optional) = show the author.about
+  * values: true/false
+
 {% endraw %}
 
 <br />

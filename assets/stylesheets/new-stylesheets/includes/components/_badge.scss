@@ -5,7 +5,9 @@
   margin-bottom: 2em;
 
   .badge {
-    display: flex;
+    & > div {
+      display: flex;
+    }
 
     img {
       width: 32px;
