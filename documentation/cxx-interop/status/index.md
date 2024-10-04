@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: new-layouts/base
 title: Supported Features and Constraints of C++ Interoperability
 official_url: https://swift.org/documentation/cxx-interop/status/
-redirect_from: 
+redirect_from:
 - /documentation/cxx-interop/status.html
 ---
 
@@ -128,7 +128,7 @@ Swift supports calling most non-templated:
   - Bool literal conversion operator `operator bool` is represented as a convenience initializer `Bool(fromCxx:)`
 
 Functions and constructors that use r-value reference types are not
-yet available in Swift. 
+yet available in Swift.
 
 Swift supports calling some C++ function templates. Any function or
 function template that uses a dependent type in its signature, or a universal
@@ -144,7 +144,7 @@ If a parameter of a C++ function has a default value, the parameter will also ha
 - The function is not a constructor
 - The parameter is not `inout` in Swift
 - The parameter is not a pointer
-- The parameter is not a const reference 
+- The parameter is not a const reference
 
 ### C++ Types Supported in Swift
 
@@ -164,7 +164,7 @@ by value.
 C++ types that become reference types can't be constructed directly by
 Swift code. They can be passed around freely between Swift and C++.
 
-C++ types defined inside of a C++ `namespace` are available in 
+C++ types defined inside of a C++ `namespace` are available in
 Swift.
 
 Class and structure templates are not directly available in Swift. The
@@ -209,7 +209,7 @@ undefined behavior in your program.
 
 #### Clang's Availability Attributes
 
-C++ APIs annotated with Clang's 
+C++ APIs annotated with Clang's
 [availability attributes](https://clang.llvm.org/docs/AttributeReference.html#availability) receive the same availability annotation in Swift.
 
 ## Supported Swift APIs
@@ -256,7 +256,7 @@ following Swift enumerations are not yet supported:
 Additionally, the types of all the associated values of an enumeration must be
 representable in C++. The exact set of representable types is described
 below, in the section that describes the representable
-[parameter or return types](#swift-functions-and-properties-supported-by-c). 
+[parameter or return types](#swift-functions-and-properties-supported-by-c).
 
 Swift currently does not expose nested enumerations to C++.
 
@@ -274,10 +274,10 @@ type can be represented in C++ only when:
   - if it's a generic type, like `Array`, its generic parameters must be bound
     to one of the types listed here.
 - or, it is an `UnsafePointer` / `UnsafeMutablePointer` /
-  `Optional<UnsafePointer>` / `Optional<UnsafeMutablePointer>` 
+  `Optional<UnsafePointer>` / `Optional<UnsafeMutablePointer>`
   that points to
   any type from the supported three type categories listed above.
-  
+
 Functions or initializers that have a parameter type or a return type that's
 not listed above cannot be represented in C++ yet. Properties of type
 that's not listed above cannot be represented in C++ yet.
@@ -373,7 +373,7 @@ A Swift GitHub issue tracks the status of this constraint:
 ### Performance Constraints
 
 Swift's current
-[support for C++ container types](/documentation/cxx-interop#working-with-c-containers) 
+[support for C++ container types](/documentation/cxx-interop#working-with-c-containers)
 does not provide explicit
 performance guarantees. Most notably, Swift can make a deep copy of a
 collection when it's used in a `for-in` loop in Swift.
@@ -394,8 +394,8 @@ to import C or Objective-C headers in C++ mode are listed below:
   Objective-C APIs. For example, a C function one of whose parameters is
   named `class` is not a valid C++ function.
 - Existing C or Objective-C headers might try to import another Clang module
-  inside of an `extern "C"` block. That's not allowed in C++ mode. 
-  
+  inside of an `extern "C"` block. That's not allowed in C++ mode.
+
 In cases like this you're advised to fix these issues in
 your C or Objective-C headers. If these headers come from a dependency
 that you don't control, you should report an issue to the vendor that vends

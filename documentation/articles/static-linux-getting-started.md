@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 date: 2024-06-04 12:00:00
 title: Getting Started with the Static Linux SDK
 author: [al45tair]

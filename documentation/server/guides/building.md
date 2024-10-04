@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/building"
-layout: page
+layout: new-layouts/base
 title: Build System
 ---
 

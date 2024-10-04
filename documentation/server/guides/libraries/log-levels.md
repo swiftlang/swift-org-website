@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/libraries/log-levels"
-layout: page
+layout: new-layouts/base
 title: Log Levels
 ---
 

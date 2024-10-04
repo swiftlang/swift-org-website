@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/linux-perf"
-layout: page
+layout: new-layouts/base
 title: Linux perf
 ---
 

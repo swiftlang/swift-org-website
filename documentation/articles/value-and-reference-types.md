@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 date: 2023-04-29 12:00:00
 title: Value And Reference Types In Swift
 author: [jamesdempsey]

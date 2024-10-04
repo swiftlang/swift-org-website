@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/testing"
-layout: page
+layout: new-layouts/base
 title: Testing
 ---
 

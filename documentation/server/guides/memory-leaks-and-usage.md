@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/memory-leaks-and-usage"
-layout: page
+layout: new-layouts/base
 title: Debugging Memory Leaks and Usage
 ---
 
@@ -12,7 +12,7 @@ It’s important to note, however, that a gradual increase in memory usage over 
 
 ## Tools and techniques
 
-Debugging memory leaks in Swift on macOS and Linux environments can be done using different tools and techniques, each with distinct strengths and usability. 
+Debugging memory leaks in Swift on macOS and Linux environments can be done using different tools and techniques, each with distinct strengths and usability.
 
 ### Basic troubleshooting includes:
 
@@ -22,8 +22,8 @@ Debugging memory leaks in Swift on macOS and Linux environments can be done usin
 
 **1. Using profiling tools** provided by the respective operating systems and development environments to identify and analyze memory usage.
 
-*For macOS*: [Memory Graph Debugger](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Inspect-the-debug-memory-graph) and this [Detect and diagnose memory issues](https://developer.apple.com/videos/play/wwdc2021/10180/) video are helpful. You can also use the [Xcode Instruments](https://help.apple.com/instruments/mac/10.0/#/dev022f987b) tool for various profiling instruments including the [Allocations instrument](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Profile-your-app-using-the-Allocations-instrument) to track memory allocation and deallocation in your Swift code. 
-    
+*For macOS*: [Memory Graph Debugger](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Inspect-the-debug-memory-graph) and this [Detect and diagnose memory issues](https://developer.apple.com/videos/play/wwdc2021/10180/) video are helpful. You can also use the [Xcode Instruments](https://help.apple.com/instruments/mac/10.0/#/dev022f987b) tool for various profiling instruments including the [Allocations instrument](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Profile-your-app-using-the-Allocations-instrument) to track memory allocation and deallocation in your Swift code.
+
 *For Linux*: You can use tools like [Valgrind](https://valgrind.org/) or [Heaptrack](https://github.com/KDE/heaptrack) to profile your application as shown in the examples below. Although these tools are primarily used for C/C++ code, they can also work with Swift.
 
 **2. Reviewing code and identifying potential leaks** to examine your code for any potential areas where memory leaks may occur. Common sources of leaks include retained references or unbalanced retain-release cycles, which rarely apply to Swift since it performs [automatic reference counting (ARC)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/).
@@ -31,16 +31,16 @@ Debugging memory leaks in Swift on macOS and Linux environments can be done usin
 > Note: Memory leaks can occur in Swift if there are substantial reference cycles between objects that involve closures or if objects hold references to external resources that are not released properly. However, the likelihood of such issues is significantly reduced through the automatic memory management's ability to add and remove references, making sources of leaks like retained references and unbalanced retain-release cycles less common in Swift code.
 
 **3. Enabling debug memory allocation features** allows you to get additional information about objects and their memory allocations.
-    
+
 *On macOS*: You can enable Zombie Objects using Xcode or use [MallocStackLogging](https://developer.apple.com/videos/play/wwdc2022/10106/) to detect over-released or accessed deallocated objects.
-    
-To enable Zombie Objects: 
+
+To enable Zombie Objects:
 1. Open your Xcode project.
-2. Go to the **Edit Scheme** menu by clicking on the scheme dropdown in the toolbar. 
+2. Go to the **Edit Scheme** menu by clicking on the scheme dropdown in the toolbar.
 3. In the scheme editor window, select the **Run** tab.
 4. Choose the **Diagnostics** tab.
 5. Under **Memory Management**, check the box next to **Enable Zombie Objects**.
-    
+
 *On Linux*: Swift has built-in LeakSanitizer support that can be enabled using the `-sanitize=leak` compiler flag.
 
 ## Troubleshooting
@@ -52,11 +52,11 @@ The following **example program** leaks memory. We are using it as an *example o
 ```
 public class MemoryLeaker {
    var closure: () -> Void = { () }
-   
+
    public init() {}
-   
+
    public func doNothing() {}
-   
+
    public func doSomethingThatLeaks() {
       self.closure = {
          // This will leak as it'll create a permanent reference cycle:
@@ -78,7 +78,7 @@ myFunctionDoingTheAllocation()
 ### Debugging leaks with Valgrind
 Valgrind is an open-source framework for debugging and profiling Linux applications. It provides several tools, including Memcheck, which can detect memory leaks, invalid memory accesses, and other memory errors. Although Valgrind is primarily focused on C/C++ applications, it can also be used with Swift on Linux.
 
-To debug memory leaks for Swift on Linux using Valgrind, install it on your system. 
+To debug memory leaks for Swift on Linux using Valgrind, install it on your system.
 
 1. Install Swift on your Linux system. You can download and install Swift from the [official website](https://swift.org/download/).
 2. Install Valgrind on your Linux system by using your package manager. For example, if you are using Ubuntu, you can run the following command:
@@ -135,7 +135,7 @@ The following trace block (from above) indicates a memory leak.
 ==1==    by 0x108CA3: main (in /tmp/test)
 ```
 
-However, since Swift uses name mangling for function and symbol names, the stack traces may not be straightforward to understand. 
+However, since Swift uses name mangling for function and symbol names, the stack traces may not be straightforward to understand.
 
 To demangle the Swift symbols in the stack traces, run the `swift demangle` command:
 ```
@@ -232,7 +232,7 @@ In this example, the allocation that leaked is coming from:
 #### Limitations
 
 * LeakSanitizer may not be as effective in detecting and reporting all types of memory leaks in Swift code compared to languages like C or C++.
-* False positives occur when LeakSanitizer reports a memory leak that does not exist. 
+* False positives occur when LeakSanitizer reports a memory leak that does not exist.
 * LeakSanitizer is primarily supported on macOS and Linux. While it is possible to use LeakSanitizer on iOS or other platforms that support Swift, there may be limitations or platform-specific issues that need to be considered.
 * Enabling Address Sanitizer and LeakSanitizer in your Swift project can have a performance impact. It is recommended to use LeakSanitizer for targeted analysis and debugging rather than continuously running it in production environments.
 
@@ -342,5 +342,5 @@ In this example, the debug prints are only for testing and would be removed from
 
 #### Limitations
 
-* It's important to note that Heaptrack was primarily designed for C and C++ applications, so its support for Swift applications is limited. 
+* It's important to note that Heaptrack was primarily designed for C and C++ applications, so its support for Swift applications is limited.
 * While Heaptrack can provide insights into memory allocations and deallocations in a Swift application, it may not capture certain Swift-specific memory management mechanisms like Swift's built-in Instruments profiler.

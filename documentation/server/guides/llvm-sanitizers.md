@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/llvm-sanitizers"
-layout: page
+layout: new-layouts/base
 title: LLVM TSAN / ASAN
 ---
 

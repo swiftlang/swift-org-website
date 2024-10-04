@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 date: 2024-06-05 12:00:00
 title: Configuring Emacs for Swift Development
 author: [al45tair]

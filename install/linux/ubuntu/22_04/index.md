@@ -1,5 +1,5 @@
 ---
-layout: page-wide
+layout: new-layouts/base
 title: Install Swift
 ---
 
