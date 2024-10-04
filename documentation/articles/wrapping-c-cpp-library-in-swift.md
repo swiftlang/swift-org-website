@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 date: 2023-11-08 12:00:00
 title: Wrapping C/C++ Library in Swift
 author: [etcwilde, ktoso, yim-lee]

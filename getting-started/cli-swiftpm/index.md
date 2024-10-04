@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 title: Build a Command-line Tool
 ---
 
@@ -105,12 +105,12 @@ Once we save that, we can run our application with `swift run`
 Assuming everything went well, you should see your application print this to the screen:
 
 ~~~no-highlight
-  _   _          _   _                 ____               _    __   _     _ 
+  _   _          _   _                 ____               _    __   _     _
  | | | |   ___  | | | |   ___         / ___|  __      __ (_)  / _| | |_  | |
  | |_| |  / _ \ | | | |  / _ \        \___ \  \ \ /\ / / | | | |_  | __| | |
  |  _  | |  __/ | | | | | (_) |  _     ___) |  \ V  V /  | | |  _| | |_  |_|
  |_| |_|  \___| |_| |_|  \___/  ( )   |____/    \_/\_/   |_| |_|    \__| (_)
-                                |/                                          
+                                |/
 ~~~
 
 ## Argument parsing
@@ -173,12 +173,12 @@ Note we need to specify the executable in this case, so we can pass the `input` 
 Assuming everything went well, you should see your application print this to the screen:
 
 ~~~no-highlight
-  _   _          _   _                                           _       _   _ 
+  _   _          _   _                                           _       _   _
  | | | |   ___  | | | |   ___         __      __   ___    _ __  | |   __| | | |
  | |_| |  / _ \ | | | |  / _ \        \ \ /\ / /  / _ \  | '__| | |  / _` | | |
  |  _  | |  __/ | | | | | (_) |  _     \ V  V /  | (_) | | |    | | | (_| | |_|
  |_| |_|  \___| |_| |_|  \___/  ( )     \_/\_/    \___/  |_|    |_|  \__,_| (_)
-                                |/                                             
+                                |/
 ~~~
 
 ---

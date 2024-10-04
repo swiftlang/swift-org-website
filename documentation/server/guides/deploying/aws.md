@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/deploying/aws"
-layout: page
+layout: new-layouts/base
 title: Deploying to AWS on Amazon Linux 2
 ---
 

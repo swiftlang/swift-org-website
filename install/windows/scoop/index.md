@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 title: Installation via Scoop
 ---
 

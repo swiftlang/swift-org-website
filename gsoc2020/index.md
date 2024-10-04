@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 title: Project Ideas for GSoC 2020
 ---
 

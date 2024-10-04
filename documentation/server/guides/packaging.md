@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/packaging"
-layout: page
+layout: new-layouts/base
 title: Packaging Applications for Deployment
 ---
 

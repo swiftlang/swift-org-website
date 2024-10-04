@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 title: Build a Web Service with Vapor
 ---
 

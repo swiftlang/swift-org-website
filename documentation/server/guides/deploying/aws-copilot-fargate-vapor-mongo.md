@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/deploying/aws-copilot-fargate-vapor-mongo"
-layout: page
+layout: new-layouts/base
 title: Deploying to AWS with Fargate, Vapor, and MongoDB Atlas
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 title: Setting Up Mixed-Language Swift and C++ Projects
 official_url: https://swift.org/documentation/cxx-interop/project-build-setup/
 redirect_from:

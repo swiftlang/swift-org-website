@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 title: Expired Signing Keys
 ---
 
@@ -134,7 +134,7 @@ title: Expired Signing Keys
   ~~~ shell
   $ wget -q -O - https://swift.org/keys/release-key-swift-3.x.asc | \
     gpg --import -
-  ~~~  
+  ~~~
 
 * `Swift 4.x Release Signing Key <swift-infrastructure@swift.org>`
 
