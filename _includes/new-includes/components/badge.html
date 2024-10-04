@@ -2,24 +2,32 @@
   {% for page_author in include.authors %}
     {% assign author = site.data.new-data.authors[page_author] %}
     <div class="badge">
-      <img
-        {% if author.gravatar %}
-          src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64&d=mp"
-        {% elsif author.github %}
-          src="https://www.github.com/{{ author.github }}.png?size=64"
-        {% else %}
-          src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y"
-        {% endif %}
-        alt="{{ author.name }}"
-        title="{% if include.compact %} {{ author.about }}{% endif %}"
-      />
-      <span class="name">
-        {% if author.github %}
-        <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github}}) on GitHub">{{ author.name }}</a>
-        {% else %}
-          {{ author.name }}
-        {% endif %}
-      </span>
+      <div>
+        <img
+          {% if author.gravatar %}
+            src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=64&d=mp"
+          {% elsif author.github %}
+            src="https://www.github.com/{{ author.github }}.png?size=64"
+          {% else %}
+            src="https://www.gravatar.com/avatar/dummy?s=64&d=mp&f=y"
+          {% endif %}
+          alt="{{ author.name }}"
+          title="{% if include.compact %} {{ author.about }}{% endif %}"
+        />
+        <span class="name">
+          {% if author.github %}
+          <a href="https://github.com/{{ author.github }}/" rel="nofollow" title="{{ author.name }} (@{{ author.github}}) on GitHub">{{ author.name }}</a>
+          {% else %}
+            {{ author.name }}
+          {% endif %}
+        </span>
+      </div>
+
+      {% if author.about and include.showabout == true %}
+        <p class="about">
+          {{ author.about }}
+        </p>
+      {% endif %}
     </div>
   {% endfor %}
 </div>
