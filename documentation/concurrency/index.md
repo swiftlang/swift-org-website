@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 date: 2024-03-03 12:00:00
 title: Enabling Complete Concurrency Checking
 ---

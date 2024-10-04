@@ -1,6 +1,6 @@
 ---
 redirect_from: "/core-libraries/"
-layout: page
+layout: new-layouts/base
 title: Swift Core Libraries
 ---
 

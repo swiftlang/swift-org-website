@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/deploying/digital-ocean"
-layout: page
+layout: new-layouts/base
 title: Deploying to DigitalOcean
 ---
 

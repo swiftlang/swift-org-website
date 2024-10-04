@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 title: Mixing Swift and C++
 official_url: https://swift.org/documentation/cxx-interop/
 redirect_from:
@@ -14,7 +14,7 @@ redirect_from:
 
 ## Introduction
 
-C++ interoperability is a new feature in Swift 5.9. 
+C++ interoperability is a new feature in Swift 5.9.
 A great variety of C++ APIs can be called directly from Swift, and select Swift APIs can be used from C++.
 
 This document is the reference guide describing how to mix Swift and C++. It

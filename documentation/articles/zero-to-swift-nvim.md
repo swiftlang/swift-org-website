@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 date: 2024-06-04 15:13:07
 title: Configuring Neovim for Swift Development
 author: [etcwilde]

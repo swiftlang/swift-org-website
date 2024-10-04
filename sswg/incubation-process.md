@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 title: SSWG Incubation Process
 ---
 
@@ -183,7 +183,7 @@ Please follow the guidance laid out in the [Security](/sswg/security) section.
 * Concurrency / IO
   * Packages should be non-blocking (w/ async API) unless not possible (blocking C libs, etc)
   * There should be as little (preferably no) wrapping of NIO as possible. Exposing NIO types directly will go a long way for making packages compatible.
-  * Blocking code should be wrapped in [NIOThreadPool](https://swiftpackageindex.com/apple/swift-nio/2.48.0/documentation/nioposix/niothreadpool) (like Vapor's SQLite package)  
+  * Blocking code should be wrapped in [NIOThreadPool](https://swiftpackageindex.com/apple/swift-nio/2.48.0/documentation/nioposix/niothreadpool) (like Vapor's SQLite package)
 * Uses force unwraps and force tries only as preconditions, ie. conditions that the programmer regards as impossible or programmer error. All force tries/unwraps should come with a comment stating the reasons
 * Does not use `*Unsafe*` unless interfacing with C
   * Exceptions to uses of `*Unsafe*` constructs are acceptable when appropriately documented why they are absolutely necessary.

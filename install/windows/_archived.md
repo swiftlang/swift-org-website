@@ -1,4 +1,7 @@
-## Installation of Old Swift Releases
+---
+layout: new-layouts/base
+title: Installation of Old Swift Releases
+---
 
 <div class="warning" markdown="1">
 This page documents the manual installation process for versions of Swift 5.9 or older. Subsequent releases have updated dependencies and a [streamlined installation process](/install/windows/manual).

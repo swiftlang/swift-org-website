@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 title: Build an embedded application for a microcontroller
 ---
 
@@ -19,7 +19,7 @@ To test that you have Swift installed, run `swift --version` from your shell or 
 
 ## Installing dependencies for embedded development
 
-Install the Raspberry Pi Pico SDK, and the Arm Embedded Toolchain by following the [Getting Started With Pico guide](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf). 
+Install the Raspberry Pi Pico SDK, and the Arm Embedded Toolchain by following the [Getting Started With Pico guide](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf).
 Export three environment variables to match your setup and hardware:
 
 ```shell
@@ -41,7 +41,7 @@ $ cmake --version
 cmake version 3.29.2
 $ echo $PICO_BOARD
 pico
-$ ls $PICO_SDK_PATH                              
+$ ls $PICO_SDK_PATH
 CMakeLists.txt          README.md               external/               pico_sdk_version.cmake  tools/
 CONTRIBUTING.md         cmake/                  lib/                    src/
 LICENSE.TXT             docs/                   pico_sdk_init.cmake     test/
@@ -204,7 +204,7 @@ HelloEmbedded:
 Let's run it:
 
 ```shell
-$ ./HelloEmbedded 
+$ ./HelloEmbedded
 Hello, Embedded Swift 😊
 ```
 

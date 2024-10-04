@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/deployment"
-layout: page
+layout: new-layouts/base
 title: Deploying to Servers or Public Cloud
 ---
 

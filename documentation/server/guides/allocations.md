@@ -1,20 +1,20 @@
 ---
 redirect_from: "server/guides/allocations"
-layout: page
+layout: new-layouts/base
 title: Allocations
 ---
 
 ## Overview
 In server-side Swift applications, memory allocations are fundamental for various tasks like creating objects, manipulating data structures, and managing resources. Swift allocates memory resources as needed and provides built-in memory management mechanisms, such as automatic reference counting (ARC), to handle allocations, deallocations, and memory ownership.
 
-Allocations aid in optimizing memory usage by allocating the precise amount of memory required for each object or data structure, reducing memory wastage and improving application performance. However, Swift allocations can be padded to enforce memory alignment requirements for data types or structures that need to be accessed efficiently by the hardware, reducing the risk of misaligned memory access issues and improving performance. 
+Allocations aid in optimizing memory usage by allocating the precise amount of memory required for each object or data structure, reducing memory wastage and improving application performance. However, Swift allocations can be padded to enforce memory alignment requirements for data types or structures that need to be accessed efficiently by the hardware, reducing the risk of misaligned memory access issues and improving performance.
 
 Additionally, proper allocation management prevents memory leaks and ensures that memory is released when it is no longer needed. This helps in maintaining the stability and reliability of server applications.
 
 ## Heaps and stacks
-Generally speaking, Swift has two fundamental locations for memory allocations: **Heaps** and **Stacks**. 
+Generally speaking, Swift has two fundamental locations for memory allocations: **Heaps** and **Stacks**.
 
-Swift automatically allocates memory in either the heap or the stack data structure. 
+Swift automatically allocates memory in either the heap or the stack data structure.
 
 For high-performance software in Swift, understanding the source of your heap allocations and reducing the number of allocations your software provides is paramount. Identifying these questions is similar to identifying other performance questions, such as:
 
@@ -37,18 +37,18 @@ If your production workloads run on Linux instead of macOS, the number of alloca
 *This document mainly focuses on the number of heap allocations and not their size.*
 
 ## Getting started
-Swift’s optimizer produces faster code and allocates less memory in `release` mode. By profiling your Swift code in the `release` mode and optimizing based on the results, you can achieve better performance and efficiency in your applications. 
+Swift’s optimizer produces faster code and allocates less memory in `release` mode. By profiling your Swift code in the `release` mode and optimizing based on the results, you can achieve better performance and efficiency in your applications.
 
 Follow the steps below:
 
-Step 1. **Build your code** in `release` mode by running this command: 
+Step 1. **Build your code** in `release` mode by running this command:
 ```bash
 swift run -c release
 ```
 
 Step 2. [**Install `perf`**](https://www.swift.org/server/guides/linux-perf.html) to profile your code for your environment to gather performance-related data and optimize the performance of your Swift server applications.
 
-Step 3. **Clone the FlameGraph project** to generate a flame graph visualization that helps you quickly identify hotspots in the codebase, visualize call paths, understand the flow of execution, and optimize performance. To generate a flame graph, you will need to clone the [`FlameGraph`](https://github.com/brendangregg/FlameGraph) repository on your machine or into a container, making it available at `~/FlameGraph`. 
+Step 3. **Clone the FlameGraph project** to generate a flame graph visualization that helps you quickly identify hotspots in the codebase, visualize call paths, understand the flow of execution, and optimize performance. To generate a flame graph, you will need to clone the [`FlameGraph`](https://github.com/brendangregg/FlameGraph) repository on your machine or into a container, making it available at `~/FlameGraph`.
 
 Run this command to clone the `https://github.com/brendangregg/FlameGraph` repository in `~/FlameGraph`:
 ```bash
@@ -83,9 +83,9 @@ The `perf` tool is a performance profiling and analysis tool available on Linux 
 See [Getting `perf` to work](https://www.swift.org/server/guides/linux-perf.html) for more information.
 
 ## Installing a perf user probe
-As previously mentioned, this document's example programs focus on counting the *number* of allocations. 
+As previously mentioned, this document's example programs focus on counting the *number* of allocations.
 
-Most allocations use a Swift program's `malloc` function on Linux. Installing `perf` user probes on the allocation function provides information about when an allocation function is called. 
+Most allocations use a Swift program's `malloc` function on Linux. Installing `perf` user probes on the allocation function provides information about when an allocation function is called.
 
 In this instance, a user probe was installed for all allocation functions because Swift uses other functions like `calloc` and `posix_memalign`.
 
@@ -100,7 +100,7 @@ perf probe --del 'probe_libc:*'
 perf probe -x "$libc_path" --add malloc --add calloc --add posix_memalign
 ```
 
-Subsequently, an event in `perf` will trigger whenever one of the allocation functions is called. 
+Subsequently, an event in `perf` will trigger whenever one of the allocation functions is called.
 
 The output should look like this:
 
@@ -136,7 +136,7 @@ Hello World
        0.003867000 seconds sys
 ```
 
-In this case, it appears the user probe called the allocation functions 1021 times. 
+In this case, it appears the user probe called the allocation functions 1021 times.
 
 > Important: If the probe called the allocation functions 0 times, it would indicate an error.
 
@@ -144,7 +144,7 @@ In this case, it appears the user probe called the allocation functions 1021 tim
 By running allocation analysis, you can gain a better understanding of the memory usage patterns in your application and identify and fix memory issues such as leaks or inefficient usage, ultimately improving the performance and stability of your code.
 
 ### Example program
-Once you’ve confirmed the user probe on `malloc` is working, you can analyze the allocations of a program. For instance, you can analyze a program that performs ten subsequent HTTP requests using [AsyncHTTPClient](https://github.com/swift-server/async-http-client). 
+Once you’ve confirmed the user probe on `malloc` is working, you can analyze the allocations of a program. For instance, you can analyze a program that performs ten subsequent HTTP requests using [AsyncHTTPClient](https://github.com/swift-server/async-http-client).
 
 Analyzing a program using AsyncHTTPClient can help optimize its performance, improve error handling, ensure proper concurrency and threading, enhance code readability and maintainability, and assess scalability considerations.
 
@@ -220,7 +220,7 @@ MultiThreadedEventLoopGroup.withCurrentThreadAsEventLoop { eventLoop in
 logger.info("exiting")
 ```
 
-If running a program as a Swift package, compile it in the `release` mode first, using this command: 
+If running a program as a Swift package, compile it in the `release` mode first, using this command:
 
 ```bash
 swift build -c release
@@ -229,7 +229,7 @@ swift build -c release
 A binary called `.build/release/your-program-name` should render and can be analyzed to get the number of allocations.
 
 ### Counting allocations
-Counting allocations and visualizing them as a graph can help you analyze memory utilization, profile memory usage, optimize performance, refactor and optimize code, and debug memory-related issues in your program. 
+Counting allocations and visualizing them as a graph can help you analyze memory utilization, profile memory usage, optimize performance, refactor and optimize code, and debug memory-related issues in your program.
 
 Before visualizing the allocations as a flame graph, start with an analysis using the binary to get the number of allocations by running the command:
 
@@ -252,7 +252,7 @@ Performance counter stats for '.build/release/your-program-name':
 [...]
 ```
 
-In this instance, the program allocated 2977 times through `malloc` and a small number of times through the other allocation functions. 
+In this instance, the program allocated 2977 times through `malloc` and a small number of times through the other allocation functions.
 
 It's important to note that the `-e probe_libc:*` command is used instead of individually listing every event such as:
 - `-e probe_libc: malloc`
@@ -281,12 +281,12 @@ Breaking down this command provides the following construct:
 - The `perf record` command instructs `perf` to record data.
 - The `--call-graph dwarf,16384` command instructs `perf` to use the [debugging with attributed record formats (DWARF)](http://www.dwarfstd.org/) information to create the call graphs. It also sets the maximum stack dump size to 16k, which should be enough information for full stack traces.
     - Although using DWARF is slow (see below), it creates the best call graphs.
-- `-m 50000` indicates the size of the ring buffer that `perf` uses and outputs in multiples of `PAGE_SIZE` (usually 4kB). 
+- `-m 50000` indicates the size of the ring buffer that `perf` uses and outputs in multiples of `PAGE_SIZE` (usually 4kB).
     - A significant buffer is necessary when using DWARF to prevent data loss.
 - `-e 'probe_libc:*'` records the data when the `malloc`; `calloc`; and other `malloc/calloc/...` user probes fire.
-    - The fire event occurs when the probe is triggered or executed, capturing relevant information about the allocation for further analysis and debugging. 
+    - The fire event occurs when the probe is triggered or executed, capturing relevant information about the allocation for further analysis and debugging.
 
-Your program output should look similar to this: 
+Your program output should look similar to this:
 
 ```
 <your program's output>
@@ -316,7 +316,7 @@ Here’s a breakdown of this command construct:
 - The `swift demangle --simplified` command converts the symbol names to a human-readable format.
 - The last two commands create the flame graph based on the number of allocations.
 
-Once the command has been completed, an SVG file is generated that you can open in your browser. 
+Once the command has been completed, an SVG file is generated that you can open in your browser.
 
 > Note: Lengthy run times may result depending on the data size, algorithm complexity, resource limitations such as CPU power or memory, poorly optimized or inefficient code, external services, APIs, or network latency causing a slowdown.
 
@@ -327,13 +327,13 @@ This flame graph is a direct result of the example program in this section. Hove
 
 - When interpreting flame *graphs*, the X-axis means the **count** and not time. The arrangement of the stack (left or right) is not determined by when that stack was live, unlike flame *charts*.
 
-- This flame graph is not a CPU flame graph but an allocation flame graph, where one sample indicates one allocation and not time spent on the CPU. 
+- This flame graph is not a CPU flame graph but an allocation flame graph, where one sample indicates one allocation and not time spent on the CPU.
 - The wide stack frames don’t (necessarily) allocate directly, meaning the function, or something the function called, allocated numerous times.
 
     - For example, `BaseSocketChannel.readable` is a wide frame, but its function does not allocate directly. Instead, it called other functions, such as other parts of SwiftNIO and AsyncHTTPClient, that allocated considerably.
 
 ## Allocation flame graphs on macOS
-Although much of this tutorial focuses on the `perf` tool, you can create the same graphs using macOS. 
+Although much of this tutorial focuses on the `perf` tool, you can create the same graphs using macOS.
 
 Step 1. To get started, collect the raw data using the [DTrace](https://en.wikipedia.org/wiki/DTrace) framework by running this command:
 
@@ -341,7 +341,7 @@ Step 1. To get started, collect the raw data using the [DTrace](https://en.wikip
 sudo dtrace -n 'pid$target::malloc:entry,pid$target::posix_memalign:entry,pid$target::calloc:entry,pid$target::malloc_zone_malloc:entry,pid$target::malloc_zone_calloc:entry,pid$target::malloc_zone_memalign:entry { @s[ustack(100)] = count(); } ::END { printa(@s); }' -c .build/release/your-program > raw.stacks
 ```
 
-Like Linux's `perf` user probes, DTrace also uses probes. The previous command instructs `dtrace` to aggregate the number of calls to the allocation function equivalents: 
+Like Linux's `perf` user probes, DTrace also uses probes. The previous command instructs `dtrace` to aggregate the number of calls to the allocation function equivalents:
 
 - `malloc`
 - `posix_memalign`
@@ -370,7 +370,7 @@ You will notice this command is similar to the `perf` invocation, except:
 ### Swift’s allocation patterns
 Optimizing memory allocations and improving code efficiency based on the information provided by the flame graph can help make your Swift code more performant and visually appealing. The shape of allocations in Swift can vary depending on the type of memory being allocated and the way it is used.
 
-Some common shapes of allocations in Swift include: 
+Some common shapes of allocations in Swift include:
 
 - Single object allocations
 - Collection allocations
@@ -379,7 +379,7 @@ Some common shapes of allocations in Swift include:
 - Protocol existentials
 - Structures and classes
 
-For example, a class instance (which allocates) calls `swift_allocObject`, which calls `swift_slowAlloc`, which calls `malloc` that contains the user probe. 
+For example, a class instance (which allocates) calls `swift_allocObject`, which calls `swift_slowAlloc`, which calls `malloc` that contains the user probe.
 
 ### “Prettifying” allocation patterns
 To make your flame graph look good (after demangling the collapsed stacks) insert the following code into the Linux `perf script` code (above) by:
@@ -422,12 +422,12 @@ Check IO/CPU overload!
 
 If `perf` indicates it lost several *chunks*, it means it lost data. When `perf` loses data, you can use these options to help resolve the issue:
 
-- Reduce the amount of work your program performs. 
+- Reduce the amount of work your program performs.
     - For every allocation, `perf` records a stack trace.
-- Reduce the maximum *stack dump* that `perf` records by changing the `--call-graph dwarf` parameter. 
+- Reduce the maximum *stack dump* that `perf` records by changing the `--call-graph dwarf` parameter.
 For example, change to: `--call-graph dwarf,2048`
     - The default records a maximum of 4096 bytes, rendering deep stacks. If you don’t need high-volume output, you can reduce this number. However, the flame graph may display `[unknown]` stack frames, meaning missing stack frames exist (in units of bytes).
 - Increase the number of the `-m` parameter, which is the size of the ring buffer that `perf` uses in memory and renders in multiples of `PAGE_SIZE` (usually 4kB).
-- Replace the command `--call-tree dwarf` with `--call-tree fp` to generate a call tree report that provides a hierarchical view of function calls within the program, showing how functions are called and the relationships between different functions. 
+- Replace the command `--call-tree dwarf` with `--call-tree fp` to generate a call tree report that provides a hierarchical view of function calls within the program, showing how functions are called and the relationships between different functions.
 
 Overall, these practices help you understand your program’s behavior, identify bottlenecks, and improve performance in your Swift applications.

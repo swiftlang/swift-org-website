@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: new-layouts/base
 date: 2024-05-28 12:00:00
 title: Configuring VS Code for Swift Development
 author: [matthewbastien, plemarquand]

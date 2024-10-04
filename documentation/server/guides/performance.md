@@ -1,6 +1,6 @@
 ---
 redirect_from: "server/guides/performance"
-layout: page
+layout: new-layouts/base
 title: Debugging Performance Issues
 ---
 
@@ -14,7 +14,7 @@ Here are some basic methods and tools to debug performance issues in Swift:
 
     - For macOS, see [Getting Started with Instruments](https://developer.apple.com/videos/play/wwdc2019/411/).
     - For Linux, see [perf: Linux profiling with performance counters](https://perf.wiki.kernel.org/index.php/Main_Page).
-    
+
 2. **Profile memory usage**: Use Xcode’s [Memory Graph Debugger](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use) to identify and fix memory-related issues.
 
 3. **Benchmark and measure improvements**: Continue to iterate and optimize until the desired performance is achieved.
@@ -27,14 +27,14 @@ Debugging performance issues can sometimes be a complex and iterative process. I
 
 - **Flame graphs**
 - **Malloc libraries**
-    
+
 ### Flame graphs
 
-[Flame graphs](https://www.brendangregg.com/flamegraphs.html) are a helpful tool for analyzing program performance. They show which parts of your program are taking up the most time which can help you find areas that need improvement. 
+[Flame graphs](https://www.brendangregg.com/flamegraphs.html) are a helpful tool for analyzing program performance. They show which parts of your program are taking up the most time which can help you find areas that need improvement.
 
 #### Flame graphs in Xcode
 
-While there isn’t a built-in tool in Xcode specifically designed for creating flame graphs like Linux `perf`, you can use external tools to generate flame graphs for some apps developed using Xcode. 
+While there isn’t a built-in tool in Xcode specifically designed for creating flame graphs like Linux `perf`, you can use external tools to generate flame graphs for some apps developed using Xcode.
 
 One commonly used tool for creating flame graphs is Instruments, which is part of Xcode. You can use the Time Profiler instrument in Instruments to capture stacks and convert the captured data into a flame graph using tools like [flamegraph.pl](https://github.com/brendangregg/FlameGraph/blob/master/flamegraph.pl). Running the app with Instruments using the Time Profiler and then converting the collected data into a flame graph can give you insights into your application's performance profile.
 
@@ -142,16 +142,16 @@ To generate flame graphs in Swift on Linux, you can use various tools such as `p
     ```
     swift build -c release
     ```
-        
+
     After the build process completes successfully, you can find the compiled binary in the `.build/release/` directory within your Swift package’s directory.
 
     c. Copy the compiled binary to the current directory and rename it to `slow` using the following command:
     ```
     cp .build/release/YourExecutableName ./slow
     ```
-    
+
     Replace `YourExecutableName` with the actual name of your compiled binary.
-    
+
 3. Clone the repository in the `~/FlameGraph` directory using this command:
     ```
     git clone https://github.com/brendangregg/FlameGraph
@@ -207,6 +207,6 @@ Other `malloc` implementations exist and can typically be enabled using LD_PRELO
 > LD_PRELOAD=/usr/bin/libjemalloc.so  myprogram
 ```
 
-The choice between these libraries depends on the specific performance needs and characteristics of the application or system. 
+The choice between these libraries depends on the specific performance needs and characteristics of the application or system.
 
 In summary, using performance tools for debugging Swift server applications helps optimize performance, enhance user experience, plan for scalability, and ensure the efficient operation of server applications in production environments.
