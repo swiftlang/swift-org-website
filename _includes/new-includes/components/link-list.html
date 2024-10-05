@@ -1,0 +1,17 @@
+{% assign items_count = include.items | size %}
+<div class="link-list grid-{{items_count}}-cols">
+    {% for item in include.items %}
+        <div>
+            {% if item.label %}
+                <p>{{ item.label }}</p>
+            {% endif %}
+            <ul>
+                {% for link in item.links %}
+                    <li>
+                        <a href="{{ link.url }}">{{ link.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>
