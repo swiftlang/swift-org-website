@@ -3,7 +3,7 @@ layout: new-layouts/base
 ---
 
 {% capture banner-section %}
-<div class="grid-1-col" markdown=1>
+<div class="grid-1-cols" markdown=1>
   <h1>{{ page.title }}</h1>
   <time pubdate datetime="{{ page.date | date_to_xmlschema }}">
     {{ page.date | date: "%B %-d, %Y" }}

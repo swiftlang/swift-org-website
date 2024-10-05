@@ -54,7 +54,7 @@ h3 {
   margin-bottom: 20px;
 }
 
-.grid-1-col {
+.grid-1-cols {
   @include grid($width-layout, 0);
 
   @media (max-width: 1080px) {

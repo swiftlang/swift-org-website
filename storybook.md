@@ -17,6 +17,7 @@ atom: true
 * [Code](#code)
 * [Heading](#heading)
 * [Link](#link)
+* [Link List](#link-list)
 * [Ribbon](#ribbon)
 * [Section](#section)
 * [Tabs](#tabs)
@@ -47,7 +48,7 @@ atom: true
 <br />
 
 {% raw %}
-    <div class="grid-1-col">
+    <div class="grid-1-cols">
         <div>content</div>
     </div>
 
@@ -69,7 +70,7 @@ none
 
 <br />
 
-<div class="grid-1-col">
+<div class="grid-1-cols">
     <div>content</div>
 </div>
 
@@ -439,6 +440,54 @@ none
     style="orange"
     url="#"
     text="Click Me"
+%}
+
+<br />
+<br />
+
+---
+
+<br />
+<br />
+
+### Link List
+
+<br />
+
+#### Code example
+
+<br />
+
+{% raw %}
+{%
+
+        include new-includes/components/link-list.html
+
+        items=site.data.new-data.footer-links
+
+%}
+{% endraw %}
+
+<br />
+
+#### attributes
+
+<br />
+
+{% raw %}
+
+* items = list items
+
+{% endraw %}
+
+<br />
+
+#### Render
+
+<br />
+
+{% include new-includes/components/link-list.html
+    items=site.data.new-data.footer-links
 %}
 
 <br />
