@@ -40,7 +40,7 @@ atom: true
 %}
 
 {% capture banner-section %}
-<div class="grid-1-col">
+<div class="grid-1-cols">
     {% include new-includes/components/banner.html
         style="purple"
         text="Get ready for the Swift 6 language mode with the <a href=\"#\">official migration guide</a>"
@@ -133,7 +133,7 @@ atom: true
     text="The Swift package ecosystem has thousands of packages to help you with all kinds of tasks across your projects."
 %}
 {% capture packages-section %}
-<div class="grid-1-col">
+<div class="grid-1-cols">
     {% include new-includes/components/link.html
         type="button"
         style="black"
@@ -243,20 +243,9 @@ atom: true
 %}
 
 {% capture links-section %}
-<div class="grid-4-cols">
-    <div>
-        adsadsads
-    </div>
-    <div>
-        adsadsads
-    </div>
-    <div>
-        adsadsads
-    </div>
-    <div>
-        adsadsads
-    </div>
-</div>
+{% include new-includes/components/link-list.html
+    items=site.data.new-data.footer-links
+%}
 {% endcapture %}
 {% include new-includes/components/section.html
     content=links-section

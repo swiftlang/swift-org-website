@@ -6,7 +6,7 @@ atom: true
 ---
 
 {% capture banner-section %}
-<div class="grid-1-col" markdown=1>
+<div class="grid-1-cols" markdown=1>
   <h1>Getting Started</h1>
 </div>
 {% endcapture %}

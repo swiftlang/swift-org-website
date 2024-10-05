@@ -1,0 +1,54 @@
+- label: Swift
+  links:
+    - text: About
+      url:
+    - text: Blog
+      url:
+    - text: Getting Started
+      url:
+    - text: Download
+      url:
+    - text: Platform Support
+      url:
+    - text: Documentation
+      url:
+- label: Community
+  links:
+    - text: Overview
+      url:
+    - text: Diversity
+      url:
+    - text: Mentorship
+      url:
+    - text: Contributing
+      url:
+    - text: Code of Conduct
+      url:
+- label: Open-source Development
+  links:
+    - text: Source Code
+      url:
+    - text: Continous Integration
+      url:
+    - text: Source Compatibility
+      url:
+    - text: Security
+      url:
+- label: Open-source Efforts
+  links:
+    - text: Swift Compiler
+      url:
+    - text: Standard Library
+      url:
+    - text: Package Manager
+      url:
+    - text: Core Libraries
+      url:
+    - text: REPL, Debugger & Playgrounds
+      url:
+    - text: Swift on Server
+      url:
+    - text: Swift.org Website
+      url:
+    - text: C++ Interoperability
+      url:
