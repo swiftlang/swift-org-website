@@ -60,7 +60,7 @@ Not all changes driven by the Platform Steering Group will under go evolution re
 
 ## Communication
 
-The Platform Steering Group communicates with the community primarily using the [Platform category](https://forums.swift.org/c/platform) on the Swift forums.  It may also prepare special posts for the [Swift Blog](https://www.swift.org/blog/).
+The Platform Steering Group communicates with the community primarily using the [Platform category](https://forums.swift.org/t/platform-steering-group/) on the Swift forums.  It may also prepare special posts for the [Swift Blog](https://www.swift.org/blog/).
 
 The Steering Group is presently working on a process for platform evolution and will update this charter when details of this process have been finalised, but it is expected that the Steering Group will be responsible for:
 
