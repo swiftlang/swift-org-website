@@ -9,11 +9,60 @@ categories:
       organised via [this thread in the Swift Forums](https://forums.swift.org/t/68168)
       and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
     packages:
-      - name: swift-glob
-        description: Native Swift implementation for glob pattern matching and file filtering.
-          Features include fast matching, concurrent directory searching, customizable
-          behavior, and an ergonomic API.
-        owner: David Beck
+      - name: Chip8iEmulationCore
+        description: Emulates the CHIP-8 system from the 1970s, running programs, processing
+          operations, handling input, and subscribing to screen output and sound updates
+          for frontend applications.
+        owner: Danijel Stracenski
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/danijelLoc/Chip8iEmulationCore
+        note: Discussed on [Episode 49 of Swift Package Indexing](https://share.transistor.fm/s/c3ea4e1a){:target='_blank'}.
+      - name: elementary
+        description: HTML rendering library inspired by SwiftUI for web development. Utilizes
+          Swift's generics for type-safe, efficient HTML streaming without dependencies.
+          Supports async rendering and environment values.
+        owner: Simon Leeb
+        swift_compatibility: 5.10+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/sliemeobn/elementary
+        note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/82){:target='_blank'}.
+      - name: swift-openapi-generator
+        description: Generate Swift client and server code from an OpenAPI document. Includes
+          multiple repositories for extensibility and supports various transports.
+        owner: Apple
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (macOS) and Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/apple/swift-openapi-generator
+        note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/84){:target='_blank'}.
+      - name: swift-export
+        description: Command-line tool for generating signed and notarized macOS installer
+          packages from Swift projects, with support for configuration files, sandboxing,
+          entitlements, and additional payloads.
+        owner: Frank Lefebvre
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (macOS)
+        license: MIT
+        url: https://swiftpackageindex.com/franklefebvre/swift-export
+        note: Linked to in [Issue 679 of iOS Dev Weekly](https://iosdevweekly.com/issues/679#DXo4Uf9){:target='_blank'}.
+      - name: SpectreKit
+        description: Facilitates the creation of aesthetically pleasing terminal applications
+          in Swift, inspired by Spectre.Console and Python's Rich, currently under development.
+        owner: Patrik Svensson
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
@@ -21,70 +70,19 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/davbeck/swift-glob
-        note: Discussed on [Episode 44 of Swift Package Indexing](https://share.transistor.fm/s/cbb0c6ad){:target='_blank'}.
-      - name: Easing
-        description: Easing provides a comprehensive set of easing functions for interactive
-          transitions and time-based calculations. Features include a swifty API, cubic
-          bezier based easings, interpolation for common types, and an interactive demo
-          app.
-        owner: Pavel Sharanda
+        url: https://swiftpackageindex.com/patriksvensson/spectre-kit
+        note: Discussed on [Episode 49 of Swift Package Indexing](https://share.transistor.fm/s/c3ea4e1a){:target='_blank'}.
+      - name: DeclarativeTextKit
+        description: Swift DSL for modifying text buffers declaratively, supporting undo
+          operations and changes across multiple buffers without UI rendering.
+        owner: Clean Cocoa
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        platform_compatibility_tooltip: Apple (macOS)
         license: MIT
-        url: https://swiftpackageindex.com/psharanda/Easing
-        note: Discussed on [Episode 47 of Swift Package Indexing](https://share.transistor.fm/s/546632e4){:target='_blank'}.
-      - name: Tabular
-        description: Facilitates data sharing by converting spreadsheet data into structured
-          objects, supporting XLSX via CoreXLSX. Not designed for large tables or high-performance
-          needs.
-        owner: "Ant\xF3nio Pedro Marques"
-        swift_compatibility: 5.10+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS) and Linux
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/entonio/Tabular
-        note: Discussed on [Episode 46 of Swift Package Indexing](https://share.transistor.fm/s/08c0a3f9){:target='_blank'}.
-      - name: Meridian
-        description: Enables writing web server endpoints in Swift using a declarative
-          approach.
-        owner: Soroush Khanlou
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
-        license: MIT
-        url: https://swiftpackageindex.com/khanlou/Meridian
-        note: Linked to in [Issue 667 of iOS Dev Weekly](https://iosdevweekly.com/issues/667#u2UMcBe){:target='_blank'}.
-      - name: KeyColor
-        description: Extracts dominant colors from images, supporting both UIImage and
-          NSImage. Adjustable saturation, brightness thresholds, and resolution. Uses
-          PixelColor and AsyncGraphics libraries.
-        owner: Anton Heestand
-        swift_compatibility: 5.10+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
-        license: MIT
-        url: https://swiftpackageindex.com/heestand-xyz/KeyColor
-        note: Discussed on [Episode 47 of Swift Package Indexing](https://share.transistor.fm/s/546632e4){:target='_blank'}.
-      - name: Neuron
-        description: Swift library for building and training neural networks with customizable
-          architectures. Supports Classifier, GAN, WGAN, and WGANGP models. Uses Tensors
-          for computations and various optimizers for training.
-        owner: William Vabrinskas
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/wvabrinskas/Neuron
-        note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/79){:target='_blank'}.
+        url: https://swiftpackageindex.com/CleanCocoa/DeclarativeTextKit
+        note: Discussed on [Episode 49 of Swift Package Indexing](https://share.transistor.fm/s/53ee9157){:target='_blank'}.
   - name: Packages with Macros
     slug: macros
     brief: New in Swift 5.9, Swift packages can include macro targets. Browse a selection
