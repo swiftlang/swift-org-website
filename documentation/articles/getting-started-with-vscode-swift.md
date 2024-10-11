@@ -250,4 +250,4 @@ The Swift for Visual Studio Code extension is a community driven project origina
 created by the [Swift Server Working Group](https://www.swift.org/sswg/) and now
 maintained as part of the [swiftlang organization](https://github.com/swiftlang/).
 Contributions are appreciated, including code, tests and documentation. For more
-details please visit the [GitHub repository for VS Code Swift](https://github.com/swiftlang/vscode-swift)
+details please visit the [Swift for VS Code extension repository](https://github.com/swiftlang/vscode-swift)
