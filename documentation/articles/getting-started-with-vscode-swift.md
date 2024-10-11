@@ -30,7 +30,7 @@ The Swift extension is designed to support the following projects:
    [Getting Started Guide on Swift.org](/getting-started/).
 2. Download and install [Visual Studio Code](https://code.visualstudio.com/Download).
 3. Install the Swift extension from the
-   [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang)
+   [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=swiftlang.vscode-swift)
    or directly from within the VS Code extensions pane.
 
 ![Installing the vscode-swift extension from the extensions pane](/assets/images/getting-started-with-vscode-swift/installation.png)
@@ -246,5 +246,8 @@ function correctly:
 
 ## Contributors
 
-The extension is developed by members of the Swift Community and maintained by
-the [Swift Server Working Group](/sswg/).
+The Swift for Visual Studio Code extension is a community driven project originally
+created by the [Swift Server Working Group](https://www.swift.org/sswg/) and now
+maintained as part of the [swiftlang organization](https://github.com/swiftlang/).
+Contributions are appreciated, including code, tests and documentation. For more
+details please visit the [GitHub repository for VS Code Swift](https://github.com/swiftlang/vscode-swift)
