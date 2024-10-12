@@ -93,8 +93,7 @@ export interface GetReferenceDocumentResult {
 #### Working of the "Expand Macro" Code Action
 
 1. The `"workspace/peekDocuments"` request is sent from SourceKit-LSP to the editor and prompts it to show the the contents of `locations` inside the source file `uri` as a peek window at `position`. In VS Code, this executes the `"editor.action.peekLocations"` command to present a peeked editor.
-2. Since the contents of the macro expansion are not represented by a file on disk, we introduce a custom `sourcekit-lsp://` URL scheme to represent the macro expansion buffers. In the future, this URL scheme can be represented for other use cases such as generated interfaces by using a `document-type` other than `swift-macro-expansion`.  
-macro expansion contents.
+2. Since the contents of the macro expansion are not represented by a file on disk, we introduce a custom `sourcekit-lsp://` URL scheme to represent the macro expansion buffers. In the future, this URL scheme can represent other use cases such as generated interfaces by using a `document-type` other than `swift-macro-expansion`.
 3. To fetch the contents of this custom URL scheme, the editor client sends a `"workspace/getReferenceDocument"` to SourceKit-LSP.
 
 ![Working of the Expand Macro Code Action](/assets/images/expansion-of-swift-macros-in-vscode-blog/working-of-getreferencedocumentrequest.jpeg)
@@ -103,7 +102,7 @@ macro expansion contents.
 
 #### Achieving Semantic Functionality (jump-to-definition, quick help on hover, syntax highlighting, etc.)
 
-   By default, SourceKit-LSP and SourceKitD are not equipped to handle our newly introduced Reference Document URLs. To enable semantic functionality, such as jump-to-definition, quick help on hover, and syntax highlighting, the build arguments of the file are required. To address this, we utilised the source file's build arguments and applied them to the reference documents. This effectively tricks sourcekitd into providing semantic functionality for these reference documents.
+   By default, SourceKit-LSP and SourceKitD are not equipped to handle our newly introduced Reference Document URLs. To enable semantic functionality, such as jump-to-definition, quick help on hover, and syntax highlighting, the build settings of the file are required. To address this, we utilised the source file's build settings and applied them to the reference documents. This effectively tricks sourcekitd into providing semantic functionality for these reference documents.
 
 #### Achieving Nested Macro Expansion
 
@@ -128,7 +127,7 @@ That wraps up our Google Summer of Code project successfully! 🎉
 
 #### 1. Feedback, Feedback, Feedback
 
-   We put a great deal of attention to detail, ensuring that every decision in the design process was thoughtful and deliberate. However, we understand that you might have better ideas or come across issues we haven't anticipated, and we're always eager to improve this feature. If you have suggestions or encounter any bugs, we encourage you to file an issue in either the sourcekit-lsp or vscode-swift repository, depending on where you face the problem.
+   We put a great deal of attention to detail, ensuring that every decision in the design process was thoughtful and deliberate. However, we understand that you might have better ideas or come across issues we haven't anticipated, and we're always eager to improve this feature. If you have suggestions or encounter any bugs, we encourage you to file an issue in either the [sourcekit-lsp](https://github.com/swiftlang/sourcekit-lsp) or [vscode-swift](https://github.com/swiftlang/vscode-swift] repository, depending on where you face the problem.
 
 #### 2. Implementing Semantic Functionality and Nested Macro Expansions for all LSP-based editors
 
@@ -142,7 +141,7 @@ That wraps up our Google Summer of Code project successfully! 🎉
 
    Reference Document URLs were built from the ground up to encode the data necessary to display any form of content. This functionality allows anyone to present any content of their choice, whether in a peeked editor or a fully open document, as long as it is generated during compile time. One such example we discussed today is the `swift-macro-expansion` document type.
 
-   Also, For instance, we can migrate `OpenInterfaceRequest` to Reference Document URLs to display the generated `.swiftinterface` files of modules. Additionally, we can show implicitly generated constructors and synthesized code related to `Equatable`, `Hashable`, and `Codable` conformances. Another use case involves previewing or rendering generated HTML from the Mustache template engine by integrating its CLI.
+   Also, for instance, we can migrate `OpenInterfaceRequest` to Reference Document URLs to display the generated `.swiftinterface` files of modules. Additionally, we can show implicitly generated constructors and synthesized code related to `Equatable`, `Hashable`, and `Codable` conformances. Another use case involves previewing or rendering generated HTML from the Mustache template engine by integrating its CLI.
 
    These are just a few examples. The ability to present various document formats based on different code generation behaviors opens up a wide range of possibilities, encouraging you to bring your own ideas to life. With LSP 3.18, this functionality will be standardized across all editors, not just VS Code.
 
