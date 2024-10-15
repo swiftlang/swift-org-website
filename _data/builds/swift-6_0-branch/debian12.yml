@@ -1,3 +1,8 @@
+- date: 2024-10-12 10:10:00-06:00
+  dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-10-12-a
+  download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-10-12-a-debian12.tar.gz
+  download_signature: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-10-12-a-debian12.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2024-10-08 10:10:00-06:00
   dir: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-10-08-a
   download: swift-6.0-DEVELOPMENT-SNAPSHOT-2024-10-08-a-debian12.tar.gz
