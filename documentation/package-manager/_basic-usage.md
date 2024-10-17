@@ -4,10 +4,9 @@ In [Getting Started](/getting-started/cli-swiftpm/),
 a simple command-line tool is built with the Swift Package Manager.
 
 To provide a more complete look at what the Swift Package Manager can do,
-the following example consists of four interdependent packages:
+the following example consists of three interdependent packages:
 
 * [PlayingCard][PlayingCard] - Defines `PlayingCard`, `Suit`, and `Rank` types.
-* [FisherYates][FisherYates] - Defines an extension that implements the `shuffle()` and `shuffleInPlace()` methods.
 * [DeckOfPlayingCards][DeckOfPlayingCards] - Defines a `Deck` type that shuffles and deals an array of `PlayingCard` values.
 * [Dealer][Dealer] - Defines an executable that creates a `DeckOfPlayingCards`, shuffles it, and deals the first 10 cards.
 
@@ -75,64 +74,13 @@ it will compile the Swift module for `PlayingCard`.
 > The complete code for the `PlayingCard` package can be found at
 > <https://github.com/apple/example-package-playingcard>.
 
-### Using Build Configuration Statements
-
-The next module you're going to build is `FisherYates`.
-Unlike `PlayingCard`, this module does not define any new types.
-Instead, it extends an existing type --
-specifically the `Collection` and `MutableCollection` protocols --
-to add the `shuffled()` method
-and its mutating counterpart `shuffle()`.
-
-The implementation of `shuffle()` uses
-the [Fisher-Yates](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle) algorithm
-to randomly permute the elements in a collection.
-Instead of using the random number generator provided by the Swift standard library,
-this method calls a function imported from a system module.
-For this function to be compatible with both macOS and Linux,
-the code uses build configuration statements.
-
-In macOS, the system module is `Darwin`,
-which provides the `arc4random_uniform(_:)` function.
-In Linux, the system module is `Glibc`,
-which provides the `random()` function:
-
-~~~ swift
-#if os(Linux)
-import Glibc
-#else
-import Darwin.C
-#endif
-
-public extension MutableCollection where Index == Int {
-    mutating func shuffle() {
-        if count <= 1 { return }
-
-        for i in 0..<count - 1 {
-          #if os(Linux)
-            let j = Int(random() % (count - i)) + i
-          #else
-            let j = Int(arc4random_uniform(UInt32(count - i))) + i
-          #endif
-            swapAt(i, j)
-        }
-    }
-}
-~~~
-
-> The complete code for the `FisherYates` package can be found at
-> <https://github.com/apple/example-package-fisheryates>.
-
 ### Importing Dependencies
 
-The `DeckOfPlayingCards` package brings the previous two packages together:
-It defines a `Deck` type
-that uses the `shuffle()` method from `FisherYates`
-on an array of `PlayingCard` values.
+The `DeckOfPlayingCards` package brings in the previous package:
+It defines a `Deck` type.
 
-To use the `FisherYates` and `PlayingCards` modules,
-the `DeckOfPlayingCards` package must declare their packages as dependencies
-in its `Package.swift` manifest file.
+To use the `PlayingCards` module, the `DeckOfPlayingCards` package must declare
+the package as a dependency in its `Package.swift` manifest file.
 
 ~~~ swift
 // swift-tools-version:5.3
@@ -144,13 +92,12 @@ let package = Package(
         .library(name: "DeckOfPlayingCards", targets: ["DeckOfPlayingCards"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/example-package-fisheryates.git", from: "2.0.0"),
         .package(url: "https://github.com/apple/example-package-playingcard.git", from: "3.0.0"),
     ],
     targets: [
         .target(
             name: "DeckOfPlayingCards",
-            dependencies: ["FisherYates", "PlayingCard"]),
+            dependencies: ["PlayingCard"]),
         .testTarget(
             name: "DeckOfPlayingCardsTests",
             dependencies: ["DeckOfPlayingCards"]),
@@ -163,9 +110,7 @@ The source URL is a URL accessible to the current user that resolves to a Git re
 The version requirements,
 which follow [Semantic Versioning (SemVer)](http://semver.org) conventions,
 are used to determine which Git tag to check out and use to build the dependency.
-For the `FisherYates` dependency,
-the most recent version with a major version equal to `2` (for example, `2.0.4`) will be used.
-Similarly, the `PlayingCard` dependency will use the most recent version with a major version equal to `3`.
+For the `PlayingCard` dependency will use the most recent version with a major version equal to `3`.
 
 When the `swift build` command is run,
 the Package Manager downloads all of the dependencies,
@@ -186,7 +131,7 @@ and intermediate build products in the `.build` directory at the root of your pr
 With everything else in place,
 now you can build the `Dealer` module.
 The `Dealer` module depends on the `DeckOfPlayingCards` package,
-which in turn depends on the `PlayingCard` and `FisherYates` packages.
+which in turn depends on the `PlayingCard` package.
 However, because the Swift Package Manager automatically resolves transitive dependencies,
 you only need to declare the `DeckOfPlayingCards` package as a dependency.
 
@@ -216,9 +161,6 @@ that are referenced in code.
 For the `Dealer` module's `main.swift` file,
 the `Deck` type from `DeckOfPlayingCards`
 and the `PlayingCard` type from `PlayingCard` are referenced.
-Although the `shuffle()` method on the `Deck` type
-uses the `FisherYates` module internally,
-that module does not need to be imported in `main.swift`.
 
 ~~~ swift
 import DeckOfPlayingCards
@@ -271,6 +213,5 @@ see the documentation provided in the [Swift Package Manager project on GitHub](
 
 
 [PlayingCard]: https://github.com/apple/example-package-playingcard
-[FisherYates]: https://github.com/apple/example-package-fisheryates
 [DeckOfPlayingCards]: https://github.com/apple/example-package-deckofplayingcards
 [Dealer]: https://github.com/apple/example-package-dealer
