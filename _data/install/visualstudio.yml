@@ -1,0 +1,8 @@
+- id: Community
+  name: Community
+- id: BuildTools
+  name: Build Tools
+- id: Enterprise
+  name: Enterprise
+- id: Professional
+  name: Professional

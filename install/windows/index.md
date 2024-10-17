@@ -16,7 +16,7 @@ title: Install Swift
     <p class="description">
       Install Swift via Windows Package Manager (aka WinGet).
     </p>
-    <a href="/install/windows/winget" class="cta-secondary">Instructions</a>
+    <a href="/install/windows/winget/vs17_community/10.0.22621" class="cta-secondary">Instructions</a>
   </li>
   <li class="grid-level-1">
     <h3>Package Installer</h3>
