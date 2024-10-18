@@ -5,8 +5,19 @@ title: Install Swift
 
 {% include install/_os_tabs.md macos="true" %}
 
-## Latest Release (Swift {{ site.data.builds.swift_releases.last.name }})
+## Toolchain Installer
+<ul class="grid-level-0">
+<li class="grid-level-1 featured">
+    <h3>Swiftly (beta)</h3>
+  <p class="description">
+    Command line tool for installing, managing, and switching between Swift.org toolchains.
+  </p>
+  <a href="https://download.swift.org/macos/swiftly.pkg" class="cta-secondary">Download</a>
+  <a href="/install/macos/swiftly" class="cta-secondary">Instructions</a>
+</li>
+</ul>
 
+## Latest Release (Swift {{ site.data.builds.swift_releases.last.name }})
 <ul class="grid-level-0 grid-layout-2-column">
   <li class="grid-level-1">
     <h3>Xcode</h3>
