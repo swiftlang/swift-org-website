@@ -1,15 +1,4 @@
-{
-    "version": "0.3.0",
-    "platforms": [
-        {
-            "platform": "Darwin",
-            "x86_64": "https://download.swift.org/swiftly-0.3.0-release/darwin/swiftly-0.3.0-RELEASE/swiftly-0.3.0-RELEASE-darwin.pkg",
-            "arm64": "https://download.swift.org/swiftly-0.3.0-release/darwin/swiftly-0.3.0-RELEASE/swiftly-0.3.0-RELEASE-darwin.pkg"
-        },
-        {
-            "platform": "Linux",
-            "x86_64": "https://download.swift.org/swiftly-0.3.0-release/linux/swiftly-0.3.0-RELEASE/swiftly-0.3.0-RELEASE-linux.tar.gz",
-            "arm64": "https://download.swift.org/swiftly-0.3.0-release/linux-aarch64/swiftly-0.3.0-RELEASE/swiftly-0.3.0-RELEASE-linux-aarch64.tar.gz"
-        }
-    ]
-}
+---
+layout: none
+---
+{{ site.data.builds.swiftly_release | jsonify }}
