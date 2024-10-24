@@ -1,0 +1,7 @@
+---
+layout: null
+---
+{% include install/_winget_configuration.yml
+vs_version="2022" vs_edition="Enterprise" vs_release="17"
+windows_sdk_version="10.0.26100"
+%}
