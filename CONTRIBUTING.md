@@ -73,7 +73,7 @@ A good patch is:
 2. Accompanied by a great commit message, using our commit message template.
 3. Content or visual changes:
     1. Tested, ensuring the website displays correctly after the changes.
-    2. Pull request includes screenshot of the changes to help gui the review.
+    2. Pull request includes screenshot of the changes to help guide the review.
 4. Code changes:
     1. Tested, ensuring that any tests provided failed before the patch and pass after it.
     2. Documented, adding API documentation as needed to cover new functions and properties
