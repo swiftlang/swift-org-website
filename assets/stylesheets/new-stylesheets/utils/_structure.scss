@@ -1,0 +1,59 @@
+// Widths
+$width-page-wrapper: 68rem;
+$width-column: 30rem;
+$width-column-medium: 20rem;
+$width-column-small: 15rem;
+
+// Breakpoints
+$breakpoint-desktop: 50rem;
+
+// Padding
+$padding-content: 0 2rem;
+
+// Gaps
+$gap-column: 2rem;
+$gap-column-big: 5rem;
+$gap-column-medium: 2rem;
+$gap-column-small: 1rem;
+
+// Margins
+$margins-layout: 0 auto;
+
+// Grid
+@mixin grid($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+
+  @media (max-width: $breakpoint-desktop) {
+    grid-template-columns: 1fr;
+  }
+}
+
+@mixin one-column-grid() {
+  @include grid(1, $gap-column);
+}
+
+@mixin two-columns-grid() {
+  @include grid(2, $gap-column);
+}
+
+@mixin three-columns-grid() {
+  @include grid(3, $gap-column-medium);
+}
+
+@mixin four-columns-grid() {
+  @include grid(4, $gap-column-small);
+}
+
+// Section width
+@mixin section-width($width, $margins) {
+  margin: $margins;
+  width: $width;
+
+  @media (max-width: 1080px) {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}

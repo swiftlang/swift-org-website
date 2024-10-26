@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.25em;
-  margin-bottom: 2em;
 
   .badge {
     & > div {
@@ -10,8 +9,8 @@
     }
 
     img {
-      width: 32px;
-      height: 32px;
+      width: 2rem;
+      height: 2rem;
       border-radius: 50%;
       border: 1px $gray solid;
     }

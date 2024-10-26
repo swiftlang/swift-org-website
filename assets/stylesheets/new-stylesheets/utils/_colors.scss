@@ -1,3 +1,4 @@
+// Palette
 $black: #000000;
 $brown: #6a4e19;
 $brown-light: #c18e2d;
@@ -20,6 +21,9 @@ $yellow: #f9d969;
 $yellow-dark: #f0b138;
 $yellow-light: #f9e2ab;
 $yellow-very-light: #fbeccf;
+
+// Semantic colors
+$border-color-default: $pink;
 
 @mixin isDarkTheme() {
   body:has(#theme-toggle:checked) {

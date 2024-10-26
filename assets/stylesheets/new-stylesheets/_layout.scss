@@ -1,6 +1,7 @@
-@import "layout/colors";
-@import "layout/font";
-@import "layout/structure";
+@import "utils/colors";
+@import "utils/font";
+@import "utils/structure";
+@import "utils/styling";
 
 html,
 body {
@@ -55,35 +56,19 @@ h3 {
 }
 
 .grid-1-cols {
-  @include grid($width-layout, 0);
-
-  @media (max-width: 1080px) {
-    display: block;
-  }
+  @include one-column-grid;
 }
 
 .grid-2-cols {
-  @include grid($width-column, $gap-column);
-
-  @media (max-width: 1080px) {
-    display: block;
-  }
+  @include two-columns-grid;
 }
 
 .grid-3-cols {
-  @include grid($width-column-medium, $gap-column-medium);
-
-  @media (max-width: 1080px) {
-    display: block;
-  }
+  @include three-columns-grid;
 }
 
 .grid-4-cols {
-  @include grid($width-column-small, $gap-column-small);
-
-  @media (max-width: 1080px) {
-    grid-template-columns: 1fr;
-  }
+  @include four-columns-grid;
 }
 
 p > code {

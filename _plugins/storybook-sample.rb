@@ -10,15 +10,24 @@ module Jekyll
 
     def render(context)
       content = super
+      hide_code = @params['hide_code'] == 'true'
+
+      code_output = if !hide_code
+        <<~CODE
+          #### Code
+          ```html
+          #{content.strip}
+          ```
+        CODE
+      else
+        ""
+      end
 
       <<~HTML
-        #### Code
-        ```html
-        #{content.strip}
-        ```
+        #{code_output}
 
         #### Render
-        <div class="storybook-sample">
+        <div class="storybook-render">
           #{content}
         </div>
       HTML
