@@ -12,10 +12,15 @@ module Jekyll
       content = super
       hide_code = @params['hide_code'] == 'true'
 
+      # Process Liquid includes
+      template = Liquid::Template.parse(content)
+      rendered_content = template.render(context)
+      language = rendered_content == content ? 'html' : 'liquid'
+
       code_output = if !hide_code
         <<~CODE
           #### Code
-          ```html
+          ```#{language}
           #{content.strip}
           ```
         CODE
@@ -28,7 +33,7 @@ module Jekyll
 
         #### Render
         <div class="storybook-render">
-          #{content}
+          #{rendered_content}
         </div>
       HTML
     end
