@@ -1,29 +1,7 @@
 ---
 layout: new-layouts/storybook
-title: Welcome to Swift.org Storybook
+title: Swift.org Storybook
 atom: true
----
-
-# Swift.org Storybook
-
-**Classes**
-
-- [Grid](#grid)
-
-**Components**
-
-- [Badge](#badge)
-- [Banner](#banner)
-- [Box](#box)
-- [Code](#code)
-- [Heading](#heading)
-- [Link](#link)
-- [Link List](#link-list)
-- [Ribbon](#ribbon)
-- [Section](#section)
-- [Tabs](#tabs)
-- [Toggle](#toggle)
-
 ---
 
 ## Classes
