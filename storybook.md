@@ -61,14 +61,14 @@ atom: true
 
 ### Badge
 
-```liquid
+{% storybook_sample title="Badge" %}
 {% raw %}
 {%
   include new-includes/components/badge.html
   authors='lplarson'
 %}
 {% endraw %}
-```
+{% endstorybook_sample %}
 
 #### Attributes
 
@@ -76,18 +76,11 @@ atom: true
 - `show_about` (optional): show the author.about
   - values: `true`/`false`
 
-{% storybook_sample title="Badge" hide_code="true" %}
-{%
-  include new-includes/components/badge.html
-  authors='lplarson'
-%}
-{% endstorybook_sample %}
-
 ---
 
 ### Banner
 
-```liquid
+{% storybook_sample title="Banner" %}
 {% raw %}
 {%
   include new-includes/components/banner.html
@@ -95,7 +88,7 @@ atom: true
   style="purple"
 %}
 {% endraw %}
-```
+{% endstorybook_sample %}
 
 #### Attributes
 
@@ -103,26 +96,18 @@ atom: true
 - `style`: type of banner
   - values: `purple`
 
-{% storybook_sample title="Banner" hide_code="true" %}
-{%
-  include new-includes/components/banner.html
-  text="hello world"
-  style="purple"
-%}
-{% endstorybook_sample %}
-
 ---
 
 ### Box
 
-```liquid
+{% storybook_sample title="Box" %}
 {% raw %}
 {%
   include new-includes/components/box.html
   content="This is a box"
 %}
 {% endraw %}
-```
+{% endstorybook_sample %}
 
 #### Attributes
 
@@ -138,45 +123,30 @@ atom: true
 - `type` (optional): type of box
   - values: "code"
 
-{% storybook_sample title="Box" hide_code="true" %}
-{%
-  include new-includes/components/box.html
-  content="This is a box"
-%}
-{% endstorybook_sample %}
-
 ---
 
 ### Code
 
-```liquid
+{% storybook_sample title="Code" %}
 {% raw %}
 {%
   include new-includes/components/code.html
   language="swift"
-code="var number = 2"
+  code="var number = 2"
 %}
 {% endraw %}
-```
+{% endstorybook_sample %}
 
 #### Attributes
 
 - `language`: code language
 - `code`: code to show
 
-{% storybook_sample title="Code" hide_code="true" %}
-{%
-  include new-includes/components/code.html
-  language="swift"
-  code="var number = 2"
-%}
-{% endstorybook_sample %}
-
 ---
 
 ### Heading
 
-```liquid
+{% storybook_sample title="Heading" %}
 {% raw %}
 {%
   include new-includes/components/heading.html
@@ -184,7 +154,7 @@ code="var number = 2"
   text="Heading description"
 %}
 {% endraw %}
-```
+{% endstorybook_sample %}
 
 #### Attributes
 
@@ -193,28 +163,21 @@ code="var number = 2"
   - values: "box"
 - `text` (optional): text to show
 
-{% storybook_sample title="Heading" hide_code="true" %}
-{%
-  include new-includes/components/heading.html
-  title="Heading title"
-  text="Heading description"
-%}
-{% endstorybook_sample %}
-
 ---
 
 ### Link
 
-```liquid
+{% storybook_sample title="Link" %}
 {% raw %}
 {%
   include new-includes/components/link.html
   type="button"
   style="orange"
+  url="#"
   text="Click Me"
 %}
 {% endraw %}
-```
+{% endstorybook_sample %}
 
 #### Attributes
 
@@ -227,72 +190,47 @@ code="var number = 2"
 - `target` (optional): where url should open
 - `css` (optional): custom css
 
-{% storybook_sample title="Link" hide_code="true" %}
-{%
-  include new-includes/components/link.html
-  type="button"
-  style="orange"
-  url="#"
-  text="Click Me"
-%}
-{% endstorybook_sample %}
-
 ---
 
 ### Link List
 
-```liquid
+{% storybook_sample title="Link List" %}
 {% raw %}
 {%
   include new-includes/components/link-list.html
   items=site.data.new-data.footer-links
 %}
 {% endraw %}
-```
+{% endstorybook_sample %}
 
 #### Attributes
 
 - `items`: list items
 
-{% storybook_sample title="Link List" hide_code="true" %}
-{%
-  include new-includes/components/link-list.html
-  items=site.data.new-data.footer-links
-%}
-{% endstorybook_sample %}
-
 ---
 
 ### Ribbon
 
-```liquid
+{% storybook_sample title="Ribbon" %}
 {% raw %}
-{%
-  include new-includes/components/ribbon.html
-  text="STAGING"
-%}
-{% endraw %}
-```
-
-#### Attributes
-
-- `text`: text of the ribbon
-
-{% storybook_sample title="Ribbon" hide_code="true" %}
-
-<div style="position: relative; height: 180px;">
+<div style="position: relative; height: 180px; background-color: #f0f0f0; overflow: hidden;">
 {%
   include new-includes/components/ribbon.html
   text="STAGING"
 %}
 </div>
+{% endraw %}
 {% endstorybook_sample %}
+
+#### Attributes
+
+- `text`: text of the ribbon
 
 ---
 
 ### Section
 
-```liquid
+{% storybook_sample title="Section" %}
 {% raw %}
 {% capture test-section %}
 <div class="grid-2-cols">
@@ -311,7 +249,7 @@ code="var number = 2"
   content=test-section
 %}
 {% endraw %}
-```
+{% endstorybook_sample %}
 
 #### Attributes
 
@@ -319,30 +257,11 @@ code="var number = 2"
 - `style` (optional): style of section
   - values: "orange", "purple", "yellow"  
 
-{% storybook_sample title="Section" hide_code="true" %}
-{% capture test-section %}
-
-<div class="grid-2-cols">
-  <div>
-    Right Content
-  </div>
-    <div>
-    Left Content
-  </div>
-</div>
-{% endcapture %}
-{%
-    include new-includes/components/section.html
-    style="orange"
-    content=test-section
-%}
-{% endstorybook_sample %}
-
 ---
 
 ### Tabs
 
-```liquid
+{% storybook_sample title="Tabs" %}
 {% raw %}
 {%
   include new-includes/components/tabs.html
@@ -350,7 +269,7 @@ code="var number = 2"
   tabs=site.data.new-data.install.os
 %}
 {% endraw %}
-```
+{% endstorybook_sample %}
 
 #### Attributes
 
@@ -361,19 +280,11 @@ code="var number = 2"
 - `group`: start from 1 and increases for more groups
 - `default` (optional): default selected tab
 
-{% storybook_sample title="Tabs" hide_code="true" %}
-{%
-  include new-includes/components/tabs.html
-  group="1"
-    tabs=site.data.new-data.install.os
-%}
-{% endstorybook_sample %}
-
 ---
 
 ### Toggle
 
-```liquid
+{% storybook_sample title="Toggle" %}
 {% raw %}
 {%
   include new-includes/components/toggle-button.html
@@ -382,19 +293,10 @@ code="var number = 2"
   img_off="/assets/images/new-images/icon-menu.svg"
 %}
 {% endraw %}
-```
+{% endstorybook_sample %}
 
 #### Attributes
 
 - `id`: toggle id attribute value
 - `img_on`: toggle image for active state
 - `img_off`: toggle image for non-active state
-
-{% storybook_sample title="Toggle" hide_code="true" %}
-{%
-  include new-includes/components/toggle-button.html
-  id="my-toggle"
-  img_on="/assets/images/new-images/icon-close.svg"
-  img_off="/assets/images/new-images/icon-menu.svg"
-%}
-{% endstorybook_sample %}
