@@ -1,0 +1,16 @@
+// Border radius
+$border-radius-button: 10px;
+$border-radius-box: 16px;
+
+@mixin box-radius() {
+  border-radius: $border-radius-box;
+}
+
+// Border
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+@mixin default-border() {
+  @include border($border-color-default);
+}

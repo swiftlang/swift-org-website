@@ -19,6 +19,6 @@
   }
 
   .content {
-    @include section-width($width-layout, $margins-layout);
+    @include section-width($width-page-wrapper, $margins-layout);
   }
 }

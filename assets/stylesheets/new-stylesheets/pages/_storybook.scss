@@ -1,3 +1,35 @@
-.storybook-sample {
-  padding: 20px;
+.storybook {
+  main {
+    padding: $padding-content;
+    max-width: $width-page-wrapper;
+    margin: 1rem auto;
+  }
+
+  .storybook-render {
+    @include box-radius;
+    @include default-border;
+    padding: 2rem;
+    margin: 1rem 0;
+  }
+
+  // Specificity to avoid styling other code snippets
+  main > div.highlighter-rouge {
+    @include box-radius;
+    @include default-border;
+    padding: 2rem;
+    margin: 1rem 0;
+  }
+
+  .sample-box {
+    @include box-radius;
+    background: rgba($pink, 0.4);
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  hr {
+    margin: 3rem 0;
+    border: none;
+    border-top: 2px solid $pink;
+  }
 }

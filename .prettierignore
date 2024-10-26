@@ -1,0 +1,5 @@
+# Ignore all Markdown files
+*.md
+
+# Ignore all Jekyll files
+*.html
