@@ -16,8 +16,10 @@ The following Visual Studio components should be installed:
 
 You should also install the following dependencies:
 
-- [Python 3 (latest stable release)](https://www.python.org/downloads/windows/)
+- [Python 3.10._x_](https://www.python.org/downloads/windows/) [^3]
 - [Git for Windows](https://git-scm.com/downloads/win)
+
+[^3]: You may install the latest `.x` patch release, but ensure you use the specified `major.minor` version of Python for optimal compatibility.
 
 ## Enable Developer Mode
 
@@ -29,6 +31,6 @@ After the above dependencies have been installed, [download and run the installe
 
 Alternatively, you may prefer to install a [development snapshot](/install/windows/#development-snapshots) for access to features that are actively under development. 
 
-The toolchain on Windows is typically installed to `%SystemDrive%\Library\Developer\Toolchains`.
+By default, the Swift binaries are installed to `%LocalAppData%\Programs\Swift`.
 
 <hr>
