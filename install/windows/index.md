@@ -98,4 +98,4 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
 
 ## Older Releases
 
-[Older releases of Swift](/download/#:~:text=Older%20Releases) are available for installation on Windows using the manual installer, [as documented here](/install/windows/old).
+[Older releases of Swift](/download/#:~:text=Older%20Releases) are available for installation on Windows using the manual installer, [as documented here](/install/windows/archived).
