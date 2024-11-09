@@ -73,13 +73,13 @@ components:
       KnownProposalState:
         type: string
         enum:
-          - implemented
-          - rejected
-          - in-review
           - accepted
-          - deferred
-          - withdrawn
+          - activeReview
+          - implemented
+          - previewing
+          - rejected
           - returnedForRevision
+          - withdrawn
         description: |-
           The current state of the proposal.
 
