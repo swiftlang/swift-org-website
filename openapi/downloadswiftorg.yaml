@@ -70,6 +70,7 @@ components:
         anyOf:
           - $ref: '#/components/schemas/KnownProposalState'
           - type: string
+            description: The raw state, a fallback for when an unknown state is received.
       KnownProposalState:
         type: string
         enum:
@@ -162,6 +163,7 @@ components:
         anyOf:
           - $ref: '#/components/schemas/KnownProposalDiagnosticKind'
           - type: string
+            description: The raw kind, a fallback for when an unknown kind is received.
       ProposalDiagnostic:
         type: object
         description: A diagnostic found on a proposal.
@@ -189,6 +191,7 @@ components:
         anyOf:
           - $ref: '#/components/schemas/KnownProposalCodeChangeType'
           - type: string
+            description: The raw type, a fallback for when an unknown type is received.
       KnownProposalCodeChangeType:
         type: string
         enum:
