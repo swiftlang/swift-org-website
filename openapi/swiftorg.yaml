@@ -1,6 +1,6 @@
 openapi: '3.0.3'
 info:
-  title: Swift.org API
+  title: swift.org API
   description: API for retrieving Swift version release information, including date, platform support, tags, and toolchain details.
   version: 1.0.0
 servers:
@@ -8,10 +8,16 @@ servers:
     description: The production deployment.
   - url: http://127.0.0.1:4000/api/v1
     description: A local deployment.
+tags:
+  - name: Toolchains
+    description: Information about published toolchains builds.
 paths:
   /install/releases.json:
     get:
       operationId: listReleases
+      summary: Fetch all released toolchains
+      tags:
+        - Toolchains
       responses:
         '200':
           description: A successful response.
@@ -35,6 +41,9 @@ paths:
           $ref: '#/components/schemas/KnownPlatformIdentifier'
     get:
       operationId: listDevToolchains
+      summary: Fetch all development toolchains
+      tags:
+        - Toolchains
       responses:
         '200':
           description: A successful response.
@@ -51,6 +60,9 @@ paths:
           $ref: '#/components/schemas/KnownSourceBranch'
     get:
       operationId: listStaticSDKDevToolchains
+      summary: Fetch all static SDK development toolchains
+      tags:
+        - Toolchains
       responses:
         '200':
           description: A successful response.

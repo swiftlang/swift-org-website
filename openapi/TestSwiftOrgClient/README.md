@@ -8,16 +8,17 @@ It is generated from the OpenAPI document of Swift.org and generated using Swift
 
 You can run it either against the Swift.org API or against a locally running API.
 
-By default, the tool runs against the Swift.org API.
+By default, the tool runs against the production Swift.org APIs.
 
 Run against production using:
 ```
-SWIFTORG_SERVER_NAME=prod swift run
+SWIFTORG_SERVER_NAME=prod swift run swiftorgClient
+DOWNLOADSWIFTORG_SERVER_NAME=prod swift run downloadswiftorgClient
 ```
 
 Run against a locally running server using:
 ```
-SWIFTORG_SERVER_NAME=local swift run
+SWIFTORG_SERVER_NAME=local swift run swiftorgClient
 ```
 
 The exact server URLs are defined in the OpenAPI document.
@@ -29,7 +30,7 @@ If all test cases run successfully, the tool exits with 0.
 Sample output:
 
 ```
-% SWIFTORG_SERVER_NAME=prod swift run
+% SWIFTORG_SERVER_NAME=prod swift run swiftorgClient
 Testing SwiftOrg API at https://www.swift.org/api/v1...
 ✅ listReleases
 ✅ listDevToolchains(main, amazonlinux2)
@@ -48,4 +49,6 @@ Testing SwiftOrg API at https://www.swift.org/api/v1...
 ✅ listDevToolchains(6.0, windows10)
 ✅ listStaticSDKDevToolchains(main)
 ✅ listStaticSDKDevToolchains(6.0)
+% DOWNLOADSWIFTORG_SERVER_NAME=prod swift run downloadswiftorgClient
+✅ listProposals
 ```

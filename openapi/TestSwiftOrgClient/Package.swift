@@ -1,6 +1,11 @@
 // swift-tools-version: 6.0
 import PackageDescription
 
+let clientNames: [String] = [
+    "swiftorgClient",
+    "downloadswiftorgClient",
+]
+
 let package = Package(
     name: "TestSwiftOrgClient",
     platforms: [
@@ -12,16 +17,22 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-openapi-urlsession", from: "1.0.0"),
     ],
     targets: [
+        .target(
+            name: "Shared",
+            path: "Shared"
+        )
+    ] + clientNames.map { name in
         .executableTarget(
-            name: "swiftorgclient",
+            name: name,
             dependencies: [
+                "Shared",
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
-            path: ".",
+            path: name,
             plugins: [
                 .plugin(name: "OpenAPIGenerator", package: "swift-openapi-generator"),
             ]
-        ),
-    ]
+        )
+    }
 )

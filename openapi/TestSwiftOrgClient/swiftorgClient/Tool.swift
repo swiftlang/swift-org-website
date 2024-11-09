@@ -1,5 +1,6 @@
 import OpenAPIURLSession
 import Foundation
+import Shared
 
 enum SwiftOrgServerName: String {
     case prod
@@ -8,11 +9,6 @@ enum SwiftOrgServerName: String {
 
 @main
 struct Tool {
-    struct Test: Sendable {
-        var name: String
-        var work: @Sendable (Client) async throws -> Void
-    }
-
     static func main() async throws {
         let serverURL: URL
         if
@@ -29,17 +25,17 @@ struct Tool {
             serverURL = try Servers.Server1.url()
         }
 
-        print("Testing SwiftOrg API at \(serverURL.absoluteString)...")
+        print("Testing swift.org API at \(serverURL.absoluteString)...")
 
         let client = Client(
             serverURL: serverURL,
             transport: URLSessionTransport()
         )
 
-        var tests: [Tool.Test] = [
+        var tests: [Test] = [
             .init(
                 name: "listReleases",
-                work: { _ = try await $0.listReleases().ok.body.json }
+                work: { _ = try await client.listReleases().ok.body.json }
             ),
         ]
         for branch in Components.Schemas.KnownSourceBranch.allCases {
@@ -48,7 +44,7 @@ struct Tool {
                     .init(
                         name: "listDevToolchains(\(branch.rawValue), \(platform.rawValue))",
                         work: {
-                            _ = try await $0.listDevToolchains(.init(
+                            _ = try await client.listDevToolchains(.init(
                                 path: .init(
                                     branch: branch,
                                     platform: platform
@@ -64,27 +60,12 @@ struct Tool {
                 .init(
                     name: "listStaticSDKDevToolchains(\(branch.rawValue))",
                     work: {
-                        _ = try await $0.listStaticSDKDevToolchains(.init(path: .init(branch: branch))).ok.body.json
+                        _ = try await client.listStaticSDKDevToolchains(.init(path: .init(branch: branch))).ok.body.json
                     }
                 )
             )
         }
 
-        var results: [(String, Error?)] = []
-        func runTest(_ test: Test) async {
-            do {
-                try await test.work(client)
-                results.append((test.name, nil))
-                print("✅ \(test.name)")
-            } catch {
-                results.append((test.name, error))
-                print("❌ \(test.name): \(String(describing: error))")
-            }
-        }
-        for test in tests {
-            await runTest(test)
-        }
-        let failed = results.contains(where: { $0.1 != nil })
-        exit(failed ? 1 : 0)
+        try await Tester.run(tests)
     }
 }
