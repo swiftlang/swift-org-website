@@ -12,23 +12,23 @@ title: Install Swift
 
 <ul class="grid-level-0 grid-layout-2-column">
   <li class="grid-level-1">
-    <h3>Package Manager</h3>
+    <h3>WinGet (recommended)</h3>
     <p class="description">
-      Install Swift via Windows Package Manager (aka WinGet).
+      Install Swift via the Windows Package Manager (also known as WinGet).
     </p>
     <a href="/install/windows/winget" class="cta-secondary">Instructions</a>
   </li>
   <li class="grid-level-1">
-    <h3>Package Installer</h3>
+    <h3>Manual Installation</h3>
     <p class="description">
-      Package installers (.exe).
+      Download the Swift installer (.exe).
     </p>
     <ul class="grid-level-0 grid-layout-2-column">
       {% for arch in platform.archs %}
       <a href="https://download.swift.org/{{ tag | downcase }}/windows10{% if arch != "x86_64" %}-{{ arch }}{% endif %}/{{ tag }}/{{ tag }}-windows10{% if arch != "x86_64" %}-{{ arch }}{% endif %}.exe" class="cta-secondary">Download ({{ arch }})</a>
       {% endfor %}
     </ul>
-    <a href="/install/windows/traditional" class="cta-secondary">Instructions</a>
+    <a href="/install/windows/manual" class="cta-secondary">Instructions</a>
   </li>
   <li class="grid-level-1">
     <h3>Scoop</h3>
@@ -86,7 +86,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     </ul>
   </li>
 </ul>
-<a href="/install/windows/traditional/" class="cta-secondary">Instructions</a>
+<a href="/install/windows/manual/" class="cta-secondary">Instructions</a>
 <details class="download" style="margin-bottom: 0;">
   <summary>Older Snapshots (main)</summary>
   {% include install/_older_snapshots.md builds=windows_dev_builds name="windows" platform_dir="windows10" branch_dir="development" %}
@@ -95,3 +95,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
   <summary>Older Snapshots (release/6.0)</summary>
   {% include install/_older_snapshots.md builds=windows10_6_0_builds name="windows" platform_dir="windows10" branch_dir="swift-6.0-branch" %}
 </details>
+
+## Older Releases
+
+[Older releases of Swift](/download/#:~:text=Older%20Releases) are available for installation on Windows using the manual installer, [as documented here](/install/windows/archived).
