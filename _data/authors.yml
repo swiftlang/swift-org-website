@@ -480,3 +480,13 @@ owen-voorhees:
 adam-ward:
   name: Adam Ward
   about: "Adam Ward is a member of the team at Apple working on Swift tooling."
+
+vrylko:
+  name: Vojtěch Rylko
+  github: vojtarylko
+  about: "Vojtěch Rylko is responsible for development and operations of Things Cloud at Cultured Code."
+
+wjainek:
+  name: Werner Jainek
+  github: wjainek
+  about: "Werner Jainek is Co-Founder and CEO at Cultured Code."
