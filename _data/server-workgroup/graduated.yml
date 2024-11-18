@@ -1,0 +1,12 @@
+- https://github.com/apple/swift-crypto.git
+- https://github.com/apple/swift-log.git
+- https://github.com/apple/swift-metrics.git
+- https://github.com/apple/swift-nio.git
+- https://github.com/apple/swift-statsd-client.git
+- https://github.com/grpc/grpc-swift.git
+- https://github.com/swift-server-community/APNSwift.git
+- https://github.com/swift-server/async-http-client.git
+- https://github.com/vapor/jwt-kit.git
+- https://github.com/vapor/multipart-kit.git
+- https://github.com/vapor/postgres-nio.git
+- https://github.com/vapor/vapor.git

@@ -1,0 +1,11 @@
+- https://github.com/apple/swift-distributed-actors.git
+- https://github.com/apple/swift-openapi-generator.git
+- https://github.com/discordbm/discordbm.git
+- https://github.com/hummingbird-project/hummingbird.git
+- https://github.com/lovetodream/oracle-nio.git
+- https://github.com/mattpolzin/OpenAPIKit.git
+- https://github.com/swift-server-community/mqtt-nio.git
+- https://github.com/swift-server/RediStack.git
+- https://github.com/swift-server/swift-aws-lambda-runtime.git
+- https://github.com/swift-server/swift-prometheus.git
+- https://github.com/vapor/sqlite-nio.git
