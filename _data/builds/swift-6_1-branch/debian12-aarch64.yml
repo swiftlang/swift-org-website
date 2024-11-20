@@ -1,0 +1,5 @@
+- date: 2024-11-19 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-11-19-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-11-19-a-debian12-aarch64.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-11-19-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
