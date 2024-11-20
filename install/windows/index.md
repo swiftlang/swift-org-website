@@ -46,6 +46,15 @@ title: Install Swift
   </li>
 </ul>
 
+## Older Releases
+
+Older releases of Swift are available for installation on Windows using the manual installer, [as documented here](/install/windows/archived).
+
+<details class="download" style="margin-bottom: 0;">
+  <summary>Older Releases</summary>
+  {% include install/_older-releases.md platform="Windows 10" %}
+</details>
+
 <hr>
 
 ## Development Snapshots
@@ -95,7 +104,3 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
   <summary>Older Snapshots (release/6.0)</summary>
   {% include install/_older_snapshots.md builds=windows10_6_0_builds name="windows" platform_dir="windows10" branch_dir="swift-6.0-branch" %}
 </details>
-
-## Older Releases
-
-[Older releases of Swift](/download/#:~:text=Older%20Releases) are available for installation on Windows using the manual installer, [as documented here](/install/windows/archived).

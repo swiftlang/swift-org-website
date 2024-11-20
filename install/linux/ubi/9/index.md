@@ -11,6 +11,11 @@ title: Install Swift
 
 {% include install/_build_release.md platform="UBI 9" docker_tag="rhel-ubi9" %}
 
+<details class="download" style="margin-bottom: 0;">
+  <summary>Older Releases</summary>
+  {% include install/_older-releases.md platform="Red Hat Universal Base Image 9" %}
+</details>
+
 {% include install/_build_snapshot.md platform="ubi 9"
 aarch64="true"
 branch_dir="development"

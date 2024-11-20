@@ -11,6 +11,11 @@ title: Install Swift
 
 {% include install/_build_release.md platform="Ubuntu 20.04" docker_tag="focal" %}
 
+<details class="download" style="margin-bottom: 0;">
+  <summary>Older Releases</summary>
+  {% include install/_older-releases.md platform="Ubuntu 20.04" %}
+</details>
+
 {% include install/_build_snapshot.md platform="Ubuntu 20.04"
 aarch64="true"
 branch_dir="development"
