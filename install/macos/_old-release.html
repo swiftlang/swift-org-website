@@ -1,0 +1,19 @@
+<tr>
+    <td>
+      Swift {{ release.name }}
+    </td>
+    <td>
+      {{ release.date | date: '%B %-d, %Y' }}
+    </td>
+    <td class="">
+        <span class="release">
+          <a href="https://download.swift.org/{{ include.release.tag | downcase }}/xcode/{{ include.release.tag }}/{{ include.release.tag }}-osx.pkg" title="Toolchain">Toolchain</a>
+        </span>
+    </td>
+    <td class="">
+        <span class="release">
+          <a href="https://download.swift.org/{{ include.release.tag | downcase }}/xcode/{{ include.release.tag }}/{{ include.release.tag }}-osx-symbols.pkg" title="Debugging Symbols">Debugging Symbols</a>
+        </span>
+    </td>
+</tr>
+          

@@ -29,6 +29,11 @@ title: Install Swift
   {% include install/_static_sdk_release.md %}
 </ul>
 
+<details class="download" style="margin-bottom: 0;">
+  <summary>Older Releases</summary>
+  {% include_relative _older-releases.md %}
+</details>
+
 <hr>
 
 ## Development Snapshots
