@@ -1,4 +1,4 @@
 ---
 layout: none
 ---
-{{ site.data.server-workgroup.projects | jsonify }}
+{{ site.data.server-workgroup.projects | map: "url" | jsonify }}

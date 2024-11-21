@@ -1,4 +1,4 @@
 ---
 layout: none
 ---
-{{ site.data.server-workgroup.projects | where:"maturity","Graduated" | jsonify }}
+{{ site.data.server-workgroup.projects | where:"maturity","Graduated" | map: "url" | jsonify }}
