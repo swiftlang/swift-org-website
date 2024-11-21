@@ -82,26 +82,12 @@
   accepted: 2020-04-29
   url: https://github.com/mattpolzin/OpenAPIKit.git
   
-- name: MongoSwift
-  description: MongoDB driver
-  maturity: Incubating
-  pitched: 2019-10-30
-  accepted: 2020-05-13
-  url: https://github.com/mongodb/mongo-swift-driver.git
-  
 - name: Swift AWS Lambda Runtime
   description: Runtime library for AWS Lambda functions in Swift
   maturity: Sandbox
   pitched: N/A
   accepted: 2020-06-24
   url: https://github.com/swift-server/swift-aws-lambda-runtime.git
-  
-- name: Backtrace
-  description: Nice backtraces in production
-  maturity: Incubating
-  pitched: 2019-05-30
-  accepted: 2020-07-29
-  url: https://github.com/swift-server/swift-backtrace.git
   
 - name: Service Lifecycle
   description: Lifecycle management
