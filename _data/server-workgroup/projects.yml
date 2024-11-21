@@ -3,228 +3,228 @@
   maturity: Graduated
   pitched: N/A
   accepted: 2018-09-07
-  url: http://github.com/apple/swift-nio/
+  url: http://github.com/apple/swift-nio.git
 
 - name: SwiftLog
   description: Logging API
   maturity: Graduated
   pitched: 2018-09-10
   accepted: 2019-02-07
-  url: http://github.com/apple/swift-log/
+  url: http://github.com/apple/swift-log.git
 
 - name: SwiftMetrics
   description: Metrics API
   maturity: Graduated
   pitched: 2019-01-08
   accepted: 2019-04-04
-  url: http://github.com/apple/swift-metrics/
+  url: http://github.com/apple/swift-metrics.git
     
 - name: PostgresNIO
   description: PostgreSQL driver
   maturity: Incubating
   pitched: 2018-11-18
   accepted: 2019-05-16
-  url: https://github.com/vapor/nio-postgres
+  url: https://github.com/vapor/postgres-nio.git
 
 - name: RediStack
   description: Redis driver
   maturity: Sandbox
   pitched: 2019-01-07
   accepted: 2019-06-27
-  url: https://github.com/mordil/swift-redis-nio-client
+  url: https://github.com/swift-server/RediStack.git
     
 - name: AsyncHTTPClient
   description: HTTP Client
   maturity: Graduated
   pitched: 2019-04-18
   accepted: 2019-06-27
-  url: https://github.com/swift-server/async-http-client
+  url: https://github.com/swift-server/async-http-client.git
 
 - name: APNSwift
   description: APNS Client
   maturity: Incubating
   pitched: 2019-02-05
   accepted: 2019-06-27
-  url: https://github.com/swift-server-community/APNSwift
+  url: https://github.com/swift-server-community/APNSwift.git
 
 - name: SwiftStatsdClient
   description: StatsD driver for the metrics API
   maturity: Incubating
   pitched: 2019-06-02
   accepted: 2019-08-11
-  url: https://github.com/apple/swift-statsd-client
+  url: https://github.com/apple/swift-statsd-client.git
 
 - name: SwiftPrometheus
   description: Prometheus driver for the metrics API
   maturity: Sandbox
   pitched: 2018-11-18
   accepted: 2019-08-11
-  url: https://github.com/MrLotU/SwiftPrometheus
+  url: https://github.com/swift-server/swift-prometheus.git
     
 - name: gRPC Swift
   description: gRPC client & server framework
   maturity: Graduated
   pitched: 2019-09-30
   accepted: 2020-02-19
-  url: https://github.com/grpc/grpc-swift
+  url: https://github.com/grpc/grpc-swift.git
 
 - name: Swift Crypto
   description: Open-source implementation of a substantial portion of the API of Apple CryptoKit
   maturity: Incubating
   pitched: 2020-02-20
   accepted: 2020-03-04
-  url: https://github.com/apple/swift-crypto
+  url: https://github.com/apple/swift-crypto.git
   
 - name: OpenAPIKit
   description: OpenAPI client
   maturity: Sandbox
   pitched: 2020-01-14
   accepted: 2020-04-29
-  url: https://github.com/mattpolzin/OpenAPIKit
+  url: https://github.com/mattpolzin/OpenAPIKit.git
   
 - name: MongoSwift
   description: MongoDB driver
   maturity: Incubating
   pitched: 2019-10-30
   accepted: 2020-05-13
-  url: https://github.com/mongodb/mongo-swift-driver
+  url: https://github.com/mongodb/mongo-swift-driver.git
   
 - name: Swift AWS Lambda Runtime
   description: Runtime library for AWS Lambda functions in Swift
   maturity: Sandbox
   pitched: N/A
   accepted: 2020-06-24
-  url: https://github.com/swift-server/swift-aws-lambda-runtime
+  url: https://github.com/swift-server/swift-aws-lambda-runtime.git
   
 - name: Backtrace
   description: Nice backtraces in production
   maturity: Incubating
   pitched: 2019-05-30
   accepted: 2020-07-29
-  url: https://github.com/swift-server/swift-backtrace
+  url: https://github.com/swift-server/swift-backtrace.git
   
 - name: Service Lifecycle
   description: Lifecycle management
   maturity: Incubating
   pitched: N/A
   accepted: 2020-09-02
-  url: https://github.com/swift-server/swift-service-lifecycle
+  url: https://github.com/swift-server/swift-service-lifecycle.git
   
 - name: Soto for AWS
   description: Third-party SDK for AWS
   maturity: Incubating
   pitched: 2020-10-01
   accepted: 2020-11-12
-  url: https://github.com/soto-project/soto
+  url: https://github.com/soto-project/soto.git
   
 - name: MultipartKit
   description: Multipart parser and serializer with Codable support for Multipart Form Data
   maturity: Incubating
   pitched: 2021-03-03
   accepted: 2021-11-11
-  url: https://github.com/vapor/multipart-kit
+  url: https://github.com/vapor/multipart-kit.git
   
 - name: MQTT NIO
   description: A Swift NIO MQTT v3.1.1 and v5.0 Client
   maturity: Sandbox
   pitched: 2021-11-02
   accepted: 2022-01-19
-  url: https://github.com/swift-server-community/mqtt-nio
+  url: https://github.com/swift-server-community/mqtt-nio.git
   
 - name: GraphQL
   description: GraphQL query language implementation
   maturity: Incubating
   pitched: 2022-08-22
   accepted: 2022-09-15
-  url: https://github.com/GraphQLSwift/GraphQL
+  url: https://github.com/GraphQLSwift/GraphQL.git
 
 - name: Graphiti
   description: Library for building GraphQL schemas
   maturity: Incubating
   pitched: 2022-08-22
   accepted: 2022-09-15
-  url: https://github.com/GraphQLSwift/Graphiti
+  url: https://github.com/GraphQLSwift/Graphiti.git
 
 - name: Swift Distributed Actors
   description: Peer-to-peer cluster implementation for Swift Distributed Actors
   maturity: Sandbox
   pitched: 2022-10-27
   accepted: 2023-01-03
-  url: https://github.com/apple/swift-distributed-actors
+  url: https://github.com/apple/swift-distributed-actors.git
 
 - name: CassandraClient
   description: Client library for the Cassandra distributed database
   maturity: Incubating
   pitched: 2023-01-19
   accepted: 2023-02-02
-  url: https://github.com/apple/swift-cassandra-client
+  url: https://github.com/apple/swift-cassandra-client.git
 
 - name: SQLite NIO
   description: 🐬 Non-blocking, event-driven Swift client for SQLite
   maturity: Sandbox
   pitched: 2023-08-03
   accepted: 2023-09-28
-  url: https://github.com/vapor/sqlite-nio
+  url: https://github.com/vapor/sqlite-nio.git
 
 - name: Swift Service Context
   description: Minimal type-safe context propagation container
   maturity: Incubating
   pitched: 2023-09-05
   accepted: 2023-10-03
-  url: https://github.com/apple/swift-service-context
+  url: https://github.com/apple/swift-service-context.git
 
 - name: Swift Distributed Tracing
   description: A distributed tracing API for Swift
   maturity: Incubating
   pitched: 2023-09-05
   accepted: 2023-10-03
-  url: https://github.com/apple/swift-distributed-tracing
+  url: https://github.com/apple/swift-distributed-tracing.git
 
 - name: DiscordBM
   description: A Swift library for making bots on the Discord API
   maturity: Sandbox
   pitched: 2023-05-05
   accepted: 2023-10-04
-  url: https://github.com/discordbm/discordbm
+  url: https://github.com/discordbm/discordbm.git
 
 - name: Swift OpenAPI Generator
   description: A Swift package plugin that can generate the ceremony code required to make API calls, or implement API servers
   maturity: Sandbox
   pitched: 2023-08-04
   accepted: 2023-10-04
-  url: https://github.com/apple/swift-openapi-generator
+  url: https://github.com/apple/swift-openapi-generator.git
 
 - name: MongoKitten
   description: Native MongoDB driver for Swift, written in Swift
   maturity: Incubating
   pitched: 2024-01-03
   accepted: 2024-02-01
-  url: https://github.com/orlandos-nl/MongoKitten
+  url: https://github.com/orlandos-nl/MongoKitten.git
 
 - name: Oracle NIO
   description: Native, non-blocking Oracle driver for Swift, written in Swift
   maturity: Sandbox
   pitched: 2024-01-17
   accepted: 2024-02-15
-  url: https://github.com/lovetodream/oracle-nio
+  url: https://github.com/lovetodream/oracle-nio.git
 
 - name: JWTKit
   description: Native Swift library for signing and verifying JSON Web Tokens
   maturity: Graduated
   pitched: 2024-03-12
   accepted: 2024-03-26
-  url: https://github.com/vapor/jwt-kit
+  url: https://github.com/vapor/jwt-kit.git
 
 - name: Hummingbird
   description: Lightweight, modular, modern, extensible HTTP server framework written in Swift.
   maturity: Sandbox
   pitched: 2024-03-23
   accepted: 2024-05-01
-  url: https://github.com/hummingbird-project/hummingbird
+  url: https://github.com/hummingbird-project/hummingbird.git
 
 - name: Vapor
   description: Vapor is a framework for building server applications, APIs and backends in Swift.
   maturity: Graduated
   pitched: 2024-03-23
   accepted: 2024-05-01
-  url: https://github.com/vapor/vapor
+  url: https://github.com/vapor/vapor.git
