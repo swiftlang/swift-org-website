@@ -23,7 +23,7 @@ development="main"
 docker_tag="nightly-amazonlinux2"
 development_builds=site.data.builds.development.amazonlinux2
 aarch64_development_builds=site.data.builds.development.amazonlinux2-aarch64
-development_2="release/6.0"
-docker_tag_2="nightly-6.0-amazonlinux2"
-development_builds_2=site.data.builds.swift-6_0-branch.amazonlinux2 aarch64_development_builds_2=site.data.builds.swift-6_0-branch.amazonlinux2-aarch64
-branch_dir_2="swift-6.0-branch"%}
+development_2="release/6.1"
+docker_tag_2="nightly-6.1-amazonlinux2"
+development_builds_2=site.data.builds.swift-6_1-branch.amazonlinux2 aarch64_development_builds_2=site.data.builds.swift-6_1-branch.amazonlinux2-aarch64
+branch_dir_2="swift-6.1-branch"%}

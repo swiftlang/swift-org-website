@@ -15,3 +15,15 @@ title: Install Swift
   <summary>Older Releases</summary>
   {% include install/_older-releases.md platform="Fedora 39" %}
 </details>
+
+{% include install/_build_snapshot.md platform="Fedora 39"
+aarch64="true"
+branch_dir="development"
+development="main"
+docker_tag="nightly-fedora-39"
+development_builds=site.data.builds.development.fedora39
+aarch64_development_builds=site.data.builds.development.fedora39-aarch64
+development_2="release/6.1"
+docker_tag_2="nightly-6.1-fedora39"
+development_builds_2=site.data.builds.swift-6_1-branch.fedora39 aarch64_development_builds_2=site.data.builds.swift-6_1-branch.fedora39-aarch64
+branch_dir_2="swift-6.1-branch"%}
