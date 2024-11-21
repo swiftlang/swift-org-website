@@ -21,7 +21,7 @@
     
 - name: PostgresNIO
   description: PostgreSQL driver
-  maturity: Incubating
+  maturity: Graduated
   pitched: 2018-11-18
   accepted: 2019-05-16
   url: https://github.com/vapor/postgres-nio.git
@@ -42,21 +42,21 @@
 
 - name: APNSwift
   description: APNS Client
-  maturity: Incubating
+  maturity: Graduated
   pitched: 2019-02-05
   accepted: 2019-06-27
   url: https://github.com/swift-server-community/APNSwift.git
 
 - name: SwiftStatsdClient
   description: StatsD driver for the metrics API
-  maturity: Incubating
+  maturity: Graduated
   pitched: 2019-06-02
   accepted: 2019-08-11
   url: https://github.com/apple/swift-statsd-client.git
 
 - name: SwiftPrometheus
   description: Prometheus driver for the metrics API
-  maturity: Sandbox
+  maturity: Incubating
   pitched: 2018-11-18
   accepted: 2019-08-11
   url: https://github.com/swift-server/swift-prometheus.git
@@ -70,14 +70,14 @@
 
 - name: Swift Crypto
   description: Open-source implementation of a substantial portion of the API of Apple CryptoKit
-  maturity: Incubating
+  maturity: Graduated
   pitched: 2020-02-20
   accepted: 2020-03-04
   url: https://github.com/apple/swift-crypto.git
   
 - name: OpenAPIKit
   description: OpenAPI client
-  maturity: Sandbox
+  maturity: Incubating
   pitched: 2020-01-14
   accepted: 2020-04-29
   url: https://github.com/mattpolzin/OpenAPIKit.git
@@ -98,14 +98,14 @@
   
 - name: Soto for AWS
   description: Third-party SDK for AWS
-  maturity: Incubating
+  maturity: Graduated
   pitched: 2020-10-01
   accepted: 2020-11-12
   url: https://github.com/soto-project/soto.git
   
 - name: MultipartKit
   description: Multipart parser and serializer with Codable support for Multipart Form Data
-  maturity: Incubating
+  maturity: Graduated
   pitched: 2021-03-03
   accepted: 2021-11-11
   url: https://github.com/vapor/multipart-kit.git
@@ -147,7 +147,7 @@
 
 - name: SQLite NIO
   description: 🐬 Non-blocking, event-driven Swift client for SQLite
-  maturity: Sandbox
+  maturity: Incubating
   pitched: 2023-08-03
   accepted: 2023-09-28
   url: https://github.com/vapor/sqlite-nio.git
@@ -175,7 +175,7 @@
 
 - name: Swift OpenAPI Generator
   description: A Swift package plugin that can generate the ceremony code required to make API calls, or implement API servers
-  maturity: Sandbox
+  maturity: Incubating
   pitched: 2023-08-04
   accepted: 2023-10-04
   url: https://github.com/apple/swift-openapi-generator.git
@@ -203,7 +203,7 @@
 
 - name: Hummingbird
   description: Lightweight, modular, modern, extensible HTTP server framework written in Swift.
-  maturity: Sandbox
+  maturity: Incubating
   pitched: 2024-03-23
   accepted: 2024-05-01
   url: https://github.com/hummingbird-project/hummingbird.git
