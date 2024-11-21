@@ -24,7 +24,7 @@ pre.highlight {
   .nv,  /* Name.Variable */
   .nf {
     /* Name.Function */
-    color: color(--color-syntax-project-constants);
+    color: var(--color-syntax-project-constants);
   }
 
   .s,   /* Literal.String */
@@ -102,7 +102,7 @@ pre.highlight {
   .gi .x {
     /* Generic.Inserted.Specific */
     color: var(--color-syntax-plain-text);
-    background-color: color(--color-fill-green-secondary);
+    background-color: var(--color-fill-green-secondary);
   }
 
   .gh, /* Generic.Heading */
