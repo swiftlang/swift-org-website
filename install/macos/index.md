@@ -66,10 +66,10 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     <p class="description">
       Toolchain package installer (.pkg)
       <ul>
-        <li><a href="https://download.swift.org/swift-6.0-branch/xcode/{{ xcode_6_1_builds.first.dir }}/{{ xcode_6_1_builds.first.debug_info }}">Debugging Symbols</a></li>
+        <li><a href="https://download.swift.org/swift-6.1-branch/xcode/{{ xcode_6_1_builds.first.dir }}/{{ xcode_6_1_builds.first.debug_info }}">Debugging Symbols</a></li>
       </ul>
     </p>
-    <a href="https://download.swift.org/swift-6.0-branch/xcode/{{ xcode_6_1_builds.first.dir }}/{{ xcode_6_1_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
+    <a href="https://download.swift.org/swift-6.1-branch/xcode/{{ xcode_6_1_builds.first.dir }}/{{ xcode_6_1_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
   </li>
 </ul>
 <a href="/install/macos/package_installer" class="cta-secondary">Instructions (Toolchain)</a>
