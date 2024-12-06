@@ -6,12 +6,13 @@
     Command line tool for installing, managing, and switching between Swift.org toolchains.
   </p>
   <!-- <br>
-  <p>To install swiftly, run the following command in your terminal.</p>
+  <p>To install swiftly, run the following commands in your terminal.</p>
   <pre><code>
-  $ curl -s https://download.swift.org/linux/swiftly > /usr/local/bin/swiftly
+  SWIFTLY_FILENAME=swiftly-0.4.0-dev-$(uname -m).tar.gz
+  curl -s -O "https://download.swift.org/linux/$SWIFTLY_FILENAME" && tar zxf "$SWIFTLY_FILENAME" && ./swiftly init
   </code></pre> -->
-  <h4>License: <a href="https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt">Apache-2.0</a> | PGP: <a href="https://download.swift.org/linux/swiftly.sig">Signature</a></h4>
-  <a href="https://download.swift.org/linux/swiftly" class="cta-secondary">Download</a>
+  <h4>License: <a href="https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt">Apache-2.0</a> | PGP: <a href="https://download.swift.org/linux/swiftly-0.4.0-dev-x86_64.tar.gz.sig">Signature</a></h4>
+  <a href="https://download.swift.org/linux/swiftly-0.4.0-dev-x86_64.tar.gz" class="cta-secondary">Download</a>
   <a href="/install/linux/swiftly" class="cta-secondary">Instructions</a>
 </li>
 </ul>
