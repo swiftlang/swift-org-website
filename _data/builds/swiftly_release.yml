@@ -1,8 +1,8 @@
 version: "0.4.0-dev"
 platforms:
   - platform: Linux
-    x86_64: "https://download.swift.org/swiftly-0.4.0-dev/linux/swiftly-0.4.0-dev-x86_64.tar.gz"
-    arm64: "https://download.swift.org/swiftly-0.4.0-dev/linux/swiftly-0.4.0-dev-aarch64.tar.gz"
+    x86_64: "https://download.swift.org/linux/swiftly-0.4.0-dev-x86_64.tar.gz"
+    arm64: "https://download.swift.org/linux/swiftly-0.4.0-dev-aarch64.tar.gz"
   - platform: Darwin
-    x86_64: "https://download.swift.org/swiftly-0.4.0-dev/darwin/swiftly-0.4.0-dev.pkg"
-    arm64: "https://download.swift.org/swiftly-0.4.0-dev/darwin/swiftly-0.4.0-dev.pkg"
+    x86_64: "https://download.swift.org/darwin/swiftly-0.4.0-dev.pkg"
+    arm64: "https://download.swift.org/darwin/swiftly-0.4.0-dev.pkg"
