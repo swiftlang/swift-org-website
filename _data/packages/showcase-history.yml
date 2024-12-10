@@ -1,6 +1,89 @@
 years:
   - year: 2024
     months:
+      - month: November
+        slug: november
+        packages:
+          - name: swift-crypto
+            description: Swift Crypto is an open-source implementation of a substantial
+              portion of the API of Apple CryptoKit suitable for use on Linux platforms.
+              It enables cross-platform or server applications with the advantages of CryptoKit.
+            owner: Apple
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: Apache 2.0
+            url: https://swiftpackageindex.com/apple/swift-crypto
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/93){:target='_blank'}.
+          - name: Recap
+            description: Displays "What's New" screens for apps, supporting flexible release
+              history, customization, and semantic versioning. Utilizes Markdown for release
+              notes and offers modifiers for design customization.
+            owner: Joe Fabisevich
+            swift_compatibility: 6.0+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS)
+            license: MIT
+            url: https://swiftpackageindex.com/mergesort/Recap
+            note: Discussed on [Episode 50 of Swift Package Indexing](https://share.transistor.fm/s/333d2750){:target='_blank'}.
+          - name: package-frostflake
+            description: High-performance unique ID generator for distributed systems, inspired
+              by Snowflake. Each identifier is half the size of a UUID and is suitable for
+              use as a database key.
+            owner: Ordo One
+            swift_compatibility: 5.8+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: Apache 2.0
+            url: https://swiftpackageindex.com/ordo-one/package-frostflake
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/89){:target='_blank'}.
+          - name: swift-async-operations
+            description: Enhances Swift concurrency by providing async operations like `asyncMap`,
+              enabling sequential or parallel execution of closures on sequences while preserving
+              order using Ordered Task Group.
+            owner: matsuji
+            swift_compatibility: 5.10+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/mtj0928/swift-async-operations
+            note: Discussed on [Episode 50 of Swift Package Indexing](https://share.transistor.fm/s/333d2750){:target='_blank'}.
+          - name: TinyStorage
+            description: TinyStorage replaces `UserDefaults` with a lightweight, reliable
+              storage solution supporting Swift `Codable` types. It's ideal for storing
+              small, non-sensitive data but is not secure for sensitive information.
+            owner: Christian Selig
+            swift_compatibility: 6.0+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            license: MIT
+            url: https://swiftpackageindex.com/christianselig/TinyStorage
+            note: Discussed on [Episode 50 of Swift Package Indexing](https://share.transistor.fm/s/333d2750){:target='_blank'}.
+          - name: Graphs
+            description: Provides a composable, extensible foundation for working with abstract
+              graphs, supporting various types, algorithms, and traversal strategies. Ideal
+              for constructing, analyzing, and optimizing complex graph structures.
+            owner: Laszlo Teveli
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/tevelee/swift-graphs
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/91){:target='_blank'}.
       - month: October
         slug: october
         packages:
