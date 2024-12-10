@@ -1,11 +1,26 @@
 .grid-layout-use-cases {
   @media (min-width: 1000px) {
-    grid-template-columns: repeat(2, 1fr);
-
-    li:nth-child(2n-1):nth-last-of-type(1) {
-      grid-column: span 2;
-    }
+    grid-template-columns: repeat(3, 1fr);
   }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  img {
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
 }
 
 .preamble {

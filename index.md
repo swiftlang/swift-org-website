@@ -36,16 +36,16 @@ atom: true
     </li>
 
     <li>
-      <a href="/getting-started">
+      <a href="https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour/">
         <img src="/assets/images/landing-page/signs.svg" />
-        Get started
+        Language tour
       </a>
     </li>
 
     <li>
       <a href="/documentation">
         <img src="/assets/images/landing-page/book.svg" />
-        Read the docs
+        Documentation
       </a>
     </li>
 
@@ -60,78 +60,155 @@ atom: true
 
 ## Use Cases
 
+<p>
+  Swift runs on most modern operating systems, including macOS, Windows, Linux,
+  iOS, Android and embedded devices. It's a versatile language for many
+  different scenarios:
+</p>
+
 <ul class="grid-level-0 grid-layout-use-cases">
-  <li class="grid-level-1">
-    <h3>Apple Platforms</h3>
-    <p>
-      Swift is a powerful and intuitive programming language optimized when running on iOS, macOS, and other Apple platforms.
-      <br><br>
-      Apple offers a wide variety of frameworks and APIs that make applications developed for these platforms unique and fun.
-    </p>
-    <a href="https://developer.apple.com/swift/resources/" class="cta-secondary">Learn more</a>
+  <li class="grid-level-1 selectable">
+   <a href="https://developer.apple.com/swift/resources/">
+    <div class="heading">
+        <img src="/assets/images/landing-page/phone.svg" alt="">
+        <h3>Mobile Apps</h3>
+      </div>
+      <p>
+        Swift is the primary language for building polished, unique apps for iOS, watchOS, visionOS, and other Apple platforms.
+      </p>
+    </a>
   </li>
-  <li class="grid-level-1">
-    <h3>Cross-platform Command-line</h3>
-    <p>
-      Writing Swift is interactive and fun, the syntax is concise yet expressive.
-      Swift code is safe by design and produces software that runs lightning-fast.
-      <br><br>
-      SwiftArgumentParser and Swift's growing package ecosystem make developing cross-platform command-line tools a breeze.
-    </p>
-
-    <a href="/getting-started/cli-swiftpm" class="cta-secondary">Learn more</a>
+  <li class="grid-level-1 selectable">
+    <a href="/getting-started/cli-swiftpm">
+      <div class="heading">
+        <img src="/assets/images/landing-page/terminal.svg" alt="">
+        <h3>Command Line Tools</h3>
+      </div>
+      <p>
+        With modern foundation libraries, argument parsing, and easy access to
+        C-based system calls, developing cross-platform command-line tools
+        with Swift is a breeze.
+      </p>
+    </a>
   </li>
-  <li class="grid-level-1">
-    <h3>Server and Networking</h3>
-    <p>
-      Swift's small memory footprint, quick startup time, and deterministic performance make it a great choice for server and other networked applications.
-      <br><br>
-      SwiftNIO and Swift's dynamic server ecosystem bring joy to developing networked applications.
-    </p>
-
-    <a href="/documentation/server" class="cta-secondary">Learn more</a>
+  <li class="grid-level-1 selectable">
+    <a href="/documentation/server">
+      <div class="heading">
+        <img src="/assets/images/landing-page/server.svg" alt="">
+        <h3>Web Services</h3>
+      </div>
+      <p>
+        Swift's small memory footprint, quick startup time, and deterministic
+        performance make it a great choice for server and other networked
+        applications.
+      </p>
+    </a>
+  </li>
+  <li class="grid-level-1 selectable">
+    <a href="/getting-started/library-swiftpm">
+      <div class="heading">
+        <img src="/assets/images/landing-page/package.svg" alt="">
+        <h3>Library Packages</h3>
+      </div>
+      <p>
+        Swift offers a robust package ecosystem for creating and sharing
+        high-performance, well-maintained libraries of code that integrates
+        with other systems.
+      </p>
+    </a>
+  </li>
+  <li class="grid-level-1 selectable">
+    <a href="/getting-started/cloud/">
+      <div class="heading">
+        <img src="/assets/images/landing-page/cloud.svg" alt="">
+        <h3>Cloud</h3>
+      </div>
+      <p>
+        Swift has broad support for cloud development across serverless
+        functions, containers, and hosted services.
+      </p>
+    </a>
+  </li>
+  <li class="grid-level-1 selectable">
+    <a href="/getting-started/desktop/">
+    <div class="heading">  
+      <img src="/assets/images/landing-page/desktop.svg" alt="">
+    <h3>Desktop Apps</h3>
+    </div>
+      <p>
+        With first-class support for macOS, as well as language bindings for
+        GNOME and Windows, it's easy to build an app for any major desktop
+        environment with Swift.
+      </p>
+    </a>
+  </li>
+  <li class="grid-level-1 selectable">
+    <a href="/getting-started/ai-ml">
+      <div class="heading">
+        <img src="/assets/images/landing-page/ai.svg" alt="">
+        <h3>Machine Learning & AI</h3>
+      </div>
+      <p>
+        With specialized frameworks like MLX for machine learning, Swift is a
+        great language for developing research and experimentation.
+      </p>
+    </a>
+  </li>
+  <li class="grid-level-1 selectable">
+    <a href="/getting-started/embedded-swift/">
+      <div class="heading">
+        <img src="/assets/images/landing-page/chip.svg" alt="">
+        <h3>Embedded</h3>
+      </div>
+      <p>
+        Swift targets embedded ARM and RISC-V boards with the tightest memory
+        constraints, from the Raspberry Pi Pico to ESP32 boards.
+      </p>
+    </a>
+  </li>
+  <li class="grid-level-1 selectable">
+    <a href="/getting-started/games/">
+    <div class="heading">
+      <img src="/assets/images/landing-page/controller.svg" alt="">
+      <h3>Games</h3>
+    </div>
+      <p>
+        From integration with the Godot game engine to Apple's powerful Metal
+        framework, Swift provides the horsepower to enable amazing games.
+      </p>
+    </a>
   </li>
 </ul>
 
+Regardless of how you're using Swift, you'll find [lots of resources for learning Swift](https://developer.apple.com/swift/pathway/), whether you're taking your first steps into code or are a seasoned developer switching from another language. We also have comprehensive [Swift resources for educators](https://education.apple.com/learning-center/T021340A-en_US).
+
 ## Getting Involved
 
-Everyone is welcome to contribute to Swift. Contributing doesn’t just mean writing code or submitting pull request — there are many different ways for you to get involved, including answering questions on the forums, reporting or triaging bugs, and participating in the Swift evolution process.
-
-No matter how you want to get involved, we ask that you first learn what’s expected of anyone who participates in the project by reading the [Community Overview](/community/). If you’re contributing code, you should also know how to build and run Swift from the repository, as described in [Source Code](/documentation/source-code/).
+Everyone is welcome to contribute to Swift. There are many different ways for you to get involved: hosting or attending Swift meet-ups, posting or answering questions on the forums, or participating in Swift's development.
 
 <ul class="grid-level-0 grid-layout-3-column">
   <li class="grid-level-1">
     <h3>Design</h3>
     <p>
-      Help shape the future of Swift by participating in <em>the Swift evolution process</em>.
+      Help shape Swift by contributing to the Swift compiler and other core components of the project.
     </p>
-    <a href="/contributing/#swift-evolution" class="cta-secondary">Learn more</a>
+    <a href="/contributing/" class="cta-secondary">Learn more</a>
   </li>
   <li class="grid-level-1">
-    <h3>Code</h3>
+    <h3>Forums</h3>
     <p>
-      Contribute to the Swift compiler, standard library, and other core components of the project.
+      Share your thoughts and questions and help others in the Swift Forums.
     </p>
-    <a href="/contributing/#contributing-code" class="cta-secondary">Learn more</a>
+    <a href="https://forums.swift.org/" class="cta-secondary">Learn more</a>
   </li>
   <li class="grid-level-1">
-    <h3>Troubleshoot</h3>
+    <h3>Events and Meetups</h3>
     <p>
-      Help improve the quality of Swift by reporting and triaging bugs.
+      Meet up with others who are interested in Swift development at an event near you.
     </p>
-    <a href="/contributing/#triaging-bugs" class="cta-secondary">Learn more</a>
+    <a href="https://dev.events/ios" class="cta-secondary">Learn more</a>
   </li>
 </ul>
-
-## What's New
-
-Stay up-to-date with the latest in the Swift community.
-
-<div class="links links-list-nostyle" markdown="1">
-  - [Visit the Swift.org blog](/blog/)
-  - [Visit the Swift forums](https://forums.swift.org)
-  - [Follow @swiftlang on X (formerly Twitter)](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
-</div>
 
 <script>
   var featuredSnippets = document.querySelectorAll('.featured-snippet');
