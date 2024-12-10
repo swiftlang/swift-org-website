@@ -106,7 +106,7 @@ categories:
           with state management, composition, side effects, and testing in mind. It can
           be used with SwiftUI, UIKit, and more.
         owner: Point-Free
-        swift_compatibility: 5.10+
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -124,6 +124,17 @@ categories:
         platform_compatibility_tooltip: Apple (macOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/swiftlang/swift-testing
+      - name: Defaults
+        description: Defaults is a type-safe wrapper around UserDefaults and supports
+          Codable, NSSecureCoding, change observation, and SwiftUI integration. It offers
+          iCloud synchronization and custom serialization.
+        owner: Sindre Sorhus
+        swift_compatibility: 6.0+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/sindresorhus/Defaults
       - name: swift-dependencies
         description: A dependency management library for controlling and overriding dependencies
           in Swift applications. Helps with testing, SwiftUI previews, and compile-time
@@ -153,7 +164,7 @@ categories:
         description: Offers observation tools for earlier versions of Swift, mimicking
           `@Observable` and providing compatibility with newer Swift observation features.
         owner: Point-Free
-        swift_compatibility: 5.10+
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
@@ -161,18 +172,6 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-perception
-      - name: Verge
-        description: Verge is a state management library for iOS development. It offers
-          a lightweight and efficient way to manage application state and supports both
-          UIKit and SwiftUI. It supports concurrent processing and includes an ORM for
-          efficient entity management.
-        owner: VergeGroup
-        swift_compatibility: 5.10+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS)
-        license: MIT
-        url: https://swiftpackageindex.com/VergeGroup/swift-verge
   - name: Server
     slug: server
     brief: Do you need a hand putting together a Swift app for the server? Browse some
@@ -313,6 +312,17 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
+      - name: RealHTTP
+        description: RealHTTP is a lightweight, async-based HTTP library for Swift. It
+          aims to provide an easy-to-use, powerful HTTP client with features like async/await
+          support, request customization, response validation, and more.
+        owner: Immobiliare Labs
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/immobiliare/RealHTTP
       - name: Socket
         description: BlueSocket is a Socket framework for Swift. It provides functionality
           for creating, closing, and listening on sockets.
@@ -325,17 +335,6 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Kitura/BlueSocket
-      - name: RxAlamofire
-        description: RxAlamofire is a wrapper around Alamofire that adds RxSwift functionality,
-          simplifying network requests and allowing responses to be composed in a more
-          streamlined way.
-        owner: RxSwift Community
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/RxSwiftCommunity/RxAlamofire
   - name: Testing
     slug: testing
     brief: "If you want to level up your project\u2019s tests, take a look at a selection
@@ -346,20 +345,6 @@ categories:
       title: More testing packages
       url: https://swiftpackageindex.com/keywords/testing
     packages:
-      - name: swift-snapshot-testing
-        description: SnapshotTesting is a delightful Swift snapshot testing library. It
-          allows you to easily compare snapshots of views, view controllers, URL requests,
-          and encodable values. It supports a wide range of snapshot strategies and is
-          highly configurable.
-        owner: Point-Free
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
       - name: swift-testing
         description: Enhances Swift code testing with expressive APIs, custom behaviors,
           flexible organization, scalable execution, and cross-platform support. Compatible
@@ -385,6 +370,20 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
+      - name: swift-snapshot-testing
+        description: SnapshotTesting is a delightful Swift snapshot testing library. It
+          allows you to easily compare snapshots of views, view controllers, URL requests,
+          and encodable values. It supports a wide range of snapshot strategies and is
+          highly configurable.
+        owner: Point-Free
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
       - name: Quick
         description: Quick is a behavior-driven development framework for Swift and Objective-C.
           It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
@@ -489,14 +488,11 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
-      - name: XCGLogger
-        description: XCGLogger is a debug log module for Swift projects that allows you
-          to log details to the console (and optionally a file) with additional information
-          such as date, function name, and line number.
-        owner: Dave Wood
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+      - name: Wormholy
+        description: Wormholy is a debugging tool for iOS network calls. It records app
+          traffic, reveals request and response content, and helps with debugging and
+          bug fixing. It works with NSURLSession and external libraries like Alamofire
+          and AFNetworking.
+        owner: Paolo Musolino
         license: MIT
-        url: https://swiftpackageindex.com/DaveWoodCom/XCGLogger
+        url: https://swiftpackageindex.com/pmusolino/Wormholy
