@@ -58,7 +58,7 @@ atom: true
   </ul>
 </div>
 
-## Use Cases
+## Getting Started with Swift
 
 <p>
   Swift runs on most modern operating systems, including macOS, Windows, Linux,
@@ -182,18 +182,11 @@ atom: true
 
 Regardless of how you're using Swift, you'll find [lots of resources for learning Swift](https://developer.apple.com/swift/pathway/), whether you're taking your first steps into code or are a seasoned developer switching from another language. We also have comprehensive [Swift resources for educators](https://education.apple.com/learning-center/T021340A-en_US).
 
-## Getting Involved
+## Make Connections
 
-Everyone is welcome to contribute to Swift. There are many different ways for you to get involved: hosting or attending Swift meet-ups, posting or answering questions on the forums, or participating in Swift's development.
+Everyone is welcome to participate in improving Swift. There are many different ways to get involved: you can host or attend a Swift event; you can post or answer questions on the forums; and you can play a role in Swift's development.
 
 <ul class="grid-level-0 grid-layout-3-column">
-  <li class="grid-level-1">
-    <h3>Design</h3>
-    <p>
-      Help shape Swift by contributing to the Swift compiler and other core components of the project.
-    </p>
-    <a href="/contributing/" class="cta-secondary">Learn more</a>
-  </li>
   <li class="grid-level-1">
     <h3>Forums</h3>
     <p>
@@ -207,6 +200,13 @@ Everyone is welcome to contribute to Swift. There are many different ways for yo
       Meet up with others who are interested in Swift development at an event near you.
     </p>
     <a href="https://dev.events/ios" class="cta-secondary">Learn more</a>
+  </li>
+    <li class="grid-level-1">
+    <h3>Contribute</h3>
+    <p>
+      Help shape Swift by contributing to the Swift compiler and other core components of the project.
+    </p>
+    <a href="/contributing/" class="cta-secondary">Learn more</a>
   </li>
 </ul>
 
