@@ -5,6 +5,7 @@
             <th class="download">Date</th>
             <th class="download">Toolchain</th>
             <th class="download">Debugging Symbols</th>
+            <th class="download">Static SDK</th>
         </tr>
     </thead>
     <tbody>
