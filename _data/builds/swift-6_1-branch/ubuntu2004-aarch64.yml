@@ -1,3 +1,8 @@
+- date: 2024-12-13 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-13-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-13-a-ubuntu20.04-aarch64.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-13-a-ubuntu20.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2024-12-12 10:10:00-06:00
   dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-12-a
   download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-12-a-ubuntu20.04-aarch64.tar.gz
