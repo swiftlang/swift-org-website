@@ -5,6 +5,9 @@
             <th class="download">Date</th>
             <th class="download">Toolchain</th>
             <th class="download">Docker</th>
+            {% if include.platform != "Windows 10" %}
+            <th class="download">Static SDK</th>
+            {% endif %}
         </tr>
     </thead>
     <tbody>

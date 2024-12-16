@@ -1,3 +1,18 @@
+- date: 2024-12-13 10:10:00-06:00
+  debug_info: swift-DEVELOPMENT-SNAPSHOT-2024-12-13-a-osx-symbols.pkg
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-12-13-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-12-13-a-osx.pkg
+  name: Swift Development Snapshot
+- date: 2024-12-12 10:10:00-06:00
+  debug_info: swift-DEVELOPMENT-SNAPSHOT-2024-12-12-a-osx-symbols.pkg
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-12-12-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-12-12-a-osx.pkg
+  name: Swift Development Snapshot
+- date: 2024-12-10 10:10:00-06:00
+  debug_info: swift-DEVELOPMENT-SNAPSHOT-2024-12-10-a-osx-symbols.pkg
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-12-10-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-12-10-a-osx.pkg
+  name: Swift Development Snapshot
 - date: 2024-12-04 10:10:00-06:00
   debug_info: swift-DEVELOPMENT-SNAPSHOT-2024-12-04-a-osx-symbols.pkg
   dir: swift-DEVELOPMENT-SNAPSHOT-2024-12-04-a
