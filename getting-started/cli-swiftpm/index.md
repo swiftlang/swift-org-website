@@ -3,8 +3,6 @@ layout: page
 title: Build a Command-line Tool
 ---
 
-> The source code for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-cli)
-
 {% include getting-started/_installing.md %}
 
 ## Bootstrapping
@@ -13,9 +11,9 @@ Let’s write a small application with our new Swift development environment.
 To start, we’ll use SwiftPM to make a new project for us. In your terminal of choice run:
 
 ~~~bash
-$ mkdir MyCLI
-$ cd MyCLI
-$ swift package init --name MyCLI --type executable
+mkdir MyCLI
+cd MyCLI
+swift package init --name MyCLI --type executable
 ~~~
 
 This will generate a new directory called MyCLI with the following files:
@@ -38,8 +36,8 @@ We can run the program by running  `swift run`  in our terminal.
 ~~~bash
 $ swift run MyCLI
 Building for debugging...
-[3/3] Linking MyCLI
-Build complete! (0.68s)
+[8/8] Applying MyCLI
+Build of product 'MyCLI' complete! (0.71s)
 Hello, world!
 ~~~
 
@@ -54,7 +52,7 @@ You can find more interesting libraries on [Swift Package Index](https://swiftpa
 To do so, we extend our `Package.swift` file with the following information:
 
 ~~~swift
-// swift-tools-version: 5.8
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -62,7 +60,7 @@ import PackageDescription
 let package = Package(
     name: "MyCLI",
     dependencies: [
-      .package(url: "https://github.com/apple/example-package-figlet", branch: "main"),
+        .package(url: "https://github.com/apple/example-package-figlet", branch: "main")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -70,14 +68,14 @@ let package = Package(
         .executableTarget(
             name: "MyCLI",
             dependencies: [
-                .product(name: "Figlet", package: "example-package-figlet"),
-            ],
-            path: "Sources"),
+                .product(name: "Figlet", package: "example-package-figlet")
+            ]
+        )
     ]
 )
 ~~~
 
-Running `swift build` will instruct SwiftPM to download the new dependencies and then proceed to build the code.
+Running `swift build` will instruct Swift to download the new dependencies and then proceed to build the code.
 
 Running this command also created a new file for us, `Package.resolved`.
 This file is a snapshot of the exact versions of the dependencies we are using locally.
@@ -122,7 +120,7 @@ To add this capability to our application, we add a dependency on [swift-argumen
 To do so, we extend our `Package.swift` file with the following information:
 
 ~~~swift
-// swift-tools-version: 5.8
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -130,8 +128,8 @@ import PackageDescription
 let package = Package(
     name: "MyCLI",
     dependencies: [
-      .package(url: "https://github.com/apple/example-package-figlet", branch: "main"),
-      .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
+        .package(url: "https://github.com/apple/example-package-figlet", branch: "main"),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.5.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -141,8 +139,8 @@ let package = Package(
             dependencies: [
                 .product(name: "Figlet", package: "example-package-figlet"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-            ],
-            path: "Sources"),
+            ]
+        )
     ]
 )
 ~~~
@@ -166,7 +164,9 @@ struct FigletTool: ParsableCommand {
 
 For more information about how [swift-argument-parser](https://github.com/apple/swift-argument-parser) parses command line options, see [swift-argument-parser documentation](https://github.com/apple/swift-argument-parser) documentation.
 
-Once we save that, we can run our application with `swift run MyCLI --input 'Hello, world!'`
+Once we save that, we can run our application with `swift run MyCLI --input
+'Hello, world!'` (macOS / Linux) or `swift run MyCLI --input "Hello, world!"`
+(Windows)
 
 Note we need to specify the executable in this case, so we can pass the `input` argument to it.
 
