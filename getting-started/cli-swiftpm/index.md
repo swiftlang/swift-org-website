@@ -7,8 +7,7 @@ title: Build a Command-line Tool
 
 ## Bootstrapping
 
-Let’s write a small application with our new Swift development environment.
-To start, we’ll use SwiftPM to make a new project for us. In your terminal of choice run:
+Let’s write a small application with our new Swift development environment. To start, we’ll create a new project which compiles to an executable. In your terminal of choice, run:
 
 ~~~bash
 mkdir MyCLI
@@ -29,7 +28,7 @@ This will generate a new directory called MyCLI with the following files:
 
 `Sources/main.swift` is the application entry point and where we’ll write our application code.
 
-In fact, SwiftPM generated a "Hello, world!" project for us!
+In fact, Swift generated a "Hello, world!" project for us!
 
 We can run the program by running  `swift run`  in our terminal.
 
@@ -43,11 +42,11 @@ Hello, world!
 
 ## Adding dependencies
 
-Swift based applications are usually composed from libraries that provide useful functionality.
+Swift-based applications are usually composed from libraries that provide useful functionality.
 
 In this project, we’ll use a package called [example-package-figlet](https://github.com/apple/example-package-figlet) which will help us make ASCII art.
 
-You can find more interesting libraries on [Swift Package Index](https://swiftpackageindex.com) -- the unofficial package index for Swift.
+You can find more interesting libraries at the [Swift Package Index](https://swiftpackageindex.com).
 
 To do so, we extend our `Package.swift` file with the following information:
 
@@ -148,17 +147,17 @@ let package = Package(
 We can now import the argument parsing module provided by `swift-argument-parser` and use it in our application:
 
 ~~~swift
-import Figlet
 import ArgumentParser
+import Figlet
 
 @main
 struct FigletTool: ParsableCommand {
-  @Option(help: "Specify the input")
-  public var input: String
+    @Option(help: "Specify the input")
+    public var input: String
 
-  public func run() throws {
-    Figlet.say(self.input)
-  }
+    public func run() {
+        Figlet.say(input)
+    }
 }
 ~~~
 
