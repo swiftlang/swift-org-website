@@ -17,7 +17,8 @@ atom: true
 </div>
 
 <div class="banner primary">
-  <p>Get ready for the Swift 6 language mode with the <a href="https://www.swift.org/migration/">official migration guide</a></p>
+  <p>Get ready for the Swift 6 language mode with the
+  <a href="https://www.swift.org/migration/">official migration guide</a></p>
 </div>
 
 <div class="link-grid">
@@ -68,13 +69,14 @@ atom: true
 
 <ul class="grid-level-0 grid-layout-use-cases">
   <li class="grid-level-1 selectable">
-   <a href="https://developer.apple.com/swift/resources/">
+   <a href="/getting-started/swiftui">
     <div class="heading">
         <img src="/assets/images/landing-page/phone.svg" alt="">
         <h3>Mobile Apps</h3>
       </div>
       <p>
-        Swift is the primary language for building polished, unique apps for iOS, watchOS, visionOS, and other Apple platforms.
+        Swift is the primary language for building polished, unique apps for
+        iOS, watchOS, visionOS, and other Apple platforms.
       </p>
     </a>
   </li>
@@ -92,7 +94,7 @@ atom: true
     </a>
   </li>
   <li class="grid-level-1 selectable">
-    <a href="/documentation/server">
+    <a href="/getting-started/vapor-web-server">
       <div class="heading">
         <img src="/assets/images/landing-page/server.svg" alt="">
         <h3>Web Services</h3>
