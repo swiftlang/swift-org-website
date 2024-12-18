@@ -1,7 +1,11 @@
+@use './core/_vars' as mixvars;
+@use './core/colors/_light' as mixlight;
+@use './core/colors/_dark' as mixdark;
+
 body {
   color-scheme: light dark;
-  @include vars-light;
-  @include color-vars-light;
+  @include mixvars.vars-light;
+  @include mixlight.color-vars-light;
 
   &[data-color-scheme="light"] {
     color-scheme: light;
@@ -11,8 +15,8 @@ body {
     color-scheme: dark;
 
     @media screen {
-      @include vars-dark;
-      @include color-vars-dark;
+      @include mixvars.vars-dark;
+      @include mixdark.color-vars-dark;
     }
   }
 }
