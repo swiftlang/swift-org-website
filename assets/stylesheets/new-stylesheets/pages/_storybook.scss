@@ -1,8 +1,43 @@
 .storybook {
   main {
-    padding: $padding-content;
-    max-width: $width-page-wrapper-small;
-    margin: 1rem auto;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 1rem;
+
+    .sidebar {
+      width: 20%;
+      padding: 1rem;
+      margin-right: 1%;
+      border: 1px solid $pink;
+      position: sticky;
+      top: 0;
+      height: fit-content;
+
+      @media (max-width: $breakpoint-desktop) {
+        width: 100%;
+        display: none;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-top: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .content {
+      width: 79%;
+      max-width: 79%;
+      margin-top: 1rem;
+
+      @media (max-width: $breakpoint-desktop) {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
   }
 
   .storybook-render {
@@ -13,7 +48,7 @@
   }
 
   // Specificity to avoid styling other code snippets
-  main > div.highlighter-rouge {
+  main .content > div.highlighter-rouge {
     @include box-radius;
     @include default-border;
     padding: 2rem;
