@@ -1,3 +1,5 @@
+@use './_maps' as funmaps;
+
 $base-colors: (
   swift-orange: (
     light: #f05138,
@@ -86,7 +88,7 @@ $base-colors: (
 );
 
 @function base-color($keys...) {
-  @return map-deep-get($base-colors, $keys);
+  @return funmaps.map-deep-get($base-colors, $keys);
 }
 
 @function dark-color($name) {
