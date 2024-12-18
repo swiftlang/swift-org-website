@@ -19,7 +19,7 @@ module Jekyll
 
       code_output = if !hide_code
         <<~CODE
-          #### Code
+          #### Code Example
           ```#{language}
           #{content.strip}
           ```
@@ -31,7 +31,7 @@ module Jekyll
       <<~HTML
         #{code_output}
 
-        #### Render
+        #### Render Example
         <div class="storybook-render">
           #{rendered_content}
         </div>
