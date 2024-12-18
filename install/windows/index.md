@@ -63,8 +63,8 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
 
 {% assign windows_dev_builds = site.data.builds.development.windows10 | sort: 'date' | reverse %}
 {% assign windows_arm64_dev_builds = site.data.builds.development.windows10-arm64 | sort: 'date' | reverse %}
-{% assign windows10_6_0_builds = site.data.builds.swift-6_0-branch.windows10 | sort: 'date' | reverse %}
-{% assign windows10_arm64_6_0_builds = site.data.builds.swift-6_0-branch.windows10-arm64 | sort: 'date' | reverse %}
+{% assign windows10_6_1_builds = site.data.builds.swift-6_1-branch.windows10 | sort: 'date' | reverse %}
+{% assign windows10_arm64_6_1_builds = site.data.builds.swift-6_1-branch.windows10-arm64 | sort: 'date' | reverse %}
 
 
 <ul class="grid-level-0 grid-layout-2-column">
@@ -82,16 +82,16 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     </ul>
   </li>
   <li class="grid-level-1">
-    <h3>release/6.0</h3>
+    <h3>release/6.1</h3>
     <p class="description" style="font-size: 14px;">
-      <time datetime="{{ windows10_6_0_builds.first.date | date_to_xmlschema }}" title="{{ windows10_6_0_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ windows10_6_0_builds.first.date | date: '%B %-d, %Y' }}</time>
+      <time datetime="{{ windows10_6_1_builds.first.date | date_to_xmlschema }}" title="{{ windows10_6_1_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ windows10_6_1_builds.first.date | date: '%B %-d, %Y' }}</time>
     </p>
     <p class="description">
       Package installers (.exe).
     </p>
     <ul class="grid-level-0 grid-layout-2-column">
-      <a href="https://download.swift.org/swift-6.0-branch/windows10/{{ windows10_6_0_builds.first.dir }}/{{ windows10_6_0_builds.first.download }}" class="cta-secondary">Download (x86_64)</a>
-      <a href="https://download.swift.org/swift-6.0-branch/windows10-arm64/{{ windows10_arm64_6_0_builds.first.dir }}/{{ windows10_arm64_6_0_builds.first.download }}" class="cta-secondary">Download (arm64)</a>
+      <a href="https://download.swift.org/swift-6.1-branch/windows10/{{ windows10_6_1_builds.first.dir }}/{{ windows10_6_1_builds.first.download }}" class="cta-secondary">Download (x86_64)</a>
+      <a href="https://download.swift.org/swift-6.1-branch/windows10-arm64/{{ windows10_arm64_6_1_builds.first.dir }}/{{ windows10_arm64_6_1_builds.first.download }}" class="cta-secondary">Download (arm64)</a>
     </ul>
   </li>
 </ul>
@@ -101,6 +101,6 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
   {% include install/_older_snapshots.md builds=windows_dev_builds name="windows" platform_dir="windows10" branch_dir="development" %}
 </details>
 <details class="download" style="margin-bottom: 0;">
-  <summary>Older Snapshots (release/6.0)</summary>
-  {% include install/_older_snapshots.md builds=windows10_6_0_builds name="windows" platform_dir="windows10" branch_dir="swift-6.0-branch" %}
+  <summary>Older Snapshots (release/6.1)</summary>
+  {% include install/_older_snapshots.md builds=windows10_6_1_builds name="windows" platform_dir="windows10" branch_dir="swift-6.1-branch" %}
 </details>
