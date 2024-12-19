@@ -1,10 +1,12 @@
 ---
 ---
 
+<input type="search" placeholder="Filter Components" oninput="filterComponents(event)">
+
 {% assign folders = "stories/classes,stories/components" | split: "," %}
 {% for folder in folders %}
 {% capture folder_output %}
-## {{ folder | split: "/" | last | capitalize }}
+<h2>{{ folder | split: "/" | last | capitalize }}</h2>
 
 {% for file in site.static_files %}
 {% if file.path contains folder %}
@@ -14,3 +16,18 @@
 {% endcapture %}
 {{ folder_output | markdownify }}
 {% endfor %}
+
+<script>
+    function filterComponents(e) {
+        const components = document.querySelectorAll("a");
+        const searchComponentString = e.target.value.trim().toLowerCase();
+
+        components.forEach(component => {
+            component.style.display = 'revert';
+
+            if (!component.innerText.toLowerCase().includes(searchComponentString)) {
+                component.style.display = 'none';
+            }
+        })
+    }
+</script>
