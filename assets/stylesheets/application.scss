@@ -2,11 +2,11 @@
 layout: source
 ---
 
-@import "core";
-@import "colors";
-@import "syntax";
-@import "screen";
-@import "elements";
-@import "mobile";
-@import "pages";
-@import "print";
+@use "core";
+@use "colors";
+@use "syntax";
+@use "screen";
+@use "elements";
+@use "mobile";
+@use "pages";
+@use "print";
