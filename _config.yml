@@ -1,6 +1,6 @@
-url: https://swift.org
-title: Swift.org
-description: "Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns."
+url: https://swift.swiftgg.team
+title: SwiftGG
+description: "Swift 是一种通用编程语言，它采用现代方法处理安全性、性能和软件设计模式。"
 timezone: America/Lower_Princes
 exclude: ["README.md", "config.ru", "Gemfile", "Gemfile.lock", "Procfile", "vendor"]
 safe: false

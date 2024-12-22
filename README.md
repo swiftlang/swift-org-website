@@ -1,31 +1,34 @@
-# Swift.org Website
+# Swift.org 官方网站
 
-## Overview
+> 本项目由 [SwiftGG 翻译组](https://swiftgg.team)负责翻译维护。
 
-Swift.org website goals include:
 
-1. Welcome the curious about the Swift programming language.
-2. Share knowledge with the Swift users community and prospective users, including instructions for getting started with Swift as easily as possible, user guides, best practices, API documentation and feature announcements.
-3. Share knowledge with the Swift contributors community and prospective contributors, including contribution guides, technical details that assist contributions, project governance and legal information.
-4. Highlight community driven initiatives and technical work that have broad applicability to Swift users in all or some of its core usage domains.
+## 概述
 
-See [website overview](/website) for more information about the Swift.org website goals, content governance and contribution guidelines.
+Swift.org 网站的目标包括：
 
-## Technical
+1. 欢迎对 Swift 编程语言感兴趣的人。
+2. 与 Swift 用户社区和潜在用户分享知识，包括尽可能简单的 Swift 入门指南、用户指南、最佳实践、API 文档和功能公告。
+3. 与 Swift 贡献者社区和潜在贡献者分享知识，包括贡献指南、辅助贡献的技术细节、项目治理和法律信息。
+4. 突出展示社区驱动的计划和技术工作，这些工作适用于 Swift 在其所有或部分核心使用领域的用户。
 
-Swift.org uses [Jekyll](https://jekyllrb.com), a blog-aware, static site generator in Ruby.
+有关 Swift.org 网站目标、内容治理和贡献指南的更多信息，请参阅[网站概述](/website)。
 
-### Running locally
+## 技术细节
 
-Requirements
+Swift.org 使用 [Jekyll](https://jekyllrb.com)，这是一个用 Ruby 编写的支持博客的静态站点生成器。
+
+### 本地运行
+
+要求：
 - Git
-- Ruby 3.3 or higher
-  _(a Ruby installation manager, such as
-  [rbenv](https://github.com/sstephenson/rbenv) or
-  [RVM](https://rvm.io) is recommended, but not required)_
+- Ruby 3.3 或更高版本
+  _(推荐使用 Ruby 安装管理器，如
+  [rbenv](https://github.com/sstephenson/rbenv) 或
+  [RVM](https://rvm.io)，但不是必需的)_
 - [Bundler](https://bundler.io/)
 
-To run the site locally, enter the following commands into a terminal window:
+要在本地运行网站，请在终端窗口中输入以下命令：
 
 ```shell
 git clone https://github.com/swiftlang/swift-org-website.git
@@ -35,18 +38,18 @@ LC_ALL=en_us.UTF-8 bundle exec jekyll serve
 open "http://localhost:4000"
 ```
 
-### Running in Docker
+### 在 Docker 中运行
 
-First build the site with Docker Compose:
+首先使用 Docker Compose 构建站点：
 
 ```bash
 docker-compose run build
 ```
 
-Then you can run the site:
+然后你可以运行站点：
 
 ```bash
 docker-compose up website
 ```
 
-The website will be available on `http://localhost:4000`
+网站将在 `http://localhost:4000` 上可用
