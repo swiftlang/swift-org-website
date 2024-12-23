@@ -1,155 +1,155 @@
-- header: Get Started
+- header: 快速入门
   url: /getting-started/
 # ------------------------------------------------------------------------------
-- header: Blog
+- header: 博客
   url: /blog/
 # ------------------------------------------------------------------------------
-- header: Documentation
+- header: 文档
   url: /documentation/
 # ------------------------------------------------------------------------------
-- header: Packages
+- header: 软件包
   url: /packages/
 # ------------------------------------------------------------------------------
-- header: Tools
+- header: 工具
   url: /tools/
 # ------------------------------------------------------------------------------
-- header: Community
+- header: 社区
   url: /community/
   pages:
-    - title: Overview
+    - title: 概览
       url: /community/
-    - title: Swift Evolution
+    - title: Swift 演进
       url: /swift-evolution/
-    - title: Diversity
+    - title: 多元化
       url: /diversity/
       sections:
-        - title: Mission
+        - title: 使命
           name: mission
-        - title: Workgroup
+        - title: 工作组
           name: workgroup
-        - title: Community Groups
+        - title: 社区小组
           name: community-groups
-        - title: Events
+        - title: 活动
           name: events
-        - title: Community-focused blog on Swift.org
+        - title: Swift.org 社区博客
           name: community-focused-blog-on-swiftorg
-        - title: Community Participation
+        - title: 社区参与
           name: community-participation
-    - title: Mentorship
+    - title: 导师计划
       url: /mentorship/
       sections:
-        - title: Current Program
+        - title: 当前项目
           name: current-program
-        - title: Frequently Asked Questions
+        - title: 常见问题
           name: frequently-asked-questions
-    - title: Contributing
+    - title: 贡献指南
       url: /contributing/
       sections:
-        - title: Answering Questions
+        - title: 解答问题
           name: answering-questions
-        - title: Reporting Bugs
+        - title: 报告 Bug
           name: reporting-bugs
-        - title: Triaging Bugs
+        - title: Bug 分类
           name: triaging-bugs
-        - title: Blog Post Contributions
+        - title: 博客贡献
           name: website-and-blog-post-contributions
-        - title: Swift Evolution
+        - title: Swift 演进
           name: evolution-process
-        - title: Good First Issues
+        - title: 适合新手的议题
           name: good-first-issues
-        - title: Contributing Code
+        - title: 代码贡献
           name: contributing-code
-        - title: Adding External Library Dependencies
+        - title: 添加外部依赖库
           name: adding-external-library-dependencies
-        - title: LLVM and Swift
+        - title: LLVM 与 Swift
           name: llvm-and-swift
-    - section: Steering Groups
-    - title: Language
+    - section: 指导小组
+    - title: 语言组
       url: /language-steering-group/
       sections:
-        - title: Charter
+        - title: 章程
           name: charter
-        - title: Membership
+        - title: 成员构成
           name: membership
-        - title: Decision making
+        - title: 决策机制
           name: decision-making
-        - title: Communication
+        - title: 交流方式
           name: communication
-        - title: Evolution process
+        - title: 演进流程
           name: evolution-process
-        - title: Community participation
+        - title: 社区参与
           name: community-participation
-    - title: Platform
+    - title: 平台组
       url: /platform-steering-group/
       sections:
-        - title: Charter
+        - title: 章程
           name: charter
-        - title: Membership
+        - title: 成员构成
           name: membership
-        - title: Evolution
+        - title: 演进
           name: evolution
-        - title: Communication
+        - title: 交流方式
           name: communication
-        - title: Platform Evolution process
+        - title: 平台演进流程
           name: platform-evolution-process
-        - title: Community participation
+        - title: 社区参与
           name: community-participation
-    - section: Workgroups
-    - title: Contributor Experience
+    - section: 工作组
+    - title: 贡献者体验
       url: /contributor-experience-workgroup/
-    - title: Server
+    - title: 服务器
       url: /sswg/
       sections:
-        - title: Community Participation
+        - title: 社区参与
           name: community-participation
-        - title: Governance
+        - title: 治理
           name: governance
-        - title: Website workgroup
+        - title: 网站工作组
           name: website-workgroup
-    - title: Website
+    - title: 网站
       url: /website/
       sections:
-        - title: Community Participation
+        - title: 社区参与
           name: community-participation
-        - title: Governance
+        - title: 治理
           name: governance
-        - title: Website workgroup
+        - title: 网站工作组
           name: website-workgroup
-    - title: C++ Interoperability
+    - title: C++ 互操作性
       url: /cxx-interop-workgroup/
       sections:
-        - title: Charter
+        - title: 章程
           name: charter
-        - title: Membership
+        - title: 成员构成
           name: membership
-        - title: Communication
+        - title: 交流方式
           name: communication
-    - title: Documentation
+    - title: 文档
       url: /documentation-workgroup/
       sections:
-        - title: Charter
+        - title: 章程
           name: charter
-        - title: Membership
+        - title: 成员构成
           name: membership
-        - title: Communication
+        - title: 交流方式
           name: communication
-        - title: Community Participation
+        - title: 社区参与
           name: community-participation
     - title: Foundation
       url: /foundation-workgroup/
-    - section: Governance
-    - title: Code of Conduct
+    - section: 管理
+    - title: 行为准则
       url: /code-of-conduct/
-    - title: License
+    - title: 许可协议
       url: /legal/license.html
-    - title: Security
+    - title: 安全
       url: /support/security.html
       sections:
-        - title: Security Process
+        - title: 安全流程
           name: security-process
-        - title: Security Updates
+        - title: 安全更新
           name: security-updates
 # ------------------------------------------------------------------------------
-- header: Install
+- header: 安装
   url: /install/
   isCta: true
