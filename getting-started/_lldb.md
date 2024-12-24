@@ -1,14 +1,8 @@
-## Using the LLDB Debugger
+## 使用 LLDB 调试器
 
-You can use the LLDB debugger to
-run Swift programs step-by-step,
-set breakpoints,
-and inspect and modify program state.
+你可以使用 LLDB 调试器来逐步运行 Swift 程序、设置断点，以及检查和修改程序状态。
 
-As an example,
-consider the following Swift code,
-which defines a `factorial(n:)` function,
-and prints the result of calling that function:
+让我们看一个例子，以下 Swift 代码定义了一个 `factorial(n:)` 函数，并打印调用该函数的结果：
 
 ~~~ swift
 func factorial(n: Int) -> Int {
@@ -20,12 +14,7 @@ let number = 4
 print("\(number)! is equal to \(factorial(n: number))")
 ~~~
 
-Create a file named `Factorial.swift` with the code above,
-and run the `swiftc` command,
-passing the filename as a command line argument,
-along with the `-g` option to generate debug information.
-This will create an executable named `Factorial`
-in the current directory.
+创建一个名为 `Factorial.swift` 的文件，包含上述代码，然后运行 `swiftc` 命令，将文件名作为命令行参数传入，同时使用 `-g` 选项生成调试信息。这将在当前目录中创建一个名为 `Factorial` 的可执行文件。
 
 ~~~ shell
 $ swiftc -g Factorial.swift
@@ -35,9 +24,7 @@ Factorial.swift
 Factorial*
 ~~~
 
-Instead of running the `Factorial` program directly,
-run it through the LLDB debugger
-by passing it as a command line argument to the `lldb` command.
+不要直接运行 `Factorial` 程序，而是通过 LLDB 调试器运行它，将其作为命令行参数传递给 `lldb` 命令。
 
 ~~~ text
 $ lldb Factorial
@@ -45,23 +32,18 @@ $ lldb Factorial
 Current executable set to 'Factorial' (x86_64).
 ~~~
 
-This will start an interactive console
-that allows you to run LLDB commands.
+这将启动一个交互式控制台，允许你运行 LLDB 命令。
 
-> For more information about LLDB commands,
-> see the [LLDB Tutorial](http://lldb.llvm.org/tutorial.html).
+> 要了解更多关于 LLDB 命令的信息，请参阅 [LLDB 教程](http://lldb.llvm.org/tutorial.html)。
 
-Set a breakpoint on line 2 of the `factorial(n:)` function
-with the `breakpoint set` (`b`) command,
-to have the process break each time the function is executed.
+使用 `breakpoint set`（简写为 `b`）命令在 `factorial(n:)` 函数的第 2 行设置断点，这样每次执行该函数时进程都会中断。
 
 ~~~ text
 (lldb) b 2
 Breakpoint 1: where = Factorial`Factorial.factorial (Swift.Int) -> Swift.Int + 12 at Factorial.swift:2, address = 0x0000000100000e7c
 ~~~
 
-Run the process with the `run` (`r`) command.
-The process will stop at the call site of the `factorial(n:)` function.
+使用 `run`（简写为 `r`）命令运行进程。进程将在 `factorial(n:)` 函数的调用处停止。
 
 ~~~ text
 (lldb) r
@@ -78,23 +60,21 @@ Process 40246 stopped
    7    print("\(number)! is equal to \(factorial(n: number))")
 ~~~
 
-Use the `print` (`p`) command
-to inspect the value of the `n` parameter.
+使用 `print`（简写为 `p`）命令检查参数 `n` 的值。
 
 ~~~ text
 (lldb) p n
 (Int) $R0 = 4
 ~~~
 
-The `print` command can evaluate Swift expressions as well.
+`print` 命令也可以计算 Swift 表达式。
 
 ~~~ text
 (lldb) p n * n
 (Int) $R1 = 16
 ~~~
 
-Use the `backtrace` (`bt`) command
-to show the frames leading to `factorial(n:)` being called.
+使用 `backtrace`（简写为 `bt`）命令显示导致调用 `factorial(n:)` 的帧栈。
 
 ~~~ text
 (lldb) bt
@@ -105,8 +85,7 @@ to show the frames leading to `factorial(n:)` being called.
     frame #3: 0x00007fff890be5ad libdyld.dylib`start + 1
 ~~~
 
-Use the `continue` (`c`) command
-to resume the process until the breakpoint is hit again.
+使用 `continue`（简写为 `c`）命令继续运行进程，直到再次遇到断点。
 
 ~~~ text
 (lldb) c
@@ -123,19 +102,14 @@ Process 40246 stopped
    7    print("\(number)! is equal to \(factorial(n: number))")
 ~~~
 
-Use the `print` (`p`) command again
-to inspect the value of the `n` parameter
-for the second call to `factorial(n:)`.
+再次使用 `print`（简写为 `p`）命令检查第二次调用 `factorial(n:)` 时参数 `n` 的值。
 
 ~~~ text
 (lldb) p n
 (Int) $R2 = 3
 ~~~
 
-Use the `breakpoint disable` (`br di`) command
-to disable all breakpoints
-and the `continue` (`c`) command
-to have the process run until it exits.
+使用 `breakpoint disable`（简写为 `br di`）命令禁用所有断点，然后使用 `continue`（简写为 `c`）命令让进程运行直到结束。
 
 ~~~ text
 (lldb) br di

@@ -1,38 +1,34 @@
-## Compiling with the `swiftc` Command
+## 使用 `swiftc` 命令进行编译
 
-The `swiftc` command compiles Swift code into
-programs that can be run by the operating system.
+`swiftc` 命令用于将 Swift 代码编译成操作系统可以运行的程序。
 
-    // QUESTION: What is our cross-platform story?
+    // 问题：我们的跨平台支持情况如何？
 
-> A program built on a particular machine can only be run
-> on other machines with the same hardware architecture and operating system.
-> For example, an executable built on a computer running macOS 10.11 on x86_64
-> could not be run directly by a machine running Ubuntu on ARMv7.
-> However, the same _code_ can be compiled and run on any machine
-> that supports Swift.
+> 在特定机器上构建的程序只能在具有相同硬件架构和操作系统的其他机器上运行。
+> 例如，在运行 macOS 10.11 且架构为 x86_64 的计算机上构建的可执行文件，
+> 不能直接在运行 Ubuntu 且架构为 ARMv7 的机器上运行。
+> 但是，相同的代码可以在任何支持 Swift 的机器上编译和运行。
 
 ### Hello, world!
 
-By tradition, the first program in a new language
-should display "Hello, world!" on the screen.
-In Swift, this can be done in a single line.
-Create a new file, `hello.swift`,
-and enter the following:
+按照传统，学习新编程语言时的第一个程序
+应该在屏幕上显示 "Hello, world!"。
+在 Swift 中，这可以用一行代码完成。
+创建一个新文件 `hello.swift`，
+并输入以下内容：
 
 ~~~ swift
 print("Hello, world!")
 ~~~
 
-Now, in the terminal,
-enter the following command:
+然后，在终端中输入以下命令：
 
 ~~~ shell
 $ swiftc hello.swift
 ~~~
 
-Running this command will create a new executable `hello`,
-which can be run from the command line:
+运行此命令将创建一个新的可执行文件 `hello`，
+可以从命令行运行它：
 
 ~~~ shell
 $ ./hello

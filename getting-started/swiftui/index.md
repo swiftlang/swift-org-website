@@ -1,36 +1,36 @@
 ---
 layout: page
-title: Build an iOS app with SwiftUI
+title: 使用 SwiftUI 构建 iOS 应用
 ---
 
-> The source code for this guide can be found [on GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial)
+> 本教程的源代码可以在 [GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial) 上找到
 
-In this tutorial you’re going to use Swift and SwiftUI to build a small app to recommend fun new activities to users. Along the way you’ll meet several of the basic components of a SwiftUI app, including text, images, buttons, shapes, stacks, and program state.
+在本教程中,你将使用 Swift 和 SwiftUI 构建一个小应用,为用户推荐有趣的新活动。在此过程中,你将了解 SwiftUI 应用的几个基本组件,包括文本、图像、按钮、形状、堆栈和程序状态。
 
-To get started, you’ll need to [download Xcode from the Mac App Store](https://apps.apple.com/app/xcode/id497799835?mt=12). It’s free, and comes with Swift and all the other tools you need to follow this tutorial.
+首先,你需要从 Mac App Store [下载 Xcode](https://apps.apple.com/app/xcode/id497799835?mt=12)。它是免费的,并且包含了 Swift 和本教程所需的所有其他工具。
 
-Go ahead and launch Xcode once it’s installed, then select Create a new Xcode Project. Select the iOS tab at the top, then select the App template and press Next.
+安装完成后启动 Xcode,然后选择"Create a new Xcode Project"。在顶部选择 iOS 选项卡,然后选择 App 模板并点击 Next。
 
-**Tip:** Although we’ll be targeting iOS 16, our code will also work great on macOS Ventura and beyond.
+**提示:** 虽然我们将以 iOS 16 为目标平台,但我们的代码在 macOS Ventura 及更高版本上也能很好地运行。
 
-When making a new project, Xcode will ask you for a few pieces of information:
+创建新项目时,Xcode 会要求你提供一些信息:
 
-- For Product Name, enter “WhyNotTry”.
-- For Organization Identifier you can enter com.example. In real apps we’d normally enter our own domain name here, e.g. org.swift.
-- For Interface make sure SwiftUI is selected.
-- You can uncheck the boxes for Core Data and Include Tests; we won’t be using them here.
+- Product Name 输入 "WhyNotTry"
+- Organization Identifier 可以输入 com.example。在实际应用中,我们通常会在这里输入自己的域名,例如 org.swift
+- Interface 确保选择 SwiftUI
+- 可以取消选中 Core Data 和 Include Tests 的复选框;我们在这里不会用到它们
 
-![New Xcode Project]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/new-project.png)
+![新建 Xcode 项目]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/new-project.png)
 
-When you press Next, Xcode will ask where you want to save the project. You’re welcome to choose wherever suits you, but you might find your Desktop is easiest. Once that’s done, Xcode will create the new project for you, then open ContentView.swift for editing. This is where we’ll write all our code, and you’ll see some default SwiftUI code in there for us.
+点击 Next 后,Xcode 会询问你要将项目保存在哪里。你可以选择任何适合你的位置,但桌面可能是最方便的。完成后,Xcode 会为你创建新项目,然后打开 ContentView.swift 进行编辑。这是我们将编写所有代码的地方,你会看到其中已经有一些默认的 SwiftUI 代码。
 
-![Initial SwiftUI project]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/initial-view.png)
+![初始 SwiftUI 项目]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/initial-view.png)
 
-The example code Xcode made for us creates a new view called `ContentView`. Views are how SwiftUI represents our app’s user interface on the screen, and we can add custom layout and logic in there.
+Xcode 为我们创建的示例代码创建了一个名为 `ContentView` 的新视图。视图是 SwiftUI 在屏幕上表示应用用户界面的方式,我们可以在其中添加自定义布局和逻辑。
 
-On the right-hand side of Xcode, you’ll see a live preview of that code running – if you make a change to the code on the left, it will appear in the preview straight away. If you can't see the preview, follow [these instructions](https://developer.apple.com/documentation/swiftui/previews-in-xcode) to enable it.
+在 Xcode 的右侧,你会看到该代码运行的实时预览 - 如果你对左侧的代码进行更改,它会立即显示在预览中。如果你看不到预览,请按照[这些说明](https://developer.apple.com/documentation/swiftui/previews-in-xcode)启用它。
 
-For example, try replacing the default `body` code with this:
+例如,尝试将默认的 `body` 代码替换为以下内容:
 
 ```swift
 var body: some View {
@@ -40,14 +40,13 @@ var body: some View {
 
 ![Hello SwiftUI]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/hello-swift-ui.png)
 
-You should see your preview update immediately, which makes for really fast prototyping while you work. This is a computed property called `body`, and SwiftUI will call that whenever it wants to display our user interface.
+你应该会看到预览立即更新,这使得在工作时进行快速原型设计变得非常容易。这是一个名为 `body` 的计算属性,每当 SwiftUI 想要显示我们的用户界面时都会调用它。
 
+## 构建静态 UI
 
-## Building a static UI
+在这个应用中,我们将向用户展示他们可以尝试的新健身活动,如篮球、高尔夫和徒步旅行。为了让它看起来更有吸引力,我们将使用活动的名称和代表该活动的图标来显示每个活动,然后在背景中添加一抹颜色。
 
-In this app we’re going to show the user a new activity they could try to keep fit, such as basketball, golf, and hiking. To make it a little more attractive, we’ll display each activity using its name, and also an icon representing the activity, then add a splash of color behind it.
-
-The main part of our user interface will be a circle showing the currently recommended activity. We can draw circles just by writing `Circle`, so replace the `Text("Hello, SwiftUI!")` view with this:
+我们用户界面的主要部分将是一个显示当前推荐活动的圆圈。我们只需写 `Circle` 就可以绘制圆圈,所以将 `Text("Hello, SwiftUI!")` 视图替换为:
 
 ```swift
 Circle()
@@ -55,9 +54,9 @@ Circle()
 
 ![SwiftUI Circle]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle.png)
 
-In your preview you’ll see a large black circle fills the available screen width. That’s a start, but it’s not quite right – we want some color in there, and ideally adding a little space on either side so it doesn’t look so tight.
+在预览中,你会看到一个大的黑色圆圈填满了可用的屏幕宽度。这是一个开始,但还不太对 - 我们想要在里面添加一些颜色,最好在两侧添加一些空间,这样看起来就不会那么紧凑。
 
-Both of these can be accomplished by calling methods on the `Circle` view. We call these *view modifiers* in SwiftUI because they modify the way the circle looks or works, and in this case we need to use the `fill()` modifier to color the circle, then the `padding()` modifier to add some space around it, like this:
+这两个效果都可以通过调用 `Circle` 视图的方法来实现。我们在 SwiftUI 中称这些为*视图修饰符*,因为它们修改了圆圈的外观或工作方式。在这种情况下,我们需要使用 `fill()` 修饰符来为圆圈着色,然后使用 `padding()` 修饰符在其周围添加一些空间,如下所示:
 
 ```swift
 Circle()
@@ -65,13 +64,13 @@ Circle()
     .padding()
 ```
 
-![SwiftUI Circle with Color and Padding]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-color.png)
+![带有颜色和内边距的 SwiftUI 圆圈]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-color.png)
 
-The `.blue` color is one of several built-in options, such as `.red`, `.white`, and `.green`. These are all appearance aware, which means they look subtly different depending on the whether the device is in dark mode or light mode.
+`.blue` 颜色是几个内置选项之一,如 `.red`、`.white` 和 `.green`。这些都是外观感知的,这意味着它们会根据设备是处于深色模式还是浅色模式而略有不同。
 
-Over that blue circle we’re going to place an icon showing the activity we recommend. iOS comes with several thousand free icons called *SF Symbols*, and there’s a [free app you can download that shows you all the options](https://developer.apple.com/sf-symbols/). Each of these icons is available in multiple weights, can be scaled up or down smoothly, and many can also be colored.
+在这个蓝色圆圈上,我们将放置一个显示我们推荐活动的图标。iOS 带有数千个免费图标,称为 *SF Symbols*,你可以[下载免费应用](https://developer.apple.com/sf-symbols/)来查看所有选项。这些图标都有多种粗细可供选择,可以平滑地放大或缩小,而且许多图标还可以着色。
 
-Here, though, we want something nice and simple: we want just one icon placed over our circle. This means using another modifier called `overlay()`, which places one view over another. Modify your code to this:
+在这里,我们想要一些简单漂亮的东西:我们只想在圆圈上放置一个图标。这意味着使用另一个名为 `overlay()` 的修饰符,它将一个视图放在另一个视图上。将你的代码修改为:
 
 ```swift
 Circle()
@@ -82,13 +81,13 @@ Circle()
     )
 ```
 
-![SwiftUI Circle with Icon]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-icon.png)
+![带有图标的 SwiftUI 圆圈]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-icon.png)
 
-You should see a small, black archery icon over our large, blue circle – it’s the right idea, but it doesn’t look great.
+你应该会看到一个小的黑色射箭图标覆盖在我们的大蓝色圆圈上 - 这是正确的想法,但看起来不太好。
 
-What we really want is the archery icon to be much bigger, and also much more visible on that background. For that we need another two modifiers: `font()` to control the size of the icon, and `foregroundColor()` to change its color. Yes, we use a font modifier to control the icon’s size – SF Symbols like this one automatically scale with the rest of our text, which makes them really flexible.
+我们真正想要的是射箭图标要大得多,而且在背景上更加醒目。为此,我们需要另外两个修饰符:`font()` 来控制图标的大小,以及 `foregroundColor()` 来改变其颜色。是的,我们使用字体修饰符来控制图标的大小 - 像这样的 SF Symbols 会自动随着我们的文本缩放,这使它们非常灵活。
 
-Adjust your `Image` code to this:
+将你的 `Image` 代码调整为:
 
 ```swift
 Image(systemName: "figure.archery")
@@ -96,22 +95,22 @@ Image(systemName: "figure.archery")
     .foregroundColor(.white)
 ```
 
-![SwiftUI Circle with Icon Sized]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-icon-sized.png)
+![调整大小的 SwiftUI 圆圈图标]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-icon-sized.png)
 
-**Tip:** That `font()` modifier asks for a 144-point system font, which is nice and big on all devices.
+**提示:** 那个 `font()` 修饰符请求一个 144 点的系统字体,这在所有设备上都很大。
 
-That should now look a lot better.
+现在应该看起来好多了。
 
-Next, let’s add some text below the image so it’s clear to the user what the suggestion is. You already met the `Text` view and the `font()` modifier, so you can add this code below the `Circle` code:
+接下来,让我们在图像下方添加一些文本,以便用户清楚地知道这是什么建议。你已经见过 `Text` 视图和 `font()` 修饰符了,所以你可以在 `Circle` 代码下方添加这段代码:
 
 ```swift
 Text("Archery!")
     .font(.title)
 ```
 
-Rather than using a fixed font size, that uses one of SwiftUI’s built in Dynamic Type sizes called `.title`. This means the font will grow or shrink depending on the user’s settings, which is usually a good idea.
+我们使用 SwiftUI 的内置动态类型大小之一 `.title`,而不是使用固定的字体大小。这意味着字体会根据用户的设置而增大或缩小,这通常是个好主意。
 
-If everything has gone to plan, your code should look like this:
+如果一切顺利,你的代码应该是这样的:
 
 ```swift
 var body: some View {
@@ -129,13 +128,13 @@ var body: some View {
 }
 ```
 
-![Circle With Title Text]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/circle-with-title.png)
+![带标题文本的圆圈]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/circle-with-title.png)
 
-However, what you see in Xcode’s preview probably won’t match what you were expecting: you’ll see the same icon as before, but no text. What gives?
+然而,你在 Xcode 的预览中看到的可能与你预期的不符:你会看到与之前相同的图标,但没有文本。这是怎么回事?
 
-The problem here is that we’ve told SwiftUI our user interface will have two views inside – the circle and some text – but we haven’t told it how to arrange them. Do we want them side by side? One above the other? Or in some other kind of layout?
+问题在于我们告诉了 SwiftUI 我们的用户界面将有两个视图 - 圆圈和一些文本 - 但我们没有告诉它如何排列它们。我们是想要它们并排吗?一个在另一个上面?还是其他某种布局?
 
-We get to choose, but I think here a vertical layout will look better. In SwiftUI we get that with a new view type called `VStack`, which is placed *around* our current code, like this:
+我们可以选择,但我认为这里垂直布局会看起来更好。在 SwiftUI 中,我们使用一个名为 `VStack` 的新视图类型来实现这一点,它被放置在我们当前代码的*周围*,像这样:
 
 ```swift
 VStack {
@@ -153,15 +152,15 @@ VStack {
 }
 ```
 
-And now you should see the layout you expected earlier: our archery icon above the text “Archery!”.
+现在你应该看到你之前期望的布局:我们的射箭图标在"Archery!"文本的上方。
 
-![Circle With Title Text in a VStack]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/circle-with-title-vstack.png)
+![VStack 中带标题文本的圆圈]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/circle-with-title-vstack.png)
 
-That’s much better!
+这好多了!
 
-To finish up our first pass at this user interface, we can add a title at the top. We already have a `VStack` that allows us to position views one above the other, but I don’t want the title inside there too because later on we’ll be adding some animation for that part of our screen.
+为了完成我们对这个用户界面的第一次尝试,我们可以在顶部添加一个标题。我们已经有一个允许我们将视图一个接一个垂直放置的 `VStack`,但我不想把标题也放在里面,因为稍后我们会为屏幕的那部分添加一些动画。
 
-Fortunately, SwiftUI lets us nest stacks freely, meaning that we can place a `VStack` inside another `VStack` to get the exact behavior we want. So, change your code to this:
+幸运的是,SwiftUI 允许我们自由嵌套堆栈,这意味着我们可以将一个 `VStack` 放在另一个 `VStack` 内部,以获得我们想要的确切行为。所以,将你的代码改为:
 
 ```swift
 VStack {
@@ -184,18 +183,17 @@ VStack {
 }
 ```
 
-That makes the new text have a large title font, and also makes it bold so it stands out better as a real title for our screen.
+这使得新文本具有大标题字体,并且使其变粗,使其作为我们屏幕的真正标题更加突出。
 
-![Why Not Try Title Added]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/why-not-try-title.png)
+![添加了 Why Not Try 标题]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/why-not-try-title.png)
 
-Now we have two `VStack` views: an inner one that holds the circle and “Archery!” text, and an outer one that adds a title around the inner `VStack`. This will be very helpful later on when we add animation!
+现在我们有两个 `VStack` 视图:一个内部的,包含圆圈和"Archery!"文本,以及一个外部的,在内部 `VStack` 周围添加标题。当我们稍后添加动画时,这将非常有帮助!
 
+## 让它活起来
 
-## Bringing it to life
+尽管射箭很有趣,但这个应用真正需要的是为用户随机推荐一项活动,而不是总是显示同样的内容。这意味着我们需要向视图添加两个新属性:一个用于存储可能的活动数组,另一个用于显示当前推荐的活动。
 
-As much fun as archery is, this app really needs to suggest a random activity to users rather than always showing the same thing. That means adding two new properties to our view: one to store the array of possible activities, and one to show whichever one is currently being recommended.
-
-SF Symbols has lots of interesting activities to choose from, so I’ve picked out a handful that work well here. Our `ContentView` struct already has a `body` property containing our SwiftUI code, but we want to add new properties outside that. So, change your code to this:
+SF Symbols 有很多有趣的活动可供选择,所以我挑选了一些在这里效果很好的。我们的 `ContentView` 结构已经有一个包含 SwiftUI 代码的 `body` 属性,但我们想在外面添加新的属性。所以,将你的代码改为:
 
 ```swift
 struct ContentView: View {
@@ -209,130 +207,128 @@ struct ContentView: View {
 }
 ```
 
-**Important:** Notice how the `activities` and `selected` properties are *inside* the struct – that means they belong to `ContentView`, rather than just being free-floating variables in our program.
+**重要:** 注意 `activities` 和 `selected` 属性是在结构*内部* - 这意味着它们属于 `ContentView`,而不是仅仅是我们程序中的自由浮动变量。
 
-That creates an array of various activity names, and selects archery as the default. Now we can use the selected activity in our UI using string interpolation – we can place the `selected` variable directly inside strings.
+这创建了一个各种活动名称的数组,并选择射箭作为默认值。现在我们可以使用字符串插值在我们的 UI 中使用选定的活动 - 我们可以直接在字符串中放置 `selected` 变量。
 
-For the activity name this is straightforward:
+对于活动名称,这很简单:
 
 ```swift
 Text("\(selected)!")
     .font(.title)
 ```
 
-For the image this is a little more complicated, because we need to prefix it with `figure.` then lowercase the activity name – we want `figure.archery` rather than `figure.Archery`, otherwise the SF Symbol won’t be loaded.
+对于图像来说这稍微复杂一些,因为我们需要在前面加上 `figure.` 然后将活动名称小写 - 我们需要 `figure.archery` 而不是 `figure.Archery`,否则 SF Symbol 将无法加载。
 
-So, change your `Image` code this:
+所以,将你的 `Image` 代码改为:
 
 ```swift
 Image(systemName: "figure.\(selected.lowercased())")
 ```
 
-Those changes mean our UI will display whatever the `selected` property is set to, so can see it all change if you place a new string in that property:
+这些更改意味着我们的 UI 将显示 `selected` 属性设置的任何内容,所以如果你在该属性中放置一个新字符串,你可以看到它全部更改:
 
 ```swift
 var selected = "Baseball"
 ```
 
-![Showing Baseball]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/baseball.png)
+![显示棒球]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/baseball.png)
 
-Of course, we want that to change *dynamically* rather than having to edit the code each time, so we’re going to add a button below our inner `VStack` that will change the selected activity every time it’s pressed. This is still inside the outer `VStack`, though, which means it will be arranged below the title and activity icon.
+当然,我们希望它能*动态*改变,而不是每次都要编辑代码,所以我们要在内部 `VStack` 下面添加一个按钮,每次按下它时都会改变选定的活动。这仍然在外部 `VStack` 内,这意味着它将排列在标题和活动图标的下方。
 
-Add this code now:
+现在添加这段代码:
 
 ```swift
 Button("Try again") {
-    // change activity
+    // 改变活动
 }
 .buttonStyle(.borderedProminent)
 ```
 
-![Try Again Button]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/try-again-button.png)
+![再试一次按钮]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/try-again-button.png)
 
-So, your structure should be this:
+所以,你的结构应该是这样的:
 
 ```swift
 VStack {
-    // "Why not try…" text
+    // "Why not try…" 文本
 
-    // Inner VStack with icon and activity name
+    // 带有图标和活动名称的内部 VStack
 
-    // New button code
+    // 新的按钮代码
 }
 ```
 
-The new button code does three things:
+新的按钮代码做了三件事:
 
-1. We create the `Button` by passing in a title to show as the button’s label.
-2. The `// change activity` comment is code that will be run when the button is pressed.
-3. The `buttonStyle()` modifier tells SwiftUI we want this button to stand out, so you’ll see it appear in a blue rectangle with white text.
+1. 我们通过传入一个标题来创建 `Button`,该标题将显示为按钮的标签。
+2. `// 改变活动` 注释是按下按钮时将运行的代码。
+3. `buttonStyle()` 修饰符告诉 SwiftUI 我们希望这个按钮突出显示,所以你会看到它出现在一个带有白色文本的蓝色矩形中。
 
-Just having a comment as the button’s action isn’t very interesting – really we want to make it set `selected` to a random element from the `activities` array. We can pick a random element from the array by calling the helpfully named `randomElement()` method on it, so replace the comment with this:
+仅仅有一个注释作为按钮的动作并不是很有趣 - 我们真正想要的是让它从 `activities` 数组中设置一个随机元素到 `selected`。我们可以通过调用数组上的 `randomElement()` 方法来从数组中选择一个随机元素,所以用这个替换注释:
 
 ```swift
 selected = activities.randomElement()
 ```
 
-That code *looks* right, but it will actually cause compiler errors. We’re telling Swift to pick a random element from the array and place it into the `selected` property, but there’s no way for Swift to be sure there’s anything in that array – it could be empty, in which case there’s no random element to return.
+这段代码*看起来*是对的,但实际上会导致编译器错误。我们告诉 Swift 从数组中选择一个随机元素并将其放入 `selected` 属性中,但 Swift 无法确定数组中是否有任何内容 - 它可能是空的,在这种情况下就没有随机元素可以返回。
 
-![Random Element Error]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/random-element-error.png)
+![随机元素错误]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/random-element-error.png)
 
-Swift calls these *optionals*: `randomElement()` won’t return a regular string, it will return an *optional* string. This means the string might not be there, so it’s not safe to assign to the `selected` property.
+Swift 将这些称为*可选值*:`randomElement()` 不会返回一个普通的字符串,它会返回一个*可选*字符串。这意味着字符串可能不存在,所以将其分配给 `selected` 属性是不安全的。
 
-Even though we know the array will never be empty – it will *always* have activities in there – we can give Swift a sensible default value to use just in case the array happens to be empty in the future, like this:
+尽管我们知道数组永远不会为空 - 它*总是*会有活动在里面 - 我们可以给 Swift 一个合理的默认值,以防将来数组恰好为空,像这样:
 
 ```swift
 selected = activities.randomElement() ?? "Archery"
 ```
 
-That partly fixes our code, but Xcode will still be showing an error. The problem now is that SwiftUI doesn’t like us changing our program’s state right inside our view structs without warning – it wants us to mark all the mutable state ahead of time, so it knows to watch for changes.
+这部分修复了我们的代码,但 Xcode 仍然会显示一个错误。现在的问题是 SwiftUI 不喜欢我们在没有警告的情况下直接在视图结构中更改程序的状态 - 它希望我们提前标记所有可变状态,这样它就知道要注意变化。
 
-![Non-@State mutating]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/non-state-mutating.png)
-
-This is done by writing `@State` before any view properties that will change, like this:
+这是通过在任何将要改变的视图属性前写 `@State` 来完成的,像这样:
 
 ```swift
 @State var selected = "Baseball"
 ```
 
-This is called a *property wrapper*, meaning that it wraps our `selected` property with some extra logic. The `@State` property wrapper allows us to change view state freely, but it also automatically watches its property for changes so that it can make sure the user interface stays up to date with the latest values.
+这被称为*属性包装器*,意味着它用一些额外的逻辑包装了我们的 `selected` 属性。`@State` 属性包装器允许我们自由地更改视图状态,但它也会自动监视其属性的变化,以确保用户界面保持最新的值。
 
-That fixes the two errors in our code, so you can now press Cmd+R to build and run your app in the iOS simulator. It will suggest baseball by default, but every time you press “Try again” you’ll see it change.
+这修复了我们代码中的两个错误,所以你现在可以按 Cmd+R 在 iOS 模拟器中构建和运行你的应用。它默认会推荐棒球,但每次你按"Try again"时你都会看到它改变。
 
-<img class="device-aspect-ratio" src="{{site.url}}/assets/images/getting-started-guides/swiftui-ios/running-in-simulator.png" alt="Running The App in the Simulator">
+<img class="device-aspect-ratio" src="{{site.url}}/assets/images/getting-started-guides/swiftui-ios/running-in-simulator.png" alt="在模拟器中运行应用">
 
-## Adding some polish
+## 添加一些润色
 
-Before we’re done with this project, let’s add a handful more tweaks to make it better.
+在我们完成这个项目之前,让我们再添加一些调整来使它变得更好。
 
-First, an easy one: Apple recommends that local view state always be marked with `private` access control. In larger projects, this means you can’t accidentally write code that reads one view’s local state from another, which helps keep your code easier to understand.
+首先,一个简单的:Apple 建议本地视图状态始终标记为 `private` 访问控制。在较大的项目中,这意味着你不会意外地编写从另一个视图读取一个视图的本地状态的代码,这有助于使你的代码更容易理解。
 
-This means modifying the `selected` property like so:
+这意味着要这样修改 `selected` 属性:
 
 ```swift
 @State private var selected = "Baseball"
 ```
 
-Second, rather than always showing a blue background, we can pick a random color each time. This takes two steps, starting with a new property of all the colors we want to select from – put this next to the `activities` property:
+第二,与其总是显示蓝色背景,我们可以每次都选择一个随机颜色。这需要两个步骤,首先是添加一个包含我们想要选择的所有颜色的新属性 - 将其放在 `activities` 属性旁边:
 
 ```swift
 var colors: [Color] = [.blue, .cyan, .gray, .green, .indigo, .mint, .orange, .pink, .purple, .red]
 ```
 
-Now we can change our circle’s `fill()` modifier to use `randomElement()` on that array, or `.blue` if somehow the array ends up being empty:
+现在我们可以将圆圈的 `fill()` 修饰符改为在该数组上使用 `randomElement()`,如果数组恰好为空则使用 `.blue`:
 
 ```swift
 Circle()
     .fill(colors.randomElement() ?? .blue)
 ```
 
-Third, we can separate the activity `VStack` and “Try again” button by adding a new SwiftUI view between them, called `Spacer`. This is a flexible space that automatically expands, which means it will push our activity icon to the top of the screen, and the button to the bottom.
+第三,我们可以通过在活动 `VStack` 和"Try again"按钮之间添加一个新的 SwiftUI 视图 `Spacer` 来分隔它们。这是一个自动扩展的灵活空间,这意味着它会将我们的活动图标推到屏幕顶部,将按钮推到底部。
 
-Insert it between the two, like this:
+在它们之间插入它,像这样:
 
 ```swift
 VStack {
-    // current Circle/Text code
+    // 当前 Circle/Text 代码
 }
 
 Spacer()
@@ -342,11 +338,11 @@ Button("Try again") {
 }
 ```
 
-If you add multiple spacers, they will divide the space equally between them. If you try placing a second spacer before the “Why not try…” text you’ll see what I mean – SwiftUI will create and equal amount of space above the text and below the activity name.
+如果你添加多个间隔器,它们会平均分配空间。如果你尝试在"Why not try…"文本之前放置第二个间隔器,你就会明白我的意思 - SwiftUI 将在文本上方和活动名称下方创建相等的空间。
 
-![View With Spacers]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/spacers.png)
+![带间隔器的视图]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/spacers.png)
 
-And fourth, it would be nice if the change between activities was smoother, which we can do by animating the change. In SwiftUI, this is done by wrapping changes we want to animate with a call to the `withAnimation()` function, like this:
+第四,如果活动之间的变化更平滑会更好,我们可以通过动画来实现这一点。在 SwiftUI 中,这是通过将我们想要动画的更改包装在对 `withAnimation()` 函数的调用中来完成的,像这样:
 
 ```swift
 Button("Try again") {
@@ -357,7 +353,7 @@ Button("Try again") {
 .buttonStyle(.borderedProminent)
 ```
 
-That will cause our button press to move between activities with a gentle fade. If you want, you can customize that animation by passing the animation you want to the `withAnimation()` call, like this:
+这将使我们的按钮按压以温和的淡入淡出效果在活动之间移动。如果你愿意,你可以通过将你想要的动画传递给 `withAnimation()` 调用来自定义该动画,像这样:
 
 ```swift
 withAnimation(.easeInOut(duration: 1)) {
@@ -365,19 +361,19 @@ withAnimation(.easeInOut(duration: 1)) {
 }
 ```
 
-That’s an improvement, but we can do better!
+这是一个改进,但我们可以做得更好!
 
-The fade happens because SwiftUI sees the background color, icon, and text changing, so it removes the old views and replaces it with new views. Earlier I made you create an inner `VStack` to house those three views, and now you can see why: we’re going to tell SwiftUI that these views can be identified as a single group, and that the group’s identifier can change over time.
+淡入淡出发生是因为 SwiftUI 看到背景颜色、图标和文本在改变,所以它移除旧视图并用新视图替换它。早些时候我让你创建一个内部 `VStack` 来容纳这三个视图,现在你可以看到原因了:我们要告诉 SwiftUI 这些视图可以被识别为一个单一的组,并且该组的标识符可以随时间改变。
 
-To make that happen, we need to start by defining some more program state inside our view. This will be the identifier for our inner `VStack`, and because it will change as our program runs we’ll use `@State`. Add this property next to `selected`:
+要实现这一点,我们需要首先在我们的视图中定义更多的程序状态。这将是我们内部 `VStack` 的标识符,因为它会在我们的程序运行时改变,我们将使用 `@State`。在 `selected` 旁边添加这个属性:
 
 ```swift
 @State private var id = 1
 ```
 
-**Tip:** That’s more local view state, so it’s good practice to mark it with `private`.
+**提示:** 这是更多的本地视图状态,所以最好用 `private` 标记它。
 
-Next, we can tell SwiftUI to change that identifier every time our button is pressed, like this:
+接下来,我们可以告诉 SwiftUI 每次按下我们的按钮时都改变该标识符,像这样:
 
 ```swift
 Button("Try again") {
@@ -389,25 +385,25 @@ Button("Try again") {
 .buttonStyle(.borderedProminent)
 ```
 
-Finally, we can use SwiftUI’s `id()` modifier to attach that identifier to the whole inner `VStack`, meaning that when the identifier changes SwiftUI should consider the whole `VStack` as new. This will make it animate the old `VStack` being removed and a new `VStack` being added, rather than just the individual views inside it. Even better, we can control how that add and remove transition happens using a `transition()` modifier, which has various built-in transitions we can use.
+最后,我们可以使用 SwiftUI 的 `id()` 修饰符将该标识符附加到整个内部 `VStack` 上,这意味着当标识符改变时 SwiftUI 应该将整个 `VStack` 视为新的。这将使它动画显示旧 `VStack` 被移除和新 `VStack` 被添加,而不是仅仅是其中的单个视图。更好的是,我们可以使用 `transition()` 修饰符控制该添加和移除转换的发生方式,它有各种内置的转换供我们使用。
 
-So, add these two modifiers to the inner `VStack`, telling SwiftUI to identify the whole group using our `id` property, and animate its add and removal transitions with a slide:
+所以,将这两个修饰符添加到内部 `VStack`,告诉 SwiftUI 使用我们的 `id` 属性识别整个组,并用滑动动画其添加和移除转换:
 
 ```swift
 .transition(.slide)
 .id(id)
 ```
 
-Press Cmd+R to run your app one last time, and you should see that pressing “Try Again” now smoothly animates the old activity off the screen, and replaces it with a new one. It even overlaps animations if you press “Try Again” repeatedly!
+最后一次按 Cmd+R 运行你的应用,你应该会看到按下"Try Again"现在会平滑地将旧活动动画移出屏幕,并用新活动替换它。如果你重复按下"Try Again",它甚至会重叠动画!
 
 <video class="device-aspect-ratio" autoplay loop muted>
   <source src="{{site.url}}/assets/videos/getting-started-guides/swiftui-app/demo.mp4" type="video/mp4">
 </video>
 
-## Where now?
+## 接下来去哪里?
 
-We’ve covered a lot of SwiftUI basics in this tutorial, including text, images, buttons, stacks, animation, and even using `@State` to mark values that change over time. SwiftUI is capable of so much more, and can be used to build complex cross-platform apps if needed.
+在本教程中,我们介绍了很多 SwiftUI 的基础知识,包括文本、图像、按钮、堆栈、动画,甚至使用 `@State` 来标记随时间变化的值。SwiftUI 能做的远不止这些,如果需要的话,可以用来构建复杂的跨平台应用。
 
-If you’d like to continue learning SwiftUI, there are lots of free resources available. For example, [Apple publishes a wide variety of tutorials](https://developer.apple.com/tutorials/swiftui) covering essential topics, drawing and animation, app design, and more. We’ll also post links here on Swift.org to some other popular tutorials – we’re a big and welcoming community, and we’re glad to have you join!
+如果你想继续学习 SwiftUI,有很多免费资源可用。例如,[Apple 发布了各种各样的教程](https://developer.apple.com/tutorials/swiftui),涵盖基本主题、绘图和动画、应用设计等。我们也会在 Swift.org 上发布一些其他流行教程的链接 - 我们是一个庞大而热情的社区,很高兴有你的加入!
 
-> The source code for this guide can be found [on GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial)
+> 本教程的源代码可以在 [GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial) 上找到

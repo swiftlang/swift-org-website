@@ -1,9 +1,8 @@
-## Using the REPL
+## 使用 REPL
 
-If you run `swift repl` without any other arguments,
-you'll launch the REPL, an interactive shell
-that will read, evaluate, and print the results
-of any Swift code you enter.
+如果你不带任何参数运行 `swift repl` 命令，
+将会启动 REPL（交互式命令行环境），
+它会读取、执行并打印你输入的任何 Swift 代码的结果。
 
 ~~~ shell
 $ swift repl
@@ -12,20 +11,20 @@ Type :help for assistance.
   1>
 ~~~
 
-Interacting with the REPL is a great way to experiment with Swift.
-For example, if you enter the expression `1 + 2`,
-the result of the expression, `3`, is printed on the next line:
+使用 REPL 是体验 Swift 的好方法。
+例如，如果你输入表达式 `1 + 2`，
+表达式的结果 `3` 会在下一行显示：
 
 ~~~ shell
   1> 1 + 2
 $R0: Int = 3
 ~~~
 
-You can assign values to constants and variables,
-and use them in subsequent lines.
-For instance, the `String` value `Hello, world!`
-can be assigned to the constant `greeting`,
-and then passed as an argument to the `print(_:)` function:
+你可以为常量和变量赋值，
+并在后续行中使用它们。
+比如，可以将字符串值 `Hello, world!` 
+赋值给常量 `greeting`，
+然后将其作为参数传递给 `print(_:)` 函数：
 
 ~~~ shell
   2> let greeting = "Hello!"
@@ -34,8 +33,8 @@ greeting: String = "Hello!"
 Hello!
 ~~~
 
-If you enter an invalid expression,
-the REPL will print an error showing where the problem occurred:
+如果你输入了无效的表达式，
+REPL 会打印一个错误，显示问题出现的位置：
 
 ~~~ shell
 let answer = "forty"-"two"
@@ -44,25 +43,23 @@ let answer = "forty"-"two"
              ~~~~~~~^~~~~~
 ~~~
 
-You can use the up-arrow and down-arrow keys (`↑` and `↓`)
-to cycle through previous lines entered into the REPL.
-This allows you to make a slight change to a previous expression
-without retyping the entire line,
-and is especially convenient for fixing errors like the one in the previous example:
+你可以使用上下箭头键（`↑` 和 `↓`）
+来循环浏览之前输入的命令。
+这样你就可以对之前的表达式做小修改，
+而不用重新输入整行代码。
+这在修复像上面那样的错误时特别方便：
 
 ~~~ shell
 let answer = "forty-two"
 answer: String = "forty-two"
 ~~~
 
-Another useful feature of the REPL
-is that it can automatically suggest functions and methods
-that can be used in a particular context.
-For example, if you enter `re`
-after a dot operator on a `String` value
-and then hit the tab key (`⇥`),
-the REPL will give a list of available completions
-like `remove(at:)` and `replaceSubrange(bounds:with:)`:
+REPL 的另一个有用特性是
+它可以自动提示在特定上下文中可以使用的函数和方法。
+例如，如果你在 `String` 值后面输入点操作符，
+然后输入 `re` 并按 tab 键（`⇥`），
+REPL 会给出可用的补全列表，
+比如 `remove(at:)` 和 `replaceSubrange(bounds:with:)`：
 
 ~~~ shell
 5> "Hi!".re⇥
@@ -79,12 +76,11 @@ Available completions:
 	reserveCapacity(n: Int) -> Void
 ~~~
 
-If you start a block of code,
-such as when iterating over an array with a `for-in` loop,
-the REPL will automatically indent the next line,
-and change the prompt character from `>` to `.`
-to indicate that code entered on that line
-will only be evaluated when the entire code block is evaluated.
+当你开始一个代码块时，
+比如使用 `for-in` 循环遍历数组，
+REPL 会自动缩进下一行，
+并将提示符从 `>` 改为 `.`，
+表示该行输入的代码只有在整个代码块输入完成后才会被执行。
 
 ~~~ shell
   6> let numbers = [1,2,3]
@@ -101,14 +97,14 @@ numbers: [Int] = 3 values {
 1
 ~~~
 
-All of the functionality of Swift is available to you from the REPL,
-from writing control flow statements
-to declaring and instantiating structures and classes.
+Swift 的所有功能都可以在 REPL 中使用，
+从编写控制流语句
+到声明和实例化结构体和类。
 
-You can also import any available system modules,
-such as `Darwin` on macOS and `Glibc` on Linux:
+你还可以导入任何可用的系统模块，
+比如 macOS 上的 `Darwin` 和 Linux 上的 `Glibc`：
 
-### On macOS
+### 在 macOS 上
 
 ~~~ swift
 1> import Darwin
@@ -116,7 +112,7 @@ such as `Darwin` on macOS and `Glibc` on Linux:
 $R0: UInt32 = 4
 ~~~
 
-### On Linux
+### 在 Linux 上
 
 ~~~ swift
 1> import Glibc
@@ -124,19 +120,19 @@ $R0: UInt32 = 4
 $R0: Int32 = 4
 ~~~
 
-### On Windows
+### 在 Windows 上
 
-The REPL depends on Python bindings.  You must ensure that Python 3.7 is available
-in the path.  The following command adds Python 3.7 from Visual Studio to `%PATH%`
-so that it can be used:
+REPL 依赖于 Python 绑定。你必须确保 Python 3.7 在系统路径中可用。
+以下命令将 Visual Studio 中的 Python 3.7 添加到 `%PATH%` 中，
+以便使用：
 
 ~~~ cmd
 path %ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Python37_64;%PATH%
 ~~~
 
-Because the Windows installation separates out the SDK from the toolchain, a few
-extra parameters must be passed to the REPL.  This allows you to use multiple
-different SDKs with the same toolchain.
+由于 Windows 安装将 SDK 与工具链分开，
+因此必须向 REPL 传递一些额外的参数。
+这允许你使用同一个工具链搭配多个不同的 SDK。
 
 ~~~ cmd
 set SWIFTFLAGS=-sdk %SDKROOT% -I %SDKROOT%/usr/lib/swift -L %SDKROOT%/usr/lib/swift/windows
