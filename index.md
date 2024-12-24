@@ -1,6 +1,6 @@
 ---
 layout: page-wide
-title: 欢迎访问 Swift.org
+title: Swift 中文站点
 hideTitle: true
 atom: true
 ---
