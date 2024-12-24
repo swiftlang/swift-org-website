@@ -1,12 +1,12 @@
 - repo: https://github.com/swiftlang/swift-se0270-range-set/
   name: SE0270_RangeSet
   description: >-
-    Operations on noncontiguous subranges of collections, 
-    such as <code>subranges(where:)</code> and <code>moveSubranges(_:to:)</code>, 
-    as well as the supporting <code>RangeSet</code> type.
+    对集合的非连续子范围进行操作，
+    例如 <code>subranges(where:)</code> 和 <code>moveSubranges(_:to:)</code>，
+    以及支持这些操作的 <code>RangeSet</code> 类型。
 
 - repo: https://github.com/swiftlang/swift-se0288-is-power/
   name: SE0288_IsPower
   description: >-
-    Extends <code>BinaryInteger</code> with an <code>isPower(of:)</code> method 
-    that returns whether an integer is a power of another.
+    为 <code>BinaryInteger</code> 扩展了一个 <code>isPower(of:)</code> 方法，
+    用于判断一个整数是否为另一个整数的幂。

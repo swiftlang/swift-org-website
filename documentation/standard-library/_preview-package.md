@@ -1,19 +1,13 @@
-## Standard Library Preview Package
+## 标准库预览包
 
-The **[Standard Library Preview package][preview-package]** provides
-early access to new additions to the standard library. When new standard
-library APIs that can be implemented as a standalone library are accepted
-through the Swift Evolution process, they are published as individual
-packages and included in the preview package, which acts as an umbrella
-library. The preview package currently includes the following individual
-packages:
+**[标准库预览包][preview-package]** 提供了对标准库新增功能的早期访问。当通过 Swift Evolution 流程接受了可以作为独立库实现的新标准库 API 时，这些 API 会以单独的包的形式发布，并被包含在预览包中。预览包作为一个统一的顶层库，目前包含以下独立包:
 
 [preview-package]: https://github.com/apple/swift-standard-library-preview/
 
 <table>
 <tr>
-    <th>Package</th>
-    <th>Description</th>
+    <th>包名</th>
+    <th>描述</th>
 </tr>
 {% for package in site.data.preview_packages %}
 <tr>
