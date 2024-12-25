@@ -26,6 +26,10 @@
       outline: none;
     }
 
+    button {
+      cursor: pointer;
+    }
+
     .sidebar {
       width: 20%;
       padding: 1rem;
@@ -47,6 +51,10 @@
 
       a {
         text-decoration: none;
+
+        &.active {
+          text-decoration: underline;
+        }
       }
     }
 
@@ -54,23 +62,37 @@
       margin-top: 2rem;
     }
 
+    &>.content:first-of-type {
+      padding-top: 1rem;
+    }
+
     .content {
       width: 79%;
       max-width: 79%;
-      margin-top: 1rem;
 
       @media (max-width: $breakpoint-desktop) {
         width: 100%;
         max-width: 100%;
       }
     }
+
+    .footer {
+      border-top: 2px solid $pink;
+      font-size: $font-size-small;
+      padding: 2rem 0;
+    }
   }
 
   .storybook-render {
     @include box-radius;
     @include default-border;
+
     padding: 2rem;
     margin: 1rem 0;
+
+    &.storybook-viewport-mobile {
+      max-width: 500px;
+    }
   }
 
   // Specificity to avoid styling other code snippets

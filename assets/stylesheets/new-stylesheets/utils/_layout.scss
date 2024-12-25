@@ -29,6 +29,10 @@ $margins-layout: 0 auto;
   @media (max-width: $breakpoint-desktop) {
     grid-template-columns: 1fr;
   }
+
+  .storybook-viewport-mobile & {
+    grid-template-columns: 1fr;
+  }
 }
 
 @mixin one-column-grid() {

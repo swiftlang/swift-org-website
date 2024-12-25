@@ -34,9 +34,8 @@ module Jekyll
         #{code_output}
 
         #### Render Example
-        <button class="fullscreen">fullscreen</button>
-        <button class="mobile">mobile</button>
-        <button class="dark">dark</button>
+        <button class="viewport">switch viewport</button>
+        <button class="theme">switch theme</button>
 
         <div class="storybook-render">
           #{rendered_content}
