@@ -1,8 +1,8 @@
 ---
 layout: page-wide
-title: Tools
+title: 开发工具
 ---
 
-Your favorite editor likely already supports Swift. Below are setup guides for some popular choices.
+你喜欢的编辑器很可能已经支持 Swift。以下是一些流行编辑器的设置指南。
 
 {% include_relative _editors.md %}

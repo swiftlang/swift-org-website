@@ -1,4 +1,4 @@
-## Editors
+## 编辑器
 
 <ul class="grid-level-0 grid-layout-2-column">
   {%- for editor in site.data.tools.editors %}
@@ -13,7 +13,7 @@
       </p>
       {% if editor.guide %}
         <a href="{{ editor.guide }}" class="cta-secondary">
-          Learn more
+          了解更多
         </a>
       {% endif %}
     </li>
