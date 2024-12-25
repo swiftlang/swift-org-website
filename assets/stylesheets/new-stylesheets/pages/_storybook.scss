@@ -4,6 +4,19 @@
     box-sizing: border-box;
     padding: 0 1rem;
 
+    h1 {
+      color: $brown-light;
+      font-size: 1.9em;
+    }
+
+    input[type="search"] {
+      border: 2px solid $pink;
+      padding: 1rem;
+      width: 100%;
+      font-size: 1em;
+      outline: none;
+    }
+
     .sidebar {
       width: 20%;
       padding: 1rem;
