@@ -32,7 +32,7 @@ SwiftGG 翻译工作组是一个致力于为大中华地区用户提供优质 Sw
 
 我们对以下SwiftGG核心工作组成员的服务表示感谢：
 
-* [张思琦()](https://github.com/ethan-kusters)（SwiftGG 负责人）
+* [张思琦](https://github.com/ethan-kusters)（SwiftGG 负责人）
 * [御姐](https://github.com/krilnon)
 * [Kiwi Guo](https://github.com/theMomax)（SwiftGG 设计负责人）
 
