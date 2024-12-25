@@ -1,7 +1,9 @@
 ---
 ---
 
-<input type="search" placeholder="Filter Components" oninput="filterComponents(event)">
+<h1>Swift.org Storybook</h1>
+
+<input type="search" placeholder="Filter Elements" oninput="filterComponents(event)">
 
 {% assign folders = "stories/classes,stories/components" | split: "," %}
 {% for folder in folders %}
