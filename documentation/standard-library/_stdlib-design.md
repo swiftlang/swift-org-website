@@ -1,28 +1,21 @@
-## Standard Library Design
+## 标准库设计
 
-The Swift standard library encompasses a number of data types,
-protocols and functions, including fundamental data types (e.g.,
-`Int`, `Double`), collections (e.g., `Array`, `Dictionary`) along with
-the protocols that describe them and algorithms that operate on them,
-characters and strings, and low-level primitives (e.g.,
-`UnsafeMutablePointer`). The implementation of the standard library
-resides in the `stdlib/public` subdirectory within the [Swift
-repository][swift-repo], which is further subdivided into:
+Swift 标准库涵盖了多种数据类型、协议和函数，包括基本数据类型(如 `Int`、`Double`)、集合类型(如 `Array`、`Dictionary`)以及描述它们的协议和操作它们的算法、字符和字符串，以及底层原语(如 `UnsafeMutablePointer`)。标准库的实现位于 [Swift 代码库][swift-repo] 中的 `stdlib/public` 子目录下，该目录进一步细分为:
 
-* **Standard library core**: The core of the standard library (implemented in [stdlib/public/core](https://github.com/swiftlang/swift/tree/main/stdlib/public/core)), including the definitions of all of the data types, protocols, functions, etc.
+* **标准库核心**: 标准库的核心部分(在 [stdlib/public/core](https://github.com/swiftlang/swift/tree/main/stdlib/public/core) 中实现)，包括所有数据类型、协议、函数等的定义。
 
-* **Runtime**: The language support runtime (implemented in [stdlib/public/runtime](https://github.com/swiftlang/swift/tree/main/stdlib/public/runtime)), which is layered between the compiler and the core standard library. It is responsible for implementing many of the dynamic features of the language, such as casting (e.g., for the `as!` and `as?` operators), type metadata (to support generics and reflection), and memory management (object allocation, reference counting, etc.). Unlike higher-level libraries, the runtime is written mostly in C++ or (where needed for interoperability) Objective-C.
+* **运行时**: 语言支持运行时(在 [stdlib/public/runtime](https://github.com/swiftlang/swift/tree/main/stdlib/public/runtime) 中实现)，它位于编译器和核心标准库之间。它负责实现语言的许多动态特性，如类型转换(例如 `as!` 和 `as?` 运算符)、类型元数据(支持泛型和反射)，以及内存管理(对象分配、引用计数等)。与高层库不同，运行时主要用 C++ 编写，或在需要互操作性时使用 Objective-C。
 
-* **SDK Overlays**: Specific to Apple platforms, the SDK overlays (implemented in [stdlib/public/Platform](https://github.com/swiftlang/swift/tree/main/stdlib/public/Platform)) provide Swift-specific additions and modifications to existing Objective-C frameworks to improve their mapping into Swift. In particular, the `Foundation` overlay provides additional support for interoperability with Objective-C code.
+* **SDK 覆盖层**: 特定于 Apple 平台，SDK 覆盖层(在 [stdlib/public/Platform](https://github.com/swiftlang/swift/tree/main/stdlib/public/Platform) 中实现)为现有的 Objective-C 框架提供 Swift 特定的添加和修改，以改善它们在 Swift 中的映射。特别是，`Foundation` 覆盖层提供了与 Objective-C 代码互操作的额外支持。
 
-The Swift standard library is written in Swift, but because it is the lowest-level Swift code in the stack---responsible for implementing the core data types on which other Swift code is built---it is a bit different from normal Swift code. Some of the differences include:
+Swift 标准库是用 Swift 编写的，但由于它是技术栈中最底层的 Swift 代码——负责实现其他 Swift 代码所依赖的核心数据类型——它与普通的 Swift 代码有一些不同。主要区别包括：
 
-* **Access to compiler builtins**: The `Builtin` module, which is only generally accessible to the standard library, provides compiler builtin functions (e.g., to directly create SIL instructions) and data types (e.g., "raw" pointers, primitive LLVM integer types) needed to implement the data types that are fundamental to programming in Swift.
+* **访问编译器内置功能**: `Builtin` 模块通常只对标准库开放，它提供编译器内置函数(例如，直接创建 SIL 指令)和数据类型(例如，"原始"指针、基本的 LLVM 整数类型)，这些都是实现 Swift 编程基础数据类型所必需的。
 
-* **Visibility is often managed by convention**: Standard library declarations often need to have greater visibility than one would generally like, due to the way in which the standard library is compiled and optimized. For example, `private` modifiers are never used. More importantly, it is common to need to make something `public` even when it is not intended as part of the public interface. In such cases, one should use a leading underscore to indicate that the public API is meant to be private. The policy for access control in the standard library is documented in [docs/AccessControlInStdlib.rst](https://github.com/swiftlang/swift/blob/main/docs/AccessControlInStdlib.rst).
+* **可见性通常通过约定管理**: 由于标准库的编译和优化方式，标准库声明通常需要比理想情况下更大的可见性。例如，从不使用 `private` 修饰符。更重要的是，即使某些内容不打算作为公共接口的一部分，也经常需要将其标记为 `public`。在这种情况下，应使用下划线前缀来表示该公共 API 实际上是私有的。标准库中的访问控制策略记录在 [docs/AccessControlInStdlib.rst](https://github.com/swiftlang/swift/blob/main/docs/AccessControlInStdlib.rst) 中。
 
-* **Repetitive code uses gyb**: [gyb](https://github.com/swiftlang/swift/blob/main/utils/gyb.py) is a simple tool for generating repetitive code from a template that is used often in the standard library. For example, it is used to create the definitions of the various sized integer types (`Int8`, `Int16`, `Int32`, `Int64`, etc.) from a single source.
+* **重复代码使用 gyb**: [gyb](https://github.com/swiftlang/swift/blob/main/utils/gyb.py) 是一个简单的工具，用于从模板生成重复代码，在标准库中经常使用。例如，它用于从单一源代码创建各种大小的整数类型(`Int8`、`Int16`、`Int32`、`Int64` 等)的定义。
 
-* **Testing is tightly coupled with the compiler**: The standard library and the compiler evolve together and are tightly coupled. Changes in core data types (e.g., `Array` or `Int`) can require compiler-side changes, and vice-versa, so the standard library test suite is stored within the same directory structure as the compiler, in [test/stdlib](https://github.com/swiftlang/swift/tree/main/test/stdlib) and [validation-test/stdlib](https://github.com/swiftlang/swift/tree/main/validation-test/stdlib).
+* **测试与编译器紧密耦合**: 标准库和编译器是一起演进的，它们紧密耦合。核心数据类型(如 `Array` 或 `Int`)的更改可能需要编译器端的更改，反之亦然，因此标准库测试套件存储在与编译器相同的目录结构中，位于 [test/stdlib](https://github.com/swiftlang/swift/tree/main/test/stdlib) 和 [validation-test/stdlib](https://github.com/swiftlang/swift/tree/main/validation-test/stdlib)。
 
-[swift-repo]: https://github.com/swiftlang/swift "Swift repository"
+[swift-repo]: https://github.com/swiftlang/swift "Swift 代码库"
