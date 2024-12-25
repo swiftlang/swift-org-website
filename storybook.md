@@ -1,6 +1,5 @@
 ---
 layout: new-layouts/storybook
-title: Swift.org Storybook
 atom: true
 ---
 
