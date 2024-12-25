@@ -1,6 +1,6 @@
 ## 标准库设计
 
-Swift 标准库包含了多种数据类型、协议和函数，包括基本数据类型(如 `Int`、`Double`)、集合类型(如 `Array`、`Dictionary`)以及描述它们的协议和操作它们的算法、字符和字符串，以及底层原语(如 `UnsafeMutablePointer`)。标准库的实现位于 [Swift 代码库][swift-repo] 中的 `stdlib/public` 子目录下，该目录进一步细分为:
+Swift 标准库涵盖了多种数据类型、协议和函数，包括基本数据类型(如 `Int`、`Double`)、集合类型(如 `Array`、`Dictionary`)以及描述它们的协议和操作它们的算法、字符和字符串，以及底层原语(如 `UnsafeMutablePointer`)。标准库的实现位于 [Swift 代码库][swift-repo] 中的 `stdlib/public` 子目录下，该目录进一步细分为:
 
 * **标准库核心**: 标准库的核心部分(在 [stdlib/public/core](https://github.com/swiftlang/swift/tree/main/stdlib/public/core) 中实现)，包括所有数据类型、协议、函数等的定义。
 
