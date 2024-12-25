@@ -9,6 +9,15 @@
       font-size: 1.9em;
     }
 
+    .page-title {
+      font-size: 2.4em;
+      display: none;
+
+      @media (max-width: $breakpoint-desktop) {
+        display: block;
+      }
+    }
+
     input[type="search"] {
       border: 2px solid $pink;
       padding: 1rem;
@@ -39,6 +48,10 @@
       a {
         text-decoration: none;
       }
+    }
+
+    .copy-code, .fullscreen {
+      margin-top: 2rem;
     }
 
     .content {

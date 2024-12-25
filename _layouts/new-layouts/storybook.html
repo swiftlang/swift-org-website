@@ -25,8 +25,33 @@
         {% include_relative /storybook-sidebar.md %}
       </div>
       <div class="content">
+        <h1 class="page-title">Swift.org Storybook</h1>
         {{content}}
       </div>
     </main>
   </body>
+  <script>
+    const copyButtons = document.querySelectorAll('.copy-code');
+
+    copyButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const codeBlock = button.parentNode.nextElementSibling;
+
+        if (codeBlock) {
+          const code = codeBlock.innerText.trim();
+
+          navigator.clipboard.writeText(code)
+            .then(() => {
+              button.textContent = 'Copied!';
+              setTimeout(() => {
+                button.textContent = 'Copy Code';
+              }, 1000);
+            })
+            .catch(err => {
+              console.error('Failed to copy code:', err);
+            });
+        }
+      });
+    });
+  </script>
 </html>

@@ -20,6 +20,8 @@ module Jekyll
       code_output = if !hide_code
         <<~CODE
           #### Code Example
+
+          <button class="copy-code">copy code</button>
           ```#{language}
           #{content.strip}
           ```
@@ -32,6 +34,10 @@ module Jekyll
         #{code_output}
 
         #### Render Example
+        <button class="fullscreen">fullscreen</button>
+        <button class="mobile">mobile</button>
+        <button class="dark">dark</button>
+
         <div class="storybook-render">
           #{rendered_content}
         </div>
