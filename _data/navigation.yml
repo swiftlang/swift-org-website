@@ -95,6 +95,17 @@
         - title: 社区参与
           name: community-participation
     - section: 工作组
+    - title: SwiftGG 翻译组
+      url: /swiftgg-workgroup/
+      sections:
+        - title: 章程
+          name: charter
+        - title: 成员构成
+          name: membership
+        - title: 交流方式
+          name: communication
+        - title: 社区参与
+          name: community-participation
     - title: 贡献者体验
       url: /contributor-experience-workgroup/
     - title: 服务器

@@ -54,7 +54,7 @@
       Types in Swift are grouped in two categories: value types and reference types.
       Each behave differently and understanding the difference is an important part of understanding Swift.
   - title: DocC
-    url: /documentation/docc/
+    url: https://www.swift.org/documentation/docc/
     description: |
       DocC is a documentation compiler that makes it easy for you to produce documentation for your Swift frameworks and packages.
       The compiler builds your documentation by combining the comments you write in source with extension files, articles, and tutorials that live alongside your package's source code.

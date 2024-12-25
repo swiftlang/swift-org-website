@@ -1,20 +1,20 @@
 - name: Xcode
-  description: Xcode is a complete IDE enabling you to develop, test, debug, and distribute apps for all Apple platforms on macOS.
+  description: Xcode 是一个完整的集成开发环境，能够让您在 macOS 上开发、测试、调试和分发所有 Apple 平台的应用程序。
   link: https://developer.apple.com/xcode
   guide: https://developer.apple.com/xcode
 - name: Visual Studio Code
-  description: Visual Studio Code is a cross-platform and extensible editor that supports Swift through the Swift extension, which provides intelligent editor functionality as well as debugging and test support.
+  description: Visual Studio Code 是一个跨平台且可扩展的编辑器，通过 Swift 扩展支持 Swift，提供智能编辑器功能以及调试和测试支持。
   link: https://code.visualstudio.com
   guide: /documentation/articles/getting-started-with-vscode-swift.html
 - name: Emacs
-  description: Emacs is an extensible cross-platform text editor. Swift editing support can be enabled through community-provided packages.
+  description: Emacs 是一个可扩展的跨平台文本编辑器。可以通过社区提供的包启用 Swift 编辑支持。
   link: https://www.gnu.org/software/emacs/
   guide: /documentation/articles/zero-to-swift-emacs.html
 - name: Neovim
-  description: Neovim is an extensible cross-platform text editor. Swift editing support can be enabled through your pick of community-provided plugins.
+  description: Neovim 是一个可扩展的跨平台文本编辑器。可以通过您选择的社区提供的插件启用 Swift 编辑支持。
   link: https://neovim.io/
   guide: /documentation/articles/zero-to-swift-nvim.html
-- name: Other Editors
-  description: Any editor that supports the Language Server Protocol (LSP) can use SourceKit-LSP to provide intelligent editor functionality for Swift.
+- name: 其他编辑器
+  description: 任何支持语言服务器协议（LSP）的编辑器都可以使用 SourceKit-LSP 提供 Swift 的智能编辑器功能。
   link: https://github.com/swiftlang/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md
   guide: https://github.com/swiftlang/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md
