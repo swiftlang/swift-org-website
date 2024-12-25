@@ -26,7 +26,8 @@ $yellow-very-light: #fbeccf;
 $border-color-default: $pink;
 
 @mixin isDarkTheme() {
-  body:has(#theme-toggle:checked) {
+  body:has(#theme-toggle:checked),
+  .storybook-dark-theme {
     @content;
   }
 }

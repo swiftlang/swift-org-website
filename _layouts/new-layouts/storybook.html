@@ -25,8 +25,17 @@
         {% include_relative /storybook-sidebar.md %}
       </div>
       <div class="content">
+        <hr />
         <h1 class="page-title">Swift.org Storybook</h1>
         {{content}}
+        <div class="footer">
+          <p>
+            Copyright © {{ site.time | date: '%Y' }} Apple Inc. All rights reserved.
+          </p>
+          <p>
+            Swift and the Swift logo are trademarks of Apple Inc.
+          </p>
+        </div>
       </div>
     </main>
   </body>
@@ -50,6 +59,30 @@
             .catch(err => {
               console.error('Failed to copy code:', err);
             });
+        }
+      });
+    });
+
+    const toggleViewportButtons = document.querySelectorAll('.viewport');
+
+    toggleViewportButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const renderBlock = button.parentNode.nextElementSibling;
+
+        if (renderBlock) {
+          renderBlock.classList.toggle('storybook-viewport-mobile');
+        }
+      });
+    });
+
+    const toggleThemeButtons = document.querySelectorAll('.theme');
+
+    toggleThemeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const renderBlock = button.parentNode.nextElementSibling;
+
+        if (renderBlock) {
+          renderBlock.classList.toggle('storybook-dark-theme');
         }
       });
     });
