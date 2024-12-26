@@ -4,7 +4,7 @@
 
 我们的目标是为所有平台提供 Swift 的源代码兼容性，即使具体的实现机制可能因平台而异。一个主要例子是，Apple 平台包含 Objective-C 运行时，这是访问 UIKit 和 AppKit 等 Apple 平台框架所必需的。而在其他平台（如 Linux）上，没有 Objective-C 运行时，因为它并非必要。
 
-[Swift 核心库项目](/documentation/core-libraries/) 旨在通过提供基本 Apple 框架（如 Foundation）的可移植实现来扩展 Swift 的跨平台能力，而无需依赖 Objective-C 运行时。尽管核心库目前处于开发的早期阶段，但最终将提升 Swift 代码在各个平台上的源代码兼容性。
+[Swift 核心库项目](/documentation/core-libraries/)旨在通过提供基本 Apple 框架（如 Foundation）的可移植实现来扩展 Swift 的跨平台能力，而无需依赖 Objective-C 运行时。尽管核心库目前处于开发的早期阶段，但最终将提升 Swift 代码在各个平台上的源代码兼容性。
 
 ### Apple 平台
 
@@ -12,11 +12,11 @@
 
 ### Linux
 
-开源的 Swift 可以在 Linux 上用于构建 Swift 库和应用程序。开源二进制构建提供了 Swift 编译器和标准库、Swift REPL 和调试器（LLDB），以及 [核心库](/documentation/core-libraries/)，因此开发者可以立即开始使用 Swift 开发。
+开源的 Swift 可以在 Linux 上用于构建 Swift 库和应用程序。开源二进制构建提供了 Swift 编译器和标准库、Swift REPL 和调试器（LLDB），以及[核心库](/documentation/core-libraries/)，因此开发者可以立即开始使用 Swift 开发。
 
 ### Windows
 
-开源的 Swift 可以在 Windows 上用于构建 Swift 库和应用程序。开源二进制构建提供 C/C++/Swift 工具链、标准库和调试器（LLDB），以及 [核心库](/documentation/core-libraries/)，因此开发者可以立即开始使用 Swift 开发。同时，发布版本中包含 SourceKit-LSP，支持开发者在自己选择的 IDE 中高效工作。
+开源的 Swift 可以在 Windows 上用于构建 Swift 库和应用程序。开源二进制构建提供 C/C++/Swift 工具链、标准库和调试器（LLDB），以及[核心库](/documentation/core-libraries/)，因此开发者可以立即开始使用 Swift 开发。同时，发布版本中包含 SourceKit-LSP，支持开发者在自己选择的 IDE 中高效工作。
 
 ### 新平台
 

@@ -33,8 +33,6 @@ Swift 的特性相辅相成，打造出一种强大却又有趣的实用编程�
 
 Swift 从一开始就设计得比基于 C 的语言更安全，并消除了各种不安全代码的问题。变量在使用前必须初始化，数组和整数会进行溢出检查，内存管理是自动化的。语法经过优化，便于清晰表达意图，例如使用简单的三个字符关键字定义一个变量（`var`）或常量（`let`）。
 
-Another safety feature is that by default Swift objects can never be `nil`, and trying to make or use a `nil` object results in a compile-time error. This makes writing code much cleaner and safer, and prevents a common cause of runtime crashes. However, there are cases where `nil` is appropriate, and for these situations Swift has an innovative feature known as **optionals**. An optional may contain `nil`, but Swift syntax forces you to safely deal with it using ``?`` to indicate to the compiler you understand the behavior and will handle it safely.
-
 另一个安全特性是 Swift 对象（object）在默认情况下不能为 `nil`，尝试创建或使用 `nil` 对象会导致编译时错误。这使代码编写更清晰、更安全，并避免了一种运行时崩溃的常见原因。然而，在某些情况下，`nil` 是合适的，为此 Swift 提供了一项创新特性，称为 **可选值（optionals）**。可选值可以包含 `nil` 值，但 Swift 的语法要求你使用 ``?`` 向编译器明确表示你理解这种行为并会安全地处理它，从而强制实现安全的可选值操作。
 
 {% include_relative _platform-support.md %}
