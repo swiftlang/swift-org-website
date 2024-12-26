@@ -86,5 +86,68 @@
         }
       });
     });
+
+    const sourceHtmlButtons = document.querySelectorAll('.source-html');
+
+    sourceHtmlButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        let previousEl = button.parentNode.previousElementSibling;
+        const title = previousEl.id;
+
+        while (previousEl && previousEl.tagName !== 'H2') {
+          previousEl = previousEl.previousElementSibling;
+        }
+
+        const folder = previousEl.id;
+
+        if (title && folder && folder !== 'classes') {
+          window.open(`https://github.com/swiftlang/swift-org-website/blob/new-layout/_includes/new-includes/${folder}/${title}.html`, '_blank');
+        } else {
+          alert('Nothing to show :-(');
+        }
+      });
+    });
+
+    const sourceCssButtons = document.querySelectorAll('.source-css');
+
+    sourceCssButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        let previousEl = button.parentNode.previousElementSibling;
+        const title = previousEl.id;
+
+        while (previousEl && previousEl.tagName !== 'H2') {
+          previousEl = previousEl.previousElementSibling;
+        }
+
+        const folder = previousEl.id;
+
+        if (title && folder && folder !== 'classes') {
+          window.open(`https://github.com/swiftlang/swift-org-website/blob/new-layout/assets/stylesheets/new-stylesheets/includes/${folder}/_${title}.scss`, '_blank');
+        } else {
+          alert('Nothing to show :-()');
+        }
+      });
+    });
+
+    const contributeButtons = document.querySelectorAll('.contribute-code');
+
+    contributeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        let previousEl = button.parentNode.previousElementSibling;
+        const title = previousEl.id;
+
+        while (previousEl && previousEl.tagName !== 'H2') {
+          previousEl = previousEl.previousElementSibling;
+        }
+
+        const folder = previousEl.id;
+
+        if (title && folder) {
+          window.open(`https://github.com/swiftlang/swift-org-website/blob/new-layout/stories/${folder}/${title}.md`, '_blank');
+        } else {
+          alert('Nothing to show :-(');
+        }
+      });
+    });
   </script>
 </html>
