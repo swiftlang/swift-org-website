@@ -19,6 +19,10 @@ module Jekyll
 
       code_output = if !hide_code
         <<~CODE
+          <button class="source-html">source HTML</button>
+          <button class="source-css">source CSS</button>
+          <button class="contribute-code">contribute</button>
+
           #### Code Example
 
           <button class="copy-code">copy code</button>
