@@ -1,38 +1,23 @@
-## Platform Support
+## 平台支持
 
-One of the most exciting aspects of developing Swift in the open is knowing that it is now free to be ported across a wide range of platforms, devices, and use cases.
+以开源方式开发 Swift 最令人兴奋的方面之一是知道它现在可以自由移植到各种平台、设备和应用场景中。
 
-Our goal is to provide source compatibility for Swift across all platforms, even though the actual implementation mechanisms may differ from one platform to the next. The primary example is that the Apple platforms include the Objective-C runtime, which is required to access Apple platform frameworks such as UIKit and AppKit. On other platforms, such as Linux, no Objective-C runtime is present, because it isn't necessary.
+我们的目标是为所有平台提供 Swift 的源代码兼容性，即使具体的实现机制可能因平台而异。一个主要例子是，Apple 平台包含 Objective-C 运行时，这是访问 UIKit 和 AppKit 等 Apple 平台框架所必需的。而在其他平台（如 Linux）上，没有 Objective-C 运行时，因为它并非必要。
 
-The [Swift core libraries project](/documentation/core-libraries/) aims to
-extend the cross-platform capabilities of Swift by providing portable
-implementations of fundamental Apple frameworks (such as Foundation)
-without dependencies on the Objective-C runtime. Although the core
-libraries are in an early stage of development, they will eventually
-provide improved source compatibility for Swift code across all
-platforms.
+[Swift 核心库项目](/documentation/core-libraries/) 旨在通过提供基本 Apple 框架（如 Foundation）的可移植实现来扩展 Swift 的跨平台能力，而无需依赖 Objective-C 运行时。尽管核心库目前处于开发的早期阶段，但最终将提升 Swift 代码在各个平台上的源代码兼容性。
 
-### Apple Platforms
+### Apple 平台
 
-Open-source Swift can be used on the Mac to target all of the Apple
-platforms: iOS, macOS, watchOS, and tvOS. Moreover, binary builds of
-open-source Swift integrate with the Xcode developer tools, including
-complete support for the Xcode build system, code completion in the
-editor, and integrated debugging, allowing anyone to experiment with
-the latest Swift developments in a familiar Cocoa and Cocoa Touch
-development environment.
-
+开源的 Swift 可以在 Mac 上使用，并可以以所有的 Apple 平台作为编译目标：iOS、macOS、watchOS 和 tvOS。此外，开源 Swift 的二进制构建与 Xcode 开发工具进行了集成，包括对 Xcode 构建系统的完整支持、编辑器中的代码补全和集成调试功能，让任何人都可以在熟悉的 Cocoa 和 Cocoa Touch 开发环境中尝试最新的 Swift 功能。
 
 ### Linux
 
-Open-source Swift can be used on Linux to build Swift libraries and
-applications. The open-source binary builds provide the Swift compiler and standard library, Swift REPL and debugger (LLDB), and the [core libraries](/documentation/core-libraries/), so one can jump right in to Swift development.
-
+开源的 Swift 可以在 Linux 上用于构建 Swift 库和应用程序。开源二进制构建提供了 Swift 编译器和标准库、Swift REPL 和调试器（LLDB），以及 [核心库](/documentation/core-libraries/)，因此开发者可以立即开始使用 Swift 开发。
 
 ### Windows
 
-Open source Swift can be used on Windows to build Swift libraries and applications. The open source binary builds provide C/C++/Swift toolchains, the standard library, and debugger (LLDB), as well as the [core libraries](/documentation/core-libraries/), so one can jump right in to Swift development. SourceKit-LSP is bundled into the releases to enable developers to be quickly productive with the IDE of their choice.
+开源的 Swift 可以在 Windows 上用于构建 Swift 库和应用程序。开源二进制构建提供 C/C++/Swift 工具链、标准库和调试器（LLDB），以及 [核心库](/documentation/core-libraries/)，因此开发者可以立即开始使用 Swift 开发。同时，发布版本中包含 SourceKit-LSP，支持开发者在自己选择的 IDE 中高效工作。
 
-### New Platforms
+### 新平台
 
-We can't wait to see the new places we can bring Swift---together.  We truly believe that this language that we love can make software safer, faster, and easier to maintain.  We'd love your help to bring Swift to even more computing platforms.
+我们迫不及待地想与大家一起将 Swift 带到更多新的平台上。我们坚信，这门我们热爱的编程语言能够让软件变得更安全、更快速、更易于维护。我们热切期待你的加入，共同将 Swift 推广到更多计算平台上。
