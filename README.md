@@ -33,7 +33,7 @@ To run the site locally, enter the following commands into a terminal window:
 git clone https://github.com/swiftlang/swift-org-website.git
 cd swift-org-website
 bundle install
-LC_ALL=en_us.UTF-8 bundle exec jekyll serve
+LC_ALL=en_us.UTF-8 bundle exec jekyll serve --config _config.yml,_config_dev.yml
 open "http://localhost:4000"
 ```
 
