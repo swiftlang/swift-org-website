@@ -66,6 +66,8 @@ While running the website in localhost, you can visit [the page /storybook](127.
 
 Each "component" or style "class" must be added to the `stories/` folder.
 
+The storybook is only available in development.
+
 ## Roadmap / Issues Tracking
 
 Currently there is no deadline for delivery.
@@ -78,7 +80,9 @@ We are using the same used for the current website (might change)
 ## Staging
 
 We are working on providing a staging url where we can see the look of the new template based on the `new-layout` branch.
+
 Staging in reacheable at: https://swift-org-website.vercel.app
+
 TODO: Merge in `new-layout` should deploy to https://swift-org-website.vercel.app
 
 ## Production
