@@ -7,13 +7,11 @@ title: 构建系统
 推荐使用 [Swift 包管理器](/documentation/package-manager/)来构建服务端应用程序。SwiftPM 提供了一个跨平台的基础架构来构建 Swift 代码，并且非常适合把一个代码库编辑和运行在多个 Swift 平台上。
 
 ## 构建
-
 SwiftPM 可以从命令行工作，同时也集成在 Xcode 中。
 
 你可以通过在终端运行 `swift build` 来构建你的代码，或者在 Xcode 中触发构建操作。
 
 ### 通过 Docker 使用
-
 Swift 二进制文件是特定于架构的，因此在 macOS 上运行构建命令将创建一个 macOS 二进制文件，类似地，在 Linux 上运行命令将创建一个 Linux 二进制文件。
 
 许多 Swift 开发者使用 macOS 进行开发，这使他们能够利用 Xcode 中提供的出色工具。然而，大多数服务端应用程序被设计为在 Linux 上运行。
