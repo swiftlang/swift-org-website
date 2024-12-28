@@ -26,7 +26,7 @@ _The Swift Programming Language_ 是 Swift 的权威参考书，提供了语言�
 欢迎你对书籍的贡献——拉取请求、新问题或对现有主题的评论——请访问 [书籍的 GitHub 仓库](https://github.com/swiftlang/swift-book)。
 
 ### 翻译
-我们鼓励你参与将《Swift 编程语言》翻译成其他语言。你可以加入现有的翻译项目，或启动一个新的翻译项目。
+我们鼓励你参与将 _The Swift Programming Language_ 翻译成其他语言。你可以加入现有的翻译项目，或启动一个新的翻译项目。
 
 <div class="links links-external links-list-nostyle" markdown="1">
 - [阅读中文翻译](https://swiftgg.gitbook.io/swift){:target="_blank"}
