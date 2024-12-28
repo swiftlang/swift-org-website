@@ -8,7 +8,7 @@ title: 在服务端使用 Swift
 ---
 
 ## 概述
-[**Swift**](https://www.swift.org) 是一种通用编程语言，使用现代化的方法构建，注重安全性、性能和软件设计模式。最初由苹果公司开发，用于构建 iOS、macOS、watchOS 和 tvOS 应用程序，Swift 的项目目标是创造从系统编程到移动和桌面应用程序、再到高度分布式的云服务的最佳可用语言。Swift 丰富的生态系统允许在 Linux 或 macOS 上开发和部署服务。最重要的是，Swift 旨在使开发人员编写和维护正确的程序变得简单。
+[**Swift**](https://swift.org.gg) 是一种通用编程语言，使用现代化的方法构建，注重安全性、性能和软件设计模式。最初由苹果公司开发，用于构建 iOS、macOS、watchOS 和 tvOS 应用程序，Swift 的项目目标是创造从系统编程到移动和桌面应用程序、再到高度分布式的云服务的最佳可用语言。Swift 丰富的生态系统允许在 Linux 或 macOS 上开发和部署服务。最重要的是，Swift 旨在使开发人员编写和维护正确的程序变得简单。
 
 **Swift on Server**  指的是使用 Swift 编程语言进行服务端开发的能力。为了在服务器上部署 Swift 应用程序，开发人员可以利用诸如 [Vapor](https://vapor.codes/) 和 [Hummingbird](https://swiftpackageindex.com/hummingbird-project/hummingbird) 这样的 Web 框架，它们提供了各种工具和库来简化开发过程。这些框架处理如路由、数据库集成和请求处理等重要逻辑，可以让开发人员专注于构建他们应用程序的业务逻辑。
 
