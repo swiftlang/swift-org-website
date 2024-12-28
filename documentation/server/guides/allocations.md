@@ -12,7 +12,7 @@ title: 内存分配
 此外，适当的分配管理可以防止内存泄漏，并确保内存在不再需要时被释放。这有助于维护服务端应用程序的稳定性和可靠性。
 
 ## 堆和栈
-通常，Swift 有两个基本的内存分配位置：**堆** 和 **栈**。
+通常，Swift 有两个基本的内存分配位置：**堆**和**栈**。
 
 Swift 自动在堆或栈数据结构中分配内存。
 
@@ -144,7 +144,7 @@ Hello World
 通过运行分配分析，您可以更好地了解应用程序中的内存使用模式，并识别和修复内存问题，例如泄漏或使用效率低下，从而最终提高代码的性能和稳定性。
 
 ### 示例程序
-一旦您确认 `malloc` 上的用户探针工作正常，您就可以分析程序的内存分配情况。例如，您可以分析一个使用 [AsyncHTTPClient](https://github.com/swift-server/async-http-client)执行十个连续 HTTP 请求的程序。
+一旦您确认 `malloc` 上的用户探针工作正常，您就可以分析程序的内存分配情况。例如，您可以分析一个使用 [AsyncHTTPClient](https://github.com/swift-server/async-http-client) 执行十个连续 HTTP 请求的程序。
 
 分析使用 AsyncHTTPClient 的程序可以帮助优化性能，改进错误处理，确保适当的并发和线程处理，增强代码的可读性和可维护性，以及评估可扩展性。
 
@@ -228,16 +228,16 @@ swift build -c release
 
 会生成一个名为 `.build/release/your-program-name` 的二进制文件，可以对其进行分析以获取内存分配的数量。
 
-### 计算内存分配次数
-计算内存分配次数并将其可视化为图表有助于您分析内存利用率，配置内存使用情况，优化性能，重构和优化代码，以及调试程序中的内存相关问题。
+### 计算内存分配数量
+计算内存分配数量并将其可视化为图表有助于您分析内存利用率，配置内存使用情况，优化性能，重构和优化代码，以及调试程序中的内存相关问题。
 
-在将分配可视化为火焰图之前，请先使用二进制文件进行分析，通过运行命令来获取内存分配次数：
+在将分配可视化为火焰图之前，请先使用二进制文件进行分析，通过运行命令来获取内存分配数量：
 
 ```bash
 perf stat -e 'probe_libc:*' -- .build/release/your-program-name
 ```
 
-此命令指示 `perf` 运行您的程序并计算用户探针 `probe_libc:malloc` 被命中或在您的应用程序中分配内存的次数。
+此命令指示 `perf` 运行您的程序并计算用户探针 `probe_libc:malloc` 被命中或在您的应用程序中分配内存的数量。
 
 输出应该类似于这样：
 
@@ -267,7 +267,7 @@ Performance counter stats for '.build/release/your-program-name':
 
 `perf` 命令不允许在程序运行时创建实时图表。然而，[Linux Perf 工具](https://perf.wiki.kernel.org/index.php/Main_Page)提供了一个 `perf record` 实用命令，它捕获性能事件以供稍后分析。然后可以将收集的数据转换为图表。
 
-通常，命令 `perf record` 可用于运行程序，`libc_probe：malloc` 来收集信息，如下所示：
+通常，命令 `perf record` 可用于运行程序，`libc_probe:malloc` 来收集信息，如下所示：
 
 ```bash
 perf record --call-graph dwarf,16384 \
@@ -314,7 +314,7 @@ perf script | \
 - `perf` 命令将 `perf record` 捕获的二进制信息转换成文本形式。
 - `stackcollapse-perf` 命令将 `perf script` 生成的堆栈转换为火焰图的正确格式。
 - `swift demangle --simplified` 命令将符号名称转换为我们可读的格式。
-- 最后两个命令根据内存分配次数创建火焰图。
+- 最后两个命令根据内存分配数量创建火焰图。
 
 命令完成后，将生成一个 SVG 文件，您可以在浏览器中打开该文件。
 
