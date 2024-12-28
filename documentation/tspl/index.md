@@ -37,5 +37,5 @@ _The Swift Programming Language_ 是 Swift 的权威参考书，提供了语言�
 
 <div class="info" markdown="1">
 如果你知道有质量高的翻译项目正在进行中，
-请通过在 [Swift.org 仓库](https://github.com/swiftlang/swift-org-website) 开一个问题或提交拉取请求来告知我们。
+请通过在 [Swift.org 仓库](https://github.com/swiftlang/swift-org-website) 创建一个问题或提交拉取请求来告知我们。
 </div>
