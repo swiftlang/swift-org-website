@@ -86,7 +86,7 @@ docker run -it --rm \
 
 在 Linux 上，大多数内存分配使用 Swift 中的 `malloc` 函数。在内存分配函数上安装 `perf` 用户探针可以提供内存分配函数被调用时的信息。
 
-In this instance, a user probe was installed for all allocation functions because Swift uses other functions like `calloc` and `posix_memalign`.
+In this instance，a user probe was installed for all allocation functions because Swift uses other functions like `calloc` and `posix_memalign`.
 在这个例子中，需要这也写才能为所有内存分配函数安装用户探针，因为 Swift 使用了其他函数，如 `calloc` 和 `posix_memalign`。
 
 ```bash
@@ -96,7 +96,7 @@ libc_path=$(readlink -e /lib64/libc.so.6 /lib/x86_64-linux-gnu/libc.so.6)
 # 删除 libc 上所有现有的用户探针（你可以用 * 来代替，也可以单独列出它们）
 perf probe --del 'probe_libc:*'
 
-# 给 `malloc`, `calloc`, 和 `posix_memalign` 函数安装探针
+# 给 `malloc`，`calloc`，和 `posix_memalign` 函数安装探针
 perf probe -x "$libc_path" --add malloc --add calloc --add posix_memalign
 ```
 
@@ -255,7 +255,6 @@ Performance counter stats for '.build/release/your-program-name':
 在这种情况下，该程序通过 `malloc` 分配了 2977 次以及通过其他内存分配函数少量次。
 
 请务必注意，这里使用的是 `-e probe_libc：*` 命令，而不是单独列出每个事件，例如：
-
 - `-e probe_libc: malloc`
 - `probe_libc:calloc`
 - `probe_libc:calloc_1`
@@ -326,9 +325,11 @@ perf script | \
 
 <p><img src="/assets/images/server-guides/perf-malloc-full.svg" alt="Flame graph" /></p>
 
-- 在解读火焰*图*时, X 轴表示 **计数** 而不是时间。堆栈的排列（左或右）并不是由该堆栈活跃的时间决定的，这与火焰*图表*不同。
+- 在解读火焰*图*时，X 轴表示 **计数** 而不是时间。堆栈的排列（左或右）并不是由该堆栈活跃的时间决定的，这与火焰*图表*不同。
+  
 - 这个火焰图不是 CPU 火焰图，而是内存分配火焰图，其中一个样本表示一次内存分配，而不是 CPU 上花费的时间。
 - 宽堆栈帧不一定（直接）分配，这意味着函数或函数调用的内容被分配了多次。
+
     - 例如，`BaseSocketChannel.readable` 是一个宽帧，但它的函数不直接分配。相反，它调用了其他函数，例如 SwiftNIO 和 AsyncHTTPClient 的其他部分，它们进行了相当数量的内存分配。
 
 ## macOS 上的内存分配火焰图
@@ -362,7 +363,7 @@ cat raw.stacks |\
 
 您会注意到这个命令与 `perf` 调用类似，但有以下不同：
 - 命令 `cat raw.stacks` 替换了 `perf script` 命令，因为 `dtrace` 已经包含了一个文本数据文件。
-- 命令 `stackcollapse.pl`, 它解析 `dtrace` 的聚合输出，替换了 `stackcollapse-perf.pl` 命令，后者解析 `perf script` 的输出。
+- 命令 `stackcollapse.pl`，它解析 `dtrace` 的聚合输出，替换了 `stackcollapse-perf.pl` 命令，后者解析 `perf script` 的输出。
 
 ## 其他 perf 技巧
 
