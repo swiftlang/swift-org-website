@@ -1,31 +1,27 @@
 ---
 redirect_from: "/core-libraries/"
 layout: page
-title: Swift Core Libraries
+title: Swift 核心库
 ---
 
-The Swift Core Libraries project provides higher-level functionality than the
-Swift standard library. These libraries provide powerful tools that developers
-can depend upon across all the platforms that Swift supports. The Core Libraries
-have a goal of providing stable and useful features in the following key areas:
+Swift 核心库项目提供比 Swift 标准库更高级的功能。这些库为开发者提供强大的工具，可在 Swift 支持的所有平台上依赖使用。核心库的目标是提供以下关键领域中稳定且实用的特性：
 
-* Commonly needed types, including data, URLs, character sets, and specialized collections
-* Unit testing
-* Networking primitives
-* Scheduling and execution of work, including threads, queues, and notifications
-* Persistence, including property lists, archives, JSON parsing, and XML parsing
-* Support for dates, times, and calendrical calculations
-* Abstraction of OS-specific behavior
-* Interaction with the file system
-* Internationalization, including date and number formatting and language-specific resources
-* User preferences
+* 常用类型，包括数据、URL、字符集和专用集合
+* 单元测试
+* 网络基础功能
+* 任务调度与执行，包括线程、队列和通知
+* 数据持久化，包括属性列表、归档、JSON 解析和 XML 解析
+* 日期、时间和日历计算的支持
+* 操作系统特定行为的抽象
+* 文件系统交互
+* 国际化，包括日期和数字格式化及语言特定资源
+* 用户偏好设置
 
+### 项目状态
 
-### Project Status
+这些库是我们持续扩展 Swift 跨平台能力的工作的一部分。我们选择将它们作为开源项目发布，以便与社区共同开发和完善。
 
-These libraries are part of our ongoing work to extend the cross-platform capabilities of Swift.  We chose to make them part of our open source release so that we can work on them together with the community.
-
-Writing code that provides all of this functionality from scratch would be an enormous undertaking. Therefore, we've decided to bootstrap this project by taking advantage of great work that has already been done in these areas. Specifically, we will reuse the API and as much implementation as is possible from three existing libraries: `Foundation`, `libdispatch`, and `XCTest`.
+如果要从零开始编写提供所有这些功能的代码，将是一项庞大的工程。因此，我们决定通过复用现有优秀库的 API 和尽可能多的实现来启动该项目。具体来说，我们将复用以下三个现有库的 API 和实现：`Foundation`、`libdispatch` 和 `XCTest`。
 
 * * *
 
@@ -35,4 +31,4 @@ Writing code that provides all of this functionality from scratch would be an en
 
 * * *
 
-As stated above, this project is in its early days. We look forward to working together with the community to create a great set of libraries that enable Swift to produce powerful software across platforms.
+正如前述所言，该项目仍处于早期阶段。我们期待与社区携手，共同打造一套强大的库，使 Swift 能够在各个平台上开发出优秀的软件。
