@@ -1,41 +1,41 @@
 ---
 redirect_from: "server/guides/deploying/aws-sam-lambda"
 layout: page
-title: Deploying to AWS Lambda using the Serverless Application Model (SAM)
+title: 使用 Serverless 应用程序模型（SAM）部署到 AWS Lambda
 ---
 
-This guide illustrates how to deploy a Server-Side Swift workload on AWS using the [AWS Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/) toolkit. The workload is a REST API for tracking a To Do List. It deploys the API using [Amazon API Gateway](https://aws.amazon.com/api-gateway/). The API methods store and retrieve data in a [Amazon DynamoDB](https://aws.amazon.com/dynamodb) database using [AWS Lambda](https://aws.amazon.com/lambda/) functions.
+本指南说明了如何使用 Serverless 应用程序模型（SAM） 在 AWS 上部署一个服务器端 Swift 工作负载。 [AWS Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/) 工具包。该工作负载是一个用于跟踪待办事项列表的 REST API。它使用 AWS Lambda 部署该 API，并通过 Amazon API Gateway 提供访问。 [Amazon API Gateway](https://aws.amazon.com/api-gateway/)。API 方法通过使用 AWS SDK for Swift 将数据存储和检索到[Amazon DynamoDB](https://aws.amazon.com/dynamodb) 数据库中。 [AWS Lambda](https://aws.amazon.com/lambda/) 函数。
 
-## Architecture
+## 架构
 
 ![Architecture](/assets/images/server-guides/aws/aws-lambda-sam-arch.png)
 
-- Amazon API Gateway receives API requests
-- API Gateway invokes Lambda functions to process PUT and GET events
-- Lambda functions use the [AWS SDK for Swift](https://aws.amazon.com/sdk-for-swift/) and the [Swift AWS Lambda Runtime](https://github.com/swift-server/swift-aws-lambda-runtime) to retrieve and save items to the database
+- Amazon API Gateway 接收 API 请求
+- API Gateway 调用 Lambda 函数以处理 PUT 和 GET 事件
+- Lambda 函数使用 [AWS SDK for Swift](https://aws.amazon.com/sdk-for-swift/) 和 [Swift AWS Lambda Runtime](https://github.com/swift-server/swift-aws-lambda-runtime) 来从数据库检索和保存数据项。
 
 
-## Prerequisites
+## 先决条件
 
-To build this sample application, you need:
+要构建此示例应用程序，您需要：
 
 - [AWS Account](https://console.aws.amazon.com/)
-- [AWS Command Line Interface (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) - install the CLI and [configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) it with credentials to your AWS account
-- [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started.html) - a command-line tool used to create serverless workloads on AWS
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) - to compile your Swift code into a Docker image
+- [AWS Command Line Interface (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) - 安装 CLI 并 [configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) i将其配置为使用您的 AWS 账户凭证。
+- [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started.html) - 一个用于在 AWS 上创建无服务器工作负载的命令行工具。
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) - 将您的 Swift 代码编译为 Docker 镜像。
 
-## Step 1: Create a new SAM project
+## 步骤 1：创建一个新的 SAM 项目 
 
-The SAM project creates resources (Lambda functions, API Gateway, and DynamoDB table) in your AWS account. You define the resources in a YAML template.
+SAM 项目会在您的 AWS 账户中创建资源（Lambda 函数、API Gateway 和 DynamoDB 表）。您需要在 YAML 模板中定义这些资源。
 
-Create a folder for your project and a new **template.yml** file.
+为您的项目创建一个文件夹，并创建一个新的 **template.yml** 文件。
 
 ```
 mkdir swift-lambda-api && cd swift-lambda-api
 touch template.yml
 ```
 
-Open the **template.yml** file and add the following code. Review the comments in the code to determine what it created in each section.
+打开 **template.yml** 文件，并添加以下代码。查看代码中的注释，以了解每个部分创建了什么内容。
 
 ```yml
 AWSTemplateFormatVersion: '2010-09-09'
@@ -115,11 +115,12 @@ Outputs:
     Description: "DynamoDB Table Name"
     Value: !Ref SwiftAPITable
 ```
-## Step 2: Initialize Lambda functions with SwiftPM
+## 步骤 2：使用 SwiftPM 初始化 Lambda 函数
 
-Lambda functions, written in Swift, process the API events. The *PutItem* function processes *POST* requests to add items to the database. The *GetItems* function processes *GET* requests to retrieve items from the database.
+用 Swift 编写的 Lambda 函数用于处理 API 事件。 *PutItem* 函数处理 *POST* 请求，将项目添加到数据库。
+GetItems 函数处理 *GET* 请求，从数据库检索项目。
 
-Use the Swift Package Manager to initialize a project for each function. You also add a *Dockerfile* to each folder.
+使用 Swift Package Manager 为每个函数初始化一个项目，并为每个文件夹添加一个 *Dockerfile* 文件。
 
 ```bash
 mkdir -p src/put-item
@@ -135,9 +136,9 @@ swift package init --type executable
 touch Dockerfile
 ```
 
-## Step 3: Update the Dockerfile
+## Step 3: 更新 Dockerfile 文件
 
-Docker is used to compile your Swift code and deploy the image to Lambda. Copy the following code into the Dockerfile you created in each function's folder.
+Docker 用于编译您的 Swift 代码并将镜像部署到 Lambda。将以下代码复制到您在每个函数文件夹中创建的 *Dockerfile* 中。
 
 ```Dockerfile
 # image used to compile your Swift code
@@ -169,14 +170,14 @@ WORKDIR /var/task
 CMD ["/var/task/lambdaExec"]
 ```
 
-## Step 4: Update the Swift dependencies
+## 步骤 4：更新 Swift 依赖项
 
-Your project requires 3 libraries.
+您的项目需要 3 个库
 - swift-aws-lambda-runtime
 - swift-aws-lambda-events
 - aws-sdk-swift
 
-You define these in the *Package.swift* file. Replace the contents of the Package.swift file in each function's folder with the following code.
+您可以在 *Package.swift* 文件中定义它们。将每个函数文件夹中的 *Package.swift* 文件内容替换为以下代码。
 
 **src/put-item/Sources/put-item/Package.swift**
 ```swift
@@ -238,9 +239,9 @@ let package = Package(
 )
 ```
 
-## Step 5: Update the Lambda function source code
+## 步骤 5：更新 Lambda 函数的源代码
 
-Replace the contents of the main code file for each Swift project with the following code.
+将每个 Swift 项目主代码文件的内容替换为以下代码。
 
 **src/put-item/Sources/put-item/put_item.swift**
 
@@ -353,35 +354,35 @@ struct GetItemsFunction: SimpleLambdaHandler {
 }
 ```
 
-## Step 6: Build the SAM project
+## 步骤 6：构建 SAM 项目
 
-Building your SAM project uses Docker on your machine to compile your Swift code into Docker images. From the root folder of your project *(swift-lambda-api)* run the following command.
+构建 SAM 项目需要使用你机器上的 Docker 将 Swift 代码编译为 Docker 镜像。在项目的根文件夹 *(swift-lambda-api)* 中运行以下命令。
 
 ```bash
 sam build
 ```
 
-## Step 7: Deploy the SAM project
+## 部署 SAM 项目
 
-Deploying your SAM project creates the Lambda functions, API Gateway, and DynamoDB database in your AWS account.
+部署你的 SAM 项目会在你的 AWS 账户中创建 Lambda 函数、API Gateway 和 DynamoDB 数据库。
 
 ```bash
 sam deploy --guided
 ```
 
-Accept the default response to every prompt, except the following two:
+对每个提示接受默认响应，但以下两个例外：
 
 ```bash
 PutItemFunction may not have authorization defined, Is this okay? [y/N]: y
 GetItemsFunction may not have authorization defined, Is this okay? [y/N]: y
 ```
 
-The project creates a publicly accessible API endpoint. These are warnings to inform you the API does not have authorization. If you are interested in adding authorization to the API, please refer to the [SAM Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-httpapi.html).
+该项目会创建一个公开可访问的 API 端点。这些警告是为了告知您该 API 没有授权。如果您有兴趣为 API 添加授权，请参考以下内容： [SAM Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-httpapi.html)。
 
 
-## Step 8: Use your API
+## 第 8 步：使用你的 API
 
-At the end of deployment, SAM displays the endpoint of your API Gateway:
+在部署结束时，SAM 会显示你 API Gateway 的端点：
 
 ```bash
 Outputs
@@ -392,23 +393,23 @@ Value               https://[your-api-id].execute-api.[your-aws-region].amazonaw
 ----------------------------------------------------------------------------------------
 ```
 
-Use cURL or a tool such as [Postman](https://www.postman.com/) to interact with your API. Replace **[your-api-endpoint]** with the SwiftAPIEndpoint value from the deployment output.
+使用 cURL 或类似的工具，如 [Postman](https://www.postman.com/) ，与您的 API 进行交互。将 **[your-api-endpoint]** 替换为部署输出中的 SwiftAPIEndpoint 值。
 
-Add a To Do List item
+添加一个待办事项项
 
 ```bash
 curl --request POST 'https://[your-api-endpoint]/item' --header 'Content-Type: application/json' --data-raw '{"itemName": "my todo item"}'
 ```
 
-Retrieve To Do List items
+检索待办事项列表项
 
 ```bash
 curl https://[your-api-endpoint]/items
 ```
 
-## Cleanup
+## 清理
 
-When finished with your application, use SAM to delete it from your AWS account. Answer **Yes (y)** to all prompts.
+完成应用程序后，使用 SAM 将其从您的 AWS 账户中删除。对所有提示回答 **Yes (y)**。
 
 ```bash
 sam delete

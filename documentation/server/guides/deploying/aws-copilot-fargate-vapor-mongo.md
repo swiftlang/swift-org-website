@@ -1,47 +1,47 @@
 ---
 redirect_from: "server/guides/deploying/aws-copilot-fargate-vapor-mongo"
 layout: page
-title: Deploying to AWS with Fargate, Vapor, and MongoDB Atlas
+title: 使用 Fargate、Vapor 和 MongoDB Atlas 部署到 AWS
 ---
 
-This guide illustrates how to deploy a Server-Side Swift workload on AWS. The workload is a REST API for tracking a To Do List. It uses the [Vapor](https://vapor.codes/) framework to program the API methods. The methods store and retrieve data in a [MongoDB Atlas](https://www.mongodb.com/atlas/database) cloud database. The Vapor application is containerized and deployed to AWS on AWS Fargate using the [AWS Copilot](https://aws.github.io/copilot-cli/) toolkit.
+本指南说明了如何在 AWS 上部署 Server-Side Swift 工作负载。该工作负载是一个用于管理待办事项列表的 REST API。它使用 [Vapor](https://vapor.codes/) 框架来编写 API 方法，这些方法将数据存储到 [MongoDB Atlas](https://www.mongodb.com/atlas/database) 云数据库中，并支持数据的检索。 Vapor 应用被容器化并通过 [AWS Copilot](https://aws.github.io/copilot-cli/) 工具部署到 AWS 的 AWS Fargate 服务上。
 
-## Architecture
+## 架构
 
 ![Architecture](/assets/images/server-guides/aws/aws-fargate-vapor-mongo.png)
 
-- Amazon API Gateway receives API requests
-- API Gateway locates your application containers in AWS Fargate through internal DNS managed by AWS Cloud Map
-- API Gateway forwards the requests to the containers
-- The containers run the Vapor framework and have methods to GET and POST items
-- Vapor stores and retrieves items in a MongoDB Atlas cloud database which runs in a MongoDB managed AWS account
+- Amazon API Gateway 接收 API 请求
+- API Gateway 通过由 AWS Cloud Map 管理的内部 DNS 定位在 AWS Fargate 中的应用容器
+- API Gateway 将请求转发到容器
+- 容器运行 Vapor 框架，并提供 GET 和 POST 项目的方法
+- Vapor 将项目存储到 MongoDB Atlas 云数据库，并从中检索数据，数据库运行在由 MongoDB 管理的 AWS 账户中
 
-## Prerequisites
+## 先决条件
 
-To build this sample application, you need:
+要构建此示例应用程序，您需要：
 
 - [AWS Account](https://console.aws.amazon.com/)
 - [MongoDB Atlas Database](https://www.mongodb.com/atlas/database)
-- [AWS Copilot](https://aws.github.io/copilot-cli/) - a command-line tool used to create containerized workloads on AWS
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) - to compile your Swift code into a Docker image
-- [Vapor](https://vapor.codes/) - to code the REST service
-- [AWS Command Line Interface (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) - install the CLI and [configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) it with credentials to your AWS account
+- [AWS Copilot](https://aws.github.io/copilot-cli/) - 用于在 AWS 上创建容器化工作负载的命令行工具
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) - 将 Swift 代码编译为 Docker 镜像
+- [Vapor](https://vapor.codes/) - 用于编写 REST 服务
+- [AWS Command Line Interface (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) - 安装 CLI 并 [configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) 将其与您的 AWS 账户凭证关联
 
-## Step 1: Create Your Database
+## 步骤 1：创建您的数据库
 
-If you are new to MongoDB Atlas, follow this [Getting Started Guide](https://www.mongodb.com/docs/atlas/getting-started/). You need to create the following items:
+如果您是 MongoDB Atlas 的新用，请按照以下步骤操作 [Getting Started Guide](https://www.mongodb.com/docs/atlas/getting-started/)。您需要创建以下内容：
 
-- Atlas Account
-- Cluster
-- Database Username / Password
-- Database
-- Collection
+- Atlas 账户
+- 集群
+- 数据库用户名/密码
+- 数据库
+- 集合
 
-In subsequent steps, you provide values to these items to configure the application.
+在后续步骤中，您将为这些项提供值以配置应用程序。
 
-## Step 2: Initialize a New Vapor Project
+## 步骤 2：初始化一个新的 Vapor 项目
 
-Create a folder for your project.
+为您的项目创建一个文件夹。
 
 ```
 mkdir todo-app && cd todo-app
@@ -53,11 +53,11 @@ Initialize a Vapor project named *api*.
 vapor new api -n
 ```
 
-## Step 3: Add Project Dependencies
+## 步骤 3：添加项目依赖项
 
-Vapor initializes a *Package.swift* file for the project dependencies. Your project requires an additional library, [MongoDBVapor](https://github.com/mongodb/mongodb-vapor). Add the MongoDBVapor library to the project and target dependencies of your *Package.swift* file.
+Vapor 为项目依赖项初始化一个 *Package.swift* 文件。您的项目需要一个额外的库，  [MongoDBVapor](https://github.com/mongodb/mongodb-vapor)。将 MongoDBVapor 库添加到 *Package.swift* 文件的项目和目标依赖项中。
 
-Your updated file should look like this:
+更新后的文件应如下所示：
 
 **api/Package.swift**
 ```swift
@@ -93,15 +93,15 @@ let package = Package(
 )
 ```
 
-## Step 4: Update the Dockerfile
+## Step 4: 更新 Dockerfile
 
-You deploy your Swift Server code to AWS Fargate as a Docker image. Vapor generates an initial Dockerfile for your application. Your application requires a few modifications to this Dockerfile:
+您将 Swift 服务端代码作为 Docker 镜像部署到 AWS Fargate。Vapor 为您的应用程序生成了一个初始 Dockerfile。您的应用程序需要对该 Dockerfile 进行以下几项修改：
 
-- pull the *build* and *run* images from the [Amazon ECR Public Gallery](https://gallery.ecr.aws)  container repository
-- install *libssl-dev* in the build image
-- install *libxml2* and *curl* in the run image
+- 从以下来源拉取 *build* 和 *run* 镜像： [Amazon ECR Public Gallery](https://gallery.ecr.aws)  容器存储库
+- 安装 *libssl-dev* 在构建镜像中
+- 安装 *libxml2* and *curl* 在运行镜像中
 
-Replace the contents of the Vapor generated Dockerfile with the following code:
+将 Vapor 生成的 Dockerfile 内容替换为以下代码：
 
 **api/Dockerfile**
 ```Dockerfile
@@ -183,13 +183,13 @@ ENTRYPOINT ["./Run"]
 CMD ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "8080"]
 ```
 
-## Step 5: Update the Vapor Source Code
+## 步骤 5：更新 Vapor 源代码
 
-Vapor also generates the sample files needed to code an API. You must customize these files with code that exposes your To Do List API methods and interacts with your MongoDB database.
+Vapor 还会生成编写 API 所需的示例文件。您需要使用代码自定义这些文件，以公开您的待办事项列表 API 方法并与 MongoDB 数据库交互。
 
-The *configure.swift* file initializes an application-wide pool of connections to your MongoDB database. It retrieves the connection string to your MongoDB database from an environment variable at runtime.
+*configure.swift* 文件用于初始化一个面向整个应用的 MongoDB 数据库连接池。它在运行时从环境变量中获取 MongoDB 数据库的连接字符串。
 
-Replace the contents of the file with the following code:
+将该文件的内容替换为以下代码：
 
 **api/Sources/App/configure.swift**
 ```swift
@@ -209,9 +209,9 @@ public func configure(_ app: Application) throws {
 }
 ```
 
-The *routes.swift* file defines the methods to your API. These include a *POST Item* method to insert a new item and a *GET Items* method to retrieve a list of all existing items. See comments in the code to understand what happens in each section.
+*routes.swift* 文件定义了您的 API 方法。这些方法包括一个 *POST Item* 方法，用于插入新项，以及一个 *GET Items* 方法，用于检索所有现有项的列表。请参阅代码中的注释以理解每个部分的功能。
 
-Replace the contents of the file with the following code:
+将该文件的内容替换为以下代码：
 
 **api/Sources/App/routes.swift**
 ```swift
@@ -264,9 +264,9 @@ func routes(_ app: Application) throws {
 }
 ```
 
-The *main.swift* file defines the startup and shutdown code for the application. Change the code to include a *defer* statement to close the connection to your MongoDB database when the application ends.
+*main.swift* 文件定义了应用程序的启动和关闭代码。修改代码以包含一个 *defer* 语句，用于在应用程序结束时关闭与 MongoDB 数据库的连接。
 
-Replace the contents of the file with the following code:
+将该文件的内容替换为以下代码：
 
 **api/Sources/Run/main.swift**
 ```swift
@@ -289,23 +289,23 @@ defer {
 try app.run()
 ```
 
-## Step 6: Initialize AWS Copilot
+## 步骤 6：初始化 AWS Copilot
 
-[AWS Copilot](https://aws.github.io/copilot-cli/) is a command-line utility for generating a containerized application in AWS. You use Copilot to build and deploy your Vapor code as containers in Fargate. Copilot also creates and tracks an AWS Systems Manager secret parameter for the value of your MongoDB connection string. You store this value as a secret as it contains the username and password to your database.  You never want to store this in your source code. Finally, Copilot creates an API Gateway to expose a public endpoint for your API.
+[AWS Copilot](https://aws.github.io/copilot-cli/) Copilot 是一个命令行工具，用于在 AWS 中生成容器化应用程序。您使用 Copilot 来构建和部署您的 Vapor 代码作为 Fargate 中的容器。Copilot 还会为您的 MongoDB 连接字符串的值创建并跟踪一个 AWS Systems Manager 秘密参数。您将此值存储为秘密，因为它包含您的数据库的用户名和密码。您绝不希望将其存储在源代码中。最后，Copilot 会创建一个 API Gateway，公开您的 API 的公共端点。
 
-Initialize a new Copilot application.
+初始化一个新的 Copilot 应用程序。
 
 ```bash
 copilot app init todo
 ```
 
-Add a new Copilot *Backend Service*. The service refers to the Dockerfile of your Vapor project for instructions on how to build the container.
+添加一个新的 Copilot *后台服务*。该服务引用您 Vapor 项目的 Dockerfile，以获取如何构建容器的指令。
 
 ```bash
 copilot svc init --name api --svc-type "Backend Service" --dockerfile ./api/Dockerfile
 ```
 
-Create a Copilot environment for your application. An environment typically aligns to a phase, such as dev, test, or prod. When prompted, select the AWS credentials profile you configured with the AWS CLI.
+为您的应用程序创建一个 Copilot 环境。一个环境通常与一个阶段对应，例如开发（dev）、测试（test）或生产（prod）。当提示时，选择您通过 AWS CLI 配置的 AWS 凭证配置文件。
 
 ```bash
 copilot env init --name dev --app todo --default-config
@@ -317,40 +317,40 @@ Deploy the *dev* environment:
 copilot env deploy --name dev
 ```
 
-## Step 7: Create a Copilot Secret for Database Credentials
+## 步骤 7：为数据库凭证创建一个 Copilot 秘密参数
 
-Your application requires credentials to authenticate to your MongoDB Atlas database. You should never store this sensitive information in your source code. Create a Copilot *secret* to store the credentials. This stores the connection string to your MongoDB cluster in an AWS Systems Manager Secret Parameter.
+您的应用程序需要凭证来验证 MongoDB Atlas 数据库的身份。您绝不应将这些敏感信息存储在源代码中。创建一个 Copilot *secret* 来存储这些凭证。这会将您的 MongoDB 集群的连接字符串存储在 AWS Systems Manager 秘密参数中。
 
-Determine the connection string from the MongoDB Atlas website. Select the *Connect* button on your cluster page and the *Connect your application*.
+从 MongoDB Atlas 网站获取连接字符串。在集群页面上选择 Connect 按钮，然后选择 *Connect your application*.
 
 ![Architecture](/assets/images/server-guides/aws/aws-fargate-vapor-mongo-atlas-connection.png)
 
-Select *Swift version 1.2.0* as the Driver and copy the displayed connection string. It looks something like this:
+选择 *Swift version 1.2.0* 作为驱动程序，并复制显示的连接字符串。它看起来像这样：
 
 ```bash
 mongodb+srv://username:<password>@mycluster.mongodb.net/?retryWrites=true&w=majority
 ```
 
-The connection string contains your database username and a placeholder for the password. Replace the **\<password\>** section with your database password. Then create a new Copilot secret named MONGODB_URI and save your connection string when prompted for the value.
+连接字符串包含您的数据库用户名和密码的占位符。将 *\<password\>**  部分替换为您的数据库密码。然后，创建一个新的 Copilot 秘密参数，命名为 MONGODB_URI，并在提示输入值时保存您的连接字符串。
 
 ```bash
 copilot secret init --app todo --name MONGODB_URI
 ```
 
-Fargate injects the secret value as an environment variable into your container at runtime. In Step 5 above, you extracted this value in your *api/Sources/App/configure.swift* file and used it to configure your MongoDB connection.
+Fargate 会在运行时将秘密值作为环境变量注入到您的容器中。在上面的步骤 5 中，您在*api/Sources/App/configure.swift* 文件中提取了该值，并用它来配置您的 MongoDB 连接。
 
-## Step 8: Configure the Backend Service
+## 步骤 8：配置后台服务
 
-Copilot generates a *manifest.yml* file for your application that defines the attributes of your service, such as the Docker image, network, secrets, and environment variables. Change the manifest file generated by Copilot to add the following properties:
+Copilot 为您的应用程序生成了一个 *manifest.yml* 文件，该文件定义了服务的属性，例如 Docker 镜像、网络、秘密参数和环境变量。修改 Copilot 生成的清单文件以添加以下属性：
 
-- configure a health check for the container image
-- add a reference to the MONGODB_URI secret
-- configure the service network as *private*
-- add environment variables for the MONGODB_DATABASE and MONGODB_COLLECTION
+- 配置容器镜像的健康检查
+- 添加对 MONGODB_URI 秘密参数的引用
+- 将服务网络配置为 private（私有）
+- 添加用于 MONGODB_DATABASE 和 MONGODB_COLLECTION 的环境变量
 
-To implement these changes, replace the contents of the *manifest.yml* file with the following code. Update the values of MONGODB_DATABASE and MONGODB_COLLECTION to reflect the names of the database and cluster you created in MongoDB Atlas for this application.
+要实现这些更改，请将 *manifest.yml* 文件的内容替换为以下代码。根据您在 MongoDB Atlas 中为此应用程序创建的数据库和集合的名称，更新 MONGODB_DATABASE 和 MONGODB_COLLECTION 的值。
 
-If you are building this solution on a **Mac M1/M2** machine, uncomment the **platform** property in the manifest.yml file to specify an ARM build. The default value is *linux/x86_64*.
+如果您在 **Mac M1/M2** 机器上构建此解决方案，请取消注释 *manifest.yml* 文件中的 **platform** 属性，以指定 ARM 构建。默认值为 *linux/x86_64*。
 
 **copilot/api/manifest.yml**
 ```yaml
@@ -411,31 +411,31 @@ secrets:
 #       rolling: 'recreate' # Stops existing tasks before new ones are started for faster deployments.
 ```
 
-## Step 9: Create a Copilot Addon Service for your API Gateway
+## 步骤 9：为您的 API Gateway 创建一个 Copilot 附加服务
 
-Copilot does not have the capability to add an API Gateway to your application. You can, however, add additional AWS resources to your application using [Copilot "Addons"](https://aws.github.io/copilot-cli/docs/developing/additional-aws-resources/#how-to-do-i-add-other-resources).
+Copilot 无法直接为您的应用程序添加 API Gateway。然而，您可以使用 addons 功能为应用程序添加其他 AWS 资源。 [Copilot "Addons"](https://aws.github.io/copilot-cli/docs/developing/additional-aws-resources/#how-to-do-i-add-other-resources).
 
-Define an addon by creating an *addons* folder under your Copilot service folder and creating a CloudFormation yaml template to define the services you wish to create.
+通过在您的 Copilot 服务文件夹下创建一个 *addons* 文件夹，并编写一个 CloudFormation YAML 模板来定义您希望创建的服务，从而定义一个附加组件。
 
-Create a folder for the addon:
+为附加组件创建文件夹：
 
 ```bash
 mkdir -p copilot/api/addons
 ```
 
-Create a file to define the API Gateway:
+创建一个文件来定义 API Gateway：
 
 ```bash
 touch copilot/api/addons/apigateway.yml
 ```
 
-Create a file to pass parameters from the main service into the addon service:
+创建一个文件，将参数从主服务传递到附加服务：
 
 ```bash
 touch copilot/api/addons/addons.parameters.yml
 ```
 
-Copy the following code into the *addons.parameters.yml* file. It passes the ID of the Cloud Map service into the addon stack.
+将以下代码复制到 *addons.parameters.yml* 文件中。它将 Cloud Map 服务的 ID 传递到附加堆栈中：
 
 **copilot/api/addons/addons.parameters.yml**
 ```yaml
@@ -443,7 +443,7 @@ Parameters:
    DiscoveryServiceARN:  !GetAtt DiscoveryService.Arn
 ```
 
-Copy the following code into the *addons/apigateway.yml* file. It creates an API Gateway using the DiscoveryServiceARN to integrate with the Cloud Map service Copilot created for your Fargate containers.
+将以下代码复制到 *addons/apigateway.yml* 文件中。它使用 DiscoveryServiceARN 创建一个 API Gateway，并与 Copilot 为您的 Fargate 容器创建的 Cloud Map 服务集成：
 
 **copilot/api/addons/apigateway.yml**
 ```yaml
@@ -511,23 +511,23 @@ Resources:
       Target: !Sub "integrations/${ApiGatewayV2Integration}"
 ```
 
-## Step 10: Deploy the Copilot Service
+## 步骤 10：部署 Copilot 服务
 
-When deploying your service, Copilot executes the following actions:
+在部署您的服务时，Copilot 执行以下操作：
 
-- builds your Vapor Docker image
-- deploys the image to the Amazon Elastic Container Registry (ECR) in your AWS account
-- creates and deploys an AWS CloudFormation template into your AWS account. CloudFormation creates all the services defined in your application.
+- 构建您的 Vapor Docker 镜像
+- 将该镜像部署到您 AWS 账户中的 Amazon Elastic Container Registry (ECR)
+- 创建并部署一个 AWS CloudFormation 模板到您的 AWS 账户中。CloudFormation 会创建应用程序中定义的所有服务。
 
 ```bash
 copilot svc deploy --name api --app todo --env dev
 ```
 
-## Step 11: Configure MongoDB Atlas Network Access
+## 步骤 11：配置 MongoDB Atlas 网络访问
 
-MongoDB Atlas uses an IP Access List to restrict access to your database to a specific list of source IP addresses. In your application, traffic from your containers originates from the public IP addresses of the NAT Gateways in your application's network. You must configure MongoDB Atlas to allow traffic from these IP addresses.
+MongoDB Atlas 使用 IP 访问列表来限制访问数据库的源 IP 地址。在您的应用程序中，来自容器的流量来源于应用程序网络中 NAT 网关的公共 IP 地址。您必须配置 MongoDB Atlas 以允许来自这些 IP 地址的流量。
 
-To get the IP address of the NAT Gateways, run the following AWS CLI command:
+要获取 NAT 网关的 IP 地址，请运行以下 AWS CLI 命令：
 
 ```bash
 aws ec2 describe-nat-gateways --filter "Name=tag-key, Values=copilot-application" --query 'NatGateways[?State == `available`].NatGatewayAddresses[].PublicIp' --output table
@@ -544,13 +544,13 @@ Output:
 +-------------------+
 ```
 
-Use the IP addresses to create a Network Access rule in your MongoDB Atlas account for each address.
+使用这些 IP 地址在您的 MongoDB Atlas 账户中为每个地址创建一个网络访问规则。
 
 ![Architecture](/assets/images/server-guides/aws/aws-fargate-vapor-mongo-atlas-network-address.png)
 
-## Step 12: Use your API
+## 步骤 12：使用您的 API
 
-To get the endpoint for your API, use the following AWS CLI command:
+要获取您的 API 的端点，请使用以下 AWS CLI 命令：
 
 ```bash
 aws apigatewayv2 get-apis --query 'Items[?Name==`api.dev.todo.api`].ApiEndpoint' --output table
@@ -566,23 +566,23 @@ Output:
 +----------------------------------------------------------+
 ```
 
-Use cURL or a tool such as [Postman](https://www.postman.com/) to interact with your API:
+使用 cURL 或类似的工具，如 [Postman](https://www.postman.com/) 与您的 API 交互：
 
-Add a To Do List item
+添加一个待办事项列表项
 
 ```bash
 curl --request POST 'https://[your-api-endpoint]/item' --header 'Content-Type: application/json' --data-raw '{"name": "my todo item"}'
 ```
 
-Retrieve To Do List items
+检索待办事项列表项
 
 ```bash
 curl https://[your-api-endpoint]/items
 ```
 
-## Cleanup
+## 清理
 
-When finished with your application, use Copilot to delete it. This deletes all the services created in your AWS account.
+完成应用程序后，使用 Copilot 删除它。这将删除您 AWS 账户中创建的所有服务。
 
 ```bash
 copilot app delete --name todo
