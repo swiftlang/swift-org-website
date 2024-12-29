@@ -1,7 +1,7 @@
 ---
 redirect_from: "server/guides/deploying/aws-sam-lambda"
 layout: page
-title: 使用 Serverless 应用程序模型（SAM）部署到 AWS Lambda
+title: 使用 Serverles 应用程序模型（SAM）部署到 AWS Lambda
 ---
 
 本指南说明了如何使用 Serverless 应用程序模型（SAM） 在 AWS 上部署一个服务器端 Swift 工作负载。 [AWS Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/) 工具包。该工作负载是一个用于跟踪待办事项列表的 REST API。它使用 AWS Lambda 部署该 API，并通过 Amazon API Gateway 提供访问。 [Amazon API Gateway](https://aws.amazon.com/api-gateway/)。API 方法通过使用 AWS SDK for Swift 将数据存储和检索到[Amazon DynamoDB](https://aws.amazon.com/dynamodb) 数据库中。 [AWS Lambda](https://aws.amazon.com/lambda/) 函数。

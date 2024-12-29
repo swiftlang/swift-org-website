@@ -1,7 +1,7 @@
 ---
 redirect_from: "server/guides/deploying/aws-copilot-fargate-vapor-mongo"
 layout: page
-title: 使用 Fargate、Vapor 和 MongoDB Atlas 部署到 AWS
+title: 使用 Fargate Vapor 和 MongoDB Atlas 部署到 AWS
 ---
 
 本指南说明了如何在 AWS 上部署 Server-Side Swift 工作负载。该工作负载是一个用于管理待办事项列表的 REST API。它使用 [Vapor](https://vapor.codes/) 框架来编写 API 方法，这些方法将数据存储到 [MongoDB Atlas](https://www.mongodb.com/atlas/database) 云数据库中，并支持数据的检索。 Vapor 应用被容器化并通过 [AWS Copilot](https://aws.github.io/copilot-cli/) 工具部署到 AWS 的 AWS Fargate 服务上。
