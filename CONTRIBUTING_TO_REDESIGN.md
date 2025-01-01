@@ -10,6 +10,7 @@ To apply a new layout to a page, change the front-matter `layout` variable (e.g.
 The folder `_includes/new-includes/`, for the new theme, contains:
 * In the root, the sections of the template.
 * In `/components`, the components of the template.
+    * Components must be added to the `stories/` folder.
 
 The folder `_data/new-data/`, is where additional data is stored.
 

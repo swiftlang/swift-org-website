@@ -3,6 +3,9 @@
 
 <h1>Swift.org Storybook</h1>
 
+<button class="storybook-source-html">source HTML</button>
+<button class="storybook-source-css">source CSS</button>
+
 <input type="search" placeholder="Filter Elements" oninput="filterComponents(event)">
 
 {% assign folders = "stories/classes,stories/components" | split: "," %}
@@ -32,4 +35,16 @@
             }
         })
     }
+
+    const sourceHtmlButton = document.querySelector('.storybook-source-html');
+
+    sourceHtmlButton.addEventListener('click', () => {
+        window.open('https://github.com/swiftlang/swift-org-website/blob/new-layout/_layouts/new-layouts/storybook.html', '_blank');
+    });
+
+    const sourceCssButton = document.querySelector('.storybook-source-css');
+
+    sourceCssButton.addEventListener('click', () => {
+        window.open('https://github.com/swiftlang/swift-org-website/blob/new-layout/assets/stylesheets/new-stylesheets/pages/_storybook.scss', '_blank');
+    });
 </script>
