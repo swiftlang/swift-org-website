@@ -16,9 +16,9 @@ title: Install Swift
   <p>To install swiftly, run the following command in your terminal.</p>
   <pre><code>
   SWIFTLY_FILENAME=swiftly-0.4.0-dev.pkg
-  curl -O -s "https://download.swift.org/macos/$SWIFTLY_FILENAME" && installer -pkg "$SWIFTLY_FILENAME" -target CurrentUserHomeDirectory && ~/usr/local/bin/swiftly init
+  curl -O -s "https://download.swift.org/swiftly/darwin/$SWIFTLY_FILENAME" && installer -pkg "$SWIFTLY_FILENAME" -target CurrentUserHomeDirectory && ~/usr/local/bin/swiftly init
   </code></pre> -->
-  <a href="https://download.swift.org/macos/swiftly-0.4.0-dev.pkg" class="cta-secondary">Download</a>
+  <a href="https://download.swift.org/swiftly/darwin/swiftly-0.4.0-dev.pkg" class="cta-secondary">Download</a>
   <a href="/install/macos/swiftly" class="cta-secondary">Instructions</a>
 </li>
 </ul>
