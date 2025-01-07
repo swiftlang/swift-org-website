@@ -67,7 +67,7 @@ While running the website in localhost, you can visit [the page /storybook](127.
 
 Each "component" or style "class" must be added to the `stories/` folder.
 
-The storybook is only available in development.
+The storybook is only [available in development](https://github.com/swiftlang/swift-org-website/blob/new-layout/README.md#running-locally).
 
 ## Roadmap / Issues Tracking
 
