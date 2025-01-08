@@ -93,14 +93,14 @@ article pre {
 
       注意:在像 `popFirst` 这样的罕见情况下，摘要由多个用分号分隔的句子片段组成。
 
-    * **描述下标*访问*什么**:
+    * **描述下标*访问*什么**：
 
       ~~~ swift
       /// **访问**第 `index` 个元素。
       subscript(index: Int) -> Element { get set }
       ~~~
 
-    * **描述初始化器*创建*什么**:
+    * **描述初始化器*创建*什么**：
 
       ~~~ swift
       /// **创建**一个包含 `n` 个重复 `x` 的实例。
@@ -146,7 +146,7 @@ article pre {
 
     * **使用公认的[符号文档标记]({{SymbolDoc}}SW1)元素**在适当时添加摘要之外的信息。
 
-    * **了解并使用带有[符号命令语法]({{SymbolDoc}}SW13)的公认项目符号**。像 Xcode 这样的流行开发工具对以下关键字开头的项目符号给予特殊处理:
+    * **了解并使用带有[符号命令语法]({{SymbolDoc}}SW13)的公认项目符号**。像 Xcode 这样的流行开发工具对以下关键字开头的项目符号给予特殊处理：
 
       | [Attention]({{ref}}Attention.html) | [Author]({{ref}}Author.html) | [Authors]({{ref}}Authors.html) | [Bug]({{ref}}Bug.html) |
       | [Complexity]({{ref}}Complexity.html) | [Copyright]({{ref}}Copyright.html) | [Date]({{ref}}Date.html) | [Experiment]({{ref}}Experiment.html) |
@@ -181,7 +181,7 @@ article pre {
   如果我们从方法签名中省略 `at` 这个词，可能会让读者误以为该方法是搜索并移除一个等于 `x` 的元素，而不是使用 `x` 来指示要移除的元素的位置。
 
   ~~~ swift
-  employees.remove(x) // 不清楚:我们是在移除 x 吗?
+  employees.remove(x) // 不清楚：我们是在移除 x 吗?
   ~~~
   {:.bad}
 
@@ -201,7 +201,7 @@ article pre {
   ~~~
   {:.bad}
 
-  在这种情况下，`Element` 这个词在调用点没有添加任何重要信息。这个 API 可以改进为:
+  在这种情况下，`Element` 这个词在调用点没有添加任何重要信息。这个 API 可以改进为：
 
   ~~~ swift
   public mutating func remove(_ member: Element) -> Element?
@@ -242,7 +242,7 @@ article pre {
   ~~~
   {:.good}
 
-  如果关联类型与其协议约束的关系如此紧密以至于协议名称*就是*其角色，可以通过在协议名称后附加 `Protocol` 来避免冲突:
+  如果关联类型与其协议约束的关系如此紧密以至于协议名称*就是*其角色，可以通过在协议名称后附加 `Protocol` 来避免冲突：
 
   ~~~ swift
   protocol Sequence {
@@ -266,7 +266,7 @@ article pre {
   ~~~
   {:.bad}
 
-  为了恢复清晰度，**在每个弱类型参数前加上描述其角色的名词**:
+  为了恢复清晰度，**在每个弱类型参数前加上描述其角色的名词**：
 
   ~~~ swift
   func add**Observer**(_ observer: NSObject, for**KeyPath** path: String)
@@ -296,7 +296,7 @@ article pre {
   ~~~
   {:.bad}
 
-  当这些参数不是调用含义的核心时，在第一个或第二个参数之后，流畅性可以适当降低:
+  当这些参数不是调用含义的核心时，在第一个或第二个参数之后，流畅性可以适当降低：
 
   ~~~swift
   AudioUnit.instantiate(
@@ -315,7 +315,7 @@ article pre {
 
   {{expand}}
   {{detail}}
-  例如，这些调用的第一个参数不应该作为基本名称短语的一部分:
+  例如，这些调用的第一个参数不应该作为基本名称短语的一部分：
 
   ~~~swift
   let foreground = **Color**(red: 32, green: 64, blue: 128)
@@ -362,7 +362,7 @@ article pre {
       {{expand}}
       {{detail}}
 
-      * 优先使用动词的过去[分词](https://en.wikipedia.org/wiki/Participle)（通常添加"ed"）来命名不可变变体:
+      * 优先使用动词的过去[分词](https://en.wikipedia.org/wiki/Participle)（通常添加"ed"）来命名不可变变体：
 
         ~~~ swift
         /// 原地反转 `self`。
@@ -444,7 +444,7 @@ article pre {
   {{detail}}
   将连续数据结构命名为 `Array` 比使用简化的术语如 `List` 要好，即使初学者可能更容易理解 `List` 的含义。数组在现代计算中是基础的，所以每个程序员都知道——或者很快就会学到——什么是数组。使用大多数程序员熟悉的术语，他们的网络搜索和提问就会得到回报。
 
-  在特定的编程*领域*中，比如数学，广泛使用的先例术语如 `sin(x)` 比解释性短语如 `verticalPositionOnUnitCircleAtOriginOfEndOfRadiusWithAngle(x)` 更可取。注意在这种情况下，先例优先于避免缩写的指导原则:虽然完整的词是 `sine`，但 “sin(*x*)” 在程序员中已使用了几十年，在数学家中已使用了几个世纪。
+  在特定的编程*领域*中，比如数学，广泛使用的先例术语如 `sin(x)` 比解释性短语如 `verticalPositionOnUnitCircleAtOriginOfEndOfRadiusWithAngle(x)` 更可取。注意在这种情况下，先例优先于避免缩写的指导原则：虽然完整的词是 `sine`，但 “sin(*x*)” 在程序员中已使用了几十年，在数学家中已使用了几个世纪。
   {{enddetail}}
 
 ## 约定
@@ -454,25 +454,25 @@ article pre {
 * **给任何非 O(1) 的计算属性的复杂度写文档注释**。人们经常假设属性访问不涉及重要的计算，因为他们以存储属性为心智模型。当这个假设可能被违反时，一定要提醒他们。
   {:#document-computed-property-complexity}
 
-* **优先使用方法和属性而不是自由函数**。自由函数仅在特殊情况下使用:
+* **优先使用方法和属性而不是自由函数**。自由函数仅在特殊情况下使用：
   {:#prefer-method-and-properties-to-functions}
 
   {{expand}}
   {{detail}}
 
-  1. 当没有明显的 `self` 时:
+  1. 当没有明显的 `self` 时：
 
      ~~~
      min(x, y, z)
      ~~~
 
-  2. 当函数是不受约束的泛型时:
+  2. 当函数是不受约束的泛型时：
 
      ~~~
      print(x)
      ~~~
 
-  3. 当函数语法是既定领域表示法的一部分时:
+  3. 当函数语法是既定领域表示法的一部分时：
 
      ~~~
      sin(x)
@@ -486,7 +486,7 @@ article pre {
   {{expand}}
   {{detail}}
 
-  在美式英语中通常全部大写出现的[首字母缩写词和缩略语](https://en.wikipedia.org/wiki/Acronym)应该根据大小写约定统一使用大写或小写:
+  在美式英语中通常全部大写出现的[首字母缩写词和缩略语](https://en.wikipedia.org/wiki/Acronym)应该根据大小写约定统一使用大写或小写：
 
   ~~~swift
   var **utf8**Bytes: [**UTF8**.CodeUnit]
@@ -507,7 +507,7 @@ article pre {
 
   {{expand}}
   {{detail}}
-  例如，以下做法是被鼓励的，因为这些方法本质上做相同的事情:
+  例如，以下做法是被鼓励的，因为这些方法本质上做相同的事情：
 
   ~~~ swift
   extension Shape {
@@ -526,7 +526,7 @@ article pre {
   ~~~
   {:.good}
 
-  而且由于几何类型和集合是不同的领域，在同一个程序中这样做也是可以的:
+  而且由于几何类型和集合是不同的领域，在同一个程序中这样做也是可以的：
 
   ~~~ swift
   extension Collection where Element : Equatable {
@@ -537,7 +537,7 @@ article pre {
   ~~~
   {:.good}
 
-  然而，这些 `index` 方法有不同的语义，应该被命名为不同的名称:
+  然而，这些 `index` 方法有不同的语义，应该被命名为不同的名称：
 
   ~~~ swift
   extension Database {
@@ -579,7 +579,7 @@ func move(from **start**: Point, to **end**: Point)
 
   {{expand}}
   {{detail}}
-  选择这些名称使文档易于阅读。例如，这些名称使文档读起来很自然:
+  选择这些名称使文档易于阅读。例如，这些名称使文档读起来很自然：
 
   ~~~swift
   /// 返回一个包含 `self` 中满足 `**predicate**` 条件的元素的 `Array`。
@@ -590,7 +590,7 @@ func move(from **start**: Point, to **end**: Point)
   ~~~
   {:.good}
 
-  而这些则使文档读起来很尴尬且不符合语法:
+  而这些则使文档读起来很尴尬且不符合语法：
 
   ~~~swift
   /// 返回包含 `self` 中满足 `**includedInResult**` 的元素的 `Array`。
@@ -608,7 +608,7 @@ func move(from **start**: Point, to **end**: Point)
 
   {{expand}}
   {{detail}}
-  默认参数通过隐藏不相关的信息来提高可读性。例如:
+  默认参数通过隐藏不相关的信息来提高可读性。例如：
 
   ~~~ swift
   let order = lastName.compare(
@@ -616,7 +616,7 @@ func move(from **start**: Point, to **end**: Point)
   ~~~
   {:.bad}
 
-  可以变得更简单:
+  可以变得更简单：
 
   ~~~ swift
   let order = lastName.**compare(royalFamilyName)**
@@ -636,7 +636,7 @@ func move(from **start**: Point, to **end**: Point)
   ~~~
   {:.good}
 
-  上面的方法可能不简单，但比下面的方式要简单得多:
+  上面的方法可能不简单，但比下面的方式要简单得多：
 
   ~~~ swift
   extension String {
@@ -799,7 +799,7 @@ x.move(**from:** x, **to:** y)
 
   {{expand}}
   {{detail}}
-  例如，考虑这个重载集:
+  例如，考虑这个重载集：
 
   ~~~ swift
   struct Array<Element> {
