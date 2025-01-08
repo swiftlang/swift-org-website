@@ -15,7 +15,7 @@ SwiftGG 翻译工作组是一个致力于为大中华地区用户提供优质 Sw
 当前的翻译工作组成员包括：
 
 * [金琛然(SamYin Kim)](https://github.com/chenranj)（翻译组负责人）
-* [韩勇成(Lex)](https://github.com/llllllex)
+* [韩勇成(Lex)](https://github.com/llllllex)（内容组负责人）
 * [崔元亮](https://github.com/moxcoot)
 * [安东尼(JackW)](https://github.com/king-open)
 * [潘子健(ChrisPan)](https://github.com/szupzj18)
@@ -32,7 +32,7 @@ SwiftGG 翻译工作组是一个致力于为大中华地区用户提供优质 Sw
 
 我们对以下SwiftGG核心工作组成员的服务表示感谢：
 
-* [张思琦](https://github.com/SwiftSIQI)（SwiftGG 负责人）
+* [张思琦](https://github.com/SwiftSIQI)（SwiftGG 总负责人）
 * [御姐](https://github.com/OneeMe)
 * [Kiwi Guo](https://github.com/loshoc)（SwiftGG 设计负责人）
 
@@ -68,6 +68,6 @@ SwiftGG 翻译工作组是一个致力于为大中华地区用户提供优质 Sw
 
 欢迎每个人参与贡献 Swift 的文档翻译和翻译工作组的倡议。如果您想贡献，可以考虑：
 
-* 参加翻译工作组在 WebEx 上的公开会议（请联系 heelo@swiftgg.team 获取详细信息）。
+* 参加翻译工作组在 WebEx 上的公开会议（请联系 hello@swiftgg.team 获取详细信息）。
 * 在 Swift 论坛中讨论翻译想法，例如在 [Swift-DocC 论坛](https://forums.swift.org/c/development/swift-docc) 中讨论与 Swift-DocC 相关的翻译想法。
 * 官方 Swift 工作可参与 [Swift 导师计划](/mentorship)。
