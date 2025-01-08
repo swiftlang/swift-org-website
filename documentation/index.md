@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Documentation
+title: 文档
 ---
 
-If you are new to Swift, you may want to check out these additional resources.
+如果您是 Swift 新手，可以查看以下额外资源。
 
 <div class="links links-list-nostyle" markdown="1">
-- [Getting started guide](/getting-started/)
-- [Swift resources on developer.apple.com](https://developer.apple.com/swift/resources/){:target="_blank" class="link-external"}
+- [入门指南](/getting-started/)
+- [Apple 开发者网站上的 Swift 资源](https://developer.apple.com/swift/resources/){:target="_blank" class="link-external"}
 </div>
 
 {%- for category in site.data.documentation %}

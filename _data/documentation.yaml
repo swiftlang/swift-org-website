@@ -1,95 +1,95 @@
-- header: Overview
+- header: 概述
   pages:
-  - title: Language Reference
+  - title: 语言参考
     url: /documentation/tspl/
     description: |
-      The Swift Programming Language (TSPL) book is the authoritative reference for Swift,
-      offering a guided tour, a comprehensive guide, and a formal reference of the language.
-  - title: API Design Guidelines
+      Swift编程语言(TSPL)是Swift的权威参考书籍，
+      提供了语言的导览、综合指南和正式参考。
+  - title: API设计指南
     url: /documentation/api-design-guidelines/
     description: |
-      Delivering a clear, consistent developer experience when writing Swift code is largely defined by the names and idioms that appear in APIs.
-      These design guidelines explain how to make sure that your code feels like a part of the larger Swift ecosystem.
-  - title: Standard Library
+      编写Swift代码时提供清晰一致的开发者体验很大程度上取决于API中使用的命名和用法。
+      这些设计指南说明了如何确保你的代码能够融入更大的Swift生态系统。
+  - title: 标准库
     url: /documentation/standard-library/
     description: |
-      The Swift standard library defines a base layer of functionality for writing Swift programs.
-  - title: Core Libraries
+      Swift标准库为编写Swift程序定义了基础功能层。
+  - title: 核心库
     url: /documentation/core-libraries/
     description: |
-      The Swift Core Libraries project provides higher-level functionality than the Swift standard library.
-      These libraries provide powerful tools that developers can depend upon across all the platforms Swift supports.
-  - title: Package Manager
+      Swift核心库项目提供了比Swift标准库更高层次的功能。
+      这些库为开发者提供了可以在Swift支持的所有平台上使用的强大工具。
+  - title: 包管理器
     url: /documentation/package-manager/
     description: |
-      The Swift Package Manager is a tool for managing the distribution and use of "packages" of Swift code.
-      It's integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies into target products.
-  - title: REPL &  Debugger
+      Swift包管理器是一个用于管理Swift代码"包"的分发和使用的工具。
+      它与Swift构建系统集成，可以自动完成下载、编译和链接依赖项到目标产品的过程。
+  - title: REPL和调试器
     url: /documentation/lldb/
     description: |
-      The LLDB debugger provides a rich REPL as well as the debugging environment for the Swift Language.
-  - title: About Swift
+      LLDB调试器为Swift语言提供了强大的REPL以及调试环境。
+  - title: 关于Swift
     url: /about/
     description: |
-      A summary of the core features of Swift, supported platforms, and open source projects.
-#----------------------------------------------------
-- header: Articles
+      Swift核心特性、支持平台和开源项目的总结。
+
+- header: 文章
   pages:
-  - title: Swift on Server
+  - title: 服务器端Swift
     url: /documentation/server/
     description: |
-      Swift is a general-purpose programming language with unique characteristics that make it specifically suitable for Server applications.
-  - title: Embedded development
+      Swift是一种通用编程语言，具有独特的特性，使其特别适合服务器应用程序开发。
+  - title: 嵌入式开发
     url: /getting-started/embedded-swift/
     description: |
-      Introduction to embedded development using Swift. Learn how to get started.
-  - title: Mixing Swift and C++
+      Swift嵌入式开发介绍。了解如何开始。
+  - title: Swift和C++混合编程
     url: /documentation/cxx-interop/
     description: |
-      Swift has support for bidirectional interoperability with C++.
-      A great variety of C++ APIs can be called directly from Swift, and select Swift APIs can be used from C++.
-  - title: Value and Reference types
+      Swift支持与C++的双向互操作性。
+      大量C++ API可以直接从Swift调用，部分Swift API也可以从C++使用。
+  - title: 值类型和引用类型
     url: /documentation/articles/value-and-reference-types.html
     description: |
-      Types in Swift are grouped in two categories: value types and reference types.
-      Each behave differently and understanding the difference is an important part of understanding Swift.
+      Swift中的类型分为两类：值类型和引用类型。
+      它们的行为方式不同，理解它们之间的差异是理解Swift的重要组成部分。
   - title: DocC
     url: https://www.swift.org/documentation/docc/
     description: |
-      DocC is a documentation compiler that makes it easy for you to produce documentation for your Swift frameworks and packages.
-      The compiler builds your documentation by combining the comments you write in source with extension files, articles, and tutorials that live alongside your package's source code.
-  - title: Enabling Complete Concurrency Checking
+      DocC是一个文档编译器，可以让你轻松为Swift框架和包生成文档。
+      编译器通过将源代码中的注释与扩展文件、文章和教程结合在一起来构建文档。
+  - title: 启用完整并发检查
     url: /documentation/concurrency/
     description: |
-        Prepare for Swift 6 by enabling complete concurrency checking in your SwiftPM packages, Xcode projects, and CI scripts.
-  - title: Getting Started with the Static Linux SDK
+      通过在SwiftPM包、Xcode项目和CI脚本中启用完整并发检查为Swift 6做准备。
+  - title: 静态Linux SDK入门
     url: /documentation/articles/static-linux-getting-started.html
     description: |
-      Learn how to get started building binaries for Linux with no system dependencies (not even the Swift runtime or C library).
-      Even better, you can do this from any system with a Swift toolchain, allowing you to develop on macOS or Windows and easily deploy to Linux when you go to production.
-#----------------------------------------------------
-- header: Contributing
+      了解如何开始构建无系统依赖的Linux二进制文件（甚至不需要Swift运行时或C库）。
+      更好的是，你可以在任何安装了Swift工具链的系统上进行开发，允许你在macOS或Windows上开发，并在生产环境中轻松部署到Linux。
+
+- header: 贡献
   pages:
-  - title: Swift Evolution
+  - title: Swift演进
     url: /swift-evolution/
     description: |
-      Swift evolution governs how changes are introduced to the Swift language.
-      The process details how ideas are proposed, discussed, reviewed, and eventually accepted into upcoming releases.
-  - title: Source Code
+      Swift演进管理着如何向Swift语言引入变更。
+      该过程详细说明了想法如何被提出、讨论、审查并最终被纳入即将发布的版本。
+  - title: 源代码
     url: /documentation/source-code/
     description: |
-      The code for the Swift project is divided into several open-source repositories, all hosted on GitHub.com.
-  - title: Continuous Integration
+      Swift项目的代码分为几个开源仓库，全部托管在GitHub.com上。
+  - title: 持续集成
     url: /documentation/continuous-integration/
     description: |
-      Swift.org CI system produces the snapshot builds posted on swift.org, and runs tests against active branches.
-      It is also used as part of the review process to run tests against pull requests before committing them.
-  - title: Source Compatibility
+      Swift.org CI系统生成发布在swift.org上的快照构建，并对活跃分支运行测试。
+      它也用于审查过程中，在提交拉取请求之前运行测试。
+  - title: 源代码兼容性
     url: /documentation/source-compatibility/
     description: |
-      Source compatibility test suite is a community owned resource designed to test for regressions
-      in the compiler by building against a corpus of Swift source code.
-  - title: Compiler Architecture
+      源代码兼容性测试套件是一个社区拥有的资源，
+      旨在通过对Swift源代码集进行构建来测试编译器的回归问题。
+  - title: 编译器架构
     url: /documentation/swift-compiler/
     description: |
-      Overview of the Swift compiler architecture.
+      Swift编译器架构概述。
