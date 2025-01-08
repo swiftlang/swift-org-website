@@ -21,6 +21,7 @@ These are the platforms one can use for Swift's development tools. This table sh
 | **Amazon Linux**                       |  Amazon Linux                 |
 | **Red Hat Universal Base Image**       |  Red Hat Universal Base Image |
 | **Windows**                            |  Windows                      |
+| **Android**                            |  Android                      |
 
 #### Minimum deployment version
 
@@ -37,6 +38,7 @@ This table shows the minimum OS version for which a Swift application can be dep
 | **Amazon Linux**                   |2                           |
 | **Red Hat Universal Base Image**   |9                           |
 | **Windows**                        |10.0                        |
+| **Android**                        |5.0 (API 21)                |
 
 #### Development Tools
 
@@ -50,6 +52,7 @@ The Swift compiler and debugger run on platforms supporting development.  Suppor
 | **Amazon Linux**                   | ✓                      | ✓              |
 | **Red Hat Universal Base Image**   | ✓                      | ✓              |
 | **Windows**                        | ✓                      | ✓              |
+| **Android**                        | ✓                      | ✓              |
 
 ### Deployment-only
 
@@ -68,6 +71,7 @@ The table below list the available capabilities on each platform for running Swi
 | **Amazon Linux**                  | ✓       | ✓   |
 | **Red Hat Universal Base Image**  | ✓       | ✓   |
 | **Windows**                       | ✓       |     |
+| **Android**                       |         |     |
 
 ## Platform Owners
 
@@ -82,6 +86,7 @@ Platform owners help facilitate contributors to the Swift project to collaborate
 | **Apple platforms**  | [Docs](/getting-started/#on-macos)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
 | **Linux**            | [Docs](/getting-started/#on-linux)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
 | **Windows**          | [Docs](/getting-started/#on-windows)| [Apple Inc.](https://www.apple.com)               | ✓                            |
+| **Android**          | [Docs](https://github.com/finagolfin/swift-android-sdk/blob/main/README.md)| [Finagolfin](https://github.com/finagolfin) |                              |
 
 * Apple platforms includes macOS, iOS, tvOS, and watchOS.
 * Linux includes Ubuntu, CentOS, Amazon Linux and Red Hat Universal Base Image platforms.
