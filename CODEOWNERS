@@ -27,9 +27,19 @@
 ###
 
 # The following lines are used by GitHub to automatically recommend reviewers.
+#
+# Lines starting with '#' are comments.
+# Each line is a case-sensitive file pattern followed by one or more owners.
+# Order is important — the last matching pattern has the most precedence.
+# More information: https://docs.github.com/en/articles/about-code-owners
+#
+# Please mirror the repository's file hierarchy in case-sensitive lexicographic
+# order.
 
 * @0xTim @alexandersandberg @daveverwer @dempseyatgithub @parispittman @kaishin @shahmishal @timsneath @federicobucchi
 
 /_posts/* @timsneath @tkremenek @shahmishal
+
+/contributor-experience-workgroup/ @swiftlang/contributor-experience
 
 /gsoc*/ @ktoso
