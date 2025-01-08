@@ -5,13 +5,6 @@ hideTitle: true
 atom: true
 ---
 
-<div class="banner primary">
-  <p>🧨🧨🧨</p>
-  <p>辞旧岁，赴明媚</p>
-  <p>但求平安，一切顺遂</p>
-  <p>2025 新年快乐</p>
-</div><br/>
-
 <div class="callout" markdown="1">
 <h1 class="preamble">Swift 是一款<strong>通用</strong>编程语言。<br/>新手<strong>易学</strong>，专家<strong>称心</strong><span>Swift <strong>快速</strong>、<strong>现代</strong>、<strong>安全</strong>，<br/>写起代码<strong>乐无边</strong>。</span></h1>
 
