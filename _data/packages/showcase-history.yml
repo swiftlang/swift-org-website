@@ -5,23 +5,18 @@ years:
         slug: november
         packages:
           - name: swift-crypto
-            description: Swift Crypto is an open-source implementation of a substantial
-              portion of the API of Apple CryptoKit suitable for use on Linux platforms.
-              It enables cross-platform or server applications with the advantages of CryptoKit.
+            description: Swift Crypto 是苹果 CryptoKit 的开源实现,适用于 Linux 平台。它使跨平台或服务器应用程序能够获得 CryptoKit 的优势。
             owner: Apple
             swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
             license: Apache 2.0
             url: https://swiftpackageindex.com/apple/swift-crypto
-            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/93){:target='_blank'}.
+            note: 通过[这个论坛帖子](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/93){:target='_blank'}提名。
           - name: Recap
-            description: Displays "What's New" screens for apps, supporting flexible release
-              history, customization, and semantic versioning. Utilizes Markdown for release
-              notes and offers modifiers for design customization.
+            description: 为应用程序显示"新功能"界面,支持灵活的发布历史、自定义和语义版本控制。使用 Markdown 编写发布说明,并提供设计自定义修饰符。
             owner: Joe Fabisevich
             swift_compatibility: 6.0+
             platform_compatibility:
@@ -29,39 +24,31 @@ years:
             platform_compatibility_tooltip: Apple (iOS)
             license: MIT
             url: https://swiftpackageindex.com/mergesort/Recap
-            note: Discussed on [Episode 50 of Swift Package Indexing](https://share.transistor.fm/s/333d2750){:target='_blank'}.
+            note: 在 [Swift Package Indexing 第50集](https://share.transistor.fm/s/333d2750){:target='_blank'}中讨论。
           - name: package-frostflake
-            description: High-performance unique ID generator for distributed systems, inspired
-              by Snowflake. Each identifier is half the size of a UUID and is suitable for
-              use as a database key.
+            description: 受 Snowflake 启发的高性能分布式系统唯一 ID 生成器。每个标识符的大小是 UUID 的一半，适合用作数据库键。
             owner: Ordo One
             swift_compatibility: 5.8+
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
             license: Apache 2.0
             url: https://swiftpackageindex.com/ordo-one/package-frostflake
-            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/89){:target='_blank'}.
+            note: 通过[这个论坛帖子](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/89){:target='_blank'}提名。
           - name: swift-async-operations
-            description: Enhances Swift concurrency by providing async operations like `asyncMap`,
-              enabling sequential or parallel execution of closures on sequences while preserving
-              order using Ordered Task Group.
+            description: 通过提供 `asyncMap` 等异步操作增强 Swift 并发功能，使用 Ordered Task Group 实现序列上闭包的顺序或并行执行，同时保持顺序。
             owner: matsuji
             swift_compatibility: 5.10+
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
             license: MIT
             url: https://swiftpackageindex.com/mtj0928/swift-async-operations
-            note: Discussed on [Episode 50 of Swift Package Indexing](https://share.transistor.fm/s/333d2750){:target='_blank'}.
+            note: 在 [Swift Package Indexing 第50集](https://share.transistor.fm/s/333d2750){:target='_blank'}中讨论。
           - name: TinyStorage
-            description: TinyStorage replaces `UserDefaults` with a lightweight, reliable
-              storage solution supporting Swift `Codable` types. It's ideal for storing
-              small, non-sensitive data but is not secure for sensitive information.
+            description: TinyStorage 用轻量级、可靠的存储解决方案替代 `UserDefaults`，支持 Swift `Codable` 类型。它适合存储小型、非敏感数据，但不适合存储敏感信息。
             owner: Christian Selig
             swift_compatibility: 6.0+
             platform_compatibility:
@@ -69,21 +56,18 @@ years:
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/christianselig/TinyStorage
-            note: Discussed on [Episode 50 of Swift Package Indexing](https://share.transistor.fm/s/333d2750){:target='_blank'}.
+            note: 在 [Swift Package Indexing 第50集](https://share.transistor.fm/s/333d2750){:target='_blank'}中讨论。
           - name: Graphs
-            description: Provides a composable, extensible foundation for working with abstract
-              graphs, supporting various types, algorithms, and traversal strategies. Ideal
-              for constructing, analyzing, and optimizing complex graph structures.
+            description: 为处理抽象图提供可组合、可扩展的基础，支持各种类型、算法和遍历策略。适用于构建、分析和优化复杂的图结构。
             owner: Laszlo Teveli
             swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
             license: MIT
             url: https://swiftpackageindex.com/tevelee/swift-graphs
-            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/91){:target='_blank'}.
+            note: 通过[这个论坛帖子](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/91){:target='_blank'}提名。
       - month: October
         slug: october
         packages:

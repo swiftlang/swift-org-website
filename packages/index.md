@@ -1,30 +1,30 @@
 ---
 layout: page-wide
-title: Packages
+title: 软件包
 ---
 
-The Swift package ecosystem has thousands of packages to help you with all kinds of tasks across your projects. You'll find networking, testing, UI helpers, logging, animation, and many more packages that work with the [Swift Package Manager]({% link documentation/package-manager/index.md %}) (SwiftPM).
+Swift 软件包生态系统拥有数千个软件包，可以帮助您处理项目中的各种任务。您可以找到网络、测试、UI 辅助工具、日志记录、动画等多种可与 [Swift Package Manager]({% link documentation/package-manager/index.md %}) (SwiftPM) 配合使用的软件包。
 
-## Package Ecosystem
+## 软件包生态系统
 
-Browse a small selection of interesting packages in popular categories from around the community, as well as a hand-picked selection of new and notable packages.
+浏览来自社区的各个热门类别中精选的有趣软件包，以及精心挑选的新发布和值得关注的软件包。
 
 {% include_relative _package-lists.html %}
 {% include_relative _get-involved.html %}
 
-## Create Your Own
+## 创建您自己的软件包
 
-Creating a Swift package is a great way to modularise your code either for personal use, for private use inside your company, or to release an open source package for the rest of the Swift community to use.
+创建 Swift 软件包是模块化代码的好方法，无论是供个人使用、公司内部私有使用，还是发布开源软件包供 Swift 社区使用。
 
-Start by reading [creating a Swift package](/getting-started/library-swiftpm/), or by watching [Creating Swift Packages](https://developer.apple.com/videos/play/wwdc2019/410/) from WWDC 2019, or [Meet Swift Package plugins](https://developer.apple.com/videos/play/wwdc2022/110359/) from WWDC 2022.
+您可以先阅读[创建 Swift 软件包](/getting-started/library-swiftpm/)，或观看 WWDC 2019 的 [Creating Swift Packages](https://developer.apple.com/videos/play/wwdc2019/410/) 视频，或 WWDC 2022 的 [Meet Swift Package plugins](https://developer.apple.com/videos/play/wwdc2022/110359/) 视频。
 
-To make your package easier to find for other members of the community, [add it to the Swift Package Index](https://swiftpackageindex.com/add-a-package).
+为了让社区其他成员更容易找到您的软件包，您可以[将其添加到 Swift Package Index](https://swiftpackageindex.com/add-a-package)。
 
-## Advanced Search
+## 高级搜索
 
-The [Swift Package Index](https://swiftpackageindex.com/) is a community-run package search engine with powerful filters to help you find what you're looking for. For example, you could search for packages that:
+[Swift Package Index](https://swiftpackageindex.com/) 是一个社区运营的软件包搜索引擎，具有强大的过滤功能，可以帮助您找到所需的内容。例如，您可以搜索：
 
-- [Match a search term](https://swiftpackageindex.com/search?query=swiftui)
-- [Have compatibility with both iOS and macOS platforms](https://swiftpackageindex.com/search?query=swiftui+platform:ios,macos)
-- [Include an executable helper or tool](https://swiftpackageindex.com/search?query=swiftui+product:executable)
-- [Have been created by a specific author](https://swiftpackageindex.com/search?query=author:apple)
+- [匹配搜索词的软件包](https://swiftpackageindex.com/search?query=swiftui)
+- [同时兼容 iOS 和 macOS 平台的软件包](https://swiftpackageindex.com/search?query=swiftui+platform:ios,macos)
+- [包含可执行助手或工具的软件包](https://swiftpackageindex.com/search?query=swiftui+product:executable)
+- [特定作者创建的软件包](https://swiftpackageindex.com/search?query=author:apple)

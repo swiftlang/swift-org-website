@@ -3,15 +3,15 @@
 
 <section class="package-list">
   <nav>
-    <a href="{% link packages/showcase.md %}" rel="parent">View this month’s Community Showcase</a>
+    <a href="{% link packages/showcase.md %}" rel="parent">查看本月的社区展示</a>
   </nav>
 
   <p>
-    The Community Showcase of Swift packages features packages from around the Swift community nominated via
-    <a href="https://forums.swift.org/t/68168">this thread on the Swift forums</a> and voted on by the
-    <a href="https://swift.org/website-workgroup/">Swift Website Workgroup</a>.
+    Swift 软件包社区展示栏目展示了来自 Swift 社区的各类软件包，这些包通过
+    <a href="https://forums.swift.org/t/68168">Swift 论坛上的这个帖子</a>提名，并由
+    <a href="https://swift.org/website-workgroup/">Swift 网站工作组</a>投票选出。
   </p>
-  <p><strong>This list is an archive of the Community Showcase from {{ month.month }} {{ year.year }}</strong>.</p>
+  <p><strong>这是 {{ year.year }}年{{ month.month }} Swift 社区展示的存档列表</strong>。</p>
 
   <ul>
     {%- for package in month.packages %} {% include_relative _package.html package=package %} {%- endfor %}

@@ -1,18 +1,11 @@
 categories:
-  - name: Community Showcase
+  - name: 社区展示
     slug: showcase
-    brief: "A hand-curated selection of new and interesting packages being discussed
-      by the Swift community. Browse the list to find out what\u2019s new and how to
-      nominate packages for consideration in this section."
-    description: This showcase celebrates new and interesting packages discussed by
-      the Swift community. Package selection in this section is an editorial process
-      organised via [this thread in the Swift Forums](https://forums.swift.org/t/68168)
-      and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
+    brief: "精心挑选的新颖有趣的包集合,这些包正在被 Swift 社区讨论。浏览列表以了解最新动态,以及如何提名包加入此版块。"
+    description: 这个展示区展示了 Swift 社区正在讨论的新颖有趣的包。此版块的包选择是一个编辑过程,通过[Swift 论坛的这个主题](https://forums.swift.org/t/68168)组织,并由 [Swift 网站工作组](https://www.swift.org/website-workgroup/)策划。
     packages:
       - name: GestureButton
-        description: GestureButton enables multiple gesture-specific actions using a single
-          SwiftUI button. Customize actions for gestures like tap, long press, and drag,
-          with flexible delays and timeouts.
+        description: GestureButton 让你可以在单个 SwiftUI 按钮中使用多个特定手势的动作。可以为点击、长按和拖动等手势自定义动作,并支持灵活的延迟和超时设置。
         owner: Daniel Saidi
         swift_compatibility: 6.0+
         platform_compatibility:
@@ -20,7 +13,7 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/danielsaidi/GestureButton
-        note: Discussed on [Episode 51 of Swift Package Indexing](https://share.transistor.fm/s/257bd1fa){:target='_blank'}.
+        note: 在 [Swift Package Indexing 第51集](https://share.transistor.fm/s/257bd1fa){:target='_blank'} 中讨论。
       - name: JSONPatch
         description: "Swift \u03BC-framework for creating RFC6902-compliant JSON patch
           objects, supporting operations like add, remove, replace, move, copy, and test
@@ -87,7 +80,7 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/hidden-spectrum/swift-translate
         note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/76){:target='_blank'}.
-  - name: Packages with Macros
+  - name: 包与宏
     slug: macros
     brief: New in Swift 5.9, Swift packages can include macro targets. Browse a selection
       of packages that showcase this feature.
@@ -170,15 +163,12 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-perception
-  - name: Server
+  - name: 服务器
     slug: server
-    brief: Do you need a hand putting together a Swift app for the server? Browse some
-      packages that get you started.
-    description: What packages can help you build a top-class back-end server for your
-      app or a website built with HTML? Swift has several mature back-end frameworks,
-      ORM, database connection packages, and more.
+    brief: 需要帮助构建服务器端 Swift 应用程序吗？浏览这些可以帮你入门的包。
+    description: 哪些包可以帮助你为你的应用或使用 HTML 构建的网站搭建一个一流的后端服务器？Swift 有多个成熟的后端框架、ORM、数据库连接包等。
     more:
-      title: More server packages
+      title: 更多服务器包
       url: https://swiftpackageindex.com/keywords/server-side-swift
     packages:
       - name: vapor
@@ -252,15 +242,12 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/vapor/fluent
-  - name: Networking
+  - name: 网络
     slug: networking
-    brief: Browse a selection of packages that can extend and enhance the Swift core
-      networking libraries.
-    description: "Covering everything from abstractions on top of core networking libraries
-      to full-featured HTTP clients to low-level networking libraries. If you need a
-      little more on top of URLSession, or a lot more, you\u2019ll find it here."
+    brief: 浏览可以扩展和增强 Swift 核心网络库的包集合。
+    description: "涵盖从核心网络库的抽象到功能齐全的 HTTP 客户端再到底层网络库的所有内容。如果你需要在 URLSession 之上添加一点或很多功能,你都可以在这里找到。"
     more:
-      title: More networking packages
+      title: 更多网络包
       url: https://swiftpackageindex.com/keywords/networking
     packages:
       - name: Alamofire
@@ -333,14 +320,12 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Kitura/BlueSocket
-  - name: Testing
+  - name: 测试
     slug: testing
-    brief: "If you want to level up your project\u2019s tests, take a look at a selection
-      of packages that might come in useful."
-    description: "Whether you\u2019re looking for an extension on top of XCTest or a
-      completely different way to approach testing, these packages are here to help."
+    brief: "如果你想提升项目的测试水平,看看这些可能有用的包。"
+    description: "无论你是在寻找 XCTest 的扩展还是完全不同的测试方法,这些包都能帮到你。"
     more:
-      title: More testing packages
+      title: 更多测试包
       url: https://swiftpackageindex.com/keywords/testing
     packages:
       - name: swift-testing
@@ -418,15 +403,14 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/jonreid/OCMockito
-  - name: Debug logging
+  - name: 调试日志
     slug: logging
-    brief: "Are you looking for something more than Swift\u2019s built-in logging? Start
-      with this list of logging-related packages."
-    description: Swift has [great logging built-in](https://developer.apple.com/documentation/os/logging),
+    brief: "在寻找比 Swift 内置日志更多的功能？从这个日志相关包列表开始。"
+    description: Swift 有[出色的内置日志功能](https://developer.apple.com/documentation/os/logging),
       but start with this list of packages if you want to extend or find something specific
       to your needs.
     more:
-      title: More debug logging packages
+      title: 更多调试日志包
       url: https://swiftpackageindex.com/keywords/logging
     packages:
       - name: CocoaLumberjack

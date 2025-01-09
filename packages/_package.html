@@ -2,7 +2,7 @@
   <a href="{{ package.url }}" target="_blank">
     <h4>
       <div class="name">{{ package.name }}</div>
-      <div class="owner">by {{ package.owner }}</div>
+      <div class="owner">作者: {{ package.owner }}</div>
     </h4>
     <section class="description">{{ package.description | markdownify }}</section>
     <section class="metadata">
@@ -13,11 +13,11 @@
         {% endfor %}
       </div>
       {% endif %} {% if package.swift_compatibility %}
-      <div class="lozenge swift-compatibility" title="Swift version compatibility">
+      <div class="lozenge swift-compatibility" title="Swift 版本兼容性">
         <span>{{ package.swift_compatibility }}</span>
       </div>
       {% endif %}
-      <div class="lozenge license" title="Package license"><span>{{ package.license }}</span></div>
+      <div class="lozenge license" title="包许可证"><span>{{ package.license }}</span></div>
     </section>
   </a>
   {% if package.note %}
