@@ -1,52 +1,52 @@
-## Installation of Old Swift Releases
+## 旧版 Swift 发行版的安装说明
 
 <div class="warning" markdown="1">
-This page documents the manual installation process for versions of Swift 5.9 or older. Subsequent releases have updated dependencies and a [streamlined installation process](/install/windows/manual).
+本页面介绍了 Swift 5.9 或更早版本的手动安装过程。后续版本已更新了依赖项并有[简化的安装流程](/install/windows/manual)。
 </div>
 
-Older versions of Swift have been tested with [Visual Studio](https://visualstudio.microsoft.com) 2019. You will need to install Visual Studio with the following components. Older installers for Swift are available in the [Download](/download/#:~:text=Older%20Releases) section. The toolchain on Windows is typically installed to `%SystemDrive%\Library\Developer\Toolchains`.
+旧版 Swift 已在 [Visual Studio](https://visualstudio.microsoft.com) 2019 上测试通过。你需要安装 Visual Studio 并包含以下组件。Swift 的旧版安装程序可在[下载](/download/#:~:text=Older%20Releases)部分找到。Windows 上的工具链通常安装在 `%SystemDrive%\Library\Developer\Toolchains` 目录下。
 
-The following Visual Studio components are **required**:
+以下 Visual Studio 组件是**必需的**：
 
-| Component | Visual Studio ID |
+| 组件 | Visual Studio ID |
 |-----------|------------------|
-| MSVC v142 - VS 2019 C++ x64/x86 build tools (Latest) | Microsoft.VisualStudio.Component.VC.Tools.x86.x64 |
+| MSVC v142 - VS 2019 C++ x64/x86 构建工具（最新版） | Microsoft.VisualStudio.Component.VC.Tools.x86.x64 |
 | Windows 10 SDK (10.0.17763.0)[^2] | Microsoft.VisualStudio.Component.Windows10SDK.17763 |
 
-[^2]: You may install a newer SDK instead.
+[^2]: 你也可以安装更新版本的 SDK。
 
-The following additional Visual Studio components are **recommended**:
+以下额外的 Visual Studio 组件是**推荐的**：
 
-| Component | Visual Studio ID |
+| 组件 | Visual Studio ID |
 |-----------|------------------|
 | Git for Windows | Microsoft.VisualStudio.Component.Git |
-| Python 3 64-bit (3.7.8) | Component.CPython.x64 |
+| Python 3 64位 (3.7.8) | Component.CPython.x64 |
 
-The following additional Visual Studio component is **suggested**:
+以下额外的 Visual Studio 组件是**建议的**：
 
-| Component | Visual Studio ID |
+| 组件 | Visual Studio ID |
 |-----------|------------------|
 | C++ CMake tools for Windows | Microsoft.VisualStudio.Component.VC.CMake.Project |
 
-After Visual Studio and the required components are installed:
+安装 Visual Studio 和所需组件后：
 
-0. Download the required [older Swift release installer](/download/#:~:text=Older%20Releases).
+0. 下载所需的[旧版 Swift 安装程序](/download/#:~:text=Older%20Releases)。
 
-0. Run the package installer.
+0. 运行安装包安装程序。
 
-### Support Files
+### 支持文件
 
 <div class="info" markdown="1">
-This is only required for versions older than 5.4.2.
+这仅适用于 5.4.2 之前的版本。
 </div>
 
 <div class="warning" markdown="1">
-You must run the following commands using `x64 Native Tools for VS2019 Command Prompt` as administrator.
-The `x64 Native Tools for VS2019 Command Prompt` sets up the necessary environment variables to find the system headers.
-Administrator permission is required to modify the Visual Studio installation.
+你必须以管理员身份使用 `x64 Native Tools for VS2019 Command Prompt` 运行以下命令。
+`x64 Native Tools for VS2019 Command Prompt` 设置了查找系统头文件所需的环境变量。
+修改 Visual Studio 安装需要管理员权限。
 </div>
 
-In order to make the Windows SDK accessible to Swift, it is necessary to deploy a few files into the Windows SDK.
+为了使 Windows SDK 能被 Swift 访问，需要将一些文件部署到 Windows SDK 中。
 
 ~~~ batch
 copy /Y %SDKROOT%\usr\share\ucrt.modulemap "%UniversalCRTSdkDir%\Include\%UCRTVersion%\ucrt\module.modulemap"
@@ -55,25 +55,25 @@ copy /Y %SDKROOT%\usr\share\visualc.apinotes "%VCToolsInstallDir%\include\visual
 copy /Y %SDKROOT%\usr\share\winsdk.modulemap "%UniversalCRTSdkDir%\Include\%UCRTVersion%\um\module.modulemap"
 ~~~
 
-Because the Windows SDK is typically installed as part of Visual Studio, these files may need to be copied each time Visual Studio is updated.
+由于 Windows SDK 通常作为 Visual Studio 的一部分安装，每次更新 Visual Studio 时可能都需要重新复制这些文件。
 
-### Repairing after Visual Studio Updates
+### Visual Studio 更新后的修复
 
 <div class="info" markdown="1">
-This is only required for versions older than 5.9.0.
+这仅适用于 5.9.0 之前的版本。
 </div>
 
-If Visual Studio is updated, you may have to repair the installation. For versions older than 5.4.2, reinstall support files [as mentioned above](#support-files). For newer versions, see Microsoft’s [instructions](https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-10-e90eefe4-d0a2-7c1b-dd59-949a9030f317) for repairing installed programs.
+如果更新了 Visual Studio，你可能需要修复安装。对于 5.4.2 之前的版本，需要[按上述说明](#support-files)重新安装支持文件。对于较新版本，请参阅 Microsoft 的[说明](https://support.microsoft.com/windows/repair-apps-and-programs-in-windows-10-e90eefe4-d0a2-7c1b-dd59-949a9030f317)来修复已安装的程序。
 
-### Code Signing on Windows
+### Windows 上的代码签名
 
 <div class="warning" markdown="1">
-The following commands must be run in PowerShell.
+以下命令必须在 PowerShell 中运行。
 </div>
 
-0. Install GPG from [GnuPG.org](https://gnupg.org/download/index.html)
+0. 从 [GnuPG.org](https://gnupg.org/download/index.html) 安装 GPG
 
-0. If you are downloading Swift packages **for the first time**, import the PGP keys into your keyring:
+0. 如果你是**第一次**下载 Swift 包，请将 PGP 密钥导入你的密钥环：
 
 {% assign all_keys_file = 'all-keys.asc' %}
 
@@ -84,25 +84,25 @@ The following commands must be run in PowerShell.
              '8A74 9566 2C3C D4AE 18D9  5637 FAF6 989E 1BC1 6FEA'
    ~~~
 
-   or:
+   或者：
 
    ~~~ powershell
    $ wget https://swift.org/keys/{{ all_keys_file }} -UseBasicParsing | Select-Object -Expand Content | gpg.exe —import -
    ~~~
 
-   Skip this step if you have imported the keys in the past.
+   如果你之前已导入密钥，请跳过此步骤。
 
-0. Verify the PGP signature.
+0. 验证 PGP 签名。
 
-   The `.exe` installer for Windows are signed using GnuPG with one of the keys of the Swift open source project. Everyone is strongly encouraged to verify the signatures before using the software.
+   Windows 的 `.exe` 安装程序使用 Swift 开源项目的密钥之一通过 GnuPG 进行签名。强烈建议所有人在使用软件之前验证签名。
 
-   First, refresh the keys to download new key revocation certificates, if any are available:
+   首先，刷新密钥以下载新的密钥撤销证书（如果有）：
 
    ~~~ powershell
    $ gpg.exe —keyserver hkp://keyserver.ubuntu.com —refresh-keys Swift
    ~~~
 
-   Then, use the signature file to verify that the archive is intact:
+   然后，使用签名文件验证存档的完整性：
 
    ~~~ powershell
    $ gpg.exe —verify swift-<VERSION>-<PLATFORM>.exe.sig
@@ -110,19 +110,19 @@ The following commands must be run in PowerShell.
    gpg: Good signature from "Swift Automatic Signing Key #3 <swift-infrastructure@swift.org>"
    ~~~
 
-   If `gpg` fails to verify because you don’t have the public key (`gpg: Can’t check signature: No public key`), please follow the instructions in [Active Signing Keys](#active-signing-keys) below to import the keys into your keyring.
+   如果由于没有公钥而导致 `gpg` 验证失败（`gpg: Can't check signature: No public key`），请按照下面[活动签名密钥](#active-signing-keys)中的说明将密钥导入你的密钥环。
 
-   You might see a warning:
+   你可能会看到警告：
 
    ~~~ powershell
    gpg: WARNING: This key is not certified with a trusted signature!
    gpg:          There is no indication that the signature belongs to the owner.
    ~~~
 
-   This warning means that there is no path in the Web of Trust between this key and you. The warning is harmless as long as you have followed the steps above to retrieve the key from a trusted source.
+   此警告表示在信任网络中，此密钥与你之间没有路径。只要你按照上述步骤从可信来源获取密钥，此警告就是无害的。
 
 <div class="warning" markdown="1">
-  If `gpg` fails to verify and reports "BAD signature", do not run the downloaded installer. Instead, please email <swift-infrastructure@forums.swift.org> with as much detail as possible, so that we can investigate the problem.
+  如果 `gpg` 验证失败并报告"BAD signature"，请不要运行下载的安装程序。请发送电子邮件至 <swift-infrastructure@forums.swift.org>，并提供尽可能多的详细信息，以便我们调查问题。
 </div>
 
 <hr>

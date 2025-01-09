@@ -3,16 +3,16 @@
 {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Static SDK'| first %}
 
 <li class="grid-level-1 featured">
-  <h3>Static Linux SDK </h3>
+  <h3>静态 Linux SDK</h3>
   <p class="description">
-    Static Linux SDK - Cross compile to Linux
+    静态 Linux SDK - 用于交叉编译到 Linux 平台
     <ul>
-      <li><a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-0.0.1.artifactbundle.tar.gz.sig">Signature (PGP)</a>
+      <li><a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-0.0.1.artifactbundle.tar.gz.sig">签名文件 (PGP)</a>
       </li>
       <li>
-        Checksum: <code>{{ platform.checksum }}</code></li>
+        校验和: <code>{{ platform.checksum }}</code></li>
     </ul>
   </p>
-  <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-0.0.1.artifactbundle.tar.gz" class="cta-secondary">Download Linux Static SDK</a>
-  <a href="/documentation/articles/static-linux-getting-started.html" class="cta-secondary">Instructions (Static Linux SDK)</a>
+  <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-0.0.1.artifactbundle.tar.gz" class="cta-secondary">下载 Linux 静态 SDK</a>
+  <a href="/documentation/articles/static-linux-getting-started.html" class="cta-secondary">使用说明 (静态 Linux SDK)</a>
 </li>

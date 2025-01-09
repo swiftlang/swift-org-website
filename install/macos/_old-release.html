@@ -3,16 +3,16 @@
       Swift {{ release.name }}
     </td>
     <td>
-      {{ release.date | date: '%B %-d, %Y' }}
+      {{ release.date | date: '%Y年%-m月%-d日' }}
     </td>
     <td class="">
         <span class="release">
-          <a href="https://download.swift.org/{{ include.release.tag | downcase }}/xcode/{{ include.release.tag }}/{{ include.release.tag }}-osx.pkg" title="Toolchain">Toolchain</a>
+          <a href="https://download.swift.org/{{ include.release.tag | downcase }}/xcode/{{ include.release.tag }}/{{ include.release.tag }}-osx.pkg" title="工具链">工具链</a>
         </span>
     </td>
     <td class="">
         <span class="release">
-          <a href="https://download.swift.org/{{ include.release.tag | downcase }}/xcode/{{ include.release.tag }}/{{ include.release.tag }}-osx-symbols.pkg" title="Debugging Symbols">Debugging Symbols</a>
+          <a href="https://download.swift.org/{{ include.release.tag | downcase }}/xcode/{{ include.release.tag }}/{{ include.release.tag }}-osx-symbols.pkg" title="调试符号">调试符号</a>
         </span>
     </td>
     <td class="release">
@@ -20,14 +20,14 @@
         {% assign static_sdk = release_info.platforms | where: 'name', 'Static SDK'| first %}
     {% if static_sdk %}
         {% assign tag_downcase = include.release.tag | downcase %}
-        <button onclick="copyToClipboard('swift sdk install https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ include.release.tag }}/{{ include.release.tag }}_static-linux-0.0.1.artifactbundle.tar.gz --checksum {{ static_sdk.checksum }}')">Copy install command</button>
+        <button onclick="copyToClipboard('swift sdk install https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ include.release.tag }}/{{ include.release.tag }}_static-linux-0.0.1.artifactbundle.tar.gz --checksum {{ static_sdk.checksum }}')">复制安装命令</button>
     <script>
         function copyToClipboard(text) {
           navigator.clipboard.writeText(text)
         }
     </script>
     {% else %}
-        Unavailable
+        暂不可用
     {% endif %}
     </td>
 </tr>

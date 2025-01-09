@@ -1,19 +1,19 @@
 ---
 layout: page-wide
-title: Install Swift
+title: 安装 Swift
 ---
 
 {% include install/_os_tabs.md linux="true" %}
 
 {% include install/_linux_platforms_tabs.md ubi="true" %}
 
-{% include install/_os_versions_tabs.md os_versions=site.data.install.ubi  name="Red Hat Universal Base Image" pressed="Red Hat Universal Base Image 9" %}
+{% include install/_os_versions_tabs.md os_versions=site.data.install.ubi  name="Red Hat 通用基础镜像" pressed="Red Hat 通用基础镜像 9" %}
 
 {% include install/_build_release.md platform="UBI 9" docker_tag="rhel-ubi9" %}
 
 <details class="download" style="margin-bottom: 0;">
-  <summary>Older Releases</summary>
-  {% include install/_older-releases.md platform="Red Hat Universal Base Image 9" %}
+  <summary>历史版本</summary>
+  {% include install/_older-releases.md platform="Red Hat 通用基础镜像 9" %}
 </details>
 
 {% include install/_build_snapshot.md platform="ubi 9"

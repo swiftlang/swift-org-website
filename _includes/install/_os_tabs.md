@@ -1,4 +1,4 @@
-Follow the instructions below to install the latest version of Swift on a [supported platform](/platform-support).
+请按照以下说明在[支持的平台](/platform-support)上安装最新版本的 Swift。
 
 <div class="interactive-tabs os">
   <div class="tabs">

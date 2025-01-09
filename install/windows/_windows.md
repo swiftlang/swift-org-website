@@ -1,25 +1,25 @@
 ---
 layout: page
-title: Windows Installation Options
+title: Windows 安装选项
 ---
 
-## Dependencies
+## 依赖项
 
-Swift has the following general dependencies:
+Swift 需要以下基本依赖：
 
-- Git (used by Swift Package Manager)
-- Python[^1] (used by the debugger - LLDB)
+- Git (被 Swift Package Manager 使用)
+- Python[^1] (被调试器 LLDB 使用)
 
-[^1]: The Windows binaries are built against Python 3.9
+[^1]: Windows 二进制文件是基于 Python 3.9 构建的
 
-Swift on Windows has the following additional platform specific dependencies:
+Swift 在 Windows 平台上还需要以下特定依赖：
 
-- Windows SDK (provides the Windows headers and import libraries)
-- Visual Studio (provides the Visual C++ SDK/Build Tools for additional headers)
+- Windows SDK (提供 Windows 头文件和导入库)
+- Visual Studio (提供用于额外头文件的 Visual C++ SDK/构建工具)
 
-## Developer Mode
+## 开发者模式
 
-In order to develop applications, particularly with the Swift Package Manager, you will need to enable developer mode. Please see Microsoft’s [documentation](https://docs.microsoft.com/windows/apps/get-started/enable-your-device-for-development) for instructions about how to enable developer mode.
+为了开发应用程序，特别是使用 Swift Package Manager 时，您需要启用开发者模式。请参阅 Microsoft 的[文档](https://docs.microsoft.com/windows/apps/get-started/enable-your-device-for-development)了解如何启用开发者模式的说明。
 
 {% include_relative _winget.md %}
 {% include_relative _scoop.md %}

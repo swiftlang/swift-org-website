@@ -15,7 +15,7 @@ atom: true
 {: class="featured-snippet {% if forloop.first %}visible{% endif %}" }
 {% endfor %}
 </div>
-·
+
 <div class="banner primary">
   <p>通过<a href="https://www.swift.org/migration/">官方迁移指南</a>为 Swift 6 语言模式做好准备</p>
 </div>

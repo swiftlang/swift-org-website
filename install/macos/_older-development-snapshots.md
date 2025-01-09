@@ -1,7 +1,7 @@
 <table id="osx-builds" class="downloads">
     <thead>
         <tr>
-            <th class="download">Download</th>
+            <th class="download">下载</th>
         </tr>
     </thead>
     <tbody>

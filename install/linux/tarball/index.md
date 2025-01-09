@@ -1,25 +1,25 @@
 ---
 layout: page
-title: Linux Installation via Tarball
+title: 通过 Tarball 在 Linux 上安装
 ---
 
-## Installation via Tarball
+## 通过 Tarball 安装
 
-**1. Install required dependencies:**
+**1. 安装必需的依赖：**
 
 {% include linux/table.html %}
 
-**2. Download the latest binary release** ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases)).
+**2. 下载最新的二进制发布版本** ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases))。
 
-The `swift-<VERSION>-<PLATFORM>.tar.gz` file is the toolchain itself.
-The `.sig` file is the digital signature.
+`swift-<VERSION>-<PLATFORM>.tar.gz` 文件是工具链本身。
+`.sig` 文件是数字签名。
 
-**3. Import and verify the PGP signature:**
+**3. 导入并验证 PGP 签名：**
 
-Skip this step if you have imported the keys in the past. This does not apply to verify.
+如果您之前已经导入过密钥，可以跳过此步骤。这不适用于验证。
 
 <details class="download" style="margin-bottom: 0;">
-  <summary>Import PGP keys details</summary>
+  <summary>导入 PGP 密钥详情</summary>
   <pre class="highlight">
     <code>$ gpg --keyserver hkp://keyserver.ubuntu.com \
           --recv-keys \
@@ -40,28 +40,24 @@ Skip this step if you have imported the keys in the past. This does not apply to
 </details>
 
 <details class="download" style="margin-bottom: 0;">
-  <summary>Verify the PGP signature</summary>
+  <summary>验证 PGP 签名</summary>
 
   <div class="warning">
-    <p>If <code class="language-plaintext highlighter-rouge">gpg</code> fails to verify and reports “BAD signature”,
-    do not use the downloaded toolchain.
-    Instead, please email <a href="mailto:swift-infrastructure@forums.swift.org">swift-infrastructure@forums.swift.org</a>
-    with as much detail as possible,
-    so that we can investigate the problem.</p>
+    <p>如果 <code class="language-plaintext highlighter-rouge">gpg</code> 验证失败并报告"BAD signature"，
+    请勿使用下载的工具链。
+    请发送邮件至 <a href="mailto:swift-infrastructure@forums.swift.org">swift-infrastructure@forums.swift.org</a>
+    并提供尽可能详细的信息，以便我们调查问题。</p>
   </div>
-  <p>The <code class="language-plaintext highlighter-rouge">.tar.gz</code> archives for Linux are signed using GnuPG
-  with one of the keys of the Swift open source project.
-  Everyone is strongly encouraged to verify the signatures
-  before using the software.</p>
-  <p>First, refresh the keys to download new key revocation certificates,
-  if any are available:</p>
+  <p>Linux 的 <code class="language-plaintext highlighter-rouge">.tar.gz</code> 压缩包使用 Swift 开源项目的密钥之一
+  通过 GnuPG 进行签名。强烈建议所有人在使用软件之前验证签名。</p>
+  <p>首先，刷新密钥以下载新的密钥撤销证书（如果有）：</p>
 
   <div class="language-shell highlighter-rouge">
     <div class="highlight">
       <pre class="highlight"><code><span class="nv">$ </span>gpg <span class="nt">--keyserver</span> hkp://keyserver.ubuntu.com <span class="nt">--refresh-keys</span> Swift</code></pre>
     </div>
   </div>
-  <p>Then, use the signature file to verify that the archive is intact:</p>
+  <p>然后，使用签名文件验证压缩包的完整性：</p>
   <div class="language-shell highlighter-rouge">
     <div class="highlight">
       <pre class="highlight">
@@ -72,10 +68,11 @@ Skip this step if you have imported the keys in the past. This does not apply to
       </pre>
     </div>
   </div>
-  <p>If <code class="language-plaintext highlighter-rouge">gpg</code> fails to verify because you don’t have the public key (<code class="language-plaintext highlighter-rouge">gpg: Can't
-  check signature: No public key</code>), please follow the instructions in <a href="#active-signing-keys">Active Signing Keys</a> below to import the keys into your keyring.
-  </p>
-  <p>You might see a warning:</p>
+  <p>如果由于没有公钥而导致 <code class="language-plaintext highlighter-rouge">gpg</code> 验证失败
+  （<code class="language-plaintext highlighter-rouge">gpg: Can't check signature: No public key</code>），
+  请按照下面<a href="#active-signing-keys">活动签名密钥</a>中的说明将密钥导入到您的密钥环中。</p>
+
+  <p>您可能会看到警告：</p>
   <div class="language-shell highlighter-rouge">
     <div class="highlight">
       <pre class="highlight">
@@ -85,26 +82,25 @@ Skip this step if you have imported the keys in the past. This does not apply to
       </pre>
     </div>
   </div>
-  <p>This warning means that there is no path in the Web of Trust between this
-  key and you. The warning is harmless as long as you have followed the steps
-  above to retrieve the key from a trusted source.</p>
+  <p>此警告表示在信任网络中，此密钥与您之间没有路径。只要您按照上述步骤从可信来源获取密钥，
+  此警告就是无害的。</p>
 
-  <p><a href="/keys/active">Active Signing Keys</a></p>
-  <p><a href="/keys/expired">Expired Signing Keys</a></p>
+  <p><a href="/keys/active">活动签名密钥</a></p>
+  <p><a href="/keys/expired">过期签名密钥</a></p>
 </details>
 
-**4. Extract the archive with the following command:**
+**4. 使用以下命令解压压缩包：**
 
 ```shell
 $ tar xzf swift-<VERSION>-<PLATFORM>.tar.gz
 ```
 
-This creates a `usr/` directory in the location of the archive.
+这将在压缩包所在位置创建一个 `usr/` 目录。
 
-**5. Add the Swift toolchain to your path as follows:**
+**5. 按如下方式将 Swift 工具链添加到您的路径中：**
 
 ```shell
 $ export PATH=/path/to/usr/bin:"${PATH}"
 ```
 
-You can now execute the `swift` command to run the REPL or build Swift projects.
+现在您可以执行 `swift` 命令来运行 REPL 或构建 Swift 项目。

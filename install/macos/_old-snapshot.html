@@ -1,14 +1,14 @@
 <tr>
     <td class="download">
         <span class="release">
-          <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.download }}" title="Download" download>{{ include.build.date | date: '%B %-d, %Y' }}</a>
+          <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.download }}" title="下载" download>{{ include.build.date | date: '%B %-d, %Y' }}</a>
           {% if include.build.download_signature %}
-            <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.download_signature }}" title="PGP Signature" class="signature">Signature</a>
+            <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.download_signature }}" title="PGP 签名" class="signature">签名</a>
           {% endif %}
           {% if include.build.debug_info %}
-            <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.debug_info }}" title="Debugging Symbols" class="debug">Debugging Symbols</a>
+            <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.debug_info }}" title="调试符号" class="debug">调试符号</a>
           {% if include.build.debug_info_signature %}
-            <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.debug_info_signature }}" title="PGP Signature for Debugging Symbols">Signature</a>
+            <a href="https://download.swift.org/{{ include.branch_dir }}/{{ include.platform_dir }}/{{ include.build.dir }}/{{ include.build.debug_info_signature }}" title="调试符号的PGP签名">签名</a>
           {% endif %}
           {% endif %}
         </span>

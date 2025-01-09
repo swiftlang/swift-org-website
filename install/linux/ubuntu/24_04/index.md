@@ -1,6 +1,6 @@
 ---
 layout: page-wide
-title: Install Swift
+title: 安装 Swift
 ---
 
 {% include install/_os_tabs.md linux="true" %}
@@ -12,7 +12,7 @@ title: Install Swift
 {% include install/_build_release.md platform="Ubuntu 24.04" docker_tag="noble" %}
 
 <details class="download" style="margin-bottom: 0;">
-  <summary>Older Releases</summary>
+  <summary>历史版本</summary>
   {% include install/_older-releases.md platform="Ubuntu 24.04" %}
 </details>
 

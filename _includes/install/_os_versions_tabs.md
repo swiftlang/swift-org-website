@@ -1,4 +1,4 @@
-<p id="versions">Select {{ include.name }} version:</p>
+<p id="versions">选择 {{ include.name }} 版本：</p>
 
 <div class="interactive-tabs os">
   <div class="tabs">

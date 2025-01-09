@@ -1,6 +1,6 @@
 ---
 layout: page-wide
-title: Install Swift
+title: 安装 Swift
 ---
 
 {% include install/_os_tabs.md linux="true" %}
@@ -12,7 +12,7 @@ title: Install Swift
 {% include install/_build_release.md platform="Fedora 39" docker_tag="fedora39" %}
 
 <details class="download" style="margin-bottom: 0;">
-  <summary>Older Releases</summary>
+  <summary>历史版本</summary>
   {% include install/_older-releases.md platform="Fedora 39" %}
 </details>
 

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Installation via RPM
+title: 通过 RPM 安装
 ---
 
-Use the instructions below for RPM installation:
+请按照以下说明进行 RPM 安装：
 
 **Amazon Linux 2**
 

@@ -1,16 +1,15 @@
-## Installation via Tarball
+## 通过 Tarball 安装
 
-0. Install required dependencies:
+0. 安装必需的依赖项：
 
 {% include linux/table.html %}
 
-0. Download the latest binary release ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases)).
+0. 下载最新的二进制发行版 ([{{ site.data.builds.swift_releases.last.name }}](/download/#releases))。
 
-   The `swift-<VERSION>-<PLATFORM>.tar.gz` file is the toolchain itself.
-   The `.sig` file is the digital signature.
+   `swift-<VERSION>-<PLATFORM>.tar.gz` 文件是工具链本身。
+   `.sig` 文件是数字签名。
 
-0. If you are downloading Swift packages **for the first time**, import the PGP
-   keys into your keyring:
+0. 如果你是**第一次**下载 Swift 软件包，需要将 PGP 密钥导入到你的密钥环中：
 
 {% assign all_keys_file = 'all-keys.asc' %}
 {% assign automatic_signing_key_file = 'automatic-signing-key-4.asc' %}
@@ -104,12 +103,11 @@
 
 ### Active Signing Keys
 
-The Swift project uses one set of keys for snapshot builds, and separate keys for
-every official release.  We are using 4096-bit RSA keys.
+Swift 项目对快照构建使用一组密钥，对每个正式发布版本使用单独的密钥。我们使用 4096 位的 RSA 密钥。
 
-The following keys are being used to sign toolchain packages:
+以下密钥用于签名工具链软件包：
 
-* `Swift Automatic Signing Key #4 <swift-infrastructure@forums.swift.org>`
+* `Swift 自动签名密钥 #4 <swift-infrastructure@forums.swift.org>`
 
   Download
   : <https://swift.org/keys/{{ automatic_signing_key_file }}>
@@ -165,7 +163,7 @@ The following keys are being used to sign toolchain packages:
 
 ### Expired Signing Keys
 
-* `Swift Automatic Signing Key #3 <swift-infrastructure@swift.org>`
+* `Swift 自动签名密钥 #3 <swift-infrastructure@swift.org>`
 
   Download
   : <https://swift.org/keys/{{ automatic_signing_key_file_3 }}>
@@ -192,7 +190,7 @@ The following keys are being used to sign toolchain packages:
   ~~~
 
 
-* `Swift Automatic Signing Key #2 <swift-infrastructure@swift.org>`
+* `Swift 自动签名密钥 #2 <swift-infrastructure@swift.org>`
 
   Download
   : <https://swift.org/keys/{{ automatic_signing_key_file_2 }}>
@@ -219,7 +217,7 @@ The following keys are being used to sign toolchain packages:
   ~~~
 
 
-* `Swift Automatic Signing Key #1 <swift-infrastructure@swift.org>`
+* `Swift 自动签名密钥 #1 <swift-infrastructure@swift.org>`
 
   Download
   : <https://swift.org/keys/{{ automatic_signing_key_file_1 }}>
@@ -246,7 +244,7 @@ The following keys are being used to sign toolchain packages:
   ~~~
 
 
-* `Swift 2.2 Release Signing Key <swift-infrastructure@swift.org>`
+* `Swift 2.2 发布签名密钥 <swift-infrastructure@swift.org>`
 
   Download
   : <https://swift.org/keys/release-key-swift-2.2.asc>
@@ -272,7 +270,7 @@ The following keys are being used to sign toolchain packages:
     gpg --import -
   ~~~
 
-* `Swift 3.x Release Signing Key <swift-infrastructure@swift.org>`
+* `Swift 3.x 发布签名密钥 <swift-infrastructure@swift.org>`
 
   Download
   : <https://swift.org/keys/release-key-swift-3.x.asc>
@@ -298,7 +296,7 @@ The following keys are being used to sign toolchain packages:
     gpg --import -
   ~~~  
 
-* `Swift 4.x Release Signing Key <swift-infrastructure@swift.org>`
+* `Swift 4.x 发布签名密钥 <swift-infrastructure@swift.org>`
 
   Download
   : <https://swift.org/keys/release-key-swift-4.x.asc>

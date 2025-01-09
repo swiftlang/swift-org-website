@@ -2,7 +2,7 @@
 redirect_from:
   - "/download/"
 layout: page-wide
-title: Install Swift
+title: 安装 Swift
 ---
 
 {% include install/_os_tabs.md %}

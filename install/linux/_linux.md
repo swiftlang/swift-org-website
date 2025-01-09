@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Linux Installation Options
+title: Linux 安装选项
 ---
 
 {% include_relative _docker.md %}

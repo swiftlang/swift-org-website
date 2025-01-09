@@ -1,27 +1,27 @@
-## Installation via Scoop
+## 通过 Scoop 安装
 
-[Scoop](https://scoop.sh) is a command-line installer for Windows. It can be installed through the following PowerShell commands.
+[Scoop](https://scoop.sh) 是一个 Windows 命令行安装工具。可以通过以下 PowerShell 命令进行安装。
 
 ~~~ powershell
-# Optional: Needed to run a remote script the first time
+# 可选：首次运行远程脚本时需要
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-# Command for installing Scoop
+# 安装 Scoop 的命令
 Invoke-RestMethod get.scoop.sh | Invoke-Expression
 ~~~
 
-0. Install general dependencies:
+0. 安装基础依赖：
 
    ~~~ batch
    scoop bucket add versions
    scoop install python39
    ~~~
 
-0. Install Windows platform dependencies:
+0. 安装 Windows 平台依赖：
 
-   The required C++ toolchain and Windows SDK are installed as part of Visual Studio 2022. The instructions below are for the Community edition, but you may want to [use a different Visual Studio edition](https://visualstudio.microsoft.com/vs/compare/) based on your usage and team size.
+   所需的 C++ 工具链和 Windows SDK 都包含在 Visual Studio 2022 中。以下说明是针对社区版的安装步骤，但根据您的使用情况和团队规模，您可能需要[选择不同的 Visual Studio 版本](https://visualstudio.microsoft.com/vs/compare/)。
 
    <div class="warning" markdown="1">
-   This code snippet must be run in a traditional Command Prompt (`cmd.exe`).
+   以下代码片段必须在传统的命令提示符（`cmd.exe`）中运行。
    </div>
 
    ~~~ batch
@@ -30,7 +30,7 @@ Invoke-RestMethod get.scoop.sh | Invoke-Expression
    del /q vs_community.exe
    ~~~
 
-0. Install Swift:
+0. 安装 Swift：
 
    ~~~ batch
    scoop install swift

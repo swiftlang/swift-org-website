@@ -15,7 +15,7 @@
       {% endif %}
     </td>
     <td>
-      {{ release.date | date: '%B %-d, %Y' }}
+      {{ release.date | date: '%Y年%-m月%-d日' }}
     </td>
     <td class="arch-tag"> 
     {% for arch in platform.archs %}
@@ -33,7 +33,7 @@
         {% assign tag_downcase = include.release.tag | downcase %}
         <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.release.tag}}/{{ include.release.tag}}-{{ platform_name }}.{{ package_extension }}">{{ arch }}</a>
         {% unless platform.platform == "Windows" and include.release.date >= swift_5_9_1_release_build.date %}
-        <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.release.tag}}/{{ include.release.tag}}-{{ platform_name }}.{{ package_extension }}.sig" title="PGP Signature" class="signature">Signature ({{ arch }})</a>
+        <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.release.tag}}/{{ include.release.tag}}-{{ platform_name }}.{{ package_extension }}.sig" title="PGP 签名" class="signature">签名 ({{ arch }})</a>
         {% endunless %}
     {% endfor %}
     </td>
@@ -41,7 +41,7 @@
     {% if platform.docker %}
         <a href="https://hub.docker.com/_/swift/?tab=tags">{{ platform.docker }}</a>
     {% else %}
-        Unavailable
+        暂不可用
     {% endif %}
     </td>
     {% if platform.platform != "Windows" %}
@@ -50,14 +50,14 @@
         {% assign static_sdk = release_info.platforms | where: 'name', 'Static SDK'| first %}
     {% if static_sdk %}
         {% assign tag_downcase = include.release.tag | downcase %}
-        <button onclick="copyToClipboard('swift sdk install https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ include.release.tag }}/{{ include.release.tag }}_static-linux-0.0.1.artifactbundle.tar.gz --checksum {{ static_sdk.checksum }}')">Copy install command</button>
+        <button onclick="copyToClipboard('swift sdk install https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ include.release.tag }}/{{ include.release.tag }}_static-linux-0.0.1.artifactbundle.tar.gz --checksum {{ static_sdk.checksum }}')">复制安装命令</button>
     <script>
         function copyToClipboard(text) {
           navigator.clipboard.writeText(text)
         }
     </script>
     {% else %}
-        Unavailable
+        暂不可用
     {% endif %}
     </td>
     {% endif %}
