@@ -15,7 +15,7 @@ SwiftGG 翻译工作组是一个致力于为大中华地区用户提供优质 Sw
 当前的翻译工作组成员包括：
 
 * [金琛然(SamYin Kim)](https://github.com/chenranj)（翻译组负责人）
-* [韩勇成(Lex)](https://github.com/llllllex)（内容组负责人）
+* [韩勇成(Lex)](https://github.com/llllllex)（排版宣传组负责人）
 * [崔元亮](https://github.com/moxcoot)
 * [安东尼(JackW)](https://github.com/king-open)
 * [潘子健(ChrisPan)](https://github.com/szupzj18)
