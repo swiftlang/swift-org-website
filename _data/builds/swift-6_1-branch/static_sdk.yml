@@ -1,0 +1,15 @@
+- date: 2025-01-05 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-05-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-05-a_static-linux-0.0.1.artifactbundle.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-05-a_static-linux-0.0.1.artifactbundle.tar.gz.sig
+  checksum: 6836ae014099c935d648983c77907435e9f848854a35e313fdf167bd15ec52ec
+- date: 2025-01-03 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-03-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-03-a_static-linux-0.0.1.artifactbundle.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-03-a_static-linux-0.0.1.artifactbundle.tar.gz.sig
+  checksum: a39e46632292b049f3d041c87941c8503ada83f1b26a3b8cb6af77afb74892c8
+- date: 2024-12-21 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-21-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-21-a_static-linux-0.0.1.artifactbundle.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-21-a_static-linux-0.0.1.artifactbundle.tar.gz.sig
+  checksum: de2c2e591ca6e57a5a4079d70f75061a2e84f6dfdd685a2cabe929fdba74a232

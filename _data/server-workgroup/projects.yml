@@ -214,3 +214,10 @@
   pitched: 2024-03-23
   accepted: 2024-05-01
   url: https://github.com/vapor/vapor.git
+
+- name: SwiftASN1
+  description: A Swift package for encoding and decoding ASN.1 data
+  maturity: Sandbox
+  pitched: 2024-08-20
+  accepted: 2025-01-06
+  url: https://github.com/apple/swift-asn1.git

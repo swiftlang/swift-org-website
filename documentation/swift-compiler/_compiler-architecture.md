@@ -37,7 +37,7 @@ high-level description of the major components of the Swift compiler:
   [lib/SILGen](https://github.com/swiftlang/swift/tree/main/lib/SILGen))
   lowers the type-checked AST into so-called "raw" SIL.  The design of
   SIL is described in
-  [docs/SIL.rst](https://github.com/swiftlang/swift/blob/main/docs/SIL.rst).
+  [docs/SIL/SIL.md](https://github.com/swiftlang/swift/blob/main/docs/SIL/SIL.md).
 
 * **SIL guaranteed transformations**: The SIL guaranteed
     transformations (implemented in
