@@ -4,7 +4,7 @@ layout: page
 title: LLVM TSAN / ASAN
 ---
 
-对于多线程和低级别不安全接口的服务器代码，使用 LLVM 的 [ThreadSanitizer](https://clang.llvm.org/docs/ThreadSanitizer.html) 和
+对于涉及多线程操作和需要与低级别不安全接口交互的服务器端代码，使用 LLVM 的 [ThreadSanitizer](https://clang.llvm.org/docs/ThreadSanitizer.html) 和
  [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) 的能力可以帮助排查无效的线程使用和无效的内存使用/访问。
 
 有一篇 [博客文章](/blog/tsan-support-on-linux/) 概述了 TSAN 的使用。
