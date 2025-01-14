@@ -2,8 +2,8 @@
 layout: source
 ---
 
-@import "global";
-@import "includes";
-@import "pages";
-@import "dark";
-@import "print";
+@use "global";
+@use "includes";
+@use "pages";
+@use "dark";
+@use "print";
