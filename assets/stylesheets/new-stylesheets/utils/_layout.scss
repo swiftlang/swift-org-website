@@ -1,3 +1,5 @@
+@use "../utils/colors" as colors;
+
 // Widths
 $width-page-wrapper: 72rem;
 $width-page-wrapper-small: 50rem;
@@ -19,6 +21,23 @@ $gap-column-small: 1rem;
 
 // Margins
 $margins-layout: 0 auto;
+
+// Border radius
+$border-radius-button: 10px;
+$border-radius-box: 16px;
+
+// Border
+@mixin box-radius() {
+  border-radius: $border-radius-box;
+}
+
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+@mixin default-border() {
+  @include border(colors.$border-color-default);
+}
 
 // Grid
 @mixin grid($columns, $gap) {

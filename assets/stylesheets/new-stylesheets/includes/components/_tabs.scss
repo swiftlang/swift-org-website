@@ -1,3 +1,5 @@
+@use "../../utils/colors" as colors;
+
 .tabs {
   position: relative;
   margin: 25px 0;
@@ -6,7 +8,7 @@
 
 .tab label,
 .tab a {
-  background: $gray-light;
+  background: colors.$gray-light;
   padding: 10px;
   margin-left: -1px;
   position: relative;
@@ -21,7 +23,7 @@
   position: absolute;
   top: 28px;
   left: 0;
-  background: $white;
+  background: colors.$white;
   right: 0;
   bottom: 0;
   padding: 20px 0;
@@ -29,7 +31,7 @@
 
 [type="radio"]:checked ~ label,
 [type="radio"]:checked ~ a {
-  background: $white;
+  background: colors.$white;
   z-index: 2;
 }
 

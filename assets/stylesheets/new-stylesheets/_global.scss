@@ -1,7 +1,6 @@
-@import "utils/colors";
-@import "utils/font";
-@import "utils/layout";
-@import "utils/styling";
+@use "utils/colors" as colors;
+@use "utils/font" as font;
+@use "utils/layout" as layout;
 
 html,
 body {
@@ -12,11 +11,11 @@ body {
 }
 
 body {
-  background-color: $white;
-  font-family: $font-family-base;
-  line-height: $font-line-height-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-base;
+  background-color: colors.$white;
+  font-family: font.$font-family-base;
+  line-height: font.$font-line-height-base;
+  font-size: font.$font-size-base;
+  font-weight: font.$font-weight-base;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -38,37 +37,37 @@ pre {
 }
 
 h1 {
-  font-size: $font-size-big;
+  font-size: font.$font-size-big;
   line-height: 1.2em;
   margin-bottom: 30px;
 }
 
 h2 {
-  font-size: $font-size-medium;
+  font-size: font.$font-size-medium;
   line-height: 1.2em;
   margin-bottom: 14px;
 }
 
 h3 {
-  font-size: $font-size-medium-small;
+  font-size: font.$font-size-medium-small;
   line-height: 1.2em;
   margin-bottom: 20px;
 }
 
 .grid-1-cols {
-  @include one-column-grid;
+  @include layout.one-column-grid;
 }
 
 .grid-2-cols {
-  @include two-columns-grid;
+  @include layout.two-columns-grid;
 }
 
 .grid-3-cols {
-  @include three-columns-grid;
+  @include layout.three-columns-grid;
 }
 
 .grid-4-cols {
-  @include four-columns-grid;
+  @include layout.four-columns-grid;
 }
 
 p > code {
@@ -76,8 +75,8 @@ p > code {
   word-break: break-word;
   padding: 0 6px;
   border-radius: 4px;
-  border: 1px solid $gray;
-  background-color: $white;
-  font-family: $font-family-code;
-  font-size: $font-size-base;
+  border: 1px solid colors.$gray;
+  background-color: colors.$white;
+  font-family: font.$font-family-code;
+  font-size: font.$font-size-base;
 }

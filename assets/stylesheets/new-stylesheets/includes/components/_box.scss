@@ -1,12 +1,15 @@
+@use "../../utils/colors" as colors;
+@use "../../utils/layout" as layout;
+
 .box-link {
   text-decoration: none;
 }
 
 .box {
-  border: 1px solid $black;
-  border-radius: $border-radius-box;
+  border: 1px solid colors.$black;
+  border-radius: layout.$border-radius-box;
   width: 100%;
-  color: $black;
+  color: colors.$black;
   text-decoration: none;
   padding: 20px;
   box-sizing: border-box;
@@ -21,20 +24,20 @@
 
   &.orange {
     border: 0;
-    background-color: $orange;
-    color: $white;
+    background-color: colors.$orange;
+    color: colors.$white;
   }
 
   &.white {
-    border-color: $pink;
-    color: $gray;
+    border-color: colors.$pink;
+    color: colors.$gray;
 
     h2,
     h3,
     h4,
     h5,
     h6 {
-      color: $orange;
+      color: colors.$orange;
     }
   }
 

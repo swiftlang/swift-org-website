@@ -1,9 +1,12 @@
+@use "../../utils/colors" as colors;
+@use "../../utils/font" as font;
+
 pre code {
-  font-family: $font-family-code;
+  font-family: font.$font-family-code;
 }
 
 pre.highlight {
-  background: $white;
+  background: colors.$white;
 
   .c,
     /* Comment */
@@ -15,7 +18,7 @@ pre.highlight {
     /* Comment.Single */
     .cs {
     /* Comment.Special */
-    color: $gray;
+    color: colors.$gray;
   }
 
   .k,
@@ -32,14 +35,14 @@ pre.highlight {
     /* Keyword.Reserved */
     .nb {
     /* Name.Builtin */
-    color: $orange;
+    color: colors.$orange;
   }
 
   .nv,
     /* Name.Variable */
     .nf {
     /* Name.Function */
-    color: $black;
+    color: colors.$black;
   }
 
   .s,
@@ -62,12 +65,12 @@ pre.highlight {
     /* Literal.String.Single */
     .sx {
     /* Literal.String.Other */
-    color: $purple;
+    color: colors.$purple;
   }
 
   .na {
     /* Name.Attribute */
-    color: $black;
+    color: colors.$black;
   }
 
   .nc,
@@ -82,7 +85,7 @@ pre.highlight {
     /* Name.Variable.Global */
     .vi {
     /* Name.Variable.Instance */
-    color: $brown-light;
+    color: colors.$brown-light;
   }
 
   .err,
@@ -93,7 +96,7 @@ pre.highlight {
     /* Generic.Traceback */
     .ne {
     /* Name.Exception */
-    color: $brown-light;
+    color: colors.$brown-light;
   }
 
   .m,
@@ -108,7 +111,7 @@ pre.highlight {
     /* Literal.Number.Integer.Long */
     .mo {
     /* Literal.Number.Oct */
-    color: $black;
+    color: colors.$black;
   }
 
   .o,
@@ -127,23 +130,23 @@ pre.highlight {
 
   .nt {
     /* Name.Tag */
-    color: $orange;
+    color: colors.$orange;
   }
 
   .gd,
     /* Generic.Deleted */
     .gd .x {
     /* Generic.Deleted.Specific */
-    color: $black;
-    background-color: $pink;
+    color: colors.$black;
+    background-color: colors.$pink;
   }
 
   .gi,
     /* Generic.Inserted */
     .gi .x {
     /* Generic.Inserted.Specific */
-    color: $black;
-    background-color: $pink;
+    color: colors.$black;
+    background-color: colors.$pink;
   }
 
   .gh,
@@ -158,22 +161,22 @@ pre.highlight {
     /* Generic.Subheading */
     .w {
     /* Text.Whitespace */
-    color: $black;
+    color: colors.$black;
   }
 
   .nn {
     /* Name.Namespace */
-    color: $orange;
+    color: colors.$orange;
   }
 
   .sr {
     /* Literal.String.Regex */
-    color: $green;
+    color: colors.$green;
   }
 
   .ss {
     /* Literal.String.Symbol */
-    color: $black;
+    color: colors.$black;
   }
 
   /* Make prompts non-selectable, to make it easy to copy and paste */
@@ -189,7 +192,7 @@ pre.highlight {
 }
 
 .language-console {
-  color: $gray;
+  color: colors.$gray;
 }
 
 // Explicit syntax highlighting for C++ code blocks:
@@ -202,5 +205,5 @@ pre.highlight {
 .language-c\+\+ .kt,
 .language-c\+\+ .nl,
 .language-c\+\+ .o {
-  color: $orange;
+  color: colors.$orange;
 }

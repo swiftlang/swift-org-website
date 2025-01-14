@@ -1,24 +1,27 @@
+@use "../../utils/colors" as colors;
+@use "../../utils/layout" as layout;
+
 .section {
-  background-color: $white;
-  color: $black;
+  background-color: colors.$white;
+  color: colors.$black;
   padding: 20px 0;
 
   &.orange {
-    background-color: $orange;
-    color: $white;
+    background-color: colors.$orange;
+    color: colors.$white;
   }
 
   &.purple {
-    background-color: $purple;
-    color: $white;
+    background-color: colors.$purple;
+    color: colors.$white;
   }
 
   &.yellow {
-    background-color: $yellow-dark;
-    color: $black;
+    background-color: colors.$yellow-dark;
+    color: colors.$black;
   }
 
   .content {
-    @include section-width($width-page-wrapper, $margins-layout);
+    @include layout.section-width(layout.$width-page-wrapper, layout.$margins-layout);
   }
 }

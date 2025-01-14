@@ -1,13 +1,15 @@
+@use "../../utils/colors" as colors;
+
 .ribbon {
   position: absolute;
   top: 0;
   left: 0;
   font-size: 28px;
   font-weight: bold;
-  color: $white;
+  color: colors.$white;
   line-height: 1.8;
   padding-inline: 1lh;
   transform: translate(calc((cos(45deg) - 1)*100%), -100%) rotate(-45deg);
   transform-origin: 100% 100%;
-  background-color: $orange;
+  background-color: colors.$orange;
 }

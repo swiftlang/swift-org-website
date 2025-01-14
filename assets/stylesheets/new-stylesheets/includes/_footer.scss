@@ -1,9 +1,12 @@
+@use "../utils/font" as font;
+@use "../utils/layout" as layout;
+
 footer {
-  line-height: $font-line-height-small;
-  font-size: $font-size-small;
+  line-height: font.$font-line-height-small;
+  font-size: font.$font-size-small;
   padding: 20px 0;
 
-  @include section-width($width-page-wrapper, $margins-layout);
+  @include layout.section-width(layout.$width-page-wrapper, layout.$margins-layout);
 
   .theme-switch {
     img {

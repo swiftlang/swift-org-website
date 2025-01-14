@@ -1,10 +1,12 @@
+@use "../utils/layout" as layout;
+
 $height-header: 50px;
 
 header {
   height: $height-header;
   padding: 1rem;
 
-  @include section-width($width-page-wrapper, $margins-layout);
+  @include layout.section-width(layout.$width-page-wrapper, layout.$margins-layout);
 
   @media (max-width: 1080px) {
     height: auto;
