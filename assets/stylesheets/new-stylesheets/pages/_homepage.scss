@@ -1,3 +1,5 @@
+@use "../utils/font" as font;
+
 .homepage {
   .claim {
     display: flex;
@@ -5,8 +7,8 @@
     justify-content: space-between;
 
     .text {
-      font-size: $font-size-medium-small;
-      line-height: $font-line-height-base;
+      font-size: font.$font-size-medium-small;
+      line-height: font.$font-line-height-base;
     }
 
     .button {

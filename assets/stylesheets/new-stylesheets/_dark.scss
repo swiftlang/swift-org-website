@@ -1,5 +1,7 @@
-@include isDarkTheme() {
-  background-color: $black;
+@use "./utils/colors" as colors;
+
+@include colors.isDarkTheme() {
+  background-color: colors.$black;
 
   h1 {
     // Add style

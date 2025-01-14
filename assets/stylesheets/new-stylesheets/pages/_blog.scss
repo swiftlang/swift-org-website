@@ -1,5 +1,7 @@
+@use "../utils/layout" as layout;
+
 .blog {
   header, .summary {
-    max-width: $width-page-wrapper;
+    max-width: layout.$width-page-wrapper;
   }
 }

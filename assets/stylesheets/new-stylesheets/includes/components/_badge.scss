@@ -1,3 +1,5 @@
+@use "../../utils/colors" as colors;
+
 .badges {
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +14,7 @@
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
-      border: 1px $gray solid;
+      border: 1px colors.$gray solid;
     }
 
     .name {

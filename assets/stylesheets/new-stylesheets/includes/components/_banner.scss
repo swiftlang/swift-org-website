@@ -1,7 +1,11 @@
+@use "../../utils/layout" as layout;
+@use "../../utils/colors" as colors;
+@use "../../utils/font" as font;
+
 .banner {
-  border-radius: $border-radius-box;
+  border-radius: layout.$border-radius-box;
   width: 100%;
-  color: $white;
+  color: colors.$white;
   text-align: center;
   box-sizing: border-box;
 
@@ -10,14 +14,14 @@
   }
 
   &.purple {
-    border: 2px solid $purple-light;
-    border-radius: $border-radius-button;
-    background: $purple-very-light;
-    color: $purple;
+    border: 2px solid colors.$purple-light;
+    border-radius: layout.$border-radius-button;
+    background: colors.$purple-very-light;
+    color: colors.$purple;
 
     a {
-      color: $purple;
-      font-weight: $font-weight-heavy;
+      color: colors.$purple;
+      font-weight: font.$font-weight-heavy;
     }
   }
 }

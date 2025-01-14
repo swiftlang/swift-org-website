@@ -1,3 +1,7 @@
+@use "../utils/layout" as layout;
+@use "../utils/colors" as colors;
+@use "../utils/font" as font;
+
 .storybook {
   main {
     display: flex;
@@ -5,7 +9,7 @@
     padding: 0 1rem;
 
     h1 {
-      color: $brown-light;
+      color: colors.$brown-light;
       font-size: 1.9em;
     }
 
@@ -13,13 +17,13 @@
       font-size: 2.4em;
       display: none;
 
-      @media (max-width: $breakpoint-desktop) {
+      @media (max-width: layout.$breakpoint-desktop) {
         display: block;
       }
     }
 
     input[type="search"] {
-      border: 2px solid $pink;
+      border: 2px solid colors.$pink;
       padding: 1rem;
       width: 100%;
       font-size: 1em;
@@ -34,12 +38,12 @@
       width: 20%;
       padding: 1rem;
       margin-right: 1%;
-      border: 1px solid $pink;
+      border: 1px solid colors.$pink;
       position: sticky;
       top: 0;
       height: fit-content;
 
-      @media (max-width: $breakpoint-desktop) {
+      @media (max-width: layout.$breakpoint-desktop) {
         width: 100%;
         display: none;
       }
@@ -74,22 +78,22 @@
       width: 79%;
       max-width: 79%;
 
-      @media (max-width: $breakpoint-desktop) {
+      @media (max-width: layout.$breakpoint-desktop) {
         width: 100%;
         max-width: 100%;
       }
     }
 
     .footer {
-      border-top: 2px solid $pink;
-      font-size: $font-size-small;
+      border-top: 2px solid colors.$pink;
+      font-size: font.$font-size-small;
       padding: 2rem 0;
     }
   }
 
   .storybook-render {
-    @include box-radius;
-    @include default-border;
+    @include layout.box-radius;
+    @include layout.default-border;
 
     padding: 2rem;
     margin: 1rem 0;
@@ -101,16 +105,16 @@
 
   // Specificity to avoid styling other code snippets
   main .content > div.highlighter-rouge {
-    @include box-radius;
-    @include default-border;
+    @include layout.box-radius;
+    @include layout.default-border;
     padding: 2rem;
     margin: 1rem 0;
     overflow-x: scroll;
   }
 
   .sample-box {
-    @include box-radius;
-    background: rgba($pink, 0.4);
+    @include layout.box-radius;
+    background: rgba(colors.$pink, 0.4);
     padding: 1rem;
     margin: 1rem 0;
   }
@@ -118,6 +122,6 @@
   hr {
     margin: 3rem 0;
     border: none;
-    border-top: 2px solid $pink;
+    border-top: 2px solid colors.$pink;
   }
 }
