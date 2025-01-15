@@ -1,0 +1,320 @@
+openapi: 3.0.3
+info:
+  title: download.swift.org API
+  description: API for the download.swift.org hostname.
+  version: 1.0.0
+servers:
+  - url: https://download.swift.org
+    description: The production server.
+tags:
+  - name: Evolution
+    description: Information about the Swift evolution process.
+paths:
+  /swift-evolution/v1/evolution.json:
+    get:
+      summary: List all proposals
+      description: Retrieve a list of all Swift Evolution proposals.
+      operationId: listProposals
+      tags:
+        - Evolution
+      responses:
+        '200':
+          description: A list of proposals.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProposalListSnapshot'
+components:
+    schemas:
+      ProposalListSnapshot:
+        type: object
+        properties:
+          schemaVersion:
+            type: string
+            description: The version of the schema used for this data.
+            example: '1.0.0'
+          toolVersion:
+            type: string
+            description: The version of the tool used to generate this data.
+            example: '0.1.0'
+          commit:
+            type: string
+            description: The commit hash of the data.
+            example: 'be37f35a0f06ab07dc6c84b3676833260cb86ddd'
+          creationDate:
+            type: string
+            format: date-time
+            description: The creation date of the data.
+            example: '2024-11-08T16:50:22Z'
+          implementationVersions:
+            type: array
+            items:
+              $ref: '#/components/schemas/SwiftVersion'
+            description: The known versions of Swift for the returned proposals.
+          proposals:
+            type: array
+            items:
+              $ref: '#/components/schemas/Proposal'
+        required:
+          - schemaVersion
+          - toolVersion
+          - commit
+          - creationDate
+          - implementationVersions
+          - proposals
+      SwiftVersion:
+        type: string
+        description: A version of Swift.
+        example: '6.1'
+      ProposalState:
+        anyOf:
+          - $ref: '#/components/schemas/KnownProposalState'
+          - type: string
+            description: The raw state, a fallback for when an unknown state is received.
+      KnownProposalState:
+        type: string
+        enum:
+          - accepted
+          - activeReview
+          - implemented
+          - previewing
+          - rejected
+          - returnedForRevision
+          - withdrawn
+        description: |-
+          The current state of the proposal.
+
+          This is distinct from `ProposalState` to allow parsing unknown states.
+          Parsing unknown states is important to avoid a new state causing a major API break.
+        example: accepted
+      ProposalStatus:
+        type: object
+        description: The status of a proposal.
+        properties:
+          state:
+            $ref: '#/components/schemas/ProposalState'
+          version:
+            $ref: '#/components/schemas/SwiftVersion'
+          start:
+            type: string
+            description: The start date of a review.
+            example: '2024-10-24T00:00:00Z'
+          end:
+            type: string
+            description: The end date of a review.
+            example: '2024-11-07T00:00:00Z'
+        required:
+          - state
+      ProposalDiscussion:
+        type: object
+        properties:
+          name:
+            type: string
+            description: The name of the discussion.
+            example: 'pitch'
+          link:
+            type: string
+            format: uri
+            description: URL to the discussion.
+            example: 'https://forums.swift.org/t/pitch-swift-backtracing-api/62741'
+        required:
+          - name
+          - link
+      ProposalPerson:
+        type: object
+        properties:
+          name:
+            type: string
+            description: The name of the person.
+            example: 'Swift Dev123'
+          link:
+            type: string
+            description: URL to the person's GitHub profile.
+            example: 'https://github.com/swiftdev123'
+        required:
+          - name
+      TrackingIssue:
+        type: object
+        description: An issue tracking work on a proposal.
+        properties:
+          id:
+            type: string
+            description: The ID of the tracking issue.
+            example: 'apple/swift#46493'
+          link:
+            type: string
+            format: uri
+            description: URL to the tracking bug.
+            example: 'https://github.com/apple/swift/issues/46493'
+        required:
+          - id
+          - link
+      KnownProposalDiagnosticKind:
+        type: string
+        description: |-
+          The kind of diagnostic.
+
+          This is distinct from `ProposalDiagnosticKind` to allow parsing unknown kinds.
+          Parsing unknown kinds is important to avoid a new kind causing a major API break.
+        enum:
+          - warning
+          - error
+      ProposalDiagnosticKind:
+        anyOf:
+          - $ref: '#/components/schemas/KnownProposalDiagnosticKind'
+          - type: string
+            description: The raw kind, a fallback for when an unknown kind is received.
+      ProposalDiagnostic:
+        type: object
+        description: A diagnostic found on a proposal.
+        properties:
+          code:
+            type: integer
+            description: A numeric code of the diagnostic.
+            example: 0
+          kind:
+            $ref: '#/components/schemas/ProposalDiagnosticKind'
+          message:
+            type: string
+            description: A diagnostic message.
+            example: 'Missing or invalid dates for a review period.'
+          suggestion:
+            type: string
+            description: A suggested fix for the diagnostic.
+            example: 'Update the start and end fields in the proposal state.'
+        required:
+          - code
+          - kind
+          - message
+          - suggestion
+      ProposalCodeChangeType:
+        anyOf:
+          - $ref: '#/components/schemas/KnownProposalCodeChangeType'
+          - type: string
+            description: The raw type, a fallback for when an unknown type is received.
+      KnownProposalCodeChangeType:
+        type: string
+        enum:
+          - pull
+          - commit
+        description: |-
+          The code change kind.
+
+          This is distinct from `ProposalCodeChangeType` to allow parsing unknown types.
+          Parsing unknown types is important to avoid a new type causing a major API break.
+        example: pull
+      ProposalCodeChange:
+        type: object
+        description: A code change associated with a proposal.
+        properties:
+          account:
+            type: string
+            description: The GitHub organization name of the repository containing the code change.
+            example: 'swiftlang'
+          repository:
+            type: string
+            description: The GitHub name of the repository containing the code change.
+            example: 'swift'
+          id:
+            type: string
+            description: The identifier of the code change in the repository.
+            example: '76636'
+          type:
+            $ref: '#/components/schemas/ProposalCodeChangeType'
+        required:
+          - account
+          - repository
+          - id
+          - type
+      ProposalID:
+        type: string
+        pattern: 'SE-\d{4}'
+        description: The unique identifier of the proposal.
+        example: 'SE-0001'
+      ProposalUpcomingFeatureFlag:
+        type: object
+        description: An upcoming feature flag that enables the proposal's behavior.
+        properties:
+          flag:
+            type: string
+            description: The name of the feature flag, passed to the Swift tools.
+            example: 'DynamicActorIsolation'
+        required:
+          - flag
+      Proposal:
+        type: object
+        description: A proposed change to the Swift project.
+        properties:
+          id:
+            $ref: '#/components/schemas/ProposalID'
+          title:
+            type: string
+            description: The title of the proposal.
+            example: 'Swift Backtrace API'
+          summary:
+            type: string
+            description: A brief summary of the proposal.
+            example: |-
+              This year we are improving the usability of Swift for command line and server-side 
+              development by adding first-class support for backtraces to Swift.
+          status:
+            $ref: '#/components/schemas/ProposalStatus'
+          authors:
+            type: array
+            description: A list of the authors of the proposal.
+            items:
+              $ref: '#/components/schemas/ProposalPerson'
+          reviewManagers:
+            type: array
+            description: A list of the review managers of the proposal.
+            items:
+              $ref: '#/components/schemas/ProposalPerson'
+          link:
+            type: string
+            description: File name to the proposal document.
+            example: '0419-backtrace-api.md'
+          discussions:
+            type: array
+            description: Links to the related discussions on the Swift Forums.
+            items:
+              $ref: '#/components/schemas/ProposalDiscussion'
+          trackingBugs:
+            type: array
+            description: A list of tracking issues for the proposal.
+            items:
+              $ref: '#/components/schemas/TrackingIssue'
+          implementation:
+            type: array
+            description: A list of the code changes associated with this proposal.
+            items:
+              $ref: '#/components/schemas/ProposalCodeChange'
+          upcomingFeatureFlag:
+            $ref: '#/components/schemas/ProposalUpcomingFeatureFlag'
+          sha:
+            type: string
+            description: 'TODO - what does this represent?'
+            example: '86cfc386995a0b8c68528728545d1d981fccbc2e'
+          previousProposalIDs:
+            type: array
+            description: A list of IDs that this proposal was associated with in the past.
+            items:
+              $ref: '#/components/schemas/ProposalID'
+          warnings:
+            type: array
+            description: A list of warnings associated with the proposal.
+            items:
+              $ref: '#/components/schemas/ProposalDiagnostic'
+          errors:
+            type: array
+            description: A list of errors associated with the proposal.
+            items:
+              $ref: '#/components/schemas/ProposalDiagnostic'
+        required:
+          - id
+          - title
+          - summary
+          - status
+          - authors
+          - reviewManagers
+          - link
+          - sha
