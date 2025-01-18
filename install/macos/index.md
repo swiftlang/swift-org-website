@@ -46,6 +46,11 @@ title: Install Swift
   {% include install/_static_sdk_release.md %}
 </ul>
 
+<details class="download" style="margin-bottom: 0;">
+  <summary>Older Releases</summary>
+  {% include_relative _older-releases.md %}
+</details>
+
 <hr>
 
 ## Development Snapshots
@@ -53,7 +58,7 @@ title: Install Swift
 Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.
 
 {% assign xcode_dev_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}
-{% assign xcode_6_0_builds = site.data.builds.swift-6_0-branch.xcode | sort: 'date' | reverse %}
+{% assign xcode_6_1_builds = site.data.builds.swift-6_1-branch.xcode | sort: 'date' | reverse %}
 
 <h3>Toolchain</h3>
 <ul class="grid-level-0 grid-layout-2-column">
@@ -71,17 +76,17 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
     <a href="https://download.swift.org/development/xcode/{{ xcode_dev_builds.first.dir }}/{{ xcode_dev_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
   </li>
   <li class="grid-level-1">
-    <h3>release/6.0</h3>
+    <h3>release/6.1</h3>
     <p class="description" style="font-size: 14px;">
-      <time datetime="{{ xcode_6_0_builds.first.date | date_to_xmlschema }}" title="{{ xcode_6_0_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ xcode_6_0_builds.first.date | date: '%B %-d, %Y' }}</time>
+      <time datetime="{{ xcode_6_1_builds.first.date | date_to_xmlschema }}" title="{{ xcode_6_1_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ xcode_6_1_builds.first.date | date: '%B %-d, %Y' }}</time>
     </p>
     <p class="description">
       Toolchain package installer (.pkg)
       <ul>
-        <li><a href="https://download.swift.org/swift-6.0-branch/xcode/{{ xcode_6_0_builds.first.dir }}/{{ xcode_6_0_builds.first.debug_info }}">Debugging Symbols</a></li>
+        <li><a href="https://download.swift.org/swift-6.1-branch/xcode/{{ xcode_6_1_builds.first.dir }}/{{ xcode_6_1_builds.first.debug_info }}">Debugging Symbols</a></li>
       </ul>
     </p>
-    <a href="https://download.swift.org/swift-6.0-branch/xcode/{{ xcode_6_0_builds.first.dir }}/{{ xcode_6_0_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
+    <a href="https://download.swift.org/swift-6.1-branch/xcode/{{ xcode_6_1_builds.first.dir }}/{{ xcode_6_1_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
   </li>
 </ul>
 <a href="/install/macos/package_installer" class="cta-secondary">Instructions (Toolchain)</a>
@@ -93,6 +98,6 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
   {% include_relative _older-development-snapshots.md %}
 </details>
 <details class="download" style="margin-bottom: 0;">
-  <summary>Older Snapshots (release/6.0)</summary>
-  {% include_relative _older-6_0-snapshots.md %}
+  <summary>Older Snapshots (release/6.1)</summary>
+  {% include_relative _older-6_1-snapshots.md %}
 </details>

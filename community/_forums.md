@@ -15,6 +15,8 @@ A core principle for the Swift project is that the community is an open and incl
 
 - A response to a post has the option of providing _additional text_ in a different language if that is helpful.
 
+- Posts should not use expressive images, such as memes; violations may be removed.  Please see the [forum post introducing this policy](https://forums.swift.org/t/forums-policy-on-memes-and-other-expressive-images/75714) for more information.
+
 ### Announcements
 [Announcements]: #announcements
 **[Announcements](https://forums.swift.org/c/general-announce)** - For anyone interested in hearing about important announcements about the Swift project.  This is a low volume category.

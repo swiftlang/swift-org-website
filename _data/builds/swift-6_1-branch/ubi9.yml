@@ -1,0 +1,125 @@
+- date: 2025-01-17 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-17-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-17-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-17-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-16 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-16-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-16-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-16-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-14 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-14-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-14-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-14-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-13 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-13-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-13-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-13-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-12 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-12-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-12-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-12-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-11 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-11-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-11-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-11-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-10 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-10-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-10-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-10-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-09 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-09-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-09-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-09-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-08 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-08-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-08-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-08-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-07 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-07-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-07-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-07-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-05 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-05-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-05-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-05-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-03 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-03-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-03-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-03-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-21 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-21-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-21-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-21-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-20 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-20-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-20-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-20-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-18 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-18-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-18-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-18-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-16 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-16-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-16-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-16-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-15 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-15-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-15-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-15-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-13 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-13-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-13-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-13-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-12 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-12-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-12-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-12-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-11 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-11-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-11-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-11-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-04 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-04-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-04-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-04-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-03 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-03-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-03-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-03-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-12-02 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-02-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-02-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-12-02-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-11-21 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-11-21-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-11-21-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-11-21-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2024-11-19 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-11-19-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-11-19-a-ubi9.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2024-11-19-a-ubi9.tar.gz.sig
+  name: Swift Development Snapshot

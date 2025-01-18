@@ -1,3 +1,47 @@
+- date: 2025-01-10 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-01-10-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-01-10-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
+- date: 2025-01-04 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-01-04-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-01-04-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
+- date: 2025-01-03 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-01-03-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-01-03-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
+- date: 2025-01-02 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-01-02-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-01-02-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
+- date: 2024-11-20 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-11-20-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-11-20-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
+- date: 2024-11-19 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-11-19-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-11-19-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
+- date: 2024-11-18 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-11-18-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-11-18-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
+- date: 2024-11-16 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-11-16-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-11-16-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
+- date: 2024-11-14 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-11-14-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-11-14-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
+- date: 2024-11-09 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-11-09-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-11-09-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
+- date: 2024-10-25 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2024-10-25-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2024-10-25-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
 - date: 2024-09-24 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2024-09-24-a
   download: swift-DEVELOPMENT-SNAPSHOT-2024-09-24-a-windows10-arm64.exe
