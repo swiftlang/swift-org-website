@@ -1,3 +1,6 @@
+@use 'sass:meta';
+@use 'sass:map';
+
 /// Returns the value associated with a keypath in a map, or a default value if
 /// no value is associated with it.
 ///
@@ -33,7 +36,7 @@
     @if (not $map or not is-map($map)) {
       $map: ();
     }
-    $map: map-get($map, $key);
+    $map: map.get($map, $key);
   }
   @return if($map, $map, $default);
 }
@@ -44,5 +47,5 @@
 /// @returns {Boolean}
 ////
 @function is-map($map) {
-  @return type-of($map) == map;
+  @return meta.type-of($map) == map;
 }

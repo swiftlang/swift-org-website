@@ -357,7 +357,7 @@ mapping = cmp.mapping.preset.insert({
         end
     end, {"i", "s"}),
     ["<S-tab>"] = cmp.mapping(function(original)
-        if cmp.visual() then
+        if cmp.visible() then
             cmp.select_prev_item()
         else
             original()
@@ -431,7 +431,7 @@ _nvim-cmp_. Then we'll wire it into the tab key expansion behavior.
                     end
                 end, {"i", "s"}),
                 ["<S-tab>"] = cmp.mapping(function(original)
-                    if cmp.visual() then
+                    if cmp.visible() then
                         cmp.select_prev_item()
                     elseif luasnip.expand_or_jumpable() then
                         luasnip.jump(-1)

@@ -1,13 +1,10 @@
----
-layout: page-wide
-title: Traditional Installation
----
+## Installation of Old Swift Releases
 
 <div class="warning" markdown="1">
-The traditional installation process is required for Swift older than 5.4.2.
+This page documents the manual installation process for versions of Swift 5.9 or older. Subsequent releases have updated dependencies and a [streamlined installation process](/install/windows/manual).
 </div>
 
-Swift has been tested with [Visual Studio](https://visualstudio.microsoft.com) 2019. You will need to install Visual Studio with the following components. The installer for Swift is available in the [Download](/install/windows) section. The toolchain on Windows is typically installed to `%SystemDrive%\Library\Developer\Toolchains`.
+Older versions of Swift have been tested with [Visual Studio](https://visualstudio.microsoft.com) 2019. You will need to install Visual Studio with the following components. Older installers for Swift are available in the [Download](/download/#:~:text=Older%20Releases) section. The toolchain on Windows is typically installed to `%SystemDrive%\Library\Developer\Toolchains`.
 
 The following Visual Studio components are **required**:
 
@@ -33,7 +30,7 @@ The following additional Visual Studio component is **suggested**:
 
 After Visual Studio and the required components are installed:
 
-0. Download a latest Swift release ([{{ site.data.builds.swift_releases.last.name }}](/install/windows)) or development [snapshot](/install/windows/#development-snapshots) installer.
+0. Download the required [older Swift release installer](/download/#:~:text=Older%20Releases).
 
 0. Run the package installer.
 
@@ -58,7 +55,7 @@ copy /Y %SDKROOT%\usr\share\visualc.apinotes "%VCToolsInstallDir%\include\visual
 copy /Y %SDKROOT%\usr\share\winsdk.modulemap "%UniversalCRTSdkDir%\Include\%UCRTVersion%\um\module.modulemap"
 ~~~
 
-Because it is installing the files into the Visual Studio image, the files will need to be copied each time Visual Studio is updated.
+Because the Windows SDK is typically installed as part of Visual Studio, these files may need to be copied each time Visual Studio is updated.
 
 ### Repairing after Visual Studio Updates
 
@@ -127,3 +124,5 @@ The following commands must be run in PowerShell.
 <div class="warning" markdown="1">
   If `gpg` fails to verify and reports "BAD signature", do not run the downloaded installer. Instead, please email <swift-infrastructure@forums.swift.org> with as much detail as possible, so that we can investigate the problem.
 </div>
+
+<hr>

@@ -1,0 +1,66 @@
+{% for platform in include.release.platforms %}
+    {% if platform.name == include.platform %}
+    {% if platform.platform == "Windows" %}
+        {% assign package_extension = 'exe' %}
+        {% assign swift_5_9_1_release_build = site.data.builds.swift_releases | where: 'name', '5.9.1' | first %}
+        {% assign swift_5_9_1_release_date_string = swift_5_9_1_release_build.date | date: '%Y-%m-%d' %}
+    {% else %}
+        {% assign package_extension = 'tar.gz' %}
+    {% endif %}
+<tr>
+    <td>
+      Swift {{ release.name }}
+      {% if platform.platform == "Windows" and include.release.date < swift_5_9_1_release_build.date %}
+        <sup> 1</sup>
+      {% endif %}
+    </td>
+    <td>
+      {{ release.date | date: '%B %-d, %Y' }}
+    </td>
+    <td class="arch-tag"> 
+    {% for arch in platform.archs %}
+        {% if platform.dir %}
+            {% assign platform_name_url = platform.dir %}
+            {% assign platform_name = platform_name_url %}
+        {% else %}
+            {% assign platform_name_url = platform.name | remove: '.' | remove: ' ' | downcase %}
+            {% assign platform_name = platform.name | remove : ' ' | downcase %}
+        {% endif %}
+        {% if arch != "x86_64" %}
+            {% assign platform_name_url = platform_name_url | append: "-" | append: arch %}
+            {% assign platform_name = platform_name | append: "-" | append: arch %}
+        {% endif %}
+        {% assign tag_downcase = include.release.tag | downcase %}
+        <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.release.tag}}/{{ include.release.tag}}-{{ platform_name }}.{{ package_extension }}">{{ arch }}</a>
+        {% unless platform.platform == "Windows" and include.release.date >= swift_5_9_1_release_build.date %}
+        <a href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}/{{ include.release.tag}}/{{ include.release.tag}}-{{ platform_name }}.{{ package_extension }}.sig" title="PGP Signature" class="signature">Signature ({{ arch }})</a>
+        {% endunless %}
+    {% endfor %}
+    </td>
+    <td class="docker-tag">
+    {% if platform.docker %}
+        <a href="https://hub.docker.com/_/swift/?tab=tags">{{ platform.docker }}</a>
+    {% else %}
+        Unavailable
+    {% endif %}
+    </td>
+    {% if platform.platform != "Windows" %}
+    <td class="docker-tag">
+        {% assign release_info = site.data.builds.swift_releases| where: 'tag', include.release.tag | first %}
+        {% assign static_sdk = release_info.platforms | where: 'name', 'Static SDK'| first %}
+    {% if static_sdk %}
+        {% assign tag_downcase = include.release.tag | downcase %}
+        <button onclick="copyToClipboard('swift sdk install https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ include.release.tag }}/{{ include.release.tag }}_static-linux-0.0.1.artifactbundle.tar.gz --checksum {{ static_sdk.checksum }}')">Copy install command</button>
+    <script>
+        function copyToClipboard(text) {
+          navigator.clipboard.writeText(text)
+        }
+    </script>
+    {% else %}
+        Unavailable
+    {% endif %}
+    </td>
+    {% endif %}
+</tr>
+{% endif %}
+{% endfor %}

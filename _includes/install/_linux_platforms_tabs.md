@@ -8,11 +8,11 @@
   <!-- <br>
   <p>To install swiftly, run the following commands in your terminal.</p>
   <pre><code>
-  SWIFTLY_FILENAME=swiftly-0.4.0-dev-$(uname -m).tar.gz
+  SWIFTLY_FILENAME=swiftly-{{ site.data.builds.swiftly_releases.version }}-$(uname -m).tar.gz
   curl -s -O "https://download.swift.org/swiftly/linux/$SWIFTLY_FILENAME" && tar zxf "$SWIFTLY_FILENAME" && ./swiftly init
   </code></pre> -->
-  <h4>License: <a href="https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt">Apache-2.0</a> | PGP: <a href="https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz.sig">Signature</a></h4>
-  <a href="https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz" class="cta-secondary">Download</a>
+  <h4>License: <a href="https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt">Apache-2.0</a> | PGP: <a href="https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_releases.version }}-x86_64.tar.gz.sig">Signature</a></h4>
+  <a href="https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_releases.version }}-x86_64.tar.gz" class="cta-secondary">Download</a>
   <a href="/install/linux/swiftly" class="cta-secondary">Instructions</a>
 </li>
 </ul>

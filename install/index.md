@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - "/download/"
 layout: page-wide
 title: Install Swift
 ---
