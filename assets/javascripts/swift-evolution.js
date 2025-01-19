@@ -55,69 +55,69 @@ const State = Object.freeze({
  */
 const states = {
   [State.awaitingReview]: {
-    name: 'Awaiting Review',
-    shortName: 'Awaiting Review',
+    name: '等待审核',
+    shortName: '等待审核',
     className: 'awaiting-review',
     count: 0
   },
   [State.scheduledForReview]: {
-    name: 'Scheduled for Review',
-    shortName: 'Scheduled',
+    name: '已排期审核',
+    shortName: '已排期',
     className: 'scheduled-for-review',
     count: 0
   },
   [State.activeReview]: {
-    name: 'Active Review',
-    shortName: 'Active Review',
-    statusPrefix: 'In ',
+    name: '正在审核',
+    shortName: '审核中',
+    statusPrefix: '正在',
     className: 'active-review',
     count: 0
   },
   [State.returnedForRevision]: {
-    name: 'Returned for Revision',
-    shortName: 'Returned',
+    name: '需要修改',
+    shortName: '需修改',
     className: 'returned-for-revision',
     count: 0
   },
   [State.withdrawn]: {
-    name: 'Withdrawn',
-    shortName: 'Withdrawn',
+    name: '已撤回',
+    shortName: '已撤回',
     className: 'withdrawn',
     count: 0
   },
   [State.accepted]: {
-    name: 'Accepted',
-    shortName: 'Accepted',
+    name: '已接受',
+    shortName: '已接受',
     className: 'accepted',
     count: 0
   },
   [State.acceptedWithRevisions]: {
-    name: 'Accepted with revisions',
-    shortName: 'Accepted',
+    name: '修改后接受',
+    shortName: '已接受',
     className: 'accepted-with-revisions',
     count: 0
   },
   [State.rejected]: {
-    name: 'Rejected',
-    shortName: 'Rejected',
+    name: '已拒绝',
+    shortName: '已拒绝',
     className: 'rejected',
     count: 0
   },
   [State.implemented]: {
-    name: 'Implemented',
-    shortName: 'Implemented',
+    name: '已实现',
+    shortName: '已实现',
     className: 'implemented',
     count: 0
   },
   [State.previewing]: {
-    name: 'Previewing',
-    shortName: 'Previewing',
+    name: '预览中',
+    shortName: '预览中',
     className: 'previewing',
     count: 0
   },
   [State.error]: {
-    name: 'Error',
-    shortName: 'Error',
+    name: '错误',
+    shortName: '错误',
     className: 'error',
     count: 0
   }
@@ -159,10 +159,10 @@ function init() {
   })
 
   req.addEventListener('error', function (e) {
-    document.querySelector('#proposals-count-number').innerText = 'Proposal data failed to load.'
+    document.querySelector('#proposals-count-number').innerText = '提案数据无法加载'
   })
 
-  document.querySelector('#proposals-count-number').innerHTML = 'Loading…'
+  document.querySelector('#proposals-count-number').innerHTML = '加载中……'
   req.open('get', EVOLUTION_METADATA_URL)
   req.send()
 }
@@ -379,7 +379,7 @@ function renderProposals() {
 function renderAuthors(authors) {
   return html('div', { className: 'authors proposal-detail' }, [
     html('div', { className: 'proposal-detail-label' },
-      authors.length > 1 ? 'Authors: ' : 'Author: '
+      authors.length > 1 ? '作者: ' : '作者: '
     ),
     html('div', { className: 'proposal-detail-value' },
       personNodesForPersonArray(authors))
@@ -390,7 +390,7 @@ function renderAuthors(authors) {
 function renderReviewManagers(reviewManagers) {
   return html('div', { className: 'review-managers proposal-detail' }, [
     html('div', { className: 'proposal-detail-label' },
-      reviewManagers.length > 1 ? 'Review Managers: ' : 'Review Manager: '
+      reviewManagers.length > 1 ? '审核管理员: ' : '审核管理员: '
     ),
     html('div', { className: 'proposal-detail-value' }, 
       personNodesForPersonArray(reviewManagers))
@@ -441,7 +441,7 @@ function renderImplementation(implementations) {
 
   implNodes = _joinNodes(implNodes, ', ')
 
-  var label = 'Implementation: '
+  var label = '实现：'
 
   return html('div', { className: 'proposal-detail' }, [
     html('div', { className: 'proposal-detail-label' }, [label]),
@@ -455,7 +455,7 @@ function renderImplementation(implementations) {
 function renderUpcomingFeatureFlag(upcomingFeatureFlag) {
   return html('div', { className: 'proposal-detail' }, [
     html('div', { className: 'proposal-detail-label' }, [
-      'Upcoming Feature Flag: '
+      '即将推出的功能标记：'
     ]),
     html('div', { className: 'proposal-detail-value' }, [
       upcomingFeatureFlag
@@ -467,11 +467,11 @@ function renderUpcomingFeatureFlag(upcomingFeatureFlag) {
 function renderPreview() {
   return html('div', { className: 'proposal-detail' }, [
     html('div', { className: 'proposal-detail-label' }, [
-      'Preview: '
+      '预览: '
     ]),
     html('div', { className: 'proposal-detail-value' }, [
       html('a', { href: 'https://github.com/apple/swift-standard-library-preview', target: '_blank' },
-        'Standard Library Preview'
+        '标准库预览'
       )
     ])
   ])
@@ -481,7 +481,7 @@ function renderPreview() {
 function renderVersion(version) {
   return html('div', { className: 'proposal-detail' }, [
     html('div', { className: 'proposal-detail-label' }, [
-      'Implemented In: '
+      '实现版本: '
     ]),
     html('div', { className: 'proposal-detail-value' }, [
       'Swift ' + version
@@ -490,10 +490,10 @@ function renderVersion(version) {
 }
 
 /** For some proposal states like `.activeReview`, it helps to see the status in the same details list. */
-function renderStatus (status) {
+function renderStatus(status) {
   return html('div', { className: 'proposal-detail' }, [
     html('div', { className: 'proposal-detail-label' }, [
-      'Status: '
+      '状态: '
     ]),
     html('div', { className: 'proposal-detail-value' }, [
       states[status.state].name
@@ -505,8 +505,8 @@ function renderStatus (status) {
  * Review periods are ISO-8601-style 'YYYY-MM-DD' dates.
  */
 function renderReviewPeriod (status) {
-  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
-    'August', 'September', 'October', 'November', 'December'
+  var months = ['一月', '二月', '三月', '四月', '五月', '六月', '七月',
+    '八月', '九月', '十月', '十一月', '十二月'
   ]
 
   var start = new Date(status.start)
@@ -1121,12 +1121,12 @@ function updateStatusFilterToggleText(filterCount) {
   if (filterCount === 0) {
     var panel = document.querySelector('.expandable')
     if (panel.classList.contains('expanded')) {
-      container.innerText = 'Hide Filters'
+      container.innerText = '隐藏筛选'
     } else {
-      container.innerText = 'Show Filters'
+      container.innerText = '显示筛选'
     }
   } else {
-    container.innerText = filterCount + ' Filter' + ((filterCount !== 1) ? 's' : '')
+    container.innerText = filterCount + '个筛选'
   }
 }
 
@@ -1138,15 +1138,15 @@ function updateStatusFilterToggleText(filterCount) {
 function updateProposalsCount (count) {
   // Calculate and set value of proposal count span
   var numberField = document.querySelector('#proposals-count-number')
-  var baseString = (count.toString() + ' proposal' + (count !== 1 ? 's' : ''))
+  var baseString = (count.toString() + '个提案')
   numberField.innerHTML = baseString
 
   // Calculate and set value of flag filter description span
   var flagFilterDescription = document.querySelector('#flag-filter-description')
   if (upcomingFeatureFlagFilterEnabled) {
     var anchorTag = '<a href="' + UFF_INFO_URL + '">'
-    var uffText = 'upcoming feature flag' + (count !== 1 ? 's' : '')
-    flagFilterDescription.innerHTML = " with "+ (count !== 1 ? '' : 'an ') + anchorTag + uffText + '</a>'
+    var uffText = '即将推出的功能标记'
+    flagFilterDescription.innerHTML = "带有" + anchorTag + uffText + '</a>'
   } else {
     flagFilterDescription.innerHTML = ""
   }
@@ -1187,14 +1187,14 @@ function descriptionForSelectedStatuses(selectedOptions) {
   let allExceptThreshold = totalCount - ALL_EXCEPT_MAX_COUNT
 
   if (selectedCount === 0 || selectedCount === totalCount) {
-    return "All Statuses"
+    return "所有状态"
   } else if (selectedCount >= allExceptThreshold) {
     let unselectedOptions = allStateOptions.filter(function (option) {
       return selectedOptions.indexOf(option) === -1
     })
-    return "All Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
+    return "除了" + listStringForStatuses(unselectedOptions, "和", false) + "的所有状态"
   } else {
-    return listStringForStatuses(selectedOptions, "or", true)
+    return listStringForStatuses(selectedOptions, "或", true)
   }
 }
 
