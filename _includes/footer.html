@@ -13,6 +13,22 @@
       class="color-scheme-toggle"
       role="radiogroup"
       tabindex="0"
+      id="language-toggle"
+    >
+      <legend class="visuallyhidden">语言选择器</legend>
+      <label for="lang-zh">
+        <input id="lang-zh" type="radio" name="language-preference" value="zh" checked>
+        <span class="color-scheme-toggle-label">中文</span>
+      </label>
+      <label for="lang-en">
+        <input id="lang-en" type="radio" name="language-preference" value="en">
+        <span class="color-scheme-toggle-label">English</span>
+      </label>
+    </form> &nbsp; &nbsp;
+    <form
+      class="color-scheme-toggle"
+      role="radiogroup"
+      tabindex="0"
       id="color-scheme-toggle"
     >
       <legend class="visuallyhidden">主题选择器</legend>
@@ -35,3 +51,12 @@
     </aside> -->
   </div>
 </footer>
+
+<script>
+// 语言切换处理
+document.getElementById('lang-en').addEventListener('click', function(e) {
+  // 阻止单选框被选中
+  e.preventDefault();
+  window.location.href = 'https://swift.org' + window.location.pathname;
+});
+</script>
