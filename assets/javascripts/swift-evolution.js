@@ -515,21 +515,22 @@ function renderReviewPeriod (status) {
   var startMonth = start.getUTCMonth()
   var endMonth = end.getUTCMonth()
 
-  var detailNodes = [months[startMonth], ' ']
+  var detailNodes = [months[startMonth], '']
 
   if (startMonth === endMonth) {
     detailNodes.push(
       start.getUTCDate().toString(),
-      '–',
-      end.getUTCDate().toString()
+      '日 – ',
+      end.getUTCDate().toString(),
+      '日'
     )
   } else {
     detailNodes.push(
       start.getUTCDate().toString(),
-      ' – ',
+      '日 – ',
       months[endMonth],
-      ' ',
-      end.getUTCDate().toString()
+      end.getUTCDate().toString(),
+      '日'
     )
   }
 
