@@ -129,7 +129,7 @@ atom: true
 
 <div class="links links-list-nostyle" markdown="1">
   - [访问 Swift.org 博客](/blog/)
-  - [访问 SwiftGG 中文论坛](https://forums.swift.org.gg)
+  - [访问 Swift 论坛（英文）](https://forums.swift.org)
   - [在 Github 上关注 SwiftGG](https://github.com/swiftggteam){:target="_blank" class="link-external"}
   - [在 X 上关注 Swift（以前的推特）](https://x.com/swiftlang){:target="_blank" class="link-external"}
 </div>
