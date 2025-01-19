@@ -1,28 +1,28 @@
-## Triaging Bugs
+## 问题分类处理
 
-Reporting bugs is an important part of improving software.
-Nearly as important is triaging those bugs
-to ensure that they are reproducible, small, and unique.
+报告问题是改进软件的重要组成部分。
+同样重要的是对这些问题进行分类处理，
+以确保它们是可复现的、简明的且不重复的。
 
-There are a number of things you can do to help triage bugs
-in the [bug tracker][bugtracker].
+在[问题追踪系统][bugtracker]中，
+你可以通过以下几种方式来帮助进行问题分类：
 
-- **Reproduce bugs**.
-  For a bug to be actionable,
-  it needs to be reproducible.
-  If you can't reproduce the bug,
-  try to figure out why.
-  Get in touch with the submitter if you need more information.
+- **复现问题**。
+  要使一个问题具有可操作性，
+  首先需要能够复现它。
+  如果你无法复现某个问题，
+  请尝试找出原因。
+  如果需要更多信息，请与提交者联系。
 
-- **Reduce bugs**.
-  Once a bug can be reproduced,
-  reduce it to the smallest amount of code possible.
-  Reasoning about a sample that reproduces a bug in just a few lines of Swift code
-  is easier than reasoning about a longer sample.
+- **简化问题**。
+  一旦问题可以被复现，
+  就将其简化到最少的代码量。
+  分析一个只需几行 Swift 代码就能复现的问题，
+  要比分析一个较长的代码示例容易得多。
 
-- **Eliminate duplicate bugs**.
-  If two bug reports refer to the same underlying problem,
-  mark the newer one as a duplicate of the older one.
-  Doing so allows others to work more effectively.
+- **消除重复问题**。
+  如果两个问题报告指向同一个潜在问题，
+  请将较新的标记为较旧问题的重复项。
+  这样做可以帮助其他人更有效地工作。
 
 [bugtracker]: https://github.com/swiftlang/swift/issues

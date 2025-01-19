@@ -1,80 +1,80 @@
 ---
 layout: page
-title: Swift Server Workgroup (SSWG)
+title: Swift 服务端工作组 (SSWG)
 ---
 
-The Swift Server workgroup is a steering team that promotes the use of Swift for developing and deploying server applications. The Swift Server workgroup will:
+Swift 服务端工作组是一个指导团队，旨在推广 Swift 在开发和部署服务端应用程序方面的应用。Swift 服务端工作组将：
 
-* Define and prioritize efforts that address the needs of the Swift server community.
-* Define and run an [incubation process](/sswg/incubation-process.html) for these efforts to reduce duplication of effort, increase compatibility and promote best practices.
-* Channel feedback for Swift language features needed by the server development community to the Swift Core Team.
+* 明确并优先处理 Swift 服务端社区的需求。
+* 为这些工作制定并实施[孵化流程](/sswg/incubation-process.html)，以减少重复工作、提高兼容性并推广最佳实践。
+* 向 Swift 核心团队反馈服务端开发社区所需的 Swift 语言特性。
 
-Analogous to the [Core Team](/community#core-team) for Swift, the workgroup is responsible for providing overall technical direction and establishing the standards by which libraries and tools are proposed, developed and eventually recommended. Membership of the workgroup is contribution-based and is expected to evolve over time.
+与 Swift 的[核心团队](/community#core-team)类似，该工作组负责提供总体技术方向，并制定库和工具的提议、开发和最终推荐的标准。工作组的成员资格基于贡献，预计将随时间演变。
 
-The current Swift Server workgroup consists of the following people:
+当前的 Swift 服务端工作组由以下成员组成：
 
 {% assign people = site.data.server-workgroup.members | sort: "name" %}
 <ul>
 {% for person in people %}
 <li>{{ person.name }}
 {%- if person.affiliation -%}
-  , {{ person.affiliation }}
+  ，{{ person.affiliation }}
 {% endif %}
 {% if person.github %}
-  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+  （<a href="https://github.com/{{person.github}}">@{{person.github}}</a>）
 {% endif %}
 </li>
 {% endfor %}
 </ul>
 
-We are grateful for the service of the following emeritus workgroup members:
+我们感谢以下荣誉退休工作组成员的服务：
 
 {% assign people = site.data.server-workgroup.emeriti | sort: "name" %}
 <ul>
 {% for person in people %}
 <li>{{ person.name }}
 {%- if person.affiliation -%}
-  , {{ person.affiliation }}
+  ，{{ person.affiliation }}
 {% endif %}
 {% if person.github %}
-  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+  （<a href="https://github.com/{{person.github}}">@{{person.github}}</a>）
 {% endif %}
 </li>
 {% endfor %}
 </ul>
 
-## Communication
+## 交流方式
 
-The Swift Server workgroup uses the [Swift Server forum](https://forums.swift.org/c/server) for general discussion.
+Swift 服务端工作组使用 [Swift 服务端论坛](https://forums.swift.org/c/server)进行一般性讨论。
 
-## Community Participation
+## 社区参与
 
-Everyone is welcome to contribute in the following ways:
+我们欢迎所有人通过以下方式参与贡献：
 
-* Proposing new libraries and tools to be considered.
-* Participating in design discussions.
-* Asking or answering questions on the forums.
-* Reporting or triaging bugs.
-* Submitting pull requests to the library projects for implementation or tests.
+* 提议新的库和工具供考虑。
+* 参与设计讨论。
+* 在论坛上提问或回答问题。
+* 报告或分类错误。
+* 向库项目提交实现或测试的拉取请求。
 
-These conversations will take place on the [Swift Server forum](https://forums.swift.org/c/server). Over time, the workgroup may form smaller working groups to focus on specific technology areas.
+这些对话将在 [Swift 服务端论坛](https://forums.swift.org/c/server)上进行。随着时间推移，工作组可能会形成较小的工作小组来专注于特定的技术领域。
 
-## Charter
+## 章程
 
-The main goal of the Swift Server workgroup is to eventually recommend libraries and tools for server application development with Swift. The difference between this workgroup and the Swift Evolution process is that server-oriented libraries and tools that are produced as a result of workgroup efforts will exist outside of the Swift language project itself. The workgroup will work to nurture, mature and recommend projects as they move into their development and release stages.
+Swift 服务端工作组的主要目标是最终推荐用于 Swift 服务端应用程序开发的库和工具。该工作组与 Swift 演进流程的区别在于，工作组努力产生的面向服务端的库和工具将存在于 Swift 语言项目本身之外。工作组将致力于培育、成熟并推荐项目，直至它们进入开发和发布阶段。
 
-## Membership
+## 成员资格
 
-Membership in the workgroup is contribution-based and expected to evolve over time. Adding new members and removing inactive ones is subject to a SSWG vote and requires unanimous agreement. A cap of two members per company is in place to avoid overweight representation. A cap of ten members total is in place to keep the group small enough to be effective. Membership term is capped at 2 years, but exiting members may re-apply at the end of their term. When multiple candidates compete for the same seat, the SSWG will vote between all candidates, with a final voting round between the two candidates that received most votes in the first round.
+工作组的成员资格基于贡献，预计将随时间演变。添加新成员和移除不活跃成员需要经过 SSWG 投票，并要求一致同意。每个公司最多可有两名成员，以避免代表性过重。工作组总人数上限为十人，以保持组织的高效运作。成员任期上限为 2 年，但离任成员可在任期结束时重新申请。当多个候选人竞争同一席位时，SSWG 将在所有候选人中进行投票，最终在第一轮获得最多票数的两名候选人之间进行最后一轮投票。
 
-Companies or individuals that would like to join the workgroup should apply by posting a request to the [Swift Server forum](https://forums.swift.org/c/server). Applicants will then be invited to the next available SSWG meeting to present their case.
+希望加入工作组的公司或个人应通过在 [Swift 服务端论坛](https://forums.swift.org/c/server)上发帖申请。申请人将被邀请参加下一次可用的 SSWG 会议来陈述他们的理由。
 
-Inactive members that do not participate in four consecutive workgroup meetings will be contacted to confirm their desire to stay with the group. After missing ten consecutive meetings, the SSWG will vote on removing them from the group.
+连续四次未参加工作组会议的不活跃成员将被联系以确认其是否希望留在工作组。连续缺席十次会议后，SSWG 将就是否将其从工作组中移除进行投票。
 
-## Voting
+## 投票
 
-In various situations the SSWG shall hold a vote. These votes can happen on the phone, email, or via a voting service, when appropriate. SSWG members can either respond "agree, yes, +1", "disagree, no, -1", or "abstain". A vote passes with two-thirds vote of votes cast based on the SSWG charter. An abstain vote equals not voting at all.
+在各种情况下，SSWG 将举行投票。这些投票可以通过电话、电子邮件或在适当时通过投票服务进行。SSWG 成员可以回复"同意、是、+1"、"不同意、否、-1"或"弃权"。根据 SSWG 章程，投票需要获得三分之二的投票支持才能通过。弃权票等同于不投票。
 
-## Meeting Time
+## 会议时间
 
-The SSWG meets biweekly on Wednesday at 2:00PM PT (USA Pacific). The meetings take place in the weeks with the [odd week numbers](http://www.whatweekisit.org).
+SSWG 每两周在周三太平洋时间下午 2:00（美国太平洋时间）召开一次会议。会议在[奇数周](http://www.whatweekisit.org)举行。

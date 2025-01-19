@@ -1,44 +1,42 @@
 ---
 layout: page
-title: QuickStart contribution
+title: 快速入门指南
 ---
 
-* [Configure the system](#configure-the-system)
-* [Build Swift Compiler](#build-swift-compiler)
-    * [Build Swift compiler without additional tools](#build-swift-compiler-without-additional-tools)
-    * [Build Swift Compiler with Sccache](#build-swift-compiler-with-sccache)
-    * [Build Swift stdlib against a downloadable toolchain](#build-swift-stdlib-against-a-downloadable-toolchain)
-* [Build swift-corelibs-foundation](#build-swift-corelibs-foundation)
-* [Good first issues](#good-first-issues)
+* [配置系统](#配置系统)
+* [构建 Swift 编译器](#构建-swift-编译器)
+    * [不带额外工具构建 Swift 编译器](#不带额外工具构建-swift-编译器)
+    * [使用 Sccache 构建 Swift 编译器](#使用-sccache-构建-swift-编译器)
+    * [基于可下载工具链构建 Swift 标准库](#基于可下载工具链构建-swift-标准库)
+* [构建 swift-corelibs-foundation](#构建-swift-corelibs-foundation)
+* [适合新手的问题](#适合新手的问题)
 
-## Configure the system
+## 配置系统
 
-### Requirements
+### 系统要求
 
-* macOS 10.14.4 or later
+* macOS 10.14.4 或更高版本
 * Xcode 11 beta 1
-* 60 GB of free disk space
+* 60 GB 可用磁盘空间
 
+### 安装 Xcode
 
-### Install Xcode
-
-* Download [Xcode 11 beta 1](https://developer.apple.com/download/) and select Applications
-* Double click on the XIP image
-* Move the Xcode-beta.app to /Applications/
+* 下载 [Xcode 11 beta 1](https://developer.apple.com/download/) 并选择应用程序
+* 双击 XIP 镜像文件
+* 将 Xcode-beta.app 移动到 /Applications/ 目录
 
 ~~~bash
 mv ~/Downloads/Xcode-beta.app /Applications/
 ~~~
-* xcode-select the Xcode 11 beta 1
+* 使用 xcode-select 选择 Xcode 11 beta 1
 
 ~~~bash
 xcode-select -s /Applications/Xcode-beta.app
 ~~~
 
+### 安装 CMake 和 Ninja
 
-### Install CMake and Ninja
-
-* Install CMake using package manager [1]
+* 使用包管理器安装 CMake [1]
 * Homebrew
 
 ~~~bash
@@ -50,14 +48,14 @@ brew install cmake ninja
 port install cmake ninja
 ~~~
 
-### Setup Swift Repositories
+### 设置 Swift 代码仓库
 
-* Clone Swift repository
+* 克隆 Swift 代码仓库
 
 ~~~bash
 git clone git@github.com:swiftlang/swift.git
 ~~~
-* Clone other required repositories
+* 克隆其他必需的代码仓库
 
 ~~~bash
 ./swift/utils/update-checkout --clone --scheme main
@@ -65,36 +63,36 @@ git clone git@github.com:swiftlang/swift.git
 
 * * *
 
-## Build Swift Compiler
+## 构建 Swift 编译器
 
 * * *
 
-### Build Swift compiler without additional tools
+### 不带额外工具构建 Swift 编译器
 
-* Build Swift Compiler:
+* 构建 Swift 编译器：
 
 ~~~bash
 ./swift/utils/build-script --build-ninja --release-debuginfo
 ~~~
 
-### Build Swift Compiler with Sccache
+### 使用 Sccache 构建 Swift 编译器
 
-* Install sccache using Homebrew [2]
+* 使用 Homebrew 安装 sccache [2]
 
 ~~~bash
 brew install sccache
 ~~~
-* Set sccache server URL
+* 设置 sccache 服务器 URL
 
 ~~~bash
 export SCCACHE_REDIS=${SCCACHE_REDIS}
 ~~~
-* Start sccache server
+* 启动 sccache 服务器
 
 ~~~bash
 sccache  --start-server
 ~~~
-* Build Swift Compiler:
+* 构建 Swift 编译器：
 
 ~~~bash
 ./swift/utils/build-script \
@@ -103,26 +101,26 @@ sccache  --start-server
     --preset=buildbot_incremental,tools=RA,stdlib=RD,build
 ~~~
 
-* Stop sccache server
+* 停止 sccache 服务器
 
 ~~~bash
 sccache  --stop-server
 ~~~
 
-### Build Swift stdlib against a downloadable toolchain
+### 基于可下载工具链构建 Swift 标准库
 
-* Create a workspace directory
+* 创建工作目录
 
 ~~~bash
 mkdir workspace
 cd workspace
 ~~~
-* Download the following snapshot from [swift.org](http://swift.org/): [https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a-osx.pkg](https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a-osx.pkg)
+* 从 [swift.org](http://swift.org/) 下载以下快照：[https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a-osx.pkg](https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a-osx.pkg)
 
 ~~~bash
 curl -O https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a-osx.pkg
 ~~~
-* Untar the file using the commands into workspace/toolchain
+* 使用以下命令将文件解压到 workspace/toolchain
 
 ~~~bash
 mkdir toolchain
@@ -130,81 +128,81 @@ xar -C toolchain -x -f swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a-osx.pkg
 tar -C toolchain -xzf toolchain/swift-DEVELOPMENT-SNAPSHOT-2019-06-06-a-osx-package.pkg/Payload
 TOOLCHAIN_BIN_DIR=$PWD/toolchain/usr/bin
 ~~~
-* Clone Swift repository:
+* 克隆 Swift 代码仓库：
 
 ~~~bash
 git clone git@github.com:swiftlang/swift.git
 ~~~
-* Clone other required repositories:
+* 克隆其他必需的代码仓库：
 
 ~~~bash
 ./swift/utils/update-checkout --clone --scheme=stdlib_standalone
 ~~~
-* Build the swift stdlib using one of the presets from the chart below. We suggest for development to try `stdlib_DA_standalone,build`. The form of the build-script invocation is:
+* 使用下表中的预设之一构建 swift 标准库。我们建议开发时尝试使用 `stdlib_DA_standalone,build`。构建脚本调用格式如下：
 
 
-    * To build/test
+    * 构建/测试
 
         ```
         ./swift/utils/build-script --preset=$PRESET_NAME toolchain_path=$TOOLCHAIN_BIN_DIR
         ```
 
-    * To reconfigure (rerun cmake), pass in the reconfigure flag.
+    * 重新配置（重新运行 cmake），传入 reconfigure 标志。
 
         ```
         ./swift/utils/build-script --preset=$PRESET_NAME toolchain_path=$TOOLCHAIN_BIN_DIR --reconfigure
         ```
 
-    * Example:
+    * 示例：
 
         ```
         ./swift/utils/build-script --preset=stdlib_DA_standalone,build toolchain_path=$TOOLCHAIN_BIN_DIR
         ```
 
-    * To clean remove ./workspace/build/$PRESET_STEM. Example:
+    * 清理：删除 ./workspace/build/$PRESET_STEM。示例：
 
         ```
         rm -rfv build/stdlib_DA_standalone
         ```
 
-|Preset `$PRESET_NAME`	|Build Type	|Test	|Debug Info	|
+|预设名称 `$PRESET_NAME`	|构建类型	|测试	|调试信息	|
 |---|---|---|---|
-|`stdlib_DA_standalone,build`	|Debug	|No	|Yes	|
-|`stdlib_DA_standalone,build,test`	|Debug	|Yes	|Yes	|
-|`stdlib_RA_standalone,build`	|Release	|No	|No	|
-|`stdlib_RA_standalone,build,test`	|Release	|Yes	|No	|
-|`stdlib_RDA_standalone,build`	|Release	|No	|Yes	|
-|`stdlib_RDA_standalone,build,test`	|Release	|Yes	|Yes	|
+|`stdlib_DA_standalone,build`	|Debug	|否	|是	|
+|`stdlib_DA_standalone,build,test`	|Debug	|是	|是	|
+|`stdlib_RA_standalone,build`	|Release	|否	|否	|
+|`stdlib_RA_standalone,build,test`	|Release	|是	|否	|
+|`stdlib_RDA_standalone,build`	|Release	|否	|是	|
+|`stdlib_RDA_standalone,build,test`	|Release	|是	|是	|
 
 * * *
 
-## Build swift-corelibs-foundation
+## 构建 swift-corelibs-foundation
 
 * * *
 
-### build swift-corelibs-foundation against a downloadable toolchain
+### 基于可下载工具链构建 swift-corelibs-foundation
 
-* Download and install the latest trunk snapshot using the Installer app from [swift.org](/download/#snapshots)
-* Clone Swift repository
+* 从 [swift.org](/download/#snapshots) 下载并使用安装程序安装最新的主干快照
+* 克隆 Swift 代码仓库
 
 ~~~bash
 git clone git@github.com:swiftlang/swift.git
 ~~~
-* Clone other required repositories
+* 克隆其他必需的代码仓库
 
 ~~~bash
 ./swift/utils/update-checkout --clone --scheme main
 ~~~
-* Open the Xcode version you just installed; select from the menu Xcode > Preferences > Components > Toolchains and enable the trunk snapshot you installed.
-* Open `Foundation.xcworkspace` from the `swift-corelibs-foundation` repository from that version of Xcode.
-* Build and run the `TestFoundation` scheme.
+* 打开刚刚安装的 Xcode 版本；从菜单选择 Xcode > Preferences > Components > Toolchains，并启用已安装的主干快照。
+* 使用该版本的 Xcode 打开 `swift-corelibs-foundation` 仓库中的 `Foundation.xcworkspace`。
+* 构建并运行 `TestFoundation` scheme。
 
 * * *
 
-[1] Manually install CMake
+[1] 手动安装 CMake
 
-* Download [CMake](https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-Darwin-x86_64.tar.gz)
-* Install CMake
+* 下载 [CMake](https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-Darwin-x86_64.tar.gz)
+* 安装 CMake
 
 ~~~bash
 mkdir -p $HOME/bin
@@ -212,10 +210,10 @@ tar xfz cmake-3.14.4-Darwin-x86_64.tar.gz -C $HOME/bin
 export PATH=$HOME/bin/cmake-3.14.4-Darwin-x86_64/CMake.app/Contents/bin:$PATH
 ~~~
 
-[2] Manually Install Sccache:
+[2] 手动安装 Sccache：
 
-* Download [sccache](https://github.com/mozilla/sccache/releases/download/0.2.8/sccache-0.2.8-x86_64-apple-darwin.tar.gz)
-* Install sccache
+* 下载 [sccache](https://github.com/mozilla/sccache/releases/download/0.2.8/sccache-0.2.8-x86_64-apple-darwin.tar.gz)
+* 安装 sccache
 
 ~~~bash
 mkdir -p $HOME/bin
@@ -223,12 +221,9 @@ tar xfz sccache-0.2.8-x86_64-apple-darwin.tar.gz -C $HOME/bin
 export PATH=$HOME/bin/sccache-0.2.8-x86_64-apple-darwin:$PATH
 ~~~
 
+## 适合新手的问题
 
-## Good first issues
-
-The Swift project uses GitHub Issues for tracking bugs, ideas, and tasks. For
-example, the issues for the Swift compiler repository can be found on its
-[issues dashboard](http://github.com/swiftlang/swift/issues). Beginner-friendly
-issues are decorated with the `good first issue` label and can be found by
-visiting `https://github.com/apple/<repository>/contribute`.
+Swift 项目使用 GitHub Issues 来跟踪 bug、想法和任务。例如，Swift 编译器仓库的问题可以在其
+[问题面板](http://github.com/swiftlang/swift/issues)上找到。适合新手的问题会标记
+`good first issue` 标签，可以通过访问 `https://github.com/apple/<repository>/contribute` 找到。
 

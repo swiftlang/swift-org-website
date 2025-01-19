@@ -1,48 +1,48 @@
 ---
 layout: page
-title: Swift Mentorship Program Terms & Conditions
+title: Swift 导师计划条款和条件
 ---
 
-Participants in the Swift Mentorship Program (the **"Program"**) shall be subject to the terms and conditions set forth below (the **"Agreement"**). This is a legal agreement between you and Apple so please read it carefully before joining the Program. By submitting a survey and joining the Program, you agree to be bound by the terms and conditions of this Agreement. If you do not agree to all the terms and conditions of this Agreement, then you may not join the Program and participate as a Mentor or a Mentee.
+Swift 导师计划（以下简称"计划"）的参与者须遵守以下条款和条件（以下简称"协议"）。这是您与苹果公司之间的法律协议，因此在加入计划之前请仔细阅读。提交调查问卷并加入计划即表示您同意受本协议条款和条件的约束。如果您不同意本协议的所有条款和条件，则不得加入计划并作为导师或学员参与。
 
-1. **Definitions**
+1. **定义**
 
-**"Mentor"** means (i) you are a member of the Swift Community; and (ii) you have agreed to provide mentorship through the Program.
+**"导师"**是指（i）您是 Swift 社区的成员；且（ii）您已同意通过本计划提供指导。
 
-**"Mentee"** means (i) you are a member of the Swift Community; and (ii) you have asked to be mentored through the Program.
+**"学员"**是指（i）您是 Swift 社区的成员；且（ii）您已申请通过本计划接受指导。
 
-**"Participants," "You", or "Your"** means both Mentors and Mentees entering into this Agreement.
+**"参与者"、"您"或"您的"**是指签订本协议的导师和学员。
 
-**"Swift Community"** means the community of Swift users more fully described at [https://swift.org/community/](/community/).
+**"Swift 社区"**是指在 [https://swift.org/community/](/community/) 中详细描述的 Swift 用户社区。
 
-2. **Eligibility Requirements.** All survey submissions must be submitted through the Swift Forums and will not be accepted through any other channel. Participants will be selected based on the review criteria for the Program. Selection and airing decisions are in Apple’s sole discretion and are confidential. To be eligible to participate in the Program, you must be 18 years of age or older, and you must be a member of the Swift Community.
+2. **资格要求。** 所有调查问卷必须通过 Swift 论坛提交，不接受通过其他渠道提交。参与者将根据计划的审核标准进行选择。选拔和配对决定由苹果公司全权决定，并且是保密的。要有资格参加本计划，您必须年满 18 周岁，并且必须是 Swift 社区的成员。
 
-3. **Program Requirements.**  Participants will enter into the mentoring relationship with a commitment to assisting each other to develop and learn in an environment that will support honesty, fairness and respect. When discussing matters or sharing information while engaging in the Program, both parties are bound by the obligations set forth herein including confidentiality. Failure to comply with these Agreement terms may result in termination from the Program. The Mentor and Mentee will disclose any conflict of interest or any potential conflict of interest, as soon as such conflict of interest arises. A conflict of interest is a matter in which the interests of a Mentor or Mentee conflicts with the duty to act in the best interest of their Mentee or Mentor or to act to the detriment of their Mentee or Mentor.
+3. **计划要求。** 参与者将以致力于在诚实、公平和尊重的环境中互相帮助发展和学习的承诺进入指导关系。在参与计划期间讨论事项或分享信息时，双方都受本协议规定的义务约束，包括保密义务。违反这些协议条款可能导致被终止参与计划。导师和学员一旦发现任何利益冲突或潜在的利益冲突，应立即披露。利益冲突是指导师或学员的利益与其为学员或导师最佳利益行事的职责相冲突，或其行为有损于学员或导师利益的情况。
 
-4. **Participant Provisions.**  (a) Participation in the Program is voluntary. You understand and agree that nothing in this Agreement may be construed as an offer or contract of employment with Apple. Nothing herein contained shall be deemed or construed to create any employee/employer relationship, partnership, or an agency relationship between you and Apple. Apple does not warrant or guarantee that you will be matched with a Mentor or that you will be satisfied with your Mentor; (b) You agree that Apple select Mentors at Apple’s sole discretion and there is no guarantee that you will be selected as a Mentor; and (c) Apple may also terminate your right to be a Mentor at our reasonable discretion if you breach this Agreement, or we receive negative feedback about your mentorship.
+4. **参与者条款。** （a）参与本计划是自愿的。您理解并同意，本协议中的任何内容都不得解释为苹果公司的雇佣要约或合同。本协议中的任何内容均不应被视为或解释为在您与苹果公司之间建立任何雇主/雇员关系、合伙关系或代理关系。苹果公司不保证或担保您一定会被匹配到导师，或者您一定会对您的导师感到满意；（b）您同意苹果公司可全权决定选择导师，且不保证您一定会被选为导师；以及（c）如果您违反本协议，或我们收到关于您指导工作的负面反馈，苹果公司也可以合理酌情终止您作为导师的权利。
 
-5. **Privacy.**  Participants will be asked to provide personal information about themselves in their submission to the Program. Mentors and Mentees may also be asked to provide personal data to other participants who wish to be matched with them as a Mentor or Mentee. Data collected pursuant to this Agreement will be treated in accordance with Apple’s Privacy Policy, which is incorporated by reference into this Agreement and which can be viewed at: [https://www.apple.com/legal/privacy/](https://www.apple.com/legal/privacy/).
+5. **隐私。** 参与者在提交计划申请时将被要求提供个人信息。导师和学员也可能被要求向希望与其配对的其他参与者提供个人数据。根据本协议收集的数据将按照苹果公司的隐私政策处理，该政策通过引用并入本协议，可在以下网址查看：[https://www.apple.com/legal/privacy/](https://www.apple.com/legal/privacy/)。
 
-6. **Code of Conduct.** Apple is committed to diversity and to providing a harassment-free experience for everyone. All participants have the right to a safe and welcoming environment regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, or any other attributes. By taking part in the Program, Mentors and Mentees agree to comply with the Community Guidelines and Code of Conduct which can be viewed at: [https://swift.org/code-of-conduct/](/code-of-conduct/). Apple reserves the right, at any time and from time to time, to update, revise, supplement, and otherwise modify this Agreement and to impose new or additional rules, policies, terms, or conditions on participation in the Program, including revising the Community Guidelines and Code of Conduct. In addition, Participants agree:
-  * To be open and truthful in communications;
-  * To respect each other’s time availability;
-  * Either party may end the relationship at any time;
-  * There is no guarantee that a Mentor can or will provide specific guidance;
-  * To ensure that the focus on the mentoring is career-related; and
-  * Mentors and Mentees must stop communicating if they feel uncomfortable or apprehensive about their mentorship relationship and should reach out to: the Diversity in Swift workgroup on the Swift Forums at [@diversity-workgroup](https://forums.swift.org/new-message?groupname=diversity-workgroup)
+6. **行为准则。** 苹果公司致力于多元化，为所有人提供无骚扰的体验。所有参与者都有权获得安全和友好的环境，不论其性别、性别认同和表达、年龄、性取向、残疾状况、外貌、体型、种族、民族、宗教或任何其他特征。参与本计划即表示导师和学员同意遵守社区指南和行为准则，可在以下网址查看：[https://swift.org/code-of-conduct/](/code-of-conduct/)。苹果公司保留随时更新、修订、补充和以其他方式修改本协议的权利，并可对参与计划施加新的或额外的规则、政策、条款或条件，包括修订社区指南和行为准则。此外，参与者同意：
+  * 在沟通中保持开放和诚实；
+  * 尊重彼此的时间安排；
+  * 任何一方都可以随时终止关系；
+  * 不保证导师一定能够或将会提供具体指导；
+  * 确保指导重点与职业相关；以及
+  * 如果导师和学员对其指导关系感到不适或担忧，必须停止沟通，并应通过 Swift 论坛联系 Swift 多元化工作组：[@diversity-workgroup](https://forums.swift.org/new-message?groupname=diversity-workgroup)
 
-7. **Confidentiality.** Mentors and Mentees will treat any information, suggestions, advice or guidance they receive in the course of their participation in the Program in confidence, unless release of that information has been agreed by the other party, is required by law or the information is already available in the public domain other than as a result of a breach of this section. You must not use any personal data about a Mentor or Mentee for any purpose (including, but not limited to, their email address or phone number) not related to the Program. Although the Mentors and Mentees agree to maintain the confidentiality of all information shared within the mentoring partnership, as the Mentors and Mentees may not be affiliated with Apple, Apple cannot guarantee that any information you disclose to your Mentor or Mentee (as applicable) will be kept confidential by the recipient.
+7. **保密性。** 导师和学员将对其在参与计划过程中收到的任何信息、建议、意见或指导保密，除非另一方同意披露该信息，或法律要求披露，或该信息已通过非违反本条款的方式进入公共领域。您不得将导师或学员的任何个人数据（包括但不限于其电子邮件地址或电话号码）用于与计划无关的任何目的。尽管导师和学员同意对在指导伙伴关系中共享的所有信息保密，但由于导师和学员可能与苹果公司无关联，苹果公司无法保证您向导师或学员（视情况而定）披露的任何信息会被接收方保密。
 
-8. **Disclaimer of Liability.** Apple hereby disclaims all warranties, whether expressed or implied, including, without limitation, any implied warranties of merchantability, or fitness for a particular purpose. Apple does not guarantee and is not liable for the advice given to you in your capacity as a Mentee by any Mentor.
+8. **免责声明。** 苹果公司特此否认所有明示或暗示的保证，包括但不限于对适销性或特定用途适用性的任何暗示保证。苹果公司不对任何导师以您作为学员的身份向您提供的建议做出保证或承担责任。
 
-9. **Indemnity.** By participating in the Program, you agree, to the extent permitted by law, to indemnify and hold Apple, its directors, officers, employees, affiliates, agents, contractors, and licensors harmless with respect to any claims arising out of your breach of the Agreement, any representations or warranties made by you herein, or your other improper, unauthorized or unlawful use of the Program.
+9. **赔偿。** 通过参与本计划，在法律允许的范围内，您同意就因您违反协议、您在此做出的任何陈述或保证，或您对计划的其他不当、未经授权或非法使用而引起的任何索赔，对苹果公司及其董事、管理人员、员工、附属机构、代理人、承包商和许可方进行赔偿并使其免受损害。
 
-10. **Limitation of Liability.** TO THE EXTENT PERMITTED BY LAW, IN NO EVENT WILL APPLE BE LIABILE TO YOU FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, INCIDENTAL, SPECIAL, EXEMPLARY OR PUNITIVE DAMAGES, REGARDLESS OF THE NATURE OF THE CLAIM OR THEORY OF LIABILITY, EVEN IF APPLE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. To the extent that a Mentee acts on any information, suggestion or advice or guidance given by the Mentor as part of the Program, Mentee shall do so at Mentee’s sole risk. The Mentee is advised to take independent financial, legal or other appropriate professional (if relevant) counsel before acting on any information, suggestion or advice given by the Mentor.
+10. **责任限制。** 在法律允许的范围内，无论索赔性质或责任理论如何，即使苹果公司已被告知可能发生此类损害，苹果公司在任何情况下都不对您承担任何直接、间接、后果性、附带性、特殊、惩戒性或惩罚性损害赔偿责任。如果学员根据导师作为计划一部分提供的任何信息、建议或指导采取行动，学员应自行承担风险。建议学员在根据导师提供的任何信息或建议采取行动之前，寻求独立的财务、法律或其他适当的专业（如相关）咨询。
 
-11. **Termination.** Participants may terminate this Agreement or a mentoring relationship for any reason at any time. Apple may terminate this Agreement or an individual engagement at any time, with or without cause, immediately upon written notice to you, and may terminate this Agreement immediately for any breach of the confidentiality provisions set forth herein.
+11. **终止。** 参与者可以随时因任何原因终止本协议或指导关系。苹果公司可以随时通过书面通知您终止本协议或个别参与，无论是否有原因，并且可以因违反本协议规定的保密条款而立即终止本协议。
 
-12. **Governing Law.** You expressly agree that the laws of the State of California, excluding its conflicts of law rules, govern the Agreement and your participation in the Program, and that the exclusive jurisdiction for any proceeding relating in any way to your participation will be the Northern District of California. You hereby waive the right to object to the foregoing choice of law, personal jurisdiction or venue.
+12. **管辖法律。** 您明确同意加利福尼亚州法律（不包括其法律冲突规则）管辖本协议和您对计划的参与，并且与您参与有关的任何程序的专属管辖权属于加利福尼亚北区。您特此放弃对上述法律选择、属人管辖权或审判地点提出异议的权利。
 
 LM 1010
 
-May 6, 2021
+2021年5月6日

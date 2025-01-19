@@ -1,67 +1,67 @@
 ---
 layout: page
-title: Foundation Workgroup
+title: Foundation 工作组
 ---
 
-The Foundation Workgroup governs the Swift Foundation project. Foundation provides a base layer of functionality that is useful in many applications. It includes fundamental types for numbers, data, URL, and dates, as well as functions for task management, file system access, localization, and more.
+Foundation 工作组负责管理 Swift Foundation 项目。Foundation 提供了许多应用程序常用的基础功能层。它包含了数字、数据、URL 和日期等基本类型，以及任务管理、文件系统访问、本地化等功能。
 
-The Foundation Workgroup will:
+Foundation 工作组将：
 
-* Set high level goals for the direction of Foundation
-* Run reviews of community API proposals, prioritizing those that align with the goals of the project
-* Define processes that govern contributions to Foundation and its related projects
-* Channel feedback to Swift Core Team about the needs of the Swift community.
+* 为 Foundation 的发展方向设定高层次目标
+* 审查社区 API 提案，优先考虑符合项目目标的提案
+* 制定管理 Foundation 及其相关项目贡献的流程
+* 向 Swift 核心团队反馈 Swift 社区的需求
 
-The current members of the Foundation Workgroup are:
+Foundation 工作组的现任成员包括：
 
 {% assign people = site.data['foundation-workgroup'].members | sort: "name" %}
 <ul>
 {% for person in people %}
 <li>{{ person.name }}
 {%- if person.affiliation -%}
-, {{ person.affiliation }}
+，{{ person.affiliation }}
 {% endif %}
 {% if person.handle %}
-(<a href="https://forums.swift.org/new-message?username={{person.handle}}">@{{person.handle}}</a>)
+（<a href="https://forums.swift.org/new-message?username={{person.handle}}">@{{person.handle}}</a>）
 {% endif %}
 </li>
 {% endfor %}
 </ul>
 
 
-## Charter 
+## 章程
 
-The goal of the Foundation project is to deliver the best fundamental data types and internationalization features, and make them available to Swift developers everywhere. It takes advantage of emerging features in the language as they are added, and enables library and app authors to build higher level API with confidence.
+Foundation 项目的目标是提供最好的基础数据类型和国际化功能，并使其对所有 Swift 开发者可用。它利用语言中新增的特性，使库和应用程序开发者能够自信地构建更高层次的 API。
 
-An important part of that confidence is built by using a [community-focused API review process](https://github.com/swiftlang/swift-foundation/blob/main/Evolution.md). The Foundation Workgroup oversees the process, and closely coordinates with developments in the Swift project, Apple platforms, and other platforms. The workgroup members review and work with contributors to iterate API proposals, triage bug and feature requests on [Github Issues](https://github.com/swiftlang/swift-foundation/issues), and provide feedback via pull requests and forum posts to incorporate the changes. The workgroup members also look at emerging trends in the Swift ecosystem, and discuss how the library should evolve to align with the language.
+这种信心的重要来源之一是采用[以社区为中心的 API 审查流程](https://github.com/swiftlang/swift-foundation/blob/main/Evolution.md)。Foundation 工作组负责监督这个流程，并与 Swift 项目、苹果平台和其他平台的发展密切协调。工作组成员审查并与贡献者合作完善 API 提案，在 [Github Issues](https://github.com/swiftlang/swift-foundation/issues) 上分类处理错误和功能请求，并通过拉取请求和论坛帖子提供反馈以整合变更。工作组成员还会关注 Swift 生态系统中的新趋势，并讨论如何使库与语言保持一致。
 
-The workgroup meets quarterly, and also when the review period ends to accept or return proposals for revision. 
+工作组每季度召开一次会议，并在审查期结束时召开会议以接受或退回需要修改的提案。
 
-### Evolution Process
+### 演进流程
 
-The Foundation Workgroup follows an evolution process that is documented in the [Foundation GitHub repository](https://github.com/swiftlang/swift-foundation/blob/main/Evolution.md).
+Foundation 工作组遵循[Foundation GitHub 仓库](https://github.com/swiftlang/swift-foundation/blob/main/Evolution.md)中记录的演进流程。
 
-### Membership 
+### 成员资格
 
-Members of the Foundation Workgroup provide stewardship of the Foundation project as outlined in the charter above. The membership is made up of Swift community members with a variety of backgrounds. 
+Foundation 工作组成员按照上述章程为 Foundation 项目提供管理。工作组成员由具有不同背景的 Swift 社区成员组成。
 
-The Core Team also selects one member of the workgroup as the chair. The chair has no special authority over the workgroup, but they are responsible for ensuring its smooth functioning, including by:
+核心团队还会选择工作组中的一名成员担任主席。主席对工作组没有特殊权力，但他们负责确保工作组顺利运作，包括：
 
-* Organizing and leading regular meetings.
-* Ensuring that the workgroup communicates effectively with the community.
-* Coordinating meetings between workgroup representatives and the Core Team when issues need to be raised to the Core Team.
+* 组织和主持定期会议。
+* 确保工作组与社区进行有效沟通。
+* 在需要向核心团队提出问题时，协调工作组代表与核心团队之间的会议。
 
-Workgroup members will try to make a decision independently by consensus whenever possible, and will raise issues to the Core Team when there are particular challenges with reaching consensus on significant decisions.
+工作组成员将尽可能独立通过共识做出决定，并在就重要决定达成共识遇到特殊挑战时向核心团队提出问题。
 
-## Communication 
+## 沟通
 
-The Foundation Workgroup communicates with the broader Swift community using the [forum](https://forums.swift.org/c/related-projects/foundation/99) for general discussions.
+Foundation 工作组通过[论坛](https://forums.swift.org/c/related-projects/foundation/99)与更广泛的 Swift 社区进行一般性讨论。
 
-The workgroup can also be contacted privately by messaging [@foundation-workgroup](https://forums.swift.org/new-message?groupname=foundation-workgroup) on the Swift Forums.
+也可以通过在 Swift 论坛上向 [@foundation-workgroup](https://forums.swift.org/new-message?groupname=foundation-workgroup) 发送消息与工作组进行私下联系。
 
-## Community Participation 
+## 社区参与
 
-Foundation welcomes contributions from the community, including bug fixes, tests, documentation, and ports to new platforms. Please see the [`CONTRIBUTING`](https://github.com/apple/swift-foundation/blob/main/CONTRIBUTING.md) document for more information, including the process for accepting community contributions for new API in Foundation. We would also love your comments and reviews in the community API approval process and evolution processes linked above.
+Foundation 欢迎来自社区的贡献，包括错误修复、测试、文档和对新平台的移植。请查看 [`CONTRIBUTING`](https://github.com/apple/swift-foundation/blob/main/CONTRIBUTING.md) 文档了解更多信息，包括在 Foundation 中接受社区贡献新 API 的流程。我们也非常欢迎您在上述社区 API 审批流程和演进流程中提供评论和审查。
 
-Discussion about general topics that are not code specific takes place on the [forum](https://forums.swift.org/c/related-projects/foundation/99). You can also reach out to the workgroup by sending messages to [@foundation-workgroup](https://forums.swift.org/new-message?groupname=foundation-workgroup) . The chair brings the list of outstanding issues and topics to the workgroup during regular workgroup meetings. The workgroup decides the actions for the issues. 
+与代码无关的一般性主题讨论在[论坛](https://forums.swift.org/c/related-projects/foundation/99)上进行。您也可以通过向 [@foundation-workgroup](https://forums.swift.org/new-message?groupname=foundation-workgroup) 发送消息来联系工作组。主席会在定期工作组会议期间向工作组提交未解决的问题和主题列表。工作组将决定这些问题的处理方案。 
 

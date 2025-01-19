@@ -1,108 +1,108 @@
 ---
 layout: page
-title: Swift Mentorship Program
+title: Swift 导师计划
 ---
 
-The Swift Mentorship Program is designed to encourage developers to actively participate in the Swift open source community through direct mentorship with experienced developers. The program is open to everyone! The program also looks to foster mentorship relationships within Swift's [community groups](/diversity/#community-groups), for those who are interested. Members of Women in Swift, Black in Swift, and Pride in Swift are strongly encouraged to participate!
+Swift 导师计划旨在通过与经验丰富的开发者直接指导的方式，鼓励开发者积极参与 Swift 开源社区。该计划对所有人开放！同时，对于感兴趣的人来说，该计划还致力于培养 Swift [社区群体](/diversity/#community-groups)内的导师关系。我们强烈鼓励 Women in Swift（Swift 女性开发者）、Black in Swift（Swift 黑人开发者）和 Pride in Swift（Swift LGBTQ+ 开发者）群体的成员参与！
 
-Each mentee will have the opportunity to connect with and learn from an experienced developer within the Swift community, with the goal of them contributing code directly to an open-source project. The mentee can contribute to any open-source project written in Swift, or even in the Swift compiler itself, depending on the mentee's learning goals. Mentors and mentees will be matched based on the learning goals of the mentee and the experience of the mentor.
+每位学员都将有机会与 Swift 社区中的资深开发者建立联系并向其学习，目标是直接为开源项目贡献代码。根据学员的学习目标，他们可以为任何用 Swift 编写的开源项目做贡献，甚至可以为 Swift 编译器本身做贡献。导师和学员将根据学员的学习目标和导师的经验进行匹配。
 
-If the mentee has not contributed to the project before, they will first work with their mentor to submit their first patch and overcome any workflow hurdles. The core of the mentorship program is making contributions that work toward the mentee's learning goals. These contributions can range from implementing a small feature within the project, to several independent bug fixes within the same area of the project. At the end of the mentorship, mentees will have an opportunity for their contributions and learnings to be featured in a dedicated post on the Swift.org blog.
+如果学员以前从未为项目做过贡献，他们将首先在导师的帮助下提交第一个补丁并克服任何工作流程上的障碍。导师计划的核心是做出符合学员学习目标的贡献。这些贡献可以是在项目中实现一个小功能，也可以是在项目同一领域进行多个独立的错误修复。在导师计划结束时，学员将有机会在 Swift.org 博客上发表专门的文章，展示他们的贡献和学习成果。
 
-## Current Program
+## 当前计划
 
-### 2024 Timeline
+### 2024 时间表
 
-| Date               | Event                            |
-|:-------------------|:---------------------------------|
-| **June 17th**      |  Mentor Interest surveys open    |
-| **July 1st**       |  Mentor Interest survey deadline |
-| **July 8th**       |  Mentee Interest surveys open    |
-| **July 15th**      |  Mentee Interest survey deadline |
-| **July 29th**      |  Mentorship pairings announced   |
-| **August 5th**     |  10-week cohort begins           |
-| **September 9th**  |  Halfway checkpoint              |
-| **October 14th**   |  10-week cohort ends             |
-| **October 21st**   |  Feedback deadline               |
+| 日期              | 事件                          |
+|:-----------------|:------------------------------|
+| **6月17日**      | 导师意向调查开放               |
+| **7月1日**       | 导师意向调查截止               |
+| **7月8日**       | 学员意向调查开放               |
+| **7月15日**      | 学员意向调查截止               |
+| **7月29日**      | 公布导师-学员配对结果          |
+| **8月5日**       | 为期10周的课程开始             |
+| **9月9日**       | 中期检查点                    |
+| **10月14日**     | 为期10周的课程结束             |
+| **10月21日**     | 反馈截止                      |
 
-### Participation
+### 参与方式
 
-The 2024 interest survey submissions will be open in accordance with the above timeline. If you are interested in participating as:
+2024年意向调查提交将按照上述时间表开放。如果您有兴趣参与：
 
-* A mentor, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ).
-* A mentee, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_1ZzrYvo7xQP4i3k).
+* 作为导师，请在[这里](https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ)填写意向调查。
+* 作为学员，请在[这里](https://essentials.applesurveys.com/jfe/form/SV_1ZzrYvo7xQP4i3k)填写意向调查。
 
-The mentee interest survey is not an application; but rather it will tell the Contributor Experience workgroup about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the workgroup may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
+学员意向调查不是申请表，而是用来告诉贡献者体验工作组您的技术兴趣和学习目标，这些信息将用于帮助您匹配合适的导师。虽然调查不会像申请那样被评估，但如果没有足够的导师，或者没有导师能够帮助您实现特定的学习目标，工作组可能无法为每位感兴趣的学员配对导师。
 
-The Swift Mentorship Program is also a leadership opportunity for veteran community members, particularly if they are already an open-source project maintainer or frequent contributor. If you're passionate about lowering the barrier to entry for new contributors in our community, please consider getting involved as a mentor!
+Swift 导师计划也是资深社区成员的一个领导力机会，特别是如果他们已经是开源项目的维护者或频繁贡献者。如果您热衷于为社区新贡献者降低准入门槛，请考虑作为导师参与进来！
 
-## Frequently Asked Questions
+## 常见问题
 
-Participation in the Swift Mentorship program is governed by the [Swift Code of Conduct](/code-of-conduct), and participants agree to the Swift Mentorship Program [terms and conditions](/mentorship-tos/). If you have any questions or concerns throughout the program, please reach out to [@contributor-experience-workgroup](https://forums.swift.org/new-message?groupname=contributor-experience-workgroup) on the Swift Forums.
+参与 Swift 导师计划需要遵守 [Swift 行为准则](/code-of-conduct)，参与者同意 Swift 导师计划的[条款和条件](/mentorship-tos/)。如果您在整个计划期间有任何问题或疑虑，请在 Swift 论坛上联系 [@contributor-experience-workgroup](https://forums.swift.org/new-message?groupname=contributor-experience-workgroup)。
 
 <details class="download">
-  <summary>How are mentor/mentee pairs selected?</summary>
+  <summary>导师/学员配对是如何选择的？</summary>
 
-Mentors and mentees will each fill out an interest survey. The survey is not an application, but rather it tells the Contributor Experience workgroup about the participant's interests, experience, learning goals, and more, which will be used to help the workgroup match mentor-mentee pairs. The interest surveys have a parallel set of questions to help evaluate whether the mentor has suitable experience to help the mentee with their learning goals. For example, the mentee questionnaire asks the mentee which specific skills/topics they are interested in working on, and the mentor questionnaire asks which specific skills/topics the mentor has experience with and can help a mentee learn about. A potential mentee will not be matched with a mentor if there are not enough mentors, or if there is not a suitable mentor to help them with their learning goals.
+导师和学员都将填写意向调查。这个调查不是申请表，而是用来告诉贡献者体验工作组参与者的兴趣、经验、学习目标等信息，这些信息将用于帮助工作组匹配导师-学员对。意向调查有一系列平行的问题，以帮助评估导师是否有合适的经验来帮助学员实现其学习目标。例如，学员问卷询问学员有兴趣学习哪些具体技能/主题，而导师问卷询问导师在哪些具体技能/主题方面有经验并可以帮助学员学习。如果没有足够的导师，或者没有合适的导师来帮助潜在学员实现其学习目标，该学员将不会被匹配到导师。
 </details>
 
 <details class="download">
-  <summary>Are there any necessary qualifications to participate?</summary>
+  <summary>参与有什么必要的资格要求吗？</summary>
 
-There are no necessary qualifications for mentees — the mentorship program is open to anybody 18 years and older who is willing to learn about Swift! Since this program is designed to encourage and help diverse developers overcome barriers and actively participate in the Swift community, the Contributor Experience workgroup strongly encourages members of Women in Swift and Black in Swift to participate.
-Mentors must be members of the Swift community (e.g., iOS developers, Swift compiler contributors, etc). Prior experience with mentorship is a plus, but not required.
+对学员没有必要的资格要求——导师计划向所有18岁及以上愿意学习 Swift 的人开放！由于该计划旨在鼓励和帮助多元化开发者克服障碍并积极参与 Swift 社区，贡献者体验工作组强烈鼓励 Women in Swift 和 Black in Swift 的成员参与。
+导师必须是 Swift 社区的成员（例如，iOS 开发者、Swift 编译器贡献者等）。有过导师经验是加分项，但不是必需的。
 </details>
 
 <details class="download">
-  <summary>I'm not a student. Can I still be a mentee?</summary>
+  <summary>我不是学生，我还可以成为学员吗？</summary>
 
-Yes! This mentorship program is not limited to students.
+可以！这个导师计划不仅限于学生。
 </details>
 
 <details class="download">
-  <summary>What should I expect from my mentor?</summary>
+  <summary>我应该对导师有什么期望？</summary>
 
-You can expect your mentor to help guide you as you make contributions to an open source project, provide constructive feedback on your work, share their own experiences, and help you navigate the Swift community! You should not expect your mentor to make sure your contributions are accepted or assign work to you. You also should not expect your mentor to directly teach you. Think of your mentor as a teaching assistant rather than a teacher — they may suggest resources to aid your learning, answer questions, and discuss what you've learned, but they are not expected to give you a lecture on a technical concept.
+您可以期望导师在您为开源项目做贡献时为您提供指导，对您的工作提供建设性的反馈，分享他们的经验，并帮助您融入 Swift 社区！您不应该期望导师确保您的贡献被接受或为您分配工作。您也不应该期望导师直接教授您。把导师想象成助教而不是老师——他们可能会建议一些帮助您学习的资源，回答问题，讨论您所学到的内容，但他们不会对技术概念进行讲课。
 </details>
 
 <details class="download">
-  <summary>What is the expected time commitment?</summary>
+  <summary>预期的时间投入是多少？</summary>
 
-Mentors are expected to allocate at least a half hour per week to meet with their mentees. The mentorship pair can decide how to distribute that time throughout the program. Mentees are expected to spend at least an additional half hour per week working on their contributions.
+导师预期每周至少分配半小时与学员会面。导师和学员可以决定如何在整个计划期间分配这些时间。学员预期每周至少额外花费半小时用于他们的贡献工作。
 </details>
 
 <details class="download">
-  <summary>How will mentors and mentees communicate?</summary>
+  <summary>导师和学员如何沟通？</summary>
 
-Most communication is expected to happen asynchronously on the Swift Forums. The mentorship pair may also decide to meet "face to face" via video chat or similar.
+大多数沟通预计将在 Swift 论坛上异步进行。导师和学员也可以决定通过视频聊天或类似方式进行"面对面"会议。
 </details>
 
 <details class="download">
-  <summary>How long is the program term?</summary>
+  <summary>计划期限是多长？</summary>
 
-10 weeks.
+10周。
 </details>
 
 <details class="download">
-  <summary>How are open source tasks for mentees identified?</summary>
+  <summary>学员的开源任务是如何确定的？</summary>
 
-If the mentee does not have any ideas in mind, project maintainers and mentors may identify starter tasks that are suitable for newcomers to the project. For example, a <a href="/contributing/#good-first-issues">good first issue</a>. Beyond the initial contribution, mentors or mentees may suggest small "projects" that are implementable given the expected time commitment. Otherwise, every open source project has an endless supply of issues to be fixed! Participants may rely on the issue tracking system for the open source project to identify these tasks.
+如果学员没有任何想法，项目维护者和导师可能会确定适合项目新手的入门任务。例如，一个<a href="/contributing/#good-first-issues">适合新手的议题</a>。在初始贡献之后，导师或学员可能会建议一些在预期时间投入内可实现的小"项目"。此外，每个开源项目都有无穷无尽的问题需要修复！参与者可以依靠开源项目的问题跟踪系统来确定这些任务。
 </details>
 
 <details class="download">
-  <summary>Is there an evaluation at the end of the program?</summary>
+  <summary>计划结束时会有评估吗？</summary>
 
-There is no formal evaluation at the end of the mentorship program. However, there will be an opt-in exit survey for all participants. There will also be a post on the Swift.org blog to highlight mentees' contributions and their learnings.
+导师计划结束时没有正式的评估。但是，所有参与者都将有一个可选的结束调查。此外，Swift.org 博客上会发表文章，突出展示学员的贡献和他们的学习成果。
 </details>
 
 <details class="download">
-  <summary>I'm interested in being a mentor! What should I do?</summary>
+  <summary>我有兴趣成为导师！我该怎么做？</summary>
 
-Please fill out the <a href="https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ">Mentor Interest Survey</a> if you are interested in participating as a mentor.
+如果您有兴趣作为导师参与，请填写<a href="https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ">导师意向调查</a>。
 </details>
 
 <details class="download">
-  <summary>I have more questions. What should I do?</summary>
+  <summary>我还有更多问题。我该怎么办？</summary>
 
-Please reach out to <a href="https://forums.swift.org/new-message?groupname=contributor-experience-workgroup">@contributor-experience-workgroup</a> on the Swift Forums with any additional questions you have!
+如果您有任何其他问题，请在 Swift 论坛上联系 <a href="https://forums.swift.org/new-message?groupname=contributor-experience-workgroup">@contributor-experience-workgroup</a>！
 </details>

@@ -1,19 +1,19 @@
 ---
 layout: page
-title: SSWG Incubated packages
+title: SSWG 孵化项目
 ---
 
-The Swift Server Workgroup ([SSWG](/sswg/)) has a [process](/sswg/incubation-process.html) which allows a project to go through incubation stages until it graduates and becomes a recommended project.
+Swift 服务器工作组（[SSWG](/sswg/））有一个[流程](/sswg/incubation-process.html)，允许项目经过孵化阶段，直到毕业成为推荐项目。
 
-## Graduated Projects
+## 已毕业项目
 
 <table>
   <thead>
     <tr>
-      <th>Project</th>
-      <th>Description</th>
-      <th>Pitched</th>
-      <th>Accepted</th>
+      <th>项目</th>
+      <th>描述</th>
+      <th>提议时间</th>
+      <th>接受时间</th>
     </tr>
   </thead>
   <tbody>
@@ -31,15 +31,15 @@ The Swift Server Workgroup ([SSWG](/sswg/)) has a [process](/sswg/incubation-pro
   </tbody>
 </table>
 
-## Incubating Projects
+## 孵化中项目
 
 <table>
   <thead>
     <tr>
-      <th>Project</th>
-      <th>Description</th>
-      <th>Pitched</th>
-      <th>Accepted</th>
+      <th>项目</th>
+      <th>描述</th>
+      <th>提议时间</th>
+      <th>接受时间</th>
     </tr>
   </thead>
   <tbody>
@@ -57,15 +57,15 @@ The Swift Server Workgroup ([SSWG](/sswg/)) has a [process](/sswg/incubation-pro
   </tbody>
 </table>
 
-## Sandbox Projects
+## 沙盒项目
 
 <table>
   <thead>
     <tr>
-      <th>Project</th>
-      <th>Description</th>
-      <th>Pitched</th>
-      <th>Accepted</th>
+      <th>项目</th>
+      <th>描述</th>
+      <th>提议时间</th>
+      <th>接受时间</th>
     </tr>
   </thead>
   <tbody>
@@ -83,5 +83,5 @@ The Swift Server Workgroup ([SSWG](/sswg/)) has a [process](/sswg/incubation-pro
   </tbody>
 </table>
 
-The SSWG publishes a [package collection](/blog/package-collections/) that contains the projects incubated by the workgroup. The collection is available at `https://swiftserver.group/collection/sswg.json`.
+SSWG 发布了一个[软件包集合](/blog/package-collections/)，其中包含工作组孵化的项目。该集合可在 `https://swiftserver.group/collection/sswg.json` 获取。
 

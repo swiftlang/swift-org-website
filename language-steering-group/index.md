@@ -1,44 +1,44 @@
 ---
 layout: page
-title: Language Steering Group
+title: 语言指导小组
 ---
 
-The Swift Language Steering Group guides the development of the Swift language and standard libraries through the [Swift evolution process](https://github.com/swiftlang/swift-evolution/blob/main/process.md).
+Swift 语言指导小组通过 [Swift 演进流程](https://github.com/swiftlang/swift-evolution/blob/main/process.md)指导 Swift 语言和标准库的发展。
 
-## Charter
+## 章程
 
-The Swift Language Steering Group:
-* works with the [Swift Core Team](/community/#community-structure) to define a roadmap for the focus areas of language and library development in the upcoming releases of Swift.
-* works with the Swift Core Team and other workgroups to define, document, and develop the Swift evolution process.
-* implements the evolution process for the Swift language and library by:
-  * soliciting, writing, and approving feature roadmaps.
-  * guiding evolution discussion.
-  * keeping evolution discussion collegial and inclusive.
-  * deciding whether and when to run a review for an evolution proposal.
-  * running evolution reviews.
-  * making decisions about proposals.
-* keeps the community informed about changes to the project roadmap, the status of accepted proposals, and the availability of new features.
+Swift 语言指导小组：
+* 与 [Swift 核心团队](/community/#community-structure)合作，为即将发布的 Swift 版本中的语言和库开发重点领域制定路线图。
+* 与 Swift 核心团队和其他工作组合作，定义、记录和开发 Swift 演进流程。
+* 通过以下方式实施 Swift 语言和库的演进流程：
+  * 征集、编写和批准功能路线图。
+  * 指导演进讨论。
+  * 保持演进讨论的友好性和包容性。
+  * 决定是否以及何时对演进提案进行评审。
+  * 开展演进评审。
+  * 对提案做出决策。
+* 让社区了解项目路线图的变更、已接受提案的状态以及新功能的可用性。
 
-## Membership
+## 成员资格
 
-The Language Steering Group is made up of Swift community members with a variety of backgrounds. Members of the workgroup are volunteers who ordinarily serve for a term of two years. The Swift Core Team is solely responsible for the membership of the workgroup and may add or remove members as it sees fit.
+语言指导小组由具有不同背景的 Swift 社区成员组成。工作组成员都是志愿者，通常任期两年。Swift 核心团队全权负责工作组的成员资格，可以根据需要增加或移除成员。
 
-The Core Team also selects one member of the workgroup as the chair. The chair has no special authority over the workgroup, but they are responsible for ensuring its smooth functioning, including by:
+核心团队还会选择工作组的一名成员担任主席。主席对工作组没有特殊权力，但他们负责确保工作组平稳运作，包括：
 
-* organizing and leading regular meetings.
-* ensuring that proposals have an assigned review manager sufficiently in advance of when they will be reviewed.
-* ensuring that the workgroup discusses and reaches a conclusion promptly after a proposal has been reviewed.
-* ensuring that the workgroup communicates effectively with the community.
-* coordinating meetings between workgroup representatives and the Core Team when issues need to be raised to the Core Team.
+* 组织和主持定期会议。
+* 确保提案在评审之前有足够时间分配审查管理员。
+* 确保工作组在提案评审后及时讨论并得出结论。
+* 确保工作组与社区进行有效沟通。
+* 在需要向核心团队提出问题时，协调工作组代表与核心团队之间的会议。
 
-The current members of the Language Steering Group are:
+语言指导小组的现任成员是：
 
 {% assign people = site.data['language-steering-group'].members | sort: "name" %}
 <ul>
 {% for person in people %}
 <li>{{ person.name }}
 {%- if person.affiliation -%}
-  , {{ person.affiliation }}
+  ，{{ person.affiliation }}
 {% endif %}
 {% if person.github %}
   (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
@@ -47,45 +47,45 @@ The current members of the Language Steering Group are:
 {% endfor %}
 </ul>
 
-## Decision making
+## 决策制定
 
-The Language Steering Group is commissioned by the Swift Core Team to make decisions on its behalf, and it typically works autonomously, with a goal of reaching consensus within the workgroup whenever possible. Final decision-making authority about all language evolution topics rests with the Project Lead.
+语言指导小组受 Swift 核心团队委托代表其做出决策，通常独立工作，目标是在工作组内部尽可能达成共识。所有语言演进主题的最终决策权归项目负责人所有。
 
-## Communication
+## 沟通
 
-The Language Steering Group communicates with the community primarily using the [Evolution](https://forums.swift.org/c/evolution) category on the Swift forums. It will also prepare special posts for the Swift Blog.
+语言指导小组主要通过 Swift 论坛的 [Evolution](https://forums.swift.org/c/evolution) 分类与社区沟通。它还会为 Swift 博客准备特别文章。
 
-The workgroup is responsible for the following regular communication with the broader Swift community:
+工作组负责与更广泛的 Swift 社区进行以下定期沟通：
 
-* Announcing (and running) evolution proposal reviews for language and library proposals.
-* Announcing decisions about evolution proposal reviews for language and library proposals.
-* After every release of Swift, describing the language and library evolution proposals newly implemented in that release.
-* After every release of Swift, describing the current language and library evolution roadmap for the next few upcoming releases (a 1–2 year timeline).
+* 宣布（并运行）语言和库提案的演进评审。
+* 宣布关于语言和库提案评审的决定。
+* 在每次 Swift 发布后，描述该版本中新实现的语言和库演进提案。
+* 在每次 Swift 发布后，描述未来几个版本（1-2 年时间线）的当前语言和库演进路线图。
 
-The workgroup is also partially responsible for the content of language and library documentation:
+工作组还部分负责语言和库文档的内容：
 
-* It has editorial authority over evolution proposals as primary documents.
-* It has editorial authority over the naming guidelines and other “style” documents which are under the control of the evolution process.
-* It reviews the technical content of any language and library documentation hosted on [swift.org](http://swift.org/), but editorial authority over that documentation rests with the Website Workgroup or other groups as appropriate.
+* 对演进提案作为主要文档具有编辑权限。
+* 对命名指南和其他受演进流程控制的"风格"文档具有编辑权限。
+* 审查托管在 [swift.org](http://swift.org/) 上的任何语言和库文档的技术内容，但这些文档的编辑权限属于网站工作组或其他适当的组织。
 
-## Evolution process
+## 演进流程
 
-The Language Steering Group is an evolution workgroup which uses the [Swift evolution process](https://github.com/swiftlang/swift-evolution/blob/main/process.md) to guide proposals through evolution review. The Language Steering Group has evolution authority over the Swift language and standard library. Authority over the language includes authority over the language configuration, such as compiler flags for language options, diagnostic options, and similar settings with a direct impact on the language or a programmer's experience using the language. This authority does not extend to other compiler flags, such as optimization or code generation settings, or to tools such as build systems and package managers.
+语言指导小组是一个演进工作组，使用 [Swift 演进流程](https://github.com/swiftlang/swift-evolution/blob/main/process.md)来指导提案通过演进评审。语言指导小组对 Swift 语言和标准库具有演进权限。对语言的权限包括对语言配置的权限，如语言选项的编译器标志、诊断选项以及对语言或程序员使用语言的体验有直接影响的类似设置。这种权限不延伸到其他编译器标志，如优化或代码生成设置，也不延伸到构建系统和包管理器等工具。
 
-These limits on the evolution authority of the Language Steering Group are not meant to be limits on the scope of evolution proposals. Swift workgroups are expected to collaborate to ensure that proposals offer a satisfactory solution across the entire Swift project. If a proposal impacts parts of the project under the authority of multiple workgroups, those workgroups must work together to bring the proposal through the evolution process.
+这些对语言指导小组演进权限的限制并不意味着对演进提案范围的限制。Swift 工作组应该相互协作，确保提案能够为整个 Swift 项目提供令人满意的解决方案。如果一个提案影响到多个工作组权限范围内的项目部分，这些工作组必须共同合作，将提案纳入演进流程。
 
-As a major client of the evolution process, the Language Steering Group works closely with the Core Team to define and improve that process, such as by:
+作为演进流程的主要参与者，语言指导小组与核心团队密切合作，定义和改进该流程，例如：
 
-* clearly defining how proposals are pitched and reviewed.
-* providing guidelines for participating in the evolution process in various roles.
-* regularly updating the process and guidelines to make the process work better.
+* 明确定义如何提出和评审提案。
+* 为在演进流程中担任各种角色提供指南。
+* 定期更新流程和指南，使流程更好地运作。
 
-Any change to the evolution process is ultimately up to the discretion of the Core Team.
+对演进流程的任何更改最终都由核心团队决定。
 
-## Community participation
+## 社区参与
 
-The Language Steering Group is not separate from the Swift community. Workgroup members participate in evolution discussions and propose language changes just like any other member of the community. When the workgroup develops a new idea about a proposal in the course of its internal deliberations, a workgroup member is expected to bring that idea to the community for discussion before the review is considered complete.
+语言指导小组不是与 Swift 社区分离的。工作组成员像社区的其他成员一样参与演进讨论并提出语言更改。当工作组在内部讨论过程中对提案产生新想法时，工作组成员应该在评审结束前将该想法提交给社区讨论。
 
-Proposals or feedback about the Swift language, the general evolution process, a specific evolution proposal, or any other topic under the purview of the Language Steering Group are always welcome. The primary way to communicate with the Language Steering Group is simply to post in the [Evolution category](https://forums.swift.org/c/evolution/) on the Swift forums, either by adding a reply to an existing review, pitch, or other discussion thread or by creating a new thread in [Evolution > Discussion](https://forums.swift.org/c/evolution/discuss) or [Evolution > Pitches](https://forums.swift.org/c/evolution/pitches). Community members may also reach out privately to members of the Language Steering Group by email or private message on the forums.
+欢迎就 Swift 语言、一般演进流程、特定演进提案或语言指导小组职权范围内的任何其他主题提出建议或反馈。与语言指导小组沟通的主要方式是在 Swift 论坛的 [Evolution 分类](https://forums.swift.org/c/evolution/)中发帖，可以在现有的评审、提议或其他讨论主题中添加回复，也可以在 [Evolution > Discussion](https://forums.swift.org/c/evolution/discuss) 或 [Evolution > Pitches](https://forums.swift.org/c/evolution/pitches) 中创建新主题。社区成员也可以通过电子邮件或论坛私信与语言指导小组成员私下联系。
 
-The Language Steering Group follows the Swift [Code of Conduct](/code-of-conduct/). Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the workgroup chair or a member of the [Swift Core Team](/community/#community-structure) or by flagging the behavior for moderation, whether you are the target of that behavior or not.
+语言指导小组遵循 Swift [行为准则](/code-of-conduct/)。如果您遇到或目睹了滥用、骚扰或其他不可接受的行为，可以通过联系工作组主席或 [Swift 核心团队](/community/#community-structure)成员，或通过标记该行为以进行审核来报告。

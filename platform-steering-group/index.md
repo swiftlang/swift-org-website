@@ -1,88 +1,87 @@
 ---
 layout: page
-title: Platform Steering Group
+title: 平台指导小组
 ---
 
-The Platform Steering Group enables the Swift language and its tools to be used in new environments. The Platform Steering Group’s primary goal is to **drive development work that brings the Swift toolchain and language runtime to a variety of platforms**. Specifically, the Platform Steering Group will:
+平台指导小组致力于使 Swift 语言及其工具能够在新环境中使用。平台指导小组的主要目标是**推动开发工作，使 Swift 工具链和语言运行时能够支持各种平台**。具体而言，平台指导小组将：
 
-* work with the Swift Core Team to define a roadmap for toolchain improvements and expanded platform support,
-* work with the (to be formed) Ecosystem Steering Group to improve the experience of setting up a Swift development environment on all supported platforms,
-* work with the Language Steering Group to define Swift language support in specific environments,
-* implement an evolution process for the Swift toolchain and new platform support, and
-* keep the community informed about changes to the project roadmap, the status of accepted proposals, and the availability of platform support, their support tier, and their requirements.
+* 与 Swift 核心团队合作制定工具链改进和扩展平台支持的路线图，
+* 与（即将成立的）生态系统指导小组合作，改善在所有支持平台上搭建 Swift 开发环境的体验，
+* 与语言指导小组合作，定义特定环境中的 Swift 语言支持，
+* 实施 Swift 工具链和新平台支持的演进流程，
+* 让社区了解项目路线图的变更、已接受提案的状态，以及平台支持的可用性、支持级别和要求。
 
-## Membership
+## 成员资格
 
-The Platform Steering Group is made up of Swift community members who have technical expertise and hands on engineering experience in build systems, compilers, debuggers, linkers, or systems programming. Members of the steering group are volunteers who ordinarily serve for a term of two years. The Swift Core Team is solely responsible for the membership of the steering group and may add or remove members as it sees fit.
+平台指导小组由在构建系统、编译器、调试器、链接器或系统编程方面具有技术专长和实践工程经验的 Swift 社区成员组成。指导小组的成员都是志愿者，通常任期两年。Swift 核心团队全权负责指导小组的成员资格，可以根据需要增加或移除成员。
 
-The current members of the Platform Steering Group are:
+平台指导小组的现任成员包括：
 
 {% assign people = site.data['platform-steering-group'].members | sort: "name" %}
 <ul>
 {% for person in people %}
 <li>{{ person.name }}
 {%- if person.affiliation -%}
-  , {{ person.affiliation }}
+  ，{{ person.affiliation }}
 {% endif %}
 {% if person.github %}
-  (<a href="https://github.com/{{person.github}}">@{{person.github}}</a>)
+  （<a href="https://github.com/{{person.github}}">@{{person.github}}</a>）
 {% endif %}
 </li>
 {% endfor %}
 </ul>
 
+## 演进
 
-## Evolution
+平台指导小组对 Swift 工具链中的底层工具具有演进决策权，包括：
 
-The Platform Steering Group has evolution authority over low-level tools in the Swift toolchain, including:
+* SwiftPM 构建系统
+* 调试器
+* 链接器
+* 库，如代码检查器
+* Swift 运行时机制
+* ABI 稳定性
+* 基于平台约束的运行时 API 可用性
 
-* The SwiftPM build system
-* The debugger
-* The linker
-* Libraries, such as the sanitizers
-* The mechanics of the Swift runtime
-* ABI stability, and
-* Runtime API availability based on platform constraints
+由于特定平台的 Swift 语言子集的提案或愿景文档会直接影响程序语义和整体编程模型，因此将与语言指导小组合作进行审查。
 
-Proposals or vision documents that define subsets of the Swift language for specific platforms will be reviewed in collaboration with the Language Steering Group, because they have direct impact on program semantics and the overall programming model.
+平台指导小组的演进决策权不包括：
 
-Evolution authority of the Platform Steering Group does not extend to
-
-* Tools that help programmers read and write code on various platforms
-* IDE extensions
+* 帮助程序员在各种平台上读写代码的工具
+* IDE 扩展
 * SourceKit LSP
-* DocC, or
-* The SwiftPM dependency management and distribution features
+* DocC
+* SwiftPM 依赖管理和分发功能
 
-All of these are under the purview of the (to be formed) Ecosystem Steering Group.
+这些都属于（即将成立的）生态系统指导小组的职权范围。
 
-Not all changes driven by the Platform Steering Group will under go evolution review. Evolution review is critical for defining new platform support and new features of existing platforms that have major implications on ABI stability and toolchain compatibility. The Platform Steering Group will also participate in standard processes of related communities, such as submitting proposals for the DWARF Debugging Standard in support of LLDB. The evolution process only concerns itself with implementation details where they interact with the underlying platform. It is also not necessary for day-to-day engineering work for reaching a higher support tier for a particular platform, general bug fixes, performance improvements, and other quality-of-life changes.
+并非平台指导小组推动的所有变更都需要经过演进审查。演进审查对于定义新的平台支持和现有平台的新功能至关重要，特别是那些对 ABI 稳定性和工具链兼容性有重大影响的功能。平台指导小组还将参与相关社区的标准流程，例如为支持 LLDB 而向 DWARF 调试标准提交提案。演进流程只关注与底层平台交互的实现细节。对于特定平台达到更高支持级别的日常工程工作、一般性错误修复、性能改进和其他生活质量改进，则无需经过演进流程。
 
-## Communication
+## 沟通
 
-The Platform Steering Group communicates with the community primarily using the [Platform category](https://forums.swift.org/c/platform) on the Swift forums.  It may also prepare special posts for the [Swift Blog](https://www.swift.org/blog/).
+平台指导小组主要通过 Swift 论坛的[平台分类](https://forums.swift.org/c/platform)与社区沟通。它也可能在 [Swift 博客](https://www.swift.org/blog/)上发布特别文章。
 
-The Steering Group is presently working on a process for platform evolution and will update this charter when details of this process have been finalised, but it is expected that the Steering Group will be responsible for:
+指导小组目前正在制定平台演进流程，并将在确定流程细节后更新本章程。预计指导小组将负责：
 
-* Announcing (and running) platform evolution proposal reviews.
-* Announcing decisions about platform evolution proposal reviews.
-* After every release of Swift, describing the platform evolution proposals newly implemented in that release.
-* After every release of Swift, describing the current platform evolution roadmap for the next few upcoming releases (a 1–2 year timeline).
+* 宣布（并运行）平台演进提案审查。
+* 宣布有关平台演进提案审查的决定。
+* 在每次 Swift 发布后，描述该版本中新实现的平台演进提案。
+* 在每次 Swift 发布后，描述未来几个版本（1-2 年时间线）的平台演进路线图。
 
-The Steering Group will also be partially responsible for the content of platform and runtime library documentation:
+指导小组还将部分负责平台和运行时库文档的内容：
 
-* It will have editorial authority over platform evolution proposals as primary documents.
-* It will review, alongside other steering groups, the technical content as relates to platform support of any language, library, runtime, or platform documentation hosted on [swift.org](https://swift.org), but editorial authority over that documentation rests with the Website Workgroup or other groups as appropriate.
+* 它将对平台演进提案作为主要文档具有编辑权限。
+* 它将与其他指导小组一起审查 [swift.org](https://swift.org) 上托管的任何与平台支持相关的语言、库、运行时或平台文档的技术内容，但这些文档的编辑权限属于网站工作组或其他相关小组。
 
-## Platform Evolution process
+## 平台演进流程
 
-The Steering Group is presently working on defining a Platform Evolution process, and will share more here when ready.
+指导小组目前正在制定平台演进流程，完成后将在此处分享更多信息。
 
-## Community participation
+## 社区参与
 
-The Platform Steering Group is not separate from the Swift community. Steering Group members participate in platform evolution discussions and propose changes just like any other member of the community.  When the Steering Group develops a new idea about a proposal in the course of its internal deliberations, a Steering Group member is expected to bring that idea to the community for discussion before the review is considered complete.
+平台指导小组不是与 Swift 社区分离的。指导小组成员像其他社区成员一样参与平台演进讨论并提出变更建议。当指导小组在内部讨论过程中对提案产生新想法时，指导小组成员应在审查完成前将该想法提交给社区讨论。
 
-Proposals or feedback about Swift platform support, the Platform Evolution process, a specific Platform Evolution proposal, or any other topic under the purview of the Platform Steering Group are always welcome.  The primary way to communicate with the Platform Steering Group is simply to post in the Evolution category on the Swift forums, either by adding a reply to an existing review, pitch, or other discussion thread, or by creating a new thread in [Evolution > Discussion](https://forums.swift.org/c/evolution/discuss) or [Evolution > Pitches](https://forums.swift.org/c/evolution/pitches).  Community members may also reach out privately to members of the Platform Steering Group by email or private message on the forums.
+欢迎就 Swift 平台支持、平台演进流程、具体平台演进提案或任何其他属于平台指导小组职权范围的主题提出建议或反馈。与平台指导小组沟通的主要方式是在 Swift 论坛的演进分类中发帖，可以在现有的审查、建议或其他讨论主题中回复，也可以在[演进 > 讨论](https://forums.swift.org/c/evolution/discuss)或[演进 > 建议](https://forums.swift.org/c/evolution/pitches)中创建新主题。社区成员也可以通过电子邮件或论坛私信与平台指导小组成员进行私下联系。
 
-The Platform Steering Group follows the [Swift Code of Conduct](https://www.swift.org/code-of-conduct/).  Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported by contacting the Steering Group chair or a member of the [Swift Core Team](https://www.swift.org/community/#community-structure) or by flagging the behavior for moderation, whether you are the target of that behaviour or not.
+平台指导小组遵循 [Swift 行为准则](https://www.swift.org/code-of-conduct/)。如果您遇到或目睹了任何滥用、骚扰或其他不可接受的行为，可以联系指导小组主席或 [Swift 核心团队](https://www.swift.org/community/#community-structure)成员，或者标记该行为以进行审核。
 

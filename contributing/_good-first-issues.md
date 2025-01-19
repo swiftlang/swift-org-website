@@ -1,23 +1,12 @@
-## Good First Issues
+## 新手友好议题
 
-Good first issues are bugs, ideas, and tasks that are intended to be accessible
-for contributors that are new to working on the Swift project, and even new to
-the patterns and concepts behind subprojects such as the Swift compiler.
-Good first issues are decorated with a corresponding label and are most easily
-found by visiting `github.com/apple/<repository>/contribute`, e.g.
-[github.com/apple/swiftlang/contribute](https://github.com/swiftlang/swift/contribute)
-for the main Swift repository.
-They are expected to be low-priority and of modest scope, and not require
-excessive refactoring, research, or debugging — rather, they should encourage
-newcomers to dip their toes in some part of Swift, learn more about it, and
-make a real contribution.
+新手友好议题是指那些适合 Swift 项目新手，甚至是对 Swift 编译器等子项目的模式和概念还不熟悉的贡献者参与的 bug、想法和任务。新手友好议题会标注相应的标签，最简单的查找方式是访问 `github.com/apple/<仓库名>/contribute`，例如 Swift 主仓库的地址是 [github.com/apple/swiftlang/contribute](https://github.com/swiftlang/swift/contribute)。这些议题通常优先级较低，范围适中，不需要过多的重构、研究或调试——相反，它们旨在鼓励新人接触 Swift 的某个部分，了解更多相关知识，并做出实际贡献。
 
-Anyone with [commit access](#commit-access) and insight into a particular area
-is welcome and encouraged to pin down or think up good first issues.
+任何拥有[提交权限](#commit-access)且对特定领域有深入了解的人都欢迎并鼓励去确定或构思新手友好议题。
 
 {% comment %}
-    // TODO: This is content I'd like to migrate into Jira behind a "starter" label of some sort. For now:
+    // TODO: 这些内容我想迁移到 Jira 中并使用"starter"标签进行标记。目前暂时保留：
 
-* Swift Intermediate Language (SIL) round-tripping: make sure that the SIL parser can parse what the SIL printer prints. This is a great project for getting a feel for SIL and how it's used, and making it round-trippable has huge benefits for anyone working on the Swift compiler.
-* Warning control: [Clang](http://clang.llvm.org) has a great scheme for placing warnings into specific warning groups, allowing one to control (from the command line) which warnings are emitted by the compiler or are treated as errors. Swift needs that!
+* Swift 中间语言（SIL）往返转换：确保 SIL 解析器能够解析 SIL 打印器输出的内容。这是一个很好的项目，可以帮助理解 SIL 及其用途，而且使其能够往返转换对于在 Swift 编译器上工作的任何人都有巨大好处。
+* 警告控制：[Clang](http://clang.llvm.org) 有一个很好的方案，可以将警告放入特定的警告组中，允许用户从命令行控制编译器发出哪些警告或将哪些警告视为错误。Swift 也需要这样的功能！
 {% endcomment %}

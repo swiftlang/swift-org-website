@@ -1,104 +1,69 @@
 ---
 layout: page
-title: Swift Documentation Workgroup
+title: Swift 文档工作组
 ---
 
-The Documentation Workgroup is a steering team that helps guide the
-documentation experience for Swift.
+文档工作组是一个指导团队，负责帮助指导 Swift 的文档体验。
 
-The Documentation Workgroup will:
+文档工作组将：
 
-* Define and prioritize efforts that address the documentation needs of the
-  Swift community.
-* Actively guide development for documentation tooling such as Swift-DocC.
-* Define processes that govern contributions to Swift’s documentation
-  experience.
-* Channel feedback to Swift Core Team about the needs of the Swift community.
+* 定义并优先处理满足 Swift 社区文档需求的工作。
+* 积极指导文档工具（如 Swift-DocC）的开发。
+* 制定管理 Swift 文档体验贡献的流程。
+* 向 Swift 核心团队传达 Swift 社区的需求。
 
-The current Documentation Workgroup consists of the following people:
+当前的文档工作组由以下成员组成：
 
 * [Daniel Grumberg](https://github.com/daniel-grumberg)
 * [Dave Verwer](https://github.com/daveverwer)
 * [David Rönnqvist](https://github.com/d-ronnqvist)
 * [Dianna Ma](https://github.com/tayloraswift)
-* [Franklin Schrans](https://github.com/franklinsch) (chair)
+* [Franklin Schrans](https://github.com/franklinsch)（主席）
 * [Joe Heck](https://github.com/heckj)
 * [Kyle Ye](https://github.com/Kyle-Ye)
 * [Sofía Rodríguez Morales](https://github.com/sofiaromorales)
 * [Sven Schmidt](https://github.com/finestructure)
 * [Vera Mitchell](https://github.com/QuietMisdreavus)
 
-We are grateful for the service of the following emeritus workgroup members:
+我们感谢以下荣誉退休工作组成员的服务：
 
 * [Ethan Kusters](https://github.com/ethan-kusters)
 * [Kyle Murray](https://github.com/krilnon)
 * [Max Obermeier](https://github.com/theMomax)
 
-## Charter
+## 章程
 
-The main goal of the Documentation Workgroup is to deliver a great
-documentation experience to the Swift community. To that end, the workgroup
-will develop tooling like Swift-DocC to support the experience it wants to
-provide for the ecosystem and future Swift language documentation efforts. Over
-time, the workgroup will also help define guidelines for writing quality
-documentation and drive a cohesive documentation ecosystem across Swift.
+文档工作组的主要目标是为 Swift 社区提供出色的文档体验。为此，工作组将开发 Swift-DocC 等工具，以支持它希望为生态系统和未来 Swift 语言文档工作提供的体验。随着时间推移，工作组还将帮助制定编写高质量文档的指南，并推动整个 Swift 生态系统的文档体验保持一致。
 
-In that capacity, workgroup members review proposals for changes to the
-documentation experience, either in pull requests or ideas posted to forums,
-and provide feedback in an effort to integrate these changes in a way that is
-consistent with the documentation experience’s goals.
+在这方面，工作组成员会审查对文档体验的修改提案（无论是在拉取请求中还是在论坛中发布的想法），并提供反馈，以努力使这些更改与文档体验的目标保持一致。
 
-Workgroup members may also initiate projects to improve different aspects of
-the Swift documentation experience, such as documentation UI/UX
-design and the documentation authoring syntax.
+工作组成员还可以发起项目来改进 Swift 文档体验的不同方面，例如文档的用户界面/用户体验设计和文档编写语法。
 
-Members of the Documentation Workgroup serve at the discretion of the Swift
-Core Team and the Swift project lead, who has the ultimate authority over the
-workgroup decisions.
+文档工作组成员由 Swift 核心团队和 Swift 项目负责人酌情任命，后者对工作组的决策拥有最终决定权。
 
-## Membership
+## 成员资格
 
-Members of the Documentation Workgroup provide steerage of Swift’s
-documentation experience as outlined in the charter above. If you’d like to
-join the workgroup, please reach out to `@swift-documentation-workgroup` in the
-forums.
+文档工作组的成员按照上述章程指导 Swift 的文档体验。如果您想加入工作组，请在论坛中联系 `@swift-documentation-workgroup`。
 
-Inactive members that do not participate for three consecutive months will be
-contacted to confirm their desire to stay with the group. After no activity for
-six months, they will be removed from the group.
+连续三个月不参与活动的非活跃成员将被联系以确认其是否希望继续留在工作组。六个月没有活动后，他们将被从工作组中移除。
 
-The Core Team also selects one member of the workgroup as the chair. The chair
-has no special authority over the workgroup, but they are responsible for
-ensuring its smooth functioning, including by:
+核心团队还会选择工作组的一名成员担任主席。主席对工作组没有特殊权力，但他们负责确保工作组顺利运作，包括：
 
-* Organizing and leading regular meetings.
-* Ensuring that the workgroup communicates effectively with the community.
-* Coordinating meetings between workgroup representatives and the Core Team
-  when issues need to be raised to the Core Team.
+* 组织和主持定期会议。
+* 确保工作组与社区进行有效沟通。
+* 在需要向核心团队提出问题时，协调工作组代表与核心团队之间的会议。
 
-Workgroup members will try to make a decision independently by consensus
-whenever possible, and will raise issues to the Core Team when there are particular
-challenges with reaching consensus on significant decisions.
+工作组成员将尽可能独立通过共识做出决定，并在就重要决定达成共识遇到特殊挑战时向核心团队提出问题。
 
-## Communication
+## 沟通
 
-The Documentation Workgroup communicates with the broader Swift community using
-the [Swift-DocC forum](https://forums.swift.org/c/development/swift-docc) for
-general discussions about Swift-DocC. The workgroup can also be contacted
-privately by messaging `@swift-documentation-workgroup` on the Swift Forums.
+文档工作组通过 [Swift-DocC 论坛](https://forums.swift.org/c/development/swift-docc)与更广泛的 Swift 社区进行有关 Swift-DocC 的一般讨论。也可以通过在 Swift 论坛上向 `@swift-documentation-workgroup` 发送消息与工作组进行私下联系。
 
-## Community Participation
+## 社区参与
 
-Everyone is invited to participate in contributing to Swift’s documentation
-experience and the Documentation Workgroup’s initiatives. If you’d like to
-contribute, consider:
+我们邀请所有人参与为 Swift 的文档体验和文档工作组的计划做出贡献。如果您想贡献，可以考虑：
 
-* Joining the Documentation Workgroup’s open meetings on WebEx (reach out to
-    `@swift-documentation-workgroup` in forums for details).
-* Discussing ideas in the Swift Forums, for example in the [Swift-DocC
-  forum](https://forums.swift.org/c/development/swift-docc) for
-  Swift-DocC–related ideas.
-* Opening issues to track enhancements and bugs for the projects governed by the Documentation Workgroup:
-  [Swift-DocC](https://github.com/swiftlang/swift-docc/issues), [The Swift Programming Language book](https://github.com/swiftlang/swift-book/issues).
-* Participating in the [Swift Mentorship
-  Program](/mentorship).
+* 参加文档工作组在 WebEx 上的公开会议（在论坛中联系 `@swift-documentation-workgroup` 了解详情）。
+* 在 Swift 论坛中讨论想法，例如在 [Swift-DocC 论坛](https://forums.swift.org/c/development/swift-docc)中讨论与 Swift-DocC 相关的想法。
+* 为文档工作组管理的项目开设议题以跟踪改进和错误：[Swift-DocC](https://github.com/swiftlang/swift-docc/issues)、[Swift 编程语言书籍](https://github.com/swiftlang/swift-book/issues)。
+* 参与 [Swift 导师计划](/mentorship)。

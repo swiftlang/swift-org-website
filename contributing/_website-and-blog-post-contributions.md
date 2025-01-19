@@ -1,5 +1,5 @@
-## Website and Blog Post Contributions
+## 网站和博客文章贡献
 
-The Swift project welcomes suggestions and enhancements to this website and community blog post contributions showcasing initiatives and stories across the community. The [Swift Website Workgroup]({% link website-workgroup/index.md %}) oversees all website and blog post contributions.
+Swift 项目欢迎对本网站的建议和改进，以及展示社区各项倡议和故事的社区博客文章投稿。[Swift 网站工作组]({% link website-workgroup/index.md %})负责监督所有网站和博客文章的贡献。
 
-Learn more about contributing to this website in the [Swift.org website governance]({% link website-governance/index.md %}) process and about how to [submit blog post contributions]({% link blog-post-contributions/index.md %}).
+您可以在 [Swift.org 网站管理]({% link website-governance/index.md %})流程中了解更多关于为本网站做贡献的信息，以及如何[提交博客文章投稿]({% link blog-post-contributions/index.md %})。

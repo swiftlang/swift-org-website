@@ -1,42 +1,42 @@
 ---
 layout: page
-title: Blog Post Contributions
+title: 博客文章投稿
 ---
 
-The [Swift.org blog](https://www.swift.org/blog/) helps to keep the Swift community informed of recent developments in the language, the release roadmap, interesting new features, libraries, tools, and announcing project & community initiatives. It is central to Diversity in Swift’s mission to recognize and highlight work across the community. We welcome blog post contributions from everyone, regardless of background or experience.
+[Swift.org 博客](https://www.swift.org/blog/)致力于让 Swift 社区了解语言的最新发展、发布路线图、有趣的新特性、库、工具，以及项目和社区倡议。认可并突出社区各方面的工作是 Swift 多元化的核心使命。我们欢迎所有人投稿博客文章，不论背景或经验如何。
 
-Are you doing interesting things using Swift? The community would love to hear how you’ve been using the language. See the process below for details on how to submit a blog post.
+你在用 Swift 做有趣的事情吗？社区很想听听你是如何使用这门语言的。请查看下面的流程了解如何提交博客文章。
 
-## Community Contributed Content
+## 社区贡献内容
 
-Blog posts don’t necessarily need to be technical, and your writing can appeal to anyone from beginners to language experts. Did you have an unusual journey towards Swift? Share that story. Did you use Swift code to interact with some hardware or in another context that people might not expect? That sounds great. Is there a previously covered topic you’d like to take further? Adding your experience and perspective is valuable.
+博客文章不一定要是技术性的，你的写作可以面向从初学者到语言专家的任何人。你是否有一段不寻常的 Swift 学习之旅？分享这个故事吧。你是否用 Swift 代码与一些硬件交互，或在人们意想不到的场景中使用它？那听起来很棒。是否有一个之前讨论过的主题你想进一步探讨？添加你的经验和观点都是很有价值的。
 
-Readers have different backgrounds and experiences, but you can assume a basic knowledge of the Swift language.
+读者有不同的背景和经验，但你可以假设他们具备 Swift 语言的基础知识。
 
-Is there anything to avoid in a Swift.org blog post? There’s a short list:
+Swift.org 博客文章有什么需要避免的内容吗？这里有一个简短的清单：
 
-* Directly commercial content promoting a product, service, or event.
-* Launch announcements for apps or libraries. While a blog post could talk about a new Swift language library or package, it should not be the post’s focus. The [Community Showcase](https://forums.swift.org/c/community-showcase/66) section of the Swift forums is ideal for community announcements.
+* 直接宣传产品、服务或活动的商业内容。
+* 应用程序或库的发布公告。虽然博客文章可以谈论新的 Swift 语言库或包，但这不应该是文章的重点。Swift 论坛的[社区展示](https://forums.swift.org/c/community-showcase/66)板块是社区公告的理想场所。
 
-All Swift.org blog posts are published under a Creative Commons Attribution 4.0 International license. You may re-publish your work on your own website under this license with appropriate attribution.
+所有 Swift.org 博客文章都在知识共享署名 4.0 国际许可协议下发布。在适当署名的情况下，你可以在自己的网站上以这个许可重新发布你的作品。
 
-## Writing Guidelines
+## 写作指南
 
-Blog posts on Swift.org don’t need to be written in a particular style, but there are some guidelines below that will help make a great post:
+Swift.org 的博客文章不需要遵循特定的写作风格，但以下指南将帮助你写出优秀的文章：
 
-* Write inclusively and respectfully according to the Swift.org Code of Conduct.
-* There’s no set length for a blog post, but between 500 and 1,000 words is typical.
-* Screenshots, illustrations, code snippets, and links to documentation or other websites can be worth a thousand words.
-* You can write alone or in a small group. It’s up to you.
+* 根据 Swift.org 行为准则，以包容和尊重的方式写作。
+* 博客文章没有固定长度要求，但通常在 500 到 1,000 字之间。
+* 截图、插图、代码片段以及文档或其他网站的链接可能胜过千言万语。
+* 你可以独自写作或与小组合作，这由你决定。
 
-## Submission Process
+## 提交流程
 
-Submit ideas or drafts of blog posts by [sending a message to the @swift-website-workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup&title=Blog%20post%20proposal). Be sure to include some details about what you’d like to contribute in your post:
+通过[向 @swift-website-workgroup 发送消息](https://forums.swift.org/new-message?groupname=swift-website-workgroup&title=Blog%20post%20proposal)来提交博客文章的想法或草稿。请务必包含一些关于你想在文章中贡献的内容的详细信息：
 
-* Either a first draft or a few paragraphs that summarise your post idea.
-* Whether your post or the topic it covers is time-sensitive and any information on why.
-* Your name and Swift forum username. If you are writing as a group, include everyone.
+* 初稿或几段概述你的文章想法的内容。
+* 你的文章或其涉及的主题是否有时间敏感性，以及任何相关说明。
+* 你的姓名和 Swift 论坛用户名。如果是小组写作，请包含所有人的信息。
 
-The [Swift Website Workgroup]({% link website-workgroup/index.md %}) discusses blog post pitches bi-weekly and will reply to all submissions.
+[Swift 网站工作组]({% link website-workgroup/index.md %})每两周讨论一次博客文章提案，并会回复所有提交的内容。
 
-Like all contributions to this website, the [Swift.org website governance]({% link website-governance/index.md %}) process covers all blog post submissions.
+与对本网站的所有贡献一样，所有博客文章提交都遵循 [Swift.org 网站管理]({% link website-governance/index.md %})流程。

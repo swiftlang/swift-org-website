@@ -1,26 +1,26 @@
 ---
 layout: page
-title: SSWG - Security requirements for packages on the index
+title: SSWG - 软件包索引的安全要求
 ---
 
-## SSWG security requirements for packages on the index
+## SSWG 软件包索引的安全要求
 
-This information is intended for package authors who have packages incubated by the SSWG and listed on the package index or are looking into pitching/proposing their package to be listed. If instead you found (or have heard of) a security vulnerability you’d like to report, please have a look over [here](/sswg/security/contributor-found-vulnerability.html).
+本文信息面向那些已经被 SSWG 孵化并列在软件包索引中的包作者，或者正在考虑向 SSWG 提议/推荐其软件包的作者。如果您发现（或听说）了一个安全漏洞并想要报告，请查看[这里](/sswg/security/contributor-found-vulnerability.html)。
 
 ---
 
-Packages that are incubated by the SSWG and are listed on the [SSWG's package index](server/#projects) are required to follow the following guidelines around security.
+被 SSWG 孵化并列在 [SSWG 软件包索引](server/#projects)中的包必须遵循以下安全准则。
 
-Where security vulnerabilities are involved, it is key to ensure that somebody who discovers a vulnerability in your package can quickly find information on how to report it. As the package author, you know best where to put important information about your software. Bear in mind that many of your users will see your repository's readme file (usually `README.md`) first. So make sure to link to your security policy from there.
+在涉及安全漏洞时，确保发现漏洞的人能够快速找到如何报告的信息是至关重要的。作为包的作者，您最清楚在哪里放置有关您软件的重要信息。请记住，许多用户首先会看到您的代码仓库的说明文件（通常是 `README.md`）。因此，请确保在那里链接到您的安全政策。
 
-A file named `SECURITY.md` in the root of your repository is the recommended place to put your full security policy. It is also worth noting that some vendors (like GitHub) automatically discover and promote `SECURITY.md` which make the relevant information even easier to find for your users.
+建议在您的代码仓库根目录下放置一个名为 `SECURITY.md` 的文件来存放完整的安全政策。值得注意的是，一些平台（如 GitHub）会自动发现并推广 `SECURITY.md`，这使得用户更容易找到相关信息。
 
-Project authors are also encouraged to make use of their source control system security features (for example: [GitHub's "Security Advisories"](https://docs.github.com/en/github/managing-security-vulnerabilities/about-github-security-advisories) and [GitLab's "Confidential Issues"](https://docs.gitlab.com/ee/user/project/issues/confidential_issues.html)) to manage the vulnerabilities and inform their users.
+我们也鼓励项目作者使用其源代码控制系统的安全功能（例如：[GitHub 的"安全公告"](https://docs.github.com/en/github/managing-security-vulnerabilities/about-github-security-advisories)和 [GitLab 的"机密议题"](https://docs.gitlab.com/ee/user/project/issues/confidential_issues.html)）来管理漏洞并通知用户。
 
-#### The key requirements are:
+#### 主要要求包括：
 
-- In your security policy (usually `SECURITY.md`), describe as easily and precisely as possible how the security process of your package works. This includes where and how to report as well as expected timelines for a fix.
-- Make sure your security policy is easy to find. For example by naming it `SECURITY.md` and linking to it from your main readme file.
-- List a clear point of contact (e.g. an email address) for security vulnerability reports in your security policy.
-- The point of contact for security vulnerabilities should be private. That means it is only accessible to you and your maintainers, and in particular that it is _not_ publicly accessible on the internet. It is also good practice to describe exactly who can access the information alongside the point of contact.
-- The goal is to make it as easy as possible for a user to report a security vulnerability to you. Try to remove all ambiguity and difficulty from reporting vulnerabilities. In many cases you will rely on somebody's spare time to report vulnerabilities.
+- 在您的安全政策（通常是 `SECURITY.md`）中，尽可能简单明确地描述您的软件包的安全流程是如何运作的。这包括在哪里以及如何报告，以及修复的预期时间线。
+- 确保您的安全政策易于找到。例如，将其命名为 `SECURITY.md` 并在主要说明文件中链接到它。
+- 在您的安全政策中列出明确的安全漏洞报告联系点（例如电子邮件地址）。
+- 安全漏洞的联系点应该是私密的。这意味着只有您和您的维护者可以访问，特别是它不应该在互联网上公开可见。同时，最好在联系点旁边准确描述谁可以访问这些信息。
+- 目标是让用户尽可能容易地向您报告安全漏洞。试图消除报告漏洞时的所有歧义和困难。在许多情况下，您将依赖他人的业余时间来报告漏洞。

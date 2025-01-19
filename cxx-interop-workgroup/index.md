@@ -1,33 +1,32 @@
 ---
 layout: page
-title: C++ Interoperability Workgroup
+title: C++ 互操作性工作组
 ---
 
-The C++ Interoperability workgroup is a team that works on adding the support for the bidirectional interoperability between Swift and C++.
+C++ 互操作性工作组是一个致力于为 Swift 和 C++ 之间添加双向互操作性支持的团队。
 
-## Charter
+## 章程
 
-The C++ Interoperability workgroup works to build and advance the interoperability support between Swift and C++, with the goal of making bidirectional interoperation with C++ a fully supported Swift language feature.
+C++ 互操作性工作组致力于构建和推进 Swift 与 C++ 之间的互操作性支持，目标是将与 C++ 的双向互操作作为一个完整的 Swift 语言特性。
 
-The C++ Interoperability workgroup serves as an incubator for the design and implementation of Swift's interoperation with C++. It has no special technical or formal authority. Workgroup members design, implement, test, and document experimental features in the Swift tools that allow both Swift programs to import and use C++ APIs and C++ programs to import and use Swift APIs. When the workgroup feels that a feature is ready, workgroup members guide the feature through the normal Swift evolution process for discussion and formal review. It is a goal of the workgroup that all features will eventually be reviewed rather than remaining perpetually experimental.
+C++ 互操作性工作组是 Swift 与 C++ 互操作设计和实现的孵化器。它没有特殊的技术或正式权限。工作组成员设计、实现、测试和记录 Swift 工具中的实验性功能，这些功能允许 Swift 程序导入和使用 C++ API，以及 C++ 程序导入和使用 Swift API。当工作组认为某个功能已经准备就绪时，工作组成员会通过常规的 Swift 演进流程来引导该功能进行讨论和正式审查。工作组的目标是所有功能最终都将经过审查，而不是永远停留在实验阶段。
 
-As an incubator for language proposals, the C++ Interoperability workgroup works closely with the Language Steering Group to get early feedback on its ideas and to provide feedback to the Language Steering Group about general directions the language should take.
+作为语言提案的孵化器，C++ 互操作性工作组与语言指导小组密切合作，以获取对其想法的早期反馈，并向语言指导小组提供关于语言应该采取的总体方向的反馈。
 
-The C++ Interoperability workgroup communicates with the broader Swift community in three primary ways:
+C++ 互操作性工作组主要通过以下三种方式与更广泛的 Swift 社区进行沟通：
 
-* The workgroup proposes features for inclusion into Swift and guides them through the normal Swift evolution process.
+* 工作组提出要纳入 Swift 的功能，并通过常规的 Swift 演进流程进行引导。
 
-* The workgroup writes design and technical documentation, such as manifestos that describe the high-level design approach it is considering or precise specifications of how complex features are handled.
+* 工作组编写设计和技术文档，例如描述其正在考虑的高层设计方法的宣言，或复杂功能处理方式的精确规范。
 
-* After every major and minor release of Swift, the workgroup publishes a report about its recent work (whether or not that work was incorporated into the release) and its plans for the upcoming releases to the [C++ interoperability Swift.org website forum section](https://forums.swift.org/c/development/c-interoperability/82).
+* 在 Swift 每个主要和次要版本发布后，工作组都会在 [Swift.org 网站论坛的 C++ 互操作性版块](https://forums.swift.org/c/development/c-interoperability/82)发布关于其最近工作（无论该工作是否已纳入发布版本）和即将发布版本计划的报告。
 
-## Membership
+## 成员资格
 
-Membership in the C++ Interoperability workgroup is open to anyone who wishes to contribute. Members communicate with each other over regular video calls and on the Swift forums. Community members interested in participating in the workgroup should reach out to a current member of the workgroup, or request to be added to the [C++ Interop workgroup](https://forums.swift.org/g/cxx-interop-workgroup) directly.
+C++ 互操作性工作组的成员资格对任何希望做出贡献的人开放。成员通过定期视频通话和 Swift 论坛相互交流。有兴趣参与工作组的社区成员应联系工作组的现有成员，或直接请求加入 [C++ 互操作性工作组](https://forums.swift.org/g/cxx-interop-workgroup)。
 
-The C++ Interoperability workgroup adheres to the Swift code of conduct. If community members have any concerns about the adherence of the workgroup or one of its members to the code of conduct, they should contact a member of the Swift Core Team.
+C++ 互操作性工作组遵守 Swift 行为准则。如果社区成员对工作组或其成员是否遵守行为准则有任何疑虑，他们应该联系 Swift 核心团队的成员。
 
+## 沟通方式
 
-## Communication
-
-The C++ Interoperability workgroup uses the [C++ interoperability Swift.org website forum section](https://forums.swift.org/c/development/c-interoperability/82) for general discussions. It can also be contacted privately by messaging [@cxx-interop-workgroup](https://forums.swift.org/g/cxx-interop-workgroup) on the Swift Forums.
+C++ 互操作性工作组使用 [Swift.org 网站论坛的 C++ 互操作性版块](https://forums.swift.org/c/development/c-interoperability/82)进行一般性讨论。也可以通过在 Swift 论坛上私信 [@cxx-interop-workgroup](https://forums.swift.org/g/cxx-interop-workgroup) 进行私下联系。

@@ -1,232 +1,208 @@
 ---
 layout: page
-title: Project Ideas
+title: 项目创意
 ---
 
-This page contains a list of potential project ideas that we are keen to develop during GSoC 2018. If you would like to apply as a GSoC student, please follow these two steps to get started:
+本页面包含了我们希望在 GSoC 2018 期间开发的潜在项目创意列表。如果你想申请成为 GSoC 学生，请按照以下两个步骤开始：
 
-1. Read through this page and identify the project ideas you find interesting.
-2. Check out the [Development forum](https://forums.swift.org/c/development) to connect with potential mentors.
+1. 浏览本页面并找出你感兴趣的项目创意。
+2. 查看[开发论坛](https://forums.swift.org/c/development)以便与潜在的导师建立联系。
 
-## Potential Projects
+## 潜在项目
 
-### Fuzzing/stress-testing tool
+### 模糊/压力测试工具
 
-**Description**
+**描述**
 
-Build a tool, in Swift code, which uses libSyntax to parse/mutate Swift projects for possible problems related to parser, type-checker, SIL generation, code-completion, refactoring actions, and sourcekitd's cursor-info functionality. The goal of the project is to stress-test the compiler pipeline and sourcekitd and catch crashers or hangs with mutations leading to invalid code, and invoking functionality like code-completion and refactoring at random points.
+用 Swift 代码构建一个工具，该工具使用 libSyntax 来解析/变异 Swift 项目，以发现与解析器、类型检查器、SIL 生成、代码补全、重构操作以及 sourcekitd 的光标信息功能相关的潜在问题。该项目的目标是对编译器管道和 sourcekitd 进行压力测试，通过导致无效代码的变异来捕获崩溃或挂起，并在随机位置调用代码补全和重构等功能。
 
-**Expected outcomes/benefits/deliverables**
+**预期成果/收益/交付物**
 
-Testing and improvements to the robustness of the compiler pipeline and sourcekitd infrastructure.
+测试并改进编译器管道和 sourcekitd 基础设施的健壮性。
 
-**Skills required**
+**所需技能**
 
-* Swift (familiar)
+* Swift（熟悉）
 
-**Potential mentors**
+**潜在导师**
 
 Nathan Hawes
 
-**Expected difficulty**
+**预期难度**
 
-Medium
+中等
 
-### libSyntax-based indentation mechanism
+### 基于 libSyntax 的缩进机制
 
-**Description**
+**描述**
 
-Replace existing Swift indentation mechanism with a new mechanism based on using libSyntax. Also part of this project will be to address the cases where the existing indentation results are sub-par.
+用基于 libSyntax 的新机制替换现有的 Swift 缩进机制。该项目的一部分工作还包括解决现有缩进结果不理想的情况。
 
-**Expected outcomes/benefits/deliverables**
+**预期成果/收益/交付物**
 
-A more robust and easier to maintain Swift indentation mechanism, along with improved indentation results.
+一个更加健壮且易于维护的 Swift 缩进机制，以及改进的缩进效果。
 
-**Skills required**
+**所需技能**
 
 * C++
 
-**Potential mentors**
+**潜在导师**
 
 Xi Ge
 
-**Expected difficulty**
+**预期难度**
 
-Medium
+中等
 
-### Swift compiler integration with external tools
+### Swift 编译器与外部工具的集成
 
-**Description**
+**描述**
 
-Add a compiler option that provides the path to an external tool for the compiler to execute and communicate with. The communication could be done via stdin/stdout using a JSON format. The compiler should pass the compiler arguments and the libSyntax tree of the currently compiling source file, allowing the tool to return custom diagnostics that the compiler includes along with the rest of the compiler diagnostics.
+添加一个编译器选项，提供编译器需要执行和通信的外部工具的路径。通信可以通过 stdin/stdout 使用 JSON 格式完成。编译器应该传递编译器参数和当前编译源文件的 libSyntax 树，允许工具返回自定义诊断信息，编译器将这些信息与其他编译器诊断信息一起包含在内。
 
-**Expected outcomes/benefits/deliverables**
+**预期成果/收益/交付物**
 
-A convenient mechanism for development and integration of custom linters, formatters, or other tools, during a build operation.
+在构建操作期间为自定义代码检查工具、格式化工具或其他工具的开发和集成提供便捷机制。
 
-**Skills required**
+**所需技能**
 
 * C++
-* Swift (familiar)
+* Swift（熟悉）
 
-**Potential mentors**
+**潜在导师**
 
 Rintaro Ishizaki
 
-**Expected difficulty**
+**预期难度**
 
-Easy
+简单
 
-### Integration of libSyntax with the rest of the compiler pipeline.
+### libSyntax 与编译器管道其余部分的集成
 
-**Description**
+**描述**
 
-This project is for integrating the libSyntax tree and making use of it across the rest of the compiler pipeline (typechecker, diagnostics, etc.). It would involve:
-- Having the parser generate only a libSyntax tree
-- Derive the AST nodes from the libSyntax tree and have the AST nodes point to libSyntax nodes for source information
-- It should be possible to provide a serialized libSyntax tree to the compiler and have typechecking and code-generation functionality without needing to parse code.
+该项目旨在集成 libSyntax 树并在编译器管道的其余部分（类型检查器、诊断等）中使用它。这将涉及：
+- 让解析器只生成 libSyntax 树
+- 从 libSyntax 树派生 AST 节点，并让 AST 节点指向 libSyntax 节点以获取源信息
+- 应该能够向编译器提供序列化的 libSyntax 树，并在无需解析代码的情况下进行类型检查和代码生成功能。
 
-**Expected outcomes/benefits/deliverables**
+**预期成果/收益/交付物**
 
-A robust architecture with a clean separation of the parsing functionality from the rest of the compiler pipeline, and enabling future work for implementing incremental re-parsing.
+一个健壮的架构，能够清晰地将解析功能与编译器管道的其余部分分离，并为实现增量重解析的未来工作奠定基础。
 
-**Skills required**
+**所需技能**
 
 * C++
-* Compiler-pipeline Basics
+* 编译器管道基础知识
 
-**Potential mentors**
+**潜在导师**
 
 Rintaro Ishizaki
 
-**Expected difficulty**
+**预期难度**
 
-Hard
+困难
 
-### SwiftPM: Autogenerate `LinuxMain.swift` file for Linux
+### SwiftPM：为 Linux 自动生成 `LinuxMain.swift` 文件
 
-**Description**
+**描述**
 
-Swift package authors are required to list their test cases in
-a `LinuxMain.swift` file to run tests on Linux. This is because, it is not
-possible (yet) to get a list of methods at runtime on Linux. However, we can use
-`SourceKit` to find the test methods and then autogenerate this file as part of
-the build process.
+Swift 包作者需要在 `LinuxMain.swift` 文件中列出他们的测试用例才能在 Linux 上运行测试。这是因为在 Linux 上（目前）无法在运行时获取方法列表。但是，我们可以使用 `SourceKit` 找到测试方法，然后在构建过程中自动生成这个文件。
 
-This project will involve:
-- Add a feature in SwiftPM to generate compiler arguments for `SourceKit`.
-- Write (minimal) Swift bindings for SourceKit's C API.
-- Write a tool that will use `SourceKit` to generate the `LinuxMain.swift` file.
-- Integrate the above tool as part of the SwiftPM build process.
+该项目将涉及：
+- 在 SwiftPM 中添加为 `SourceKit` 生成编译器参数的功能
+- 为 SourceKit 的 C API 编写（最小）Swift 绑定
+- 编写一个使用 `SourceKit` 生成 `LinuxMain.swift` 文件的工具
+- 将上述工具集成到 SwiftPM 构建过程中
 
-**Expected outcomes/benefits/deliverables**
+**预期成果/收益/交付物**
 
-`LinuxMain.swift` file is auto-generated on Linux as part of SwiftPM build process.
+在 Linux 上作为 SwiftPM 构建过程的一部分自动生成 `LinuxMain.swift` 文件。
 
-**Skills required**
+**所需技能**
 
 * Swift
 * C/C++
-* Build process knowledge will be helpful but not required.
+* 构建过程知识会有帮助但不是必需的
 
-**Potential mentors**
+**潜在导师**
 
 Ankit Aggarwal
 
-**Expected difficulty**
+**预期难度**
 
-Medium
+中等
 
-### SwiftPM: Build a tool to suggest the next semver tag of a package.
+### SwiftPM：构建一个工具来建议包的下一个语义化版本标签
 
-**Description**
+**描述**
 
-SwiftPM follows [semver](https://semver.org/) for dependency management. It is
-easily possible for a package author to release a new version that violates the
-semver conventions. A tool that can suggest the next version of a package will
-be incredibly useful for package developers. This can be done by comparing
-public API of the last released version and the current state of the API.
-`SourceKit` provides an option to generate module interface of a Swift module. We
-should be able to leverage that to build this tool. It is possible that new
-functionality needs to be added to `SourceKit`.
+SwiftPM 遵循[语义化版本](https://semver.org/)进行依赖管理。包作者很容易发布一个违反语义化版本约定的新版本。一个能够建议包下一个版本的工具对包开发者来说将非常有用。这可以通过比较最后发布版本的公共 API 和当前 API 状态来实现。`SourceKit` 提供了生成 Swift 模块接口的选项。我们应该能够利用这一点来构建这个工具。可能需要为 `SourceKit` 添加新功能。
 
-**Expected outcomes/benefits/deliverables**
+**预期成果/收益/交付物**
 
-SwiftPM should have a command to will suggest the next semver tag. E.g.:
+SwiftPM 应该有一个命令来建议下一个语义化版本标签。例如：
 
 $ swift package next-version --after 1.4.3
-Next tag should be 2.0.0 because of the following API changes:
+由于以下 API 更改，下一个标签应该是 2.0.0：
 + public func foo() -> Int
 - public func foo() -> String
 
-**Skills required**
+**所需技能**
 
 * Swift
 * C/C++
 
-**Potential mentors**
+**潜在导师**
 
 Ankit Aggarwal
 
-**Expected difficulty**
+**预期难度**
 
-Hard
+困难
 
-### SwiftPM: Improve command line status reporting
+### SwiftPM：改进命令行状态报告
 
-**Description**
+**描述**
 
-SwiftPM is a set of command line utilities that perform several interesting
-tasks, e.g. dependency resolution, compiling, testing. The progress/status of
-these tasks is reported in a mundane and serial fashion. Improving status
-reporting using terminal based animations (and maybe emojis!) will lead to
-a delightful experience for a package developer. As an example, see how buck
-reports compilation progress: https://buckbuild.com/static/buck-build-15fps.gif
+SwiftPM 是一组执行多个有趣任务的命令行工具，例如依赖解析、编译、测试。这些任务的进度/状态报告方式目前比较单调和串行。使用基于终端的动画（可能还有表情符号！）来改进状态报告将为包开发者带来愉悦的体验。例如，可以看看 buck 是如何报告编译进度的：https://buckbuild.com/static/buck-build-15fps.gif
 
-**Expected outcomes/benefits/deliverables**
+**预期成果/收益/交付物**
 
-swift package resolve, swift build and swift test should have improved CLI output.
+swift package resolve、swift build 和 swift test 应该有改进的命令行输出。
 
-**Skills required**
+**所需技能**
 
 * Swift
-* Terminal/Shell
+* 终端/Shell
 
-**Potential mentors**
+**潜在导师**
 
 Ankit Aggarwal
 
-**Expected difficulty**
+**预期难度**
 
-Medium
+中等
 
-### SwiftPM: Mechanically edit `Package.swift` manifest file
+### SwiftPM：机械式编辑 `Package.swift` 清单文件
 
-**Description**:
+**描述**
 
-A Swift package uses a `Package.swift` manifest file to declare the package
-specifications. This file should be manually edited in order to modify
-dependencies, targets, products, etc. It would be really nice if package
-developers can perform these operations using CLI. For e.g., adding a new target
-requires creating a new directory, a source file and an entry in
-`Package.swift`. If we can edit the manifest file mechanically, we can automate
-such operations and make the process much easier. This would require using
-`SourceKit` to figure out the cursor positions where the new entries should be
-inserted in `Package.swift`.
+Swift 包使用 `Package.swift` 清单文件来声明包规范。需要手动编辑该文件以修改依赖项、目标、产品等。如果包开发者可以使用命令行执行这些操作将会非常好。例如，添加新目标需要创建新目录、源文件和在 `Package.swift` 中添加条目。如果我们可以机械式地编辑清单文件，我们就可以自动化这些操作，使过程变得更加简单。这将需要使用 `SourceKit` 来确定新条目应该插入 `Package.swift` 的光标位置。
 
-**Expected outcomes/benefits/deliverables**
+**预期成果/收益/交付物**
 
-SwiftPM has ability to mechanically edit the `Package.swift` manifest file.
+SwiftPM 具有机械式编辑 `Package.swift` 清单文件的能力。
 
-**Skills required**
+**所需技能**
 
 * Swift
 * C/C++
 
-**Potential mentors**
+**潜在导师**
 
 * Ankit Aggarwal
 
-**Expected difficulty**
+**预期难度**
 
-Hard
+困难

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Platform Support
+title: 平台支持
 ---
 
 {% include_relative _platform-support.md %}

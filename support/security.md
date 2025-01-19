@@ -1,38 +1,38 @@
 ---
 layout: page
-title: Swift.org security
+title: Swift.org 安全
 ---
 
-## Security Process
+## 安全流程
 
-For the protection of our community, Swift.org doesn't disclose, discuss, or confirm security issues until our investigation is complete and any necessary updates are generally available.
+为了保护我们的社区，在调查完成且必要的更新普遍可用之前，Swift.org 不会披露、讨论或确认安全问题。
 
-Recent security updates are listed in the [Security Updates](#security-updates) section below.
+最近的安全更新列在下方的[安全更新](#security-updates)部分。
 
-Swift.org security documents reference vulnerabilities by [CVE-ID](https://www.cve.org/About/Overview) when possible.
+Swift.org 的安全文档在可能的情况下会通过 [CVE-ID](https://www.cve.org/About/Overview) 来引用漏洞。
 
-### Reporting a security or privacy vulnerability
+### 报告安全或隐私漏洞
 
-If you believe you have discovered a security or privacy vulnerability in a Swift.org project, please report it to us.
-We welcome reports from everyone, including security researchers, developers, and users.
+如果您认为在 Swift.org 项目中发现了安全或隐私漏洞，请向我们报告。
+我们欢迎来自所有人的报告，包括安全研究人员、开发者和用户。
 
-To report a security or privacy vulnerability, please send an email to [cve@forums.swift.org](mailto:cve@forums.swift.org) that includes:
+要报告安全或隐私漏洞，请发送电子邮件至 [cve@forums.swift.org](mailto:cve@forums.swift.org)，内容包括：
 
-* The specific project and software version(s) which you believe are affected.
-* A description of the behavior you observed as well as the behavior that you expected.
-* A numbered list of steps required to reproduce the issue and/or a video demonstration, if the steps may be hard to follow.
+* 您认为受影响的具体项目和软件版本。
+* 对您观察到的行为以及您预期行为的描述。
+* 重现该问题所需步骤的编号列表，以及/或视频演示（如果这些步骤可能难以理解）。
 
-Please use [Swift.org's CVE PGP key](/keys/cve-signing-key-1.asc) to encrypt sensitive information that you send by email.
+请使用 [Swift.org 的 CVE PGP 密钥](/keys/cve-signing-key-1.asc)来加密您通过电子邮件发送的敏感信息。
 
-You'll receive an email reply from Swift.org to acknowledge that we received your report, and we’ll contact you if we need more information.
+您会收到来自 Swift.org 的电子邮件回复，确认我们已收到您的报告，如果我们需要更多信息，我们会与您联系。
 
-### How Swift.org handles these reports
+### Swift.org 如何处理这些报告
 
-For the protection of our community, Swift.org doesn't disclose, discuss, or confirm security issues until our investigation is complete and any necessary updates are generally available.
+为了保护我们的社区，在调查完成且必要的更新普遍可用之前，Swift.org 不会披露、讨论或确认安全问题。
 
-Swift.org uses security advisories and our security-announce mailing list to publish information about security fixes in our projects and to publicly credit people or organizations that have reported security issues to us.
+Swift.org 使用安全公告和我们的安全公告邮件列表来发布有关我们项目中安全修复的信息，并公开感谢向我们报告安全问题的个人或组织。
 
-## Security Updates
+## 安全更新
 
 {% assign cve_list = site.data.security.cve | sort: "date" %}
 

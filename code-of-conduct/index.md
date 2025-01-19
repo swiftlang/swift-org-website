@@ -1,41 +1,40 @@
 ---
 layout: page
-title: Code of Conduct
+title: 行为准则
 ---
 
-To be a truly great community, Swift.org needs to welcome developers from all walks of life, with different backgrounds, and with a wide range of experience. A diverse and friendly community will have more great ideas, more unique perspectives, and produce more great code.  We will work diligently to make the Swift community welcoming to everyone.
+要成为一个真正优秀的社区，Swift.org 需要欢迎来自各行各业、具有不同背景和广泛经验的开发者。一个多元化且友好的社区将会产生更多绝妙的想法、更多独特的视角，并创造出更出色的代码。我们将努力不懈地使 Swift 社区欢迎每一个人。
 
-To give clarity of what is expected of our members, Swift.org is based on the code of conduct defined by [contributor-covenant.org](http://contributor-covenant.org). This document is used across many open source communities, and we think it articulates our values well.
+为了明确我们对成员的期望，Swift.org 的行为准则基于 [contributor-covenant.org](http://contributor-covenant.org) 所定义的准则。这份文档被许多开源社区所采用，我们认为它很好地表达了我们的价值观。
 
-### Contributor Code of Conduct v1.4
+### 贡献者行为准则 v1.4
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+为了营造开放和友好的环境，我们作为贡献者和维护者承诺：确保参与我们的项目和社区的每个人都能获得无骚扰的体验，无论其年龄、体型、残障情况、种族、性别特征、性别认同和表达、经验水平、教育程度、社会经济地位、国籍、个人外表、种族、宗教或性取向如何。
 
-Examples of behavior that contributes to creating a positive environment include:
+有助于创造积极环境的行为示例包括：
 
-* Using welcoming and inclusive language (e.g., prefer non-gendered words like “folks” to “guys”, non-ableist words like “soundness check” to “sanity check”, etc.).
-* Being respectful of differing viewpoints and experiences.
-* Gracefully accepting constructive criticism.
-* Focusing on what is best for the community.
-* Showing empathy towards other community members.
+* 使用友好和包容的语言（例如，用"大家"这样不带性别的词语代替"小伙子们"，用"合理性检查"这样不带歧视的词语代替"健全性检查"等）。
+* 尊重不同的观点和经历。
+* 优雅地接受建设性批评。
+* 关注对社区最有利的事情。
+* 对其他社区成员表示同理心。
 
-Examples of unacceptable behavior by participants include:
+参与者不可接受的行为示例包括：
 
-* The use of sexualized language or imagery and unwelcome sexual attention or advances.
-* Trolling, insulting/derogatory comments, and personal or political attacks.
-* Public or private harassment.
-* Publishing others’ private information, such as a physical or electronic address, without explicit permission.
-* Other conduct which could reasonably be considered inappropriate in a professional setting.
+* 使用带有性暗示的语言或图像，以及不受欢迎的性关注或性挑逗。
+* 恶意攻击、侮辱性/贬损性评论，以及人身或政治攻击。
+* 公开或私下的骚扰。
+* 未经明确许可，发布他人的私人信息，如物理地址或电子邮件地址。
+* 其他在专业环境中可能被认为不恰当的行为。
 
-Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
+项目维护者有责任明确可接受行为的标准，并对任何不可接受行为的实例采取适当和公平的纠正措施。
 
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
+项目维护者有权利和责任删除、编辑或拒绝不符合本行为准则的评论、提交、代码、维基编辑、问题和其他贡献，或暂时或永久禁止任何他们认为行为不当、威胁、冒犯或有害的贡献者。
 
-This Code of Conduct applies within all project spaces managed by Swift.org, including (but not limited to) source code repositories, bug trackers, web sites, documentation, and online forums. It also applies when an individual is representing the project or its community in public spaces. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+本行为准则适用于 Swift.org 管理的所有项目空间，包括（但不限于）源代码仓库、问题追踪器、网站、文档和在线论坛。当个人在公共场所代表项目或其社区时，本准则也适用。代表项目或社区的例子包括使用官方项目电子邮件地址、通过官方社交媒体账号发帖，或在线上或线下活动中担任指定代表。
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting a member of the [Swift Core Team](/community/#community-structure) or by flagging the behavior for moderation (e.g., in the Forums), whether you are the target of that behavior or not. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. Maintainers are obligated to maintain confidentiality with regard to the reporter of an incident. The site of the disputed behavior is usually not an acceptable place to discuss moderation decisions, and moderators may move or remove any such discussion.
+无论您是否是行为目标，都可以通过联系 [Swift 核心团队](/community/#community-structure) 成员或通过标记行为以进行审核（例如在论坛中）来报告辱骂、骚扰或其他不可接受的行为。所有投诉都将被审查和调查，并将做出必要和适当的回应。维护者有义务对事件报告者保密。有争议行为发生的地点通常不适合讨论审核决定，审核员可能会移动或删除任何此类讨论。
 
-Project maintainers are held to a higher standard, and project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project’s leadership.
-If you disagree with a moderation action, you can appeal to the Core Team (or individual Core Team members) privately.
+项目维护者需要遵守更高的标准，如果项目维护者未能真诚地遵守或执行行为准则，可能会面临由项目其他领导成员确定的临时或永久性后果。如果您不同意审核行为，可以私下向核心团队（或个别核心团队成员）提出申诉。
 
-This policy is adapted from the Contributor Code of Conduct [version 1.4](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).
+本政策改编自贡献者行为准则[1.4版本](https://www.contributor-covenant.org/version/1/4/code-of-conduct/)。

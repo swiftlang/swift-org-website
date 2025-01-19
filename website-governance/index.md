@@ -1,50 +1,47 @@
 ---
 layout: page
-title: Swift.org website governance
+title: Swift.org 网站治理
 ---
 
-See [website overview](/website) for more information about the Swift.org website goals and contribution guidelines.
+有关 Swift.org 网站目标和贡献指南的更多信息，请参阅[网站概述](/website)。
 
-The website has a small list of *maintainers* which have *write* access and are in charge of reviewing and merging pull requests from *contributors*.
-The *maintainers* group consists of a small subset of the Swift core team and the [Swift website workgroup members](/website-workgroup).
+网站有一小部分*维护者*，他们拥有*写入*权限，负责审查和合并*贡献者*的拉取请求。*维护者*组由 Swift 核心团队和 [Swift 网站工作组成员](/website-workgroup)的一小部分成员组成。
 
-The Swift.org website source code consists of several distinct parts:
+Swift.org 网站源代码由以下几个不同部分组成：
 
-1. General content: Markdown, HTML, data files, images and other content.
-2. Blog posts: Source files for blog posts, mostly in markdown form.
-3. Technical infrastructure: Code and scripts for generating the website’s final static content (HTML mostly) from other forms of textual content such as Markdown and HTML files.
-4. Information design, user experience and user interface design: The layout and navigation of the website, including CSS and images used to define the user experience and user interface.
+1. 一般内容：Markdown、HTML、数据文件、图片和其他内容。
+2. 博客文章：博客文章的源文件，主要是 markdown 格式。
+3. 技术基础设施：用于将其他形式的文本内容（如 Markdown 和 HTML 文件）生成网站最终静态内容（主要是 HTML）的代码和脚本。
+4. 信息设计、用户体验和用户界面设计：网站的布局和导航，包括用于定义用户体验和用户界面的 CSS 和图片。
 
-Each one of these areas is governed by a slightly different contribution process that matches their nature.
+这些领域中的每一个都有略微不同的贡献流程，以适应其特性。
 
-### General content governance
+### 一般内容治理
 
-Incremental updates to existing content (outside blog posts) are done by submitting pull requests, and will be reviewed by the website maintainers.
-Normally, these pull requests would be used to correct or improve existing topics.
+对现有内容（博客文章除外）的增量更新通过提交拉取请求完成，并将由网站维护者审查。通常，这些拉取请求用于纠正或改进现有主题。
 
-Larger changes to content, such as introducing broad new topics, require consultation with the [website workgroup](/website-workgroup) to decide on the appropriate navigation structure and other information design concerns. Such broader changes can be proposed via a public forum post or can be suggested more privately by contacting the website workgroup [@swift-website-workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup) on the Swift Forums.
+对内容的较大更改，如引入广泛的新主题，需要与[网站工作组](/website-workgroup)协商，以决定适当的导航结构和其他信息设计问题。此类更广泛的更改可以通过公共论坛帖子提出，也可以通过在 Swift 论坛上联系网站工作组 [@swift-website-workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup) 私下提出建议。
 
-### Blog posts governance
+### 博客文章治理
 
-The Swift.org blog is designed to keep the Swift community informed of recent development in the language, its ecosystem, and news about the community. It is a platform for sharing the language roadmap, interesting new features, libraries, and tools, and announcing project & community initiatives.
+Swift.org 博客旨在让 Swift 社区了解该语言、其生态系统的最新发展以及社区新闻。它是分享语言路线图、有趣的新功能、库和工具，以及宣布项目和社区倡议的平台。
 
-The blog is also an opportunity to recognize and highlight the work being done by members of our community, and we welcome post contributions through the [blog post contribution process]({% link blog-post-contributions/index.md %}).
+博客也是一个认可和突出社区成员工作的机会，我们欢迎通过[博客文章贡献流程]({% link blog-post-contributions/index.md %})投稿。
 
-### Swift libraries documentation and "The Swift Programming Language"
+### Swift 库文档和《Swift 编程语言》
 
-The Swift.org website hosts technical documentation for several Swift libraries, as well as "The Swift Programming Language".
+Swift.org 网站托管了几个 Swift 库的技术文档，以及《Swift 编程语言》。
 
-These technical documents are not part of the website content, and are only re-published as part of the website. As such, these technical documents are not governed by this contribution guide.
+这些技术文档不是网站内容的一部分，仅作为网站的一部分重新发布。因此，这些技术文档不受本贡献指南的管理。
 
-### Technical infrastructure governance
+### 技术基础设施治理
 
-Incremental fixes and improvements to the technical infrastructure of the website are done by submitting pull requests, and will be reviewed by the website maintainers.
+对网站技术基础设施的增量修复和改进通过提交拉取请求完成，并将由网站维护者审查。
 
-Technical infrastructure changes need to go through more testing compared to content changes to make sure they work on both macOS and Linux, which are the primary development environments for the website.
+与内容更改相比，技术基础设施更改需要进行更多测试，以确保它们在 macOS 和 Linux（网站的主要开发环境）上都能正常工作。
 
-### Information design, user experience and user interface design governance
+### 信息设计、用户体验和用户界面设计治理
 
-Incremental fixes and improvements to the styling of the website are done by submitting pull requests, and will be reviewed by the website maintainers.
+对网站样式的增量修复和改进通过提交拉取请求完成，并将由网站维护者审查。
 
-Larger changes to navigation, UX and UI, require consultation with the [website workgroup](/website-workgroup) to decide on the appropriate approach.
-Such broader changes can be proposed via a public forum post or can be suggested more privately by contacting the website workgroup [@swift-website-workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup) on the Swift Forums.
+对导航、用户体验和用户界面的较大更改需要与[网站工作组](/website-workgroup)协商，以决定适当的方法。此类更广泛的更改可以通过公共论坛帖子提出，也可以通过在 Swift 论坛上联系网站工作组 [@swift-website-workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup) 私下提出建议。
