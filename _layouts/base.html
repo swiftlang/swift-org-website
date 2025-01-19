@@ -29,14 +29,6 @@
   <link rel="alternate" type="application/atom+xml" title="Swift.org (Atom Feed)" href="/atom.xml" />
   {% endif %}
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K5J4Q9FN');</script>
-  <!-- End Google Tag Manager -->
-
   {% if page.url %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   {% endif %}
@@ -71,10 +63,6 @@
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5J4Q9FN"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 {% if jekyll.environment == 'stage' %}
 <p class="stage">
   ⚠️ STAGING WEBSITE ⚠️<br>
