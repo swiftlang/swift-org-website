@@ -13,7 +13,7 @@
 - name: Federico Bucchi
   github: federicobucchi
   affiliation: Apple
-  
+
 - name: James Dempsey
   github: dempseyatgithub
   affiliation:
@@ -21,10 +21,6 @@
 - name: Mishal Shah
   github: shahmishal
   affiliation: Apple
-
-- name: Paris Pittman
-  github: parispittman
-  affiliation: Apple, Core Team rep
 
 - name: Reda Lemeden
   github: kaishin
