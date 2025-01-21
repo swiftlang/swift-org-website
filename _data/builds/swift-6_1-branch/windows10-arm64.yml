@@ -1,3 +1,7 @@
+- date: 2025-01-17 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-17-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-17-a-windows10-arm64.exe
+  name: Windows 10 Swift Development Snapshot
 - date: 2025-01-16 10:10:00-06:00
   dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-16-a
   download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-01-16-a-windows10-arm64.exe
