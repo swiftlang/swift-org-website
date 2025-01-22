@@ -4,7 +4,7 @@ layout: page
 title: 测试
 ---
 
-SwiftPM 集成了 [XCTest, Apple’s unit test framework](https://developer.apple.com/documentation/xctest). 在终端运行 `swift test` 或者在 IDE（如 Xcode 或类似工具）中触发测试操作，会运行所有 XCTest 测试用例。测试结果会显示在 IDE 中，或者打印到终端。
+SwiftPM 集成了 [XCTest, 苹果的单元测试框架](https://developer.apple.com/documentation/xctest). 在终端运行 `swift test` 或者在 IDE（如 Xcode 或类似工具）中触发测试操作，会运行所有 XCTest 测试用例。测试结果会显示在 IDE 中，或者打印到终端。
 
 在 Linux 上进行测试的一种便捷方式是使用 Docker。例如：
 
