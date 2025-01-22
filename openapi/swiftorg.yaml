@@ -2,7 +2,7 @@ openapi: '3.0.3'
 info:
   title: swift.org API
   description: API for retrieving Swift version release information, including date, platform support, tags, and toolchain details.
-  version: 1.0.0
+  version: 1.1.0
 servers:
   - url: https://www.swift.org/api/v1
     description: The production deployment.
@@ -11,6 +11,10 @@ servers:
 tags:
   - name: Toolchains
     description: Information about published toolchains builds.
+  - name: Swiftly
+    description: Information about the Swiftly installer.
+  - name: SSWG
+    description: Information about the Swift Server Workgroup.
 paths:
   /install/releases.json:
     get:
@@ -70,6 +74,38 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DevToolchainsForArch'
+  /swiftly.json:
+    get:
+      operationId: getCurrentSwiftlyRelease
+      summary: Fetch the metadata of the current Swiftly release.
+      tags:
+        - Swiftly
+      responses:
+        '200':
+          description: A successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SwiftlyRelease'
+  /sswg/incubation/{filter}.json:
+    parameters:
+      - name: filter
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/SSWGIncubationFilter'
+    get:
+      operationId: listSSWGIncubatedPackages
+      summary: List the packages incubated by the Swift Server Workgroup.
+      tags:
+        - SSWG
+      responses:
+        '200':
+          description: A successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SSWGPackageList'
 components:
   schemas:
     Release:
@@ -252,3 +288,70 @@ components:
         - name
         - platform
         - archs
+    KnownSwiftlyPlatformIdentifier:
+      description: |-
+        A Swiftly platform identifier known as of this snapshot of the API document.
+
+        This is distinct from `SwiftlyPlatformIdentifier` to allow parsing unknown platform identifiers.
+        Parsing unknown platform identifiers is important to avoid a new platform causing a major API break.
+      type: string
+      enum:
+        - Linux
+        - Darwin
+        - Windows
+    SwiftlyPlatformIdentifier:
+      anyOf:
+        - $ref: '#/components/schemas/KnownSwiftlyPlatformIdentifier'
+        - type: string
+          description: The raw platform identifier, a fallback for when an unknown platform is received.
+    SwiftlyArtifactDownloadURL:
+      type: string
+      description: A download URL for a Swiftly artifact.
+      example: 'https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-aarch64.tar.gz'
+    SwiftlyReleasePlatformArtifacts:
+      type: object
+      description: Information about the Swiftly artifacts for a specific platform.
+      properties:
+        platform:
+          $ref: '#/components/schemas/SwiftlyPlatformIdentifier'
+        arm64:
+          $ref: '#/components/schemas/SwiftlyArtifactDownloadURL'
+        x86_64:
+          $ref: '#/components/schemas/SwiftlyArtifactDownloadURL'
+      required:
+        - platform
+        - arm64
+        - x86_64
+    SwiftlyRelease:
+      type: object
+      description: Information about a release of the Swiftly installer.
+      properties:
+        version:
+          type: string
+          description: The current Swiftly version.
+          example: '0.4.0-dev'
+        platforms:
+          type: array
+          description: A list of supported platforms with artifact URLs.
+          items:
+            $ref: '#/components/schemas/SwiftlyReleasePlatformArtifacts'
+      required:
+        - version
+        - platforms
+    SSWGPackageURL:
+      type: string
+      description: A URL of an SSWG-incubated package.
+      example: 'http://github.com/apple/swift-nio.git'
+    SSWGPackageList:
+      type: array
+      description: A list of SSWG-incubated packages.
+      items:
+        $ref: '#/components/schemas/SSWGPackageURL'
+    SSWGIncubationFilter:
+      type: string
+      description: A filter for fetching a subset of the SSWG-incubated packages.
+      enum:
+        - all
+        - graduated
+        - incubating
+        - sandbox
