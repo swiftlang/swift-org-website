@@ -3,7 +3,7 @@ layout: page-wide
 title: Swift.org API Documentation
 ---
 
-The Swift.org website provides HTTP APIs that vends information about toolchain releases and Swift evolution proposals.
+The Swift.org website provides HTTP APIs that vends information about toolchain releases, Swift evolution proposals, and more.
 
 The APIs are documented using [OpenAPI](https://www.openapis.org).
 

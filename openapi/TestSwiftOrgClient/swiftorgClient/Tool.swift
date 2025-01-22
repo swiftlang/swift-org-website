@@ -65,6 +65,14 @@ struct Tool {
                 )
             )
         }
+        tests.append(
+            .init(
+                name: "getCurrentSwiftlyRelease",
+                work: {
+                    _ = try await client.getCurrentSwiftlyRelease().ok.body.json
+                }
+            )
+        )
 
         try await Tester.run(tests)
     }
