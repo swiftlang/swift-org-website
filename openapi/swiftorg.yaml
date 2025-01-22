@@ -13,6 +13,8 @@ tags:
     description: Information about published toolchains builds.
   - name: Swiftly
     description: Information about the Swiftly installer.
+  - name: SSWG
+    description: Information about the Swift Server Workgroup.
 paths:
   /install/releases.json:
     get:
@@ -85,6 +87,25 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SwiftlyRelease'
+  /sswg/incubation/{filter}.json:
+    parameters:
+      - name: filter
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/SSWGIncubationFilter'
+    get:
+      operationId: listSSWGIncubatedPackages
+      summary: List the packages incubated by the Swift Server Workgroup.
+      tags:
+        - SSWG
+      responses:
+        '200':
+          description: A successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SSWGPackageList'
 components:
   schemas:
     Release:
@@ -317,3 +338,20 @@ components:
       required:
         - version
         - platforms
+    SSWGPackageURL:
+      type: string
+      description: A URL of an SSWG-incubated package.
+      example: 'http://github.com/apple/swift-nio.git'
+    SSWGPackageList:
+      type: array
+      description: A list of SSWG-incubated packages.
+      items:
+        $ref: '#/components/schemas/SSWGPackageURL'
+    SSWGIncubationFilter:
+      type: string
+      description: A filter for fetching a subset of the SSWG-incubated packages.
+      enum:
+        - all
+        - graduated
+        - incubating
+        - sandbox

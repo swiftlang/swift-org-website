@@ -73,6 +73,16 @@ struct Tool {
                 }
             )
         )
+        for level in Components.Schemas.SSWGIncubationFilter.allCases {
+            tests.append(
+                .init(
+                    name: "listSSWGIncubatedPackages(\(level.rawValue))",
+                    work: {
+                        _ = try await client.listSSWGIncubatedPackages(.init(path: .init(filter: level))).ok.body.json
+                    }
+                )
+            )
+        }
 
         try await Tester.run(tests)
     }
