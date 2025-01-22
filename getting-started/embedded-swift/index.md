@@ -9,7 +9,9 @@ In this tutorial we'll be targeting a Raspberry Pi Pico as the embedded device t
 
 ## Installing Swift
 
-If you don’t have Swift installed, [install it first](https://www.swift.org/install). Because Embedded Swift is experimental and only available in preview toolchains, make sure to install the "Development Snapshot" toolchain (main) instead of a release toolchain (6.0). If you're using a macOS machine, you will need to make sure the installed toolchain is selected as active e.g. by exporting the `TOOLCHAINS` environment variable:
+If you don’t have Swift installed, [install it first](https://www.swift.org/install). Because Embedded Swift is experimental and only available in preview toolchains, make sure to install the "Development Snapshot" toolchain (main) instead of a release toolchain (6.0). If you're using a macOS machine, you will need to make sure that Xcode is installed and selected by running `xcode-select -p` and verifying that it points to the Xcode installation path.
+
+After that, make sure the installed development snapshot is selected as active e.g. by exporting the `TOOLCHAINS` environment variable:
 
 ```shell
 $ export TOOLCHAINS=org.swift.59202405011a
