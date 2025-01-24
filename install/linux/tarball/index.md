@@ -107,4 +107,4 @@ This creates a `usr/` directory in the location of the archive.
 $ export PATH=/path/to/usr/bin:"${PATH}"
 ```
 
-You can now execute the `swift` command to run the REPL or build Swift projects.
+You can now execute the `swift repl` command to run the REPL or `swift build` to build Swift packages.
