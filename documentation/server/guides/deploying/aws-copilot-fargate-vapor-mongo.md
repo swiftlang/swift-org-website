@@ -4,14 +4,14 @@ layout: page
 title: 使用 Fargate Vapor 和 MongoDB Atlas 部署到 AWS
 ---
 
-本指南说明了如何在 AWS 上部署 Server-Side Swift 工作负载。该工作负载是一个用于管理待办事项列表的 REST API。它使用 [Vapor](https://vapor.codes/) 框架来编写 API 方法，这些方法将数据存储到 [MongoDB Atlas](https://www.mongodb.com/atlas/database) 云数据库中，并支持数据的检索。 Vapor 应用被容器化并通过 [AWS Copilot](https://aws.github.io/copilot-cli/) 工具部署到 AWS 的 AWS Fargate 服务上。
+本指南说明了如何在 AWS 上部署 Server-Side Swift 工作负载。该工作负载是一个用于跟踪待办事项列表的 REST API。它使用 [Vapor](https://vapor.codes/) 框架来编写 API 方法，这些方法将数据存储到 [MongoDB Atlas](https://www.mongodb.com/atlas/database) 云数据库中，并支持数据的检索。 Vapor 应用被容器化并通过 [AWS Copilot](https://aws.github.io/copilot-cli/) 工具部署到 AWS 的 AWS Fargate 服务上。
 
 ## 架构
 
 ![Architecture](/assets/images/server-guides/aws/aws-fargate-vapor-mongo.png)
 
 - Amazon API Gateway 接收 API 请求
-- API Gateway 通过由 AWS Cloud Map 管理的内部 DNS 定位在 AWS Fargate 中的应用容器
+- API Gateway 通过 AWS Cloud Map 内部管理的域名系统（DNS）在 AWS Fargate 中定位您的应用程序容器
 - API Gateway 将请求转发到容器
 - 容器运行 Vapor 框架，并提供 GET 和 POST 项目的方法
 - Vapor 将项目存储到 MongoDB Atlas 云数据库，并从中检索数据，数据库运行在由 MongoDB 管理的 AWS 账户中
@@ -20,8 +20,8 @@ title: 使用 Fargate Vapor 和 MongoDB Atlas 部署到 AWS
 
 要构建此示例应用程序，您需要：
 
-- [AWS Account](https://console.aws.amazon.com/)
-- [MongoDB Atlas Database](https://www.mongodb.com/atlas/database)
+- [AWS 账户](https://console.aws.amazon.com/)
+- [MongoDB Atlas 数据库](https://www.mongodb.com/atlas/database)
 - [AWS Copilot](https://aws.github.io/copilot-cli/) - 用于在 AWS 上创建容器化工作负载的命令行工具
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) - 将 Swift 代码编译为 Docker 镜像
 - [Vapor](https://vapor.codes/) - 用于编写 REST 服务
@@ -29,7 +29,7 @@ title: 使用 Fargate Vapor 和 MongoDB Atlas 部署到 AWS
 
 ## 步骤 1：创建您的数据库
 
-如果您是 MongoDB Atlas 的新用，请按照以下步骤操作 [Getting Started Guide](https://www.mongodb.com/docs/atlas/getting-started/)。您需要创建以下内容：
+如果您是 MongoDB Atlas 的新用户，请按照以下步骤操作 [Getting Started Guide](https://www.mongodb.com/docs/atlas/getting-started/)。您需要创建以下内容：
 
 - Atlas 账户
 - 集群
@@ -218,18 +218,18 @@ public func configure(_ app: Application) throws {
 import Vapor
 import MongoDBVapor
 
-// define the structure of a ToDoItem
+// 定义 ToDoItem 的结构
 struct ToDoItem: Content {
     var _id: BSONObjectID?
     let name: String
     var createdOn: Date?
 }
 
-// import the MongoDB database and collection names from environment variables
+// 从环境变量中导入 MongoDB 数据库和集合名称
 let MONGODB_DATABASE = Environment.get("MONGODB_DATABASE") ?? ""
 let MONGODB_COLLECTION = Environment.get("MONGODB_COLLECTION") ?? ""
 
-// define an extension to the Vapor Request object to interact with the database and collection
+// 定义 Vapor Request 对象的扩展，以便与数据库和集合进行交互
 extension Request {
 
     var todoCollection: MongoCollection<ToDoItem> {
@@ -237,20 +237,20 @@ extension Request {
     }
 }
 
-// define the api routes
+// 定义 API 路由
 func routes(_ app: Application) throws {
 
-    // an base level route used for container healthchecks
+    // 用于容器健康检查的基础级路由
     app.get { req in
         return "OK"
     }
 
-    // GET items returns a JSON array of all items in the database
+    // GET 请求 items 返回数据库中所有项目的 JSON 数组
     app.get("items") { req async throws -> [ToDoItem] in
         try await req.todoCollection.find().toArray()
     }
 
-    // POST item inserts a new item into the database and returns the item as JSON
+    // POST 请求 item 将一个新项目插入到数据库中，并以 JSON 格式返回该项目
     app.post("item") { req async throws -> ToDoItem in
 
         var item = try req.content.decode(ToDoItem.self)
@@ -279,7 +279,7 @@ try LoggingSystem.bootstrap(from: &env)
 let app = Application(env)
 try configure(app)
 
-// shutdown and cleanup the MongoDB connection when the application terminates
+// 当应用程序终止时，关闭并清理 MongoDB 连接
 defer {
   app.mongoDB.cleanup()
   cleanupMongoSwift()
@@ -291,7 +291,7 @@ try app.run()
 
 ## 步骤 6：初始化 AWS Copilot
 
-[AWS Copilot](https://aws.github.io/copilot-cli/) Copilot 是一个命令行工具，用于在 AWS 中生成容器化应用程序。您使用 Copilot 来构建和部署您的 Vapor 代码作为 Fargate 中的容器。Copilot 还会为您的 MongoDB 连接字符串的值创建并跟踪一个 AWS Systems Manager 秘密参数。您将此值存储为秘密，因为它包含您的数据库的用户名和密码。您绝不希望将其存储在源代码中。最后，Copilot 会创建一个 API Gateway，公开您的 API 的公共端点。
+[AWS Copilot](https://aws.github.io/copilot-cli/) Copilot 是一个命令行工具，用于在 AWS 中生成容器化应用程序。您使用 Copilot 来构建和部署您的 Vapor 代码作为 Fargate 中的容器。Copilot 还会为您的 MongoDB 连接字符串的值创建并跟踪一个 AWS Systems Manager 秘密参数。您将此值储存储为秘密，加密参数和该值包含数据库的用户名和密码，因此可以加密存储。最后，Copilot 会创建一个 API Gateway，公开您的 API 的公共端点。
 
 初始化一个新的 Copilot 应用程序。
 
@@ -317,9 +317,9 @@ Deploy the *dev* environment:
 copilot env deploy --name dev
 ```
 
-## 步骤 7：为数据库凭证创建一个 Copilot 秘密参数
+## 步骤 7：为数据库凭证创建一个 Copilot 密钥
 
-您的应用程序需要凭证来验证 MongoDB Atlas 数据库的身份。您绝不应将这些敏感信息存储在源代码中。创建一个 Copilot *secret* 来存储这些凭证。这会将您的 MongoDB 集群的连接字符串存储在 AWS Systems Manager 秘密参数中。
+您的应用程序需要凭证来验证 MongoDB Atlas 数据库的身份。您绝不应将这些敏感信息存储在源代码中。创建一个 Copilot *secret* 来存储这些凭证。这会将您的 MongoDB 集群的连接字符串存储在 AWS Systems Manager 密钥中。
 
 从 MongoDB Atlas 网站获取连接字符串。在集群页面上选择 Connect 按钮，然后选择 *Connect your application*.
 
