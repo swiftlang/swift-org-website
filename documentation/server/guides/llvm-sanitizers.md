@@ -4,32 +4,32 @@ layout: page
 title: LLVM TSAN / ASAN
 ---
 
-For multithreaded and low-level unsafe interfacing server code, the ability to use LLVM's [ThreadSanitizer](https://clang.llvm.org/docs/ThreadSanitizer.html) and
-[AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) can help troubleshoot invalid thread usage and invalid usage/access of memory.
+对于涉及多线程操作和需要与低级别不安全接口交互的服务器端代码，使用 LLVM 的 [ThreadSanitizer](https://clang.llvm.org/docs/ThreadSanitizer.html) 和
+ [AddressSanitizer](https://clang.llvm.org/docs/AddressSanitizer.html) 的能力可以帮助排查无效的线程使用和无效的内存使用/访问。
 
-There is a [blog post](/blog/tsan-support-on-linux/) outlining the usage of TSAN.
+有一篇 [博客文章](/blog/tsan-support-on-linux/) 概述了 TSAN 的使用。
 
-The short story is to use the swiftc command line options `-sanitize=address` and `-sanitize=thread` to each respective tool.
+简而言之，就是在 swiftc 命令行选项中使用 `-sanitize=address` 和 `-sanitize=thread` 来分别使用每个工具。
 
-Also for Swift Package Manager projects you can use `--sanitize` at the command line, e.g.:
+对于 Swift Package Manager 项目，你也可以在命令行中使用 `--sanitize` ，例如：
 
 ```
 swift build --sanitize=address
 ```
 
-or
+或者
 
 ```
 swift build --sanitize=thread
 ```
 
-and it can be used for the tests too:
+它也可以用于测试：
 
 ```
 swift test --sanitize=address
 ```
 
-or
+或者
 
 ```
 swift test --sanitize=thread
