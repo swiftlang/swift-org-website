@@ -1,31 +1,33 @@
 ---
 redirect_from: "server/guides/testing"
 layout: page
-title: Testing
+title: 测试
 ---
 
-SwiftPM is integrated with [XCTest, Apple’s unit test framework](https://developer.apple.com/documentation/xctest). Running `swift test` from the terminal, or triggering the test action in your IDE (Xcode or similar), will run all of your XCTest test cases. Test results will be displayed in your IDE or printed out to the terminal.
+SwiftPM 集成了 [XCTest, 苹果的单元测试框架](https://developer.apple.com/documentation/xctest). 在终端运行 `swift test` 或者在 IDE（如 Xcode 或类似工具）中触发测试操作，会运行所有 XCTest 测试用例。测试结果会显示在 IDE 中，或者打印到终端。
 
-A convenient way to test on Linux is using Docker. For example:
+在 Linux 上进行测试的一种便捷方式是使用 Docker。例如：
 
 `$ docker run -v "$PWD:/code" -w /code swift:latest swift test`
 
-The above command will run the tests using the latest Swift Docker image, utilizing bind mounts to the sources on your file system.
+上述命令使用最新的 Swift Docker 镜像运行测试，同时利用绑定挂载访问文件系统中的源代码。
 
-Swift supports architecture-specific code. By default, Foundation imports architecture-specific libraries like Darwin or Glibc. While developing on macOS, you may end up using APIs that are not available on Linux. Since you are most likely to deploy a cloud service on Linux, it is critical to test on Linux.
+Swift 支持特定架构的代码。默认情况下，Foundation 会导入架构相关的库，如 Darwin 或 Glibc。在 macOS 上开发时，可能会使用在 Linux 上不可用的 API。由于云服务通常部署在 Linux 上，因此在 Linux 上进行测试至关重要。
 
-A historically important detail about testing for Linux is the `Tests/LinuxMain.swift` file.
+关于 Linux 测试的一个历史细节是 `Tests/LinuxMain.swift` 文件：
 
-- In Swift versions 5.4 and newer tests are automatically discovered on all platforms, no special file or flag needed.
-- In Swift versions >= 5.1 < 5.4, tests can be automatically discovered on Linux using `swift test --enable-test-discovery` flag.
-- In Swift versions older than 5.1 the `Tests/LinuxMain.swift` file provides SwiftPM an index of all the tests it needs to run on Linux and it is critical to keep this file up-to-date as you add more unit tests. To regenerate this file, run `swift test --generate-linuxmain` after adding tests. It is also a good idea to include this command as part of your continuous integration setup.
+- 在 Swift 5.4 及更高版本中，所有平台都能自动发现测试，无需额外的文件或标志。
+- 在 Swift 5.1 至 5.4 版本之间，可使用`swift test --enable-test-discovery` 标志在 Linux 上自动发现测试。
 
-### Testing for production
+- 在 Swift 5.1 之前的版本中，`Tests/LinuxMain.swift` 文件为 SwiftPM 提供了所有需要在 Linux 上运行的测试索引。添加新的单元测试后，务必保持该文件的更新。可以通过运行 `swift test --generate-linuxmain` 重新生成此文件。建议将此命令作为持续集成设置的一部分。
 
-- For Swift versions between Swift 5.1 and 5.4, always test with `--enable-test-discovery` to avoid forgetting tests on Linux.
 
-- Make use of the sanitizers. Before running code in production, and preferably as a regular part of your CI process, do the following:
-    * Run your test suite with TSan (thread sanitizer): `swift test --sanitize=thread`
-    * Run your test suite with ASan (address sanitizer): `swift test --sanitize=address` and `swift test --sanitize=address -c release -Xswiftc -enable-testing`
+### 生产环境测试
 
-- Generally, whilst testing, you may want to build using `swift build --sanitize=thread`. The binary will run slower and is not suitable for production, but you might be able to catch threading issues early - before you deploy your software. Often threading issues are really hard to debug and reproduce and also cause random problems. TSan helps catch them early.
+- 对于 Swift 5.1 至 5.4 版本之间，请始终使用 `--enable-test-discovery` 进行测试，以避免在 Linux 上遗漏测试。
+
+- 利用检测工具。在代码部署到生产环境之前（最好作为 CI 过程的常规部分），执行以下操作：
+    * 使用 TSan（线程检测器）运行测试套件： `swift test --sanitize=thread`
+    *  使用 ASan（地址检测器）运行测试套件： `swift test --sanitize=address` 和 `swift test --sanitize=address -c release -Xswiftc -enable-testing`
+
+- 通常，在测试期间，可以使用 `swift build --sanitize=thread` 构建代码。生成的二进制文件运行速度较慢，不适合生产环境，但可以在早期捕获线程问题——在部署软件之前。线程问题往往难以调试和重现，并可能引发随机问题。TSan 能够帮助尽早发现这些问题。
