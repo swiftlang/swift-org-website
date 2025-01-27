@@ -20,7 +20,7 @@ title: 使用 Serverles 应用程序模型（SAM）部署到 AWS Lambda
 要构建此示例应用程序，您需要：
 
 - [AWS Account](https://console.aws.amazon.com/)
-- [AWS Command Line Interface (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) - 安装 CLI 并 [configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) i将其配置为使用您的 AWS 账户凭证。
+- [AWS Command Line Interface (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) - 安装 CLI 并 [configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) 将其配置为使用您的 AWS 账户凭证。
 - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started.html) - 一个用于在 AWS 上创建无服务器工作负载的命令行工具。
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) - 将您的 Swift 代码编译为 Docker 镜像。
 
@@ -42,7 +42,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 
 Resources:
-  # DynamoDB table to store your data
+  # DynamoDB 表用于存储你的数据
   SwiftAPITable:
     Type: AWS::Serverless::SimpleTable
     Properties:
@@ -50,63 +50,63 @@ Resources:
         Name: id
         Type: String
 
-  # Lambda function to put items to the database
+  # Lambda 函数将项目插入到数据库
   PutItemFunction:
     Type: AWS::Serverless::Function
     Properties:
-      # package the function as a Docker image
+      # 将函数打包为 Docker 镜像
       PackageType: Image
       Policies:
-        # allow function to read and write to database table
+        # 允许函数读取和写入数据库表
         - DynamoDBCrudPolicy:
             TableName: !Ref SwiftAPITable
       Environment:
-        # store database table name as an environment variable
+        # 将数据库表名存储为环境变量
         Variables:
           TABLE_NAME: !Ref SwiftAPITable
       Events:
-        # handles the POST /item method of the REST API
+        # 处理 REST API 中的 POST /item 方法
         Api:
           Type: HttpApi
           Properties:
             Method: post
             Path: /item
     Metadata:
-      # location of the code and Docker file for function
+      # 函数代码和 Docker 文件的位置
       DockerContext: ./src/put-item
       Dockerfile: Dockerfile
       DockerBuildArgs:
         TARGET_NAME: put-item
 
-  # Lambda function to retrieve items from database
+  # Lambda 函数从数据库中检索项目
   GetItemsFunction:
     Type: AWS::Serverless::Function
     Properties:
-      # package the function as a Docker image
+      # 将函数打包为 Docker 镜像
       PackageType: Image
       Policies:
-        # allow function to read and write to database table
+        # 允许函数读取和写入数据库表
         - DynamoDBCrudPolicy:
             TableName: !Ref SwiftAPITable
       Environment:
-        # store database table name as an environment variable
+        # 将数据库表名存储为环境变量
         Variables:
           TABLE_NAME: !Ref SwiftAPITable
       Events:
-        # handles the GET /items method of the REST API
+        # 处理 REST API 中的 GET /items 方法
         Api:
           Type: HttpApi
           Properties:
             Method: get
             Path: /items
     Metadata:
-      # location of the code and Docker file for function
+      # 函数代码和 Docker 文件的位置
       DockerContext: ./src/get-items
       Dockerfile: Dockerfile
       DockerBuildArgs:
         TARGET_NAME: get-items
 
-# print API endpoint and name of database table
+# 打印 API 端点和数据库表名
 Outputs:
   SwiftAPIEndpoint:
     Description: "API Gateway endpoint URL for your application"
@@ -141,7 +141,7 @@ touch Dockerfile
 Docker 用于编译您的 Swift 代码并将镜像部署到 Lambda。将以下代码复制到您在每个函数文件夹中创建的 *Dockerfile* 中。
 
 ```Dockerfile
-# image used to compile your Swift code
+# 用于编译 Swift 代码的镜像
 FROM --platform=linux/amd64 public.ecr.aws/docker/library/swift:5.7.2-amazonlinux2 as builder
 
 ARG TARGET_NAME
