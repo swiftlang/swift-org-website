@@ -7,7 +7,7 @@ This page contains a non-exhaustive list of potential project ideas that we are 
 
 1. Read through this page and the Google Summer of Code guides,
 2. Identify, or come up with your own project ideas you find interesting.
-3. Check out the [Development forum](https://forums.swift.org/c/development) to connect with potential mentors.
+3. Check out the [Development forum](https://forums.swift.org/c/development/gsoc/98) to connect with potential mentors.
 - Feel free to mention the project mentors on the forums, when starting a thread about your interest in participating in a specific project they are offering to mentor.
 
 When posting on the forums about GSoC this year, please use the [`gsoc-2025` tag](https://forums.swift.org/tag/gsoc-2025), so it is easy to identify.
