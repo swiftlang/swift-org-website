@@ -30,7 +30,7 @@ When it comes to writing the proposal, the [Google Summer of Code Guide](https:/
 
 ## Potential Projects
 
-We are currently collecting project ideas on the forums in the dedicated [GSoC](https://forums.swift.org/tag/gsoc-2025).
+We are currently collecting project ideas on the forums in the dedicated [GSoC](https://forums.swift.org/c/development/gsoc/98).
 
 Potential mentors, please feel free to propose project ideas to this page directly, by [opening a pull request](https://github.com/swiftlang/swift-org-website/edit/main/gsoc2025/index.md) to the Swift website. 
 
