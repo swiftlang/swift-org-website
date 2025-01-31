@@ -471,3 +471,13 @@ karl-tarbe:
   name: Karl Tarbe
   github: karulont
   about: "Karl Tarbe is on the team at Apple working on Swift Homomorphic Encryption and other privacy-preserving technologies."
+
+vrylko:
+  name: Vojtěch Rylko
+  github: vojtarylko
+  about: "Vojtěch Rylko is responsible for development and operations of Things Cloud at Cultured Code."
+
+wjainek:
+  name: Werner Jainek
+  github: wjainek
+  about: "Werner Jainek is Co-Founder and CEO at Cultured Code."
