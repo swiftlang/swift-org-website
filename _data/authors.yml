@@ -471,3 +471,8 @@ karl-tarbe:
   name: Karl Tarbe
   github: karulont
   about: "Karl Tarbe is on the team at Apple working on Swift Homomorphic Encryption and other privacy-preserving technologies."
+
+owen-voorhees:
+  name: Owen Voorhees
+  github: owenv
+  about: "Owen Voorhees is a member of the team at Apple working on Swift Build."
