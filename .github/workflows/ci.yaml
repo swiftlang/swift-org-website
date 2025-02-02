@@ -28,10 +28,12 @@ jobs:
 
   test-openapi:
     runs-on: ubuntu-latest
-    container: swift:6.0
     steps:
       - name: Check out
         uses: actions/checkout@v4
       - name: Run OpenAPI Tester
         working-directory: openapi/TestSwiftOrgClient
-        run: swift run
+        run: |
+            docker build -t swift-org-site ../../. 
+            docker run -p 4000:4000 -d --name website swift-org-site
+            swift run
