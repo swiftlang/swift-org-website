@@ -4,7 +4,7 @@ layout: page
 title: Swift Continuous Integration
 ---
 
-The Swift project follows an [incremental development model](../contributing/#contributing_code), and utilizes continuous integration (CI) testing of changes in pull requests before merging as a core tool for maintaining project stability.  The system produces the snapshot builds posted on swift.org, and runs tests against active branches.  It is also used as part of the review process to run tests against pull requests before committing them.
+The Swift project follows an [incremental development model](/contributing/#contributing-code), and utilizes continuous integration (CI) testing of changes in pull requests before merging as a core tool for maintaining project stability.  The system produces the snapshot builds posted on swift.org, and runs tests against active branches.  It is also used as part of the review process to run tests against pull requests before committing them.
 
 ## Configuration
 
@@ -46,7 +46,7 @@ If there are issues found during testing, you will get a link to the details of 
 
 ![CI Pass](../continuous-integration/images/ci_failure.png)
 
-It is expected that changes meet the [quality standards](../contributing/#quality) for the Swift project before they are committed to the development branch, and you are responsible for fixing problems found by your changes.  If your changes break builds or tests on the development or release branches, you will receive email notification.
+It is expected that changes meet the [quality standards](/contributing/#quality) for the Swift project before they are committed to the development branch, and you are responsible for fixing problems found by your changes.  If your changes break builds or tests on the development or release branches, you will receive email notification.
 
 
 ## Community Involvement
