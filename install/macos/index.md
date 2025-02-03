@@ -5,44 +5,36 @@ title: Install Swift
 
 {% include install/_os_tabs.md macos="true" %}
 
-## Toolchain Installer
-<ul class="grid-level-0">
-<li class="grid-level-1 featured">
-    <h3>Swiftly (beta)</h3>
-  <p class="description">
-    Command line tool for installing, managing, and switching between Swift.org toolchains.
-  </p>
-  <!-- <br>
-  <p>To install swiftly, run the following command in your terminal.</p>
-  <pre><code>
-  SWIFTLY_FILENAME=swiftly-0.4.0-dev.pkg
-  curl -O -s "https://download.swift.org/swiftly/darwin/$SWIFTLY_FILENAME" && installer -pkg "$SWIFTLY_FILENAME" -target CurrentUserHomeDirectory && ~/usr/local/bin/swiftly init
-  </code></pre> -->
-  <a href="https://download.swift.org/swiftly/darwin/swiftly-0.4.0-dev.pkg" class="cta-secondary">Download</a>
-  <a href="/install/macos/swiftly" class="cta-secondary">Instructions</a>
-</li>
-</ul>
-
-## Latest Release (Swift {{ site.data.builds.swift_releases.last.name }})
+## Latest Release
 <ul class="grid-level-0 grid-layout-2-column">
   <li class="grid-level-1">
     <h3>Xcode</h3>
     <p class="description">
-      Download the latest version of Xcode, which is regularly refreshed with the latest Swift toolchain.
+      To develop with Swift for Apple platforms, download the latest version of Xcode, which is regularly refreshed with the latest Swift toolchain.
     </p>
     <a href="https://developer.apple.com/xcode/" class="cta-secondary external">Install Xcode</a>
   </li>
+  <li class="grid-level-1 featured">
+    <h3>Swiftly</h3>
+  <p class="description">
+    To download toolchains from Swift.org, use the Swiftly toolchain installer. Swift.org toolchains include experimental features like Embedded Swift and support for WebAssembly.
+  </p>
+  <a href="https://download.swift.org/macos/swiftly.pkg" class="cta-secondary">Download</a>
+  <a href="/install/macos/swiftly" class="cta-secondary">Instructions</a>
+  </li>
+</ul>
+
+
+## Other Install Options
+<ul class="grid-level-0 grid-layout-2-column">
   <li class="grid-level-1">
     <h3>Package Installer</h3>
     <p class="description">
-      Toolchain package installer (.pkg)
+      The toolchain package installer (.pkg) that Swiftly automates is available as a stand-alone download.
     </p>
     <a href="https://download.swift.org/{{ site.data.builds.swift_releases.last.tag | downcase }}/xcode/{{ site.data.builds.swift_releases.last.tag }}/{{ site.data.builds.swift_releases.last.tag }}-osx.pkg" class="cta-secondary">Download Toolchain</a>
     <a href="/install/macos/package_installer" class="cta-secondary">Instructions</a>
   </li>
-</ul>
-
-<ul class="grid-level-0">
   {% include install/_static_sdk_release.md %}
 </ul>
 
@@ -56,6 +48,8 @@ title: Install Swift
 ## Development Snapshots
 
 Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.
+
+The easiest way to install development snapshots is with the Swiftly tool. Read more on the [instructions page](/install/macos/swiftly).
 
 {% assign xcode_dev_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}
 {% assign xcode_6_1_builds = site.data.builds.swift-6_1-branch.xcode | sort: 'date' | reverse %}

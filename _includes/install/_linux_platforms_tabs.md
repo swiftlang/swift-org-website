@@ -1,9 +1,9 @@
-## Toolchain Installer
+## Latest Release
 <ul class="grid-level-0">
 <li class="grid-level-1 featured">
-    <h3>Swiftly (beta)</h3>
+    <h3>Swiftly - the Swift toolchain installer</h3>
   <p class="description">
-    Command line tool for installing, managing, and switching between Swift.org toolchains.
+    The best way to get Swift for Linux is via the Swiftly command line tool. Swiftly helps you install Swift and its dependencies, switch between different versions, and download updates from swift.org.
   </p>
   <!-- <br>
   <p>To install swiftly, run the following commands in your terminal.</p>
