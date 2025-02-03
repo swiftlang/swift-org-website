@@ -1,9 +1,9 @@
-## Toolchain Installer
-<ul class="grid-level-0">
+## Latest Release
+<ul class="grid-level-0 grid-layout-2-column">
 <li class="grid-level-1 featured">
-    <h3>Swiftly (beta)</h3>
+    <h3>Swiftly (recommended)</h3>
   <p class="description">
-    Command line tool for installing, managing, and switching between Swift.org toolchains.
+    The Swiftly installer manages Swift and its dependencies. It supports switching between different versions and downloading updates.
   </p>
   <!-- <br>
   <p>To install swiftly, run the following commands in your terminal.</p>
@@ -15,6 +15,14 @@
   <a href="https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz" class="cta-secondary">Download</a>
   <a href="/install/linux/swiftly" class="cta-secondary">Instructions</a>
 </li>
+  <li class="grid-level-1">
+    <h3>Docker</h3>
+    <p class="description">
+      If you prefer a containerized environment, you can download the official Docker images for compiling and running Swift on a variety of distributions.
+    </p>
+    <a href="https://hub.docker.com/_/swift" class="cta-secondary external">Docker Hub</a>
+    <a href="/install/linux/docker" class="cta-secondary">Instructions</a>
+  </li>
 </ul>
 
 ## Alternate installation options
