@@ -35,6 +35,7 @@ jobs:
         working-directory: openapi/TestSwiftOrgClient
         env:
           DOWNLOADSWIFTORG_SERVER_NAME: local
+          SWIFTORG_SERVER_NAME: local
         run: |
             docker compose -f ../../docker-compose.yaml run build 
             docker compose -f ../../docker-compose.yaml run -d -p 4000:4000 website
