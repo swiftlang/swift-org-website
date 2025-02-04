@@ -37,6 +37,6 @@ jobs:
           DOWNLOADSWIFTORG_SERVER_NAME: local
         run: |
             docker compose -f ../../docker-compose.yaml run build 
-            docker compose -f ../../docker-compose.yaml start website
+            docker compose -f ../../docker-compose.yaml run -d -p 4000:4000 website
             swift run swiftorgClient
             swift run downloadswiftorgClient
