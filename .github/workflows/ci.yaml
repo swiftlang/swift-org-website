@@ -36,7 +36,7 @@ jobs:
         env:
           DOWNLOADSWIFTORG_SERVER_NAME: local
         run: |
-            docker build -t swift-org-site ../../. 
-            docker run -p 4000:4000 -d --name website swift-org-site
+            docker compose -f ../../docker-compose.yaml run build 
+            docker compose -f ../../docker-compose.yaml up website
             swift run swiftorgClient
             swift run downloadswiftorgClient
