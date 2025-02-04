@@ -18,6 +18,7 @@ import Shared
 
 enum DownloadSwiftOrgServerName: String {
     case prod
+    case local
 }
 
 @main
@@ -31,6 +32,8 @@ struct Tool {
             switch serverName {
             case .prod:
                 serverURL = try Servers.Server1.url()
+            case .local:
+                serverURL = try Servers.Server2.url()
             }
         } else {
             serverURL = try Servers.Server1.url()

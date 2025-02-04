@@ -6,6 +6,8 @@ info:
 servers:
   - url: https://download.swift.org
     description: The production server.
+  - url: http://127.0.0.1:4000/api/v1
+    description: A local deployment.
 tags:
   - name: Evolution
     description: Information about the Swift evolution process.

@@ -33,7 +33,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Run OpenAPI Tester
         working-directory: openapi/TestSwiftOrgClient
+        env:
+          DOWNLOADSWIFTORG_SERVER_NAME: local
         run: |
             docker build -t swift-org-site ../../. 
             docker run -p 4000:4000 -d --name website swift-org-site
-            swift run
+            swift run swiftorgClient
+            swift run downloadswiftorgClient
