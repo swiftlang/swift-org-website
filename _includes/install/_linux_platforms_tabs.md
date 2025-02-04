@@ -16,9 +16,9 @@
   <a href="/install/linux/swiftly" class="cta-secondary">Instructions</a>
 </li>
   <li class="grid-level-1">
-    <h3>Docker</h3>
+    <h3>Container</h3>
     <p class="description">
-      If you prefer a containerized environment, you can download the official Docker images for compiling and running Swift on a variety of distributions.
+      If you prefer a containerized environment, you can download the official container images for compiling and running Swift on a variety of distributions.
     </p>
     <a href="https://hub.docker.com/_/swift" class="cta-secondary external">Docker Hub</a>
     <a href="/install/linux/docker" class="cta-secondary">Instructions</a>
