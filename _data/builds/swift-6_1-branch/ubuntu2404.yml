@@ -1,3 +1,8 @@
+- date: 2025-02-04 10:10:00-06:00
+  dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-02-04-a
+  download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-02-04-a-ubuntu24.04.tar.gz
+  download_signature: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-02-04-a-ubuntu24.04.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2025-02-02 10:10:00-06:00
   dir: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-02-02-a
   download: swift-6.1-DEVELOPMENT-SNAPSHOT-2025-02-02-a-ubuntu24.04.tar.gz
