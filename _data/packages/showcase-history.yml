@@ -1,5 +1,5 @@
 years:
-  - year: 2024
+  - year: 2025
     months:
       - month: January
         slug: january
@@ -82,6 +82,8 @@ years:
             license: MIT
             url: https://swiftpackageindex.com/metasidd/Orb
             note: Discussed on [Episode 52 of Swift Package Indexing](https://share.transistor.fm/s/687d1170){:target='_blank'}.
+  - year: 2024
+    months:
       - month: December
         slug: december
         packages:
