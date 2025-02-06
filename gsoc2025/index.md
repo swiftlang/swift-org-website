@@ -37,6 +37,7 @@ Potential mentors, please feel free to propose project ideas to this page direct
 You can browse previous year's project ideas here: [2024](https://www.swift.org/gsoc2024/), [2023](https://www.swift.org/gsoc2023/), [2022](https://www.swift.org/gsoc2022/), [2021](https://www.swift.org/gsoc2021/), [2020](https://www.swift.org/gsoc2020/), [2019](https://www.swift.org/gsoc2019/).
 
 
+
 ### Re-implement property wrappers with macros
 
 **Project size**: 350 hours
@@ -53,7 +54,6 @@ You can browse previous year's project ideas here: [2024](https://www.swift.org/
 
 This work would remove a lot of property wrapper-specific code throughout the compiler - parsing, semantic analysis, SIL generation etc. which brings great benefits by facilitating code reuse, cleaning up the codebase and potentially fixing implementation corner cases. Macros and init accessors in their current state might not be sufficient to cover all of the property wrapper use scenarios, so the project is most likely going to require improving and expanding the aforementioned features as well.
 
-
 **Expected outcomes/benefits/deliverables**
 
 The outcome of this project is the complete removal of all property wrappers-specific code from the compiler. This benefits the Swift project in multiple areas - stability, testability and code health.
@@ -61,6 +61,85 @@ The outcome of this project is the complete removal of all property wrappers-spe
 **Potential mentors**
 
 - [Pavel Yaskevich](https://github.com/xedin)
+
+
+
+### Improve the display of documentation during code completion in SourceKit-LSP
+
+**Project size**: 175h
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Proficiency in Swift and C++
+
+**Description**
+
+The Language Server Protocol ([LSP](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/)) offers two rich ways of displaying documentation while invoking code completion: Every code completion item can have documentation associated with it and while completing a function signature, the editor can display the available overloads, parameter names and their documentation through [signature help](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_signatureHelp). Currently, SourceKit-LSP only displays the first line of an item’s documentation in the code completion results and does not provide any signature help.
+
+This project would implement functionality to return the entire documentation for all code completion items and also implement the LSP signature help request. Both of these will require functionality to be added in [SourceKit-LSP](http://github.com/swiftlang/sourcekit-lsp) and the [compiler’s code base](https://github.com/swiftlang/swift/blob/main/lib/IDE/CodeCompletion.cpp), which determines the list of feasible code completion results.
+
+**Expected outcomes/benefits/deliverables**
+
+SourceKit-LSP will display more information and documentation about the code completion items it offers, allowing developers to pick the item that they are interested in more easily.
+
+**Potential mentors**
+
+- [Alex Hoppen](https://github.com/ahoppen)
+
+
+
+### Refactor sourcekitd to use Swift Concurrency
+
+**Project size**: 175h
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Proficiency in Swift, including Swift 6’s concurrency model
+- Basic proficiency in C++
+
+**Description**
+
+[sourcekitd](https://github.com/apple/swift/tree/main/tools/SourceKit) is implemented in the Swift compiler’s repository to use the compiler’s understanding of Swift code to provide semantic functionality. It is currently implemented in C++. By refactoring its [request handling](https://github.com/swiftlang/swift/blob/main/tools/SourceKit/tools/sourcekitd/lib/Service/Requests.cpp) and [AST manager](https://github.com/swiftlang/swift/blob/main/tools/SourceKit/lib/SwiftLang/SwiftASTManager.cpp) to Swift, we can take advantage of Swift’s concurrency safety, improving its data race safety, making it easier to reason about and maintain.
+
+On macOS, sourcekitd is run as an XPC service, while on all other platforms, sourcekitd is run in the sourcekit-lsp process. As a stretch goal, refactoring the request handling would allow us to run sourcekitd in a separate process on Linux and Windows as well improving SourceKit-LSP's resilience as crashes inside sourcekitd would not cause a crash of the LSP process itself.
+
+**Expected outcomes/benefits/deliverables**
+
+Improved concurrency-safety of sourcekitd and better maintainability.
+
+**Potential mentors**
+
+- [Alex Hoppen](https://github.com/ahoppen)
+
+
+
+### Add more refactoring actions to SourceKit-LSP
+
+**Project size**: 90h
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Proficiency in Swift
+
+**Description**
+
+Refactoring actions assist a developer by automatically performing repetitive and mechanical tasks, such as renaming a variable. SourceKit-LSP already provides refactoring actions and this project would add new actions to SourceKit-LSP. A few new refactoring actions have already been [proposed](https://github.com/swiftlang/sourcekit-lsp/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22code%20action%22) but this project is not necessarily limited to those ideas.
+
+**Expected outcomes/benefits/deliverables**
+
+A richer set of refactorings in SourceKit-LSP that aid developers in performing mechanical tasks.
+
+**Potential mentors**
+
+- [Alex Hoppen](https://github.com/ahoppen)
+
+
 
 ### Example project name
 
