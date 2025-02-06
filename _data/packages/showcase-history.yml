@@ -1142,9 +1142,9 @@ years:
             url: https://swiftpackageindex.com/automerge/automerge-swift
             note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
           - name: Grape
-            description: Grape is a Swift library for force simulation and graph visualization.
-              It provides classes for creating simulations and forces and supports both
-              2D and 3D graphs.
+            description: Grape enables graph visualization and force simulation in Swift,
+              supporting force-directed graphs and customizable simulations with modules
+              for SwiftUI Views and performance-optimized force calculations.
             owner: Swift Graphs
             swift_compatibility: 6.0+
             platform_compatibility:
