@@ -139,7 +139,29 @@ A richer set of refactorings in SourceKit-LSP that aid developers in performing 
 
 - [Alex Hoppen](https://github.com/ahoppen)
 
+### Qualified name lookup for swift-syntax
 
+**Project size**: 350 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+
+**Description**
+
+Qualified name lookup is the process by which a compiler resolves a reference  `A.f` into a lookup for entities named `f` within `A`. In Swift, this can mean looking into the type `A` and all of its extensions, superclass, protocols, and so on to find visible members. The project involves building a new library to be integrated into the [swift-syntax package](https://github.com/swiftlang/swift-syntax) that implements Swift's qualified name lookup semantics, making it easy to build source tools that resolve names. The library will likely include a symbol table implementation that provides efficient lookup of a given name within a given type. It should also integrate with last year's [unqualified name lookup library project](https://forums.swift.org/t/gsoc-2024-swiftlexicallookup-a-new-lexical-name-lookup-library/75889), to provide complete support for name lookup on Swift code processed with swift-syntax.
+
+**Expected outcomes/benefits/deliverables**
+
+- Swift library providing APIs for qualified name lookup in swift-syntax
+- Documentation and tutorial for the library
+- Integration of the Swift library with the `SwiftLexicalLookup` library that implements unqualified name lookup
+
+**Potential mentors**
+
+- [Doug Gregor](https://github.com/DougGregor)
 
 ### Example project name
 
