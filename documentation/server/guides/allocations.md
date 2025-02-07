@@ -1,61 +1,62 @@
 ---
 redirect_from: "server/guides/allocations"
 layout: page
-title: Allocations
+title: 内存分配
 ---
 
-## Overview
-In server-side Swift applications, memory allocations are fundamental for various tasks like creating objects, manipulating data structures, and managing resources. Swift allocates memory resources as needed and provides built-in memory management mechanisms, such as automatic reference counting (ARC), to handle allocations, deallocations, and memory ownership.
+## 概述
+在服务端 Swift 应用程序中，内存分配对于创建对象、操作数据结构和管理资源等各种任务至关重要。Swift 根据需要分配内存资源，并提供了内置的内存管理机制，例如自动引用计数（ARC），来处理分配、释放和内存所有权。
 
-Allocations aid in optimizing memory usage by allocating the precise amount of memory required for each object or data structure, reducing memory wastage and improving application performance. However, Swift allocations can be padded to enforce memory alignment requirements for data types or structures that need to be accessed efficiently by the hardware, reducing the risk of misaligned memory access issues and improving performance. 
+内存分配通过分配每个对象或数据结构所需的精确内存量来帮助优化内存使用，从而减少内存浪费并提高应用程序性能。但是，Swift 内存分配可以增加填充，以强制执行需要由硬件有效访问的数据类型或结构的内存对齐要求，从而降低内存访问问题未对齐的风险并提高性能。
 
-Additionally, proper allocation management prevents memory leaks and ensures that memory is released when it is no longer needed. This helps in maintaining the stability and reliability of server applications.
+此外，适当的分配管理可以防止内存泄漏，并确保内存在不再需要时被释放。这有助于维护服务端应用程序的稳定性和可靠性。
 
-## Heaps and stacks
-Generally speaking, Swift has two fundamental locations for memory allocations: **Heaps** and **Stacks**. 
+## 堆和栈
+通常，Swift 有两个基本的内存分配位置：**堆**和**栈**。
 
-Swift automatically allocates memory in either the heap or the stack data structure. 
+Swift 自动在堆或栈数据结构中分配内存。
 
-For high-performance software in Swift, understanding the source of your heap allocations and reducing the number of allocations your software provides is paramount. Identifying these questions is similar to identifying other performance questions, such as:
+对于 Swift 中的高性能软件，理解你的堆内存分配来源并减少软件的内存分配数量至关重要。识别这些问题与识别其他性能问题类似，例如：
 
-- Where are the resources being allocated before optimizing performance?
-- What types of resources are used? CPU? Memory? Heap allocations?
+- 在优化性能之前资源被分配到了哪里？
+- 使用了哪些类型的资源？CPU？内存？堆内存分配？
+  
+> 注意：虽然堆内存分配在计算开销方面可能相对昂贵，但它们提供了灵活性和动态内存管理能力，对于处理可变大小或动态数据结构等任务至关重要。
 
-> Note: While heap allocations can be relatively expensive regarding computational overhead, they provide flexibility and dynamic memory management capabilities essential for tasks like working with variable-sized or dynamic data structures.
+## 分析
+根据项目的具体需求，你可以使用不同的工具和技术来分析你的 Swift 代码。一些常用的分析技术包括：
 
-## Profiling
-You can use different tools and techniques to profile your Swift code, depending on the specific requirements of your project. Some commonly used profiling techniques include:
+- 使用操作系统供应商提供的分析工具，如 macOS 上的 [Instruments](https://help.apple.com/instruments/mac/current/#/dev7b09c84f5) 或 Linux 上的 [`perf`](https://www.swift.org/server/guides/linux-perf.html)。
+- 使用在关键代码部分之前和之后添加时间戳等技术手动测量时间。
+- 利用 Swift 的性能分析库和框架，例如 [SwiftMetrics](https://swiftpackageregistry.com/RuntimeTools/SwiftMetrics) 或 [XCGLogger](https://github.com/XCGLogger/)。
 
-- Using OS vendor-supplied profiling tools like [Instruments](https://help.apple.com/instruments/mac/current/#/dev7b09c84f5) on macOS or [`perf`](https://www.swift.org/server/guides/linux-perf.html) on Linux.
-- Adding manual timing measurements using techniques like adding timestamps before and after critical code sections.
-- Leveraging performance profiling libraries and frameworks for Swift, such as [SwiftMetrics](https://swiftpackageregistry.com/RuntimeTools/SwiftMetrics) or [XCGLogger](https://github.com/XCGLogger/).
+对于 macOS，你可以使用 [Xcode](https://developer.apple.com/xcode/) Instruments 中的 [Allocations instrument](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Profile-your-app-using-the-Allocations-instrument) 来帮助你分析和优化应用程序中的内存使用。Allocations instrument 跟踪所有堆和匿名虚拟内存分配的大小和数量，并按类别组织它们。
 
-For macOS, you can use the [Allocations instrument](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Profile-your-app-using-the-Allocations-instrument) in [Xcode](https://developer.apple.com/xcode/) Instruments to help you analyze and optimize memory usage in your apps. The Allocations instrument tracks the size and number of all heap and anonymous virtual memory allocations and organizes them by category.
+如果你的生产工作不是在 macOS 上，而是在 Linux 上运行，那么分配数量可能会根据你的设置有很大的不同。
 
-If your production workloads run on Linux instead of macOS, the number of allocations can differ significantly depending on your setup.
+*本文档主要关注堆内存分配的数量，而不是它们的大小。*
 
-*This document mainly focuses on the number of heap allocations and not their size.*
+## 开始使用
+Swift 的优化器在 `release` 模式下生成更快的代码，并分配更少的内存。通过在 `release` 模式下分析你的 Swift 代码并根据结果进行优化，你可以在应用程序中获得更好的性能和效率。
 
-## Getting started
-Swift’s optimizer produces faster code and allocates less memory in `release` mode. By profiling your Swift code in the `release` mode and optimizing based on the results, you can achieve better performance and efficiency in your applications. 
+按照以下步骤操作：
 
-Follow the steps below:
-
-Step 1. **Build your code** in `release` mode by running this command: 
+步骤 1. **构建你的代码** 在 `release` 模式下运行以下命令：
 ```bash
 swift run -c release
 ```
 
-Step 2. [**Install `perf`**](https://www.swift.org/server/guides/linux-perf.html) to profile your code for your environment to gather performance-related data and optimize the performance of your Swift server applications.
+步骤 2. [**安装 `perf`**](https://www.swift.org/server/guides/linux-perf.html) 来分析你的代码，通过收集到的性能相关数据，优化你的 Swift 服务端应用程序的性能。
 
-Step 3. **Clone the FlameGraph project** to generate a flame graph visualization that helps you quickly identify hotspots in the codebase, visualize call paths, understand the flow of execution, and optimize performance. To generate a flame graph, you will need to clone the [`FlameGraph`](https://github.com/brendangregg/FlameGraph) repository on your machine or into a container, making it available at `~/FlameGraph`. 
+步骤 3. **克隆 FlameGraph 项目** 生成可视化火焰图，帮助你快速识别代码库中的热点，可视化调用路径，理解执行流程，并优化性能。要生成火焰图，你需要在你的机器或容器中克隆 [`FlameGraph`](https://github.com/brendangregg/FlameGraph) 仓库到 `~/FlameGraph` 目录。
 
-Run this command to clone the `https://github.com/brendangregg/FlameGraph` repository in `~/FlameGraph`:
+运行以下命令把 `https://github.com/brendangregg/FlameGraph` 仓库克隆岛 `~/FlameGraph`：
 ```bash
 git clone https://github.com/brendangregg/FlameGraph
 ```
 
-When running in Docker, use this command to bind-mount the `FlameGraph` repository into the container:
+在 Docker 中运行时，使用以下命令将 `FlameGraph` 仓库绑定挂载到容器中：
+
 ```bash
 docker run -it --rm \
            --privileged \
@@ -64,45 +65,44 @@ docker run -it --rm \
            swift:latest
 ```
 
-By visually highlighting the most frequently called functions or the functions consuming the most processing time, you can focus your optimization efforts on improving the performance of critical code paths.
+通过突出显示最频繁调用的函数或消耗最多处理时间的函数，你可以将优化工作集中在改善关键代码的性能上。
 
-## Tools
-You can identify areas for optimization and make informed decisions to improve the performance and efficiency of your Swift server code using the [Linux `perf`](https://perf.wiki.kernel.org/index.php/Main_Page) tool.
+## 工具
+你可以使用 [Linux `perf`](https://perf.wiki.kernel.org/index.php/Main_Page) 工具来识别需要优化的区域，并做出针对性的改动，以提高你的 Swift 服务端代码的性能和效率。
 
-The `perf` tool is a performance profiling and analysis tool available on Linux systems. Although it is not specific to Swift, it can be valuable for profiling Swift code on the server for the following reasons:
+`perf` 工具是一个在 Linux 系统上可用的性能分析和分析工具。尽管它不是针对 Swift 的，但它对于在服务器上分析 Swift 代码很有价值，原因如下：
 
-- **Low overhead** which means it can collect performance data with minimal impact on the execution of your Swift code.
-- **Rich set of features** like CPU profiling, memory profiling, and event-based sampling.
-- **Flame graph generation** to help you understand the relative time spent in different areas of your code and identify performance bottlenecks.
-- **System-level profiling** gathers performance data at the kernel level, analyzes system-wide events, and understands the impact of other processes or system components on the performance of your Swift application.
-- **Flexibility and extensibility** allow you to customize the types of events you want to profile, set sampling rates, specify filters, and more.
+- **低开销** 意味着它可以在对你的 Swift 代码执行的影响最小的情况下收集性能数据。
+- **丰富的功能** 如 CPU 分析、内存分析和基于事件的采样。
+- **生成火焰图** 帮助你理解代码不同区域的相对时间消耗，并识别性能瓶颈。
+- **系统级分析** 在内核级别收集性能数据，分析系统范围的事件，并了解其他进程或系统组件对你的 Swift 应用程序性能的影响。
+- **灵活性和可扩展性** 允许你自定义你想要分析的事件类型，设置采样率，指定过滤器等。
 
-> Tip 1: If you’re running `perf` in a Docker container, you will need a privileged container to provide the necessary permissions and access to the tool to gather performance data.
+> 提示 1：如果你在 Docker 容器中运行 `perf`，你将需要一个有特权的容器，以提供工具收集性能数据所需的必要权限和访问。
+> 提示 2：如果你需 `root` 访问权限，请在命令前加上  `sudo`。更多相关信息请参阅 [Getting `perf` to work](https://www.swift.org/server/guides/linux-perf.html)。
 
-> Tip 2: Prefix the commands with `sudo` if you need `root` access.
-See [Getting `perf` to work](https://www.swift.org/server/guides/linux-perf.html) for more information.
+## 安装 perf 用户探针
+如前所述，本文档的示例程序侧重于内存分配的*数量*。
 
-## Installing a perf user probe
-As previously mentioned, this document's example programs focus on counting the *number* of allocations. 
+在 Linux 上，大多数内存分配使用 Swift 中的 `malloc` 函数。在内存分配函数上安装 `perf` 用户探针可以提供内存分配函数被调用时的信息。
 
-Most allocations use a Swift program's `malloc` function on Linux. Installing `perf` user probes on the allocation function provides information about when an allocation function is called. 
-
-In this instance, a user probe was installed for all allocation functions because Swift uses other functions like `calloc` and `posix_memalign`.
+In this instance，a user probe was installed for all allocation functions because Swift uses other functions like `calloc` and `posix_memalign`.
+在这个例子中，需要这也写才能为所有内存分配函数安装用户探针，因为 Swift 使用了其他函数，如 `calloc` 和 `posix_memalign`。
 
 ```bash
-# figures out the path to libc
+# 确定 libc 的路径
 libc_path=$(readlink -e /lib64/libc.so.6 /lib/x86_64-linux-gnu/libc.so.6)
 
-# delete all existing user probes on libc (instead of * you can also list them individually)
+# 删除 libc 上所有现有的用户探针（你可以用 * 来代替，也可以单独列出它们）
 perf probe --del 'probe_libc:*'
 
-# installs a probe on `malloc`, `calloc`, and `posix_memalign`
+# 给 `malloc`，`calloc`，和 `posix_memalign` 函数安装探针
 perf probe -x "$libc_path" --add malloc --add calloc --add posix_memalign
 ```
 
-Subsequently, an event in `perf` will trigger whenever one of the allocation functions is called. 
+随后，每当调用其中一个分配函数时，`perf` 中的事件都会触发。
 
-The output should look like this:
+输出应该如下所示：
 
 ```
 Added new events:
@@ -113,15 +113,15 @@ Added new events:
 [...]
 ```
 
-Here, you can see that `perf` triggers new events `probe_libc:malloc`; `probe_libc:calloc` each time the respective function is called.
+这样你就可以看到 `perf` 每次调用相应函数时触发新事件 `probe_libc:malloc`；`probe_libc:calloc`。
 
-To confirm the user probe `probe_libc:malloc` works, run this command:
+要确认用户探针 `probe_libc:malloc` 工作正常，运行此命令：
 
 ```bash
 perf stat -e probe_libc:malloc -- bash -c 'echo Hello World'
 ```
 
-The output should look similar to this:
+输出应该类似于这样：
 
 ```
 Hello World
@@ -136,19 +136,19 @@ Hello World
        0.003867000 seconds sys
 ```
 
-In this case, it appears the user probe called the allocation functions 1021 times. 
+在这种情况下，用户探针调用内存分配函数 1021 次。
 
-> Important: If the probe called the allocation functions 0 times, it would indicate an error.
+> 重要提示：如果探针调用内存分配函数 0 次，则表示错误。
 
-## Running allocation analysis
-By running allocation analysis, you can gain a better understanding of the memory usage patterns in your application and identify and fix memory issues such as leaks or inefficient usage, ultimately improving the performance and stability of your code.
+## 运行内存分配分析
+通过运行分配分析，您可以更好地了解应用程序中的内存使用模式，并识别和修复内存问题，例如泄漏或使用效率低下，从而最终提高代码的性能和稳定性。
 
-### Example program
-Once you’ve confirmed the user probe on `malloc` is working, you can analyze the allocations of a program. For instance, you can analyze a program that performs ten subsequent HTTP requests using [AsyncHTTPClient](https://github.com/swift-server/async-http-client). 
+### 示例程序
+一旦您确认 `malloc` 上的用户探针工作正常，您就可以分析程序的内存分配情况。例如，您可以分析一个使用 [AsyncHTTPClient](https://github.com/swift-server/async-http-client) 执行十个连续 HTTP 请求的程序。
 
-Analyzing a program using AsyncHTTPClient can help optimize its performance, improve error handling, ensure proper concurrency and threading, enhance code readability and maintainability, and assess scalability considerations.
+分析使用 AsyncHTTPClient 的程序可以帮助优化性能，改进错误处理，确保适当的并发和线程处理，增强代码的可读性和可维护性，以及评估可扩展性。
 
-Here’s an example of the program source code with the following dependencies:
+下面是程序源代码示例的依赖库：
 
 ```swift
 dependencies: [
@@ -158,7 +158,7 @@ dependencies: [
 ],
 ```
 
-An example program using AsyncHTTPClient can be written as:
+下面是使用 AsyncHTTPClient 的示例程序：
 
 ```swift
 import AsyncHTTPClient
@@ -179,7 +179,7 @@ MultiThreadedEventLoopGroup.withCurrentThreadAsEventLoop { eventLoop in
         var remaining = remaining
         if let first = remaining.popFirst() {
             httpClient.get(url: first, logger: logger).map { [remaining] _ in
-                eventLoop.execute { // for shorter stacks
+                eventLoop.execute { // 为了更短的栈
                     doRemainingRequests(remaining, overallResult: overallResult, eventLoop: eventLoop)
                 }
             }.whenFailure { error in
@@ -191,7 +191,7 @@ MultiThreadedEventLoopGroup.withCurrentThreadAsEventLoop { eventLoop in
     }
 
     let promise = eventLoop.makePromise(of: Void.self)
-    // Kick off the process
+    // 发起请求
     doRemainingRequests(urls[...],
                         overallResult: promise,
                         eventLoop: eventLoop)
@@ -220,26 +220,26 @@ MultiThreadedEventLoopGroup.withCurrentThreadAsEventLoop { eventLoop in
 logger.info("exiting")
 ```
 
-If running a program as a Swift package, compile it in the `release` mode first, using this command: 
+如果以 Swift 包的形式运行程序，请先使用此命令在 `release` 模式下编译它：
 
 ```bash
 swift build -c release
 ```
 
-A binary called `.build/release/your-program-name` should render and can be analyzed to get the number of allocations.
+会生成一个名为 `.build/release/your-program-name` 的二进制文件，可以对其进行分析以获取内存分配的数量。
 
-### Counting allocations
-Counting allocations and visualizing them as a graph can help you analyze memory utilization, profile memory usage, optimize performance, refactor and optimize code, and debug memory-related issues in your program. 
+### 计算内存分配数量
+计算内存分配数量并将其可视化为图表有助于您分析内存利用率，配置内存使用情况，优化性能，重构和优化代码，以及调试程序中的内存相关问题。
 
-Before visualizing the allocations as a flame graph, start with an analysis using the binary to get the number of allocations by running the command:
+在将分配可视化为火焰图之前，请先使用二进制文件进行分析，通过运行命令来获取内存分配数量：
 
 ```bash
 perf stat -e 'probe_libc:*' -- .build/release/your-program-name
 ```
 
-This command instructs `perf` to run your program and count the number of times the user probe `probe_libc:malloc` was hit or allocated memory within your application.
+此命令指示 `perf` 运行您的程序并计算用户探针 `probe_libc:malloc` 被命中或在您的应用程序中分配内存的数量。
 
-The output should look similar to this:
+输出应该类似于这样：
 
 ```
 Performance counter stats for '.build/release/your-program-name':
@@ -252,22 +252,22 @@ Performance counter stats for '.build/release/your-program-name':
 [...]
 ```
 
-In this instance, the program allocated 2977 times through `malloc` and a small number of times through the other allocation functions. 
+在这种情况下，该程序通过 `malloc` 分配了 2977 次以及通过其他内存分配函数少量次。
 
-It's important to note that the `-e probe_libc:*` command is used instead of individually listing every event such as:
+请务必注意，这里使用的是 `-e probe_libc：*` 命令，而不是单独列出每个事件，例如：
 - `-e probe_libc: malloc`
 - `probe_libc:calloc`
 - `probe_libc:calloc_1`
 - `probe_libc:posix_memalign`
 
-> Tip: This approach assumes you don’t have *other* `perf` user probes installed. If other `perf` user probes are installed, you need to specify each event you want to use individually.
+> 提示：这种方法假定您没有安装其他 `perf` 用户探针。如果安装了其他 `perf` 用户探针，则需要单独指定您想要计算的每个事件。
 
-### Collecting raw data
-Collecting raw data is crucial for obtaining an accurate representation of the system's behavior, performing detailed performance analysis and debugging, analyzing trends, enabling profiling flexibility, and guiding performance optimization efforts.
+### 收集原始数据
+收集原始数据对于准确表示系统行为、进行详细的性能分析和调试、分析趋势、提供分析灵活性以及指导性能优化工作至关重要。
 
-The `perf` command doesn’t allow for creating live graphs while the program is running. However, the [Linux Perf tool](https://perf.wiki.kernel.org/index.php/Main_Page) provides a `perf record`  utility command that captures performance events for later analysis. The collected data can then be transformed into a graph.
+`perf` 命令不允许在程序运行时创建实时图表。然而，[Linux Perf 工具](https://perf.wiki.kernel.org/index.php/Main_Page)提供了一个 `perf record` 实用命令，它捕获性能事件以供稍后分析。然后可以将收集的数据转换为图表。
 
-In general, the command `perf record` can be used to run the program and `libc_probe:malloc` to collect information, as shown here:
+通常，命令 `perf record` 可用于运行程序，`libc_probe:malloc` 来收集信息，如下所示：
 
 ```bash
 perf record --call-graph dwarf,16384 \
@@ -276,17 +276,17 @@ perf record --call-graph dwarf,16384 \
      .build/release/your-program-name
 ```
 
-Breaking down this command provides the following construct:
+以下是这个命令结构的分解：
 
-- The `perf record` command instructs `perf` to record data.
-- The `--call-graph dwarf,16384` command instructs `perf` to use the [debugging with attributed record formats (DWARF)](http://www.dwarfstd.org/) information to create the call graphs. It also sets the maximum stack dump size to 16k, which should be enough information for full stack traces.
-    - Although using DWARF is slow (see below), it creates the best call graphs.
-- `-m 50000` indicates the size of the ring buffer that `perf` uses and outputs in multiples of `PAGE_SIZE` (usually 4kB). 
-    - A significant buffer is necessary when using DWARF to prevent data loss.
-- `-e 'probe_libc:*'` records the data when the `malloc`; `calloc`; and other `malloc/calloc/...` user probes fire.
-    - The fire event occurs when the probe is triggered or executed, capturing relevant information about the allocation for further analysis and debugging. 
+- `perf record` 命令指示 `perf` 记录数据。
+- `--call-graph dwarf,16384` 命令指示 `perf` 使用 [具有属性记录格式 （DWARF） 信息的调试](http://www.dwarfstd.org/) 信息来创建调用图。它还将最大堆栈转储大小设置为 16k，这应该足以获得完整的堆栈跟踪。
+    - 尽管使用 DWARF 速度较慢（见下文），但它创建了最佳的调用图。
+- `-m 50000` 指示 `perf` 使用并输出的环形缓冲区的大小，以 `PAGE_SIZE` （通常为 4kB）的倍数表示。
+    - 使用 DWARF 时，需要一个重要的缓冲区来防止数据丢失。
+- `-e 'probe_libc:*'` 记录当 `malloc`、`calloc`、以及他 `malloc/calloc/...` 用户探针触发时的数据。
+    - 在探针被触发或执行时，触发事件来捕获有关分配的相关信息以供进一步分析和调试。 
 
-Your program output should look similar to this: 
+您的程序输出应该类似于这样：
 
 ```
 <your program's output>
@@ -294,12 +294,12 @@ Your program output should look similar to this:
 [ perf record: Captured and wrote 401.088 MB perf.data (49640 samples) ]
 ```
 
-By placing user probes at strategic points in your codebase, you can track and log allocation events to gain insights into memory allocation patterns, identify potential performance issues or memory leaks, and analyze memory usage in your application.
+通过在代码库中的策略性点放置用户探针您可以跟踪和记录分配事件，以深入了解内存分配模式，识别潜在的性能问题或内存泄漏，并分析您的应用程序中的内存使用情况。
 
-> Important: If the `perf` output returns `lost chunks` and makes a `check the IO/CPU overload!` request, see **Overcoming lost chunks of data** below.
+> 重要提示：如果 `perf` 输出返回了 `lost chunks` 并发起 `check the IO/CPU overload!` 的请求，请参阅下面的 **克服数据块丢失**。
 
-### Creating flame graphs
-Once you’ve successfully recorded data using `perf record`, you can invoke the following command to produce an SVG file with the flame graph:
+### 创建火焰图
+一旦您使用 `perf record` 成功记录了数据，您可以调用以下命令生成火焰图的 SVG 文件：
 
 ```bash
 perf script | \
@@ -309,48 +309,48 @@ perf script | \
         --width 1600 > out.svg
 ```
 
-Here’s a breakdown of this command construct:
+以下是这个命令结构的分解：
 
-- The `perf` script command places the binary information into a textual form that `perf record` captured.
-- The `stackcollapse-perf` command transforms the stacks that `perf script` generated into the correct format for flame graphs.
-- The `swift demangle --simplified` command converts the symbol names to a human-readable format.
-- The last two commands create the flame graph based on the number of allocations.
+- `perf` 命令将 `perf record` 捕获的二进制信息转换成文本形式。
+- `stackcollapse-perf` 命令将 `perf script` 生成的堆栈转换为火焰图的正确格式。
+- `swift demangle --simplified` 命令将符号名称转换为我们可读的格式。
+- 最后两个命令根据内存分配数量创建火焰图。
 
-Once the command has been completed, an SVG file is generated that you can open in your browser. 
+命令完成后，将生成一个 SVG 文件，您可以在浏览器中打开该文件。
 
-> Note: Lengthy run times may result depending on the data size, algorithm complexity, resource limitations such as CPU power or memory, poorly optimized or inefficient code, external services, APIs, or network latency causing a slowdown.
+> 注意：根据数据大小、算法复杂性、资源限制（如 CPU 功率或内存）、代码优化不良或效率低下、外部服务、API 或网络延迟，可能会导致运行时间很长。
 
-### Reading flame graphs
-This flame graph is a direct result of the example program in this section. Hover over the stack frames to get more information, or click on any stack frame to zoom in on a sub-tree.
+### 阅读火焰图
+这个火焰图是本节中示例程序的直接结果。将鼠标悬停在堆栈帧上以获取更多信息，或点击任何堆栈帧可放大子树。
 
 <p><img src="/assets/images/server-guides/perf-malloc-full.svg" alt="Flame graph" /></p>
 
-- When interpreting flame *graphs*, the X-axis means the **count** and not time. The arrangement of the stack (left or right) is not determined by when that stack was live, unlike flame *charts*.
+- 在解读火焰*图*时，X 轴表示 **计数** 而不是时间。堆栈的排列（左或右）并不是由该堆栈活跃的时间决定的，这与火焰*图表*不同。
+  
+- 这个火焰图不是 CPU 火焰图，而是内存分配火焰图，其中一个样本表示一次内存分配，而不是 CPU 上花费的时间。
+- 宽堆栈帧不一定（直接）分配，这意味着函数或函数调用的内容被分配了多次。
 
-- This flame graph is not a CPU flame graph but an allocation flame graph, where one sample indicates one allocation and not time spent on the CPU. 
-- The wide stack frames don’t (necessarily) allocate directly, meaning the function, or something the function called, allocated numerous times.
+    - 例如，`BaseSocketChannel.readable` 是一个宽帧，但它的函数不直接分配。相反，它调用了其他函数，例如 SwiftNIO 和 AsyncHTTPClient 的其他部分，它们进行了相当数量的内存分配。
 
-    - For example, `BaseSocketChannel.readable` is a wide frame, but its function does not allocate directly. Instead, it called other functions, such as other parts of SwiftNIO and AsyncHTTPClient, that allocated considerably.
+## macOS 上的内存分配火焰图
+虽然本教程的大部分关注 `perf` 工具，但您也可以使用 macOS 创建相同的图表。
 
-## Allocation flame graphs on macOS
-Although much of this tutorial focuses on the `perf` tool, you can create the same graphs using macOS. 
-
-Step 1. To get started, collect the raw data using the [DTrace](https://en.wikipedia.org/wiki/DTrace) framework by running this command:
+步骤 1. 首先，使用 [DTrace](https://en.wikipedia.org/wiki/DTrace) 框架收集原始数据，运行此命令：
 
 ```bash
 sudo dtrace -n 'pid$target::malloc:entry,pid$target::posix_memalign:entry,pid$target::calloc:entry,pid$target::malloc_zone_malloc:entry,pid$target::malloc_zone_calloc:entry,pid$target::malloc_zone_memalign:entry { @s[ustack(100)] = count(); } ::END { printa(@s); }' -c .build/release/your-program > raw.stacks
 ```
 
-Like Linux's `perf` user probes, DTrace also uses probes. The previous command instructs `dtrace` to aggregate the number of calls to the allocation function equivalents: 
+与 Linux 的 `perf` 用户探针一样，DTrace 也使用探针。上述命令指示 `dtrace` 聚合对等内存分配函数的调用次数：
 
 - `malloc`
 - `posix_memalign`
 - `calloc`
 - `malloc_zone_*`
 
-> Note: On Apple platforms, Swift uses a slightly larger number of allocation functions than Linux.
+> 注意：在 Apple 平台上，Swift 使用的分配函数数量略多于 Linux。
 
-Step 2. Once the data is collected, run this command to create an SVG file:
+步骤 2. 数据收集完成后，运行此命令创建 SVG 文件：
 
 ```bash
 cat raw.stacks |\
@@ -361,41 +361,41 @@ cat raw.stacks |\
         --width 1600 > out.svg
 ```
 
-You will notice this command is similar to the `perf` invocation, except:
-- The command `cat raw.stacks` replaces the `perf script` command since `dtrace` already includes a textual data file.
-- The command `stackcollapse.pl`, which parses `dtrace` aggregation output, replaces the `stackcollapse-perf.pl` command, which parses the `perf script` output.
+您会注意到这个命令与 `perf` 调用类似，但有以下不同：
+- 命令 `cat raw.stacks` 替换了 `perf script` 命令，因为 `dtrace` 已经包含了一个文本数据文件。
+- 命令 `stackcollapse.pl`，它解析 `dtrace` 的聚合输出，替换了 `stackcollapse-perf.pl` 命令，后者解析 `perf script` 的输出。
 
-## Other perf tricks
+## 其他 perf 技巧
 
-### Swift’s allocation patterns
-Optimizing memory allocations and improving code efficiency based on the information provided by the flame graph can help make your Swift code more performant and visually appealing. The shape of allocations in Swift can vary depending on the type of memory being allocated and the way it is used.
+### Swift 的内存分配模式
+根据火焰图提供的信息优化内存分配并提高代码效率，可以帮助您的 Swift 代码变得更高效和视觉上更具吸引力。Swift 中的内存分配形式会根据分配的内存类型和使用方式而有所不同。
 
-Some common shapes of allocations in Swift include: 
+Swift 中一些常见的内存分配形式包括：
 
-- Single object allocations
-- Collection allocations
-- Strings
-- Function call stacks
-- Protocol existentials
-- Structures and classes
+- 单个对象分配
+- 集合分配
+- 字符串
+- 函数调用堆栈
+- 存在型协议
+- 类和结构体
 
-For example, a class instance (which allocates) calls `swift_allocObject`, which calls `swift_slowAlloc`, which calls `malloc` that contains the user probe. 
+例如，一个类实例（进行内存分配）会调用 `swift_allocObject`，该方法调用 `swift_slowAlloc`，然后调用包含用户探针的 `malloc`。
 
-### “Prettifying” allocation patterns
-To make your flame graph look good (after demangling the collapsed stacks) insert the following code into the Linux `perf script` code (above) by:
+### “美化”内存分配模式
+为了让您的火焰图看起来更美观（在解开堆栈混淆后），请通过以下方式将这段代码插入到 Linux `perf script` 代码中（如上所述）：
 
-- Removing `specialized` and replacing it with `swift_allocObject`.
-- Calling `swift_slowAlloc`, which calls `malloc`.
-- Using an `A` for allocation.
+- 移除 `specialized` 并将其替换为 `swift_allocObject`。
+- 调用 `swift_slowAlloc`，该方法调用 `malloc`。
+- 使用 `A` 表示内存分配。
 
-These changes should look like this:
+这些更改应该像这样：
 
 ```bash
 sed -e 's/specialized //g' \
     -e 's/;swift_allocObject;swift_slowAlloc;__libc_malloc/;A/g'
 ```
 
-To produce a visually appealing SVG file flame graph when analyzing memory allocations in Swift, use the complete command:
+要在 Swift 中分析内存分配时生成视觉上吸引人的 SVG 文件火焰图，请使用完整的命令：
 
 ```bash
 perf script | \
@@ -407,8 +407,8 @@ perf script | \
     > out.svg
 ```
 
-## Overcoming lost chunks of data
-When using perf with the DWARF call stack unwinding, you may encounter this issue:
+## 克服数据缺失块
+当使用 perf 并且带有 DWARF 堆栈回溯时，您可能会遇到这个问题：
 
 ```
 [ perf record: Woken up 189 times to write data ]
@@ -420,14 +420,15 @@ Check IO/CPU overload!
 [ perf record: Captured and wrote 30.868 MB perf.data (3817 samples) ]
 ```
 
-If `perf` indicates it lost several *chunks*, it means it lost data. When `perf` loses data, you can use these options to help resolve the issue:
+如果 `perf` 表示它丢失了几个块，这意味着它丢失了数据。当 `perf` 丢失数据时，您可以使用以下选项来帮助解决问题：
 
-- Reduce the amount of work your program performs. 
-    - For every allocation, `perf` records a stack trace.
-- Reduce the maximum *stack dump* that `perf` records by changing the `--call-graph dwarf` parameter. 
-For example, change to: `--call-graph dwarf,2048`
-    - The default records a maximum of 4096 bytes, rendering deep stacks. If you don’t need high-volume output, you can reduce this number. However, the flame graph may display `[unknown]` stack frames, meaning missing stack frames exist (in units of bytes).
-- Increase the number of the `-m` parameter, which is the size of the ring buffer that `perf` uses in memory and renders in multiples of `PAGE_SIZE` (usually 4kB).
-- Replace the command `--call-tree dwarf` with `--call-tree fp` to generate a call tree report that provides a hierarchical view of function calls within the program, showing how functions are called and the relationships between different functions. 
+- 减少程序执行的工作量。 
+    - 对于每次内存分配，`perf` 都会记录一个堆栈跟踪。
+- 通过更改 `--call-graph dwarf` 参数来减少 `perf` 记录的最大堆栈*转储*。
+例如，更改为：`--call-graph dwarf，2048`
+    - 默认值最多记录 4096 字节，呈现深堆栈。如果您不需要高容量输出，则可以减少此数字。但是，火焰图可能会显示 `[unknown]` 堆栈帧，这意味着存在缺失的堆栈帧（以字节为单位）。
+- 增加 `-m` 参数的数量，这是 `perf` 在内存中使用的环形缓冲区的大小，并以 `PAGE_SIZE`（通常为 4kB）的倍数渲染。
+- 用 `--call-tree fp` 替换命令 `--call-tree dwarf`，以生成一个调用树报告，提供程序内函数调用的层次视图，展示如何调用函数以及不同函数间的关系。
 
-Overall, these practices help you understand your program’s behavior, identify bottlenecks, and improve performance in your Swift applications.
+总体来说，这些做法帮助您理解程序的行为，识别瓶颈，并提高您的 Swift 应用程序的性能。
+
