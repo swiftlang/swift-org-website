@@ -163,6 +163,60 @@ Qualified name lookup is the process by which a compiler resolves a reference  `
 
 - [Doug Gregor](https://github.com/DougGregor)
 
+### Swiftly Integration in VS Code
+
+**Project size**: 200 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+- Basic proficiency in TypeScript.
+- Basic proficiency in VS Code extension development.
+
+**Description**
+
+[Swiftly](https://github.com/swiftlang/swiftly) is a toolchain manager written in and built for Swift. In order to aid adoption in the Swift community, it would be beneficial to provide a rich editor integration with the existing [Swift extension for VS Code](https://github.com/swiftlang/vscode-swift). This editor integration should aid the user in installing Swiftly itself as well as with installing and selecting Swift toolchains. This will require some effort in Swiftly itself to provide a machine readable interface that any editor could use to manage Swift toolchain installations.
+
+**Expected outcomes/benefits/deliverables**
+
+- Editor integration API in Swiftly for querying available toolchains
+- VS Code should be able to install Swiftly for the user
+- VS Code should be able to install Swift toolchains via Swiftly
+- VS Code should be able to select the active Swift toolchain via Swiftly
+- VS Code should show the version of the Swift toolchain in use
+
+**Potential mentors**
+
+- [Chris McGee](https://github.com/cmcgee1024)
+- [Matthew Bastien](https://github.com/matthewbastien)
+
+### DocC Language Features in SourceKit-LSP
+
+**Project size**: 100 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+
+**Description**
+
+SourceKit-LSP has recently added a feature to support DocC Live Preview for editors such as VS Code. This feature could be further improved by providing language features such as go to definition as well as diagnostics for invalid/missing symbol names.
+
+**Expected outcomes/benefits/deliverables**
+
+- Syntax highlighting for DocC markdown and tutorial files
+- Go to definition for symbols that appear in DocC documentation
+- Diagnostics that report missing/invalid symbol names in DocC documentation
+
+**Potential mentors**
+
+- [Matthew Bastien](https://github.com/matthewbastien)
+- [Alex Hoppen](https://github.com/ahoppen)
+
 ### Example project name
 
 **Project size**: N hours
