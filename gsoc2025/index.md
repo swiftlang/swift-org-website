@@ -20,7 +20,7 @@ To start things off, we recommend starting a new thread or joining an existing d
 
 Please use the forums to tag and communicate with the project's mentor to figure out the details of the project, such that when it comes to writing the official proposal plan, and submitting it on the Summer of Code website, you have a firm understanding of the project and can write a good, detailed proposal (see next section about hints on that).
 
-If you would like to reach out to a mentor privately rather than making a public forum post, and the forums are not allowing you to send private messages yet, please reach out to Konrad Malawski at `ktoso AT apple.com` directly via email with the `[gsoc2024]` tag in the email subject and describe the project you would like to work on. We will route you to the appropriate mentor. In general, public communications on the forums are preferred though, as this is closer to the normal open-source way of getting things done in the Swift project.
+If you would like to reach out to a mentor privately rather than making a public forum post, and the forums are not allowing you to send private messages yet, please reach out to Konrad Malawski at `ktoso AT apple.com` directly via email with the `[gsoc2025]` tag in the email subject and describe the project you would like to work on. We will route you to the appropriate mentor. In general, public communications on the forums are preferred though, as this is closer to the normal open-source way of getting things done in the Swift project.
 
 ## Writing a proposal
 
@@ -30,7 +30,7 @@ When it comes to writing the proposal, the [Google Summer of Code Guide](https:/
 
 ## Potential Projects
 
-We are currently collecting project ideas on the forums in the dedicated [GSoC](https://forums.swift.org/c/development/gsoc/98).
+We are currently collecting project ideas on the forums in the dedicated [GSoC category](https://forums.swift.org/c/development/gsoc/98).
 
 Potential mentors, please feel free to propose project ideas to this page directly, by [opening a pull request](https://github.com/swiftlang/swift-org-website/edit/main/gsoc2025/index.md) to the Swift website. 
 
@@ -216,6 +216,66 @@ SourceKit-LSP has recently added a feature to support DocC Live Preview for edit
 
 - [Matthew Bastien](https://github.com/matthewbastien)
 - [Alex Hoppen](https://github.com/ahoppen)
+
+### Tutorial mode for the VS Code Swift extension
+
+**Project size**: 100 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift
+- Basic proficiency in TypeScript
+- Basic proficiency in VS Code extension development
+
+**Description**
+
+_This project can possibly be combined with the Swiftly Integration in VS Code project and the Tutorial mode for Swift project._
+
+Right now there isn't a whole lot of guidance on how to use the [Swift extension for VS Code](https://github.com/swiftlang/vscode-swift) once it is installed. Apart from reading [an article about it](https://www.swift.org/documentation/articles/getting-started-with-vscode-swift.html) and the "Details" tab of the Swift extension in VS Code it's up to the user to realize that a Swift toolchain will have to be installed and figure out the workflow to Build, Run, Test and Debug code. As well, people who are installing the extension could be new to programming and Swift in general. A tutorial mode that will show the features of the extension will be greatly beneficial for first time users.
+
+The feature can possibly be implemented with [VS Code Walkthrough](https://code.visualstudio.com/api/ux-guidelines/walkthroughs) mode or something similar to the [CodeTour](https://github.com/microsoft/codetour) extension.
+
+**Expected outcomes/benefits/deliverables**
+
+- A better onboarding experience for first time users of the VS Code Swift extension
+- Users learn about the features of the extension
+
+**Potential mentors**
+
+- Either [Adam Ward](https://github.com/award999) or [Paul Lemarquand](https://github.com/plemarquand) or [Matthew Bastien](https://github.com/matthewbastien)
+- [Rishi Benegal](https://github.com/rbenegal)
+
+### Tutorial mode for Swift in the VS Code Extension
+
+**Project size**: 100 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift
+- Basic proficiency in TypeScript
+- Basic proficiency in VS Code extension development
+
+**Description**
+
+_This project can possibly be combined with the Swiftly Integration in VS Code project and the Tutorial mode for VS Code Swift project._
+
+Many users who install the VS Code swift extension could be new to Swift and programming in general. A tutorial mode that will show features of the programming language could allow users to experiment with their programs interactively and greatly enhance their learning experience. This tutorial mode can include examples from the [Swift Book](https://docs.swift.org/swift-book), a VS Code version of the [DocC tutorials](https://developer.apple.com/documentation/xcode/slothcreator_building_docc_documentation_in_xcode), [swift-testing](https://developer.apple.com/documentation/testing/) tutorials and code formatting tutorials using [swift-format](https://github.com/swiftlang/swift-format).
+
+The feature can possibly be implemented with [VS Code Walkthrough](https://code.visualstudio.com/api/ux-guidelines/walkthroughs) mode or something similar to the [CodeTour](https://github.com/microsoft/codetour) extension.
+
+**Expected outcomes/benefits/deliverables**
+
+- A better onboarding experience for users who want to learn more about Swift
+- Users learn about the features of the Swift programming language
+
+**Potential mentors**
+
+- Either [Adam Ward](https://github.com/award999) or [Paul Lemarquand](https://github.com/plemarquand) or [Matthew Bastien](https://github.com/matthewbastien)
+- [Rishi Benegal](https://github.com/rbenegal)
 
 ### Example project name
 
