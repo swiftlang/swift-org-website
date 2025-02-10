@@ -476,3 +476,7 @@ owen-voorhees:
   name: Owen Voorhees
   github: owenv
   about: "Owen Voorhees is a member of the team at Apple working on Swift Build."
+
+adam-ward:
+  name: Adam Ward
+  about: "Adam Ward is a member of the team at Apple working on Swift tooling."
