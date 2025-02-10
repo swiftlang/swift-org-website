@@ -10,7 +10,7 @@ Today, we are excited to announce a new version of the Swift extension for
 Visual Studio Code -- now [published to the extension
 marketplace](https://marketplace.visualstudio.com/items?itemName=swiftlang.swift-vscode)
 as an official supported release of the Swift team. The aim of this extension is
-to provide a first-class, feature-complete extension that makes developing Swift
+to provide a high-quality, feature-complete extension that makes developing Swift
 applications on all platforms a seamless experience.
 
 ![VS Code running with the Swift extension](/assets/images/vscode-extension-blog/vscode-swift-2.png)
