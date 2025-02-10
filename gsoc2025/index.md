@@ -277,7 +277,31 @@ The feature can possibly be implemented with [VS Code Walkthrough](https://code.
 - Either [Adam Ward](https://github.com/award999) or [Paul Lemarquand](https://github.com/plemarquand) or [Matthew Bastien](https://github.com/matthewbastien)
 - [Rishi Benegal](https://github.com/rbenegal)
 
+### Improved console output for Swift Testing
 
+**Project size**: 175 hours (medium)
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+
+**Description**
+
+Enhance Swift Testing's reporting of test results to the console/terminal. Consider adding features like live progress reporting, nested output reflecting suite hierarchy, test metadata (display names, tags), parameterized test arguments, and more terminal colors. Perhaps include user-configurable options. If time allows, implement several alternatives and present them to the community (and the Testing Workgroup) for consideration. Factor code as portably as possible to support many platforms, and so it could be incorporated into a supervisory “harness” process in the future.
+
+**Expected outcomes/benefits/deliverables**
+
+- Add a new component in the [swift-testing](https://github.com/swiftlang/swift-testing) repository which receives events from the testing library and decides how to reflect them in console output.
+- Modify supporting tools such as Swift Package Manager to allow enabling or configuring this functionality.
+- Land the changes behind an experimental feature flag initially.
+- Submit a proposal to the community and the Testing Workgroup to formally enable the feature.
+- Summarize your effort with a demo of the new functionality including screenshots or recordings.
+
+**Potential mentors**
+
+- [Stuart Montgomery](https://github.com/stmontgomery)
 
 ### Example project name
 
