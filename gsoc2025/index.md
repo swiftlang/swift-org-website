@@ -40,7 +40,7 @@ You can browse previous year's project ideas here: [2024](https://www.swift.org/
 
 ### Re-implement property wrappers with macros
 
-**Project size**: 350 hours
+**Project size**: 350 hours (large)
 
 **Estimated difficulty**: Intermediate
 
@@ -66,7 +66,7 @@ The outcome of this project is the complete removal of all property wrappers-spe
 
 ### Improve the display of documentation during code completion in SourceKit-LSP
 
-**Project size**: 175h
+**Project size**: 175 hours (medium)
 
 **Estimated difficulty**: Intermediate
 
@@ -92,7 +92,7 @@ SourceKit-LSP will display more information and documentation about the code com
 
 ### Refactor sourcekitd to use Swift Concurrency
 
-**Project size**: 175h
+**Project size**: 175 hours (medium)
 
 **Estimated difficulty**: Intermediate
 
@@ -119,7 +119,7 @@ Improved concurrency-safety of sourcekitd and better maintainability.
 
 ### Add more refactoring actions to SourceKit-LSP
 
-**Project size**: 90h
+**Project size**: 90 hours (small)
 
 **Estimated difficulty**: Intermediate
 
@@ -141,7 +141,7 @@ A richer set of refactorings in SourceKit-LSP that aid developers in performing 
 
 ### Qualified name lookup for swift-syntax
 
-**Project size**: 350 hours
+**Project size**: 350 hours (large)
 
 **Estimated difficulty**: Intermediate
 
@@ -165,7 +165,7 @@ Qualified name lookup is the process by which a compiler resolves a reference  `
 
 ### Swiftly Integration in VS Code
 
-**Project size**: 200 hours
+**Project size**: 175 hours (medium)
 
 **Estimated difficulty**: Intermediate
 
@@ -194,7 +194,7 @@ Qualified name lookup is the process by which a compiler resolves a reference  `
 
 ### DocC Language Features in SourceKit-LSP
 
-**Project size**: 100 hours
+**Project size**: 90 hours (medium)
 
 **Estimated difficulty**: Intermediate
 
@@ -219,7 +219,7 @@ SourceKit-LSP has recently added a feature to support DocC Live Preview for edit
 
 ### Tutorial mode for the VS Code Swift extension
 
-**Project size**: 100 hours
+**Project size**: 90 hours (small)
 
 **Estimated difficulty**: Intermediate
 
@@ -231,7 +231,7 @@ SourceKit-LSP has recently added a feature to support DocC Live Preview for edit
 
 **Description**
 
-_This project can possibly be combined with the Swiftly Integration in VS Code project and the Tutorial mode for Swift project._
+_This project can possibly be combined with the Swiftly Integration in VS Code project and the Tutorial mode for Swift project. When submitting project application for both together, please then mark it as a medium (175 hours) project._
 
 Right now there isn't a whole lot of guidance on how to use the [Swift extension for VS Code](https://github.com/swiftlang/vscode-swift) once it is installed. Apart from reading [an article about it](https://www.swift.org/documentation/articles/getting-started-with-vscode-swift.html) and the "Details" tab of the Swift extension in VS Code it's up to the user to realize that a Swift toolchain will have to be installed and figure out the workflow to Build, Run, Test and Debug code. As well, people who are installing the extension could be new to programming and Swift in general. A tutorial mode that will show the features of the extension will be greatly beneficial for first time users.
 
@@ -249,7 +249,7 @@ The feature can possibly be implemented with [VS Code Walkthrough](https://code.
 
 ### Tutorial mode for Swift in the VS Code Extension
 
-**Project size**: 100 hours
+**Project size**: 90 hours (small)
 
 **Estimated difficulty**: Intermediate
 
@@ -276,6 +276,8 @@ The feature can possibly be implemented with [VS Code Walkthrough](https://code.
 
 - Either [Adam Ward](https://github.com/award999) or [Paul Lemarquand](https://github.com/plemarquand) or [Matthew Bastien](https://github.com/matthewbastien)
 - [Rishi Benegal](https://github.com/rbenegal)
+
+
 
 ### Example project name
 
