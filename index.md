@@ -17,7 +17,7 @@ atom: true
 </div>
 
 <div class="banner primary">
-  <p>Get ready for the Swift 6 language mode with the <a href="https://www.swift.org/migration/">official migration guide</a></p>
+  <p>Swift 6 is here! Learn about the new language mode with the <a href="https://www.swift.org/migration/documentation/migrationguide/">official migration guide</a>.</p>
 </div>
 
 <div class="link-grid">
