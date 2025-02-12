@@ -330,6 +330,32 @@ Beyond the markdown output, this plugin could be further improved by generating 
 
 - [David Rönnqvist](https://github.com/d-ronnqvist)
 
+### Documentation coverage
+
+ **Project size**: 90 hours (small)
+
+ **Estimated difficulty**: Intermediate
+
+ **Recommended skills**
+
+ - Basic proficiency in Swift.
+
+ **Description**
+
+ Enhance Swift DocC's experimental documentation coverage feature to write coverage metrics in a new extensible format that other tools can read and display. 
+ Define a few types of metrics—for example Boolean (has documentation: true/false), Fraction (2/3 parameters are documented), Percentage, etc.—for this format. 
+ Explore ideas for what documentation coverage information would be useful to emit. Explore ideas for how another tool could display that coverage information. 
+
+ **Expected outcomes/benefits/deliverables**
+
+ - Land the documentation coverage output format changes for the experimental feature in DocC.
+ - Submit a pitch to the community and the Documentation Workgroup to formally enable the documentation coverage feature in DocC.
+ - Summarize your effort with a demo of the new metrics and examples of how another tool could display that information.
+
+ **Potential mentors**
+
+ - [David Rönnqvist](https://github.com/d-ronnqvist)
+
 ### Example project name
 
 **Project size**: N hours
