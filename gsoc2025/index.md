@@ -303,6 +303,59 @@ Enhance Swift Testing's reporting of test results to the console/terminal. Consi
 
 - [Stuart Montgomery](https://github.com/stmontgomery)
 
+### Improved command line tool documentation 
+
+**Project size**: 175 hours (medium)
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+
+**Description**
+
+Swift Argument Parser recently added a [command plugin](https://github.com/apple/swift-argument-parser/pull/694) to generate documentation markup for a command line tool.
+This plugin could be improved by providing support for generating separate pages for each command and by leveraging additional markdown syntax to organize command line flags into sections and display possible values and default values.
+
+Beyond the markdown output, this plugin could be further improved by generating a ["symbol graph"](https://github.com/swiftlang/swift-docc-symbolkit/tree/main) that describe each command and its flags, options, and subcommands. By describing the commands' structure, tools like [Swift DocC](https://github.com/swiftlang/swift-docc/tree/main) can further customize the display of command line tool documentation, support links to individual flags, and allow developers to extend or override the documentation for individual flags in ways that isn't overwritten when regenerating the documentation markup from the plugin. If time allows, prototype some enhancement to command line documentation in Swift DocC that leverage the information from the command symbol graph file.
+
+**Expected outcomes/benefits/deliverables**
+
+- A richer markdown output from the plugin.
+- Support for generating separate pages for each command.
+- Output a supplementary symbol graph file that describe the commands' structure.
+
+**Potential mentors**
+
+- [David Rönnqvist](https://github.com/d-ronnqvist)
+
+### Documentation coverage
+
+ **Project size**: 90 hours (small)
+
+ **Estimated difficulty**: Intermediate
+
+ **Recommended skills**
+
+ - Basic proficiency in Swift.
+
+ **Description**
+
+ Enhance Swift DocC's experimental documentation coverage feature to write coverage metrics in a new extensible format that other tools can read and display. 
+ Define a few types of metrics—for example Boolean (has documentation: true/false), Fraction (2/3 parameters are documented), Percentage, etc.—for this format. 
+ Explore ideas for what documentation coverage information would be useful to emit. Explore ideas for how another tool could display that coverage information. 
+
+ **Expected outcomes/benefits/deliverables**
+
+ - Land the documentation coverage output format changes for the experimental feature in DocC.
+ - Submit a pitch to the community and the Documentation Workgroup to formally enable the documentation coverage feature in DocC.
+ - Summarize your effort with a demo of the new metrics and examples of how another tool could display that information.
+
+ **Potential mentors**
+
+ - [David Rönnqvist](https://github.com/d-ronnqvist)
+
 ### OpenAPI integration with DocC
 
 **Project size**: 350 hours (large)

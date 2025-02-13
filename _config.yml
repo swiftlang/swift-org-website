@@ -26,3 +26,6 @@ plugins:
 
 whitelist:
   - jekyll-redirect-from
+
+include:
+ - .well-known
