@@ -2,11 +2,11 @@
 layout: post
 published: true
 date: 2025-02-21 10:00:00
-title: How Swift's Server Support powers Things Cloud
+title: How Swift's server support powers Things Cloud
 author: [vrylko, wjainek]
 ---
 
-You might be familiar with [Things](https://culturedcode.com/things/), a powerful personal task manager that has won multiple Apple Design Awards and is available across Apple devices including iPhone, iPad, Mac, Apple Watch, and Apple Vision Pro. At Cultured Code, the team behind Things, we care about a great user experience across every aspect of the product. This extends to our server back end, and after a rewrite our Things Cloud service has transitioned entirely to Swift. Over the past year in production, Swift has consistently proven to be reliable, performant, and remarkably well-suited for our server-side need.
+You might be familiar with [Things](https://culturedcode.com/things/), a delightful personal task manager that has won two Apple Design Awards and is available across Apple devices including iPhone, iPad, Mac, Apple Watch, and Apple Vision Pro. At Cultured Code, the team behind Things, we care about a great user experience across every aspect of the product. This extends to our server back end, and after a rewrite our Things Cloud service has transitioned entirely to Swift. Over the past year in production, Swift has consistently proven to be reliable, performant, and remarkably well-suited for our server-side need.
 
 <img
   alt="Things logo"
@@ -31,19 +31,19 @@ You might be familiar with [Things](https://culturedcode.com/things/), a powerfu
 
 Our legacy Things Cloud service was built on Python 2 and Google App Engine. While it was stable, it suffered from a growing list of limitations. In particular, slow response times impacted the user experience, high memory usage drove up infrastructure costs, and Python’s lack of static typing made every change risky. For our push notification system to be fast, we even had to develop a custom C-based service. As these issues accumulated and several deprecations loomed, we realized we needed a change.
 
-Rewrites are usually a last resort, but in our case, they were the only viable path for Things Cloud. We explored various programming languages including Java, Python 3, Go, and even C++. However, Swift – which was already a core part of our client apps – stood out for its potential and unique benefits. Swift promised excellent performance, predictable memory management through [ARC](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/), an expressive type system for reliability and maintainability, and seamless interoperability with C and C++.
+A full rewrite is usually a last resort, but in our case, it was the only viable path for Things Cloud. We explored various programming languages including Java, Python 3, Go, and even C++. However, Swift – which was already a core part of our client apps – stood out for its potential and unique benefits. Swift promised excellent performance, predictable memory management through [ARC](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/), an expressive type system for reliability and maintainability, and seamless interoperability with C and C++.
 
 While we initially had concerns that Swift's server support wasn’t as mature as that found in other ecosystems, both Apple and the open-source community had shown strong commitment to its evolution. Swift had reliably compiled on Linux for a long time; the Swift Server workgroup had coordinated server efforts since 2016; the [SwiftNIO library](https://github.com/apple/swift-nio) gave us confidence in the foundational capabilities, and [Vapor](https://vapor.codes) provided all the tools to get us up and running quickly.
 
-Convinced by these benefits and the opportunity to use the same language for client and server development, we embarked on a three-year journey to rewrite Things Cloud. We’ve been using it internally for the past two years, and it has now been live in production for almost a year.
+Convinced by these benefits and the opportunity to use the same language for client and server development, we embarked on a three-year journey to rewrite Things Cloud. We’ve been using it internally for the past two years, and it has now been live in production for over a year.
 
-## The new Swift server architecture
+## The new Swift-based service architecture
 
 We’ll outline the core components of our new service architecture, highlighting the Swift packages we use. We’ve found that these components work well together to provide reliability and stability, and we believe this serves as a valuable reference point for others considering a similar transition to Swift.
 
 <div style="margin: 2em auto;">
   <img
-    alt="Overview of our new Swift-based back end."
+    alt="Overview of our new Swift-based service architecture."
     src="/assets/images/how-swift-on-server-powers-things-cloud-blog/new-backend-overview.png"
     width="840" height="525"
     style="max-width: 100%; width: 100%; height: auto; margin: auto; display: block;"
@@ -92,15 +92,15 @@ Now, with over a full year in production, we're pleased to report that Swift has
 
 <div style="margin: 2em auto;">
   <img
-    alt="Comparison between our legacy back end and new Swift-based one."
+    alt="Comparison between our legacy service and new Swift-based one."
     src="/assets/images/how-swift-on-server-powers-things-cloud-blog/performance-comparison.png"
     width="540" height="270"
     style="max-width: 100%; width: 540px; height: auto; margin: auto; display: block;"
   />
-  <div style="text-align: center; font-size: smaller; margin-top: 1em;">Comparison between our legacy back end and new Swift-based one.</div>
+  <div style="text-align: center; font-size: smaller; margin-top: 1em;">Comparison between our legacy service and new Swift-based one.</div>
 </div>
 
-And one extra win: Swift’s performance was powerful enough that we were also able to replace the custom C-based push notification service we'd built with a Swift-based one; this significantly simplified our codebase and operations.
+And one extra win: Swift’s outstanding performance allowed us to replace our custom C-based push notification service with a Swift-based one; this significantly simplified our codebase and operations.
 
 ## Conclusions
 
