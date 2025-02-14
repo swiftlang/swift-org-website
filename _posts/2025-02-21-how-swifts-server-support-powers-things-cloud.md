@@ -10,7 +10,7 @@ You might be familiar with [Things](https://culturedcode.com/things/), a delight
 
 <img
   alt="Things logo"
-  src="/assets/images/how-swift-on-server-powers-things-cloud-blog/things-logo.png"
+  src="/assets/images/how-swifts-server-support-powers-things-cloud/things-logo.png"
   width="160" height="160"
   style="max-width: 80%; width: 160px; height: auto; margin: 0 auto; display: block;"
 />
@@ -20,7 +20,7 @@ You might be familiar with [Things](https://culturedcode.com/things/), a delight
 <div style="margin: 2em auto;">
   <img
     alt="Things Cloud synchronizes to-dos across different devices."
-    src="/assets/images/how-swift-on-server-powers-things-cloud-blog/things-cloud-with-devices.png"
+    src="/assets/images/how-swifts-server-support-powers-things-cloud/things-cloud-with-devices.png"
     width="840" height="473"
     style="max-width: 100%; width: 100%; height: auto; margin: 0 auto; display: block;"
   />
@@ -44,7 +44,7 @@ We’ll outline the core components of our new service architecture, highlightin
 <div style="margin: 2em auto;">
   <img
     alt="Overview of our new Swift-based service architecture."
-    src="/assets/images/how-swift-on-server-powers-things-cloud-blog/new-backend-overview.png"
+    src="/assets/images/how-swifts-server-support-powers-things-cloud/new-backend-overview.png"
     width="840" height="525"
     style="max-width: 100%; width: 100%; height: auto; margin: auto; display: block;"
   />
@@ -93,7 +93,7 @@ Now, with over a full year in production, we're pleased to report that Swift has
 <div style="margin: 2em auto;">
   <img
     alt="Comparison between our legacy service and new Swift-based one."
-    src="/assets/images/how-swift-on-server-powers-things-cloud-blog/performance-comparison.png"
+    src="/assets/images/how-swifts-server-support-powers-things-cloud/performance-comparison.png"
     width="540" height="270"
     style="max-width: 100%; width: 540px; height: auto; margin: auto; display: block;"
   />
