@@ -356,6 +356,38 @@ Beyond the markdown output, this plugin could be further improved by generating 
 
  - [David Rönnqvist](https://github.com/d-ronnqvist)
 
+### OpenAPI integration with DocC
+
+**Project size**: 350 hours (large)
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+- Basic knowledge in HTTP APIs.
+
+**Description**
+
+[OpenAPI](https://www.openapis.org/) is a standard for documenting HTTP services. It allows creating documents in YAML or JSON format that can be utilized by various tools to automate workflows, such as generating the required code for sending and receiving HTTP requests.
+
+OpenAPI is known for its tooling to generate documentation, but in the Swift ecosystem, developers are already familiar with how [DocC](https://github.com/swiftlang/swift-docc) renders documentation for Swift and Objective-C APIs. To enhance consistency and improve the developer experience, we aim to extend DocC’s support to OpenAPI documents.
+
+**Expected outcomes/benefits/deliverables**
+
+As part of the Google Summer of Code project, the student will develop a library/tool that can generate DocC documentation from an OpenAPI document.
+
+Strech goals:
+
+* Integrate the tool into the [Swift OpenAPI Generator](https://github.com/apple/swift-openapi-generator).
+* Create OpenAPI Doc to DocC Live Preview plugin for VS Code.
+
+**Potential mentors**
+
+- [Sofía Rodríguez](https://github.com/sofiaromorales)
+- [Si Beaumont](https://github.com/simonjbeaumont)
+- [Honza Dvorsky](https://github.com/czechboy0)
+
 ### Example project name
 
 **Project size**: N hours

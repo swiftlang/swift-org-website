@@ -481,6 +481,16 @@ adam-ward:
   name: Adam Ward
   about: "Adam Ward is a member of the team at Apple working on Swift tooling."
 
+george-barnett:
+  name: George Barnett
+  email: gbarnett@apple.com
+  github: glbrntt
+  about: "George Barnett is a member of a team developing Swift server networking libraries in Apple's Cloud Services organisation."
+
+gus-cairo:
+  name: Gus Cairo
+  github: gjcairo
+  
 vrylko:
   name: Vojtěch Rylko
   github: vojtarylko
