@@ -490,3 +490,13 @@ george-barnett:
 gus-cairo:
   name: Gus Cairo
   github: gjcairo
+  
+vrylko:
+  name: Vojtěch Rylko
+  github: vojtarylko
+  about: "Vojtěch Rylko is responsible for development and operations of Things Cloud at Cultured Code."
+
+wjainek:
+  name: Werner Jainek
+  github: wjainek
+  about: "Werner Jainek is Co-Founder and CEO at Cultured Code."
