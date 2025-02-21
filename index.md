@@ -130,7 +130,9 @@ Stay up-to-date with the latest in the Swift community.
 <div class="links links-list-nostyle" markdown="1">
   - [Visit the Swift.org blog](/blog/)
   - [Visit the Swift forums](https://forums.swift.org)
-  - [Follow @swiftlang on X (formerly Twitter)](https://twitter.com/swiftlang){:target="_blank" class="link-external"}
+  - [Follow @swiftlang on X (formerly Twitter)](https://x.com/swiftlang){:target="_blank" class="link-external"}
+  - [Follow @swift.org on Bluesky](https://bsky.app/profile/swift.org){:target="_blank" class="link-external"}
+  - [Follow @swiftlang on Mastodon](https://mastodon.social/@swiftlang){:target="_blank" class="link-external"}
 </div>
 
 <script>
