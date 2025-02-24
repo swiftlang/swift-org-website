@@ -25,7 +25,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
 * __[Core Team](#core-team)__ is the small group responsible for strategic direction and oversight of the Swift project.
 * __[Code Owner](/contributing/#code-owners)__ is the individual responsible for a specific area of the Swift codebase.
 * __[Committer](/contributing/#commit-access)__ is anyone that has commit access to the Swift code base.
-* __[Member](/contributing/#commit-access)__ are members of the swiftlang organization on GitHub.
+* __[Member](/contributing/#commit-access)__ is anyone who is a member of the swiftlang organization on GitHub.
 * __[Contributor](/contributing/#contributor)__ is anyone who has contributed to Swift by writing code, answering questions on the forums, reporting or triaging bugs, participating in the Swift evolution process, or other ways.
 * __Steering Groups__
    * __[Language](#language-steering-group)__ is a small group of experts that drive the Swift language forward in a coherent direction.
