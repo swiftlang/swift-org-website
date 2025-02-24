@@ -4,7 +4,7 @@ layout: page
 title: Monthly Non-Darwin Swift Releases
 ---
 
-We are very happy to announce the monthly non-Darwin Swift releases. The release manager will announce the merge window for each monthly release. This merge window will remain open for about three weeks, after which it will close. Immediately following the merge window close, release managers have one week to finalize the release which will then be published on swift.org. All the relevant dates will be communicated upfront in the announcement on Swift Forums.
+The release manager will announce the merge window for each monthly release. This merge window will remain open for about three weeks, after which it will close. Immediately following the merge window close, release managers have one week to finalize the release which will then be published on swift.org. All the relevant dates will be communicated upfront in the announcement on Swift Forums.
 
 Once the merge window is open, everybody can open a pull request against the release branch announced in the forum post. To keep the process smooth and lightweight, the release manager will only consider pull requests that
 
