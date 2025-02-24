@@ -93,3 +93,7 @@
     url: /documentation/swift-compiler/
     description: |
       Overview of the Swift compiler architecture.
+  - title: Monthly Non-Darwin Swift Releases
+    url: /documentation/monthly-non-darwin-release/
+    description: |
+      Overview of the Swift monthly non-Darwin release process.
