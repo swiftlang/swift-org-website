@@ -1,0 +1,7 @@
+- name: Member 1
+  handle: member1
+  affiliation:
+
+- name: Member 2
+  handle: member2
+  affiliation:
