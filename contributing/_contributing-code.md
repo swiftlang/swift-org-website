@@ -200,12 +200,12 @@ As you climb the contributor ladder by contributing to Swift on GitHub, you gain
 A *Member* has constructively contributed to Swift multiple times. This role is held across the entire organization, becoming a *Member* allows you to trigger CI on all repositories in the swiftlang organization on GitHub.
 
 - Requirements
-  - Make multiple constructive contributions to the Swift projects, this can be in the form of PRs, engagement on the Swift Forums, filing valuable issue, triaging them, or similar forms of contributions.
+  - Make multiple constructive contributions to the Swift projects. This can be in the form of PRs, engagement on the Swift Forums, filing valuable issue, triaging them, or similar.
 - Privileges
   - Ability to trigger CI testing
   - Show your membership in the swiftlang organization on your GitHub profile
 - Nomination
-  - If you would like to become a member, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) with the GitHub user name that you want to use
+  - If you would like to become a member, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) that includes your contribution and the GitHub user name that you want to use
 - Growth
   - Show that you use the privileges constructively and continue contributing to gain commit access.
 
