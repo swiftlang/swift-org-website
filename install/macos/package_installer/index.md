@@ -25,7 +25,11 @@ Package Manager may be limited due to some [outstanding issues](https://github.c
 
 0. Run the package installer,
    which will install an Xcode toolchain into
-   `/Library/Developer/Toolchains/`.
+   `~/Library/Developer/Toolchains/`:
+
+    ~~~ shell
+    installer -target CurrentUserHomeDirectory -pkg ~/Downloads/swift-DEVELOPMENT-SNAPSHOT-2025-02-26-a-osx.pkg
+    ~~~
 
    An Xcode toolchain (`.xctoolchain`) includes a copy of the compiler, LLDB,
    and other related tools needed to provide a cohesive development experience
