@@ -137,6 +137,8 @@
           name: community-participation
     - title: Foundation
       url: /foundation-workgroup/
+    - title: Testing
+      url: /testing-workgroup/
     - section: Governance
     - title: Code of Conduct
       url: /code-of-conduct/
