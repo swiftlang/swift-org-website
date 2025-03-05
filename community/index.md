@@ -35,6 +35,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
    * __[Contributor Experience](/contributor-experience-workgroup)__ is a team that supports contributors to the Swift project, including contributions on the Swift Forums.
    * __[Documentation](/documentation-workgroup)__ is a team that helps guide the documentation experience for Swift.
    * __[Swift on Server](/sswg)__ is a team that promotes the use of Swift for developing and deploying server applications.
+   * __[Testing](/testing-workgroup)__ is a team that helps guide the experience, libraries, and tools for testing Swift code.
    * __[Website](/website-workgroup/)__ is a team that helps guide the evolution on the Swift.org website.
 
 Most importantly, everyone that uses Swift is a valued member of our extended community.
