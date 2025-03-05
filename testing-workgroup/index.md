@@ -107,7 +107,7 @@ review.
 ## Communication
 
 The Testing Workgroup communicates with the broader Swift community in the
-[swift-testing](https://forums.swift.org/c/related-projects/swift-testing)
+[swift-testing](https://forums.swift.org/c/development/swift-testing/103)
 Forum category. The workgroup can also be contacted privately by sending a
 message to
 [@testing-workgroup](https://forums.swift.org/new-message?groupname=testing-workgroup).
@@ -124,7 +124,7 @@ in the Testing Workgroup’s initiatives. Here are some ways to consider
 participating:
 
 * Discuss ideas on the Swift Forums. You can create new topics in the
-  [swift-testing](https://forums.swift.org/c/related-projects/swift-testing)
+  [swift-testing](https://forums.swift.org/c/development/swift-testing/103)
   category, or add the `testing` tag to any topic.
 * Open GitHub issues to track enhancements or report bugs in the projects
   governed by the Testing Workgroup, such as
