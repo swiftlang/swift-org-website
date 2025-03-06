@@ -189,7 +189,27 @@ We prefer that these issues be handled before submission, but we understand that
 
 Commits that clearly violate these quality standards may be reverted, in particular when the change blocks other developers from making progress. The developer is welcome to recommit the change after the problem has been fixed.
 
-### Commit Access
+### Contributor Ladder
+
+This contributor ladder defines the roles you might gain while contributing to Swift on GitHub. Each role has privileges associated, which requires building trust with the community of contributors. We recognize there are many different types of contributors to Swift and we appreciate every single one! Everyone who has participated in the open source Swift project is a *Contributor*: This can be by writing code, answering questions on the forums, reporting or triaging bugs, or participating in the Swift evolution process.
+
+As you climb the contributor ladder by contributing to Swift on GitHub, you gain new privileges but also gain trust and responsibilities that you are expected to fulfill. If a contributor violates this trust and these responsibilities, the Core Team may give them a notice and upon repeated infringements revoke their level. We believe in a healthy community and hope this action will never be necessary.
+
+#### Member
+
+A *Member* has constructively contributed to Swift multiple times. This role is held across the entire organization, becoming a *Member* allows you to trigger CI on all repositories in the swiftlang organization on GitHub.
+
+- Requirements
+  - Make multiple constructive contributions to the Swift projects. This can be in the form of PRs, engagement on the Swift Forums, filing valuable issue, triaging them, or similar.
+- Privileges
+  - Ability to trigger CI testing
+  - Show your membership in the swiftlang organization on your GitHub profile
+- Nomination
+  - If you would like to become a member, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) that includes your contribution and the GitHub user name that you want to use
+- Growth
+  - Show that you use the privileges constructively and continue contributing to gain commit access.
+
+#### Commit Access
 
 Commit access is granted to contributors with a track record of submitting high-quality changes. If you would like commit access, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) with the GitHub user name that you want to use and a list of 5 non-trivial pull requests that were accepted without modifications.
 
@@ -202,6 +222,23 @@ Once you’ve been granted commit access, you will be able to commit to all of t
 * You are allowed to commit changes without approval to the portions of Swift to which you have contributed or for which you have been assigned responsibility. Such commits must not break the build. This is a “trust but verify” policy, and commits of this nature are reviewed after being committed.
 
 Multiple violations of these policies or a single egregious violation may cause commit access to be revoked.  Even with commit access, your changes are still subject to [code review](#code-review). Of course, you are also encouraged to review other peoples’ changes.
+
+
+#### Code Owners
+
+Code owners are individuals assigned to specific areas of the Swift project, with code quality their primary responsibility. The umbrella Swift project is composed of numerous sub-projects including the Swift standard library, extensions to the LLDB debugger, and the Swift package manager, to name a few. Each sub-project will be assigned a code owner.  The code owner then works to get all contributions reviewed, gather feedback from the community, and shepherd approved patches into the product.
+
+Anyone can review a piece of code, and we welcome code review from everyone that is interested. Code review procedures are not dictated by a central, global policy. Instead, the process is defined by each code owner.
+
+Any community member that is active and shows themselves to be valuable can offer to become a code owner via posting to the forums, or be nominated by another member.  If fellow contributors agree, the project lead will make the appointment and add the new owner's name to the code owners file. The position is completely voluntary, and can be resigned at any time.
+
+The list of current code owners can be found in the file `CODE_OWNERS.txt` in the root of the parent Swift source tree. We also maintain a mailing group so you can [send an email](mailto:code-owners@forums.swift.org) to all the code owners.
+
+There may be nothing more important to the success of Swift than strong, engaged code owners. We all owe them respect, gratitude, and whatever help we can offer.
+
+
+Each contributor is responsible for adding his or her name to the `CONTRIBUTORS.txt` file at the project's root and maintaining the contact information. If you are contributing under the umbrella of your company, please add your company’s information, and do not also list yourself as an additional copyright holder.
+
 
 [community]: /community  "Swift.org community overview"
 [get_started]: /getting-started/ "How to setup your own version of Swift"

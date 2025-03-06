@@ -23,9 +23,10 @@ Advancing the Swift programming language with a coherent, clear view of its evol
 
 * __[Project Lead](#project-lead)__ appoints technical leaders from the community.  Apple Inc. is the project lead, and interacts with the community through its representative.
 * __[Core Team](#core-team)__ is the small group responsible for strategic direction and oversight of the Swift project.
-* __[Code Owner](#code-owners)__ is the individual responsible for a specific area of the Swift codebase.
+* __[Code Owner](/contributing/#code-owners)__ is the individual responsible for a specific area of the Swift codebase.
 * __[Committer](/contributing/#commit-access)__ is anyone that has commit access to the Swift code base.
-* __[Contributor](/contributing/#contributing-code)__ is anyone that contributes a patch or helps with code review.
+* __[Member](/contributing/#member)__ is anyone who is a member of the swiftlang organization on GitHub.
+* __[Contributor](/contributing/#contributor)__ is anyone who has contributed to Swift by writing code, answering questions on the forums, reporting or triaging bugs, participating in the Swift evolution process, or other ways.
 * __Steering Groups__
    * __[Language](#language-steering-group)__ is a small group of experts that drive the Swift language forward in a coherent direction.
    * __[Platforms](/platform-steering-group)__ is a small group of experts that enables the Swift language and its tools to be used in new environments.
@@ -34,6 +35,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
    * __[Contributor Experience](/contributor-experience-workgroup)__ is a team that supports contributors to the Swift project, including contributions on the Swift Forums.
    * __[Documentation](/documentation-workgroup)__ is a team that helps guide the documentation experience for Swift.
    * __[Swift on Server](/sswg)__ is a team that promotes the use of Swift for developing and deploying server applications.
+   * __[Testing](/testing-workgroup)__ is a team that helps guide the experience, libraries, and tools for testing Swift code.
    * __[Website](/website-workgroup/)__ is a team that helps guide the evolution on the Swift.org website.
 
 Most importantly, everyone that uses Swift is a valued member of our extended community.
@@ -76,24 +78,6 @@ The current Language Steering Group members are:
 {% assign people = site.data.language_wg | sort: "name" %}
 {% for person in people %}* {{ person.name }}
 {% endfor %}
-
-#### Code Owners
-
-[Contact via Forums](https://forums.swift.org/new-message?groupname=code-owners)
-
-Code owners are individuals assigned to specific areas of the Swift project, with code quality their primary responsibility. The umbrella Swift project is composed of numerous sub-projects including the Swift standard library, extensions to the LLDB debugger, and the Swift package manager, to name a few. Each sub-project will be assigned a code owner.  The code owner then works to get all contributions reviewed, gather feedback from the community, and shepherd approved patches into the product.
-
-Anyone can review a piece of code, and we welcome code review from everyone that is interested. Code review procedures are not dictated by a central, global policy. Instead, the process is defined by each code owner.
-
-Any community member that is active and shows themselves to be valuable can offer to become a code owner via posting to the forums, or be nominated by another member.  If fellow contributors agree, the project lead will make the appointment and add the new owner's name to the code owners file. The position is completely voluntary, and can be resigned at any time.
-
-The list of current code owners can be found in the file `CODE_OWNERS.txt` in the root of the parent Swift source tree. We also maintain a mailing group so you can [send an email][email-owners] to all the code owners.
-
-There may be nothing more important to the success of Swift than strong, engaged code owners. We all owe them respect, gratitude, and whatever help we can offer.
-
-
-Each contributor is responsible for adding his or her name to the `CONTRIBUTORS.txt` file at the project's root and maintaining the contact information. If you are contributing under the umbrella of your company, please add your company’s information, and do not also list yourself as an additional copyright holder.
-
 
 {% include_relative _forums.md %}
 

@@ -18,7 +18,7 @@ here="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 function replace_acceptable_years() {
     # this needs to replace all acceptable forms with 'YEARS'
-    sed -e 's/20[12][789012]-20[12][89012]/YEARS/' -e 's/20[12][89012]/YEARS/'
+    sed -e 's/20[2][0123456789]-20[2][0123456789]/YEARS/' -e 's/20[2][0123456789]/YEARS/'
 }
 
 printf "=> Checking for unacceptable language... "
@@ -45,11 +45,11 @@ tmp=$(mktemp /tmp/.swift-org-soundness_XXXXXX)
 for language in swift-or-c bash python; do
   declare -a matching_files
   declare -a exceptions
-  expections=( )
+  exceptions=( )
   matching_files=( -name '*' )
   case "$language" in
       swift-or-c)
-        exceptions=( -name "" )
+        exceptions=( -name "Package.swift" )
         matching_files=( -name '*.swift' -o -name '*.c' -o -name '*.h' )
         cat > "$tmp" <<"EOF"
 //===----------------------------------------------------------------------===//
@@ -68,6 +68,7 @@ for language in swift-or-c bash python; do
 EOF
         ;;
       bash)
+        exceptions=( -name "placeholder" )
         matching_files=( -name '*.sh' )
         cat > "$tmp" <<"EOF"
 #!/bin/bash
@@ -87,6 +88,7 @@ EOF
 EOF
       ;;
       python)
+        exceptions=( -name "placeholder" )
         matching_files=( -name '*.py' )
         cat > "$tmp" <<"EOF"
 #!/usr/bin/env python
