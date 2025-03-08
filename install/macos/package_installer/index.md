@@ -56,7 +56,7 @@ Package Manager may be limited due to some [outstanding issues](https://github.c
   the `TOOLCHAINS` environment variable as follows:
 
   ~~~ shell
-  export TOOLCHAINS=$(plutil -extract CFBundleIdentifier raw /Library/Developer/Toolchains/<toolchain name>.xctoolchain/Info.plist)
+  export TOOLCHAINS=$(plutil -extract CFBundleIdentifier raw ~/Library/Developer/Toolchains/<toolchain name>.xctoolchain/Info.plist)
   ~~~
 
 
