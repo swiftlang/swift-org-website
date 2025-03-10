@@ -1,3 +1,8 @@
+- date: 2025-03-09 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-09-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-09-a-debian12.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-03-09-a-debian12.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2025-03-04 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-04-a
   download: swift-DEVELOPMENT-SNAPSHOT-2025-03-04-a-debian12.tar.gz
