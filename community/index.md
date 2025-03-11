@@ -31,6 +31,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
    * __[Language](#language-steering-group)__ is a small group of experts that drive the Swift language forward in a coherent direction.
    * __[Platforms](/platform-steering-group)__ is a small group of experts that enables the Swift language and its tools to be used in new environments.
 * __Workgroups__
+   * __[Android](/android-workgroup)__ is a team that works on the use of Swift for developing Android applications.
    * __[C++ Interoperability](/cxx-interop-workgroup)__ is a team that works on adding the support for the bidirectional interoperability between Swift and C++.
    * __[Contributor Experience](/contributor-experience-workgroup)__ is a team that supports contributors to the Swift project, including contributions on the Swift Forums.
    * __[Documentation](/documentation-workgroup)__ is a team that helps guide the documentation experience for Swift.

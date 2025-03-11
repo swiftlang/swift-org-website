@@ -1,0 +1,45 @@
+- name: Abe White
+  handle: aabewhite
+  github: aabewhite
+  affiliation:
+
+- name: Andrew Druk
+  handle: andriydruk
+  github: andriydruk
+  affiliation:
+
+- name: Finagolfin
+  handle: finagolfin
+  github: finagolfin
+  affiliation:
+
+- name: Jason Foreman
+  handle: threeve
+  github: threeve
+  affiliation:
+
+- name: Joannis Orlandos
+  handle: Joannis_Orlandos
+  github: Joannis
+  affiliation:
+
+- name: Luke Howard
+  handle: lukeh
+  github: lhoward
+  affiliation:
+
+- name: Marc Prud’hommeaux
+  handle: Marc_Prud_hommeaux
+  github: marcprux
+  affiliation:
+
+- name: Robbert Brandsma
+  handle: obbut
+  github: obbut
+  affiliation:
+
+- name: Saleem Abdulrasool
+  handle: compnerd
+  github: compnerd
+  affiliation:
+
