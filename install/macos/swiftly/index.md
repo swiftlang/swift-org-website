@@ -1,51 +1,59 @@
 ---
 layout: page
-title: Getting Started with Swiftly
+title: Getting Started with Swiftly on macOS
 ---
 
-Download swiftly from the [install page](/install).
-
-Run the following command in your terminal, to configure swiftly for your account:
-
+On macOS you can run download the pkg:
 ```
-$ swiftly init
+curl -O https://download.swift.org/swiftly/darwin/swiftly-{{ site.data.builds.swiftly_release.version }}.pkg
 ```
 
-Once swiftly is installed you can use it to install the latest available swift toolchain like this:
-
+Run the pkg installer from the command-line like this:
 ```
-$ swiftly install latest
+installer -pkg swiftly-{{ site.data.builds.swiftly_release.version }}.pkg -target CurrentUserHomeDirectory
+```
 
-Fetching the latest stable Swift release...
-Installing Swift 6.0.1
-Downloaded 1355.3 MiB of 1355.3 MiB
-Installing package in user home directory...
-installer: Package name is Swift Open Source Xcode Toolchain
-installer: Upgrading at base path /Users/swift
-installer: The upgrade was successful.
-Swift 6.0.1 installed successfully!
-
+Now run swiftly init to finish the installation:
+```
+/usr/local/bin/swiftly init
+```
+Swiftly will install itself and download the latest available Swift toolchain. Follow the prompts for any additional steps. Once everything is done you can begin using swift.
+```
 $ swift --version
 
-Apple Swift version 6.0.1 (swift-6.0.1-RELEASE)
-Target: arm64-apple-macosx15.0
+
+Swift version 6.0.3 (swift-6.0.3-RELEASE)
+...
+
+
+$ swift build        # Build with the latest (6.0.3) toolchain
 ```
 
-Or, you can install (and use) a swift release:
-
+You can install (and use) another release toolchain:
 ```
 $ swiftly install --use 5.10
 
+
 $ swift --version
 
-Apple Swift version 5.10 (swift-5.10-RELEASE)
-Target: arm64-apple-macosx15.0
+
+Swift version 5.10.1 (swift-5.10.1-RELEASE)
+...
+
+
+$ swift build    # Build with the 5.10.1 toolchain
 ```
 
-There's also an option to install the latest snapshot release and get access to the latest features:
-
+Quickly test your package with the latest nightly snapshot to prepare for the next release:
 ```
 $ swiftly install main-snapshot
+$ swiftly run swift test +main-snapshot   # Run "swift test" with the main-snapshot toolchain
+$ swift build                             # Continue to build with my usual toolchain
 ```
 
-> Note: This last example just installed the toolchain. You can run "swiftly use" to switch to it and other installed toolchahins when you're ready.
+Uninstall this toolchain after you’re finished with it:
+```
+$ swiftly uninstall main-snapshot
+```
+
+[Learn more about Swiftly](https://www.swift.org/swiftly/documentation/swiftlydocs)
