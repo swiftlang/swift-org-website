@@ -6,21 +6,30 @@ title: Install Swift
 {% include install/_os_tabs.md macos="true" %}
 
 ## Latest Release
-<ul class="grid-level-0 grid-layout-2-column">
+<ul class="grid-level-0 grid-layout-1-column">
+  <li class="grid-level-1 featured">
+    <h3>Swiftly</h3>
+  <p class="description">
+    To download toolchains from Swift.org, use the Swiftly toolchain installer. Swift.org toolchains include experimental features like Embedded Swift and support for WebAssembly.
+  </p>
+  <h4>Run this in a terminal:</h4>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -O https://download.swift.org/swiftly/darwin/swiftly-{{ site.data.builds.swiftly_release.version }}.pkg &amp;&amp; \
+installer -pkg swiftly-{{ site.data.builds.swiftly_release.version }}.pkg -target CurrentUserHomeDirectory &amp;&amp; \
+~/usr/local/bin/swiftly init --quiet-shell-followup &amp;&amp; \
+. ~/Library/Application\ Support/swiftly/env.sh &amp;&amp; \
+hash -r
+</code></pre></div></div>
+  <h4>License: <a href="https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt">Apache-2.0</a></h4>
+  <a href="/install/macos/swiftly" class="cta-secondary">Instructions</a>
+  </li>
+</ul>
+<ul class="grid-level-0 grid-layout-1-column">
   <li class="grid-level-1">
     <h3>Xcode</h3>
     <p class="description">
       To develop with Swift for Apple platforms, download the latest version of Xcode, which is regularly refreshed with the latest Swift toolchain.
     </p>
     <a href="https://developer.apple.com/xcode/" class="cta-secondary external">Install Xcode</a>
-  </li>
-  <li class="grid-level-1 featured">
-    <h3>Swiftly</h3>
-  <p class="description">
-    To download toolchains from Swift.org, use the Swiftly toolchain installer. Swift.org toolchains include experimental features like Embedded Swift and support for WebAssembly.
-  </p>
-  <a href="https://download.swift.org/macos/swiftly.pkg" class="cta-secondary">Download</a>
-  <a href="/install/macos/swiftly" class="cta-secondary">Instructions</a>
   </li>
 </ul>
 

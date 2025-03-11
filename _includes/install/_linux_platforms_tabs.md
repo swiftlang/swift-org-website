@@ -1,15 +1,23 @@
 ## Latest Release
-<ul class="grid-level-0 grid-layout-2-column">
+<ul class="grid-level-0 grid-layout-1-column">
 <li class="grid-level-1 featured">
     <h3>Swiftly (recommended)</h3>
   <p class="description">
     The Swiftly installer manages Swift and its dependencies. It supports switching between different versions and downloading updates.
   </p>
+  <h4>Run this in a terminal:</h4>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -O https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz &amp;&amp; \
+tar zxf swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz &amp;&amp; \
+./swiftly init --quiet-shell-followup &amp;&amp; \
+. ~/.local/share/swiftly/env.sh &amp;&amp; \
+hash -r
+</code></pre></div></div>
   <h4>License: <a href="https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt">Apache-2.0</a> | PGP: <a href="https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz.sig">Signature</a></h4>
-  <a href="https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz" class="cta-secondary">Download</a>
   <a href="/install/linux/swiftly" class="cta-secondary">Instructions</a>
 </li>
-  <li class="grid-level-1">
+</ul>
+<ul class="grid-level-0 grid-layout-1-column">
+<li class="grid-level-1">
     <h3>Container</h3>
     <p class="description">
       If you prefer a containerized environment, you can download the official container images for compiling and running Swift on a variety of distributions.
