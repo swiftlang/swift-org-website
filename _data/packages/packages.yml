@@ -9,83 +9,82 @@ categories:
       organised via [this thread in the Swift Forums](https://forums.swift.org/t/68168)
       and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
     packages:
-      - name: Queue
-        description: Exposes `AsyncQueue` for managing asynchronous tasks in Swift, ensuring
-          ordered execution without explicit dependencies, and handling errors through
-          an `errorSequence` property.
-        owner: Matt Massicotte
+      - name: CodableWrappers
+        description: Simplify serialization with Property Wrappers. Customize encoding
+          and decoding for Codable types with annotations.
+        owner: GottaGetSwifty
         swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: BSD 3-Clause
-        url: https://swiftpackageindex.com/mattmassicotte/Queue
-        note: Discussed on [Episode 52 of Swift Package Indexing](https://share.transistor.fm/s/687d1170){:target='_blank'}.
-      - name: SwiftCommand
-        description: Wrapper for `Foundation.Process`, inspired by Rust's `std::process::Command`.
-          Facilitates command line program execution and I/O handling using synchronous
-          or `async`/`await` APIs.
-        owner: Josef Zoller
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
-        license: MIT
-        url: https://swiftpackageindex.com/Zollerboy1/SwiftCommand
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/110){:target='_blank'}.
-      - name: SoulverCore
-        description: SoulverCore provides a natural language math engine for calculations,
-          unit conversions, currency rates, and custom functions, with high performance
-          and extensibility.
-        owner: Soulver
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS)
-        license: Unknown license
-        url: https://swiftpackageindex.com/soulverteam/SoulverCore
-        note: Discussed on [Episode 52 of Swift Package Indexing](https://share.transistor.fm/s/687d1170){:target='_blank'}.
-      - name: swift-mustache
-        description: Swift-Mustache enables rendering of Mustache templates, a logic-less
-          templating language. It supports standard Mustache tags, template inheritance,
-          and custom features like transforms, excluding Lambda support.
-        owner: Hummingbird
-        swift_compatibility: 5.8+
         platform_compatibility:
           - Apple
           - Linux
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: Apache 2.0
-        url: https://swiftpackageindex.com/hummingbird-project/swift-mustache
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/107){:target='_blank'}.
-      - name: ColorToolbox
-        description: ColorToolbox provides Swift color utilities for UIKit, AppKit, and
-          SwiftUI. It includes features such as converting from and to hex strings, calculating
-          relative luminance and WCAG contrast ratio, and lightening/darkening colors.
-        owner: Ramon Torres
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/raymondjavaxx/ColorToolbox
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/114){:target='_blank'}.
-      - name: Orb
-        description: SwiftUI component for creating customizable animated orbs with effects
-          like glowing, particles, and dynamic animations, inspired by Siri animations.
-          Ideal for interactive and visually appealing UI designs.
-        owner: Siddhant Mehta
+        url: https://swiftpackageindex.com/GottaGetSwifty/CodableWrappers
+        note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/116){:target='_blank'}.
+      - name: Forked
+        description: Manages shared data by preventing data races and race conditions,
+          using a decentralized model for branching and merging. Supports custom data
+          types, advanced merging, and iCloud synchronization.
+        owner: Drew McCormack
         swift_compatibility: 6.0+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, visionOS, tvOS)
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
-        url: https://swiftpackageindex.com/metasidd/Orb
-        note: Discussed on [Episode 52 of Swift Package Indexing](https://share.transistor.fm/s/687d1170){:target='_blank'}.
+        url: https://swiftpackageindex.com/drewmccormack/Forked
+        note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/119){:target='_blank'}.
+      - name: SwiftSessions
+        description: Swift Sessions provides session types for structured communication
+          in concurrent systems, featuring session type inference, binary branches, dynamic
+          linearity checking, and client/server architecture support.
+        owner: Alessio Rubicini
+        swift_compatibility: 5.10+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/alessiorubicini/SwiftSessions
+        note: Discussed on [Episode 46 of Swift Package Indexing](https://share.transistor.fm/s/08c0a3f9){:target='_blank'}.
+      - name: ControlKit
+        description: ControlKit enables media playback control and device volume adjustment.
+          It supports Spotify integration with authentication through a custom URL scheme
+          and requires a Spotify client ID.
+        owner: Ryan F
+        swift_compatibility: 5.10+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS)
+        license: MIT
+        url: https://swiftpackageindex.com/superturboryan/ControlKit
+        note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/95){:target='_blank'}.
+      - name: Scipio
+        description: Scipio facilitates dependency management by converting Swift packages
+          into XCFrameworks, ensuring efficient caching and portability. Inspired by Carthage,
+          it merges SwiftPM and XCFramework benefits.
+        owner: Kohki Miki
+        swift_compatibility: 6.0+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (macOS)
+        license: MIT
+        url: https://swiftpackageindex.com/giginet/Scipio
+        note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/118){:target='_blank'}.
+      - name: SwiftUIFX
+        description: Enhances Final Cut Pro by integrating SwiftUI views as video overlays,
+          allowing dynamic visual content creation and manipulation through a Swift package.
+        owner: Finn Voorhees
+        swift_compatibility: 6.0+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (macOS)
+        license: CC Zero 1.0
+        url: https://swiftpackageindex.com/finnvoor/SwiftUIFX
+        note: Linked to in [Issue 688 of iOS Dev Weekly](https://iosdevweekly.com/issues/688#4ItU5lq){:target='_blank'}.
   - name: Packages with Macros
     slug: macros
     brief: New in Swift 5.9, Swift packages can include macro targets. Browse a selection
@@ -203,6 +202,18 @@ categories:
         platform_compatibility_tooltip: Apple (macOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-openapi-generator
+      - name: hummingbird
+        description: Hummingbird is a lightweight, flexible server framework written in
+          Swift. It consists of an HTTP server, a web application framework, and extension
+          modules.
+        owner: Hummingbird
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/hummingbird-project/hummingbird
       - name: fluent
         description: Fluent helps you work with databases, providing a high-level, type-safe
           API for querying and manipulating data in Vapor apps.
@@ -214,18 +225,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/vapor/fluent
-      - name: hummingbird
-        description: Hummingbird is a lightweight, flexible server framework written in
-          Swift. It consists of an HTTP server, a web application framework, and extension
-          modules.
-        owner: Hummingbird
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (macOS, visionOS, tvOS) and Linux
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/hummingbird-project/hummingbird
       - name: MongoKitten
         description: MongoKitten is a fast, pure Swift MongoDB driver built for Server
           Side Swift. It supports both MongoDB in server and embedded environments and
@@ -288,6 +287,27 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-nio
+      - name: RealHTTP
+        description: RealHTTP is a lightweight, async-based HTTP library for Swift. It
+          aims to provide an easy-to-use, powerful HTTP client with features like async/await
+          support, request customization, response validation, and more.
+        owner: Immobiliare Labs
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/immobiliare/RealHTTP
+      - name: Moya
+        description: Moya is a network abstraction layer for Alamofire. It simplifies
+          network calls and provides compile-time checking for API endpoints.
+        owner: Moya
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/Moya/Moya
       - name: Pulse
         description: Pulse is a powerful logging system for Apple platforms. It records
           and inspects logs and network requests, and allows for real-time viewing and
@@ -299,16 +319,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
-      - name: Moya
-        description: Moya is a network abstraction layer for Alamofire. It simplifies
-          network calls and provides compile-time checking for API endpoints.
-        owner: Moya
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/Moya/Moya
       - name: Socket
         description: BlueSocket is a Socket framework for Swift. It provides functionality
           for creating, closing, and listening on sockets.
@@ -321,17 +331,6 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Kitura/BlueSocket
-      - name: RealHTTP
-        description: RealHTTP is a lightweight, async-based HTTP library for Swift. It
-          aims to provide an easy-to-use, powerful HTTP client with features like async/await
-          support, request customization, response validation, and more.
-        owner: Immobiliare Labs
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/immobiliare/RealHTTP
   - name: Testing
     slug: testing
     brief: "If you want to level up your project\u2019s tests, take a look at a selection
@@ -342,20 +341,6 @@ categories:
       title: More testing packages
       url: https://swiftpackageindex.com/keywords/testing
     packages:
-      - name: swift-snapshot-testing
-        description: SnapshotTesting is a delightful Swift snapshot testing library. It
-          allows you to easily compare snapshots of views, view controllers, URL requests,
-          and encodable values. It supports a wide range of snapshot strategies and is
-          highly configurable.
-        owner: Point-Free
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
       - name: swift-testing
         description: Enhances Swift code testing with expressive APIs, custom behaviors,
           flexible organization, scalable execution, and cross-platform support. Compatible
@@ -368,6 +353,20 @@ categories:
         platform_compatibility_tooltip: Apple (macOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/swiftlang/swift-testing
+      - name: swift-snapshot-testing
+        description: SnapshotTesting is a delightful Swift snapshot testing library. It
+          allows you to easily compare snapshots of views, view controllers, URL requests,
+          and encodable values. It supports a wide range of snapshot strategies and is
+          highly configurable.
+        owner: Point-Free
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
       - name: swift-custom-dump
         description: A collection of tools for debugging, diffing, and testing data structures
           in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
@@ -381,19 +380,6 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
-      - name: Nimble
-        description: Nimble is a testing library for Swift and Objective-C. It provides
-          a more expressive way to write assertions and supports operator overloads and
-          asynchronous testing.
-        owner: Quick
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/Quick/Nimble
       - name: Quick
         description: Quick is a behavior-driven development framework for Swift and Objective-C.
           It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
@@ -406,19 +392,27 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Quick
-      - name: combine-schedulers
-        description: Combine Schedulers is a library that provides schedulers for testing
-          and working with Combine publishers. It includes schedulers like `AnyScheduler`,
-          `TestScheduler`, `ImmediateScheduler`, and more.
-        owner: Point-Free
-        swift_compatibility: 5.9+
+      - name: OCHamcrest
+        description: OCHamcrest is an Objective-C module that provides a library of matchers
+          for creating flexible test assertions and user input validation.
+        owner: Hamcrest
+        swift_compatibility: 5.8+
         platform_compatibility:
           - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: BSD 2-Clause
+        url: https://swiftpackageindex.com/hamcrest/OCHamcrest
+      - name: OCMockito
+        description: OCMockito is an Objective-C implementation of Mockito, allowing you
+          to create, verify, and stub mock objects. It has some key differences from other
+          mocking frameworks, making tests less fragile and more readable.
+        owner: Jon Reid
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/combine-schedulers
+        url: https://swiftpackageindex.com/jonreid/OCMockito
   - name: Debug logging
     slug: logging
     brief: "Are you looking for something more than Swift\u2019s built-in logging? Start
@@ -464,17 +458,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, visionOS, tvOS)
         license: Apache 2.0
         url: https://swiftpackageindex.com/DataDog/dd-sdk-ios
-      - name: Pulse
-        description: Pulse is a powerful logging system for Apple platforms. It records
-          and inspects logs and network requests, and allows for real-time viewing and
-          sharing.
-        owner: Alex Grebenyuk
-        swift_compatibility: 5.10+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/kean/Pulse
       - name: SwiftyBeaver
         description: SwiftyBeaver is a flexible, colorful, lightweight logging library
           for Swift. It supports console, file, and cloud destinations and is ideal for
@@ -487,6 +470,17 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
+      - name: Pulse
+        description: Pulse is a powerful logging system for Apple platforms. It records
+          and inspects logs and network requests, and allows for real-time viewing and
+          sharing.
+        owner: Alex Grebenyuk
+        swift_compatibility: 5.10+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/kean/Pulse
       - name: Wormholy
         description: Wormholy is a debugging tool for iOS network calls. It records app
           traffic, reveals request and response content, and helps with debugging and

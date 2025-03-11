@@ -7,7 +7,6 @@ The Swift Server Workgroup and Swift on Server community have developed a number
 
 They focus on how to compile, test, deploy and debug such application and provides tips in those areas.
 
-- [Setup and code editing](/documentation/server/guides/setup-and-ide-alternatives.html)
 - [Building](/documentation/server/guides/building.html)
 - [Testing](/documentation/server/guides/testing.html)
 - [Debugging Memory leaks](/documentation/server/guides/memory-leaks-and-usage.html)

@@ -17,7 +17,8 @@ These are the platforms one can use for Swift's development tools. This table sh
 |:--------------------------------------:|:-----------------------------:|
 | **macOS**                              |  Apple platforms              |
 | **Ubuntu**                             |  Ubuntu                       |
-| **CentOS**                             |  CentOS                       |
+| **Debian**                             |  Debian                       |
+| **Fedora**                             |  Fedora                       |
 | **Amazon Linux**                       |  Amazon Linux                 |
 | **Red Hat Universal Base Image**       |  Red Hat Universal Base Image |
 | **Windows**                            |  Windows                      |
@@ -32,8 +33,9 @@ This table shows the minimum OS version for which a Swift application can be dep
 | **iOS**                            |11.0                        |
 | **watchOS**                        |4.0                         |
 | **tvOS**                           |11.0                        |
-| **Ubuntu**                         |18.04                       |
-| **CentOS**                         |7                           |
+| **Ubuntu**                         |20.04                       |
+| **Debian**                         |12                          |
+| **Fedora**                         |39                          |
 | **Amazon Linux**                   |2                           |
 | **Red Hat Universal Base Image**   |9                           |
 | **Windows**                        |10.0                        |
@@ -46,7 +48,8 @@ The Swift compiler and debugger run on platforms supporting development.  Suppor
 |:----------------------------------:|:----------------------:|:--------------:|
 | **macOS**                          | ✓                      | ✓              |
 | **Ubuntu**                         | ✓                      | ✓              |
-| **CentOS**                         | ✓                      | ✓              |
+| **Debian**                         | ✓                      | ✓              |
+| **Fedora**                         | ✓                      | ✓              |
 | **Amazon Linux**                   | ✓                      | ✓              |
 | **Red Hat Universal Base Image**   | ✓                      | ✓              |
 | **Windows**                        | ✓                      | ✓              |
@@ -64,7 +67,8 @@ The table below list the available capabilities on each platform for running Swi
 | **watchOS**                       | ✓       |     |
 | **tvOS**                          | ✓       |     |
 | **Ubuntu**                        | ✓       | ✓   |
-| **CentOS**                        | ✓       | ✓   |
+| **Debian**                        | ✓       | ✓   |
+| **Fedora**                        | ✓       | ✓   |
 | **Amazon Linux**                  | ✓       | ✓   |
 | **Red Hat Universal Base Image**  | ✓       | ✓   |
 | **Windows**                       | ✓       |     |
@@ -84,7 +88,7 @@ Platform owners help facilitate contributors to the Swift project to collaborate
 | **Windows**          | [Docs](/getting-started/#on-windows)| [Apple Inc.](https://www.apple.com)               | ✓                            |
 
 * Apple platforms includes macOS, iOS, tvOS, and watchOS.
-* Linux includes Ubuntu, CentOS, Amazon Linux and Red Hat Universal Base Image platforms.
+* Linux includes Ubuntu, Debian, Fedora, Amazon Linux and Red Hat Universal Base Image platforms.
 
 ### Continuous Integration for Platforms
 
