@@ -18,8 +18,6 @@ Run the following command in your terminal, to configure swiftly for your accoun
 ```
 
 <div class="warning" markdown="1">
-Depending on how you installed the package the swiftly binary can be in your home directory. You can run in from there like this:  `~/swiftly init`
-
 Your current shell may need some additional steps to update your session. Follow the guidance at the end of the installation for a smooth install experience, such as sourcing the environment file, and rehashing your shell's PATH.
 </div>
 
