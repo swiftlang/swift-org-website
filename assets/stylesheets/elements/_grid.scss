@@ -113,9 +113,21 @@ a.cta-secondary, [class^="language-"] button {
   }
 }
 
+div.highlight {
+  position: relative;
+
+  &:hover [class^="language-"] button {
+    display: block;
+  }
+}
+
 [class^="language-"] button {
   cursor: pointer;
   padding: 0.1rem 0.4rem;
-  margin-left: auto;
   font-size: 0.8rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  margin: 0;
+  display: none;
 }
