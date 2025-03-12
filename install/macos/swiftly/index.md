@@ -3,57 +3,55 @@ layout: page
 title: Getting Started with Swiftly on macOS
 ---
 
-On macOS you can run download the pkg:
-```
-curl -O https://download.swift.org/swiftly/darwin/swiftly-{{ site.data.builds.swiftly_release.version }}.pkg
-```
+Download the [swiftly package for macOS](https://download.swift.org/swiftly/darwin/swiftly-{{ site.data.builds.swiftly_release.version }}.pkg).
 
-Run the pkg installer from the command-line like this:
+Install the package in your user account:
+
 ```
 installer -pkg swiftly-{{ site.data.builds.swiftly_release.version }}.pkg -target CurrentUserHomeDirectory
 ```
 
-Now run swiftly init to finish the installation:
+Run the following command in your terminal, to configure swiftly for your account, and automatically download the latest swift toolchain.
+
 ```
-/usr/local/bin/swiftly init
-```
-Swiftly will install itself and download the latest available Swift toolchain. Follow the prompts for any additional steps. Once everything is done you can begin using swift.
-```
-$ swift --version
-
-
-Swift version 6.0.3 (swift-6.0.3-RELEASE)
-...
-
-
-$ swift build        # Build with the latest (6.0.3) toolchain
+~/usr/local/bin/swiftly init
 ```
 
-You can install (and use) another release toolchain:
+<div class="warning" markdown="1">
+Depending on how you installed the package the swiftly binary can be in your home directory. You can run in from there like this:  `~/swiftly init`
+
+Your current shell may need some additional steps to update your session. Follow the guidance at the end of the installation for a smooth install experience, such as sourcing the environment file, and rehashing your shell's PATH.
+</div>
+
+Now that swiftly and swift are installed, you can access the `swift` command from the latest Swift release:
+
 ```
-$ swiftly install --use 5.10
-
-
-$ swift --version
-
-
-Swift version 5.10.1 (swift-5.10.1-RELEASE)
-...
-
-
-$ swift build    # Build with the 5.10.1 toolchain
-```
-
-Quickly test your package with the latest nightly snapshot to prepare for the next release:
-```
-$ swiftly install main-snapshot
-$ swiftly run swift test +main-snapshot   # Run "swift test" with the main-snapshot toolchain
-$ swift build                             # Continue to build with my usual toolchain
+swift --version
+--
+Apple Swift version {{ site.data.builds.swift_releases.last.name }} (swift-{{ site.data.builds.swift_releases.last.name }}-RELEASE)
+Target: arm64-apple-macosx15.0
 ```
 
-Uninstall this toolchain after you’re finished with it:
+Or, you can install (and use) another swift release:
+
 ```
-$ swiftly uninstall main-snapshot
+swiftly install --use 5.10
+swift --version
+--
+Apple Swift version 5.10 (swift-5.10-RELEASE)
+Target: arm64-apple-macosx15.0
 ```
 
-[Learn more about Swiftly](https://www.swift.org/swiftly/documentation/swiftlydocs)
+There's also an option to install the latest snapshot release and get access to the latest features:
+
+```
+swiftly install --use main-snapshot
+```
+
+Check for updates to swiftly and install them by running the self-update command:
+
+```
+swiftly self-update
+```
+
+You can discover more about swiftly in the [documentation](https://www.swift.org/swiftly/documentation/swiftlydocs/)

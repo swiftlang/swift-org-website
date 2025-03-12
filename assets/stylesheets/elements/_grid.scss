@@ -116,7 +116,7 @@ a.cta-secondary, [class^="language-"] button {
 div.highlight {
   position: relative;
 
-  &:hover [class^="language-"] button {
+  &:hover button {
     display: block;
   }
 }
