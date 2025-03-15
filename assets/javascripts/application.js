@@ -87,5 +87,24 @@ layout: source
         }
       })
     }
+
+    if (navigator && navigator.clipboard) {
+      const copyCodeButtons = document.querySelectorAll('[class^="language-"] button');
+
+      copyCodeButtons.forEach(function(button) {
+        const codeElement = button.parentElement.querySelector('code');
+        const originalText = button.innerText;
+
+        button.addEventListener('mousedown', async function() {
+          await navigator.clipboard.writeText(codeElement.innerText);
+
+          button.innerText = 'Copied!';
+
+          setTimeout(() => {
+            button.innerText = originalText;
+          }, 1000);
+        });
+      });
+    }
   });
 })();
