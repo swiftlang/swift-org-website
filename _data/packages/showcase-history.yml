@@ -260,7 +260,7 @@ years:
             swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/danijelLoc/Chip8iEmulationCore
             note: Discussed on [Episode 49 of Swift Package Indexing](https://share.transistor.fm/s/c3ea4e1a){:target='_blank'}.
@@ -387,7 +387,7 @@ years:
               NSImage. Adjustable saturation, brightness thresholds, and resolution. Uses
               PixelColor and AsyncGraphics libraries.
             owner: Anton Heestand
-            swift_compatibility: 5.10+
+            swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
@@ -414,7 +414,7 @@ years:
               has full support for Swift concurrency and type-safe APIs with abstractions
               for easier testability.
             owner: DiscordBM
-            swift_compatibility: 5.9+
+            swift_compatibility: 5.10+
             platform_compatibility:
               - Apple
               - Linux
@@ -816,7 +816,7 @@ years:
             description: Fork allows for parallelizing multiple async functions. It takes
               a single input and splits it into two separate async functions that return
               different outputs that can be merged back into a single output.
-            owner: Zach
+            owner: Leif
             swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
@@ -843,7 +843,7 @@ years:
               and Snapshot tests, enhancing UI component, screen, and flow visualization
               and testing.
             owner: BarredEwe
-            swift_compatibility: 5.10+
+            swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, tvOS)
@@ -987,7 +987,7 @@ years:
               and frameworks. It supports automated regression checks, manual comparisons,
               and benchmark result exports in multiple formats.
             owner: Ordo One
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -1034,7 +1034,7 @@ years:
             swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/pointfreeco/swift-composable-architecture
             note: Linked from [this Swift forums post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/3){:target='_blank'}.
