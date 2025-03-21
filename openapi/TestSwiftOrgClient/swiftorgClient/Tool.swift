@@ -60,8 +60,8 @@ struct Tool {
                         work: {
                             _ = try await client.listDevToolchains(.init(
                                 path: .init(
-                                    branch: branch,
-                                    platform: platform
+                                    branch: .init(value1: branch),
+                                    platform: .init(value1: platform)
                                 )
                             )).ok.body.json
                         }
@@ -74,7 +74,7 @@ struct Tool {
                 .init(
                     name: "listStaticSDKDevToolchains(\(branch.rawValue))",
                     work: {
-                        _ = try await client.listStaticSDKDevToolchains(.init(path: .init(branch: branch))).ok.body.json
+                        _ = try await client.listStaticSDKDevToolchains(.init(path: .init(branch: .init(value1: branch)))).ok.body.json
                     }
                 )
             )
