@@ -194,7 +194,7 @@ Qualified name lookup is the process by which a compiler resolves a reference  `
 
 ### DocC Language Features in SourceKit-LSP
 
-**Project size**: 90 hours (medium)
+**Project size**: 175 hours (medium)
 
 **Estimated difficulty**: Intermediate
 
