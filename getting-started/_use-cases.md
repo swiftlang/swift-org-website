@@ -70,4 +70,4 @@ Here are some examples of the many use cases of Swift, in case you want to jump 
 
 ---
 
-Looking for a language reference? [The Swift Programming Language (TSPL)](https://docs.swift.org/swift-book/) book is available in [multiple languages](/documentation/tspl/#translations).
+Looking for a language reference? [The Swift Programming Language (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/) book is available in [multiple languages](/documentation/tspl/#translations).
