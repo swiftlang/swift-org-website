@@ -1,3 +1,28 @@
+- date: 2025-03-25 10:10:00-06:00
+  debug_info: swift-DEVELOPMENT-SNAPSHOT-2025-03-25-a-osx-symbols.pkg
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-25-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-25-a-osx.pkg
+  name: Swift Development Snapshot
+- date: 2025-03-17 10:10:00-06:00
+  debug_info: swift-DEVELOPMENT-SNAPSHOT-2025-03-17-a-osx-symbols.pkg
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-17-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-17-a-osx.pkg
+  name: Swift Development Snapshot
+- date: 2025-03-14 10:10:00-06:00
+  debug_info: swift-DEVELOPMENT-SNAPSHOT-2025-03-14-a-osx-symbols.pkg
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-14-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-14-a-osx.pkg
+  name: Swift Development Snapshot
+- date: 2025-03-13 10:10:00-06:00
+  debug_info: swift-DEVELOPMENT-SNAPSHOT-2025-03-13-a-osx-symbols.pkg
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-13-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-13-a-osx.pkg
+  name: Swift Development Snapshot
+- date: 2025-03-10 10:10:00-06:00
+  debug_info: swift-DEVELOPMENT-SNAPSHOT-2025-03-10-a-osx-symbols.pkg
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-10-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-10-a-osx.pkg
+  name: Swift Development Snapshot
 - date: 2025-03-09 10:10:00-06:00
   debug_info: swift-DEVELOPMENT-SNAPSHOT-2025-03-09-a-osx-symbols.pkg
   dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-09-a
