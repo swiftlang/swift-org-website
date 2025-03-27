@@ -29,6 +29,8 @@ Run the following command in your terminal, to configure swiftly for your accoun
 ./swiftly init
 ```
 
+Note: You can set the SWIFTLY_HOME_DIR and SWIFTLY_BIN_DIR environment variables to customize your install location.
+
 Your current shell may need some additional steps to update your session. Follow the guidance at the end of the installation for a smooth install experience, such as sourcing the environment file, and rehashing your shell's PATH.
 
 There can be certain packages that need to be installed on your system so that the Swift toolchain can function. The swiftly initialization routine will show you how to install any missing packages.
