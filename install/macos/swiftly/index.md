@@ -14,7 +14,7 @@ installer -pkg swiftly-{{ site.data.builds.swiftly_release.version }}.pkg -targe
 Run the following command in your terminal, to configure swiftly for your account, and automatically download the latest swift toolchain.
 
 ```
-~/usr/local/bin/swiftly init
+SWIFTLY_HOME_DIR=~/.swiftly SWIFTLY_BIN_DIR=~/.swiftly/bin ~/.swiftly/bin/swiftly init
 ```
 
 <div class="warning" markdown="1">

@@ -26,7 +26,7 @@ tar -zxf swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.
 Run the following command in your terminal, to configure swiftly for your account, and automatically download the latest swift toolchain.
 
 ```
-./swiftly init
+SWIFTLY_HOME_DIR=~/.swiftly SWIFTLY_BIN_DIR=~/.swiftly/bin ./swiftly init
 ```
 
 Your current shell may need some additional steps to update your session. Follow the guidance at the end of the installation for a smooth install experience, such as sourcing the environment file, and rehashing your shell's PATH.
