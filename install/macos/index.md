@@ -15,7 +15,7 @@ title: Install Swift
   <h4>Run this in a terminal:</h4>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre class="highlight"><code>curl -O https://download.swift.org/swiftly/darwin/swiftly-{{ site.data.builds.swiftly_release.version }}.pkg &amp;&amp; \
 installer -pkg swiftly-{{ site.data.builds.swiftly_release.version }}.pkg -target CurrentUserHomeDirectory &amp;&amp; \
-SWIFTLY_HOME_DIR=~/.swiftly SWIFTLY_BIN_DIR=~/.swiftly/bin ~/.swiftly/bin/swiftly init --quiet-shell-followup &amp;&amp; \
+~/.swiftly/bin/swiftly init --quiet-shell-followup &amp;&amp; \
 . ~/.swiftly/env.sh &amp;&amp; \
 hash -r
 </code></pre></div></div>

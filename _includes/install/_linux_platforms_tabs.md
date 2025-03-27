@@ -8,8 +8,8 @@
   <h4>Run this in a terminal:</h4>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre class="highlight"><code>curl -O https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz &amp;&amp; \
 tar zxf swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz &amp;&amp; \
-SWIFTLY_HOME_DIR=~/.swiftly SWIFTLY_BIN_DIR=~/.swiftly/bin ./swiftly init --quiet-shell-followup &amp;&amp; \
-. ~/.swiftly/env.sh &amp;&amp; \
+./swiftly init --quiet-shell-followup &amp;&amp; \
+. ~/.local/share/swiftly/env.sh &amp;&amp; \
 hash -r
 </code></pre></div></div>
   <h4>License: <a href="https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt">Apache-2.0</a> | PGP: <a href="https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz.sig">Signature</a></h4>
