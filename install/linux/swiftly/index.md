@@ -29,7 +29,7 @@ Run the following command in your terminal, to configure swiftly for your accoun
 SWIFTLY_HOME_DIR=~/.swiftly SWIFTLY_BIN_DIR=~/.swiftly/bin ./swiftly init
 ```
 
-Note: You can adjust the SWIFTLY_* environment variables to customize the install location, or remove them entirely to a Linux standard location.
+Note: You can adjust the SWIFTLY_* environment variables to customize your install location, or remove them entirely to get the Linux standard location.
 
 Your current shell may need some additional steps to update your session. Follow the guidance at the end of the installation for a smooth install experience, such as sourcing the environment file, and rehashing your shell's PATH.
 
