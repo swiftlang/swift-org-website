@@ -55,22 +55,22 @@ $ swiftly list-available main-snapshot
 --
 Available main development snapshot toolchains
 ----------------------------------------------
-main-snapshot-2025-02-25
+main-snapshot-2025-03-25
 ...
 ```
 
 Once you’ve identified a snapshot toolchain, it can be installed using its name:
 
 ```
-$ swiftly install main-snapshot-2025-02-25
+$ swiftly install main-snapshot-2025-03-25
 --
-Installing main-snapshot-2025-02-25
+Installing main-snapshot-2025-03-25
 ```
 
 Another way to temporarily use a specific version of Swift is to use the special '+' selector. With this syntax, you don't need to first switch to a different toolchain:
 
 ```
-$ swiftly run lldb +main-snapshot-2025-02-25
+$ swiftly run lldb +main-snapshot-2025-03-25
 --
 (lldb) _
 ```
