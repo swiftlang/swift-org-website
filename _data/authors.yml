@@ -500,3 +500,8 @@ wjainek:
   name: Werner Jainek
   github: wjainek
   about: "Werner Jainek is Co-Founder and CEO at Cultured Code."
+
+chris-mcgee:
+  name: Chris McGee
+  github: cmcgee1024
+  about: "Chris McGee is on the team at Apple working on Swift Package Manager, and Swiftly."
