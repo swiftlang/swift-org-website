@@ -91,7 +91,7 @@ The only remaining problem was being able to deliver the operating system and pr
 
 Moving forward, swiftly will become the default way to install Swift outside of Xcode. The initial version supports macOS and a variety of Linux distributions, including Ubuntu, Debian, Fedora, Red Hat Enterprise Linux and Amazon Linux.
 
-The [swiftly documentation](https://www.swift.org/swiftly/documentation/swiftlydocs/) provides further information about [using swiftly in a CI/CD environment](https://www.swift.org/swiftly/documentation/swiftly/automated-install), as well as setting proxy servers and custom install locations for enterprise environments. swiftly is an open source project, and so you can raise new issues or contribute pull requests at its [GitHub repository](https://github.com/swiftlang/swiftly). You can also [ask questions or discuss swiftly on the Swift Forums](https://forums.swift.org/tag/swiftly).
+The [swiftly documentation](/swiftly/documentation/swiftlydocs/) provides further information about [using swiftly in a CI/CD environment](/swiftly/documentation/swiftly/automated-install), as well as setting proxy servers and custom install locations for enterprise environments. swiftly is an open source project, and so you can raise new issues or contribute pull requests at its [GitHub repository](https://github.com/swiftlang/swiftly). You can also [ask questions or discuss swiftly on the Swift Forums](https://forums.swift.org/tag/swiftly).
 
 Special thanks to Patrick Freed for creating swiftly, contributing it to the Swift organization, and his continued contributions to this valuable tool. The community is what makes Swift amazing!
 
