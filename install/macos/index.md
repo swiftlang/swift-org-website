@@ -58,7 +58,7 @@ hash -r
 
 Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.
 
-The easiest way to install development snapshots is with the Swiftly tool. Read more on the [instructions page](/swiftly/documentation/swiftlydocs/).
+The easiest way to install development snapshots is with the Swiftly tool. Read more on the [instructions page](/install/macos/swiftly/).
 
 {% assign xcode_dev_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}
 {% assign xcode_6_1_builds = site.data.builds.swift-6_1-branch.xcode | sort: 'date' | reverse %}
