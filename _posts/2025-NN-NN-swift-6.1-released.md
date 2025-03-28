@@ -165,8 +165,6 @@ Previously, if you wrote a link to one of these overloads you needed to include 
 
 You can discover the minimal combination of parameter types and return types for each overload from Swift-DocC’s warnings about ambiguous symbol links. For more details, see [the Ambiguous Symbol Links section of Linking to Symbols and Other Content](https://www.swift.org/documentation/docc/linking-to-symbols-and-other-content#Ambiguous-Symbol-Links).
 
-## Next Steps
-
-### Install Swift 6.1
+## Install Swift 6.1
 
 You can try out these exciting new developments in Swift 6.1 today! Install the official Swift 6 toolchains for macOS, Linux, and Windows at [Swift.org/install](https://www.swift.org/install/).
