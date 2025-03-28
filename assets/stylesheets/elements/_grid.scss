@@ -77,7 +77,7 @@
 }
 
 // Button typically embedded in a grid-level-1
-a.cta-secondary {
+a.cta-secondary, [class^="language-"] button {
   background-color: var(--color-fill-tertiary);
   border: 1px solid var(--color-fill-quaternary);
   border-radius: var(--border-radius);
@@ -110,4 +110,23 @@ a.cta-secondary {
   &.external:after {
     content: " ↗";
   }
+}
+
+div.highlight {
+  position: relative;
+
+  &:hover button {
+    display: block;
+  }
+}
+
+[class^="language-"] button {
+  cursor: pointer;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.8rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  margin: 0;
+  display: none;
 }
