@@ -22,7 +22,7 @@ Naturally, swiftly itself is written in Swift, and is able to update itself to t
 
 Let's take a look at some of the features of swiftly!
 
-To get started, visit [swift.org/install](http://swift.org/install) and install it.
+To get started, visit [swift.org/install](/install) and install it.
 
 swiftly will provide directions after installation if there are any system packages, or shell commands needed for smooth operation of the new toolchain.
 
