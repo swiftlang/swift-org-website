@@ -30,7 +30,7 @@ function setShell() {
     shellToggle.innerText = "sh";
   } else {
     shell = "sh";
-    code.innerText += ". ${SWIFTLY_HOME_DIR:-~/.local/share/swiftly}/env.sh && \\\n"
+    code.innerText += ". \"${SWIFTLY_HOME_DIR:-~/.local/share/swiftly}/env.sh\" && \\\n"
     code.innerText += "hash -r"
     shellToggle.innerText = "fish";
   }
