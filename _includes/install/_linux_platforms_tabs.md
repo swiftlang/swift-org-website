@@ -5,17 +5,42 @@
   <p class="description">
     The Swiftly installer manages Swift and its dependencies. It supports switching between different versions and downloading updates.
   </p>
-  <h4>Run this in a terminal:</h4>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre class="highlight"><code>curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz &amp;&amp; \
-tar zxf swiftly-$(uname -m).tar.gz &amp;&amp; \
-./swiftly init --quiet-shell-followup &amp;&amp; \
-. ~/.local/share/swiftly/env.sh &amp;&amp; \
-hash -r
-</code></pre></div></div>
+  <div class="shellcode-intro">Run this in a terminal:<button id="shell" class="toggle">fish</button></div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre class="highlight"><code id="shellcode" style="white-space: initial;"></code></pre></div></div>
   <h4>License: <a href="https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt">Apache-2.0</a> | PGP: <a href="https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz.sig">Signature</a></h4>
   <a href="/install/linux/swiftly" class="cta-secondary">Instructions</a>
 </li>
 </ul>
+
+<script>
+var shell = "";
+var shellToggle = document.getElementById("shell");
+var code = document.getElementById("shellcode");
+
+function setShell() {
+  code.innerText = "curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz && \\\n"
+  code.innerText += "tar zxf swiftly-$(uname -m).tar.gz && \\\n"
+  code.innerText += "./swiftly init --quiet-shell-followup && \\\n"
+
+  if (shell == "sh") {
+    shell = "fish";
+    code.innerText += ". ~/.swiftly/env.fish"
+    shellToggle.innerText = "sh";
+  } else {
+    shell = "sh";
+    code.innerText += ". ${SWIFTLY_HOME_DIR:-~/.swiftly}/env.sh && \\\n"
+    code.innerText += "hash -r"
+    shellToggle.innerText = "fish";
+  }
+}
+
+setShell();
+
+shellToggle.addEventListener("mousedown", function() {
+  setShell();
+});
+</script>
+
 <ul class="grid-level-0 grid-layout-1-column">
 <li class="grid-level-1">
     <h3>Container</h3>

@@ -12,13 +12,8 @@ title: Install Swift
   <p class="description">
     To download toolchains from Swift.org, use the Swiftly toolchain installer. Swift.org toolchains include experimental features like Embedded Swift and support for WebAssembly.
   </p>
-  <h4>Run this in a terminal:</h4>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre class="highlight"><code>curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg &amp;&amp; \
-installer -pkg swiftly.pkg -target CurrentUserHomeDirectory &amp;&amp; \
-~/.swiftly/bin/swiftly init --quiet-shell-followup &amp;&amp; \
-. ~/.swiftly/env.sh &amp;&amp; \
-hash -r
-</code></pre></div></div>
+  <div class="shellcode-intro">Run this in a terminal:<button id="shell" class="toggle"></button></div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre style="white-space: initial;" class="highlight"><code id="shellcode"></code></pre></div></div>
   <h4>License: <a href="https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt">Apache-2.0</a></h4>
   <a href="/install/macos/swiftly" class="cta-secondary">Instructions</a>
   </li>
@@ -32,6 +27,35 @@ hash -r
     <a href="https://developer.apple.com/xcode/" class="cta-secondary external">Install Xcode</a>
   </li>
 </ul>
+<script>
+
+var shell = "";
+var shellToggle = document.getElementById("shell");
+var code = document.getElementById("shellcode");
+
+function setShell() {
+  code.innerText = "curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg && \\\n"
+  code.innerText += "installer -pkg swiftly.pkg -target CurrentUserHomeDirectory && \\\n"
+  code.innerText += "~/.swiftly/bin/swiftly init --quiet-shell-followup && \\\n"
+
+  if (shell == "sh") {
+    shell = "fish";
+    code.innerText += ". ~/.swiftly/env.fish"
+    shellToggle.innerText = "sh";
+  } else {
+    shell = "sh";
+    code.innerText += ". ${SWIFTLY_HOME_DIR:-~/.swiftly}/env.sh && \\\n"
+    code.innerText += "hash -r"
+    shellToggle.innerText = "fish";
+  }
+}
+
+setShell();
+
+shellToggle.addEventListener("mousedown", function() {
+  setShell();
+});
+</script>
 
 
 ## Other Install Options
