@@ -40,7 +40,7 @@ function setShell() {
 
   if (shell == "sh") {
     shell = "fish";
-    code.innerText += ". ~/.swiftly/env.fish"
+    code.innerText += "set -q SWIFTLY_HOME_DIR && . \"$SWIFTLY_HOME_DIR/env.fish\" || . ~/.swiftly/env.fish"
     shellToggle.innerText = "sh";
   } else {
     shell = "sh";

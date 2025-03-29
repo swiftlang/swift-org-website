@@ -24,11 +24,13 @@ function setShell() {
 
   if (shell == "sh") {
     shell = "fish";
-    code.innerText += ". ~/.swiftly/env.fish"
+    code.innerText = code.innerText.replace("$(", "(") // Subshells are invoked differently in fish
+    code.innerText = code.innerText.replace("$(", "(")
+    code.innerText += "set -q SWIFTLY_HOME_DIR && . \"$SWIFTLY_HOME_DIR/env.fish\" || . ~/.local/share/swiftly/env.fish"
     shellToggle.innerText = "sh";
   } else {
     shell = "sh";
-    code.innerText += ". ${SWIFTLY_HOME_DIR:-~/.swiftly}/env.sh && \\\n"
+    code.innerText += ". ${SWIFTLY_HOME_DIR:-~/.local/share/swiftly}/env.sh && \\\n"
     code.innerText += "hash -r"
     shellToggle.innerText = "fish";
   }
