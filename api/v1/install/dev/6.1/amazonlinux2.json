@@ -1,0 +1,6 @@
+---
+layout: none
+---
+{ "x86_64": {{ site.data.builds.swift-6_1-branch.amazonlinux2 | jsonify }},
+  "aarch64": {{ site.data.builds.swift-6_1-branch.amazonlinux2-aarch64 | jsonify}}
+}
