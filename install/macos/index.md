@@ -13,8 +13,8 @@ title: Install Swift
     To download toolchains from Swift.org, use the Swiftly toolchain installer. Swift.org toolchains include experimental features like Embedded Swift and support for WebAssembly.
   </p>
   <h4>Run this in a terminal:</h4>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre class="highlight"><code>curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg &amp;&amp; \
-installer -pkg swiftly.pkg -target CurrentUserHomeDirectory &amp;&amp; \
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre class="highlight"><code>curl -o /tmp/swiftly.pkg https://download.swift.org/swiftly/darwin/swiftly.pkg &amp;&amp; \
+installer -pkg /tmp/swiftly.pkg -target CurrentUserHomeDirectory &amp;&amp; \
 ~/.swiftly/bin/swiftly init --quiet-shell-followup &amp;&amp; \
 . ~/.swiftly/env.sh &amp;&amp; \
 hash -r
