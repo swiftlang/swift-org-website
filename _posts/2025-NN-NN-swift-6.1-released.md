@@ -104,7 +104,7 @@ let subsequences = numbers.split(
 
 In addition to improved development ergonomics, code generation tools like plugins and macros can be simplified, because generating a comma-separated list no longer needs a special condition for the last element.
 
-You can find a complete list of language proposals that were accepted through the [Swift Evolution](https://github.com/swiftlang/swift-evolution)process and implemented in Swift 6 on the [Swift Evolution dashboard](https://www.swift.org/swift-evolution/#?version=6.1).
+You can find a complete list of language proposals that were accepted through the [Swift Evolution](https://github.com/swiftlang/swift-evolution)process and implemented in Swift 6 on the [Swift Evolution dashboard](/swift-evolution/#?version=6.1).
 
 ## Package and build improvements
 
@@ -163,8 +163,8 @@ func doSomething(first: String?, second: Int) -> Double
 
 Previously, if you wrote a link to one of these overloads you needed to include a short hash of that symbol’s unique identifier to disambiguate the link and uniquely reference the specific overload. Swift-DocC's warnings aided in writing these hashes but a person can't decode the resulting hash suffix (`-3c5j`) to determine which overload the link is referring to. Now, you can use a combination of parameter types and return types—like  `-(String,_)`, `->Float,` or `-(String?,_)->Double`—to disambiguate the link and uniquely reference a specific overload.
 
-You can discover the minimal combination of parameter types and return types for each overload from Swift-DocC’s warnings about ambiguous symbol links. For more details, see [the Ambiguous Symbol Links section of Linking to Symbols and Other Content](https://www.swift.org/documentation/docc/linking-to-symbols-and-other-content#Ambiguous-Symbol-Links).
+You can discover the minimal combination of parameter types and return types for each overload from Swift-DocC’s warnings about ambiguous symbol links. For more details, see [the Ambiguous Symbol Links section of Linking to Symbols and Other Content](/documentation/docc/linking-to-symbols-and-other-content#Ambiguous-Symbol-Links).
 
 ## Install Swift 6.1
 
-You can try out these exciting new developments in Swift 6.1 today! Install the official Swift 6 toolchains for macOS, Linux, and Windows at [Swift.org/install](https://www.swift.org/install/).
+You can try out these exciting new developments in Swift 6.1 today! Install the official Swift 6 toolchains for macOS, Linux, and Windows at [Swift.org/install](/install/).
