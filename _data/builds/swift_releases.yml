@@ -1997,3 +1997,64 @@
       archs:
         - x86_64
         - arm64
+- name: "6.1"
+  tag: swift-6.1-RELEASE
+  xcode: Xcode 16.3
+  xcode_release: true
+  date: 2025-03-31
+  platforms:
+    - name: Ubuntu 20.04
+      platform: Linux
+      docker: 6.1-focal
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 6.1-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 24.04
+      platform: Linux
+      docker: 6.1-noble
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 12
+      platform: Linux
+      docker: 6.1-bookworm
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 39
+      platform: Linux
+      docker: 6.1-fedora39
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 6.1-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 6.1-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 6.1-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+        - arm64
+    - name: Static SDK
+      platform: static-sdk
+      checksum: 111c6f7d280a651208b8c74c0521dd99365d785c1976a6e23162f55f65379ac6
+      archs:
+        - x86_64
+        - arm64
