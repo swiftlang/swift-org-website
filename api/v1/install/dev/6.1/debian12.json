@@ -1,0 +1,6 @@
+---
+layout: none
+---
+{ "x86_64": {{ site.data.builds.swift-6_1-branch.debian12 | jsonify }},
+  "aarch64": {{ site.data.builds.swift-6_1-branch.debian12-aarch64 | jsonify }}
+}
