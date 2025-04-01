@@ -9,9 +9,9 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # usage:
-# docker-compose run build
+# docker compose run build
 #
-# docker-compose up website
+# docker compose up website
 #
 
 services:
