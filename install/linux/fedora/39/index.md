@@ -1,29 +1,34 @@
 ---
-layout: page-wide
+layout: new-layouts/install-linux-version
 title: Install Swift
 ---
 
-{% include install/_os_tabs.md linux="true" %}
+{% include /new-includes/assigns/linux-platform-builds.html
+    platform="Fedora 39"
+    aarch64="true"
+    branch_dir="development"
+    development="main"
+    docker_tag="nightly-fedora-39"
+    development_builds=site.data.builds.development.fedora39
+    aarch64_development_builds=site.data.builds.development.fedora39-aarch64
+    development_2="release/6.2"
+    docker_tag_2="nightly-6.2-fedora39"
+    development_builds_2=site.data.builds.swift-6_2-branch.fedora39
+    aarch64_development_builds_2=site.data.builds.swift-6_2-branch.fedora39-aarch64
+    branch_dir_2="swift-6.2-branch"
+%}
 
-{% include install/_linux_platforms_tabs.md fedora="true" %}
-
-{% include install/_os_versions_tabs.md os_versions=site.data.install.fedora  name="Fedora" pressed="Fedora 39" %}
-
-{% include install/_build_release.md platform="Fedora 39" docker_tag="fedora39" %}
-
-<details class="download" style="margin-bottom: 0;">
-  <summary>Older Releases</summary>
-  {% include install/_older-releases.md platform="Fedora 39" %}
-</details>
-
-{% include install/_build_snapshot.md platform="Fedora 39"
-aarch64="true"
-branch_dir="development"
-development="main"
-docker_tag="nightly-fedora-39"
-development_builds=site.data.builds.development.fedora39
-aarch64_development_builds=site.data.builds.development.fedora39-aarch64
-development_2="release/6.2"
-docker_tag_2="nightly-6.2-fedora39"
-development_builds_2=site.data.builds.swift-6_2-branch.fedora39 aarch64_development_builds_2=site.data.builds.swift-6_2-branch.fedora39-aarch64
-branch_dir_2="swift-6.2-branch"%}
+{% include /new-includes/components/linux-releases.html
+  docker=site.data.new-data.install.linux.fedora.fedora-39.releases.latest-release.docker
+  tarball=site.data.new-data.install.linux.fedora.fedora-39.releases.latest-release.tarball
+  static_sdk=site.data.new-data.install.linux.fedora.fedora-39.releases.latest-release.static-linux-sdk
+  rpm=site.data.new-data.install.linux.fedora.fedora-39.releases.latest-release.rpm
+  dev_main=site.data.new-data.install.linux.fedora.fedora-39.releases.latest-release.main
+  dev_release_6_2=site.data.new-data.install.linux.fedora.fedora-39.releases.latest-release.release-6-2
+  development_builds=development_builds
+  development_builds_2=development_builds_2
+  platform=platform
+  platform_name_url=platform_name_url
+  branch_dir=branch_dir
+  branch_dir_2=branch_dir_2
+%}

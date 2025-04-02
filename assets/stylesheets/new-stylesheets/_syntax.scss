@@ -1,0 +1,98 @@
+[class^='language-'] .highlight,
+.code-box pre {
+  position: relative;
+
+  button {
+    background-color: #c5c5c5;
+    color: white;
+    border: 0;
+    padding: 5px 8px;
+    font-family: sans-serif;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    border-radius: 0 10px 0 0;
+
+    &:hover {
+      background-color: #868686;
+    }
+  }
+
+  &:hover {
+    button {
+      display: block;
+    }
+  }
+}
+
+.code-box pre {
+  button {
+    border-radius: 0;
+  }
+}
+
+pre.highlight {
+  background: #fff;
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.53;
+
+  .c,
+  .cm,
+  .cp,
+  .c1,
+  .cs {
+    color: #6e6e6e;
+    font-style: italic;
+  }
+
+  .k,
+  .kt,
+  .kr,
+  .kd {
+    color: #ad3da4;
+  }
+
+  .s,
+  .s1,
+  .s2,
+  .sd {
+    color: #d12f1b;
+  }
+
+  .nf {
+    color: #703daa;
+  }
+
+  .nc,
+  .no,
+  .nt {
+    color: #3b5bdb;
+  }
+
+  .nv,
+  .vg,
+  .vi {
+    color: #333;
+  }
+
+  .m,
+  .mi,
+  .mf {
+    color: #098658;
+  }
+
+  .o {
+    color: #000;
+  }
+
+  .err {
+    background-color: #ffeef0;
+    color: #d73a49;
+  }
+}

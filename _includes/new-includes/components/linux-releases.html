@@ -1,0 +1,95 @@
+<div class="content">
+  <h2>Latest release</h2>
+  <div class="releases-grid">
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/code-box.html content = include.docker %}
+      </div>
+    </div>
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/code-box.html content = include.tarball %}
+      </div>
+    </div>
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/code-box.html content = include.static_sdk %}
+      </div>
+    </div>
+    {% if include.rpm %}
+      <div class="release-box section">
+        <div class="content">
+          {% include new-includes/components/code-box.html content = include.rpm %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+  <div class="release-box section">
+    <div class="content">
+        <details class="download">
+        <summary>Previous Releases</summary>
+        {% include install/_older-releases.md platform=include.platform %}
+        </details>
+    </div>
+  </div>
+  <h2>Development Snapshots</h2>
+  <div>
+    <p class="content-copy">Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.</p>
+  </div>
+  <div>
+    <p class="content-copy">
+      <a class="content-link" href="https://www.swift.org/install/linux/tarball">Instructions (Tarball) <i></i></a>
+    </p>
+  </div>
+  <div>
+    <p class="content-copy">
+      <a class="content-link" href="https://www.swift.org/install/linux/docker">Instructions (Docker) <i></i></a>
+    </p>
+  </div>
+  <div class="releases-grid">
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/code-box.html content = include.dev_main %}
+      </div>
+    </div>
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/code-box.html content = include.dev_release_6_2 %}
+      </div>
+    </div>
+  </div>
+  <h3>Static Linux SDK</h3>
+  <div>
+    <p class="content-copy">
+      <a class="content-link" href="https://www.swift.org/documentation/articles/static-linux-getting-started.html">Instructions <i></i></a>
+    </p>
+  </div>
+  <div class="releases-grid">
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/code-box.html content = site.data.new-data.install.linux.static-linux-sdk-dev.main %}
+      </div>
+    </div>
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/code-box.html content = site.data.new-data.install.linux.static-linux-sdk-dev.release-6-1 %}
+      </div>
+    </div>
+  </div>
+  <div class="release-box section">
+    <div class="content">
+        <details class="download">
+        <summary>Previous Snapshots (main)</summary>
+        {% include install/_older_snapshots.md builds=development_builds name=platform platform_dir=platform_name_url branch_dir=branch_dir %}
+        </details>
+    </div>
+  </div>
+  <div class="release-box section">
+    <div class="content">
+        <details class="download">
+        <summary>Previous Snapshots (release/6.2)</summary>
+        {% include install/_older_snapshots.md builds=development_builds_2 name=platform platform_dir=platform_name_url branch_dir=branch_dir_2 %}
+        </details>
+    </div>
+  </div>
+</div>

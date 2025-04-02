@@ -1,0 +1,97 @@
+@use '../../colors' as *;
+@use '../../helpers' as *;
+@use '../../graphics' as *;
+@use '../../themes' as *;
+
+.site-navigation {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  line-height: initial;
+  background: var(--site-navigation-background);
+  backdrop-filter: blur(20px);
+  border-bottom: var(--site-navigation-border-bottom);
+  box-shadow: var(--site-navigation-box-shadow);
+
+  .wrapper {
+    @include flex-between;
+    padding: 0 20px;
+    max-width: 1234px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    margin: 0;
+
+    a {
+      display: flex;
+      width: 116px;
+
+      svg {
+        flex: 1;
+      }
+    }
+  }
+
+  // hide mobile navigation
+  .menu-toggle,
+  .mobile-navigation {
+    display: none;
+  }
+
+  .navigation-items {
+    display: flex;
+    list-style: none;
+
+    li {
+      a {
+        display: block;
+        padding: 22px 15px;
+        font-size: 19px;
+        color: var(--site-navigation-text-color);
+        transition:
+          background-color 0.2s ease,
+          color 0.2s ease; // smooth hover
+
+        // hover/focus states
+        &:hover,
+        &:focus {
+          background-color: var(--site-navigation-item-background);
+          outline: none; // basic focus outline removal
+        }
+
+        // visual focus indicator for accessibility
+        &:focus-visible {
+          outline: 2px solid dodgerblue;
+          outline-offset: 2px;
+        }
+      }
+
+      &.active {
+        a {
+          background-color: var(--site-navigation-item-background);
+          outline: none; // basic focus outline removal
+        }
+      }
+    }
+  }
+
+  // use a border to separate "Install"
+  .desktop-navigation {
+    .navigation-items {
+      li.border {
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+
+        span {
+          display: block;
+          width: 2px;
+          height: 18px;
+          background-color: var(--site-navigation-text-color);
+        }
+      }
+    }
+  }
+} // .site-navigation

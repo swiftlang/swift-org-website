@@ -1,0 +1,5 @@
+headline: Build your own container images
+body: Swift Container Plugin allows you to build and publish your own container images using Swift Package Manager.
+link:
+  href: 'https://github.com/apple/swift-container-plugin'
+  copy: Swift Container Plugin

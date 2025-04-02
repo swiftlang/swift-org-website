@@ -1,0 +1,12 @@
+headline: Create cloud services with Swift
+body: Run performant services on Linux and deploy to the cloud
+link:
+  url: /getting-started/vapor-web-server
+  text: Get Started
+boxes:
+  - title: Memory efficient
+    text: As a compiled language, Swift has predictable runtime performance and a low memory footprint.
+  - title: Quick start-up time
+    text: With minimal warm-up operations, Swift is an ideal fit for cloud services, which are often rescheduled onto virtual machines and containers.
+  - title: Production ready
+    text: Swift server is used in production for large-scale cloud services, handling billions of requests a day.

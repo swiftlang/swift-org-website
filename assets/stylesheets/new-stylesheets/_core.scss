@@ -1,0 +1,52 @@
+@use 'reset';
+@use 'print';
+@use 'graphics' as *;
+@use 'fonts';
+@use 'themes' as *;
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  color: #051416;
+  font-size: 17px;
+  line-height: 1.6;
+  color-scheme: light dark;
+   transition:
+     background-color 0.3s ease,
+     color 0.3s ease;
+  @include light-theme;
+
+  &[data-color-scheme='light'] {
+    color-scheme: light;
+  }
+
+  &[data-color-scheme='dark'] {
+    color-scheme: dark;
+
+    @include dark-theme;
+  }
+
+  // TODO: Remove this and move the rule in body
+  #install {
+    color: var(--site-text-color);
+  }
+}
+
+h2 {
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+code {
+  font-family:
+    'SF Mono', ui-monospace, Menlo, Consolas, Monaco, 'Courier New', monospace,
+    serif;
+  font-weight: 400;
+}

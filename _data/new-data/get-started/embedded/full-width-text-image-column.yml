@@ -1,0 +1,9 @@
+headline: Ergonomic and performant
+paragraphs:
+  - Access hardware registers confidently with Swift-MMIO’s type-safe, expressive API. Your Swift code compiles into minimal, efficient machine code—providing the power and correctness embedded developers need.
+link:
+  url: https://github.com/apple/swift-mmio
+  text: Learn more
+image:
+  url: /assets/images/get-started/ergonomic-performant@2x.png 
+  alt: An fpo image

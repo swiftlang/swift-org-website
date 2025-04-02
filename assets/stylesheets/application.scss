@@ -10,3 +10,21 @@ layout: source
 @use "mobile";
 @use "pages";
 @use "print";
+@use "new-stylesheets/themes" as *;
+@use 'new-stylesheets/includes/header';
+@use 'new-stylesheets/includes/navigation';
+@use 'new-stylesheets/includes/footer';
+
+body {
+  @include light-theme;
+
+  &[data-color-scheme='light'] {
+    color-scheme: light;
+  }
+
+  &[data-color-scheme='dark'] {
+    color-scheme: dark;
+
+    @include dark-theme;
+  }
+}

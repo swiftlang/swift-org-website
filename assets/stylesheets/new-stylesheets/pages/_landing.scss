@@ -1,0 +1,249 @@
+@use "../helpers" as *;
+@use 'sass:list';
+
+@mixin swoop-ratio($width, $height) {
+  aspect-ratio: list.slash($width, calc($height * 1.2));
+}
+
+.section {
+  padding: 242px 0;
+  text-align: center;
+
+  h2 {
+    font-size: 45px;
+    color: #3d3d3d;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+#what-is-swift {
+  padding-top: 72px; // height of navigation, plus standard
+  text-align: center;
+  position: relative;
+  background-color: #fbd19d;
+
+  @media only screen and (max-width: 1024px) {
+    & {
+      padding: calc(72px + 142px) 10px 214px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/assets/images/noise.png);
+    opacity: 0.04;
+  }
+
+  .hero-content {
+    margin-top: 23vw;
+    z-index: 5;
+  }
+
+  // we can add a noise filter background, but we might need to use an image in base64
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   opacity: 0.3; // grain intensity
+  //   z-index: -1; // place it behind the body content
+  //   pointer-events: none; // make sure it doesn't interfere with click events
+
+  //   /* The SVG noise filter embedded as a Data URI */
+  //   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+  // }
+
+  h1 {
+    font-size: 44px;
+    color: #3d3d3d;
+    letter-spacing: 0;
+    text-align: center;
+    text-shadow: 0 2px 30px #fac686;
+    font-weight: 600;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Install */
+  .hero-content > a {
+    z-index: 5;
+    position: relative;
+    display: inline-block;
+    font-size: 35px;
+    color: #ffffff;
+    letter-spacing: 0;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 15px 95px;
+    background-image: linear-gradient(to bottom right, #ff7f00, #f05238);
+    border-radius: 37px;
+    white-space: nowrap; // prevent link text from breaking mid-word
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease; // smooth hover
+
+    /* hover/focus states */
+    &:hover,
+    &:focus {
+      background-color: #ff7f00;
+      color: #e0e0e0;
+      outline: none; // basic focus outline removal
+    }
+
+    /* Visual focus indicator for accessibility */
+    &:focus-visible {
+      outline: 2px solid dodgerblue;
+      outline-offset: 2px;
+    }
+  }
+
+  /* Get Started */
+  h2 {
+    font-size: 40px;
+    color: #000000;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 113px;
+    margin-bottom: 24px;
+  }
+
+  nav[aria-label="Get started with Swift"] {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+
+    @media only screen and (max-width: 1024px) {
+      & {
+        max-width: 100%;
+      }
+    }
+
+    ul {
+      /* Reset default list styling */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      /* Flexbox */
+      display: flex;
+      flex-wrap: wrap; // allow items to wrap onto the next line
+      justify-content: center;
+
+      /* Spacing between items, row and column */
+      gap: 15px;
+
+      /* Button styles */
+      li a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 25px;
+        color: #051416;
+        letter-spacing: 0;
+        font-weight: 400;
+        padding: 20px 25px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 36px;
+        white-space: nowrap; // prevent link text from breaking mid-word
+        transition:
+          background-color 0.2s ease,
+          color 0.2s ease; // smooth hover
+
+        /* hover/focus states */
+        &:hover,
+        &:focus {
+          background-color: #e0e0e0;
+          color: #000;
+          outline: none; // basic focus outline removal
+        }
+
+        /* Visual focus indicator for accessibility */
+        &:focus-visible {
+          outline: 2px solid dodgerblue;
+          outline-offset: 2px;
+        }
+      }
+    }
+  }
+}
+
+.pillar {
+  position: relative;
+  overflow: visible;
+
+  .swoop {
+    display: block;
+    background: none no-repeat;
+    background-size: 120%;
+    background-position: -25% 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(50%);
+    pointer-events: none;
+
+    @for $i from 1 through 5 {
+      &.swoop-#{$i}.visible {
+        background-image: url(/assets/images/page-scroll-swoops/swoop-#{$i}.png);
+        z-index: 5 - $i;
+      }
+    }
+  
+  }
+}
+
+#pillar-0 {
+  background-color: #bbbbbb;
+}
+
+#pillar-1 {
+  background-color: #fadadd;
+
+  .swoop {
+    @include swoop-ratio(1358, 353)
+  }
+}
+
+#pillar-2 {
+  background-color: #b4f8c8;
+
+  .swoop {
+    @include swoop-ratio(1181, 291)
+  }
+}
+
+#pillar-3 {
+  background-color: #fdfd96;
+
+  .swoop {
+    @include swoop-ratio(444, 97)
+  }
+}
+
+#pillar-4 {
+  background-color: #d8bfd8;
+  
+  .swoop {
+    @include swoop-ratio(1265, 224)
+  }
+}
+
+#pillar-5 {
+  background-color: #b0e0e6;
+}

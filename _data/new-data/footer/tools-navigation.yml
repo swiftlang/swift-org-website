@@ -1,0 +1,10 @@
+- title: Xcode
+  link: https://developer.apple.com/xcode/
+- title: Visual Studio Code
+  link: https://code.visualstudio.com
+- title: Emacs
+  link: https://www.gnu.org/software/emacs/
+- title: Neovim
+  link: https://neovim.io
+- title: Other Editors
+  link: https://github.com/swiftlang/sourcekit-lsp/blob/main/Documentation/Editor%20Integration.md

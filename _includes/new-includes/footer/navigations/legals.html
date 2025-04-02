@@ -1,0 +1,9 @@
+<nav aria-label="Legals">
+    <ul>
+        {% for item in site.data.new-data.footer.legals-navigation %}
+            <li class="item {% if page.url == item.url %}active{% endif %}">
+                <a href="{{ item.link }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

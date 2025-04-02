@@ -1,0 +1,75 @@
+latest-release:
+  docker:
+    pre-code-text: |
+      The official Docker images for Swift.
+    headline: Docker
+    links:
+      - href: 'https://hub.docker.com/_/swift'
+        copy: '6.1.1-noble'
+      - href: 'https://www.swift.org/install/linux/docker'
+        copy: 'Instructions'
+  tarball:
+    pre-code-text: |-
+      Tarball packages (.tar.gz)
+      <ul>
+        <li>
+          Signature (PGP): <a href="https://download.swift.org/swift-6.1.1-release/ubuntu2404/swift-6.1.1-RELEASE/swift-6.1.1-RELEASE-ubuntu24.04.tar.gz.sig">x86_64</a> | <a href="https://download.swift.org/swift-6.1.1-release/ubuntu2404-aarch64/swift-6.1.1-RELEASE/swift-6.1.1-RELEASE-ubuntu24.04-aarch64.tar.gz.sig">aarch64</a>
+        </li>
+      </ul>
+    headline: Tarball
+    links:
+      - href: 'https://download.swift.org/swift-6.1.1-release/ubuntu2404/swift-6.1.1-RELEASE/swift-6.1.1-RELEASE-ubuntu24.04.tar.gz'
+        copy: 'Download (x86_64)'
+      - href: 'https://download.swift.org/swift-6.1.1-release/ubuntu2404-aarch64/swift-6.1.1-RELEASE/swift-6.1.1-RELEASE-ubuntu24.04-aarch64.tar.gz'
+        copy: 'Download (aarch64)'
+      - href: 'https://www.swift.org/install/linux/docker'
+        copy: 'Instructions'
+  static-linux-sdk:
+    pre-code-text: |-
+      Static Linux SDK - Cross compile to Linux
+      <ul>
+        <li>
+          <a href="https://download.swift.org/swift-6.1.1-release/static-sdk/swift-6.1.1-RELEASE/swift-6.1.1-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz.sig">Signature (PGP)</a>
+        </li>
+        <li>
+          Checksum: <code>8a69753e181e40c202465f03bcafcc898070a86817ca0f39fc808f76638e90c2</code>
+        </li>
+      </ul>
+    headline: Static Linux SDK
+    links:
+      - href: 'https://download.swift.org/swift-6.1.1-release/static-sdk/swift-6.1.1-RELEASE/swift-6.1.1-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz'
+        copy: 'Download Linux Static SDK'
+      - href: 'https://www.swift.org/documentation/articles/static-linux-getting-started.html'
+        copy: 'Instructions (Static Linux SDK)'
+  main:
+    pre-code-text: |-
+      <small>May 23, 2025</small>
+      <ul>
+        <li>
+          Signature (PGP): <a href="https://download.swift.org/development/ubuntu2404/swift-DEVELOPMENT-SNAPSHOT-2025-05-23-a/swift-DEVELOPMENT-SNAPSHOT-2025-05-23-a-ubuntu24.04.tar.gz.sig">x86_64</a> | <a href="https://download.swift.org/development/ubuntu2404-aarch64/swift-DEVELOPMENT-SNAPSHOT-2025-05-23-a/swift-DEVELOPMENT-SNAPSHOT-2025-05-23-a-ubuntu24.04-aarch64.tar.gz.sig">aarch64</a>
+        </li>
+      </ul>
+    headline: main
+    links:
+      - href: 'https://download.swift.org/development/ubuntu2404/swift-DEVELOPMENT-SNAPSHOT-2025-05-23-a/swift-DEVELOPMENT-SNAPSHOT-2025-05-23-a-ubuntu24.04.tar.gz'
+        copy: 'Download (x86_64)'
+      - href: 'https://download.swift.org/development/ubuntu2404-aarch64/swift-DEVELOPMENT-SNAPSHOT-2025-05-23-a/swift-DEVELOPMENT-SNAPSHOT-2025-05-23-a-ubuntu24.04-aarch64.tar.gz'
+        copy: 'Download (aarch64)'
+      - href: 'https://hub.docker.com/r/swiftlang/swift/tags'
+        copy: 'nightly-noble'
+  release-6-2:
+    pre-code-text: |-
+      <small>May 15, 2025</small>
+      <ul>
+        <li>
+          Signature (PGP): <a href="https://download.swift.org/swift-6.2-branch/ubuntu2404/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a-ubuntu24.04.tar.gz.sig">x86_64</a> | <a href="https://download.swift.org/swift-6.2-branch/ubuntu2404-aarch64/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a-ubuntu24.04-aarch64.tar.gz.sig">aarch64</a>
+        </li>
+      </ul>
+    headline: release/6.2
+    links:
+      - href: 'https://download.swift.org/swift-6.2-branch/ubuntu2404/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a-ubuntu24.04.tar.gz'
+        copy: 'Download (x86_64)'
+      - href: 'https://download.swift.org/swift-6.2-branch/ubuntu2404-aarch64/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a-ubuntu24.04-aarch64.tar.gz'
+        copy: 'Download (aarch64)'
+      - href: 'https://hub.docker.com/r/swiftlang/swift/tags'
+        copy: 'nightly-6.2-noble'

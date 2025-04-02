@@ -22,3 +22,6 @@ xcuserdata
 
 # VS Code files
 .vscode
+
+# Npm modules
+node_modules

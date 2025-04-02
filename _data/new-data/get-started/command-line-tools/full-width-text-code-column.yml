@@ -1,0 +1,32 @@
+headline: Handle process execution robustly with minimal boilerplate
+paragraphs:
+  - 'Subprocess is a Swift library that provides precise, idiomatic control over launching and managing child processes. You can either collect the child process output asynchronously in full, or stream it in real time using AsyncSequence, making it easy to process output line-by-line as it arrives.'
+  - 'Subprocess gives you fine-grained control over environment variables, arguments, and many platform specific parameters, while embracing Swift’s concurrency features and type safety. Whether you’re building CLI tools or server-side Swift applications, swift-subprocess integrates cleanly.'
+link:
+  text: Subprocess
+  url: https://github.com/swiftlang/swift-subprocess
+code: |-
+  import Subprocess
+
+  // Launch Nginx and monitor the log file in parallel
+  async let monitorResult = run(
+      .path("/usr/bin/tail"),
+      arguments: ["-f", "/path/to/nginx.log"]
+  ) { execution, standardOutput in
+      for try await line in standardOutput.lines(encoding: UTF8.self) {
+          // Parse the log text
+          if line.contains("500") {
+              // Oh no, 500 error
+          }
+      }
+  }
+
+  let launchResult = try await run(
+      .name("nginx"), // Lookup executable by name
+      arguments: ["-c", "/path/to/nginx.conf"]
+  )
+  if !launchResult.terminationStatus.isSuccess {
+      print("Nginx failed to launch: \(launchResult.terminationStatus)")
+  } else {
+      print("Nginx launched with PID \(launchResult.processIdentifier)")
+  }

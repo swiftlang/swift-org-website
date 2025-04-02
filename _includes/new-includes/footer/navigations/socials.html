@@ -1,0 +1,9 @@
+<nav class="socials" aria-label="Socials">
+    <ul>
+        {% for item in site.data.new-data.footer.social-navigation %}
+            <li class="item {% if page.url == item.url %}active{% endif %}">
+                <a href="{{ item.link }}" rel="me" title="{{ item.title }}"><i class="{{ item.class }}"></i></a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

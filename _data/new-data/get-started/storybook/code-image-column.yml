@@ -1,0 +1,21 @@
+headline: Code Image Row
+body: Optional body content. Optional body content. Optional body content. Optional body content. Optional body content.
+link:
+  url: https://github.com/apple/swift-mmio
+  text: Optional Link
+image:
+  url: /assets/images/getting-started/embedded/primary-card-vapor-logo.jpg
+  alt: A place holder image
+code: |-
+  let vegetable = "red pepper"
+  switch vegetable {
+  case "celery":
+      print("Add some raisins and make ants on”)
+  case "cucumber", "watercress":
+      print("That would make a good tea sandwich.")
+  case let x where x.hasSuffix("pepper"):
+      print("Is it a spicy \(x)?")
+  default:
+      print("Everything tastes good in soup.")
+  }
+  // Prints "Is it a spicy red pepper?"

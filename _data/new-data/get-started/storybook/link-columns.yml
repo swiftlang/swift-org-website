@@ -1,0 +1,24 @@
+headline: Resource
+columns:
+  - headline: Community Groups
+    links:
+      - text: Embedded Forums
+        url: '#'
+      - text: Embedded Forums
+        url: '#'
+  - headline: Talks
+    links:
+      - text: Embedded Forums
+        url: '#'
+      - text: Embedded Forums
+        url: '#'
+  - headline: Documentation
+    links:
+      - text: Vision Documentation
+        url: '#'
+      - text: Toolchain Installation
+        url: '#'
+      - text: Example Projects
+        url: '#'
+      - text: Getting Started Guide
+        url: '#'

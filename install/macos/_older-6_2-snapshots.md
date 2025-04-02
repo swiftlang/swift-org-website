@@ -1,4 +1,4 @@
-<table id="osx-builds" class="downloads">
+<table id="osx-builds" class="downloads body-copy">
     <thead>
         <tr>
             <th class="download">Download</th>

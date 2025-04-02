@@ -1,0 +1,49 @@
+@mixin light-theme() {
+  --site-text-color: #051416;
+  --site-navigation-border-bottom: linear-gradient(0deg, #f6b391 0%, #f8ce6e 92%);
+  --site-navigation-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  --site-navigation-background: rgba(255, 255, 255, 0.5);
+  --site-navigation-text-color: #3D3D3D;
+  --site-navigation-item-background: rgba(0, 0, 0, 0.05);
+  --site-tabs-background: rgba(255, 255, 255, 0.8);
+  --site-tabs-active-background: #ffffff;
+  --site-navigation-menu-toggle-invert: invert(0);
+  --site-navigation-item-border: 1px solid #051416;
+  --site-code-box-text: #3D3D3D;
+  --site-link-with-right-arrow-color: #384fea;
+  --site-link-with-right-arrow-icon-filter: none;
+  --site-content-link-with-right-arrow-icon-filter: brightness(0);
+
+  --install-page-bg: linear-gradient(0deg, #f6b391 0%, #f8ce6e 92%);
+  --install-site-code-box-bg: #ffffff;
+  --install-site-code-box-pre-bg: #f2f2f2;
+  --install-release-box-th-bg: #f2f2f2;
+  --install-release-box-th-color: #333;
+  --install-release-box-tr-border-bottom: 1px solid #f2f2f2;
+  --install-release-box-tr-bg: #ffffff;
+}
+
+@mixin dark-theme() {
+  --site-text-color: #ffffff;
+  --site-navigation-border-bottom: 0;
+  --site-navigation-box-shadow: none;
+  --site-navigation-background: rgba(0, 0, 0, 0.3);
+  --site-navigation-text-color: #ffffff;
+  --site-navigation-item-background: rgba(0, 0, 0, 0.4);
+  --site-tabs-background: rgba(35, 52, 74, 1);
+  --site-tabs-active-background: #505F83;
+  --site-navigation-menu-toggle-invert: invert(1);
+  --site-navigation-item-border: 1px solid #ffffff;
+  --site-code-box-text: #ffffff;
+  --site-link-with-right-arrow-color: #1EC1FD;
+  --site-link-with-right-arrow-icon-filter: invert(66%) sepia(89%) saturate(602%) hue-rotate(172deg) brightness(102%) contrast(101%);
+  --site-content-link-with-right-arrow-icon-filter: brightness(0) invert(1);
+
+  --install-page-bg: linear-gradient(0deg, #FF8115 0%, #B7451B 92%);
+  --install-site-code-box-bg: #23344A;
+  --install-site-code-box-pre-bg: #111727;
+  --install-release-box-th-bg: #111727;
+  --install-release-box-th-color: #ffffff;
+  --install-release-box-tr-border-bottom: 1px solid #051416;
+  --install-release-box-tr-bg: #384461;
+}

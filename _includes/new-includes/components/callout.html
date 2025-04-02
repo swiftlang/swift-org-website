@@ -1,0 +1,29 @@
+{% assign is_even = include.index | modulo: 2 %} {% assign with_code =
+include.code %}
+<div
+  class="callout {% if is_even == 0 %}reverse{% endif %} {% if with_code %}with-code{% endif %}"
+>
+  <div class="text">
+    {% if include.title %}
+    <h3 class="callout-title">{{ include.title }}</h3>
+    {% endif %} {% if include.subtitle %}
+    <p class="callout-subtitle">{{ include.subtitle }}</p>
+    {% endif %} {% if include.text %}
+    <p class="callout-text body-copy">{{ include.text }}</p>
+    {% endif %}
+  </div>
+  {% if include.code %}
+  <!-- prettier-ignore -->
+  <div class="code" markdown="1">
+~~~swift
+{{include.code}}
+~~~
+</div>
+  {% endif %} {% assign links = include.links %} {% if links %}
+  <div class="links">
+    {% for link in links %}
+    <a href="{{ link.link }}">{{ link.text }} <i></i></a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

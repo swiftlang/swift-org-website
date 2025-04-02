@@ -1,0 +1,109 @@
+latest-release:
+  swiftly:
+    pre-code-text: |
+      To download toolchains from Swift.org, use the Swiftly toolchain installer. Swift.org toolchains support Static Linux SDK, include experimental features like Embedded Swift and support for WebAssembly.
+    headline: Swiftly
+    tabs:
+      - label: Bash
+        code: |
+          curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg && \
+          installer -pkg swiftly.pkg -target CurrentUserHomeDirectory && \
+          ~/.swiftly/bin/swiftly init --quiet-shell-followup && \
+          . ${SWIFTLY_HOME_DIR:-~/.swiftly}/env.sh && \
+          hash -r
+    links:
+      - href: 'https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt'
+        copy: 'License: Apache-2.0'
+      - href: 'https://www.swift.org/install/macos/swiftly'
+        copy: 'Instructions'
+  xcode:
+    pre-code-text: To develop with Swift for Apple platforms, download the latest version of Xcode, which is regularly refreshed with the latest Swift toolchain.
+    headline: Xcode
+    links:
+      - href: 'https://developer.apple.com/xcode/'
+        copy: 'Install Xcode'
+  package-installer:
+    pre-code-text: The toolchain package installer (.pkg) that Swiftly automates is available as a stand-alone download.
+    headline: Package Installer
+    links:
+      - href: 'https://download.swift.org/swift-6.1-release/xcode/swift-6.1-RELEASE/swift-6.1-RELEASE-osx.pkg'
+        copy: 'Download Toolchain'
+      - href: 'https://www.swift.org/install/macos/package_installer'
+        copy: 'Instructions'
+  static-linux-sdk:
+    pre-code-text: |
+      Static Linux SDK - Cross compile to Linux
+      <ul>
+        <li>
+          <a href="https://download.swift.org/swift-6.1-release/static-sdk/swift-6.1-RELEASE/swift-6.1-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz.sig">Signature (PGP)</a>
+        </li>
+        <li>
+          Checksum: <code>111c6f7d280a651208b8c74c0521dd99365d785c1976a6e23162f55f65379ac6</code>
+        </li>
+      </ul>
+    headline: Static Linux SDK
+    links:
+      - href: 'https://download.swift.org/swift-6.1-release/static-sdk/swift-6.1-RELEASE/swift-6.1-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz'
+        copy: 'Download Linux Static SDK'
+      - href: 'https://www.swift.org/documentation/articles/static-linux-getting-started.html'
+        copy: 'Instructions (Static Linux SDK)'
+  toolchain:
+    main:
+      pre-code-text: |
+        <small>May 20, 2025</small><br />
+        Toolchain package installer (.pkg)
+        <ul>
+          <li>
+            <a href="https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2025-05-20-a/swift-DEVELOPMENT-SNAPSHOT-2025-05-20-a-osx-symbols.pkg">Debugging Symbols</a>
+          </li>
+        </ul>
+      headline: main
+      links:
+        - href: 'https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2025-05-20-a/swift-DEVELOPMENT-SNAPSHOT-2025-05-20-a-osx.pkg'
+          copy: 'Download Toolchain'
+    release-6-2:
+      pre-code-text: |
+        <small>May 15, 2025</small><br />
+        Toolchain package installer (.pkg)
+        <ul>
+          <li>
+            <a href="https://download.swift.org/swift-6.2-branch/xcode/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a-osx-symbols.pkg">Debugging Symbols</a>
+          </li>
+        </ul>
+      headline: release/6.2
+      links:
+        - href: 'https://download.swift.org/swift-6.2-branch/xcode/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a-osx.pkg'
+          copy: 'Download Toolchain'
+  static-linux-sdk-dev:
+    main:
+      pre-code-text: |
+        <small>January 31, 2025</small><br />
+        Static Linux SDK - Cross compile to Linux
+        <ul>
+          <li>
+            <a href="https://download.swift.org/development/static-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-01-31-a/swift-DEVELOPMENT-SNAPSHOT-2025-01-31-a_static-linux-0.0.1.artifactbundle.tar.gz.sig">Signature (PGP)</a>
+          </li>
+          <li>
+            Checksum: <code>cd1b0de0bcc809692e803a078800b9d577c0eefbd2b3d2cfd24e53f019ca5de3</code>
+          </li>
+        </ul>
+      headline: main
+      links:
+        - href: 'https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2025-05-20-a/swift-DEVELOPMENT-SNAPSHOT-2025-05-20-a-osx.pkg'
+          copy: 'Download Linux Static SDK'
+    release-6-1:
+      pre-code-text: |
+        <small>March 25, 2025</small><br />
+        Static Linux SDK - Cross compile to Linux
+        <ul>
+          <li>
+            <a href="https://download.swift.org/swift-6.1-branch/static-sdk/swift-6.1-DEVELOPMENT-SNAPSHOT-2025-03-25-a/swift-6.1-DEVELOPMENT-SNAPSHOT-2025-03-25-a_static-linux-0.0.1.artifactbundle.tar.gz.sig">Signature (PGP)</a>
+          </li>
+          <li>
+            Checksum: <code>2b73c30ec402f443857e6cd2ac06b8525f186e889a7a727af05601629148fe6a</code>
+          </li>
+        </ul>
+      headline: release/6.1
+      links:
+        - href: 'https://download.swift.org/swift-6.1-branch/static-sdk/swift-6.1-DEVELOPMENT-SNAPSHOT-2025-03-25-a/swift-6.1-DEVELOPMENT-SNAPSHOT-2025-03-25-a_static-linux-0.0.1.artifactbundle.tar.gz'
+          copy: 'Download Linux Static SDK'

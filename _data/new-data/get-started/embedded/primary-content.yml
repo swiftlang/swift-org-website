@@ -1,0 +1,34 @@
+title: Explore example projects
+primary_cards:
+  - name: Harmony Bluetooth Speaker
+    logo: /assets/images/get-started/harmony-bluetooth-speaker@2x.png
+    logo_alt: Harmony
+    text: Build a Bluetooth speaker with a ferrofluid visualizer using the Raspberry Pi Pico W.
+    link_text: Learn more
+    link: https://github.com/apple/swift-embedded-examples/tree/main/harmony
+
+  - name: Matter and HomeKit Smart Light
+    logo: /assets/images/get-started/matter-homeKit-smartlight@2x.png
+    logo_alt: Matter and HomeKit Smart Light
+    text: Implement a Matter smart light accessory that can be used from HomeKit, using an ESP32 microcontroller.
+    link: https://github.com/apple/swift-matter-examples
+    link_text: Learn more
+
+secondary_cards:
+  - name: Interactive UI Examples
+    logo_alt:
+    logo: /assets/images/get-started/interactive-ui-examples@2x.png
+    text: Build projects using the popular embedded graphics library LVGL on an STM32 board for rich UI and touch input.
+    link_text: Learn more
+    link: https://github.com/apple/swift-embedded-examples/pull/104
+
+  - name: PlaydateKit
+    logo: /assets/images/get-started/playdate-kit@2x.png
+    logo_alt: PlaydateKit
+    text: Create interactive games using PlaydateKit, which provides an easy to use Swift bindings for the Playdate gaming console.
+    link: https://github.com/finnvoor/PlaydateKit
+    link_text: Learn more
+
+link:
+  url: https://github.com/apple/swift-embedded-examples
+  text: Explore more Embedded Swift examples and templates on Github
