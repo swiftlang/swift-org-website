@@ -1,0 +1,49 @@
+image: /assets/images/get-started/package.png
+image_alt: Package image for Open Source Frameworks & Packages section
+title: Card Grid Mixed
+link:
+  text: View More at Swift Package Index
+  url: /
+primary_cards:
+  - name: Vapor
+    logo: /assets/images/getting-started/embedded/primary-card-vapor-logo.jpg
+    logo_alt: Vapor logo
+    text: Vapor provides a safe, performant and easy to use foundation to build HTTP servers, backends and APIs in Swift.
+    link_text: Vapor
+    link: /
+  - name: Hummingbird
+    logo_alt: Hummingbird logo
+    logo: /assets/images/getting-started/embedded/pimary-card-hummingbird-logo.jpg
+    text: Hummingbird is a lightweight, flexible modern web application framework that runs on top of a SwiftNIO based server implementation. It is designed to require the minimum number of dependencies.
+    link_text: Hummingbird
+    link: /
+secondary_cards:
+  - name: Vapor
+    logo: /assets/images/getting-started/embedded/secondary-card-vapor-logo.jpg
+    logo_alt: Vapor logo
+    text: Vapor provides a safe, performant and easy to use foundation to build HTTP servers, backends and APIs in Swift.
+    link_text: Vapor
+    link: /
+  - name: Hummingbird
+    logo_alt: Hummingbird logo
+    logo: /assets/images/getting-started/embedded/secondary-card-vapor-logo.jpg
+    text: Hummingbird is a lightweight, flexible modern web application framework that runs on top of a SwiftNIO based server implementation. It is designed to require the minimum number of dependencies.
+    link_text: Hummingbird
+    link: /
+tertiary_cards:
+  - name: swift-openai-generator
+    text: Generate Swift client and server code from an OpenAPI document.
+    link_text: by Apple
+    link: /
+  - name: swift-grpc
+    text: The Swift language implementation of gRPC.
+    link_text: by grpc
+    link: /
+  - name: MongoKitten
+    text: Pure Swift MongoDB drive built for Server Side Swift.
+    link_text: by Orlandos
+    link: /
+  - name: Swift Kafka Client
+    text: Provides a convenient way to interact with Apache Kafka.
+    link_text: by Swift Server Workgroup
+    link: /

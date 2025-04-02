@@ -1,0 +1,5 @@
+headline: Dive into Embedded Swift
+body: Explore how Embedded Swift tailors Swift’s features like generics, protocols, and async/await into a firmware‑optimized compilation mode that produces compact binaries with predictable performance for bare‑metal devices.
+link:
+  href: 'https://swiftpackageindex.com/apple/swift-embedded-examples/main/documentation/embeddedswift'
+  copy: Learn more

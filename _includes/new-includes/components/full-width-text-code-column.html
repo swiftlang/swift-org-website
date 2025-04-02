@@ -1,0 +1,19 @@
+<div
+  class="full-width-text-code-column content-wrapper{% if include.background %} background{% endif %}"
+>
+  <div class="text-wrapper">
+    <h2>{{ include.content.headline }}</h2>
+    {% for paragraph in include.content.paragraphs %}
+    <p class="body-copy">{{paragraph}}</p>
+    {% endfor %}
+    <a class="body-copy" href="{{ include.content.link.url }}"
+      >{{ include.content.link.text }} <i></i
+    ></a>
+  </div>
+  <!-- prettier-ignore -->
+  <div class="code body-copy" markdown="1">
+~~~swift
+{{ include.content.code }}
+~~~
+  </div>
+</div>

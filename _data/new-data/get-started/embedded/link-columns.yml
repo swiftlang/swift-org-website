@@ -1,0 +1,24 @@
+headline: Learn more
+columns:
+  - headline: Documentation
+    links:
+      - text: Build an embedded app for a microcontroller
+        url: '/getting-started/embedded-swift/'
+      - text: Embedded Swift vision document
+        url: 'https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md'
+      - text: Embedded Swift example projects
+        url: 'https://github.com/apple/swift-embedded-examples'
+  - headline: Talks
+    links:
+      - text: Go Small With Embedded Swift
+        url: 'https://www.youtube.com/watch?v=LqxbsADqDI4'
+      - text: Build a Music Visualizer
+        url: 'https://fosdem.org/2025/schedule/event/fosdem-2025-5284-building-a-ferrofluidic-music-visualizer-with-embedded-swift/'
+      - text: Why Swift is the Next Big Thing for IoT
+        url: 'https://fosdem.org/2025/schedule/event/fosdem-2025-6148-why-swift-is-the-next-big-thing-for-iot/'
+  - headline: Community
+    links:
+      - text: Embedded category on Swift forums
+        url: 'https://forums.swift.org/c/development/embedded/107'
+      - text: Embedded Swift community hour
+        url: 'https://forums.swift.org/t/embedded-swift-community-hour-may-9-2025/79647/'

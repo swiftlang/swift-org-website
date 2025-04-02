@@ -1,4 +1,4 @@
-<table id="osx-builds" class="downloads">
+<table id="osx-builds" class="downloads body-copy">
     <thead>
         <tr>
             <th class="download">Release</th>
@@ -16,5 +16,6 @@
 {% endunless %}
 
 {% endfor %}
-    </tbody>
+</tbody>
+
 </table>

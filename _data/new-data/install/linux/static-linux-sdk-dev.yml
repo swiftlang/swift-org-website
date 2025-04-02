@@ -1,0 +1,32 @@
+main:
+  pre-code-text: |
+    <small>January 31, 2025</small><br />
+    Static Linux SDK - Cross compile to Linux
+    <ul>
+      <li>
+        <a href="https://download.swift.org/development/static-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-01-31-a/swift-DEVELOPMENT-SNAPSHOT-2025-01-31-a_static-linux-0.0.1.artifactbundle.tar.gz.sig">Signature (PGP)</a>
+      </li>
+      <li>
+        Checksum: <code>cd1b0de0bcc809692e803a078800b9d577c0eefbd2b3d2cfd24e53f019ca5de3</code>
+      </li>
+    </ul>
+  headline: main
+  links:
+    - href: 'https://download.swift.org/development/static-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-01-31-a/swift-DEVELOPMENT-SNAPSHOT-2025-01-31-a_static-linux-0.0.1.artifactbundle.tar.gz'
+      copy: 'Download Linux Static SDK'
+release-6-1:
+  pre-code-text: |
+    <small>March 25, 2025</small><br />
+    Static Linux SDK - Cross compile to Linux
+    <ul>
+      <li>
+        <a href="https://download.swift.org/swift-6.1-branch/static-sdk/swift-6.1-DEVELOPMENT-SNAPSHOT-2025-03-25-a/swift-6.1-DEVELOPMENT-SNAPSHOT-2025-03-25-a_static-linux-0.0.1.artifactbundle.tar.gz.sig">Signature (PGP)</a>
+      </li>
+      <li>
+        Checksum: <code>2b73c30ec402f443857e6cd2ac06b8525f186e889a7a727af05601629148fe6a</code>
+      </li>
+    </ul>
+  headline: release/6.1
+  links:
+    - href: 'https://download.swift.org/swift-6.1-branch/static-sdk/swift-6.1-DEVELOPMENT-SNAPSHOT-2025-03-25-a/swift-6.1-DEVELOPMENT-SNAPSHOT-2025-03-25-a_static-linux-0.0.1.artifactbundle.tar.gz'
+      copy: 'Download Linux Static SDK'

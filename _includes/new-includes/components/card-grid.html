@@ -1,0 +1,59 @@
+<div class="section card-grid">
+  <div class="content">
+    <!-- TODO clarify if this icon is still part of the design -->
+    <!-- <img
+      class="section-icon"
+      src="{{ include.content.image }}"
+      alt="{{ include.content.image_alt }}"
+    /> -->
+    <h2>{{ include.content.title }}</h2>
+    {% if include.content.hero_card %} {% include
+    new-includes/components/hero-card.html image = include.content.hero_card %}
+    {% endif %} {% if include.content.primary_cards %}
+    <ul class="primary-cards">
+      {% for card in include.content.primary_cards %}
+      <li>
+        <img src="{{ card.logo }}" alt="{{ card.logo_alt }}" />
+        <div>
+          <span class="name">{{ card.name }}</span>
+          <span class="text">{{ card.text }}</span>
+          <a href="{{ card.link }}">{{ card.link_text }} <i></i></a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% if include.content.secondary_cards %}
+    <ul class="secondary-cards">
+      {% for card in include.content.secondary_cards %}
+      <li>
+        <img src="{{ card.logo }}" alt="{{ card.logo_alt }}" />
+        <div>
+          <span class="name">{{ card.name }}</span>
+          <span class="text">{{ card.text }}</span>
+          <a href="{{ card.link }}">{{ card.link_text }} <i></i></a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% if include.content.tertiary_cards %}
+    <ul class="tertiary-cards">
+      {% for card in include.content.tertiary_cards %}
+      <li>
+        {% if card.image %}
+        <img src="{{card.image.url}}" alt="{{card.image.alt}}" />
+        {% endif %}
+        <div>
+          <span class="name">{{ card.name }}</span>
+          <span class="text">{{ card.text }}</span>
+          <a href="{{ card.link }}">{{ card.link_text }} <i></i></a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% if include.content.link %}
+    <a href="{{ include.content.link.url }}"
+      >{{ include.content.link.text }} <i></i
+    ></a>
+    {% endif %}
+  </div>
+</div>

@@ -1,22 +1,10 @@
 ---
-layout: page-wide
+layout: new-layouts/install-linux-version
 title: Install Swift
 ---
 
-{% include install/_os_tabs.md linux="true" %}
-
-{% include install/_linux_platforms_tabs.md ubuntu="true" %}
-
-{% include install/_os_versions_tabs.md os_versions=site.data.install.ubuntu  name="Ubuntu" pressed="Ubuntu 20.04" %}
-
-{% include install/_build_release.md platform="Ubuntu 20.04" docker_tag="focal" %}
-
-<details class="download" style="margin-bottom: 0;">
-  <summary>Older Releases</summary>
-  {% include install/_older-releases.md platform="Ubuntu 20.04" %}
-</details>
-
-{% include install/_build_snapshot.md platform="Ubuntu 20.04"
+{% include /new-includes/assigns/linux-platform-builds.html
+platform="Ubuntu 20.04"
 aarch64="true"
 branch_dir="development"
 development="main"
@@ -25,5 +13,22 @@ development_builds=site.data.builds.development.ubuntu2004
 aarch64_development_builds=site.data.builds.development.ubuntu2004-aarch64
 development_2="release/6.2"
 docker_tag_2="nightly-6.2-focal"
-development_builds_2=site.data.builds.swift-6_2-branch.ubuntu2004 aarch64_development_builds_2=site.data.builds.swift-6_2-branch.ubuntu2004-aarch64
-branch_dir_2="swift-6.2-branch"%}
+development_builds_2=site.data.builds.swift-6_2-branch.ubuntu2004
+aarch64_development_builds_2=site.data.builds.swift-6_2-branch.ubuntu2004-aarch64
+branch_dir_2="swift-6.2-branch"
+%}
+
+{% include /new-includes/components/linux-releases.html
+  docker=site.data.new-data.install.linux.ubuntu.ubuntu-20-04.releases.latest-release.docker
+  tarball=site.data.new-data.install.linux.ubuntu.ubuntu-20-04.releases.latest-release.tarball
+  static_sdk=site.data.new-data.install.linux.ubuntu.ubuntu-20-04.releases.latest-release.static-linux-sdk
+  rpm=site.data.new-data.install.linux.ubuntu.ubuntu-20-04.releases.latest-release.rpm
+  dev_main=site.data.new-data.install.linux.ubuntu.ubuntu-20-04.releases.latest-release.main
+  dev_release_6_2=site.data.new-data.install.linux.ubuntu.ubuntu-20-04.releases.latest-release.release-6-2
+  development_builds=development_builds
+  development_builds_2=development_builds_2
+  platform=platform
+  platform_name_url=platform_name_url
+  branch_dir=branch_dir
+  branch_dir_2=branch_dir_2
+%}

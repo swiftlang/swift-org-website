@@ -1,0 +1,15 @@
+- title: Package 1
+  description: This is the first package.
+  link: /packages/package-1
+- title: Package 2
+  description: This is the second package.
+  link: /packages/package-2
+- title: Package 3
+  description: This is the third package.
+  link: /packages/package-3
+- title: Package 4
+  description: This is the fourth package.
+  link: /packages/package-4
+- title: Package 5
+  description: This is the fifth package.
+  link: /packages/package-5
