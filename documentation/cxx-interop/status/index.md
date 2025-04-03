@@ -79,10 +79,20 @@ code for a specific deployment platform:
 | **Ubuntu, CentOS, Amazon Linux**  | libstdc++ |
 | **Windows**   | Microsoft C++ Standard Library (msvcprt)  |
 
+Swift also supports selecting libc++ when building on certain Linux
+distributions by passing `-Xcc -stdlib=libc++` flags. On those distributions,
+libc++ needs to be installed from a system package manager, e.g. apt or yum.
+This compatibility matrix shows the versions of libc++ that are supported by
+Swift when building for various Linux versions:
+
+| Linux version running Swift application | Supported libc++ package |
+|-----------------------------------------|--------------------------|
+| Ubuntu 22.04                            | libc++-15-dev            |
+| Ubuntu 24.04                            | libc++-18-dev            |
+
 Swift does not currently support selecting an alternative standard library for
-platforms that support alternative standard libraries. For example, you can't use
-libc++ when building Swift code for Ubuntu, even though libc++ can be used when
-building C++ code for Ubuntu.
+other platforms. For example, you can't use libc++ when building Swift code for
+Windows, even though libc++ can be used when building C++ code for Windows.
 
 Mixed Swift and C++ code must use
 the same C++ standard library.
