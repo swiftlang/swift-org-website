@@ -1285,11 +1285,6 @@ The C++ caller of this function is responsible for releasing the object.
 The `SWIFT_UNSAFE_REFERENCE` annotation macro has the same effect as `SWIFT_IMMORTAL_REFERENCE`
 annotation macro. However, it communicates different semantics: the type is intended to be used unsafely, rather than living for the duration of the program.
 
-### Unique Reference Types
-
-Unique reference types, such as types passed around by `std::unique_ptr` are
-not yet supported by Swift.
-
 ## Using C++ Standard Library from Swift
 
 This section describes how to import the C++ standard library, and how

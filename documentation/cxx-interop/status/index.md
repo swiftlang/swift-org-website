@@ -196,10 +196,11 @@ The following C++ standard library types are supported in Swift:
 - Specializations of `std::set`, `std::multiset` and `std::unordered_set`
 - Specializations of `std::optional`
 - Specializations of `std::shared_ptr`
+- Specializations of `std::unique_ptr`
 - Specializations of `std::array`
 
-Other standard library types, like `std::unique_ptr`, `std::function` and
-`std::variant` are not yet supported in Swift.
+Other standard library types, like `std::function` and `std::variant`, are not
+yet supported in Swift.
 
 ### Other C++ Features Handled by Swift
 
