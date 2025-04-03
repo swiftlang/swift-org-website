@@ -352,6 +352,7 @@ standard library that can be represented in C++:
 | `CBool`   | `bool`       |
 | `CChar`   | `char`       |
 | `CWideChar`   | `wchar_t`   |
+| `CChar8`    | `char8_t`        |
 | `CChar16`   | `char16_t`       |
 | `CChar32`   | `char32_t`   |
 | `CSignedChar`   | `signed char`   |
