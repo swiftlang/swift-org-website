@@ -492,7 +492,8 @@ because they return a reference that points into the `Forest` object.
 
 #### Virtual Member Functions
 
-Currently virtual member functions are not available in Swift.
+Virtual methods of C++ value types cannot be called from Swift. This is similar
+to C++, where you can only call virtual methods on a pointer or a reference.
 
 #### Static Member Functions
 
@@ -1253,6 +1254,14 @@ let object = SharedObject.create()
 object.doSomething()
 // `object` will be released here.
 ```
+
+### Inheritance and Virtual Member Functions
+
+Similar to value types, casting an instance of a derived reference type to a
+base reference type, or vice versa, is not yet supported by Swift.
+
+If a reference type has virtual methods, you can call those methods from Swift.
+This includes pure virtual methods.
 
 #### Exposing C++ Shared Reference Types back from Swift
 
