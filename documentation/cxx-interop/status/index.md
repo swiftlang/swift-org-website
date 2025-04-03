@@ -370,7 +370,7 @@ standard library that can be represented in C++:
 ## Constraints and Limitations
 
 Swift has some known limitations related to C++ interoperability support.
-They're currently [listed on GitHub](https://github.com/swiftlang/swift/issues/66159).
+They are currently [tracked on GitHub](https://github.com/swiftlang/swift/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22c%2B%2B%20interop%22).
 
 ### Swift Package Manager Constraints
 
