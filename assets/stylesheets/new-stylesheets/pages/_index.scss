@@ -1,0 +1,352 @@
+@use 'sass:color';
+@use '../helpers' as *;
+@use '../graphics' as *;
+
+$icons: (
+  'cloud',
+  'mobile',
+  'chip',
+  'desktop',
+  'websites',
+  'games',
+  'ai',
+  'command-line',
+  'packages'
+);
+
+.section {
+  text-align: center;
+
+  h2 {
+    font-size: 45px;
+    color: #3d3d3d;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+#what-is-swift {
+  padding-top: 72px; // height of navigation, plus standard
+  text-align: center;
+  position: relative;
+  background-color: #fbd19d;
+  @include noise();
+
+  @media only screen and (max-width: 1024px) {
+    & {
+      padding: calc(72px + 142px) 10px 214px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .animation-container {
+    top: calc(66px - 9.5vw);
+    left: 0;
+    width: 57vw;
+    min-width: 500px;
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+
+    @media only screen and (max-width: 800px) {
+      // start to crop in hero from the left
+      width: 500px;
+      left: initial;
+      right: 50%;
+      top: 11px;
+      transform: translateX(14%);
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  .hero-content {
+    margin-top: 18vw;
+    z-index: 5;
+
+    @media only screen and (max-width: 1024px) {
+      margin-top: 48px;
+    }
+  }
+
+  h1 {
+    font-size: 44px;
+    color: #3d3d3d;
+    letter-spacing: 0;
+    text-align: center;
+    text-shadow: 0 2px 30px #fac686;
+    font-weight: 600;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Install */
+  .hero-content > a {
+    @include big-button();
+  }
+
+  /* Platform Support */
+  .hero-content > p {
+    opacity: 0.66;
+    font-size: 17px;
+    color: #3d3d3d;
+    font-weight: 500;
+    margin-top: 11px;
+  }
+
+  /* Get Started */
+  h2 {
+    font-size: 32px;
+    color: #000000;
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 70px;
+    margin-bottom: 29px;
+    position: relative;
+    z-index: 1;
+  }
+
+  nav[aria-label='Get started with Swift'] {
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+
+    ul {
+      display: flex;
+
+      li {
+        a {
+          display: flex;
+          text-decoration: none;
+          color: #801a1a;
+          font-weight: 400;
+          background-color: rgba(255, 177, 100, 0.9);
+          border-radius: 36px;
+          font-size: 14px;
+          padding: 12px;
+          transition:
+            background-color 0.2s ease,
+            color 0.2s ease;
+
+          /* Icon inside button */
+          i {
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            display: inline-block;
+            vertical-align: middle;
+
+            @each $name in $icons {
+              &.#{$name} {
+                background-image: url(/assets/images/icon-#{$name}.svg);
+              }
+            }
+          }
+
+          /* Hover/focus styles */
+          &:hover,
+          &:focus {
+            background-color: rgba(230, 150, 80, 0.9);
+            outline: none;
+          }
+
+          &:focus-visible {
+            outline: 2px solid dodgerblue;
+            outline-offset: 2px;
+          }
+        }
+      }
+
+      &.primary-links {
+        gap: 20px;
+        margin-bottom: 20px;
+
+        li {
+          flex: 1; // equal width
+
+          a {
+            text-align: left;
+            padding: 25px;
+            gap: 12px;
+
+            .title {
+              font-size: 24px;
+              font-weight: 600;
+              margin-bottom: 8px;
+            }
+
+            i {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+
+      &.secondary-links {
+        gap: 15px;
+
+        li {
+          flex-grow: 1; // varied width
+
+          a {
+            gap: 8px;
+
+            .title {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    /* Mobile */
+    @media only screen and (max-width: 1024px) {
+      max-width: 100%;
+
+      ul {
+        flex-direction: column;
+
+        &.primary-links {
+          gap: 15px;
+          margin-bottom: 15px;
+        }
+
+        &.primary-links,
+        &.secondary-links {
+          li {
+            a {
+              padding: 20px;
+              align-items: center;
+              gap: 12px;
+
+              i {
+                width: 30px;
+                height: 30px;
+              }
+
+              .title {
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: capitalize;
+                margin: 0;
+              }
+
+              .subtitle {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .swoop {
+    @include swoop-ratio(2048, 703, 1.33);
+    background-image: url(/assets/images/landing-page/swoops/swoop-0.png);
+    z-index: 1;
+    background-size: 133%;
+    background-position: 45% 0;
+  }
+} // what-is-swift
+
+.pillar {
+  padding: 200px 0;
+  position: relative;
+  overflow: visible;
+
+  @include noise();
+}
+
+.swoop {
+  display: block;
+  background: none no-repeat;
+  background-size: 120%;
+  background-position: -25% 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
+.code {
+  text-align: left;
+  margin: 0 auto 10px;
+  max-width: 900px;
+  position: relative;
+  z-index: 10;
+  overflow-x: scroll;
+
+  pre.highlight {
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 28px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+#pillar-0 {
+  background-color: #bbbbbb;
+}
+
+#pillar-1 {
+  background-image: linear-gradient(180deg, #f9f9f9 0%, #d9f2ff 100%);
+
+  .swoop {
+    @include swoop-ratio(444, 97, 1.33);
+    z-index: 1;
+    background-size: 133%;
+    background-position: 60% 0;
+    bottom: -5vw;
+    background-image: url('/assets/images/landing-page/swoops/swoop-1.png');
+  }
+}
+
+#pillar-2 {
+  padding: 100px 0 180px;
+  background-image: linear-gradient(1deg, #e4937f 0%, #fdd9a1 99%);
+
+  .swoop {
+    @include swoop-ratio(2624, 1073, 1.33);
+    z-index: 1;
+    background-size: 133%;
+    background-position: 45% 0;
+    bottom: -5vw;
+    background-image: url('/assets/images/landing-page/swoops/swoop-2.png');
+  }
+}
+
+#pillar-3 {
+  background-image: linear-gradient(180deg, #a268c1 0%, #4b3773 100%);
+  padding: 60px 0 40px;
+
+  .callout {
+    color: white;
+    max-width: 760px;
+  }
+}
+
+#pillar-4 {
+  background-color: #d8bfd8;
+}
+
+#pillar-5 {
+  background-color: #b0e0e6;
+}

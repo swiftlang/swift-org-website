@@ -1,0 +1,12 @@
+{% assign path_parts = page.url | split: '/' %} {% assign selected =
+path_parts[2] | default: 'macos' %}
+<div class="os-selection-navigation">
+  <h1>Install Swift</h1>
+  <p>
+    Follow the instructions below to install the latest version of Swift on a
+    <a href="/platform-support">supported platform</a>.
+  </p>
+  {% assign tabs = site.data.new-data.os-versions %} {% include
+  new-includes/components/interactive-tabs.html tabs=tabs class="os"
+  selected=selected %}
+</div>

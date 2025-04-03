@@ -1,0 +1,20 @@
+@media only screen and (max-width: 1024px) {
+  .overlapping-containers {
+    max-width: 100%;
+    flex-direction: column;
+    margin: 0 20px;
+
+    .box-left {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    .box-right {
+      width: 100%;
+      box-sizing: border-box;
+      margin-left: 0;
+      padding-left: 1rem;
+    }
+  }
+}

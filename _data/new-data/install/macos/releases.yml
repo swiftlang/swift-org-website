@@ -1,0 +1,26 @@
+latest-release:
+  swiftly:
+    pre-code-text: |
+      To download toolchains from Swift.org, use the Swiftly toolchain installer. Swift.org toolchains support Static Linux SDK, include experimental features like Embedded Swift and support for WebAssembly.
+      <br /><br />
+      Run this in a terminal:
+    headline: Swiftly
+    code: |
+      curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg && \
+      installer -pkg swiftly.pkg -target CurrentUserHomeDirectory && \
+      ~/.swiftly/bin/swiftly init --quiet-shell-followup && \
+      . ~/.swiftly/env.sh && \
+      hash -r
+    links:
+      - href: "https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt"
+        copy: "License: Apache-2.0"
+    buttons:
+      - href: "https://www.swift.org/install/macos/swiftly"
+        copy: "Instructions"
+  xcode:
+    pre-code-text: |
+      To develop with Swift for Apple platforms, download the latest version of Xcode, which is regularly refreshed with the latest Swift toolchain.
+    headline: Xcode
+    buttons:
+      - href: "https://developer.apple.com/xcode"
+        copy: "Install Xcode"

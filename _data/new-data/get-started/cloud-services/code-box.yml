@@ -1,0 +1,9 @@
+headline: Build and deploy Swift with containers
+code: $ docker pull swift
+after-code-text: Aliquam finibus urna nec semper sollicitudin. Mauris in purus sed elit
+  semper blandit. Integer facilisis venenatis feugiat. Fusce hendrerit sem ac
+  elit porttitor cursus. Mauris in purus sed elit semper blandit. Integer
+  facilisis venenatis feugiat. Fusce hendrerit sem ac elit porttitor.
+link:
+  href: '#'
+  copy: Container

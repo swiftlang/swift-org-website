@@ -1,0 +1,70 @@
+@use '../../helpers' as *;
+
+.callout {
+  gap: 26px;
+  align-items: flex-start;
+  padding: 1em;
+  margin: 1.5em auto;
+  max-width: 980px;
+  box-sizing: border-box;
+  text-align: center;
+
+  > div {
+    min-width: 0;
+  }
+
+  &.with-code {
+    display: grid;
+    grid-template-columns: 2.2fr 3.2fr;
+    text-align: left;
+
+    .text {
+      width: 100%;
+    }
+
+    .code {
+      width: 100%;
+    }
+  }
+
+  .links {
+    margin-top: 30px;
+
+    a {
+      @include link-with-right-arrow();
+      display: block;
+      color: white;
+      margin-top: 14px;
+
+      i {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+}
+
+.callout.reverse {
+  direction: rtl;
+}
+
+.callout.reverse > * {
+  direction: ltr;
+}
+
+.callout-title {
+  margin: 0 0 0.2em;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.callout-subtitle {
+  margin: 0 0 1em;
+  font-size: 1.4em;
+}
+
+.callout-text {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: left;
+}

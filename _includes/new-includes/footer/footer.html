@@ -1,0 +1,60 @@
+<footer role="contentinfo">
+  <div class="footer-content">
+    {{ include.licenseinfo }}
+    <p class="copyright">
+      Copyright © {{ site.time | date: '%Y' }} Apple Inc. All rights reserved.
+    </p>
+    <p class="trademark">
+      Swift and the Swift logo are trademarks of Apple Inc.
+    </p>
+    <p class="privacy">
+      {% for item in site.data.new-data.footer.legals-navigation %}
+      <a href="{{ item.link }}">{{ item.title }}</a>
+      {% endfor %}
+    </p>
+  </div>
+  <div class="footer-other">
+    <form
+      class="color-scheme-toggle"
+      role="radiogroup"
+      tabindex="0"
+      id="color-scheme-toggle"
+    >
+      <legend class="visuallyhidden">Color scheme preference</legend>
+      <label for="scheme-light">
+        <input
+          id="scheme-light"
+          type="radio"
+          name="color-scheme-preference"
+          value="light"
+        />
+        <span class="color-scheme-toggle-label">Light</span>
+      </label>
+      <label for="scheme-dark">
+        <input
+          id="scheme-dark"
+          type="radio"
+          name="color-scheme-preference"
+          value="dark"
+        />
+        <span class="color-scheme-toggle-label">Dark</span>
+      </label>
+      <label for="scheme-auto" id="scheme-auto-wrapper">
+        <input
+          id="scheme-auto"
+          type="radio"
+          name="color-scheme-preference"
+          value="auto"
+        />
+        <span class="color-scheme-toggle-label">Auto</span>
+      </label>
+    </form>
+    <aside>
+      {% for item in site.data.new-data.footer.social-navigation %}
+      <a href="{{ item.link }}" rel="me" title="{{ item.title }}"
+        ><i class="{{ item.class }}"></i
+      ></a>
+      {% endfor %}
+    </aside>
+  </div>
+</footer>

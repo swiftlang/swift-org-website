@@ -1,0 +1,317 @@
+@use '../helpers' as *;
+
+@mixin button-style {
+  text-decoration: none;
+  color: #801a1a;
+  font-weight: 400;
+  background-color: rgba(255, 177, 100, 0.9);
+  border-radius: 36px;
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 12px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 6px;
+    min-width: 80px;
+  }
+
+  & > div {
+    display: inline-block;
+    margin-left: 14px;
+  }
+
+  &[aria-pressed='true'],
+  &:hover,
+  &:focus {
+    background-color: rgba(200, 100, 12, 0.9);
+    border: 0 !important;
+    color: white;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid dodgerblue;
+    outline-offset: 2px;
+  }
+
+  span {
+    display: block;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    white-space: normal;
+  }
+}
+
+#install {
+  @include noise();
+  position: relative;
+  background-image: linear-gradient(-16deg, #97ffbd 1%, #006239 70%);
+  padding: 160px 0;
+
+  .content {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 1024px) {
+      padding: 20px;
+    }
+
+    h2 {
+      color: white;
+      text-align: left;
+    }
+  }
+}
+
+.os-selection-navigation {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  box-sizing: border-box;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 2;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 0 20px;
+  }
+
+  & > h1 {
+    font-size: 44px;
+  }
+
+  & > h2 {
+    color: white;
+    margin-top: 60px;
+  }
+
+  & > p {
+    font-size: 1.4em;
+    margin: 20px 0 40px;
+  }
+
+  a {
+    color: white;
+  }
+
+  label {
+    margin: 10px 0 20px;
+    display: block;
+  }
+
+  .interactive-tabs {
+    @media only screen and (max-width: 1024px) {
+      max-width: 100%;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+
+      a {
+        min-width: 120px;
+        text-align: center;
+        @include button-style;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        gap: 6px;
+      }
+    }
+  }
+}
+
+.release-box {
+  width: 100%;
+  position: relative;
+  padding: 30px 0 10px;
+
+  a {
+    &.button {
+      margin-top: 10px;
+      @include button-style;
+    }
+  }
+
+  summary {
+    font-size: 20px;
+    display: list-item;
+    cursor: pointer;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-size: 16px;
+    table-layout: auto;
+    border: 1px solid #ccc;
+
+    .release {
+      button {
+        border: 0;
+        cursor: pointer;
+        @include button-style;
+      }
+    }
+  }
+
+  table thead {
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #ccc;
+  }
+
+  table th,
+  table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  table th.download {
+    font-weight: 600;
+    color: #333;
+  }
+
+  table td a {
+    color: #007aff;
+    text-decoration: none;
+  }
+
+  table td a:hover {
+    text-decoration: underline;
+  }
+
+  table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  @media only screen and (max-width: 768px) {
+    table th,
+    table td {
+      padding: 10px 8px;
+      font-size: 14px;
+    }
+
+    table {
+      font-size: 14px;
+    }
+
+    table thead {
+      display: none;
+    }
+
+    table tr {
+      display: block;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    table td {
+      display: block;
+      position: relative;
+    }
+
+    table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 16px;
+      width: 45%;
+      text-align: left;
+      font-weight: bold;
+      color: #666;
+    }
+  }
+
+  .code-block {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+
+    h2 {
+      color: black !important;
+    }
+
+    pre {
+      overflow: scroll;
+    }
+
+    .button-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-start;
+    }
+  }
+
+  .content {
+    background-color: white;
+    max-width: 900px;
+    width: 900px;
+    margin: 0 auto;
+    z-index: 3;
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+    padding: 20px;
+
+    & > h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    & > p {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.releases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  .release-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      .code-block {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 200px;
+
+        .body-copy {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}

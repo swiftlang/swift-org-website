@@ -1,0 +1,6 @@
+- title: Memory efficient
+  text: As a compiled language, Swift has predictable runtime performance that's unaffected by a garbage collector.
+- title: Quick start-up time
+  text: With minimal warm-up operations, Swift is an ideal fit for cloud services which are often rescheduled onto virtual machines or containers.
+- title: Productivity ready
+  text: Swift on Server is used in production for large-scale services.

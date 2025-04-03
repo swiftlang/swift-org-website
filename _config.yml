@@ -29,3 +29,4 @@ whitelist:
 
 include:
  - .well-known
+ - assets/fonts

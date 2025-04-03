@@ -1,0 +1,137 @@
+@use 'sass:list';
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin inline-link-style {
+  padding: 0.5em;
+  display: inline-block;
+  color: black;
+
+  &::before {
+    content: attr(data-text);
+    display: block;
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+@mixin link-with-right-arrow {
+  color: #384fea;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  i {
+    display: inline-block;
+    background: url(/assets/images/icon-arrow-right-circle.svg) no-repeat center;
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@mixin appearance-none {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@mixin mobile-toggle-btn($bg-img) {
+  display: block;
+  @include appearance-none;
+  border: none;
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  background-image: $bg-img;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+@mixin visuallyhidden() {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin nav-link-style {
+  color: var(--color-nav-link-color);
+  transition:
+    color 0.2s ease,
+    border 0.2s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+@mixin swoop-ratio($width, $height, $multiplier) {
+  aspect-ratio: list.slash($width, calc($height * $multiplier));
+}
+
+@mixin noise {
+  &::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/assets/images/noise.png);
+    opacity: 0.04;
+    z-index: 1;
+  }
+}
+
+@mixin big-button {
+  z-index: 5;
+  position: relative;
+  display: inline-block;
+  font-size: 35px;
+  color: #ffffff;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 15px 81px;
+  background-image: linear-gradient(to bottom right, #ff7f00, #f05238);
+  border-radius: 43px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: #ff7f00;
+    color: #e0e0e0;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid dodgerblue;
+    outline-offset: 2px;
+  }
+}
+
+@mixin lazyloadBg($url) {
+  background-image: none;
+
+  &.visible {
+    background-image: url($url);
+  }
+}

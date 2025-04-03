@@ -1,0 +1,17 @@
+<div class="image-text-section content-wrapper">
+  <div class="image-column">
+    <img
+      src="{{ include.image-section.src }}"
+      alt="{{ include.image-section.alt }}"
+    />
+  </div>
+  <div class="copy-wrapper">
+    <h3>{{ include.text-section.headline }}</h3>
+    {% for paragraph in include.text-section.paragraphs %}
+    <p>{{paragraph}}</p>
+    {% endfor %}
+    <a href="{{include.text-section.link.href}}"
+      >{{include.text-section.link.copy}} <i></i
+    ></a>
+  </div>
+</div>

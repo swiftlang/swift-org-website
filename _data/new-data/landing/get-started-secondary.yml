@@ -1,0 +1,23 @@
+- title: Linux
+  data-text: Linux
+  link: /get-started/linux
+
+- title: Apple Platforms
+  data-text: Apple Platforms
+  link: https://developer.apple.com/swift
+
+- title: Windows
+  data-text: Windows
+  link: /get-started/windows
+
+- title: Games
+  data-text: Games
+  link: /get-started/games
+
+- title: machine learning &amp; AI
+  data-text: Machine learning and AI
+  link: /get-started/machine-learning-and-ai
+
+- title: Packages
+  data-text: Packages
+  link: /get-started/library-packages

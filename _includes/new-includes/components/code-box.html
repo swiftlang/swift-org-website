@@ -1,0 +1,19 @@
+<div class="code-block content-wrapper">
+  <h2>{{include.content.headline}}</h2>
+  {% if include.content.pre-code-text %}
+  <p class="body-copy">{{include.content.pre-code-text}}</p>
+  {% endif %} {% if include.content.code %}
+  <pre><code>{{include.content.code}}</code></pre>
+  {% endif %} {% if include.content.after-code-text %}
+  <p class="body-copy">{{include.content.after-code-text}}</p>
+  {% endif %} {% if include.content.links %} {% for link in
+  include.content.links %}
+  <a class="body-copy" href="{{ link.href }}"> {{ link.copy }} <i></i> </a>
+  {% endfor %} {% endif %} {% if include.content.buttons %}
+  <div class="button-list">
+    {% for button in include.content.buttons %}
+    <a class="button" href="{{ button.href }}"> {{ button.copy }} </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

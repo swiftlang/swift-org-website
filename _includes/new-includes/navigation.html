@@ -1,0 +1,56 @@
+<header class="site-navigation">
+  <div class="wrapper">
+    <h1 class="logo">
+      <a href="/" title="Swift.org"> {% include logo.html %} </a>
+    </h1>
+
+    <!-- desktop-navigation -->
+    <nav class="desktop-navigation" role="navigation">
+      <ul class="navigation-items">
+        {% for nav in site.data.new-data.header.navigation %}
+        <li class="nav-item{% if nav.isCta %} nav-cta{% endif %}">
+          <a href="{{ nav.url }}" data-text="{{ nav.header }}"
+            >{{ nav.header }}</a
+          >
+        </li>
+        {% endfor %}
+        <li class="border">
+          <span />
+        </li>
+        <li>
+          <a href="/install" data-text="Install"
+            >Install ({{ site.data.builds.swift_releases.last.name }})</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- toggle -->
+    <button
+      id="menu-toggle"
+      class="menu-item menu-toggle open"
+      aria-expanded="false"
+      aria-label="Toggle Navigation Menu"
+    />
+  </div>
+
+  <!-- mobile-navigation -->
+  <nav class="mobile-navigation" role="navigation">
+    <ul class="navigation-items">
+      {% for nav in site.data.new-data.header.navigation %}
+      <li class="nav-item">
+        <a
+          class="link-container{% if page.url == nav.url %} active{% endif %}"
+          href="{{ nav.url }}"
+          >{{ nav.header }}</a
+        >
+      </li>
+      {% endfor %}
+      <li>
+        <a href="/install" data-text="Install"
+          >Install ({{ site.data.builds.swift_releases.last.name }})</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>

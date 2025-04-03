@@ -1,0 +1,112 @@
+- title: Approachable.
+  subtitle: Adopt advanced features over time.
+  text: Swift is easy to learn. If you’re an experienced developer, Swift empowers you to develop in object-oriented, functional, and protocol-oriented patterns. And if you’re a new developer, Swift’s intuitive design makes it easy to jump right in. As your skills evolve and grow, Swift allows you to gradually take advantage of more advanced features.
+  code: |
+    import ArgumentParser
+
+    @main
+    struct Summarize: ParsableCommand {
+        enum Statistic: String, EnumerableFlag {
+            case mean, median, mode
+        }
+    
+        @Flag(help: "The kind of summary statistics to provide.")
+        var statistic: [Statistic] = [.mean]
+        
+        @Argument(help: "The values to summarize.")
+        var values: [Double]
+        
+        mutating func run() throws {
+            values.sort()
+            
+            if statistic.contains(.mean) {
+                print("Mean: \(values.reduce(0, +) / Double(values.count))")
+            }
+            
+            if statistic.contains(.median) {
+                let middle = values.count / 2
+                print("Median: \(values[middle])")
+            }
+            
+            if statistic.contains(.mode) {
+                let sortedCounts = Dictionary(grouping: values, by: \.self)
+                    .sorted(by: { $0.value.count < $1.value.count })
+                print("Mode: \(sortedCounts.last!.key)")
+            }
+        }
+    }
+
+- title: Fast.
+  subtitle: Build with speed and performance.
+  text: Swift meets the most performance-critical needs, while allowing your code to remain expressive and approachable. Swift compiles directly to native code and provides predictable memory management.
+  code: |
+    func isASCII(input: [4 x SIMD16<UInt8>]) -> Bool {
+      (0 ..< 4).reduce(into: SIMD16()) {
+        $0 |= input[$1]
+      }.max() < 0x80
+    }
+
+- title: Safe.
+  subtitle: Protect memory safety.
+  text: Swift prioritizes safety and eliminates entire classes of bugs and vulnerabilities by its design. Memory safety and data race safety are core features of the language, making them straightforward to integrate into your codebase. Safety is required at compile time, before your applications are ever run.
+  code: |
+    let transform: Span<Double> = Affine2DTransformBuilder()
+        .translate([10.0, 20.0].span)
+        .rotate(30.0)
+        .build()
+    let v: [Double] = [11.0, 22.0, 1.0]
+    let u = mat_vec_mul(transform, rowCount, colCount, v.span, allocator)
+    let uMagnitude = vec_mag(u.span)
+
+- title: Interoperable.
+  subtitle: Adopt in existing code incrementally.
+  text: Swift’s interoperability features allow you to incrementally adopt the language into existing codebases without requiring a full code rewrite. Interoperability is bi-directional and works with other languages, including C, C++, Objective-C, and Java. And Swift can directly call code written in C without requiring a bridging layer or additional effort.
+  code: |
+    let vegetable = "red pepper"
+
+    switch vegetable {
+
+    case "celery":
+
+        print("Add some raisins and make ants on a log.")
+
+    case "cucumber", "watercress":
+
+        print("That would make a good tea sandwich.")
+
+    case let x where x.hasSuffix("pepper"):
+
+        print("Is it a spicy \(x)?")
+
+    default:
+
+        print("Everything tastes good in soup.")
+
+    }
+
+    // Prints "Is it a spicy red pepper?"
+
+- title: Scalable.
+  subtitle: Use in many different ways.
+  text: Swift excels across a range of uses and technical requirements, from constrained environments like firmware where every byte counts, to cloud services handling billions of requests a day.
+  code: |
+    // Configure pins A9 and A7 for UART
+    gpioa.configure(pin: 9, as: .init(mode: .alternateFunction, outputType: .pushPull, outputSpeed: .low, pull: .none, alternateFunction: 7))
+    gpiob.configure(pin: 7, as: .init(mode: .alternateFunction, outputType: .pushPull, outputSpeed: .low, pull: .none, alternateFunction: 7))
+    
+    // Enable RX and TX for UART, use 115,200 baud rate
+    usart1.brr.modify { $0.raw.brr_field = 16_000_000 / 115200 }
+    usart1.cr1.modify { rw in
+      rw.ue = .Enabled
+      rw.re = .Enabled
+      rw.te = .Enabled
+    }
+
+- title: Open Source.
+  subtitle: Contribute and get involved.
+  text: Swift is developed through collaboration. As an open source project, Swift has a community governance structure. And we invite you to get involved with the ongoing evolution of the Swift language community, and ecosystem.
+  links:
+    - link: https://github.com/swiftlang
+      text: View SwiftLang on GitHub
+    - link: https://forums.swift.org
+      text: Join the forums

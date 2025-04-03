@@ -1,0 +1,12 @@
+@media only screen and (max-width: 1024px) {
+  footer[role='contentinfo'] {
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+  .footer-other {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}

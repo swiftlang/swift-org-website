@@ -1,0 +1,17 @@
+<ul class="navigation-items">
+  {% for nav in site.data.new-data.header.navigation %}
+  <li class="nav-item {% if page.url == nav.url %}active{% endif %}">
+    <a href="{{ nav.url }}" data-text="{{ nav.header }}"
+      >{{ nav.header }}</a
+    >
+  </li>
+  {% endfor %}
+  <li class="border">
+    <span />
+  </li>
+  <li class="nav-item {% if page.url == nav.url %}active{% endif %}">
+    <a href="/install" data-text="Install"
+      >Install <span>({{ site.data.builds.swift_releases.last.name }})</span></a
+    >
+  </li>
+</ul>

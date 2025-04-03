@@ -1,0 +1,90 @@
+@use '../../colors' as *;
+@use '../../helpers' as *;
+@use '../../graphics' as *;
+
+.site-navigation {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  line-height: initial;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgb(229, 231, 235, 0.5);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+  .wrapper {
+    @include flex-between;
+    padding: 0 20px;
+  }
+
+  .logo {  
+    margin: 0;
+
+    a {
+      display: flex;
+      width: 116px;
+    }
+  }
+
+  // hide mobile navigation
+  .menu-toggle,
+  .mobile-navigation {
+    display: none;
+  }
+
+  .navigation-items {
+    display: flex;
+    list-style: none;
+
+    li {
+      a {
+        display: block;
+        padding: 22px 15px;
+        font-size: 19px;
+        color: #051416;
+        transition:
+          background-color 0.2s ease,
+          color 0.2s ease; // smooth hover
+
+        // hover/focus states
+        &:hover,
+        &:focus {
+          background-color: rgba(0, 0, 0, 0.05);
+          outline: none; // basic focus outline removal
+        }
+
+        // visual focus indicator for accessibility
+        &:focus-visible {
+          outline: 2px solid dodgerblue;
+          outline-offset: 2px;
+        }
+      }
+
+      &.active {
+        a {
+          background-color: rgba(0, 0, 0, 0.05);
+          outline: none; // basic focus outline removal
+        }
+      }
+    }
+  }
+
+  // use a border to separate "Install"
+  .desktop-navigation {
+    .navigation-items {
+      li.border {
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+
+        span {
+          display: block;
+          width: 2px;
+          height: 18px;
+          background-color: #051416;
+        }
+      }
+    }
+  }
+} // .site-navigation

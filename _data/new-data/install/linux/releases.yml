@@ -1,0 +1,28 @@
+latest-release:
+  swiftly:
+    pre-code-text: |
+      The Swiftly installer manages Swift and its dependencies. It supports switching between different versions and downloading updates.
+      <br /><br />
+      Run this in a terminal:
+    headline: Swiftly (recommended)
+    code: |
+      curl -O "https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz" && \
+      tar zxf "swiftly-$(uname -m).tar.gz" && \
+      ./swiftly init --quiet-shell-followup && \
+      . ~/.local/share/swiftly/env.sh && \
+      hash -r
+    links:
+      - href: "https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt"
+        copy: "License: Apache-2.0"
+      - href: "https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz.sig"
+        copy: "PGP: Signature"
+    buttons:
+      - href: "https://www.swift.org/install/linux/swiftly"
+        copy: "Instructions"
+  container:
+    pre-code-text: |
+      If you prefer a containerized environment, you can download the official container images for compiling and running Swift on a variety of distributions.
+    headline: Container
+    buttons:
+      - href: "https://hub.docker.com/_/swift"
+        copy: "Docker Hub"

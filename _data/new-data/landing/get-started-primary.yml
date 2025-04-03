@@ -1,0 +1,14 @@
+- title: Cloud Services
+  subtitle: Run performant services on Linux and deploy to the cloud.
+  data-text: Cloud Services
+  link: /get-started/cloud-services
+
+- title: Command Line
+  subtitle: Create powerful CLI tools that are fast and memory safe.
+  data-text: Command Line
+  link: /get-started/command-line-tools
+
+- title: Embedded
+  subtitle: Develop firmware and embed Swift on devices like microcontrollers.
+  data-text: Embedded
+  link: /get-started/embedded

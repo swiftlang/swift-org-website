@@ -1,0 +1,144 @@
+@use '../../colors' as *;
+@use '../../graphics' as *;
+@use '../../helpers' as *;
+
+$footer-margin-top: 4em;
+$footer-padding: 1.5em 0 1em 0;
+$footer-min-height: 74px;
+
+@mixin icon-style($icon) {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  display: block;
+  margin-left: 1em;
+  float: right;
+  background-image: $icon;
+}
+
+footer {
+  margin-top: $footer-margin-top;
+  padding: $footer-padding;
+
+  nav {
+    [rel='prev'],
+    [rel='next'] {
+      width: 45%;
+      text-align: inherit;
+      float: inherit;
+    }
+
+    [rel='prev'] {
+      float: left;
+      text-align: left;
+
+      &:before {
+        content: '← ';
+      }
+    }
+
+    [rel='next'] {
+      float: right;
+      text-align: right;
+
+      &:after {
+        content: ' →';
+      }
+    }
+  }
+
+  &[role='contentinfo'] {
+    background: #eeeeee;
+    border-top: 1px solid black;
+    color: black;
+    padding: 20px 30px;
+    min-height: $footer-min-height;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 0.625em;
+      color: black;
+      line-height: 1em;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.privacy a {
+        color: black;
+        border-right: 1px solid black;
+        margin-right: 6px;
+        padding-right: 8px;
+
+        &:last-child {
+          border: none;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    aside {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+
+      i {
+        &.x {
+          @include icon-style($icon-x);
+        }
+
+        &.mastodon {
+          @include icon-style($icon-mastodon);
+        }
+
+        &.bluesky {
+          @include icon-style($icon-bluesky);
+        }
+
+        &.feed {
+          @include icon-style($icon-feed);
+        }
+      }
+    }
+  }
+}
+
+.color-scheme-toggle {
+  display: inline-flex;
+  font-size: 12px;
+  border: 1px solid $accent;
+  border-radius: 4px;
+  padding: 1px;
+  margin-bottom: 10px;
+  outline: none;
+
+  input,
+  legend {
+    @include visuallyhidden;
+    appearance: none;
+  }
+}
+
+.color-scheme-toggle-label {
+  border: 1px solid transparent;
+  color: $accent;
+  display: inline-block;
+  text-align: center;
+  padding: 1px 6px;
+  min-width: 42px;
+  box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input:checked + .color-scheme-toggle-label {
+  background: #a5a5a5;
+  color: white;
+}
