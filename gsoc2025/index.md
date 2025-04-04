@@ -388,6 +388,32 @@ Strech goals:
 - [Si Beaumont](https://github.com/simonjbeaumont)
 - [Honza Dvorsky](https://github.com/czechboy0)
 
+
+### Swift for Embedded Linux
+
+**Project size**: 350 hours (large)
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+C++, Swift, Python, CMake, Bitbake
+
+**Description**
+
+Apple's Swift programming language is growing. With the static Linux SDK (https://www.swift.org/documentation/articles/static-linux-getting-started.html) and Swift cross compilation concept(https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md) efforts have been made to port Swift to more platforms.
+I would like to join these efforts and bring Swift to Embedded Linux using Yocto.
+
+**Expected outcomes/benefits/deliverables**
+
+- Swift built using Yocto for architectures: arch32, aarch64 and x86_64
+- CI on swiftlang/swift for Embedded Linux 
+- meta-swift (Yocto layer) established on swiftlang
+
+**Potential mentors**
+
+- [Luke Howard](https://github.com/lhoward)
+
 ### Example project name
 
 **Project size**: N hours
