@@ -406,7 +406,7 @@ I would like to join these efforts and bring Swift to Embedded Linux using Yocto
 
 **Expected outcomes/benefits/deliverables**
 
-- Swift built using Yocto for architectures: arch32, aarch64 and x86_64
+- Swift built using Yocto for architectures: aarch32, aarch64 and x86_64
 - CI on swiftlang/swift for Embedded Linux 
 - meta-swift (Yocto layer) established on swiftlang
 
