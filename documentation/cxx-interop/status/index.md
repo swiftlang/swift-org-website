@@ -230,15 +230,13 @@ header.
 
 ### Swift Structures Supported by C++
 
-Swift can generate C++ representation for most top-level Swift structures. The
-following Swift structures are not yet supported:
+Swift can generate C++ representation for most Swift structures. The following
+Swift structures are not yet supported:
 
 - Zero-sized structures that don't have any stored properties
 - Non-copyable structures
 - Generic structures with generic constraints, or with more than three generic
   parameters, or that have variadic generics
-
-Swift currently does not expose nested structures to C++.
 
 ### Swift Classes and Actors Supported by C++
 
@@ -247,8 +245,6 @@ actors. The
 following Swift classes are not yet supported:
 
 - Generic classes and actors
-
-Swift currently does not expose nested classes and actors to C++.
 
 ### Swift Enumerations Supported by C++
 
