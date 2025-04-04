@@ -196,10 +196,11 @@ The following C++ standard library types are supported in Swift:
 - Specializations of `std::set`, `std::multiset` and `std::unordered_set`
 - Specializations of `std::optional`
 - Specializations of `std::shared_ptr`
+- Specializations of `std::unique_ptr`
 - Specializations of `std::array`
 
-Other standard library types, like `std::unique_ptr`, `std::function` and
-`std::variant` are not yet supported in Swift.
+Other standard library types, like `std::function` and `std::variant`, are not
+yet supported in Swift.
 
 ### Other C++ Features Handled by Swift
 
@@ -229,15 +230,13 @@ header.
 
 ### Swift Structures Supported by C++
 
-Swift can generate C++ representation for most top-level Swift structures. The
-following Swift structures are not yet supported:
+Swift can generate C++ representation for most Swift structures. The following
+Swift structures are not yet supported:
 
 - Zero-sized structures that don't have any stored properties
 - Non-copyable structures
 - Generic structures with generic constraints, or with more than three generic
   parameters, or that have variadic generics
-
-Swift currently does not expose nested structures to C++.
 
 ### Swift Classes and Actors Supported by C++
 
@@ -246,8 +245,6 @@ actors. The
 following Swift classes are not yet supported:
 
 - Generic classes and actors
-
-Swift currently does not expose nested classes and actors to C++.
 
 ### Swift Enumerations Supported by C++
 
@@ -351,6 +348,7 @@ standard library that can be represented in C++:
 | `CBool`   | `bool`       |
 | `CChar`   | `char`       |
 | `CWideChar`   | `wchar_t`   |
+| `CChar8`    | `char8_t`        |
 | `CChar16`   | `char16_t`       |
 | `CChar32`   | `char32_t`   |
 | `CSignedChar`   | `signed char`   |
@@ -369,7 +367,7 @@ standard library that can be represented in C++:
 ## Constraints and Limitations
 
 Swift has some known limitations related to C++ interoperability support.
-They're currently [listed on GitHub](https://github.com/swiftlang/swift/issues/66159).
+They are currently [tracked on GitHub](https://github.com/swiftlang/swift/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22c%2B%2B%20interop%22).
 
 ### Swift Package Manager Constraints
 
