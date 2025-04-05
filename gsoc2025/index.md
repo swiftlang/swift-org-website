@@ -401,8 +401,15 @@ C++, Swift, Python, CMake, Bitbake
 
 **Description**
 
-Apple's Swift programming language is growing. With the [static Linux SDK](https://www.swift.org/documentation/articles/static-linux-getting-started.html) and [Swift cross compilation concept](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md) efforts have been made to port Swift to more platforms.
-I would like to join these efforts and bring Swift to Embedded Linux using Yocto. As clarification Swift for Embedded Linux is supposed to be a full featured Swift, since it has nothing to do with Embedded Swift, which only contains a subset of Swift's features.
+Apple's Swift programming language is growing. With the [static Linux
+SDK](https://www.swift.org/documentation/articles/static-linux-getting-started.html)
+and [Swift cross compilation
+concept](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md)
+efforts have been made to port Swift to more platforms. I would like to join
+these efforts and bring Swift to Embedded Linux using Yocto. As clarification
+Swift for Embedded Linux is supposed to be a full featured Swift, since it has
+nothing to do with Embedded Swift, which only contains a subset of Swift's
+features.
 
 **Expected outcomes/benefits/deliverables**
 
