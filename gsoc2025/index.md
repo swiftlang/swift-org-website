@@ -421,7 +421,7 @@ features.
 
 - [Xaver Gruber](https://github.com/xavgru12)
 
-**Potential mentors**
+**Mentor**
 
 - [Luke Howard](https://github.com/lhoward)
 
