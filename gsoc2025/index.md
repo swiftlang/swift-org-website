@@ -410,6 +410,10 @@ I would like to join these efforts and bring Swift to Embedded Linux using Yocto
 - CI on swiftlang/swift for Embedded Linux 
 - meta-swift (Yocto layer) established on swiftlang
 
+**Contributor**
+
+- [Xaver Gruber](https://github.com/xavgru12)
+
 **Potential mentors**
 
 - [Luke Howard](https://github.com/lhoward)
