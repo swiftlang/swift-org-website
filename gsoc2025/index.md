@@ -429,7 +429,7 @@ from Java, using these generated Java accessor classes.
 
 **Recommended skills**
 
-C++, Swift, Python, CMake, Bitbake
+- C++, Swift, Python, CMake, Bitbake
 
 **Description**
 
