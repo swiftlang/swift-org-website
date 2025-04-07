@@ -388,6 +388,39 @@ Strech goals:
 - [Si Beaumont](https://github.com/simonjbeaumont)
 - [Honza Dvorsky](https://github.com/czechboy0)
 
+### JNI mode for swift-java's source jextract tool
+
+**Project size**: 350 hours (large)
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+- Basic proficiency in Java, since the source generator will be emitting both Java and Swift code.
+
+**Description**
+
+The existing [swift-java](https://github.com/swiftlang/swift-java) Java interoperability project currently supports both JNI and Java's new Foreign Function & Memory API's, 
+however the latter source generator which works by analysis of existing Swift code, and emitting Java "accessors" to these
+currently only works with JDK 22+ because it uses FFM for its implementation. It would be possible–and beneficial for platforms
+where JDK 22+ is not available–to allow the `jextract` tool also operate in a limited functionality JNI mode.
+
+This project would kickstart the work on a JNI mode for the `jextract` tool, allowing for calling for any Swift APIs
+from Java, using these generated Java accessor classes.
+
+**Expected outcomes/benefits/deliverables**
+
+- Provide a new JNI mode for the `jextract`
+- Achieve feature parity with the current day FFM mode of jextract
+- The project can be stretched to provide more features and continue work on jextract, providing more flexibility in the tool 
+
+**Potential mentors**
+
+- [Konrad 'ktoso' Malawski](https://github.com/ktoso)
+
+
+
 ### Example project name
 
 **Project size**: N hours
