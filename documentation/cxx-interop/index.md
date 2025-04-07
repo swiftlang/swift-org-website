@@ -1986,6 +1986,11 @@ that are outlined in the documentation above.
 
 This section lists the recent changes made to this reference guide.
 
+**2025-04-07**
+
+- C++ virtual methods of reference types are now available in Swift.
+- `std::unique_ptr` is now supported in Swift.
+
 **2024-08-12**
 
 - Added several customization macros from `<swift/bridging>` to the list.
