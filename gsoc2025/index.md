@@ -447,7 +447,7 @@ which only contains a subset of Swift's features.
 
 **Expected outcomes/benefits/deliverables**
 
-- Swift built using Yocto for architectures: armv7, aarch64 and x86_64
+- cross-compile Swift and Swift applications for Embedded Linux using Yocto for architectures: armv7, aarch64 and x86_64
 - CI on swiftlang/swift for Embedded Linux 
 - [meta-swift](https://github.com/jeremy-prater/meta-swift) (Yocto layer) established on swiftlang
 
