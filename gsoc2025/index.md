@@ -452,9 +452,10 @@ features.
 
 - [Xaver Gruber](https://github.com/xavgru12)
 
-**Mentor**
+**Mentors**
 
-- [Luke Howard](https://github.com/lhoward)
+- [finagolfin](https://github.com/finagolfin)
+- [Jesse Zamora](https://github.com/xtremekforever)
 
 ### Example project name
 
