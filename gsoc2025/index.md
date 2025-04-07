@@ -439,8 +439,8 @@ and [cross compilation
 concept](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md)
 efforts have been made to port Swift to more platforms. I would like to join
 these efforts and bring Swift to Embedded Linux using Yocto. As clarification
-Swift for Embedded Linux is supposed to be a full featured Swift, since it unrelated to Embedded Swift, which only contains a subset of Swift's
-features.
+Swift for Embedded Linux is supposed to be a full featured Swift, since it
+unrelated to Embedded Swift, which only contains a subset of Swift's features.
 
 **Expected outcomes/benefits/deliverables**
 
