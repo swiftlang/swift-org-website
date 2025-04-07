@@ -433,12 +433,12 @@ from Java, using these generated Java accessor classes.
 
 **Description**
 
-Apple's Swift programming language is growing. With the [static Linux
+Apple's Swift programming language is growing. Leveraging recent advancements
+like the [static Linux
 SDK](https://www.swift.org/documentation/articles/static-linux-getting-started.html)
 and [cross compilation
-bundles](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md)
-efforts have been made to port Swift to more platforms. I would like to join
-these efforts and bring Swift to Embedded Linux using
+bundles](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md),
+this proposal aims to enable Swift's official support for Embedded Linux using
 [Yocto](https://www.yoctoproject.org/). As clarification Swift for Embedded
 Linux is supposed to be a full featured Swift, since it is unrelated to
 [Embedded
