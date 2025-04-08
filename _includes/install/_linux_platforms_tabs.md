@@ -6,8 +6,8 @@
     The Swiftly installer manages Swift and its dependencies. It supports switching between different versions and downloading updates.
   </p>
   <h4>Run this in a terminal:</h4>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre class="highlight"><code>curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz &amp;&amp; \
-tar zxf swiftly-$(uname -m).tar.gz &amp;&amp; \
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre class="highlight"><code>curl -O "https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz" &amp;&amp; \
+tar zxf "swiftly-$(uname -m).tar.gz" &amp;&amp; \
 ./swiftly init --quiet-shell-followup &amp;&amp; \
 . ~/.local/share/swiftly/env.sh &amp;&amp; \
 hash -r
