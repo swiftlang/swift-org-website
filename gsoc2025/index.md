@@ -421,7 +421,44 @@ from Java, using these generated Java accessor classes.
 
 - [Konrad 'ktoso' Malawski](https://github.com/ktoso)
 
+### Swift for Embedded Linux
 
+**Project size**: 350 hours (large)
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- C++, Swift, Python, CMake, Bitbake
+
+**Description**
+
+Apple's Swift programming language is growing. Leveraging recent advancements
+like the [static Linux
+SDK](https://www.swift.org/documentation/articles/static-linux-getting-started.html)
+and [cross compilation
+bundles](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md),
+this proposal aims to enable Swift's official support for Embedded Linux using
+[Yocto](https://www.yoctoproject.org/). As clarification Swift for Embedded
+Linux is supposed to be a full featured Swift, since it is unrelated to
+[Embedded
+Swift](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md),
+which only contains a subset of Swift's features.
+
+**Expected outcomes/benefits/deliverables**
+
+- cross-compile Swift and Swift applications for Embedded Linux using Yocto for architectures: armv7, aarch64 and x86_64
+- CI on swiftlang/swift for Embedded Linux 
+- [meta-swift](https://github.com/jeremy-prater/meta-swift) (Yocto layer) established on swiftlang
+
+**Contributor**
+
+- [Xaver Gruber](https://github.com/xavgru12)
+
+**Mentors**
+
+- [finagolfin](https://github.com/finagolfin)
+- [Jesse Zamora](https://github.com/xtremekforever)
 
 ### Example project name
 
