@@ -70,4 +70,4 @@
 
 ---
 
-需要语言参考？[Swift 编程语言 (TSPL)](https://doc.swiftgg.team/documentation/the-swift-programming-language/) 书籍提供[多种语言版本](/documentation/tspl/#translations)。
+需要语言参考？[Swift 编程语言 (TSPL)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/) 书籍提供[多种语言版本](/documentation/tspl/#translations)。

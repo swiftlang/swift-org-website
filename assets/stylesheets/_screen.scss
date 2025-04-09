@@ -1,3 +1,5 @@
+@use './core/_helpers' as mixhelpers;
+
 *,
 *:before,
 *:after {
@@ -291,7 +293,7 @@ h2.header-with-anchor {
 
     & a,
     & > span {
-      @include nav-link-style;
+      @include mixhelpers.nav-link-style;
       padding: 0.5em;
     }
   }
@@ -414,7 +416,7 @@ h2.header-with-anchor {
 
     & a,
     & > span {
-      @include nav-link-style;
+      @include mixhelpers.nav-link-style;
     }
   }
 }
@@ -513,8 +515,14 @@ footer[role="contentinfo"] {
       margin-left: 1em;
       float: right;
 
-      &.twitter {
-        background-image: url("/assets/images/icon-twitter.svg");
+      &.x {
+        background-image: url("/assets/images/icon-x.svg");
+      }
+      &.mastodon {
+        background-image: url("/assets/images/icon-mastodon.svg");
+      }
+      &.bluesky {
+        background-image: url("/assets/images/icon-bluesky.svg");
       }
 
       &.feed {
@@ -1108,7 +1116,7 @@ article {
   margin-bottom: var(--content-margin-bottom);
 
   input {
-    @include visuallyhidden;
+    @include mixhelpers.visuallyhidden;
     appearance: none;
   }
 }
@@ -1139,7 +1147,7 @@ article {
 }
 
 .visuallyhidden {
-  @include visuallyhidden();
+  @include mixhelpers.visuallyhidden();
 }
 
 .stage {

@@ -9,7 +9,7 @@ title: 为微控制器构建嵌入式应用
 
 ## 安装 Swift
 
-如果你还没有安装 Swift,请先[安装 Swift](https://swift.swiftgg.team/install)。由于嵌入式 Swift 目前还处于实验阶段,仅在预览工具链中提供,因此请确保安装"开发快照"工具链(main),而不是发布工具链(6.0)。如果你使用的是 macOS 机器,需要确保已安装的工具链被选为活动状态,例如通过导出 `TOOLCHAINS` 环境变量:
+如果您尚未安装 Swift，请[先安装它](https://www.swift.org/install)。由于嵌入式 Swift 仍处于实验阶段，且仅在预览工具链中可用，请确保安装"开发快照"工具链（main），而不是发布工具链（6.0）。如果您使用的是 macOS 设备，需要确保已安装并选择了 Xcode，可以通过运行 `xcode-select -p` 并验证它指向 Xcode 安装路径来确认。接下来，确保将已安装的开发快照选择为活动工具链，例如通过导出 `TOOLCHAINS` 环境变量：
 
 ```shell
 $ export TOOLCHAINS=org.swift.59202405011a

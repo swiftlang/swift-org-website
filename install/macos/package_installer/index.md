@@ -19,23 +19,28 @@ Xcode 包含了一个由 Apple 官方支持的 Swift 版本。
    或开发版本的[快照包](/install/macos/#development-snapshots)。
    请确保你的系统满足上述包的要求。
 
-0. 运行软件包安装器，
-   它会将 Xcode 工具链安装到
-   `/Library/Developer/Toolchains/` 目录。
+0. Run the package installer,
+   which will install an Xcode toolchain into
+   `~/Library/Developer/Toolchains/`:
 
-   Xcode 工具链（`.xctoolchain`）包含编译器、LLDB 以及
-   其他相关工具的副本，这些工具能够为特定版本的 Swift
-   提供完整的开发体验。
+    ~~~ shell
+    installer -target CurrentUserHomeDirectory -pkg ~/Downloads/swift-DEVELOPMENT-SNAPSHOT-2025-02-26-a-osx.pkg
+    ~~~
 
-* 要在 Xcode 中选择已安装的工具链，请导航到 `Xcode > Toolchains`。
+   An Xcode toolchain (`.xctoolchain`) includes a copy of the compiler, LLDB,
+   and other related tools needed to provide a cohesive development experience
+   for working in a specific version of Swift.
 
-  Xcode 使用选定的工具链来构建 Swift 代码、调试，
-  甚至代码补全和语法高亮。当 Xcode 使用已安装的工具链时，
-  你会在 Xcode 的工具栏中看到一个新的工具链指示器。
-  选择默认工具链可以返回到 Xcode 的内置工具。
+* To select the installed toolchain in Xcode, navigate to `Xcode > Toolchains`.
 
-* 在 Xcode 中选择工具链只会影响 IDE。要在命令行中使用已安装的工具链：
-  * 对于 `xcrun`，传入 `--toolchain swift` 选项。例如：
+  Xcode uses the selected toolchain for building Swift code, debugging, and
+  even code completion and syntax coloring. You'll see a new toolchain
+  indicator in Xcode's toolbar when Xcode is using an installed toolchain.
+  Select the default toolchain to go back to Xcode's built-in tools.
+
+* Selecting a toolchain in Xcode affects the IDE only. To use the installed
+  toolchain with
+  * `xcrun`, pass the `--toolchain swift` option. For example:
 
     ~~~ shell
     xcrun --toolchain swift swift --version
@@ -46,7 +51,7 @@ Xcode 包含了一个由 Apple 官方支持的 Swift 版本。
   另外，你也可以通过导出 `TOOLCHAINS` 环境变量来在命令行中选择工具链：
 
   ~~~ shell
-  export TOOLCHAINS=$(plutil -extract CFBundleIdentifier raw /Library/Developer/Toolchains/<工具链名称>.xctoolchain/Info.plist)
+  export TOOLCHAINS=$(plutil -extract CFBundleIdentifier raw ~/Library/Developer/Toolchains/<toolchain name>.xctoolchain/Info.plist)
   ~~~
 
 

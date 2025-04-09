@@ -471,3 +471,37 @@ karl-tarbe:
   name: Karl Tarbe
   github: karulont
   about: "Karl Tarbe is on the team at Apple working on Swift Homomorphic Encryption and other privacy-preserving technologies."
+
+owen-voorhees:
+  name: Owen Voorhees
+  github: owenv
+  about: "Owen Voorhees is a member of the team at Apple working on Swift Build."
+
+adam-ward:
+  name: Adam Ward
+  about: "Adam Ward is a member of the team at Apple working on Swift tooling."
+
+george-barnett:
+  name: George Barnett
+  email: gbarnett@apple.com
+  github: glbrntt
+  about: "George Barnett is a member of a team developing Swift server networking libraries in Apple's Cloud Services organisation."
+
+gus-cairo:
+  name: Gus Cairo
+  github: gjcairo
+  
+vrylko:
+  name: Vojtěch Rylko
+  github: vojtarylko
+  about: "Vojtěch Rylko is responsible for development and operations of Things Cloud at Cultured Code."
+
+wjainek:
+  name: Werner Jainek
+  github: wjainek
+  about: "Werner Jainek is Co-Founder and CEO at Cultured Code."
+
+chris-mcgee:
+  name: Chris McGee
+  github: cmcgee1024
+  about: "Chris McGee is on the team at Apple working on Swift Package Manager, and Swiftly."

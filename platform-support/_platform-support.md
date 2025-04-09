@@ -12,14 +12,15 @@ Swift 可以在不同的平台上使用。以下信息记录了每个平台当�
 
 这些是可用于 Swift 开发工具的平台。下表显示了在给定平台上使用工具时可以针对哪些平台进行开发。例如，macOS 上的工具可以构建在 iOS 上运行的 Swift 应用程序。
 
-| 运行开发工具的平台               | 可部署的目标平台            |
-|:-------------------------------:|:---------------------------:|
-| **macOS**                       | Apple 平台                  |
-| **Ubuntu**                      | Ubuntu                      |
-| **CentOS**                      | CentOS                      |
-| **Amazon Linux**                | Amazon Linux                |
-| **Red Hat Universal Base Image**| Red Hat Universal Base Image|
-| **Windows**                     | Windows                     |
+| 运行开发工具的平台                        | 可部署的目标平台                 |
+|:--------------------------------------:|:-----------------------------:|
+| **macOS**                              |  Apple 平台                    |
+| **Ubuntu**                             |  Ubuntu                       |
+| **Debian**                             |  Debian                       |
+| **Fedora**                             |  Fedora                       |
+| **Amazon Linux**                       |  Amazon Linux                 |
+| **Red Hat Universal Base Image**       |  Red Hat Universal Base Image |
+| **Windows**                            |  Windows                      |
 
 #### 最低部署版本
 
@@ -31,8 +32,9 @@ Swift 可以在不同的平台上使用。以下信息记录了每个平台当�
 | **iOS**                         | 11.0                      |
 | **watchOS**                     | 4.0                       |
 | **tvOS**                        | 11.0                      |
-| **Ubuntu**                      | 18.04                     |
-| **CentOS**                      | 7                         |
+| **Ubuntu**                      |20.04                      |
+| **Debian**                      |12                         |
+| **Fedora**                      |39                         |
 | **Amazon Linux**                | 2                         |
 | **Red Hat Universal Base Image**| 9                         |
 | **Windows**                     | 10.0                      |
@@ -45,7 +47,8 @@ Swift 编译器和调试器可在支持开发的平台上运行。Swift Package 
 |:------------------------------:|:----------------------:|:---------------:|
 | **macOS**                      | ✓                      | ✓               |
 | **Ubuntu**                     | ✓                      | ✓               |
-| **CentOS**                     | ✓                      | ✓               |
+| **Debian**                     | ✓                      | ✓               |
+| **Fedora**                     | ✓                      | ✓               |
 | **Amazon Linux**               | ✓                      | ✓               |
 | **Red Hat Universal Base Image**| ✓                     | ✓               |
 | **Windows**                    | ✓                      | ✓               |
@@ -63,7 +66,8 @@ Swift 编译器和调试器可在支持开发的平台上运行。Swift Package 
 | **watchOS**                    | ✓      |      |
 | **tvOS**                       | ✓      |      |
 | **Ubuntu**                     | ✓      | ✓    |
-| **CentOS**                     | ✓      | ✓    |
+| **Debian**                     | ✓      | ✓    |
+| **Fedora**                     | ✓      | ✓    |
 | **Amazon Linux**               | ✓      | ✓    |
 | **Red Hat Universal Base Image**| ✓      | ✓    |
 | **Windows**                    | ✓      |      |
@@ -83,7 +87,7 @@ Swift 开源社区的不同成员支持在各种平台上开发和运行 Swift �
 | **Windows**       | [文档](/getting-started/#on-windows)| [Apple Inc.](https://www.apple.com)           | ✓             |
 
 * Apple 平台包括 macOS、iOS、tvOS 和 watchOS。
-* Linux 包括 Ubuntu、CentOS、Amazon Linux 和 Red Hat Universal Base Image 平台。
+* Linux 包括 Ubuntu、Debian、Fedora、Amazon Linux 和 Red Hat Universal Base Image 平台。
 
 ### 平台的持续集成
 

@@ -4,50 +4,50 @@ layout: page
 title: 调试内存泄漏
 ---
 
-# 概述
+# Overview
 
-调试内存泄漏和使用情况有助于识别和解决应用程序中与内存管理相关的问题。内存泄漏发生在内存被分配但未正确释放时，导致内存使用量随时间逐渐增加。这会严重影响应用程序的性能和稳定性。
+Debugging memory leaks and usage helps you identify and resolve issues related to memory management in an application. Memory leaks occur when memory is allocated but not properly deallocated, leading to a gradual increase in memory usage over time. This can severely impact an application's performance and stability.
 
-然而，需要注意的是，内存使用量随时间逐渐增加并不总是表示存在泄漏。相反，这可能是应用程序的内存特征。例如，当应用程序的缓存随时间逐渐填满时，它会显示出相同的内存使用量逐渐增加。因此，配置缓存使其不会超出指定限制将导致内存使用量趋于平稳。此外，由于性能或其他原因，分配器库并不总是立即将内存反馈给系统。但随着时间的推移，它会稳定下来。
+It’s important to note, however, that a gradual increase in memory usage over time doesn’t always indicate a leak. Instead, it may be the memory profile of the application. For example, when an application’s cache gradually fills over time it shows the same gradual increase in memory. Accordingly, configuring the cache so it doesn’t expand beyond a designated limit will cause the memory usage to plateau. Additionally, allocator libraries don't always immediately return memory feedback to the system due to performance or other reasons. But it will stabilize over time.
 
-## 工具和技术
+## Tools and techniques
 
-在 macOS 和 Linux 环境中调试 Swift 的内存泄漏可以使用不同的工具和技术，每种工具和技术都有其独特的优势和可用性。
+Debugging memory leaks in Swift on macOS and Linux environments can be done using different tools and techniques, each with distinct strengths and usability. 
 
-### 基本故障排除包括：
+### Basic troubleshooting includes:
 
-* 使用分析工具。
-* 审查代码并识别潜在的泄漏。
-* 启用调试内存分配功能。
+* Using profiling tools.
+* Reviewing code and identifying potential leaks.
+* Enabling debug memory allocation features.
 
-**1. 使用分析工具** 由各自的操作系统和开发环境提供，用于识别和分析内存使用情况。
+**1. Using profiling tools** provided by the respective operating systems and development environments to identify and analyze memory usage.
 
-*对于 macOS*： [Memory Graph Debugger](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Inspect-the-debug-memory-graph) 和这个 [Detect and diagnose memory issues](https://developer.apple.com/videos/play/wwdc2021/10180/) 视频非常有帮助。你还可以使用 [Xcode Instruments](https://help.apple.com/instruments/mac/10.0/#/dev022f987b) 工具，其中包括 [Allocations instrument](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Profile-your-app-using-the-Allocations-instrument) 来跟踪 Swift 代码中的内存分配和释放。
+*For macOS*: [Memory Graph Debugger](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Inspect-the-debug-memory-graph) and this [Detect and diagnose memory issues](https://developer.apple.com/videos/play/wwdc2021/10180/) video are helpful. You can also use the [Xcode Instruments](https://help.apple.com/instruments/mac/10.0/#/dev022f987b) tool for various profiling instruments including the [Allocations instrument](https://developer.apple.com/documentation/xcode/gathering-information-about-memory-use#Profile-your-app-using-the-Allocations-instrument) to track memory allocation and deallocation in your Swift code. 
+    
+*For Linux*: You can use tools like [Valgrind](https://valgrind.org/) or [Heaptrack](https://github.com/KDE/heaptrack) to profile your application as shown in the examples below. Although these tools are primarily used for C/C++ code, they can also work with Swift.
 
-*对于 Linux*：你可以使用 [Valgrind](https://valgrind.org/) 或 [Heaptrack](https://github.com/KDE/heaptrack) 等工具来分析你的应用程序，如下面的示例所示。虽然这些工具主要用于 C/C++ 代码，但它们也可以用于 Swift。
+**2. Reviewing code and identifying potential leaks** to examine your code for any potential areas where memory leaks may occur. Common sources of leaks include retained references or unbalanced retain-release cycles, which rarely apply to Swift since it performs [automatic reference counting (ARC)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/).
 
-**2. 审查代码并识别潜在的泄漏** 以检查代码中可能发生内存泄漏的任何潜在区域。常见的泄漏来源包括保留的引用或不平衡的保留-释放周期，这在 Swift 中很少适用，因为它执行 [automatic reference counting (ARC)](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/)。
+> Note: Memory leaks can occur in Swift if there are substantial reference cycles between objects that involve closures or if objects hold references to external resources that are not released properly. However, the likelihood of such issues is significantly reduced through the automatic memory management's ability to add and remove references, making sources of leaks like retained references and unbalanced retain-release cycles less common in Swift code.
 
-> 注意：如果对象之间存在涉及闭包的实质性引用循环，或者对象持有未正确释放的外部资源的引用，Swift 中可能会发生内存泄漏。然而，通过自动内存管理添加和删除引用的能力，显著减少了保留引用和不平衡保留-释放周期等泄漏来源在 Swift 代码中出现的可能性。
+**3. Enabling debug memory allocation features** allows you to get additional information about objects and their memory allocations.
+    
+*On macOS*: You can enable Zombie Objects using Xcode or use [MallocStackLogging](https://developer.apple.com/videos/play/wwdc2022/10106/) to detect over-released or accessed deallocated objects.
+    
+To enable Zombie Objects: 
+1. Open your Xcode project.
+2. Go to the **Edit Scheme** menu by clicking on the scheme dropdown in the toolbar. 
+3. In the scheme editor window, select the **Run** tab.
+4. Choose the **Diagnostics** tab.
+5. Under **Memory Management**, check the box next to **Enable Zombie Objects**.
+    
+*在 Linux 上*：Swift 内置了 LeakSanitizer 支持，可以通过地址消毒器（Address Sanitizer）启用。更多信息，请阅读[使用 LeakSanitizer 调试内存泄漏](#debugging-leaks-with-leaksanitizer)部分。
 
-**3. 启用调试内存分配功能** 允许您获取有关对象及其内存分配的附加信息。
+## Troubleshooting
 
-*在 macOS 上*：您可以使用 Xcode 启用 Zombie Objects 或使用 [MallocStackLogging](https://developer.apple.com/videos/play/wwdc2022/10106/) 来检测过度释放或访问已释放的对象。
+This section aims to provide you with helpful server-side troubleshooting techniques to debug leaks and usage using **Valgrind**, **LeakSanitizer**, and **Heaptrack**.
 
-启用 Zombie Objects 的步骤：
-1. 打开您的 Xcode 项目。
-2. 通过点击工具栏中的方案下拉菜单进入 **Edit Scheme** 菜单。
-3. 在方案编辑器窗口中，选择 **Run** 选项卡。
-4. 选择 **Diagnostics** 选项卡。
-5. 在 **Memory Management** 下，勾选 **Enable Zombie Objects** 旁边的框。
-
-*在 Linux 上*：Swift 内置了 LeakSanitizer 支持，可以使用 `-sanitize=leak` 编译器标志启用。
-
-## 故障排除
-
-本节旨在为您提供有用的服务器端故障排除技术，以使用 **Valgrind**、**LeakSanitizer** 和 **Heaptrack** 调试内存泄漏和使用情况。
-
-以下 **示例程序** 会泄漏内存。我们仅将其用作示例来说明下面提到的各种故障排除方法。
+The following **example program** leaks memory. We are using it as an *example only* to illustrate the various troubleshooting methods mentioned below.
 
 ```
 public class MemoryLeaker {

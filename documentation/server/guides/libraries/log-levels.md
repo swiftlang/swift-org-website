@@ -22,7 +22,7 @@ SwiftLog defines the following 7 log levels via the [`Logger.Level` enum](https:
 * `error`
 * `critical`
 
-Out of those, only levels _less severe than_ info (exclusively) are generally okay to be used by libraries.
+Out of those, only levels _less severe than_ `info` (exclusively) are generally okay to be used by libraries: `debug` and `trace`.
 
 In the following section we'll explore how to use them in practice.
 
@@ -68,26 +68,26 @@ Some libraries and situations may not be entirely clear with regard to what log 
 
 ### Log levels to avoid
 
-All these rules are only _general_ guidelines, and as such may have exceptions. Consider the following examples and rationale for why logging at high log levels by a library may not be desirable:
+All these rules are only _general_ guidelines, and as such may have exceptions. Consider the following examples and rationale for why logging at severe log levels by a library may not be desirable:
 
 It is generally _not acceptable_ for a service client (for example, an http client) to log an `error` when a request has failed. End-users may be using the client to probe if an endpoint is even responsive or not, and a failure to respond may be _expected_ behavior. Logging errors would only confuse and pollute their logs.
 
 Instead, libraries should either `throw`, or return an `Error` value that users of the library will have enough knowledge about if they should log or ignore it.
 
-It is even less acceptable for a library to log any successful operations. This leads to flooding server side systems, especially if, for example, one were to log every successfully handled request. In a server side application, this can easily flood and overwhelm logging systems when deployed to production where many end users are connected to the same server. Such issues are rarely found in development time, because of only a single peer requesting things from the service-under-test.
+It is even less acceptable for a library to log any successful operations at a more severe log level than `debug`. This leads to flooding server side systems, especially if, for example, one were to log every successfully handled request. In a server side application, this can easily flood and overwhelm logging systems when deployed to production where many end users are connected to the same server. Such issues are rarely found in development time, because of only a single peer requesting things from the service-under-test.
 
 #### Examples (of things to avoid)
 
-Avoid using `info` or any higher log level for:
+Avoid using `info` or any more severe log level for:
 
-- "Normal operation" of the library, that is there is no need to log on info level "accepted a request" as this is the normal operation of a web service.
+- "Normal operation" of the library, there is no need to log on info level "accepted a request" as this is the normal operation of a web service.
 
 Avoid using `error` or `warning`:
 
 - To report errors which the end-user of the library has the means of logging themselves. For example, if a database driver fails to fetch all rows of a query, it should not log an error or warning, but instead return or throw an error on the stream of values (or function, async function, or even the async sequence) that was providing the returned values.
   - Since the end-user is consuming these values, and has a mean of reporting (or swallowing) this error, the library should not log anything on their behalf.
 - Never report as warnings which is merely an information. For example. "weird header detected" may look like a good idea to log as a warning at first sight, however if the "weird header" is simply a misconfigured client (or just a "weird browser") you may be accidentally completely flooding an end-users logs with these "weird header" warnings (!)
-  - Only log warnings about actionable things which the end-user of your library can do something about. Using the "weird header detected" log statement as an example: it would not be a good candidate to log as a warning because the server developer has no way to fix the users of their service to stop sending weird headers, so the server should not be logging this information as a warning.
+  - Only log warnings about actionable things which the end-user of your library can do something about. Using the "weird header detected" log statement as an example: it would not be a good candidate to log as a warning because the server developer has no way to fix the users of their service to stop sending weird headers, so the server should not be logging this information as a warning. It might still be appropriate to log it at a `debug` level, however.
 - It may be tempting to implement a "log as warning only once" technique for per-request style situations which may be almost important enough to be a warning, but should not be logged repeatedly after all. Authors may think of smart techniques to log a warning only once per "weird header discovered" and later on log the same issue on a different level, such as trace... Such techniques result in confusing hard to debug logs, where developers of a system unaware of the stateful nature of the logging would be left confused when trying to reproduce the issue.
   - For example, if a developer spots such a warning in a production system, they may attempt to reproduce it — thinking that it only happens in the production environment. However, if the logging system's log level choice is _stateful_ they may actually be successfully reproducing the issue but never seeing it manifest. For this, and related performance reasons (as implementing "only once per X" implies growing storage and per-request additional checking requirements), it is not recommended to apply this pattern.
 
@@ -96,6 +96,29 @@ Exceptions to the "avoid logging warnings" rule:
 - "Background processes" such as tasks scheduled on a periodic timer, may not have any other means of communicating a failure or warning to the end user of the library other than through logging.
   - Consider offering an API that would collect errors at runtime, and then you can avoid logging errors manually. This can often take the form of a customizable "on error" hook that the library accepts when constructing the scheduled job. If the handler is not customized, we can log the errors, but if it was, it again is up to the end-user of the library to decide what to do with them.
 - An exception to the "log a warning only once" rule is when things do not happen very frequently. For example, if a library is warning about an outdated license or something similar during _its initialization_ this isn't necessarily a bad idea. After all, we'd rather see this warning once during initialization rather during every request made to the library. Use your best judgement and consider the developers using your library when designing how often and where from to log such information.
+
+### Avoid mutating the log level or log handler
+
+Library code should emit informative logs, and let the current `Logger`'s `LogHandler` handle filtering and actually exporting the logs to a backend system. The executable target that links the library is responsible for configuring `LogHandler`'s and log levels.
+
+It is an anti-pattern for a library to mutate the log level or `LogHandler` of a `Logger`, so avoid code like this:
+
+```swift
+// ⚠️ Avoid mutating log levels in libraries
+var localLogger = logger
+localLogger.logLevel = .warning
+// ...
+```
+
+And like this:
+
+```swift
+// ⚠️ Avoid creating loggers with a log handler factory in libraries
+let localLogger = Logger(label: "Local", factory: ...)
+// ...
+```
+
+Any such code should be included in the executable target instead.
 
 ### Suggested logging style
 

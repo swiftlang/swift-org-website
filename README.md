@@ -43,13 +43,13 @@ open "http://localhost:4000"
 首先使用 Docker Compose 构建站点：
 
 ```bash
-docker-compose run build
+docker compose run build
 ```
 
 然后你可以运行站点：
 
 ```bash
-docker-compose up website
+docker compose up website
 ```
 
 网站将在 `http://localhost:4000` 上可用

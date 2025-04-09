@@ -103,4 +103,4 @@ $ tar xzf swift-<VERSION>-<PLATFORM>.tar.gz
 $ export PATH=/path/to/usr/bin:"${PATH}"
 ```
 
-现在您可以执行 `swift` 命令来运行 REPL 或构建 Swift 项目。
+现在您可以执行 `swift repl` 命令来运行 REPL 执行 `swift build` 来构建 Swift 项目。

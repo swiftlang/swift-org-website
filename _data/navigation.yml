@@ -148,6 +148,8 @@
           name: community-participation
     - title: Foundation
       url: /foundation-workgroup/
+    - title: 测试
+      url: /testing-workgroup/
     - section: 管理
     - title: 行为准则
       url: /code-of-conduct/

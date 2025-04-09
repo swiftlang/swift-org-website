@@ -492,7 +492,8 @@ because they return a reference that points into the `Forest` object.
 
 #### Virtual Member Functions
 
-Currently virtual member functions are not available in Swift.
+Virtual methods of C++ value types cannot be called from Swift. This is similar
+to C++, where you can only call virtual methods on a pointer or a reference.
 
 #### Static Member Functions
 
@@ -1254,6 +1255,14 @@ object.doSomething()
 // `object` will be released here.
 ```
 
+### Inheritance and Virtual Member Functions
+
+Similar to value types, casting an instance of a derived reference type to a
+base reference type, or vice versa, is not yet supported by Swift.
+
+If a reference type has virtual methods, you can call those methods from Swift.
+This includes pure virtual methods.
+
 #### Exposing C++ Shared Reference Types back from Swift
 
 C++ can call into Swift APIs that take or return C++ Shared Reference Types. Objects of these types are always created on the C++ side,
@@ -1275,11 +1284,6 @@ The C++ caller of this function is responsible for releasing the object.
 
 The `SWIFT_UNSAFE_REFERENCE` annotation macro has the same effect as `SWIFT_IMMORTAL_REFERENCE`
 annotation macro. However, it communicates different semantics: the type is intended to be used unsafely, rather than living for the duration of the program.
-
-### Unique Reference Types
-
-Unique reference types, such as types passed around by `std::unique_ptr` are
-not yet supported by Swift.
 
 ## Using C++ Standard Library from Swift
 
@@ -1981,6 +1985,11 @@ that are outlined in the documentation above.
 ## Document Revision History
 
 This section lists the recent changes made to this reference guide.
+
+**2025-04-07**
+
+- C++ virtual methods of reference types are now available in Swift.
+- `std::unique_ptr` is now supported in Swift.
 
 **2024-08-12**
 

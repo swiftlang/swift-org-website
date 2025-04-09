@@ -1,3 +1,133 @@
+- date: 2025-04-03 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-04-03-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-04-03-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-04-03-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-04-02 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-04-02-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-04-02-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-04-02-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-03-28 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-28-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-28-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-03-28-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-03-25 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-25-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-25-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-03-25-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-03-17 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-17-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-17-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-03-17-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-03-14 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-14-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-14-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-03-14-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-03-13 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-13-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-13-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-03-13-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-03-10 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-10-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-10-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-03-10-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-03-09 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-09-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-09-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-03-09-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-03-04 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-03-04-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-03-04-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-03-04-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-28 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-28-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-28-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-28-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-27 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-27-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-27-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-27-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-26 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-26-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-26-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-26-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-25 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-25-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-25-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-25-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-24 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-24-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-24-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-24-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-20 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-20-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-20-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-20-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-18 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-18-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-18-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-18-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-17 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-17-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-17-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-17-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-15 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-15-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-15-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-15-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-14 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-14-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-14-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-14-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-06 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-06-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-06-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-06-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-04 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-04-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-04-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-04-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-03 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-03-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-03-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-03-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-02-02 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-02-02-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-02-02-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-02-02-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-31 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-01-31-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-01-31-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-01-31-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-01-10 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-01-10-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-01-10-a-debian12-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-01-10-a-debian12-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2025-01-05 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2025-01-05-a
   download: swift-DEVELOPMENT-SNAPSHOT-2025-01-05-a-debian12-aarch64.tar.gz

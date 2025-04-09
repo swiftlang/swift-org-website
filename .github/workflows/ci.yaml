@@ -1,0 +1,42 @@
+name: test
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+on:
+  pull_request: { types: [opened, reopened, synchronize, ready_for_review] }
+  push: { branches: [ main ] }
+
+jobs:
+  soundness:
+    name: Soundness Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run script
+        run: ./scripts/soundness.sh
+
+  build-site:
+    name: Build the Jekyll Site
+    runs-on: ubuntu-latest
+    container: ruby:3.3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build site
+        run: bundle install && bundle exec jekyll build
+
+  test-openapi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+      - name: Run OpenAPI Tester
+        working-directory: openapi/TestSwiftOrgClient
+        env:
+          DOWNLOADSWIFTORG_SERVER_NAME: local
+          SWIFTORG_SERVER_NAME: local
+        run: |
+            docker compose -f ../../docker-compose.yaml run build 
+            docker compose -f ../../docker-compose.yaml run -d -p 4000:4000 website
+            swift run swiftorgClient

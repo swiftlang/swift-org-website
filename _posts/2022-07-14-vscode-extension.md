@@ -6,7 +6,7 @@ title: Swift Extension for Visual Studio Code
 author: adam-fowler
 ---
 
-As Swift is deployed across more platforms, it is important that Swift can be developed on more platforms as well. The [Swift Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang) provides a cross-platform solution for Swift development supporting macOS, Linux, and Windows.
+As Swift is deployed across more platforms, it is important that Swift can be developed on more platforms as well. The [Swift Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=swiftlang.swift-vscode) provides a cross-platform solution for Swift development supporting macOS, Linux, and Windows.
 
 ##  Motivation
 
@@ -60,4 +60,4 @@ You can also use container support with the nightly Swift Docker images to test 
 
 The extension includes the core set of features we initially planned for, but we are not finished and will continue to expand on what we have. While much of the work initially was done by the SSWG, this is a community project and we are happy to involve anyone interested in contributing.
 
-If you feel something is missing or broken, please add an [Issue](https://github.com/swift-server/vscode-swift/issues). If you can contribute time to building new features or fixing bugs, please get in touch.
+If you feel something is missing or broken, please add an [Issue](https://github.com/swiftlang/vscode-swift/issues). If you can contribute time to building new features or fixing bugs, please get in touch.
