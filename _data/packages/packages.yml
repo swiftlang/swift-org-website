@@ -90,97 +90,21 @@ categories:
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
-        license: MIT
-        url: https://swiftpackageindex.com/aus-der-Technik/FileMonitor
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/125){:target='_blank'}.
-      - name: Versionator
-        description: A plugin to gathers version information and embeds it into a package/executable,
-          allowing retrieval at runtime. Generates `Version.swift`, `Info.plist`, and
-          a header file.
-        owner: Elegant Chaos
-        swift_compatibility: 6.0+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (macOS)
-        license: MIT
-        url: https://swiftpackageindex.com/elegantchaos/Versionator
-        note: Discussed on [Episode 49 of Swift Package Indexing](https://share.transistor.fm/s/c3ea4e1a){:target='_blank'}.
-      - name: Numerix
-        description: Provides Complex, Vector, Matrix, and ShapedArray structures for
-          linear algebra and numerical computations using the Accelerate framework for
-          high-performance calculations.
-        owner: Gavin Wiggins
-        swift_compatibility: 6.0+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/wigging/numerix
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/119){:target='_blank'}.
-      - name: swift-zip-archive
-        description: A library for reading and editing zip archives. Supports reading
-          and writing standard or password protected zip files from disk and memory buffers.
-        owner: Adam Fowler
-        swift_compatibility: 6.0+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (macOS, visionOS)
-        license: MIT
-        url: https://swiftpackageindex.com/hidden-spectrum/swift-translate
-        note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/76){:target='_blank'}.
-  - name: Packages with Macros
-    slug: macros
-    brief: New in Swift 5.9, Swift packages can include macro targets. Browse a selection
-      of packages that showcase this feature.
-    description: Macros are new in Swift 5.9 and transform your source code when you
-      compile it, letting you avoid writing repetitive code. [Read more about creating
-      macros](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/macros/){:target='_blank'}
-      or check out these packages that include macro targets.
-    more:
-      title: More packages that include macros
-      url: https://swiftpackageindex.com/search?query=product:macro
-    packages:
-      - name: SwiftLint
-        description: SwiftLint is a tool that enforces Swift style and conventions. It
-          uses the AST representation of source files to provide accurate results and
-          can be integrated into both Xcode projects and Swift packages.
-        owner: Realm
-        swift_compatibility: 5.10+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
-        license: MIT
-        url: https://swiftpackageindex.com/realm/SwiftLint
-      - name: swift-composable-architecture
-        description: The Composable Architecture is a library for building applications
-          with state management, composition, side effects, and testing in mind. It can
-          be used with SwiftUI, UIKit, and more.
-        owner: Point-Free
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-composable-architecture
       - name: swift-testing
-        description: Enhances Swift code testing with expressive APIs, custom behaviors,
-          flexible organization, scalable execution, and cross-platform support. Compatible
-          with XCTest for easy migration.
+        description: 通过表达性 API、自定义行为、灵活组织、可扩展执行和跨平台支持增强 Swift 代码测试。与 XCTest 兼容，便于迁移。
         owner: The Swift Programming Language
         swift_compatibility: 6.0+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
+        platform_compatibility_tooltip: Apple (macOS) 和 Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/swiftlang/swift-testing
       - name: Defaults
-        description: Defaults is a type-safe wrapper around UserDefaults and supports
-          Codable, NSSecureCoding, change observation, and SwiftUI integration. It offers
-          iCloud synchronization and custom serialization.
+        description: Defaults 是 UserDefaults 的类型安全包装器，支持 Codable、NSSecureCoding、变更观察和 SwiftUI 集成。它提供 iCloud 同步和自定义序列化。
         owner: Sindre Sorhus
         swift_compatibility: 6.0+
         platform_compatibility:
@@ -189,28 +113,23 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/sindresorhus/Defaults
       - name: swift-dependencies
-        description: A dependency management library for controlling and overriding dependencies
-          in Swift applications. Helps with testing, SwiftUI previews, and compile-time
-          performance.
+        description: 一个用于控制和覆盖 Swift 应用程序中依赖项的依赖管理库。有助于测试、SwiftUI 预览和编译时性能。
         owner: Point-Free
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-dependencies
       - name: swift-perception
-        description: Offers observation tools for earlier versions of Swift, mimicking
-          `@Observable` and providing compatibility with newer Swift observation features.
+        description: 为早期版本的 Swift 提供观察工具，模仿 `@Observable` 并提供与较新的 Swift 观察功能的兼容性。
         owner: Point-Free
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-perception
   - name: 服务器
@@ -222,87 +141,66 @@ categories:
       url: https://swiftpackageindex.com/keywords/server-side-swift
     packages:
       - name: vapor
-        description: Vapor is an HTTP web framework for Swift, providing an expressive
-          and easy-to-use foundation for websites, APIs, and cloud projects.
+        description: Vapor 是一个用 Swift 编写的 HTTP Web 框架，为网站、API 和云项目提供表达性强且易于使用的基础。
         owner: Vapor
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/vapor/vapor
       - name: swift-openapi-generator
-        description: Generate Swift client and server code from an OpenAPI document. Includes
-          multiple repositories for extensibility and supports various transports.
+        description: 从 OpenAPI 文档生成 Swift 客户端和服务器代码。包括多个用于扩展的仓库，并支持各种传输。
         owner: Apple
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
+        platform_compatibility_tooltip: Apple (macOS) 和 Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-openapi-generator
       - name: hummingbird
-        description: Hummingbird is a lightweight, flexible server framework written in
-          Swift. It consists of an HTTP server, a web application framework, and extension
-          modules.
+        description: Hummingbird 是一个用 Swift 编写的轻量级、灵活的服务器框架。它由 HTTP 服务器、Web 应用程序框架和扩展模块组成。
         owner: Hummingbird
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) 和 Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
       - name: fluent
-        description: Fluent helps you work with databases, providing a high-level, type-safe
-          API for querying and manipulating data in Vapor apps.
+        description: Fluent 帮助你处理数据库，为 Vapor 应用程序中的查询和操作数据提供高级、类型安全的 API。
         owner: Vapor
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/vapor/fluent
       - name: MongoKitten
-        description: MongoKitten is a fast, pure Swift MongoDB driver built for Server
-          Side Swift. It supports both MongoDB in server and embedded environments and
-          can be used with Vapor or Hummingbird.
+        description: MongoKitten 是一个为服务器端 Swift 构建的快速、纯 Swift MongoDB 驱动程序。它支持服务器和嵌入式环境中的 MongoDB，可以与 Vapor 或 Hummingbird 一起使用。
         owner: Orlandos
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/orlandos-nl/MongoKitten
       - name: SwiftyBeaver
-        description: SwiftyBeaver is a flexible, colorful, lightweight logging library
-          for Swift. It supports console, file, and cloud destinations and is ideal for
-          server-side Swift.
+        description: SwiftyBeaver 是一个灵活、多彩、轻量级的 Swift 日志库。它支持控制台、文件和云目标，非常适合服务器端 Swift。
         owner: SwiftyBeaver
         swift_compatibility: 5.8+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
-      - name: fluent
-        description: Fluent helps you work with databases, providing a high-level, type-safe
-          API for querying and manipulating data in Vapor apps.
-        owner: Vapor
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
-        license: MIT
-        url: https://swiftpackageindex.com/vapor/fluent
-  - name: Networking
+  - name: 网络
     slug: networking
     brief: 浏览可以扩展和增强 Swift 核心网络库的包集合。
     description: "涵盖从核心网络库的抽象到功能齐全的 HTTP 客户端再到底层网络库的所有内容。如果你需要在 URLSession 之上添加一点或很多功能,你都可以在这里找到。"
@@ -311,35 +209,27 @@ categories:
       url: https://swiftpackageindex.com/keywords/networking
     packages:
       - name: Alamofire
-        description: Alamofire is an HTTP networking library written in Swift. It provides
-          features such as request/response handling, parameter encoding, authentication,
-          progress tracking, and more.
+        description: Alamofire 是一个用 Swift 编写的 HTTP 网络库。它提供请求/响应处理、参数编码、身份验证、进度跟踪等功能。
         owner: Alamofire
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/Alamofire/Alamofire
       - name: swift-nio
-        description: SwiftNIO is a cross-platform networking framework for building high-performance
-          protocol servers and clients. It uses non-blocking I/O for efficient handling
-          of multiple connections.
+        description: SwiftNIO 是一个用于构建高性能协议服务器和客户端的跨平台网络框架。它使用非阻塞 I/O 高效处理多个连接。
         owner: Apple
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-nio
       - name: Pulse
-        description: Pulse is a powerful logging system for Apple platforms. It records
-          and inspects logs and network requests, and allows for real-time viewing and
-          sharing.
+        description: Pulse 是一个强大的 Apple 平台日志系统。它记录和检查日志和网络请求，并允许实时查看和共享。
         owner: Alex Grebenyuk
         swift_compatibility: 5.10+
         platform_compatibility:
@@ -348,8 +238,7 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
       - name: Moya
-        description: Moya is a network abstraction layer for Alamofire. It simplifies
-          network calls and provides compile-time checking for API endpoints.
+        description: Moya 是 Alamofire 的网络抽象层。它简化网络调用，并为 API 端点提供编译时检查。
         owner: Moya
         swift_compatibility: 5.8+
         platform_compatibility:
@@ -358,22 +247,17 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/Moya/Moya
       - name: FlyingFox
-        description: FlyingFox enables the creation of lightweight, concurrent HTTP servers
-          with support for WebSockets and static file serving. It uses non blocking BSD
-          sockets to handle each connection with Swift concurrency.
+        description: FlyingFox 支持创建轻量级、并发的 HTTP 服务器，支持 WebSockets 和静态文件服务。它使用非阻塞 BSD 套接字，通过 Swift 并发处理每个连接。
         owner: Simon Whitty
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/swhitty/FlyingFox
       - name: RealHTTP
-        description: RealHTTP is a lightweight, async-based HTTP library for Swift. It
-          aims to provide an easy-to-use, powerful HTTP client with features like async/await
-          support, request customization, response validation, and more.
+        description: RealHTTP 是一个轻量级、基于异步的 Swift HTTP 库。它旨在提供一个易于使用、功能强大的 HTTP 客户端，具有 async/await 支持、请求自定义、响应验证等功能。
         owner: Immobiliare Labs
         swift_compatibility: 5.8+
         platform_compatibility:
@@ -382,18 +266,16 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/immobiliare/RealHTTP
       - name: Socket
-        description: BlueSocket is a Socket framework for Swift. It provides functionality
-          for creating, closing, and listening on sockets.
+        description: BlueSocket 是一个 Swift 的套接字框架。它提供创建、关闭和监听套接字的功能。
         owner: Kitura
         swift_compatibility: 5.8+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Kitura/BlueSocket
-  - name: Testing
+  - name: 测试
     slug: testing
     brief: "如果你想提升项目的测试水平,看看这些可能有用的包。"
     description: "无论你是在寻找 XCTest 的扩展还是完全不同的测试方法,这些包都能帮到你。"
@@ -402,60 +284,47 @@ categories:
       url: https://swiftpackageindex.com/keywords/testing
     packages:
       - name: swift-testing
-        description: Enhances Swift code testing with expressive APIs, custom behaviors,
-          flexible organization, scalable execution, and cross-platform support. Compatible
-          with XCTest for easy migration.
+        description: 通过表达性 API、自定义行为、灵活组织、可扩展执行和跨平台支持增强 Swift 代码测试。与 XCTest 兼容，便于迁移。
         owner: The Swift Programming Language
         swift_compatibility: 6.0+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
+        platform_compatibility_tooltip: Apple (macOS) 和 Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/swiftlang/swift-testing
       - name: swift-custom-dump
-        description: A collection of tools for debugging, diffing, and testing data structures
-          in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
-          and `XCTAssertNoDifference` for test assertions.
+        description: 一组用于调试、比较和测试 Swift 数据结构的工具。包括用于精细输出的 `customDump`、用于文本比较的 `diff` 和用于测试断言的 `XCTAssertNoDifference`。
         owner: Point-Free
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
       - name: swift-snapshot-testing
-        description: SnapshotTesting is a delightful Swift snapshot testing library. It
-          allows you to easily compare snapshots of views, view controllers, URL requests,
-          and encodable values. It supports a wide range of snapshot strategies and is
-          highly configurable.
+        description: SnapshotTesting 是一个令人愉快的 Swift 快照测试库。它允许你轻松比较视图、视图控制器、URL 请求和可编码值的快照。它支持广泛的快照策略，并且高度可配置。
         owner: Point-Free
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
       - name: Quick
-        description: Quick is a behavior-driven development framework for Swift and Objective-C.
-          It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
-          framework for tests.
+        description: Quick 是一个用于 Swift 和 Objective-C 的行为驱动开发框架。它受到 RSpec、Specta 和 Ginkgo 的启发。它附带 Nimble，一个用于测试的匹配器框架。
         owner: Quick
         swift_compatibility: 5.8+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) 和 Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Quick
       - name: OCMockito
-        description: OCMockito is an Objective-C implementation of Mockito, allowing you
-          to create, verify, and stub mock objects. It has some key differences from other
-          mocking frameworks, making tests less fragile and more readable.
+        description: OCMockito 是 Mockito 的 Objective-C 实现，允许你创建、验证和存根模拟对象。它与其他模拟框架有一些关键区别，使测试不那么脆弱，更易于阅读。
         owner: Jon Reid
         swift_compatibility: 5.8+
         platform_compatibility:
@@ -463,32 +332,35 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/jonreid/OCMockito
-  - name: Debug logging
+      - name: OCHamcrest
+        description: OCHamcrest 是一个 Objective-C 模块，提供用于创建灵活测试断言和用户输入验证的匹配器库。
+        owner: Hamcrest
+        swift_compatibility: 5.8+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: BSD 2-Clause
+        url: https://swiftpackageindex.com/hamcrest/OCHamcrest
+  - name: 调试日志
     slug: logging
     brief: "在寻找比 Swift 内置日志更多的功能？从这个日志相关包列表开始。"
-    description: Swift 有[出色的内置日志功能](https://developer.apple.com/documentation/os/logging),
-      but start with this list of packages if you want to extend or find something specific
-      to your needs.
+    description: Swift 有[出色的内置日志功能](https://developer.apple.com/documentation/os/logging)，但如果你想要扩展或找到特定于你需求的功能，请从这个包列表开始。
     more:
       title: 更多调试日志包
       url: https://swiftpackageindex.com/keywords/logging
     packages:
       - name: swift-log
-        description: SwiftLog is a community-driven logging API package for server-side
-          Swift applications. It provides easy logging of messages to a shared destination
-          and supports various logging backends for customization and integration.
+        description: SwiftLog 是一个社区驱动的服务器端 Swift 应用程序日志 API 包。它提供将消息轻松记录到共享目标的功能，并支持各种日志后端以进行自定义和集成。
         owner: Apple
         swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) 和 Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-log
       - name: CocoaLumberjack
-        description: CocoaLumberjack is a fast, simple, powerful, and flexible, logging
-          framework that allows logging to multiple destinations simultaneously.
+        description: CocoaLumberjack 是一个快速、简单、功能强大且灵活的日志框架，允许同时记录到多个目标。
         owner: CocoaLumberjack
         swift_compatibility: 5.8+
         platform_compatibility:
@@ -497,21 +369,17 @@ categories:
         license: BSD 3-Clause
         url: https://swiftpackageindex.com/CocoaLumberjack/CocoaLumberjack
       - name: SwiftyBeaver
-        description: SwiftyBeaver is a flexible, colorful, lightweight logging library
-          for Swift. It supports console, file, and cloud destinations and is ideal for
-          server-side Swift.
+        description: SwiftyBeaver 是一个灵活、多彩、轻量级的 Swift 日志库。它支持控制台、文件和云目标，非常适合服务器端 Swift。
         owner: SwiftyBeaver
         swift_compatibility: 5.8+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) 和 Linux
         license: MIT
         url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
       - name: Datadog
-        description: This library provides Swift and Objective-C SDKs to interact with
-          Datadog. It includes features for log collection, trace collection, and RUM
-          events collection.
+        description: 这个库提供 Swift 和 Objective-C SDK 来与 Datadog 交互。它包括日志收集、跟踪收集和 RUM 事件收集的功能。
         owner: Datadog, Inc.
         swift_compatibility: 5.9+
         platform_compatibility:
@@ -520,9 +388,7 @@ categories:
         license: Apache 2.0
         url: https://swiftpackageindex.com/DataDog/dd-sdk-ios
       - name: Pulse
-        description: Pulse is a powerful logging system for Apple platforms. It records
-          and inspects logs and network requests, and allows for real-time viewing and
-          sharing.
+        description: Pulse 是一个强大的 Apple 平台日志系统。它记录和检查日志和网络请求，并允许实时查看和共享。
         owner: Alex Grebenyuk
         swift_compatibility: 5.10+
         platform_compatibility:
@@ -531,10 +397,7 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
       - name: Wormholy
-        description: Wormholy is a debugging tool for iOS network calls. It records app
-          traffic, reveals request and response content, and helps with debugging and
-          bug fixing. It works with NSURLSession and external libraries like Alamofire
-          and AFNetworking.
+        description: Wormholy 是一个用于 iOS 网络调用的调试工具。它记录应用程序流量，显示请求和响应内容，并帮助调试和修复错误。它与 NSURLSession 和外部库（如 Alamofire 和 AFNetworking）一起工作。
         owner: Paolo Musolino
         license: MIT
         url: https://swiftpackageindex.com/pmusolino/Wormholy
