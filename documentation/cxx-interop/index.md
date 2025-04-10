@@ -1331,6 +1331,12 @@ automatically.
 
 ## Working with C++ References and View Types in Swift
 
+Swift has a new [safe interoperability](https://www.swift.org/documentation/cxx-interop/safe-interop)
+model under development that makes code auditable for memory safety errors by explicitly delineating potentially
+unsafe code from safe code and introducing ways to annotate lifetime contracts. We recommend giving this
+new mode of interoperability a try as the rest of this section might be subsumed by these new features under
+a new interoperability version in the future.
+
 As outlined
 [earlier](#member-functions-returning-references-are-unsafe-by-default),
 member functions that return references, pointers, or certain structures/classes that

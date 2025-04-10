@@ -14,10 +14,10 @@ redirect_from:
 
 ## Introduction
 
-Swift's [strict memory safety mode](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0458-strict-memory-safety.md)
-is a new feature in Swift 6.2 to make code easier to audit for memory safety.
 This document describes how to ergonomically interact with Swift by importing
-C++ construct safely. All of the features in this document work in regular Swift
+C++ construct safely. Swift's [strict memory safety mode](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0458-strict-memory-safety.md)
+is a new feature under development to make code easier to audit for memory safety.
+All of the features in this document work in regular Swift
 but they provide more value in strict memory safe mode.
 
 * * *
@@ -40,17 +40,28 @@ break code in existing codebases [by default](#source-stability-guarantees-for-m
 Swift provides memory safety with a combination of language affordances and runtime checking.
 However, Swift also deliberately includes some unsafe constructs, such as the `UnsafePointer` and `UnsafeMutablePointer`
 types in the standard library.
-Swift occasionally needs additional information that is not present in the C++ type and API declarations
+In some cases, Swift needs additional information that is not present in the C++ type and API declarations
 to safely interface with them. This document describes how such code needs to be annotated.
 
 ### Annotating foreign types
 
-Types imported from C++ are considered foreign to Swift. Many of these types are considered safe,
-including the built-in integral types like `int`, some standard library types like `std::string`,
-and aggregate types built from other safe types.
+Types imported from C++ are considered foreign to Swift. 
+Types imported from C++ are considered foreign to Swift. Normally, most C++ types are imported into Swift
+without any restriction. However, a small set of C++ APIs e.g. pointers/references and methods returning
+pointers will be imported as unsafe (section [Working with C++ references and view types in Swift](https://www.swift.org/documentation/cxx-interop/#working-with-c-references-and-view-types-in-swift)
+explains this in more detail.) Under the strict memory safe mode, the compiler will flip the polarity and
+treat all types that are not known to be safe as unsafe, and will diagnose uses of them. In this section,
+we will show how to annotate unsafe C++ types so that they can be accessed safely and correctly from Swift.
+Note that the features here are agnostic to whether strictly-safe mode is on or off. When the strictly safe
+mode is on, the compiler warnings can serve as a guide to properly annotate C++ types and also help ensure
+that the code doesn't use unsafe APIs anywhere. When the strictly-memory-safe mode is off, it is still
+recommended to adopt these annotation whereever appropriate, especially on C++ types that are potentially
+lifetime dependent on other objects.
 
-On the other hand, some C++ types are imported as unsafe by default. Consider the following C++ type
-and APIs:
+Under strictly-memory-safe mode the built-in integral types like `int`, some standard library types like `std::string`,
+and aggregate types built from other safe types are considered safe. Whereas all other unannotated types
+are considered unsafe. Let's see what happens when we are trying to use an unannotated type in
+strictly-safe mode. Consider the following C++ type and APIs:
 
 ```c++
 class StringRef {
@@ -143,28 +154,25 @@ contracts helping us to write code that is free of memory safety errors.
 
 ## Escapability annotations in detail
 
-Currently, unannotated types are imported as `Escapable` to maintain backward
+Under the strictly-safe mode, even though compiler warns on unannotated types,
+they are imported as if they are `Escapable` to maintain backward
 compatibility. This might change in the future under a new interoperability version.
 We have already seen that we can import a type as `~Escapable` to Swift by adding
 the `SWIFT_NONESCAPABLE` annotation:
 
 ```c++
 struct SWIFT_NONESCAPABLE View {
-    View() : member(nullptr) {}
     View(const int *p) : member(p) {}
-    View(const View&) = default;
 private:
     const int *member;
 };
 ```
 
 Moreover, we can explicitly mark types as `Escapable` using the `SWIFT_ESCAPABLE`
-annotation:
+annotation to express that they are not lifetime dependent on any other values:
 
 ```c++
-struct SWIFT_ESCAPABLE Owner {
-    ...
-}; 
+struct SWIFT_ESCAPABLE Owner { ... }; 
 ```
 
 The main reason for explicitly annotating a type as `SWIFT_ESCAPABLE` is to make sure
@@ -193,28 +201,63 @@ In this example, `MyList<View>` should be imported as `~Escapable` while `MyList
 should be imported as `Escapable`. This can be achieved via conditional escapability
 annotations:
 
-```
+```c++
 template<typename T>
 struct SWIFT_ESCAPABLE_IF(T) MyList {
     ...
 };
 ```
 
+Here, instantiations of `MyList` are imported as `Escapable` when `T` is substituted
+with an `Escapable` type.
+
+The `SWIFT_ESCAPABLE_IF` macro can take multiple template parameters:
+
+```c++
+template<typename F, typename S>
+struct SWIFT_ESCAPABLE_IF(F, S) MyPair {
+    F first;
+    S second;
+};
+```
+
+`MyPair` instantiations are only imported as `Escapable` if both template arguments
+are `Escapable`.
+
+`Escapable` types cannot have `~Escapable` fields. The following code snippet will
+trigger a compiler error:
+
+```c++
+struct SWIFT_NONESCAPABLE View { ... };
+struct SWIFT_ESCAPABLE Owner { 
+    View v;
+}; 
+```
+
+Escapability annotations will not only help the Swift compiler to import C++ types
+safely, it will also help discover missing lifetime annotations as all `~Escapable`
+parameters and return values need to be annotated in an API to make its use safe in
+Swift.
+
 ## Lifetime annotations in detail
 
-The `lifetimebound` attribute can be used to annotate code in various scenarios.
-On a constructor, it describes the lifetime of the created object:
+The `lifetimebound` attribute on a function parameter or implicit object parameter
+indicates that the returned object's lifetime could end when any of the `lifetimebound`
+annotated parameters' lifetime ended.
+This annotation a constructor describes the lifetime of the created object:
 
 ```c++
 struct SWIFT_NONESCAPABLE View {
     View(const int *p [[clang::lifetimebound]]) : member(p) {}
-private:
-    const int *member;
+    ...
 };
 ```
 
+In this example, the object initialized by the `View` constructor has the same
+lifetime as the input argument of the constructor.
+
 In case the attribute is after the method signature, the returned object has
-the same lifetime as the `this` object.
+the same lifetime as the implicit `this` parameter.
 
 ```c++
 struct Owner {
@@ -226,19 +269,17 @@ struct Owner {
 };
 ```
 
-In case the attribute is applied to a subset of the formal parameters, the return
+Consider a call site like `View v = o.handOutView()`. The `v` object has the same lifetime
+as `o`.
+
+In case the attribute is applied to a subset of the parameters, the return
 value might depend on the corresponding arguments:
 
 ```c++
-View getView(const Owner& owner [[clang::lifetimebound]]) {
-    return View(&owner.data);
-}
-
-View getViewFromFirst(const Owner& owner [[clang::lifetimebound]], const Owner& owner2) {
-    return View(&owner.data);
-}
-
-View getViewFromEither(View view1 [[clang::lifetimebound]], View view2 [[clang::lifetimebound]]) {
+View getOneOfTheViews(const Owner& owner1 [[clang::lifetimebound]], const Owner& owner2
+    View view1 [[clang::lifetimebound]], View view2 [[clang::lifetimebound]]) {
+    if (coinFlip)
+        return View(&owner1.data);
     if (coinFlip)
         return view1;
     else
@@ -246,7 +287,10 @@ View getViewFromEither(View view1 [[clang::lifetimebound]], View view2 [[clang::
 }
 ```
 
-Occasionally, a function might return a non-escapable type that in fact has no dependency on any other values.
+Here, the returned `View`'s lifetime depends on `owner`, `view1`, and `view2` but it cannot
+depend on `owner2`. 
+
+Occasionally, a function might return a non-escapable type that has no dependency on any other values.
 These types might point to static data or might represent an empty sequence or lack of data.
 Such functions need to be annotated with `SWIFT_RETURNS_INDEPENDENT_VALUE`:
 
@@ -276,17 +320,25 @@ Tags:
 
 Note that APINotes have some limitations around C++, they do not support overloaded functions.
 
-We can use `lifetime_capture_by` annotations for output arguments.
+While `lifetimebound` always describes the lifetime dependencies of the return value (or
+the constructed object in case of constructors), we can use can use `lifetime_capture_by`
+annotation to descibe the lifetime of other output values, like output/inout arguments
+or globals.
 
 ```c++
 void copyView(View view1 [[clang::lifetime_capture_by(view2)]], View &view2) {
     view2 = view1;
 }
+```
 
+In this example, `view2` will have get all of the lifetime dependencies of `view1`
+after a call to `copyView`. a
+
+We can annotate dependency captured by the implicit `this` object, or
+an inout argument capturing `this`:
+
+```c++
 struct SWIFT_NONESCAPABLE CaptureView {
-    CaptureView() : view(nullptr) {}
-    CaptureView(View p [[clang::lifetimebound]]) : view(p) {}
-
     void captureView(View v [[clang::lifetime_capture_by(this)]]) {
         view = v;
     }
@@ -301,11 +353,49 @@ struct SWIFT_NONESCAPABLE CaptureView {
 
 All of the non-escapable inputs need lifetime annotations for a function to be
 considered safe. If an input never escapes from the called function we can use
-the `noescape` annotation.
+the `noescape` annotation:
 
 ```c++
 void is_palindrome(std::span<int> s [[clang::noescape]]);
 ```
 
+While the annotations in this section are powerful, they cannot express all of
+the lifetime contracts. APIs with inexpressible contracts can be used from Swift,
+but they are imported as unsafe APIs and need extra care from the developers
+to manually guarantee safety.
+
 ## Convenience overloads for annotated spans and pointers
+
+C++ APIs often using standard library types or other constructs like a 
+pointer and a size to represent buffers that have Swift equivalents like
+Swift's `Span` type. These Swift types have additional requirements and
+guarantees. When these properties are properly annotated on the C++ side,
+the Swift compiler can introduce safe convenience functions to make
+interacting with the C++ APIs as effortless as if they were written in Swift.
+
+### C++ span support
+
+APIs taking/returning C++'s `std::span` with sufficient lifetime
+annotations will automatically get overloads taking/returning Swift
+`Span`.
+
+The following table summarizes the generated convenience overloads:
+
+```c++
+using IntSpan = std::span<const int>;
+using IntVec = std::vector<int>;
+```
+
+| C++ API                                                   | Generated Swift overload                                             |
+| --------------------------------------------------------- | -------------------------------------------------------------------- |
+| `void takeSpan(IntSpan x [[clang::noescape]]);`           | `func takeSpan(_ x: Span<Int32>)`                                    |
+| `IntSpan changeSpan(IntSpan x [[clang::lifetimebound]]);` | `@lifetime(x) func changeSpan(_ x: Span<Int32>) -> Span<Int32>`      |
+| `IntSpan changeSpan(IntVec& x [[clang::lifetimebound]]);` | `@lifetime(x) func changeSpan(_ x: borrowing IntVec) -> Span<Int32>` |
+| `IntSpan Owner::getSpan() [[clang::lifetimebound]];`      | `@lifetime(self) func getSpan() -> Span<Int32>`                      |
+
+These transformations only support top level `std::span`s, we do not
+transform the nested cases. A `std::span` of a non-const type `T` will
+be transformed to `MutableSpan<T>` on the Swift wide.
+
+### Annotated pointers
 
