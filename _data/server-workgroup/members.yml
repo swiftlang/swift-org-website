@@ -1,51 +1,51 @@
-- name: Adam Fowler
-  github: adam-fowler
-  affiliation:
+- name: Tibor Bödecs
+  github: tib
+  affiliation: Binary Birds
 
 - name: Franz Busch
   github: FranzBusch
   affiliation: Apple
 
-- name: Gwynne Raskind
-  github: gwynne
-  affiliation: Vapor
-
-- name: Joannis Orlandos
-  github: joannis
-  affiliation:
-
-- name: Konrad Malawski
-  github: ktoso
-  affiliation: Apple
-
-- name: Simon Pilkington
-  github: tachyonics
-  affiliation: Amazon
+- name: Ben Cohen
+  github: airspeedswift
+  affiliation: Apple, Core team rep
 
 - name: Tim Condon
   github: 0xTim
   affiliation: Vapor
 
-- name: Sebastien Stormacq
-  github: sebsto
+- name: Josh Elkins
+  github: jbelkins
   affiliation: Amazon
 
-- name: Sven A. Schmidt
-  github: finestructure
-  affiliation: Swift Package Index
+- name: Adam Fowler
+  github: adam-fowler
+  affiliation:
 
 - name: Dianna Ma
   github: tayloraswift
   affiliation: 
 
-- name: Tibor Bödecs
-  github: tib
-  affiliation: Binary Birds
+- name: Konrad Malawski
+  github: ktoso
+  affiliation: Apple
 
-- name: Ben Cohen
-  github: airspeedswift
-  affiliation: Apple, Core team rep
+- name: Joannis Orlandos
+  github: joannis
+  affiliation:
 
-- name: Josh Elkins
-  github: jbelkins
-  affiliation: Amazon  
+- name: Simon Pilkington
+  github: tachyonics
+  affiliation: Atlassian
+
+- name: Gwynne Raskind
+  github: gwynne
+  affiliation: Vapor
+
+- name: Sven A. Schmidt
+  github: finestructure
+  affiliation: Swift Package Index
+
+- name: Sebastien Stormacq
+  github: sebsto
+  affiliation: Amazon
