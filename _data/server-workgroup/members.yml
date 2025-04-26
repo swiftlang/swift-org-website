@@ -16,7 +16,7 @@
 
 - name: Josh Elkins
   github: jbelkins
-  affiliation: Amazon
+  affiliation: AWS
 
 - name: Adam Fowler
   github: adam-fowler
@@ -36,7 +36,7 @@
 
 - name: Simon Pilkington
   github: tachyonics
-  affiliation: Atlassian
+  affiliation: 
 
 - name: Gwynne Raskind
   github: gwynne
@@ -48,4 +48,4 @@
 
 - name: Sebastien Stormacq
   github: sebsto
-  affiliation: Amazon
+  affiliation: AWS
