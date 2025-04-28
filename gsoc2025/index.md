@@ -28,6 +28,8 @@ Getting familiar with the codebase you are interested in working on during GSoC 
 
 When it comes to writing the proposal, the [Google Summer of Code Guide](https://google.github.io/gsocguides/student/writing-a-proposal) contains general, good advice.
 
+The best proposals include a detailed timeline, specific milestones and goals as well as an outline the technical challenges you foresee. It is best if you engage with your potential project mentor on the forums before contriburing, and have them clarify the goals and steps that they think are necessary for the project to be successful. Your proposal should have a clear goal, which can be successfully achieved as part of the weeks you'll be working it. Provide details about your approach, significant milestones you wish to achieve, and clarify with your potential mentor if they agree those seem reasonable. The time before proposal submissions is there for you to reach out and polish your proposal, so make sure you use it well! Good luck!
+
 ## Potential Projects
 
 We are currently collecting project ideas on the forums in the dedicated [GSoC category](https://forums.swift.org/c/development/gsoc/98).
@@ -194,7 +196,7 @@ Qualified name lookup is the process by which a compiler resolves a reference  `
 
 ### DocC Language Features in SourceKit-LSP
 
-**Project size**: 90 hours (medium)
+**Project size**: 175 hours (medium)
 
 **Estimated difficulty**: Intermediate
 
@@ -387,6 +389,39 @@ Strech goals:
 - [Sofía Rodríguez](https://github.com/sofiaromorales)
 - [Si Beaumont](https://github.com/simonjbeaumont)
 - [Honza Dvorsky](https://github.com/czechboy0)
+
+### JNI mode for swift-java's source jextract tool
+
+**Project size**: 350 hours (large)
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+- Basic proficiency in Java, since the source generator will be emitting both Java and Swift code.
+
+**Description**
+
+The existing [swift-java](https://github.com/swiftlang/swift-java) Java interoperability project currently supports both JNI and Java's new Foreign Function & Memory API's, 
+however the latter source generator which works by analysis of existing Swift code, and emitting Java "accessors" to these
+currently only works with JDK 22+ because it uses FFM for its implementation. It would be possible–and beneficial for platforms
+where JDK 22+ is not available–to allow the `jextract` tool also operate in a limited functionality JNI mode.
+
+This project would kickstart the work on a JNI mode for the `jextract` tool, allowing for calling for any Swift APIs
+from Java, using these generated Java accessor classes.
+
+**Expected outcomes/benefits/deliverables**
+
+- Provide a new JNI mode for the `jextract`
+- Achieve feature parity with the current day FFM mode of jextract
+- The project can be stretched to provide more features and continue work on jextract, providing more flexibility in the tool 
+
+**Potential mentors**
+
+- [Konrad 'ktoso' Malawski](https://github.com/ktoso)
+
+
 
 ### Example project name
 

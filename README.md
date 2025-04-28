@@ -40,13 +40,13 @@ open "http://localhost:4000"
 First build the site with Docker Compose:
 
 ```bash
-docker-compose run build
+docker compose run build
 ```
 
 Then you can run the site:
 
 ```bash
-docker-compose up website
+docker compose up website
 ```
 
 The website will be available on `http://localhost:4000`

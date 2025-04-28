@@ -10,7 +10,7 @@ title: Install Swift
   <li class="grid-level-1 featured">
     <h3>Swiftly</h3>
   <p class="description">
-    To download toolchains from Swift.org, use the Swiftly toolchain installer. Swift.org toolchains include experimental features like Embedded Swift and support for WebAssembly.
+    To download toolchains from Swift.org, use the Swiftly toolchain installer. Swift.org toolchains support Static Linux SDK, include experimental features like Embedded Swift and support for WebAssembly.
   </p>
   <div class="shellcode-intro">Run this in a terminal:<button id="shell" class="toggle"></button></div>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre style="white-space: initial;" class="highlight"><code id="shellcode"></code></pre></div></div>
