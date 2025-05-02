@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2025-05-01 10:00:00
+date: 2025-05-02 11:15:00
 title: "ICYMI: Memory Safety, Ecosystem Talks, and Java Interoperability at FOSDEM 2025"
 author: [parispittman]
 ---
@@ -12,7 +12,7 @@ In case you missed it, here are a few highlights from the event:
 
 ## Memory Safety in Swift
 
-The main track of the conference featured a talk presented by Doug Gregor on memory safety: [“Incremental Memory Safety in an Established Software Stack: Lessons Learned from Swift.”](https://fosdem.org/2025/schedule/event/fosdem-2025-6176-incremental-memory-safety-in-an-established-software-stack-lessons-learned-from-swift/)
+The main track of the conference featured a talk presented by Doug Gregor on memory safety: [Slide from a presentation at FOSDEM 2025 titled 'Incremental Memory Safety in an Established Software Stack: Lessons Learned from Swift' by Doug Gregor.](https://fosdem.org/2025/schedule/event/fosdem-2025-6176-incremental-memory-safety-in-an-established-software-stack-lessons-learned-from-swift/)
 
 ![Incremental Memory Safety in an Established Software Stack](/assets/images/fosdem-2025-memory-and-java-blog/fosdem2025-1.png)
 
@@ -36,7 +36,7 @@ Check out the [complete lineup](https://fosdem.org/2025/schedule/track/swift/) t
 
 In the Free Java DevRoom, Konrad 'ktoso' Malawski presented on Java interoperability in Swift: [“Foreign Function and Memory APIs and Swift/Java interoperability.“](https://fosdem.org/2025/schedule/event/fosdem-2025-4886-foreign-function-and-memory-apis-and-swift-java-interoperability/)
 
-![Foreign Function and Memory APIs and Swift/Java interoperability](/assets/images/fosdem-2025-memory-and-java-blog/fosdem2025-2.png)
+![Slide from a presentation at FOSDEM 2025 titled 'Foreign Function and Memory APIs and Swift/Java interoperability' by Konrad 'ktoso' Malawski](/assets/images/fosdem-2025-memory-and-java-blog/fosdem2025-2.png)
 
 Konrad’s talk was a technical deep dive into the [Java interoperability effort](https://forums.swift.org/t/java-interoperability-effort/74969) that launched at the 2024, demonstrating the bridges and bindings needed to integrate systems written in these Swift and Java while still maintaining great performance. Catch up on this talk to see how you can leverage existing libraries without complete rewrites.
 
