@@ -12,9 +12,9 @@ In case you missed it, here are a few highlights from the event:
 
 ## Memory Safety in Swift
 
-The main track of the conference featured a talk presented by Doug Gregor on memory safety: [Slide from a presentation at FOSDEM 2025 titled 'Incremental Memory Safety in an Established Software Stack: Lessons Learned from Swift' by Doug Gregor.](https://fosdem.org/2025/schedule/event/fosdem-2025-6176-incremental-memory-safety-in-an-established-software-stack-lessons-learned-from-swift/)
+The main track of the conference featured a talk presented by Doug Gregor on memory safety: [“Incremental Memory Safety in an Established Software Stack: Lessons Learned from Swift.”](https://fosdem.org/2025/schedule/event/fosdem-2025-6176-incremental-memory-safety-in-an-established-software-stack-lessons-learned-from-swift/)
 
-![Incremental Memory Safety in an Established Software Stack](/assets/images/fosdem-2025-memory-and-java-blog/fosdem2025-1.png)
+![Slide from a presentation at FOSDEM 2025 titled 'Incremental Memory Safety in an Established Software Stack: Lessons Learned from Swift' by Doug Gregor.](/assets/images/fosdem-2025-memory-and-java-blog/fosdem2025-1.png)
 
 If you’re interested in learning more about Swift’s memory safe features, this talk is a great place to start; it walks through  the different dimensions of memory safety in Swift, the language’s safe interoperability with C(++), and reflects on lessons learned for both programming language design and adopting Swift in an established software codebase.
 
