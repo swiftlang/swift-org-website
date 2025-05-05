@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-date: 2025-05-02 11:15:00
+date: 2025-05-05 11:55:00
 title: "ICYMI: Memory Safety, Ecosystem Talks, and Java Interoperability at FOSDEM 2025"
 author: [parispittman]
 ---
