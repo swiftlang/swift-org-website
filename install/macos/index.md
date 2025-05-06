@@ -16,7 +16,7 @@ title: Install Swift
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><button>Copy</button><pre class="highlight"><code>curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg &amp;&amp; \
 installer -pkg swiftly.pkg -target CurrentUserHomeDirectory &amp;&amp; \
 ~/.swiftly/bin/swiftly init --quiet-shell-followup &amp;&amp; \
-. ~/.swiftly/env.sh &amp;&amp; \
+. ${SWIFTLY_HOME_DIR:-~/.swiftly}/env.sh &amp;&amp; \
 hash -r
 </code></pre></div></div>
   <h4>License: <a href="https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt">Apache-2.0</a></h4>
