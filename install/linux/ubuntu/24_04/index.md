@@ -23,7 +23,7 @@ development="main"
 docker_tag="nightly-noble"
 development_builds=site.data.builds.development.ubuntu2404
 aarch64_development_builds=site.data.builds.development.ubuntu2404-aarch64
-development_2="release/6.1"
-docker_tag_2="nightly-6.1-noble"
-development_builds_2=site.data.builds.swift-6_1-branch.ubuntu2404 aarch64_development_builds_2=site.data.builds.swift-6_1-branch.ubuntu2404-aarch64
-branch_dir_2="swift-6.1-branch"%}
+development_2="release/6.2"
+docker_tag_2="nightly-6.2-noble"
+development_builds_2=site.data.builds.swift-6_2-branch.ubuntu2404 aarch64_development_builds_2=site.data.builds.swift-6_2-branch.ubuntu2404-aarch64
+branch_dir_2="swift-6.2-branch"%}
