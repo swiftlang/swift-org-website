@@ -102,7 +102,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/swiftlang/swift-testing
       - name: Defaults
@@ -129,9 +130,9 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-dependencies
-      - name: swift-perception
-        description: Offers observation tools for earlier versions of Swift, mimicking
-          `@Observable` and providing compatibility with newer Swift observation features.
+      - name: swift-case-paths
+        description: CasePaths extends the functionality of key paths to enum cases, allowing
+          for the extraction, modification, and testing of associated values in enums.
         owner: Point-Free
         swift_compatibility: 5.9+
         platform_compatibility:
@@ -140,7 +141,7 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-perception
+        url: https://swiftpackageindex.com/pointfreeco/swift-case-paths
   - name: Server
     slug: server
     brief: Do you need a hand putting together a Swift app for the server? Browse some
@@ -180,7 +181,7 @@ categories:
           Swift. It consists of an HTTP server, a web application framework, and extension
           modules.
         owner: Hummingbird
-        swift_compatibility: 5.9+
+        swift_compatibility: 5.10+
         platform_compatibility:
           - Apple
           - Linux
@@ -195,7 +196,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/vapor/fluent
       - name: MongoKitten
@@ -210,18 +212,18 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/orlandos-nl/MongoKitten
-      - name: SwiftyBeaver
-        description: SwiftyBeaver is a flexible, colorful, lightweight logging library
-          for Swift. It supports console, file, and cloud destinations and is ideal for
-          server-side Swift.
-        owner: SwiftyBeaver
-        swift_compatibility: 5.8+
+      - name: routing-kit
+        description: RoutingKit provides a high-performance router and routing types for
+          applications and libraries, such as Vapor.
+        owner: Vapor
+        swift_compatibility: 5.10+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
-        url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
+        url: https://swiftpackageindex.com/vapor/routing-kit
   - name: Networking
     slug: networking
     brief: Browse a selection of packages that can extend and enhance the Swift core
@@ -251,7 +253,7 @@ categories:
           protocol servers and clients. It uses non-blocking I/O for efficient handling
           of multiple connections.
         owner: Apple
-        swift_compatibility: 5.9+
+        swift_compatibility: 5.10+
         platform_compatibility:
           - Apple
           - Linux
@@ -259,6 +261,16 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-nio
+      - name: Moya
+        description: Moya is a network abstraction layer for Alamofire. It simplifies
+          network calls and provides compile-time checking for API endpoints.
+        owner: Moya
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/Moya/Moya
       - name: Pulse
         description: Pulse is a powerful logging system for Apple platforms. It records
           and inspects logs and network requests, and allows for real-time viewing and
@@ -270,16 +282,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
-      - name: Moya
-        description: Moya is a network abstraction layer for Alamofire. It simplifies
-          network calls and provides compile-time checking for API endpoints.
-        owner: Moya
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/Moya/Moya
       - name: FlyingFox
         description: FlyingFox enables the creation of lightweight, concurrent HTTP servers
           with support for WebSockets and static file serving. It uses non blocking BSD
@@ -293,17 +295,17 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/swhitty/FlyingFox
-      - name: RealHTTP
-        description: RealHTTP is a lightweight, async-based HTTP library for Swift. It
-          aims to provide an easy-to-use, powerful HTTP client with features like async/await
-          support, request customization, response validation, and more.
-        owner: Immobiliare Labs
-        swift_compatibility: 5.8+
+      - name: Networking
+        description: Networking is a Swift library for making network requests with a
+          straightforward API. It supports faking requests, caching images, and various
+          types of authentication.
+        owner: Elvis Nunez
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
-        url: https://swiftpackageindex.com/immobiliare/RealHTTP
+        url: https://swiftpackageindex.com/3lvis/Networking
   - name: Testing
     slug: testing
     brief: "If you want to level up your project\u2019s tests, take a look at a selection
@@ -323,22 +325,10 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
-        license: Apache 2.0
-        url: https://swiftpackageindex.com/swiftlang/swift-testing
-      - name: swift-custom-dump
-        description: A collection of tools for debugging, diffing, and testing data structures
-          in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
-          and `XCTAssertNoDifference` for test assertions.
-        owner: Point-Free
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-          - Linux
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
-        license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/swiftlang/swift-testing
       - name: swift-snapshot-testing
         description: SnapshotTesting is a delightful Swift snapshot testing library. It
           allows you to easily compare snapshots of views, view controllers, URL requests,
@@ -353,12 +343,25 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
+      - name: swift-custom-dump
+        description: A collection of tools for debugging, diffing, and testing data structures
+          in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
+          and `XCTAssertNoDifference` for test assertions.
+        owner: Point-Free
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
       - name: Quick
         description: Quick is a behavior-driven development framework for Swift and Objective-C.
           It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
           framework for tests.
         owner: Quick
-        swift_compatibility: 5.8+
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
@@ -370,7 +373,7 @@ categories:
           to create, verify, and stub mock objects. It has some key differences from other
           mocking frameworks, making tests less fragile and more readable.
         owner: Jon Reid
-        swift_compatibility: 5.8+
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -380,7 +383,7 @@ categories:
         description: OCHamcrest is an Objective-C module that provides a library of matchers
           for creating flexible test assertions and user input validation.
         owner: Hamcrest
-        swift_compatibility: 5.8+
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -414,24 +417,12 @@ categories:
         description: CocoaLumberjack is a fast, simple, powerful, and flexible, logging
           framework that allows logging to multiple destinations simultaneously.
         owner: CocoaLumberjack
-        swift_compatibility: 5.8+
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: BSD 3-Clause
         url: https://swiftpackageindex.com/CocoaLumberjack/CocoaLumberjack
-      - name: SwiftyBeaver
-        description: SwiftyBeaver is a flexible, colorful, lightweight logging library
-          for Swift. It supports console, file, and cloud destinations and is ideal for
-          server-side Swift.
-        owner: SwiftyBeaver
-        swift_compatibility: 5.8+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
-        license: MIT
-        url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
       - name: Datadog
         description: This library provides Swift and Objective-C SDKs to interact with
           Datadog. It includes features for log collection, trace collection, and RUM
@@ -454,6 +445,18 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/kean/Pulse
+      - name: SwiftyBeaver
+        description: SwiftyBeaver is a flexible, colorful, lightweight logging library
+          for Swift. It supports console, file, and cloud destinations and is ideal for
+          server-side Swift.
+        owner: SwiftyBeaver
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/SwiftyBeaver/SwiftyBeaver
       - name: Wormholy
         description: Wormholy is a debugging tool for iOS network calls. It records app
           traffic, reveals request and response content, and helps with debugging and

@@ -103,7 +103,7 @@ years:
               Facilitates command line program execution and I/O handling using synchronous
               or `async`/`await` APIs.
             owner: Josef Zoller
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -128,7 +128,7 @@ years:
               templating language. It supports standard Mustache tags, template inheritance,
               and custom features like transforms, excluding Lambda support.
             owner: Hummingbird
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -230,7 +230,8 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (macOS) and Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
             license: MIT
             url: https://swiftpackageindex.com/GeorgeLyon/SwiftClaude
             note: Discussed on [Episode 51 of Swift Package Indexing](https://share.transistor.fm/s/257bd1fa){:target='_blank'}.
@@ -280,7 +281,7 @@ years:
               by Snowflake. Each identifier is half the size of a UUID and is suitable for
               use as a database key.
             owner: Ordo One
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -470,7 +471,7 @@ years:
             swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/heestand-xyz/KeyColor
             note: Discussed on [Episode 47 of Swift Package Indexing](https://share.transistor.fm/s/546632e4){:target='_blank'}.
@@ -572,7 +573,7 @@ years:
               in Swift. It consists of an HTTP server, a web application framework, and
               extension modules.
             owner: Hummingbird
-            swift_compatibility: 5.9+
+            swift_compatibility: 5.10+
             platform_compatibility:
               - Apple
               - Linux
@@ -608,7 +609,7 @@ years:
               order submission, and certificate issuance with ACME v2. Requires external
               challenge verification.
             owner: Matthieu Barthelemy
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -662,7 +663,7 @@ years:
             description: Serialization and deserialization of binary data, not based on
               key/value pairs, offering an alternative to `Codable` for efficient storage.
             owner: Matt Cox
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -676,7 +677,7 @@ years:
               hand hovering over the screen performing taps and gestures while using your
               app.
             owner: Adam Wulf
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, visionOS)
@@ -688,7 +689,7 @@ years:
               supporting command line use and integration as a library, with partial WebAssembly
               and WASI spec implementation.
             owner: SwiftWasm
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -787,7 +788,7 @@ years:
             description: Provides an XCTest assertion for testing asynchronous code by repeatedly
               evaluating conditions until they are met or time out.
             owner: Jon Reid
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -841,7 +842,7 @@ years:
             description: Creates an acknowledgements screen for your app that displays a
               list of licenses from your CocoaPods or Swift Package Manager dependencies.
             owner: Vincent Tourraine
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -854,7 +855,7 @@ years:
               can display images, headings, lists, blockquotes, code blocks, tables, and
               more.
             owner: Guille Gonzalez
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -881,7 +882,7 @@ years:
               APIs for retrieving and formatting time values. It also allows converting
               between time zones and calculating differences between dates.
             owner: Dave DeLong
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -911,7 +912,7 @@ years:
               capabilities and a robust caching system. Optimized for performance, customizable,
               and extensively tested for reliability.
             owner: Alex Grebenyuk
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
@@ -935,7 +936,7 @@ years:
               SwiftUI applications, supporting features like glTF, interactive camera controls,
               and environment-based lighting.
             owner: Freek
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
@@ -965,7 +966,7 @@ years:
               It looks similar to the Apple Calendar app out-of-the-box, while allowing
               customization when needed.
             owner: Richard Topchii
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, tvOS)
@@ -992,7 +993,7 @@ years:
               can display images, headings, lists, blockquotes, code blocks, tables, and
               more.
             owner: Guille Gonzalez
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -1015,7 +1016,7 @@ years:
             description: The easiest way to create a summary from a String. Internally it's
               a simple wrapper around CoreServices SKSummary.
             owner: Stef Kors
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (macOS, visionOS)
@@ -1030,7 +1031,7 @@ years:
               It provides access to all AWS services via a direct mapping of the REST APIs
               Amazon publishes for each of its services.
             owner: Soto for AWS
-            swift_compatibility: 5.9+
+            swift_compatibility: 5.10+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
@@ -1042,7 +1043,7 @@ years:
               app. It includes transitions and change effects which can trigger every time
               a value is updated.
             owner: Emerge Tools
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
@@ -1053,7 +1054,7 @@ years:
             description: OpenAPIKit allows encoding and decoding of OpenAPI 3.0.x and 3.1.x
               documents and their components in Swift.
             owner: Mathew Polzin
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -1080,7 +1081,7 @@ years:
               operations. It offers three retry strategy options: constant, exponential,
               and exponential with jitter."
             owner: Space Code
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -1123,7 +1124,7 @@ years:
               APIs for retrieving and formatting time values. It also allows converting
               between time zones and calculating differences between dates.
             owner: Dave DeLong
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -1159,7 +1160,7 @@ years:
               1-Wire interfaces. It is specifically designed for Raspberry Pis and other
               ARM boards running Linux.
             owner: uraimo
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -1187,7 +1188,7 @@ years:
               supports many features from SwiftUI, such as property wrappers, view builders,
               and modifiers.
             owner: Rens Breur
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
               - Linux
@@ -1200,7 +1201,7 @@ years:
               engine. Developers can use it to build extensions or embed Godot directly
               into Swift applications.
             owner: Miguel de Icaza
-            swift_compatibility: 5.9+
+            swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
               - Linux
@@ -1238,7 +1239,7 @@ years:
               expressions to detect tokens and color them based on the current theme and
               supports line numbers, customizable themes, and multiple languages.
             owner: Taylor Lineman
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (macOS)
@@ -1249,7 +1250,7 @@ years:
             description: "An SDK for developing video applications on iOS with Daily\u2019s
               real-time audio, video, and vision platform."
             owner: Daily
-            swift_compatibility: 5.8+
+            swift_compatibility: 5.9+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS)
