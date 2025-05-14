@@ -39,9 +39,9 @@ special authority over the steering group, but they are responsible for ensuring
 smooth functioning, including by:
 
 - organizing and leading regular meetings,
-- ensuring that the workgroup communicates effectively with the community, and
-- coordinating meetings between workgroup representatives and other Swift
-  workgroups or teams when necessary.
+- ensuring that the steering group communicates effectively with the community, and
+- coordinating meetings between steering group representatives and other Swift
+  steering groups and workgroups or teams when necessary.
 
 The current members of the Ecosystem Steering Group are:
 
