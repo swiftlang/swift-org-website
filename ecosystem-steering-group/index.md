@@ -153,7 +153,7 @@ are informed of broader project directions and decisions.
 # Communication
 
 The Ecosystem Steering Group communicates with the community primarily using the
-[Ecosystem](TODO) category on the Swift forums. It may also prepare special
+[Ecosystem](https://forums.swift.org/c/ecosystem/120) category on the Swift forums. It may also prepare special
 posts for the Swift Blog.
 
 Furthermore, the Ecosystem Steering Group intends to establish a well defined
