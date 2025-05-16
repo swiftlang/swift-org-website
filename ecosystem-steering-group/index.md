@@ -110,7 +110,7 @@ Steering Group.
 # Workgroups
 
 While the Ecosystem Steering group has purview over various areas that
-contribute to a flourishing and healthy ecosystem. Some of those areas are
+contribute to a flourishing and healthy ecosystem, some of those areas are
 already covered by existing workgroups that will fall under the governance of
 the Ecosystem Steering group. This includes:
 
