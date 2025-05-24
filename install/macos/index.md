@@ -61,7 +61,7 @@ Swift snapshots are prebuilt binaries that are automatically created from the br
 The easiest way to install development snapshots is with the Swiftly tool. Read more on the [instructions page](/install/macos/swiftly).
 
 {% assign xcode_dev_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}
-{% assign xcode_6_1_builds = site.data.builds.swift-6_1-branch.xcode | sort: 'date' | reverse %}
+{% assign xcode_6_2_builds = site.data.builds.swift-6_2-branch.xcode | sort: 'date' | reverse %}
 
 <h3>Toolchain</h3>
 <ul class="grid-level-0 grid-layout-2-column">
@@ -79,17 +79,17 @@ The easiest way to install development snapshots is with the Swiftly tool. Read 
     <a href="https://download.swift.org/development/xcode/{{ xcode_dev_builds.first.dir }}/{{ xcode_dev_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
   </li>
   <li class="grid-level-1">
-    <h3>release/6.1</h3>
+    <h3>release/6.2</h3>
     <p class="description" style="font-size: 14px;">
-      <time datetime="{{ xcode_6_1_builds.first.date | date_to_xmlschema }}" title="{{ xcode_6_1_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ xcode_6_1_builds.first.date | date: '%B %-d, %Y' }}</time>
+      <time datetime="{{ xcode_6_2_builds.first.date | date_to_xmlschema }}" title="{{ xcode_6_2_builds.first.date | date: '%B %-d, %Y %l:%M %p (%Z)' }}">{{ xcode_6_2_builds.first.date | date: '%B %-d, %Y' }}</time>
     </p>
     <p class="description">
       Toolchain package installer (.pkg)
       <ul>
-        <li><a href="https://download.swift.org/swift-6.1-branch/xcode/{{ xcode_6_1_builds.first.dir }}/{{ xcode_6_1_builds.first.debug_info }}">Debugging Symbols</a></li>
+        <li><a href="https://download.swift.org/swift-6.2-branch/xcode/{{ xcode_6_2_builds.first.dir }}/{{ xcode_6_2_builds.first.debug_info }}">Debugging Symbols</a></li>
       </ul>
     </p>
-    <a href="https://download.swift.org/swift-6.1-branch/xcode/{{ xcode_6_1_builds.first.dir }}/{{ xcode_6_1_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
+    <a href="https://download.swift.org/swift-6.2-branch/xcode/{{ xcode_6_2_builds.first.dir }}/{{ xcode_6_2_builds.first.download }}" class="cta-secondary">Download Toolchain</a>
   </li>
 </ul>
 <a href="/install/macos/package_installer" class="cta-secondary">Instructions (Toolchain)</a>
@@ -101,6 +101,6 @@ The easiest way to install development snapshots is with the Swiftly tool. Read 
   {% include_relative _older-development-snapshots.md %}
 </details>
 <details class="download" style="margin-bottom: 0;">
-  <summary>Older Snapshots (release/6.1)</summary>
-  {% include_relative _older-6_1-snapshots.md %}
+  <summary>Older Snapshots (release/6.2)</summary>
+  {% include_relative _older-6_2-snapshots.md %}
 </details>

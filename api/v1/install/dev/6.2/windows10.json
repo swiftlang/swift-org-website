@@ -1,0 +1,6 @@
+---
+layout: none
+---
+{ "x86_64": {{ site.data.builds.swift-6_2-branch.windows10 | jsonify }},
+  "arm64": {{ site.data.builds.swift-6_2-branch.windows10-arm64 | jsonify }}
+}
