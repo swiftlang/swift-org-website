@@ -509,3 +509,11 @@ chris-mcgee:
 parispittman:
    name: Paris Pittman
    github: parispittman
+
+marcprux:
+  name: Marc Prud'hommeaux
+  email: marc@skip.tools
+  gravatar: marcprux
+  github: marcprux
+  about: "Marc Prud'hommeaux works on bringing Swift application development to Android at Skip.tools."
+

@@ -67,6 +67,10 @@
     description: |
       Learn how to get started building binaries for Linux with no system dependencies (not even the Swift runtime or C library).
       Even better, you can do this from any system with a Swift toolchain, allowing you to develop on macOS or Windows and easily deploy to Linux when you go to production.
+  - title: Getting Started with the Swift Android SDK
+    url: /documentation/articles/swift-android-getting-started.html
+    description: |
+      Learn how to get started cross-compiling Swift packages for Android.
 #----------------------------------------------------
 - header: Contributing
   pages:
