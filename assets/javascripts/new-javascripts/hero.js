@@ -150,7 +150,7 @@ const heroAnimation = async () => {
   const DURATION = 1000
 
   const tl = anime.createTimeline({
-    defaults: { duration: DURATION, ease: 'out(.8)' },
+    defaults: { duration: DURATION, ease: 'inOut(.8)' },
   })
 
   tl.label('start', 0)
