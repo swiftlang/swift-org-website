@@ -2121,9 +2121,9 @@
         - arm64
 - name: "6.1.2"
   tag: swift-6.1.2-RELEASE
-  xcode: Xcode 16.3
+  xcode: Xcode 16.4
   xcode_release: true
-  date: 2025-05-27
+  date: 2025-05-28
   platforms:
     - name: Ubuntu 20.04
       platform: Linux
