@@ -18,4 +18,4 @@
     <a href="https://download.swift.org/development/wasi-swift-sdk/{{ wasi_swift_sdk_dev_builds.first.dir }}/{{ wasi_swift_sdk_dev_builds.first.download }}" class="cta-secondary">Download Swift SDK for WASI</a>
   </li>
 </ul>
-<a href="/documentation/articles/wasi-swift-sdk-getting-started.html" class="cta-secondary">Instructions (Swift SDK for WASI)</a>
+<a href="/documentation/articles/wasm-getting-started.html" class="cta-secondary">Instructions (Swift SDK for WASI)</a>
