@@ -5,10 +5,11 @@
     <h2>{{ include.content.headline }}</h2>
     {% for paragraph in include.content.paragraphs %}
     <p class="body-copy">{{paragraph}}</p>
-    {% endfor %}
+    {% endfor %} {% if include.content.link %}
     <a class="body-copy" href="{{ include.content.link.url }}"
       >{{ include.content.link.text }} <i></i
     ></a>
+    {% endif %}
   </div>
   <!-- prettier-ignore -->
   <div class="code body-copy" markdown="1">
