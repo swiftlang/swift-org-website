@@ -24,6 +24,7 @@
       margin-top: 60px;
       position: relative;
       z-index: 10;
+      line-height: 1.2em;
     }
 
     h3 {
@@ -48,6 +49,10 @@
           @include link-with-right-arrow;
           margin-top: 10px;
           display: flex;
+
+          &.centered {
+            justify-content: center;
+          }
 
           i {
             filter: var(--site-content-link-with-right-arrow-icon-filter);
@@ -208,7 +213,7 @@
     h2 {
       color: var(--site-code-box-text) !important;
       font-size: 22px;
-      margin: 0 !important;
+      margin: 0 0 10px 0 !important;
     }
 
     pre {
@@ -229,6 +234,11 @@
       li code {
         word-break: break-word;
       }
+    }
+
+    .content-body {
+      flex-grow: 1;
+      width: 100%;
     }
   }
 
@@ -281,10 +291,6 @@
         display: flex;
         flex-direction: column;
         min-height: 200px;
-
-        .content-body {
-          flex-grow: 1;
-        }
       }
     }
   }
