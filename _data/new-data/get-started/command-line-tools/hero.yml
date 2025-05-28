@@ -4,9 +4,9 @@ link:
   url: /getting-started/cli-swiftpm/
   text: Get Started
 boxes:
-  - title: Quickly get started
-    text: Many common command line features are auto-generated using the Swift Argument Parser package, including help commands and completion scripts.
-  - title: Inherit Swift’s strengths
-    text: Swift's speed and safety make it a great choice for building command line tools.
+  - title: Simplified setup
+    text: Auto-generate common command line features like help commands and completion scripts using the Swift Argument Parser package.
+  - title: Language strengths
+    text: Swift is fast, memory safe, and has robust string handling, making it a great choice for building command line tools.
   - title: Interoperable
-    text: Swift’s interoperability enables you to use or wrap existing libraries in other languages within your CLI tools.
+    text: Integrate and reuse existing libraries written in other languages like C and C++ by taking advantage of Swift's interoperability.
