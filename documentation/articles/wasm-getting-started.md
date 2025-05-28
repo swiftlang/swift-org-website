@@ -13,42 +13,14 @@ WebAssembly support in Swift started out as a community project. Any instruction
 standardized ABI and system interfaces, and from its inception Wasm support in Swift targeted [WebAssembly System
 Interface](https://wasi.dev/), which made porting Swift core libraries to this platform much easier.
 
-We're excited to announce the general availability of [Swift SDKs for WASI distributed by
-swift.org](https://swift.org/download) for Swift 6.2 and development snapshots. You can easily cross-compile and
-run Wasm modules with these Swift SDKs. The distributed artifact bundles also include support for the experimental Embedded
-Swift mode and a subset of Swift Concurrency supported in this mode.
+With Swift 6.2 and development snapshots you can easily cross-compile and run Wasm modules with Swift SDKs for WASI distributed on [swift.org](https://swift.org/download).
+The distributed artifact bundles also include support for the experimental Embedded Swift mode.
 
 ## Installation
 
-1. To install the required version of the Swift toolchain, install `swiftly` first.
+1. [Install `swiftly` per the instructions](https://www.swift.org/install/) for the platform that you're bulding on.
 
-    a. On macOS, install swiftly with the following command:
-
-    ```
-    curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg && \
-    installer -pkg swiftly.pkg -target CurrentUserHomeDirectory && \
-    ~/.swiftly/bin/swiftly init --quiet-shell-followup && \
-    . ~/.swiftly/env.sh && \
-    hash -r
-    ```
-
-    b. On Linux, the installation command is slightly different:
-
-    ```
-    curl -O "https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz" && \
-    tar zxf "swiftly-$(uname -m).tar.gz" && \
-    ./swiftly init --quiet-shell-followup && \
-    . ~/.local/share/swiftly/env.sh && \
-    hash -r
-    ```
-
-2. Note the exact version of Swift with the following command
-
-    ```
-    swift --version
-    ```
-
-    If you’re installing development snapshot with `swiftly install main-snapshot`, note the exact date component in `swiftly`s output.
+2. Install latest 6.2 development snapshot with `swiftly install 6.2-snapshot`, note the exact snapshot date component in the output of this command.
 
 3. Navigate to [the downloads page](https://www.swift.org/download/) and find the “Swift SDK for WASI” section. Find a URL of a version that exactly matches the version from step 2.
 If the corresponding snapshot version is not available for the Swift SDK, you’ll have to install the matching toolchain first.
@@ -59,9 +31,10 @@ If the corresponding snapshot version is not available for the Swift SDK, you’
     swift sdk install <swift_sdk_url> --checksum <checksum_value>
     ```
 
-5. Run `swift sdk list` to verify the Swift SDK was installed and note its ID in the output. Embedded Swift SDK for WASI will have `-embedded` suffix in its ID.
+5. Run `swift sdk list` to verify the Swift SDK was installed and note its ID in the output. Two Swift SDKs will be installed,
+one with support for all Swift features, and the other with a subset of features allowed in the experimental [Embedded Swift mode](#embedded-swift-support).
 
-6. After installing or selecting a new version of Swift, make sure to follow steps 2-5 to install a Swift SDK exactly matching the toolchain version.
+6. In the future, after installing or selecting a new version of the toolchain with `swiftly` make sure to follow steps 3-5 to install a Swift SDK exactly matching the toolchain version.
 
 ## Building and Running
 
@@ -113,11 +86,13 @@ Build of product 'wasi-test' complete! (1.31s)
 Hello from WASI!
 ```
 
-When building with Embedded Swift SDK, you have to pass `-c release` to `swift build` and `swift run` to enable
-optimizations required for Embedded Swift.
+# Embedded Swift Support
 
-## Conclusion
+[Embedded Swift](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md) is an experimental subset of the language
+allowing the toolchain to produce Wasm binaries that are multiple orders of magnitude smaller. One of the Swift SDKs in the artifact bundle you've installed
+with the `swift sdk install` command is tailored specifically for Embedded Swift. A subset of Swift Concurrency is also supported in this mode
+thanks to the functionality provided by WASI.
 
-With Swift SDKs for WASI now available for 6.2 and development snapshots, there's ongoing work on setting up test suite
-execution for libraries under `swiftlang` organization that can support WASI. If you're interested, we invite you to try
-out this new platform with your own packages and are looking forward to your feedback!
+To build with Embedded Swift SDK, pass its ID as noted in `swift sdk list` output (which has an `-embedded` suffix) in the `--swift-sdk` option. You also have to pass `-c release`
+to `swift build` and `swift run` to enable optimizations required for Embedded Swift.
+
