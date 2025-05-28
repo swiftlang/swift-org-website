@@ -2,8 +2,10 @@ headline: Learn more
 columns:
   - headline: Documentation
     links:
-      - text: Build an embedded app for a microcontroller
-        url: '/getting-started/embedded-swift/'
+      - text: Embedded Swift documentation
+        url: 'https://swiftpackageindex.com/apple/swift-embedded-examples/main/documentation/embeddedswift'
+      - text: Getting started with Embedded Swift
+        url: 'https://swiftpackageindex.com/apple/swift-embedded-examples/main/documentation/embeddedswift/waystogetstarted'
       - text: Embedded Swift vision document
         url: 'https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md'
       - text: Embedded Swift example projects

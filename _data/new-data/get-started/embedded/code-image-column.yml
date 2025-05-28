@@ -24,7 +24,7 @@ code: |-
       }
     } 
   }
-body: In just 788 bytes, Embedded Swift powers Conway’s Game of Life on the Playdate handheld—melding high‑level abstractions with low‑level bit‑twiddling for real‑time animation.
+body: In just 788 bytes of resulting compiled code, Embedded Swift powers Conway’s Game of Life on the Playdate handheld—melding high‑level abstractions with low‑level bit‑twiddling for real‑time animation.
 link:
   url: https://www.swift.org/blog/byte-sized-swift-tiny-games-playdate/
   text: Learn more
