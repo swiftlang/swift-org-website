@@ -2,7 +2,7 @@
   subtitle: Build with speed and performance.
   text: Swift meets the most performance-critical needs, while allowing your code to remain expressive and approachable. Swift compiles directly to native code and provides predictable memory management.
   code: |-
-    // Vectorized check that a utf8 buffer is all ASII
+    // Vectorized check that a utf8 buffer is all ASCII
     func isASCII(utf8: Span<SIMD16<UInt8>>) -> Bool {
       // combine all the code units into a single entry
       utf8.indices.reduce(into: SIMD16()) {
@@ -15,7 +15,7 @@
 
 - title: Expressive
   subtitle: Concise code. Powerful results.
-  text: Swift empowers you to write advanced code in a concise, readable syntax that even a beginner can understand. Swift supports object-oriented, functional, and protocol-oriented patterns that experienced developers are familiar with. Its progressive disclosure allows you to pick up the language quickly, taking advantage of power-user features as you need them.
+  text: Swift empowers you to write advanced code in a concise, readable syntax that even a beginner can understand. Swift supports object-oriented, functional, and generic programming patterns that experienced developers are familiar with. Its progressive disclosure allows you to pick up the language quickly, taking advantage of power-user features as you need them.
   code: |-
     import ArgumentParser
 
