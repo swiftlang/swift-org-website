@@ -379,12 +379,17 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  padding: 37px 111px 41px 49px;
+  padding: 37px 50px 41px 50px;
   margin-bottom: 70px;
   box-sizing: border-box;
   border-radius: 22px;
 
+  pre {
+    max-height: 400px;
+  }
+
   &.code-box-with-tabs {
+    overflow: hidden;
     pre {
       display: none;
 
@@ -397,6 +402,7 @@
   &-tabs {
     margin-bottom: 20px;
     padding-left: 0 !important;
+
     button {
       outline: none;
       border: none;
@@ -468,6 +474,16 @@
 
   a {
     @include link-with-right-arrow;
+  }
+
+  @media only screen and (max-width: 768px) {
+    nav {
+      ul {
+        white-space: nowrap;
+        width: calc(100% - 59px);
+        overflow: scroll;
+      }
+    }
   }
 }
 
