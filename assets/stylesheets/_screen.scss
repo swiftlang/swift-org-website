@@ -1,13 +1,5 @@
 @use './core/_helpers' as mixhelpers;
 
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 html,
 body {
   display: flex;
@@ -208,6 +200,7 @@ h2.header-with-anchor {
 
 main {
   padding-top: 66px; // height of nav
+  background-color: var(--color-fill);
 
   .callout {
     display: grid;
