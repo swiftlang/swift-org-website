@@ -11,9 +11,6 @@ title: Embedded
 
 <!-- Runs on many embedded platforms -->
 
-<style>
-.hero-card { aspect-ratio: auto; width: auto; }
-</style>
 {% include new-includes/components/card-grid.html content = site.data.new-data.get-started.embedded.card-grid %}
 
 <!-- Explore example projects -->

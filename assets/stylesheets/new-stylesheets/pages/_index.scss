@@ -23,6 +23,11 @@ $icons: (
     letter-spacing: 0;
     text-align: center;
     font-weight: 600;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 }
 
@@ -69,7 +74,7 @@ $icons: (
 
   @media only screen and (max-width: 1024px) {
     & {
-      padding: calc(72px + 142px) 10px 214px;
+      padding: calc(72px + 142px) 10px 24vw;
       padding-left: 10px;
       padding-right: 10px;
     }
@@ -95,6 +100,11 @@ $icons: (
     margin-bottom: 30px;
     position: relative;
     z-index: 3;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   /* Install */
@@ -122,11 +132,16 @@ $icons: (
     margin-bottom: 29px;
     position: relative;
     z-index: 1;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   .sub-text > h2 {
     font-size: 32px;
-    color: #3D3D3D;
+    color: #3d3d3d;
     letter-spacing: 0;
     text-align: center;
     font-weight: 400;
@@ -134,6 +149,12 @@ $icons: (
     margin-bottom: 60px;
     position: relative;
     z-index: 1;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 28px;
+      margin-bottom: 30px;
+      line-height: 1.33;
+    }
   }
 
   nav[aria-label='Get started with Swift'] {
@@ -349,6 +370,10 @@ $icons: (
     background-size: 133%;
     background-position: 60% 0;
     @include lazyloadBg('/assets/images/landing-page/swoops/swoop-1.png');
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding-top: 17.88vw;
   }
 }
 
