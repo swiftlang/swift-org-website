@@ -17,10 +17,9 @@ title: Install Swift - Linux
     </div>
   </div>
   <div class="callout">
-  <h2>Looking for alternate installation options?</h2>
     <div>
       <p class="content-copy">
-        <a class="content-link centered" href="/install/linux/amazonlinux/2">Check them out</a>
+        <a class="content-link centered" href="/install/linux/amazonlinux/2">Alternate Install Options</a>
       </p>
     </div>
   </div>
