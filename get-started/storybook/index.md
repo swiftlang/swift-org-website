@@ -46,7 +46,7 @@ title: Storybook
 {% include new-includes/components/code-box.html content = site.data.new-data.get-started.storybook.code-box-with-tabs with-tabs = true %}
 
 <div class="stand-alone-link">
-    <a class="link">Stand alone link<i></i></a>
+    <a class="link">Stand alone link</a>
 </div>
 
 </div>
