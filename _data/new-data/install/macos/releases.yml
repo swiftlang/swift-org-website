@@ -16,6 +16,8 @@ latest-release:
         copy: 'License: Apache-2.0'
       - href: 'https://www.swift.org/install/macos/swiftly'
         copy: 'Instructions'
+      - href: "https://www.swift.org/tools/#editors"
+        copy: "Editors"
   xcode:
     pre-code-text: To develop with Swift for Apple platforms, download the latest version of Xcode, which is regularly refreshed with the latest Swift toolchain.
     headline: Xcode

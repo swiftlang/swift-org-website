@@ -2,7 +2,7 @@ latest-release:
   swiftly:
     pre-code-text: |
       The Swiftly installer manages Swift and its dependencies. It supports switching between different versions and downloading updates.
-    headline: Swiftly (recommended)
+    headline: Swiftly
     tabs:
       - label: Bash
         code: |-
@@ -18,6 +18,8 @@ latest-release:
         copy: 'PGP: Signature'
       - href: 'https://www.swift.org/install/linux/swiftly'
         copy: 'Instructions'
+      - href: "https://www.swift.org/tools/#editors"
+        copy: "Editors"
   container:
     pre-code-text: |-
       If you prefer a containerized environment, you can download the official container images for compiling and running Swift on a variety of distributions.
