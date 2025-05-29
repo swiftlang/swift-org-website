@@ -5,8 +5,14 @@
       align-items: center;
       margin-bottom: 3em;
 
-      .notes .logo {
+      .logo {
         margin-bottom: 3em;
+      }
+
+      h3 {
+        height: auto;
+        display: block;
+        align-items: unset;
       }
 
       nav {
