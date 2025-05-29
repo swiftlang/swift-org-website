@@ -19,7 +19,6 @@ title: Install Swift - macOS
       {% include new-includes/components/code-box.html content = site.data.new-data.install.macos.releases.latest-release.xcode%}
     </div>
   </div>
-  <h2>Other install options</h2>
   <div class="releases-grid">
     <div class="release-box section">
       <div class="content">
