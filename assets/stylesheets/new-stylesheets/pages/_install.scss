@@ -49,9 +49,11 @@
           @include link-with-right-arrow;
           margin-top: 10px;
           display: flex;
+          text-decoration: underline;
 
-          &.centered {
+          &.block {
             justify-content: center;
+            font-size: 2em;
           }
 
           i {
@@ -185,8 +187,8 @@
 
     table tr {
       display: block;
-      margin-bottom: 20px;
-      border: 1px solid #f2f2f2;
+      margin-bottom: 6px;
+      border-bottom: 1px solid #f2f2f2;
     }
 
     table td {
