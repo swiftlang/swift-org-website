@@ -1,10 +1,10 @@
 - title: Xcode
   link: https://developer.apple.com/xcode/
 - title: Visual Studio Code
-  link: https://code.visualstudio.com
+  link: /documentation/articles/getting-started-with-vscode-swift.html
 - title: Emacs
-  link: https://www.gnu.org/software/emacs/
+  link: /documentation/articles/zero-to-swift-emacs.html
 - title: Neovim
-  link: https://neovim.io
+  link: /documentation/articles/zero-to-swift-nvim.html
 - title: Other Editors
-  link: https://github.com/swiftlang/sourcekit-lsp/blob/main/Documentation/Editor%20Integration.md
+  link: https://github.com/swiftlang/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md
