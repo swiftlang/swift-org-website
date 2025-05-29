@@ -1,8 +1,8 @@
 latest-release:
   docker:
     pre-code-text: |
-      The official Docker images for Swift.
-    headline: Docker
+      If you prefer a containerized environment, you can download the official container images for compiling and running Swift on a variety of distributions.
+    headline: Container
     links:
       - href: 'https://hub.docker.com/_/swift'
         copy: '6.1.1-noble'
