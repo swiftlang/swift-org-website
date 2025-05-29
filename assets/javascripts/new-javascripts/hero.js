@@ -103,23 +103,35 @@ const heroAnimation = async () => {
     // Convert SVG path pulled from AE masks
     let pathInstance = new Path2D(path)
 
-    ctx.setLineDash([pathLength])
-    ctx.lineDashOffset = pathLength
+    if (!isReduceMotionEnabled) {
+      ctx.setLineDash([pathLength])
+      ctx.lineDashOffset = pathLength
 
-    if (hasDebugParam) {
-      ctx.strokeStyle = debugColor
-      ctx.stroke(pathInstance)
+      if (hasDebugParam) {
+        ctx.strokeStyle = debugColor
+        ctx.stroke(pathInstance)
+      }
+    } else {
+      ctx.drawImage(image, 0, 0)
     }
+
     return { ctx, pathInstance }
   }
 
-  const initLogo = ({ canvas, image, positionStart: [posX, posY] }) => {
+  const initLogo = ({ canvas, image, positionStart: [posX, posY], positionEnd: [endX, endY] }) => {
     const ctx = canvas.getContext('2d')
-    ctx.globalAlpha = 0
     // Same reason for conversion as initSwoops
     ctx.translate(posX - image.naturalWidth / 2, posY - image.naturalHeight / 2)
 
-    ctx.drawImage(image, 0, 0)
+    if (!isReduceMotionEnabled) {
+      ctx.globalAlpha = 0
+      ctx.drawImage(image, 0, 0)
+    } else {
+      ctx.globalAlpha = 1
+      const deltaX = endX - posX;
+      const deltaY = endY - posY;
+      ctx.drawImage(image, deltaX, deltaY);
+    }
 
     return ctx
   }
@@ -148,29 +160,6 @@ const heroAnimation = async () => {
   }
 
   if (isReduceMotionEnabled) {
-    // Render final state immediately
-    heroSwoops.forEach((swoop) => {
-      const { ctx, pathInstance, image, canvas } = swoop;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.lineDashOffset = 0;
-      ctx.stroke(pathInstance);
-      ctx.globalCompositeOperation = 'source-in';
-      ctx.drawImage(image, 0, 0);
-      ctx.globalCompositeOperation = 'source-over';
-    });
-
-    const {
-      ctx,
-      image,
-      canvas,
-      positionStart: [startX, startY],
-      positionEnd: [endX, endY],
-    } = logo;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.globalAlpha = 1;
-    const deltaX = endX - startX;
-    const deltaY = endY - startY;
-    ctx.drawImage(image, deltaX, deltaY);
     return;
   }
 
