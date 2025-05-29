@@ -9,13 +9,15 @@ title: Use case
 
 {% include new-includes/components/card-grid.html content = site.data.new-data.get-started.cloud-services.secondary-content %}
 
-{% include new-includes/components/card-grid.html content = site.data.new-data.get-started.cloud-services.tertiary-content %}
+{% include new-includes/components/card-grid.html content = site.data.new-data.get-started.cloud-services.tertiary-content-cloud-native %}
 
 {% include new-includes/components/image-text-column.html content = site.data.new-data.get-started.cloud-services.image-text-column %}
 
 {% include new-includes/components/headline-section.html content = site.data.new-data.get-started.cloud-services.headline-section %}
 
 {% include new-includes/components/code-box.html content = site.data.new-data.get-started.cloud-services.code-box %}
+
+{% include new-includes/components/card-grid.html content = site.data.new-data.get-started.cloud-services.tertiary-content %}
 
 <!-- Resources -->
 

@@ -1,4 +1,4 @@
-title: Explore cloud native packages
+title: Explore more server packages
 link:
   text: Explore more packages on Swift Package Index
   url: https://swiftpackageindex.com/keywords/server-side-swift
@@ -7,10 +7,10 @@ tertiary_cards:
     text: Generate Swift client and server code from an OpenAPI document.
     link_text: View on GitHub
     link: https://github.com/apple/swift-openapi-generator
-  - name: gRPC Swift
-    text: The Swift language implementation of gRPC.
+  - name: SwiftNIO
+    text: Cross-platform asynchronous event-driven network application framework.
     link_text: View on GitHub
-    link: https://github.com/grpc/grpc-swift
+    link: https://github.com/apple/swift-nio
   - name: PostgresNIO
     text: Non-blocking, event-driven Swift client for PostgreSQL.
     link_text: View on GitHub
