@@ -2,7 +2,7 @@ latest-release:
   winget:
     pre-code-text: |
       Install Swift via the Windows Package Manager (also known as WinGet).
-    headline: WinGet (recommended)
+    headline: WinGet
     after-code-text: |
       First, install Windows platform dependencies:
       <pre><code>winget install --id Microsoft.VisualStudio.2022.Community --exact --force
@@ -16,6 +16,8 @@ latest-release:
     links:
       - href: "/install/windows/winget/"
         copy: "Instructions"
+      - href: "https://www.swift.org/tools/#editors"
+        copy: "Editors"
   manual:
     pre-code-text: |
       Download the Swift installer (.exe).
