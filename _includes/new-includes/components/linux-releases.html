@@ -57,6 +57,22 @@
       </div>
     </div>
   </div>
+  <div class="release-box section">
+    <div class="content">
+        <details class="download">
+        <summary>Previous Snapshots (main)</summary>
+        {% include install/_older_snapshots.md builds=development_builds name=platform platform_dir=platform_name_url branch_dir=branch_dir %}
+        </details>
+    </div>
+  </div>
+  <div class="release-box section">
+    <div class="content">
+        <details class="download">
+        <summary>Previous Snapshots (release/6.2)</summary>
+        {% include install/_older_snapshots.md builds=development_builds_2 name=platform platform_dir=platform_name_url branch_dir=branch_dir_2 %}
+        </details>
+    </div>
+  </div>
   <h3>Static Linux SDK</h3>
   <div>
     <p class="content-copy">
@@ -73,22 +89,6 @@
       <div class="content">
         {% include new-includes/components/code-box.html content = site.data.new-data.install.linux.static-linux-sdk-dev.release-6-1 %}
       </div>
-    </div>
-  </div>
-  <div class="release-box section">
-    <div class="content">
-        <details class="download">
-        <summary>Previous Snapshots (main)</summary>
-        {% include install/_older_snapshots.md builds=development_builds name=platform platform_dir=platform_name_url branch_dir=branch_dir %}
-        </details>
-    </div>
-  </div>
-  <div class="release-box section">
-    <div class="content">
-        <details class="download">
-        <summary>Previous Snapshots (release/6.2)</summary>
-        {% include install/_older_snapshots.md builds=development_builds_2 name=platform platform_dir=platform_name_url branch_dir=branch_dir_2 %}
-        </details>
     </div>
   </div>
 </div>
