@@ -48,7 +48,7 @@ title: Install Swift - Windows
   </div>
   <div>
     <p class="content-copy">
-      <a class="content-link" href="/install/windows/manual/">Instructions <i></i></a>
+      <a class="content-link" href="/install/windows/manual/">Instructions</a>
     </p>
   </div>
   <div class="releases-grid">
