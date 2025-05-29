@@ -1,5 +1,5 @@
 const heroAnimation = async () => {
-  const reduceMotion = document.body.classList.contains('reduced-motion')
+  const isReduceMotionEnabled = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const urlParams = new URLSearchParams(location.search)
   const hasDebugParam = urlParams.has('debug')
 
@@ -135,16 +135,43 @@ const heroAnimation = async () => {
     logo.image = logoImage
     // init canvas for each swoop layer
     heroSwoops.forEach((swoop, i) => {
-      swoop.image = swoopImages[i]
-      const canvasData = initSwoops(swoop)
-      swoop.ctx = canvasData.ctx
-      swoop.pathInstance = canvasData.pathInstance
-    })
+      swoop.image = swoopImages[i];
+      const canvasData = initSwoops(swoop);
+      swoop.ctx = canvasData.ctx;
+      swoop.pathInstance = canvasData.pathInstance;
+    });
     // init logo canvas
     logo.ctx = initLogo(logo)
   } catch (error) {
     console.error('Error loading images:', error)
     throw error
+  }
+
+  if (isReduceMotionEnabled) {
+    // Render final state immediately
+    heroSwoops.forEach((swoop) => {
+      const { ctx, pathInstance, image, canvas } = swoop;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.lineDashOffset = 0;
+      ctx.stroke(pathInstance);
+      ctx.globalCompositeOperation = 'source-in';
+      ctx.drawImage(image, 0, 0);
+      ctx.globalCompositeOperation = 'source-over';
+    });
+
+    const {
+      ctx,
+      image,
+      canvas,
+      positionStart: [startX, startY],
+      positionEnd: [endX, endY],
+    } = logo;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.globalAlpha = 1;
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
+    ctx.drawImage(image, deltaX, deltaY);
+    return;
   }
 
   const DURATION = 1000
