@@ -49,7 +49,7 @@ title: Install Swift - macOS
   <h3>Toolchain</h3>
   <div>
     <p class="content-copy">
-      <a class="content-link" href="/install/macos/package_installer">Instructions <i></i></a>
+      <a class="content-link" href="/install/macos/package_installer">Instructions</a>
     </p>
   </div>
   <div class="releases-grid">
@@ -67,7 +67,7 @@ title: Install Swift - macOS
   <h3>Static Linux SDK</h3>
   <div>
     <p class="content-copy">
-      <a class="content-link" href="/documentation/articles/static-linux-getting-started.html">Instructions <i></i></a>
+      <a class="content-link" href="/documentation/articles/static-linux-getting-started.html">Instructions</a>
     </p>
   </div>
   <div class="releases-grid">

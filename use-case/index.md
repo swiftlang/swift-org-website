@@ -34,7 +34,7 @@ title: Use case
                     <div>
                         <span class="name">{{ package.name }}</span>
                         <span class="text">{{ package.text }}</span>
-                        <a href="{{ package.link }}">{{ package.link_text }} <i></i></a>
+                        <a href="{{ package.link }}">{{ package.link_text }}</a>
                     </div>
                 </li>
             {% endfor %}
@@ -45,11 +45,11 @@ title: Use case
                     <div>
                         <span class="name">{{ package.name }}</span>
                         <span class="text">{{ package.text }}</span>
-                        <a href="{{ package.link }}">{{ package.link_text }} <i></i></a>
+                        <a href="{{ package.link }}">{{ package.link_text }}</a>
                     </div>
                 </li>
             {% endfor %}
         </ul>
-        <a href="{{ frameworks_packages.link }}">{{ frameworks_packages.link_text }} <i></i></a>
+        <a href="{{ frameworks_packages.link }}">{{ frameworks_packages.link_text }}</a>
     </div>
 </div>
