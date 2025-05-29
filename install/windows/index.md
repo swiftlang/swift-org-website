@@ -11,7 +11,6 @@ title: Install Swift - Windows
 {% assign windows10_arm64_6_1_builds = site.data.builds.swift-6_1-branch.windows10-arm64 | sort: 'date' | reverse %}
 
 <div class="content">
-  <h2>Latest release</h2>
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.winget %}
