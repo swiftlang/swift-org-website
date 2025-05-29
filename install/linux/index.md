@@ -8,7 +8,7 @@ title: Install Swift - Linux
 <div class="content">
   <div class="release-box section">
     <div class="content">
-      {% include new-includes/components/code-box.html content = site.data.new-data.install.linux.releases.latest-release.swiftly %}
+      {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.linux.releases.latest-release.swiftly %}
     </div>
   </div>
   <div class="release-box section">
