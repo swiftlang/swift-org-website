@@ -9,7 +9,6 @@ title: Install Swift - macOS
 {% assign xcode_6_2_builds = site.data.builds.swift-6_2-branch.xcode | sort: 'date' | reverse %}
 
 <div class="content">
-  <h2>Latest release</h2>
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html content = site.data.new-data.install.macos.releases.latest-release.swiftly%}
