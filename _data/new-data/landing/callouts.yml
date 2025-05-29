@@ -21,19 +21,20 @@
 
     // Complete implementation of a command line tool
     @main struct Describe: ParsableCommand {
-        @Argument(help: "The values to describe.")
-        var values: [Double] = []
-        
-        mutating func run() {
-            values.sort()
-            let total = values.reduce(0, +)
+      @Argument(help: "The values to describe.")
+      var values: [Double] = []
 
-            print("""
-              Smallest: \(values.first, default: "No value")
-              Total:    \(total)
-              Mean:     \(total / Double(values.count))
-              """)
-        }
+      mutating func run() {
+        values.sort()
+        let total = values.reduce(0, +)
+
+        print(
+          """
+          Smallest: \(values.first, default: "No value")
+          Total:    \(total)
+          Mean:     \(total / Double(values.count))
+          """)
+      }
     }
 
 - title: Safe
