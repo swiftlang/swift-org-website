@@ -62,6 +62,22 @@ title: Install Swift - macOS
       </div>
     </div>
   </div>
+  <div class="release-box section">
+    <div class="content">
+        <details class="download" style="margin-bottom: 0;">
+        <summary>Previous Snapshots (main)</summary>
+        {% include_relative _older-development-snapshots.md %}
+        </details>
+    </div>
+  </div>
+  <div class="release-box section">
+    <div class="content">
+        <details class="download" style="margin-bottom: 0;">
+        <summary>Previous Snapshots (release/6.2)</summary>
+        {% include_relative _older-6_2-snapshots.md %}
+        </details>
+    </div>
+  </div>
   <h3>Static Linux SDK</h3>
   <div>
     <p class="content-copy">
@@ -78,22 +94,6 @@ title: Install Swift - macOS
       <div class="content">
         {% include new-includes/components/code-box.html content = site.data.new-data.install.macos.releases.latest-release.static-linux-sdk-dev.release-6-1%}
       </div>
-    </div>
-  </div>
-  <div class="release-box section">
-    <div class="content">
-        <details class="download" style="margin-bottom: 0;">
-        <summary>Previous Snapshots (main)</summary>
-        {% include_relative _older-development-snapshots.md %}
-        </details>
-    </div>
-  </div>
-  <div class="release-box section">
-    <div class="content">
-        <details class="download" style="margin-bottom: 0;">
-        <summary>Previous Snapshots (release/6.2)</summary>
-        {% include_relative _older-6_2-snapshots.md %}
-        </details>
     </div>
   </div>
 </div>
