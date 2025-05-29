@@ -81,7 +81,7 @@
         display: inline-block;
         color: #801a1a;
         font-weight: 400;
-        padding: 24px 16px;
+        padding: 16px 16px 20px;
         background-color: rgba(97, 75, 138, 0.8);
         border-radius: 20px;
         font-size: 14px;
@@ -95,12 +95,14 @@
           &.title {
             font-size: 24px;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            line-height: 1.2;
           }
 
           &.text {
             font-size: 14px;
             white-space: normal;
+            line-height: 1.14;
           }
         }
       }
