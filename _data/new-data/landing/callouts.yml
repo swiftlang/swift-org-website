@@ -19,23 +19,17 @@
   code: |-
     import ArgumentParser
 
-    @main
-    struct Describe: ParsableCommand {
+    // Complete implementation of a command line tool
+    @main struct Describe: ParsableCommand {
         @Argument(help: "The values to describe.")
         var values: [Double] = []
         
         mutating func run() {
             values.sort()
             let total = values.reduce(0, +)
-            let smallest =
-                if let first = values.first {
-                    "\(first)"
-                } else {
-                    "No value"
-                }
-          
+
             print("""
-              Smallest: \(smallest)
+              Smallest: \(values.first, default: "No value")
               Total:    \(total)
               Mean:     \(total / Double(values.count))
               """)
