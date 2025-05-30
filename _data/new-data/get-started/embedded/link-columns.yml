@@ -3,9 +3,9 @@ columns:
   - headline: Documentation
     links:
       - text: Embedded Swift documentation
-        url: 'https://swiftpackageindex.com/apple/swift-embedded-examples/main/documentation/embeddedswift'
+        url: 'https://docs.swift.org/embedded/documentation/embedded'
       - text: Getting started with Embedded Swift
-        url: 'https://swiftpackageindex.com/apple/swift-embedded-examples/main/documentation/embeddedswift/waystogetstarted'
+        url: 'https://docs.swift.org/embedded/documentation/embedded/waystogetstarted'
       - text: Embedded Swift vision document
         url: 'https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md'
       - text: Embedded Swift example projects
