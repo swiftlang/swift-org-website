@@ -1,3 +1,4 @@
+    
 @mixin light-theme() {
   --site-text-color: #051416;
   --site-navigation-border-bottom: linear-gradient(0deg, #f6b391 0%, #f8ce6e 92%);
@@ -14,6 +15,8 @@
   --site-link-with-right-arrow-icon-filter: none;
   --site-content-link-with-right-arrow-icon-filter: brightness(0);
 
+  --page-bg: #fff;
+
   --install-page-bg: linear-gradient(0deg, #f6b391 0%, #f8ce6e 92%);
   --install-site-code-box-bg: #ffffff;
   --install-site-code-box-pre-bg: #f2f2f2;
@@ -21,6 +24,49 @@
   --install-release-box-th-color: #333;
   --install-release-box-tr-border-bottom: 1px solid #f2f2f2;
   --install-release-box-tr-bg: #ffffff;
+
+  --homepage-hero-bg: linear-gradient(179deg,#fac685 3%, #fbdab0 87%, #ffffff 100%);
+  --homepage-install-text: #3d3d3d;
+  --homepage-pillar-1-bg: linear-gradient(to bottom, #ffffff 0%, #d9f2ff 75%, #fff3d8 90%);
+  --homepage-pillar-2-bg: linear-gradient(to top, #e4937f 0%, #fdd9a1 72%, #fff3d8 100%);
+  --homepage-pillar-3-bg: linear-gradient(180deg, #e4937f 0%, #a268c1 36%, #4b3773 100%);
+  --home-quicklinks-bg: rgba(255, 177, 100, 0.9);
+  --home-quicklinks-color: #801a1a;
+
+  // rubber band
+  --nav-scroller-gradient-start: #1e162e;
+  --nav-scroller-gradient-end: #fff;
+
+  // syntax
+  --color-syntax-attributes: rgb(148, 113, 0);
+  --color-syntax-characters: rgb(39, 42, 216);
+  --color-syntax-comments: rgb(112, 127, 140);
+  --color-syntax-documentation-markup: rgb(80, 99, 117);
+  --color-syntax-documentation-markup-keywords: rgb(80, 99, 117);
+  --color-syntax-brackets-dots: rgba(45, 100, 105);
+  --color-syntax-heading: rgb(186, 45, 162);
+  --color-syntax-keywords: rgb(173, 61, 164);
+  --color-syntax-marks: rgb(0, 0, 0);
+  --color-syntax-numbers: rgb(39, 42, 216);
+  --color-syntax-other-class-names: rgb(112, 61, 170);
+  --color-syntax-other-constants: rgb(75, 33, 176);
+  --color-syntax-other-declarations: rgb(4, 124, 176);
+  --color-syntax-other-function-and-method-names: rgb(75, 33, 176);
+  --color-syntax-other-instance-variables-and-globals: rgb(112, 61, 170);
+  --color-syntax-other-preprocessor-macros: rgb(120, 73, 42);
+  --color-syntax-other-type-names: rgb(112, 61, 170);
+  --color-syntax-param-internal-name: rgb(64, 64, 64);
+  --color-syntax-plain-text: rgb(0, 0, 0);
+  --color-syntax-preprocessor-statements: rgb(120, 73, 42);
+  --color-syntax-project-class-names: rgb(62, 128, 135);
+  --color-syntax-project-constants: rgb(45, 100, 105);
+  --color-syntax-project-function-and-method-names: rgb(45, 100, 105);
+  --color-syntax-project-instance-variables-and-globals: rgb(62, 128, 135);
+  --color-syntax-project-preprocessor-macros: rgb(120, 73, 42);
+  --color-syntax-project-type-names: rgb(62, 128, 135);
+  --color-syntax-strings: rgb(209, 47, 27);
+  --color-syntax-type-declarations: rgb(3, 99, 140);
+  --color-syntax-urls: rgb(19, 55, 255);
 }
 
 @mixin dark-theme() {
@@ -39,6 +85,8 @@
   --site-link-with-right-arrow-icon-filter: invert(66%) sepia(89%) saturate(602%) hue-rotate(172deg) brightness(102%) contrast(101%);
   --site-content-link-with-right-arrow-icon-filter: brightness(0) invert(1);
 
+  --page-bg: #fff;
+
   --install-page-bg: linear-gradient(0deg, #FF8115 0%, #B7451B 92%);
   --install-site-code-box-bg: #23344A;
   --install-site-code-box-pre-bg: #111727;
@@ -46,4 +94,47 @@
   --install-release-box-th-color: #ffffff;
   --install-release-box-tr-border-bottom: 1px solid #051416;
   --install-release-box-tr-bg: #384461;
+
+  --homepage-install-text: #DEDEDE;;
+  --homepage-hero-bg: linear-gradient(180deg, #144173 0%, #141228 68%, #144173 99%);
+  --homepage-pillar-1-bg: linear-gradient(179deg, #144173 1%, #000000 57%, #350839 88%, #B7451B 99%);
+  --homepage-pillar-2-bg: linear-gradient(0deg, #A268C1 4%, #FF8115 8%, #B7451B 99%);
+  --homepage-pillar-3-bg: linear-gradient(180deg, #A268C1 4%, #4B3773 99%);
+
+  --home-quicklinks-bg: #23344A;
+  --home-quicklinks-color: #ffffff;
+
+  // rubber band
+  --nav-scroller-gradient-start: #1e162e;
+  --nav-scroller-gradient-end: #000;
+
+  // syntax
+  --color-syntax-attributes: rgb(204, 151, 104);
+  --color-syntax-characters: rgb(217, 201, 124);
+  --color-syntax-comments: rgb(127, 140, 152);
+  --color-syntax-documentation-markup: rgb(127, 140, 152);
+  --color-syntax-documentation-markup-keywords: rgb(163, 177, 191);
+  --color-syntax-brackets-dots: rgba(255, 255, 255);
+  --color-syntax-keywords: rgb(255, 121, 179);
+  --color-syntax-marks: rgb(255, 255, 255);
+  --color-syntax-numbers: rgb(217, 201, 124);
+  --color-syntax-other-class-names: rgb(218, 186, 255);
+  --color-syntax-other-constants: rgb(167, 235, 221);
+  --color-syntax-other-declarations: rgb(78, 176, 204);
+  --color-syntax-other-function-and-method-names: rgb(178, 129, 235);
+  --color-syntax-other-instance-variables-and-globals: rgb(178, 129, 235);
+  --color-syntax-other-preprocessor-macros: rgb(255, 161, 79);
+  --color-syntax-other-type-names: rgb(218, 186, 255);
+  --color-syntax-param-internal-name: rgb(191, 191, 191);
+  --color-syntax-plain-text: rgb(255, 255, 255);
+  --color-syntax-preprocessor-statements: rgb(255, 161, 79);
+  --color-syntax-project-class-names: rgb(172, 242, 228);
+  --color-syntax-project-constants: rgb(120, 194, 179);
+  --color-syntax-project-function-and-method-names: rgb(120, 194, 179);
+  --color-syntax-project-instance-variables-and-globals: rgb(120, 194, 179);
+  --color-syntax-project-preprocessor-macros: rgb(255, 161, 79);
+  --color-syntax-project-type-names: rgb(172, 242, 228);
+  --color-syntax-strings: rgb(255, 129, 112);
+  --color-syntax-type-declarations: rgb(107, 223, 255);
+  --color-syntax-urls: rgb(102, 153, 255);
 }
