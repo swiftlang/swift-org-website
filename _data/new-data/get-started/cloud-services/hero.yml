@@ -7,6 +7,6 @@ boxes:
   - title: Performant
     text: With incredible memory efficiency, Swift operates without a garbage collector, running with predictable speed while using fewer resources.
   - title: Lightweight
-    text: Swift has minimal warm-up operations, making it an ideal fit for running cloud services, which are often rescheduled onto virtual machines or containers.
-  - title: Scales
+    text: Swift has minimal warm-up operations, making it an ideal fit for running cloud services, which are often rescheduled onto virtual machines and containers.
+  - title: Scalable
     text: Powering internet-scale cloud services that handle billions of requests a day, Swift is capable of running large production workloads.
