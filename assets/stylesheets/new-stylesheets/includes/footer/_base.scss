@@ -12,11 +12,12 @@
 }
 
 footer.global-footer {
-  background-color: #1E162E;
+  background-color: #1e162e;
   padding: 20px;
   text-align: center;
   padding: 6rem 3rem 3rem 3.5em;
   color: rgb(235, 236, 240);
+  position: relative;
   z-index: 10;
 
   .container {
@@ -31,23 +32,23 @@ footer.global-footer {
     margin-bottom: 5em;
 
     .logo {
-        display: flex;
-        height: 36px;
-        margin-bottom: 15px;
+      display: flex;
+      height: 36px;
+      margin-bottom: 15px;
 
-        svg {
-          height: 100%;
-        }
+      svg {
+        height: 100%;
+      }
 
-        #logotype {
-          fill: #ebecf0;
-        }
+      #logotype {
+        fill: #ebecf0;
+      }
     }
 
     h3 {
       height: 36px;
       margin-bottom: 15px;
-      color: #FCA76C;
+      color: #fca76c;
       font-size: 1.17em;
       line-height: 1.2;
       font-weight: bold;
@@ -130,7 +131,7 @@ footer.global-footer {
         }
 
         input:checked + .color-scheme-toggle-label {
-          background: #FCA76C;
+          background: #fca76c;
           color: #1e162e;
         }
       }
@@ -144,20 +145,19 @@ footer.global-footer {
     align-items: flex-end;
     color: #d1d2d4;
 
-
     nav {
       display: inline-block;
 
-        ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: inline-flex;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: inline-flex;
 
-          a {
-            color: #d1d2d4;
-          }
+        a {
+          color: #d1d2d4;
         }
+      }
     }
 
     .legals {
@@ -168,7 +168,9 @@ footer.global-footer {
         margin-bottom: 1.5em;
         line-height: 1.5em;
 
-        p { margin: 0; }
+        p {
+          margin: 0;
+        }
 
         a {
           color: #d1d2d4;
@@ -180,7 +182,7 @@ footer.global-footer {
           margin-right: 1.75em;
 
           a {
-            padding: .35em 0;
+            padding: 0.35em 0;
             border-bottom: 1px solid transparent;
 
             &:hover {
@@ -205,19 +207,19 @@ footer.global-footer {
           &.github {
             @include icon-style($icon-github);
           }
-  
+
           &.bluesky {
             @include icon-style($icon-bluesky);
           }
-  
+
           &.feed {
             @include icon-style($icon-feed);
           }
-  
+
           &.mastodon {
             @include icon-style($icon-mastodon);
           }
-  
+
           &.x {
             @include icon-style($icon-x);
           }

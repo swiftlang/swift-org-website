@@ -11,9 +11,6 @@ title: Embedded
 
 <!-- Runs on many embedded platforms -->
 
-<style>
-.card-grid p { margin-bottom: 20px; }
-</style>
 {% include new-includes/components/card-grid.html content = site.data.new-data.get-started.embedded.card-grid %}
 
 <!-- Explore example projects -->

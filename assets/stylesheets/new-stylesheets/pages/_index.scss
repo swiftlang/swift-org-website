@@ -23,6 +23,11 @@ $icons: (
     letter-spacing: 0;
     text-align: center;
     font-weight: 600;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   .callout-subtitle {
@@ -67,7 +72,7 @@ $icons: (
 
   @media only screen and (max-width: 1024px) {
     & {
-      padding: calc(72px + 142px) 10px 214px;
+      padding: calc(72px + 142px) 10px 24vw;
       padding-left: 10px;
       padding-right: 10px;
     }
@@ -92,6 +97,11 @@ $icons: (
     margin-bottom: 30px;
     position: relative;
     z-index: 3;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   /* Install */
@@ -119,6 +129,11 @@ $icons: (
     margin-bottom: 29px;
     position: relative;
     z-index: 1;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   .sub-text > h2 {
@@ -131,6 +146,12 @@ $icons: (
     margin-bottom: 60px;
     position: relative;
     z-index: 1;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 28px;
+      margin-bottom: 30px;
+      line-height: 1.33;
+    }
   }
 
   nav[aria-label='Get started with Swift'] {
@@ -170,8 +191,14 @@ $icons: (
 
             @each $name in $icons {
               &.#{$name} {
-                mask: url("/assets/images/icon-#{$name}.svg") center / contain no-repeat;
-                -webkit-mask: url("/assets/images/icon-#{$name}.svg") center / contain no-repeat;
+                mask: url('/assets/images/icon-#{$name}.svg')
+                  center /
+                  contain
+                  no-repeat;
+                -webkit-mask: url('/assets/images/icon-#{$name}.svg')
+                  center /
+                  contain
+                  no-repeat;
               }
             }
           }
@@ -332,16 +359,16 @@ $icons: (
   }
 }
 
-  body[data-color-scheme='dark'] {
-    .callout.with-code {
-      .code {
-        pre.highlight {
-          border: 1px solid #575757;
-          background: #111727;
-        }
+body[data-color-scheme='dark'] {
+  .callout.with-code {
+    .code {
+      pre.highlight {
+        border: 1px solid #575757;
+        background: #111727;
       }
     }
   }
+}
 
 #pillar-1 {
   background-image: var(--homepage-pillar-1-bg);
@@ -354,6 +381,10 @@ $icons: (
     background-size: 133%;
     background-position: 60% 0;
     @include lazyloadBg('/assets/images/landing-page/swoops/swoop-1.png');
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding-top: 17.88vw;
   }
 }
 

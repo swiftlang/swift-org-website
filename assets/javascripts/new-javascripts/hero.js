@@ -1,5 +1,7 @@
 const heroAnimation = async () => {
-  const isReduceMotionEnabled = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isReduceMotionEnabled = window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+  ).matches
   const urlParams = new URLSearchParams(location.search)
   const hasDebugParam = urlParams.has('debug')
 
@@ -118,7 +120,12 @@ const heroAnimation = async () => {
     return { ctx, pathInstance }
   }
 
-  const initLogo = ({ canvas, image, positionStart: [posX, posY], positionEnd: [endX, endY] }) => {
+  const initLogo = ({
+    canvas,
+    image,
+    positionStart: [posX, posY],
+    positionEnd: [endX, endY],
+  }) => {
     const ctx = canvas.getContext('2d')
     // Same reason for conversion as initSwoops
     ctx.translate(posX - image.naturalWidth / 2, posY - image.naturalHeight / 2)
@@ -128,9 +135,9 @@ const heroAnimation = async () => {
       ctx.drawImage(image, 0, 0)
     } else {
       ctx.globalAlpha = 1
-      const deltaX = endX - posX;
-      const deltaY = endY - posY;
-      ctx.drawImage(image, deltaX, deltaY);
+      const deltaX = endX - posX
+      const deltaY = endY - posY
+      ctx.drawImage(image, deltaX, deltaY)
     }
 
     return ctx
@@ -147,11 +154,11 @@ const heroAnimation = async () => {
     logo.image = logoImage
     // init canvas for each swoop layer
     heroSwoops.forEach((swoop, i) => {
-      swoop.image = swoopImages[i];
-      const canvasData = initSwoops(swoop);
-      swoop.ctx = canvasData.ctx;
-      swoop.pathInstance = canvasData.pathInstance;
-    });
+      swoop.image = swoopImages[i]
+      const canvasData = initSwoops(swoop)
+      swoop.ctx = canvasData.ctx
+      swoop.pathInstance = canvasData.pathInstance
+    })
     // init logo canvas
     logo.ctx = initLogo(logo)
   } catch (error) {
@@ -160,7 +167,7 @@ const heroAnimation = async () => {
   }
 
   if (isReduceMotionEnabled) {
-    return;
+    return
   }
 
   const DURATION = 1000
@@ -271,7 +278,7 @@ const heroAnimation = async () => {
     logo.state,
     {
       ease: 'out(1.1)',
-      duration: 250,
+      duration: 200,
       delay: 750,
       progress: 1,
       // ease: 'inOutQuad',

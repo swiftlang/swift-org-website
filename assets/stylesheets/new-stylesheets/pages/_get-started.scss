@@ -49,6 +49,11 @@
       margin-bottom: 20px;
       position: relative;
       z-index: 1;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 32px;
+        line-height: 1.33;
+      }
     }
 
     > p {
@@ -71,7 +76,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
 
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 768px) {
         & {
           grid-template-columns: 1fr;
         }
@@ -134,8 +139,8 @@
   margin-bottom: 50px;
 
   .content {
+    padding: 30px 50px 20px;
     background-color: var(--get-started-card-primary-bg);
-    padding: 53px 50px 40px;
     max-width: 980px;
     margin: 0 auto;
     z-index: 3;
@@ -148,6 +153,10 @@
       margin: 0 10px;
     }
 
+    @media only screen and (max-width: 768px) {
+      padding: 22px 15px 10px;
+    }
+
     .section-icon {
       width: 60px;
       margin: 40px 0 0;
@@ -158,10 +167,20 @@
       font-size: 48px;
       margin-bottom: 52px;
       color: var(--site-text-color);
+
+      @media only screen and (max-width: 768px) {
+        font-size: 32px;
+        line-height: 1.33;
+        margin-bottom: 22px;
+      }
     }
 
     a {
       @include link-with-right-arrow();
+
+      @media only screen and (max-width: 768px) {
+        padding-bottom: 15px;
+      }
     }
 
     .primary-cards,
@@ -284,7 +303,8 @@
 
           .name {
             margin-bottom: 6px;
-            font-size: 21px;
+            font-size: 22px;
+            line-height: 1.33;
           }
 
           .text {
@@ -311,6 +331,11 @@
     margin-bottom: 44px;
     width: 100%;
     text-align: center;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   .card-wrapper {
@@ -352,7 +377,6 @@
 
     p {
       margin-bottom: 25px;
-      padding-right: 90px;
     }
 
     a {
@@ -451,12 +475,22 @@
       font-size: 22px;
       line-height: 1.2;
       margin-bottom: 5px;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 32px;
+        line-height: 1.33;
+      }
     }
   }
 
   h2 {
     font-size: 48px;
     margin-bottom: 27px;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   p,
@@ -528,12 +562,21 @@
     font-size: 48px;
     font-weight: 600;
     margin-bottom: 29px;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   p {
     font-size: 17px;
     padding: 0 100px;
-    margin-bottom: 26px;
+    margin-bottom: 45px;
+
+    @media only screen and (max-width: 768px) {
+      padding: 0;
+    }
   }
 
   a {
@@ -560,6 +603,11 @@
     font-size: 48px;
     margin-bottom: 30px;
     line-height: 1.2;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   p {
@@ -614,6 +662,11 @@
     font-size: 48px;
     margin-bottom: 30px;
     line-height: 1.2;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   p {
@@ -640,6 +693,11 @@
     margin-bottom: 44px;
     width: 100%;
     text-align: center;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   .card-wrapper {
@@ -725,6 +783,11 @@
   h2 {
     font-size: 48px;
     margin-bottom: 30px;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   p {
@@ -817,6 +880,11 @@
     font-size: 48px;
     margin-bottom: 44px;
     text-align: center;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 32px;
+      line-height: 1.33;
+    }
   }
 
   h3 {
