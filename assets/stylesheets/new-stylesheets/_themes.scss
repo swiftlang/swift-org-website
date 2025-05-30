@@ -1,16 +1,21 @@
-    
 @mixin light-theme() {
   --site-text-color: #051416;
-  --site-navigation-border-bottom: linear-gradient(0deg, #f6b391 0%, #f8ce6e 92%);
-  --site-navigation-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  --site-navigation-border-bottom: linear-gradient(
+    0deg,
+    #f6b391 0%,
+    #f8ce6e 92%
+  );
+  --site-navigation-box-shadow:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   --site-navigation-background: rgba(255, 255, 255, 0.5);
-  --site-navigation-text-color: #3D3D3D;
+  --site-navigation-text-color: #3d3d3d;
   --site-navigation-item-background: rgba(0, 0, 0, 0.05);
   --site-tabs-background: rgba(255, 255, 255, 0.8);
   --site-tabs-active-background: #ffffff;
   --site-navigation-menu-toggle-invert: invert(0);
   --site-navigation-item-border: 1px solid #051416;
-  --site-code-box-text: #3D3D3D;
+  --site-code-box-text: #3d3d3d;
   --site-link-with-right-arrow-color: #384fea;
   --site-link-with-right-arrow-icon-filter: none;
   --site-content-link-with-right-arrow-icon-filter: brightness(0);
@@ -25,11 +30,38 @@
   --install-release-box-tr-border-bottom: 1px solid #f2f2f2;
   --install-release-box-tr-bg: #ffffff;
 
-  --homepage-hero-bg: linear-gradient(179deg,#fac685 3%, #fbdab0 87%, #ffffff 100%);
+  --get-started-page-bg: #fafafa;
+  --get-started-card-primary-bg: rgba(255, 255, 255, 0.9);
+  --get-started-card-secondary-bg: rgba(236, 236, 236, 1);
+  --get-started-boxes-bg: rgba(255, 255, 255, 0.5);
+  --get-started-code-box-pre-bg: #fff;
+  --get-started-code-box-pre-border: 1px solid #d5d5d5;
+
+  --homepage-hero-bg: linear-gradient(
+    179deg,
+    #fac685 3%,
+    #fbdab0 87%,
+    #ffffff 100%
+  );
   --homepage-install-text: #3d3d3d;
-  --homepage-pillar-1-bg: linear-gradient(to bottom, #ffffff 0%, #d9f2ff 75%, #fff3d8 90%);
-  --homepage-pillar-2-bg: linear-gradient(to top, #e4937f 0%, #fdd9a1 72%, #fff3d8 100%);
-  --homepage-pillar-3-bg: linear-gradient(180deg, #e4937f 0%, #a268c1 36%, #4b3773 100%);
+  --homepage-pillar-1-bg: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #d9f2ff 75%,
+    #fff3d8 90%
+  );
+  --homepage-pillar-2-bg: linear-gradient(
+    to top,
+    #e4937f 0%,
+    #fdd9a1 72%,
+    #fff3d8 100%
+  );
+  --homepage-pillar-3-bg: linear-gradient(
+    180deg,
+    #e4937f 0%,
+    #a268c1 36%,
+    #4b3773 100%
+  );
   --home-quicklinks-bg: rgba(255, 177, 100, 0.9);
   --home-quicklinks-color: #801a1a;
 
@@ -77,31 +109,55 @@
   --site-navigation-text-color: #ffffff;
   --site-navigation-item-background: rgba(0, 0, 0, 0.4);
   --site-tabs-background: rgba(35, 52, 74, 1);
-  --site-tabs-active-background: #505F83;
+  --site-tabs-active-background: #505f83;
   --site-navigation-menu-toggle-invert: invert(1);
   --site-navigation-item-border: 1px solid #ffffff;
   --site-code-box-text: #ffffff;
-  --site-link-with-right-arrow-color: #1EC1FD;
-  --site-link-with-right-arrow-icon-filter: invert(66%) sepia(89%) saturate(602%) hue-rotate(172deg) brightness(102%) contrast(101%);
+  --site-link-with-right-arrow-color: #1ec1fd;
+  --site-link-with-right-arrow-icon-filter: invert(66%) sepia(89%)
+    saturate(602%) hue-rotate(172deg) brightness(102%) contrast(101%);
   --site-content-link-with-right-arrow-icon-filter: brightness(0) invert(1);
 
   --page-bg: #fff;
 
-  --install-page-bg: linear-gradient(0deg, #FF8115 0%, #B7451B 92%);
-  --install-site-code-box-bg: #23344A;
+  --install-page-bg: linear-gradient(0deg, #ff8115 0%, #b7451b 92%);
+  --install-site-code-box-bg: #23344a;
   --install-site-code-box-pre-bg: #111727;
   --install-release-box-th-bg: #111727;
   --install-release-box-th-color: #ffffff;
   --install-release-box-tr-border-bottom: 1px solid #051416;
   --install-release-box-tr-bg: #384461;
 
-  --homepage-install-text: #DEDEDE;;
-  --homepage-hero-bg: linear-gradient(180deg, #144173 0%, #141228 68%, #144173 99%);
-  --homepage-pillar-1-bg: linear-gradient(179deg, #144173 1%, #000000 57%, #350839 88%, #B7451B 99%);
-  --homepage-pillar-2-bg: linear-gradient(0deg, #A268C1 4%, #FF8115 8%, #B7451B 99%);
-  --homepage-pillar-3-bg: linear-gradient(180deg, #A268C1 4%, #4B3773 99%);
+  --get-started-page-bg: rgb(5, 20, 35);
+  --get-started-card-primary-bg: rgba(35, 52, 74, 0.9);
+  --get-started-card-secondary-bg: rgba(56, 68, 97, 1);
+  --get-started-boxes-bg: rgba(25, 52, 74, 0.5);
+  --get-started-code-box-pre-bg: #111727;
+  --get-started-code-box-pre-border: 1px solid #575757;
 
-  --home-quicklinks-bg: #23344A;
+  --homepage-install-text: #dedede;
+  --homepage-hero-bg: linear-gradient(
+    180deg,
+    #144173 0%,
+    #141228 68%,
+    #144173 99%
+  );
+  --homepage-pillar-1-bg: linear-gradient(
+    179deg,
+    #144173 1%,
+    #000000 57%,
+    #350839 88%,
+    #b7451b 99%
+  );
+  --homepage-pillar-2-bg: linear-gradient(
+    0deg,
+    #a268c1 4%,
+    #ff8115 8%,
+    #b7451b 99%
+  );
+  --homepage-pillar-3-bg: linear-gradient(180deg, #a268c1 4%, #4b3773 99%);
+
+  --home-quicklinks-bg: #23344a;
   --home-quicklinks-color: #ffffff;
 
   // rubber band
