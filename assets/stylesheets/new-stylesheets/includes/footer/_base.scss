@@ -30,27 +30,29 @@ footer.global-footer {
     flex-wrap: wrap;
     margin-bottom: 5em;
 
-    .notes {
-      .logo {
-          display: flex;
-          width: 116px;
+    .logo {
+        display: flex;
+        height: 36px;
+        margin-bottom: 15px;
 
-          svg {
-            flex: 1;
-          }
+        svg {
+          height: 100%;
+        }
 
-          #logotype {
-            fill: #ebecf0;
-          }
-      }
+        #logotype {
+          fill: #ebecf0;
+        }
     }
 
     h3 {
+      height: 36px;
       margin-bottom: 15px;
       color: #FCA76C;
       font-size: 1.17em;
       line-height: 1.2;
       font-weight: bold;
+      display: flex;
+      align-items: center;
     }
 
     nav {
