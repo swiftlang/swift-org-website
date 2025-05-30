@@ -147,15 +147,15 @@
     #144173 1%,
     #000000 57%,
     #350839 88%,
-    #b7451b 99%
+    #df6b40 99%
   );
-  --homepage-pillar-2-bg: linear-gradient(
-    0deg,
-    #a268c1 4%,
-    #ff8115 8%,
-    #b7451b 99%
+  --homepage-pillar-2-bg: linear-gradient(0deg, #ffac64 0, #df6b40 100%);
+  --homepage-pillar-3-bg: linear-gradient(
+    180deg,
+    #ffac64 0%,
+    #a268c1 28%,
+    #4b3773 100%
   );
-  --homepage-pillar-3-bg: linear-gradient(180deg, #a268c1 4%, #4b3773 99%);
 
   --home-quicklinks-bg: #23344a;
   --home-quicklinks-color: #ffffff;
