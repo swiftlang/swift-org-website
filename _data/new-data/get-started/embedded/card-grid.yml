@@ -6,7 +6,7 @@ tertiary_cards:
   - name: "Integrate with Raspberry Pi Pico SDK"
     text: "Take advantage of seamless interoperatibility and use existing APIs from the Pico SDK directly from your Swift code."
     link_text: Open guide
-    link: https://swiftpackageindex.com/apple/swift-embedded-examples/main/documentation/embeddedswift/picoguide
+    link: https://docs.swift.org/embedded/documentation/embedded/picoguide
   - name: "Go baremetal on STM32 chips"
     text: "For maximum control, you can run completely baremetal and use Swift MMIO to operate hardware devices."
     link_text: Open guide
