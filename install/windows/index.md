@@ -53,12 +53,12 @@ title: Install Swift - Windows
   <div class="releases-grid">
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.main%}
+        {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.main %}
       </div>
     </div>
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.release-6-1%}
+        {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.release-6-1 %}
       </div>
     </div>
   </div>

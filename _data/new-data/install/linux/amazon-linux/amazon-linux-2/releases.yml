@@ -67,7 +67,7 @@ latest-release:
         copy: 'nightly-amazonlinux2'
   release-6-2:
     pre-code-text: |-
-      <small>May 15, 2025</small>xw
+      <small>May 15, 2025</small>
     headline: release/6.2
     links:
       - group:
