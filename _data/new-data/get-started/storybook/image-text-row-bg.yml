@@ -1,0 +1,11 @@
+image:
+  src: /assets/images/getting-started/embedded/primary-card-vapor-logo.jpg
+  alt: a place holder
+copy:
+  headline: Low memory footprint with massive performance.
+  paragraphs:
+    - 'Culture of Code migrated the infrasture that supports Things to Swift and saw a massive reduction in both cost and response time.'
+    - 'Leveraging Swift’s built-in features as well as frameworks to enable rapid development, they were able to improve their customer experience without sacrificing time.'
+  link:
+    text: Read more
+    href: '#'

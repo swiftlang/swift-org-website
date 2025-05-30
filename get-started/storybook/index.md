@@ -33,7 +33,9 @@ title: Storybook
     content=site.data.new-data.get-started.storybook.code-text-row
 %}
 
-{% include new-includes/components/image-text-column.html content = site.data.new-data.get-started.storybook.image-text-column %}
+{% include new-includes/components/image-text-row.html content = site.data.new-data.get-started.storybook.image-text-row %}
+
+{% include new-includes/components/image-text-row.html content = site.data.new-data.get-started.storybook.image-text-row-bg background = true %}
 
 {% include new-includes/components/headline-section.html content = site.data.new-data.get-started.storybook.headline-section %}
 

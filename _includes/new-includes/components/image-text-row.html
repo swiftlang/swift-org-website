@@ -1,5 +1,9 @@
-<div class="image-text-column content-wrapper">
+<div
+  class="image-text-row content-wrapper{% if include.background %} background{% endif %}"
+>
+  {% if include.headline %}
   <h2>{{ include.content.headline }}</h2>
+  {% endif %}
   <div class="card-wrapper">
     <img
       src="{{ include.content.image.src }}"
