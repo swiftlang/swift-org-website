@@ -323,8 +323,29 @@
   }
 }
 
-.image-text-column {
+.image-text-row {
   margin: 60px auto 70px;
+
+  &.background {
+    border-radius: 22px;
+    padding: 28px 50px 25px 50px;
+    background: var(--get-started-card-primary-bg);
+    box-sizing: border-box;
+
+    .card-wrapper:first-child {
+      // Maintain vertical space when there is no headline
+      margin-top: 10px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      padding-bottom: 8px;
+
+      .card-wrapper:first-child {
+        // Maintain vertical space when there is no headline
+        margin-top: 0;
+      }
+    }
+  }
 
   h2 {
     font-size: 48px;
