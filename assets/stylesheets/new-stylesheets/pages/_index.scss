@@ -29,6 +29,10 @@ $icons: (
       line-height: 1.33;
     }
   }
+
+  .callout-subtitle {
+    margin-bottom: 22px;
+  }
 }
 
 .animation-container {
@@ -63,13 +67,7 @@ $icons: (
   padding-bottom: 8vw;
   text-align: center;
   position: relative;
-
-  background-image: linear-gradient(
-    179deg,
-    #fac685 3%,
-    #fbdab0 87%,
-    #ffffff 100%
-  );
+  background-image: var(--homepage-hero-bg);
   @include noise();
 
   @media only screen and (max-width: 1024px) {
@@ -92,10 +90,9 @@ $icons: (
   h1 {
     font-size: 48px;
     line-height: 1.2;
-    color: #3d3d3d;
+    color: var(--site-code-box-text);
     letter-spacing: 0;
     text-align: center;
-    text-shadow: 0 2px 30px #fac686;
     font-weight: 600;
     margin-bottom: 30px;
     position: relative;
@@ -116,7 +113,7 @@ $icons: (
   .hero-content > p {
     opacity: 0.66;
     font-size: 17px;
-    color: #3d3d3d;
+    color: var(--homepage-install-text);
     font-weight: 500;
     margin-top: 11px;
   }
@@ -124,7 +121,7 @@ $icons: (
   /* Get Started */
   h2 {
     font-size: 32px;
-    color: #000000;
+    color: var(--site-text-color);
     letter-spacing: 0;
     text-align: center;
     font-weight: 400;
@@ -141,7 +138,7 @@ $icons: (
 
   .sub-text > h2 {
     font-size: 32px;
-    color: #3d3d3d;
+    color: var(--site-code-box-text);
     letter-spacing: 0;
     text-align: center;
     font-weight: 400;
@@ -170,9 +167,10 @@ $icons: (
         a {
           display: flex;
           text-decoration: none;
-          color: #801a1a;
+          color: var(--home-quicklinks-color);
+          background-color: var(--home-quicklinks-bg);
+          // background-color: #fff;
           font-weight: 400;
-          background-color: rgba(255, 177, 100, 0.9);
           border-radius: 36px;
           font-size: 14px;
           padding: 12px;
@@ -189,10 +187,18 @@ $icons: (
             background-position: center;
             display: inline-block;
             vertical-align: middle;
+            background-color: var(--home-quicklinks-color);
 
             @each $name in $icons {
               &.#{$name} {
-                background-image: url(/assets/images/icon-#{$name}.svg);
+                mask: url('/assets/images/icon-#{$name}.svg')
+                  center /
+                  contain
+                  no-repeat;
+                -webkit-mask: url('/assets/images/icon-#{$name}.svg')
+                  center /
+                  contain
+                  no-repeat;
               }
             }
           }
@@ -200,7 +206,8 @@ $icons: (
           /* Hover/focus styles */
           &:hover,
           &:focus {
-            background-color: rgba(230, 150, 80, 0.9);
+            // background-color: rgba(230, 150, 80, 0.9);
+            // background-color: color.adjust($foo, $lightness: -10%);
             outline: none;
           }
 
@@ -352,18 +359,22 @@ $icons: (
   }
 }
 
-#pillar-0 {
-  background-color: #bbbbbb;
+body[data-color-scheme='dark'] {
+  .callout.with-code {
+    .code {
+      pre.highlight {
+        border: 1px solid #575757;
+        background: #111727;
+      }
+    }
+  }
 }
 
 #pillar-1 {
-  background-image: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #d9f2ff 75%,
-    #fff3d8 90%
-  );
+  background-image: var(--homepage-pillar-1-bg);
   padding: 11.88vw 0 16.88vw;
+  color: var(--site-text-color);
+
   .swoop {
     @include swoop-ratio(444, 97, 1.33);
     z-index: 1;
@@ -379,12 +390,7 @@ $icons: (
 
 #pillar-2 {
   padding: 0.94vw 0 12.5vw;
-  background-image: linear-gradient(
-    to top,
-    #e4937f 0%,
-    #fdd9a1 72%,
-    #fff3d8 100%
-  );
+  background-image: var(--homepage-pillar-2-bg);
 
   .swoop {
     @include swoop-ratio(2624, 1073, 1.33);
@@ -397,12 +403,7 @@ $icons: (
 }
 
 #pillar-3 {
-  background-image: linear-gradient(
-    180deg,
-    #e4937f 0%,
-    #a268c1 36%,
-    #4b3773 100%
-  );
+  background-image: var(--homepage-pillar-3-bg);
   padding: 5vw 0 40px;
 
   .callout {
@@ -413,12 +414,4 @@ $icons: (
   .callout-text {
     text-align: center;
   }
-}
-
-#pillar-4 {
-  background-color: #d8bfd8;
-}
-
-#pillar-5 {
-  background-color: #b0e0e6;
 }

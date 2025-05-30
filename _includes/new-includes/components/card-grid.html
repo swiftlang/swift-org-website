@@ -50,7 +50,11 @@
       </li>
       {% endfor %}
     </ul>
-    {% endif %} {% if include.content.link %}
+    {% endif %}
+    {% if include.content.text %}
+    <p>{{ include.content.text }}</p>
+    {% endif %}
+    {% if include.content.link %}
     <a href="{{ include.content.link.url }}"
       >{{ include.content.link.text }}
     </a>

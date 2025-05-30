@@ -16,7 +16,7 @@ body {
    transition:
      background-color 0.3s ease,
      color 0.3s ease;
-  @include light-theme;
+    @include light-theme;
 
   &[data-color-scheme='light'] {
     color-scheme: light;
@@ -24,7 +24,6 @@ body {
 
   &[data-color-scheme='dark'] {
     color-scheme: dark;
-
     @include dark-theme;
   }
 
@@ -32,6 +31,13 @@ body {
   #install {
     color: var(--site-text-color);
   }
+
+  // Use linear-gradient so over scroll color matches footer background color, when user rubberbands.
+  background-image: linear-gradient(
+    180deg,
+    var(--nav-scroller-gradient-start) 50%,
+    var(--nav-scroller-gradient-end) 50%
+  );
 }
 
 h2 {
@@ -42,6 +48,7 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--page-bg);
 }
 
 code {

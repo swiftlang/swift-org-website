@@ -8,7 +8,7 @@ secondary_cards:
     link: https://vapor.codes
   - name: Hummingbird
     logo_alt: Hummingbird logo
-    logo: /assets/images/getting-started/embedded/secondary-card-hummingbird-logo.jpg
+    logo: /assets/images/getting-started/cloud-services/humingbird@2x.png
     text: Hummingbird is a lightweight, flexible modern web application framework that runs on top of a SwiftNIO based server implementation.
     link_text: Hummingbird
     link: https://hummingbird.codes

@@ -57,7 +57,7 @@ atom: true
         </p>
         <br />
         <p class="pillar-intro body-copy">
-            It’s the combination of approachability, speed, safety, and all of Swift’s strengths that make it so unique.
+            It's the combination of approachability, speed, safety, and all of<br/> Swift’s strengths that make it so unique.
         </p>
     </div>
     {% for callout in pillar1_callouts %}

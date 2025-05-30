@@ -455,9 +455,19 @@
     flex-direction: column;
 
     a {
-      margin-right: 20px;
+      text-align: left;
       margin-bottom: 10px;
     }
+  }
+
+  .link-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .link-single {
+    display: flex;
   }
 
   &.code-box-with-tabs {

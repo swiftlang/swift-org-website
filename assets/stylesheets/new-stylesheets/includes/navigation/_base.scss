@@ -16,8 +16,8 @@
 
   .wrapper {
     @include flex-between;
-    padding: 0 20px;
     max-width: 1234px;
+    padding: 0 20px;
     margin: 0 auto;
   }
 
@@ -47,18 +47,26 @@
     li {
       a {
         display: block;
-        padding: 22px 15px;
+        padding: 22px 5px;
         font-size: 19px;
         color: var(--site-navigation-text-color);
         transition:
           background-color 0.2s ease,
           color 0.2s ease; // smooth hover
+        
+          & > span {
+            padding: 12px 15px;
+            border-radius: 36px;
+          }
 
         // hover/focus states
         &:hover,
         &:focus {
-          background-color: var(--site-navigation-item-background);
           outline: none; // basic focus outline removal
+
+          & > span {
+            background-color: var(--site-navigation-item-background);
+          }
         }
 
         // visual focus indicator for accessibility
@@ -70,8 +78,11 @@
 
       &.active {
         a {
-          background-color: var(--site-navigation-item-background);
           outline: none; // basic focus outline removal
+
+          & > span {
+            background-color: rgba(230, 150, 80, .9);
+          }
         }
       }
     }

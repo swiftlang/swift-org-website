@@ -2,7 +2,7 @@ image:
   src: /assets/images/get-started/swift-performance-graph@2x.png
   alt:
 copy:
-  headline: Low memory footprint with massive performance
+  headline: Low memory footprint. Massive performance.
   paragraphs:
     - 'Cultured Code migrated the services that support Things to Swift and saw a massive reduction in both cost and response time.'
     - 'By leveraging Swift’s built-in features and server-oriented packages, they were able to thoroughly test and rapidly improve their customer experience.'

@@ -4,9 +4,9 @@ link:
   url: /getting-started/cli-swiftpm/
   text: Get Started
 boxes:
-  - title: Simplified setup
-    text: Auto-generate common command line features like help commands and completion scripts using the Swift Argument Parser package.
-  - title: Language strengths
-    text: Swift is fast, memory safe, and has robust string handling, making it a great choice for building command line tools.
-  - title: Interoperable
-    text: Integrate and reuse existing libraries written in other languages like C and C++ by taking advantage of Swift's interoperability.
+  - title: Simple
+    text: Use Swift’s clear syntax and a lightweight, declarative style to quickly develop rich command line tools.
+  - title: Powerful
+    text: ArgumentParser provides type validation, rich help screens, shell completions, and more, all without ceremony.
+  - title: Safe
+    text: Using Swift’s type, memory, and concurrency safety, develop powerful CLI tools without worry.

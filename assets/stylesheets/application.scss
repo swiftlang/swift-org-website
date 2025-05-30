@@ -27,4 +27,11 @@ body {
 
     @include dark-theme;
   }
+
+  // Use linear-gradient so over scroll color matches footer background color, when user rubberbands.
+  background-image: linear-gradient(
+    180deg,
+    var(--nav-scroller-gradient-start) 50%,
+    var(--nav-scroller-gradient-end) 50%
+  );
 }

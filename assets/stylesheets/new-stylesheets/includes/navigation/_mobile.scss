@@ -38,8 +38,14 @@
           }
     
           a {
-            padding: 1rem;
+            padding: 0;
             display: block;
+
+            & > span {
+              padding: 1rem;
+              border-radius: 0;
+              display: block;
+            }
           }
 
           &.border {
