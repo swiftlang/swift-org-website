@@ -9,6 +9,8 @@ title: Install Swift - Windows
 {% assign windows_arm64_dev_builds = site.data.builds.development.windows10-arm64 | sort: 'date' | reverse %}
 {% assign windows10_6_1_builds = site.data.builds.swift-6_1-branch.windows10 | sort: 'date' | reverse %}
 {% assign windows10_arm64_6_1_builds = site.data.builds.swift-6_1-branch.windows10-arm64 | sort: 'date' | reverse %}
+{% assign tag = site.data.builds.swift_releases.last.tag %}
+{% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Windows 10' | first %}
 
 <div class="content">
   <div class="release-box section">
@@ -20,12 +22,37 @@ title: Install Swift - Windows
   <div class="releases-grid">
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.manual %}
+        <div class="code-box content-wrapper">
+          <h2>Manual Installation</h2>
+          <p class="body-copy">
+            Download the Swift installer (.exe)
+          </p>
+          <div class="link-wrapper">
+            {% for arch in platform.archs %}
+              <div class="link-single">
+                <a href="https://download.swift.org/{{ tag | downcase }}/windows10{% if arch != "x86_64" %}-{{ arch }}{% endif %}/{{ tag }}/{{ tag }}-windows10{% if arch != "x86_64" %}-{{ arch }}{% endif %}.exe" class="body-copy">Download ({{ arch }})</a>
+              </div>
+            {% endfor %}
+            <div class="link-single">
+              <a href="/install/windows/manual" class="body-copy">Instructions</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.docker %}
+        <div class="code-box content-wrapper">
+          <h2>Container</h2>
+          <p class="body-copy">
+            If you prefer a containerized environment, you can download the official container images for compiling and running Swift on a variety of distributions.
+          </p>
+          <div class="link-wrapper">
+            <div class="link-single">
+              <a href="https://hub.docker.com/_/swift" class="body-copy">{{ site.data.builds.swift_releases.last.name }}-windowsservercore-ltsc2022</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -53,12 +80,41 @@ title: Install Swift - Windows
   <div class="releases-grid">
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.main %}
+        <div class="code-box content-wrapper">
+          <h2>main</h2>
+          <p class="body-copy">
+            <small>{{ windows_dev_builds.first.date | date: '%B %-d, %Y' }}</small><br />
+            Package installers (.exe)
+          </p>
+          <div class="link-wrapper">
+            <div class="link-single">
+              <a href="https://download.swift.org/development/windows10/{{ windows_dev_builds.first.dir }}/{{ windows_dev_builds.first.download }}" class="body-copy">Download (x86_64)</a>
+            </div>
+            <div class="link-single">
+              <a href="https://download.swift.org/development/windows10-arm64/{{ windows_arm64_dev_builds.first.dir }}/{{ windows_arm64_dev_builds.first.download }}" class="body-copy">Download (arm64)</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.release-6-1 %}
+      <div class="content">
+        <div class="code-box content-wrapper">
+          <h2>main</h2>
+          <p class="body-copy">
+            <small>{{ windows10_6_1_builds.first.date | date: '%B %-d, %Y' }}</small><br />
+            Package installers (.exe)
+          </p>
+          <div class="link-wrapper">
+            <div class="link-single">
+              <a href="https://download.swift.org/swift-6.1-branch/windows10/{{ windows10_6_1_builds.first.dir }}/{{ windows10_6_1_builds.first.download }}" class="body-copy">Download (x86_64)</a>
+            </div>
+            <div class="link-single">
+              <a href="https://download.swift.org/swift-6.1-branch/windows10-arm64/{{ windows10_arm64_6_1_builds.first.dir }}/{{ windows10_arm64_6_1_builds.first.download }}" class="body-copy">Download (arm64)</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
