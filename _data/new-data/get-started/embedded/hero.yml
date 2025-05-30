@@ -1,7 +1,7 @@
 headline: Create embedded software with Swift
 body: Develop efficient, reliable firmware for devices like microcontrollers
 link:
-  url: https://swiftpackageindex.com/apple/swift-embedded-examples/main/documentation/embeddedswift/waystogetstarted
+  url: https://docs.swift.org/embedded/documentation/embedded/waystogetstarted
   text: Get Started
 boxes:
   - title: Safe
