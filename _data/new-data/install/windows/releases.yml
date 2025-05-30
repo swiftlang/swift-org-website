@@ -20,12 +20,12 @@ latest-release:
         copy: "Editors"
   manual:
     pre-code-text: |
-      Download the Swift installer (.exe).
+      Download the Swift installer (.exe)
     headline: Manual Installation
     links:
-      - href: 'https://download.swift.org/swift-6.1-release/windows10/swift-6.1-RELEASE/swift-6.1-RELEASE-windows10.exe'
+      - href: 'https://download.swift.org/{swift-6.1-release}/{windows10}/{swift-6.1-RELEASE}/{swift-6.1-RELEASE}-windows10.exe'
         copy: 'Download (x86_64)'
-      - href: 'https://download.swift.org/swift-6.1-release/windows10-arm64/swift-6.1-RELEASE/swift-6.1-RELEASE-windows10-arm64.exe'
+      - href: 'https://download.swift.org/{swift-6.1-release}/{windows10}-arm64/{swift-6.1-RELEASE}/{swift-6.1-RELEASE}-windows10-arm64.exe'
         copy: 'Download (arm64)'
       - href: 'https://www.swift.org/install/windows/manual'
         copy: 'Instructions'
@@ -35,11 +35,11 @@ latest-release:
     headline: Container
     links:
       - href: 'https://hub.docker.com/_/swift'
-        copy: '6.1-windowsservercore-ltsc2022'
+        copy: '{6.1-windowsservercore-ltsc2022}'
   main:
     pre-code-text: |
-      <small>April 3, 2025</small><br />
-      Package installers (.exe).
+      <small>{April 3, 2025}</small><br />
+      Package installers (.exe)
     headline: main
     links:
       - href: 'https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-2025-04-03-a/swift-DEVELOPMENT-SNAPSHOT-2025-04-03-a-windows10.exe'
@@ -49,7 +49,7 @@ latest-release:
   release-6-1:
     pre-code-text: |
       <small>March 6, 2025</small><br />
-      Package installers (.exe).
+      Package installers (.exe)
     headline: release/6.1
     links:
       - href: 'https://download.swift.org/swift-6.1-branch/windows10/swift-6.1-DEVELOPMENT-SNAPSHOT-2025-03-06-a/swift-6.1-DEVELOPMENT-SNAPSHOT-2025-03-06-a-windows10.exe'

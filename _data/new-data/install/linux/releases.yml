@@ -35,3 +35,19 @@ latest-release:
         copy: 'Docker Hub'
       - href: 'https://www.swift.org/install/linux/docker'
         copy: 'Instructions'
+  static-linux-sdk:
+    pre-code-text: |-
+      Static Linux SDK - Cross compile to Linux
+      <br /><br />
+      <button onclick="copyToClipboard(this, 'swift sdk install https://download.swift.org/swift-6.1.1-release/static-sdk/swift-6.1.1-RELEASE/swift-6.1.1-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz --checksum 8a69753e181e40c202465f03bcafcc898070a86817ca0f39fc808f76638e90c2')">
+        Copy install command
+      </button>
+    headline: Static Linux SDK
+    links:
+      - group:
+        - href: 'https://download.swift.org/swift-6.1.1-release/static-sdk/swift-6.1.1-RELEASE/swift-6.1.1-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz'
+          copy: 'Download Linux Static SDK'
+        - href: 'https://download.swift.org/swift-6.1.1-release/static-sdk/swift-6.1.1-RELEASE/swift-6.1.1-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz.sig'
+          copy: 'Signature (PGP)'
+      - href: 'https://www.swift.org/documentation/articles/static-linux-getting-started.html'
+        copy: 'Instructions (Static Linux SDK)'

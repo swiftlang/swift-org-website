@@ -21,22 +21,6 @@
     {% if static_sdk %}
         {% assign tag_downcase = include.release.tag | downcase %}
         <button onclick="copyToClipboard(this, 'swift sdk install https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ include.release.tag }}/{{ include.release.tag }}_static-linux-0.0.1.artifactbundle.tar.gz --checksum {{ static_sdk.checksum }}')">Copy install command</button>
-
-        <script>
-          function copyToClipboard(button, text) {
-            const originalText = button.innerText;
-
-            navigator.clipboard.writeText(text).then(() => {
-              button.innerText = 'Copied!';
-              setTimeout(() => {
-                button.innerText = originalText;
-              }, 1000);
-            }).catch(err => {
-              console.error('Failed to copy:', err);
-              button.innerText = 'Failed';
-            });
-          }
-        </script>
     {% else %}
         Unavailable
     {% endif %}
