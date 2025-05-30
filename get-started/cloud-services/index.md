@@ -7,11 +7,12 @@ title: Use case
 
 {% include new-includes/components/get-started-hero.html content = site.data.new-data.get-started.cloud-services.hero  %}
 
+{% include new-includes/components/image-text-row.html content = site.data.new-data.get-started.cloud-services.image-text-row background = true %}
+
 {% include new-includes/components/card-grid.html content = site.data.new-data.get-started.cloud-services.secondary-content %}
 
 {% include new-includes/components/card-grid.html content = site.data.new-data.get-started.cloud-services.tertiary-content-cloud-native %}
 
-{% include new-includes/components/image-text-row.html content = site.data.new-data.get-started.cloud-services.image-text-row %}
 
 {% include new-includes/components/headline-section.html content = site.data.new-data.get-started.cloud-services.headline-section %}
 
