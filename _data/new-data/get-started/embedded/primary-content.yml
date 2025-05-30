@@ -20,7 +20,7 @@ secondary_cards:
     logo: /assets/images/get-started/interactive-ui-examples@2x.png
     text: Build projects using the popular embedded graphics library LVGL on an STM32 board for rich UI and touch input.
     link_text: Learn more
-    link: https://github.com/apple/swift-embedded-examples/pull/104
+    link: https://github.com/apple/swift-embedded-examples/tree/main/stm32-lvgl
 
   - name: PlaydateKit
     logo: /assets/images/get-started/playdate-kit@2x.png

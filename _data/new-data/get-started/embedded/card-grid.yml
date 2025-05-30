@@ -6,12 +6,15 @@ tertiary_cards:
   - name: "Integrate with Raspberry Pi Pico SDK"
     text: "Take advantage of seamless interoperatibility and use existing APIs from the Pico SDK directly from your Swift code."
     link_text: Open guide
-    link: https://swiftpackageindex.com/apple/swift-embedded-examples/main/documentation/embeddedswift/integratewithpico
+    link: https://docs.swift.org/embedded/documentation/embedded/picoguide
   - name: "Go baremetal on STM32 chips"
     text: "For maximum control, you can run completely baremetal and use Swift MMIO to operate hardware devices."
     link_text: Open guide
     link: https://swiftpackageindex.com/apple/swift-embedded-examples/main/documentation/embeddedswift/stm32baremetalguide
-paragraph:
+text:
   Embedded Swift is not limited to specific hardware devices or platforms. It's versatile, it can be integrated with
-  existing SDKs and build systems, and it can also be used for pure baremetal development. Most commonly used ARM
+  existing SDKs and build systems, and it can also be used for pure baremetal development. Most common ARM
   and RISC-V chips can be targeted by the Swift toolchain.
+link:
+  url: https://docs.swift.org/embedded/documentation/embedded/integratingwithplatforms
+  text: Learn more about integration with other platforms and build systems

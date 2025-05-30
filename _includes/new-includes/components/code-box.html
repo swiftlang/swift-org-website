@@ -26,8 +26,19 @@
   {% endif %}{% if include.content.links %}
   <div class="link-wrapper">
     {% for link in include.content.links %}
-    <a class="body-copy" href="{{ link.href }}"> {{ link.copy }}</a>
+      {% if link.group %}
+        <div class="link-group">
+          {% for item in link.group %}
+            <a class="body-copy" href="{{ item.href }}">{{ item.copy }}</a>
+            {% unless forloop.last %}|{% endunless %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="link-single">
+          <a class="body-copy" href="{{ link.href }}">{{ link.copy }}</a>
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
-  {% endif %}
+{% endif %}
 </div>

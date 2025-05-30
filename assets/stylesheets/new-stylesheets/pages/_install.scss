@@ -90,7 +90,7 @@
 .release-box {
   width: 100%;
   position: relative;
-  padding: 30px 0 10px;
+  margin-top: 40px;
 
   thead th {
     border-collapse: separate;
@@ -238,6 +238,22 @@
       }
     }
 
+    p.body-copy {
+      flex-grow: 1;
+      
+      button {
+        border: 0;
+        background: var(--install-release-box-th-bg);
+        border-radius: 10px;
+        padding: 6px 15px;
+        color: var(--site-link-with-right-arrow-color);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
     .content-body {
       flex-grow: 1;
       width: 100%;
@@ -254,6 +270,7 @@
     position: relative;
     text-align: left;
     padding: 20px;
+    height: 100%;
 
     & > h3 {
       font-size: 24px;
@@ -271,8 +288,8 @@
   display: inline-grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  margin-bottom: 40px;
   width: 100%;
+  margin: 40px 0 0;
 
   @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -281,10 +298,9 @@
   .release-box {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    margin-top: 0;
 
     .content {
-      flex: 1;
       display: flex;
       flex-direction: column;
 
@@ -292,7 +308,7 @@
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        min-height: 200px;
+        min-height: 150px;
       }
     }
   }

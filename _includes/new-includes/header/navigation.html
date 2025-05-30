@@ -1,13 +1,13 @@
 <ul class="navigation-items">
   {% for item in site.data.new-data.header.navigation %}
   <li class="nav-item {% if page.url == item.url %}active{% endif %}">
-    <a href="{{ item.url }}" data-text="{{ item.header }}">{{ item.header }}</a>
+    <a href="{{ item.url }}" data-text="{{ item.header }}"><span>{{ item.header }}</span></a>
   </li>
   {% endfor %}
   <li class="border">
     <span />
   </li>
   <li class="nav-item {% if page.url contains '/install' %}active{% endif %}">
-    <a href="/install" data-text="Install">Install <span>({{ site.data.builds.swift_releases.last.name }})</span></a>
+    <a href="/install" data-text="Install"><span>Install <span>({{ site.data.builds.swift_releases.last.name }})</span></span></a>
   </li>
 </ul>
