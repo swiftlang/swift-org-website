@@ -16,5 +16,5 @@ text:
   existing SDKs and build systems, and it can also be used for pure baremetal development. Most common ARM
   and RISC-V chips can be targeted by the Swift toolchain.
 link:
-  url: https://swiftpackageindex.com/apple/swift-embedded-examples/main/documentation/embeddedswift/integratingwithplatforms
+  url: https://docs.swift.org/embedded/documentation/embedded/integratingwithplatforms
   text: Learn more about integration with other platforms and build systems
