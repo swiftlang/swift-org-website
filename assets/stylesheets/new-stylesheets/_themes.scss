@@ -70,6 +70,10 @@
   --nav-scroller-gradient-end: #fff;
 
   // syntax
+  --color-syntax-clipboard-bg: rgb(223, 223, 247);
+  --color-syntax-clipboard-hover-bg: rgb(216, 216, 242);
+  --color-syntax-clipboard-check-color: rgb(12, 156, 12);
+
   --color-syntax-attributes: rgb(148, 113, 0);
   --color-syntax-characters: rgb(39, 42, 216);
   --color-syntax-comments: rgb(112, 127, 140);
@@ -165,6 +169,10 @@
   --nav-scroller-gradient-end: #000;
 
   // syntax
+  --color-syntax-clipboard-bg: rgb(71, 79, 110);
+  --color-syntax-clipboard-hover-bg: rgb(80, 89, 124);
+  --color-syntax-clipboard-check-color: rgb(11, 242, 11);
+
   --color-syntax-attributes: rgb(204, 151, 104);
   --color-syntax-characters: rgb(217, 201, 124);
   --color-syntax-comments: rgb(127, 140, 152);
