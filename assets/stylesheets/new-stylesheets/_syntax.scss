@@ -3,27 +3,43 @@
   position: relative;
 
   button {
-    background-color: #c5c5c5;
-    color: white;
-    border: 0;
-    padding: 5px 8px;
-    font-family: sans-serif;
-    transition: background-color 0.2s;
-    cursor: pointer;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1em;
+    right: 1em;
+    background: none;
+    border: medium;
+    cursor: pointer;
+    padding: 7px 6px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
     display: none;
-    border-radius: 0 10px 0 0;
+    background-color: var(--color-syntax-clipboard-bg);
+
+    svg {
+      width: 20px;
+      height: 20px;
+      opacity: 0.8;
+    }
+
+    &.copied {
+      svg {
+        color: var(--color-syntax-clipboard-check-color);
+      }
+    }
+
 
     &:hover {
-      background-color: #868686;
+      background-color: var(--color-syntax-clipboard-hover-bg);
+
+      svg {
+        opacity: 1;
+      }
     }
   }
 
   &:hover {
     button {
-      display: block;
+      display: flex;
     }
   }
 }

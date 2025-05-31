@@ -45,28 +45,41 @@ document.addEventListener('DOMContentLoaded', function () {
 if (navigator && navigator.clipboard) {
   const codeBlocks = document.querySelectorAll(
     ':is([class^="language-"] pre.highlight, .code-box pre code)',
-  )
+  );
+
+  const copyIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>`;
+  const copiedIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>`;
 
   codeBlocks.forEach((codeBlock) => {
-    const button = document.createElement('button')
-    const codeElement = codeBlock.querySelector('code') || codeBlock
-    const container = codeBlock.parentElement
+    const button = document.createElement('button');
+    const codeElement = codeBlock.querySelector('code') || codeBlock;
+    const container = codeBlock.parentElement;
 
-    container.style.position = 'relative'
-    container.appendChild(button)
-    button.innerText = 'copy'
+    button.classList.add('copy-button');
+    container.appendChild(button);
+    button.innerHTML = copyIcon
 
     button.addEventListener('mousedown', async () => {
-      const originalText = button.innerText
+      const originalIcon = copyIcon; // Store the original icon
 
-      await navigator.clipboard.writeText(codeElement.innerText)
-      button.innerText = 'copied!'
+      try {
+        await navigator.clipboard.writeText(codeElement.innerText);
 
-      setTimeout(() => {
-        button.innerText = originalText
-      }, 1000)
-    })
-  })
+        button.classList.add('copied');
+        button.innerHTML = copiedIcon;
+
+        setTimeout(() => {
+          button.classList.remove('copied');
+          button.innerHTML = originalIcon;
+        }, 1000);
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+        setTimeout(() => {
+          button.innerHTML = originalIcon; // Revert to original icon
+        }, 1000);
+      }
+    });
+  });
 }
 
 // Check for reduced motion setting
