@@ -3,7 +3,7 @@ image_alt: Package image for Open Source Frameworks & Packages section
 title: Explore CLIs built with Swift
 tertiary_cards:
   - name: swiftly
-    text: CLI tool for installing, managing, and switching between Swift toolchains
+    text: CLI tool for installing, managing, and switching between Swift toolchains.
     link_text: Learn more
     link: https://github.com/swiftlang/swiftly
   - name: DocC
