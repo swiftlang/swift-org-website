@@ -1,24 +1,72 @@
+{% assign tag = site.data.builds.swift_releases.last.tag %}
+{% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
+{% assign platform_name_url = include.platform | remove: '.' | remove: ' ' | downcase %}
+{% assign platform_name = include.platform | remove : ' ' | downcase %}
+{% assign platform = site.data.builds.swift_releases.last.platforms | where: 'dir', include.platform_name_url | first %}
+{% unless platform %}
+  {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', include.platform | first %}
+{% endunless %}
+
 <div class="content">
   <div class="releases-grid">
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = include.docker %}
+        <div class="code-box content-wrapper">
+          <h2>Container</h2>
+          <p class="body-copy">
+            If you prefer a containerized environment, you can download the official container images for compiling and running Swift on a variety of distributions.
+          </p>
+          <div class="link-wrapper">
+            <a href="https://hub.docker.com/_/swift" class="body-copy">{{ site.data.builds.swift_releases.last.name }}-{{include.docker_tag}}</a>
+          </div>
+          <div class="link-wrapper">
+            <a href="/install/linux/docker" class="body-copy">Instructions</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = include.tarball %}
+        <div class="code-box content-wrapper">
+          <h2>Tarball</h2>
+          <p class="body-copy">
+            Tarball packages (.tar.gz)
+          </p>
+          <div class="link-wrapper">
+            {%- for arch in platform.archs -%}
+            <div class="link-group">
+              <a class="body-copy" href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}{% if arch != "x86_64" %}-{{ arch }}{% endif %}/{{ tag }}/{{ tag }}-{{ platform_name }}{% if arch != "x86_64" %}-{{ arch }}{% endif %}.tar.gz" class="cta-secondary">
+                Download ({{ arch }})
+              </a> |
+              <a class="body-copy" href="https://download.swift.org/{{ tag_downcase }}/{{ platform_name_url }}{% if arch != "x86_64" %}-{{ arch }}{% endif %}/{{ tag }}/{{ tag }}-{{ platform_name }}{% if arch != "x86_64" %}-{{ arch }}{% endif %}.tar.gz.sig" >
+                {{- arch -}}
+              </a>
+            </div>
+            {%- endfor -%}
+          </div>
+          <div class="link-wrapper">
+            <a href="/install/linux/tarball" class="body-copy">Instructions</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = include.static_sdk %}
+        {% include new-includes/components/static-linux-sdk.html %}
       </div>
     </div>
     {% if include.rpm %}
       <div class="release-box section">
         <div class="content">
-          {% include new-includes/components/code-box.html content = include.rpm %}
+          <div class="code-box content-wrapper">
+            <h2>RPM</h2>
+            <p class="body-copy">
+              RPM Package Manager (Experimental use only)
+            </p>
+            <div class="link-wrapper">
+              <a href="/install/linux/rpm" class="body-copy">Instructions</a>
+            </div>
+          </div>
         </div>
       </div>
     {% endif %}
@@ -48,12 +96,52 @@
   <div class="releases-grid">
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = include.dev_main %}
+        <div class="code-box content-wrapper">
+          <h2>{{ include.development }}</h2>
+          <p class="body-copy">
+            <small>{{ development_builds.first.date | date: '%B %-d, %Y' }}</small><br />
+          </p>
+          <div class="link-wrapper">
+            <div class="link-group">
+              <a href="https://download.swift.org/{{ include.branch_dir }}/{{ platform_name_url }}/{{ development_builds.first.dir }}/{{ development_builds.first.download }}" class="body-copy">Download (x86_64)</a> |
+              <a href="https://download.swift.org/{{ include.branch_dir }}/{{ platform_name_url }}/{{ development_builds.first.dir }}/{{ development_builds.first.download_signature }}" class="body-copy">Signature (PGP)</a>
+            </div>
+          </div>
+          <div class="link-wrapper">
+            <div class="link-group">
+              <a href="https://download.swift.org/{{ include.branch_dir }}/{{ platform_name_url }}-aarch64/{{ aarch64_development_builds.first.dir }}/{{ aarch64_development_builds.first.download }}" class="body-copy">Download (aarch64)</a> |
+              <a href="https://download.swift.org/{{ include.branch_dir }}/{{ platform_name_url }}-aarch64/{{ aarch64_development_builds.first.dir }}/{{ aarch64_development_builds.first.download_signature }}" class="body-copy">Signature (PGP)</a>
+            </div>
+          </div>
+          <div class="link-wrapper">
+            <a href="https://hub.docker.com/r/swiftlang/swift/tags" class="body-copy">{{ include.docker_tag }}</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="release-box section">
       <div class="content">
-        {% include new-includes/components/code-box.html content = include.dev_release_6_2 %}
+        <div class="code-box content-wrapper">
+          <h2>{{ include.development_2 }}</h2>
+          <p class="body-copy">
+            <small>{{ development_builds_2.first.date | date: '%B %-d, %Y' }}</small><br />
+          </p>
+          <div class="link-wrapper">
+            <div class="link-group">
+              <a href="https://download.swift.org/{{ include.branch_dir_2 }}/{{ platform_name_url }}/{{ development_builds_2.first.dir }}/{{ development_builds_2.first.download }}"  class="body-copy">Download (x86_64)</a> |
+              <a href="https://download.swift.org/{{ include.branch_dir_2 }}/{{ platform_name_url }}/{{ development_builds_2.first.dir }}/{{ development_builds_2.first.download_signature }}" class="body-copy">Signature (PGP)</a>
+            </div>
+          </div>
+          <div class="link-wrapper">
+            <div class="link-group">
+              <a href="https://download.swift.org/{{ include.branch_dir_2 }}/{{ platform_name_url }}-aarch64/{{ aarch64_development_builds_2.first.dir }}/{{ aarch64_development_builds_2.first.download }}" class="body-copy">Download (aarch64)</a> |
+              <a href="https://download.swift.org/{{ include.branch_dir_2 }}/{{ platform_name_url }}-aarch64/{{ aarch64_development_builds_2.first.dir }}/{{ aarch64_development_builds_2.first.download_signature }}" class="body-copy">Signature (PGP)</a>
+            </div>
+          </div>
+          <div class="link-wrapper">
+            <a href="https://hub.docker.com/r/swiftlang/swift/tags" class="body-copy">{{ include.docker_tag }}</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -91,4 +179,5 @@
       </div>
     </div>
   </div>
+  {% include new-includes/components/static-linux-sdk-dev.html %}
 </div>

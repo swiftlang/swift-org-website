@@ -18,7 +18,7 @@ title: Install Swift - Linux
   </div>
   <div class="release-box section">
     <div class="content">
-      {% include new-includes/components/code-box.html content = site.data.new-data.install.linux.releases.latest-release.static-linux-sdk %}
+      {% include new-includes/components/static-linux-sdk.html %}
     </div>
   </div>
   <div class="callout">
