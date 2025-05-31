@@ -30,51 +30,6 @@ latest-release:
     links:
       - href: 'https://developer.apple.com/xcode/'
         copy: 'Install Xcode'
-  package-installer:
-    pre-code-text: The toolchain package installer (.pkg) that Swiftly automates is available as a stand-alone download.
-    headline: Package Installer
-    links:
-      - href: 'https://download.swift.org/swift-6.1-release/xcode/swift-6.1-RELEASE/swift-6.1-RELEASE-osx.pkg'
-        copy: 'Download Toolchain'
-      - href: 'https://www.swift.org/install/macos/package_installer'
-        copy: 'Instructions'
-  static-linux-sdk:
-    pre-code-text: |
-      Static Linux SDK - Cross compile to Linux
-      <br /><br />
-      <button onclick="copyToClipboard(this, 'swift sdk install https://download.swift.org/swift-6.1-release/static-sdk/swift-6.1-RELEASE/swift-6.1-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz --checksum 111c6f7d280a651208b8c74c0521dd99365d785c1976a6e23162f55f65379ac6')">
-        Copy install command
-      </button>
-    headline: Static Linux SDK
-    links:
-      - group:
-          - href: 'https://download.swift.org/swift-6.1-release/static-sdk/swift-6.1-RELEASE/swift-6.1-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz'
-            copy: 'Download Linux Static SDK'
-          - href: 'https://download.swift.org/swift-6.1-release/static-sdk/swift-6.1-RELEASE/swift-6.1-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz.sig'
-            copy: 'Signature (PGP)'
-      - href: 'https://www.swift.org/documentation/articles/static-linux-getting-started.html'
-        copy: 'Instructions (Static Linux SDK)'
-  toolchain:
-    main:
-      pre-code-text: |
-        <small>May 20, 2025</small><br />
-        Toolchain package installer (.pkg)
-      headline: main
-      links:
-        - href: 'https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2025-05-20-a/swift-DEVELOPMENT-SNAPSHOT-2025-05-20-a-osx-symbols.pkg'
-          copy: 'Debugging Symbols'
-        - href: 'https://download.swift.org/development/xcode/swift-DEVELOPMENT-SNAPSHOT-2025-05-20-a/swift-DEVELOPMENT-SNAPSHOT-2025-05-20-a-osx.pkg'
-          copy: 'Download Toolchain'
-    release-6-2:
-      pre-code-text: |
-        <small>May 15, 2025</small><br />
-        Toolchain package installer (.pkg)
-      headline: release/6.2
-      links:
-        - href: 'https://download.swift.org/swift-6.2-branch/xcode/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a-osx-symbols.pkg'
-          copy: 'Debugging Symbols'
-        - href: 'https://download.swift.org/swift-6.2-branch/xcode/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a/swift-6.2-DEVELOPMENT-SNAPSHOT-2025-05-15-a-osx.pkg'
-          copy: 'Download Toolchain'
   static-linux-sdk-dev:
     main:
       pre-code-text: |
