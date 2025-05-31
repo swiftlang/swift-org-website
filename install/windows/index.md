@@ -99,9 +99,8 @@ title: Install Swift - Windows
     </div>
     <div class="release-box section">
       <div class="content">
-      <div class="content">
         <div class="code-box content-wrapper">
-          <h2>main</h2>
+          <h2>release/6.1</h2>
           <p class="body-copy">
             <small>{{ windows10_6_1_builds.first.date | date: '%B %-d, %Y' }}</small><br />
             Package installers (.exe)
