@@ -438,6 +438,18 @@
 
   &.code-box-with-tabs {
     overflow: hidden;
+
+    h2 {
+      font-size: 22px;
+      line-height: 1.2;
+      margin-bottom: 5px;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 32px;
+        line-height: 1.33;
+      }
+    }
+
     pre {
       display: none;
 
@@ -470,6 +482,11 @@
         margin-bottom: -1px;
       }
     }
+
+    @media only screen and (max-width: 768px) {
+      overflow: scroll;
+      padding-bottom: 1px;
+    }
   }
 
   .link-wrapper {
@@ -490,19 +507,6 @@
 
   .link-single {
     display: flex;
-  }
-
-  &.code-box-with-tabs {
-    h2 {
-      font-size: 22px;
-      line-height: 1.2;
-      margin-bottom: 5px;
-
-      @media only screen and (max-width: 768px) {
-        font-size: 32px;
-        line-height: 1.33;
-      }
-    }
   }
 
   h2 {
