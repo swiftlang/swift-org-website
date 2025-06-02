@@ -35,10 +35,6 @@ If the corresponding snapshot version is not available for the Swift SDK, you’
 
 6. Run `swift sdk list` to verify the Swift SDK was installed and note its ID in the output. Two Swift SDKs will be installed,
 one with support for all Swift features, and the other with a subset of features allowed in the experimental [Embedded Swift mode](#embedded-swift-support).
-| SDK ID | Description |
-|:-------:|:-----------:|
-| `swift-<version>_wasm` | Support all Swift features |
-| `swift-<version>_wasm-embedded` | Support a subset of features allowed in the experimental [Embedded Swift mode](#embedded-swift-support) |
 
 7. In the future, after installing or selecting a new version of the toolchain with `swiftly` make sure to follow steps 3-6 to install a Swift SDK exactly matching the toolchain version.
 
