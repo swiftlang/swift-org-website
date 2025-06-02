@@ -2059,7 +2059,7 @@
         - x86_64
         - arm64
 - name: "6.1.1"
-  tag: swift-6.1-RELEASE
+  tag: swift-6.1.1-RELEASE
   xcode: Xcode 16.3
   xcode_release: false
   date: 2025-05-23
@@ -2116,6 +2116,67 @@
     - name: Static SDK
       platform: static-sdk
       checksum: 8a69753e181e40c202465f03bcafcc898070a86817ca0f39fc808f76638e90c2
+      archs:
+        - x86_64
+        - arm64
+- name: "6.1.2"
+  tag: swift-6.1.2-RELEASE
+  xcode: Xcode 16.4
+  xcode_release: true
+  date: 2025-05-28
+  platforms:
+    - name: Ubuntu 20.04
+      platform: Linux
+      docker: 6.1.2-focal
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 6.1.2-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 24.04
+      platform: Linux
+      docker: 6.1.2-noble
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 12
+      platform: Linux
+      docker: 6.1.2-bookworm
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 39
+      platform: Linux
+      docker: 6.1.2-fedora39
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 6.1.2-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 6.1.2-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 6.1.2-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+        - arm64
+    - name: Static SDK
+      platform: static-sdk
+      checksum: df0b40b9b582598e7e3d70c82ab503fd6fbfdff71fd17e7f1ab37115a0665b3b
       archs:
         - x86_64
         - arm64
