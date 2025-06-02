@@ -17,7 +17,6 @@ const heroAnimation = async (animContainer) => {
   // Skip to visible portion of animation when cropped on small screens
   const { left, width } = animContainer.getClientRects()[0]
   const offScreenDelta = Math.abs(left) / width
-  const initProgressVal = offScreenDelta
 
   const heroSwoops = [
     {
