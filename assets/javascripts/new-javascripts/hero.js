@@ -29,7 +29,7 @@ const heroAnimation = async (animContainer) => {
       lineWidth: 210,
       debugColor: 'purple',
       image: null,
-      state: { progress: initProgressVal },
+      state: { progress: offScreenDelta },
     },
     {
       canvas: document.querySelector('#white-swoop-1'),
@@ -41,7 +41,7 @@ const heroAnimation = async (animContainer) => {
       lineWidth: 140,
       debugColor: 'red',
       image: null,
-      state: { progress: initProgressVal },
+      state: { progress: offScreenDelta },
     },
     {
       canvas: document.querySelector('#white-swoop-2'),
@@ -53,7 +53,7 @@ const heroAnimation = async (animContainer) => {
       lineWidth: 73.6,
       debugColor: 'cyan',
       image: null,
-      state: { progress: initProgressVal },
+      state: { progress: offScreenDelta },
     },
     {
       canvas: document.querySelector('#orange-swoop-bottom'),
@@ -65,7 +65,7 @@ const heroAnimation = async (animContainer) => {
       lineWidth: 202.2,
       debugColor: 'yellow',
       image: null,
-      state: { progress: initProgressVal },
+      state: { progress: offScreenDelta },
     },
     {
       canvas: document.querySelector('#orange-swoop-top'),
@@ -77,7 +77,7 @@ const heroAnimation = async (animContainer) => {
       lineWidth: 163.4,
       debugColor: 'green',
       image: null,
-      state: { progress: initProgressVal },
+      state: { progress: offScreenDelta },
     },
   ]
   const logo = {
@@ -88,7 +88,7 @@ const heroAnimation = async (animContainer) => {
     position: [610, 672.5],
     imagePath: '/assets/images/landing-page/hero/bird.png',
     image: null,
-    state: { progress: initProgressVal },
+    state: { progress: offScreenDelta },
   }
 
   const initSwoops = ({
@@ -206,7 +206,7 @@ const heroAnimation = async (animContainer) => {
     heroSwoops[1].state,
     {
       progress: 1,
-      duration: 950 - 950 * initProgressVal,
+      duration: 950 - 950 * offScreenDelta,
       onUpdate: () => swoopUpdate(heroSwoops[1]),
     },
     'start',
@@ -216,7 +216,7 @@ const heroAnimation = async (animContainer) => {
     heroSwoops[0].state,
     {
       progress: 1,
-      duration: 950 - 950 * initProgressVal,
+      duration: 950 - 950 * offScreenDelta,
       onUpdate: () => swoopUpdate(heroSwoops[0]),
     },
     'start',
