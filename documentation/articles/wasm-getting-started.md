@@ -22,31 +22,33 @@ The distributed artifact bundles also include support for the experimental Embed
 
 2. Install latest 6.2 development snapshot with `swiftly install 6.2-snapshot`, note the exact snapshot date component in the output of this command.
 
-3. Navigate to [the downloads page](https://www.swift.org/download/) and find the “Swift SDK for WASI” section. Find a URL of a version that exactly matches the version from step 2.
+3. Select the installed toolchain with `swiftly use 6.2-snapshot`.
+
+4. Navigate to [the downloads page](https://www.swift.org/download/) and find the “Swift SDK for WASI” section. Find a URL of a version that exactly matches the version from step 2.
 If the corresponding snapshot version is not available for the Swift SDK, you’ll have to install the matching toolchain first.
 
-4. Find the checksum value for the corresponding Swift SDK on the same page, substitute it together with the URL from step 2, and execute the following command:
+5. Find the checksum value for the corresponding Swift SDK on the same page, substitute it together with the URL from step 2, and execute the following command:
 
     ```
     swift sdk install <swift_sdk_url> --checksum <checksum_value>
     ```
 
-5. Run `swift sdk list` to verify the Swift SDK was installed and note its ID in the output. Two Swift SDKs will be installed,
+6. Run `swift sdk list` to verify the Swift SDK was installed and note its ID in the output. Two Swift SDKs will be installed,
 one with support for all Swift features, and the other with a subset of features allowed in the experimental [Embedded Swift mode](#embedded-swift-support).
 
-6. In the future, after installing or selecting a new version of the toolchain with `swiftly` make sure to follow steps 3-5 to install a Swift SDK exactly matching the toolchain version.
+7. In the future, after installing or selecting a new version of the toolchain with `swiftly` make sure to follow steps 3-6 to install a Swift SDK exactly matching the toolchain version.
 
 ## Building and Running
 
 Let's create a simple package to see the Swift SDK in action:
 
 ```
-mkdir wasi-example
-cd wasi-example
+mkdir Hello
+cd Hello
 swift package init --type executable
 ```
 
-Modify freshly created `Sources/wasi-test/wasi_test.swift` file to print different strings depending on the target
+Modify freshly created `Sources/Hello/Hello.swift` file to print different strings depending on the target
 platform:
 
 ```swift
@@ -81,8 +83,8 @@ You should see the following output:
 ```
 [1/1] Planning build
 Building for debugging...
-[8/8] Linking wasi-test.wasm
-Build of product 'wasi-test' complete! (1.31s)
+[8/8] Linking Hello.wasm
+Build of product 'Hello' complete! (1.31s)
 Hello from WASI!
 ```
 
