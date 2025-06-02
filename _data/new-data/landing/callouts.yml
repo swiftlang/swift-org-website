@@ -55,7 +55,7 @@
 
 - title: Interoperable
   subtitle: Adopt in existing code incrementally.
-  text: Swift’s interoperability features allow you to incrementally adopt the language into existing codebases without requiring a full code rewrite. Interoperability is bi-directional and works with other languages, including C, C++, Objective-C, and Java. And Swift can directly call code written in C without requiring a bridging layer or additional effort.
+  text: Swift provides unmatched interoperability with its combination of natively understanding C and C++ types without the need for foreign function interfaces, and by providing bridging for bi-directional access. Swift’s interoperability features allow you to incrementally adopt the language into existing codebases without requiring a full code rewrite.
   code: |-
     import CxxStdlib
 
