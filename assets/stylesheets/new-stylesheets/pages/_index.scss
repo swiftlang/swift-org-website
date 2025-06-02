@@ -36,7 +36,7 @@ $icons: (
 }
 
 .animation-container {
-  @include noise();
+  aspect-ratio: 1248 / 1116;
   top: calc(66px - 9.5vw);
   left: 0;
   width: 57vw;
