@@ -11,26 +11,29 @@ If the mentee has not contributed to the project before, they will first work wi
 
 ## Current Program
 
-### 2024 Timeline
+### 2025 Timeline
 
-| Date               | Event                            |
-|:-------------------|:---------------------------------|
-| **June 17th**      |  Mentor Interest surveys open    |
-| **July 1st**       |  Mentor Interest survey deadline |
-| **July 8th**       |  Mentee Interest surveys open    |
-| **July 15th**      |  Mentee Interest survey deadline |
-| **July 29th**      |  Mentorship pairings announced   |
-| **August 5th**     |  10-week cohort begins           |
-| **September 9th**  |  Halfway checkpoint              |
-| **October 14th**   |  10-week cohort ends             |
-| **October 21st**   |  Feedback deadline               |
+| Date             | Event                            |
+|:-----------------|:---------------------------------|
+| **June 2**       |  Mentor Interest surveys open    |
+| **June 16**      |  Mentor Interest survey deadline |
+| **June 23**      |  Mentee Interest surveys open    |
+| **June 30**      |  Mentee Interest survey deadline |
+| **July 14**      |  Mentorship pairings announced   |
+| **July 21**      |  10-week cohort begins           |
+| **August 25**    |  Halfway checkpoint              |
+| **September 26** |  10-week cohort ends             |
+| **October 6**    |  Feedback deadline               |
 
 ### Participation
 
-The 2024 interest survey submissions will be open in accordance with the above timeline. If you are interested in participating as:
+The 2025 interest survey submissions will be open in accordance with the above timeline. If you are interested in participating as:
 
-* A mentor, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ).
-* A mentee, please fill out the interest survey [here](https://essentials.applesurveys.com/jfe/form/SV_1ZzrYvo7xQP4i3k).
+* A mentor, please fill out the interest survey [here][mentor survey].
+* A mentee, please fill out the interest survey [here][mentee survey].
+
+[mentor survey]: https://essentials.applesurveys.com/jfe/form/SV_0UuJQKrOLDnui7I
+[mentee survey]: https://essentials.applesurveys.com/jfe/form/SV_55Z5pywWOkKTnZY
 
 The mentee interest survey is not an application; but rather it will tell the Contributor Experience workgroup about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the workgroup may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
 
