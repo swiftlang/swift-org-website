@@ -509,3 +509,23 @@ chris-mcgee:
 parispittman:
    name: Paris Pittman
    github: parispittman
+
+rmondello:
+  name: Ricky Mondello
+  github: rmondello
+  about: "Ricky Mondello is a member of the engineering team at Apple working on the Passwords app, passkeys, and other authentication technologies."
+
+indravardhan:
+  name: Indravardhan Singh Shaktawat
+  github: indravardhan
+  about: "Indravardhan Singh Shaktawat is a member of the engineering team at Apple working on Password Monitoring and other Security Services."
+
+spencervd6:
+  name: Spencer Van Dyke
+  github: spencervd6
+  about: "Spencer Van Dyke is a member of the engineering team at Apple working on Password Monitoring and other Security Services."
+
+umeshbatra13:
+  name: Umesh Batra
+  github: umeshbatra13
+  about: "Umesh Batra is a member of the engineering team at Apple working on Password Monitoring and other Security Services."
