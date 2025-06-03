@@ -5,8 +5,8 @@ link:
   text: A CTA
 boxes:
   - title: Box 1
-    text: Modern software built to last must be free of memory corruption bugs. Swift offers the highest-level guarantees of memory safety, and you can get those in your embedded projects with Embedded Swift, too.
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   - title: Box 2
-    text: Swift's excellent support for seemless integration with C and C++ code works just as well in Embedded Swift. Existing SDKs and API from your vendors can be directly used in your Swift code.
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   - title: Box 3
-    text: Swift's excellent support for seemless integration with C and C++ code works...
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

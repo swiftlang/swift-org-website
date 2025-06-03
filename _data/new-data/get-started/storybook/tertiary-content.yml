@@ -1,26 +1,20 @@
-image: /assets/images/get-started/package.png
-image_alt: Package image for Open Source Frameworks & Packages section
+image: /assets/images/placeholders/image_placeholder_large@2x.png
+image_alt: An alt description
 title: Tertiary Content Cards
 tertiary_cards:
-  - name: MongoKitten
-    text: Generate Swift client and server code from an OpenAPI document.
-    link_text: by Apple
-    link: /
-    image:
-      url: /assets/images/getting-started/embedded/secondary-card-vapor-logo.jpg
-      alt: alt text
-  - name: Swift Kafka Client
-    text: The Swift language implementation of gRPC.
-    link_text: by grpc
-    link: /
-    image:
-      url: /assets/images/getting-started/embedded/secondary-card-vapor-logo.jpg
-      alt: alt text
-  - name: MongoKitten
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #
+  - name: A title
     text: Pure Swift MongoDB drive built for Server Side Swift.
-    link_text: by Orlandos
-    link: /
-  - name: Swift Kafka Client
-    text: Provides a convenient way to interact with Apache Kafka.
-    link_text: by Swift Server Workgroup
-    link: /
+    link_text: Lorem ipsum
+    link: #
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #

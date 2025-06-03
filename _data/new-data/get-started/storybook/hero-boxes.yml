@@ -1,6 +1,6 @@
-- title: Safe
-  text: Modern software built to last must be free of memory corruption bugs. Swift offers the highest-level guarantees of memory safety, and you can get those in your embedded projects with Embedded Swift, too.
-- title: Interoperable
-  text: Swift's excellent support for seemless integration with C and C++ code works just as well in Embedded Swift. Existing SDKs and API from your vendors can be directly used in your Swift code.
-- title: Small binaries
-  text: Embedded Swift produces self-contained binaries with a tiny footprint and minimal system dependencies. Meaningful binaries can be tens of kilobytes or even less in size.
+- title: Lorem
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- title: Ipsum
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- title: Lorem
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

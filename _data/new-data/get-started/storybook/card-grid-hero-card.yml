@@ -1,21 +1,21 @@
 title: Card Grid Mixed with Hero
 hero_card:
   url: /assets/images/placeholders/image_placeholder_large@2x.png
-  alt: 'A Macbook Pro next to a computer chip.'
+  alt: An alt description
 tertiary_cards:
-  - name: swift-openai-generator
-    text: Generate Swift client and server code from an OpenAPI document.
-    link_text: by Apple
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
     link: #
-  - name: swift-grpc
-    text: The Swift language implementation of gRPC.
-    link_text: by grpc
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
     link: #
-  - name: MongoKitten
-    text: Pure Swift MongoDB drive built for Server Side Swift.
-    link_text: by Orlandos
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
     link: #
-  - name: Swift Kafka Client
-    text: Provides a convenient way to interact with Apache Kafka.
-    link_text:
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
     link: #
