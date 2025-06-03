@@ -34,7 +34,7 @@ title: Install Swift - Windows
               </div>
             {% endfor %}
             <div class="link-single">
-              <a href="/install/windows/manual" class="body-copy">Instructions</a>
+              <a href="/install/windows/manual" class="body-copy">Additional details included in Instructions</a>
             </div>
           </div>
         </div>
