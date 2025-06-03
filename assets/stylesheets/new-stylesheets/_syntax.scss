@@ -27,7 +27,6 @@
       }
     }
 
-
     &:hover {
       background-color: var(--color-syntax-clipboard-hover-bg);
 
@@ -47,7 +46,7 @@
 pre.highlight {
   background: var(--color-code-background);
   font-size: 14px;
-  line-height: 1.53;
+  line-height: 1.5;
   overflow-x: auto;
 
   .c,   /* Comment */
@@ -77,10 +76,11 @@ pre.highlight {
   }
 
   .n {
-    color: #B181EC;
+    color: #b181ec;
   }
 
-  .o, .p {
+  .o,
+  .p {
     color: var(--color-syntax-brackets-dots);
   }
 
