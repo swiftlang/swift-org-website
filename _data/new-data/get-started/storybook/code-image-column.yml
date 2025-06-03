@@ -1,10 +1,10 @@
 headline: Code Image Row
-body: Optional body content. Optional body content. Optional body content. Optional body content. Optional body content.
+body: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 link:
   url: https://github.com/apple/swift-mmio
   text: Optional Link
 image:
-  url: /assets/images/getting-started/embedded/primary-card-vapor-logo.jpg
+  url: /assets/images/placeholders/image_placeholder_large@2x.png
   alt: A place holder image
 code: |-
   let vegetable = "red pepper"

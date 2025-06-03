@@ -1,11 +1,11 @@
 image:
-  src: /assets/images/getting-started/embedded/primary-card-vapor-logo.jpg
-  alt: a place holder
+  src: /assets/images/placeholders/image_placeholder_large@2x.png
+  alt: An alt description
 copy:
-  headline: Low memory footprint with massive performance.
+  headline: Lorem ipsum dolor
   paragraphs:
-    - 'Culture of Code migrated the infrasture that supports Things to Swift and saw a massive reduction in both cost and response time.'
-    - 'Leveraging Swift’s built-in features as well as frameworks to enable rapid development, they were able to improve their customer experience without sacrificing time.'
+    - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   link:
-    text: Read more
+    text: Lorem ipsum
     href: '#'

@@ -1,10 +1,10 @@
 headline: Full Width Text Image Column
 paragraphs:
-  - The Swift MMIO library offers high-level type-safe access to HW registers, but still compiles down to optimal instruction sequences. (something something zero-cost abstractions…)
-  - Another paragraph to illustrate that you can add an array of paragraph elements.
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 link:
   url: /
-  text: Learn More
+  text: Lorem ipsum
 image:
-  url: /assets/images/getting-started/embedded/primary-card-vapor-logo.jpg
-  alt: An fpo image
+  url: /assets/images/placeholders/image_placeholder_large@2x.png
+  alt: An alt description

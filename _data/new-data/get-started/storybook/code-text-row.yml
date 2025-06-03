@@ -1,10 +1,10 @@
 headline: Code Text Row
 copy:
-  headline: Low memory footprint with massive performance.
+  headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   paragraphs:
-    - 'Swift provides verifiable memory safety every time you compile your code, preventing programming errors from escalating into security vulnerabilities. Swift can protect against data races, and provides type safety, lifetime safety, and more. And when interacting with code written in memory unsafe languages, Swift has a strict mode to enable additional memory safety checks.'
+    - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   link:
-    text: Vapor
+    text: Lorem
     url: /
 code: |-
   let vegetable = "red pepper"
