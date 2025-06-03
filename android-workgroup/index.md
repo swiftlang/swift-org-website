@@ -37,7 +37,7 @@ The Android workgroup selects one member of the workgroup as the chair. The chai
 * ensuring that the workgroup communicates effectively with the community, and
 * coordinating meetings between workgroup representatives and other Swift workgroups or teams when necessary.
 
-Workgroup members will try to make a decision independently by consensus whenever possible, and will raise issues to the Platform Steering Group when there are particular challenges with reaching consensus on significant decisions.
+Where the Workgroup is uncertain of or unable to agree on the way forward, members may raise issues to the relevant Steering Group(s) for consideration. Significant decisions should be made following the usual Swift Evolution process to allow for community participation and Steering Group oversight.
 
 The current members of the Android workgroup are:
 
