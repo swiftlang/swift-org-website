@@ -41,7 +41,7 @@ One of the most significant aspects of Swift that impressed us was its emphasis 
 
 Safety is another area where Swift takes a distinctive approach compared to Java. For example, Swift’s optional type and safe unwrapping mechanisms eliminate the need for null checks everywhere, reducing the risk of null pointer exceptions and enhancing code readability. This safety-first approach ingrained throughout Swift’s language design, whether it is deterministic deallocation, copy-on-write (CoW), or value types, makes it inherently less prone to runtime errors.
 
-Swift's async/await support is a nice addition, streamlining how we handle async tasks. Earlier managing async operations often involved complex callback patterns or external libraries. Swift’s async/await syntax simplifies this process, making it more intuitive and less error-prone. We can now write async code that reads like sync code, leading to more readable, testable, and maintainable concurrency handling—especially critical in high-load, multi-threaded environments.
+Swift's async/await support is a nice addition, streamlining how we handle async tasks. Previously, managing async operations often involved complex callback patterns or external libraries. Swift’s async/await syntax simplifies this process, making it more intuitive and less error-prone. We can now write async code that reads like sync code, leading to more readable, testable, and maintainable concurrency handling—especially critical in high-load, multi-threaded environments.
 
 Overall, our experience with Swift has been overwhelmingly positive and we were able to finish the rewrite much faster than initially estimated. Swift allowed us to write smaller, less verbose, and more expressive codebases (close to 85% reduction in lines of code) that are highly readable while prioritizing safety and efficiency.
 
@@ -51,7 +51,8 @@ Our service benefited from a diverse ecosystem of Swift packages, including [log
 
 We benchmarked performance throughout the process of development and deployment, allowing us to discover the trait of the Swift programming language that delighted us the most — its efficiency.
 
-Swift’s deterministic memory management led to a much lower memory threshold for our service. Not only were our initial results heartening, but after a few iterations of performance improvements, we had close to 40% throughput gain with latencies under 1 ms for 99.9% of requests on our current production hardware. Additionally, the new service had a much smaller memory footprint per instance — in the 100s of megabytes — an order of magnitude smaller compared to the 10s of gigabytes our Java implementation needed under peak load to sustain the same throughput and latencies. This allowed us to use about 50% of the original hardware in production.
+Swift’s deterministic memory management led to a much lower memory threshold for our service. Not only were our initial results heartening, but after a few iterations of performance improvements, we had close to 40% throughput gain with latencies under 1 ms for 99.9% of requests on our current production hardware. Additionally, the new service had a much smaller memory footprint per instance — in the 100s of megabytes — an order of magnitude smaller compared to the 10s of gigabytes our Java implementation needed under peak load to sustain the same throughput and latencies. The service runs on Kubernetes, and the migration's efficiency improvements allowed us to release about 50% of its capacity for other workloads.
+
 <div style="margin: 2em auto;">
   <img
     alt="Resource Utilization Comparison between java vs swift."
