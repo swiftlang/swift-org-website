@@ -15,6 +15,6 @@ latest-release:
       <pre><code>winget install --id Swift.Toolchain -e</code></pre>
     links:
       - href: "/install/windows/winget/"
-        copy: "Instructions"
+        copy: "Additional details included in Instructions"
       - href: "https://www.swift.org/tools/#editors"
         copy: "Editors"
