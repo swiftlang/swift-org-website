@@ -73,9 +73,10 @@
   subtitle: From microcontrollers to servers.
   text: "The only language that can span from embedded and kernel, to server and apps. Swift excels no matter where it’s used: from constrained environments like firmware where every byte counts, to cloud services handling billions of requests a day."
   code: |-
-    // Configure UART by direct register manipulation using Swift MMIO.
-    // Enables RX and TX, and sets baud rate to 115,200.
-    // Compiles down to an optimal assembly sequence with no overhead.
+    // Configure UART by direct register manipulation 
+    // using Swift MMIO. Enables RX and TX, and sets
+    // baud rate to 115,200. Compiles down to an
+    // optimal assembly sequence with no overhead.
 
     usart1.brr.modify { rw in
       rw.raw.brr_field = 16_000_000 / 115_200
