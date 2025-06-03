@@ -45,7 +45,7 @@ title: Install Swift - Windows
         <div class="code-box content-wrapper">
           <h2>Container</h2>
           <p class="body-copy">
-            If you prefer a containerized environment, you can download the official container images for compiling and running Swift on a variety of distributions.
+            Official container images are available for compiling and running Swift on a variety of distributions.
           </p>
           <div class="link-wrapper">
             <div class="link-single">
