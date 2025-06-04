@@ -194,3 +194,9 @@
     white-space: normal;
   }
 }
+
+@mixin underline {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 2px;
+}
