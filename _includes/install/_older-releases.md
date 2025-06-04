@@ -1,4 +1,4 @@
-<table id="osx-builds" class="downloads">
+<table id="osx-builds" class="downloads body-copy">
     <thead>
         <tr>
             <th class="download">Release</th>
@@ -18,7 +18,8 @@
         {% endunless %}
 
 {% endfor %}
-    </tbody>
+</tbody>
+
 </table>
 {% if include.platform == "Windows 10" %}
 <sup>1</sup> Swift {{ include.release.name }} {{ windows_platform.first.name }} toolchain is provided by <a href="https://github.com/compnerd">Saleem Abdulrasool</a>. Saleem is the platform champion for the Windows port of Swift and this is an official build from the Swift project. <br><br>

@@ -1,0 +1,97 @@
+- title: Fast
+  subtitle: Build with speed and performance.
+  text: Swift meets the most performance-critical needs, while allowing your code to remain expressive and approachable. Swift compiles directly to native code and provides predictable memory management.
+  code: |-
+    // Vectorized check that a utf8 buffer is all ASCII
+    func isASCII(utf8: Span<SIMD16<UInt8>>) -> Bool {
+      // combine all the code units into a single entry
+      utf8.indices.reduce(into: SIMD16()) {
+        // fold each set of code units into the result
+        $0 |= utf8[$1]
+      }
+      // check that every entry is in the ASCII range
+      .max() < 0x80
+    }
+
+- title: Expressive
+  subtitle: Concise code. Powerful results.
+  text: Swift empowers you to write advanced code in a concise, readable syntax that even a beginner can understand. Swift supports object-oriented, functional, and generic programming patterns that experienced developers are familiar with. Its progressive disclosure allows you to pick up the language quickly, taking advantage of power-user features as you need them.
+  code: |-
+    import ArgumentParser
+
+    // Complete implementation of a command line tool
+    @main struct Describe: ParsableCommand {
+      @Argument(help: "The values to describe.")
+      var values: [Double] = []
+
+      mutating func run() {
+        values.sort()
+        let total = values.reduce(0, +)
+
+        print(
+          """
+          Smallest: \(values.first, default: "No value")
+          Total:    \(total)
+          Mean:     \(total / Double(values.count))
+          """)
+      }
+    }
+
+- title: Safe
+  subtitle: Protect memory safety.
+  text: Swift prioritizes safety and eliminates entire classes of bugs and vulnerabilities by its design. Memory safety and data race safety are core features of the language, making them straightforward to integrate into your codebase. Safety is required at compile time, before your applications are ever run.
+  code: |-
+    let transform = Affine2DTransformBuilder()
+        .translate([10.0, 20.0].span)
+        .rotate(30.0)
+        .build()
+
+    let v = [11.0, 22.0, 1.0]
+
+    // Call C functions safely with Swift types
+    let u = mat_vec_mul(
+      transform, rowCount, colCount, v.span, allocator)
+    let uMagnitude = vec_mag(u.span)
+
+- title: Interoperable
+  subtitle: Adopt in existing code incrementally.
+  text: Swift provides unmatched interoperability with its combination of natively understanding C and C++ types without the need for foreign function interfaces, and by providing bridging for bi-directional access. Swift’s interoperability features allow you to incrementally adopt the language into existing codebases without requiring a full code rewrite.
+  code: |-
+    import CxxStdlib
+
+    // Use types from C++, like std::string, directly
+    let beverages: [std.string] = [
+      "apple juice", "grape juice", "green tea"
+    ]
+
+    let juices = beverages.filter { cppstring in
+      // and call methods directly on C++ types
+      cppstring.find(.init("juice")) != std.string.npos
+    }
+
+- title: Adaptable
+  subtitle: From microcontrollers to servers.
+  text: "The only language that can span from embedded and kernel, to server and apps. Swift excels no matter where it’s used: from constrained environments like firmware where every byte counts, to cloud services handling billions of requests a day."
+  code: |-
+    // Configure UART by direct register manipulation 
+    // using Swift MMIO. Enables RX and TX, and sets
+    // baud rate to 115,200. Compiles down to an
+    // optimal assembly sequence with no overhead.
+
+    usart1.brr.modify { rw in
+      rw.raw.brr_field = 16_000_000 / 115_200
+    }
+
+    usart1.cr1.modify { rw in
+      rw.ue = .Enabled
+      rw.re = .Enabled
+      rw.te = .Enabled
+    }
+
+- title: Open Source
+  subtitle: Contribute and get involved.
+  links:
+    - link: https://github.com/swiftlang
+      text: View SwiftLang on GitHub
+    - link: https://forums.swift.org
+      text: Join the forums

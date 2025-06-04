@@ -1,0 +1,21 @@
+<section id="get-started-hero" class="section">
+  <div class="hero-content">
+    <h1>{{include.content.headline}}</h1>
+    <p>{{include.content.body}}</p>
+    <ul>
+      {% for box in include.content.boxes %}
+      <li>
+        <span class="title">{{ box.title }}</span>
+        <span class="text">{{ box.text }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    <a
+      href="{{include.content.link.url}}"
+      data-text="{{include.content.link.text}}"
+      >{{include.content.link.text}}</a
+    >
+    <div class="swoop swoop-1"></div>
+    <div class="swoop swoop-2"></div>
+  </div>
+</section>

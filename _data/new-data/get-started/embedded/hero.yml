@@ -1,0 +1,12 @@
+headline: Create embedded software with Swift
+body: Develop efficient, reliable firmware for devices like microcontrollers
+link:
+  url: https://docs.swift.org/embedded/documentation/embedded/waystogetstarted
+  text: Get Started
+boxes:
+  - title: Safe
+    text: Eliminate buffer overruns and null‑pointer crashes at compile time, keeping your firmware dependable and robust.
+  - title: Interoperable
+    text: Reuse existing C/C++ drivers and SDKs with zero wrappers or runtime glue, integrating in minutes.
+  - title: Tiny
+    text: Produce meaningful programs measured in kilobytes that are capable of running on constrained devices with no hidden overhead.
