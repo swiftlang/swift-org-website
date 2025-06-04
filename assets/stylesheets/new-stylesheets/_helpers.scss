@@ -197,6 +197,6 @@
 
 @mixin underline {
   text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
   text-underline-offset: 2px;
 }
