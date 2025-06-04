@@ -211,17 +211,13 @@ const heroAnimation = async (animContainer) => {
     },
     'start',
   )
-  let count = 0
   // Purple swoop
   tl.add(
     heroSwoops[0].state,
     {
       progress: 1,
       duration: 950 - 950 * offScreenDelta,
-      onUpdate: () => {
-        swoopUpdate(heroSwoops[0])
-        if (count++ > 0) debugger
-      },
+      onUpdate: () => swoopUpdate(heroSwoops[0]),
     },
     'start',
   )
