@@ -1,7 +1,7 @@
 headline: Create cloud services with Swift
 body: Run performant services on Linux and deploy to the cloud
 link:
-  url: /getting-started/vapor-web-server
+  url: "https://docs.swift.org/getting-started-swift-server/tutorials/getting-started-swift-server/"
   text: Get Started
 boxes:
   - title: Performant
