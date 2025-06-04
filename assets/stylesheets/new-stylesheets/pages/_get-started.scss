@@ -434,6 +434,10 @@
   pre {
     max-height: 400px;
     border: var(--get-started-code-box-pre-border);
+
+    code {
+      white-space: pre-wrap;
+    }
   }
 
   &.code-box-with-tabs {
