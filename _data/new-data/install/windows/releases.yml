@@ -5,10 +5,7 @@ latest-release:
     headline: WinGet
     after-code-text: |
       First, install Windows platform dependencies:
-      <pre><code>winget install --id Microsoft.VisualStudio.2022.Community --exact --force
-      --custom "--add Microsoft.VisualStudio.Component.Windows11SDK.22000 --add
-      Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add
-      Microsoft.VisualStudio.Component.VC.Tools.ARM64"</code></pre>
+      <pre><code>winget install --id Microsoft.VisualStudio.2022.Community --exact --force --custom "--add Microsoft.VisualStudio.Component.Windows11SDK.22000 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64"</code></pre>
       <br />
       Next, install Swift and other dependencies:
       <br /><br />
