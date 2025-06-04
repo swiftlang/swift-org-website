@@ -1,0 +1,26 @@
+<div class="code-image-column content-wrapper">
+  <div class="text-wrapper">
+    {% if include.content.headline %}
+    <h2>{{ include.content.headline }}</h2>
+    {% endif %} {% if include.content.body %}
+    <p class="body-copy">{{ include.content.body }}</p>
+    {% endif %} {% if include.content.link %}
+    <a class="body-copy" href="{{ include.content.link.url }}"
+      >{{ include.content.link.text }}
+    </a>
+    {% endif %}
+  </div>
+  <div class="card-wrapper">
+    <!-- prettier-ignore -->
+    <div class="code body-copy" markdown="1">
+~~~swift
+{{ include.content.code }}
+~~~
+  </div>
+    <img
+      src="{{include.content.image.url}}"
+      alt="{{include.content.image.alt}}"
+    />
+  </div>
+  <!-- FIXME: Include body & link -->
+</div>

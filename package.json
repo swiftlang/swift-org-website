@@ -1,0 +1,15 @@
+{
+  "name": "swift.org",
+  "private": true,
+  "scripts": {
+    "prettify": "./scripts/prettify.sh",
+    "copy:vendor": "bash scripts/copy-vendor.sh",
+    "postinstall": "npm run copy:vendor"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "animejs": "^4.0.2"
+  }
+}

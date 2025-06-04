@@ -1,0 +1,21 @@
+title: Card Grid Mixed with Hero
+hero_card:
+  url: /assets/images/placeholders/image_placeholder_large@2x.png
+  alt: An alt description
+tertiary_cards:
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #

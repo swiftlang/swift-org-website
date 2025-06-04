@@ -1,0 +1,11 @@
+<nav aria-label="Main">
+    <a class="logo" href="/" title="Swift.org"> {% include new-includes/header/logo.html %} </a>
+
+    <ul>
+        {% for item in site.data.new-data.footer.main-navigation %}
+        <li class="item {% if page.url == item.url %}active{% endif %}">
+            <a href="{{ item.link }}" data-text="{{ item.title }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

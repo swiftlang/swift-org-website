@@ -1,0 +1,30 @@
+headline: Squeeze into the smallest places
+image:
+  url: /assets/images/get-started/playdate-device@2x.png
+  alt: A playdate device
+code: |-
+  /// Updates each pixel of the current row based on
+  /// the surrounding rows in the previous frame.
+  func update(above: Row, current: Row, below: Row) {
+    var byte: UInt8 = 0
+    var bitPosition: UInt8 = 0x80
+    for column in 0..<Frame.columns {
+      let sum = above.sum(at: column)
+        + current.middleSum(at: column)
+        + below.sum(at: column)
+      let isOn = current.isOn(at: column)
+      if sum == 3 || (isOn && sum == 2) {
+        byte |= bitPosition
+      }
+      bitPosition >>= 1
+      if bitPosition == 0 {
+        self[Int(column / 8)] = ~byte
+        byte = 0
+        bitPosition = 0x80
+      }
+    } 
+  }
+body: In just 788 bytes of resulting compiled code, Embedded Swift powers Conway’s Game of Life on the Playdate handheld—melding high‑level abstractions with low‑level bit‑twiddling for real‑time animation.
+link:
+  url: https://www.swift.org/blog/byte-sized-swift-tiny-games-playdate/
+  text: Learn more

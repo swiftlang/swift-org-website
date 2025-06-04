@@ -1,0 +1,26 @@
+headline: Learn more
+columns:
+  - headline: Documentation
+    links:
+      - text: 'Build a web service with Vapor'
+        url: '/getting-started/vapor-web-server/'
+      - text: 'Swift server development guides'
+        url: '/documentation/server/guides/'
+      - text: 'Swift on AWS documentation'
+        url: 'https://aws.amazon.com/developer/language/swift/'
+  - headline: Talks
+    links:
+      - text: 'Explore the Swift on Server ecosystem'
+        url: 'https://www.youtube.com/watch?v=OWNjtWUb9bs'
+      - text: 'Live coding a streaming ChatGPT proxy with Swift OpenAPI—from scratch!'
+        url: 'https://www.youtube.com/watch?v=yK__6GF_tvM'
+      - text: 'Swift, Server-Side, Serverless'
+        url: 'https://www.youtube.com/watch?v=M1POAEPATFo'
+  - headline: Community
+    links:
+      - text: 'Server category on Swift forums'
+        url: 'https://forums.swift.org/c/server/43'
+      - text: 'Swift server meetup'
+        url: 'https://forums.swift.org/tag/meetup'
+      - text: 'Swift server workgroup'
+        url: '/sswg/'

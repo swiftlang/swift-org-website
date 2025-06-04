@@ -1,0 +1,44 @@
+<div
+  class="code-box content-wrapper {% if include.with-tabs %}code-box-with-tabs{% endif %}"
+>
+  <h2>{{include.content.headline}}</h2>
+  {% if include.content.pre-code-text %}
+  <p class="body-copy">{{include.content.pre-code-text}}</p>
+  {% endif %} {% if include.content.tabs %}
+  <nav>
+    <ul class="code-box-tabs">
+      {% for tab in include.content.tabs %}
+      <li class="body-copy{% if forloop.first %} active{% endif %}">
+        <button data-tab-index="{{forloop.index0}}">{{tab.label}}</button>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% for tab in include.content.tabs %}
+  <pre
+    data-tab-index="{{forloop.index0}}"
+    class="{% if forloop.first %}active{% endif %}"
+  ><code>{{tab.code | escape}}</code></pre>
+  {% endfor %} {% else %} {% if include.content.code %}
+  <pre><code>{{include.content.code | escape}}</code></pre>
+  {% endif %} {% endif %} {% if include.content.after-code-text %}
+  <p class="body-copy">{{include.content.after-code-text}}</p>
+  {% endif %}{% if include.content.links %}
+  <div class="link-wrapper">
+    {% for link in include.content.links %}
+      {% if link.group %}
+        <div class="link-group">
+          {% for item in link.group %}
+            <a class="body-copy" href="{{ item.href }}">{{ item.copy }}</a>
+            {% unless forloop.last %}|{% endunless %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="link-single">
+          <a class="body-copy" href="{{ link.href }}">{{ link.copy }}</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
+</div>

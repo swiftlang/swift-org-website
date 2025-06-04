@@ -1,0 +1,18 @@
+pre-code-text: To download toolchains from Swift.org, use the Swiftly toolchain installer. Swift.org toolchains support Static Linux SDK, include experimental features like Embedded Swift and support for WebAssembly.
+headline: Install with Swiftly
+tabs:
+  - label: Bash
+    code: |-
+      curl -O "https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz" && \
+      tar zxf "swiftly-$(uname -m).tar.gz" && \
+      ./swiftly init --quiet-shell-followup && \
+      . ~/.local/share/swiftly/env.sh && \
+      hash -r
+  - label: Fish
+    code: |-
+      fish swiftly lorem ipsum
+links:
+  - href: 'https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt'
+    copy: 'License: Apache-2.0'
+  - href: 'https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz.sig'
+    copy: 'PGP: Signature'

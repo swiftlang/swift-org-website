@@ -1,0 +1,9 @@
+- name: Linux
+  slug: linux
+  url: /install/linux/
+- name: macOS
+  slug: macos
+  url: /install/macos/
+- name: Windows
+  slug: windows
+  url: /install/windows/

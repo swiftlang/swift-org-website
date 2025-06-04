@@ -1,0 +1,31 @@
+headline: Full Width Text Code Column
+paragraphs:
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+link:
+  url: /
+  text: Learn More
+code: |-
+  import Subprocess
+
+  // Launch Nginx and monitor the log file in parallel
+  async let monitorResult = run(
+      .path("/usr/bin/tail"),
+      arguments: ["-f", "/path/to/nginx.log"]
+  ) { execution, standardOutput in
+      for try await line in standardOutput.lines(encoding: UTF8.self) {
+          // Parse the log text
+          if line.contains("500") {
+              // Oh no, 500 error
+          }
+      }
+  }
+
+  let launchResult = try await run(
+      .name("nginx"), // Lookup executable by name
+      arguments: ["-c", "/path/to/nginx.conf"]
+  )
+  if !launchResult.terminationStatus.isSuccess {
+      print("Nginx failed to launch: \(launchResult.terminationStatus)")
+  } else {
+      print("Nginx launched with PID \(launchResult.processIdentifier)")
+  }

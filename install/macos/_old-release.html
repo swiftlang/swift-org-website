@@ -20,12 +20,7 @@
         {% assign static_sdk = release_info.platforms | where: 'name', 'Static SDK'| first %}
     {% if static_sdk %}
         {% assign tag_downcase = include.release.tag | downcase %}
-        <button onclick="copyToClipboard('swift sdk install https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ include.release.tag }}/{{ include.release.tag }}_static-linux-0.0.1.artifactbundle.tar.gz --checksum {{ static_sdk.checksum }}')">Copy install command</button>
-    <script>
-        function copyToClipboard(text) {
-          navigator.clipboard.writeText(text)
-        }
-    </script>
+        <button onclick="copyToClipboard(this, 'swift sdk install https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ include.release.tag }}/{{ include.release.tag }}_static-linux-0.0.1.artifactbundle.tar.gz --checksum {{ static_sdk.checksum }}')">Copy install command</button>
     {% else %}
         Unavailable
     {% endif %}

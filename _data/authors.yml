@@ -103,7 +103,7 @@ shahmishal:
    email: mishal_shah@apple.com
    github: shahmishal
    gravatar: 231cec2cc45a272aa5b341b413fdc2ed
-   about: "Mishal Shah is an engineer on the Swift Infrastructure team at Apple."
+   about: "Mishal Shah is part of the Swift Core Team, the Swift Ecosystem steering group, and the Swift Website workgroup, among other roles. He oversees a team focused on compiler developer experience tooling at Apple."
 
 mikeash:
    name: Mike Ash
@@ -517,3 +517,22 @@ marcprux:
   github: marcprux
   about: "Marc Prud'hommeaux works on bringing Swift application development to Android at Skip.tools."
 
+rmondello:
+  name: Ricky Mondello
+  github: rmondello
+  about: "Ricky Mondello is a member of the engineering team at Apple working on the Passwords app, passkeys, and other authentication technologies."
+
+indravardhan:
+  name: Indravardhan Singh Shaktawat
+  github: indravardhan
+  about: "Indravardhan Singh Shaktawat is a member of the engineering team at Apple working on Password Monitoring and other Security Services."
+
+spencervd6:
+  name: Spencer Van Dyke
+  github: spencervd6
+  about: "Spencer Van Dyke is a member of the engineering team at Apple working on Password Monitoring and other Security Services."
+
+umeshbatra13:
+  name: Umesh Batra
+  github: umeshbatra13
+  about: "Umesh Batra is a member of the engineering team at Apple working on Password Monitoring and other Security Services."

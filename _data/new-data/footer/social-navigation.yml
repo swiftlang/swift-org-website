@@ -1,0 +1,15 @@
+# - title: Follow swiftlang on Github
+#   link: https://github.com/swiftlang
+#   class: github
+- title: Follow @SwiftLang on X
+  link: https://x.com/swiftlang
+  class: x
+- title: Follow @swift.org on Bluesky
+  link: https://bsky.app/profile/swift.org
+  class: bluesky
+- title: Follow @swiftLang on Mastodon
+  link: https://mastodon.social/@swiftlang
+  class: mastodon
+- title: Subscribe to Site Updates
+  link: /atom.xml
+  class: feed
