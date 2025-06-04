@@ -175,7 +175,7 @@ const heroAnimation = async (animContainer) => {
   const DURATION = 1000 - 1000 * offScreenDelta
 
   const tl = anime.createTimeline({
-    defaults: { duration: DURATION, ease: 'inOut(1.2)' },
+    defaults: { duration: DURATION, ease: 'in(1.8)' },
   })
 
   tl.label('start', 0)
@@ -211,13 +211,17 @@ const heroAnimation = async (animContainer) => {
     },
     'start',
   )
+  let count = 0
   // Purple swoop
   tl.add(
     heroSwoops[0].state,
     {
       progress: 1,
       duration: 950 - 950 * offScreenDelta,
-      onUpdate: () => swoopUpdate(heroSwoops[0]),
+      onUpdate: () => {
+        swoopUpdate(heroSwoops[0])
+        if (count++ > 0) debugger
+      },
     },
     'start',
   )
@@ -254,7 +258,7 @@ const heroAnimation = async (animContainer) => {
   tl.add(
     logo.state,
     {
-      ease: 'out(2)',
+      ease: 'out(1.2)',
       duration: 200 - 200 * offScreenDelta,
       delay: 750 - 750 * offScreenDelta,
       progress: 1,
