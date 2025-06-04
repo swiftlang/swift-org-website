@@ -17,8 +17,8 @@ Today's release includes refreshed home and install pages. Additionally, new pag
 We explored several design options and found that the latest design conveys the fluidity and creativity of Swift through the splash of orange and the bird animation in the background.
 
 <div style="display: flex;column-gap:25px;">
-   <img style="width: 50%;" src="/assets/images/swift-redesign-blog/home_dark@2x.png">
-   <img style="width: 50%;" src="/assets/images/swift-redesign-blog/home_light@2x.png">
+   <img style="width: 50%;" src="/assets/images/swift-redesign-blog/home_dark@2x.jpg">
+   <img style="width: 50%;" src="/assets/images/swift-redesign-blog/home_light@2x.jpg">
 </div>
 
 ## Curated content and examples
@@ -26,8 +26,8 @@ We explored several design options and found that the latest design conveys the 
 The homepage now highlights Swift's strengths alongside code examples that illustrate them. Additionally, we showcase various types of software that can be developed using Swift; these new use case pages provide information such as relevant packages, examples of Swift in action, code snippets, and links to resources for further learning.
 
 <div style="display: flex;column-gap:25px;">
-   <img style="width: 50%;" src="/assets/images/swift-redesign-blog/code_dark@2x.png">
-   <img style="width: 50%;" src="/assets/images/swift-redesign-blog/cloud_light@2x.png">
+   <img style="width: 50%;" src="/assets/images/swift-redesign-blog/code_dark@2x.jpg">
+   <img style="width: 50%;" src="/assets/images/swift-redesign-blog/cloud_light@2x.jpg">
 </div>
 
 ## Next Steps
