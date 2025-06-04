@@ -6,7 +6,7 @@ title: "Byte-sized Swift: Building Tiny Games for the Playdate"
 author: [rauhul]
 ---
 
-I'm excited to share [swift-playdate-examples](https://github.com/apple/swift-playdate-examples), a technical demonstration of using Swift to build games for [Playdate](https://play.date/), a handheld game system by [Panic](https://panic.com).
+I'm excited to share [swift-playdate-examples](https://github.com/swiftlang/swift-playdate-examples), a technical demonstration of using Swift to build games for [Playdate](https://play.date/), a handheld game system by [Panic](https://panic.com).
 
 <video title="A screencapture of Swift Break running on Playdate hardware mirrored to a Mac." autoplay loop muted style="width: 100%; border-radius: 15px;">
   <source src="{{site.url}}/assets/images/2024-03-12-byte-sized-swift-tiny-games-playdate/playdate-mirror-video-swiftbreak.mp4" type="video/mp4">
@@ -96,7 +96,7 @@ Swift Break features a splash screen, a pause menu, paddle-location-based bounce
 
 ## Try it Out
 
-If you're eager to use Swift on your Playdate, the [swift-playdate-examples](https://github.com/apple/swift-playdate-examples) repository has you covered. It contains the above ready-to-use examples that demonstrate how to build Swift games for the Playdate, both for the simulator and the hardware.
+If you're eager to use Swift on your Playdate, the [swift-playdate-examples](https://github.com/swiftlang/swift-playdate-examples) repository has you covered. It contains the above ready-to-use examples that demonstrate how to build Swift games for the Playdate, both for the simulator and the hardware.
 
 Additionally, the repository includes detailed documentation to guide you through the setup process. Whether you're a seasoned developer or just starting, you'll find the necessary resources to bring your ideas to life.
 
@@ -440,7 +440,7 @@ Thanks for diving into the bring-up journey with me. From refining the Swift Pla
 
 However, with the issues now resolved, creating Playdate games in Swift is a streamlined process. Just run `make` and enjoy a development experience with Swift that is both expressive _and_ performant.
 
-You can find all the code examples mentioned in this post in the [swift-playdate-examples](https://github.com/apple/swift-playdate-examples) repository with accompanying "Getting Started" documentation.
+You can find all the code examples mentioned in this post in the [swift-playdate-examples](https://github.com/swiftlang/swift-playdate-examples) repository with accompanying "Getting Started" documentation.
 
 I hope this post encourages you to explore the possibilities of using Swift in unconventional environments. Feel free to reach out with your experiences, questions, or game ideas on the [Swift Forums](https://forums.swift.org/t/byte-sized-swift-building-tiny-games-for-the-playdate/70615)!
 
