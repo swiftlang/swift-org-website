@@ -175,7 +175,7 @@ const heroAnimation = async (animContainer) => {
   const DURATION = 1000 - 1000 * offScreenDelta
 
   const tl = anime.createTimeline({
-    defaults: { duration: DURATION, ease: 'in(1.2)' },
+    defaults: { duration: DURATION, ease: 'inOut(1.2)' },
   })
 
   tl.label('start', 0)
@@ -254,7 +254,7 @@ const heroAnimation = async (animContainer) => {
   tl.add(
     logo.state,
     {
-      ease: 'out(1.2)',
+      ease: 'out(2)',
       duration: 200 - 200 * offScreenDelta,
       delay: 750 - 750 * offScreenDelta,
       progress: 1,
