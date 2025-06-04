@@ -49,7 +49,7 @@
           @include link-with-right-arrow;
           margin-top: 10px;
           display: flex;
-          text-decoration: underline;
+          @include underline;
 
           &.block {
             justify-content: center;
