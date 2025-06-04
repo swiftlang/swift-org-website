@@ -1,0 +1,16 @@
+<div class="tab-nav {{ include.class | default: '' }}">
+  <div class="tabs">
+    {% for tab in include.tabs %} {% assign tab_name = tab.slug | downcase %} {%
+    if tab_name == include.selected %} {% assign is_selected = true %} {% else
+    %} {% assign is_selected = false %} {% endif %}
+    <a
+      href="{{ tab.url }}"
+      class="body-copy{% if is_selected %} active{% endif %}"
+      data-tab-nameX="{{ tab.slug }}"
+      aria-pressed="{% if is_selected %}true{% else %}false{% endif %}"
+    >
+      {{ tab.name }}
+    </a>
+    {% endfor %}
+  </div>
+</div>

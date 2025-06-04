@@ -1,0 +1,15 @@
+- title: iOS apps
+  data-text: iOS apps
+  link: /getting-started/swiftui/
+
+- title: Windows apps
+  data-text: Windows apps
+  link: /blog/swift-everywhere-windows-interop/
+
+- title: Machine Learning &amp; AI
+  data-text: Machine learning and AI
+  link: /blog/mlx-swift/
+
+- title: Packages
+  data-text: Packages
+  link: /getting-started/library-swiftpm/

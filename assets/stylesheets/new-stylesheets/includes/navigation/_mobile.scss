@@ -1,0 +1,60 @@
+@use '../../colors' as *;
+@use '../../helpers' as *;
+@use '../../graphics' as *;
+
+@media only screen and (max-width: 1024px) {
+  .site-navigation {
+
+    // hide desktop navigation
+    .desktop-navigation {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: inline-block;
+      @include mobile-toggle-btn($menu-icon-close);
+      filter: var(--site-navigation-menu-toggle-invert);
+      padding: 33px 0;
+
+      &.open {
+        background-image: $menu-icon;
+      }
+    }
+
+    .mobile-navigation {
+      &.open {
+        display: block;
+      }
+
+      .navigation-items {
+        display: block;
+
+        li {
+          display: block;
+          border-top: var(--site-navigation-item-border);
+
+          &:last-child {
+            border-bottom: none;
+          }
+    
+          a {
+            padding: 0;
+            display: block;
+
+            & > span {
+              padding: 1rem;
+              border-radius: 0;
+              display: block;
+            }
+          }
+
+          &.border {
+            display: none;
+          }
+        }
+      }
+    } // .mobile-navigation
+
+  } // .site-navigation
+
+} // max-width: 1024px

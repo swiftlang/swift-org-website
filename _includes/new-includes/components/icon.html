@@ -1,0 +1,8 @@
+{% assign icon = include.name | append: "." | append: include.type %} {% capture
+path %}assets/images/{{ icon }}{% endcapture %}
+<span
+  class="{{ include.class | default: 'icon' }}"
+  style="width:{{ include.size | default: '24px' }}; height:{{ include.size | default: '24px' }}"
+>
+  {% include_relative {{ path }} %}
+</span>

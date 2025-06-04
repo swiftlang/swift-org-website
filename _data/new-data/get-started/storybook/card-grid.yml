@@ -1,0 +1,49 @@
+image: /assets/images/get-started/package.png
+image_alt: An alt description
+title: Card Grid Mixed
+link:
+  text: Lorem Ipsum
+  url: /
+primary_cards:
+  - name: Lorem
+    logo: /assets/images/placeholders/image_placeholder_large@2x.png
+    logo_alt: An alt description
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem
+    link: /
+  - name: Ipsum
+    logo_alt: An alt description
+    logo: /assets/images/placeholders/image_placeholder_large@2x.png
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Ipsum
+    link: /
+secondary_cards:
+  - name: Lorem
+    logo: /assets/images/placeholders/image_placeholder_large@2x.png
+    logo_alt: An alt description
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem
+    link: /
+  - name: Ipsum
+    logo_alt: An alt description
+    logo: /assets/images/placeholders/image_placeholder_large@2x.png
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Ipsum
+    link: /
+tertiary_cards:
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #
+  - name: A title
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem ipsum
+    link: #

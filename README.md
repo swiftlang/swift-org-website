@@ -31,8 +31,21 @@ To run the site locally, enter the following commands into a terminal window:
 git clone https://github.com/swiftlang/swift-org-website.git
 cd swift-org-website
 bundle install
-LC_ALL=en_us.UTF-8 bundle exec jekyll serve
+LC_ALL=en_us.UTF-8 bundle exec jekyll serve --config _config.yml,_config_dev.yml
 open "http://localhost:4000"
+```
+
+If you’d like to contribute to this project, please run Prettier before submitting your pull request to ensure consistent code style across the project.
+
+Requirements
+- [Node v18.17.1 or higher](https://nodejs.org)
+
+```shell
+npm install
+```
+
+```shell
+npm run prettify
 ```
 
 ### Running in Docker

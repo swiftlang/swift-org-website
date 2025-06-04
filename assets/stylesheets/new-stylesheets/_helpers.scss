@@ -1,0 +1,196 @@
+@use 'sass:list';
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin inline-link-style {
+  padding: 0.5em;
+  display: inline-block;
+  color: black;
+
+  &::before {
+    content: attr(data-text);
+    display: block;
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+@mixin link-with-right-arrow {
+  color: var(--site-link-with-right-arrow-color);
+  text-decoration: none;
+  align-items: center;
+  display: inline-flex;
+
+  i {
+    display: inline-block;
+    margin-left: 6px;
+    background: url(/assets/images/icon-arrow-right-circle.svg) no-repeat center;
+    filter: var(--site-link-with-right-arrow-icon-filter);
+
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@mixin appearance-none {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@mixin mobile-toggle-btn($bg-img) {
+  display: block;
+  @include appearance-none;
+  border: none;
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  background-image: $bg-img;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+@mixin visuallyhidden() {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin nav-link-style {
+  color: var(--color-nav-link-color);
+  transition:
+    color 0.2s ease,
+    border 0.2s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+@mixin swoop-ratio($width, $height, $multiplier) {
+  aspect-ratio: list.slash($width, calc($height * $multiplier));
+}
+
+@mixin noise {
+  &::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/assets/images/noise.png);
+    opacity: 0.04;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+@mixin big-button {
+  z-index: 5;
+  position: relative;
+  display: inline-block;
+  line-height: 1.2;
+  font-size: 35px;
+  color: #ffffff;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 15px 81px;
+  background-image: linear-gradient(to bottom right, #ff7f00, #f05238);
+  border-radius: 43px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: #ff7f00;
+    color: #e0e0e0;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid dodgerblue;
+    outline-offset: 2px;
+  }
+}
+
+@mixin lazyloadBg($url) {
+  background-image: none;
+  opacity: 0;
+
+  &.visible {
+    opacity: 1;
+    background-image: url($url);
+  }
+}
+
+@mixin button-style {
+  text-decoration: none;
+  color: #801a1a;
+  font-weight: 400;
+  background-color: rgba(255, 177, 100, 0.9);
+  border-radius: 36px;
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 12px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 6px;
+    min-width: 80px;
+  }
+
+  & > div {
+    display: inline-block;
+    margin-left: 14px;
+  }
+
+  &[aria-pressed='true'],
+  &:hover,
+  &:focus {
+    background-color: rgba(200, 100, 12, 0.9);
+    border: 0 !important;
+    color: white;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid dodgerblue;
+    outline-offset: 2px;
+  }
+
+  span {
+    display: block;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    white-space: normal;
+  }
+}

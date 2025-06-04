@@ -1,0 +1,37 @@
+latest-release:
+  swiftly:
+    pre-code-text: |
+      The Swiftly installer manages Swift and its dependencies. It supports switching between different versions and downloading updates.
+    headline: Swiftly
+    tabs:
+      - label: Bash
+        code: |-
+          curl -O https://download.swift.org/swiftly/linux/swiftly-$(uname -m).tar.gz && \
+          tar zxf swiftly-$(uname -m).tar.gz && \
+          ./swiftly init --quiet-shell-followup && \
+          . "${SWIFTLY_HOME_DIR:-~/.local/share/swiftly}/env.sh" && \
+          hash -r
+      - label: Fish
+        code: |-
+          curl -O https://download.swift.org/swiftly/linux/swiftly-(uname -m).tar.gz && \
+          tar zxf swiftly-(uname -m).tar.gz && \
+          ./swiftly init --quiet-shell-followup && \
+          set -q SWIFTLY_HOME_DIR && . "$SWIFTLY_HOME_DIR/env.fish" || . ~/.local/share/swiftly/env.fish
+    links:
+      - href: 'https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt'
+        copy: 'License: Apache-2.0'
+      - href: 'https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz.sig'
+        copy: 'PGP: Signature'
+      - href: 'https://www.swift.org/install/linux/swiftly'
+        copy: 'Instructions'
+      - href: "https://www.swift.org/tools/#editors"
+        copy: "Editors"
+  container:
+    pre-code-text: |-
+      Official container images are available for compiling and running Swift on a variety of distributions.
+    headline: Container
+    links:
+      - href: 'https://hub.docker.com/_/swift'
+        copy: 'Docker Hub'
+      - href: 'https://www.swift.org/install/linux/docker'
+        copy: 'Instructions'
