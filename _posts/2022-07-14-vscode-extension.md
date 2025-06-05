@@ -12,7 +12,7 @@ As Swift is deployed across more platforms, it is important that Swift can be de
 
 Swift is held back from extending outside the Apple ecosystem by the lack of a first-class, integrated development environment on non-Apple platforms. There is no Xcode if you are developing on Linux or Windows.
 
-Until this point there have been individual components to make up that development environment like Apple's [SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp) project and support for the Swift version of LLDB when using the [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) extension, but nothing to bring them all together.
+Until this point there have been individual components to make up that development environment like Apple's [SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp) project and support for the Swift version of LLDB when using the [LLDB DAP](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.lldb-dap) extension, but nothing to bring them all together.
 
 The [Swift Server Workgroup](/sswg/) (SSWG) felt there was a need for a more complete solution. The Swift Extension for Visual Studio Code from the SSWG brings together many of these components into one package with everything pre-configured to work from the get-go.
 
@@ -38,7 +38,7 @@ The language server protocol (LSP) is a standard for providing language features
 
 ### Debugger
 
-A debugger is provided via the [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) debugger extension. All the hard work integrating with LLDB is done by CodeLLDB. The Swift extension provides the integration with CodeLLDB by creating debug launch configurations for your project executables on start up. It also configures CodeLLDB to use the Swift version of LLDB.
+A debugger is provided via the [LLDB DAP](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.lldb-dap) debugger extension. All the hard work integrating with LLDB is done by the LLDB DAP (Debug Adapter Protocol) extension. The Swift extension provides the integration with LLDB DAP by creating debug launch configurations for your project executables on start up. It also configures LLDB DAP to use the Swift version of LLDB.
 
 ### Test Explorer
 
