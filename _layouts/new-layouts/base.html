@@ -169,6 +169,10 @@
   </head>
 
   <body>
+    <script>
+      // Set theme before body content to avoid flash of light styles in dark mode
+      setColorScheme(getStoredScheme())
+    </script>
     <main>
       {% include new-includes/header/header.html %} {{content}} {% include
       new-includes/footer/footer.html %}
