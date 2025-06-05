@@ -130,7 +130,7 @@ Visual Studio Code provides a rich debugging experience. See the
 more information.
 
 The Swift extension relies on the
-[Code-LLDB extension](https://github.com/vadimcn/vscode-lldb) to enable
+[LLDB DAP extension](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.lldb-dap) to enable
 debugging support.
 
 <div class="warning" markdown="1">
