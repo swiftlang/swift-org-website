@@ -175,6 +175,21 @@
     </main>
 
     <script src="/assets/javascripts/new-javascripts/application.js"></script>
+    <!-- metrics -->
+    <script>
+    /* RSID: */
+    var s_account="awdswiftorg"
+    </script>
+    {% if jekyll.environment != 'development' %}
+    <script src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+    <script>
+    s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+
+    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code=s.t();if(s_code)document.write(s_code)
+    </script>
+    {% endif %}
+    <!-- /metrics -->
     {% if page.url == "/" %}
     <script src="/assets/javascripts/new-javascripts/landing.js"></script>
     {% endif %}
