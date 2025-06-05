@@ -133,16 +133,6 @@ The Swift extension relies on the
 [LLDB DAP extension](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.lldb-dap) to enable
 debugging support.
 
-<div class="warning" markdown="1">
-The Swift extension will prompt you to configure settings for LLDB the first
-time you launch VS Code. You will need to either apply the configuration
-globally (user settings) or to your workspace (workspace settings) for the
-debugger to work properly.
-
-![Configure the Debugger](/assets/images/getting-started-with-vscode-swift/debugging/configure-lldb.png)
-
-</div>
-
 By default, the extension creates a launch configuration for each executable
 target in your Swift package. You may configure these yourself by adding a
 `launch.json` file to the root folder of your project. For example, this
