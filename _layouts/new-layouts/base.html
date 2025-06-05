@@ -175,7 +175,10 @@
     </main>
 
     <script src="/assets/javascripts/new-javascripts/application.js"></script>
-    <!-- metrics -->
+    {% if page.url == "/" %}
+    <script src="/assets/javascripts/new-javascripts/landing.js"></script>
+    {% endif %}
+   <!-- metrics -->
     <script>
     /* RSID: */
     var s_account="awdswiftorg"
@@ -190,8 +193,5 @@
     </script>
     {% endif %}
     <!-- /metrics -->
-    {% if page.url == "/" %}
-    <script src="/assets/javascripts/new-javascripts/landing.js"></script>
-    {% endif %}
   </body>
 </html>
