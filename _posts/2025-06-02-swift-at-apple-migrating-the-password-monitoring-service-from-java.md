@@ -2,7 +2,7 @@
 layout: post
 published: true
 date: 2025-06-02 10:00:00
-title: "Swift at Apple: migrating the Password Monitoring service from Java"
+title: "Swift at Apple: Migrating the Password Monitoring service from Java"
 author: [rmondello, indravardhan, spencervd6, umeshbatra13]
 ---
 
