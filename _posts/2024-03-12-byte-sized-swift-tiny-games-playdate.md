@@ -4,6 +4,7 @@ published: true
 date: 2024-03-12 10:00:00
 title: "Byte-sized Swift: Building Tiny Games for the Playdate"
 author: [rauhul]
+tag: [embedded]
 ---
 
 I'm excited to share [swift-playdate-examples](https://github.com/swiftlang/swift-playdate-examples), a technical demonstration of using Swift to build games for [Playdate](https://play.date/), a handheld game system by [Panic](https://panic.com).
