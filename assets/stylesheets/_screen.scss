@@ -178,6 +178,8 @@ cite {
 }
 
 .header-with-anchor {
+  scroll-margin-top: 80px;
+
   a {
     display: none;
     color: var(--color-text);
