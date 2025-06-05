@@ -9,7 +9,7 @@ columns:
       - text: Embedded Swift vision document
         url: 'https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md'
       - text: Embedded Swift example projects
-        url: 'https://github.com/apple/swift-embedded-examples'
+        url: 'https://github.com/swiftlang/swift-embedded-examples'
   - headline: Talks
     links:
       - text: Go Small With Embedded Swift

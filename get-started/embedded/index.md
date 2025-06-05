@@ -1,4 +1,5 @@
 ---
+redirect_from: "getting-started/embedded-swift"
 layout: new-layouts/base
 title: Embedded
 ---

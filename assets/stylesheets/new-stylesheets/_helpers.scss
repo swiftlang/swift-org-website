@@ -194,3 +194,9 @@
     white-space: normal;
   }
 }
+
+@mixin underline {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
+  text-underline-offset: 2px;
+}
