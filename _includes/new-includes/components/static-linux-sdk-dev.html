@@ -1,5 +1,5 @@
 {% assign static_sdk_dev_builds = site.data.builds.development.static_sdk | sort: 'date' | reverse %}
-{% assign static_sdk_6_1_builds = site.data.builds.swift-6_1-branch.static_sdk | sort: 'date' | reverse %}
+{% assign static_sdk_6_2_builds = site.data.builds.swift-6_2-branch.static-sdk | sort: 'date' | reverse %}
 
 <div class="releases-grid">
     <div class="release-box section">
@@ -28,21 +28,21 @@
     <div class="release-box section">
         <div class="content">
         <div class="code-box content-wrapper">
-            <h2>release/6.1</h2>
+            <h2>release/6.2</h2>
             <p class="body-copy">
-            <small>{{ static_sdk_6_1_builds.first.date | date: '%B %-d, %Y' }}</small><br />
+            <small>{{ static_sdk_6_2_builds.first.date | date: '%B %-d, %Y' }}</small><br />
             Static Linux SDK - Cross compile to Linux.
             <br /><br />
-            {% assign base_url = "https://download.swift.org/development/static-sdk/" | append: static_sdk_6_1_builds.first.dir | append: "/" | append: static_sdk_6_1_builds.first.download %}
-            {% assign command = "swift sdk install " | append: base_url | append: " --checksum " | append: static_sdk_6_1_builds.first.checksum %}
+            {% assign base_url = "https://download.swift.org/swift-6.2-branch/static-sdk/" | append: static_sdk_6_2_builds.first.dir | append: "/" | append: static_sdk_6_2_builds.first.download %}
+            {% assign command = "swift sdk install " | append: base_url | append: " --checksum " | append: static_sdk_6_2_builds.first.checksum %}
             <button onclick="copyToClipboard(this, '{{ command | escape }}')">
                 Copy install command
             </button>
             </p>
             <div class="link-wrapper">
             <div class="link-group">
-                <a href="https://download.swift.org/swift-6.1-branch/static-sdk/{{ static_sdk_6_1_builds.first.dir }}/{{ static_sdk_6_1_builds.first.download }}" class="body-copy">Download Linux Static SDK</a> |
-                <a href="https://download.swift.org/swift-6.1-branch/static-sdk/{{ static_sdk_6_1_builds.first.dir }}/{{ static_sdk_6_1_builds.first.download_signature }}" class="body-copy">Signature (PGP)</a>
+                <a href="https://download.swift.org/swift-6.2-branch/static-sdk/{{ static_sdk_6_2_builds.first.dir }}/{{ static_sdk_6_2_builds.first.download }}" class="body-copy">Download Linux Static SDK</a> |
+                <a href="https://download.swift.org/swift-6.2-branch/static-sdk/{{ static_sdk_6_2_builds.first.dir }}/{{ static_sdk_6_2_builds.first.download_signature }}" class="body-copy">Signature (PGP)</a>
             </div>
             </div>
         </div>

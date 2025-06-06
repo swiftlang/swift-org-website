@@ -120,4 +120,11 @@ title: Install Swift - macOS
     </p>
   </div>
   {% include new-includes/components/static-linux-sdk-dev.html %}
+   <h3>Swift SDK for WebAssembly</h3>
+  <div>
+    <p class="content-copy">
+      <a class="content-link" href="/documentation/articles/wasm-getting-started.html">Instructions</a>
+    </p>
+  </div>
+  {% include new-includes/components/wasm-sdk-dev.html %}
 </div>
