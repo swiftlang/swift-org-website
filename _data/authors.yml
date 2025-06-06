@@ -490,7 +490,7 @@ george-barnett:
 gus-cairo:
   name: Gus Cairo
   github: gjcairo
-  
+
 vrylko:
   name: Vojtěch Rylko
   github: vojtarylko
@@ -509,6 +509,10 @@ chris-mcgee:
 parispittman:
    name: Paris Pittman
    github: parispittman
+
+maxdesiatov:
+  name: Max Desiatov
+  github: maxdesiatov
 
 rmondello:
   name: Ricky Mondello
