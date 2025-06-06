@@ -7,8 +7,8 @@ title: Install Swift - Windows
 
 {% assign windows_dev_builds = site.data.builds.development.windows10 | sort: 'date' | reverse %}
 {% assign windows_arm64_dev_builds = site.data.builds.development.windows10-arm64 | sort: 'date' | reverse %}
-{% assign windows10_6_1_builds = site.data.builds.swift-6_1-branch.windows10 | sort: 'date' | reverse %}
-{% assign windows10_arm64_6_1_builds = site.data.builds.swift-6_1-branch.windows10-arm64 | sort: 'date' | reverse %}
+{% assign windows10_6_2_builds = site.data.builds.swift-6_2-branch.windows10 | sort: 'date' | reverse %}
+{% assign windows10_arm64_6_2_builds = site.data.builds.swift-6_2-branch.windows10-arm64 | sort: 'date' | reverse %}
 {% assign tag = site.data.builds.swift_releases.last.tag %}
 {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Windows 10' | first %}
 
@@ -100,17 +100,17 @@ title: Install Swift - Windows
     <div class="release-box section">
       <div class="content">
         <div class="code-box content-wrapper">
-          <h2>release/6.1</h2>
+          <h2>release/6.2</h2>
           <p class="body-copy">
-            <small>{{ windows10_6_1_builds.first.date | date: '%B %-d, %Y' }}</small><br />
+            <small>{{ windows10_6_2_builds.first.date | date: '%B %-d, %Y' }}</small><br />
             Package installers (.exe)
           </p>
           <div class="link-wrapper">
             <div class="link-single">
-              <a href="https://download.swift.org/swift-6.1-branch/windows10/{{ windows10_6_1_builds.first.dir }}/{{ windows10_6_1_builds.first.download }}" class="body-copy">Download (x86_64)</a>
+              <a href="https://download.swift.org/swift-6.2-branch/windows10/{{ windows10_6_2_builds.first.dir }}/{{ windows10_6_2_builds.first.download }}" class="body-copy">Download (x86_64)</a>
             </div>
             <div class="link-single">
-              <a href="https://download.swift.org/swift-6.1-branch/windows10-arm64/{{ windows10_arm64_6_1_builds.first.dir }}/{{ windows10_arm64_6_1_builds.first.download }}" class="body-copy">Download (arm64)</a>
+              <a href="https://download.swift.org/swift-6.2-branch/windows10-arm64/{{ windows10_arm64_6_2_builds.first.dir }}/{{ windows10_arm64_6_2_builds.first.download }}" class="body-copy">Download (arm64)</a>
             </div>
           </div>
         </div>
@@ -128,8 +128,8 @@ title: Install Swift - Windows
   <div class="release-box section">
     <div class="content">
         <details class="download">
-        <summary>Previous Snapshots (release/6.1)</summary>
-        {% include install/_older_snapshots.md builds=windows10_6_1_builds name="windows" platform_dir="windows10" branch_dir="swift-6.1-branch" %}
+        <summary>Previous Snapshots (release/6.2)</summary>
+        {% include install/_older_snapshots.md builds=windows10_6_2_builds name="windows" platform_dir="windows10" branch_dir="swift-6.2-branch" %}
         </details>
     </div>
   </div>
