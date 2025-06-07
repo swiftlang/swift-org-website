@@ -375,9 +375,9 @@ APIs with such contracts can still be used from Swift,
 but they are imported as unsafe APIs, so that developers are aware
 that they need to take extra care when using these APIs to avoid memory safety violations.
 
-## Convenience Overloads for Annotated Spans and Pointers
+## Safe Overloads for Annotated Spans and Pointers
 
-C++ APIs often feature parameters that denote a span of memory.
+C and C++ APIs often feature parameters that denote a span of memory.
 For example, some might have two parameters where one points to a memory buffer
 and the other designates the buffer's size; others might use the
 [`std::span`](https://en.cppreference.com/w/cpp/container/span) type from the
@@ -386,8 +386,12 @@ compiler can bridge those span-like parameters to Swift's
 [`Span`](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0447-span-access-shared-contiguous-storage.md)
 and [`MutableSpan`](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0467-MutableSpan.md)
 types, and the user with a safe and convenient interface to those imported APIs.
+These interfaces are *in addition to* the interfaces generated without annotations:
+adding additional annotations to C or C++ APIs will not affect Swift code currently
+relying on the plain interface. Adding additional information may alter the signature
+of any existing safe overload however, since only 1 safe overload per imported function is generated.
 
-### C++ `std::span` Support
+### Safe Overloads for C++ `std::span`
 
 APIs taking or returning C++'s `std::span` with sufficient lifetime
 annotations will automatically get safe overloads take or return Swift
@@ -410,3 +414,128 @@ using IntVec = std::vector<int>;
 These transformations only support top-level `std::span`s. The compiler
 currently does not transform nested `std::span`s. A `std::span<T>` of a non-const
 type `T` is transformed to `MutableSpan<T>` on the Swift side.
+
+### Safe Overloads for Pointers
+
+If an API uses raw pointers rather than `std::span` - perhaps because it's written in C or Objective-C,
+or because it's an older C++ API that doesn't want to break backwards compatibility -
+it can still receive the same interop safety as `std::span`. This added bounds safety doesn't break
+source compatiblity, nor does it affect ABI. Instead it leverages bounds attributes to express the
+pointer bounds in terms of other parameters in the function signature.
+
+#### Annotating Pointers with Bounds Attributes
+
+The most common bounds attribute is `__counted_by`. You can apply `__counted_by` to pointer parameters
+and return values to indicate the number of elements that the pointer points to, like this:
+
+```c
+int calculate_sum(const int * __counted_by(len) values, int len);
+```
+
+In this example the function signature on the C side hasn't changed, but the `__counted_by(len)`
+annotation communicates that the `values` and `len` parameters are related - specifically, `values`
+should point to a buffer of at least `len` `int` values. When you annotate a function with a bounds
+attribute like this, the compiler will generate a bounds safe overload: in addition to the imported
+`func calculate_sum(_ values: UnsafePointer<CInt>, _ len: CInt) -> CInt` signature, you will also
+get the an overload with the `func calculate_sum(_ values: UnsafeBufferPointer<CInt>) -> CInt` signature.
+This signature is not only more ergonomic to work with - since the generated overload does the unpacking
+of base pointer and count for you - but it's also bounds safe. For example, if your API contains parameters
+that share a count, the bounds safe overload will check that they all correspond.
+
+```c
+void sum_vectors(const int * __counted_by(len) a,
+                 const int * __counted_by(len) b,
+                 int * __counted_by(len) out,
+                 int len);
+```
+This safe overload will trap if `a.count != b.count || b.count != out.count`:
+```swift
+func sum_vectors(_ a: UnsafeBufferPointer<CInt>,
+                 _ b: UnsafeBufferPointer<CInt>,
+                 _ out: UnsafeMutableBufferPointer<CInt>)
+```
+
+If one of the `UnsafeBufferPointer` parameters is larger than the others and you intentionally want to use
+only a part of it, you can create a slice using `extracting(_:)`.
+
+If your API has more complex bounds you can express those with an arithmetic expression, like so:
+
+```c
+int transpose_matrix(int * __counted_by(columns * rows) values, int columns, int rows);
+```
+
+In this case the `columns` and `rows` parameters can't be elided:
+```swift
+func transpose_matrix(_ values: UnsafeMutableBufferPointer<CInt>, _ columns: CInt, _ rows: CInt)
+```
+This is because there's no way to factor out `columns` and `rows` given only `values.count`.
+Instead a bounds check is inserted to verify that `columns * rows == values.count`.
+
+When your C/C++ API uses opaque pointers, void pointers or otherwise pointers to unsized types,
+the buffer size can't be described in terms of the number of elements. Instead you can annotate
+these pointers with `__sized_by`. This bounds attribute behaves like `__counted_by`, but takes
+a parameter describing the *number of bytes* in the buffer rather than the *number of elements*.
+Where `__counted_by` maps to `UnsafeBufferPointer<T>`, `__sized_by` will map to
+`UnsafeRawBufferPointer` instead.
+
+You can access the `__counted_by` and `__sized_by` macro definitions by including the `ptrcheck.h` header.
+
+#### Lifetime Safe Overloads for Pointers
+
+Like with `std::span`, pointers with bounds annotations can also have their safe overloads map to
+`Span`/`MutableSpan`, when annotated with the appropriate lifetime annotations. Not all C versions
+support the `[[clang::noescape]]` attribute syntax, so convenience macros for lifetime attributes
+using the GNU style syntax are available in the `lifetimebound.h` header.
+
+```c
+#include <ptrcheck.h>
+#include <lifetimebound.h>
+````
+
+| C API                                                                                                 | Generated Swift overload                                             |
+| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `void take_ptr(const int * __counted_by(len) x __noescape, int len);`                                 | `func take_ptr(_ x: Span<Int32>)`                                    |
+| `const int * __counted_by(len) change_ptr(const int * __counted_by(len) x __lifetimebound, int len);` | `@lifetime(x) func change_ptr(_ x: Span<Int32>) -> Span<Int32>`      |
+
+These overloads provide the same bounds safety as their `UnsafeBufferPointer` equvalents, but with
+added lifetime safety. If lifetime information is available the generated safe overload will always
+choose to use `Span` - no `UnsafeBufferPointer` overload will be generated in this case. This means
+that existing callers are not affected by annotating an API with `__counted_by`, but callers using the
+safe overload after adding `__counted_by` *will* be affected if `__noescape` is also added later on, or
+if another parameter is then also annotated with `__counted_by`.
+To prevent source breaking changes, make sure to fully annotate the bounds and lifetimes of an API when
+adding any bounds or lifetime annotations.
+
+#### Bounds Annotations using API Notes
+
+In cases where you don't want to modify the imported headers, bounds attributes can be applied using API Notes.
+Given the following header:
+```c
+void foo(int *p, int len);
+void *bar(int size);
+```
+We can provide bounds annotations in our API note file like this:
+```
+Functions:
+  - Name:              foo
+    Parameters:
+      - Position:      0
+        BoundsSafety:
+            Kind:      counted_by
+            BoundedBy: "len"
+  - Name:              bar
+    BoundsSafety:
+        Kind:          sized_by
+        BoundedBy:     "size"
+```
+
+#### Limitations
+Bounds attributes are not supported for nested pointers: only the outermost pointer can be transformed.
+
+`lifetime_capture_by` is currently not taken into account when generating safe overloads.
+
+Bounds attributes on global variables or struct fields are ignored: only parameters and return values
+are considered.
+
+Bounds attributes, while supported in Objective-C code bases, are not currently supported in Objective-C
+class method signatures.
