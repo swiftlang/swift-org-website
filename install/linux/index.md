@@ -21,6 +21,11 @@ title: Install Swift - Linux
       {% include new-includes/components/static-linux-sdk.html %}
     </div>
   </div>
+  <div class="release-box section">
+    <div class="content">
+      {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.vscode%}
+    </div>
+  </div>
   <h2>Development Snapshots</h2>
   <div>
     <p class="content-copy">Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.</p>
