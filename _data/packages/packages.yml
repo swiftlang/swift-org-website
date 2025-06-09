@@ -169,7 +169,7 @@ categories:
         description: Generate Swift client and server code from an OpenAPI document. Includes
           multiple repositories for extensibility and supports various transports.
         owner: Apple
-        swift_compatibility: 5.9+
+        swift_compatibility: 5.10+
         platform_compatibility:
           - Apple
           - Linux
@@ -188,18 +188,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
-      - name: fluent
-        description: Fluent helps you work with databases, providing a high-level, type-safe
-          API for querying and manipulating data in Vapor apps.
-        owner: Vapor
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/vapor/fluent
       - name: MongoKitten
         description: MongoKitten is a fast, pure Swift MongoDB driver built for Server
           Side Swift. It supports both MongoDB in server and embedded environments and
@@ -212,18 +200,31 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS) and Linux
         license: MIT
         url: https://swiftpackageindex.com/orlandos-nl/MongoKitten
-      - name: routing-kit
-        description: RoutingKit provides a high-performance router and routing types for
-          applications and libraries, such as Vapor.
+      - name: fluent
+        description: Fluent helps you work with databases, providing a high-level, type-safe
+          API for querying and manipulating data in Vapor apps.
         owner: Vapor
-        swift_compatibility: 5.10+
+        swift_compatibility: 5.9+
         platform_compatibility:
           - Apple
           - Linux
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
           Linux
         license: MIT
-        url: https://swiftpackageindex.com/vapor/routing-kit
+        url: https://swiftpackageindex.com/vapor/fluent
+      - name: multipart-kit
+        description: MultipartKit is a multipart parsing and serializing library. It provides
+          Codable support for the special case of the multipart/form-data media type and
+          delivers its output as it is parsed through callbacks suitable for streaming.
+        owner: Vapor
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/vapor/multipart-kit
   - name: Networking
     slug: networking
     brief: Browse a selection of packages that can extend and enhance the Swift core
@@ -261,16 +262,6 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-nio
-      - name: Moya
-        description: Moya is a network abstraction layer for Alamofire. It simplifies
-          network calls and provides compile-time checking for API endpoints.
-        owner: Moya
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: MIT
-        url: https://swiftpackageindex.com/Moya/Moya
       - name: Pulse
         description: Pulse is a powerful logging system for Apple platforms. It records
           and inspects logs and network requests, and allows for real-time viewing and
@@ -295,6 +286,16 @@ categories:
           Linux
         license: MIT
         url: https://swiftpackageindex.com/swhitty/FlyingFox
+      - name: Moya
+        description: Moya is a network abstraction layer for Alamofire. It simplifies
+          network calls and provides compile-time checking for API endpoints.
+        owner: Moya
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: MIT
+        url: https://swiftpackageindex.com/Moya/Moya
       - name: Networking
         description: Networking is a Swift library for making network requests with a
           straightforward API. It supports faking requests, caching images, and various
@@ -413,16 +414,6 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-log
-      - name: CocoaLumberjack
-        description: CocoaLumberjack is a fast, simple, powerful, and flexible, logging
-          framework that allows logging to multiple destinations simultaneously.
-        owner: CocoaLumberjack
-        swift_compatibility: 5.9+
-        platform_compatibility:
-          - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-        license: BSD 3-Clause
-        url: https://swiftpackageindex.com/CocoaLumberjack/CocoaLumberjack
       - name: Datadog
         description: This library provides Swift and Objective-C SDKs to interact with
           Datadog. It includes features for log collection, trace collection, and RUM
@@ -434,6 +425,16 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, visionOS, tvOS)
         license: Apache 2.0
         url: https://swiftpackageindex.com/DataDog/dd-sdk-ios
+      - name: CocoaLumberjack
+        description: CocoaLumberjack is a fast, simple, powerful, and flexible, logging
+          framework that allows logging to multiple destinations simultaneously.
+        owner: CocoaLumberjack
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: BSD 3-Clause
+        url: https://swiftpackageindex.com/CocoaLumberjack/CocoaLumberjack
       - name: Pulse
         description: Pulse is a powerful logging system for Apple platforms. It records
           and inspects logs and network requests, and allows for real-time viewing and
