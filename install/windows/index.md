@@ -18,6 +18,11 @@ title: Install Swift - Windows
       {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.winget %}
     </div>
   </div>
+  <div class="release-box section">
+    <div class="content">
+      {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.vscode%}
+    </div>
+  </div>
   <h2>Alternative install options</h2>
   <div class="releases-grid">
     <div class="release-box section">

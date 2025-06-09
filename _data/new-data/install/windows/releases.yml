@@ -13,5 +13,13 @@ latest-release:
     links:
       - href: "/install/windows/winget/"
         copy: "Additional details included in Instructions"
+  vscode:
+    pre-code-text: Visual Studio Code is a cross-platform and extensible editor that supports Swift through the Swift extension, which provides intelligent editor functionality as well as debugging and test support.
+    headline: Visual Studio Code
+    links:
+      - href: 'https://marketplace.visualstudio.com/items?itemName=swiftlang.swift-vscode'
+        copy: 'Install Swift extension'
+      - href: 'https://code.visualstudio.com/docs/languages/swift'
+        copy: 'Documentation'
       - href: "https://www.swift.org/tools/#editors"
-        copy: "Editors"
+        copy: "Other Editors"
