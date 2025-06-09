@@ -1,6 +1,58 @@
 years:
   - year: 2025
     months:
+      - month: May
+        slug: may
+        packages:
+          - name: Anodize
+            description: Adds type safety to Metal shaders, enabling Swift to interact with
+              Metal kernels without managing binding indices. Enhances code safety and simplifies
+              GPU kernel integration.
+            owner: Audulus LLC
+            swift_compatibility: 6.0+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (macOS)
+            license: MIT
+            url: https://swiftpackageindex.com/audulus/Anodize
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/123){:target='_blank'}.
+          - name: Noora
+            description: Enhances terminal aesthetics for Swift CLIs with a customizable
+              design system, improving consistency and readability in command-line interfaces.
+            owner: Tuist
+            swift_compatibility: 6.0+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+            license: MIT
+            url: https://swiftpackageindex.com/tuist/Noora
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/120){:target='_blank'}.
+          - name: swift-aws-lambda-runtime
+            description: Facilitates building serverless functions in Swift for AWS Lambda,
+              offering features like JSON handling, response streaming, and background tasks,
+              while emphasizing performance, safety, and developer control.
+            owner: Swift on Server
+            swift_compatibility: 5.9+
+            platform_compatibility:
+              - Apple
+              - Linux
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              and Linux
+            license: Apache 2.0
+            url: https://swiftpackageindex.com/swift-server/swift-aws-lambda-runtime
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/127){:target='_blank'}.
+          - name: swift-package-registry-service
+            description: An implementation of the Swift Package Registry Service which proxies
+              the Github API.
+            owner: CrowdStrike
+            swift_compatibility: 6.0+
+            platform_compatibility:
+              - Apple
+            platform_compatibility_tooltip: Apple (macOS, visionOS)
+            license: MIT
+            url: https://swiftpackageindex.com/CrowdStrike/swift-package-registry-service
+            note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/128){:target='_blank'}.
       - month: April
         slug: april
         packages:
