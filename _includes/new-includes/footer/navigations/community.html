@@ -1,0 +1,10 @@
+<nav aria-label="Community">
+    <h3>Community</h3>
+    <ul>
+        {% for item in site.data.new-data.footer.community-navigation %}
+        <li class="item {% if page.url == item.url %}active{% endif %}">
+            <a href="{{ item.link }}" data-text="{{ item.title }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

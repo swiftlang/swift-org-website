@@ -1,0 +1,15 @@
+<div class="os-selection-navigation">
+  <h2>Alternate Install Options</h2>
+
+  {% assign platforms = site.data.new-data.install.linux.os-names %} {% assign
+  url_parts = page.url | split: '/' %} {% assign selected_os = url_parts[3] %}
+  <label>Select Linux platform:</label>
+  {% include new-includes/components/tab-nav.html tabs=platforms class="os"
+  selected=selected_os %} {% assign selected_platform = platforms | where:
+  "slug", selected_os | first %} {% assign selected_version = url_parts[3] |
+  append: url_parts[4] %} {% if selected_platform.versions %}
+  <label>Select {{ selected_platform.name }} version:</label>
+  {% include new-includes/components/tab-nav.html
+  tabs=selected_platform.versions class="version" selected=selected_version %}
+  {% endif %}
+</div>

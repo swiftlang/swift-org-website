@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="31px" viewBox="0 0 46 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>command-line</title>
+    <g id="command-line" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#80191A" stroke-width="2" x="1" y="1" width="44" height="29" rx="6"></rect>
+        <g id="Group-3" transform="translate(10, 8)" fill="#80191A">
+            <polygon id="Fill-1" points="2.345 0 8.8817842e-16 3.24 5.542 7.253 0.013 11.146 2.316 14.417 12.424 7.298"></polygon>
+            <polygon id="Fill-2" points="14.2976 14.2061 26.9506 14.2061 26.9506 10.2051 14.2976 10.2051"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+image: /assets/images/placeholders/image_placeholder_large@2x.png
+image_alt: An alt description
+title: Secondary Content Cards
+secondary_cards:
+  - name: Lorem
+    logo: /assets/images/placeholders/image_placeholder_large@2x.png
+    logo_alt: Lorem logo
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Lorem
+    link: /
+  - name: Ipsum
+    logo_alt: Ipsum logo
+    logo: /assets/images/placeholders/image_placeholder_large@2x.png
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    link_text: Ipsum
+    link: /

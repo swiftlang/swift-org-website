@@ -378,6 +378,7 @@ that they need to take extra care when using these APIs to avoid memory safety v
 ## Safe Overloads for Annotated Spans and Pointers
 
 C and C++ APIs often feature parameters that denote a span of memory.
+
 For example, some might have two parameters where one points to a memory buffer
 and the other designates the buffer's size; others might use the
 [`std::span`](https://en.cppreference.com/w/cpp/container/span) type from the

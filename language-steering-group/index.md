@@ -21,15 +21,15 @@ The Swift Language Steering Group:
 
 ## Membership
 
-The Language Steering Group is made up of Swift community members with a variety of backgrounds. Members of the workgroup are volunteers who ordinarily serve for a term of two years. The Swift Core Team is solely responsible for the membership of the workgroup and may add or remove members as it sees fit.
+The Language Steering Group is made up of Swift community members with a variety of backgrounds. Members of the steering group are volunteers who ordinarily serve for a term of two years. The Swift Core Team is solely responsible for the membership of the steering group and may add or remove members as it sees fit.
 
-The Core Team also selects one member of the workgroup as the chair. The chair has no special authority over the workgroup, but they are responsible for ensuring its smooth functioning, including by:
+The Core Team also selects one member of the steering group as the chair. The chair has no special authority over the steering group, but they are responsible for ensuring its smooth functioning, including by:
 
 * organizing and leading regular meetings.
 * ensuring that proposals have an assigned review manager sufficiently in advance of when they will be reviewed.
-* ensuring that the workgroup discusses and reaches a conclusion promptly after a proposal has been reviewed.
-* ensuring that the workgroup communicates effectively with the community.
-* coordinating meetings between workgroup representatives and the Core Team when issues need to be raised to the Core Team.
+* ensuring that the steering group discusses and reaches a conclusion promptly after a proposal has been reviewed.
+* ensuring that the steering group communicates effectively with the community.
+* coordinating meetings between steering group representatives and the Core Team when issues need to be raised to the Core Team.
 
 The current members of the Language Steering Group are:
 

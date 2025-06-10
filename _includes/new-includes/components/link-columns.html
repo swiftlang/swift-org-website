@@ -1,0 +1,17 @@
+<div class="content-wrapper link-columns">
+  <h2>{{include.content.headline}}</h2>
+  <div class="link-grid">
+    {% for column in include.content.columns %}
+    <div class="link-column">
+      <h3>{{column.headline}}</h3>
+      <ul>
+        {% for link in column.links %}
+        <li>
+          <a class="link body-copy" href="{{link.url}}">{{link.text}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</div>

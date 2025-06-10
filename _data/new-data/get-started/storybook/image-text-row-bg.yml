@@ -1,0 +1,11 @@
+image:
+  src: /assets/images/placeholders/image_placeholder_large@2x.png
+  alt: An alt description
+copy:
+  headline: Lorem ipsum dolor
+  paragraphs:
+    - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  link:
+    text: Lorem ipsum
+    href: '#'

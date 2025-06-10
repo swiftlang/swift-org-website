@@ -64,6 +64,8 @@
         - title: LLVM and Swift
           name: llvm-and-swift
     - section: Steering Groups
+    - title: Ecosystem
+      url: /ecosystem-steering-group/
     - title: Language
       url: /language-steering-group/
       sections:

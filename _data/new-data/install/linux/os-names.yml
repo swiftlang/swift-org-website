@@ -1,0 +1,42 @@
+- name: Amazon Linux
+  slug: amazonlinux
+  url: /install/linux/amazonlinux/2
+  versions:
+    - name: Amazon Linux 2
+      slug: amazonlinux2
+      url: /install/linux/amazonlinux/2
+- name: Debian
+  slug: debian
+  url: /install/linux/debian/12
+  versions:
+    - name: Debian 12
+      slug: debian12
+      url: /install/linux/debian/12
+- name: Fedora
+  slug: fedora
+  url: /install/linux/fedora/39
+  versions:
+    - name: Fedora 39
+      slug: fedora39
+      url: /install/linux/fedora/39
+- name: Red Hat
+  slug: ubi
+  url: /install/linux/ubi/9
+  versions:
+    - name: Red Hat Universal Base Image 9
+      slug: ubi9
+      url: /install/linux/ubi/9
+- name: Ubuntu
+  slug: ubuntu
+  url: /install/linux/ubuntu/24_04
+  versions:
+    - name: Ubuntu 24.04
+      slug: Ubuntu24_04
+      url: /install/linux/ubuntu/24_04
+    - name: Ubuntu 22.04
+      slug: Ubuntu22_04
+      url: /install/linux/ubuntu/22_04
+    - name: Ubuntu 20.04
+      slug: Ubuntu20_04
+      url: /install/linux/ubuntu/20_04
+

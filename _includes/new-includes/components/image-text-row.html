@@ -1,0 +1,22 @@
+<div
+  class="image-text-row content-wrapper{% if include.background %} background{% endif %}"
+>
+  {% if include.content.headline %}
+  <h2>{{ include.content.headline }}</h2>
+  {% endif %}
+  <div class="card-wrapper">
+    <img
+      src="{{ include.content.image.src }}"
+      alt="{{ include.content.image.alt }}"
+    />
+    <div class="copy-wrapper">
+      <h3>{{ include.content.copy.headline }}</h3>
+      {% for paragraph in include.content.copy.paragraphs %}
+      <p class="body-copy">{{paragraph}}</p>
+      {% endfor %}
+      <a class="body-copy" href="{{include.content.copy.link.href}}"
+        >{{include.content.copy.link.text}}
+      </a>
+    </div>
+  </div>
+</div>

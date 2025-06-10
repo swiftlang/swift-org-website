@@ -1,0 +1,51 @@
+{% assign wasm_sdk_dev_builds = site.data.builds.development.wasm-sdk | sort: 'date' | reverse %}
+{% assign wasm_sdk_6_2_builds = site.data.builds.swift-6_2-branch.wasm-sdk | sort: 'date' | reverse %}
+
+<div class="releases-grid">
+    <div class="release-box section">
+        <div class="content">
+        <div class="code-box content-wrapper">
+            <h2>main</h2>
+            <p class="body-copy">
+            <small>{{ wasm_sdk_dev_builds.first.date | date: '%B %-d, %Y' }}</small><br />
+            Swift SDKs for WebAssembly
+            <br /><br />
+            {% assign base_url = "https://download.swift.org/development/wasm-sdk/" | append: wasm_sdk_dev_builds.first.dir | append: "/" | append: wasm_sdk_dev_builds.first.download %}
+            {% assign command = "swift sdk install " | append: base_url | append: " --checksum " | append: wasm_sdk_dev_builds.first.checksum %}
+            <button onclick="copyToClipboard(this, '{{ command | escape }}')">
+                Copy install command
+            </button>
+            </p>
+            <div class="link-wrapper">
+            <div class="link-group">
+                <a href="https://download.swift.org/development/wasm-sdk/{{ wasm_sdk_dev_builds.first.dir }}/{{ wasm_sdk_dev_builds.first.download }}" class="body-copy">Download Wasm SDK</a> |
+                <a href="https://download.swift.org/development/wasm-sdk/{{ wasm_sdk_dev_builds.first.dir }}/{{ wasm_sdk_dev_builds.first.download_signature }}" class="body-copy">Signature (PGP)</a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="release-box section">
+        <div class="content">
+        <div class="code-box content-wrapper">
+            <h2>release/6.2</h2>
+            <p class="body-copy">
+            <small>{{ wasm_sdk_6_2_builds.first.date | date: '%B %-d, %Y' }}</small><br />
+            Swift SDKs for WebAssembly
+            <br /><br />
+            {% assign base_url = "https://download.swift.org/swift-6.2-branch/wasm-sdk/" | append: wasm_sdk_6_2_builds.first.dir | append: "/" | append: wasm_sdk_6_2_builds.first.download %}
+            {% assign command = "swift sdk install " | append: base_url | append: " --checksum " | append: wasm_sdk_6_2_builds.first.checksum %}
+            <button onclick="copyToClipboard(this, '{{ command | escape }}')">
+                Copy install command
+            </button>
+            </p>
+            <div class="link-wrapper">
+            <div class="link-group">
+                <a href="https://download.swift.org/swift-6.2-branch/wasm-sdk/{{ wasm_sdk_6_2_builds.first.dir }}/{{ wasm_sdk_6_2_builds.first.download }}" class="body-copy">Download Wasm SDK</a> |
+                <a href="https://download.swift.org/swift-6.2-branch/wasm-sdk/{{ wasm_sdk_6_2_builds.first.dir }}/{{ wasm_sdk_6_2_builds.first.download_signature }}" class="body-copy">Signature (PGP)</a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

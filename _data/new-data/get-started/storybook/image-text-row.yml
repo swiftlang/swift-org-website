@@ -1,0 +1,12 @@
+headline: Image Text Row
+image:
+  src: /assets/images/placeholders/image_placeholder_large@2x.png
+  alt: a place holder
+copy:
+  headline: Lorem Ipsum
+  paragraphs:
+    - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  link:
+    text: Read more
+    href: '#'

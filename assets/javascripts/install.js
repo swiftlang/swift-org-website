@@ -1,4 +1,4 @@
-const { userAgentData, userAgent } = window.navigator;
+const { userAgentData, userAgent } = window.navigator
 
 const osToOsRegex = {
   windows: /win/,
@@ -12,6 +12,9 @@ const osToPage = {
   linux: '/install/linux/',
 }
 
-const OS = Object.keys(osToOsRegex).find(os => osToOsRegex[os].test(userAgent.toLowerCase())) || 'macos';
+const OS =
+  Object.keys(osToOsRegex).find((os) =>
+    osToOsRegex[os].test(userAgent.toLowerCase()),
+  ) || 'macos'
 
-window.location.replace(OS);
+window.location.replace(OS)

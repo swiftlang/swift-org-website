@@ -1,0 +1,12 @@
+<nav class="governance" aria-label="Governance">
+    <h3>Governance</h3>
+    <ul>
+        {% for item in site.data.new-data.footer.governance-navigation %}
+        <li class="item {% if page.url == item.url %}active{% endif %}">
+            <a href="{{ item.link }}" data-text="{{ item.title }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% include new-includes/footer/theme-toggle.html %}
+</nav>

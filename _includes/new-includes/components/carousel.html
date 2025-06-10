@@ -1,0 +1,20 @@
+<div class="carousel-container">
+  <div class="carousel" id="carousel">
+    <div class="carousel-track">
+      {% for package in include.packages %}
+      <div class="carousel-item">
+        <img src="{{ package.image }}" />
+        <h3>{{ package.title }}</h3>
+        <p>{{ package.description }}</p>
+        <a href="{{ package.link }}">Learn more &larr;</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="carousel-buttons">
+    <button class="carousel-btn prev-btn">&larr;</button>
+    <button class="carousel-btn next-btn">&rarr;</button>
+  </div>
+</div>
+
+<script src="/assets/javascripts/new-javascripts/carousel.js"></script>

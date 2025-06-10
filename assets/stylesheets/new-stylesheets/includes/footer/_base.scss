@@ -1,0 +1,230 @@
+@use '../../colors' as *;
+@use '../../graphics' as *;
+@use '../../helpers' as *;
+
+@mixin icon-style($icon) {
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  display: block;
+  background-image: $icon;
+}
+
+footer.global-footer {
+  background-color: #1e162e;
+  padding: 20px;
+  text-align: center;
+  padding: 6rem 3rem 3rem 3.5em;
+  color: rgb(235, 236, 240);
+  position: relative;
+  z-index: 10;
+
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .footer-navigation-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+
+    .logo {
+      display: flex;
+      height: 36px;
+      margin-bottom: 15px;
+
+      svg {
+        height: 100%;
+      }
+
+      #logotype {
+        fill: #ebecf0;
+      }
+    }
+
+    h3 {
+      height: 36px;
+      margin-bottom: 15px;
+      color: #fca76c;
+      font-size: 1.17em;
+      line-height: 1.2;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    nav {
+      margin-bottom: 20px;
+      text-align: left;
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          a {
+            font-size: 14px;
+            border-bottom: 1px solid transparent;
+            color: rgb(235, 236, 240);
+            display: inline-block;
+            padding: 0.35em 0;
+
+            &:hover {
+              border-bottom-color: rgb(235, 236, 240);
+            }
+          }
+        }
+      }
+
+      &.governance {
+        display: flex;
+        flex-direction: column;
+
+        // theme toggle
+        .color-scheme-toggle {
+          display: inline-flex;
+          font-size: 14px;
+          border: 1px solid #d1d2d4;
+          border-radius: 15px;
+          padding: 1px;
+          outline: none;
+          margin-top: auto;
+
+          input,
+          legend {
+            @include visuallyhidden;
+            appearance: none;
+          }
+
+          .scheme-light {
+            .color-scheme-toggle-label {
+              border-top-left-radius: 15px;
+              border-bottom-left-radius: 15px;
+            }
+          }
+
+          .scheme-auto-wrapper {
+            .color-scheme-toggle-label {
+              border-top-right-radius: 15px;
+              border-bottom-right-radius: 15px;
+            }
+          }
+        }
+
+        .color-scheme-toggle-label {
+          border: 1px solid transparent;
+          background-color: #1e162e;
+          color: #d1d2d4;
+          display: inline-block;
+          text-align: center;
+          padding: 1px 6px;
+          min-width: 42px;
+          box-sizing: border-box;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        input:checked + .color-scheme-toggle-label {
+          background: #fca76c;
+          color: #1e162e;
+        }
+      }
+    }
+  }
+
+  .sub-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-end;
+    color: #d1d2d4;
+
+    nav {
+      display: inline-block;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: inline-flex;
+
+        a {
+          color: #d1d2d4;
+        }
+      }
+    }
+
+    .legals {
+      font-size: 11px;
+      text-align: left;
+
+      .copyright {
+        margin-bottom: 1.5em;
+        line-height: 1.5em;
+
+        p {
+          margin: 0;
+        }
+
+        a {
+          color: #d1d2d4;
+        }
+      }
+
+      nav ul {
+        li {
+          margin-right: 1.75em;
+
+          a {
+            padding: 0.35em 0;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+              border-bottom-color: #d1d2d4;
+            }
+          }
+        }
+      }
+    }
+
+    .socials {
+      ul li a {
+        display: block;
+        padding: 0 0.6em;
+
+        &:hover {
+          // color: #ebecf0;
+          // color: red;
+        }
+
+        i {
+          &.github {
+            @include icon-style($icon-github);
+          }
+
+          &.bluesky {
+            @include icon-style($icon-bluesky);
+          }
+
+          &.feed {
+            @include icon-style($icon-feed);
+          }
+
+          &.mastodon {
+            @include icon-style($icon-mastodon);
+          }
+
+          &.x {
+            @include icon-style($icon-x);
+          }
+        }
+      }
+    }
+  }
+}

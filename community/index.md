@@ -28,6 +28,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
 * __[Member](/contributing/#member)__ is anyone who is a member of the swiftlang organization on GitHub.
 * __[Contributor](/contributing/#contributor)__ is anyone who has contributed to Swift by writing code, answering questions on the forums, reporting or triaging bugs, participating in the Swift evolution process, or other ways.
 * __Steering Groups__
+   * __[Ecosystem](/ecosystem-steering-group)__ is a small group of experts who focus on the direction of Swift packages and tooling.
    * __[Language](#language-steering-group)__ is a small group of experts that drive the Swift language forward in a coherent direction.
    * __[Platforms](/platform-steering-group)__ is a small group of experts that enables the Swift language and its tools to be used in new environments.
 * __Workgroups__

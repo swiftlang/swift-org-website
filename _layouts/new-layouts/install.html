@@ -1,0 +1,25 @@
+---
+layout: new-layouts/base
+---
+
+<section id="install" class="section">
+  {% include new-includes/components/os-selection.html %} {{ content }}
+
+  <div class="swoop swoop-1"></div>
+</section>
+
+<script>
+  function copyToClipboard(button, text) {
+    const originalText = button.innerText;
+
+    navigator.clipboard.writeText(text).then(() => {
+      button.innerText = 'Copied!';
+      setTimeout(() => {
+        button.innerText = originalText;
+      }, 1000);
+    }).catch(err => {
+      console.error('Failed to copy:', err);
+      button.innerText = 'Failed';
+    });
+  }
+</script>

@@ -1,0 +1,19 @@
+title: Read the blog
+secondary_cards:
+  - name: Get Started with Embedded Swift on Microcontrollers
+    logo_alt: Variety of embedded development boards
+    logo: /assets/images/get-started/embedded-swift-micro-controllers@2x.png
+    text: Discover how Swift runs on ARM and RISC-V microcontrollers with real-world examples using the new Embedded Swift compilation mode.
+    link_text: Read more
+    link: https://www.swift.org/blog/embedded-swift-examples/
+
+  - name: "Byte-sized Swift: Building Tiny Games for the Playdate"
+    logo_alt: Breakout-style grayscale game
+    logo: /assets/images/get-started/tiny-games-playdate@2x.png
+    text: Learn how Swift was used to build tiny games on the Playdate, with full source, hardware demos, and a deep dive into Embedded Swift.
+    link_text: Read more
+    link: https://www.swift.org/blog/byte-sized-swift-tiny-games-playdate/
+
+link:
+  text: Read more
+  url: /blog

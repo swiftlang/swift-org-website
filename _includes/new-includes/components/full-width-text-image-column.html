@@ -1,0 +1,16 @@
+<div class="full-width-text-image-column content-wrapper">
+  <div class="text-wrapper">
+    <h2>{{ include.content.headline }}</h2>
+    {% for paragraph in include.content.paragraphs %}
+    <p class="body-copy">{{paragraph}}</p>
+    {% endfor %}
+    <a class="body-copy" href="{{ include.content.link.url }}"
+      >{{ include.content.link.text }}
+    </a>
+  </div>
+  <img
+    src="{{include.content.image.url}}"
+    alt="{{include.content.image.alt}}"
+  />
+  <!-- FIXME: Move body & link below image -->
+</div>

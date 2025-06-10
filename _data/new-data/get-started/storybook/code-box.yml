@@ -1,0 +1,10 @@
+headline: Code Box
+code: $ docker pull swift
+after-code-text:
+  Aliquam finibus urna nec semper sollicitudin. Mauris in purus sed elit
+  semper blandit. Integer facilisis venenatis feugiat. Fusce hendrerit sem ac
+  elit porttitor cursus. Mauris in purus sed elit semper blandit. Integer
+  facilisis venenatis feugiat. Fusce hendrerit sem ac elit porttitor.
+links:
+  - href: 'https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt'
+    copy: 'Container'

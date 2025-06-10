@@ -1,0 +1,17 @@
+- title: Cloud Services
+  subtitle: Run performant services on Linux and deploy to the cloud.
+  icon: cloud
+  data-text: Cloud Services
+  link: /get-started/cloud-services
+
+- title: Command Line
+  subtitle: Create powerful CLI tools that are fast and memory safe.
+  icon: command-line
+  data-text: Command Line
+  link: /get-started/command-line-tools
+
+- title: Embedded
+  subtitle: Develop efficient, reliable firmware for devices like microcontrollers.
+  icon: chip
+  data-text: Embedded
+  link: /get-started/embedded

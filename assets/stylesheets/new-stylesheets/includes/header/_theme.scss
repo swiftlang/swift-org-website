@@ -1,0 +1,7 @@
+body[data-color-scheme="dark"] .logo svg #logotype {
+  fill: #ffffff;
+}
+
+body[data-color-scheme="light"] .logo svg #logotype {
+  fill: #000000;
+}

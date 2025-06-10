@@ -1,0 +1,25 @@
+headline: Build straightforward CLI tools with Argument Parser
+paragraphs:
+  - 'You can quickly build full-featured command-line interfaces using the Swift Argument Parser library. Define commands by creating types with regular Swift properties. Link multiple commands to create rich command hierarchies.'
+  - 'ArgumentParser provides a detailed help screen, clear error messages with near-miss checking, broad customization, and more.'
+link:
+  text: Swift Argument Parser
+  url: https://github.com/apple/swift-argument-parser
+code: |-
+  import ArgumentParser
+  @main
+  struct Repeat: ParsableCommand {
+    @Argument(help: "The phrase to repeat.")
+    var phrase: String
+    
+    @Option(help: "The number of times to repeat 'phrase'.")
+    var count: Int? = nil
+    
+    mutating func run() throws {
+      let repeatCount = count ?? .max
+      
+      for i in 1...repeatCount {
+        print(phrase)
+      }
+    }
+  }

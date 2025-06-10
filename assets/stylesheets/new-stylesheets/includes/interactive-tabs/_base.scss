@@ -1,0 +1,17 @@
+.interactive-tabs .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.interactive-tabs .tabs a {
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: white;
+}
+
+.interactive-tabs .tabs a[aria-pressed='true'] {
+  color: white;
+  border-bottom: 1px solid white;
+}

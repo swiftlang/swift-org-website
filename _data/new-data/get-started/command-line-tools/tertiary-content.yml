@@ -1,0 +1,20 @@
+image: /assets/images/get-started/package.png
+image_alt: Package image for Open Source Frameworks & Packages section
+title: Explore CLIs built with Swift
+tertiary_cards:
+  - name: swiftly
+    text: CLI tool for installing, managing, and switching between Swift toolchains.
+    link_text: Learn more
+    link: https://github.com/swiftlang/swiftly
+  - name: DocC
+    text: CLI tool for Swift-DocC and provides support for generating and previewing documentation.
+    link_text: Learn more
+    link: https://github.com/swiftlang/swift-docc
+  - name: Swift Package Manager
+    text: Tool for managing the distribution of Swift code that’s integrated with the Swift build system.
+    link_text: Learn more
+    link: https://github.com/swiftlang/swift-package-manager
+  - name: Vapor Toolbox
+    text: CLI tool to easily create new Vapor projects.
+    link_text: Learn more
+    link: https://github.com/vapor/toolbox

@@ -1,0 +1,21 @@
+headline: Code Text Row
+copy:
+  headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  paragraphs:
+    - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  link:
+    text: Lorem
+    url: /
+code: |-
+  let vegetable = "red pepper"
+  switch vegetable {
+  case "celery":
+      print("Add some raisins and make ants on”)
+  case "cucumber", "watercress":
+      print("That would make a good tea sandwich.")
+  case let x where x.hasSuffix("pepper"):
+      print("Is it a spicy \(x)?")
+  default:
+      print("Everything tastes good in soup.")
+  }
+  // Prints "Is it a spicy red pepper?"

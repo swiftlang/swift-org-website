@@ -1,0 +1,12 @@
+headline: Get Started Components
+body: A look book of components to use on get started pages. This is the hero component.
+link:
+  url: /
+  text: A CTA
+boxes:
+  - title: Box 1
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  - title: Box 2
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  - title: Box 3
+    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

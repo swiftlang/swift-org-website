@@ -1,0 +1,16 @@
+image: /assets/images/placeholders/image_placeholder_large@2x.png
+image_alt: An alt description
+title: Primary Content Cards
+primary_cards:
+  - name: Lorem
+    logo: /assets/images/placeholders/image_placeholder_large@2x.png
+    logo_alt: Lorem logo
+    text: Lorem provides a safe, performant and easy to use foundation to build HTTP servers, backends and APIs in Swift.
+    link_text: Lorem
+    link: /
+  - name: Ipsum
+    logo_alt: An alt description
+    logo: /assets/images/placeholders/image_placeholder_large@2x.png
+    text: Ipsum is a lightweight, flexible modern web application framework that runs on top of a SwiftNIO based server implementation. It is designed to require the minimum number of dependencies.
+    link_text: Ipsum
+    link: /
