@@ -1282,6 +1282,16 @@ let object = SharedObject(42)
 
 Note that if a C++ constructor and a user-annotated static factory (using `SWIFT_NAME`) have identical parameter signatures, Swift favors the static factory when resolving initializer calls. 
 This is particularly useful when you want to use a custom allocator or want to disable direct construction entirely and expose only factories.
+### Inference of Shared Reference behaviour in Derived Types
+
+When a C++ type inherits from a `SWIFT_SHARED_REFERENCE` base type, the Swift compiler automatically infers `SWIFT_SHARED_REFERENCE` annotation for the derived type.
+The derived type also gets imported as a reference type, and uses the same `retain` and `release` functions as its base class.
+This inference works as long as all the annotated base types in the inheritance chain (including multiple or indirect inheritance) have the same `retain` and `release` functions.
+If multiple base types have conflicting `retain` or `release` functions, the derived type is imported as a Swift value type, and the compiler emits a warning.
+
+
+Note that this inference currently applies only to `SWIFT_SHARED_REFERENCE`. 
+It does not apply to types annotated with `SWIFT_IMMORTAL_REFERENCE` or `SWIFT_UNSAFE_REFERENCE`.
 
 ### Inheritance and Virtual Member Functions
 
