@@ -466,3 +466,86 @@ categories:
         owner: Paolo Musolino
         license: MIT
         url: https://swiftpackageindex.com/pmusolino/Wormholy
+  - name: Databases and Persistence
+    slug: database
+    brief: Database access packages and related libraries for data storage, retrieval,
+      and persistence.
+    description: "[Core Data](https://developer.apple.com/documentation/coredata) and
+      [SwiftData](https://developer.apple.com/documentation/swiftdata) are built-in
+      options, but if you need additional functionality or want to connect to a remote
+      database, you\u2019ll find plenty of quality packages."
+    more:
+      title: More database and persistence packages
+      url: https://swiftpackageindex.com/keywords/database
+    packages:
+      - name: GRDB
+        description: "GRDB is a SQLite toolkit for application development. It provides
+          SQL generation, database observation, robust concurrency, migrations, and raw
+          SQL access. Use it to save your app\u2019s data into SQLite databases."
+        owner: "Gwendal Rou\xE9"
+        swift_compatibility: 6.0+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/groue/GRDB.swift
+      - name: Supabase
+        description: Supabase client for Swift, mirroring the design of supabase-js, offering
+          database interaction, authentication, storage, and real-time capabilities. Supports
+          custom options for configuration and connection.
+        owner: Supabase
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/supabase/supabase-swift
+      - name: MongoKitten
+        description: MongoKitten is a fast, pure Swift MongoDB driver built for Server
+          Side Swift. It supports both MongoDB in server and embedded environments and
+          can be used with Vapor or Hummingbird.
+        owner: Orlandos
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS) and Linux
+        license: MIT
+        url: https://swiftpackageindex.com/orlandos-nl/MongoKitten
+      - name: fluent
+        description: Fluent helps you work with databases, providing a high-level, type-safe
+          API for querying and manipulating data in Vapor apps.
+        owner: Vapor
+        swift_compatibility: 5.9+
+        platform_compatibility:
+          - Apple
+          - Linux
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
+        license: MIT
+        url: https://swiftpackageindex.com/vapor/fluent
+      - name: Realm
+        description: Realm is a mobile database for iOS, macOS, tvOS, and watchOS. It
+          offers an object-oriented data model, real-time syncing, and encryption. It
+          integrates with SwiftUI and supports various installation methods.
+        owner: Realm
+        swift_compatibility: 5.10+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+        license: Apache 2.0
+        url: https://swiftpackageindex.com/realm/realm-swift
+      - name: Boutique
+        description: Boutique simplifies state-driven app development with a dual-layered
+          memory and disk caching system, offering easy persistence and real-time updates
+          for SwiftUI, UIKit, and AppKit applications.
+        owner: Joe Fabisevich
+        swift_compatibility: 5.10+
+        platform_compatibility:
+          - Apple
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+        license: MIT
+        url: https://swiftpackageindex.com/mergesort/Boutique
