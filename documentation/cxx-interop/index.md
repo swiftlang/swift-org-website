@@ -1293,6 +1293,35 @@ If multiple base types have conflicting `retain` or `release` functions, the der
 Note that this inference currently applies only to `SWIFT_SHARED_REFERENCE`. 
 It does not apply to types annotated with `SWIFT_IMMORTAL_REFERENCE` or `SWIFT_UNSAFE_REFERENCE`.
 
+#### Calling conventions when returning Shared Reference Types from C++ to Swift
+
+When C++ functions and methods return `SWIFT_SHARED_REFERENCE` types, it is necessary to specify the ownership of the returned value.
+For this you should use the `SWIFT_RETURNS_RETAINED` and `SWIFT_RETURNS_UNRETAINED` annotations on functions and methods.
+These annotations tell the Swift compiler whether the type is returned as `+1` (retained) or `+0` (unretained).
+
+```c++
+// Returns +1 ownership.
+SharedObject* makeOwnedObject() SWIFT_RETURNS_RETAINED;
+
+// Returns +0 ownership.
+SharedObject* getUnOwnedObject() SWIFT_RETURNS_UNRETAINED;
+```
+
+These annotations are necessary to ensure that appropriate `retain`/`release` operations are inserted at the boundary:
+
+```swift
+let owned = makeOwnedObject()
+owned.doSomething()
+// `owned` is already at +1, so no further retain is needed here
+
+let unOwned = getUnOwnedObject()
+// Swift inserts a retain operation on `unowned` here to bring it to +1.
+unOwned.doSomething()
+```
+
+Note that the Swift compiler will automatically infer the ownership conventons for Swift functions returning `SWIFT_SHARED_REFERENCE` types.
+See [Exposing C++ Shared Reference Types back from Swift](#exposing-c-shared-reference-types-back-from-swift) for calling Swift functions returning `SWIFT_SHARED_REFERENCE` types from C++.
+
 ### Inheritance and Virtual Member Functions
 
 Similar to value types, casting an instance of a derived reference type to a
