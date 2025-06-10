@@ -1280,7 +1280,7 @@ owned/guaranteed calling conventions. The C++ callers must guarantee that `x` is
 Note that functions returning a shared reference type such as `returnSharedObject` transfer the ownership to the caller.
 The C++ caller of this function is responsible for releasing the object.
 
-If a C++ Shared Reference Type is passed as an argument to a C++ API from Swift, the Swift compiler *guarantees* that the passed value would be alive. Also Swift *assumes* that the C++ API is not consuming i.e., it returns with a valid object in the passed reference at the end of the C++ API call.
+If a C++ Shared Reference Type is passed as an non-const argument to a C++ API from Swift, the Swift compiler *guarantees* that the passed value would be alive. Also Swift *assumes* that the C++ API is not consuming i.e., it returns with a valid object in the passed reference at the end of the C++ API call.
 
 ```swift
 var obj = SharedObject.create()
