@@ -1239,7 +1239,7 @@ To specify that a C++ type is a shared reference type, use the `SWIFT_SHARED_REF
 class SharedObject : IntrusiveReferenceCounted<SharedObject> {
 public:
     SharedObject(const SharedObject &) = delete; // non-copyable
-
+    SharedObject();
     static SharedObject* create();
     void doSomething();
 } SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject);
@@ -1250,10 +1250,38 @@ void releaseSharedObject(SharedObject *);
 
 Now that `SharedObject` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
 ```swift
-let object = SharedObject.create()
-object.doSomething()
+let object1 = SharedObject.create()
+let object2 = SharedObject() // The C++ constructor is imported as a Swift initializer
+object1.doSomething()
+object2.doSomething()
 // `object` will be released here.
 ```
+
+#### Constructing objects of Shared Reference Types from Swift
+
+As demonstrated in the provided example, starting from Swift 6.2, you can create instances of `SWIFT_SHARED_REFERENCE` types by invoking their initializer.
+Note that the Swift compiler uses the default `new` operator to construct C++ shared reference types. 
+If you want to hide the constructors of shared reference types, you can also delete the default operator `new` in C++.
+
+You can also import a user-defined C++ static factory function as a Swift initializer by annotating it with `SWIFT_NAME("init(…)")` annotation macro, ensuring that the number of underscore placeholders matches the number of parameters in the factory function. 
+For example:
+
+```cpp
+struct SharedObject {
+  static SharedObject* make(int id) SWIFT_NAME("init(_:)");
+
+  void doSomething();
+} SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject);
+```
+
+In this case, Swift will import the static `make` function as a Swift initializer:
+
+```swift
+let object = SharedObject(42)
+```
+
+Note that if a C++ constructor and a user-annotated static factory (using `SWIFT_NAME`) have identical parameter signatures, Swift favors the static factory when resolving initializer calls. 
+This is particularly useful when you want to use a custom allocator or want to disable direct construction entirely and expose only factories.
 
 ### Inheritance and Virtual Member Functions
 
