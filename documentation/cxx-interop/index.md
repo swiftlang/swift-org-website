@@ -1239,8 +1239,8 @@ To specify that a C++ type is a shared reference type, use the `SWIFT_SHARED_REF
 class SharedObject : IntrusiveReferenceCounted<SharedObject> {
 public:
     SharedObject(const SharedObject &) = delete; // non-copyable
+    SharedObject(); // Constructor
 
-    static SharedObject* create();
     void doSomething();
 } SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject);
 
@@ -1250,10 +1250,18 @@ void releaseSharedObject(SharedObject *);
 
 Now that `SharedObject` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
 ```swift
-let object = SharedObject.create()
+// Call the C++ constructor of SharedObject using Swift initializer syntax.
+let object = SharedObject()
 object.doSomething()
 // `object` will be released here.
 ```
+
+You can create instances of `SharedObject` directly in Swift by calling its C++ constructor through a Swift initializer.
+
+Alternatively, you can construct instances using a user-defined static factory function, provided that the factory function is annotated with `SWIFT_NAME("init(...)")`, where the number of `_` placeholders matches the number of parameters in the factory function
+
+> **Note**: If a C++ constructor and a user-annotated static factory (via `SWIFT_NAME`) have identical parameter signatures, Swift prefers the static factory when resolving initializer calls.
+
 
 ### Inheritance and Virtual Member Functions
 
