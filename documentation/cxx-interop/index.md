@@ -1335,6 +1335,16 @@ automatically.
 
 ## Working with C++ References and View Types in Swift
 
+<div class="info" markdown="1">
+Swift 6.2 introduces a new [safe interoperability](https://www.swift.org/documentation/cxx-interop/safe-interop)
+mode, which makes it possible to use C/C++ pointers and specific view types,
+such as `std::span`, safely from Swift. We recommend enabling safe
+interoperability mode, since it provides stronger safety guarantees. The
+features described in the following section can still be used in cases where the
+safe interoperability features do not apply or are overly restrictive, e.g. for
+APIs returning C++ references. 
+</div>
+
 As outlined
 [earlier](#member-functions-returning-references-are-unsafe-by-default),
 member functions that return references, pointers, or certain structures/classes that
