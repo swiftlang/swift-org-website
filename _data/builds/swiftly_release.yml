@@ -1,8 +1,8 @@
-version: "1.0.0"
+version: "1.0.1"
 platforms:
   - platform: Linux
-    x86_64: "https://download.swift.org/swiftly/linux/swiftly-1.0.0-x86_64.tar.gz"
-    arm64: "https://download.swift.org/swiftly/linux/swiftly-1.0.0-aarch64.tar.gz"
+    x86_64: "https://download.swift.org/swiftly/linux/swiftly-1.0.1-x86_64.tar.gz"
+    arm64: "https://download.swift.org/swiftly/linux/swiftly-1.0.1-aarch64.tar.gz"
   - platform: Darwin
-    x86_64: "https://download.swift.org/swiftly/darwin/swiftly-1.0.0.pkg"
-    arm64: "https://download.swift.org/swiftly/darwin/swiftly-1.0.0.pkg"
+    x86_64: "https://download.swift.org/swiftly/darwin/swiftly-1.0.1.pkg"
+    arm64: "https://download.swift.org/swiftly/darwin/swiftly-1.0.1.pkg"
