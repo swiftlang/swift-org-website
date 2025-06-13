@@ -27,7 +27,7 @@ The distributed artifact bundles also include support for the experimental Embed
 4. Navigate to [the downloads page](https://www.swift.org/download/) and find the “Swift SDK for WASI” section. Find a URL of a version that exactly matches the version from step 2.
 If the corresponding snapshot version is not available for the Swift SDK, you’ll have to install the matching toolchain first.
 
-5. Find the checksum value for the corresponding Swift SDK on the same page, substitute it together with the URL from step 2, and execute the following command:
+5. Press "Copy install command" link for the selected Swift SDK to get the installation command, then run it in your terminal application. The command would look like this:
 
     ```
     swift sdk install <swift_sdk_url> --checksum <checksum_value>
