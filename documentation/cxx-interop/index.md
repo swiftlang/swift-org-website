@@ -1255,6 +1255,30 @@ object.doSomething()
 // `object` will be released here.
 ```
 
+To specify the ownership of returned `SWIFT_SHARED_REFERENCE` types, use the `SWIFT_RETURNS_RETAINED` and `SWIFT_RETURNS_UNRETAINED` annotations on C++ functions and methods. These annotations tell the Swift compiler whether the type is returned as `+1` (retained) or `+0` (unretained). This is necessary to ensure that appropriate `retain`/`release` operations are inserted at the boundary:
+
+```c++
+// Returns +1 ownership; Swift will take responsibility for releasing it.
+SharedObject* makeOwnedObject() SWIFT_RETURNS_RETAINED;
+
+// Returns +0 ownership; the caller must ensure the object stays alive.
+SharedObject* makeUnownedObject() SWIFT_RETURNS_UNRETAINED;
+```
+
+These ownership conventions are reflected naturally in Swift:
+```swift
+let owned = makeOwnedObject()
+owned.doSomething()
+// `owned` is automatically released when it goes out of scope
+
+let unowned = makeUnownedObject()
+unowned.doSomething()
+// make sure `unowned` remains valid while in use
+```
+
+These ownership annotations are also supported in Objective-C or Objective-C++ functions that return C++ `SWIFT_SHARED_REFERENCE` types.
+
+
 ### Inheritance and Virtual Member Functions
 
 Similar to value types, casting an instance of a derived reference type to a
