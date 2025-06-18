@@ -30,7 +30,7 @@ Membership in the Android workgroup is open to anyone who wishes to contribute. 
 
 The Android workgroup adheres to the Swift code of conduct. If community members have any concerns about the adherence of the workgroup or one of its members to the code of conduct, they should contact a member of the Swift Core Team.
 
-The Android workgroup selects one member of the workgroup as the chair. The chair has no special authority over the workgroup, but they are responsible for ensuring its smooth functioning, including by:
+The Platform Steering Group selects one member of the Android workgroup as the chair. The chair has no special authority over the workgroup, but they are responsible for ensuring its smooth functioning, including by:
 
 * organizing and leading regular meetings,
 * ensuring that the workgroup communicates effectively with the community, and
