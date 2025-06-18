@@ -1280,6 +1280,20 @@ owned/guaranteed calling conventions. The C++ callers must guarantee that `x` is
 Note that functions returning a shared reference type such as `returnSharedObject` transfer the ownership to the caller.
 The C++ caller of this function is responsible for releasing the object.
 
+If a C++ Shared Reference Type is passed as an argument to a C++ API from Swift, the Swift compiler *guarantees* that the passed value would be alive. Also Swift *assumes* that the C++ API is not consuming i.e., it returns with a valid object in the passed reference at the end of the C++ API call.
+
+```swift
+var obj = SharedObject.create()
+receiveSharedObject(obj) // Swift gaurantees that obj is alive
+```
+
+```c++
+void receiveSharedObject(SharedObject *sobj) {
+  ...
+  // Swift assumes that sobj is valid, non-null object at the end of this function
+}
+```
+
 ### Unsafe Reference Types
 
 The `SWIFT_UNSAFE_REFERENCE` annotation macro has the same effect as `SWIFT_IMMORTAL_REFERENCE`
