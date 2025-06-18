@@ -13,4 +13,4 @@ Swift 6 unifies the implementation of [Foundation](https://developer.apple.com/d
 
 If your app is particularly sensitive to binary size, you can import the `FoundationEssentials` library, which provides a more targeted subset of Foundation’s features that omits internationalization and localization data.
 
-Much more information about this work is available on our [GitHub project page](https://github.com/swiftlang/swift-foundation).
+More information about this work is available on our [GitHub project page](https://github.com/swiftlang/swift-foundation).
