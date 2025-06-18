@@ -55,6 +55,11 @@ title: Install Swift - macOS
     <p class="content-copy">Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.</p>
     <p class="content-copy">The easiest way to install development snapshots is with the Swiftly tool. Read more on the <a href="/install/macos/swiftly">instructions page</a>.</p>
   </div>
+  <div class="release-box section">
+    <div class="content">
+      {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.linux.dev.latest-dev.swiftly %}
+    </div>
+  </div>
   <h3>Toolchain</h3>
   <div>
     <p class="content-copy">
@@ -120,4 +125,11 @@ title: Install Swift - macOS
     </p>
   </div>
   {% include new-includes/components/static-linux-sdk-dev.html %}
+   <h3>Swift SDK for WebAssembly</h3>
+  <div>
+    <p class="content-copy">
+      <a class="content-link" href="/documentation/articles/wasm-getting-started.html">Instructions</a>
+    </p>
+  </div>
+  {% include new-includes/components/wasm-sdk-dev.html %}
 </div>

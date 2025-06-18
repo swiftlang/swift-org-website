@@ -81,8 +81,9 @@ which can include:
 ![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
 
 <div class="warning" markdown="1">
-Before language features can be used you must perform a `swift build` command on your
-project either on the command line or using a task in VS Code. This populates the index in SourceKit-LSP.
+Prior to Swift 6.1 you must perform a `swift build` command on your project either
+on the command line or using a task in VS Code Before language features can be used.
+This populates the index in SourceKit-LSP.
 </div>
 
 ## Swift Tasks
@@ -130,18 +131,8 @@ Visual Studio Code provides a rich debugging experience. See the
 more information.
 
 The Swift extension relies on the
-[Code-LLDB extension](https://github.com/vadimcn/vscode-lldb) to enable
+[LLDB DAP extension](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.lldb-dap) to enable
 debugging support.
-
-<div class="warning" markdown="1">
-The Swift extension will prompt you to configure settings for LLDB the first
-time you launch VS Code. You will need to either apply the configuration
-globally (user settings) or to your workspace (workspace settings) for the
-debugger to work properly.
-
-![Configure the Debugger](/assets/images/getting-started-with-vscode-swift/debugging/configure-lldb.png)
-
-</div>
 
 By default, the extension creates a launch configuration for each executable
 target in your Swift package. You may configure these yourself by adding a
@@ -152,10 +143,9 @@ target in your Swift package. You may configure these yourself by adding a
 {
   "configurations": [
     {
-      "type": "lldb",
+      "type": "swift",
       "name": "Debug swift-executable",
       "request": "launch",
-      "sourceLanguages": ["swift"],
       "args": ["--hello", "world"],
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/.build/debug/swift-executable",
