@@ -15,7 +15,7 @@ The Android workgroup will:
 * Recommend enhancements to core Swift packages such as Foundation and Dispatch to work better with Android idioms
 * Work with the Platform Steering Group to officially define platform support levels generally, and then work towards achieving official support of a particular level for Android
 * Determine the range of supported Android API levels and architectures for Swift integration
-* Develop [continuous integration](https://www.swift.org/documentation/continuous-integration/) for the [main Swift repository](https://ci-external.swift.org/job/oss-swift-RA-linux-ubuntu-24.04-android-arm64/) that adds Android checks for pull requests
+* Develop [continuous integration](https://www.swift.org/documentation/continuous-integration/) for the Swift project that includes Android testing in pull request checks.
 * Identify and recommend best practices for bridging between Swift and Android's Java SDK and packaging Swift libraries with Android apps
 * Develop support for debugging Swift applications on Android
 * Advise and assist with adding support for Android to various community Swift packages
