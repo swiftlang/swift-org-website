@@ -11,7 +11,6 @@ The main goal of the Android workgroup is to add and maintain Android as an offi
 
 The Android workgroup will:
 
-* Coordinate the development of a reference Swift Android SDK  
 * Improve and maintain Android support for the official Swift distribution, eliminating the need for out-of-tree or downstream patches
 * Recommend enhancements to core Swift packages such as Foundation and Dispatch to work better with Android idioms
 * Work with the Platform Steering Group to officially define platform support levels generally, and then work towards achieving official support of a particular level for Android
