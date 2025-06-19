@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Safely Mixing Swift and C++
+title: Safely Mixing Swift and C/C++
 official_url: https://swift.org/documentation/cxx-interop/safe-interop/
 redirect_from:
 - /documentation/cxx-interop/safe-interop.html
@@ -429,7 +429,7 @@ The most common bounds attribute is `__counted_by`. You can apply `__counted_by`
 and return values to indicate the number of elements that the pointer points to, like this:
 
 ```c
-int calculate_sum(const int * __counted_by(len) values, int len);
+int calculate_sum(const int * __counted_by(len) values [[clang::noescape]], int len);
 ```
 
 In this example the function signature on the C side hasn't changed, but the `__counted_by(len)`
@@ -437,36 +437,36 @@ annotation communicates that the `values` and `len` parameters are related - spe
 should point to a buffer of at least `len` `int` values. When you annotate a function with a bounds
 attribute like this, the compiler will generate a bounds safe overload: in addition to the imported
 `func calculate_sum(_ values: UnsafePointer<CInt>, _ len: CInt) -> CInt` signature, you will also
-get the an overload with the `func calculate_sum(_ values: UnsafeBufferPointer<CInt>) -> CInt` signature.
+get the an overload with the `func calculate_sum(_ values: Span<CInt>) -> CInt` signature.
 This signature is not only more ergonomic to work with - since the generated overload does the unpacking
 of base pointer and count for you - but it's also bounds safe. For example, if your API contains parameters
 that share a count, the bounds safe overload will check that they all correspond.
 
 ```c
-void sum_vectors(const int * __counted_by(len) a,
-                 const int * __counted_by(len) b,
-                 int * __counted_by(len) out,
+void sum_vectors(const int * __counted_by(len) a [[clang::noescape]],
+                 const int * __counted_by(len) b [[clang::noescape]],
+                 int * __counted_by(len) out [[clang::noescape]],
                  int len);
 ```
 This safe overload will trap if `a.count != b.count || b.count != out.count`:
 ```swift
-func sum_vectors(_ a: UnsafeBufferPointer<CInt>,
-                 _ b: UnsafeBufferPointer<CInt>,
-                 _ out: UnsafeMutableBufferPointer<CInt>)
+func sum_vectors(_ a: Span<CInt>,
+                 _ b: Span<CInt>,
+                 _ out: MutableSpan<CInt>)
 ```
 
-If one of the `UnsafeBufferPointer` parameters is larger than the others and you intentionally want to use
+If one of the `Span` parameters is larger than the others and you intentionally want to use
 only a part of it, you can create a slice using `extracting(_:)`.
 
 If your API has more complex bounds you can express those with an arithmetic expression, like so:
 
 ```c
-int transpose_matrix(int * __counted_by(columns * rows) values, int columns, int rows);
+int transpose_matrix(int * __counted_by(columns * rows) values [[clang::noescape]], int columns, int rows);
 ```
 
 In this case the `columns` and `rows` parameters can't be elided:
 ```swift
-func transpose_matrix(_ values: UnsafeMutableBufferPointer<CInt>, _ columns: CInt, _ rows: CInt)
+func transpose_matrix(_ values: MutableSpan<CInt>, _ columns: CInt, _ rows: CInt)
 ```
 This is because there's no way to factor out `columns` and `rows` given only `values.count`.
 Instead a bounds check is inserted to verify that `columns * rows == values.count`.
@@ -475,30 +475,38 @@ When your C/C++ API uses opaque pointers, void pointers or otherwise pointers to
 the buffer size can't be described in terms of the number of elements. Instead you can annotate
 these pointers with `__sized_by`. This bounds attribute behaves like `__counted_by`, but takes
 a parameter describing the *number of bytes* in the buffer rather than the *number of elements*.
-Where `__counted_by` maps to `UnsafeBufferPointer<T>`, `__sized_by` will map to
-`UnsafeRawBufferPointer` instead.
+Where `__counted_by` maps to `Span<T>`, `__sized_by` will map to
+`RawSpan` instead.
 
 You can access the `__counted_by` and `__sized_by` macro definitions by including the `ptrcheck.h` header.
+For more information about these annotations, see Clang's [bounds safety documentation](https://clang.llvm.org/docs/BoundsSafety.html).
+If the C code base is compiled with `-fbounds-safety` bounds safety is enforced on the C side as well -
+otherwise it is only enforced at the interop boundary.
 
-#### Lifetime Safe Overloads for Pointers
+#### Lifetime Annotations for Pointers
 
-Like with `std::span`, pointers with bounds annotations can also have their safe overloads map to
-`Span`/`MutableSpan`, when annotated with the appropriate lifetime annotations. Not all C versions
+Like with `std::span`, pointers with bounds annotations can have their safe overloads map to
+`Span`/`MutableSpan` when annotated with the appropriate lifetime annotations. Not all C versions
 support the `[[clang::noescape]]` attribute syntax, so convenience macros for lifetime attributes
-using the GNU style syntax are available in the `lifetimebound.h` header.
+using the GNU style syntax are available in the `lifetimebound.h` header. Unlike `std::span`, pointers
+with bounds annotations also get a bounds safe overload when they lack lifetime annotations:
 
 ```c
 #include <ptrcheck.h>
 #include <lifetimebound.h>
-````
+```
 
-| C API                                                                                                 | Generated Swift overload                                             |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `void take_ptr(const int * __counted_by(len) x __noescape, int len);`                                 | `func take_ptr(_ x: Span<Int32>)`                                    |
-| `const int * __counted_by(len) change_ptr(const int * __counted_by(len) x __lifetimebound, int len);` | `@lifetime(x) func change_ptr(_ x: Span<Int32>) -> Span<Int32>`      |
+| C API                                                                                                          | Generated Swift overload                                                                           |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `void take_ptr_lifetime(const int * __counted_by(len) x __noescape, int len);`                                 | `func take_ptr_lifetime(_ x: Span<Int32>)`                                                         |
+| `const int * __counted_by(len) change_ptr_lifetime(const int * __counted_by(len) x __lifetimebound, int len);` | `@lifetime(x) func change_ptr_lifetime(_ x: Span<Int32>) -> Span<Int32>`                           |
+| `void take_ptr(const int * __counted_by(len) x, int len);`                                                     | `func take_ptr(_ x: UnsafeBufferPointer<Int32>)`                                                   |
+| `const int * __counted_by(len) change_ptr(const int * __counted_by(len) x, int len);`                          | `@lifetime(x) func change_ptr(_ x: UnsafeBufferPointer<Int32>) -> UnsafeBufferPointer<Int32>`      |
 
-These overloads provide the same bounds safety as their `UnsafeBufferPointer` equvalents, but with
-added lifetime safety. If lifetime information is available the generated safe overload will always
+The `UnsafeBufferPointer` overloads provide the same bounds safety as their `Span` equvalents
+(NB: `UnsafeBufferPointer` is not bounds checked on memory access in release builds, but the generated
+`UnsafeBufferPointer` overloads contain bounds checks in the same cases as the `Span` overloads, *even in release builds*),
+but without lifetime safety. If lifetime information is available the generated safe overload will always
 choose to use `Span` - no `UnsafeBufferPointer` overload will be generated in this case. This means
 that existing callers are not affected by annotating an API with `__counted_by`, but callers using the
 safe overload after adding `__counted_by` *will* be affected if `__noescape` is also added later on, or
