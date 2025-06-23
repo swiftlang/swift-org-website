@@ -105,6 +105,10 @@ struct SWIFT_NONESCAPABLE StringRef { ... };
 Now the Swift compiler imports `StringRef` as a safe type and no longer
 emits a warning about using an unsafe type.
 
+<div class="info" markdown="1">
+Some containers and protocols do not yet support non-escapable types in Swift 6.2.
+</div>
+
 ### Annotating C++ APIs
 
 Building the code again will emit a new diagnostic for the `fileName` function about
@@ -386,6 +390,13 @@ compiler can bridge those span-like parameters to Swift's
 [`Span`](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0447-span-access-shared-contiguous-storage.md)
 and [`MutableSpan`](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0467-MutableSpan.md)
 types, and the user with a safe and convenient interface to those imported APIs.
+
+<div class="info" markdown="1">
+At the time of writing, the features described in this section
+are behind an experimental feature flag on the Swift 6.2 release branch.
+To enable these features, pass `-enable-experimental-feature SafeInteropWrappers`
+to the Swift compiler.
+</div>
 
 ### C++ `std::span` Support
 
