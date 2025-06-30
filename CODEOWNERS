@@ -27,7 +27,7 @@
 * @0xTim @alexandersandberg @davelester @daveverwer @dempseyatgithub @kaishin @shahmishal @timsneath @federicobucchi
 
 CODEOWNERS @timsneath @tkremenek @shahmishal @davelester
-index.md @timsneath @tkremenek @shahmishal @davelester
+/index.md @timsneath @tkremenek @shahmishal @davelester
 /_data/new-data/landing/* @timsneath @tkremenek @shahmishal @davelester
 /_posts/* @timsneath @tkremenek @shahmishal @davelester
 
