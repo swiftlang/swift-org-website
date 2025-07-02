@@ -1256,20 +1256,8 @@ object.doSomething()
 ```
 
 ### Calling conventions when passing shared reference types from Swift to C++
-If a C++ shared reference type is passed as an argument to a C++ API from Swift, the Swift compiler guarantees that the passed value would be alive, and retains the ownership of the value. In other words, the argument is passed as +0 and there is no transfer of ownership. 
+If a C++ shared reference type is passed as an argument to a C++ API from Swift, the Swift compiler guarantees that the passed value would be alive, and retains the ownership of the value. In other words, the argument is passed at `+0` and there is no transfer of ownership. 
 The C++ function is responsible for ensuring that the value pointed to by the parameter is alive during and at the end of the call. The C++ function should not assume it has ownership of the value and should do necessary retain operations if it is needs to take ownership.
-
-If the argument is an inout (non-const reference) as shown below:
-```c++
-void takeSharedObjectAsInout(SharedObject *& x) { ... }
-```
-
-which would be imported in Swift as
-```swift
-func takeSharedObjectAsInout(_ x: inout SharedObject) { ... }
-```
-
-If the C++ function overwrites the value of the argument with the new value, it is responsible for releasing the old value, and ensuring that the new value is properly retained so that the Swift caller has ownership of the new value when the function returns. Adhering to these rules is necessary to safely and correctly pass around `SWIFT_SHARED_REFERENCE` between Swift and C++. These rules are also generally recommended conventions to manage shared objects that use reference counting.
 
 ```swift
 var obj = SharedObject.create()
@@ -1282,6 +1270,18 @@ void receiveSharedObject(SharedObject *sobj) {
   // Swift assumes that sobj is valid, non-null object at the end of this function
 }
 ```
+
+Note that if the argument is an inout (non-const reference) as shown below:
+```c++
+void takeSharedObjectAsInout(SharedObject *& x) { ... }
+```
+
+which would be imported in Swift as
+```swift
+func takeSharedObjectAsInout(_ x: inout SharedObject) { ... }
+```
+
+ the C++ function can overwrite the value of the argument with the new value. However, the C++ function is responsible for releasing the old value, and ensuring that the new value is properly retained so that the Swift caller has ownership of the new value when the function returns. Adhering to these rules is necessary to safely and correctly pass around `SWIFT_SHARED_REFERENCE` between Swift and C++. These rules are also generally recommended conventions to manage shared objects that use reference counting.
 
 ### Inheritance and Virtual Member Functions
 
