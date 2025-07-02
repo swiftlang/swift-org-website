@@ -1255,33 +1255,10 @@ object.doSomething()
 // `object` will be released here.
 ```
 
-### Inheritance and Virtual Member Functions
-
-Similar to value types, casting an instance of a derived reference type to a
-base reference type, or vice versa, is not yet supported by Swift.
-
-If a reference type has virtual methods, you can call those methods from Swift.
-This includes pure virtual methods.
-
-#### Exposing C++ Shared Reference Types back from Swift
-
-C++ can call into Swift APIs that take or return C++ Shared Reference Types. Objects of these types are always created on the C++ side,
-but their references can be passed back and forth between Swift and C++. This section explains the conventions of incrementing and decrementing
-the reference counts when passing such references across the language boundaries. Consider the following Swift APIs:
-
-```swift
-public func takeSharedObject(_ x : SharedObject) { ... }
-
-public func returnSharedObject() -> SharedObject { ... }
-```
-
-In case of the `takeSharedObject` function, the compiler will automatically insert calls to retain and release for `x` as necessary to satisfy the semantics of
-owned/guaranteed calling conventions. The C++ callers must guarantee that `x` is alive for the duration of the call.
-Note that functions returning a shared reference type such as `returnSharedObject` transfer the ownership to the caller.
-The C++ caller of this function is responsible for releasing the object.
-
-If a C++ shared reference type is passed as an non-const argument to a C++ API from Swift, the Swift compiler guarantees that the passed value would be alive, and retains the ownership of the value. In other words, the argument is passed as +0 and there is no transfer of ownership. 
+### Calling conventions when passing shared reference types from Swift to C++
+If a C++ shared reference type is passed as an argument to a C++ API from Swift, the Swift compiler guarantees that the passed value would be alive, and retains the ownership of the value. In other words, the argument is passed as +0 and there is no transfer of ownership. 
 The C++ function is responsible for ensuring that the value pointed to by the parameter is alive during and at the end of the call. The C++ function should not assume it has ownership of the value and should do necessary retain operations if it is needs to take ownership.
+
 If the argument is an inout (non-const reference) as shown below:
 ```c++
 void takeSharedObjectAsInout(SharedObject *& x) { ... }
@@ -1305,6 +1282,31 @@ void receiveSharedObject(SharedObject *sobj) {
   // Swift assumes that sobj is valid, non-null object at the end of this function
 }
 ```
+
+### Inheritance and Virtual Member Functions
+
+Similar to value types, casting an instance of a derived reference type to a
+base reference type, or vice versa, is not yet supported by Swift.
+
+If a reference type has virtual methods, you can call those methods from Swift.
+This includes pure virtual methods.
+
+### Exposing C++ Shared Reference Types back from Swift
+
+C++ can call into Swift APIs that take or return C++ Shared Reference Types. Objects of these types are always created on the C++ side,
+but their references can be passed back and forth between Swift and C++. This section explains the conventions of incrementing and decrementing
+the reference counts when passing such references across the language boundaries. Consider the following Swift APIs:
+
+```swift
+public func takeSharedObject(_ x : SharedObject) { ... }
+
+public func returnSharedObject() -> SharedObject { ... }
+```
+
+In case of the `takeSharedObject` function, the compiler will automatically insert calls to retain and release for `x` as necessary to satisfy the semantics of
+owned/guaranteed calling conventions. The C++ callers must guarantee that `x` is alive for the duration of the call.
+Note that functions returning a shared reference type such as `returnSharedObject` transfer the ownership to the caller.
+The C++ caller of this function is responsible for releasing the object.
 
 ### Unsafe Reference Types
 
