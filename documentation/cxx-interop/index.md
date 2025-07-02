@@ -1280,11 +1280,23 @@ owned/guaranteed calling conventions. The C++ callers must guarantee that `x` is
 Note that functions returning a shared reference type such as `returnSharedObject` transfer the ownership to the caller.
 The C++ caller of this function is responsible for releasing the object.
 
-If a C++ Shared Reference Type is passed as an non-const argument to a C++ API from Swift, the Swift compiler *guarantees* that the passed value would be alive. Also Swift *assumes* that the C++ API is not consuming i.e., it returns with a valid object in the passed reference at the end of the C++ API call.
+If a C++ shared reference type is passed as an non-const argument to a C++ API from Swift, the Swift compiler guarantees that the passed value would be alive, and retains the ownership of the value. In other words, the argument is passed as +0 and there is no transfer of ownership. 
+The C++ function is responsible for ensuring that the value pointed to by the parameter is alive during and at the end of the call. The C++ function should not assume it has ownership of the value and should do necessary retain operations if it is needs to take ownership.
+If the argument is an inout (non-const reference) as shown below:
+```c++
+void takeSharedObjectAsInout(SharedObject *& x) { ... }
+```
+
+which would be imported in Swift as
+```swift
+func takeSharedObjectAsInout(_ x: inout SharedObject) { ... }
+```
+
+If the C++ function overwrites the value of the argument with the new value, it is responsible for releasing the old value, and ensuring that the new value is properly retained so that the Swift caller has ownership of the new value when the function returns. Adhering to these rules is necessary to safely and correctly pass around `SWIFT_SHARED_REFERENCE` between Swift and C++. These rules are also generally recommended conventions to manage shared objects that use reference counting.
 
 ```swift
 var obj = SharedObject.create()
-receiveSharedObject(obj) // Swift gaurantees that obj is alive
+receiveSharedObject(obj) // Swift guarantees that obj is alive
 ```
 
 ```c++
