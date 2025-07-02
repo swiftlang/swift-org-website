@@ -1261,7 +1261,7 @@ To specify the ownership of returned `SWIFT_SHARED_REFERENCE` types, use the `SW
 // Returns +1 ownership; Swift will take responsibility for releasing it.
 SharedObject* makeOwnedObject() SWIFT_RETURNS_RETAINED;
 
-// Returns +0 ownership; the caller must ensure the object stays alive.
+// Returns +0 ownership; the caller must ensure the object stays alive by retaining it before use.
 SharedObject* makeUnownedObject() SWIFT_RETURNS_UNRETAINED;
 ```
 
@@ -1271,12 +1271,12 @@ let owned = makeOwnedObject()
 owned.doSomething()
 // `owned` is automatically released when it goes out of scope
 
-let unowned = makeUnownedObject()
-unowned.doSomething()
-// make sure `unowned` remains valid while in use
+let unOwned = makeUnownedObject()
+unOwned.doSomething()
+// Swift makes sure `unOwned` remains valid while in use by calling an explicit retain operation.
 ```
 
-These ownership annotations are also supported in Objective-C or Objective-C++ functions that return C++ `SWIFT_SHARED_REFERENCE` types.
+These ownership annotations are also supported in Objective-C++ functions that return C++ `SWIFT_SHARED_REFERENCE` types.
 
 
 ### Inheritance and Virtual Member Functions
