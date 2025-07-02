@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>
       {% if page.url == "/" %} {{ page.title | escape }} {% else %} {{
-      page.title | escape }} — {{ site.title }} {% endif %}
+      page.title | escape }} | {{ site.title }} {% endif %}
     </title>
     {% if jekyll.environment == 'stage' %}
     <meta name="robots" content="noindex" />
