@@ -1255,32 +1255,34 @@ object.doSomething()
 // `object` will be released here.
 ```
 
-#### Calling convention for returning shared reference types
+#### Calling conventions for returning Shared Reference Types
 
-When C++ functions and methods return `SWIFT_SHARED_REFERENCE` types, it is necessary to specify the ownership of the returned value. For this you can use the `SWIFT_RETURNS_RETAINED` and `SWIFT_RETURNS_UNRETAINED` annotations on C++ functions and methods. These annotations tell the Swift compiler whether the type is returned as `+1` (retained) or `+0` (unretained). This is necessary to ensure that appropriate `retain`/`release` operations are inserted at the boundary:
+When C++ functions and methods return `SWIFT_SHARED_REFERENCE` types, it is necessary to specify the ownership of the returned value.
+For this you should use the `SWIFT_RETURNS_RETAINED` and `SWIFT_RETURNS_UNRETAINED` annotations on functions and methods.
+These annotations tell the Swift compiler whether the type is returned as `+1` (retained) or `+0` (unretained).
 
 ```c++
-// Returns +1 ownership; Swift will take responsibility for releasing it.
+// Returns +1 ownership.
 SharedObject* makeOwnedObject() SWIFT_RETURNS_RETAINED;
 
-// Returns +0 ownership; the caller must ensure the object stays alive by retaining it before use.
-SharedObject* getUnownedObject() SWIFT_RETURNS_UNRETAINED;
+// Returns +0 ownership.
+SharedObject* getUnOwnedObject() SWIFT_RETURNS_UNRETAINED;
 ```
 
-These ownership conventions are reflected naturally in Swift:
+These annotations are necessary to ensure that appropriate `retain`/`release` operations are inserted at the boundary:
+
 ```swift
 let owned = makeOwnedObject()
 owned.doSomething()
-// `owned` is automatically released when it goes out of scope.
+// `owned` is already at +1, so no further retain is needed here
 
-let unOwned = getUnownedObject()
+let unOwned = getUnOwnedObject()
+// Swift inserts a retain operation on `unowned` here to bring it to +1.
 unOwned.doSomething()
-// Swift makes sure `unOwned` remains valid while in use by calling a retain operation.
 ```
 
-These ownership annotations are also supported in Objective-C++ functions that return C++ `SWIFT_SHARED_REFERENCE` types.
-
-Note that the Swift compiler will automatically infer the ownership conventons for Swift functions returning `SWIFT_SHARED_REFERENCE` types. See [Exposing C++ Shared Reference Types back from Swift](#exposing-c-shared-reference-types-back-from-swift) for calling Swift functions returning `SWIFT_SHARED_REFERENCE` types from C++.
+Note that the Swift compiler will automatically infer the ownership conventons for Swift functions returning `SWIFT_SHARED_REFERENCE` types.
+See [Exposing C++ Shared Reference Types back from Swift](#exposing-c-shared-reference-types-back-from-swift) for calling Swift functions returning `SWIFT_SHARED_REFERENCE` types from C++.
 
 ### Inheritance and Virtual Member Functions
 
