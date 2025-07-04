@@ -1255,9 +1255,10 @@ object.doSomething()
 // `object` will be released here.
 ```
 
-### Inference for Derived Types
+### Inference of Shared Reference behaviour in Derived Types
 
-Swift compiler automatically infers the ```SWIFT_SHARED_REFERENCE``` annotation for C++ types that inherit from a base type annotated with ```SWIFT_SHARED_REFERENCE```. These derived types are also imported as a reference type in Swift that use the same ```retain``` and ```release``` functions as the base type. No additional annotation is required on the derived types.
+When a C++ type inherits from a `SWIFT_SHARED_REFERENCE` base type, the Swift compiler automatically infers `SWIFT_SHARED_REFERENCE` annotation for the derived type.
+The derived type also gets imported as a reference type, and uses the same `retain` and `release` functions as its base class.
 
 ### Inheritance and Virtual Member Functions
 
