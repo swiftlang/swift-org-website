@@ -1255,7 +1255,7 @@ object.doSomething()
 // `object` will be released here.
 ```
 
-#### Calling conventions for returning Shared Reference Types
+#### Calling conventions when returning Shared Reference Types from C++ to Swift
 
 When C++ functions and methods return `SWIFT_SHARED_REFERENCE` types, it is necessary to specify the ownership of the returned value.
 For this you should use the `SWIFT_RETURNS_RETAINED` and `SWIFT_RETURNS_UNRETAINED` annotations on functions and methods.
