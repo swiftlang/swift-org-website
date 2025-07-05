@@ -1239,7 +1239,7 @@ To specify that a C++ type is a shared reference type, use the `SWIFT_SHARED_REF
 class SharedObject : IntrusiveReferenceCounted<SharedObject> {
 public:
     SharedObject(const SharedObject &) = delete; // non-copyable
-
+    SharedObject();
     static SharedObject* create();
     void doSomething();
 } SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject);
@@ -1250,10 +1250,40 @@ void releaseSharedObject(SharedObject *);
 
 Now that `SharedObject` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
 ```swift
-let object = SharedObject.create()
-object.doSomething()
+// The C++ constructor is imported as a Swift initializer
+let object1 = SharedObject.create()
+let object2 = SharedObject()
+object1.doSomething()
+object2.doSomething()
 // `object` will be released here.
 ```
+
+You can create instances of `SharedObject` directly from Swift by calling its C++ constructor through a Swift initializer. 
+
+**NOTE:** Swift uses *default* `new` operator for constructing c++ shared reference types. If you'd like to prevent Swift from importing constructors as initializers, you can also delete the *default* `new` operator in C++.
+
+
+Alternatively, you can also construct instances of `SharedObject` using a user-defined static factory function, provided that the factory function is annotated with `SWIFT_NAME("init(...)")`, where the number of `_` placeholders matches the number of parameters in the factory function.
+
+For example, consider a factory that performs custom allocation or returns a singleton instance:
+
+```cpp
+struct SharedObject {
+static SharedObject* make(int id) SWIFT_NAME("init(_:)");
+
+  void doSomething();
+} SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject);
+```
+
+In this case, Swift will import the static `make` function as a Swift initializer:
+
+```swift
+let object = SharedObject(id: 42)
+object.doSomething()
+```
+
+**Note**: If a C++ constructor and a user-annotated static factory (via `SWIFT_NAME`) have identical parameter signatures, Swift prefers the static factory when resolving initializer calls. Using `SWIFT_NAME("init(...)")` is especially useful if you want to use a custom allocator or you want to disable direct construction entirely and expose only factories. 
+
 
 ### Inheritance and Virtual Member Functions
 
