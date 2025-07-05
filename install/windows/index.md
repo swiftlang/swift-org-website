@@ -23,7 +23,7 @@ title: Install Swift - Windows
       {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.vscode%}
     </div>
   </div>
-  <h2>Alternative install options</h2>
+  <h2 id="alternative-install-options" class="header-with-anchor">Alternative install options</h2>
   <div class="releases-grid">
     <div class="release-box section">
       <div class="content">
@@ -61,7 +61,7 @@ title: Install Swift - Windows
       </div>
     </div>
   </div>
-  <h2>Previous Releases</h2>
+  <h2 id="previous-releases" class="header-with-anchor">Previous Releases</h2>
   <div>
     <p class="content-copy">Previous releases of Swift are available for installation on Windows using the manual installer, <a href="/install/windows/archived">as documented here</a>.</p>
   </div>
@@ -73,7 +73,7 @@ title: Install Swift - Windows
         </details>
     </div>
   </div>
-  <h2>Development Snapshots</h2>
+  <h2 id="development-snapshots" class="header-with-anchor">Development Snapshots</h2>
   <div>
     <p class="content-copy">Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.</p>
   </div>
