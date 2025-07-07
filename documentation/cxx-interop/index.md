@@ -1257,20 +1257,22 @@ object.doSomething()
 
 ### Calling conventions when passing Shared Reference Types from Swift to C++
 
-If a C++ shared reference type is passed as an argument to a C++ API from Swift, the Swift compiler guarantees that the passed value would be alive, and retains the ownership of the value.
+If a C++ shared reference type is passed as an argument to a C++ API from Swift, the Swift compiler guarantees that the passed value would be alive. 
+Swift also retains the ownership of the value.
 In other words, the argument is passed at `+0` and there is no transfer of ownership.
-The C++ function is responsible for ensuring that the value pointed to by the parameter is alive during and at the end of the call.
-The C++ function should not assume it has ownership of the value and should do necessary retain operations if it is needs to take ownership.
+The C++ function should not assume that it has the ownership of the value and should do necessary retain operations if it is needs to take ownership.
+The C++ function is responsible for ensuring that the value pointed to by the parameter is alive during and at the end of the function call.
+
 
 ```swift
 var obj = SharedObject.create()
-receiveSharedObject(obj) // Swift guarantees that obj is alive
+receiveSharedObject(obj) // Swift guarantees that obj is alive and it is passed at +0
 ```
 
 ```c++
 void receiveSharedObject(SharedObject *sobj) {
   ...
-  // Swift assumes that sobj is valid, non-null object at the end of this function
+  // Swift assumes that sobj is a valid, non-null object at the end of this function
 }
 ```
 
