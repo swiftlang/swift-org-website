@@ -1250,26 +1250,25 @@ void releaseSharedObject(SharedObject *);
 
 Now that `SharedObject` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
 ```swift
-// The C++ constructor is imported as a Swift initializer
 let object1 = SharedObject.create()
-let object2 = SharedObject()
+let object2 = SharedObject() // The C++ constructor is imported as a Swift initializer
 object1.doSomething()
 object2.doSomething()
 // `object` will be released here.
 ```
 
-You can create instances of `SharedObject` directly from Swift by calling its C++ constructor through a Swift initializer. 
+#### Constructing objects of Shared Reference Types from Swift
 
-**NOTE:** Swift uses *default* `new` operator for constructing c++ shared reference types. If you'd like to prevent Swift from importing constructors as initializers, you can also delete the *default* `new` operator in C++.
+As demonstrated in the provided example, starting from Swift 6.2, you can create instances of `SWIFT_SHARED_REFERENCE` types by invoking their initializer.
+Note that the Swift compiler uses the default `new` operator to construct C++ shared reference types. 
+If you want to hide the constructors of shared reference types, you can also delete the default operator `new` in C++.
 
-
-Alternatively, you can also construct instances of `SharedObject` using a user-defined static factory function, provided that the factory function is annotated with `SWIFT_NAME("init(...)")`, where the number of `_` placeholders matches the number of parameters in the factory function.
-
-For example, consider a factory that performs custom allocation or returns a singleton instance:
+You can also import a user-defined C++ static factory function as a Swift initializer by annotating it with `SWIFT_NAME("init(…)")` annotation macro, ensuring that the number of underscore placeholders matches the number of parameters in the factory function. 
+For example:
 
 ```cpp
 struct SharedObject {
-static SharedObject* make(int id) SWIFT_NAME("init(_:)");
+  static SharedObject* make(int id) SWIFT_NAME("init(_:)");
 
   void doSomething();
 } SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject);
@@ -1278,12 +1277,11 @@ static SharedObject* make(int id) SWIFT_NAME("init(_:)");
 In this case, Swift will import the static `make` function as a Swift initializer:
 
 ```swift
-let object = SharedObject(id: 42)
-object.doSomething()
+let object = SharedObject(42)
 ```
 
-**Note**: If a C++ constructor and a user-annotated static factory (via `SWIFT_NAME`) have identical parameter signatures, Swift prefers the static factory when resolving initializer calls. Using `SWIFT_NAME("init(...)")` is especially useful if you want to use a custom allocator or you want to disable direct construction entirely and expose only factories. 
-
+Note that if a C++ constructor and a user-annotated static factory (using `SWIFT_NAME`) have identical parameter signatures, Swift favors the static factory when resolving initializer calls. 
+This is particularly useful when you want to use a custom allocator or want to disable direct construction entirely and expose only factories.
 
 ### Inheritance and Virtual Member Functions
 
