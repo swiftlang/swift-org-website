@@ -1282,7 +1282,8 @@ let object = SharedObject(42)
 
 Note that if a C++ constructor and a user-annotated static factory (using `SWIFT_NAME`) have identical parameter signatures, Swift favors the static factory when resolving initializer calls. 
 This is particularly useful when you want to use a custom allocator or want to disable direct construction entirely and expose only factories.
-### Inference of Shared Reference behaviour in Derived Types
+
+#### Inference of Shared Reference behaviour in Derived Types
 
 When a C++ type inherits from a `SWIFT_SHARED_REFERENCE` base type, the Swift compiler automatically infers `SWIFT_SHARED_REFERENCE` annotation for the derived type.
 The derived type also gets imported as a reference type, and uses the same `retain` and `release` functions as its base class.
@@ -1322,7 +1323,7 @@ unOwned.doSomething()
 Note that the Swift compiler will automatically infer the ownership conventons for Swift functions returning `SWIFT_SHARED_REFERENCE` types.
 See [Exposing C++ Shared Reference Types back from Swift](#exposing-c-shared-reference-types-back-from-swift) for calling Swift functions returning `SWIFT_SHARED_REFERENCE` types from C++.
 
-### Calling conventions when passing Shared Reference Types from Swift to C++
+#### Calling conventions when passing Shared Reference Types from Swift to C++
 
 If a C++ shared reference type is passed as an argument to a C++ API from Swift, the Swift compiler guarantees that the passed value would be alive. 
 Swift also retains the ownership of the value.
@@ -1360,7 +1361,7 @@ However, the C++ function is responsible for releasing the old value, and ensuri
 Adhering to these rules is necessary to safely and correctly pass around `SWIFT_SHARED_REFERENCE` between Swift and C++.
 These rules are also generally recommended conventions to manage shared objects that use reference counting.
 
-### Inheritance and Virtual Member Functions
+#### Inheritance and Virtual Member Functions
 
 Similar to value types, casting an instance of a derived reference type to a
 base reference type, or vice versa, is not yet supported by Swift.
@@ -1368,7 +1369,7 @@ base reference type, or vice versa, is not yet supported by Swift.
 If a reference type has virtual methods, you can call those methods from Swift.
 This includes pure virtual methods.
 
-### Exposing C++ Shared Reference Types back from Swift
+#### Exposing C++ Shared Reference Types back from Swift
 
 C++ can call into Swift APIs that take or return C++ Shared Reference Types. Objects of these types are always created on the C++ side,
 but their references can be passed back and forth between Swift and C++. This section explains the conventions of incrementing and decrementing
