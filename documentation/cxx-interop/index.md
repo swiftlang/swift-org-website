@@ -1240,13 +1240,16 @@ class SharedObject : IntrusiveReferenceCounted<SharedObject> {
 public:
     SharedObject(const SharedObject &) = delete; // non-copyable
     SharedObject();
-    static SharedObject* create();
+    static SharedObject* _Nonnull create() SWIFT_RETURNS_RETAINED;
     void doSomething();
 } SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject);
 
 void retainSharedObject(SharedObject *);
 void releaseSharedObject(SharedObject *);
 ```
+
+In the example above, the `SWIFT_RETURNS_RETAINED` annotation specifies that the returned value is passed with `+1` ownership.
+For more details, see [Calling conventions when returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift).
 
 Now that `SharedObject` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
 ```swift
@@ -1259,9 +1262,8 @@ object2.doSomething()
 
 #### Constructing objects of Shared Reference Types from Swift
 
-As demonstrated in the provided example, starting from Swift 6.2, you can create instances of `SWIFT_SHARED_REFERENCE` types by invoking their initializer.
+As demonstrated in the provided example, starting from Swift 6.2, you can create instances of `SWIFT_SHARED_REFERENCE` types by invoking their initializers.
 Note that the Swift compiler uses the default `new` operator to construct C++ shared reference types. 
-If you want to hide the constructors of shared reference types, you can also delete the default operator `new` in C++.
 
 You can also import a user-defined C++ static factory function as a Swift initializer by annotating it with `SWIFT_NAME("init(…)")` annotation macro, ensuring that the number of underscore placeholders matches the number of parameters in the factory function. 
 For example:
