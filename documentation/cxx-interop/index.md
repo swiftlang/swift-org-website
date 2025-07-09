@@ -1304,10 +1304,10 @@ These annotations tell the Swift compiler whether the type is returned as `+1` (
 
 ```c++
 // Returns +1 ownership.
-SharedObject* makeOwnedObject() SWIFT_RETURNS_RETAINED;
+SharedObject* _Nonnull makeOwnedObject() SWIFT_RETURNS_RETAINED;
 
 // Returns +0 ownership.
-SharedObject* getUnOwnedObject() SWIFT_RETURNS_UNRETAINED;
+SharedObject* _Nonnull getUnOwnedObject() SWIFT_RETURNS_UNRETAINED;
 ```
 
 These annotations are necessary to ensure that appropriate `retain`/`release` operations are inserted at the boundary:
