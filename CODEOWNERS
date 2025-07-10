@@ -24,7 +24,7 @@
 
 # The following lines are used by GitHub to automatically recommend reviewers.
 
-* @0xTim @alexandersandberg @davelester @daveverwer @dempseyatgithub @kaishin @shahmishal @timsneath @federicobucchi
+* @0xTim @alexandersandberg @davelester @daveverwer @dempseyatgithub @kaishin @shahmishal @timsneath @federicobucchi @heckj
 
 CODEOWNERS @timsneath @tkremenek @shahmishal @davelester
 /index.md @timsneath @tkremenek @shahmishal @davelester
@@ -33,4 +33,4 @@ CODEOWNERS @timsneath @tkremenek @shahmishal @davelester
 
 /gsoc*/ @ktoso
 
-/openapi/ @czechboy0
+/openapi/ @czechboy0 @heckj
