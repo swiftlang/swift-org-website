@@ -9,11 +9,8 @@ The Foundation framework defines a base layer of functionality that is required 
 * Provide a level of OS independence, to enhance portability.
 
 
-More information about the Foundation framework in general is available
-[from Apple's documentation](https://developer.apple.com/reference/foundation).  The Swift.org version of Foundation makes use of many
-of the same underlying libraries (e.g. ICU and CoreFoundation) as Apple's
-implementation, but has been built to be completely independent of the
-Objective-C runtime.  Because of this, it is a substantial reimplementation of
-the same API, using pure Swift code layered on top of these common underlying
-libraries.  Much more information about this work is available on our
-[GitHub project page](http://www.github.com/swiftlang/swift-corelibs-foundation).
+Swift 6 unifies the implementation of key [Foundation](https://developer.apple.com/documentation/foundation/) API across all platforms. Foundation's modern, portable Swift implementation provides consistency across platforms, is more robust, and is open source.
+
+If your app is particularly sensitive to binary size, you can import the `FoundationEssentials` library, which provides a more targeted subset of Foundation’s features that omits internationalization and localization data.
+
+More information about this work is available on our [GitHub project page](https://github.com/swiftlang/swift-foundation).

@@ -95,11 +95,9 @@ Hello from WASI!
 
 # Embedded Swift Support
 
-[Embedded Swift](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md) is an experimental subset of the language
+[Embedded Swift](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md) is an experimental [subset of the language](https://docs.swift.org/embedded/documentation/embedded/languagesubset)
 allowing the toolchain to produce Wasm binaries that are multiple orders of magnitude smaller. One of the Swift SDKs in the artifact bundle you've installed
-with the `swift sdk install` command is tailored specifically for Embedded Swift. A subset of Swift Concurrency is also supported in this mode
-thanks to the functionality provided by WASI.
+with the `swift sdk install` command is tailored specifically for Embedded Swift.
 
-To build with Embedded Swift SDK, pass its ID as noted in `swift sdk list` output (which has an `-embedded` suffix) in the `--swift-sdk` option. You also have to pass `-c release`
-to `swift build` and `swift run` to enable optimizations required for Embedded Swift.
+To build with Embedded Swift SDK, pass its ID as noted in `swift sdk list` output (which has an `-embedded` suffix) in the `--swift-sdk` option.
 

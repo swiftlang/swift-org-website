@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Safely Mixing Swift and C++
+title: Safely Mixing Swift and C/C++
 official_url: https://swift.org/documentation/cxx-interop/safe-interop/
 redirect_from:
 - /documentation/cxx-interop/safe-interop.html
@@ -115,9 +115,12 @@ Building the code again will emit a new diagnostic for the `fileName` function a
 missing lifetime annotations. C and C++ functions that return non-escapable types need annotations
 to describe their lifetime contracts via [lifetimebound](https://clang.llvm.org/docs/AttributeReference.html#id8)
 and [lifetime_capture_by](https://clang.llvm.org/docs/AttributeReference.html#lifetime-capture-by) annotations.
+Not all versions of C and C++ support the `[[clang::lifetimebound]]` attribute syntax. Convenience macros for
+lifetime annotations using the GNU style attribute syntax are available in the `lifetimebound.h` header, and we'll
+be using them throughout this document.
 
 ```c++
-StringRef fileName(const std::string &normalizedPath [[clang::lifetimebound]]);
+StringRef fileName(const std::string &normalizedPath __lifetimebound);
 ```
 
 Adding this annotation to `fileName` indicates that the returned `StringRef` value has the
@@ -190,7 +193,7 @@ types do not need lifetime annotations.
 
 Escapability annotations can also be attached to types via [API Notes](https://clang.llvm.org/docs/APINotes.html):
 
-```
+```yaml
 Tags:
 - Name: NonEscapableType
   SwiftEscapable: false
@@ -257,7 +260,7 @@ Annotating the parameters of a constructor describes the lifetime of the created
 
 ```c++
 struct SWIFT_NONESCAPABLE View {
-    View(const int *p [[clang::lifetimebound]]) : member(p) {}
+    View(const int *p __lifetimebound) : member(p) {}
     ...
 };
 ```
@@ -272,7 +275,7 @@ the same lifetime as the implicit `this` parameter.
 struct Owner {
     int data;
 
-    View handOutView() const [[clang::lifetimebound]] {
+    View handOutView() const __lifetimebound {
         return View(&data);
     }
 };
@@ -288,10 +291,10 @@ In case the attribute is applied to a subset of the parameters, the return
 value might depend on the corresponding arguments:
 
 ```c++
-View getOneOfTheViews(const Owner &owner1 [[clang::lifetimebound]],
+View getOneOfTheViews(const Owner &owner1 __lifetimebound,
                       const Owner &owner2,
-                      View view1 [[clang::lifetimebound]],
-                      View view2 [[clang::lifetimebound]]) {
+                      View view1 __lifetimebound,
+                      View view2 __lifetimebound) {
     if (coinFlip)
         return View(&owner1.data);
     if (coinFlip)
@@ -317,7 +320,7 @@ Notably, the default constructor of a type is always assumed to create an indepe
 
 We can also attach `lifetimebound` annotations to C and C++ APIs using [API Notes](https://clang.llvm.org/docs/APINotes.html). The `-1` index represents the `this` position.
 
-```
+```yaml
 Tags:
 - Name: MyClass
   Methods:
@@ -339,7 +342,7 @@ annotation to describe the lifetime of other output values, like output/inout ar
 or globals.
 
 ```c++
-void copyView(View view1 [[clang::lifetime_capture_by(view2)]], View &view2) {
+void copyView(View view1 __lifetime_capture_by(view2), View &view2) {
     view2 = view1;
 }
 ```
@@ -355,11 +358,11 @@ private:
     View containedView;
 
 public:
-    void captureView(View v [[clang::lifetime_capture_by(this)]]) {
+    void captureView(View v __lifetime_capture_by(this)) {
         containedView = v;
     }
 
-    void handOut(View &v) const [[clang::lifetime_capture_by(v)]] {
+    void handOut(View &v) const __lifetime_capture_by(v) {
        v = containedView; 
     }
 };
@@ -370,7 +373,7 @@ considered safe. If an input never escapes from the called function we can use
 the `noescape` annotation:
 
 ```c++
-void is_palindrome(std::span<int> s [[clang::noescape]]);
+void is_palindrome(std::span<int> s __noescape);
 ```
 
 The lifetime annotations presented in this sections are powerful,
@@ -379,9 +382,9 @@ APIs with such contracts can still be used from Swift,
 but they are imported as unsafe APIs, so that developers are aware
 that they need to take extra care when using these APIs to avoid memory safety violations.
 
-## Convenience Overloads for Annotated Spans and Pointers
+## Safe Overloads for Annotated Spans and Pointers
 
-C++ APIs often feature parameters that denote a span of memory.
+C and C++ APIs often feature parameters that denote a span of memory.
 For example, some might have two parameters where one points to a memory buffer
 and the other designates the buffer's size; others might use the
 [`std::span`](https://en.cppreference.com/w/cpp/container/span) type from the
@@ -390,6 +393,10 @@ compiler can bridge those span-like parameters to Swift's
 [`Span`](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0447-span-access-shared-contiguous-storage.md)
 and [`MutableSpan`](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0467-MutableSpan.md)
 types, and the user with a safe and convenient interface to those imported APIs.
+These interfaces are *in addition to* the interfaces generated without annotations:
+adding additional annotations to C or C++ APIs will not affect Swift code currently
+relying on the plain interface. Adding additional information may alter the signature
+of any existing safe overload however, since only 1 safe overload per imported function is generated.
 
 <div class="info" markdown="1">
 At the time of writing, the features described in this section
@@ -398,7 +405,7 @@ To enable these features, pass `-enable-experimental-feature SafeInteropWrappers
 to the Swift compiler.
 </div>
 
-### C++ `std::span` Support
+### Safe Overloads for C++ `std::span`
 
 APIs taking or returning C++'s `std::span` with sufficient lifetime
 annotations will automatically get safe overloads take or return Swift
@@ -413,11 +420,205 @@ using IntVec = std::vector<int>;
 
 | C++ API                                                   | Generated Swift overload                                             |
 | --------------------------------------------------------- | -------------------------------------------------------------------- |
-| `void takeSpan(IntSpan x [[clang::noescape]]);`           | `func takeSpan(_ x: Span<Int32>)`                                    |
-| `IntSpan changeSpan(IntSpan x [[clang::lifetimebound]]);` | `@lifetime(x) func changeSpan(_ x: Span<Int32>) -> Span<Int32>`      |
-| `IntSpan changeSpan(IntVec &x [[clang::lifetimebound]]);` | `@lifetime(x) func changeSpan(_ x: borrowing IntVec) -> Span<Int32>` |
-| `IntSpan Owner::getSpan() [[clang::lifetimebound]];`      | `@lifetime(self) func getSpan() -> Span<Int32>`                      |
+| `void takeSpan(IntSpan x __noescape);`           | `func takeSpan(_ x: Span<Int32>)`                                    |
+| `IntSpan changeSpan(IntSpan x __lifetimebound);` | `@lifetime(x) func changeSpan(_ x: Span<Int32>) -> Span<Int32>`      |
+| `IntSpan changeSpan(IntVec &x __lifetimebound);` | `@lifetime(x) func changeSpan(_ x: borrowing IntVec) -> Span<Int32>` |
+| `IntSpan Owner::getSpan() __lifetimebound;`      | `@lifetime(self) func getSpan() -> Span<Int32>`                      |
 
 These transformations only support top-level `std::span`s. The compiler
 currently does not transform nested `std::span`s. A `std::span<T>` of a non-const
 type `T` is transformed to `MutableSpan<T>` on the Swift side.
+
+### Safe Overloads for Pointers
+
+If an API uses raw pointers rather than `std::span` - perhaps because it's written in C or Objective-C,
+or because it's an older C++ API that doesn't want to break backwards compatibility -
+it can still receive the same interop safety as `std::span`. This added bounds safety doesn't break
+source compatiblity, nor does it affect ABI. Instead it leverages bounds annotations to express the
+pointer bounds in terms of other parameters in the function signature.
+
+#### Annotating Pointers with Bounds Annotations
+
+The most common bounds annotation is `__counted_by`. You can apply `__counted_by` to pointer parameters
+and return values to indicate the number of elements that the pointer points to, like this:
+
+```c
+int calculate_sum(const int * __counted_by(len) values __noescape, int len);
+```
+
+In this example, the function signature on the C side hasn't changed, but the `__counted_by(len)`
+annotation communicates that the `values` and `len` parameters are related - specifically, `values`
+should point to a buffer of at least `len` `int` values. When you annotate a function with a bounds
+annotation like this, the compiler will generate a bounds safe overload: in addition to the imported
+`func calculate_sum(_ values: UnsafePointer<CInt>, _ len: CInt) -> CInt` signature, you will also
+get the an overload with the `func calculate_sum(_ values: Span<CInt>) -> CInt` signature.
+Note that, like for `std::span`, the `__noescape` annotation is necessary to get a safe wrapper using `Span`.
+This signature is not only more ergonomic to work with - since the generated overload does the unpacking
+of base pointer and count for you - but it's also bounds safe. For example, if your API contains parameters
+that share a count, the bounds safe overload will check that they all correspond.
+
+```c
+void sum_vectors(const int * __counted_by(len) a __noescape,
+                 const int * __counted_by(len) b __noescape,
+                 int * __counted_by(len) out __noescape,
+                 int len);
+```
+This safe overload will trap if `a.count != b.count || b.count != out.count`:
+```swift
+func sum_vectors(_ a: Span<CInt>,
+                 _ b: Span<CInt>,
+                 _ out: MutableSpan<CInt>)
+```
+
+If the count of the `Span` parameters is larger than the C function expects and you intentionally want to use
+only a part of it, you can create a slice using `extracting(_:)`.
+
+If your API has more complex bounds you can express those with an arithmetic expression, like so:
+
+```c
+int transpose_matrix(int * __counted_by(columns * rows) values __noescape, int columns, int rows);
+```
+
+In this case the `columns` and `rows` parameters can't be elided:
+```swift
+func transpose_matrix(_ values: MutableSpan<CInt>, _ columns: CInt, _ rows: CInt)
+```
+This is because there's no way to factor out `columns` and `rows` given only `values.count`.
+Instead a bounds check is inserted to verify that `columns * rows == values.count`.
+
+When your C/C++ API uses opaque pointers, void pointers or otherwise pointers to unsized types,
+the buffer size can't be described in terms of the number of elements. Instead you can annotate
+these pointers with `__sized_by`. This bounds annotation behaves like `__counted_by`, but takes
+a parameter describing the *number of bytes* in the buffer rather than the *number of elements*.
+Where `__counted_by` maps to `Span<T>`, `__sized_by` will map to
+`RawSpan` instead.
+
+You can access the `__counted_by` and `__sized_by` macro definitions by including the `ptrcheck.h` header.
+For more information about these annotations, see Clang's [bounds safety documentation](https://clang.llvm.org/docs/BoundsSafety.html).
+If the C code base is compiled with `-fbounds-safety`, bounds safety is enforced on the C side as well -
+otherwise it is only enforced at the interop boundary.
+
+#### Lifetime Annotations for Pointers
+
+Like with `std::span`, pointers with bounds annotations can have their safe overloads map to
+`Span`/`MutableSpan` when annotated with the appropriate lifetime annotations from the `lifetimebound.h` header.
+Unlike `std::span`, pointers with bounds annotations also get a bounds safe overload when they lack lifetime annotations:
+
+<table>
+<tr><td> C API </td> <td> Generated Swift overload </td></tr>
+
+<tr>
+<td markdown=1>
+```c
+void
+take_ptr_lifetime(
+  const int * __counted_by(len) x __noescape,
+  int len);
+```
+</td>
+<td markdown=1>
+```swift
+func take_ptr_lifetime(_ x: Span<Int32>)
+```
+</td>
+</tr>
+
+<tr>
+<td markdown=1>
+```c
+const int * __counted_by(len)
+change_ptr_lifetime(
+  const int * __counted_by(len) x __lifetimebound,
+  int len);
+```
+</td>
+<td markdown=1>
+```swift
+@lifetime(x)
+func change_ptr_lifetime(_ x: Span<Int32>)
+  -> Span<Int32>
+```
+</td>
+</tr>
+
+<tr>
+<td markdown=1>
+```c
+void
+take_ptr(
+  const int * __counted_by(len) x,
+  int len);
+```
+</td>
+<td markdown=1>
+```swift
+func take_ptr(_ x: UnsafeBufferPointer<Int32>)
+```
+</td>
+</tr>
+
+<tr>
+<td markdown=1>
+```c
+const int * __counted_by(len)
+change_ptr(
+  const int * __counted_by(len) x,
+  int len);
+```
+</td>
+<td markdown=1>
+```swift
+@lifetime(x)
+func change_ptr(_ x: UnsafeBufferPointer<Int32>)
+  -> UnsafeBufferPointer<Int32>
+```
+</td>
+</tr>
+
+</table>
+
+The `UnsafeBufferPointer` overloads provide the same bounds safety as their `Span` equvalents
+(NB: `UnsafeBufferPointer` is not bounds checked on memory access in release builds, but the generated
+`UnsafeBufferPointer` overloads contain bounds checks in the same cases as the `Span` overloads, *even in release builds*),
+but without lifetime safety. If lifetime information is available the generated safe overload will always
+choose to use `Span` - no `UnsafeBufferPointer` overload will be generated in this case. This means
+that existing callers are not affected by annotating an API with `__counted_by`, but callers using the
+safe overload after adding `__counted_by` *will* be affected if `__noescape` is also added later on, or
+if another parameter is then also annotated with `__counted_by`.
+To prevent source breaking changes, make sure to fully annotate the bounds and lifetimes of an API when
+adding any bounds or lifetime annotations.
+
+#### Bounds Annotations using API Notes
+
+In cases where you don't want to modify the imported headers, bounds annotations can be applied using API Notes.
+Given the following header:
+```c
+void foo(int *p, int len);
+void *bar(int size);
+```
+We can provide bounds annotations in our API note file like this:
+```yaml
+Functions:
+  - Name:              foo
+    Parameters:
+      - Position:      0
+        BoundsSafety:
+            Kind:      counted_by
+            BoundedBy: "len"
+  - Name:              bar
+    BoundsSafety:
+        Kind:          sized_by
+        BoundedBy:     "size"
+```
+
+#### Limitations
+Bounds annotations are not supported for nested pointers: only the outermost pointer can be transformed.
+
+[`lifetime_capture_by`](https://clang.llvm.org/docs/AttributeReference.html#lifetime-capture-by)
+is currently not taken into account when generating safe overloads.
+
+Bounds annotations on global variables or struct fields are ignored: only parameters and return values
+are considered.
+
+Bounds annotations, while supported in Objective-C code bases, are not currently supported in Objective-C
+class method signatures.
