@@ -105,6 +105,10 @@ struct SWIFT_NONESCAPABLE StringRef { ... };
 Now the Swift compiler imports `StringRef` as a safe type and no longer
 emits a warning about using an unsafe type.
 
+<div class="info" markdown="1">
+Some containers and protocols do not yet support non-escapable types in Swift 6.2.
+</div>
+
 ### Annotating C++ APIs
 
 Building the code again will emit a new diagnostic for the `fileName` function about
@@ -393,6 +397,13 @@ These interfaces are *in addition to* the interfaces generated without annotatio
 adding additional annotations to C or C++ APIs will not affect Swift code currently
 relying on the plain interface. Adding additional information may alter the signature
 of any existing safe overload however, since only 1 safe overload per imported function is generated.
+
+<div class="info" markdown="1">
+At the time of writing, the features described in this section
+are behind an experimental feature flag on the Swift 6.2 release branch.
+To enable these features, pass `-enable-experimental-feature SafeInteropWrappers`
+to the Swift compiler.
+</div>
 
 ### Safe Overloads for C++ `std::span`
 
