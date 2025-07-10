@@ -79,6 +79,16 @@ struct Tool {
                 )
             )
         }
+        for branch in Components.Schemas.KnownSourceBranch.allCases {
+            tests.append(
+                .init(
+                    name: "listWasmSDKDevToolchains(\(branch.rawValue))",
+                    work: {
+                        _ = try await client.listWasmSDKDevToolchains(.init(path: .init(branch: .init(value1: branch)))).ok.body.json
+                    }
+                )
+            )
+        }
         tests.append(
             .init(
                 name: "getCurrentSwiftlyRelease",
