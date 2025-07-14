@@ -255,6 +255,8 @@ components:
       enum:
         - main
         - '6.0'
+        - '6.1'
+        - '6.2'
     SourceBranch:
       anyOf:
         - $ref: '#/components/schemas/KnownSourceBranch'
