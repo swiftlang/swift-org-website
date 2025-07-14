@@ -9,9 +9,9 @@ Each mentee will have the opportunity to connect with and learn from an experien
 
 If the mentee has not contributed to the project before, they will first work with their mentor to submit their first patch and overcome any workflow hurdles. The core of the mentorship program is making contributions that work toward the mentee's learning goals. These contributions can range from implementing a small feature within the project, to several independent bug fixes within the same area of the project. At the end of the mentorship, mentees will have an opportunity for their contributions and learnings to be featured in a dedicated post on the Swift.org blog.
 
-## Current Program
+## Current Program — 2025
 
-### 2025 Timeline
+### Timeline
 
 | Date             | Event                            |
 |:-----------------|:---------------------------------|
