@@ -30,8 +30,7 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS), Linux, and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/perrystreetsoftware/Harmonize
         note: Discussed on [Episode 57 of Swift Package Indexing](https://share.transistor.fm/s/32b618c5){:target='_blank'}.
@@ -43,10 +42,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Wasm
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          Wasm, and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/southkin/HasLazyServer
         note: Discussed on [Episode 56 of Swift Package Indexing](https://share.transistor.fm/s/135e7db3){:target='_blank'}.
@@ -105,9 +102,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Wasm
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Wasm
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/swiftlang/swift-testing
       - name: Defaults
@@ -129,10 +125,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Wasm
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          Wasm, and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-case-paths
       - name: swift-perception
@@ -143,10 +137,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Wasm
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          Wasm, and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-perception
   - name: Server
@@ -168,9 +160,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/vapor/vapor
       - name: swift-openapi-generator
@@ -181,8 +172,7 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (macOS), Linux, and Android
+        platform_compatibility_tooltip: Apple (macOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-openapi-generator
       - name: hummingbird
@@ -194,9 +184,7 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS), Linux, and
-          Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
       - name: fluent
@@ -207,9 +195,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/vapor/fluent
       - name: console-kit
@@ -221,9 +208,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/vapor/console-kit
       - name: MongoKitten
@@ -258,9 +244,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/Alamofire/Alamofire
       - name: swift-nio
@@ -272,9 +257,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-nio
       - name: Pulse
@@ -297,9 +281,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/swhitty/FlyingFox
       - name: Moya
@@ -343,9 +326,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Wasm
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Wasm
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/swiftlang/swift-testing
       - name: swift-snapshot-testing
@@ -358,9 +340,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
       - name: swift-custom-dump
@@ -372,10 +353,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Wasm
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          Wasm, and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
       - name: Quick
@@ -387,9 +366,7 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS), Linux, and
-          Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Quick
       - name: OCMockito
@@ -433,10 +410,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Wasm
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          Wasm, and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-log
       - name: CocoaLumberjack
@@ -516,9 +491,9 @@ categories:
         license: MIT
         url: https://swiftpackageindex.com/groue/GRDB.swift
       - name: Firebase
-        description: Firebase provides app development tools including authentication,
-          database, cloud messaging, analytics, and storage for building, growing, and
-          monetizing mobile applications.
+        description: Firebase offers a suite of development tools for building, growing,
+          and monetizing applications across Apple platforms, excluding FirebaseAnalytics.
+          It supports various components like Auth, Database, and Performance Monitoring.
         owner: Firebase
         swift_compatibility: 6.0+
         platform_compatibility:
@@ -534,9 +509,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/vapor/fluent
       - name: Supabase
@@ -548,9 +522,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-          - Android
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
-          and Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
+          Linux
         license: MIT
         url: https://swiftpackageindex.com/supabase/supabase-swift
       - name: Realm
