@@ -24,7 +24,7 @@
 
 # The following lines are used by GitHub to automatically recommend reviewers.
 
-* @0xTim @alexandersandberg @davelester @daveverwer @dempseyatgithub @kaishin @shahmishal @timsneath @federicobucchi @heckj
+* @swiftlang/website-workgroup
 
 CODEOWNERS @timsneath @tkremenek @shahmishal @davelester
 /index.md @timsneath @tkremenek @shahmishal @davelester
