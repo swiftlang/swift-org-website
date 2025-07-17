@@ -238,6 +238,6 @@ function correctly:
 
 The official documentation for this extension is [available on swift.org](https://docs.swift.org/vscode/documentation/userdocs).
 
-To propose new features, you can post on the [swift.org forums](https://forums.swift.org) in the [VS Code Swift Extension category](https://forums.swift.org/c/related-projects/vscode-swift-extension/). If you run into something that doesn't work the way you'd expect, you can [file an issue in the GitHub repository](https://github.com/swiftlang/vscode-swift/issues/new).
+To propose new features, you can post on the Swift forums in the [VS Code Swift Extension category](https://forums.swift.org/c/related-projects/vscode-swift-extension/). If you run into something that doesn't work the way you'd expect, please [file an issue in the extension's GitHub repository](https://github.com/swiftlang/vscode-swift/issues/new).
 
-Contributions, including code, tests, and documentation, are welcome. For more details, please refer to the [contribution guide](https://github.com/swiftlang/vscode-swift/blob/HEAD/CONTRIBUTING.md).
+The project welcomes contributions, including code, tests, and documentation. For more details on how to contribute, please read the [contribution guide](https://github.com/swiftlang/vscode-swift/blob/HEAD/CONTRIBUTING.md).
