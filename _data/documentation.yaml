@@ -67,6 +67,10 @@
     url: /documentation/articles/wasm-getting-started.html
     description: |
       Learn how to get started building Swift packages for WebAssembly (Wasm).
+  - title: Getting Started with Swift on VS Code
+    url: /documentation/articles/getting-started-with-vscode-swift.html
+    description: |
+      Learn how to get started with the Swift extension for VS Code.
 #----------------------------------------------------
 - header: Contributing
   pages:
