@@ -1,3 +1,8 @@
+- date: 2025-07-17 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-07-17-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-07-17-a-ubuntu22.04-aarch64.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-07-17-a-ubuntu22.04-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2025-07-15 10:10:00-06:00
   dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-07-15-a
   download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-07-15-a-ubuntu22.04-aarch64.tar.gz
