@@ -185,7 +185,7 @@ The timeline of the project reflects its comprehensive scope beginning with prin
 
 * Dave Verwer (Swift Website and Documentation workgroups)
 * David Rönnqvist (Documentation workgroup)
-* Dianna Ma (Documentation and Server workgroups)
+* Diana Ma (Documentation and Server workgroups)
 * James Dempsey (DRI)
 * Joe Heck (Contributor Experience and Documentation workgroups)
 * Paris Pittman(Core Team)
