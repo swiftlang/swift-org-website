@@ -2,7 +2,7 @@
 layout: page
 date: 2024-06-04 12:00:00
 title: Getting Started with the Static Linux SDK
-author: [al45tair, incertum]
+author: [al45tair, incertum, etcwilde]
 ---
 
 It's well known that Swift can be used to build software for Apple
@@ -39,6 +39,14 @@ supported by the Swift compiler and package manager; this means that
 you can develop and test your program on macOS before building and
 deploying it to a Linux-based server, whether running locally or
 somewhere in the cloud.
+
+Finally, for those wondering about an equivalent for Apple platforms,
+no such static SDK exists. Building a fully static executable is not
+possible on Apple's operating systems because, unlike Linux, the
+Darwin kernel's system call table is not part of the ABI. This design
+requires all system calls to be routed through the dynamic library
+`libsystem.dylib`, fundamentally preventing a 100% statically linked
+binary.
 
 ### Static vs Dynamic Linking
 
