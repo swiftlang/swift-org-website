@@ -7,4 +7,4 @@ title: Package Manager
 <link rel="canonical" href="https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/" />
 
 This page should redirect automatically to the updated location for
-the [Swift Package Manager (SwiftPM) documentation](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
+the [Swift Package Manager (SwiftPM) documentation](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/).
