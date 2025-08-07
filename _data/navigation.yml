@@ -50,7 +50,7 @@
         - title: Reporting Bugs
           name: reporting-bugs
         - title: Triaging Bugs
-          name: triaging-bugs
+          name: triaging-bugsllbm
         - title: Blog Post Contributions
           name: website-and-blog-post-contributions
         - title: Swift Evolution
@@ -61,8 +61,6 @@
           name: contributing-code
         - title: Adding External Library Dependencies
           name: adding-external-library-dependencies
-        - title: LLVM and Swift
-          name: llvm-and-swift
     - section: Steering Groups
     - title: Ecosystem
       url: /ecosystem-steering-group/
