@@ -1,18 +1,18 @@
 title: Explore cloud native packages
 tertiary_cards:
-  - name: Swift Prometheus
-    text: Client for the Prometheus monitoring system, supporting counters, gauges and histograms.
-    link_text: View on GitHub
-    link: https://github.com/swift-server/swift-prometheus
   - name: gRPC Swift
     text: The Swift language implementation of gRPC.
     link_text: View on GitHub
     link: https://github.com/grpc/grpc-swift
-  - name: Swift OPA
-    text:  Evaluate Open Policy Agent IR Plans compiled from Rego declarative policy. (pre-1.0 release)
-    link_text: View on GitHub
-    link: https://github.com/open-policy-agent/swift-opa
   - name: Swift OTel 
     text: OpenTelemetry client built for Swift observability libraries. (pre-1.0 release)
     link_text: View on GitHub
     link: https://github.com/swift-otel/swift-otel
+  - name: Swift Prometheus
+    text: Client for the Prometheus monitoring system, supporting counters, gauges and histograms.
+    link_text: View on GitHub
+    link: https://github.com/swift-server/swift-prometheus
+  - name: Swift OPA
+    text:  Evaluate Open Policy Agent IR Plans compiled from Rego declarative policy. (pre-1.0 release)
+    link_text: View on GitHub
+    link: https://github.com/open-policy-agent/swift-opa
