@@ -6,21 +6,21 @@ title: Getting Started with Swiftly on Linux
 Download swiftly for [Linux (Intel)](https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_release.version }}-x86_64.tar.gz), or [Linux (ARM)](https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_release.version }}-aarch64.tar.gz).
 
 ```
-curl -O https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz
+curl -O "https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz"
 ```
 
 You can verify the integrity of the archive using the PGP signature. This will download the signature, install the swift.org signatures into your keychain, and verify the signature.
 
 ```
 curl https://www.swift.org/keys/all-keys.asc | gpg --import -
-curl -O https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz.sig
-gpg --verify swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz.sig swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz
+curl -O "https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz.sig"
+gpg --verify "swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz.sig" "swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz"
 ```
 
 Extract the archive.
 
 ```
-tar -zxf swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz
+tar -zxf "swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz"
 ```
 
 Run the following command in your terminal, to configure swiftly for your account, and automatically download the latest swift toolchain.
