@@ -1,0 +1,38 @@
+#!/bin/bash -e
+# Install script for Swiftly
+# Usage: curl -fsSL https://swift.org/swiftly-install | sh
+OS_NAME=$(uname -s)
+OS_ARCH=$(uname -m)
+TMPDIR=$(mktemp -d)
+
+cd ${TMPDIR}
+
+case "$OS_NAME" in
+    "Linux")
+        curl -fsSLO https://download.swift.org/swiftly/linux/swiftly-${OS_ARCH}.tar.gz
+        tar zxf swiftly-${OS_ARCH}.tar.gz
+        ./swiftly init
+        SWIFTLY_HOME_DIR=${SWIFTLY_HOME_DIR:-$HOME/.swiftly}
+        ;;
+    "Darwin")
+        curl -fsSLO https://download.swift.org/swiftly/darwin/swiftly.pkg
+        installer -pkg swiftly.pkg -target CurrentUserHomeDirectory
+        ~/.swiftly/bin/swiftly init
+        SWIFTLY_HOME_DIR=${SWIFTLY_HOME_DIR:-$HOME/.local/share/swiftly}
+        ;;
+    *)
+        echo "Unknown platform: $OS_NAME"
+        echo "This script supports Linux and Darwin/macOS only"
+        exit 1
+        ;;
+esac
+
+echo "Swiftly installed! Run the following command to set up your environment:"
+PARENT_SHELL=$(ps -o comm= -p "$PPID")
+if [ "$PARENT_SHELL" = "fish" ]; then
+    echo "source ${SWIFTLY_HOME_DIR}/env.fish"
+else
+    # Not fish: assume sh-compatible (bash/zsh)
+    echo "source ${SWIFTLY_HOME_DIR}/env.sh"
+fi
+

@@ -11,7 +11,7 @@ title: Install Swift - macOS
 <div class="content">
   <div class="release-box section">
     <div class="content">
-      {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.macos.releases.latest-release.swiftly%}
+      {% include new-includes/components/code-box.html content = site.data.new-data.install.macos.releases.latest-release.swiftly%}
     </div>
   </div>
   <div class="release-box section">
