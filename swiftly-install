@@ -12,7 +12,7 @@
 ## SPDX-License-Identifier: Apache-2.0
 ##
 ##===----------------------------------------------------------------------===##
-
+set -eu
 # Install script for Swiftly
 # Usage: curl -fsSL https://swift.org/swiftly-install | sh
 OS_NAME=$(uname -s)
