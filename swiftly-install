@@ -24,7 +24,7 @@ cd "${TMPDIR}"
 case "$OS_NAME" in
     "Linux")
         curl -fsSLO "https://download.swift.org/swiftly/linux/swiftly-${OS_ARCH}.tar.gz"
-        tar zxf swiftly-${OS_ARCH}.tar.gz
+        tar zxf "swiftly-${OS_ARCH}.tar.gz"
         ./swiftly init
         SWIFTLY_HOME_DIR=${SWIFTLY_HOME_DIR:-$HOME/.swiftly}
         ;;
