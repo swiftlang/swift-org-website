@@ -19,7 +19,7 @@ OS_NAME=$(uname -s)
 OS_ARCH=$(uname -m)
 TMPDIR=$(mktemp -d)
 
-cd ${TMPDIR}
+cd "${TMPDIR}"
 
 case "$OS_NAME" in
     "Linux")
