@@ -15,11 +15,17 @@
 set -eu
 # Install script for Swiftly
 # Usage: curl -fsSL https://swift.org/swiftly-install | sh
+
+if ! command -v curl >/dev/null 2>&1 || ! command -v ps >/dev/null 2>&1 || ! command -v tar >/dev/null 2>&1 ; then
+    echo "Missing one of more of the following programs: curl, ps, tar" >&2
+    exit 1
+fi
+
 OS_NAME=$(uname -s)
 OS_ARCH=$(uname -m)
-TMPDIR=$(mktemp -d)
+TEMP_DIR=$(mktemp -d)
 
-cd "${TMPDIR}"
+cd "${TEMP_DIR}"
 
 case "$OS_NAME" in
     "Linux")
