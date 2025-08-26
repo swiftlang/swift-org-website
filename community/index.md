@@ -11,8 +11,8 @@ The Swift.org community has the singular goal of making the world's best general
 The Swift language is developed in the open, and all technical or administrative topics about the language or community processes should be directed to the Swift public forums. Public conversations are encouraged, and active developers of the Swift language should monitor the relevant forum categories.
 
 * Directory of forum categories and email instructions are in the [forum section](#forums).
-* Source code for all Swift projects can be found on GitHub at [github.com/apple][github].
-* The Swift language bug tracking system is maintained at [github.com/swiftlang/swift/issues][bugtracker].
+* Source code for Swift projects can be found on GitHub at [github.com/swiftlang][github].
+* The Swift bug tracking system is maintained at [github.com/swiftlang/swift/issues][bugtracker].
 
 All communication within project spaces should adhere to Swift project's [Code of Conduct](/code-of-conduct).
 
@@ -103,7 +103,7 @@ The current Language Steering Group members are:
 [email-devs]: mailto:swift-dev@swift.org  "Email the developer discussion list"
 [email-lead]: mailto:project-lead@swift.org "The leaders at Apple responsible for Swift.org"
 
-[github]: https://github.com/apple  "Apple's home page on GitHub"
+[github]: https://github.com/swiftlang "The Swift organization on GitHub"
 [repo]: git+ssh://github.com/apple "Link to the repo hosted on GitHub"
 [bugtracker]:  http://github.com/swiftlang/swift/issues
 
