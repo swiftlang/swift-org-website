@@ -10,7 +10,7 @@ Swift has the following general dependencies:
 - Git (used by Swift Package Manager)
 - Python[^1] (used by the debugger - LLDB)
 
-[^1]: The Windows binaries are built against Python 3.9
+[^1]: The Windows binaries are built against Python 3.10
 
 Swift on Windows has the following additional platform specific dependencies:
 
