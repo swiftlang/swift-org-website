@@ -116,9 +116,9 @@ Before starting, please note the following requirements:
   swift.org.
 
 * If you are using macOS, note that you cannot use the toolchain
-  provided with Xcode to build programs using the SDK. Instead, just
-  to remind you, you must use the Swift compiler from the open-source
-  toolchain (see above).
+  provided with Xcode to build programs using the SDK. Instead, you
+  must use the Swift compiler from the open-source toolchain (see
+  above).
 
 #### (2) Pre-Installation Notes
 
