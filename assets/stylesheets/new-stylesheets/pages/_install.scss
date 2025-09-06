@@ -79,7 +79,7 @@
     background-size: 166% auto;
     background-position: 47% 0%;
     top: -20vw;
-    background-image: url(/assets/images/install/swoops/swoop-0.png);
+    background-image: url(/assets/images/shared-swoops/swoop-0.png);
 
     @media only screen and (max-width: 768px) {
       top: -4vw;
@@ -240,7 +240,7 @@
 
     p.body-copy {
       flex-grow: 1;
-      
+
       button {
         border: 0;
         background: var(--install-release-box-th-bg);

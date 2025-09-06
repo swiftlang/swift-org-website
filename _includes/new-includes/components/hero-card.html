@@ -1,3 +1,8 @@
 <div class="hero-card {% if include.stand_alone %} content-wrapper{% endif %}">
-  <img src="{{ include.image.url}}" alt="{{include.image.alt}}" />
+  {% if include.title %}
+  <h3>{{include.title}}</h3>
+  {% endif %} {% if include.image %}<img
+    src="{{ include.image.url}}"
+    alt="{{include.image.alt}}"
+  />{% endif %}
 </div>

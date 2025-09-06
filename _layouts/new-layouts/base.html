@@ -122,7 +122,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@SwiftLang" />
     {% if page.id %}
-    <meta name="twitter:title" content="{{ page.title | escape }}" />
+    <meta name="twitter:title" contenct="{{ page.title | escape }}" />
     <meta
       name="twitter:description"
       content="{{ page.excerpt | strip_html | escape }}"
@@ -177,23 +177,28 @@
       {% include new-includes/header/header.html %} {{content}} {% include
       new-includes/footer/footer.html %}
     </main>
-
+    <script>
+      console.log('{{ page.url }}')
+    </script>
     <script src="/assets/javascripts/new-javascripts/application.js"></script>
     {% if page.url == "/" %}
     <script src="/assets/javascripts/new-javascripts/landing.js"></script>
+    {% endif %} {% if page.url contains "/blog" %}
+    <script src="/assets/javascripts/new-javascripts/blog.js"></script>
     {% endif %}
-   <!-- metrics -->
+    <!-- metrics -->
     <script>
-    /* RSID: */
-    var s_account="awdswiftorg"
+      /* RSID: */
+      var s_account = 'awdswiftorg'
     </script>
     {% if jekyll.environment != 'development' %}
     <script src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
     <script>
-    s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+      s.pageName = AC && AC.Tracking && AC.Tracking.pageName()
 
-    /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
-    var s_code=s.t();if(s_code)document.write(s_code)
+      /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+      var s_code = s.t()
+      if (s_code) document.write(s_code)
     </script>
     {% endif %}
     <!-- /metrics -->
