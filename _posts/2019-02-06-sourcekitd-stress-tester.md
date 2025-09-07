@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 date: 2019-02-06 12:00:00
 title: Introducing the sourcekitd Stress Tester
 author: nathawes

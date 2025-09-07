@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2022-07-06 08:00:00
 title: "Swift language announcements from WWDC22"

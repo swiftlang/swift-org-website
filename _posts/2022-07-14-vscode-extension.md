@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2022-07-14 09:45:00
 title: Swift Extension for Visual Studio Code

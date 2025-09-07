@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2024-03-25 10:00:00
 title: "Writing GNOME Apps with Swift"

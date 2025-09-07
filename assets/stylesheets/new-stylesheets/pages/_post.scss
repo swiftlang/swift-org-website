@@ -1,0 +1,116 @@
+@use '../helpers' as *;
+
+#post {
+  position: relative;
+  padding: 160px 0 70px;
+
+  .content {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+
+    @media (max-width: 1024px) {
+      padding: 20px;
+
+      h1 {
+        margin-top: 0!important;
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      text-align: left;
+      color: var(--color-syntax-plain-text);
+      margin: 40px 0 16px;
+    }
+
+    h1 { font-size: 2.2em; margin-bottom: 40px; }
+    h2 { font-size: 1.8em; }
+
+    p {
+      margin-bottom: 1em;
+
+      &:has(+ ul) {
+        margin-bottom: 0;
+      }
+    }
+
+    ul, ol {
+      list-style-type: initial;
+      padding-left: 20px;
+      margin: 1em 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--site-link-with-right-arrow-color);
+    }
+
+    time {
+      color: var(--blog-page-time-text-color);
+      font-size: .8em;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .featured {
+      border-radius: 20px;
+      margin: 20px 0;
+    }
+
+    .details {
+      width: 90%;
+      margin: 1.2em auto;
+      color: var(--color-syntax-plain-text);
+
+      hr {
+        margin-top: 44px;
+        border-top: var(--blog-divider-border);
+      }
+
+      pre.highlight {
+        background: var(--blog-page-code-bg);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 1em;
+      }
+    }
+
+    .card-grid {
+      background: transparent;
+
+      ul, ol {
+        padding-left: 0;
+      }
+
+      .content {
+        background: transparent;
+        padding: 0;
+
+        time {
+          margin-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .swoop-1 {
+    @include swoop-ratio(2624, 1073, 1.33);
+    background: url(/assets/images/install/swoops/swoop-0.png) no-repeat;
+    background-size: 166% auto;
+    background-position: 47% 0%;
+    top: -46vw;
+    opacity: 0.7;
+
+    @media (max-width: 768px) {
+      top: -39vw;
+    }
+  }
+}

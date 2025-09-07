@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2023-04-26 10:30:00
 title: Foundation Package Preview Now Available

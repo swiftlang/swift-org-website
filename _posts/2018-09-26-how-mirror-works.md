@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 date: 2018-09-26 10:00:00
 title: How Mirror Works
 author: mikeash

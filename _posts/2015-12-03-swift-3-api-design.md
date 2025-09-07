@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2015-12-03 12:01:01
 title: Swift 3 API Design Guidelines

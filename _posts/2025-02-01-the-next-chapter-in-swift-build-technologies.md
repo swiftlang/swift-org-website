@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2025-02-01 6:00:00
 title: The Next Chapter in Swift Build Technologies

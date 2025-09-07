@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2022-03-24 11:00:00
 title: Introducing Swift Async Algorithms
