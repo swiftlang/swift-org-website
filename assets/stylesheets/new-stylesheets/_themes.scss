@@ -19,6 +19,7 @@
   --site-link-with-right-arrow-color: #384fea;
   --site-link-with-right-arrow-icon-filter: none;
   --site-content-link-with-right-arrow-icon-filter: brightness(0);
+  --site-border-color: #051416;
 
   --page-bg: #fff;
 
@@ -31,6 +32,10 @@
   --install-release-box-th-color: #333;
   --install-release-box-tr-border-bottom: 1px solid #f2f2f2;
   --install-release-box-tr-bg: #ffffff;
+
+  --blog-page-time-text-color: #8D8D8D;
+  --blog-page-code-bg: #f2f2f2;
+  --blog-divider-border: #979797;
 
   --get-started-page-bg: #fafafa;
   --get-started-card-primary-bg: rgba(255, 255, 255, 0.9);
@@ -123,8 +128,9 @@
   --site-link-with-right-arrow-icon-filter: invert(66%) sepia(89%)
     saturate(602%) hue-rotate(172deg) brightness(102%) contrast(101%);
   --site-content-link-with-right-arrow-icon-filter: brightness(0) invert(1);
+  --site-border-color: #ffffff;
 
-  --page-bg: #fff;
+  --page-bg: #000;
 
   --exception-page-bg: #23344a;
 
@@ -135,6 +141,10 @@
   --install-release-box-th-color: #ffffff;
   --install-release-box-tr-border-bottom: 1px solid #051416;
   --install-release-box-tr-bg: #384461;
+
+  --blog-page-time-text-color: #8D8D8D;
+  --blog-page-code-bg: #111727;
+  --blog-divider-border: #979797;
 
   --get-started-page-bg: rgb(5, 20, 35);
   --get-started-card-primary-bg: rgba(35, 52, 74, 0.9);

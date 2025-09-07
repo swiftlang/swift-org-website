@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2023-07-10 10:00:00
 title: Introducing Swift HTTP Types

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2024-03-07 10:30:00
 title: Iterate Over Parameter Packs in Swift 6.0
