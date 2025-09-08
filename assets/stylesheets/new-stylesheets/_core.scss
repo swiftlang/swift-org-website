@@ -57,3 +57,24 @@ code {
     serif;
   font-weight: 400;
 }
+
+.header-with-anchor {
+  scroll-margin-top: 80px;
+
+  a {
+    display: none;
+    margin-left: 0.2em;
+
+    svg {
+      filter: var(--icon-filter);
+    }
+  }
+}
+
+h2.header-with-anchor {
+  &:hover {
+    a {
+      display: inline-block;
+    }
+  }
+}
