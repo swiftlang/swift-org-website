@@ -48,7 +48,7 @@ The new [`Span`](https://developer.apple.com/documentation/swift/span?changes=_8
 Swift 6.2 enhances its capabilities for low-level and security-critical projects beyond new APIs:
 
 * **Embedded Swift:** Embedded Swift now includes Swift’s full `String` APIs, `any` types for class-constrained protocols, and the new `InlineArray` and `Span` types.
-* **C++ interoperability:** Projects that mix Swift and C++ can take advantage of Swift’s safe abstractions like `Span` for C++ APIs through header annotations.
+* **Safe C++ interoperability:** Projects that mix Swift and C++ can [take advantage of Swift’s safe abstractions](https://www.swift.org/documentation/cxx-interop/safe-interop/) like `Span` for C++ APIs through header annotations.
 * **Opt-in strict memory safety:** Swift has provided memory safety since its inception, while allowing use of unsafe constructs like unsafe pointers when needed, such as using a C API that accepts pointers. Swift 6.2 introduces *opt-in strict memory safety*, which flags uses of unsafe constructs, so you can replace them with safe alternatives or explicitly acknowledge them in source code. It’s opt-in because the majority of projects don’t need this level of enforcement — strict memory safety is best left for projects with the strongest security requirements.
 
 ## Streamlined Workflows
