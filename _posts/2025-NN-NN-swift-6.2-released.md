@@ -133,25 +133,19 @@ Swift 6.2 enables streaming transactional state changes of observable types usin
 
 ### Swift Testing
 
-Swift Testing in Swift 6.2 supports [custom attachments](https://developer.apple.com/documentation/testing/attachments), letting you include additional context in your test results:
+Swift Testing in Swift 6.2 adds new APIs for enhanced expressivity in your tests and test results:
 
-```swift
-@Test
-func validateProposalID() async throws {
-  let (data, _) = try await URLSession.shared.data(from: evolutionJSONMetadataURL)
-  Attachment.record(data, named: "evolution-metadata.json")
+* [**Exit testing**](https://developer.apple.com/documentation/testing/exit-testing) lets you verify that code terminates under specific conditions, such as a failed precondition. Your exit tests run in a new process and validate that the exit behavior is what you expect, making it possible to exercise critical failure paths like you would in any other test.
+* [**Attachments**](https://developer.apple.com/documentation/testing/attachments) let you include additional context in test results, including  strings, images, logs, and other artifacts, surfaced in test reports or written to disk. This makes it easier to diagnose failures with concrete evidence—whether that’s a screenshot of a UI state, a JSON payload, or a trace of steps leading up to the issue.
+* [**Raw identifier display names**](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0451-escaped-identifiers.md) let you customize the names of test functions and suite types with less code:
 
-  let jsonDecoder = JSONDecoder()
-  let metadata = try jsonDecoder.decode(EvolutionMetadata.self, from: data)
-  for proposal in metadata.proposals {
-    #expect(proposal.id.starts(with: "SE"))
-  }
-}
-```
-
-You can attach strings, images, logs, and other artifacts directly to a test outcome. These attachments are included in test reports or written to disk, making it easier to diagnose failures with concrete evidence—whether that’s a screenshot of a UI state, a JSON payload, or a trace of steps leading up to the issue.
-
-Swift Testing also supports [exit testing](https://developer.apple.com/documentation/testing/exit-testing), which lets you verify that code terminates under specific conditions, such as a failed precondition. Swift Testing will run your exit tests in a new process and validate that the exit behavior is what you expect. This makes it possible to exercise critical failure paths like you would in any other test.
+    ```diff
+    -@Test("square() returns x * x")
+    -func squareIsXTimesX() {
+    +@Test func `square() returns x * x`() {
+       #expect(square(4) == 4 * 4)
+     }
+    ```
 
 ## WebAssembly Support
 
