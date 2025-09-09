@@ -1,2 +1,4 @@
 - name: Fedora 39
   url: /install/linux/fedora/39
+- name: Fedora 41
+  url: /install/linux/fedora/41

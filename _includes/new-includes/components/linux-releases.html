@@ -8,6 +8,7 @@
 {% endunless %}
 
 <div class="content">
+  {% if platform %}
   <div class="releases-grid">
     <div class="release-box section">
       <div class="content">
@@ -79,6 +80,7 @@
         </details>
     </div>
   </div>
+  {% endif %}
   <h2 id="development-snapshots" class="header-with-anchor">Development Snapshots</h2>
   <div>
     <p class="content-copy">Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.</p>
@@ -119,6 +121,7 @@
         </div>
       </div>
     </div>
+    {% if development_2 %}
     <div class="release-box section">
       <div class="content">
         <div class="code-box content-wrapper">
@@ -144,6 +147,7 @@
         </div>
       </div>
     </div>
+    {% endif %}
   </div>
   <div class="release-box section">
     <div class="content">
@@ -153,6 +157,7 @@
         </details>
     </div>
   </div>
+  {% if development_2 %}
   <div class="release-box section">
     <div class="content">
         <details class="download">
@@ -161,6 +166,7 @@
         </details>
     </div>
   </div>
+  {% endif %}
   <h3>Static Linux SDK</h3>
   <div>
     <p class="content-copy">
