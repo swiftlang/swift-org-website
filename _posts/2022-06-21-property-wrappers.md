@@ -4,6 +4,7 @@ published: true
 date: 2022-06-21 10:00:00
 title: "Exploring Swift: Property wrappers in the wild"
 author: [tingbecker, twostraws]
+category: "Language"
 ---
 
 Property wrappers were [introduced in Swift 5.1](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0258-property-wrappers.md) as a way to make it easier to reuse common programming patterns, but since then they have grown to work with local context, function and closure parameters, and more. We’re lucky enough to have lots of creators in our community creating apps with property wrappers then writing about their experiences, and we’d like to share a few of our favorites with you here.

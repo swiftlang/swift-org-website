@@ -3,6 +3,7 @@ layout: post
 title: Standard Library Preview Package
 author: natecook1000
 date: 2020-02-18 09:00:00
+category: "Developer Tools"
 ---
 
 I'm excited to announce a new open-source package and an enhancement to the Swift Evolution process: the [Standard Library Preview package](https://github.com/apple/swift-standard-library-preview)! The preview package provides access to functionality that has been accepted into the Swift standard library through the [Swift Evolution process](https://github.com/swiftlang/swift-evolution/blob/master/process.md), but has not yet shipped as part of an official Swift release. This will allow us to incorporate feedback informed by real-world usage and remove many of the technical obstacles to contributing to the standard library.

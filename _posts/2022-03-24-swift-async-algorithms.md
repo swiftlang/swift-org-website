@@ -4,6 +4,7 @@ published: true
 date: 2022-03-24 11:00:00
 title: Introducing Swift Async Algorithms
 author: parkera
+category: "Developer Tools"
 ---
 
 As part of Swift's move toward safe, simple, and performant asynchronous programming, we are pleased to introduce a new package of algorithms for `AsyncSequence`. It is called **Swift Async Algorithms** and it is available now [on GitHub](https://github.com/apple/swift-async-algorithms).

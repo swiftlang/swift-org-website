@@ -3,6 +3,7 @@ layout: post
 date: 2020-09-25 9:00:00
 title: Swift System is Now Open Source
 author: milseman
+category: "Developer Tools"
 ---
 
 In June, Apple introduced Swift System, a new library for Apple platforms that provides idiomatic interfaces to system calls and low-level currency types. Today, I’m excited to announce that we’re open-sourcing [System](https://github.com/apple/swift-system) and adding Linux support! Our vision is for System to eventually act as the single home for low-level system interfaces for all supported Swift platforms.

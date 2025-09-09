@@ -10,9 +10,9 @@ title: Blog
       <h2 class="blog-featured-grid-headline">{{site.data.new-data.blog.page-data.headline}}</h2>
       {% assign hero_card_title = site.data.new-data.blog.page-data.category_titles[0] %}
       {% assign hero_card_post = site.categories[hero_card_title][0] %}
-      {% assign hero_card_thumbnail = hero_card_post.thumbnail %}
-      <div class="blog-featured-hero-card">
-        <h3 class="blog-featured-grid-category-headline">{{hero_card_title}}</h3>
+      {% assign hero_card_thumbnail = hero_card_post.featured-image %}
+      <h3 class="blog-featured-grid-category-headline">{{hero_card_title}}</h3>
+      <div class="blog-featured-hero-card {% if hero_card_thumbnail.url %} blog-featured-hero-card-with-image {% endif %}">
         {% if hero_card_thumbnail.url %}
           <img class="blog-featured-hero-card-image" src="{{ hero_card_thumbnail.url }}" alt="{{hero_card_thumbnail.alt}}" />
         {% endif %}
@@ -47,39 +47,38 @@ title: Blog
         <span class="body-copy>">Categories</span>
         <span class="dropdown-toggle-arrow"></span>
       </button>
-      <div class="dropdown-menu" id="dropdown-menu" role="menu">
+      <div class="dropdown-menu" role="menu">
         <div class="dropdown-header">
+           <button class="dropdown-close" aria-label="Close"></button>
            <label>
-            <input name="select-all" class="select-all" type="checkbox" value="select-all" checked><span class="checkbox-symbol"></span> <span class="dropdown-filter-text">All Categories</span>
+            <input name="select-all" class="select-all" type="checkbox" value="select-all" checked="true">
+            <span class="checkbox-symbol"></span> <span class="dropdown-filter-text">All Categories</span>
           </label>
-          <button class="dropdown-close" aria-label="Close"></button>
         </div>
         <hr>
         {% for category in site.data.new-data.blog.page-data.category_titles %}
-          <label class="dropdown-filters">
-            <input name="{{category}}" class="category-filter" type="checkbox" value="{{category}}" checked> <span class="check-symbol"></span> <span class="checkbox-symbol"></span> <span class="dropdown-filter-text">{{category}}</span>
+          <label 
+          class="dropdown-filters" 
+            >
+          <input name="{{category}}" class="category-filter" type="checkbox" value="{{category}}" checked>
+           <span class="check-symbol"></span> <span class="checkbox-symbol"></span> <span class="dropdown-filter-text">{{category}}</span>
           </label>
         {% endfor %}
     </div>
     </div>
     <div class="blogs-wrapper"></div>
     <script type="application/json" id="post-data">
-      [
-        {% for post in site.posts %}
+      [{% for post in site.posts %}
           {
             "id": "{{ post.id | escape }}",
             "title": "{{ post.title | escape }}",
             "categories": {{ post.categories | jsonify }},
-            "tags": {{ post.tags | jsonify }},
             "url": "{{ post.url | escape }}",
             "date": "{{ post.date | date: "%B %-d, %Y" }}",
-            "excerpt": "{{ post.excerpt | strip_html | strip_newlines | escape }}"
-            {% if post.image %}
-              "image": "{{ post.image | jsonify }}",
+            "excerpt": "{{ post.excerpt | strip_html | strip_newlines | escape }}"{% if post.featured-image %},
+            "image": "{{ post.featured-image.url }}"
             {% endif %}
-          }{% if forloop.last == false %},{% endif %}
-        {% endfor %}
-      ]
+          }{% if forloop.last == false %},{% endif %}{% endfor %}]
     </script>
   </section>
 </div>

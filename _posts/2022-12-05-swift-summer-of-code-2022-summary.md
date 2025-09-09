@@ -4,6 +4,7 @@ published: true
 date: 2022-12-05 10:00:00
 title: Swift Summer of Code 2022 Summary
 author: [ktoso]
+category: "Community"
 ---
 
 Google Summer of Code (also known as [GSoC](https://summerofcode.withgoogle.com)) is a long-running mentorship program focused on introducing contributors to the world of open source development. This year marks the fifth time the Swift project has participated in GSoC.

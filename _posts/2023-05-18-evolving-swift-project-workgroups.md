@@ -4,6 +4,7 @@ published: true
 date: 2023-05-18 10:30:00
 title: Evolving the Swift Workgroups
 author: [tkremenek]
+category: "Community"
 ---
 
 Today, the Swift Core Team is announcing forward-looking changes to the structure of Swift, the work, and the people around it. These changes include new groups, names, organization, as well as inclusion as a first-class concept for each group:

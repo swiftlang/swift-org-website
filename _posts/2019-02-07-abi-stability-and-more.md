@@ -3,7 +3,7 @@ layout: post
 date: 2019-02-07 10:00:00
 title: ABI Stability and More
 author: jrose
-
+category: "Language"
 ---
 
 It has been a longstanding goal to stabilize Swift’s ABI on macOS, iOS, watchOS, and tvOS.  While a stable ABI is an important milestone for the maturity of any language, the ultimate benefit to the Swift ecosystem was to enable binary compatibility for apps and libraries.  This post describes what binary compatibility means in Swift 5 and how it will evolve in future releases of Swift.

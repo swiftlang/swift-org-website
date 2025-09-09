@@ -4,6 +4,7 @@ published: true
 date: 2025-02-21 10:00:00
 title: How Swift's server support powers Things Cloud
 author: [vrylko, wjainek]
+category: "Adopters"
 ---
 
 You might be familiar with [Things](https://culturedcode.com/things/), a delightful personal task manager that has won two Apple Design Awards and is available across Apple devices including iPhone, iPad, Mac, Apple Watch, and Apple Vision Pro. At Cultured Code, the team behind Things, we care about a great user experience across every aspect of the product. This extends to our server back end, and after a rewrite our Things Cloud service has transitioned entirely to Swift. Over the past year in production, Swift has consistently proven to be reliable, performant, and remarkably well-suited for our server-side need.

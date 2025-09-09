@@ -3,6 +3,7 @@ layout: post
 date: 2020-10-07 9:00:00
 title: Announcing Swift Algorithms
 author: natecook1000
+category: "Developer Tools"
 ---
 
 I'm excited to announce [Swift Algorithms](https://github.com/apple/swift-algorithms), a new open-source package of sequence and collection algorithms, along with their related types.

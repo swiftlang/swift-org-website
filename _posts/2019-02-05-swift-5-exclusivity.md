@@ -3,6 +3,7 @@ layout: post
 date: 2019-02-05 10:00:00
 title: Swift 5 Exclusivity Enforcement
 author: atrick
+category: "Language"
 ---
 
 The Swift 5 release enables runtime checking of "Exclusive Access to

@@ -4,7 +4,7 @@ published: true
 date: 2019-10-17 10:00:00
 title: New Diagnostic Architecture Overview
 author: xedin
-
+category: "Language"
 ---
 
 Diagnostics play a very important role in a programming language experience. It's vital for developer productivity that the compiler can produce proper guidance in any situation, especially incomplete or invalid code.

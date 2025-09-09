@@ -4,6 +4,7 @@ published: true
 date: 2016-10-25 9:00:00
 title: Server APIs Work Group
 author: seabaylea
+category: "Community"
 ---
 
 Since Swift became available on Linux there has been a huge amount of interest in using Swift on the server, resulting in the emergence of a number of Web Frameworks, including Kitura, Vapor, Perfect, and Zewo, along with many others. As an important part of the Swift ecosystem, and one that we are keen to foster, we are today announcing the formation of the Server APIs work group.

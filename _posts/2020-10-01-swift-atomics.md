@@ -3,6 +3,7 @@ layout: post
 date: 2020-10-01 14:00:00
 title: Introducing Swift Atomics
 author: lorentey
+category: "Developer Tools"
 ---
 
 I'm delighted to announce Swift Atomics, a new open source package that enables direct use of low-level atomic operations in Swift code. The goal of this library is to enable intrepid systems programmers to start building synchronization constructs (such as concurrent data structures) directly in Swift.

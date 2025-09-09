@@ -3,6 +3,7 @@ layout: post
 title: Swift-DocC is Now Open Source
 author: franklinsch
 date: 2021-10-13 10:00:00
+category: "Developer Tools"
 ---
 
 At WWDC21, Apple announced Swift-DocC, a new documentation compiler for Swift frameworks and

@@ -3,6 +3,7 @@ layout: post
 date: 2018-09-26 10:00:00
 title: How Mirror Works
 author: mikeash
+category: "Language"
 ---
 
 Swift places a lot of emphasis on static typing, but it also supports rich metadata about types, which allows code to inspect and manipulate arbitrary values at runtime. This is exposed to Swift programmers through the `Mirror` API. One might wonder, how does something like `Mirror` work in a language with so much emphasis on static types? Let's take a look!

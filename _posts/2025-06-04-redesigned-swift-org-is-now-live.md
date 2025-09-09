@@ -2,8 +2,9 @@
 layout: post
 published: true
 date: 2025-06-04 10:00:00
-title: "Redesigned Swift.org is now live"
+title: 'Redesigned Swift.org is now live'
 author: [shahmishal]
+category: 'Community'
 ---
 
 Over the past few months, the website workgroup has been redesigning Swift.org. On behalf of the website workgroup, I'm pleased to announce that we have merged the initial changes.
@@ -34,9 +35,8 @@ The homepage now highlights Swift's strengths alongside code examples that illus
 
 We look forward to hearing your feedback on this first set of changes as we continue to redesign other sections of the site. There are several ways to offer feedback on the redesign and to get involved:
 
-* A [forum announcement](https://forums.swift.org/t/redesigned-swift-org-is-now-live/80296) has been shared on the forums that can be used for discussion, and the website repository has GitHub issues.
-* The website itself is open source, and your contributions to the [swiftlang/swift-org-website](https://github.com/swiftlang/swift-org-website) repository are welcome.
-* [The Swift Information Architecture Project](https://forums.swift.org/t/announcing-the-swift-information-architecture-project/75866) is an ongoing effort that has helped inform decisions related to the site redesign.
-
+- A [forum announcement](https://forums.swift.org/t/redesigned-swift-org-is-now-live/80296) has been shared on the forums that can be used for discussion, and the website repository has GitHub issues.
+- The website itself is open source, and your contributions to the [swiftlang/swift-org-website](https://github.com/swiftlang/swift-org-website) repository are welcome.
+- [The Swift Information Architecture Project](https://forums.swift.org/t/announcing-the-swift-information-architecture-project/75866) is an ongoing effort that has helped inform decisions related to the site redesign.
 
 Thank you to the website workgroup and community members for contributing to these improvements.

@@ -4,6 +4,7 @@ published: true
 date: 2022-08-18 13:00:00
 title: Server Guides Now on Swift.org
 author: 0xTim
+category: "Community"
 ---
 
 The [Swift Server Workgroup](/sswg/) has maintained a set of open source guides for Swift on Server development for a number of years. Now that swift.org is open source, we've [moved the guides to this site](/documentation/server/guides/).

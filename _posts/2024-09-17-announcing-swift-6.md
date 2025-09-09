@@ -4,6 +4,7 @@ published: true
 date: 2024-09-17 10:00:00
 title: Announcing Swift 6
 author: [hborla]
+category: "Language"
 ---
 
 We're delighted to announce the general availability of Swift 6. This is a major new release that expands Swift to more platforms and domains.

@@ -3,6 +3,7 @@ layout: post
 date: 2020-02-13 09:00:00
 title: Library Evolution in Swift
 author: slavapestov
+category: "Language"
 ---
 
 Swift 5.0 introduced a stable binary interface on Apple platforms. This meant that apps built with the Swift 5.0 compiler can use the Swift runtime and standard library built into the operating system, and that existing apps will remain compatible with new versions of the Swift runtime in future operating system releases.

@@ -4,6 +4,7 @@ published: true
 date: 2016-10-21 10:00:00
 title: Whole-Module Optimization in Swift 3
 author: eeckstein
+category: "Language"
 ---
 
 Whole-module optimization is an optimization mode of the Swift compiler.

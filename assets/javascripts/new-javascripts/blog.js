@@ -1,17 +1,16 @@
 const wrapper = document.querySelector('.blogs-and-filter-wrapper')
-const filterSelector = wrapper.querySelector('.blogs-filter')
 const postsWrapper = wrapper.querySelector('.blogs-wrapper')
 const postData = JSON.parse(wrapper.querySelector('#post-data').textContent)
 const checkboxes = [...wrapper.querySelectorAll('.category-filter')]
 const selectAllBox = document.querySelector('.select-all')
 const dropdown = document.querySelector('.dropdown')
+const allCheckboxes = [selectAllBox, ...checkboxes]
 const dropdownOpenButton = document.querySelector('.dropdown-toggle')
 const dropdownCloseButton = document.querySelector('.dropdown-close')
 const elementsCache = []
 
 // create post links
 const createAnchor = (postData) => {
-  if (postData.image) debugger
   const anchor = document.createElement('a')
   anchor.href = postData.url
   anchor.classList.add('post-link')
@@ -38,7 +37,6 @@ const selectAllCategories = () => {
 }
 
 dropdownOpenButton.addEventListener('click', function () {
-  const dropdown = this.parentElement
   dropdown.classList.toggle('active')
 
   // Toggle aria-expanded attribute
@@ -46,7 +44,7 @@ dropdownOpenButton.addEventListener('click', function () {
   this.setAttribute('aria-expanded', !isExpanded)
 })
 
-// close the dropdown if clicked outside
+// Close the dropdown if clicked outside
 window.addEventListener('click', function (evt) {
   if (!dropdown.contains(evt.target)) {
     dropdown.classList.remove('active')
@@ -54,6 +52,7 @@ window.addEventListener('click', function (evt) {
   }
 })
 
+// Handle the "All" button functionality
 selectAllBox.addEventListener('click', selectAllCategories)
 
 dropdownCloseButton.addEventListener('click', function () {
@@ -66,6 +65,7 @@ dropdownCloseButton.addEventListener('click', function () {
 
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', function () {
+    // debugger
     // If every box is either checked or none are, set all categories on
     if (
       checkboxes.every((checkbox) => checkbox.checked === checkboxes[0].checked)

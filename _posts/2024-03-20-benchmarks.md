@@ -4,6 +4,7 @@ published: true
 date: 2024-03-20 10:00:00
 title: "Introducing the Benchmark Package: Complementing Unit Tests with Performance Checks"
 author: [hassila]
+category: "Developer Tools"
 ---
 
 In the world of software development, the old adage "make it work, make it right, make it fast" serves as a guiding principle for creating robust, efficient applications. This journey starts with ensuring that our code functions as intended, a task where unit and integration testing have proven indispensable. However, ensuring functionality is only part of the equation. The true measure of an application's excellence extends into its performance - how fast and efficiently it operates under various conditions. Herein lies the critical but often overlooked third step: _making it fast_.

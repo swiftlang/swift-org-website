@@ -4,6 +4,7 @@ published: true
 date: 2018-01-08 12:00:00
 title: Conditional Conformance in the Standard Library
 author: airspeedswift
+category: "Language"
 ---
 
 The Swift 4.1 compiler brings the next phase of improvements from the

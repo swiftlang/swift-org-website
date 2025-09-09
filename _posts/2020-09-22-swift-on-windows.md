@@ -3,6 +3,7 @@ layout: post
 date: 2020-09-22 9:00:00
 title: Introducing Swift on Windows
 author: compnerd
+category: "Community"
 ---
 
 The Swift project is introducing [new downloadable Swift toolchain images](/download) for Windows!  These images contain development components needed to build and run Swift code on Windows.

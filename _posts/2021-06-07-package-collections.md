@@ -3,6 +3,7 @@ layout: post
 date: 2021-06-07 9:00:00
 title: Package Collections
 author: tomerd
+category: "Community"
 ---
 
 In Swift 5.5, the Swift Package Manager adds support for package collections — bite size curated lists of packages that make it easy to discover, share and adopt packages.

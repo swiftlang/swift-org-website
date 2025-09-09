@@ -4,6 +4,7 @@ published: true
 date: 2023-04-26 10:30:00
 title: Foundation Package Preview Now Available
 author: [parkera]
+category: "Developer Tools"
 ---
 
 I'm pleased to announce that a preview of the [future of Foundation](https://www.swift.org/blog/future-of-foundation/) is now available on [GitHub](https://github.com/swiftlang/swift-foundation)!
