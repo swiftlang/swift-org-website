@@ -13,7 +13,7 @@ Swift 5.9 introduced a number of new debugging features to the compiler and [LLD
 Here are three changes that can help with your everyday debugging workflows.
 
 
-### Faster variable inspection with `p` and `po`
+### Faster variable inspection with <code>p</code> and <code>po</code>
 
 LLDB provides the shorthand `p` command alias to inspect variables and `po` to call the debugDescription property of objects. Originally, these were aliases for the rather heavyweight `expression` and `expression -O` commands. In Swift 5.9, the `p` and `po` command aliases have been redefined to the new [`dwim-print` command](https://reviews.llvm.org/D138315 "LLVM review").
 
