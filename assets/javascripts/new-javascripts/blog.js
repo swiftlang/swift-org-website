@@ -13,7 +13,6 @@ const createAnchor = (postData) => {
   const imgEl = postData['image-url']
     ? `<img src="${postData['image-url']}" alt="${postData['image-alt']}" />`
     : ''
-  console.log(imgEl, postData.title)
   anchor.href = postData.url
   anchor.classList = imgEl ? 'post-link post-link-with-image' : 'post-link'
   anchor.innerHTML = `
@@ -76,7 +75,7 @@ updatePosts(filterPosts(elementsCache, checkboxes), postsWrapper, postsWrapper)
 filterMenuToggle.addEventListener('click', () => {
   dropdown.classList.toggle('active')
 
-  const isExpanded = this.getAttribute('aria-expanded') === 'true'
+  const isExpanded = filterMenuToggle.getAttribute('aria-expanded') === 'true'
   filterMenuToggle.toggleAttribute('aria-expanded', !isExpanded)
 })
 
@@ -92,7 +91,6 @@ window.addEventListener('click', (evt) => {
 selectAllBox.addEventListener('click', selectAllCategories)
 
 dropdownCloseButton.addEventListener('click', () => {
-  const dropdown = this.closest('.dropdown')
   dropdown.classList.remove('active')
   document
     .querySelector('.dropdown-toggle')
