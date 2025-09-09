@@ -19,6 +19,9 @@
     - name: Fedora 39
       slug: fedora39
       url: /install/linux/fedora/39
+    - name: Fedora 41
+      slug: fedora41
+      url: /install/linux/fedora/41
 - name: Red Hat
   slug: ubi
   url: /install/linux/ubi/9
