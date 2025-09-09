@@ -4,6 +4,7 @@ published: true
 date: 2022-07-22 10:30:00
 title: Announcing the Documentation Workgroup
 author: franklinsch
+category: "Community"
 ---
 
 I’m thrilled to announce the formation of the Documentation Workgroup!

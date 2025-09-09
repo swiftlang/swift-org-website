@@ -113,6 +113,20 @@
   --color-syntax-strings: rgb(209, 47, 27);
   --color-syntax-type-declarations: rgb(3, 99, 140);
   --color-syntax-urls: rgb(19, 55, 255);
+
+  --blog-dropdown-arrow: url('/assets/images/icon-arrow-dark.svg');
+  --blog-muted-color: #8d8d8d;
+  --blog-card-bg: #ffffff;
+  --blog-category-pill-copy-color: #4d4d4d;
+  --blog-category-pill-bg: #e2e2e2;
+  --blog-dropdown-bg: #ffffff;
+  --blog-dropdown-toggle-outline-color: #e8e8e8;
+  --blog-dropdown-toggle-outset-outline-color-active: #384ff0;
+  --blog-dropdown-toggle-inset-outline-color-active: #e4e4e4;
+  --dropdown-close-icon: url('/assets/images/icon-dropdown-close.svg');
+  --dropdown-check-icon: url('/assets/images/icon-check-dark.svg');
+  --dropdown-check-icon-inverse: url('/assets/images/icon-check-light.svg');
+  --dropdown-all-background: #384ff0;
 }
 
 @mixin dark-theme() {
@@ -221,4 +235,18 @@
   --color-syntax-strings: rgb(255, 129, 112);
   --color-syntax-type-declarations: rgb(107, 223, 255);
   --color-syntax-urls: rgb(102, 153, 255);
+
+  --blog-dropdown-arrow: url('/assets/images/icon-arrow-light.svg');
+  --blog-muted-color: #c4c4c4;
+  --blog-category-pill-copy-color: #c4c4c4;
+  --blog-category-pill-bg: #172538;
+  --blog-card-bg: #23344a;
+  --blog-dropdown-bg: #111727;
+  --blog-dropdown-toggle-outline-color: #384461;
+  --blog-dropdown-toggle-outset-outline-color-active: #384461;
+  --blog-dropdown-toggle-inset-outline-color-active: #727272;
+  --dropdown-close-icon: url('/assets/images/icon-dropdown-close-dark.svg');
+  --dropdown-check-icon: url('/assets/images/icon-check-light.svg');
+  --dropdown-check-icon-inverse: url('/assets/images/icon-check-dark.svg');
+  --dropdown-all-background: #1dc2fe;
 }

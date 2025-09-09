@@ -4,7 +4,7 @@ published: true
 date: 2020-05-05 10:00:00
 title: Additional Linux Distributions
 author: tomerd
-
+category: "Developer Tools"
 ---
 
 It is my pleasure to announce a new set of Linux distributions officially supported by the Swift project. [Swift.org](/download/) now offers downloadable toolchain and Docker images for the following new Linux distributions:

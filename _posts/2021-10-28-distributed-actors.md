@@ -3,6 +3,7 @@ layout: new-layouts/post
 date: 2021-10-28 9:00:00
 title: Introducing Swift Distributed Actors
 author: ktoso
+category: "Developer Tools"
 ---
 
 We're thrilled to announce a new open-source package for the Swift on Server ecosystem, [Swift Distributed Actors](https://github.com/apple/swift-distributed-actors/), a complete server-oriented cluster library for the upcoming `distributed actor` language feature!

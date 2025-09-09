@@ -4,6 +4,7 @@ published: true
 date: 2023-03-07 9:00:00
 title: Introducing Swift Certificates and Swift ASN.1
 author: [corybenfield]
+category: "Developer Tools"
 ---
 
 I'm excited to announce two new open source Swift packages: [swift-certificates](https://github.com/apple/swift-certificates) and [swift-asn1](https://github.com/apple/swift-asn1). Together, these libraries provide developers a faster and safer implementation of X.509 certificates, a critical technology that powers the security of TLS.

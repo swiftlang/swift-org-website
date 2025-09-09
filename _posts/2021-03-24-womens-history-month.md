@@ -3,6 +3,7 @@ layout: new-layouts/post
 date: 2021-03-24 10:00:00
 title: Celebrating Women’s History Month
 author: [hborla, twostraws]
+category: "Community"
 ---
 
 This Women's History Month, we're so happy to celebrate the amazing women developers in our community. Women have made an immense impact on the Swift ecosystem by building important tools we use every day, creating resources to pass on what they have learned, and more. This post highlights a few outstanding contributions from individuals in the Women in Swift community.

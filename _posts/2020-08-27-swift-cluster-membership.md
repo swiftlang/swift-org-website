@@ -4,6 +4,7 @@ published: true
 date: 2020-08-27 9:00:00
 title: Introducing Swift Cluster Membership
 author: ktoso
+category: "Developer Tools"
 ---
 
 It is my pleasure to announce a new open source project for the Swift Server ecosystem, [Swift Cluster Membership](https://www.github.com/apple/swift-cluster-membership). This library aims to help Swift grow in a new space of server applications: clustered multi-node distributed systems. With this library we provide reusable runtime-agnostic *membership protocol* implementations which can be adopted in various clustering use-cases.

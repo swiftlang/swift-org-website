@@ -4,6 +4,7 @@ published: true
 date: 2023-02-16 14:00:00
 title: “The Swift Programming Language” book now published with DocC
 author: [amartini]
+category: "Community"
 ---
 
 

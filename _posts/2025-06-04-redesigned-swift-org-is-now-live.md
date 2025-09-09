@@ -5,6 +5,7 @@ date: 2025-06-04 10:00:00
 title: "Redesigned Swift.org is now live"
 image: "swift-redesign-blog.png"
 author: [shahmishal]
+category: 'Community'
 ---
 
 Over the past few months, the website workgroup has been redesigning Swift.org. On behalf of the website workgroup, I'm pleased to announce that we have merged the initial changes.
