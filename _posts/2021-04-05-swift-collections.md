@@ -3,6 +3,7 @@ layout: new-layouts/post
 date: 2021-04-05 14:00:00
 title: Introducing Swift Collections
 author: lorentey
+category: "Developer Tools"
 ---
 
 I'm thrilled to announce [Swift Collections][collections], a new open-source package focused on extending the set of available Swift data structures. Like the [Swift Algorithms][algorithms] and [Swift Numerics][numerics] packages before it, we're releasing Swift Collections to help incubate new functionality for the Swift Standard Library.

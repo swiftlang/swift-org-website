@@ -4,6 +4,7 @@ published: true
 date: 2016-7-07 13:00:00
 title: Xcode Playground Support
 author: k8stone
+category: "Developer Tools"
 ---
 
 We are delighted to introduce [Xcode Playground Support](/documentation/lldb/#xcode-playground-support)

@@ -4,6 +4,7 @@ published: true
 date: 2024-03-25 10:00:00
 title: "Writing GNOME Apps with Swift"
 author: [davidswift]
+category: 'Developer Tools'
 ---
 
 Swift is well-suited for creating user interfaces thanks to the clean syntax, static typing, and special features making code easier to write.

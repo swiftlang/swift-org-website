@@ -4,6 +4,7 @@ published: true
 date: 2024-06-10 10:00:00
 title: "New GitHub Organization for the Swift Project"
 author: [tkremenek]
+category: "Community"
 ---
 
 Today, we are announcing an exciting development for the Swift programming language: its migration to a dedicated GitHub organization at [GitHub.com/swiftlang](http://github.com/swiftlang).

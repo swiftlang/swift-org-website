@@ -4,6 +4,7 @@ published: true
 date: 2025-02-01 6:00:00
 title: The Next Chapter in Swift Build Technologies
 author: [owen-voorhees]
+category: "Developer Tools"
 ---
 
 Swift continues to grow in popularity as a cross-platform language supporting a wide variety of use cases, with support on a [variety of embedded devices](/blog/embedded-swift-examples/), form factors that encompass [wearables](https://developer.apple.com/documentation/watchos-apps/building_a_watchos_app) to [server](/documentation/server/), and a wide variety of [operating systems](/documentation/articles/static-linux-getting-started.html). As Swift expands, there’s value in investing in matching cross-platform build tools that provide a powerful, consistent, and flexible experience across the ecosystem.

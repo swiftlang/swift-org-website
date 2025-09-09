@@ -4,6 +4,7 @@ published: true
 date: 2025-05-05 11:55:00
 title: "ICYMI: Memory Safety, Ecosystem Talks, and Java Interoperability at FOSDEM 2025"
 author: [parispittman]
+category: "Digest"
 ---
 
 The Swift community had a strong presence at FOSDEM 2025, the world’s largest independently run open source conference, held every year in Brussels, Belgium. FOSDEM highlighted a range of Swift-related talks related to memory safety, a broad ecosystem around Swift including using it to develop web services and embedded projects, and new areas of the project including Java interoperability.

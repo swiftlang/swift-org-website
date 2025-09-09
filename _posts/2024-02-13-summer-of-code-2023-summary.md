@@ -1,9 +1,11 @@
 ---
 layout: new-layouts/post
 published: true
+category: "Community"
 date: 2024-02-13 10:00:00
 title: Swift Summer of Code 2023 Summary
 author: [ktoso, FranzBusch, ahoppen, xedin]
+category: "Community"
 ---
 
 The Swift project regularly participates in [Google Summer of Code](https://summerofcode.withgoogle.com) in order to help people new to the open source ecosystem dip their toes in contributing to Swift and its growing ecosystem.

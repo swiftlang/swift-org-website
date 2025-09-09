@@ -4,6 +4,7 @@ published: true
 date: 2023-07-10 10:00:00
 title: Introducing Swift HTTP Types
 author: [guoyezhang, erickinnear, corybenfield]
+category: "Developer Tools"
 ---
 
 We're excited to announce a new open source package called [Swift HTTP Types](https://github.com/apple/swift-http-types).

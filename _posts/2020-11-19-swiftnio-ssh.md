@@ -3,6 +3,7 @@ layout: new-layouts/post
 date: 2020-11-19 9:00:00
 title: Introducing SwiftNIO SSH
 author: corybenfield
+category: "Developer Tools"
 ---
 
 I am delighted to introduce a new open source project for the Swift Server ecosystem, [SwiftNIO SSH](https://github.com/apple/swift-nio-ssh). Distributed as a Swift package, SwiftNIO SSH is designed to enable Swift developers to interact with the SSH network protocol.
