@@ -62,7 +62,6 @@
   }
 
   // page global blog card styles
-
   .blog-date {
     display: block;
     color: var(--blog-muted-color);
@@ -425,6 +424,26 @@
     text-decoration: none;
     display: block;
 
+    &-with-image {
+      display: flex;
+      gap: 36px;
+
+      img {
+        width: 120px;
+        height: 120px;
+        background-size: cover;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        display: block;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
     h3 {
       font-size: 22px;
       font-weight: 400;
@@ -450,5 +469,3 @@
     }
   }
 }
-
-// bg?

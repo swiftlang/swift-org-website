@@ -32,7 +32,7 @@ title: Blog
                         <span class="blog-title">{{ latest_post.title }}</span>
                         <time  class="blog-date body-copy" pubdate datetime="{{ latest_post.date | date_to_xmlschema }}">{{ latest_post.date | date: "%B %-d, %Y" }}</time>
                         <p class="blog-excerpt body-copy">{{ latest_post.excerpt | strip_html}}</p>
-                        <a class="blog-post-cta" href="{{ post.url }}">{{site.data.new-data.blog.page-data.read-more}}</a>
+                        <a class="blog-post-cta" href="{{ latest_post.url }}">{{site.data.new-data.blog.page-data.read-more}}</a>
                     </div>
                   <!-- </a> -->
               </li>
@@ -76,7 +76,8 @@ title: Blog
             "url": "{{ post.url | escape }}",
             "date": "{{ post.date | date: "%B %-d, %Y" }}",
             "excerpt": "{{ post.excerpt | strip_html | strip_newlines | escape }}"{% if post.featured-image %},
-            "image": "{{ post.featured-image.url }}"
+            "image-url": "{{ post.featured-image.url | escape }}", 
+            "image-alt": "{{ post.featured-image.alt }}"
             {% endif %}
           }{% if forloop.last == false %},{% endif %}{% endfor %}]
     </script>
