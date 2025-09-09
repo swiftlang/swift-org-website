@@ -2,7 +2,7 @@
 layout: page
 date: 2024-06-04 12:00:00
 title: Getting Started with the Static Linux SDK
-author: [al45tair]
+author: [al45tair, incertum, etcwilde]
 ---
 
 It's well known that Swift can be used to build software for Apple
@@ -24,11 +24,29 @@ with no external dependencies at all (not even the C library), which
 means that it will run on _any_ Linux distribution as the only thing
 it depends on is the Linux system call interface.
 
+This portability comes at a cost, namely that everything your program
+depends on must be statically linked. There is no support for dynamic
+linking whatsoever — even the `dlopen()` function will not work.
+
+A result of this design choice is that the Static Linux SDK uses a
+“bring your own dependencies” model, similar to that you might be used
+to with the Swift Package Manager. You cannot use system libraries,
+but must either rely on the handful of common libraries supplied with
+the Static SDK (see below), or build any extras yourself.
+
 Additionally, the Static Linux SDK can be used from any platform
 supported by the Swift compiler and package manager; this means that
 you can develop and test your program on macOS before building and
 deploying it to a Linux-based server, whether running locally or
 somewhere in the cloud.
+
+Finally, for those wondering about an equivalent for Apple platforms,
+no such static SDK exists. Building a fully static executable is not
+possible on Apple's operating systems because, unlike Linux, the
+Darwin kernel's system call table is not part of the ABI. This design
+requires all system calls to be routed through the dynamic library
+`libsystem.dylib`, fundamentally preventing a 100% statically linked
+binary.
 
 ### Static vs Dynamic Linking
 
@@ -255,7 +273,7 @@ in another, or a pointer type will be imported as `OpaquePointer`
 rather than `UnsafePointer<FOO>`.
 
 If you do find yourself needing to make these kinds of adjustments,
-you can make your local copy of the package dependency editable by
+you can make your [local copy](https://developer.apple.com/documentation/xcode/editing-a-package-dependency-as-a-local-package) of the package dependency editable by
 doing
 
 ```console
@@ -265,3 +283,69 @@ $ swift package edit SomePackage
 and then editing the files in the `Packages` directory that appears in
 your program's source directory.  You may wish to consider raising PRs
 upstream with any fixes you may have.
+
+If your project makes use of C or C++ language libraries, you may need
+to take additional steps. The Static SDK for Linux includes a small
+handful of very common dependencies (e.g.
+[libxml2](https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home),
+[zlib](https://www.zlib.net/) and [curl](https://curl.se/)). There is
+a high bar for adding dependencies to the SDK itself, because it makes
+the SDK image larger, and means the SDK must be updated to track the
+versions of those dependencies.
+
+The Static SDK includes an SBOM, in [SPDX format](https://spdx.dev/),
+that you can use to determine exactly what is present in any given
+release of the Static SDK for Linux. For instance, using the `bom`
+tool, you can display the SBOM using a command like:
+
+```console
+$ bom document outline ~/.swiftpm/swift-sdks/swift-6.1.2-RELEASE-static-linux-0.0.1.artifactbundle/sbom.spdx.json
+              _      
+ ___ _ __   __| |_  __
+/ __| '_ \ / _` \ \/ /
+\__ \ |_) | (_| |>  < 
+|___/ .__/ \__,_/_/\_\
+    |_|               
+
+ 📂 SPDX Document SBOM-SPDX-648fa59a-9d9d-476f-9183-78d57d847c31
+  │ 
+  │ 📦 DESCRIBES 1 Packages
+  │ 
+  ├ Swift statically linked SDK for Linux@0.0.1
+  │  │ 🔗 7 Relationships
+  │  ├ GENERATED_FROM PACKAGE swift@6.1.2-RELEASE
+  │  ├ GENERATED_FROM PACKAGE musl@1.2.5
+  │  ├ GENERATED_FROM PACKAGE musl-fts@1.2.7
+  │  ├ GENERATED_FROM PACKAGE libxml2@2.12.7
+  │  ├ GENERATED_FROM PACKAGE curl@8.7.1
+  │  ├ GENERATED_FROM PACKAGE boringssl@fips-20220613
+  │  └ GENERATED_FROM PACKAGE zlib@1.3.1
+  │ 
+  └ 📄 DESCRIBES 0 Files
+```
+
+If your project has additional C/C++ dependencies, the process is the
+same as using any static library you’ve built yourself in any other
+context. You must ensure the static library (`.a` file) is in the
+linker’s search path. Additionally, if you intend to call the
+library's functions directly from your Swift code, you must also add
+its header files to the compiler's include path. The only
+Swift-specific part is that you will need a module map for the
+library, but this is also true outside of the Static SDK for Linux
+(see [Mixing Swift and
+C++](https://www.swift.org/documentation/cxx-interop/)).
+
+Some of the dependencies bundled in the Static SDK may be pulled in by
+Swift’s runtime libraries, if you use the functionality that requires
+them — for instance, Foundation Networking uses `libcurl` and
+`libcurl` uses `libz` — but because of the way static linking works,
+you will generally only “pay for what you use”.
+
+You may be able to override the versions of libraries that ship with
+the Static SDK by placing a newer build of the library earlier in the
+linker’s search path. Note however that where other libraries that
+ship with the Static SDK have been built against the library in
+question, your new build will need to be ABI compatible with the
+version that shipped in the Static SDK, since the other libraries in
+the Static SDK will have been built against the headers from the
+version that they ship with.

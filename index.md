@@ -1,6 +1,6 @@
 ---
 layout: new-layouts/base
-title: Welcome to Swift.org
+title: Swift Programming Language
 atom: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 date: 2018-10-08 10:00:00
 title: REPL Support for Swift Packages
 author: aciid

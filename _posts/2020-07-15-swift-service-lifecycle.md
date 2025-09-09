@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2020-07-15 9:00:00
 title: Introducing Swift Service Lifecycle

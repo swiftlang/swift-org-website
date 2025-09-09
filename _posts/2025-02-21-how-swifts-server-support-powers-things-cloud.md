@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2025-02-21 10:00:00
 title: How Swift's server support powers Things Cloud

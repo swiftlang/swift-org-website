@@ -9,14 +9,14 @@ latest-release:
           curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg && \
           installer -pkg swiftly.pkg -target CurrentUserHomeDirectory && \
           ~/.swiftly/bin/swiftly init --quiet-shell-followup && \
-          . "${SWIFTLY_HOME_DIR:-~/.swiftly}/env.sh" && \
+          . "${SWIFTLY_HOME_DIR:-$HOME/.swiftly}/env.sh" && \
           hash -r
       - label: Fish
         code: |
           curl -O https://download.swift.org/swiftly/darwin/swiftly.pkg && \
           installer -pkg swiftly.pkg -target CurrentUserHomeDirectory && \
           ~/.swiftly/bin/swiftly init --quiet-shell-followup && \
-          set -q SWIFTLY_HOME_DIR && . "$SWIFTLY_HOME_DIR/env.fish" || . ~/.swiftly/env.fish
+          set -q SWIFTLY_HOME_DIR && source "$SWIFTLY_HOME_DIR/env.fish" || source ~/.swiftly/env.fish
     links:
       - href: 'https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt'
         copy: 'License: Apache-2.0'

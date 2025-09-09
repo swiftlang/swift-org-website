@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2022-06-30 16:00:00
 title: "Developer Spotlight: Porting Graphing Calculator from C++ to Swift"

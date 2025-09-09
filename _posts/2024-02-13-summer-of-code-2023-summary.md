@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 category: "Community"
 date: 2024-02-13 10:00:00

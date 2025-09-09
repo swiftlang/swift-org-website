@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2025-06-04 10:00:00
 title: "Redesigned Swift.org is now live"
+image: "swift-redesign-blog.png"
 author: [shahmishal]
 category: 'Community'
 ---

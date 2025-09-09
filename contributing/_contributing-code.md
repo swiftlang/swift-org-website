@@ -205,24 +205,25 @@ A *Member* has constructively contributed to Swift multiple times. This role is 
   - Ability to trigger CI testing
   - Show your membership in the swiftlang organization on your GitHub profile
 - Nomination
-  - If you would like to become a member, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) that includes your contribution and the GitHub user name that you want to use
+  - If you would like to become a *Member*, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) that includes your contribution and the GitHub user name that you want to use
 - Growth
   - Show that you use the privileges constructively and continue contributing to gain commit access.
 
-#### Commit Access
+#### Code Merger
 
-Commit access is granted to contributors with a track record of submitting high-quality changes. If you would like commit access, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) with the GitHub user name that you want to use and a list of 5 non-trivial pull requests that were accepted without modifications.
+A *Code Merger* has made several high-quality contributions, has enough knowledge to review PRs in their area, and is trusted to merge changes after getting approvals. The *Code Merger* level is granted on a per-repository basis.
 
-Once you’ve been granted commit access, you will be able to commit to all of the GitHub repositories that host Swift.org projects.  To verify that your commit access works, please make a test commit (for example, change a comment or add a blank line).  The following policies apply to users with commit access:
-
-* You are granted commit-after-approval to all parts of Swift. To get approval, create a pull request. When the pull request is approved, you may merge it yourself.
-
-* You may commit an obvious change without first getting approval. The community expects you to use good judgment. Examples are reverting obviously broken patches, correcting code comments, and other minor changes.
-
-* You are allowed to commit changes without approval to the portions of Swift to which you have contributed or for which you have been assigned responsibility. Such commits must not break the build. This is a “trust but verify” policy, and commits of this nature are reviewed after being committed.
-
-Multiple violations of these policies or a single egregious violation may cause commit access to be revoked.  Even with commit access, your changes are still subject to [code review](#code-review). Of course, you are also encouraged to review other peoples’ changes.
-
+- Requirements
+  - Author 5 small to medium-sized, non-trivial, high-quality PRs (or equivalent) that needed little guidance.
+- Responsibilities
+  - Provide PR reviews, answer questions, and triage issues in your area.
+- Privileges
+  - Merge PRs in the repository that you’re a *Code Merger* of, including PRs authored by other contributors. You are expected to only merge PRs after you have received an approving review from a *Code Owner*. *Code Owners* might approve with comments, with the expectation that you, as a *Code Merger*, will re-request a review if you make major adjustments after the approving review and ensure that the comments are addressed in a timely manner.
+  - Ability to label/triage issues and assign them to contributors.
+- Nomination
+  - Like for a *Member*, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) that includes your contributions, the GitHub user name that you want to use and the repositories you want to become a *Code Merger* for. At the digression of the code owner list, you may also be granted the *Code Merger* role for repositories that you have not contributed to but that are conceptually linked to your contributions, like `swift-syntax` and `swift-driver` after having contributed to the compiler.
+- Growth
+  - As an *Code Merger*, you are trusted not just with your own work but with helping others. In reviews, you can show that you are able to take care of a code area to become a *Code Owner*.
 
 #### Code Owners
 

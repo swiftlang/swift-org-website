@@ -27,7 +27,7 @@ The distributed artifact bundles also include support for the experimental Embed
 4. Navigate to [the downloads page](https://www.swift.org/download/) and find the “Swift SDK for WASI” section. Find a URL of a version that exactly matches the version from step 2.
 If the corresponding snapshot version is not available for the Swift SDK, you’ll have to install the matching toolchain first.
 
-5. Find the checksum value for the corresponding Swift SDK on the same page, substitute it together with the URL from step 2, and execute the following command:
+5. Press "Copy install command" link for the selected Swift SDK to get the installation command, then run it in your terminal application. The command would look like this:
 
     ```
     swift sdk install <swift_sdk_url> --checksum <checksum_value>
@@ -95,11 +95,9 @@ Hello from WASI!
 
 # Embedded Swift Support
 
-[Embedded Swift](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md) is an experimental subset of the language
+[Embedded Swift](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md) is an experimental [subset of the language](https://docs.swift.org/embedded/documentation/embedded/languagesubset)
 allowing the toolchain to produce Wasm binaries that are multiple orders of magnitude smaller. One of the Swift SDKs in the artifact bundle you've installed
-with the `swift sdk install` command is tailored specifically for Embedded Swift. A subset of Swift Concurrency is also supported in this mode
-thanks to the functionality provided by WASI.
+with the `swift sdk install` command is tailored specifically for Embedded Swift.
 
-To build with Embedded Swift SDK, pass its ID as noted in `swift sdk list` output (which has an `-embedded` suffix) in the `--swift-sdk` option. You also have to pass `-c release`
-to `swift build` and `swift run` to enable optimizations required for Embedded Swift.
+To build with Embedded Swift SDK, pass its ID as noted in `swift sdk list` output (which has an `-embedded` suffix) in the `--swift-sdk` option.
 

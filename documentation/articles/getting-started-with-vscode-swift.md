@@ -81,8 +81,9 @@ which can include:
 ![Package swift actions](/assets/images/getting-started-with-vscode-swift/language-features/package_actions.png)
 
 <div class="warning" markdown="1">
-Before language features can be used you must perform a `swift build` command on your
-project either on the command line or using a task in VS Code. This populates the index in SourceKit-LSP.
+Prior to Swift 6.1 you must perform a `swift build` command on your project either
+on the command line or using a task in VS Code Before language features can be used.
+This populates the index in SourceKit-LSP.
 </div>
 
 ## Swift Tasks
@@ -142,10 +143,9 @@ target in your Swift package. You may configure these yourself by adding a
 {
   "configurations": [
     {
-      "type": "lldb",
+      "type": "swift",
       "name": "Debug swift-executable",
       "request": "launch",
-      "sourceLanguages": ["swift"],
       "args": ["--hello", "world"],
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/.build/debug/swift-executable",
@@ -234,7 +234,10 @@ function correctly:
 
 ![Reload VS Code warning](/assets/images/getting-started-with-vscode-swift/toolchain-selection/reload.png)
 
-## Contributors
+## Learn More and Contribute
 
-The extension is developed by members of the Swift Community and maintained by
-the [Swift Server Working Group](/sswg/).
+The official documentation for this extension is [available on swift.org](https://docs.swift.org/vscode/documentation/userdocs).
+
+To propose new features, you can post on the Swift forums in the [VS Code Swift Extension category](https://forums.swift.org/c/related-projects/vscode-swift-extension/). If you run into something that doesn't work the way you'd expect, please [file an issue in the extension's GitHub repository](https://github.com/swiftlang/vscode-swift/issues/new).
+
+The project welcomes contributions, including code, tests, and documentation. For more details on how to contribute, please read the [contribution guide](https://github.com/swiftlang/vscode-swift/blob/HEAD/CONTRIBUTING.md).

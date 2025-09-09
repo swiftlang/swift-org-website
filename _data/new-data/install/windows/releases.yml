@@ -2,7 +2,7 @@ latest-release:
   winget:
     pre-code-text: |
       Install Swift via the Windows Package Manager (also known as WinGet).
-    headline: WinGet
+    headline: 1. Install Swift via WinGet
     after-code-text: |
       First, install Windows platform dependencies:
       <pre><code>winget install --id Microsoft.VisualStudio.2022.Community --exact --force --custom "--add Microsoft.VisualStudio.Component.Windows11SDK.22000 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64"</code></pre>
@@ -13,5 +13,29 @@ latest-release:
     links:
       - href: "/install/windows/winget/"
         copy: "Additional details included in Instructions"
+  vscode:
+    pre-code-text: Visual Studio Code is a cross-platform and extensible editor that supports Swift through the Swift extension, which provides intelligent editor functionality as well as debugging and test support.
+    headline: 2. Select an Editor <br><br> Visual Studio Code
+    links:
+      - href: 'https://marketplace.visualstudio.com/items?itemName=swiftlang.swift-vscode'
+        copy: 'Install Swift extension'
+      - href: 'https://code.visualstudio.com/docs/languages/swift'
+        copy: 'Documentation'
       - href: "https://www.swift.org/tools/#editors"
-        copy: "Editors"
+        copy: "Other Editors"
+  build-a-package:
+    pre-code-text: "Let’s write a small application with your new Swift development environment."
+    headline: 3. Build a Command-line Tool
+    after-code-text: |
+      Create a directory:
+      <pre><code>mkdir MyCLI</code></pre>
+      Change the directory:
+      <pre><code>cd MyCLI</code></pre>
+      Create a new project:
+      <pre><code>swift package init --name MyCLI --type executable</code></pre>
+      Run the program with
+      <pre><code>swift run MyCLI</code></pre>
+      You can continue to expand the program with additional features. Check out the getting started guide for command line tools.
+    links:
+      - href: 'https://www.swift.org/getting-started/cli-swiftpm/'
+        copy: 'Build a Command-line Tool Guide'

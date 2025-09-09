@@ -74,6 +74,25 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DevToolchainsForArch'
+  /install/dev/{branch}/wasm-sdk.json:
+    parameters:
+      - name: branch
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/SourceBranch'
+    get:
+      operationId: listWasmSDKDevToolchains
+      summary: Fetch all SDK for WebAssembly toolchains
+      tags:
+        - Toolchains
+      responses:
+        '200':
+          description: A successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DevToolchainsForArch'
   /swiftly.json:
     get:
       operationId: getCurrentSwiftlyRelease
@@ -195,6 +214,10 @@ components:
           type: string
           description: Filename of the snapshot archive to download.
           example: 'swift-6.0-DEVELOPMENT-SNAPSHOT-2024-07-25-a-amazonlinux2-aarch64.tar.gz'
+        checksum:
+          type: string
+          description: SHA-256 Checksum of the download.
+          example: 'a915e4a5f167f4bc8bbf702c4b235ba2d4b9c79124f61e3d85d3e0c0cafbc63c'
         download_signature:
           type: string
           description: Filename of the signature file for the download.
@@ -232,6 +255,8 @@ components:
       enum:
         - main
         - '6.0'
+        - '6.1'
+        - '6.2'
     SourceBranch:
       anyOf:
         - $ref: '#/components/schemas/KnownSourceBranch'
