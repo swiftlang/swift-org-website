@@ -5,6 +5,9 @@ date: 2024-09-17 10:00:00
 title: Announcing Swift 6
 author: [hborla]
 category: "Language"
+featured-image:
+  url: '/assets/images/placeholders/image_placeholder_large.png'
+  alt: 'An FPO image for a blog.'
 ---
 
 We're delighted to announce the general availability of Swift 6. This is a major new release that expands Swift to more platforms and domains.
