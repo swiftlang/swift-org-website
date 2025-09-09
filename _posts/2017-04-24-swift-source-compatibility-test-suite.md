@@ -4,6 +4,7 @@ published: true
 date: 2017-04-24 13:01:01
 title: Swift Source Compatibility Test Suite Now Available
 author: lplarson
+category: "Developer Tools"
 ---
 
 We are pleased to announce the release of a new [Swift source compatibility test

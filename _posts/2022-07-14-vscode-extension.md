@@ -4,6 +4,7 @@ published: true
 date: 2022-07-14 09:45:00
 title: Swift Extension for Visual Studio Code
 author: adam-fowler
+category: "Developer Tools"
 ---
 
 As Swift is deployed across more platforms, it is important that Swift can be developed on more platforms as well. The [Swift Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=swiftlang.swift-vscode) provides a cross-platform solution for Swift development supporting macOS, Linux, and Windows.

@@ -3,6 +3,7 @@ layout: new-layouts/post
 published: true
 date: 2015-12-03 11:01:01
 title: The Swift Linux Port
+category: 'Developer Tools'
 ---
 
 With the launch of the open source Swift project, we are also releasing

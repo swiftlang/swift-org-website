@@ -5,6 +5,7 @@ date: 2024-01-31 12:00:00
 title: Swift OpenAPI Generator 1.0 Released
 author: [simonjbeaumont, honzadvorsky]
 excerpt_separator: <!--read more-->
+category: "Developer Tools"
 ---
 
 We’re happy to announce the stable 1.0 release of [Swift OpenAPI Generator][swift-openapi-generator-repo]!

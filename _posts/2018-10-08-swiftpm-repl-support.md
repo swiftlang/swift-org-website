@@ -3,6 +3,7 @@ layout: new-layouts/post
 date: 2018-10-08 10:00:00
 title: REPL Support for Swift Packages
 author: aciid
+category: "Developer Tools"
 ---
 
 The `swift run` command has a new `--repl` option which launches the Swift REPL with support for importing library targets of a package.

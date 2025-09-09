@@ -4,6 +4,7 @@ published: true
 date: 2025-02-10 16:00:00
 title: Updating the Visual Studio Code extension for Swift
 author: [adam-ward]
+category: "Developer Tools"
 ---
 
 Today, we are excited to announce a new version of the Swift extension for

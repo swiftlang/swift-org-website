@@ -4,6 +4,7 @@ published: true
 date: 2023-10-13 10:00:00
 title: "Swift Everywhere: Using Interoperability to Build on Windows"
 author: [compnerd]
+category: "Adopters"
 ---
 
 *This post was originally published at [Speaking in Swift by The Browser Company](https://speakinginswift.substack.com/p/interoperability-swifts-super-power) under the title "Interoperability: Swift's Super Power".*

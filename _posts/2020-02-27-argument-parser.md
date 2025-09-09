@@ -3,6 +3,7 @@ layout: new-layouts/post
 title: Announcing ArgumentParser
 author: natecook1000
 date: 2020-02-27 09:00:00
+category: "Developer Tools"
 ---
 
 We're delighted to announce [`ArgumentParser`](https://github.com/apple/swift-argument-parser), a new open-source library that makes it straightforward — even enjoyable! — to parse command-line arguments in Swift.

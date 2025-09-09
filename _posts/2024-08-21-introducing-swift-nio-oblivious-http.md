@@ -4,6 +4,7 @@ published: true
 date: 2024-08-21 10:00:00
 title: Introducing Oblivious HTTP support in Swift
 author: [corybenfield]
+category: "Developer Tools"
 ---
 
 We’re excited to introduce an implementation of provisional support for Oblivious HTTP to the Swift ecosystem, with the availability of a new package called [SwiftNIO Oblivious HTTP](https://github.com/apple/swift-nio-oblivious-http).

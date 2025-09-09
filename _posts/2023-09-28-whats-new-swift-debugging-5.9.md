@@ -4,6 +4,7 @@ published: true
 date: 2023-09-28 11:00:00
 title: Debugging Improvements in Swift 5.9
 author: [adrian-prantl, augustonoronha, kastiglione]
+category: "Language"
 ---
 
 

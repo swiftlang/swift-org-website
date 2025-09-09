@@ -3,7 +3,7 @@ layout: new-layouts/post
 date: 2019-02-11 10:00:00
 title: Evolving Swift On Apple Platforms After ABI Stability
 author: jckarter
-
+category: "Language"
 ---
 
 With the release of Swift 5.0, Swift is now ABI stable and is delivered as a core component of macOS, iOS, tvOS, and watchOS. ABI stability has been a goal for Swift since its inception, and brings with it many benefits for developers and users of these platforms:

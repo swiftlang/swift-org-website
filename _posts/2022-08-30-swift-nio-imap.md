@@ -4,6 +4,7 @@ published: true
 date: 2022-08-30 13:00:00
 title: Announcing SwiftNIO IMAP
 author: [danieleggert, corybenfield]
+category: "Developer Tools"
 ---
 
 As part of expanding the Swift on Server ecosystem, we're thrilled to announce the release of a new IMAPv4 parser and encoder, SwiftNIO IMAP.

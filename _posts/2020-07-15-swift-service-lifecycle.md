@@ -4,6 +4,7 @@ published: true
 date: 2020-07-15 9:00:00
 title: Introducing Swift Service Lifecycle
 author: tomerd
+category: "Developer Tools"
 ---
 
 It is my pleasure to announce a new open source project for the Swift server ecosystem, [Swift Service Lifecycle](https://github.com/swift-server/swift-service-lifecycle). Service Lifecycle is a Swift package designed to help server applications, also known as services, manage their startup and shutdown sequences.

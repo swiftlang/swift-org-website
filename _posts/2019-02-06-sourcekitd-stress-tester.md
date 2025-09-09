@@ -3,6 +3,7 @@ layout: new-layouts/post
 date: 2019-02-06 12:00:00
 title: Introducing the sourcekitd Stress Tester
 author: nathawes
+category: "Developer Tools"
 ---
 
 Sourcekitd provides the data backing key editor features like code completion, semantic highlighting, and refactoring for Swift files in both Xcode and the recently announced [SourceKit-LSP](https://forums.swift.org/t/introducing-sourcekit-lsp/17964). To help improve its robustness, we're introducing a new tool, the sourcekitd stress tester, that over the past few months has helped find 91 reproducible sourcekitd crashes, assertion failures, and hangs. This post covers the stress tester's implementation, its deployment in Swift's CI and PR testing, and how Swift developers can run it over their own projects to help improve the Swift editing experience for everyone.

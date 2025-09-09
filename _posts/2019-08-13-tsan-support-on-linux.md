@@ -4,6 +4,7 @@ published: true
 date: 2019-08-13 10:00:00
 title: Thread Sanitizer for Swift on Linux
 author: jlettner
+category: "Developer Tools"
 ---
 
 Thread Sanitizer is now available on Linux as part of Swift 5.1! Head over to [Swift.org](/download/#snapshots) and grab a Swift 5.1 Development snapshot to try it out.

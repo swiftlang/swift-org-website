@@ -4,6 +4,7 @@ published: true
 date: 2020-05-29 10:00:00
 title: Introducing Swift AWS Lambda Runtime
 author: tomerd
+category: "Developer Tools"
 ---
 
 It is my pleasure to announce a new open source project for the Swift Server ecosystem, [Swift AWS Lambda Runtime](https://github.com/swift-server/swift-aws-lambda-runtime/). Distributed as a Swift package, the Swift AWS Lambda Runtime is designed to help Swift developers build serverless functions for the [Amazon Web Services Lambda platform](https://aws.amazon.com/lambda/).

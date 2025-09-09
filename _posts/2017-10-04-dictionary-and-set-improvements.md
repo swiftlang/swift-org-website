@@ -4,6 +4,7 @@ published: true
 date: 2017-10-04 12:00:00
 title: Dictionary and Set Improvements in Swift 4.0
 author: natecook1000
+category: "Language"
 ---
 
 In the latest release of Swift,

@@ -4,6 +4,7 @@ published: true
 date: 2020-10-21 9:00:00
 title: Introducing Swift Service Discovery
 author: yim-lee
+category: "Developer Tools"
 ---
 
 It is my pleasure to announce a new open source project for the Swift Server ecosystem, [Swift Service Discovery](https://github.com/apple/swift-service-discovery). Service Discovery is a Swift package designed to establish a standard API that can be implemented by various [service discovery](https://en.wikipedia.org/wiki/Service_discovery) backends such as DNS-based, key-value store, etc.

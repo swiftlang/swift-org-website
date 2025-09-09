@@ -4,6 +4,7 @@ published: true
 date: 2023-03-24 8:00:00
 title: Swift Package Index gains Apple sponsorship
 author: [daveverwer, svenaschmidt]
+category: "Community"
 ---
 
 Building a thriving open source ecosystem is important to Swift’s success, and open source packages are the building blocks that help power countless Swift projects. As the number of packages increases, discovery becomes critical for developers needing to find the tools and libraries that help them build their apps and services.

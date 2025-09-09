@@ -3,6 +3,7 @@ layout: new-layouts/post
 date: 2021-02-22 10:00:00
 title: Celebrating Black History Month
 author: [hborla, krstnfx]
+category: "Community"
 ---
 
 Black History Month is a time to learn about, reflect on, and celebrate the impact and accomplishments of the Black community. In honor of Black History Month, we have curated a handful of outstanding contributions from the Black Swift community to acknowledge and celebrate their impact on the Swift ecosystem.

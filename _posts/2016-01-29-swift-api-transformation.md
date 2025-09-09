@@ -4,6 +4,7 @@ published: true
 date: 2016-1-29
 title: "It's Coming: the Great Swift API Transformation"
 author: dabrahams
+category: "Language"
 ---
 
 Cocoa, the Swift standard library, maybe even your own types and

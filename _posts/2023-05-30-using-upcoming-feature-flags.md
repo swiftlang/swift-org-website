@@ -4,6 +4,7 @@ published: true
 date: 2023-05-30 10:00:00
 title: Using Upcoming Feature Flags
 author: [jamesdempsey]
+category: "Language"
 ---
 
 Beginning in Swift 5.8 you can flexibly adopt upcoming Swift features using a new compiler flag and compilation condition. This post describes the problem upcoming feature flags solve, their benefits, and how to get started using them in your projects.

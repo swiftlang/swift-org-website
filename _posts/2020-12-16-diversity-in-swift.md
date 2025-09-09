@@ -3,6 +3,7 @@ layout: new-layouts/post
 date: 2020-12-16 10:00:00
 title: Diversity in Swift
 author: diversity-workgroup
+category: "Community"
 ---
 
 6 years ago, Swift was announced.  In the years since, a thriving community has emerged around a shared passion for building and using the Swift programming language. This community has spread far beyond Apple through conferences, open source repositories, community-authored books, and more — people are always finding new ways to connect with and support other Swift developers around the world. However, we feel we can always do more to encourage a wider range of developers to actively engage in our community.  That’s why we’re excited to announce **Diversity in Swift**. This initiative is focused on further elevating a wide variety of voices, and making it easier for developers to start learning or contributing to Swift, regardless of their background.
