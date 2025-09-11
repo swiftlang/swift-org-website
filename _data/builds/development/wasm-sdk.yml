@@ -1,3 +1,9 @@
+- checksum: 28db0e81248b4f75f3b9ca9f7367d77855f44692bdfaeb91df37075b2e04bfb6
+  date: 2025-09-10 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-09-10-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-09-10-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-09-10-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
 - checksum: 47090e870ac2297befc4d49a103c215fe7f7221eb1d4d05dc91e98688e96527d
   date: 2025-09-07 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2025-09-07-a
