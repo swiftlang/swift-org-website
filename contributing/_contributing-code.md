@@ -176,7 +176,7 @@ People depend on Swift to create their production software.  This means that a b
 2. Bug fixes and new features must include a test case to pinpoint any future regressions, or include a justification for why a test case would be impractical.
 3. Code must pass the appropriate test suites---for example, the `swift/test` and `swift/validation-test` test suites in the Swift compiler.
 
-Additionally, the committer is responsible for addressing any problems found in the future that the change may cause. This responsibility means that you may need to update your change in order to:
+Additionally, the code merger is responsible for addressing any problems found in the future that the change may cause. This responsibility means that you may need to update your change in order to:
 
 * Ensure the code compiles cleanly on all primary platforms.
 * Fix any correctness regressions found in other test suites.

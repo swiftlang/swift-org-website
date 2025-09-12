@@ -24,7 +24,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
 * __[Project Lead](#project-lead)__ appoints technical leaders from the community.  Apple Inc. is the project lead, and interacts with the community through its representative.
 * __[Core Team](#core-team)__ is the small group responsible for strategic direction and oversight of the Swift project.
 * __[Code Owner](/contributing/#code-owners)__ is the individual responsible for a specific area of the Swift codebase.
-* __[Committer](/contributing/#commit-access)__ is anyone that has commit access to the Swift code base.
+* __[Code Merger](/contributing/#code-merger)__ is anyone that has commit access to the Swift code base.
 * __[Member](/contributing/#member)__ is anyone who is a member of the swiftlang organization on GitHub.
 * __[Contributor](/contributing/#contributor)__ is anyone who has contributed to Swift by writing code, answering questions on the forums, reporting or triaging bugs, participating in the Swift evolution process, or other ways.
 * __Steering Groups__
