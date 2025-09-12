@@ -99,7 +99,7 @@ Swift 6.2 includes *migration tooling* to help you adopt upcoming language featu
 * **Identify source incompatibility:** Identify code patterns that will no longer compile or change behavior when the upcoming feature is enabled through warnings from migration tooling.
 * **Automate code changes:** Apply fix-its to update your code to preserve its existing behavior.
 
-This streamlines the process of enabling upcoming features by eliminating the tedious task of manual code changes. You can learn more migration tooling in the [Swift migration guide](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/featuremigration).
+This streamlines the process of enabling upcoming features by eliminating the tedious task of manual code changes. You can learn more about migration tooling in the [Swift migration guide](/migration/documentation/swift-6-concurrency-migration-guide/featuremigration).
 
 ## Core Library Updates
 
