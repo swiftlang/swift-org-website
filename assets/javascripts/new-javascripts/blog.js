@@ -1,37 +1,30 @@
 const wrapper = document.querySelector('.blogs-and-filter-wrapper')
 const postsWrapper = wrapper.querySelector('.blogs-wrapper')
 const postData = JSON.parse(wrapper.querySelector('#post-data').textContent)
-const checkboxes = [...wrapper.querySelectorAll('.category-filter')]
+const filters = [...wrapper.querySelectorAll('.category-filter')]
 const selectAllBox = document.querySelector('.select-all')
 const dropdown = document.querySelector('.dropdown')
-const allCheckboxes = [selectAllBox, ...checkboxes]
+const allCheckboxes = [selectAllBox, ...filters]
 const filterMenuToggle = document.querySelector('.dropdown-toggle')
-const dropdownCloseButton = document.querySelector('.dropdown-close')
+
 // create post links
 const createAnchor = (postData) => {
   const anchor = document.createElement('a')
-  const imgEl = postData['image-url']
-    ? `<img src="${postData['image-url']}" alt="${postData['image-alt']}" />`
-    : ''
-  console.log(imgEl, postData.title)
   anchor.href = postData.url
-  anchor.classList = imgEl ? 'post-link post-link-with-image' : 'post-link'
+  anchor.classList = 'post-link'
   anchor.innerHTML = `
-  ${imgEl}
-  ${imgEl ? '<div>' : ''}
     <h3 class="title">${postData.title}</h3>
     <time pubdate datetime="${postData.date}" class="blog-date">${postData.date}</time>
     <p class="body-copy">${postData.excerpt}</p>
     ${postData.categories.reduce((markup, category) => {
       return markup + ` <span class="category body-copy">${category}</span>`
     }, '')}
-  ${imgEl ? '</div>' : ''}
     `
   return anchor
 }
 
 // checks all filters
-const selectAllCategories = () => {
+const selectAllCategories = (selectAllBox, checkboxes) => {
   if (selectAllBox.checked) {
     checkboxes.forEach((checkbox) => {
       checkbox.checked = true
@@ -71,12 +64,12 @@ const elementsCache = postData.map((post) => {
   }
 })
 
-updatePosts(filterPosts(elementsCache, checkboxes), postsWrapper, postsWrapper)
+updatePosts(filterPosts(elementsCache, filters), postsWrapper, postsWrapper)
 
 filterMenuToggle.addEventListener('click', () => {
   dropdown.classList.toggle('active')
 
-  const isExpanded = this.getAttribute('aria-expanded') === 'true'
+  const isExpanded = filterMenuToggle.getAttribute('aria-expanded') === 'true'
   filterMenuToggle.toggleAttribute('aria-expanded', !isExpanded)
 })
 
@@ -89,28 +82,32 @@ window.addEventListener('click', (evt) => {
 })
 
 // Select all category filters
-selectAllBox.addEventListener('click', selectAllCategories)
+selectAllBox.addEventListener('click', () =>
+  selectAllCategories(selectAllBox, filters),
+)
 
-dropdownCloseButton.addEventListener('click', () => {
-  const dropdown = this.closest('.dropdown')
-  dropdown.classList.remove('active')
-  document
-    .querySelector('.dropdown-toggle')
-    .setAttribute('aria-expanded', 'false')
-})
-
-checkboxes.forEach((checkbox) => {
+filters.forEach((checkbox) => {
   checkbox.addEventListener('change', () => {
-    // If every box is either checked or none are, set all filter to checked
-    if (
-      checkboxes.every((checkbox) => checkbox.checked === checkboxes[0].checked)
-    ) {
+    const enabledFilters = filters.filter((checkbox) => checkbox.checked)
+
+    if (enabledFilters.length === 1) {
+      enabledFilters[0].disabled = true
+    } else {
+      filters.forEach((checkbox) => (checkbox.disabled = false))
+    }
+
+    // If every box is checked, select all
+    if (enabledFilters.length === filters.length) {
       selectAllBox.checked = true
+      selectAllBox.disabled = true
       selectAllCategories()
       return
+      // Uncheck all select all if filter was unchecked
     } else if (!checkbox.checked && selectAllBox.checked) {
       selectAllBox.checked = false
+      selectAllBox.disabled = false
     }
-    updatePosts(filterPosts(elementsCache, checkboxes), postsWrapper)
+
+    updatePosts(filterPosts(elementsCache, filters), postsWrapper)
   })
 })

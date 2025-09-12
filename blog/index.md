@@ -11,10 +11,14 @@ title: Blog
       {% assign hero_card_title = site.data.new-data.blog.page-data.category_titles[0] %}
       {% assign hero_card_post = site.categories[hero_card_title][0] %}
       {% assign hero_card_thumbnail = hero_card_post.featured-image %}
+      {% assign hero_card_thumbnail_dark = hero_card_post.featured-image-dark %}
       <h3 class="blog-featured-grid-category-headline">{{hero_card_title}}</h3>
       <div class="blog-featured-hero-card {% if hero_card_thumbnail.url %} blog-featured-hero-card-with-image {% endif %}">
         {% if hero_card_thumbnail.url %}
-          <img class="blog-featured-hero-card-image" src="{{ hero_card_thumbnail.url }}" alt="{{hero_card_thumbnail.alt}}" />
+          <img class="blog-featured-hero-card-image {% if hero_card_thumbnail_dark.url %}hide-dark{% endif %}" src="{{ hero_card_thumbnail.url }}" alt="{{hero_card_thumbnail.alt}}" />
+        {% endif %}
+        {% if hero_card_thumbnail_dark.url %}
+          <img class="blog-featured-hero-card-image hide-light" src="{{ hero_card_thumbnail_dark.url }}" alt="{{hero_card_thumbnail_dark.alt}}" />
         {% endif %}
         <span class="blog-title">{{ hero_card_post.title }}</span>
         <time class="blog-date body-copy" pubdate datetime="{{ hero_card_post.date | date_to_xmlschema }}">{{ hero_card_post.date | date: "%B %-d, %Y" }}</time>
@@ -49,9 +53,8 @@ title: Blog
       </button>
       <div class="dropdown-menu" role="menu">
         <div class="dropdown-header">
-           <button class="dropdown-close" aria-label="Close"></button>
            <label>
-            <input name="select-all" class="select-all" type="checkbox" value="select-all" checked="true">
+            <input disabled name="select-all" class="select-all" type="checkbox" value="select-all" checked="true">
             <span class="checkbox-symbol"></span> <span class="dropdown-filter-text">All Categories</span>
           </label>
         </div>
