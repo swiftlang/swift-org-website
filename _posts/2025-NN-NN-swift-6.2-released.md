@@ -159,6 +159,6 @@ If you’re excited about where Swift is headed, there’s no better time to get
 
 ## Next Steps
 
-You can find a complete list of language proposals that were accepted through the [_Swift Evolution_](https://github.com/swiftlang/swift-evolution) process and implemented in Swift 6.2 on the [_Swift Evolution dashboard_](https://www.swift.org/swift-evolution/#?version=6.2).
+You can find a complete list of language proposals that were accepted through the [_Swift Evolution_](https://github.com/swiftlang/swift-evolution) process and implemented in Swift 6.2 on the [_Swift Evolution dashboard_](/swift-evolution/#?version=6.2).
 
 Ready to upgrade? Install the latest toolchain using Swiftly or [Swift.org/install](http://swift.org/install) and start exploring Swift 6.2 today.
