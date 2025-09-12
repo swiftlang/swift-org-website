@@ -20,8 +20,34 @@ Swift 6.2 lowers the barrier to concurrent programming with a set of changes des
 * **Intuitive `async` functions:** Write async code without concurrent access to mutable state. Previously, `nonisolated async` methods always switched to the global executor that manages the concurrent thread pool, which made it difficult to write async methods for class types without data-race safety errors. In Swift 6.2, you can migrate to an [upcoming feature](https://docs.swift.org/compiler/documentation/diagnostics/nonisolated-nonsending-by-default/) where `async` functions run in the caller’s execution context, even when called on the main actor.
 * **Opting into concurrency with `@concurrent`:** Introduce code that runs concurrently using the new `@concurrent` attribute. This makes it clear when you want code to remain serialized on actor, and when code may run in parallel.
 
-```
-TODO: code example
+```swift
+// In '-default-isolation MainActor' mode
+
+struct Image {
+  // The image cache is safe because it's protected
+  // by the main actor.
+  static var cachedImage: [URL: Image] = [:]
+
+  static func create(from url: URL) async throws -> Image {
+    if let image = cachedImage[url] {
+      return image
+    }
+
+    let image = try await fetchImage(at: url)
+
+    cachedImage[url] = image
+    return image
+  }
+
+  // Fetch the data from the given URL and decode it.
+  // This is performed on the concurrent thread pool to
+  // keep the main actor free while decoding large images.
+  @concurrent
+  static func fetchImage(at url: URL) async throws -> Image {
+    let (data, _) = try await URLSession.shared.data(from: url)
+    return await decode(data: data)
+  }
+}
 ```
 
 Together, these improvements let you write data-race free code with less annotation overhead, provide more predictable behavior for async code, while still allowing you to introduce concurrency when you need it.
