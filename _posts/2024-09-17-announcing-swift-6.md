@@ -3,6 +3,12 @@ layout: new-layouts/post
 published: true
 date: 2024-09-17 10:00:00
 title: Announcing Swift 6
+featured-image:
+  url: '/assets/images/6.2-blog/blog-posts-hero@2x.png'
+  alt: 'Featured blog image with the Swift Logo over a white to orange gradient background.'
+featured-image-dark:
+  url: '/assets/images/6.2-blog/blog-posts-hero-dark@2x.png'
+  alt: 'Featured blog image with the Swift Logo over a white to black gradient background.'
 author: [hborla]
 category: "Language"
 ---
