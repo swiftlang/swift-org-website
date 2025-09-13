@@ -12,7 +12,7 @@ excessive refactoring, research, or debugging — rather, they should encourage
 newcomers to dip their toes in some part of Swift, learn more about it, and
 make a real contribution.
 
-Anyone with [commit access](#commit-access) and insight into a particular area
+Anyone with [commit access](#code-merger) and insight into a particular area
 is welcome and encouraged to pin down or think up good first issues.
 
 {% comment %}
