@@ -7,7 +7,7 @@ featured-image:
   url: '/assets/images/swift-redesign-blog/swift-redesign-blog.png'
   alt: 'Screenshot of the redesigned website.'
 featured-image-dark:
-  url: '/assets/images/swift-redesign-blog/blog-posts-hero-dark@2x.png'
+  url: '/assets/images/swift-redesign-blog/swift-redesign-blog.png'
   alt: 'Screenshot of the redesigned website.'
 image: "swift-redesign-blog.png"
 author: [shahmishal]
