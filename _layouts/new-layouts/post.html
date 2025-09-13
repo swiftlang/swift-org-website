@@ -31,8 +31,16 @@ layout: new-layouts/base
     <div class="details">
       {{ content }} {% if page.author %}
       <hr />
-      <h2>Authors</h2>
-      {% include authors.html authors=page.author %} {% endif %}
+      {% assign authors = page.author | array %}
+
+      {% if authors.size > 1 %}
+        <h2>Authors</h2>
+      {% else %}
+        <h2>Author</h2>
+      {% endif %}
+
+      {% include authors.html authors=authors %}
+      {% endif %}
 
       <hr />
 
