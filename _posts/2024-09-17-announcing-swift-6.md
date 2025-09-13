@@ -5,6 +5,9 @@ date: 2024-09-17 10:00:00
 title: Announcing Swift 6
 author: [hborla]
 category: "Language"
+featured-image:
+  url: '/assets/images/placeholders/image_placeholder_large.png'
+  alt: 'An FPO image for a blog.'
 ---
 
 We're delighted to announce the general availability of Swift 6. This is a major new release that expands Swift to more platforms and domains.
@@ -121,7 +124,7 @@ You can find a complete list of language proposals that were accepted through th
 
 ## Debugging
 
-### Custom LLDB summaries with `@DebugDescription`
+### Custom LLDB summaries with <code>@DebugDescription</code>
 
 Swift 6 provides a new debugging macro to easily customize how an object is displayed in LLDB when using the `p` command, and in the variables view in Xcode and VSCode, by using a formatting scheme that does not run arbitrary code.
 
