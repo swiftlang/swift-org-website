@@ -3,69 +3,76 @@ layout: new-layouts/base
 ---
 
 <section id="post" class="section">
-    <div class="swoop swoop-1"></div>
+  <div class="swoop swoop-1"></div>
 
-    <div class="content">
-        <h1>{{ page.title }}</h1>
+  <div class="content">
+    <h1>{{ page.title }}</h1>
 
-        {% include authors.html authors=page.author compact=true %}
+    {% include authors.html authors=page.author compact=true %}
 
-        <time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    <time pubdate datetime="{{ page.date | date_to_xmlschema }}"
+      >{{ page.date | date: "%B %-d, %Y" }}</time
+    >
+    {% assign featured_image = page.featured-image %} {% assign
+    featured_image_dark = page.featured-image-dark %} {% if featured_image.url
+    %}
+    <img
+      class="featured{% if featured_image_dark.url %} hide-dark{% endif %}"
+      src="{{ featured_image.url }}"
+      alt="{{ featured_image.alt }}"
+    />
+    {% endif %} {% if featured_image_dark.url %}
+    <img
+      class="featured hide-light"
+      src="{{ featured_image_dark.url }}"
+      alt="{{ featured_image_dark.alt }}"
+    />
+    {% endif %}
+    <div class="details">
+      {{ content }} {% if page.author %}
+      <hr />
+      <h2>Authors</h2>
+      {% include authors.html authors=page.author %} {% endif %}
 
-        {% if page.image %}
-        <img class="featured" src="/assets/images/{{ page.image | split: '.' | first }}/{{ page.image }}"
-            alt="{{ page.title }} featured image" />
-        {% endif %}
+      <hr />
 
-        <div class="details">
-            {{ content }}
+      <h2>Continue Reading</h2>
 
-            {% if page.author %}
-            <hr />
-            <h2>Authors</h2>
-            {% include authors.html authors=page.author %}
+      {% if page.previous or page.next %}
+      <nav class="section card-grid">
+        <div class="content">
+          <ul class="tertiary-cards">
+            {% if page.previous %}
+            <li>
+              <div>
+                <h3>{{ page.previous.title }}</h3>
+                <time pubdate datetime="{{ page.date | date_to_xmlschema }}"
+                  >{{ page.previous.date | date: "%B %-d, %Y" }}</time
+                >
+                <p class="nav-excerpt">
+                  {{ page.previous.excerpt | strip_html | truncate: 80, '..' }}
+                </p>
+                <a href="{{ page.previous.url }}" rel="prev"> More </a>
+              </div>
+            </li>
+            {% endif %} {% if page.next %}
+            <li>
+              <div>
+                <h3>{{ page.next.title }}</h3>
+                <time pubdate datetime="{{ page.date | date_to_xmlschema }}"
+                  >{{ page.next.date | date: "%B %-d, %Y" }}</time
+                >
+                <p class="nav-excerpt">
+                  {{ page.next.excerpt | strip_html | truncate: 80, '..' }}
+                </p>
+                <a href="{{ page.next.url }}" rel="next"> More </a>
+              </div>
+            </li>
             {% endif %}
-
-            <hr />
-
-            <h2>Continue Reading</h2>
-
-            {% if page.previous or page.next %}
-            <nav class="section card-grid">
-                <div class="content">
-                    <ul class="tertiary-cards">
-                        {% if page.previous %}
-                        <li>
-                            <div>
-                                <h3>{{ page.previous.title }}</h3>
-                                <time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.previous.date | date: "%B %-d, %Y" }}</time>
-                                <p class="nav-excerpt">
-                                    {{ page.previous.excerpt | strip_html | truncate: 80, '..' }}
-                                </p>
-                                <a href="{{ page.previous.url }}" rel="prev">
-                                    More
-                                </a>
-                            </div>
-                        </li>
-                        {% endif %}
-                        {% if page.next %}
-                        <li>
-                            <div>
-                                <h3>{{ page.next.title }}</h3>
-                                <time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.next.date | date: "%B %-d, %Y" }}</time>
-                                <p class="nav-excerpt">
-                                    {{ page.next.excerpt | strip_html | truncate: 80, '..' }}
-                                </p>
-                                <a href="{{ page.next.url }}" rel="next">
-                                    More
-                                </a>
-                            </div>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </nav>
-            {% endif %}
+          </ul>
         </div>
+      </nav>
+      {% endif %}
     </div>
+  </div>
 </section>

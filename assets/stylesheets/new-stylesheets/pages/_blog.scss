@@ -325,7 +325,7 @@
     }
 
     .dropdown-header {
-      padding: 53px 0 20px;
+      padding: 23px 0 20px;
     }
 
     &.active {
@@ -361,6 +361,7 @@
       width: 25px;
       height: 25px;
       border-radius: 5px;
+      outline: 1px solid var(--site-text-color);
     }
 
     label {
