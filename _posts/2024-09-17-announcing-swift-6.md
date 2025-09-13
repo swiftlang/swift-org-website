@@ -5,9 +5,6 @@ date: 2024-09-17 10:00:00
 title: Announcing Swift 6
 author: [hborla]
 category: "Language"
-featured-image:
-  url: '/assets/images/placeholders/image_placeholder_large.png'
-  alt: 'An FPO image for a blog.'
 ---
 
 We're delighted to announce the general availability of Swift 6. This is a major new release that expands Swift to more platforms and domains.
@@ -22,7 +19,7 @@ Read on for a deep dive into changes to the language, standard libraries, debugg
 
 ### Concurrency
 
-Swift has long offered memory safety, ensuring that variables are initialized before they’re used, memory isn’t accessed after it’s been deallocated, and array indices are checked for out-of-bounds errors.  Swift 6 now includes a new, opt-in language mode that extends Swift’s safety guarantees to prevent data races in concurrent code by diagnosing potential data races in your code as compiler errors.
+Swift has long offered memory safety, ensuring that variables are initialized before they’re used, memory isn’t accessed after it’s been deallocated, and array indices are checked for out-of-bounds errors. Swift 6 now includes a new, opt-in language mode that extends Swift’s safety guarantees to prevent data races in concurrent code by diagnosing potential data races in your code as compiler errors.
 
 Data-race safety checks were previously available as warnings in Swift 5.10 through the `-strict-concurrency=complete` compiler flag. Thanks to improved `Sendable` inference and new compiler analysis for transferring mutable state from one actor to another, Swift 6 warnings about data-race safety have fewer false positives. You can find more information about the Swift 6 language mode and how to migrate at [Swift.org/migration](http://swift.org/migration).
 
@@ -37,8 +34,8 @@ Swift 6 enables functions to specify the type of error that they throw as part o
 For example:
 
 ```swift
-func parseRecord(from string: String) throws(ParseError) -> Record { 
-  // ... 
+func parseRecord(from string: String) throws(ParseError) -> Record {
+  // ...
 }
 ```
 
@@ -58,8 +55,8 @@ Typed throws can also be used in generic functions to propagate error types from
 
 ```swift
 extension Sequence {
-  func map<T, E>(_ body: (Element) throws(E) -> T) throws(E) -> [T] { 
-    // ... 
+  func map<T, E>(_ body: (Element) throws(E) -> T) throws(E) -> [T] {
+    // ...
   }
 }
 ```
@@ -118,7 +115,7 @@ Swift 6 rounds out the set of low-level integer primitives with the addition of 
 
 ### Productivity enhancements
 
-Swift 6 introduces a number of productivity enhancements, including [`count(where:)`](https://developer.apple.com/documentation/swift/sequence/count(where:)) to streamline counting the number of elements in a sequence that satisfy a predicate, [pack iteration](https://www.swift.org/blog/pack-iteration/) for writing natural `for`-loops over the elements in a value parameter pack, access control for imports to keep implementation details from leaking into your public APIs, `@attached(body)` macros for synthesizing and augmenting function implementations, expression macros as default arguments, and more.
+Swift 6 introduces a number of productivity enhancements, including [`count(where:)`](<https://developer.apple.com/documentation/swift/sequence/count(where:)>) to streamline counting the number of elements in a sequence that satisfy a predicate, [pack iteration](https://www.swift.org/blog/pack-iteration/) for writing natural `for`-loops over the elements in a value parameter pack, access control for imports to keep implementation details from leaking into your public APIs, `@attached(body)` macros for synthesizing and augmenting function implementations, expression macros as default arguments, and more.
 
 You can find a complete list of language proposals that were accepted through the [Swift Evolution](https://github.com/swiftlang/swift-evolution) process and implemented in Swift 6 on the [Swift Evolution dashboard](https://www.swift.org/swift-evolution/#?version=6.0).
 
@@ -130,7 +127,7 @@ Swift 6 provides a new debugging macro to easily customize how an object is disp
 
 Types that conform to `CustomDebugStringConvertible` provide a `debugDescription` property that returns a string describing the object. In LLDB, the `po` command calls this computed property on an object. In contrast, the `p` command uses LLDB’s type summary formatters to directly format the object using its stored property values.
 
-[`@DebugDescription`](https://developer.apple.com/documentation/swift/debugdescription()) is a new macro in the standard library which lets you specify LLDB type summaries for your own types directly in code. The macro processes the `debugDescription` property, translating simple string interpolations involving stored properties into LLDB type summaries. This allows LLDB to use your custom formatting even when using `p`, and also in Xcode or VSCode’s variable display windows. The macro can use an existing conformance to `CustomDebugStringConvertible`, or you can provide a separate string interpolation only for use in LLDB’s `p` command. Providing a separate LLDB description string is useful if your `CustomDebugStringConvertible` implementation doesn’t meet the requirements of the `@DebugDescription` macro, or if you’re familiar with the [LLDB Summary String syntax](https://lldb.llvm.org/use/variable.html#summary-strings) and you want to use it directly.
+[`@DebugDescription`](<https://developer.apple.com/documentation/swift/debugdescription()>) is a new macro in the standard library which lets you specify LLDB type summaries for your own types directly in code. The macro processes the `debugDescription` property, translating simple string interpolations involving stored properties into LLDB type summaries. This allows LLDB to use your custom formatting even when using `p`, and also in Xcode or VSCode’s variable display windows. The macro can use an existing conformance to `CustomDebugStringConvertible`, or you can provide a separate string interpolation only for use in LLDB’s `p` command. Providing a separate LLDB description string is useful if your `CustomDebugStringConvertible` implementation doesn’t meet the requirements of the `@DebugDescription` macro, or if you’re familiar with the [LLDB Summary String syntax](https://lldb.llvm.org/use/variable.html#summary-strings) and you want to use it directly.
 
 For example, the following code customizes how `po` in LLDB displays the `Organization` type with a conformance to `CustomDebugStringConvertible`, and the `@DebugDescription` macro exposes this custom formatting to the `p` command and the variables view:
 
@@ -150,7 +147,7 @@ struct Organization: CustomDebugStringConvertible {
 
 ```
 (lldb) p myOrg
-(Organization) myOrg = "`#100 Worldwide Travel [Jonathan Swift]`" 
+(Organization) myOrg = "`#100 Worldwide Travel [Jonathan Swift]`"
 ```
 
 ### Improved startup performance with explicit modules
@@ -188,7 +185,7 @@ func mentionedContinents(videoName: String) async throws {
 
 Swift Testing takes full advantage of macros. Its `@Test` and `@Suite` attached macros declare test functions and suite types respectively, and they accept arguments (known as traits) to customize various behaviors. The `#expect` and `#require` expression macros validate expected behaviors, and capture rich representation of expressions and their sub-values to produce detailed failure messages.
 
-Since Swift Testing is included directly in Swift 6 toolchains, you can `import Testing` without needing to declare a package dependency. This means your tests do not need to build Swift Testing or its dependencies (including swift-syntax), and its macro implementation comes prebuilt. The package manager in Swift 6 automatically builds and runs Swift Testing tests in addition to XCTests (if present), and shows results from both libraries in log output. Swift Testing supports all platforms that Swift officially supports, including all Apple platforms, Linux, and Windows. 
+Since Swift Testing is included directly in Swift 6 toolchains, you can `import Testing` without needing to declare a package dependency. This means your tests do not need to build Swift Testing or its dependencies (including swift-syntax), and its macro implementation comes prebuilt. The package manager in Swift 6 automatically builds and runs Swift Testing tests in addition to XCTests (if present), and shows results from both libraries in log output. Swift Testing supports all platforms that Swift officially supports, including all Apple platforms, Linux, and Windows.
 
 To learn more about this new open source project, visit the [swift-testing](https://github.com/swiftlang/swift-testing) repository on GitHub, and get involved with its ongoing development [on the forums](https://forums.swift.org/c/related-projects/swift-testing/103).
 
