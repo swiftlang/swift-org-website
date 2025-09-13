@@ -1,3 +1,69 @@
+- checksum: b03a8e285ab22e023709dfb1e3b617216b14fd614717dd19b64a982051d1826f
+  date: 2025-09-10 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-10-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-10-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-10-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: afb03e5f382bf18de738d08a6e13ddcce28fa8508e5e291f70961ca67c2338be
+  date: 2025-09-06 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-06-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-06-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-06-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: 44693f6ea91b97aba38f7b5f178cc9ead8f1fd0cbdd14440c3d8332c8168e1d5
+  date: 2025-09-05 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-05-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-05-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-05-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: 122ec7d5bb3d832e121fb77b02612416e05057a04e9628368393bdee71ca7f7c
+  date: 2025-09-04 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-04-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-04-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-04-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: d112f453eb879bac85acd295a1653b528895d6f034b51922a773ff7c1a9b3b2e
+  date: 2025-09-03 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-03-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-03-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-09-03-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: 4badc86d1d3a65449240efef0ce29e74d2a5d3fe62b8510922f13cfd890cf3a7
+  date: 2025-08-30 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-30-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-30-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-30-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: 4d181dc4d69c627ff7e7b9c67e0f1d672b322c35eceeec8be6c18a77aa05b2d6
+  date: 2025-08-29 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-29-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-29-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-29-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: 74fb2d6c95fa6716d0a6c24f0a817b3c2abe68d95e95ef14fb25539323cc9df6
+  date: 2025-08-28 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-28-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-28-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-28-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: 46984066d3c93add1ef2e12914fc5af3814b722ada26aa13690def663236e675
+  date: 2025-08-21 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-21-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-21-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-21-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: b6cee8f77cd59b98868f40b74bff0cd295fdcc6fa7fc5e742856cb2cd6c273f8
+  date: 2025-08-20 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-20-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-20-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-20-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: 3c7f7bc8b72798e2b70204e8ccfdb2773975165a1d3db4f49572e6de1a5ec82f
+  date: 2025-08-19 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-19-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-19-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-19-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
 - checksum: 9ce35793a58b41423cc93db9f516214b508cbd574a21f002249e2780136a4bab
   date: 2025-08-14 10:10:00-06:00
   dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-08-14-a

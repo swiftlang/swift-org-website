@@ -11,9 +11,7 @@ If you are new to Swift, you may want to check out these additional resources.
 </div>
 
 {%- for category in site.data.documentation %}
-  <h2>
-  {{ category.header }}
-  </h2>
+## {{ category.header }}
   <div>
   {%- for entry in category.pages %}
     <div>

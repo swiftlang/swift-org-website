@@ -17,7 +17,7 @@ Oblivious HTTP is a vital foundational technology that supports an emerging rang
 The package we’re releasing today is still in active development, and forms part of the [SwiftNIO project](https://github.com/apple/swift-nio) for development of maintainable high-performance network code. It supports two separate standards:
 
 * An implementation of [RFC 9292](https://www.rfc-editor.org/rfc/rfc9292.html), which standardizes a binary representation for serializing HTTP.
-* An implementation of [RFC 9457](https://www.rfc-editor.org/rfc/rfc9458.html), which defines Oblivious HTTP itself.
+* An implementation of [RFC 9458](https://www.rfc-editor.org/rfc/rfc9458.html), which defines Oblivious HTTP itself.
 
 These two implementations can either used together or separately; they enable Swift *clients* to use services that rely on Oblivious HTTP, as well as enabling Swift *servers* to implement the specification.
 
@@ -54,7 +54,7 @@ while let message = try parser.nextMessage() {
 
 The Oblivious HTTP specification marries the binary serialization format for HTTP with an encryption scheme built on top of [Hybrid Public Key Encryption (HPKE)](https://www.rfc-editor.org/rfc/rfc9180.html). This encryption scheme is entirely general, so it may be used for any arbitrary data in addition to binary HTTP messages.
 
-The `ObliviousX` library provides a complete series of APIs for working with this encapsulation scheme. They come in two flavours: single-shot functions, that implement the OHTTP scheme from RFC 9457, and streaming flavours that implement the scheme [defined in the draft chunked OHTTP specification](https://datatracker.ietf.org/doc/draft-ietf-ohai-chunked-ohttp/). As an example of the use of the one-shot APIs:
+The `ObliviousX` library provides a complete series of APIs for working with this encapsulation scheme. They come in two flavours: single-shot functions, that implement the OHTTP scheme from RFC 9458, and streaming flavours that implement the scheme [defined in the draft chunked OHTTP specification](https://datatracker.ietf.org/doc/draft-ietf-ohai-chunked-ohttp/). As an example of the use of the one-shot APIs:
 
 ```swift
 import ObliviousX

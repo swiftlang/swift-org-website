@@ -421,10 +421,10 @@ rcollobert:
   github: andresy
 
 simanerush:
-   name: Sima Nerush
-   email: simanerush@gmail.com
-   github: simanerush
-   about: "Sima Nerush is an incoming engineer on the Apple SwiftUI team. She is an experienced iOS Engineer, Swift Compiler contributor, and a computer science student."
+  name: Sima Nerush
+  email: sima_nerush@apple.com
+  github: simanerush
+  about: "Sima Nerush is a member of the SwiftUI team at Apple, and a Swift compiler contributor."
 
 rauhul:
   name: Rauhul Varma
