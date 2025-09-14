@@ -83,7 +83,7 @@ window.addEventListener('click', (evt) => {
 
 // Select all category filters
 selectAllBox.addEventListener('click', () =>
-  selectAllCategories(selectAllBox, filters),
+  selectAllCategories(selectAllBox, filters)
 )
 
 filters.forEach((checkbox) => {
@@ -100,8 +100,6 @@ filters.forEach((checkbox) => {
     if (enabledFilters.length === filters.length) {
       selectAllBox.checked = true
       selectAllBox.disabled = true
-      selectAllCategories()
-      return
       // Uncheck all select all if filter was unchecked
     } else if (!checkbox.checked && selectAllBox.checked) {
       selectAllBox.checked = false
