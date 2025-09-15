@@ -18,11 +18,20 @@ title: Install Swift - Windows
       {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.winget %}
     </div>
   </div>
-  <div class="release-box section">
-    <div class="content">
-      {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.vscode%}
+  <h3 id="editor" class="header-with-anchor">2. Select an Editor</h3>
+  <div class="releases-grid">
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.vscode%}
+      </div>
+    </div>
+    <div class="release-box section">
+      <div class="content">
+      {% include new-includes/components/code-box.html content = site.data.new-data.install.macos.releases.latest-release.other_editors%}
+      </div>
     </div>
   </div>
+  <h3 id="build-a-command-line-tool" class="header-with-anchor">3. Build a Command-line Tool</h3>
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.build-a-package%}

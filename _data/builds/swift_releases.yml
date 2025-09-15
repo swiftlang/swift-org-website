@@ -2241,3 +2241,64 @@
       archs:
         - x86_64
         - arm64
+- name: "6.2"
+  tag: swift-6.2-RELEASE
+  xcode: Xcode 26
+  xcode_release: true
+  date: 2025-09-15
+  platforms:
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 6.2-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 24.04
+      platform: Linux
+      docker: 6.2-noble
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 12
+      platform: Linux
+      docker: 6.2-bookworm
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 39
+      platform: Linux
+      docker: 6.2-fedora39
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 6.2-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 6.2-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 6.2-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+        - arm64
+    - name: Static SDK
+      platform: static-sdk
+      checksum: d2225840e592389ca517bbf71652f7003dbf45ac35d1e57d98b9250368769378
+      archs:
+        - x86_64
+        - arm64
+    - name: Wasm
+      platform: wasm
+      checksum: fe4e8648309fce86ea522e9e0d1dc48e82df6ba6e5743dbf0c53db8429fb5224
+      archs:
+        - x86_64
+        - arm64

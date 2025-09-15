@@ -3,10 +3,8 @@
 {% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
 
 <div class="code-box content-wrapper">
-    <h2>Static Linux SDK</h2>
+    <h2>Static Linux</h2>
     <p class="body-copy">
-    Static Linux SDK - Cross compile to Linux.
-    <br /><br />
     {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/static-sdk/" | append: tag | append: "/" | append: tag %}
     {% assign command = "swift sdk install " | append: base_url | append: "_static-linux-0.0.1.artifactbundle.tar.gz --checksum " | append: platform.checksum %}
     <button onclick="copyToClipboard(this, '{{ command | escape }}')">
