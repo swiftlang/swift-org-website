@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2018-05-03 9:00:00
 title: Swift Community-Hosted Continuous Integration
 author: [najacque, shahmishal]
+category: "Community"
 ---
 
 We are delighted to announce a significant expansion of our Swift.org continuous integration testing system.  Members of the Swift community have been hard at work to support Swift on a number of new platforms, and we have extended the Swift CI system to support community-hosted nodes for testing additional platforms.

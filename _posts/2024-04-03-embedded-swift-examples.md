@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2024-04-03 10:00:00
 title: "Get Started with Embedded Swift on ARM and RISC-V Microcontrollers"
 author: [kubamracek]
+category: "Developer Tools"
 ---
 
 We're pleased to introduce a [repository of example projects](https://github.com/swiftlang/swift-embedded-examples) that demonstrate how Embedded Swift can be used to develop software on a range of microcontrollers.

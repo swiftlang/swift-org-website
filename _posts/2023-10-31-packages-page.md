@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2023-11-01 10:30:00
 title: 'Introducing Packages on Swift.org'
 author: [daveverwer, svenaschmidt]
+category: "Community"
 ---
 
 Today, Swift.org gains a useful, new [top-level Packages page](/packages).

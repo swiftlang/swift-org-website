@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2017-1-26 10:00:00
 title: Faster Mix-and-Match Builds with Precompiled Bridging Headers
 author: graydon
+category: "Language"
 ---
 
 An examination of build times of Xcode projects that mix Objective-C and Swift, which can contain large bridging headers, shows that the Swift compiler spends a lot of time re-processing the same bridging headers for all the Swift files in a project.

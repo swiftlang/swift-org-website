@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: new-layouts/post
 date: 2018-05-10 10:00:00
 title: Introducing Related Projects to Swift Forums
 author: tkremenek
+category: "Community"
 ---
 
 The Swift community is growing and [Swift Forums](https://forums.swift.org) are growing with it.

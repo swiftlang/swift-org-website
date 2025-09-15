@@ -19,6 +19,7 @@
   --site-link-with-right-arrow-color: #384fea;
   --site-link-with-right-arrow-icon-filter: none;
   --site-content-link-with-right-arrow-icon-filter: brightness(0);
+  --site-border-color: #051416;
 
   --page-bg: #fff;
 
@@ -34,6 +35,10 @@
   --install-release-box-th-color: #333;
   --install-release-box-tr-border-bottom: 1px solid #f2f2f2;
   --install-release-box-tr-bg: #ffffff;
+
+  --blog-page-time-text-color: #8D8D8D;
+  --blog-page-code-bg: #f2f2f2;
+  --blog-divider-border: #979797;
 
   --get-started-page-bg: #fafafa;
   --get-started-card-primary-bg: rgba(255, 255, 255, 0.9);
@@ -108,6 +113,20 @@
   --color-syntax-strings: rgb(209, 47, 27);
   --color-syntax-type-declarations: rgb(3, 99, 140);
   --color-syntax-urls: rgb(19, 55, 255);
+
+  --blog-dropdown-arrow: url('/assets/images/icon-arrow-dark.svg');
+  --blog-muted-color: #8d8d8d;
+  --blog-card-bg: #ffffff;
+  --blog-category-pill-copy-color: #4d4d4d;
+  --blog-category-pill-bg: #e2e2e2;
+  --blog-dropdown-bg: #ffffff;
+  --blog-dropdown-toggle-outline-color: #e8e8e8;
+  --blog-dropdown-toggle-outset-outline-color-active: #384ff0;
+  --blog-dropdown-toggle-inset-outline-color-active: #e4e4e4;
+  --dropdown-close-icon: url('/assets/images/icon-dropdown-close.svg');
+  --dropdown-check-icon: url('/assets/images/icon-check-dark.svg');
+  --dropdown-check-icon-inverse: url('/assets/images/icon-check-light.svg');
+  --dropdown-all-background: #384ff0;
 }
 
 @mixin dark-theme() {
@@ -126,8 +145,9 @@
   --site-link-with-right-arrow-icon-filter: invert(66%) sepia(89%)
     saturate(602%) hue-rotate(172deg) brightness(102%) contrast(101%);
   --site-content-link-with-right-arrow-icon-filter: brightness(0) invert(1);
+  --site-border-color: #ffffff;
 
-  --page-bg: #fff;
+  --page-bg: #000;
 
   --exception-page-bg: #23344a;
 
@@ -141,6 +161,10 @@
   --install-release-box-th-color: #ffffff;
   --install-release-box-tr-border-bottom: 1px solid #051416;
   --install-release-box-tr-bg: #384461;
+
+  --blog-page-time-text-color: #8D8D8D;
+  --blog-page-code-bg: #111727;
+  --blog-divider-border: #979797;
 
   --get-started-page-bg: rgb(5, 20, 35);
   --get-started-card-primary-bg: rgba(35, 52, 74, 0.9);
@@ -211,4 +235,18 @@
   --color-syntax-strings: rgb(255, 129, 112);
   --color-syntax-type-declarations: rgb(107, 223, 255);
   --color-syntax-urls: rgb(102, 153, 255);
+
+  --blog-dropdown-arrow: url('/assets/images/icon-arrow-light.svg');
+  --blog-muted-color: #c4c4c4;
+  --blog-category-pill-copy-color: #c4c4c4;
+  --blog-category-pill-bg: #172538;
+  --blog-card-bg: #23344a;
+  --blog-dropdown-bg: #111727;
+  --blog-dropdown-toggle-outline-color: #384461;
+  --blog-dropdown-toggle-outset-outline-color-active: #384461;
+  --blog-dropdown-toggle-inset-outline-color-active: #727272;
+  --dropdown-close-icon: url('/assets/images/icon-dropdown-close-dark.svg');
+  --dropdown-check-icon: url('/assets/images/icon-check-light.svg');
+  --dropdown-check-icon-inverse: url('/assets/images/icon-check-dark.svg');
+  --dropdown-all-background: #1dc2fe;
 }

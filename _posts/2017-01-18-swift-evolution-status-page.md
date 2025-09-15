@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2017-01-18 12:01:01
 title: Swift Evolution Status Page Now Available
 author: krilnon
+category: "Community"
 ---
 
 We're pleased to announce the release of the new [Swift Evolution](https://www.swift.org/swift-evolution/) status page as a one-stop destination for information about proposed changes to Swift.
