@@ -2296,10 +2296,9 @@
       archs:
         - x86_64
         - arm64
-        - name: Static SDK
+    - name: Wasm
       platform: wasm
       checksum: fe4e8648309fce86ea522e9e0d1dc48e82df6ba6e5743dbf0c53db8429fb5224
       archs:
         - x86_64
         - arm64
-        - name: Wasm
