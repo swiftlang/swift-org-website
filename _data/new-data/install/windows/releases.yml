@@ -15,17 +15,15 @@ latest-release:
         copy: "Additional details included in Instructions"
   vscode:
     pre-code-text: Visual Studio Code is a cross-platform and extensible editor that supports Swift through the Swift extension, which provides intelligent editor functionality as well as debugging and test support.
-    headline: 2. Select an Editor <br><br> Visual Studio Code
+    headline: Visual Studio Code
     links:
       - href: 'https://marketplace.visualstudio.com/items?itemName=swiftlang.swift-vscode'
         copy: 'Install Swift extension'
       - href: 'https://code.visualstudio.com/docs/languages/swift'
         copy: 'Documentation'
-      - href: "https://www.swift.org/tools/#editors"
-        copy: "Other Editors"
   build-a-package:
     pre-code-text: "Let’s write a small application with your new Swift development environment."
-    headline: 3. Build a Command-line Tool
+    headline:
     after-code-text: |
       Create a directory:
       <pre><code>mkdir MyCLI</code></pre>
