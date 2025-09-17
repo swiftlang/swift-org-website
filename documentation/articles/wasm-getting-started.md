@@ -13,26 +13,27 @@ WebAssembly support in Swift started out as a community project. Any instruction
 standardized ABI and system interfaces, and from its inception Wasm support in Swift targeted [WebAssembly System
 Interface](https://wasi.dev/), which made porting Swift core libraries to this platform much easier.
 
-With Swift 6.2 and development snapshots you can easily cross-compile and run Wasm modules with Swift SDKs for Wasm distributed on [swift.org](https://swift.org/download).
+Starting with Swift 6.2 and development snapshots you can easily cross-compile and run Wasm modules with Swift SDKs for Wasm distributed on [swift.org](https://swift.org/download).
 The distributed artifact bundles also include support for the experimental Embedded Swift mode.
 
 ## Installation
 
-1. [Install `swiftly` per the instructions](https://www.swift.org/install/) for the platform that you're bulding on.
-
-2. Install Swift 6.2 with `swiftly install 6.2`, note the exact snapshot date component in the output of this command.
-
-3. Select the installed toolchain with `swiftly use 6.2`.
-
-4. Run a command in your terminal application to install Swift SDKs for Wasm.
-
-{% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Wasm'| first %}
-{% assign tag = site.data.builds.swift_releases.last.tag %}
-{% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
+{% assign last_release = site.data.builds.swift_releases.last %}
+{% assign platform = last_release.platforms | where: 'name', 'Wasm'| first %}
+{% assign release_name = last_release.name %}
+{% assign tag = last_release.tag %}
+{% assign tag_downcase = last_release.tag | downcase %}
 
 {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/wasm/" | append: tag | append: "/" | append: tag %}
 {% assign command = "swift sdk install " | append: base_url | append: "_wasm.artifactbundle.tar.gz --checksum " | append: platform.checksum %}
 
+1. [Install `swiftly` per the instructions](https://www.swift.org/install/) for the platform that you're bulding on.
+
+2. Install Swift {{ release_name }} with `swiftly install {{ release_name }}`, note the exact snapshot date component in the output of this command.
+
+3. Select the installed toolchain with `swiftly use {{ release_name }}`.
+
+4. Run a command in your terminal application to install Swift SDKs for Wasm.
     ```
     {{ command }}
     ```
@@ -76,7 +77,7 @@ struct wasi_test {
 Build your package with the following command, substituting the ID from step 5 of [the "Installation" section](#installation) above.
 
 ```
-swift build --swift-sdk swift-6.2-RELEASE_wasm
+swift build --swift-sdk {{ tag }}_wasm
 ```
 
 Recent toolchain snapshots that are compatible with Swift SDKs for Wasm also include
@@ -84,7 +85,7 @@ Recent toolchain snapshots that are compatible with Swift SDKs for Wasm also inc
 execution. To run the freshly built module, use `swift run` with the same `--swift-sdk` option:
 
 ```
-swift run --swift-sdk swift-6.2-RELEASE_wasm
+swift run --swift-sdk {{ tag }}_wasm
 ```
 
 You should see the following output:
@@ -103,5 +104,14 @@ Hello from WASI!
 allowing the toolchain to produce Wasm binaries that are multiple orders of magnitude smaller. One of the Swift SDKs in the artifact bundle you've installed
 with the `swift sdk install` command is tailored specifically for Embedded Swift.
 
-To build with Embedded Swift SDK, pass its ID as noted in `swift sdk list` output (which has an `-embedded` suffix) in the `--swift-sdk` option.
+To build with Embedded Swift SDK, pass its ID as noted in `swift sdk list` output (which has an `-embedded` suffix) in the `--swift-sdk` option. For example:
 
+```
+swift build --swift-sdk {{ tag }}_wasm-embedded
+```
+
+or
+
+```
+swift run --swift-sdk {{ tag }}_wasm-embedded
+```
