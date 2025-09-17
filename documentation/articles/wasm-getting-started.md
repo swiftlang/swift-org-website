@@ -29,7 +29,7 @@ The distributed artifact bundles also include support for the experimental Embed
 
 1. [Install `swiftly` per the instructions](https://www.swift.org/install/) for the platform that you're bulding on.
 
-2. Install Swift {{ release_name }} with `swiftly install {{ release_name }}`, note the exact snapshot date component in the output of this command.
+2. Install Swift {{ release_name }} with `swiftly install {{ release_name }}`.
 
 3. Select the installed toolchain with `swiftly use {{ release_name }}`.
 
