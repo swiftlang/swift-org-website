@@ -150,11 +150,6 @@ To obtain the Static Linux SDK:
 * For previous releases, navigate to "Previous Releases" on the
   installation page.
 
-* For development snapshots, access the static-sdk YAML file for your
-  target branch (e.g., swift-6.2-branch snapshots
-  [here](https://github.com/swiftlang/swift-org-website/blob/main/_data/builds/swift-6_2-branch/static-sdk.yml))
-  to quickly construct the install command (following the pattern
-  explained below) by browsing the available checksums.
 
 #### (4) Installation Commands Pattern
 
@@ -167,10 +162,20 @@ $ swift sdk install <URL-or-filename-here> [--checksum <checksum-for-archive-URL
 You can provide either a URL (with corresponding checksum) or a local
 filename where the SDK can be found.
 
-For example, if you have installed the `swift-6.1.2-RELEASE` toolchain, you would enter:
+<!--
+{% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Static SDK'| first %}
+{% assign tag = site.data.builds.swift_releases.last.tag %}
+{% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
+{% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/static-sdk/" | append: tag | append: "/" | append: tag %}
+{% assign command = "swift sdk install " | append: base_url | append: "_static-linux-0.0.1.artifactbundle.tar.gz --checksum " | append: platform.checksum %}
+
+{% comment %} Generate branch information - ONLY major.minor {% endcomment %}
+-->
+
+For example, if you have installed the {{ tag }} toolchain, you would enter:
 
 ```console
-$ swift sdk install https://download.swift.org/swift-6.1.2-release/static-sdk/swift-6.1.2-RELEASE/swift-6.1.2-RELEASE_static-linux-0.0.1.artifactbundle.tar.gz --checksum df0b40b9b582598e7e3d70c82ab503fd6fbfdff71fd17e7f1ab37115a0665b3b
+$ {{ command }}
 ```
 
 This will download and install the corresponding Static Linux SDK on
