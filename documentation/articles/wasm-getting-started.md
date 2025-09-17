@@ -26,8 +26,15 @@ The distributed artifact bundles also include support for the experimental Embed
 
 4. Run a command in your terminal application to install Swift SDKs for Wasm.
 
+{% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Wasm'| first %}
+{% assign tag = site.data.builds.swift_releases.last.tag %}
+{% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
+
+{% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/wasm/" | append: tag | append: "/" | append: tag %}
+{% assign command = "swift sdk install " | append: base_url | append: "_wasm.artifactbundle.tar.gz --checksum " | append: platform.checksum %}
+
     ```
-    swift sdk install https://download.swift.org/swift-6.2-release/wasm/swift-6.2-RELEASE/swift-6.2-RELEASE_wasm.artifactbundle.tar.gz --checksum fe4e8648309fce86ea522e9e0d1dc48e82df6ba6e5743dbf0c53db8429fb5224
+    {{ command }}
     ```
 
 6. Run `swift sdk list` to verify the Swift SDK was installed and note its ID in the output. Two Swift SDKs will be installed,
