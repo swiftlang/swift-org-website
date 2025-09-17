@@ -1,4 +1,4 @@
-{% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Wasm'| first %}
+{% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Wasm SDK'| first %}
 {% assign tag = site.data.builds.swift_releases.last.tag %}
 {% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
 

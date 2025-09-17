@@ -2296,8 +2296,8 @@
       archs:
         - x86_64
         - arm64
-    - name: Wasm
-      platform: wasm
+    - name: Wasm SDK
+      platform: wasm-sdk
       checksum: fe4e8648309fce86ea522e9e0d1dc48e82df6ba6e5743dbf0c53db8429fb5224
       archs:
         - x86_64
