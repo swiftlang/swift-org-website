@@ -31,6 +31,6 @@ CODEOWNERS @timsneath @tkremenek @shahmishal @davelester
 /_data/new-data/landing/* @timsneath @tkremenek @shahmishal @davelester
 /_posts/* @timsneath @tkremenek @shahmishal @davelester
 
-/gsoc*/ @ktoso
+/gsoc*/ @ktoso @swiftlang/website-workgroup
 
-/openapi/ @czechboy0 @heckj
+/openapi/ @czechboy0 @swiftlang/website-workgroup
