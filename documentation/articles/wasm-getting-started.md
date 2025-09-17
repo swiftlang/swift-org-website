@@ -27,7 +27,9 @@ The distributed artifact bundles also include support for the experimental Embed
 {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/wasm/" | append: tag | append: "/" | append: tag %}
 {% assign command = "swift sdk install " | append: base_url | append: "_wasm.artifactbundle.tar.gz --checksum " | append: platform.checksum %}
 
-1. [Install `swiftly` per the instructions](https://www.swift.org/install/) for the platform that you're bulding on.
+Note that these steps are required on macOS even if you already have latest Xcode installed. Cross-compilation with Swift SDKs on Windows hosts is [not supported yet](https://github.com/swiftlang/swift-package-manager/issues/9148). 
+
+1. [Install `swiftly` per the instructions](https://www.swift.org/install/) for the platform that you're bulding on. 
 
 2. Install Swift {{ release_name }} with `swiftly install {{ release_name }}`.
 
