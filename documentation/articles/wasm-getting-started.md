@@ -19,7 +19,7 @@ The distributed artifact bundles also include support for the experimental Embed
 ## Installation
 
 {% assign last_release = site.data.builds.swift_releases.last %}
-{% assign platform = last_release.platforms | where: 'name', 'Wasm'| first %}
+{% assign platform = last_release.platforms | where: 'name', 'Wasm SDK'| first %}
 {% assign release_name = last_release.name %}
 {% assign tag = last_release.tag %}
 {% assign tag_downcase = last_release.tag | downcase %}
