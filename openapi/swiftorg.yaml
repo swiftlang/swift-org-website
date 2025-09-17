@@ -134,12 +134,12 @@ components:
           type: string
           pattern: \d+\.\d+(\.\d+)?
           description: Version number of the Swift release.
-          example: '6.0.2'
+          example: '6.2.0'
         date:
           type: string
           pattern: \d{4}-\d{2}-\d{2}
           description: Release date of the Swift version.
-          example: '2024-10-28'
+          example: '2025-09-15'
         platforms:
           type: array
           description: List of supported platforms for this release.
@@ -172,10 +172,13 @@ components:
       enum:
         - amazonlinux2
         - centos7
+        - debian12
+        - fedora39
         - macos
         - ubi9
         - ubuntu2004
         - ubuntu2204
+        - ubuntu2404
         - windows10
     PlatformIdentifier:
       anyOf:
@@ -191,6 +194,8 @@ components:
       type: string
       enum:
         - Swift Development Snapshot
+        - Swift Static SDK Development Snapshot
+        - Swift Wasm SDK Development Snapshot
     DevToolchainKind:
       anyOf:
         - $ref: '#/components/schemas/KnownDevToolchainKind'
@@ -273,6 +278,8 @@ components:
         - Linux
         - Windows
         - static-sdk
+        - wasm
+      example: Linux
     PlatformType:
       anyOf:
         - $ref: '#/components/schemas/KnownPlatformType'
@@ -311,7 +318,12 @@ components:
           description: List of supported architectures.
         checksum:
           type: string
-          description: SHA-256 Checksum of the static SDK, if this platform is the static SDK.
+          description: SHA-256 checksum of the Swift SDK.
+          example: 'd2225840e592389ca517bbf71652f7003dbf45ac35d1e57d98b9250368769378'
+        docker:
+          type: string
+          description: The tag of the container image.
+          example: '6.2-noble'
       required:
         - name
         - platform
