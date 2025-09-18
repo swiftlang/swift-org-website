@@ -33,7 +33,7 @@ Get involved with an existing translation project, or start a new one.
 <div class="links links-external links-list-nostyle" markdown="1">
 - [Read Chinese translation](https://doc.swiftgg.team){:target="_blank"}
 - [Read Japanese translation](https://www.swiftlangjp.com){:target="_blank"}
-- [Read Korean translation](https://bbiguduk.gitbook.io/swift){:target="_blank"}
+- [Read Korean translation](https://bbiguduk.github.io/swift-book-korean/documentation/tsplk){:target="_blank"}
 - [Read Ukrainian translation](https://book.swift.org.ua){:target="_blank"}
 </div>
 
