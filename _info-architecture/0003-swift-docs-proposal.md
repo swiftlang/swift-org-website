@@ -128,7 +128,9 @@ Like the Swift Embedded examples repository, it benefits from close proximity be
 
 ### Swift Docs Repository Content
 
-Based on my review of existing content in Swift.org, I'd propose the following initial collections to include existing articles:
+Based on the existing content in Swift.org, migrate the majority of the content into DocC format, grouped into the collection sets below. A few exceptions are detailed after the file names, to accomodate very out of date content, or content that's already replicated in other locations.
+
+All the key markdown files would remain in `/documentation` as they are today, with their front matter (Jekyll metadata) updated to redirect the URL requests to the new locations when content has been translated and accepted into the new docs repository. Markdown files prefixed with `_` are typically only included in other files and not referenced by URL, and are to be removed when the relevant content is migrated.
 
 - API guidelines
 
@@ -137,37 +139,43 @@ Based on my review of existing content in Swift.org, I'd propose the following i
 - Server guides
 
   - documentation/server/index.md
-  - documentation/server/guides/memory-leaks-and-usage.md
-  - documentation/server/guides/packaging.md
-  - documentation/server/guides/allocations.md
-  - documentation/server/guides/libraries
-  - documentation/server/guides/libraries/log-levels.md
-  - documentation/server/guides/libraries/concurrency-adoption-guidelines.md
-  - documentation/server/guides/testing.md
-  - documentation/server/guides/performance.md
-  - documentation/server/guides/linux-perf.md
-  - documentation/server/guides/deployment.md
+
   - documentation/server/guides/index.md
-  - documentation/server/guides/deploying/heroku.md
-  - documentation/server/guides/deploying/ubuntu.md
-  - documentation/server/guides/deploying/gcp.md
-  - documentation/server/guides/deploying/digital-ocean.md
+  - documentation/server/guides/building.md
+  - documentation/server/guides/testing.md
+  - documentation/server/guides/memory-leaks-and-usage.md
+  - documentation/server/guides/allocations.md
+    - documentation/server/guides/linux-perf.md
+    - documentation/server/guides/performance.md
+
+  - documentation/server/guides/llvm-sanitizers.md
+  - documentation/server/guides/deployment.md
+  - documentation/server/guides/packaging.md
+  - documentation/server/guides/passkeys.md
+
+  - documentation/server/guides/libraries/log-levels.md: migrate content into swift-log
+  - documentation/server/guides/libraries/concurrency-adoption-guidelines.md: remove content & redirect link to existing migration guide
+
+  - documentation/server/guides/deploying/aws-sam-lambda.md
   - documentation/server/guides/deploying/aws-copilot-fargate-vapor-mongo.md
   - documentation/server/guides/deploying/aws.md
-  - documentation/server/guides/deploying/aws-sam-lambda.md
-  - documentation/server/guides/building.md
-  - documentation/server/guides/llvm-sanitizers.md
-  - documentation/server/guides/passkeys.md
+  - documentation/server/guides/deploying/digital-ocean.md
+    - documentation/server/guides/deploying/ubuntu.md
+  - documentation/server/guides/deploying/heroku.md
+  - documentation/server/guides/deploying/gcp.md
   - documentation/articles/static-linux-getting-started.md
     
-- Interop Guides
+- C/C++ Interop Guides
 
-  - documentation/articles/wrapping-c-cpp-library-in-swift.md
+  - documentation/cxx-interop/index.md
+  - documentation/cxx-interop/safe-interop/index.md
   - documentation/cxx-interop/project-build-setup/index.md
+  - documentation/cxx-interop/status/index.md
+  - documentation/articles/wrapping-c-cpp-library-in-swift.md
 
 - Swift Language Guides
 
-  - possibly seeding this and re-organizing it with content from https://github.com/swiftlang/swift-migration-guide
+  - migrate all of these pieces into https://github.com/swiftlang/swift-migration-guide
   - documentation/articles/value-and-reference-types.md
   - migration-guide-swift3/_migration-guide.md
   - migration-guide-swift3/se-0107-migrate.md
@@ -178,15 +186,51 @@ Based on my review of existing content in Swift.org, I'd propose the following i
   - migration-guide-swift4.2/index.md
   - migration-guide-swift5/_migration-guide.md
   - migration-guide-swift5/index.md
-  - documentation/concurrency/index.md
-  - documentation/lldb/_playground-support.md
-  - documentation/lldb/index.md
+  - documentation/concurrency/index.md (redirect only, its content is effectively already there)
 
 - Tool Guides
 
   - documentation/articles/zero-to-swift-nvim.md
   - documentation/articles/zero-to-swift-emacs.md
   - documentation/articles/getting-started-with-vscode-swift.md
+
+- WASM
+
+  - documentation/articles/wasm-getting-started.md
+
+### Swift.org documentation files & directories remaining:
+
+- Remain on swift.org
+  - documentation/core-libraries/index.md
+    - documentation/core-libraries/_foundation.md
+    - documentation/core-libraries/_libdispatch.md
+    - documentation/core-libraries/_swift-testing.md
+    - documentation/core-libraries/_xctest.md
+
+- documentation/package-manager/index.md
+  (currently redirects to https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
+
+- documentation/articles/value-and-reference-types.md
+
+- documentation/tspl/index.md (stays as is, references into TSPL and links to translations)
+
+- documentation/lldb/index.md: migrate to github.com/swiftlang/swift:`userdocs/`
+  - documentation/lldb/_playground-support.md
+
+- documentation/swift-compiler/index.md: migrate to github.com/swiftlang/swift:`userdocs/`
+  - documentation/swift-compiler/_compiler-architecture.md
+
+- documentation/standard-library/index.md
+  - documentation/standard-library/_preview-package.md
+  - documentation/standard-library/_stdlib-design.md
+
+- documentation/source-compatibility/index.md: migrate to github.com/swiftlang/project-operations repository
+  (referencess to swift source compatibility project)
+
+- documentation/source-code/index.md: migrate to github.com/swiftlang/project-operations repository
+  (partial list to existing source code that goes into toolchain, needs updating if kept)
+
+- documentation/continuous-integration/index.md: migrate to github.com/swiftlang/project-operations repository
 
 ## Alternatives Considered
 
@@ -218,4 +262,6 @@ Because this content doesn't have the constraint of Swift packages, which expect
 
 ## Future Directions
 
-I think there's a good argument for migrating some of the content in the Swift repository's [docs](https://github.com/swiftlang/swift/tree/main/docs) directory to provide details about the Swift compiler and how to use it, as well as content related to the establishment and output of both the Platform and Ecosystems steering groups.
+The Swift compiler has a `userdocs` directory now, that is starting to see information specific to the compiler, and building out more detail for how the compiler works, LLDB, and the related driver pieces would be excellent additions. That's new content rather than existing migration work for the most part.
+
+The Swift-Java interop project could easily warrant it's own docc catalog, or potentially be included in a more generic "Swift Language interop" collection. Today the majority of existing content is focused on C/C++ Interop, although that's a place where there could be significant growth.
