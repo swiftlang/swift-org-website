@@ -1,8 +1,8 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2025-09-22 10:00:00
-title: "Ten Years of Swift on the Server"
+date: 2025-09-23 10:00:00
+title: "The Growth of the Swift Server Ecosystem"
 author: [0xTim]
 category: "Community"
 ---
@@ -54,6 +54,6 @@ The last ten years has seen the community grow and grow at an ever accelerating 
 
 There's even a dedicated conference! The [ServerSide.swift conference](https://www.serversideswift.info) I organize, is hosting its 5th year this year in London. The schedule has recently been announced and it's packed with amazing talks on gRPC, containers, concurrency, and success stories. Previous years have seen really great talks, such as the [success story of using Swift on the server](https://www.youtube.com/watch?v=oJArLZIQF8w) by Cultured Code, the company behind Things. Other standout sessions include talks on [the OpenAPI generator](https://www.youtube.com/watch?v=n1PRYVveLd0), the announcement of the new [Swift Foundation](https://www.youtube.com/watch?v=EUKSZiOaWKk), and technical language talks on [structured concurrency](https://www.youtube.com/watch?v=JmrnE7HUaDE).
 
-Tickets for this year's conference are still available on the [website](https://www.serversideswift.info). We even have a day of workshops, including a workshop from expert developers from Apple on how to get started with Swift on the server, which is a great opportunity for anyone wanting to learn more.
+Tickets for this year's conference are still available on the [website](https://www.serversideswift.info). We even have a day of workshops, including a workshop from expert developers on how to get started with Swift on the server, which is a great opportunity for anyone wanting to learn more.
 
 The adoption of Swift on the server is ever-increasing as the language proves its benefits for safe, performant backends. The ecosystem continues to grow, with more frameworks, libraries, and tools being developed to support an expanding range of server applications. I can't believe it's _only_ been ten years since it started, and I'm excited to see how Swift on the server grows over the next decade!
