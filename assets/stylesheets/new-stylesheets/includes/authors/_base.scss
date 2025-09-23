@@ -13,6 +13,11 @@
     }
   }
 
+  &.fullwidth {
+    grid-template-columns: repeat(1, 1fr);
+    color: var(--color-syntax-plain-text);
+  }
+
   &.compact {
     display: flex;
     flex-wrap: wrap;

@@ -8,7 +8,11 @@ layout: new-layouts/base
   <div class="content">
     <h1>{{ page.title }}</h1>
 
-    {% include authors.html authors=page.author compact=true %}
+    {% assign compact_flag = false %}
+    {% if page.author.size > 1 %}
+      {% assign compact_flag = true %}
+    {% endif %}
+    {% include authors.html authors=page.author compact=compact_flag fullwidth=true %}
 
     <time pubdate datetime="{{ page.date | date_to_xmlschema }}"
       >{{ page.date | date: "%B %-d, %Y" }}</time
@@ -30,16 +34,15 @@ layout: new-layouts/base
     {% endif %}
     <div class="details">
       {{ content }} {% if page.author %}
-      <hr />
+      
       {% assign authors = page.author | array %}
 
       {% if authors.size > 1 %}
+        <hr />
         <h2>Authors</h2>
-      {% else %}
-        <h2>Author</h2>
+        {% include authors.html authors=authors %}
       {% endif %}
 
-      {% include authors.html authors=authors %}
       {% endif %}
 
       <hr />
