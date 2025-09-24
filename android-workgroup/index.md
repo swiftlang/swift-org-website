@@ -22,7 +22,7 @@ The Android workgroup will:
 
 ## Communication
 
-The Swift Android workgroup uses the [Swift Android forum](https://forums.swift.org/c/platform/android) for general discussions. It can also be contacted privately by messaging [@android-workgroup](https://forums.swift.org/g/android-workgroup) on the Swift Forums.
+The Swift Android workgroup uses the [Swift Android forum](https://forums.swift.org/c/platform/android/115) for general discussions. It can also be contacted privately by messaging [@android-workgroup](https://forums.swift.org/g/android-workgroup) on the Swift Forums.
 
 ## Membership
 
