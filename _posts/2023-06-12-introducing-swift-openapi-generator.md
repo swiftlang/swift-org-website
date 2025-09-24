@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2023-06-12 11:00:00
 title: Introducing Swift OpenAPI Generator
 author: [honzadvorsky, simonjbeaumont]
+category: "Developer Tools"
 ---
 
 We’re excited to announce a set of open source libraries designed to help both client and server developers streamline their workflow around HTTP communication using the industry‑standard OpenAPI specification.

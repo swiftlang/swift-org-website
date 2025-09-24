@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2017-08-22 09:45:00
 title: Swift Local Refactoring
 author: nkcsgexi
+category: "Developer Tools"
 ---
 
 Xcode 9 includes a brand new refactoring engine. It can transform code locally

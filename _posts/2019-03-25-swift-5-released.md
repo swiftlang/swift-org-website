@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2019-03-25 12:00:00
 title: Swift 5 Released!
 author: tkremenek
+category: "Language"
 ---
 
 Swift 5 is now officially released!
