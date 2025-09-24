@@ -111,14 +111,14 @@
       href="/assets/images/icon-swift.svg"
       color="#F05339"
     />
-    {% if page.atom %}
     <link
       rel="alternate"
       type="application/atom+xml"
       title="Swift.org (Atom Feed)"
       href="/atom.xml"
     />
-    {% endif %} {% if page.url %}
+
+    {% if page.url %}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     {% endif %}
 
