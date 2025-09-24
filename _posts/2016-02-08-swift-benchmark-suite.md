@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2016-02-08 18:00:00
 title: Swift Benchmark Suite now Available
 author: lplarson
+category: "Developer Tools"
 ---
 
 Apple's Swift Team is happy to announce that Swift's [benchmark

@@ -7,12 +7,10 @@ latest-release:
     links:
       - href: 'https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt'
         copy: 'License: Apache-2.0'
-      - href: 'https://download.swift.org/swiftly/linux/swiftly-0.4.0-dev-x86_64.tar.gz.sig'
+      - href: 'https://download.swift.org/swiftly/linux/swiftly-x86_64.tar.gz.sig'
         copy: 'PGP: Signature'
       - href: 'https://www.swift.org/install/linux/swiftly'
         copy: 'Instructions'
-      - href: "https://www.swift.org/tools/#editors"
-        copy: "Editors"
   container:
     pre-code-text: |-
       Official container images are available for compiling and running Swift on a variety of distributions.

@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2022-07-06 08:00:00
 title: "Swift language announcements from WWDC22"
 author: [fbernutz, hishnash, natpanferova]
+category: "Language"
 ---
 
 ![Sketchnote summary for Swift language announcements from WWDC22 blog post](/assets/images/swift-language-updates-from-wwdc22-blog/wwdc22-swift-updates-sketch-thumbnail.jpeg)

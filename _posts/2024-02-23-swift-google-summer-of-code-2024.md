@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2024-02-23 10:00:00
 title: Swift joins Google Summer of Code 2024
 author: [ktoso]
+category: "Community"
 ---
 
 We're happy to announce that Swift will once again be joining [Google Summer of Code 2024](https://summerofcode.withgoogle.com)!

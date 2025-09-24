@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2024-03-07 10:30:00
 title: Iterate Over Parameter Packs in Swift 6.0
 author: [simanerush]
+category: "Language"
 ---
 
 Parameter packs, introduced in Swift 5.9, make it possible to write generics that abstract over the number of arguments. This eliminates the need to have overloaded copies of the same generic function for one argument, two arguments, three arguments, and so on.

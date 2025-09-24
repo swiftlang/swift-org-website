@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2022-04-25 11:00:00
 title: SSWG 2021 Annual Update
 author: 0xTim
+category: "Community"
 ---
 
 Since the last update from the SSWG, the Swift on Server ecosystem has continued to grow and expand.

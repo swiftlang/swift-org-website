@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2017-06-21 09:45:00
 title: Swift Package Manager Manifest API Redesign
 author: aciid
+category: "Developer Tools"
 ---
 
 The Package Manager in Swift 4 includes the redesigned `Package.swift` manifest

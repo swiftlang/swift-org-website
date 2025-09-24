@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2024-07-30 10:00:00
 title: Announcing Swift Homomorphic Encryption
 author: [fabian-boemer, karl-tarbe, rehan-rishi]
+category: "Developer Tools"
 ---
 
 We’re excited to announce a new open source Swift package for homomorphic

@@ -8,18 +8,54 @@ title: Install Swift - macOS
 {% assign xcode_dev_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}
 {% assign xcode_6_2_builds = site.data.builds.swift-6_2-branch.xcode | sort: 'date' | reverse %}
 
+
 <div class="content">
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html content = site.data.new-data.install.macos.releases.latest-release.swiftly%}
     </div>
   </div>
+  <h3 id="editor" class="header-with-anchor">2. Select an Editor</h3>
+  <div class="releases-grid">
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html content = site.data.new-data.install.macos.releases.latest-release.xcode%}
     </div>
   </div>
+  <div class="release-box section">
+    <div class="content">
+      {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.vscode%}
+    </div>
+  </div>
+</div>
+  <div class="release-box section">
+    <div class="content">
+      {% include new-includes/components/code-box.html content = site.data.new-data.install.macos.releases.latest-release.other_editors%}
+    </div>
+  </div>
+  <h3 id="build-a-command-line-tool" class="header-with-anchor">3. Build a Command-line Tool</h3>
+<div class="release-box section">
+    <div class="content">
+      {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.build-a-package%}
+    </div>
+  </div>
+  <h2 id="swift-sdk-bundles" class="header-with-anchor">Swift SDK Bundles</h2>
+  <div>
+    <p class="content-copy">Additional components for cross-compilation</p>
+  </div>
   <div class="releases-grid">
+      <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/static-linux-sdk.html %}
+      </div>
+    </div>
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/wasm-sdk.html %}
+      </div>
+    </div>
+  </div>
+  <h3 id="alternative-install-options" class="header-with-anchor">Alternative toolchain install options</h3>
     <div class="release-box section">
       <div class="content">
         <div class="code-box content-wrapper">
@@ -36,12 +72,6 @@ title: Install Swift - macOS
         </div>
       </div>
     </div>
-    <div class="release-box section">
-      <div class="content">
-        {% include new-includes/components/static-linux-sdk.html %}
-      </div>
-    </div>
-  </div>
   <div class="release-box section">
     <div class="content">
         <details class="download" style="margin-bottom: 0;">
@@ -50,6 +80,8 @@ title: Install Swift - macOS
         </details>
     </div>
   </div>
+  <br><br>
+  <hr>
   <h2 id="development-snapshots" class="header-with-anchor">Development Snapshots</h2>
   <div>
     <p class="content-copy">Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.</p>
@@ -118,7 +150,11 @@ title: Install Swift - macOS
         </details>
     </div>
   </div>
-  <h3>Static Linux SDK</h3>
+  <h2 id="swift-sdk-buindles-dev" class="header-with-anchor">Swift SDK Bundles</h2>
+  <div>
+    <p class="content-copy">Additional components for cross-compilation</p>
+  </div>
+  <h3>Swift SDK for Static Linux</h3>
   <div>
     <p class="content-copy">
       <a class="content-link" href="/documentation/articles/static-linux-getting-started.html">Instructions</a>
