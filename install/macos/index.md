@@ -10,6 +10,7 @@ title: Install Swift - macOS
 
 
 <div class="content">
+  <h3 id="swiftly" class="header-with-anchor">1. Install Swift via Swiftly</h3>
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.macos.releases.latest-release.swiftly%}
