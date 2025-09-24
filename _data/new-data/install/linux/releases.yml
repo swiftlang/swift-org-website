@@ -2,7 +2,6 @@ latest-release:
   swiftly:
     pre-code-text: |
       The Swiftly installer manages Swift and its dependencies. It supports switching between different versions and downloading updates.
-    headline: 1. Install Swift via Swiftly
     tabs:
       - label: Bash
         code: |-
