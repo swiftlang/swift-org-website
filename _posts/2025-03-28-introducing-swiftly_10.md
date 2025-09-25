@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2025-03-28 6:00:00
 title: Introducing swiftly 1.0
 author: [chris-mcgee]
+category: "Developer Tools"
 ---
 
 Today we’re delighted to introduce the first stable release of swiftly, a Swift version manager that takes the pain out of installing, managing and updating your Swift toolchain.

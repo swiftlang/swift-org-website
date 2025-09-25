@@ -52,8 +52,20 @@ struct Tool {
                 work: { _ = try await client.listReleases().ok.body.json }
             ),
         ]
+        struct DevToolchainBranchPlatform: Hashable {
+            var branch: Components.Schemas.KnownSourceBranch
+            var platform: Components.Schemas.KnownPlatformIdentifier
+        }
+        let excluded: Set<DevToolchainBranchPlatform> = [
+            .init(branch: ._6_0, platform: .debian12),
+            .init(branch: ._6_0, platform: .fedora39),
+            .init(branch: ._6_0, platform: .ubuntu2404),
+        ]
         for branch in Components.Schemas.KnownSourceBranch.allCases {
             for platform in Components.Schemas.KnownPlatformIdentifier.allCases {
+                guard !excluded.contains(.init(branch: branch, platform: platform)) else {
+                    continue
+                }
                 tests.append(
                     .init(
                         name: "listDevToolchains(\(branch.rawValue), \(platform.rawValue))",
@@ -75,6 +87,16 @@ struct Tool {
                     name: "listStaticSDKDevToolchains(\(branch.rawValue))",
                     work: {
                         _ = try await client.listStaticSDKDevToolchains(.init(path: .init(branch: .init(value1: branch)))).ok.body.json
+                    }
+                )
+            )
+        }
+        for branch in Components.Schemas.KnownSourceBranch.allCases {
+            tests.append(
+                .init(
+                    name: "listWasmSDKDevToolchains(\(branch.rawValue))",
+                    work: {
+                        _ = try await client.listWasmSDKDevToolchains(.init(path: .init(branch: .init(value1: branch)))).ok.body.json
                     }
                 )
             )

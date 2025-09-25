@@ -1,0 +1,15 @@
+latest-dev:
+  swiftly:
+    pre-code-text: |
+      Swiftly supports installing development snapshot toolchains. For example, you can install the latest available snapshot for the next major release using the “main-snapshot” selector and prepare your code for when it arrives.
+    headline: Swiftly
+    tabs:
+      - label: main
+        code: |-
+          swiftly install main-snapshot
+      - label: release/6.2
+        code: |-
+          swiftly install 6.2-snapshot
+    links:
+      - href: '/install/linux/swiftly'
+        copy: 'Instructions'

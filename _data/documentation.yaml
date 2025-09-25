@@ -39,10 +39,6 @@
     url: /documentation/server/
     description: |
       Swift is a general-purpose programming language with unique characteristics that make it specifically suitable for Server applications.
-  - title: Embedded development
-    url: /getting-started/embedded-swift/
-    description: |
-      Introduction to embedded development using Swift. Learn how to get started.
   - title: Mixing Swift and C++
     url: /documentation/cxx-interop/
     description: |
@@ -71,6 +67,14 @@
     url: /documentation/articles/swift-android-getting-started.html
     description: |
       Learn how to get started cross-compiling Swift packages for Android.
+  - title: Getting Started with Swift SDKs for WebAssembly
+    url: /documentation/articles/wasm-getting-started.html
+    description: |
+      Learn how to get started building Swift packages for WebAssembly (Wasm).
+  - title: Getting Started with Swift on VS Code
+    url: /documentation/articles/getting-started-with-vscode-swift.html
+    description: |
+      Learn how to get started with the Swift extension for VS Code.
 #----------------------------------------------------
 - header: Contributing
   pages:

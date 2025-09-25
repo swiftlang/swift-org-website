@@ -39,22 +39,20 @@ This will generate a new directory called _MyLibrary_ with the following files:
 In fact, SwiftPM generated a "Hello, world!" project for us, including some unit tests!
 We can run the tests by running  `swift test`  in our terminal.
 
-~~~bash
+~~~no-highlight
 $ swift test
 Building for debugging...
 [5/5] Linking MyLibraryPackageTests
 Build complete! (7.91s)
-Test Suite 'All tests' started at 2023-08-29 18:59:31.328
-Test Suite 'MyLibraryPackageTests.xctest' started at 2023-08-29 18:59:31.329
-Test Suite 'MyLibraryTests' started at 2023-08-29 18:59:31.329
-Test Case '-[MyLibraryTests.MyLibraryTests testExample]' started.
-Test Case '-[MyLibraryTests.MyLibraryTests testExample]' passed (0.001 seconds).
-Test Suite 'MyLibraryTests' passed at 2023-08-29 18:59:31.330.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
-Test Suite 'MyLibraryPackageTests.xctest' passed at 2023-08-29 18:59:31.330.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
-Test Suite 'All tests' passed at 2023-08-29 18:59:31.330.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.002) seconds
+Test Suite 'All tests' started at 2025-08-01 14:02:39.232.
+Test Suite 'All tests' passed at 2025-08-01 14:02:39.233.
+   Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 6.1 (43b6f88e2f2712e)
+↳ Target Platform: arm64-apple-macosx
+◇ Test example() started.
+✔ Test example() passed after 0.001 seconds.
+✔ Test run with 1 test passed after 0.001 seconds.
 ~~~
 
 ## A small library
@@ -86,15 +84,17 @@ Now let's add a unit test for this strongly typed Email API.
 Replace the example content of `MyLibraryTests.swift` with the following code:
 
 ~~~swift
+import Testing
 @testable import MyLibrary
-import XCTest
 
-final class MyLibraryTests: XCTestCase {
-  func testEmail() throws {
+struct MyLibraryTests {
+  @Test func email() throws {
     let email = try Email("john.appleseed@apple.com")
-    XCTAssertEqual(email.description, "john.appleseed@apple.com")
+    #expect(email.description == "john.appleseed@apple.com")
 
-    XCTAssertThrowsError(try Email("invalid"))
+    #expect(throws: (any Error).self) {
+      try Email("invalid")
+    }
   }
 }
 ~~~
@@ -102,23 +102,23 @@ final class MyLibraryTests: XCTestCase {
 Once we save that, we can run the tests again:
 
 ~~~no-highlight
-❯ swift test
+$ swift test
 Building for debugging...
 [5/5] Linking MyLibraryPackageTests
 Build complete! (3.09s)
-Test Suite 'All tests' started at 2023-08-29 19:01:08.640
-Test Suite 'MyLibraryPackageTests.xctest' started at 2023-08-29 19:01:08.641
-Test Suite 'MyLibraryTests' started at 2023-08-29 19:01:08.641
-Test Case '-[MyLibraryTests.MyLibraryTests testEmail]' started.
-Test Case '-[MyLibraryTests.MyLibraryTests testEmail]' passed (0.002 seconds).
-Test Suite 'MyLibraryTests' passed at 2023-08-29 19:01:08.643.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
-Test Suite 'MyLibraryPackageTests.xctest' passed at 2023-08-29 19:01:08.643.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
-Test Suite 'All tests' passed at 2023-08-29 19:01:08.643.
-	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+Test Suite 'All tests' started at 2025-08-01 14:24:32.687.
+Test Suite 'All tests' passed at 2025-08-01 14:24:32.689.
+   Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+◇ Test run started.
+↳ Testing Library Version: 6.1 (43b6f88e2f2712e)
+↳ Target Platform: arm64-apple-macosx
+◇ Suite MyLibraryTests started.
+◇ Test email() started.
+✔ Test email() passed after 0.001 seconds.
+✔ Suite MyLibraryTests passed after 0.001 seconds.
+✔ Test run with 1 test passed after 0.001 seconds.
 ~~~
 
 ---
 
-> The source code for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-package-library)
+> The source code for this guide can be found [on GitHub](https://github.com/apple/swift-getting-started-package-library).

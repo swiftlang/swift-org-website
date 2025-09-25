@@ -20,7 +20,7 @@ The current Documentation Workgroup consists of the following people:
 * [Daniel Grumberg](https://github.com/daniel-grumberg)
 * [Dave Verwer](https://github.com/daveverwer)
 * [David Rönnqvist](https://github.com/d-ronnqvist)
-* [Dianna Ma](https://github.com/tayloraswift)
+* [Diana Ma](https://github.com/tayloraswift)
 * [Franklin Schrans](https://github.com/franklinsch) (chair)
 * [Joe Heck](https://github.com/heckj)
 * [Kyle Ye](https://github.com/Kyle-Ye)

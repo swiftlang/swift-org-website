@@ -37,9 +37,7 @@
       @include link-with-right-arrow();
       display: block;
       color: white;
-      text-decoration: underline;
-      text-decoration-color: rgba(255, 255, 255, 0.5);
-      text-underline-offset: 2px;
+      @include underline;
       margin-top: 14px;
 
       i {

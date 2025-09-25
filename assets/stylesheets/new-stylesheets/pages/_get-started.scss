@@ -468,7 +468,6 @@
     padding-left: 0 !important;
 
     button {
-      outline: none;
       border: none;
       background: none;
 
@@ -554,9 +553,10 @@
 
   @media only screen and (max-width: 768px) {
     nav {
+     width: 100%;
+
       ul {
         white-space: nowrap;
-        width: calc(100% - 59px);
       }
     }
   }

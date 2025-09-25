@@ -11,8 +11,8 @@ The Swift.org community has the singular goal of making the world's best general
 The Swift language is developed in the open, and all technical or administrative topics about the language or community processes should be directed to the Swift public forums. Public conversations are encouraged, and active developers of the Swift language should monitor the relevant forum categories.
 
 * Directory of forum categories and email instructions are in the [forum section](#forums).
-* Source code for all Swift projects can be found on GitHub at [github.com/apple][github].
-* The Swift language bug tracking system is maintained at [github.com/swiftlang/swift/issues][bugtracker].
+* Source code for Swift projects can be found on GitHub at [github.com/swiftlang][github].
+* The Swift bug tracking system is maintained at [github.com/swiftlang/swift/issues][bugtracker].
 
 All communication within project spaces should adhere to Swift project's [Code of Conduct](/code-of-conduct).
 
@@ -24,7 +24,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
 * __[Project Lead](#project-lead)__ appoints technical leaders from the community.  Apple Inc. is the project lead, and interacts with the community through its representative.
 * __[Core Team](#core-team)__ is the small group responsible for strategic direction and oversight of the Swift project.
 * __[Code Owner](/contributing/#code-owners)__ is the individual responsible for a specific area of the Swift codebase.
-* __[Committer](/contributing/#commit-access)__ is anyone that has commit access to the Swift code base.
+* __[Code Merger](/contributing/#code-merger)__ is anyone that has commit access to the Swift code base.
 * __[Member](/contributing/#member)__ is anyone who is a member of the swiftlang organization on GitHub.
 * __[Contributor](/contributing/#contributor)__ is anyone who has contributed to Swift by writing code, answering questions on the forums, reporting or triaging bugs, participating in the Swift evolution process, or other ways.
 * __Steering Groups__
@@ -32,6 +32,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
    * __[Language](#language-steering-group)__ is a small group of experts that drive the Swift language forward in a coherent direction.
    * __[Platforms](/platform-steering-group)__ is a small group of experts that enables the Swift language and its tools to be used in new environments.
 * __Workgroups__
+   * __[Android](/android-workgroup)__ is a team that works on the use of Swift for developing Android applications.
    * __[C++ Interoperability](/cxx-interop-workgroup)__ is a team that works on adding the support for the bidirectional interoperability between Swift and C++.
    * __[Contributor Experience](/contributor-experience-workgroup)__ is a team that supports contributors to the Swift project, including contributions on the Swift Forums.
    * __[Documentation](/documentation-workgroup)__ is a team that helps guide the documentation experience for Swift.
@@ -102,7 +103,7 @@ The current Language Steering Group members are:
 [email-devs]: mailto:swift-dev@swift.org  "Email the developer discussion list"
 [email-lead]: mailto:project-lead@swift.org "The leaders at Apple responsible for Swift.org"
 
-[github]: https://github.com/apple  "Apple's home page on GitHub"
+[github]: https://github.com/swiftlang "The Swift organization on GitHub"
 [repo]: git+ssh://github.com/apple "Link to the repo hosted on GitHub"
 [bugtracker]:  http://github.com/swiftlang/swift/issues
 

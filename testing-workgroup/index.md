@@ -94,7 +94,7 @@ particular challenges with reaching consensus on significant decisions.
 ## Meetings
 
 The Testing Workgroup meets biweekly on Monday at 1:00PM PT (USA Pacific).
-Meetings take place in [even numbered weeks](http://www.whatweekisit.org/),
+Meetings take place in [odd numbered weeks](http://www.whatweekisit.org/),
 unless otherwise communicated in advance.
 
 Many workgroup meetings are meant for open discussion and any Swift community

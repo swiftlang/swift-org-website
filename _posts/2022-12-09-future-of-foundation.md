@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2022-12-09 08:00:00
 title: The Future of Foundation
 author: [parkera]
+category: "Developer Tools"
 ---
 
 The Foundation framework is used in nearly all Swift projects. It provides both a base layer of functionality for fundamentals like strings, collections, and dates, as well as setting conventions for writing great Swift code.

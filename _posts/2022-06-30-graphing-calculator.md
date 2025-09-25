@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2022-06-30 16:00:00
 title: "Developer Spotlight: Porting Graphing Calculator from C++ to Swift"
 author: [ronavitzur]
+category: "Adopters"
 ---
 
 *Developer Spotlight is a series highlighting interesting Swift developers from around the world. This post is authored by Ron Avitzur, author of the [Pacific Tech Graphing Calculator](http://PacificT.com/Story).*

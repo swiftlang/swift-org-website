@@ -194,3 +194,23 @@
     white-space: normal;
   }
 }
+
+body[data-color-scheme='light'] {
+  .hide-light {
+    display: none
+  }    
+}
+
+body[data-color-scheme='dark'] {
+  .hide-dark {
+    display: none
+  }    
+}
+
+
+
+@mixin underline {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
+  text-underline-offset: 2px;
+}

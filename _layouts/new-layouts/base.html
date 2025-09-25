@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>{{ site.title }} - {{ page.title | escape }}</title>
+    <title>
+      {% if page.url == "/" %} {{ page.title | escape }} {% else %} {{
+      page.title | escape }} | {{ site.title }} {% endif %}
+    </title>
     {% if jekyll.environment == 'stage' %}
     <meta name="robots" content="noindex" />
     {% endif %}
@@ -108,14 +111,14 @@
       href="/assets/images/icon-swift.svg"
       color="#F05339"
     />
-    {% if page.atom %}
     <link
       rel="alternate"
       type="application/atom+xml"
       title="Swift.org (Atom Feed)"
       href="/atom.xml"
     />
-    {% endif %} {% if page.url %}
+
+    {% if page.url %}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     {% endif %}
 
@@ -169,6 +172,10 @@
   </head>
 
   <body>
+    <script>
+      // Set theme before body content to avoid flash of light styles in dark mode
+      setColorScheme(getStoredScheme())
+    </script>
     <main>
       {% include new-includes/header/header.html %} {{content}} {% include
       new-includes/footer/footer.html %}
@@ -177,6 +184,24 @@
     <script src="/assets/javascripts/new-javascripts/application.js"></script>
     {% if page.url == "/" %}
     <script src="/assets/javascripts/new-javascripts/landing.js"></script>
+    {% endif %} {% if page.url == "/blog/" %}
+    <script src="/assets/javascripts/new-javascripts/blog.js"></script>
     {% endif %}
+    <!-- metrics -->
+    <script>
+      /* RSID: */
+      var s_account = 'awdswiftorg'
+    </script>
+    {% if jekyll.environment != 'development' %}
+    <script src="https://developer.apple.com/assets/metrics/scripts/analytics.js"></script>
+    <script>
+      s.pageName = AC && AC.Tracking && AC.Tracking.pageName()
+
+      /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+      var s_code = s.t()
+      if (s_code) document.write(s_code)
+    </script>
+    {% endif %}
+    <!-- /metrics -->
   </body>
 </html>

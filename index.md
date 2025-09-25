@@ -1,7 +1,6 @@
 ---
 layout: new-layouts/base
-title: Welcome to Swift.org
-atom: true
+title: Swift Programming Language
 ---
 
 <div class="animation-container">

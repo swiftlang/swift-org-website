@@ -1,9 +1,17 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2025-06-04 10:00:00
 title: "Redesigned Swift.org is now live"
+featured-image:
+  url: '/assets/images/swift-redesign-blog/swift-redesign-blog.png'
+  alt: 'Screenshot of the redesigned website.'
+featured-image-dark:
+  url: '/assets/images/swift-redesign-blog/swift-redesign-blog.png'
+  alt: 'Screenshot of the redesigned website.'
+image: "swift-redesign-blog.png"
 author: [shahmishal]
+category: 'Community'
 ---
 
 Over the past few months, the website workgroup has been redesigning Swift.org. On behalf of the website workgroup, I'm pleased to announce that we have merged the initial changes.

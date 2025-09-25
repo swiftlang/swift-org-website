@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>{{ site.title }} - {{ page.title | escape }}</title>
+  <title>{{ page.title | escape }} | {{ site.title }}</title>
   {% if jekyll.environment == 'stage' %}
   <meta name="robots" content="noindex" />
   {% endif %}
@@ -25,9 +25,7 @@
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
   <link rel="mask-icon" href="/assets/images/icon-swift.svg" color="#F05339" />
-  {% if page.atom %}
   <link rel="alternate" type="application/atom+xml" title="Swift.org (Atom Feed)" href="/atom.xml" />
-  {% endif %}
 
   {% if page.url %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />

@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
 date: 2025-06-02 10:00:00
-title: "Swift at Apple: migrating the Password Monitoring service from Java"
+title: "Swift at Apple: Migrating the Password Monitoring service from Java"
 author: [rmondello, indravardhan, spencervd6, umeshbatra13]
+category: "Adopters"
 ---
 
 _Swift is heavily used in production for building cloud services at Apple, with incredible results. Last year, the Password Monitoring service was rewritten in Swift, handling multiple billions of requests per day from devices all over the world. In comparison with the previous Java service, the updated backend delivers a 40% increase in performance, along with improved scalability, security, and availability._

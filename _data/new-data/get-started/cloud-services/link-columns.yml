@@ -3,7 +3,7 @@ columns:
   - headline: Documentation
     links:
       - text: 'Build a web service with Vapor'
-        url: '/getting-started/vapor-web-server/'
+        url: 'https://docs.swift.org/getting-started-swift-server/tutorials/getting-started-swift-server/'
       - text: 'Swift server development guides'
         url: '/documentation/server/guides/'
       - text: 'Swift on AWS documentation'
