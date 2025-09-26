@@ -53,11 +53,11 @@
         transition:
           background-color 0.2s ease,
           color 0.2s ease; // smooth hover
-        
-          & > span {
-            padding: 12px 15px;
-            border-radius: 36px;
-          }
+
+        & > span {
+          padding: 12px 15px;
+          border-radius: 36px;
+        }
 
         // hover/focus states
         &:hover,
@@ -81,7 +81,7 @@
           outline: none; // basic focus outline removal
 
           & > span {
-            background-color: rgba(230, 150, 80, .9);
+            background-color: var(--site-navigation-selected-background);
           }
         }
       }
