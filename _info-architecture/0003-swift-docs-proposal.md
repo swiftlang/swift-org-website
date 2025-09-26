@@ -1,14 +1,21 @@
 # Proposal: Swift Docs Repository
 
-* Author: [Joseph Heck](https://github.com/heckj)
+* Author: [Joe Heck](https://github.com/heckj)
 
 ## Introduction
 
-Introduce a repository to host multiple catalogs, aligned by broad use cases and to workgroups or steering groups, to collect guides, explanatory documentation, and general reference documentation for the Swift project. Migrate some of the articles currently hosted as Jekyll/markdown content on Swift.org into a DocC format to provide structure around a growing set of articles, and host the archives generated from those catalogs at docs.swift.org, linked and referenced from the swift.org website. This provides a basic structure aligned to the Swift organization to support growth, as well as preserve links from legacy content at swift.org that we can redirect as content is migrated.
+Introduce a repository to host multiple DocC catalogs, aligned by broad use cases and with workgroups or steering groups, to collect guides, tutorial content, and explanatory or general documentation for the Swift project.
+The goal of this repository is to provide a structured, central location to collect documentation related to the Swift project.
+Today there are bits and pieces of documentation in multiple locations, including a number of articles currently hosted as Jekyll/Markdown content on Swift.org.
+This proposal suggests moving that content and converting it into a DocC/Markdown format to provide structure for visually navigating the articles as well as creating a consistent place to grow more content.
+The content in this structure is expected to be generated into static DocC archives using Swift's documentation tool, and hosted through the project’s infrastructure at docs.swift.org, then linked and referenced from the swift.org website.
+This provides structure aligned to the Swift organization to support documentation growth, while maintaining links from the URLs where the content previously existed when referenced from swift.org that we can redirect as content is migrated.
 
 ## Motivation
 
-The documentation for Swift has grown organically since its open source release. That growth has resulted in fragmented locations to find information, little organization, and inconsistencies in updating content as the language grew. The Swift WebSite workgroup started down the path to redesign the swift.org website, and parallel with launched the [Swift Information Architecture project](https://forums.swift.org/t/swift-high-level-information-architecture/80066), to both revitalize the site and to set a structure that supports further, consistent growth for Swift documentation.
+The documentation for Swift has grown organically since its open-source release.
+That growth has resulted in fragmented locations to find information, little organization, and inconsistencies in updating content as the language grew.
+The Swift WebSite workgroup started down the path to redesign the swift.org website, and parallel with that, launched the [Swift Information Architecture project](https://forums.swift.org/t/swift-high-level-information-architecture/80066), to both revitalize the site and to set a structure that supports further, consistent growth for information about Swift.
 
 This proposal provides concrete guidance and structure for the [Documentation focus area](https://forums.swift.org/t/swift-high-level-information-architecture/80066#p-367675-documentation-41).
 
@@ -21,68 +28,93 @@ The proposal's goal is to provide a consistent place to host a diversity of Swif
 
 ## Proposed Solution
 
-Leverage Swift's [documentation tooling](https://www.swift.org/documentation/docc/) to provide a means to collect and organize the documentation, grouped into common collections. For documentation content aligned with a tool or library, host the source of the documentation alongside the source for that tool or library.
+Leverage Swift's [documentation tooling](https://www.swift.org/documentation/docc/) to provide a means to collect and organize the documentation, grouped into common collections.
+For documentation content aligned with a tool or library, host the source of the documentation alongside the source for that tool or library.
 
-For documentation content that cuts across the ecosystem, or otherwise isn't aligned with a single repository, organize the content into collections within a single repository. Group the content of each collection by use case that aligns to a workgroup or set of people within the Swift community that can provide technical/accuracy reviews.
+For documentation content that cuts across the ecosystem, or isn't aligned with a single repository, organize the content into collections within a single "docs" repository.
+Group the content of each collection by use case that aligns to a workgroup or set of people within the Swift community that can provide technical/accuracy reviews.
+At a high level, these collections can be viewed as "books" of documentation, using DocC's structure to provide a hierarchical visual structure, and leveraging DocC's navigation structure for reading through the content.
 
-This pattern of collections takes inspiration from what [Rust language website describes as "Books"](https://www.rust-lang.org/learn). Collections that bring together in-depth content - references, guides, and explanatory conceptual content - that provide more depth and detail, collected together to be published in a coordinated fashion. This keeps the content available and discoverable by browsing and skimming and provides organization to support organic growth of content over time.
+This pattern of collections takes inspiration from what [Rust language website describes as "Books"](https://www.rust-lang.org/learn).
+These are collections that bring together in-depth content - references, guides, and explanatory conceptual content - that provide more depth and detail, collected together to be published in a coordinated fashion.
+This keeps the content available and discoverable by browsing and skimming and provides organization to support organic growth of content over time.
 
-For cross-cutting documentation, use a single repository to host collections of documentation content (DocC catalogs) to avoid an explosion of documentation repositories. For example, DocC, Swift Package Manager, Swiftly, and others have existing repositories to host documentation but topic areas such as API guidelines, articles about language interoperability, Swift server tutorials, or guides to setting up development tooling do not. 
+For cross-cutting documentation related to Swift, use a single repository to host collections of documentation content (DocC catalogs) to avoid an explosion of documentation repositories.
+For example, DocC, Swift Package Manager, Swiftly, and other projects have existing repositories to host documentation where the content is specific and tightly coupled to the code in those repositories.
+Topic areas such as API guidelines, Swift server tutorials, or guides to setting up development tooling do not.
 
-To support accurate documentation, align each DocC catalog with a Swift workgroup or steering group to identify relevant reviewers. For example, API guidelines should be reviewed by people identified by the Language Steering Group, or Swift server tutorials reviewed by people nominated by the Swift Server workgroup.
+An exception to these guidelines of where to host content could be made where there's an overlap of code, especially testing and validation, with documentation.
+Today, Swift projects basic support for validating code blocks written in Swift using DocC's feature snippets, but this capability doesn't extend beyond code written in Swift.
+For some documentation efforts, such as Embedded Swift or C/C++ Interop, hosting the documentation closer to the code where example code can be tested and validated as well as included in Documentation is a useful exception to support tested-as-accurate and up-to-date content for the documentation.
+This is also a place where Swift's documentation has some potential to expand in the future, supporting broader scenarios where more variety of code examples can be validated as well as included in formal documentation.
 
-Codify the available reviewers using GitHub's `CODEOWNERS` file to map the DocC catalogs to relevant reviewers, and use GitHub pull requests for the review process.
+To support accurate documentation and a well-defined set of reviewers, align each DocC catalog with a Swift workgroup or steering group who can identify or provide relevant reviewers.
+For example, API guidelines should be reviewed by people identified by the Language Steering Group, and Swift server tutorials can be reviewed by individuals nominated by the Swift Server workgroup.
 
-From each DocC Catalog, build a DocC archive and publish it as a "static hosted site" to docs.swift.org. Link to the published documentation archives from the relevant pages and high-level organization provided on the swift.org website to provide click-through discoverability from swift.org pages.
+Codify the available reviewers using GitHub's `CODEOWNERS` file to provide the concrete map of reviewers for the DocC catalogs, and use GitHub pull requests for the review process.
 
-To support migration of content that exists as articles on Swift.org today, use Jekyll's `redirectTo` plugin, which is already enabled on swift.org. As articles are migrated, update the front matter (YAML metadata) for the article source on Swift.org to provide a seamless redirect after the content is hosted at a URL on docs.swift.org.
+From each DocC Catalog, the intent is to build a DocC archive and publish it as a "static hosted site" to docs.swift.org. 
+From swift.org, include links to these published archives and provide high-level organization on the swift.org website to enable click-through discoverability.
+
+To support migration of content that exists as articles on Swift.org today, use Jekyll's `redirectTo` plugin, which is enabled on swift.org.
+As articles are migrated, update the front matter (YAML metadata) for the article source on Swift.org to provide a seamless redirect to updated content locations after the content is migrated and hosted at a URL on docs.swift.org.
 
 ## Detailed Design
 
 ### Catalogs and reviewers
 
-Host a repository with a set of DocC catalogs that provide documentation related to a workgroup or steering group.
+Create a single repository that hosts a set of DocC catalogs that provide documentation collected by broad use case (loosely thinking of this as a book of related content), and aligned to a workgroup or steering group to provide oversight and support review.
 
-These documentation catalogs are meant to be separate from API reference documentation, so in DocC terms - they're primarily "bare" catalogs with only articles, or potentially hosting both articles and tutorials. In particular, this isn't meant to replace hosting API reference documentation for libraries, such as what's available through Swift Package Index.
+These documentation catalogs are meant to be separate from API reference documentation, so in DocC terms - they're primarily "bare" catalogs with only articles, or host articles and tutorials.
+In particular, this isn't meant to provide hosting for API reference documentation for individual libraries or projects provided from Swift Packages, such as what is available through Swift Package Index.
 
 Viewed from a "type" of documentation, for example referencing [diátaxis](https://diataxis.fr), the contents are meant to host [explanation](https://diataxis.fr/explanation/), [tutorials](https://diataxis.fr/tutorials/), and [how-to guides](https://diataxis.fr/how-to-guides/); not [reference](https://diataxis.fr/reference/) content.
 
-Each catalog is associated with an existing workgroup or steering group.
+Each catalog is associated with an existing workgroup or steering group, and with the expectation that this won't be an exceptionally large set of collections, the initial expected structure is largely flat.
+If the documentation grows to where we find ourselves wanting to host significantly more collections, or the flat structure becomes unwieldy, we can shift to a more hierarchical structure.
+
+The initial catalogs listed below are based on the existing content within `/documentation` at Swift.org,
+but don't reflect all the possible future content we might create.
 
   - API guidelines - moderated/reviewed by the Language Steering Group.
   - Server guides - moderated/reviewed by the SSWG.
-  - C++ Interop Guide - moderated/reviewed by C++ Interop group.
   - Swift Migration guides - moderated by lang/platforms.
   - Tools Guides - moderated/reviewed by platform & ecosystem.
+  - WASM - moderated/reviewed by platform steering group.
 
-The `tree` view of such a repository:
+An example `tree` view of such a repository:
 
 ```
-├── APIGuides
-│   └── APIGuides.docc
+├── APIGuidelines
+│   └── APIGuideliness.docc
 │       ├── Documentation.md
 │       ├── ...
 ├── CODEOWNERS
-├── InteropGuides
-│   └── InteropGuides.docc
-│       ├── ...
 ├── README.md
-├── ServerGuides
+├── Server
 │   └── ServerGuides.docc
 │       └── Documentation.md
 ├── SwiftLangGuides
 │   └── SwiftLangGuides.docc
 │       └── Documentation.md
 │       ├── ...
-└── ToolGuides
-    └── ToolGuides.docc
-        ├── Documentation.md
-        ├── ...
+├── Tools
+│   └── ToolsAndEditors.docc
+│       ├── Documentation.md
+│       ├── ...
+└── WASM
+    └── WASM.docc
 ```
 
-Catalogs with associated code, such as API reference documentation, that heavily leverage snippets, or that provide examples, are better served when wrapped inside a Swift package. These can also be hosted together in this repository, using the same "each directory owned/reviewed by a workgroup" pattern, but are only relevant for packages that would never be used as a dependency. Swift conventions dictate that a package intended to be used as a dependency needs to be hosted in its own git repository, making it more difficult to use in a monorepo-style configuration.
+The directories for each catalog residing at the root can host another DocC catalog (a directory ending with .docc), to host the markdown content in a typical DocC fashion.
+This also allows each catalog to also provide a Package.swift file, which is required today to enable support for DocC's feature Snippets, which validates that Swift code blocks compile.
 
-The workgroup or steering group associated with a collection identifies who to include as reviewers for their catalogs. From a mechanical perspective, reviewers are listed in a `CODEOWNERS` file, which uses the GitHub groups that Swift provides, or lists GitHub usernames individually.
+Catalogs with associated code, such as API reference documentation, that heavily leverage snippets, or that provide examples, are better served when wrapped inside a Swift package.
+These can also be hosted together in this repository, using the same "each directory owned/reviewed by a workgroup" pattern, but are only relevant for packages that would never be used as a dependency.
+Swift conventions dictate that a package intended to be used as a dependency needs to be hosted in its own git repository, making it more difficult to use in a monorepo-style configuration.
+
+The workgroup or steering group associated with a collection identifies who to include as reviewers for their catalogs.
+From a mechanical perspective, reviewers are listed in a `CODEOWNERS` file, which uses the GitHub groups that Swift provides, or lists GitHub usernames individually.
 
 For example, the structure of the catalogs above might line up to:
 
@@ -97,40 +129,55 @@ For example, the structure of the catalogs above might line up to:
 If a group dissolves, any catalogs can be associated with another group, or revert to control by the Swift Core Team.
 
 New catalogs can be created at the request of the relevant workgroup or steering group, published and referenced from the swift.org website with the coordination of the Website workgroup.
+As new catalogs are created, the CODEOWNERS file is updated in sync to provide the relevant reviewers for the new content.
 
-### Existing "standalone" DocC catalogs
+The repository may also include a directory or directories to support continuous integration and scripts that build the static DocC archives to host them on Swift project infrastructure.
+
+Since this repository should generally reflect the state of all current documentation for the Swift project, it should also include a list of any other repositories that provide documentation that we want to host at docs.swift.org as part of the broader Swift project.
+This data is intended to serve two purposes - to provide a list of where all the documentation exists, and to support programmatic solutions (scripts/continuous integration) to build all the relevant documentation content that is hosted on docs.swift.org.
+
+### Migration strategy for existing "standalone" DocC catalogs
+
+As Swift has grown organically, there are some pre-existing repositories that host documentation today.
+While we want all future cross-cutting documentation to be collected together in a docs repository,
+for the sake of expediency and migration, we likely want to support continuing to build documentation from a number of these pre-existing repositories:
 
 #### The Swift Programming Language:
 
-Content hosted from https://github.com/swiftlang/swift-book/, presented at https://docs.swift.org/swift-book/documentation/the-swift-programming-language/ and linked from swift.org is already well established and likely wouldn't benefit from migrating.
-
-In addition, there are links to external translations of that content, the links hosted at https://www.swift.org/documentation/tspl/, that should be preserved.
+Content hosted from https://github.com/swiftlang/swift-book/, presented at https://docs.swift.org/swift-book/documentation/the-swift-programming-language/ and linked from swift.org is already well established, with reviewers and review processes.
+In addition, the content in Swift.org presents links (hosted at https://www.swift.org/documentation/tspl/) to external translations of this content that should be preserved.
 
 #### Swift Embedded:
 
 The embedded Swift collaborators have assembled a DocC catalog in https://github.com/apple/swift-embedded-examples.
 
-That catalog is closely aligned with Swift code content and projects also in that repository.
-
-I think it is best to maintain and evolve with the close proximity, rather than breaking the stand-alone content into a separate git repository.
-
-Additionally, the number and breadth of examples are far more discoverable within a focused repository such as this.
+This DocC catalog is closely aligned with Swift code and projects in that repository.
+This is an example where validation of examples, and a desire to maintain and evolve the content in close proximity with deeper code examples warrants its own repository.
+Additionally, the number and breadth of examples are far more discoverable within a focused repository such as this provides.
 
 #### Concurrency Migration Guide:
 
 The content displayed at https://www.swift.org/migration/documentation/migrationguide/ is generated from a stand-alone DocC catalog in the repository https://github.com/swiftlang/swift-migration-guide.
 
-There are legacy Swift language migration guides, for earlier versions of Swift, hosted as articles within swift.org.
-
+There are legacy Swift language migration guides for earlier versions of Swift, hosted as articles within swift.org.
 The newer migration guide hosts content examples in an associated Swift package. 
-
 Like the Swift Embedded examples repository, it benefits from close proximity between examples and written content.
 
-### Swift Docs Repository Content
+### Migrating Jekyll to DocC content in the Swift Docs Repository
 
-Based on the existing content in Swift.org, migrate the majority of the content into DocC format, grouped into the collection sets below. A few exceptions are detailed after the file names, to accomodate very out of date content, or content that's already replicated in other locations.
+Based on the existing content in Swift.org, the general goal is to migrate the majority of what is general documentation content into a DocC format, grouped into the collections below.
+A few exceptions are detailed after the file names, to accommodate very out-of-date content, or content that's already replicated in other locations.
 
-All the key markdown files would remain in `/documentation` as they are today, with their front matter (Jekyll metadata) updated to redirect the URL requests to the new locations when content has been translated and accepted into the new docs repository. Markdown files prefixed with `_` are typically only included in other files and not referenced by URL, and are to be removed when the relevant content is migrated.
+This proposal is primarily meant to provide a guide to the structure for content as we want to see it,
+and isn't meant to provide a full and discrete audit of all existing content.
+Nevertheless, a few examples stand out and have been discussed previously within the community as needing updates, or removal and relevant links redirected to more up-to-date and recent content.
+A full audit of the documentation for recency and relevancy is worthwhile, but beyond the scope of this proposal.
+
+The notes of this migration are intended to be guides, and any migration process isn't expected to be done immediately and in one sweep.
+The migration can, and should, occur incrementally, building into the docs repository as supported by the community including content reviewers and their availability.
+
+All of the listed markdown files would remain in `/documentation`, with their front matter (Jekyll metadata) updated to redirect the URL requests to the new locations as content is migrated and accepted into the new docs repository.
+Markdown files prefixed with `_` are typically only included in other files and not referenced by URL, and can be removed after they are migrated.
 
 - API guidelines
 
@@ -165,14 +212,6 @@ All the key markdown files would remain in `/documentation` as they are today, w
   - documentation/server/guides/deploying/gcp.md
   - documentation/articles/static-linux-getting-started.md
     
-- C/C++ Interop Guides
-
-  - documentation/cxx-interop/index.md
-  - documentation/cxx-interop/safe-interop/index.md
-  - documentation/cxx-interop/project-build-setup/index.md
-  - documentation/cxx-interop/status/index.md
-  - documentation/articles/wrapping-c-cpp-library-in-swift.md
-
 - Swift Language Guides
 
   - migrate all of these pieces into https://github.com/swiftlang/swift-migration-guide
@@ -197,6 +236,14 @@ All the key markdown files would remain in `/documentation` as they are today, w
 - WASM
 
   - documentation/articles/wasm-getting-started.md
+
+- C/C++ Interop Guides
+  - Doug Gregor has indicated a desire to reset and migrate this content into the Swift repository, leveraging code validation that is beyond Swift's Documentation tooling today, and to keep it closely aligned with the relvant code that provides the interop functionality.
+  - documentation/cxx-interop/index.md
+  - documentation/cxx-interop/safe-interop/index.md
+  - documentation/cxx-interop/project-build-setup/index.md
+  - documentation/cxx-interop/status/index.md
+  - documentation/articles/wrapping-c-cpp-library-in-swift.md
 
 ### Swift.org documentation files & directories remaining:
 
@@ -264,4 +311,4 @@ Because this content doesn't have the constraint of Swift packages, which expect
 
 The Swift compiler has a `userdocs` directory now, that is starting to see information specific to the compiler, and building out more detail for how the compiler works, LLDB, and the related driver pieces would be excellent additions. That's new content rather than existing migration work for the most part.
 
-The Swift-Java interop project could easily warrant it's own docc catalog, or potentially be included in a more generic "Swift Language interop" collection. Today the majority of existing content is focused on C/C++ Interop, although that's a place where there could be significant growth.
+The Swift-Java interop project could easily warrant its own docc catalog, or potentially be included in a more generic "Swift Language interop" collection. Today the majority of existing content is focused on C/C++ Interop, although that's a place where there could be significant growth.
