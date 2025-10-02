@@ -64,7 +64,7 @@ paths:
           $ref: '#/components/schemas/SourceBranch'
     get:
       operationId: listStaticSDKDevToolchains
-      summary: Fetch all static SDK development toolchains
+      summary: Fetch all development static Linux Swift SDKs
       tags:
         - Toolchains
       responses:
@@ -83,7 +83,7 @@ paths:
           $ref: '#/components/schemas/SourceBranch'
     get:
       operationId: listWasmSDKDevToolchains
-      summary: Fetch all SDK for WebAssembly toolchains
+      summary: Fetch all development Swift SDKs for WebAssembly
       tags:
         - Toolchains
       responses:
