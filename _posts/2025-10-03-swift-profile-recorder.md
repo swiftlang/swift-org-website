@@ -101,7 +101,7 @@ The generated profiles work seamlessly with popular visualization tools:
 * Traditional FlameGraph tools: Use Brendan Gregg's original [FlameGraph scripts](https://github.com/brendangregg/FlameGraph) for custom visualizations
 * Many other tools compatible with the common `.perf`, `.pprof` or stack collapsed formats
 
-An example running Hummingbird's [`hello` example](https://github.com/hummingbird-project/hummingbird-examples/tree/main/hello) on macOS visualized in Speedcope can be seen below
+An example running Hummingbird's [`hello` example](https://github.com/hummingbird-project/hummingbird-examples/tree/main/hello) on macOS visualized in Speedscope can be seen below
 
 ![a flamegraph showing Hummingbird's hello example running on macOS](/assets/images/2025-09-27-profile-recorder--macos-hummingbird-hello.png)
 
