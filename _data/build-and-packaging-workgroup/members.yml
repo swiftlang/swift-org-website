@@ -1,0 +1,39 @@
+- name: Tracy Miranda
+  handle: tracymiranda
+  github: tracymiranda
+  affiliation: Apple
+
+- name: Joannis Orlandos
+  handle: Joannis_Orlandos
+  github: Joannis
+  affiliation:
+
+- name: Yuta Saito
+  handle: kateinoigakukun
+  github: kateinoigakukun
+  affiliation: Goodnotes
+
+- name: Doug Schaefer
+  handle: dschaefer2
+  github: dschaefer2
+  affiliation: Apple
+
+- name: Sven A. Schmidt
+  handle: finestructure
+  github: finestructure
+  affiliation: Swift Package Index
+
+- name: Dave Verwer
+  handle: daveverwer
+  github: daveverwer
+  affiliation: Swift Package Index
+
+- name: Owen Voorhees
+  handle: owenv
+  github: owenv
+  affiliation: Apple
+
+- name: Evan Wilde
+  handle: etcwilde
+  github: etcwilde
+  affiliation: Apple
