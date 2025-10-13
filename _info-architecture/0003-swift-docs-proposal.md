@@ -78,9 +78,8 @@ but don't reflect all the possible future content we might create.
 
   - API guidelines - moderated/reviewed by the Language Steering Group.
   - Server guides - moderated/reviewed by the SSWG.
-  - Swift Migration guides - moderated by lang/platforms.
-  - Tools Guides - moderated/reviewed by platform & ecosystem.
-  - WASM - moderated/reviewed by platform steering group.
+  - Ecosystem Tools Guides - moderated/reviewed by ecosystem steering group.
+  - WASM - moderated/reviewed by ecosystem steering group.
 
 An example `tree` view of such a repository:
 
@@ -188,26 +187,26 @@ The migration can, and should, occur incrementally, building into the docs repos
 | `api-design-guidelines/index.md` | translate to docc, break into multiple articles in `api-guidelines/APIGuidelines.docc` |
 | `server/index.md` | deprecate & redirect to https://www.swift.org/get-started/cloud-services/ |
 | `server/guides/index.md` | translate, migrate to top level of `server-guides/ServerGuides.docc` |
-| `server/guides/building.md` |  |
-| `server/guides/testing.md` |  |
-| `server/guides/memory-leaks-and-usage.md` |  |
-| `server/guides/allocations.md` |  |
-| `server/guides/linux-perf.md` |  |
-| `server/guides/performance.md` |  |
-| `server/guides/llvm-sanitizers.md` |  |
-| `server/guides/deployment.md` |  |
-| `server/guides/packaging.md` |  |
-| `server/guides/passkeys.md` |  |
+| `server/guides/building.md` | update to swift 6 references, but otherwise migrate as is |
+| `server/guides/testing.md` | update to swift 6 references, but otherwise migrate as is |
+| `server/guides/memory-leaks-and-usage.md` | migrate as is |
+| `server/guides/allocations.md` | migrate as is, add reference to package-benchmark to help measure allocations |
+| `server/guides/linux-perf.md` |  migrate as is, add reference to swift-performance-profiler, package-benchmark |
+| `server/guides/performance.md` | revise to reference swift-performance-profiler, package-benchmark |
+| `server/guides/llvm-sanitizers.md` | migrate as is |
+| `server/guides/packaging.md` | update content - reference Container & swift-container-plugin |
+| `server/guides/passkeys.md` | migrate content into article within https://github.com/swift-server/webauthn-swift.git |
 | `server/guides/libraries/log-levels.md` | migrate content into swift-log (https://github.com/apple/swift-log/pull/370) |
 | `server/guides/libraries/concurrency-adoption-guidelines.md` | deprecate and redirect to https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety (https://github.com/swiftlang/swift-org-website/pull/1186) |
-| `server/guides/deploying/aws-sam-lambda.md` |  |
-| `server/guides/deploying/aws-copilot-fargate-vapor-mongo.md` |  |
-| `server/guides/deploying/aws.md` |  |
-| `server/guides/deploying/digital-ocean.md` |  |
-| `server/guides/deploying/ubuntu.md` |  |
-| `server/guides/deploying/heroku.md` |  |
-| `server/guides/deploying/gcp.md` |  |
-| `articles/static-linux-getting-started.md` |  |
+| `server/guides/deployment.md` | migrate as is - guide to deploying |
+| `server/guides/deploying/aws-sam-lambda.md` | migrate as is - slightly outdated |
+| `server/guides/deploying/aws-copilot-fargate-vapor-mongo.md` | migrate as is - slightly outdated |
+| `server/guides/deploying/aws.md` | migrate as is - slightly outdated |
+| `server/guides/deploying/digital-ocean.md` | migrate as is - slightly outdated |
+| `server/guides/deploying/ubuntu.md` | migrate as is - slightly outdated |
+| `server/guides/deploying/heroku.md` |  migrate as is - slightly outdated|
+| `server/guides/deploying/gcp.md` | migrate as is - slightly outdated |
+| `articles/static-linux-getting-started.md` | migrate as is |
 | `migration-guide-swift3/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
 | `migration-guide-swift3/se-0107-migrate.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
 | `migration-guide-swift3/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
@@ -221,10 +220,10 @@ The migration can, and should, occur incrementally, building into the docs repos
 | `documentation/articles/zero-to-swift-nvim.md` | migrate into `ecosystem/EcosystemTools.docc` |
 | `documentation/articles/zero-to-swift-emacs.md` | migrate into `ecosystem/EcosystemTools.docc` |
 | `documentation/articles/getting-started-with-vscode-swift.md` | migrate into `ecosystem/EcosystemTools.docc` |
-| `articles/wasm-getting-started.md` | translate and migrate into `ecosystem |
-| `continuous-integration/index.md` | migrate content to github.com/swiftlang/project-operations repository |
-| `source-compatibility/index.md` | migrate to github.com/swiftlang/project-operations repository (referencess to swift source compatibility project) |
-| `source-code/index.md` | migrate to github.com/swiftlang/project-operations repository (partial list to existing source code that goes into toolchain, needs updating if kept) |
+| `articles/wasm-getting-started.md` | translate and migrate into `ecosystem/WASM.docc` |
+| `continuous-integration/index.md` | migrate content to [project-operations](https://github.com/swiftlang/project-operations) repository |
+| `source-compatibility/index.md` | migrate to [project-operations](https://github.com/swiftlang/project-operations) repository (referencess to swift source compatibility project) |
+| `source-code/index.md` | migrate to [project-operations](https://github.com/swiftlang/project-operations) repository (partial list to existing source code that goes into toolchain, needs updating if kept) |
 
 ### Swift.org documentation files & directories remaining:
 
