@@ -85,25 +85,27 @@ but don't reflect all the possible future content we might create.
 An example `tree` view of such a repository:
 
 ```
-├── APIGuidelines
-│   └── APIGuideliness.docc
+├── api-guidelines
+│   └── APIGuidelines.docc
+│       ├── DocComment.md
 │       ├── Documentation.md
-│       ├── ...
+│       ├── include-words-to-avoid-ambiguity.md
+│       ├── name-according-to-roles.md
+│       ├── omit-needless-words.md
+│       └── weak-type-information.md
 ├── CODEOWNERS
+├── ecosystem
+│   ├── EcosystemTools.docc
+│   │   ├── Documentation.md
+│   │   ├── getting-started-with-vscode-swift.md
+│   │   ├── zero-to-swift-emacs.md
+│   │   └── zero-to-swift-nvim.md
+│   └── WASM.docc
+│       └── Documentation.md
 ├── README.md
-├── Server
-│   └── ServerGuides.docc
-│       └── Documentation.md
-├── SwiftLangGuides
-│   └── SwiftLangGuides.docc
-│       └── Documentation.md
-│       ├── ...
-├── Tools
-│   └── ToolsAndEditors.docc
-│       ├── Documentation.md
-│       ├── ...
-└── WASM
-    └── WASM.docc
+└── server-guides
+    └── ServerGuides.docc
+        └── Documentation.md
 ```
 
 The directories for each catalog residing at the root can host another DocC catalog (a directory ending with .docc), to host the markdown content in a typical DocC fashion.
