@@ -181,48 +181,45 @@ A full audit of the documentation for recency and relevancy is worthwhile, but b
 The notes of this migration are intended to be guides, and any migration process isn't expected to be done immediately and in one sweep.
 The migration can, and should, occur incrementally, building into the docs repository as supported by the community including content reviewers and their availability.
 
-`source` | status & destination
-- | - | - 
-`api-design-guidelines/index.md` | translate to docc, break into multiple articles in `api-guidelines/APIGuidelines.docc`
-
-`server/index.md` | deprecate & redirect to https://www.swift.org/get-started/cloud-services/
-`server/guides/index.md` | translate, migrate to top level of `server-guides/ServerGuides.docc`
-`server/guides/building.md` | 
-`server/guides/testing.md` | 
-`server/guides/memory-leaks-and-usage.md` | 
-`server/guides/allocations.md` | 
-`server/guides/linux-perf.md` | 
-`server/guides/performance.md` | 
-`server/guides/llvm-sanitizers.md` | 
-`server/guides/deployment.md` | 
-`server/guides/packaging.md` | 
-`server/guides/passkeys.md` | 
-`server/guides/libraries/log-levels.md` | migrate content into swift-log (https://github.com/apple/swift-log/pull/370)
-`server/guides/libraries/concurrency-adoption-guidelines.md`: deprecate and redirect to https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety (https://github.com/swiftlang/swift-org-website/pull/1186)
-`server/guides/deploying/aws-sam-lambda.md` | 
-`server/guides/deploying/aws-copilot-fargate-vapor-mongo.md` | 
-`server/guides/deploying/aws.md` | 
-`server/guides/deploying/digital-ocean.md` | 
-`server/guides/deploying/ubuntu.md` | 
-`server/guides/deploying/heroku.md` | 
-`server/guides/deploying/gcp.md` | 
-`articles/static-linux-getting-started.md` | 
-
-`migration-guide-swift3/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide
-`migration-guide-swift3/se-0107-migrate.md` | migrate into https://github.com/swiftlang/swift-migration-guide
-`migration-guide-swift3/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide
-`migration-guide-swift4/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide
-`migration-guide-swift4/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide
-`migration-guide-swift4.2/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide
-`migration-guide-swift4.2/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide
-`migration-guide-swift5/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide
-`migration-guide-swift5/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide
-`concurrency/index.md` | redirect to content at https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety
-
-`documentation/articles/zero-to-swift-nvim.md` | migrate into `ecosystem/EcosystemTools.docc`
-`documentation/articles/zero-to-swift-emacs.md` | migrate into `ecosystem/EcosystemTools.docc`
-`documentation/articles/getting-started-with-vscode-swift.md` | migrate into `ecosystem/EcosystemTools.docc`
-`articles/wasm-getting-started.md` | translate and migrate into `ecosystem
+| `source` | status & destination |
+| - | - | 
+| `api-design-guidelines/index.md` | translate to docc, break into multiple articles in `api-guidelines/APIGuidelines.docc` |
+| `server/index.md` | deprecate & redirect to https://www.swift.org/get-started/cloud-services/ |
+| `server/guides/index.md` | translate, migrate to top level of `server-guides/ServerGuides.docc` |
+| `server/guides/building.md` |  |
+| `server/guides/testing.md` |  |
+| `server/guides/memory-leaks-and-usage.md` |  |
+| `server/guides/allocations.md` |  |
+| `server/guides/linux-perf.md` |  |
+| `server/guides/performance.md` |  |
+| `server/guides/llvm-sanitizers.md` |  |
+| `server/guides/deployment.md` |  |
+| `server/guides/packaging.md` |  |
+| `server/guides/passkeys.md` |  |
+| `server/guides/libraries/log-levels.md` | migrate content into swift-log (https://github.com/apple/swift-log/pull/370) |
+| `server/guides/libraries/concurrency-adoption-guidelines.md` | deprecate and redirect to https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety (https://github.com/swiftlang/swift-org-website/pull/1186) |
+| `server/guides/deploying/aws-sam-lambda.md` |  |
+| `server/guides/deploying/aws-copilot-fargate-vapor-mongo.md` |  |
+| `server/guides/deploying/aws.md` |  |
+| `server/guides/deploying/digital-ocean.md` |  |
+| `server/guides/deploying/ubuntu.md` |  |
+| `server/guides/deploying/heroku.md` |  |
+| `server/guides/deploying/gcp.md` |  |
+| `articles/static-linux-getting-started.md` |  |
+| `migration-guide-swift3/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift3/se-0107-migrate.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift3/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift4/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift4/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift4.2/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift4.2/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift5/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift5/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `concurrency/index.md` | redirect to content at https://www.swift.org/migration/documentation/|  |swift-6-concurrency-migration-guide/enabledataracesafety |
+| `documentation/articles/zero-to-swift-nvim.md` | migrate into `ecosystem/EcosystemTools.docc` |
+| `documentation/articles/zero-to-swift-emacs.md` | migrate into `ecosystem/EcosystemTools.docc` |
+| `documentation/articles/getting-started-with-vscode-swift.md` | migrate into `ecosystem/EcosystemTools.docc` |
+| `articles/wasm-getting-started.md` | translate and migrate into `ecosystem |
 
 
 ### Swift.org documentation files & directories remaining:
