@@ -220,49 +220,33 @@ The migration can, and should, occur incrementally, building into the docs repos
 | `documentation/articles/zero-to-swift-emacs.md` | migrate into `ecosystem/EcosystemTools.docc` |
 | `documentation/articles/getting-started-with-vscode-swift.md` | migrate into `ecosystem/EcosystemTools.docc` |
 | `articles/wasm-getting-started.md` | translate and migrate into `ecosystem |
-
+| `continuous-integration/index.md` | migrate content to github.com/swiftlang/project-operations repository |
+| `source-compatibility/index.md` | migrate to github.com/swiftlang/project-operations repository (referencess to swift source compatibility project) |
+| `source-code/index.md` | migrate to github.com/swiftlang/project-operations repository (partial list to existing source code that goes into toolchain, needs updating if kept) |
 
 ### Swift.org documentation files & directories remaining:
 
-- C/C++ Interop Guides
-  - Doug Gregor has indicated a desire to reset and migrate this content into the Swift repository, leveraging code validation that is beyond Swift's Documentation tooling today, and to keep it closely aligned with the relvant code that provides the interop functionality.
-  - documentation/cxx-interop/index.md
+- Remain on swift.org
+  - documentation/cxx-interop/index.md (Doug Gregor has indicated a desire to reset and migrate this content into the Swift repository)
   - documentation/cxx-interop/safe-interop/index.md
   - documentation/cxx-interop/project-build-setup/index.md
   - documentation/cxx-interop/status/index.md
   - documentation/articles/wrapping-c-cpp-library-in-swift.md
-
-- Remain on swift.org
   - documentation/core-libraries/index.md
     - documentation/core-libraries/_foundation.md
     - documentation/core-libraries/_libdispatch.md
     - documentation/core-libraries/_swift-testing.md
     - documentation/core-libraries/_xctest.md
-
-- documentation/package-manager/index.md
-  (currently redirects to https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
-
-- documentation/articles/value-and-reference-types.md
-
-- documentation/tspl/index.md (stays as is, references into TSPL and links to translations)
-
-- documentation/lldb/index.md: migrate to github.com/swiftlang/swift:`userdocs/`
-  - documentation/lldb/_playground-support.md
-
-- documentation/swift-compiler/index.md: migrate to github.com/swiftlang/swift:`userdocs/`
-  - documentation/swift-compiler/_compiler-architecture.md
-
-- documentation/standard-library/index.md
-  - documentation/standard-library/_preview-package.md
-  - documentation/standard-library/_stdlib-design.md
-
-- documentation/source-compatibility/index.md: migrate to github.com/swiftlang/project-operations repository
-  (referencess to swift source compatibility project)
-
-- documentation/source-code/index.md: migrate to github.com/swiftlang/project-operations repository
-  (partial list to existing source code that goes into toolchain, needs updating if kept)
-
-- documentation/continuous-integration/index.md: migrate to github.com/swiftlang/project-operations repository
+  - documentation/package-manager/index.md (currently redirects to https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
+  - documentation/articles/value-and-reference-types.md
+  - documentation/tspl/index.md
+  - documentation/lldb/index.md
+    - documentation/lldb/_playground-support.md
+  - documentation/swift-compiler/index.md
+    - documentation/swift-compiler/_compiler-architecture.md
+  - documentation/standard-library/index.md
+    - documentation/standard-library/_preview-package.md
+    - documentation/standard-library/_stdlib-design.md
 
 ## Alternatives Considered
 
