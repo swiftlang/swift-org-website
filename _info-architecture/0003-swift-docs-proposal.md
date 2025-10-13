@@ -119,11 +119,9 @@ From a mechanical perspective, reviewers are listed in a `CODEOWNERS` file, whic
 For example, the structure of the catalogs above might line up to:
 
 ```
-/APIGuides.docc/* @swiftlang/language-steering-group
-/ServerGuides.docc/* @swiftlang/server-workgroup
-/InteropGuides.docc/* @swiftlang/cxx-interop-workgroup
-/SwiftLangGuides.docc/* @swiftlang/language-steering-group
-/ToolGuides.docc/* @swiftlang/platform-steering-group
+/api-guidelines/* @swiftlang/language-steering-group
+/ecosystem/* @swiftlang/ecosystem-steering-group
+/server-guides/* @swiftlang/server-workgroup
 ```
 
 If a group dissolves, any catalogs can be associated with another group, or revert to control by the Swift Core Team.
@@ -166,6 +164,13 @@ Like the Swift Embedded examples repository, it benefits from close proximity be
 ### Migrating Jekyll to DocC content in the Swift Docs Repository
 
 Based on the existing content in Swift.org, the general goal is to migrate the majority of what is general documentation content into a DocC format, grouped into the collections below.
+
+All of the listed markdown files would remain in `/documentation`, with their front matter (Jekyll metadata) updated to redirect the URL requests to the new locations as content is migrated and accepted into the new docs repository.
+Markdown files prefixed with `_` are typically only included in other files and not referenced by URL, and can be removed after they are migrated.
+
+#### Disposition Plan for files under `documentation`
+
+
 A few exceptions are detailed after the file names, to accommodate very out-of-date content, or content that's already replicated in other locations.
 
 This proposal is primarily meant to provide a guide to the structure for content as we want to see it,
@@ -176,66 +181,51 @@ A full audit of the documentation for recency and relevancy is worthwhile, but b
 The notes of this migration are intended to be guides, and any migration process isn't expected to be done immediately and in one sweep.
 The migration can, and should, occur incrementally, building into the docs repository as supported by the community including content reviewers and their availability.
 
-All of the listed markdown files would remain in `/documentation`, with their front matter (Jekyll metadata) updated to redirect the URL requests to the new locations as content is migrated and accepted into the new docs repository.
-Markdown files prefixed with `_` are typically only included in other files and not referenced by URL, and can be removed after they are migrated.
+`source` | status & destination
+- | - | - 
+`api-design-guidelines/index.md` | translate to docc, break into multiple articles in `api-guidelines/APIGuidelines.docc`
 
-- API guidelines
+`server/index.md` | deprecate & redirect to https://www.swift.org/get-started/cloud-services/
+`server/guides/index.md` | translate, migrate to top level of `server-guides/ServerGuides.docc`
+`server/guides/building.md` | 
+`server/guides/testing.md` | 
+`server/guides/memory-leaks-and-usage.md` | 
+`server/guides/allocations.md` | 
+`server/guides/linux-perf.md` | 
+`server/guides/performance.md` | 
+`server/guides/llvm-sanitizers.md` | 
+`server/guides/deployment.md` | 
+`server/guides/packaging.md` | 
+`server/guides/passkeys.md` | 
+`server/guides/libraries/log-levels.md` | migrate content into swift-log (https://github.com/apple/swift-log/pull/370)
+`server/guides/libraries/concurrency-adoption-guidelines.md`: deprecate and redirect to https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety (https://github.com/swiftlang/swift-org-website/pull/1186)
+`server/guides/deploying/aws-sam-lambda.md` | 
+`server/guides/deploying/aws-copilot-fargate-vapor-mongo.md` | 
+`server/guides/deploying/aws.md` | 
+`server/guides/deploying/digital-ocean.md` | 
+`server/guides/deploying/ubuntu.md` | 
+`server/guides/deploying/heroku.md` | 
+`server/guides/deploying/gcp.md` | 
+`articles/static-linux-getting-started.md` | 
 
-  - documentation/api-design-guidelines/index.md
+`migration-guide-swift3/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide
+`migration-guide-swift3/se-0107-migrate.md` | migrate into https://github.com/swiftlang/swift-migration-guide
+`migration-guide-swift3/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide
+`migration-guide-swift4/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide
+`migration-guide-swift4/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide
+`migration-guide-swift4.2/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide
+`migration-guide-swift4.2/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide
+`migration-guide-swift5/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide
+`migration-guide-swift5/index.md` | migrate into https://github.com/swiftlang/swift-migration-guide
+`concurrency/index.md` | redirect to content at https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety
 
-- Server guides
+`documentation/articles/zero-to-swift-nvim.md` | migrate into `ecosystem/EcosystemTools.docc`
+`documentation/articles/zero-to-swift-emacs.md` | migrate into `ecosystem/EcosystemTools.docc`
+`documentation/articles/getting-started-with-vscode-swift.md` | migrate into `ecosystem/EcosystemTools.docc`
+`articles/wasm-getting-started.md` | translate and migrate into `ecosystem
 
-  - documentation/server/index.md
 
-  - documentation/server/guides/index.md
-  - documentation/server/guides/building.md
-  - documentation/server/guides/testing.md
-  - documentation/server/guides/memory-leaks-and-usage.md
-  - documentation/server/guides/allocations.md
-    - documentation/server/guides/linux-perf.md
-    - documentation/server/guides/performance.md
-
-  - documentation/server/guides/llvm-sanitizers.md
-  - documentation/server/guides/deployment.md
-  - documentation/server/guides/packaging.md
-  - documentation/server/guides/passkeys.md
-
-  - documentation/server/guides/libraries/log-levels.md: migrate content into swift-log
-  - documentation/server/guides/libraries/concurrency-adoption-guidelines.md: remove content & redirect link to existing migration guide
-
-  - documentation/server/guides/deploying/aws-sam-lambda.md
-  - documentation/server/guides/deploying/aws-copilot-fargate-vapor-mongo.md
-  - documentation/server/guides/deploying/aws.md
-  - documentation/server/guides/deploying/digital-ocean.md
-    - documentation/server/guides/deploying/ubuntu.md
-  - documentation/server/guides/deploying/heroku.md
-  - documentation/server/guides/deploying/gcp.md
-  - documentation/articles/static-linux-getting-started.md
-    
-- Swift Language Guides
-
-  - migrate all of these pieces into https://github.com/swiftlang/swift-migration-guide
-  - documentation/articles/value-and-reference-types.md
-  - migration-guide-swift3/_migration-guide.md
-  - migration-guide-swift3/se-0107-migrate.md
-  - migration-guide-swift3/index.md
-  - migration-guide-swift4/_migration-guide.md
-  - migration-guide-swift4/index.md
-  - migration-guide-swift4.2/_migration-guide.md
-  - migration-guide-swift4.2/index.md
-  - migration-guide-swift5/_migration-guide.md
-  - migration-guide-swift5/index.md
-  - documentation/concurrency/index.md (redirect only, its content is effectively already there)
-
-- Tool Guides
-
-  - documentation/articles/zero-to-swift-nvim.md
-  - documentation/articles/zero-to-swift-emacs.md
-  - documentation/articles/getting-started-with-vscode-swift.md
-
-- WASM
-
-  - documentation/articles/wasm-getting-started.md
+### Swift.org documentation files & directories remaining:
 
 - C/C++ Interop Guides
   - Doug Gregor has indicated a desire to reset and migrate this content into the Swift repository, leveraging code validation that is beyond Swift's Documentation tooling today, and to keep it closely aligned with the relvant code that provides the interop functionality.
@@ -244,8 +234,6 @@ Markdown files prefixed with `_` are typically only included in other files and 
   - documentation/cxx-interop/project-build-setup/index.md
   - documentation/cxx-interop/status/index.md
   - documentation/articles/wrapping-c-cpp-library-in-swift.md
-
-### Swift.org documentation files & directories remaining:
 
 - Remain on swift.org
   - documentation/core-libraries/index.md
