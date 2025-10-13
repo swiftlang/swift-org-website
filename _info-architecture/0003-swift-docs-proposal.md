@@ -169,17 +169,17 @@ Based on the existing content in Swift.org, the general goal is to migrate the m
 All of the listed markdown files would remain in `/documentation`, with their front matter (Jekyll metadata) updated to redirect the URL requests to the new locations as content is migrated and accepted into the new docs repository.
 Markdown files prefixed with `_` are typically only included in other files and not referenced by URL, and can be removed after they are migrated.
 
-## Migration Plan for files under `documentation`
+## Migration Plan
 
-A few exceptions are detailed after the file names, to accommodate very out-of-date content, or content that's already replicated in other locations.
-
-This proposal is primarily meant to provide a guide to the structure for content as we want to see it,
-and isn't meant to provide a full and discrete audit of all existing content.
-Nevertheless, a few examples stand out and have been discussed previously within the community as needing updates, or removal and relevant links redirected to more up-to-date and recent content.
+This proposal is primarily meant to provide a guide to the structure for content as we want to see it.
+In the process of establishing this new repository and structure of DocC catalogs, the following files from swift.org are intended to be migrated.
 A full audit of the documentation for recency and relevancy is worthwhile, but beyond the scope of this proposal.
 
-The notes of this migration are intended to be guides, and any migration process isn't expected to be done immediately and in one sweep.
+This list is intended to be a guide, with additional potential updates from the relevant reviewing team, and is not expected to be complete in a single sweep.
 The migration can, and should, occur incrementally, building into the docs repository as supported by the community including content reviewers and their availability.
+The migration process itself will be tracked by pull requests and within an issue or issues housed at https://github.com/swiftlang/swift-org-website/, with the issues and tracking to be started if the proposal is approved.
+
+Files under the `documentation` directory on Swift.org:
 
 | `source` | status & destination |
 | - | - | 
@@ -224,29 +224,28 @@ The migration can, and should, occur incrementally, building into the docs repos
 | [`source-compatibility/index.md`](https://www.swift.org/documentation/source-compatibility/index.html) | migrate to [project-operations](https://github.com/swiftlang/project-operations) repository (referencess to swift source compatibility project) |
 | [`source-code/index.md`](https://www.swift.org/documentation/source-code/index.html) | migrate to [project-operations](https://github.com/swiftlang/project-operations) repository (partial list to existing source code that goes into toolchain, needs updating if kept) |
 
-### Swift.org documentation files & directories remaining:
+### Swift.org documentation remaining and untouched:
 
-- Remain on swift.org
-  - documentation/cxx-interop/index.md (Doug Gregor has indicated a desire to reset and migrate this content into the Swift repository)
-  - documentation/cxx-interop/safe-interop/index.md
-  - documentation/cxx-interop/project-build-setup/index.md
-  - documentation/cxx-interop/status/index.md
-  - documentation/articles/wrapping-c-cpp-library-in-swift.md
-  - documentation/core-libraries/index.md
-    - documentation/core-libraries/_foundation.md
-    - documentation/core-libraries/_libdispatch.md
-    - documentation/core-libraries/_swift-testing.md
-    - documentation/core-libraries/_xctest.md
-  - documentation/package-manager/index.md (currently redirects to https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
-  - documentation/articles/value-and-reference-types.md
-  - documentation/tspl/index.md
-  - documentation/lldb/index.md
-    - documentation/lldb/_playground-support.md
-  - documentation/swift-compiler/index.md
-    - documentation/swift-compiler/_compiler-architecture.md
-  - documentation/standard-library/index.md
-    - documentation/standard-library/_preview-package.md
-    - documentation/standard-library/_stdlib-design.md
+- documentation/cxx-interop/index.md (Doug Gregor indicated a desire to reset and migrate this content into the Swift repository in the future)
+- documentation/cxx-interop/safe-interop/index.md
+- documentation/cxx-interop/project-build-setup/index.md
+- documentation/cxx-interop/status/index.md
+- documentation/articles/wrapping-c-cpp-library-in-swift.md
+- documentation/core-libraries/index.md
+  - documentation/core-libraries/_foundation.md
+  - documentation/core-libraries/_libdispatch.md
+  - documentation/core-libraries/_swift-testing.md
+  - documentation/core-libraries/_xctest.md
+- documentation/package-manager/index.md (currently redirects to https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
+- documentation/articles/value-and-reference-types.md
+- documentation/tspl/index.md
+- documentation/lldb/index.md
+  - documentation/lldb/_playground-support.md
+- documentation/swift-compiler/index.md
+  - documentation/swift-compiler/_compiler-architecture.md
+- documentation/standard-library/index.md
+  - documentation/standard-library/_preview-package.md
+  - documentation/standard-library/_stdlib-design.md
 
 ## Alternatives Considered
 
