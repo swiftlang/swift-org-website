@@ -169,8 +169,7 @@ Based on the existing content in Swift.org, the general goal is to migrate the m
 All of the listed markdown files would remain in `/documentation`, with their front matter (Jekyll metadata) updated to redirect the URL requests to the new locations as content is migrated and accepted into the new docs repository.
 Markdown files prefixed with `_` are typically only included in other files and not referenced by URL, and can be removed after they are migrated.
 
-#### Disposition Plan for files under `documentation`
-
+## Migration Plan for files under `documentation`
 
 A few exceptions are detailed after the file names, to accommodate very out-of-date content, or content that's already replicated in other locations.
 
@@ -221,7 +220,7 @@ The migration can, and should, occur incrementally, building into the docs repos
 | [`articles/zero-to-swift-emacs.md`](https://www.swift.org/documentation/articles/zero-to-swift-emacs.html) | migrate into `ecosystem/EcosystemTools.docc` |
 | [`articles/getting-started-with-vscode-swift.md`](https://www.swift.org/documentation/articles/getting-started-with-vscode-swift.html) | migrate into `ecosystem/EcosystemTools.docc` |
 | [`articles/wasm-getting-started.md`](https://www.swift.org/documentation/articles/wasm-getting-started.html) | translate and migrate into `ecosystem/WASM.docc` |
-| [continuous-integration/index.md`](https://www.swift.org/documentation/continuous-integration/index.html) | migrate content to [project-operations](https://github.com/swiftlang/project-operations) repository |
+| [`continuous-integration/index.md`](https://www.swift.org/documentation/continuous-integration/index.html) | migrate content to [project-operations](https://github.com/swiftlang/project-operations) repository |
 | [`source-compatibility/index.md`](https://www.swift.org/documentation/source-compatibility/index.html) | migrate to [project-operations](https://github.com/swiftlang/project-operations) repository (referencess to swift source compatibility project) |
 | [`source-code/index.md`](https://www.swift.org/documentation/source-code/index.html) | migrate to [project-operations](https://github.com/swiftlang/project-operations) repository (partial list to existing source code that goes into toolchain, needs updating if kept) |
 
