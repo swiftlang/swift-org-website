@@ -546,3 +546,15 @@ incertum:
   email: mkilby@apple.com
   github: incertum
   about: "Melissa Kilby works on the Swift for Linux Server team at Apple."
+
+weissi:
+  name: Johannes Weiss
+  email: johannesweiss@apple.com
+  github: weissi
+  about: "Johannes Weiss works on Distributed Systems in Swift at Apple."
+
+mitchellallison:
+  name: Mitchell Allison
+  email: mitchell_allison@apple.com
+  github: mitchellallison
+  about: "Mitchell Allison works on Distributed Systems in Swift at Apple."

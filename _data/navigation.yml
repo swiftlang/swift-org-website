@@ -61,8 +61,6 @@
           name: contributing-code
         - title: Adding External Library Dependencies
           name: adding-external-library-dependencies
-        - title: LLVM and Swift
-          name: llvm-and-swift
     - section: Steering Groups
     - title: Ecosystem
       url: /ecosystem-steering-group/
