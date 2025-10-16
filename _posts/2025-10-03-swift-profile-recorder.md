@@ -7,8 +7,6 @@ author: [weissi, mitchellallison]
 category: "Developer Tools"
 ---
 
-# Introducing Swift Profile Recorder: Identifying Performance Bottlenecks in Production
-
 
 [Swift Profile Recorder](https://github.com/apple/swift-profile-recorder), an in-process sampling profiler for Swift services, is now available as an open source project.
 
