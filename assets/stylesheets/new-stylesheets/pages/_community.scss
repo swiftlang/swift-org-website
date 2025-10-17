@@ -281,6 +281,38 @@
                 width: 1px;
                 background-color: #999;
             }
+
+            @media (max-width: 768px) {
+                .community-section-links {
+                    flex-direction: column;
+                    height: auto;
+                }
+
+                .community-section-links li {
+                    width: 100%;
+                    padding: 16px 0;
+                }
+
+                .community-section-links li:nth-child(3)::after {
+                    content: none;
+                }
+
+                .link-card {
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 12px;
+                }
+
+                .link-card-image {
+                    width: 60px;
+                    margin-bottom: 0;
+                }
+
+                .link-card-text {
+                    text-align: left;
+                    font-size: 16px;
+                }
+            }
         }
     }
 }
