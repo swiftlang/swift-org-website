@@ -78,32 +78,33 @@ but don't reflect all the possible future content we might create.
 
   - API guidelines - moderated/reviewed by the Language Steering Group.
   - Server guides - moderated/reviewed by the SSWG.
-  - Swift Migration guides - moderated by lang/platforms.
-  - Tools Guides - moderated/reviewed by platform & ecosystem.
-  - WASM - moderated/reviewed by platform steering group.
+  - Ecosystem Tools Guides - moderated/reviewed by ecosystem steering group.
+  - WASM - moderated/reviewed by ecosystem steering group.
 
 An example `tree` view of such a repository:
 
 ```
-├── APIGuidelines
-│   └── APIGuideliness.docc
+├── api-guidelines
+│   └── APIGuidelines.docc
+│       ├── DocComment.md
 │       ├── Documentation.md
-│       ├── ...
+│       ├── include-words-to-avoid-ambiguity.md
+│       ├── name-according-to-roles.md
+│       ├── omit-needless-words.md
+│       └── weak-type-information.md
 ├── CODEOWNERS
+├── ecosystem
+│   ├── EcosystemTools.docc
+│   │   ├── Documentation.md
+│   │   ├── getting-started-with-vscode-swift.md
+│   │   ├── zero-to-swift-emacs.md
+│   │   └── zero-to-swift-nvim.md
+│   └── WASM.docc
+│       └── Documentation.md
 ├── README.md
-├── Server
-│   └── ServerGuides.docc
-│       └── Documentation.md
-├── SwiftLangGuides
-│   └── SwiftLangGuides.docc
-│       └── Documentation.md
-│       ├── ...
-├── Tools
-│   └── ToolsAndEditors.docc
-│       ├── Documentation.md
-│       ├── ...
-└── WASM
-    └── WASM.docc
+└── server-guides
+    └── ServerGuides.docc
+        └── Documentation.md
 ```
 
 The directories for each catalog residing at the root can host another DocC catalog (a directory ending with .docc), to host the markdown content in a typical DocC fashion.
@@ -119,11 +120,9 @@ From a mechanical perspective, reviewers are listed in a `CODEOWNERS` file, whic
 For example, the structure of the catalogs above might line up to:
 
 ```
-/APIGuides.docc/* @swiftlang/language-steering-group
-/ServerGuides.docc/* @swiftlang/server-workgroup
-/InteropGuides.docc/* @swiftlang/cxx-interop-workgroup
-/SwiftLangGuides.docc/* @swiftlang/language-steering-group
-/ToolGuides.docc/* @swiftlang/platform-steering-group
+/api-guidelines/* @swiftlang/language-steering-group
+/ecosystem/* @swiftlang/ecosystem-steering-group
+/server-guides/* @swiftlang/server-workgroup
 ```
 
 If a group dissolves, any catalogs can be associated with another group, or revert to control by the Swift Core Team.
@@ -166,118 +165,87 @@ Like the Swift Embedded examples repository, it benefits from close proximity be
 ### Migrating Jekyll to DocC content in the Swift Docs Repository
 
 Based on the existing content in Swift.org, the general goal is to migrate the majority of what is general documentation content into a DocC format, grouped into the collections below.
-A few exceptions are detailed after the file names, to accommodate very out-of-date content, or content that's already replicated in other locations.
-
-This proposal is primarily meant to provide a guide to the structure for content as we want to see it,
-and isn't meant to provide a full and discrete audit of all existing content.
-Nevertheless, a few examples stand out and have been discussed previously within the community as needing updates, or removal and relevant links redirected to more up-to-date and recent content.
-A full audit of the documentation for recency and relevancy is worthwhile, but beyond the scope of this proposal.
-
-The notes of this migration are intended to be guides, and any migration process isn't expected to be done immediately and in one sweep.
-The migration can, and should, occur incrementally, building into the docs repository as supported by the community including content reviewers and their availability.
 
 All of the listed markdown files would remain in `/documentation`, with their front matter (Jekyll metadata) updated to redirect the URL requests to the new locations as content is migrated and accepted into the new docs repository.
 Markdown files prefixed with `_` are typically only included in other files and not referenced by URL, and can be removed after they are migrated.
 
-- API guidelines
+## Migration Plan
 
-  - documentation/api-design-guidelines/index.md
+This proposal is primarily meant to provide a guide to the structure for content as we want to see it.
+In the process of establishing this new repository and structure of DocC catalogs, the following files from swift.org are intended to be migrated.
+A full audit of the documentation for recency and relevancy is worthwhile, but beyond the scope of this proposal.
 
-- Server guides
+This list is intended to be a guide, with additional potential updates from the relevant reviewing team, and is not expected to be complete in a single sweep.
+The migration can, and should, occur incrementally, building into the docs repository as supported by the community including content reviewers and their availability.
+The migration process itself will be tracked by pull requests and within an issue or issues housed at https://github.com/swiftlang/swift-org-website/, with the issues and tracking to be started if the proposal is approved.
 
-  - documentation/server/index.md
+Files under the `documentation` directory on Swift.org:
 
-  - documentation/server/guides/index.md
-  - documentation/server/guides/building.md
-  - documentation/server/guides/testing.md
-  - documentation/server/guides/memory-leaks-and-usage.md
-  - documentation/server/guides/allocations.md
-    - documentation/server/guides/linux-perf.md
-    - documentation/server/guides/performance.md
+| `source` | status & destination |
+| - | - | 
+| [`api-design-guidelines/index.md`](https://www.swift.org/documentation/api-design-guidelines/) | translate to docc, break into multiple articles in `api-guidelines/APIGuidelines.docc` |
+| [`server/index.md`](https://www.swift.org/documentation/server/index.html) | deprecate & redirect to https://www.swift.org/get-started/cloud-services/ |
+| [`server/guides/index.md`](https://www.swift.org/documentation/server/guides/index.html) | translate, migrate to top level of `server-guides/ServerGuides.docc` |
+| [`server/guides/building.md`](https://www.swift.org/documentation/server/guides/building.html) | refine/update to provide examples of building, add section for debug vs. release and swift tooling, link to SwiftPM docs on building, add section about building in Linux using containers, add section on building with devContainers, add detail on static linux SDK, break out some content to a CI related article |
+| [`server/guides/testing.md`](https://www.swift.org/documentation/server/guides/testing.html) | heavily outdated - update to swift 6, swift-testing, break out some content into a "CI" focused article - focus on unit testing, leave room for functional, integration testing as sep articles |
+| [`server/guides/memory-leaks-and-usage.md`](https://www.swift.org/documentation/server/guides/memory-leaks-and-usage.html) | migrate as is |
+| [`server/guides/allocations.md`](https://www.swift.org/documentation/server/guides/allocations.html) | migrate as is, add reference to package-benchmark to help measure allocations |
+| [`server/guides/linux-perf.md`](https://www.swift.org/documentation/server/guides/linux-perf.html) |  migrate as is, update examples to use container and latest versions, break out a separate flame-graph article |
+| [`server/guides/performance.md`](https://www.swift.org/documentation/server/guides/performance.html) | revise to guidepints for understand performance, reference swift-performance-profiler, package-benchmark, break out flamegraph (what they are, how to read) into it's own article - include perf profiler flamegraphs tool references |
+| [`server/guides/llvm-sanitizers.md`](https://www.swift.org/documentation/server/guides/llvm-sanitizers.html) | merge content into 'build' and 'test' articles, deprecate/remove |
+| [`server/guides/packaging.md`](https://www.swift.org/documentation/server/guides/packaging.html) | add new overview of options, incl static-binary, container. reference runtime dependencies with static compilation options, example of docker w/ 2-stage build and using published docker binaries, break out distroless into it's own article |
+| [`server/guides/passkeys.md`](https://www.swift.org/documentation/server/guides/passkeys.html) | migrate content into article within https://github.com/swift-server/webauthn-swift.git |
+| [`server/guides/libraries/log-levels.md`](https://www.swift.org/documentation/server/guides/libraries/log-levels.html) | migrate content into swift-log (https://github.com/apple/swift-log/pull/370) |
+| [`server/guides/libraries/concurrency-adoption-guidelines.md`](https://www.swift.org/documentation/server/guides/libraries/concurrency-adoption-guidelines.html) | deprecate and redirect to https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety (https://github.com/swiftlang/swift-org-website/pull/1186) |
+| [`server/guides/deployment.md`](https://www.swift.org/documentation/server/guides/deployment.html) | migrate as is - guide to deploying, revise as guidepost article |
+| [`server/guides/deploying/aws-sam-lambda.md`](https://www.swift.org/documentation/server/guides/deploying/aws-sam-lambda.html) | migrate as is - slightly outdated |
+| [`server/guides/deploying/aws-copilot-fargate-vapor-mongo.md`](https://www.swift.org/documentation/server/guides/deploying/aws-copilot-fargate-vapor-mongo.html) | migrate as is - slightly outdated |
+| [`server/guides/deploying/aws.md`](https://www.swift.org/documentation/server/guides/deploying/aws.html) | migrate as is - slightly outdated |
+| [`server/guides/deploying/digital-ocean.md`](https://www.swift.org/documentation/server/guides/deploying/digital-ocean.html) | migrate as is - slightly outdated |
+| [`server/guides/deploying/ubuntu.md`](https://www.swift.org/documentation/server/guides/deploying/ubuntu.html) | migrate as is - slightly outdated |
+| [`server/guides/deploying/heroku.md`](https://www.swift.org/documentation/server/guides/deploying/heroku.html) |  migrate as is - slightly outdated|
+| [`server/guides/deploying/gcp.md`](https://www.swift.org/documentation/server/guides/deploying/gcp.html) | migrate as is - slightly outdated |
+| [`articles/static-linux-getting-started.md`](https://www.swift.org/documentation/articles/static-linux-getting-started.html) | migrate as is |
+| `migration-guide-swift3/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift3/se-0107-migrate.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| [`migration-guide-swift3/index.md`](https://www.swift.org/migration-guide-swift3/index.html) | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift4/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| [`migration-guide-swift4/index.md`](https://www.swift.org/migration-guide-swift4/index.html) | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift4.2/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| [`migration-guide-swift4.2/index.md`](https://www.swift.org/migration-guide-swift4.2/index.html) | migrate into https://github.com/swiftlang/swift-migration-guide |
+| `migration-guide-swift5/_migration-guide.md` | migrate into https://github.com/swiftlang/swift-migration-guide |
+| [`migration-guide-swift5/index.md`](https://www.swift.org/migration-guide-swift5/index.html) | migrate into https://github.com/swiftlang/swift-migration-guide |
+| [`concurrency/index.md`](https://www.swift.org/documentation/concurrency/index.html) | redirect to content at https://www.swift.org/migration/documentation/|  |swift-6-concurrency-migration-guide/enabledataracesafety |
+| [`articles/zero-to-swift-nvim.md`](https://www.swift.org/documentation/articles/zero-to-swift-nvim.html) | migrate into `ecosystem/EcosystemTools.docc` |
+| [`articles/zero-to-swift-emacs.md`](https://www.swift.org/documentation/articles/zero-to-swift-emacs.html) | migrate into `ecosystem/EcosystemTools.docc` |
+| [`articles/getting-started-with-vscode-swift.md`](https://www.swift.org/documentation/articles/getting-started-with-vscode-swift.html) | migrate into `ecosystem/EcosystemTools.docc` |
+| [`articles/wasm-getting-started.md`](https://www.swift.org/documentation/articles/wasm-getting-started.html) | translate and migrate into `ecosystem/WASM.docc` |
+| [`continuous-integration/index.md`](https://www.swift.org/documentation/continuous-integration/index.html) | migrate content to [project-operations](https://github.com/swiftlang/project-operations) repository |
+| [`source-compatibility/index.md`](https://www.swift.org/documentation/source-compatibility/index.html) | migrate to [project-operations](https://github.com/swiftlang/project-operations) repository (referencess to swift source compatibility project) |
+| [`source-code/index.md`](https://www.swift.org/documentation/source-code/index.html) | migrate to [project-operations](https://github.com/swiftlang/project-operations) repository (partial list to existing source code that goes into toolchain, needs updating if kept) |
 
-  - documentation/server/guides/llvm-sanitizers.md
-  - documentation/server/guides/deployment.md
-  - documentation/server/guides/packaging.md
-  - documentation/server/guides/passkeys.md
+### Swift.org documentation remaining and untouched:
 
-  - documentation/server/guides/libraries/log-levels.md: migrate content into swift-log
-  - documentation/server/guides/libraries/concurrency-adoption-guidelines.md: remove content & redirect link to existing migration guide
-
-  - documentation/server/guides/deploying/aws-sam-lambda.md
-  - documentation/server/guides/deploying/aws-copilot-fargate-vapor-mongo.md
-  - documentation/server/guides/deploying/aws.md
-  - documentation/server/guides/deploying/digital-ocean.md
-    - documentation/server/guides/deploying/ubuntu.md
-  - documentation/server/guides/deploying/heroku.md
-  - documentation/server/guides/deploying/gcp.md
-  - documentation/articles/static-linux-getting-started.md
-    
-- Swift Language Guides
-
-  - migrate all of these pieces into https://github.com/swiftlang/swift-migration-guide
-  - documentation/articles/value-and-reference-types.md
-  - migration-guide-swift3/_migration-guide.md
-  - migration-guide-swift3/se-0107-migrate.md
-  - migration-guide-swift3/index.md
-  - migration-guide-swift4/_migration-guide.md
-  - migration-guide-swift4/index.md
-  - migration-guide-swift4.2/_migration-guide.md
-  - migration-guide-swift4.2/index.md
-  - migration-guide-swift5/_migration-guide.md
-  - migration-guide-swift5/index.md
-  - documentation/concurrency/index.md (redirect only, its content is effectively already there)
-
-- Tool Guides
-
-  - documentation/articles/zero-to-swift-nvim.md
-  - documentation/articles/zero-to-swift-emacs.md
-  - documentation/articles/getting-started-with-vscode-swift.md
-
-- WASM
-
-  - documentation/articles/wasm-getting-started.md
-
-- C/C++ Interop Guides
-  - Doug Gregor has indicated a desire to reset and migrate this content into the Swift repository, leveraging code validation that is beyond Swift's Documentation tooling today, and to keep it closely aligned with the relvant code that provides the interop functionality.
-  - documentation/cxx-interop/index.md
-  - documentation/cxx-interop/safe-interop/index.md
-  - documentation/cxx-interop/project-build-setup/index.md
-  - documentation/cxx-interop/status/index.md
-  - documentation/articles/wrapping-c-cpp-library-in-swift.md
-
-### Swift.org documentation files & directories remaining:
-
-- Remain on swift.org
-  - documentation/core-libraries/index.md
-    - documentation/core-libraries/_foundation.md
-    - documentation/core-libraries/_libdispatch.md
-    - documentation/core-libraries/_swift-testing.md
-    - documentation/core-libraries/_xctest.md
-
-- documentation/package-manager/index.md
-  (currently redirects to https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
-
+- documentation/cxx-interop/index.md (Doug Gregor indicated a desire to reset and migrate this content into the Swift repository in the future)
+- documentation/cxx-interop/safe-interop/index.md
+- documentation/cxx-interop/project-build-setup/index.md
+- documentation/cxx-interop/status/index.md
+- documentation/articles/wrapping-c-cpp-library-in-swift.md
+- documentation/core-libraries/index.md
+  - documentation/core-libraries/_foundation.md
+  - documentation/core-libraries/_libdispatch.md
+  - documentation/core-libraries/_swift-testing.md
+  - documentation/core-libraries/_xctest.md
+- documentation/package-manager/index.md (currently redirects to https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
 - documentation/articles/value-and-reference-types.md
-
-- documentation/tspl/index.md (stays as is, references into TSPL and links to translations)
-
-- documentation/lldb/index.md: migrate to github.com/swiftlang/swift:`userdocs/`
+- documentation/tspl/index.md
+- documentation/lldb/index.md
   - documentation/lldb/_playground-support.md
-
-- documentation/swift-compiler/index.md: migrate to github.com/swiftlang/swift:`userdocs/`
+- documentation/swift-compiler/index.md
   - documentation/swift-compiler/_compiler-architecture.md
-
 - documentation/standard-library/index.md
   - documentation/standard-library/_preview-package.md
   - documentation/standard-library/_stdlib-design.md
-
-- documentation/source-compatibility/index.md: migrate to github.com/swiftlang/project-operations repository
-  (referencess to swift source compatibility project)
-
-- documentation/source-code/index.md: migrate to github.com/swiftlang/project-operations repository
-  (partial list to existing source code that goes into toolchain, needs updating if kept)
-
-- documentation/continuous-integration/index.md: migrate to github.com/swiftlang/project-operations repository
 
 ## Alternatives Considered
 
