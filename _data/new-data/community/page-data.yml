@@ -1,0 +1,74 @@
+headline: Swift Community
+read-more: Read more
+hero-cards:
+  - image:
+      light: /assets/images/community/community-hero.png
+      dark: /assets/images/community/community-hero-dark.png
+    alt: Community Hero image
+  - image:
+      light: /assets/images/community/community-showcase@2x.png
+      dark: /assets/images/community/community-showcase-dark@2x.png
+    alt: Community Showcase image
+    label: Community Showcase
+    link: https://forums.swift.org
+  - image:
+      light: /assets/images/community/featured-packages@2x.png
+      dark: /assets/images/community/featured-packages-dark@2x.png
+    alt: Featured Package image
+    label: Featured Package
+    link: /packages/
+section2:
+  headline: Explore the forums
+  text: The community's official channel for answering questions and discussing the development of Swift
+  cards:
+    - title: Using Swift
+      text: This area is intended for users to get help with or ask questions about Swift or its related tools and is not for discussion about work being done to the language itself.
+      link: /
+    - title: Swift development
+      text: Topics related to development and implementation of Swift.
+      link: /
+    - title: Swift evolution
+      text: Topics related to the Swift Evolution Process. Another line here.
+      link: /
+    - title: Related projects
+      text: Dedicated to open source projects within the Swift community that are separate from the Swift language itself.
+      link: /
+section3:
+  headline: Contribute to Swift
+  text: Swift is open to code and non-code contributions, get involved today
+  cards:
+    - title: Open pull requests and issues
+      text: Contributions are welcome! Each Swift project has a contributing file that describes its best practices.
+      link: /
+    - title: Paticipate in language design
+      text: Major Swift language features are openly developed as part of the Swift Evolution process.
+      link: /
+    - title: Answers questions on Swift Forums
+      text: Help others by answering each others questions. Another line here.
+      link: /
+    - title: Learn about workgroups
+      text: Community groups coordinating focused efforts within the Swift project.
+      link: /
+section4:
+  headline: Follow Swift
+  links:
+    - image: /
+      label: Bluesky
+      link: /
+      alt: Bluesky icon
+    - image: /
+      label: Mastodon
+      link: /
+      alt: Mastodon icon
+    - image: /
+      label: Twitter/X
+      link: /
+      alt: Twitter/X icon
+    - image: /
+      label: Swift blog
+      link: /
+      alt: Swift blog icon
+    - image: /
+      label: GitHub
+      link: /
+      alt: GitHub icon
