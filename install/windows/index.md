@@ -13,6 +13,7 @@ title: Install Swift - Windows
 {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Windows 10' | first %}
 
 <div class="content">
+  <h3 id="winget" class="header-with-anchor">1. Install Swift via WinGet</h3>
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.winget %}

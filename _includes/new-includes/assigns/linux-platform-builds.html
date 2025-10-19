@@ -5,17 +5,23 @@
 {% assign docker_tag=include.docker_tag %}
 {% assign development_builds=include.development_builds %}
 {% assign aarch64_development_builds=include.aarch64_development_builds %}
+
+{% if development_2 %}
 {% assign development_2=include.development_2 %}
 {% assign docker_tag_2=include.docker_tag_2 %}
 {% assign development_builds_2=include.development_builds_2 %}
 {% assign aarch64_development_builds_2=include.aarch64_development_builds_2 %}
 {% assign branch_dir_2=include.branch_dir_2 %}
+{% assign development_builds_2 = development_builds_2 | sort: 'date' | reverse %}
+
+{% if aarch64 %}
+	{% assign aarch64_development_builds_2 = aarch64_development_builds_2 | sort: 'date' | reverse %}
+{% endif %}
+{% endif %}
 
 {% assign platform_name_url = platform | remove: '.' | remove: ' ' | downcase %}
-{% assign development_builds_2 = development_builds_2 | sort: 'date' | reverse %}
 {% assign development_builds = development_builds | sort: 'date' | reverse %}
 
 {% if aarch64 %}
-{% assign aarch64_development_builds_2 = aarch64_development_builds_2 | sort: 'date' | reverse %}
 {% assign aarch64_development_builds = aarch64_development_builds | sort: 'date' | reverse %}
 {% endif %}

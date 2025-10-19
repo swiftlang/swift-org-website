@@ -73,7 +73,10 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 Swift builds upon several other open-source projects, most notably
 [the LLVM Compiler Infrastructure](http://llvm.org). Swift's clones of
 the repositories of those open-source projects contain Swift-specific
-changes and are merged regularly from their upstream sources. For more information about the clone of LLVM repository, see the section on [LLVM and Swift](/contributing/#llvm-and-swift).
+changes and are merged regularly from their upstream sources. 
+For more information about the clone of the LLVM repository, see
+[LLVM and Swift](https://github.com/swiftlang/project-operations/blob/main/llvm-and-swift.md)
+in the [project-operations](https://github.com/swiftlang/project-operations/) repository.
 
 [llvm-project](https://github.com/swiftlang/llvm-project)
 : The source code for [LLVM](http://llvm.org), with a handful of Swift-specific additions. Merged regularly from the [LLVM sources at llvm.org](https://github.com/llvm/llvm-project).
