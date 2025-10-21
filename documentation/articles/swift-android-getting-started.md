@@ -1,6 +1,6 @@
 ---
 layout: page
-date: 2025-06-01 12:00:00
+date: 2025-10-21 12:00:00
 title: Getting Started with the Swift SDK for Android
 author: [marcprux]
 ---
@@ -25,13 +25,13 @@ The first thing to note is that while `swift` may already be installed on your s
 The easiest and recommended way to manage host toolchains on macOS and Linux is to use [the swiftly command](https://www.swift.org/swiftly/documentation/swiftly/getting-started) command. Once that has been setup, you can install the host toolchain with:
 
 ```console
-$ swiftly install main-snapshot-2025-10-02
-Installing Swift main-snapshot-2025-10-02
+$ swiftly install main-snapshot-2025-10-16
+Installing Swift main-snapshot-2025-10-16
 Installing package in user home directory...
-main-snapshot-2025-10-02 installed successfully!
+main-snapshot-2025-10-16 installed successfully!
 
-$ swiftly use main-snapshot-2025-10-02
-The global default toolchain has been set to `main-snapshot-2025-10-02` (was 6.2.0)
+$ swiftly use main-snapshot-2025-10-16
+The global default toolchain has been set to `main-snapshot-2025-10-16` (was 6.2.0)
 
 $ swiftly run swift --version
 Apple Swift version 6.3-dev (LLVM 0d0246569621d5b, Swift 199240b3fe97eda)
@@ -43,16 +43,16 @@ Target: arm64-apple-macosx15.0
 Next, download and install the SDK bundle using the built-in `swift sdk` command:
 
 ```console
-$ swift sdk install https://github.com/swift-android-sdk/swift-android-sdk/releases/download/DEVELOPMENT-SNAPSHOT-2025-10-02-a/swift-DEVELOPMENT-SNAPSHOT-2025-10-02-a-android-0.1.artifactbundle.tar.gz --checksum 46f01534412f4998f996a6231ad695ed67760cac59f82f86b48a2eae7eb8fd66
+$ swift sdk install https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a_android-0.1.artifactbundle.tar.gz --checksum 451844c232cf1fa02c52431084ed3dc27a42d103635c6fa71bae8d66adba2500
 
-Swift SDK bundle at `https://github.com/swift-android-sdk/swift-android-sdk/releases/download/DEVELOPMENT-SNAPSHOT-2025-10-02-a/swift-DEVELOPMENT-SNAPSHOT-2025-10-02-a-android-0.1.artifactbundle.tar.gz` successfully installed as swift-DEVELOPMENT-SNAPSHOT-2025-10-02-a-android-0.1.artifactbundle.
+Swift SDK bundle at `https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a_android-0.1.artifactbundle.tar.gz` successfully installed as swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a-android-0.1.artifactbundle.
 ```
 
 You should now see the Android SDK included in the `swift sdk list` command:
 
 ```console
 $ swiftly run swift sdk list
-swift-DEVELOPMENT-SNAPSHOT-2025-10-02-a-android-0.1
+swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a-android-0.1
 ```
 
 #### 3. Install and configure the Android NDK
@@ -73,7 +73,7 @@ Once you have downloaded and unpacked the NDK, you can link it up to the Swift S
 
 ```console
 $ cd ~/Library/org.swift.swiftpm || cd ~/.swiftpm
-$ ./swift-sdks/swift-DEVELOPMENT-SNAPSHOT-2025-10-02-a-android-0.1.artifactbundle/swift-android/scripts/setup-android-sdk.sh
+$ ./swift-sdks/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a-android-0.1.artifactbundle/swift-android/scripts/setup-android-sdk.sh
 setup-android-sdk.sh: success: ndk-sysroot linked to Android NDK at android-ndk-r27d/toolchains/llvm/prebuilt
 ```
 
