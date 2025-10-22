@@ -108,55 +108,90 @@ and can be installed by simply copying.
 
 ### Installing the SDK
 
-Before you start, it's important to note:
+#### (1) Prerequisites
 
-* You will need to [install an Open Source toolchain from
-  swift.org](/install/).
+Before starting, please note the following requirements:
 
-* You cannot use the toolchain provided with Xcode to build programs
-  using the SDK.
+* You need to install an open-source [Swift toolchain](/install/) from
+  swift.org.
 
-* If you are using macOS, you will also need to ensure that you use
-  the Swift compiler from this toolchain by [following the
-  instructions
-  here](/install/macos/package_installer/).
+* If you are using macOS, note that you cannot use the toolchain
+  provided with Xcode to build programs using the SDK. Instead, you
+  must use the Swift compiler from the open-source toolchain (see
+  above).
 
-* The toolchain must match the version of the Static Linux SDK that
-  you install.  The Static Linux SDK includes the corresponding Swift
-  version in its filename to help identify the correct version of the
-  SDK.
+#### (2) Pre-Installation Notes
 
-* When installing Swift SDKs from remote URLs, you have to pass a
-  `--checksum` option with the corresponding checksum provided by the
-  author of the Swift SDK.
+Please be aware of:
 
-Once that is out of the way, actually installing the Static Linux SDK
-is easy; at a prompt, enter
+* Version compatibility: The Swift toolchain must match the version of
+  the Static Linux SDK that you install.
+
+* Clean installation: If you previously installed an SDK for a
+  different Swift toolchain version, remove the old one before
+  installing the new one (see management commands below).
+
+* Checksum verification: When installing Swift SDKs from remote URLs,
+  you must pass a `--checksum` option with the corresponding checksum
+  provided by the SDK author.
+
+* Command pattern: The installation follows the pattern described in
+  the next sections.
+
+#### (3) Download and Install the Static Linux SDK
+
+To obtain the Static Linux SDK:
+
+* Visit the swift.org [installation
+  page](https://www.swift.org/install) for complete Static Linux SDK
+  installation instructions, where you can download directly or click
+  "Copy install command".
+
+* For previous releases, navigate to "Previous Releases" on the
+  installation page.
+
+
+#### (4) Installation Commands Pattern
+
+The basic installation command follows this pattern:
 
 ```console
 $ swift sdk install <URL-or-filename-here> [--checksum <checksum-for-archive-URL>]
 ```
 
-giving the URL (and a corresponding checksum) or filename at which the SDK can be found.
+You can provide either a URL (with corresponding checksum) or a local
+filename where the SDK can be found.
 
-For instance, assuming you have installed the
-`swift-6.0-DEVELOPMENT-SNAPSHOT-2024-07-02-a` toolchain, you would
-need to enter
+<!--
+{% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Static SDK'| first %}
+{% assign tag = site.data.builds.swift_releases.last.tag %}
+{% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
+{% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/static-sdk/" | append: tag | append: "/" | append: tag %}
+{% assign command = "swift sdk install " | append: base_url | append: "_static-linux-0.0.1.artifactbundle.tar.gz --checksum " | append: platform.checksum %}
+
+{% comment %} Generate branch information - ONLY major.minor {% endcomment %}
+-->
+
+For example, if you have installed the {{ tag }} toolchain, you would enter:
 
 ```console
-$ swift sdk install https://download.swift.org/swift-6.0-branch/static-sdk/swift-6.0-DEVELOPMENT-SNAPSHOT-2024-07-02-a/swift-6.0-DEVELOPMENT-SNAPSHOT-2024-07-02-a_static-linux-0.0.1.artifactbundle.tar.gz --checksum 42a361e1a240e97e4bb3a388f2f947409011dcd3d3f20b396c28999e9736df36
+$ {{ command }}
 ```
 
-to install the corresponding Static Linux SDK.
+This will download and install the corresponding Static Linux SDK on
+your system.
 
-Swift will download and install the SDK on your system.  You can get a
-list of installed SDKs with
+#### (5) Managing Installed SDKs
+
+After installation, you can manage your SDKs using these commands:
+
+List all installed SDKs:
 
 ```console
 $ swift sdk list
 ```
 
-and it's also possible to remove them using
+Remove an SDK:
 
 ```console
 $ swift sdk remove <name-of-SDK>
