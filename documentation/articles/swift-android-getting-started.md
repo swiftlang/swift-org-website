@@ -48,7 +48,7 @@ $ swift sdk install https://download.swift.org/development/android-sdk/swift-DEV
 Swift SDK bundle at `https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a_android-0.1.artifactbundle.tar.gz` successfully installed as swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a-android-0.1.artifactbundle.
 ```
 
-You should now see the Android SDK included in the `swift sdk list` command:
+You should now see the Android Swift SDK included in the `swift sdk list` command:
 
 ```console
 $ swiftly run swift sdk list
