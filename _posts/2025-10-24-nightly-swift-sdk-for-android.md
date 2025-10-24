@@ -5,11 +5,17 @@ date: 2025-10-24 10:00:00
 title: "Announcing the Swift SDK for Android"
 author: joannis
 category: "Developer Tools"
+featured-image:
+  url: 'assets/images/swift-sdk-for-android-blog/blog-hero@2x.png'
+  alt: 'Featured blog image with the screenshot of Android Studio with Swift code'
+featured-image-dark:
+  url: 'assets/images/swift-sdk-for-android-blog/blog-hero-dark@2x.png'
+  alt: 'Featured blog image with the screenshot of Android Studio with Swift code'
 ---
 
 Swift has matured significantly over the past decade — extending from cloud services to Windows applications, browser apps, and microcontrollers. Swift powers apps and services of all kinds, and thanks to its great interoperability, you can share code between many different platforms.
 
-The [Android workgroup](https://www.swift.org/android-workgroup/) is an open group, free for anyone to join, that aims to expand Swift to Android. Today, we are pleased to announce the nightly preview releases of the [Swift SDK for Android](https://www.swift.org/install).
+The [Android workgroup](/android-workgroup/) is an open group, free for anyone to join, that aims to expand Swift to Android. Today, we are pleased to announce the nightly preview releases of the [Swift SDK for Android](/install).
 
 This milestone reflects months of effort by the Android workgroup, building on many years of grassroots community effort. With the SDK, developers can begin developing Android applications in Swift, opening new avenues for cross-platform development and accelerating innovation across the mobile ecosystem.
 
@@ -17,7 +23,7 @@ The Swift SDK for Android is available today, bundled with the [Windows installe
 
 ## Getting Started
 
-We've published a [Getting Started guide](https://www.swift.org/documentation/articles/swift-android-getting-started.html) to help you set up your first native Swift code on an Android device. The [Swift for Android Examples](https://github.com/swiftlang/swift-android-examples) help demonstrate end‑to‑end application workflows on Android.
+We've published a [Getting Started guide](/documentation/articles/swift-sdk-for-android-getting-started.html) to help you set up your first native Swift code on an Android device. The [Swift for Android Examples](https://github.com/swiftlang/swift-android-examples) help demonstrate end‑to‑end application workflows on Android.
 
 With the Swift SDK for Android, you can now start porting your Swift packages to Android. The [Swift Package Index](https://swiftpackageindex.com) already records 27.9% of packages as [compiling for Android](https://swiftpackageindex.com/blog/adding-wasm-and-android-compatibility-testing).
 
