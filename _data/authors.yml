@@ -559,3 +559,10 @@ mitchellallison:
   email: mitchell_allison@apple.com
   github: mitchellallison
   about: "Mitchell Allison works on Distributed Systems in Swift at Apple."
+
+heckj:
+  name: Joe Heck
+  email: j_heck@apple.com
+  github: heckj
+  gravatar: 34fa393a8013e04c03deff379ac0a6f3ea7a23c5861a6f7410b409974218f5d2
+  about: "Joe Heck works on Swift as part of the Open Source Program Office at Apple."
