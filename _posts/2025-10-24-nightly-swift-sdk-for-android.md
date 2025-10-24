@@ -25,7 +25,7 @@ The Swift SDK for Android is available today, bundled with the [Windows installe
 
 We've published a [Getting Started guide](/documentation/articles/swift-sdk-for-android-getting-started.html) to help you set up your first native Swift code on an Android device. The [Swift for Android Examples](https://github.com/swiftlang/swift-android-examples) help demonstrate end‑to‑end application workflows on Android.
 
-With the Swift SDK for Android, you can now start porting your Swift packages to Android. The [Swift Package Index](https://swiftpackageindex.com) already records 27.9% of packages as [compiling for Android](https://swiftpackageindex.com/blog/adding-wasm-and-android-compatibility-testing) and [the Community Showcase](packages/showcase.html) now shows Android compatibility.
+With the Swift SDK for Android, you can now start porting your Swift packages to Android. The [Swift Package Index](https://swiftpackageindex.com) already records 27.9% of packages as [compiling for Android](https://swiftpackageindex.com/blog/adding-wasm-and-android-compatibility-testing) and [the Community Showcase](/packages/showcase.html) now shows Android compatibility.
 
 The [swift-java project](https://github.com/swiftlang/swift-java) enables you to interoperate between Java and Swift. It is both a library and a code generator, enabling you to integrate Swift and Java in both directions by automatically generating safe and performant bindings. To learn about generating bindings to bring your business logic to Android, check out the [recent Swift Server Side meetup talk](https://www.youtube.com/watch?v=96IQAA7Nl8E&t=982s) by Mads Odgaard.
 
