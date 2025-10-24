@@ -128,6 +128,8 @@
   --dropdown-check-icon: url('/assets/images/icon-check-dark.svg');
   --dropdown-check-icon-inverse: url('/assets/images/icon-check-light.svg');
   --dropdown-all-background: #384ff0;
+
+  --community-featured-image-1: url('/assets/images/community/community-bg-hero@2x.png');
 }
 
 @mixin dark-theme() {
@@ -251,4 +253,6 @@
   --dropdown-check-icon: url('/assets/images/icon-check-light.svg');
   --dropdown-check-icon-inverse: url('/assets/images/icon-check-dark.svg');
   --dropdown-all-background: #1dc2fe;
+
+  --community-featured-image-1: url('/assets/images/community/community-dark@2x.png');
 }
