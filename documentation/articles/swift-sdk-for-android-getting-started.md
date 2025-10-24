@@ -69,7 +69,7 @@ $ unzip -q android-ndk-r27d-*.zip
 $ export ANDROID_NDK_HOME=$PWD/android-ndk-r27d
 ```
 
-Once you have downloaded and unpacked the NDK, you can link it up to the Swift SDK for Android by running the `setup-android-sdk.sh` utility script included with the Swift SDK bundle:
+Once you have downloaded and unpacked the NDK, you must link it to the Swift SDK for Android by running the `setup-android-sdk.sh` utility script included with the Swift SDK bundle:
 
 ```console
 $ cd ~/Library/org.swift.swiftpm || cd ~/.swiftpm
