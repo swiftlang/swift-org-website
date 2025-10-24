@@ -15,7 +15,7 @@ featured-image-dark:
 
 Swift has matured significantly over the past decade — extending from cloud services to Windows applications, browser apps, and microcontrollers. Swift powers apps and services of all kinds, and thanks to its great interoperability, you can share code across platforms.
 
-The [Android workgroup](/android-workgroup/) is an open group, free for anyone to join, that aims to expand Swift to Android. Today, we are pleased to announce nightly preview releases of the [Swift SDK for Android](/install).
+The [Android workgroup](/android-workgroup/) is an open group, free for anyone to join, that aims to expand Swift to Android. Today, we are pleased to announce nightly preview releases of the [Swift SDK for Android](/install/macos/#swift-sdk-buindles-dev).
 
 This milestone reflects months of effort by the Android workgroup, building on many years of grassroots community effort. With the SDK, developers can begin developing Android applications in Swift, opening new avenues for cross-platform development and accelerating innovation across the mobile ecosystem.
 
