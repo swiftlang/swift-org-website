@@ -728,10 +728,14 @@ years:
               graphs, supporting various types, algorithms, and traversal strategies. Ideal
               for constructing, analyzing, and optimizing complex graph structures.
             owner: Laszlo Teveli
-            swift_compatibility: 6.2+
+            swift_compatibility: 5.10+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+              - Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/tevelee/swift-graphs
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/91){:target='_blank'}.
@@ -985,7 +989,7 @@ years:
               in Swift. It consists of an HTTP server, a web application framework, and
               extension modules.
             owner: Hummingbird
-            swift_compatibility: 5.10+
+            swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
               - Linux
@@ -1112,10 +1116,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-              - Wasm
               - Android
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
-              Linux, Wasm, and Android
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/swiftwasm/WasmKit
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/53){:target='_blank'}.

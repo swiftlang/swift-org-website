@@ -196,7 +196,7 @@ categories:
           Swift. It consists of an HTTP server, a web application framework, and extension
           modules.
         owner: Hummingbird
-        swift_compatibility: 5.10+
+        swift_compatibility: 6.0+
         platform_compatibility:
           - Apple
           - Linux
