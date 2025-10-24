@@ -13,7 +13,7 @@ featured-image-dark:
   alt: 'Featured blog image with the screenshot of Android Studio with Swift code'
 ---
 
-Swift has matured significantly over the past decade — extending from cloud services to Windows applications, browser apps, and microcontrollers. Swift powers apps and services of all kinds, and thanks to its great interoperability, you can share code between many different platforms.
+Swift has matured significantly over the past decade — extending from cloud services to Windows applications, browser apps, and microcontrollers. Swift powers apps and services of all kinds, and thanks to its great interoperability, you can share code across platforms.
 
 The [Android workgroup](/android-workgroup/) is an open group, free for anyone to join, that aims to expand Swift to Android. Today, we are pleased to announce nightly preview releases of the [Swift SDK for Android](/install).
 
