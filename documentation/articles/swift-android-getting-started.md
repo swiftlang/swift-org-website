@@ -20,7 +20,7 @@ To cross-compile Swift code for Android, you need three separate components:
 
 #### 1. Install the Host Toolchain
 
-The first thing to note is that while `swift` may already be installed on your system (such as through an Xcode installation on macOS), using a cross-compilation SDK requires that the host toolchain and the SDK versions match exactly. For this reason, you will need to install the specific version of the host toolchain for the given SDK version.
+The first thing to note is that while `swift` may already be installed on your system (such as through an Xcode installation on macOS), using a cross-compilation Swift SDK requires that the host toolchain and the Swift SDK versions match exactly. For this reason, you will need to install the specific version of the host toolchain for the given Swift SDK version.
 
 The easiest and recommended way to manage host toolchains on macOS and Linux is to use [the swiftly command](https://www.swift.org/swiftly/documentation/swiftly/getting-started) command. Once that has been setup, you can install the host toolchain with:
 
