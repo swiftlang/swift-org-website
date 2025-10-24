@@ -1,6 +1,6 @@
 ---
 layout: page
-date: 2025-10-21 12:00:00
+date: 2025-10-24 11:00:00
 title: Getting Started with the Swift SDK for Android
 author: [marcprux]
 ---
