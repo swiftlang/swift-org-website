@@ -31,7 +31,7 @@ The [swift-java project](https://github.com/swiftlang/swift-java) enables you to
 
 ## Next Steps
 
-This preview release opens many new opportunities to continue improving these tools. We encourage you to discuss your experiences, ideas, tools and apps on the [Swift Forums](https://forums.swift.org) in the [Android Category](https://forums.swift.org/c/platform/android/115).
+This preview release opens many new opportunities to continue improving these tools. We encourage you to share your experiences, ideas, tools and apps on the [Swift forums](https://forums.swift.org). This post has been published on an [associated thread](https://forums.swift.org/t/announcing-the-swift-sdk-for-android/82845) for discussion, and new posts can be shared in the [Android category](https://forums.swift.org/c/platform/android/115).
 
 The Android workgroup is drafting [a vision document](https://github.com/swiftlang/swift-evolution/pull/2946), currently under review, for directing future work regarding Swift on Android. This vision will outline priority areas and guide community efforts to maximize impact across the ecosystem. In addition, we maintain a [project board](https://github.com/orgs/swiftlang/projects/17) that tracks the status of major efforts, as well as [official CI for the Swift SDK for Android](https://ci.swift.org/job/oss-swift-package-swift-sdk-for-android/).
 
