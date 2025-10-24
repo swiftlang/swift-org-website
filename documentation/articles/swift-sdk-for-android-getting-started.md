@@ -91,7 +91,7 @@ $ mkdir hello
 $ cd hello
 ```
 
-Next, ask Swift to create a new program package for you:
+Next, ask Swift to create a new package for you:
 
 ```console
 $ swiftly run swift package init --type executable
