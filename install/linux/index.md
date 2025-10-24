@@ -9,7 +9,7 @@ title: Install Swift - Linux
   <h3 id="swiftly" class="header-with-anchor">1. Install Swift via Swiftly</h3>
   <div class="release-box section">
     <div class="content">
-      {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.linux.releases.latest-release.swiftly %}
+      {% include new-includes/components/code-box.html content = site.data.new-data.install.linux.releases.latest-release.swiftly %}
     </div>
   </div>
   <div class="release-box section">
