@@ -446,8 +446,9 @@ davidswift:
 
 joannis:
   name: Joannis Orlandos
+  email: joannis@orlandos.nl
   github: joannis
-  about: Joannis is a member of the Swift Server Workgroup and maintainer of multiple open source Swift projects.
+  about: Joannis is the chair of the Android Workgroup, member of the Server Workgroup and maintainer of Hummingbird.
 
 matthewbastien:
   name: Matthew Bastien
