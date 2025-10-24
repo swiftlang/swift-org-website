@@ -6,10 +6,10 @@ title: "Announcing the Swift SDK for Android"
 author: joannis
 category: "Developer Tools"
 featured-image:
-  url: 'assets/images/swift-sdk-for-android-blog/blog-hero@2x.png'
+  url: '/assets/images/swift-sdk-for-android-blog/blog-hero@2x.png'
   alt: 'Featured blog image with the screenshot of Android Studio with Swift code'
 featured-image-dark:
-  url: 'assets/images/swift-sdk-for-android-blog/blog-hero-dark@2x.png'
+  url: '/assets/images/swift-sdk-for-android-blog/blog-hero-dark@2x.png'
   alt: 'Featured blog image with the screenshot of Android Studio with Swift code'
 ---
 
