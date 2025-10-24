@@ -40,7 +40,7 @@ Target: arm64-apple-macosx15.0
 
 #### 2. Install the Swift SDK for Android
 
-Next, download and install the SDK bundle using the built-in `swift sdk` command:
+Next, download and install the Swift SDK bundle using the built-in `swift sdk` command:
 
 ```console
 $ swift sdk install https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a_android-0.1.artifactbundle.tar.gz --checksum 451844c232cf1fa02c52431084ed3dc27a42d103635c6fa71bae8d66adba2500
