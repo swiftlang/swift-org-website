@@ -15,7 +15,7 @@ The Build and Packaging Workgroup will:
 * Encourage development of Swift integrations in existing build and packaging systems that are outside of the Swift project (e.g. CMake, Bazel)
 * Encourage development of build tooling for cross-platform installation and deployment of packages
 * Enable the growth of a cohesive Swift package ecosystem through improved tooling
-* Channel feedback to the [Ecosystem Steering Group](https://www.swift.org/ecosystem-steering-group) about the needs of the Swift community.
+* Channel feedback to the [Ecosystem Steering Group](/ecosystem-steering-group) about the needs of the Swift community.
 * Regularly update the Swift community on the status of ongoing build and packaging efforts
 
 Current Members of the Build and Packaging Workgroup are:
@@ -36,13 +36,13 @@ Current Members of the Build and Packaging Workgroup are:
 
 The main goal of the Build and Packaging Workgroup is to deliver a great build and packaging experience for the Swift community. To that end, the workgroup will develop tooling like the [Swift Package Manager](https://github.com/swiftlang/swift-package-manager), [Swift Build](https://github.com/swiftlang/swift-build), and [llbuild](https://github.com/swiftlang/swift-llbuild), collaborate with other Swift community groups in areas which intersect with builds and packaging, work with the community to support tooling outside the Swift project, and provide feedback on relevant evolution pitches and proposals.
 
-Members of the Build and Packaging Workgroup serve at the discretion of the [Ecosystem Steering Group](https://www.swift.org/ecosystem-steering-group).
+Members of the Build and Packaging Workgroup serve at the discretion of the [Ecosystem Steering Group](/ecosystem-steering-group).
 
 When necessary, the working group collaborates with other Swift community groups to pursue related improvements in their areas. Some areas of frequent collaboration with other groups and maintainers include:
 
-* The swift test subcommand of swift-package-manager with the [Testing workgroup](https://www.swift.org/testing-workgroup)
+* The swift test subcommand of swift-package-manager with the [Testing workgroup](/testing-workgroup)
 * Build system/editor integration in [SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp) and [vscode-swift](https://github.com/swiftlang/vscode-swift) with the respective maintainers
-* Cross-platform builds support with the respective workgroups and [Platform Steering Group](https://www.swift.org/platform-steering-group)
+* Cross-platform builds support with the respective workgroups and [Platform Steering Group](/platform-steering-group)
 
 Decisions about how components of the Swift toolchain itself are built and distributed fall outside the workgroup’s charter.
 
@@ -58,13 +58,13 @@ Many workgroup meetings are meant for open discussion and any Swift community me
 
 ## Membership
 
-Membership in the Build and Packaging Workgroup is contribution-based and expected to evolve over time. Workgroup members vote to nominate new members to the [Ecosystem Steering Group](https://www.swift.org/ecosystem-steering-group) for approval. Nomination votes by the workgroup must be unanimous. The [Ecosystem Steering Group](https://www.swift.org/ecosystem-steering-group) designates one member of the workgroup as the chair. The chair has no special authority over the workgroup, but they are responsible for ensuring its smooth functioning, including by:
+Membership in the Build and Packaging Workgroup is contribution-based and expected to evolve over time. Workgroup members vote to nominate new members to the [Ecosystem Steering Group](/ecosystem-steering-group) for approval. Nomination votes by the workgroup must be unanimous. The [Ecosystem Steering Group](/ecosystem-steering-group) designates one member of the workgroup as the chair. The chair has no special authority over the workgroup, but they are responsible for ensuring its smooth functioning, including by:
 
 * organizing and leading regular meetings,
 * ensuring that the workgroup communicates effectively with the community, and
 * coordinating meetings between workgroup representatives and other Swift workgroups or teams when necessary.
 
-Workgroup members will try to make a decision independently by consensus whenever possible, and will raise issues to the [Ecosystem Steering Group](https://www.swift.org/ecosystem-steering-group) when there are particular challenges with reaching consensus.
+Workgroup members will try to make a decision independently by consensus whenever possible, and will raise issues to the [Ecosystem Steering Group](/ecosystem-steering-group) when there are particular challenges with reaching consensus.
 
 ## Community Participation
 
