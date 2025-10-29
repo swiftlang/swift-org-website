@@ -76,6 +76,7 @@ If the documentation grows to where we find ourselves wanting to host significan
 The initial catalogs listed below are based on the existing content within `/documentation` at Swift.org,
 but don't reflect all the possible future content we might create.
 
+  - Swift language guides - moderated/reviewed by the Language Steering Group.
   - API guidelines - moderated/reviewed by the Language Steering Group.
   - Server guides - moderated/reviewed by the SSWG.
   - Ecosystem tools guides - moderated/reviewed by ecosystem steering group.
@@ -106,13 +107,16 @@ An example `tree` view of such a repository:
 │       ├── Documentation.md
 │       └── testing.md
 ├── swift
-│   └── APIGuidelines.docc
-│       ├── DocComment.md
+│   ├── APIGuidelines.docc
+│   │   ├── DocComment.md
+│   │   ├── Documentation.md
+│   │   ├── include-words-to-avoid-ambiguity.md
+│   │   ├── name-according-to-roles.md
+│   │   ├── omit-needless-words.md
+│   │   └── weak-type-information.md
+│   └── LanguageGuides.docc
 │       ├── Documentation.md
-│       ├── include-words-to-avoid-ambiguity.md
-│       ├── name-according-to-roles.md
-│       ├── omit-needless-words.md
-│       └── weak-type-information.md
+│       └── value-and-reference-types.md
 ```
 
 The directories for each catalog residing at the root can host another DocC catalog (a directory ending with .docc), to host the markdown content in a typical DocC fashion.
@@ -193,6 +197,7 @@ Files to migrate under the `documentation` directory on Swift.org:
 | [`server/guides/building.md`](https://www.swift.org/documentation/server/guides/building.html) | refine/update to provide examples of building, add section for debug vs. release and swift tooling, link to SwiftPM docs on building, add section about building in Linux using containers, add section on building with devContainers, add detail on static linux SDK, break out some content to a CI related article |
 | [`server/guides/testing.md`](https://www.swift.org/documentation/server/guides/testing.html) | quite dated - update to swift 6, swift-testing, break out some content into a "CI" focused article - focus on unit testing, leave room for functional, integration testing as sep articles |
 | [`articles/static-linux-getting-started.md`](https://www.swift.org/documentation/articles/static-linux-getting-started.html) | migrate as is  - consider renaming or breaking into multiple, smaller focused articles, review any changes with previous authors (Alastair, Melissa) |
+| [`articles/value-and-reference-types.md`](https://www.swift.org/documentation/articles/value-and-reference-types.html) | migrate content into `swift/LanguageGuides`|
 | [`concurrency/index.md`](https://www.swift.org/documentation/concurrency/index.html) | redirect to content at https://www.swift.org/migration/documentation/|  |swift-6-concurrency-migration-guide/enabledataracesafety |
 | [`articles/zero-to-swift-nvim.md`](https://www.swift.org/documentation/articles/zero-to-swift-nvim.html) | migrate into `ecosystem/EcosystemTools.docc` |
 | [`articles/zero-to-swift-emacs.md`](https://www.swift.org/documentation/articles/zero-to-swift-emacs.html) | migrate into `ecosystem/EcosystemTools.docc` |
@@ -221,7 +226,6 @@ The migration process itself will be tracked by pull requests and within an issu
   - documentation/core-libraries/_swift-testing.md
   - documentation/core-libraries/_xctest.md
 - documentation/package-manager/index.md (currently redirects to https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
-- documentation/articles/value-and-reference-types.md
 - documentation/tspl/index.md
 - documentation/lldb/index.md
   - documentation/lldb/_playground-support.md
