@@ -1,8 +1,8 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2024-02-NN 10:00:00
-title: 'Swift GSoC 2024 highlight: Swiftly (Swift installer) support in Visual Studio Code
+date: 2025-02-NN 10:00:00
+title: 'Swift GSoC 2025 highlight: Swiftly (Swift installer) support in Visual Studio Code
 author: [ktoso, priyambada]
 category: "Community"
 ---
@@ -16,9 +16,9 @@ In this series of four posts, we'll highlight each of the Summer of Code contrib
 You can navigate between the posts using these convenient links:
 
 - Bringing Swiftly support to VS Code (this post)
-- [JNI mode for swift-java’s source jextract tool](./2025-11-NN-swift-gsoc-2024-highlight-2-swift-java-jextract-jni-mode.md)
-- [Improve the display of documentation during code completion in SourceKit-LSP](./2025-11-NN-swift-gsoc-2024-highlight-3-vscode-swift-lsp-documentation.md)
-- [Improved Console Output for Swift Testing](./2025-11-NN-swift-gsoc-2024-highlight-4-swift-testing-output.md)
+- [JNI mode for swift-java’s source jextract tool](2025-11-NN-swift-gsoc-2025-highlight-2-swift-java-jextract-jni-mode.md)
+- [Improve the display of documentation during code completion in SourceKit-LSP](2025-11-NN-swift-gsoc-2025-highlight-3-vscode-swift-lsp-documentation.md)
+- [Improved Console Output for Swift Testing](2025-11-NN-swift-gsoc-2025-highlight-4-swift-testing-output.md)
 
 What follows, is a shortened writeup about their project and experience by the GSoC contributors. 
 If you'd like to learn more, please check out the full version of their posts on the Swift forums (linked below)!

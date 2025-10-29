@@ -1,8 +1,8 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2024-02-NN 10:00:00
-title: 'Swift GSoC 2024 highlight: JNI mode for SwiftJava interoperability jextract tool
+date: 2025-02-NN 10:00:00
+title: 'Swift GSoC 2025 highlight: JNI mode for SwiftJava interoperability jextract tool
 author: [ktoso, mads]
 category: "Community"
 ---
@@ -14,10 +14,10 @@ to open source projects. Participants usually are students, but do not have to b
 
 In this series of four posts, we'll highlight each of the Summer of Code contributors and their projects.
 
-- [Bringing Swiftly support to VS Code](./2025-11-NN-swift-gsoc-2024-highlight-1-vscode-swiftly.md)
+- [Bringing Swiftly support to VS Code](2025-11-NN-swift-gsoc-2025-highlight-1-vscode-swiftly.md)
 - JNI mode for swift-java’s source jextract tool (this post)
-- [Improve the display of documentation during code completion in SourceKit-LSP](./2025-11-NN-swift-gsoc-2024-highlight-3-vscode-swift-lsp-documentation.md)
-- [Improved Console Output for Swift Testing](./2025-11-NN-swift-gsoc-2024-highlight-4-swift-testing-output.md)
+- [Improve the display of documentation during code completion in SourceKit-LSP](2025-11-NN-swift-gsoc-2025-highlight-3-vscode-swift-lsp-documentation.md)
+- [Improved Console Output for Swift Testing](2025-11-NN-swift-gsoc-2025-highlight-4-swift-testing-output.md)
 
 ---
 
