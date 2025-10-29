@@ -63,12 +63,12 @@ The Advanced Console Output Recorder fundamentally transforms how developers int
 ![Current Console Output](/assets/images/gsoc-25/testing-output-1.jpg)
 
 
-> Prior to this project, the default `swift test` output presented a linear, undifferentiated stream of events. While functional, this format lacked visual cues, making it challenging to quickly identify test relationships, pinpoint failures within large suites, or understand the overall structure of a test run. The absence of clear demarcation between test suites and individual tests often led to slower debugging cycles and increased cognitive load for developers.
+Prior to this project, the default `swift test` output presented a linear, undifferentiated stream of events. While functional, this format lacked visual cues, making it challenging to quickly identify test relationships, pinpoint failures within large suites, or understand the overall structure of a test run. The absence of clear demarcation between test suites and individual tests often led to slower debugging cycles and increased cognitive load for developers.
 
 **New Hierarchical Summary:**
 ![New Hierarchical Test Results](/assets/images/gsoc-25/testing-output-2.jpg)
 
-> The new recorder introduces a rich, hierarchical display that immediately brings order and clarity to test output. Using Unicode box-drawing characters (with ASCII fallback), it clearly visualizes the nested structure of test modules, suites, and individual tests. This not only makes the test results significantly easier to read and navigate but also provides crucial context around failed tests, displaying detailed issue descriptions directly within their respective hierarchical nodes. This transformation dramatically improves the developer experience by offering instant insights into test organization and failure points.
+The new recorder introduces a rich, hierarchical display that immediately brings order and clarity to test output. Using Unicode box-drawing characters (with ASCII fallback), it clearly visualizes the nested structure of test modules, suites, and individual tests. This not only makes the test results significantly easier to read and navigate but also provides crucial context around failed tests, displaying detailed issue descriptions directly within their respective hierarchical nodes. This transformation dramatically improves the developer experience by offering instant insights into test organization and failure points.
 
 ![Failed Tests Showcase](/assets/images/gsoc-25/testing-output-3.jpg)
 
@@ -95,7 +95,7 @@ I learned how to accept and act on high-quality feedback from senior engineers, 
 
 I'd like to express my deepest gratitude to my mentor, **Stuart Montgomery**, for his exceptional guidance, patience, and technical insights throughout this entire project. His mentorship has been invaluable.
 
-I'd also like to thank **Jonathan Grynspan** for his crucial, in-depth architectural feedback, which significantly improved the project's long-term viability. Thank you as well to **[Swift Testing Workgroup](https://www.swift.org/testing-workgroup/)**, and all the other members of the Swift community who provided thoughtful feedback on the forums. This project would not have been possible without your collective expertise and support.
+I'd also like to thank Jonathan Grynspan for his crucial, in-depth architectural feedback, which significantly improved the project's long-term viability. Thank you as well to **[Swift Testing Workgroup](https://www.swift.org/testing-workgroup/)**, and all the other members of the Swift community who provided thoughtful feedback on the forums. This project would not have been possible without your collective expertise and support.
 
 ----
 

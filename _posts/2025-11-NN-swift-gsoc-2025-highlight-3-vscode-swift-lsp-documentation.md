@@ -54,22 +54,6 @@ Here’s a quick demo of signature help in VS Code.
 
 ![Signature help demo in VS Code|690x441](/assets/images/gsoc-25/output.gif)
 
-### Challenges
-
-#### Retrieving declarations for cached completion items
-
-An interesting challenge we faced with full documentation comment retrieval in code completion was retrieving the comment for cached code completion items. We use the completion item's associated declaration to get the comment, but some completion items can be cached, and we can't cache their associated declarations.
-
-To tackle this issue, we cache the declaration's Swift Unified Symbol Resolution (USR), which is a string that identifies a declaration, and then we use it to look up the declaration when we need to fetch its documentation comment.
-
-The challenging part is that there are many types of declarations (e.g., functions, properties, classes). Some declarations are defined in Swift, others are imported from languages like Objective-C and C++, which are imported through Clang. There are also different types of declaration contexts (e.g., a declaration can be a top-level module item, a member of a struct, etc). And modules can be synthesized by the compiler, or they can be regular modules. We needed to account for all such cases when implementing the USR-to-declaration lookup.
-
-#### Conflicting USRs for Clang-imported declarations
-
-Another challenge we faced was an issue where a declaration imported through Clang (e.g., a declaration defined in Objective-C) and a compatibility type-alias for it had the same USR, which broke the assumption about a USR being unique to a specific declaration, making the USR-to-declaration lookup logic fail in some cases.
-
-To fix this, we changed the mangling for compatibility type-aliases to use their Swift-exposed names, disambiguating the USR for the actual declaration vs. for a type-alias.
-
 ### Closing Thoughts
 
 I'm incredibly grateful for this opportunity to contribute to the Swift project, and I really learned a lot from this experience. I'd like to thank my mentor, Hamish Knight, for his unwavering support and guidance throughout this summer. I’d also like to thank Alex Hoppen, Rintaro Ishizaki, and Ben Barham for their valuable feedback during code review.

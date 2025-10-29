@@ -27,6 +27,8 @@ My name is Mads and I am excited to share with you what I have been working on f
 
 # Overview
 
+> You can also view Mads' presentation from the Serverside.swift conference about his work on this project: [Expanding Swift/Java Interoperability](https://www.youtube.com/watch?v=tOH6V1IvTAc).
+
 The [swift-java](https://github.com/swiftlang/swift-java) interoperability library provides the `swift-java jextract` tool, which automatically generates Java sources that are used to call Swift code from Java. Previously, this tool only worked using the [Foreign Function and Memory API (FFM)](https://docs.oracle.com/en/java/javase/21/core/foreign-function-and-memory-api.html), which requires JDK 22+, making it unavailable on platforms such as Android. The goal of this project was to extend the jextract tool, such that it is able to generate Java sources using JNI instead of FFM and thereby allowing more platforms to utilize Swift/Java interoperability. 
 
 I am very glad to report that we have succeeded in that goal, supporting even more features than initially planned! Our initial goal was to achieve feature parity with the FFM mode, but the new JNI mode also supports additional Swift language features such as enums and protocols!
@@ -43,10 +45,6 @@ swift-java jextract --swift-module MySwiftLibrary \
 
 # How does it work?
 
-The FFM mode already had the logic needed to analyze `.swift` or `.swiftinterface` files to gather the needed types, functions, variables, etc. for extraction. A lot of this logic was tied into the FFM based extraction, and therefore the initial step was to separate the analysis phase and the code-generation phase. This was done by introducing a protocol `Swift2JavaGenerator`, which has two implementations: one for FFM and one for JNI. In the future you could add more, such as Kotlin. 
-
-Having separated these two phases, we could start working on generating code that uses JNI. Fortunately, the `swift-java` project has since the beginning included JNI support using the `JavaKit` library *(recently renamed to `SwiftJava`)*. This means that developers could write Swift code that uses JNI in a safe and ergonomic way. Instead of generating raw JNI code, the source-generated code depends on `SwiftJava` and uses the conversion functions such as `getJNIValue()`, `init(fromJNI:)` for basic primitive types such as `Int64`, `Bool` and `String`
-
 Each Swift class/struct is extracted as a single Java `class`. Functions and variables are generated as Java methods, that internally calls down to a native method that is implemented in Swift using `@_cdecl`. Take a look at the following example:
 
 ```swift  
@@ -61,7 +59,9 @@ public class MySwiftClass {
   }
 }
 ```
+
 It is roughly generated to the equivalent Java `class`:  
+
 ```java  
 public final class MySwiftClass implements JNISwiftInstance {
   public static  MySwiftClass init(long x, long y, SwiftArena swiftArena$) {
@@ -83,10 +83,7 @@ public final class MySwiftClass implements JNISwiftInstance {
 ```
 We also generate additional Swift thunks that actually implement the `native` methods and call the underlying Swift methods.
 
-> You might notice that we are calling functions such as \`$memoryAddress()\` and `wrapMemoryAddressUnsafe`(). And why are we passing down a `long` to the native functions? Basically, the JNI wrappers store the address of the corresponding Swift instance and use it to pass it back to Swift in the native calls, allowing Swift to reconstruct a pointer to the instance and calling the respective function such as `printMe()`.
-
 You can learn more about how the memory allocation and management works [in the full version of this post of this post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/81858)!
-
 
 An interesting aspect of an interoperability library such as `swift-java` is the memory management between the two sides, in this case the JVM and Swift. The FFM mode uses the FFM APIs around `MemorySegment` to allocate and manage native memory. We are not so lucky in JNI. In older Java versions there are different ways of allocating memory, such as `Unsafe` or `ByteBuffer.allocateDirect()`. We could have decided to use these and allocate memory on the Java side, like FFM, but instead we decided to move the responsibility to Swift, which allocates the memory instead. This had some nice upsides, as we did not have to mess the the witness tables like FFM does.
 
@@ -106,8 +103,7 @@ Here we see that we are calling a native method `$init` which returns a `long`. 
 1. `SwiftArena.ofConfined()`: returns a confined arena which is used with *try-with-resource*, to deallocate all instances at the end of some scope.  
 2. `SwiftArena.ofAuto()`: returns an arena that deallocates instances once the garbage-collector has decided to do so.
 
-This concept also exists in the FFM mode, and I recommend watching Konrad’s talk to learn more about them\!  
-> Along with the JNI mode we also added support for providing `--memory-management-mode allow-global-automatic` to the tool, to allow a global `ofAuto()` arena as a default parameter, removing the need for explicitly passing around \`SwiftArena\`s.
+This concept also exists in the FFM mode, and I recommend watching Konrad’s talk to learn more about them!  
 
 If we take a look at the native implementation of `$init` in Swift, we see how we allocate and initialize the memory:  
 ```swift  
