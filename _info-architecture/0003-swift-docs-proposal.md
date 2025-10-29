@@ -78,8 +78,8 @@ but don't reflect all the possible future content we might create.
 
   - API guidelines - moderated/reviewed by the Language Steering Group.
   - Server guides - moderated/reviewed by the SSWG.
-  - Ecosystem Tools Guides - moderated/reviewed by ecosystem steering group.
-  - Platform Guides - moderated/reviewed by platform steering group.
+  - Ecosystem tools guides - moderated/reviewed by ecosystem steering group.
+  - Platform guides - moderated/reviewed by platform steering group.
 
 An example `tree` view of such a repository:
 
@@ -130,7 +130,7 @@ For example, the structure of the catalogs above might line up to:
 ```
 /swift/* @swiftlang/language-steering-group
 /ecosystem/* @swiftlang/ecosystem-steering-group
-/server-guides/* @swiftlang/server-workgroup
+/server/* @swiftlang/server-workgroup
 /platform/* @swifting/platform-steering-group
 ```
 
@@ -178,7 +178,7 @@ Based on the existing content in Swift.org, the general goal is to migrate the m
 All of the listed markdown files would remain in `/documentation`, with their front matter (Jekyll metadata) updated to redirect the URL requests to the new locations as content is migrated and accepted into the new docs repository.
 Markdown files prefixed with `_` are typically only included in other files and not referenced by URL, and can be removed after they are migrated.
 
-## Migration Plan
+## Initial Migration Plan
 
 This proposal is primarily meant to provide a guide to the structure for content as we want to see it.
 In the process of establishing this new repository and structure of DocC catalogs, the following initial files from swift.org will be updated (if needed) and migrated, to establish the initial structure.
@@ -204,7 +204,7 @@ The navigability between DocC collections and integration of those collections i
 
 As mentioned above, the metadata for the earlier pages will remain on Swift.org for some time, with the stubs of those articles being updated to provide HTML redirects for legacy URLs to the new location once the updated content is published using the DocC catalog.
 
-### Swift.org documentation remaining and untouched:
+### Remaining Swift.org documentation content
 
 A full migration needs to be coordinated with relevant workgroups, and proceed incrementally as the availability of the community and relevant workgroups allow. 
 The migration process itself will be tracked by pull requests and within an issue or issues housed at https://github.com/swiftlang/swift-org-website/, and potentially moved to a new docs repository.
