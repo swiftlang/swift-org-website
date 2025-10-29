@@ -23,7 +23,7 @@ In this series of four posts, we'll highlight each of the Summer of Code contrib
 
 ## Improved Console Output for Swift Testing 
 
-Hello everyone! My name is Kelvin Bui, and I'm excited to share my GSoC 2025 project, where I worked on improving  the console output for the Swift Testing framework with my mentor, @smontgomery.
+Hello everyone! My name is Kelvin Bui, and I'm excited to share my GSoC 2025 project, where I worked on improving the console output for the Swift Testing framework with my mentor, @stmontgomery.
 
 ### Overview
 

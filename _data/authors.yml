@@ -555,23 +555,23 @@ mitchellallison:
 mads:
   name: Mads Odgaard
   email: mads@madsodgaard.com
-  github: https://github.com/madsodgaard
+  github: madsodgaard
   about: Mads is a Google Summer of Code 2025 contributor, where he worked on bringing JNI support to the jextract tool which is part of the Swift Java interoperability project.
 
 ahmedelrefaey:
   name: Ahmed Elrefaey
-  email: 
-  github: https://github.com/a7medev
-  about: Ahmed is a Google Summer of Code 2025 contributor, where he worked on improving the display of Swift documentation during code completion in SourceKit-LSP and VSCode.
+  email: a7med.mahmoud2004@gmail.com
+  github: a7medev
+  about: Ahmed is a Google Summer of Code 2025 contributor, where he worked on improving the display of Swift documentation during code completion in SourceKit-LSP and VS Code.
 
-tien:
-  name: Kelvin Bui
+kelvin:
+  name: Tien Quoc (Kelvin) Bui
   email: tien-quoc.bui@epita.fr
-  github: https://github.com/tienquocbui
+  github: tienquocbui
   about: Kelvin is a Google Summer of Code 2025 code contributor, where he worked on improving the console output for Swift Testing.
 
 priyambada:
   name: Priyambada Roul
   email: priyaroul99@gmail.com
-  github: https://github.com/roulpriya
+  github: roulpriya
   about: Priyambada is a Google Summer of Code 2025 code contributor, where she worked on providing Swiftly support in VSCode.

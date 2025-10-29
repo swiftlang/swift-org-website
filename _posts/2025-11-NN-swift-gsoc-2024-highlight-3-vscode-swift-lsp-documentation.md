@@ -31,15 +31,14 @@ This is Ahmed Elrefaey, I’m excited to share with you an update on my GSoC pro
 
 The aim of this project is to enhance how documentation is displayed in SourceKit-LSP during code completion by:
 
-1. Showing the full documentation for a code completion item instead of the first paragraph only which we call “brief documentation”.
+1. Showing the full documentation for a code completion item instead of the first paragraph only, which we call “brief documentation”.
+2. Implementing Language Server Protocol’s [signature help](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_signatureHelp) request showing the user which overloads are available, along with their corresponding documentation.
 
-2. Implementing Language Server Protocol’s [signature help](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_signatureHelp) request showing the user which overloads are available along with their corresponding documentation.
-
-### Progress**
+### Progress
 
 During this summer, we have made great progress on this project that I want to share with you.
 
-We have successfully implemented full documentation comment retrieval for completion items. We went with a lazy approach that retrieves the full documentation comment upon request to avoid having to compute all comments and cache them at once which will require a lot of time and memory. This involved making Swift declarations round-trippable to be able to restore them for cached completion items and retrieve the documentation comment.
+We have successfully implemented full documentation comment retrieval for completion items by lazily retrieving the full documentation comment upon request to avoid having to fetch all documentation comments at once.
 
 Here’s what SourceKit-LSP currently provides in VS Code (brief documentation):
 
@@ -57,13 +56,23 @@ Here’s a quick demo of signature help in VS Code.
 
 ### Challenges
 
-One of the interesting challenges we faced was reconstructing a declaration from its USR in order to retrieve full documentation comments for cached completion items. The challenging part is that there are many types of declarations (e.g. functions, properties, classes, etc), the most important distinction is Swift declarations vs. Clang-imported declarations. There are also different types of declaration contexts (e.g. a declaration might be declared as a top-level module item, or as a member of a nominal type declaration like a struct). And modules can be synthesized by the compiler or they can be regular modules. We needed to account for all such cases when implementing USR to declaration reconstruction.
+#### Retrieving declarations for cached completion items
 
-Another interesting challenge we faced was an issue where a Clang-imported declaration and a compatibility type-alias for it produce the same USR. This breaks the assumption that a USR is unique to a certain declaration and would result in declaration reconstruction tests failing due to non-matching declarations (e.g. the original was for the actual declaration but the one returned was for a type-alias). We fixed this issue by changing the mangling for compatibility type-aliases to be mangled as a ClangImporter-synthesized declaration with the USR containing the its Swift-exposed name disambiguating the USR for the actual declaration vs. for a type-alias.
+An interesting challenge we faced with full documentation comment retrieval in code completion was retrieving the comment for cached code completion items. We use the completion item's associated declaration to get the comment, but some completion items can be cached, and we can't cache their associated declarations.
+
+To tackle this issue, we cache the declaration's Swift Unified Symbol Resolution (USR), which is a string that identifies a declaration, and then we use it to look up the declaration when we need to fetch its documentation comment.
+
+The challenging part is that there are many types of declarations (e.g., functions, properties, classes). Some declarations are defined in Swift, others are imported from languages like Objective-C and C++, which are imported through Clang. There are also different types of declaration contexts (e.g., a declaration can be a top-level module item, a member of a struct, etc). And modules can be synthesized by the compiler, or they can be regular modules. We needed to account for all such cases when implementing the USR-to-declaration lookup.
+
+#### Conflicting USRs for Clang-imported declarations
+
+Another challenge we faced was an issue where a declaration imported through Clang (e.g., a declaration defined in Objective-C) and a compatibility type-alias for it had the same USR, which broke the assumption about a USR being unique to a specific declaration, making the USR-to-declaration lookup logic fail in some cases.
+
+To fix this, we changed the mangling for compatibility type-aliases to use their Swift-exposed names, disambiguating the USR for the actual declaration vs. for a type-alias.
 
 ### Closing Thoughts
 
-I'm incredibly grateful for this opportunity to contribute to the Swift project and I really learned a lot from this experience. I'd like to thank my mentor @hamishknight for his unwavering support and guidance throughout this summer. I’d also like to thank @ahoppen, @rintaro, and @bnbarham for their valuable feedback during code review.
+I'm incredibly grateful for this opportunity to contribute to the Swift project, and I really learned a lot from this experience. I'd like to thank my mentor, Hamish Knight, for his unwavering support and guidance throughout this summer. I’d also like to thank Alex Hoppen, Rintaro Ishizaki, and Ben Barham for their valuable feedback during code review.
 
 ---
 

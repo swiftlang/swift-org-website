@@ -93,7 +93,6 @@ I have linked all pull requests and technical details in my **[detailed project 
 
 This GSoC experience has been transformative. I came in as someone intimidated by large codebases, and I'm leaving with the confidence to tackle complex, multi-tool integrations. I'm excited to continue contributing to Swift community!
 
-Thank you.
 
 ---
 

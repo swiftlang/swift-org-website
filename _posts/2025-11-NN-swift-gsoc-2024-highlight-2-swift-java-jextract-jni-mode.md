@@ -111,6 +111,8 @@ This concept also exists in the FFM mode, and I recommend watching Konrad’s ta
 
 If we take a look at the native implementation of `$init` in Swift, we see how we allocate and initialize the memory:  
 ```swift  
+// Generated code, not something you would write
+
 @_cdecl("Java_com_example_swift_MySwiftClass__00024init__JJ")
 func Java_com_example_swift_MySwiftClass__00024init__JJ(environment: UnsafeMutablePointer<JNIEnv?>!, thisClass: jclass, x: jlong, y: jlong) -> jlong {
   let result$ = UnsafeMutablePointer<MySwiftClass>.allocate(capacity: 1)
