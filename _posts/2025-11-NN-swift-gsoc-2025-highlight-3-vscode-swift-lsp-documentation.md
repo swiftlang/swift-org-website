@@ -48,7 +48,8 @@ And here’s how it looks with full documentation:
 
 ![Full documentation demo in VS Code.|690x412](/assets/images/gsoc-25/full.gif)
 
-We have also implemented a large portion of signature help support by retrieving the available overloads similar to the existing argument completion logic and refactoring the logic for creating the code completion string to be reusable in signature help. The current implementation returns a list of viable overloads along with their full documentation comment for functions, subscripts, initializers, and enum cases with associated values.
+We have also implemented a large portion of signature help support, showing the available overloads and their corresponding documentation while editing.
+We reused the existing argument completion logic to determine the overloads and refactored the code completion item description implementation to reuse it in signature help.
 
 Here’s a quick demo of signature help in VS Code.
 
