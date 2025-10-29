@@ -2,17 +2,16 @@
 layout: new-layouts/post
 published: true
 date: 2025-10-30 10:00:00
-title: "Swift Lately: October 2025 Edition"
+title: "Swift Digest: October 2025 Edition"
 author: [heckj]
 category: "Community"
 ---
 
-# **Swift Lately: October 2025 Edition**
+# **Swift Digest: October 2025 Edition**
 
-*Swift Lately is a monthly digest featuring what's new in the Swift project and ecosystem, with insights from community voices. This October edition covers highlights from the Server Side Swift conference, major package releases, and the latest Swift Evolution proposals.*
+*Editor Note: This is the first of a new series, Swift Digest, a monthly digest featuring what's new in the Swift project and ecosystem, with insights from community voices. This October edition covers highlights from the Server Side Swift conference, major package releases, and the latest Swift Evolution proposals.*
 
 *Thanks to Joe Heck for sharing his conference experience and insights as our inaugural guest contributor.*
-
 
 ## Guest contributor highlights
 
@@ -32,14 +31,13 @@ Joe's conference experience highlights some of the exciting developments we're s
 
 **Featured community projects**
 
-* [Swift SDK for Android](https://forums.swift.org/t/announcing-the-swift-sdk-for-android/82845) - The Android workgroup has announced a preview release of an SDK supporting Android, and a [dedicated Android platforms category](https://forums.swift.org/c/platform/android/115) in the Forums.
+* [Swift SDK for Android](https://forums.swift.org/t/announcing-the-swift-sdk-for-android/82845) - The Android workgroup [announced in the blog](https://www.swift.org/blog/nightly-swift-sdk-for-android/) a preview release of an SDK supporting Android, and a [dedicated Android platforms category](https://forums.swift.org/c/platform/android/115) in the Forums.
 * The [Swift Extension of VS Code](https://docs.swift.org/vscode/documentation/userdocs/) - Useful for developing server apps in Swift, the Swift Extension of VS Code is rapidly evolving and [sharing their updates on the Swift Forums](https://forums.swift.org/t/week-of-october-27th-2025/82887).
-* Swift Build and Packaging Workgroup - [description needed]
+* [Swift Build and Packaging Workgroup](https://www.swift.org/build-and-packaging-workgroup/) - A new workgroup under the [ecosystem steering group](https://www.swift.org/ecosystem-steering-group/) with a focus on building, composing, and sharing Swift packages.
 * [Swift Package Manager documentation](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/) - The documentation for the Package Manager is refreshed and now published, including the API references, on docs.swift.org.
 
 
 **Talks and Presentations**
-
 Recent [Server Side Swift conference talks](https://youtu.be/eqeDPIK2Msc), hosted in London at the beginning of October. 
 
 * [Unlock Generative AI for Swift Server-Side Development](https://www.youtube.com/watch?v=eDkbXNleMnA) - Mona walked through using a library she helped create that uses large language models with her server side code.
@@ -48,15 +46,14 @@ Recent [Server Side Swift conference talks](https://youtu.be/eqeDPIK2Msc), hoste
 
 **The Swift package ecosystem**
 
-* [Swift OTel](https://github.com/swift-otel/swift-otel) - recent update 1.0.1 : An Open Telemetry exporter for your service to publish logs, metrics, and tracing to an OTel collector.
-* [Swift Configuration](https://github.com/apple/swift-configuration) - new release 0.2.0 : A new package, using the same pattern as swift-log and swift-metrics, to load configuration for your service that supports a variety of loaders include JSON, Yaml, and environment variables.
+* [Swift OTel](https://github.com/swift-otel/swift-otel) - recent update 1.0.1 : An Open Telemetry exporter for a service to publish logs, metrics, and tracing to an OTel collector.
+* [Swift Configuration](https://github.com/apple/swift-configuration) - new release 0.2.0 : A new package, using the same pattern as swift-log and swift-metrics, to load configuration that supports a variety of loaders include JSON, Yaml, and environment variables.
 * [Swift Profile Recorder](https://github.com/apple/swift-profile-recorder) - new release 0.3.8 : An in-process profiler to help you capture what your code is spending time doing, so you can optimize its performance.
 * [Swift Collections](https://github.com/apple/swift-collections/) - recent update 1.3 : Among other updates, this adds UniqueArray to the collections provided - a high-performance collection type that takes advantage of the Swift’s performance advances with the types Span, InlineArray, and non-copyable types in Swift.
 * [swiftly](https://github.com/swiftlang/swiftly/releases/tag/1.1.0) - recent update 1.1.0 : This adds deeper integration to help with developing Swift using VS Code.
 
 
 **Swift Evolution**
-
 Under active review:
 
 * [SE-0497](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0497-definition-visibility.md) Controlling function definition visibility in clients - The [@inlinable attribute](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0193-cross-module-inlining-and-specialization.md) in Swift allows function definitions to be visible to callers, enabling optimizations like specialization and inlining. This proposal introduces explicit control over whether a function generates a callable symbol and makes its definition available for optimization purposes.
@@ -68,5 +65,4 @@ Recently completed:
 
 
 **Working on something of your own? Drop us a line.**
-
 If you’re making something available that you’d like to highlight, create a thread on the [Swift Forums Community Showcase](https://forums.swift.org/c/community-showcase/66). Please also [nominate packages that you find interesting](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168) for potential inclusion into the [Package Showcase](https://www.swift.org/packages/showcase.html) hosted on [Swift.org](http://swift.org/)
