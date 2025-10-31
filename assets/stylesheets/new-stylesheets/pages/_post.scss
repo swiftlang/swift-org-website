@@ -76,17 +76,6 @@
         border-radius: 10px;
         margin-bottom: 1em;
       }
-
-      blockquote {
-        border-left: 4px solid var(--site-link-with-right-arrow-color);
-        margin: 1.5em 0;
-        padding: 0.5em 0 0.5em 1.5em;
-        color: var(--color-syntax-plain-text);
-
-        p:last-child {
-          margin-bottom: 0;
-        }
-      }
     }
 
     .card-grid {
