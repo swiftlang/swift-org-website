@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2025-10-30 10:00:00
+date: 2025-10-31 16:15:00
 title: "What's new in Swift: October 2025 Edition"
 author: [heckj, davelester]
 category: "Digest"
