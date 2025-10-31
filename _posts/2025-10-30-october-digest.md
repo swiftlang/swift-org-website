@@ -32,7 +32,7 @@ Joe's conference experience highlights some of the exciting developments we're s
 **Featured community projects**
 
 * [Swift SDK for Android](https://forums.swift.org/t/announcing-the-swift-sdk-for-android/82845) - The Android workgroup [announced in the blog](https://www.swift.org/blog/nightly-swift-sdk-for-android/) a preview release of an SDK supporting Android, and a [dedicated Android platforms category](https://forums.swift.org/c/platform/android/115) in the Forums.
-* The [Swift Extension of VS Code](https://docs.swift.org/vscode/documentation/userdocs/) - Useful for developing server apps in Swift, the Swift Extension of VS Code is rapidly evolving and [sharing their updates on the Swift Forums](https://forums.swift.org/t/week-of-october-27th-2025/82887).
+* The [Swift Extension of VS Code](https://docs.swift.org/vscode/documentation/userdocs/) - Useful for developing server apps in Swift, the Swift Extension of VS Code is rapidly evolving and [just released v2.12.0 featuring swiftly integration and a new walkthrough for first-time users](https://forums.swift.org/t/vs-code-swift-extension-2-12-0-release-now-available/82947).
 * [Swift Build and Packaging Workgroup](https://www.swift.org/build-and-packaging-workgroup/) - A new workgroup under the [ecosystem steering group](https://www.swift.org/ecosystem-steering-group/) with a focus on building, composing, and sharing Swift packages.
 * [Swift Package Manager documentation](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/) - The documentation for the Package Manager is refreshed and now published, including the API references, on docs.swift.org.
 
