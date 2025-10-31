@@ -35,8 +35,8 @@ Joe's conference experience highlights some of the exciting developments we're s
 * [Swift Package Manager documentation](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/) - The documentation for the Package Manager is refreshed and now published, including the API references, on docs.swift.org.
 
 
-### Talks and Presentations
-Talks from the Server Side Swift conference, hosted in London at the beginning of October, are now being published online. The following are two talks that stood out to me, which I'd like to share to encourage you to investigate the [Service Side Swift playlist of talks](https://youtu.be/eqeDPIK2Msc).
+### Talks and presentations
+Talks from the Server Side Swift conference, hosted in London at the beginning of October, are now being published online. The following are two talks that stood out to me, which I'd like to share to encourage you to investigate the [Service-Side Swift playlist of talks](https://youtu.be/eqeDPIK2Msc).
 
 * [Unlock Generative AI for Swift Server-Side Development](https://www.youtube.com/watch?v=eDkbXNleMnA) - Mona walked through using a library she helped create that uses large language models with her server side code.
 * [Building Networking Libraries with Span and Concurrency](https://youtu.be/bVCY2m8ytXM) - Joannis talks about how Swift concurrency can support network libraries for heavily concurrent data flows and the new Span feature from Swift 6.2 to provide efficient access for network buffers.
