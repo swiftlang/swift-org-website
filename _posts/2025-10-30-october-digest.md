@@ -2,12 +2,12 @@
 layout: new-layouts/post
 published: true
 date: 2025-10-30 10:00:00
-title: "Swift Digest: October 2025 Edition"
+title: "What's new in Swift: October 2025 Edition"
 author: [heckj]
 category: "Community"
 ---
 
-# **Swift Digest: October 2025 Edition**
+# **What's new in Swift: October 2025 Edition**
 
 *Editor Note: This is the first of a new series, Swift Digest, a monthly digest featuring what's new in the Swift project and ecosystem, with insights from community voices. This October edition covers highlights from the Server Side Swift conference, major package releases, and the latest Swift Evolution proposals.*
 
