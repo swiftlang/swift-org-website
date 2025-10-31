@@ -47,7 +47,7 @@ Talks from the Server Side Swift conference, hosted in London at the beginning o
 ### The Swift package ecosystem
 
 * [Swift OTel](https://github.com/swift-otel/swift-otel) - recent update 1.0.1 : An Open Telemetry exporter for a service to publish logs, metrics, and tracing to an OTel collector.
-* [Swift Configuration](https://github.com/apple/swift-configuration) - new release 0.2.0 : A new package, using the same pattern as swift-log and swift-metrics, to load configuration that supports a variety of loaders include JSON, YAML, and environment variables.
+* [Swift Configuration](https://github.com/apple/swift-configuration) - new release 0.2.0 : A new package, using the same pattern as swift-log and swift-metrics, to load configuration that supports a variety of loaders including JSON, YAML, and environment variables.
 * [Swift Profile Recorder](https://github.com/apple/swift-profile-recorder) - new release 0.3.8 : An in-process profiler to help you capture what your code is spending time doing, so you can optimize its performance.
 * [Swift Collections](https://github.com/apple/swift-collections/) - recent update 1.3 : Among other updates, this adds UniqueArray to the collections provided - a high-performance collection type that takes advantage of the Swift’s performance advances with the types Span, InlineArray, and non-copyable types in Swift.
 * [swiftly](https://github.com/swiftlang/swiftly/releases/tag/1.1.0) - recent update 1.1.0 : This adds deeper integration to help with developing Swift using VS Code.
