@@ -169,4 +169,12 @@ title: Install Swift - macOS
     </p>
   </div>
   {% include new-includes/components/wasm-sdk-dev.html %}
+  <h3>Swift SDK for Android</h3>
+  <div>
+    <p class="content-copy">
+      <a class="content-link" href="/documentation/articles/swift-sdk-for-android-getting-started.html">Instructions</a>
+    </p>
+  </div>
+  {% include new-includes/components/android-sdk-dev.html %}
 </div>
+

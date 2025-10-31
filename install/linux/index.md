@@ -63,6 +63,10 @@ title: Install Swift - Linux
       {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.linux.dev.latest-dev.swiftly %}
     </div>
   </div>
+  <h2 id="swift-sdk-bundles" class="header-with-anchor">Swift SDK Bundles</h2>
+  <div>
+    <p class="content-copy">Additional components for cross-compilation</p>
+  </div>
   <h3>Static Linux SDK</h3>
   <div>
     <p class="content-copy">
@@ -77,6 +81,13 @@ title: Install Swift - Linux
     </p>
   </div>
   {% include new-includes/components/wasm-sdk-dev.html %}
+  <h3>Swift SDK for Android</h3>
+  <div>
+    <p class="content-copy">
+      <a class="content-link" href="/documentation/articles/swift-sdk-for-android-getting-started.html">Instructions</a>
+    </p>
+  </div>
+  {% include new-includes/components/android-sdk-dev.html %}
   <div class="callout">
     <div>
       <p class="content-copy">
