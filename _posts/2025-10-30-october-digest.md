@@ -7,8 +7,6 @@ author: [heckj, davelester]
 category: "Digest"
 ---
 
-# **What's new in Swift: October 2025 Edition**
-
 *Editor Note: This is the first of a new series, What’s new in Swift, a monthly digest featuring what's new in the Swift project and ecosystem, with insights and perspectives from across the Swift world. This October edition covers highlights from the Server Side Swift conference, major package releases, and the latest Swift Evolution proposals.*
 
 *Thanks to Joe Heck for sharing his conference experience and insights as our inaugural guest contributor.*
@@ -21,7 +19,7 @@ category: "Digest"
 > 
 > In addition to low-level code performance, the conference had a great talk [Observability in Swift-Side Swift](https://www.youtube.com/watch?v=HSxIFLsoODc) on how to keep an eye on the performance of your service as part of a bigger system. I’ve long been a fan of distributed tracing, and the 1.0 release of [swift-otel](https://github.com/swift-otel/swift-otel) enables server apps to provide logs, metrics, and traces using the [OpenTelemetry](https://opentelemetry.io/) standard to system observability tools. The 1.29.0 release of [async-http-client](https://github.com/swift-server/async-http-client) just makes that process even easier, and I’ll briefly note that the new [Valkey client for Swift](https://github.com/valkey-io/valkey-swift/) also now includes full support for distributed tracing.
 > 
-> - Joe Heck
+> &mdash; Joe Heck
 
 
 Joe's conference experience highlights some of the exciting developments we're seeing across the Swift ecosystem. Let's dive into the broader picture of what's been happening in the Swift community this month.
@@ -67,5 +65,5 @@ The Swift project adds new language features to the language through the [Swift 
 * [SE-0496](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0496-inline-always.md)  @inline(always) attribute (**accepted**) - The Swift compiler uses inlining to optimize code by expanding function bodies into callers, but it may not always inline functions due to size concerns. The @inline(always) attribute allows developers to force inlining for specific functions.
 
 
-**Working on something of your own? Drop us a line.**
+### Share what you're working on
 If you’re making something available that you’d like to highlight, create a thread on the [Swift Forums Community Showcase](https://forums.swift.org/c/community-showcase/66). Please also [nominate packages that you find interesting](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168) for potential inclusion into the [Package Showcase](https://www.swift.org/packages/showcase.html) hosted on [Swift.org](http://swift.org/)
