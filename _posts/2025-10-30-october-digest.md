@@ -38,7 +38,7 @@ Joe's conference experience highlights some of the exciting developments we're s
 
 
 **Talks and Presentations**
-Recent [Server Side Swift conference talks](https://youtu.be/eqeDPIK2Msc), hosted in London at the beginning of October. 
+Talks from the Server Side Swift conference, hosted in London at the beginning of October, are now being published online. The following are two talks that stood out to me, which I'd like to share to encourage you to investigate the [Service Side Swift playlist of talks](https://youtu.be/eqeDPIK2Msc).
 
 * [Unlock Generative AI for Swift Server-Side Development](https://www.youtube.com/watch?v=eDkbXNleMnA) - Mona walked through using a library she helped create that uses large language models with her server side code.
 * [Building Networking Libraries with Span and Concurrency](https://youtu.be/bVCY2m8ytXM) - Joannis talks about how Swift concurrency can support network libraries for heavily concurrent data flows and the new Span feature from Swift 6.2 to provide efficient access for network buffers.
@@ -54,6 +54,9 @@ Recent [Server Side Swift conference talks](https://youtu.be/eqeDPIK2Msc), hoste
 
 
 **Swift Evolution**
+
+The Swift project adds new language features to the language through the [Swift Evolution process](https://github.com/swiftlang/swift-evolution/blob/main/process.md). These are some of the proposals currently under discussion or recently accepted for a future Swift release.
+
 Under active review:
 
 * [SE-0497](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0497-definition-visibility.md) Controlling function definition visibility in clients - The [@inlinable attribute](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0193-cross-module-inlining-and-specialization.md) in Swift allows function definitions to be visible to callers, enabling optimizations like specialization and inlining. This proposal introduces explicit control over whether a function generates a callable symbol and makes its definition available for optimization purposes.
