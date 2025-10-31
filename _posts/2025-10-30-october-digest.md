@@ -27,9 +27,9 @@ category: "Digest"
 Joe's conference experience highlights some of the exciting developments we're seeing across the Swift ecosystem. Let's dive into the broader picture of what's been happening in the Swift community this month.
 
 
-## What’s new in Swift
+## October 2025 updates
 
-**Featured community projects**
+### Featured community projects
 
 * [Swift SDK for Android](https://forums.swift.org/t/announcing-the-swift-sdk-for-android/82845) - The Android workgroup [announced in the blog](https://www.swift.org/blog/nightly-swift-sdk-for-android/) a preview release of an SDK supporting Android, and a [dedicated Android platforms category](https://forums.swift.org/c/platform/android/115) in the Forums.
 * The [Swift Extension of VS Code](https://docs.swift.org/vscode/documentation/userdocs/) - Useful for developing server apps in Swift, the Swift Extension of VS Code is rapidly evolving and [just released v2.12.0 featuring swiftly integration and a new walkthrough for first-time users](https://forums.swift.org/t/vs-code-swift-extension-2-12-0-release-now-available/82947).
@@ -37,14 +37,14 @@ Joe's conference experience highlights some of the exciting developments we're s
 * [Swift Package Manager documentation](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/) - The documentation for the Package Manager is refreshed and now published, including the API references, on docs.swift.org.
 
 
-**Talks and Presentations**
+### Talks and Presentations
 Talks from the Server Side Swift conference, hosted in London at the beginning of October, are now being published online. The following are two talks that stood out to me, which I'd like to share to encourage you to investigate the [Service Side Swift playlist of talks](https://youtu.be/eqeDPIK2Msc).
 
 * [Unlock Generative AI for Swift Server-Side Development](https://www.youtube.com/watch?v=eDkbXNleMnA) - Mona walked through using a library she helped create that uses large language models with her server side code.
 * [Building Networking Libraries with Span and Concurrency](https://youtu.be/bVCY2m8ytXM) - Joannis talks about how Swift concurrency can support network libraries for heavily concurrent data flows and the new Span feature from Swift 6.2 to provide efficient access for network buffers.
 
 
-**The Swift package ecosystem**
+### The Swift package ecosystem
 
 * [Swift OTel](https://github.com/swift-otel/swift-otel) - recent update 1.0.1 : An Open Telemetry exporter for a service to publish logs, metrics, and tracing to an OTel collector.
 * [Swift Configuration](https://github.com/apple/swift-configuration) - new release 0.2.0 : A new package, using the same pattern as swift-log and swift-metrics, to load configuration that supports a variety of loaders include JSON, Yaml, and environment variables.
@@ -53,15 +53,15 @@ Talks from the Server Side Swift conference, hosted in London at the beginning o
 * [swiftly](https://github.com/swiftlang/swiftly/releases/tag/1.1.0) - recent update 1.1.0 : This adds deeper integration to help with developing Swift using VS Code.
 
 
-**Swift Evolution**
+### Swift Evolution
 
 The Swift project adds new language features to the language through the [Swift Evolution process](https://github.com/swiftlang/swift-evolution/blob/main/process.md). These are some of the proposals currently under discussion or recently accepted for a future Swift release.
 
-Under active review:
+**Under active review:**
 
 * [SE-0497](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0497-definition-visibility.md) Controlling function definition visibility in clients - The [@inlinable attribute](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0193-cross-module-inlining-and-specialization.md) in Swift allows function definitions to be visible to callers, enabling optimizations like specialization and inlining. This proposal introduces explicit control over whether a function generates a callable symbol and makes its definition available for optimization purposes.
 
-Recently completed:
+**Recently completed:**
 
 * [SE-0495](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0495-cdecl.md) C compatible functions and enums (**accepted**) - This proposal introduces the @c attribute to mark Swift functions and enums as callable and representable in C, respectively. It aims to formalize and extend the experimental @_cdecl attribute.
 * [SE-0496](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0496-inline-always.md)  @inline(always) attribute (**accepted**) - The Swift compiler uses inlining to optimize code by expanding function bodies into callers, but it may not always inline functions due to size concerns. The @inline(always) attribute allows developers to force inlining for specific functions.
