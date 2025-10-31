@@ -16,12 +16,12 @@ category: "Community"
 ## Guest contributor highlights
 
 >At the beginning of October, I attended the [Server Side Swift conference](https://www.serversideswift.info/), my second year attending. I love that it focuses on using Swift both with and beyond Apple devices. This makes the conference a bit different from others you’ll see talked about by the community.
-
+> 
 > The [keynote](https://www.youtube.com/watch?v=jz3hCRSPrdo), by Ben Cohen, talked about language performance and the balancing act of the advances and continued work on the Swift language to enable you to reach for extremely high code performance. Having developed server and infrastructure apps in the past myself, I highly value the combination of the ease of developing in Swift and its impressive safety guarantees while also being able to drive out that “goes brrr” code performance.
-
+> 
 >In addition to low-level code performance, the conference had a great talk [Observability in Swift-Side Swift](https://www.youtube.com/watch?v=HSxIFLsoODc) on how to keep an eye on the performance of your service as part of a bigger system. I’ve long been a fan of distributed tracing, and the 1.0 release of [swift-otel](https://github.com/swift-otel/swift-otel) enables server apps to provide logs, metrics, and traces using the [OpenTelemetry](https://opentelemetry.io/) standard to system observability tools. The 1.29.0 release of [async-http-client](https://github.com/swift-server/async-http-client) just makes that process even easier, and I’ll briefly note that the new [Valkey client for Swift](https://github.com/valkey-io/valkey-swift/) also now includes full support for distributed tracing.
-
-- Joe Heck
+> 
+> - Joe Heck
 
 
 Joe's conference experience highlights some of the exciting developments we're seeing across the Swift ecosystem. Let's dive into the broader picture of what's been happening in the Swift community this month.
