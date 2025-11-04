@@ -8,8 +8,6 @@
             <h2>main</h2>
             <p class="body-copy">
             <small>{{ wasm_sdk_dev_builds.first.date | date: '%B %-d, %Y' }}</small><br />
-            Swift SDKs for WebAssembly
-            <br /><br />
             {% assign base_url = "https://download.swift.org/development/wasm-sdk/" | append: wasm_sdk_dev_builds.first.dir | append: "/" | append: wasm_sdk_dev_builds.first.download %}
             {% assign command = "swift sdk install " | append: base_url | append: " --checksum " | append: wasm_sdk_dev_builds.first.checksum %}
             <button onclick="copyToClipboard(this, '{{ command | escape }}')">
@@ -18,7 +16,7 @@
             </p>
             <div class="link-wrapper">
             <div class="link-group">
-                <a href="https://download.swift.org/development/wasm-sdk/{{ wasm_sdk_dev_builds.first.dir }}/{{ wasm_sdk_dev_builds.first.download }}" class="body-copy">Download Wasm SDK</a> |
+                <a href="https://download.swift.org/development/wasm-sdk/{{ wasm_sdk_dev_builds.first.dir }}/{{ wasm_sdk_dev_builds.first.download }}" class="body-copy">Download</a> |
                 <a href="https://download.swift.org/development/wasm-sdk/{{ wasm_sdk_dev_builds.first.dir }}/{{ wasm_sdk_dev_builds.first.download_signature }}" class="body-copy">Signature (PGP)</a>
             </div>
             </div>
@@ -31,8 +29,6 @@
             <h2>release/6.2</h2>
             <p class="body-copy">
             <small>{{ wasm_sdk_6_2_builds.first.date | date: '%B %-d, %Y' }}</small><br />
-            Swift SDKs for WebAssembly
-            <br /><br />
             {% assign base_url = "https://download.swift.org/swift-6.2-branch/wasm-sdk/" | append: wasm_sdk_6_2_builds.first.dir | append: "/" | append: wasm_sdk_6_2_builds.first.download %}
             {% assign command = "swift sdk install " | append: base_url | append: " --checksum " | append: wasm_sdk_6_2_builds.first.checksum %}
             <button onclick="copyToClipboard(this, '{{ command | escape }}')">
@@ -41,7 +37,7 @@
             </p>
             <div class="link-wrapper">
             <div class="link-group">
-                <a href="https://download.swift.org/swift-6.2-branch/wasm-sdk/{{ wasm_sdk_6_2_builds.first.dir }}/{{ wasm_sdk_6_2_builds.first.download }}" class="body-copy">Download Wasm SDK</a> |
+                <a href="https://download.swift.org/swift-6.2-branch/wasm-sdk/{{ wasm_sdk_6_2_builds.first.dir }}/{{ wasm_sdk_6_2_builds.first.download }}" class="body-copy">Download</a> |
                 <a href="https://download.swift.org/swift-6.2-branch/wasm-sdk/{{ wasm_sdk_6_2_builds.first.dir }}/{{ wasm_sdk_6_2_builds.first.download_signature }}" class="body-copy">Signature (PGP)</a>
             </div>
             </div>

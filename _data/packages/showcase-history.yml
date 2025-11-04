@@ -14,8 +14,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/NSFatalError/Probing
             note: Discussed on [Episode 58 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/58-people-used-to-hand-code-assembly){:target='_blank'}.
@@ -40,8 +42,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: No license
             url: https://swiftpackageindex.com/arraypress/swift-email-validator
             note: Discussed on [Episode 60 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/60-filename-suffixes-in-swift-package-prefixes){:target='_blank'}.
@@ -69,7 +73,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS) and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS), Linux,
+              Wasm, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/ordo-one/equatable
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/148){:target='_blank'}.
@@ -94,8 +101,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/fatbobman/Objects2XLSX
             note: Discussed on [Episode 59 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/59-at-least-mine-was-related-to-swift){:target='_blank'}.
@@ -108,7 +116,8 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (macOS), Linux, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/vault-courier/vault-courier
             note: Discussed on [Episode 57 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/57-how-many-of-the-same-packages-can-we-pick){:target='_blank'}.
@@ -147,7 +156,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS), Linux, and
+              Android
             license: MIT
             url: https://swiftpackageindex.com/jpsim/Yams
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/143){:target='_blank'}.
@@ -187,8 +198,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/perrystreetsoftware/Harmonize
             note: Discussed on [Episode 57 of Swift Package Indexing](https://share.transistor.fm/s/32b618c5){:target='_blank'}.
@@ -200,8 +212,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/southkin/HasLazyServer
             note: Discussed on [Episode 56 of Swift Package Indexing](https://share.transistor.fm/s/135e7db3){:target='_blank'}.
@@ -247,14 +261,14 @@ years:
             description: Facilitates building serverless functions in Swift for AWS Lambda,
               offering features like JSON handling, response streaming, and background tasks,
               while emphasizing performance, safety, and developer control.
-            owner: Swift on Server
+            owner: Amazon Web Services - Labs
             swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
               - Linux
             platform_compatibility_tooltip: Apple (macOS) and Linux
             license: Apache 2.0
-            url: https://swiftpackageindex.com/swift-server/swift-aws-lambda-runtime
+            url: https://swiftpackageindex.com/awslabs/swift-aws-lambda-runtime
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/127){:target='_blank'}.
           - name: swift-package-registry-service
             description: An implementation of the Swift Package Registry Service which proxies
@@ -278,8 +292,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/grpc/grpc-swift
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/127){:target='_blank'}.
@@ -304,8 +319,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/swift-otel/swift-otel
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/127){:target='_blank'}.
@@ -370,7 +386,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS), Linux, and
+              Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/adam-fowler/swift-zip-archive
             note: Discussed on [Episode 53 of Swift Package Indexing](https://share.transistor.fm/s/56a29e9f){:target='_blank'}.
@@ -399,8 +417,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/drewmccormack/Forked
             note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/119){:target='_blank'}.
@@ -413,8 +432,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/alessiorubicini/SwiftSessions
             note: Discussed on [Episode 46 of Swift Package Indexing](https://share.transistor.fm/s/08c0a3f9){:target='_blank'}.
@@ -466,8 +486,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: BSD 3-Clause
             url: https://swiftpackageindex.com/mattmassicotte/Queue
             note: Discussed on [Episode 52 of Swift Package Indexing](https://share.transistor.fm/s/687d1170){:target='_blank'}.
@@ -505,8 +527,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/hummingbird-project/swift-mustache
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/107){:target='_blank'}.
@@ -545,7 +569,7 @@ years:
               single SwiftUI button. Customize actions for gestures like tap, long press,
               and drag, with flexible delays and timeouts.
             owner: Daniel Saidi
-            swift_compatibility: 6.0+
+            swift_compatibility: 6.1+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -561,7 +585,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS) and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS), Linux, Wasm, and
+              Android
             license: MIT
             url: https://swiftpackageindex.com/peterringset/JSONPatch
             note: Discussed on [Episode 51 of Swift Package Indexing](https://share.transistor.fm/s/257bd1fa){:target='_blank'}.
@@ -574,8 +601,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/pointfreeco/swift-issue-reporting
             note: Linked to in [Issue 671 of iOS Dev Weekly](https://iosdevweekly.com/issues/671#gpHvv6S){:target='_blank'}.
@@ -589,8 +617,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/ladvoc/BijectiveDictionary
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/90){:target='_blank'}.
@@ -603,8 +633,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/GeorgeLyon/SwiftClaude
             note: Discussed on [Episode 51 of Swift Package Indexing](https://share.transistor.fm/s/257bd1fa){:target='_blank'}.
@@ -632,8 +663,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/apple/swift-crypto
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/93){:target='_blank'}.
@@ -668,12 +700,14 @@ years:
               enabling sequential or parallel execution of closures on sequences while preserving
               order using Ordered Task Group.
             owner: matsuji
-            swift_compatibility: 5.10+
+            swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/mtj0928/swift-async-operations
             note: Discussed on [Episode 50 of Swift Package Indexing](https://share.transistor.fm/s/333d2750){:target='_blank'}.
@@ -682,10 +716,10 @@ years:
               storage solution supporting Swift `Codable` types. It's ideal for storing
               small, non-sensitive data but is not secure for sensitive information.
             owner: Christian Selig
-            swift_compatibility: 6.0+
+            swift_compatibility: 6.1+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
+            platform_compatibility_tooltip: Apple (iOS, visionOS, watchOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/christianselig/TinyStorage
             note: Discussed on [Episode 50 of Swift Package Indexing](https://share.transistor.fm/s/333d2750){:target='_blank'}.
@@ -698,8 +732,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/tevelee/swift-graphs
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/91){:target='_blank'}.
@@ -727,8 +763,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/sliemeobn/elementary
             note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/82){:target='_blank'}.
@@ -740,7 +778,8 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (macOS) and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (macOS), Linux, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/apple/swift-openapi-generator
             note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/84){:target='_blank'}.
@@ -753,7 +792,8 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (macOS) and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (macOS), Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/franklefebvre/swift-export
             note: Linked to in [Issue 679 of iOS Dev Weekly](https://iosdevweekly.com/issues/679#DXo4Uf9){:target='_blank'}.
@@ -793,8 +833,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/davbeck/swift-glob
             note: Discussed on [Episode 44 of Swift Package Indexing](https://share.transistor.fm/s/cbb0c6ad){:target='_blank'}.
@@ -883,7 +925,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (macOS, visionOS), Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/giginet/swift-testing-revolutionary
             note: Discussed on [Episode 46 of Swift Package Indexing](https://share.transistor.fm/s/08c0a3f9){:target='_blank'}.
@@ -892,7 +936,7 @@ years:
               install, switch between, and update various Swift versions and development
               snapshots.
             owner: The Swift Programming Language
-            swift_compatibility: 5.10+
+            swift_compatibility: 6.2+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (macOS)
@@ -931,8 +975,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Wasm
             license: Apache 2.0
             url: https://swiftpackageindex.com/tayloraswift/swift-dom
             note: Nominated in [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/66){:target='_blank'}.
@@ -944,11 +989,13 @@ years:
               in Swift. It consists of an HTTP server, a web application framework, and
               extension modules.
             owner: Hummingbird
-            swift_compatibility: 5.10+
+            swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS), Linux, and
+              Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/hummingbird-project/hummingbird
             note: Discussed on [Episode 45 of Swift Package Indexing](https://share.transistor.fm/s/53ee9157){:target='_blank'}.
@@ -984,7 +1031,8 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (macOS, visionOS), Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/m-barthelemy/AcmeSwift
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/63){:target='_blank'}.
@@ -1008,8 +1056,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/mochidev/CodableDatastore
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/63){:target='_blank'}.
@@ -1025,8 +1075,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: Apache 2.0
             url: https://swiftpackageindex.com/funcmike/rabbitmq-nio
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/48){:target='_blank'}.
@@ -1038,8 +1089,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/mattcox/Pack
             note: Discussed on [Episode 43 of Swift Package Indexing](https://share.transistor.fm/s/2d4b1ba7){:target='_blank'}.
@@ -1064,8 +1116,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/swiftwasm/WasmKit
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/53){:target='_blank'}.
@@ -1125,8 +1178,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: The Unlicense
             url: https://swiftpackageindex.com/designedbyclowns/GeoURI
             note: Discussed on [Episode 43 of Swift Package Indexing](https://share.transistor.fm/s/2d4b1ba7){:target='_blank'}.
@@ -1138,8 +1193,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/pointfreeco/swift-perception
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/24){:target='_blank'}.
@@ -1151,7 +1208,8 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (macOS, visionOS), Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/gh123man/Async-Channels
             note: Discussed on [Episode 42 of Swift Package Indexing](https://share.transistor.fm/s/c118cc9c){:target='_blank'}.
@@ -1163,8 +1221,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/jonreid/ExpectToEventuallyEqual
             note: Discussed on [Episode 41 of Swift Package Indexing](https://share.transistor.fm/s/861890bb){:target='_blank'}.
@@ -1191,7 +1251,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS) and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS), Linux, and
+              Android
             license: MIT
             url: https://swiftpackageindex.com/orlandos-nl/Citadel
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/44){:target='_blank'}.
@@ -1204,8 +1266,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/swhitty/FlyingFox
             note: Discussed on [Episode 41 of Swift Package Indexing](https://share.transistor.fm/s/861890bb){:target='_blank'}.
@@ -1238,7 +1301,7 @@ years:
               embedding and logging metadata within threads for improved debugging and diagnostic
               capabilities.
             owner: Alex Cohen
-            swift_compatibility: 5.10+
+            swift_compatibility: 6.2+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
@@ -1257,8 +1320,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/davedelong/time
             note:
@@ -1273,8 +1337,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/0xLeif/Fork
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/29){:target='_blank'}.
@@ -1327,8 +1393,10 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/jrothwell/VersionedCodable
             note: Discussed on [Episode 40 of Swift Package Indexing](https://share.transistor.fm/s/a452cfcd){:target='_blank'}.
@@ -1353,8 +1421,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/stephencelis/SQLite.swift
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/19){:target='_blank'}.
@@ -1402,7 +1471,7 @@ years:
               It provides access to all AWS services via a direct mapping of the REST APIs
               Amazon publishes for each of its services.
             owner: Soto for AWS
-            swift_compatibility: 5.10+
+            swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
             platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS)
@@ -1429,7 +1498,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (macOS, visionOS) and Linux
+              - Wasm
+              - Android
+            platform_compatibility_tooltip: Apple (macOS, visionOS), Linux, Wasm, and Android
             license: MIT
             url: https://swiftpackageindex.com/mattpolzin/OpenAPIKit
             note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/12){:target='_blank'}.
@@ -1455,8 +1526,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/space-code/typhoon
             note: Discussed on [Episode 37 of Swift Package Indexing](https://share.transistor.fm/s/de52cb62){:target='_blank'}.
@@ -1485,7 +1557,7 @@ years:
             swift_compatibility: 6.0+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
             license: MIT
             url: https://swiftpackageindex.com/pointfreeco/swift-composable-architecture
             note: Linked from [this Swift forums post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/3){:target='_blank'}.
@@ -1498,8 +1570,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/davedelong/time
             note: Linked from [this Swift forums post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/7){:target='_blank'}.
@@ -1511,8 +1584,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/PureSwift/BluetoothLinux
             note: Linked from [this Swift forums post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/4){:target='_blank'}.
@@ -1525,8 +1599,9 @@ years:
             platform_compatibility:
               - Apple
               - Linux
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
-              and Linux
+              - Android
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS),
+              Linux, and Android
             license: MIT
             url: https://swiftpackageindex.com/gohanlon/swift-memberwise-init-macro
             note: Discussed in [Episode 37 of Swift Package Indexing](https://share.transistor.fm/s/de52cb62){:target='_blank'}.
@@ -1594,7 +1669,8 @@ years:
             swift_compatibility: 5.10+
             platform_compatibility:
               - Apple
-            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS)
+              - Wasm
+            platform_compatibility_tooltip: Apple (iOS, macOS, visionOS) and Wasm
             license: MIT
             url: https://swiftpackageindex.com/automerge/automerge-swift
             note: Discussed on [Episode 36 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/36-even-though-the-bug-is-fixed-its-not-over){:target='_blank'}.
