@@ -551,3 +551,9 @@ mitchellallison:
   email: mitchell_allison@apple.com
   github: mitchellallison
   about: "Mitchell Allison works on Distributed Systems in Swift at Apple."
+
+ahmedelrefaey:
+  name: Ahmed Elrefaey
+  email: a7med.mahmoud2004@gmail.com
+  github: a7medev
+  about: Ahmed is a Google Summer of Code 2025 contributor, where he worked on improving the display of Swift documentation during code completion in SourceKit-LSP and VS Code.
