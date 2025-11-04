@@ -560,6 +560,18 @@ mitchellallison:
   github: mitchellallison
   about: "Mitchell Allison works on Distributed Systems in Swift at Apple."
 
+kelvin:
+  name: Tien Quoc (Kelvin) Bui
+  email: tien-quoc.bui@epita.fr
+  github: tienquocbui
+  about: Kelvin is a Google Summer of Code 2025 code contributor, where he worked on improving the console output for Swift Testing.
+
+stmontgomery:
+  name: Stuart Montgomery
+  email: smontgomery@apple.com
+  github: stmontgomery
+  about: "Stuart is a member of the Testing Workgroup and manages the Swift Testing Frameworks team at Apple."
+
 heckj:
   name: Joe Heck
   email: j_heck@apple.com
