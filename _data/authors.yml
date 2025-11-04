@@ -446,8 +446,9 @@ davidswift:
 
 joannis:
   name: Joannis Orlandos
+  email: joannis@orlandos.nl
   github: joannis
-  about: Joannis is a member of the Swift Server Workgroup and maintainer of multiple open source Swift projects.
+  about: Joannis is the chair of the Android Workgroup, member of the Server Workgroup and maintainer of Hummingbird.
 
 matthewbastien:
   name: Matthew Bastien
@@ -510,6 +511,13 @@ parispittman:
    name: Paris Pittman
    github: parispittman
 
+marcprux:
+  name: Marc Prud'hommeaux
+  email: marc@skip.tools
+  gravatar: marcprux
+  github: marcprux
+  about: "Marc Prud'hommeaux works on bringing Swift application development to Android at Skip.tools."
+
 maxdesiatov:
   name: Max Desiatov
   github: maxdesiatov
@@ -557,3 +565,16 @@ mads:
   email: mads@madsodgaard.com
   github: madsodgaard
   about: Mads is a Google Summer of Code 2025 contributor, where he worked on bringing JNI support to the jextract tool which is part of the Swift Java interoperability project.
+
+heckj:
+  name: Joe Heck
+  email: j_heck@apple.com
+  github: heckj
+  gravatar: 34fa393a8013e04c03deff379ac0a6f3ea7a23c5861a6f7410b409974218f5d2
+  about: "Joe Heck works on Swift as part of the Open Source Program Office at Apple."
+
+davelester:
+  name: Dave Lester
+  github: davelester
+  gravatar: "376decb8be2d1c50df06daf50ef3b6b5"
+  about: "Dave Lester is a Senior Product Manager at Apple and member of the Swift website workgroup."

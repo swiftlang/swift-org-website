@@ -18,8 +18,9 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-configuration
         note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/156){:target='_blank'}.
@@ -32,8 +33,9 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
         license: Apache 2.0
         url: https://swiftpackageindex.com/swift-otel/swift-otel
         note: Nominated via [this forum post](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168/156){:target='_blank'}.
@@ -46,8 +48,10 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Wasm
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          Wasm, and Android
         license: No license
         url: https://swiftpackageindex.com/fummicc1/swift-complexity
         note: Discussed on [Episode 61 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/61-people-have-been-working-on-it-for-ten-years){:target='_blank'}.
@@ -79,7 +83,7 @@ categories:
           uses the AST representation of source files to provide accurate results and
           can be integrated into both Xcode projects and Swift packages.
         owner: Realm
-        swift_compatibility: 5.10+
+        swift_compatibility: 6.0+
         platform_compatibility:
           - Apple
           - Linux
@@ -94,7 +98,7 @@ categories:
         swift_compatibility: 6.0+
         platform_compatibility:
           - Apple
-        platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-composable-architecture
       - name: swift-testing
@@ -106,8 +110,10 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Wasm
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          Wasm, and Android
         license: Apache 2.0
         url: https://swiftpackageindex.com/swiftlang/swift-testing
       - name: Defaults
@@ -130,22 +136,25 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-dependencies
-      - name: swift-case-paths
-        description: CasePaths extends the functionality of key paths to enum cases, allowing
-          for the extraction, modification, and testing of associated values in enums.
+      - name: swift-perception
+        description: Offers observation tools for earlier versions of Swift, mimicking
+          `@Observable` and providing compatibility with newer Swift observation features.
         owner: Point-Free
-        swift_compatibility: 5.10+
+        swift_compatibility: 6.0+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Wasm
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          Wasm, and Android
         license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-case-paths
+        url: https://swiftpackageindex.com/pointfreeco/swift-perception
   - name: Server
     slug: server
     brief: Do you need a hand putting together a Swift app for the server? Browse some
@@ -165,8 +174,9 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
         license: MIT
         url: https://swiftpackageindex.com/vapor/vapor
       - name: swift-openapi-generator
@@ -177,7 +187,8 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (macOS) and Linux
+          - Android
+        platform_compatibility_tooltip: Apple (macOS), Linux, and Android
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-openapi-generator
       - name: hummingbird
@@ -185,11 +196,13 @@ categories:
           Swift. It consists of an HTTP server, a web application framework, and extension
           modules.
         owner: Hummingbird
-        swift_compatibility: 5.10+
+        swift_compatibility: 6.0+
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS), Linux, and
+          Android
         license: Apache 2.0
         url: https://swiftpackageindex.com/hummingbird-project/hummingbird
       - name: fluent
@@ -200,8 +213,9 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
         license: MIT
         url: https://swiftpackageindex.com/vapor/fluent
       - name: console-kit
@@ -213,8 +227,9 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
         license: MIT
         url: https://swiftpackageindex.com/vapor/console-kit
       - name: MongoKitten
@@ -249,8 +264,9 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
         license: MIT
         url: https://swiftpackageindex.com/Alamofire/Alamofire
       - name: swift-nio
@@ -258,7 +274,7 @@ categories:
           protocol servers and clients. It uses non-blocking I/O for efficient handling
           of multiple connections.
         owner: Apple
-        swift_compatibility: 5.10+
+        swift_compatibility: 6.0+
         platform_compatibility:
           - Apple
           - Linux
@@ -266,6 +282,20 @@ categories:
           Linux
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-nio
+      - name: FlyingFox
+        description: FlyingFox enables the creation of lightweight, concurrent HTTP servers
+          with support for WebSockets and static file serving. It uses non blocking BSD
+          sockets to handle each connection with Swift concurrency.
+        owner: Simon Whitty
+        swift_compatibility: 5.10+
+        platform_compatibility:
+          - Apple
+          - Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
+        license: MIT
+        url: https://swiftpackageindex.com/swhitty/FlyingFox
       - name: Moya
         description: Moya is a network abstraction layer for Alamofire. It simplifies
           network calls and provides compile-time checking for API endpoints.
@@ -276,19 +306,6 @@ categories:
         platform_compatibility_tooltip: Apple (iOS, macOS, watchOS, tvOS)
         license: MIT
         url: https://swiftpackageindex.com/Moya/Moya
-      - name: FlyingFox
-        description: FlyingFox enables the creation of lightweight, concurrent HTTP servers
-          with support for WebSockets and static file serving. It uses non blocking BSD
-          sockets to handle each connection with Swift concurrency.
-        owner: Simon Whitty
-        swift_compatibility: 5.10+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/swhitty/FlyingFox
       - name: Pulse
         description: Pulse is a powerful logging system for Apple platforms. It records
           and inspects logs and network requests, and allows for real-time viewing and
@@ -330,23 +347,12 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Wasm
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          Wasm, and Android
         license: Apache 2.0
         url: https://swiftpackageindex.com/swiftlang/swift-testing
-      - name: swift-custom-dump
-        description: A collection of tools for debugging, diffing, and testing data structures
-          in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
-          and `XCTAssertNoDifference` for test assertions.
-        owner: Point-Free
-        swift_compatibility: 5.10+
-        platform_compatibility:
-          - Apple
-          - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
-        license: MIT
-        url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
       - name: swift-snapshot-testing
         description: SnapshotTesting is a delightful Swift snapshot testing library. It
           allows you to easily compare snapshots of views, view controllers, URL requests,
@@ -357,10 +363,26 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
         license: MIT
         url: https://swiftpackageindex.com/pointfreeco/swift-snapshot-testing
+      - name: swift-custom-dump
+        description: A collection of tools for debugging, diffing, and testing data structures
+          in Swift. Includes `customDump` for refined output, `diff` for textual diffs,
+          and `XCTAssertNoDifference` for test assertions.
+        owner: Point-Free
+        swift_compatibility: 5.10+
+        platform_compatibility:
+          - Apple
+          - Linux
+          - Wasm
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          Wasm, and Android
+        license: MIT
+        url: https://swiftpackageindex.com/pointfreeco/swift-custom-dump
       - name: Quick
         description: Quick is a behavior-driven development framework for Swift and Objective-C.
           It is inspired by RSpec, Specta, and Ginkgo. It comes with Nimble, a matcher
@@ -370,7 +392,9 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS) and Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, tvOS), Linux, and
+          Android
         license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Quick
       - name: Nimble
@@ -382,8 +406,10 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Wasm
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          Wasm, and Android
         license: Apache 2.0
         url: https://swiftpackageindex.com/Quick/Nimble
       - name: OCMockito
@@ -427,8 +453,10 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Wasm
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          Wasm, and Android
         license: Apache 2.0
         url: https://swiftpackageindex.com/apple/swift-log
       - name: Datadog
@@ -516,8 +544,9 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
         license: MIT
         url: https://swiftpackageindex.com/vapor/fluent
       - name: Supabase
@@ -529,8 +558,9 @@ categories:
         platform_compatibility:
           - Apple
           - Linux
-        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS) and
-          Linux
+          - Android
+        platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
+          and Android
         license: MIT
         url: https://swiftpackageindex.com/supabase/supabase-swift
       - name: Realm
