@@ -27,7 +27,7 @@ My name is Mads and I am excited to share with you what I have been working on f
 
 # Overview
 
-> You can also view Mads' presentation from the Serverside.swift conference about his work on this project: [Expanding Swift/Java Interoperability](https://www.youtube.com/watch?v=tOH6V1IvTAc).
+> You can also view Mads' presentation from the Serverside.swift conference about his work on this project: [Expanding Swift/Java Interoperability](https://www.youtube.com/watch?v=tOH6V1IvTAc). You may also have noticed it in action in the recent Swift.org blog post: [Announcing the Swift SDK for Android](https://www.swift.org/blog/nightly-swift-sdk-for-android/)!
 
 The [swift-java](https://github.com/swiftlang/swift-java) interoperability library provides the `swift-java jextract` tool, which automatically generates Java sources that are used to call Swift code from Java. Previously, this tool only worked using the [Foreign Function and Memory API (FFM)](https://docs.oracle.com/en/java/javase/21/core/foreign-function-and-memory-api.html), which requires JDK 22+, making it unavailable on platforms such as Android. The goal of this project was to extend the jextract tool, such that it is able to generate Java sources using JNI instead of FFM and thereby allowing more platforms to utilize Swift/Java interoperability. 
 
