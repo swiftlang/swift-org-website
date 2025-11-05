@@ -25,7 +25,7 @@ In this series of four posts, we'll highlight each of the Summer of Code contrib
 
 Hi everyone!
 
-This is Ahmed Elrefaey, I’m excited to share with you an update on my GSoC project, Improve the display of documentation during code completion in SourceKit-LSP, mentored by Hamish Knight.
+This is Ahmed Elrefaey. I’m excited to share with you an update on my GSoC project, Improve the display of documentation during code completion in SourceKit-LSP, mentored by Hamish Knight.
 
 ### Project Goals
 
