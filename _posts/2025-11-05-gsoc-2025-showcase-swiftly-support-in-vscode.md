@@ -27,7 +27,7 @@ To learn more, you can read the [full post on the Swift forums](https://forums.s
 
 ## Bringing Swiftly support to VS Code
 
-I am Priyambada Roul. I'm incredibly excited to share what I've been working on over the past three months as part of Google Summer of Code 2025 with Swift.org, alongside my mentors, @cmcgee1024 @matthewbastien
+I am Priyambada Roul. I'm incredibly excited to share what I've been working on over the past three months as part of Google Summer of Code 2025 with Swift.org, alongside my mentors, Chris McGee and Matthew Bastien.
 
 My project focused on integrating **Swiftly** (Swift's toolchain manager) into the **VS Code Swift extension.**
 
