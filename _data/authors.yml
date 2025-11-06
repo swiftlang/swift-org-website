@@ -564,13 +564,19 @@ kelvin:
   name: Tien Quoc (Kelvin) Bui
   email: tien-quoc.bui@epita.fr
   github: tienquocbui
-  about: Kelvin is a Google Summer of Code 2025 code contributor, where he worked on improving the console output for Swift Testing.
+  about: "Kelvin is a Google Summer of Code 2025 code contributor, where he worked on improving the console output for Swift Testing."
 
 stmontgomery:
   name: Stuart Montgomery
   email: smontgomery@apple.com
   github: stmontgomery
   about: "Stuart is a member of the Testing Workgroup and manages the Swift Testing Frameworks team at Apple."
+
+priyambada:
+  name: Priyambada Roul
+  email: priyaroul99@gmail.com
+  github: roulpriya
+  about: "Priyambada is a software developer based in Bangalore, working at Cashfree Payments. When she's not coding, she enjoys Bharatanatyam dance, painting, sculpting with clay, and experimenting with side projects on GitHub."
 
 heckj:
   name: Joe Heck
