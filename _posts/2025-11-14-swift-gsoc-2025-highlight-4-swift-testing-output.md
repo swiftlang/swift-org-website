@@ -1,29 +1,32 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2025-02-NN 10:00:00
+date: 2025-11-14 10:00:00
 title: "Swift GSoC 2025 highlight: Improved Console Output for Swift Testing"
 author: [ktoso, kelvin, stmontgomery]
 category: "Developer Tools"
 ---
 
-Another year of successful Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025 came to an end recently, and this year we'd like to shine some light on the projects and work accomplished during the summer!
+Another successful year of Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) recently came to an end, and we'd like to shine some light on the projects and work accomplished!
 
 Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
-to open source projects. Participants usually are students, but do not have to be.
+to open source projects.
 
-In this series of four posts, we'll highlight each of the Summer of Code contributors and their projects.
+In this series of four blog posts, we'll highlight each of the Summer of Code contributors and their projects.
+You can navigate between the posts using these convenient links:
 
-- [Bringing Swiftly support to VS Code](2025-11-NN-swift-gsoc-2025-highlight-1-vscode-swiftly.md)
-- [JNI mode for swift-java’s source jextract tool](2025-11-NN-swift-gsoc-2025-highlight-2-swift-java-jextract-jni-mode.md)
-- [Improve the display of documentation during code completion in SourceKit-LSP](2025-11-NN-swift-gsoc-2025-highlight-3-vscode-swift-lsp-documentation.md)
+- [Bringing Swiftly support to VS Code](2025-11-05-swift-gsoc-2025-highlight-1-vscode-swiftly.md)
+- [JNI mode for swift-java’s source jextract tool](2025-11-07-swift-gsoc-2025-highlight-2-swift-java-jextract-jni-mode.md)
+- [Improve the display of documentation during code completion in SourceKit-LSP](2025-11-12-swift-gsoc-2025-highlight-3-vscode-swift-lsp-documentation.md)
 - Improved Console Output for Swift Testing (this post)
+
+Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. The fourth, and last in this year's series,  project we're featuring on the blog improved the console output that is printed when running tests implemented with Swift Testing, contributed by Kelvin Bui. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improved-console-output-for-swift-testing/82060).
 
 ---
 
 ## Improved Console Output for Swift Testing 
 
-Hello everyone! My name is Kelvin Bui, and I'm excited to share my GSoC 2025 project, where I worked on improving the console output for the Swift Testing framework with my mentor, @stmontgomery.
+Hello everyone! My name is Kelvin Bui, and I'm excited to share my GSoC 2025 project, where I worked on improving the console output for the Swift Testing framework with my mentor, Stuart Montgomery.
 
 ### Overview
 
@@ -93,10 +96,6 @@ I learned how to accept and act on high-quality feedback from senior engineers, 
 
 ## Acknowledgements
 
-I'd like to express my deepest gratitude to my mentor, **Stuart Montgomery**, for his exceptional guidance, patience, and technical insights throughout this entire project. His mentorship has been invaluable.
+I'd like to express my deepest gratitude to my mentor, Stuart Montgomery, for his exceptional guidance, patience, and technical insights throughout this entire project. His mentorship has been invaluable.
 
 I'd also like to thank Jonathan Grynspan for his crucial, in-depth architectural feedback, which significantly improved the project's long-term viability. Thank you as well to **[Swift Testing Workgroup](https://www.swift.org/testing-workgroup/)**, and all the other members of the Swift community who provided thoughtful feedback on the forums. This project would not have been possible without your collective expertise and support.
-
-----
-
-If you'd like to learn more about this project, please [check out the full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improved-console-output-for-swift-testing/82060)!
