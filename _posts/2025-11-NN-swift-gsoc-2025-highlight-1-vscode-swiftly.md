@@ -1,13 +1,13 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2025-02-NN 10:00:00
-title: 'Swift GSoC 2025 highlight: Swiftly (Swift installer) support in Visual Studio Code
-author: [ktoso, priyambada]
+date: 2025-11-05 17:00:00
+title: 'GSoC 2025 Showcase: Swiftly support in Visual Studio Code
+author: [priyambada, ktoso]
 category: "Community"
 ---
 
-Another year of successful Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025 came to an end recently, and this year we'd like to shine some light on the projects and work acomplished during the summer!
+Another year of successful Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025 came to an end recently, and this year we'd like to shine some light on the projects and work accomplished during the summer!
 
 Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
 to open source projects. Participants usually are students, but do not have to be.
@@ -16,12 +16,12 @@ In this series of four posts, we'll highlight each of the Summer of Code contrib
 You can navigate between the posts using these convenient links:
 
 - Bringing Swiftly support to VS Code (this post)
-- [JNI mode for swift-java’s source jextract tool](2025-11-NN-swift-gsoc-2025-highlight-2-swift-java-jextract-jni-mode.md)
-- [Improve the display of documentation during code completion in SourceKit-LSP](2025-11-NN-swift-gsoc-2025-highlight-3-vscode-swift-lsp-documentation.md)
-- [Improved Console Output for Swift Testing](2025-11-NN-swift-gsoc-2025-highlight-4-swift-testing-output.md)
+- JNI mode for swift-java’s source jextract tool _(coming soon)_
+- Improved display of documentation during code completion in SourceKit-LSP _(coming soon)_
+- Improved console output for Swift Testing _(coming soon)_
 
-What follows, is a shortened writeup about their project and experience by the GSoC contributors. 
-If you'd like to learn more, please check out the full version of their posts on the Swift forums (linked below)!
+Each GSoC contributor has shared a writeup about their project and experience in the program.
+To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-bringing-swiftly-support-to-vs-code/81886).
 
 ---
 
@@ -80,8 +80,3 @@ Want to see what we built? Check out the repositories:
 I have linked all pull requests and technical details in my **[detailed project report](https://docs.google.com/document/d/1Mnb9ybmVkpL6pAgrpMbSg6EV3owA2rz_FgltvAXdnUE/edit?tab=t.0)**, which provides an in-depth look into the specific changes.
 
 This GSoC experience has been transformative. I came in as someone intimidated by large codebases, and I'm leaving with the confidence to tackle complex, multi-tool integrations. I'm excited to continue contributing to Swift community!
-
-
----
-
-If you'd like to learn more about this project, please [check out the full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-bringing-swiftly-support-to-vs-code/81886)!
