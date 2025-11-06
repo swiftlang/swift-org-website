@@ -20,6 +20,7 @@ In this series of four posts, we'll highlight each of the Summer of Code contrib
 - Improved Console Output for Swift Testing  _(coming soon)_
 
 The second GSoC 2025 project we’re featuring on the Swift blog improved Swift/Java interoperability, contributed by Mads Odgaard. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/8185).
+
 ---
 
 ## JNI mode for SwiftJava interoperability jextract tool
