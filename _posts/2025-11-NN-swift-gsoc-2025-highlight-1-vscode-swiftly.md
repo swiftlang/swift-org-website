@@ -2,7 +2,7 @@
 layout: new-layouts/post
 published: true
 date: 2025-11-05 17:00:00
-title: 'GSoC 2025 Showcase: Swiftly support in Visual Studio Code
+title: 'GSoC 2025 Showcase: Swiftly support in VS Code'
 author: [priyambada, ktoso]
 category: "Community"
 ---
@@ -10,9 +10,9 @@ category: "Community"
 Another year of successful Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025 came to an end recently, and this year we'd like to shine some light on the projects and work accomplished during the summer!
 
 Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
-to open source projects. Participants usually are students, but do not have to be.
+to open source projects.
 
-In this series of four posts, we'll highlight each of the Summer of Code contributors and their projects.
+In this series of four blog posts, we'll highlight each of the Summer of Code contributors and their projects.
 You can navigate between the posts using these convenient links:
 
 - Bringing Swiftly support to VS Code (this post)
@@ -33,7 +33,7 @@ My project focused on integrating **Swiftly** (Swift's toolchain manager) into t
 
 ## The Problem We Solved
 
-We've made switching toolchains easier with Swiftly, allowing you to install and switch between Swift versions without leaving VS Code.
+We've made switching toolchains easier with Swiftly, allowing you to install and switch between Swift versions without leaving VS Code. Developers can now:
 
 1. **Switch Swift versions** with a single click
 2. **Install new toolchains** without leaving VS Code
