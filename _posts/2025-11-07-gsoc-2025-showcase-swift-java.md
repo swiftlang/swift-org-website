@@ -89,7 +89,7 @@ You can learn more about how the memory allocation and management works [in the 
 
 An interesting aspect of an interoperability library such as `swift-java` is the memory management between the two sides, in this case the JVM and Swift. The FFM mode uses the FFM APIs around `MemorySegment` to allocate and manage native memory. We are not so lucky in JNI. In older Java versions there are different ways of allocating memory, such as `Unsafe` or `ByteBuffer.allocateDirect()`. We could have decided to use these and allocate memory on the Java side, like FFM, but instead we decided to move the responsibility to Swift, which allocates the memory instead. This had some nice upsides, as we did not have to mess the the witness tables like FFM does.
 
-> For more info on memory in FFM, I strongly recommend watching Konrad’s talk [try\! Swift Tokyo 2025 \- Foreign Function and Memory APIs and Swift/Java interoperability](https://www.youtube.com/watch?v=vgtzhTOhEbs)
+> For more info on memory in FFM, I strongly recommend watching Konrad’s talk [try! Swift Tokyo 2025 \- Foreign Function and Memory APIs and Swift/Java interoperability](https://www.youtube.com/watch?v=vgtzhTOhEbs)
 
 The most obvious place we need to allocate memory is when we initialize a wrapped Swift `class`. Take a look at the following generated code for a Swift initializer:  
 ```java  
@@ -119,14 +119,10 @@ func Java_com_example_swift_MySwiftClass__00024init__JJ(environment: UnsafeMutab
   return resultBits$.getJNIValue(in: environment!)
 }
 ```
-We are basically allocating memory for a single instance of `MySwiftClass`, initializing it to a new instance and returning the memory address of the pointer. It is the same approach for `struct` as well\!
+We are basically allocating memory for a single instance of `MySwiftClass`, initializing it to a new instance and returning the memory address of the pointer. It is the same approach for `struct` as well!
 
 # My experience with GSoC
 
-Google Summer of Code was an awesome experience for me\! I got to work with my favourite language on a library that is very relevant\! A **HUGE** thanks to my mentor @ktoso, who provided invaluable guidance, was always available for questions and allowed me to experiment and take ownership of the work\!
+Google Summer of Code was an awesome experience for me! I got to work with my favorite language on a library that is very relevant! A HUGE thanks to my mentor Konrad Malawski, who provided invaluable guidance, was always available for questions and allowed me to experiment and take ownership of the work!
 
-I would definitely recommend GSoC to anyone interested, it is a great way to engage with the open-source community, develop your skills and work with some talented people\! My number one advice would be to never be afraid of asking seemingly “stupid” questions, they might not be that stupid afterall.
-
----
-
-If you'd like to learn more about this project, please [check out the full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/81858) as it contains lots of more additional examples and in-depth discussion about memory management and trade-offs this project had to resolve!
+I would definitely recommend GSoC to anyone interested, it is a great way to engage with the open-source community, develop your skills and work with some talented people! My number one advice would be to never be afraid of asking seemingly “stupid” questions, they might not be that stupid afterall.
