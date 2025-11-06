@@ -7,7 +7,7 @@ author: [priyambada, ktoso]
 category: "Community"
 ---
 
-Another year of successful Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025 came to an end recently, and this year we'd like to shine some light on the projects and work accomplished during the summer!
+Another successful year of Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) recently came to an end, and we'd like to shine some light on the projects and work accomplished!
 
 Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
 to open source projects.
