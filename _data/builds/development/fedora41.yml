@@ -1,3 +1,8 @@
+- date: 2025-11-03 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2025-11-03-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2025-11-03-a-fedora41.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2025-11-03-a-fedora41.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2025-10-17 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2025-10-17-a
   download: swift-DEVELOPMENT-SNAPSHOT-2025-10-17-a-fedora41.tar.gz
