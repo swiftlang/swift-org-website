@@ -1,0 +1,35 @@
+- name: Saleem Abdulrasool
+  handle: compnerd
+  github: compnerd
+  affiliation: The Browser Company of New York
+  chair: true
+
+- name: Alastair Houghton
+  handle: al45tair
+  github: al45tair
+  affiliation: Apple (Swift)
+
+- name: Carl Peto
+  handle: carlos4242
+  github: carlpeto
+  affiliation: Apple (Swift)
+
+- name: Charles Zablit
+  handle: c_zablit
+  github: charles-zablit
+  affiliation: Apple (LLDB)
+
+- name: Clinton Nkwocha
+  handle: clintonpi
+  github: clintonpi
+  affiliation: Apple (Standard Library/Foundation)
+
+- name: Doug Schaefer
+  handle: dschaefer2
+  github: dschaefer2
+  affiliation: Apple (SwiftPM)
+
+- name: Mohamed Hegazy
+  handle: mhegazy
+  github: mhegazy
+  affiliation: The Browser Company of New York
