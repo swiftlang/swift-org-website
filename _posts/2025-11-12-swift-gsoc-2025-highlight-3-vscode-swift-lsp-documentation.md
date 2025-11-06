@@ -1,23 +1,34 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2025-02-NN 10:00:00
+date: 2025-11-12 10:00:00
 title: "Swift GSoC 2025 highlight: Improve the display of documentation during code completion in SourceKit-LSP"
-author: [ktoso, ahmedelrefaey, hamish]
+author: [ahmedelrefaey, hamish, ktoso]
 category: "Developer Tools"
 ---
 
-Another year of successful Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025 came to an end recently, and this year we'd like to shine some light on the projects and work accomplished during the summer!
+Another successful year of Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) recently came to an end, and we'd like to shine some light on the projects and work accomplished!
+
+Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
+to open source projects.
+
+In this series of four blog posts, we'll highlight each of the Summer of Code contributors and their projects.
+You can navigate between the posts using these convenient links:
+
+
+- [Bringing Swiftly support to VS Code](2025-11-NN-swift-gsoc-2025-highlight-1-vscode-swiftly.md)
+- [JNI mode for swift-java’s source jextract tool](2025-11-NN-swift-gsoc-2025-highlight-2-swift-java-jextract-jni-mode.md)
+- Improve the display of documentation during code completion in SourceKit-LSP _(this post)_
+- Improved console output for Swift Testing _(coming soon)_
+
+Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. The first project we're featuring on the blog brought Swiftly support to Visual Studio Code, contributed by Priyambada Roul.
+To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-bringing-swiftly-support-to-vs-code/81886).
 
 Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
 to open source projects. Participants usually are students, but do not have to be.
 
-In this series of four posts, we'll highlight each of the Summer of Code contributors and their projects.
+The third project we're featuring on the Swift blog improved how documentation is displayed by sourcekit-lsp and IDEs which make use of it, such as VS Code, contributed by Ahmed Elrefaey. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improve-the-display-of-documentation-during-code-completion-in-sourcekit-lsp/81976)!
 
-- [Bringing Swiftly support to VS Code](2025-11-NN-swift-gsoc-2025-highlight-1-vscode-swiftly.md)
-- [JNI mode for swift-java’s source jextract tool](2025-11-NN-swift-gsoc-2025-highlight-2-swift-java-jextract-jni-mode.md)
-- Improve the display of documentation during code completion in SourceKit-LSP (this post)
-- [Improved Console Output for Swift Testing](2025-11-NN-swift-gsoc-2025-highlight-4-swift-testing-output.md)
 
 ---
 
@@ -58,7 +69,3 @@ Here’s a quick demo of signature help in VS Code.
 ### Closing Thoughts
 
 I'm incredibly grateful for this opportunity to contribute to the Swift project, and I really learned a lot from this experience. I'd like to thank my mentor, Hamish Knight, for his unwavering support and guidance throughout this summer. I’d also like to thank Alex Hoppen, Rintaro Ishizaki, and Ben Barham for their valuable feedback during code review.
-
----
-
-If you'd like to learn more about this project, please [check out the full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improve-the-display-of-documentation-during-code-completion-in-sourcekit-lsp/81976)!
