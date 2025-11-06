@@ -1,9 +1,9 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2025-02-NN 10:00:00
-title: 'Swift GSoC 2025 highlight: JNI mode for SwiftJava interoperability jextract tool
-author: [ktoso, mads]
+date: 2025-11-07 10:00:00
+title: "Swift GSoC 2025 highlight: JNI mode for SwiftJava interoperability jextract tool"
+author: [mads, ktoso]
 category: "Community"
 ---
 
@@ -14,11 +14,12 @@ to open source projects. Participants usually are students, but do not have to b
 
 In this series of four posts, we'll highlight each of the Summer of Code contributors and their projects.
 
-- [Bringing Swiftly support to VS Code](2025-11-NN-swift-gsoc-2025-highlight-1-vscode-swiftly.md)
+- [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
 - JNI mode for swift-java’s source jextract tool (this post)
-- [Improve the display of documentation during code completion in SourceKit-LSP](2025-11-NN-swift-gsoc-2025-highlight-3-vscode-swift-lsp-documentation.md)
-- [Improved Console Output for Swift Testing](2025-11-NN-swift-gsoc-2025-highlight-4-swift-testing-output.md)
+- Improved display of documentation during code completion in SourceKit-LSP _(coming soon)_
+- Improved Console Output for Swift Testing  _(coming soon)_
 
+The second GSoC 2025 project we’re featuring on the Swift blog improved Swift/Java interoperability, contributed by Mads Odgaard. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/8185).
 ---
 
 ## JNI mode for SwiftJava interoperability jextract tool
