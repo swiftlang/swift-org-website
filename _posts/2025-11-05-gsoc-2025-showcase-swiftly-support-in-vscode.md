@@ -20,7 +20,7 @@ You can navigate between the posts using these convenient links:
 - Improved display of documentation during code completion in SourceKit-LSP _(coming soon)_
 - Improved console output for Swift Testing _(coming soon)_
 
-Each GSoC contributor has shared a writeup about their project and experience in the program.
+Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. The first project we're featuring on the blog brought Swiftly support to Visual Studio Code, contributed by Priyambada Roul.
 To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-bringing-swiftly-support-to-vs-code/81886).
 
 ---
@@ -47,16 +47,16 @@ We've made switching toolchains easier with Swiftly, allowing you to install and
 The VS Code extension now provides an entirely **seamless toolchain management experience**:
 
 * We now support macOS too!
-* See your current Swift version in the VS Code status bar.
-* Click the version to switch between installed toolchains instantly.
-* Install any Swift version directly from VS Code with real-time progress.
+* See your current Swift version in the VS Code status bar
+* Click the version to switch between installed toolchains instantly
+* Install any Swift version directly from VS Code with real-time progress
 * Automatic detection of .swift-version files with prompts to switch
 
 ### Enhanced Swiftly CLI
 
-* Swiftly now supports a machine-readable JSON output format.
+* Swiftly now supports a machine-readable JSON output format
 * Swiftly now reports toolchain installation progress updates in **JSONL format**
-* We have polished error reporting.
+* We have polished error reporting
 
 ![](/assets/images/gsoc-25/swiftly-1.jpg)
 
