@@ -37,7 +37,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
    * __[C++ Interoperability](/cxx-interop-workgroup)__ is a team that works on adding the support for the bidirectional interoperability between Swift and C++.
    * __[Contributor Experience](/contributor-experience-workgroup)__ is a team that supports contributors to the Swift project, including contributions on the Swift Forums.
    * __[Documentation](/documentation-workgroup)__ is a team that helps guide the documentation experience for Swift.
-   * __[Foundation](/foundation-workgroup)__ is a team responsible for the stewardship and future direction of the Foundation framework.
+   * __[Foundation](/foundation-workgroup)__ is a team that helps guide the direction of Foundation and other low-level Swift libraries.
    * __[Swift on Server](/sswg)__ is a team that promotes the use of Swift for developing and deploying server applications.
    * __[Testing](/testing-workgroup)__ is a team that helps guide the experience, libraries, and tools for testing Swift code.
    * __[Website](/website-workgroup/)__ is a team that helps guide the evolution on the Swift.org website.
