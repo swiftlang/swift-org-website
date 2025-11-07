@@ -7,19 +7,14 @@ author: [mads, ktoso]
 category: "Community"
 ---
 
-Another year of successful Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025 came to an end recently, and this year we'd like to shine some light on the projects and work acomplished during the summer!
-
-Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
-to open source projects. Participants usually are students, but do not have to be.
-
-In this series of four posts, we'll highlight each of the Summer of Code contributors and their projects.
+This is the second post our series showcasing the Swift community’s participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025. Learn more about the projects and work accomplished:
 
 - [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
 - JNI mode for swift-java’s source jextract tool (this post)
 - Improved display of documentation during code completion in SourceKit-LSP _(coming soon)_
 - Improved Console Output for Swift Testing  _(coming soon)_
 
-The second GSoC 2025 project we’re featuring on the Swift blog improved Swift/Java interoperability, contributed by Mads Odgaard. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/8185).
+Each GSoC contributor has shared a writeup about their project and experience in the program on the Swift forums. Today’s featured project improved interoperability between Swift and Java, and was contributed by Mads Odgaard. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/8185).
 
 ---
 
