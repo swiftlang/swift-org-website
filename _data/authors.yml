@@ -202,7 +202,7 @@ ktoso:
   email: ktoso@apple.com
   github: ktoso
   gravatar: 03cb20b97f6a14701c24c4e088b6af87
-  about: "Konrad Malawski is a member of a team developing foundational server-side Swift libraries at Apple, with focus on distributed systems and concurrency."
+  about: "Konrad is part of the Swift language team and Swift on Server Workgroup, where he works on language and runtime features with particular interest in supporting server and distributed computing use-cases, and expanding the Swift ecosystem."
 
 compnerd:
   name: Saleem Abdulrasool
@@ -559,6 +559,12 @@ mitchellallison:
   email: mitchell_allison@apple.com
   github: mitchellallison
   about: "Mitchell Allison works on Distributed Systems in Swift at Apple."
+
+mads:
+  name: Mads Odgaard
+  email: mads@madsodgaard.com
+  github: madsodgaard
+  about: Mads is a Tech Lead at Frameo. During Google Summer of Code 2025, he worked on bringing JNI support to the jextract tool which is part of the Swift Java interoperability project.
 
 priyambada:
   name: Priyambada Roul
