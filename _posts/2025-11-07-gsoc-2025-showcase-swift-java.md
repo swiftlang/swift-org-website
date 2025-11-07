@@ -20,7 +20,7 @@ Each GSoC contributor has shared a writeup about their project and experience in
 
 ## JNI mode for SwiftJava interoperability jextract tool
 
-My name is Mads and I am excited to share with you what I have been working on for Swift/Java interoperability over the summer with my mentor Konrad for Google Summer of Code 2025.
+My name is Mads and I am excited to share with you what I have been working on for Swift/Java interoperability over the summer with my mentor Konrad Malawski for Google Summer of Code 2025.
 
 # Overview
 
