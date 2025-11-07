@@ -15,7 +15,7 @@ With the Temporal Swift SDK, you can build resilient workflows that survive infr
 
 ## Writing durable workflows in Swift
 
-The Temporal Swift SDK enables developers to write reliable and durable workflows [with native Swift APIs and modern concurrency patterns]. Previously, Swift developers had to resort to more traditional approaches for building fault-tolerant workflows, such as implementing custom state machines on top of database systems or message queuing services, solutions that often required significant boilerplate code and careful handling of edge cases that Temporal manages automatically.
+The Temporal Swift SDK enables developers to write reliable and durable workflows. Previously, Swift developers had to resort to more traditional approaches for building fault-tolerant workflows, such as implementing custom state machines on top of database systems or message queuing services, solutions that often required significant boilerplate code and careful handling of edge cases that Temporal manages automatically.
 
 The SDK provides a seamless Swift developer experience by:
 
