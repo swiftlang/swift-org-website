@@ -9,15 +9,23 @@ category: "Developer Tools"
 
 The [Temporal Swift SDK](https://github.com/apple/swift-temporal-sdk) is now available as an open source project. This Swift package enables you to build reliable distributed systems using Temporal’s durable execution platform.
 
-Building reliable distributed systems requires handling failures gracefully, coordinating complex workflows across multiple services, and ensuring long-running processes complete successfully. With the Temporal Swift SDK, you can now build fault-tolerant applications using Swift's modern concurrency features. The Temporal Swift SDK enables you to:
+Building reliable distributed systems requires handling failures gracefully, coordinating complex workflows across multiple services, and ensuring long-running processes complete successfully. Rather than develop these resiliency features into every application or service you develop, Temporal offers the pattern of a __workflow__. Workflows encapsulate your code so it runs durably and handles many common failure scenarios.
 
-- **Build resilient workflows that survive infrastructure failures**, allowing your applications to recover automatically from crashes, network issues, or service restarts without losing state.
-- **Orchestrate complex distributed systems with type-safe APIs**, leveraging Swift's strong type system to catch errors at build time rather than runtime.
-- **Integrate seamlessly with Swift Concurrency**, using familiar async/await patterns and Structured Concurrency to build maintainable workflow code.
+With the Temporal Swift SDK, you can:
+
+- Build resilient workflows that survive infrastructure failures.
+- Orchestrate complex distributed systems with type-safe APIs.
+- Integrate seamlessly with Swift Concurrency.
+
+Swift runs on many platforms including Linux and is actively used for building production cloud services. We welcome Temporal to a growing ecosystem of Swift packages.
 
 Temporal has also published a [blog post](http://temporal.io/blog/announcing-the-swift-temporal-sdk) detailing the introduction of the Temporal Swift SDK highlighting the unique advantages this brings to Swift developers building distributed systems.
 
-This new Temporal Swift SDK fills a critical gap in the Swift ecosystem, enabling developers to write reliable and durable workflows with native Swift APIs and modern concurrency patterns. Before this SDK, Swift developers had to resort to more traditional approaches for building fault-tolerant workflows, such as implementing custom state machines on top of database systems or message queuing services, solutions that often required significant boilerplate code and careful handling of edge cases that Temporal manages automatically.
+## Writing durable workflows in Swift
+
+[work in progress]
+
+The Temporal Swift SDK enables developers to write reliable and __durable workflows with native Swift APIs and modern concurrency patterns. Previously, Swift developers had to resort to more traditional approaches for building fault-tolerant workflows, such as implementing custom state machines on top of database systems or message queuing services, solutions that often required significant boilerplate code and careful handling of edge cases that Temporal manages automatically.
 
 The design and implementation of the Temporal Swift SDK has been informed and validated by multiple production use-cases, ensuring that the SDK meets real-world requirements for performance, reliability, and developer experience.
 
@@ -36,6 +44,8 @@ The Temporal Swift SDK can be used across a wide range of real-world scenarios w
 - **Activities** perform the actual work, such as calling external APIs, processing data, or interacting with databases. Activities should be idempotent, meaning they can be safely retried without causing unintended side effects.
 
 Modern distributed systems face common challenges: coordinating multiple services, handling partial failures, ensuring consistency across operations, and managing long-running processes. Traditional approaches require building custom retry logic, state machines, and coordination mechanisms. Temporal provides a platform that handles these concerns, allowing you to focus on your business logic.
+
+Temporal has also published a [blog post](http://temporal.io/blog/announcing-the-swift-temporal-sdk) detailing the introduction of the Temporal Swift SDK highlighting the unique advantages this brings to Swift developers building distributed systems.
 
 ## Getting started
 
