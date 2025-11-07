@@ -7,7 +7,7 @@ author: [FranzBusch]
 category: "Developer Tools"
 ---
 
-[Temporal Swift SDK](https://github.com/apple/swift-temporal-sdk), a Swift package for building reliable distributed systems with durable execution, is now available as an open source project.
+The [Temporal Swift SDK](https://github.com/apple/swift-temporal-sdk) is now available as an open source project. This Swift package enables you to build reliable distributed systems using Temporal’s durable execution platform.
 
 Building reliable distributed systems requires handling failures gracefully, coordinating complex workflows across multiple services, and ensuring long-running processes complete successfully. With the Temporal Swift SDK, you can now build fault-tolerant applications using Swift's modern concurrency features. The Temporal Swift SDK enables you to:
 
