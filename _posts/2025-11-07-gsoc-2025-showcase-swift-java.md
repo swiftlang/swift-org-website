@@ -2,19 +2,21 @@
 layout: new-layouts/post
 published: true
 date: 2025-11-07 10:00:00
-title: "Swift GSoC 2025 highlight: JNI mode for SwiftJava interoperability jextract tool"
+title: "GSoC 2025 Showcase: Extending Swift-Java Interoperability"
 author: [mads, ktoso]
 category: "Community"
 ---
 
-This is the second post our series showcasing the Swift community’s participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025. Learn more about the projects and work accomplished:
+This is the second post in our series showcasing the Swift community’s participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025. Learn more about the projects and work accomplished:
 
 - [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
-- JNI mode for swift-java’s source jextract tool (this post)
+- Extending Swift-Java Interoperability (this post)
 - Improved display of documentation during code completion in SourceKit-LSP _(coming soon)_
 - Improved Console Output for Swift Testing  _(coming soon)_
 
-Each GSoC contributor has shared a writeup about their project and experience in the program on the Swift forums. Today’s featured project improved interoperability between Swift and Java, and was contributed by Mads Odgaard. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/8185).
+Each GSoC contributor has shared a writeup about their project and experience in the program on the Swift forums. Today’s featured project improved interoperability between Swift and Java, contributed by Mads Odgaard. Mads recently presented on this project at the Server-Side Swift conference: [Expanding Swift/Java Interoperability](https://www.youtube.com/watch?v=tOH6V1IvTAc), and you may have noticed it in action in the recent Swift.org blog post: [Announcing the Swift SDK for Android](https://www.swift.org/blog/nightly-swift-sdk-for-android/)!
+
+To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/8185).
 
 ---
 
@@ -23,8 +25,6 @@ Each GSoC contributor has shared a writeup about their project and experience in
 My name is Mads and I am excited to share with you what I have been working on for Swift/Java interoperability over the summer with my mentor Konrad Malawski for Google Summer of Code 2025.
 
 # Overview
-
-> You can also view Mads' presentation from the Serverside.swift conference about his work on this project: [Expanding Swift/Java Interoperability](https://www.youtube.com/watch?v=tOH6V1IvTAc). You may also have noticed it in action in the recent Swift.org blog post: [Announcing the Swift SDK for Android](https://www.swift.org/blog/nightly-swift-sdk-for-android/)!
 
 The [swift-java](https://github.com/swiftlang/swift-java) interoperability library provides the `swift-java jextract` tool, which automatically generates Java sources that are used to call Swift code from Java. Previously, this tool only worked using the [Foreign Function and Memory API (FFM)](https://docs.oracle.com/en/java/javase/21/core/foreign-function-and-memory-api.html), which requires JDK 22+, making it unavailable on platforms such as Android. The goal of this project was to extend the jextract tool, such that it is able to generate Java sources using JNI instead of FFM and thereby allowing more platforms to utilize Swift/Java interoperability. 
 
@@ -80,7 +80,7 @@ public final class MySwiftClass implements JNISwiftInstance {
 ```
 We also generate additional Swift thunks that actually implement the `native` methods and call the underlying Swift methods.
 
-You can learn more about how the memory allocation and management works [in the full version of this post of this post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/81858)!
+You can learn more about how the memory allocation and management works [in the full version of this post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/81858)!
 
 An interesting aspect of an interoperability library such as `swift-java` is the memory management between the two sides, in this case the JVM and Swift. The FFM mode uses the FFM APIs around `MemorySegment` to allocate and manage native memory. We are not so lucky in JNI. In older Java versions there are different ways of allocating memory, such as `Unsafe` or `ByteBuffer.allocateDirect()`. We could have decided to use these and allocate memory on the Java side, like FFM, but instead we decided to move the responsibility to Swift, which allocates the memory instead. This had some nice upsides, as we did not have to mess the the witness tables like FFM does.
 
