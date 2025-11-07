@@ -100,7 +100,8 @@ Here we see that we are calling a native method `$init` which returns a `long`. 
 1. `SwiftArena.ofConfined()`: returns a confined arena which is used with *try-with-resource*, to deallocate all instances at the end of some scope.  
 2. `SwiftArena.ofAuto()`: returns an arena that deallocates instances once the garbage-collector has decided to do so.
 
-This concept also exists in the FFM mode, and I recommend watching Konrad’s talk to learn more about them!  
+This concept also exists in the FFM mode, and I recommend watching [Konrad’s talk at 
+try! Swift Tokyo 2025](https://www.youtube.com/watch?v=vgtzhTOhEbs) to learn more!
 
 If we take a look at the native implementation of `$init` in Swift, we see how we allocate and initialize the memory:  
 ```swift  
