@@ -16,7 +16,7 @@ This is the second post in our series showcasing the Swift community’s partici
 
 Each GSoC contributor has shared a writeup about their project and experience in the program on the Swift forums. Today’s featured project improved interoperability between Swift and Java, contributed by Mads Odgaard. Mads recently presented on this project at the Server-Side Swift conference: [Expanding Swift/Java Interoperability](https://www.youtube.com/watch?v=tOH6V1IvTAc), and you may have noticed it in action in the recent Swift.org blog post: [Announcing the Swift SDK for Android](https://www.swift.org/blog/nightly-swift-sdk-for-android/)!
 
-To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/8185).
+To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-new-jni-mode-added-to-swift-java-jextract-tool/81858).
 
 ---
 
