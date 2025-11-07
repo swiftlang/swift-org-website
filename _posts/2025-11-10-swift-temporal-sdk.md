@@ -41,11 +41,11 @@ The Temporal Swift SDK can be used across a wide range of real-world scenarios w
 
 Modern distributed systems face common challenges: coordinating multiple services, handling partial failures, ensuring consistency across operations, and managing long-running processes. Traditional approaches require building custom retry logic, state machines, and coordination mechanisms. Temporal provides a platform that handles these concerns, allowing you to focus on your business logic.
 
-Temporal has also published a [blog post](http://temporal.io/blog/announcing-the-swift-temporal-sdk) detailing the introduction of the Temporal Swift SDK highlighting the unique advantages this brings to Swift developers building distributed systems.
+Temporal has also published a [blog post](https://temporal.io/blog/announcing-the-swift-temporal-sdk) detailing the introduction of the Temporal Swift SDK highlighting the unique advantages this brings to Swift developers building distributed systems.
 
 ## Getting started
 
-To get started with the Temporal Swift SDK, explore its [documentation](https://swiftpackageindex.com/apple/swift-temporal-sdk/main/documentation/temporal) which provides detailed guides for implementing workflows and activities. The repository also includes a rich collection of [example projects](http://github.com/apple/swift-temporal-sdk/tree/main/Examples), demonstrating the SDK's capabilities across different use cases from simple task orchestration to complex multi-step business processes. For a deeper understanding of Temporal's core concepts and architectural patterns, be sure to check out the [general Temporal documentation](https://docs.temporal.io/), which provides valuable context for building robust distributed systems.
+To get started with the Temporal Swift SDK, explore its [documentation](https://swiftpackageindex.com/apple/swift-temporal-sdk/main/documentation/temporal) which provides detailed guides for implementing workflows and activities. The repository also includes a rich collection of [example projects](https://github.com/apple/swift-temporal-sdk/tree/main/Examples), demonstrating the SDK's capabilities across different use cases from simple task orchestration to complex multi-step business processes. For a deeper understanding of Temporal's core concepts and architectural patterns, be sure to check out the [general Temporal documentation](https://docs.temporal.io/), which provides valuable context for building robust distributed systems.
 
 ## Community and feedback
 
