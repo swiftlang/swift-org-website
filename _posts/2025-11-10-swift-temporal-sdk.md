@@ -11,30 +11,26 @@ The [Temporal Swift SDK](https://github.com/apple/swift-temporal-sdk) is now ava
 
 Building reliable distributed systems requires handling failures gracefully, coordinating complex workflows across multiple services, and ensuring long-running processes complete successfully. Rather than develop these resiliency features into every application or service you develop, Temporal offers the pattern of a __workflow__. Workflows encapsulate your code so it runs durably and handles many common failure scenarios.
 
-With the Temporal Swift SDK, you can:
-
-- Build resilient workflows that survive infrastructure failures.
-- Orchestrate complex distributed systems with type-safe APIs.
-- Integrate seamlessly with Swift Concurrency.
-
-Swift runs on many platforms including Linux and is actively used for building production cloud services. We welcome Temporal to a growing ecosystem of Swift packages.
-
-Temporal has also published a [blog post](http://temporal.io/blog/announcing-the-swift-temporal-sdk) detailing the introduction of the Temporal Swift SDK highlighting the unique advantages this brings to Swift developers building distributed systems.
+With the Temporal Swift SDK, you can build resilient workflows that survive infrastructure failures. The SDK brings another essential tool for developers that build highly reliable and scalable production cloud services.
 
 ## Writing durable workflows in Swift
 
-[work in progress]
+The Temporal Swift SDK enables developers to write reliable and durable workflows [with native Swift APIs and modern concurrency patterns]. Previously, Swift developers had to resort to more traditional approaches for building fault-tolerant workflows, such as implementing custom state machines on top of database systems or message queuing services, solutions that often required significant boilerplate code and careful handling of edge cases that Temporal manages automatically.
 
-The Temporal Swift SDK enables developers to write reliable and __durable workflows with native Swift APIs and modern concurrency patterns. Previously, Swift developers had to resort to more traditional approaches for building fault-tolerant workflows, such as implementing custom state machines on top of database systems or message queuing services, solutions that often required significant boilerplate code and careful handling of edge cases that Temporal manages automatically.
+The SDK provides a seamless Swift developer experience by:
 
-The design and implementation of the Temporal Swift SDK has been informed and validated by multiple production use-cases, ensuring that the SDK meets real-world requirements for performance, reliability, and developer experience.
+- Using familiar async/await patterns and Structured Concurrency to build maintainable workflow code.
+- Leveraging Swift's strong type system to catch errors at build time rather than runtime.
+- Providing macros to reduce boilerplate when authoring workflows.
+
+The design and implementation of the Temporal Swift SDK has been informed and validated by multiple production use-cases, ensuring that the SDK meets real-world requirements for performance, reliability, and developer experience. 
 
 The Temporal Swift SDK can be used across a wide range of real-world scenarios where reliability and coordination are paramount, including:
 
-- E-commerce and payment processing where multi-step payment processing requires automatic retry and rollback capabilities
-- Data processing & ETL where you may be performing large-scale data transformation pipelines
-- Business process automation with approval workflows and human-in-the-loop interactions
-- Monitoring and operations with scheduled maintenance and cleanup tasks
+- E-commerce and payment processing where multi-step payment processing requires automatic retry and rollback capabilities.
+- Data processing & ETL where you may be performing large-scale data transformation pipelines.
+- Business process automation with approval workflows and human-in-the-loop interactions.
+- Monitoring and operations with scheduled maintenance and cleanup tasks.
 
 ## What is Temporal and why does it matter?
 
@@ -51,7 +47,7 @@ Temporal has also published a [blog post](http://temporal.io/blog/announcing-the
 
 To get started with the Temporal Swift SDK, explore its [documentation](https://swiftpackageindex.com/apple/swift-temporal-sdk/main/documentation/temporal) which provides detailed guides for implementing workflows and activities. The repository also includes a rich collection of [example projects](http://github.com/apple/swift-temporal-sdk/tree/main/Examples), demonstrating the SDK's capabilities across different use cases from simple task orchestration to complex multi-step business processes. For a deeper understanding of Temporal's core concepts and architectural patterns, be sure to check out the [general Temporal documentation](https://docs.temporal.io/), which provides valuable context for building robust distributed systems.
 
-Community and feedback
+## Community and feedback
 
 Temporal Swift SDK is an open source project and we're eager to hear from the Swift community. Whether you're building microservices, coordinating long-running processes, or simply curious about durable execution, we'd love to know how the Temporal Swift SDK works for you. The SDK provides a powerful foundation for building reliable distributed systems in Swift.
 
