@@ -120,4 +120,4 @@ We are basically allocating memory for a single instance of `MySwiftClass`, init
 
 Google Summer of Code was an awesome experience for me! I got to work with my favorite language on a library that is very relevant! A HUGE thanks to my mentor Konrad Malawski, who provided invaluable guidance, was always available for questions and allowed me to experiment and take ownership of the work!
 
-I would definitely recommend GSoC to anyone interested, it is a great way to engage with the open-source community, develop your skills and work with some talented people! My number one advice would be to never be afraid of asking seemingly “stupid” questions, they might not be that stupid afterall.
+I would definitely recommend GSoC to anyone interested, it is a great way to engage with the open-source community, develop your skills and work with some talented people! My number one advice would be to never be afraid of asking what might seem to be embarrassing questions, they might actually turn out to be great questions and lead to useful discussions and solutions.
