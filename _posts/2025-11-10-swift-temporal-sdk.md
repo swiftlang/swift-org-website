@@ -38,7 +38,7 @@ The Temporal Swift SDK can be used across a wide range of real-world scenarios w
 - Business process automation with approval workflows and human-in-the-loop interactions.
 - Monitoring and operations with scheduled maintenance and cleanup tasks.
 
-## What is Temporal and why does it matter?
+## What is Temporal and why does it matter?
 
 [Temporal](https://temporal.io) is an open source platform for building reliable distributed applications. At its core is the concept of durable execution, your code runs to completion even in the face of infrastructure failures. When a worker crashes or restarts, Temporal automatically resumes your workflow from where it left off, without requiring you to write complex retry logic or state management code. This is achieved through Temporal's architecture, which separates workflow orchestration from actual work execution:
 
