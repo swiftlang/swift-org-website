@@ -5,6 +5,12 @@ date: 2025-11-10 10:00:00
 title: "Introducing Temporal Swift SDK: Building durable and reliable workflows"
 author: [FranzBusch]
 category: "Developer Tools"
+featured-image:
+  url: '/assets/images/swift-temporal-sdk-blog/blog-hero@2x.png'
+  alt: 'Featured blog image with the diagram of a Temporal workflow'
+featured-image-dark:
+  url: '/assets/images/swift-temporal-sdk-blog/blog-hero-dark@2x.png'
+  alt: 'Featured blog image with the diagram of a Temporal workflow'
 ---
 
 The [Temporal Swift SDK](https://github.com/apple/swift-temporal-sdk) is now available as an open source project. This Swift package enables you to build reliable distributed systems using Temporal’s durable execution platform.
