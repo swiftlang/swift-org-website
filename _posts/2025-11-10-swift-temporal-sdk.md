@@ -13,7 +13,7 @@ featured-image-dark:
   alt: 'Featured blog image with the diagram of a Temporal workflow'
 ---
 
-The [Temporal Swift SDK](https://github.com/apple/swift-temporal-sdk) is now available as an open source project. This Swift package enables you to build reliable distributed systems using Temporal’s durable execution platform.
+The [Temporal Swift SDK](https://github.com/apple/swift-temporal-sdk) is now available as an open source project.
 
 Building reliable distributed systems requires handling failures gracefully, coordinating complex workflows across multiple services, and ensuring long-running processes complete successfully. Rather than develop these resiliency features into every application or service you develop, Temporal offers the pattern of a __workflow__. Workflows encapsulate your code so it runs durably and handles many common failure scenarios.
 
