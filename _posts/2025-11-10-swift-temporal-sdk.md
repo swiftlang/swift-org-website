@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2025-11-10 10:00:00
+date: 2025-11-10 13:40:00
 title: "Introducing Temporal Swift SDK: Building durable and reliable workflows"
 author: [FranzBusch]
 category: "Developer Tools"
