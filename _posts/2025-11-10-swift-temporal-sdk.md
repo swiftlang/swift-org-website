@@ -44,7 +44,7 @@ Modern distributed systems face common challenges: coordinating multiple service
 
 To get started with the Temporal Swift SDK, explore its [documentation](https://swiftpackageindex.com/apple/swift-temporal-sdk/main/documentation/temporal) which provides detailed guides for implementing workflows and activities. The repository also includes a rich collection of [example projects](https://github.com/apple/swift-temporal-sdk/tree/main/Examples), demonstrating the SDK's capabilities across different use cases from simple task orchestration to complex multi-step business processes. 
 
-For a deeper understanding of Temporal's core concepts and architectural patterns, check out the [general Temporal documentation](https://docs.temporal.io/), which provides valuable context for building robust distributed systems. Temporal published a [blog post](https://temporal.io/blog/announcing-the-swift-temporal-sdk) highlighting the advantages the SDK brings to Swift developers building distributed systems. For a video introduction, watch this [conference presentation](https://www.youtube.com/watch?v=2KW78hoPBWA) from Server-Side Swift 2025 where the project was announced.
+For a deeper understanding of Temporal's core concepts and architectural patterns, check out the [general Temporal documentation](https://docs.temporal.io/), which provides valuable context for building robust distributed systems. For a video introduction, watch this [conference presentation](https://www.youtube.com/watch?v=2KW78hoPBWA) from Server-Side Swift 2025 where the project was announced.
 
 ## Community and feedback
 
