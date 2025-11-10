@@ -27,7 +27,7 @@ To learn more, you can read the [full post on the Swift forums](https://forums.s
 Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
 to open source projects. Participants usually are students, but do not have to be.
 
-The third project we're featuring on the Swift blog improved how documentation is displayed by sourcekit-lsp and IDEs which make use of it, such as VS Code, contributed by Ahmed Elrefaey. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improve-the-display-of-documentation-during-code-completion-in-sourcekit-lsp/81976)!
+The third project we're featuring on the Swift blog improved how documentation is displayed by SourceKit-LSP and IDEs which make use of it, such as VS Code, contributed by Ahmed Elrefaey. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improve-the-display-of-documentation-during-code-completion-in-sourcekit-lsp/81976)!
 
 
 ---
