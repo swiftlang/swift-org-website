@@ -17,7 +17,7 @@ The [Temporal Swift SDK](https://github.com/apple/swift-temporal-sdk) is now ava
 
 Building reliable distributed systems requires handling failures gracefully, coordinating complex workflows across multiple services, and ensuring long-running processes complete successfully. Rather than develop these resiliency features into every application or service you develop, Temporal offers the pattern of a __workflow__. Workflows encapsulate your code so it runs durably and handles many common failure scenarios.
 
-With the Temporal Swift SDK, you can build resilient workflows that survive infrastructure failures. The SDK brings another essential tool for developers that build highly reliable and scalable production cloud services.
+With the Temporal Swift SDK, you can build resilient workflows that survive infrastructure failures. The SDK brings an essential tool for developers that build highly reliable and scalable production cloud services.
 
 ## Writing durable workflows in Swift
 
