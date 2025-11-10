@@ -15,7 +15,7 @@ featured-image-dark:
 
 The [Temporal Swift SDK](https://github.com/apple/swift-temporal-sdk) is now available as an open source project.
 
-Building reliable distributed systems requires handling failures gracefully, coordinating complex workflows across multiple services, and ensuring long-running processes complete successfully. Rather than develop these resiliency features into every application or service you develop, Temporal offers the pattern of a __workflow__. Workflows encapsulate your code so it runs durably and handles many common failure scenarios.
+Building reliable distributed systems requires handling failures gracefully, coordinating complex actions across multiple services, and ensuring long-running processes complete successfully. Rather than develop these resiliency features into every application or service you develop, an alternative approach is to use __workflows__. Workflows encapsulate your code so it runs durably and handles many common failure scenarios.
 
 Temporal is widely used for workflow orchestration across many languages. With the release of the SDK, Temporal is now available for Swift developers building production cloud services.
 
