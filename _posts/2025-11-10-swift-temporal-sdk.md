@@ -19,6 +19,8 @@ Building reliable distributed systems requires handling failures gracefully, coo
 
 Temporal is widely used for workflow orchestration across many languages. With the release of the SDK, Temporal is now available for Swift developers building production cloud services.
 
+An [announcement post](https://temporal.io/blog/temporal-now-supports-swift) is also available on the Temporal blog with more information for their developer community.
+
 ## Writing durable workflows in Swift
 
 Durable workflows run to completion even when infrastructure fails. If your server crashes mid-execution, Temporal automatically resumes the workflow from where it left off with no lost state or manual intervention required. By bringing this capability to the Swift ecosystem, developers can focus on application logic while Temporal handles state management, retries, and recovery.
