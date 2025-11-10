@@ -25,7 +25,7 @@ Durable workflows run to completion even when infrastructure fails. If your serv
 
 The SDK provides a seamless Swift developer experience by:
 
-- Using familiar async/await patterns and Structured Concurrency to build maintainable workflow code.
+- Using familiar async/await patterns and structured concurrency to build maintainable workflow code.
 - Leveraging Swift's strong type system to catch errors at build time rather than runtime.
 - Providing macros to reduce boilerplate when authoring workflows.
 
