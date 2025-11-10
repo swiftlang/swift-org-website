@@ -19,7 +19,7 @@ Building reliable distributed systems requires handling failures gracefully, coo
 
 Temporal is widely used for workflow orchestration across many languages. With the release of the SDK, Temporal is now available for Swift developers building production cloud services.
 
-An [announcement post](https://temporal.io/blog/announcing-the-swift-temporal-sdk) is also available on the Temporal blog with more information for their developer community.
+An [announcement post](https://temporal.io/blog/temporal-now-supports-swift) is also available on the Temporal blog with more information for their developer community.
 
 ## Writing durable workflows in Swift
 
