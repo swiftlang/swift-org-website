@@ -5,7 +5,7 @@
 <div class="code-box content-wrapper">
     <h2>WebAssembly</h2>
     <p class="body-copy">
-    {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/wasm/" | append: tag | append: "/" | append: tag %}
+    {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/wasm-sdk/" | append: tag | append: "/" | append: tag %}
     {% assign command = "swift sdk install " | append: base_url | append: "_wasm.artifactbundle.tar.gz --checksum " | append: platform.checksum %}
     <button onclick="copyToClipboard(this, '{{ command | escape }}')">
         Copy install command
@@ -13,8 +13,8 @@
     </p>
     <div class="link-wrapper">
     <div class="link-group">
-        <a href="https://download.swift.org/{{ tag_downcase }}/wasm/{{ tag }}/{{ tag }}_wasm.artifactbundle.tar.gz" class="body-copy">Download Wasm SDK</a> |
-        <a href="https://download.swift.org/{{ tag_downcase }}/wasm/{{ tag }}/{{ tag }}_wasm.artifactbundle.tar.gz.sig" class="body-copy">Signature (PGP)</a>
+        <a href="https://download.swift.org/{{ tag_downcase }}/wasm-sdk/{{ tag }}/{{ tag }}_wasm.artifactbundle.tar.gz" class="body-copy">Download Wasm SDK</a> |
+        <a href="https://download.swift.org/{{ tag_downcase }}/wasm-sdk/{{ tag }}/{{ tag }}_wasm.artifactbundle.tar.gz.sig" class="body-copy">Signature (PGP)</a>
     </div>
     </div>
     <div class="link-wrapper">

@@ -202,7 +202,7 @@ ktoso:
   email: ktoso@apple.com
   github: ktoso
   gravatar: 03cb20b97f6a14701c24c4e088b6af87
-  about: "Konrad Malawski is a member of a team developing foundational server-side Swift libraries at Apple, with focus on distributed systems and concurrency."
+  about: "Konrad is part of the Swift language team and Swift on Server Workgroup, where he works on language and runtime features with particular interest in supporting server and distributed computing use-cases, and expanding the Swift ecosystem."
 
 compnerd:
   name: Saleem Abdulrasool
@@ -373,7 +373,7 @@ FranzBusch:
    email: f.busch@apple.com
    github: FranzBusch
    gravatar: 3b34dbe9f3870b0e9bf1f4cb0750fa3d
-   about: "Franz Busch is a member of a team developing foundational server-side Swift libraries at Apple, and is a member of the SSWG."
+   about: "Franz Busch is a member of the Ecosystem Steering Group and the Swift Server Workgroup. He works in a team developing foundational server-side Swift libraries at Apple."
 
 adrian-prantl:
   name: Adrian Prantl
@@ -559,3 +559,28 @@ mitchellallison:
   email: mitchell_allison@apple.com
   github: mitchellallison
   about: "Mitchell Allison works on Distributed Systems in Swift at Apple."
+
+mads:
+  name: Mads Odgaard
+  email: mads@madsodgaard.com
+  github: madsodgaard
+  about: Mads is a Tech Lead at Frameo. During Google Summer of Code 2025, he worked on bringing JNI support to the jextract tool which is part of the Swift Java interoperability project.
+
+priyambada:
+  name: Priyambada Roul
+  email: priyaroul99@gmail.com
+  github: roulpriya
+  about: "Priyambada is a software developer based in Bangalore, working at Cashfree Payments. When she's not coding, she enjoys Bharatanatyam dance, painting, sculpting with clay, and experimenting with side projects on GitHub."
+
+heckj:
+  name: Joe Heck
+  email: j_heck@apple.com
+  github: heckj
+  gravatar: 34fa393a8013e04c03deff379ac0a6f3ea7a23c5861a6f7410b409974218f5d2
+  about: "Joe Heck works on Swift as part of the Open Source Program Office at Apple."
+
+davelester:
+  name: Dave Lester
+  github: davelester
+  gravatar: "376decb8be2d1c50df06daf50ef3b6b5"
+  about: "Dave Lester is a Senior Product Manager at Apple and member of the Swift website workgroup."
