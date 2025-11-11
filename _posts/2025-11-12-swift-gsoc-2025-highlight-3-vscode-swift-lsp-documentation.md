@@ -18,7 +18,7 @@ You can navigate between the posts using these convenient links:
 
 - [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
 - [Extending Swift-Java Interoperability](/blog/gsoc-2025-showcase-swift-java/)
-- Improve the display of documentation during code completion in SourceKit-LSP _(this post)_
+- Improved code completion for Swift _(this post)_
 - Improved console output for Swift Testing _(coming soon)_
 
 Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. The first project we're featuring on the blog brought Swiftly support to Visual Studio Code, contributed by Priyambada Roul.
