@@ -2,7 +2,7 @@
 layout: new-layouts/post
 published: true
 date: 2025-11-12 10:00:00
-title: "Swift GSoC 2025 highlight: Improve the display of documentation during code completion in SourceKit-LSP"
+title: "Swift GSoC 2025 highlight: Improved code completion for Swift"
 author: [ahmedelrefaey, hamish, ktoso]
 category: "Developer Tools"
 ---
