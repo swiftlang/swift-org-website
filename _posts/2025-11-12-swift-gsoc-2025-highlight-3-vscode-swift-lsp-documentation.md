@@ -36,7 +36,7 @@ The third project we're featuring on the Swift blog improved how documentation i
 
 Hi everyone!
 
-This is Ahmed Elrefaey. I’m excited to share with you an update on my GSoC project, Improve the display of documentation during code completion in SourceKit-LSP, mentored by Hamish Knight.
+This is Ahmed Elrefaey. I’m excited to share with you an update on my GSoC project which improved the display of documentation during code completion for Swift. I worked on improvements to [SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp), which is an implementation of the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) (LSP) for Swift and C-based languages. My GSoC project was mentored by Hamish Knight.
 
 ### Project Goals
 
