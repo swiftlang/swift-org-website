@@ -45,6 +45,7 @@ The aim of this project is to enhance how documentation is displayed in SourceKi
 1. Showing the full documentation for a code completion item instead of the first paragraph only, which we call “brief documentation”.
 2. Implementing Language Server Protocol’s [signature help](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_signatureHelp) request showing the user which overloads are available, along with their corresponding documentation.
 
+Editors that support the Language Server Protocol all benefit from these improvements to SourceKit-LSP, bringing these features to editors like VS Code, Neovim, IntelliJ IDEA, Vim, and more.
 ### Progress
 
 During this summer, we have made great progress on this project that I want to share with you.
