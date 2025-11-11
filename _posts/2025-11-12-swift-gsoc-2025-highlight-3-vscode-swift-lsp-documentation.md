@@ -65,7 +65,7 @@ We reused the existing argument completion logic to determine the overloads and 
 
 Here’s a quick demo of signature help in VS Code.
 
-![Signature help demo in VS Code|690x441](/assets/images/gsoc-25/output.gif)
+![Signature help demo in VS Code.|690x441](/assets/images/gsoc-25/output.gif)
 
 ### Closing Thoughts
 
