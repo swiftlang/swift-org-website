@@ -17,7 +17,7 @@ You can navigate between the posts using these convenient links:
 
 
 - [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
-- [JNI mode for swift-java’s source jextract tool](2025-11-NN-swift-gsoc-2025-highlight-2-swift-java-jextract-jni-mode.md)
+- [Extending Swift-Java Interoperability](/blog/gsoc-2025-showcase-swift-java/)
 - Improve the display of documentation during code completion in SourceKit-LSP _(this post)_
 - Improved console output for Swift Testing _(coming soon)_
 
