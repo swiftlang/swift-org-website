@@ -4,12 +4,16 @@
   "scripts": {
     "prettify": "./scripts/prettify.sh",
     "copy:vendor": "bash scripts/copy-vendor.sh",
-    "postinstall": "npm run copy:vendor"
+    "postinstall": "npm run copy:vendor",
+    "site-check": "node scripts/site-check.js",
+    "site-visualize": "node scripts/site-visualize.js"
   },
   "devDependencies": {
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "playwright": "^1.49.1"
   },
   "dependencies": {
-    "animejs": "^4.0.2"
+    "animejs": "^4.0.2",
+    "d3": "^7.9.0"
   }
 }
