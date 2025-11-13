@@ -60,6 +60,7 @@ Here’s a quick demo of signature help in VS Code.
 
 ![Signature help demo in VS Code.|690x441](/assets/images/gsoc-25/output.gif)
 To try this out in VS Code for yourself, you can [download a main development snapshot from swift.org](https://swift.org/download). If using Swiftly you can run `swiftly install main-snapshot`. Then, in VS Code you can pick "Select Toolchain" from the Command Palette and select the newly downloaded toolchain.
+
 ### Closing Thoughts
 
 I'm incredibly grateful for this opportunity to contribute to the Swift project, and I really learned a lot from this experience. I'd like to thank my mentor, Hamish Knight, for his unwavering support and guidance throughout this summer. I’d also like to thank Alex Hoppen, Rintaro Ishizaki, and Ben Barham for their valuable feedback during code review.
