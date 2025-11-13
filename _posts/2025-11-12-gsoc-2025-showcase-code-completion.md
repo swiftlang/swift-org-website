@@ -16,7 +16,7 @@ Our blog post series showcasing the Swift community’s participation in [Google
 
 Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. Today’s featured project improved how documentation is displayed during code completion in IDEs, contributed by Ahmed Elrefaey.
 
-To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improve-the-display-of-documentation-during-code-completion-in-sourcekit-lsp/81976)!
+To learn more, you can read the [full post on the Swift Forums](https://forums.swift.org/t/gsoc-2025-improve-the-display-of-documentation-during-code-completion-in-sourcekit-lsp/81976)!
 
 The project enhances SourceKit-LSP, an implementation of the Language Server Protocol (LSP) for Swift and C-based languages. Now you can see full documentation during code completion instead of just brief summaries, as well as what arguments are available to pass when calling functions.
 
