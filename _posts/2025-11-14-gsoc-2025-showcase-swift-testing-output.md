@@ -7,20 +7,17 @@ author: [ktoso, kelvin, stmontgomery]
 category: "Developer Tools"
 ---
 
-Another successful year of Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) recently came to an end, and we'd like to shine some light on the projects and work accomplished!
+The Swift community participated in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025, and we've recently been showcasing all of the projects and work accomplished here on the Swift blog. You can read learn more by following these convenient links:
 
-Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
-to open source projects.
 
-In this series of four blog posts, we'll highlight each of the Summer of Code contributors and their projects.
-You can navigate between the posts using these convenient links:
+- [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
+- [Extending Swift-Java Interoperability](/blog/gsoc-2025-showcase-swift-java/)
+- [Improved code completion for Swift](/blog/gsoc-2025-showcase-code-completion/)
+- Improved console output for Swift Testing (this post)
 
-- [Bringing Swiftly support to VS Code](2025-11-05-swift-gsoc-2025-highlight-1-vscode-swiftly.md)
-- [JNI mode for swift-java’s source jextract tool](2025-11-07-swift-gsoc-2025-highlight-2-swift-java-jextract-jni-mode.md)
-- [Improve the display of documentation during code completion in SourceKit-LSP](2025-11-12-swift-gsoc-2025-highlight-3-vscode-swift-lsp-documentation.md)
-- Improved Console Output for Swift Testing (this post)
+Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. The fourth project, and last in this year's series, improved the console output that is printed when running tests implemented with Swift Testing, contributed by Kelvin Bui.
 
-Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. The fourth, and last in this year's series,  project we're featuring on the blog improved the console output that is printed when running tests implemented with Swift Testing, contributed by Kelvin Bui. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improved-console-output-for-swift-testing/82060).
+To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improved-console-output-for-swift-testing/82060).
 
 ---
 
@@ -64,7 +61,6 @@ The Advanced Console Output Recorder fundamentally transforms how developers int
 
 **Current Console Output:**
 ![Current Console Output](/assets/images/gsoc-25/testing-output-1.jpg)
-
 
 Prior to this project, the default `swift test` output presented a linear, undifferentiated stream of events. While functional, this format lacked visual cues, making it challenging to quickly identify test relationships, pinpoint failures within large suites, or understand the overall structure of a test run. The absence of clear demarcation between test suites and individual tests often led to slower debugging cycles and increased cognitive load for developers.
 
