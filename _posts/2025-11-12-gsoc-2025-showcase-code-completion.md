@@ -7,28 +7,22 @@ author: [ahmedelrefaey, hamish, ktoso]
 category: "Developer Tools"
 ---
 
-Another successful year of Swift participation in [Google Summer of Code](https://summerofcode.withgoogle.com) recently came to an end, and we'd like to shine some light on the projects and work accomplished!
-
-Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
-to open source projects.
-
-In this series of four blog posts, we'll highlight each of the Summer of Code contributors and their projects.
-You can navigate between the posts using these convenient links:
-
+Our blog post series showcasing the Swift community’s participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025 continues with our third update. Learn more about the projects and work accomplished:
 
 - [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
 - [Extending Swift-Java Interoperability](/blog/gsoc-2025-showcase-swift-java/)
 - Improved code completion for Swift _(this post)_
 - Improved console output for Swift Testing _(coming soon)_
 
-Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. The first project we're featuring on the blog brought Swiftly support to Visual Studio Code, contributed by Priyambada Roul.
-To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-bringing-swiftly-support-to-vs-code/81886).
+Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. Today’s featured project improved how documentation is displayed during code completion in IDEs, contributed by Ahmed Elrefaey.
 
-Summer of Code is an annual program, organized by Google, which provides hands-on experience for newcomers contributing
-to open source projects. Participants usually are students, but do not have to be.
+To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improve-the-display-of-documentation-during-code-completion-in-sourcekit-lsp/81976)!
 
-The third project we're featuring on the Swift blog improved how documentation is displayed by SourceKit-LSP and IDEs which make use of it, such as VS Code, contributed by Ahmed Elrefaey. To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improve-the-display-of-documentation-during-code-completion-in-sourcekit-lsp/81976)!
+The project enhances SourceKit-LSP, an implementation of the Language Server Protocol (LSP) for Swift and C-based languages. Now you can see full documentation during code completion instead of just brief summaries, as well as what arguments are available to pass when calling functions.
 
+Editors that support the Language Server Protocol all benefit from these improvements to SourceKit-LSP, bringing these features to editors like VS Code, Neovim, IntelliJ IDEA, Vim, and more.
+
+This work has landed in the project, and will be included in a future release.
 
 ---
 
@@ -45,7 +39,6 @@ The aim of this project is to enhance how documentation is displayed in SourceKi
 1. Showing the full documentation for a code completion item instead of the first paragraph only, which we call “brief documentation”.
 2. Implementing Language Server Protocol’s [signature help](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_signatureHelp) request showing the user which overloads are available, along with their corresponding documentation.
 
-Editors that support the Language Server Protocol all benefit from these improvements to SourceKit-LSP, bringing these features to editors like VS Code, Neovim, IntelliJ IDEA, Vim, and more.
 ### Progress
 
 During this summer, we have made great progress on this project that I want to share with you.
