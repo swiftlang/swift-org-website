@@ -3,7 +3,7 @@ layout: new-layouts/post
 published: true
 date: 2025-11-12 17:05:00
 title: "Swift GSoC 2025 highlight: Improved code completion for Swift"
-author: [ahmedelrefaey, hamish, ktoso]
+author: [ahmedelrefaey, ktoso]
 category: "Developer Tools"
 ---
 
