@@ -202,7 +202,7 @@ ktoso:
   email: ktoso@apple.com
   github: ktoso
   gravatar: 03cb20b97f6a14701c24c4e088b6af87
-  about: "Konrad Malawski is a member of a team developing foundational server-side Swift libraries at Apple, with focus on distributed systems and concurrency."
+  about: "Konrad is part of the Swift language team and Swift on Server Workgroup, where he works on language and runtime features with particular interest in supporting server and distributed computing use-cases, and expanding the Swift ecosystem."
 
 compnerd:
   name: Saleem Abdulrasool
@@ -373,7 +373,7 @@ FranzBusch:
    email: f.busch@apple.com
    github: FranzBusch
    gravatar: 3b34dbe9f3870b0e9bf1f4cb0750fa3d
-   about: "Franz Busch is a member of a team developing foundational server-side Swift libraries at Apple, and is a member of the SSWG."
+   about: "Franz Busch is a member of the Ecosystem Steering Group and the Swift Server Workgroup. He works in a team developing foundational server-side Swift libraries at Apple."
 
 adrian-prantl:
   name: Adrian Prantl
@@ -565,6 +565,12 @@ ahmedelrefaey:
   email: a7med.mahmoud2004@gmail.com
   github: a7medev
   about: "Ahmed is a software developer at Luciq. During Google Summer of Code 2025, he worked on improving the display of Swift documentation during code completion in SourceKit-LSP and VS Code."
+
+mads:
+  name: Mads Odgaard
+  email: mads@madsodgaard.com
+  github: madsodgaard
+  about: "Mads is a Tech Lead at Frameo. During Google Summer of Code 2025, he worked on bringing JNI support to the jextract tool which is part of the Swift Java interoperability project."
 
 priyambada:
   name: Priyambada Roul
