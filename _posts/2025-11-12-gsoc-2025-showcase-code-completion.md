@@ -48,7 +48,6 @@ We have successfully implemented full documentation comment retrieval for comple
 Here’s what SourceKit-LSP currently provides in VS Code (brief documentation):
 
 ![Brief documentation demo in VS Code.|690x412](/assets/images/gsoc-25/brief.gif)
-
 And here’s how it looks with full documentation:
 
 ![Full documentation demo in VS Code.|690x412](/assets/images/gsoc-25/full.gif)
