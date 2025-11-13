@@ -48,6 +48,26 @@ npm install
 npm run prettify
 ```
 
+### Running with Apple Container
+
+On macOS 26 and later, you can use the [Apple Container](https://github.com/apple/container) tool to host and run the website.
+
+First install and run `container`:
+
+```shell
+brew install container
+brew services start container
+```
+
+Then build and run the site:
+
+```shell
+make build
+make website
+```
+
+The website will be available at `http://localhost:4000`
+
 ### Running in Docker
 
 First build the site with Docker Compose:
