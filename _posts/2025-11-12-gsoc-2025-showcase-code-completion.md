@@ -22,7 +22,7 @@ The project enhances SourceKit-LSP, an implementation of the Language Server Pro
 
 Editors that support the Language Server Protocol all benefit from these improvements to SourceKit-LSP, bringing these features to editors like VS Code, Neovim, IntelliJ IDEA, Vim, and more.
 
-This work has landed in the project, and will be included in a future release.
+This work has landed in the SourceKit-LSP project, and will be included in a future Swift toolchain release.
 
 ---
 
