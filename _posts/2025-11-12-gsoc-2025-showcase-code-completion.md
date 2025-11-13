@@ -51,7 +51,6 @@ Here’s what SourceKit-LSP currently provides in VS Code (brief documentation):
 And here’s how it looks with full documentation:
 
 ![Full documentation demo in VS Code.|690x412](/assets/images/gsoc-25/full.gif)
-
 We have also implemented a large portion of signature help support, showing the available overloads and their corresponding documentation while editing.
 We reused the existing argument completion logic to determine the overloads and refactored the code completion item description implementation to reuse it in signature help.
 
