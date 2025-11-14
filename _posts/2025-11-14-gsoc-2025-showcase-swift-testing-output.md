@@ -7,7 +7,7 @@ author: [kelvin, ktoso]
 category: "Community"
 ---
 
-The Swift community participated in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025, and we've recently been showcasing all of the projects and work accomplished here on the Swift blog. You can read learn more by following these convenient links:
+The Swift community participated in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025, and we've recently been showcasing all of the projects and work accomplished here on the Swift blog. You can learn more by following these convenient links:
 
 - [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
 - [Extending Swift-Java Interoperability](/blog/gsoc-2025-showcase-swift-java/)
