@@ -4,7 +4,7 @@ published: true
 date: 2025-11-14 10:00:00
 title: "Swift GSoC 2025 Showcase: Improved Console Output for Swift Testing"
 author: [kelvin, ktoso]
-category: "Developer Tools"
+category: "Community"
 ---
 
 The Swift community participated in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025, and we've recently been showcasing all of the projects and work accomplished here on the Swift blog. You can read learn more by following these convenient links:
