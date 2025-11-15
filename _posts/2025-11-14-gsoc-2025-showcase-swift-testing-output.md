@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2025-11-14 10:00:00
+date: 2025-11-14 17:15:00
 title: "Swift GSoC 2025 Showcase: Improved Console Output for Swift Testing"
 author: [kelvin, ktoso]
 category: "Community"
