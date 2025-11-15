@@ -11,8 +11,8 @@ This is the second post in our series showcasing the Swift community’s partici
 
 - [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
 - Extending Swift-Java Interoperability (this post)
-- Improved display of documentation during code completion in SourceKit-LSP _(coming soon)_
-- Improved Console Output for Swift Testing  _(coming soon)_
+- [Improved code completion for Swift](/blog/gsoc-2025-showcase-code-completion/)
+- [Improved console output for Swift Testing](/blog/gsoc-2025-showcase-swift-testing-output/)
 
 Each GSoC contributor has shared a writeup about their project and experience in the program on the Swift forums. Today’s featured project improved interoperability between Swift and Java, contributed by Mads Odgaard. Mads recently presented on this project at the Server-Side Swift conference: [Expanding Swift/Java Interoperability](https://www.youtube.com/watch?v=tOH6V1IvTAc), and you may have noticed it in action in the recent Swift.org blog post: [Announcing the Swift SDK for Android](https://www.swift.org/blog/nightly-swift-sdk-for-android/)!
 

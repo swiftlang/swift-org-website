@@ -2,7 +2,7 @@
 layout: new-layouts/post
 published: true
 date: 2025-11-12 17:05:00
-title: "Swift GSoC 2025 highlight: Improved code completion for Swift"
+title: "GSoC 2025 Showcase: Improved Code completion for Swift"
 author: [ahmedelrefaey, ktoso]
 category: "Developer Tools"
 ---
@@ -12,7 +12,7 @@ Our blog post series showcasing the Swift community’s participation in [Google
 - [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
 - [Extending Swift-Java Interoperability](/blog/gsoc-2025-showcase-swift-java/)
 - Improved code completion for Swift _(this post)_
-- Improved console output for Swift Testing _(coming soon)_
+- [Improved console output for Swift Testing](/blog/gsoc-2025-showcase-swift-testing-output/)
 
 Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. Today’s featured project improved how documentation is displayed during code completion in IDEs, contributed by Ahmed Elrefaey.
 
