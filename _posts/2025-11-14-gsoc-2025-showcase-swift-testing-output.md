@@ -37,7 +37,7 @@ The default console output for `swift test` was functional but presented several
 
 Our vision was to solve these problems by creating an advanced console reporter that is both informative and intuitive.
 
-## Key Technical Achievements
+### Key Technical Achievements
 
 **Hierarchical Test Display:**
 
