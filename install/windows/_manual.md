@@ -16,7 +16,7 @@ The following Visual Studio components should be installed:
 
 You should also install the following dependencies:
 
-- [Python 3.9._x_](https://www.python.org/downloads/windows/) [^3]
+- [Python 3.10._x_](https://www.python.org/downloads/windows/) [^3]
 - [Git for Windows](https://git-scm.com/downloads/win)
 
 [^3]: You may install the latest `.x` patch release, but ensure you use the specified `major.minor` version of Python for optimal compatibility.
