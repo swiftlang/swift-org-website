@@ -89,7 +89,7 @@ The new recorder introduces a rich, hierarchical display that immediately brings
 
 I learned how to accept and act on high-quality feedback from senior engineers, and how to reframe technical trade-offs as testable hypotheses. The project sharpened my ability to move from mockups to production code while keeping maintainability and cross-platform compatibility as first-class concerns.
 
-## Acknowledgements
+### Acknowledgements
 
 I'd like to express my deepest gratitude to my mentor, Stuart Montgomery, for his exceptional guidance, patience, and technical insights throughout this entire project. His mentorship has been invaluable.
 
