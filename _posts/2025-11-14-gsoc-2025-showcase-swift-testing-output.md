@@ -54,7 +54,7 @@ Our vision was to solve these problems by creating an advanced console reporter 
 
 * A dedicated `FAILED TEST DETAILS` section that provides comprehensive information for each failure, including the fully qualified test name, a detailed error message, and the exact source location (`file:line`).
 
-## Visuals: Before & After
+### Visuals: Before & After
 
 The Advanced Console Output Recorder fundamentally transforms how developers interact with test results. By introducing a visual hierarchy and detailed contextual information, it elevates the diagnostic experience from a flat, hard-to-parse log into a structured, scannable report.
 
