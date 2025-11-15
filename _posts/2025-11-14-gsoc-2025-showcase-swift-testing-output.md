@@ -14,7 +14,7 @@ The Swift community participated in [Google Summer of Code](https://summerofcode
 - [Improved code completion for Swift](/blog/gsoc-2025-showcase-code-completion/)
 - Improved console output for Swift Testing (this post)
 
-Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. The fourth project, and last in this year's series, improved the console output that is printed when running tests implemented with Swift Testing, contributed by Kelvin Bui.
+Each GSoC contributor has shared a writeup about their project and experience in the program. The fourth and last post in this year's series, contributed by Kelvin Bui, improved the console output that is printed when running tests implemented with Swift Testing.
 
 To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-improved-console-output-for-swift-testing/82060).
 
