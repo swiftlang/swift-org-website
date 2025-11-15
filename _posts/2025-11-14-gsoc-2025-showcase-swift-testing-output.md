@@ -70,7 +70,7 @@ The new recorder introduces a rich, hierarchical display that immediately brings
 
 ![Failed Tests Showcase](/assets/images/gsoc-25/testing-output-3.jpg)
 
-## Challenges & Lessons Learned
+### Challenges & Lessons Learned
 
 **Technical lessons:**
 
