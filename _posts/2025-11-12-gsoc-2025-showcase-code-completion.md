@@ -4,7 +4,7 @@ published: true
 date: 2025-11-12 17:05:00
 title: "GSoC 2025 Showcase: Improved Code completion for Swift"
 author: [ahmedelrefaey, ktoso]
-category: "Developer Tools"
+category: "Community"
 ---
 
 Our blog post series showcasing the Swift community’s participation in [Google Summer of Code](https://summerofcode.withgoogle.com) 2025 continues with our third update. Learn more about the projects and work accomplished:
