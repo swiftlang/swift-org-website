@@ -20,13 +20,16 @@ Previously, the `description` and `debugDescription` properties for floating-poi
 
 ### Embedded restriction diagnostics
 
-There is a new opt-in set of warnings in the [EmbeddedRestrictions](https://docs.swift.org/compiler/documentation/diagnostics/embedded-restrictions) diagnostic group that diagnoses language constructs that aren’t available in Embedded Swift, such as uses of untyped throws or calling generic functions on existential values (follow the earlier link for more information). These diagnostics are enabled by default when building Embedded Swift, and can also be enabled in non-Embedded Swift using the compiler flag `-Wwarning EmbeddedRestrictions` or in the package manifest with:
+There is a new opt-in set of warnings in the [EmbeddedRestrictions](https://docs.swift.org/compiler/documentation/diagnostics/embedded-restrictions) diagnostic group that diagnoses language constructs that aren’t available in Embedded Swift, such as uses of untyped throws or calling generic functions on existential values.
+These diagnostics are enabled by default when building Embedded Swift, and can also be enabled in non-Embedded Swift using the compiler flag `-Wwarning EmbeddedRestrictions` or in the package manifest with:
 
 ```swift
 swiftSettings: [
     .treatWarning("EmbeddedRestrictions", as: .warning),
 ]
 ```
+
+Read the full details at [EmbeddedRestrictions](https://docs.swift.org/compiler/documentation/diagnostics/embedded-restrictions).
 
 ### Swift MMIO 0.1.x
 
