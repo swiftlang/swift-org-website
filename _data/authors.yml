@@ -602,3 +602,8 @@ davelester:
   github: davelester
   gravatar: "376decb8be2d1c50df06daf50ef3b6b5"
   about: "Dave Lester is a Senior Product Manager at Apple and member of the Swift website workgroup."
+
+doug_gregor:
+  name: Doug Gregor
+  github: DougGregor
+  about: "Doug Gregor is a member of the Language Steering Group and works on the Swift compiler and runtime."
