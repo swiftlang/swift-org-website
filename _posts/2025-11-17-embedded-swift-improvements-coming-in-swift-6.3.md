@@ -30,14 +30,14 @@ swiftSettings: [
 
 ### Swift MMIO 0.1.x
 
-The [0.1.x release](https://github.com/apple/swift-mmio/releases/tag/0.1.0) of Swift MMIO brings a bunch of bug fixes and quality-of-life improvements, plus brand new comprehensive [documentation](https://swiftpackageindex.com/apple/swift-mmio/documentation/mmio) on the Swift Package Index.
+The [0.1.x release](https://github.com/apple/swift-mmio/releases/tag/0.1.0) of Swift MMIO, a package for memory-mapped I/O, includes many bug fixes and quality-of-life improvements, plus newly written comprehensive [documentation](https://swiftpackageindex.com/apple/swift-mmio/documentation/mmio) on the Swift Package Index.
 
 The biggest addition is code generation support. There's now an [svd2swift tool](https://swiftpackageindex.com/apple/swift-mmio/documentation/svd2swift) and corresponding [SwiftPM plugin](https://swiftpackageindex.com/apple/swift-mmio/documentation/svd2swift/usingsvd2swiftplugin) that generates Swift MMIO interfaces directly from CMSIS System View Description (SVD) files. You can run it manually from the command line, or configure the plugin to handle everything automatically at build time.
 
 Debugging also got a nice upgrade with [SVD2LLDB](https://swiftpackageindex.com/apple/swift-mmio/documentation/svd2lldb).
 This LLDB plugin lets you work with device registers using their actual names instead of fumbling with the raw memory addresses.
 It even includes visual decoding support to help you make sense of register values.
-For example, here's what it looks like when you decode a timer control register:
+For example, here's what it looks like when you decode a hypothetical timer control register:
 
 ```swift
 (lldb) svd decode TIMER0.CR 0x0123_4567 --visual
