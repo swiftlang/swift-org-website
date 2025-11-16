@@ -7,15 +7,16 @@ author: [doug_gregor, rauhul]
 category: "Adopters"
 ---
 
-[Embedded Swift](https://www.swift.org/get-started/embedded/) is a subset of Swift that can be used to develop bare-metal, embedded, and standalone programs for a variety of hardware platforms and environments. Embedded Swift is currently an experimental feature that uses a special compilation mode to produce significantly smaller binaries than regular Swift, using techniques described in the [Embedded Swift vision document](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md).
+[Embedded Swift](/get-started/embedded/) is a subset of Swift that can be used to develop bare-metal, embedded, and standalone programs for a variety of hardware platforms and environments. Embedded Swift is currently an experimental feature that uses a special compilation mode to produce significantly smaller binaries than regular Swift, using techniques described in the [Embedded Swift vision document](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md).
 
-Embedded Swift is evolving rapidly. This post describes a number of improvements we’ve made in the last few months, covering everything from improved C interoperability to better debugging and steps toward a complete linkage model for Embedded Swift. These features and bug fixes will be available in the upcoming [Swift 6.3](https://forums.swift.org/t/swift-6-3-release-process/82843) release, but you can try them out today with a [Swift development snapshot](https://www.swift.org/install/).
+Embedded Swift is evolving rapidly. This post describes a number of improvements made in the last few months, covering everything from improved C interoperability to better debugging and steps toward a complete linkage model for Embedded Swift.
+These features and bug fixes are included in the upcoming [Swift 6.3](https://forums.swift.org/t/swift-6-3-release-process/82843) release, and you can try them out today with a [Swift development snapshot](https://www.swift.org/install/).
 
 ## Libraries and Diagnostics
 
 ### Printing floating point numbers
 
-Previously, the `description` and `debugDescription` properties for floating-point types (`Float`, `Double`, etc.) were not available in the Embedded Swift standard library. With a new [all-Swift implementation](https://github.com/swiftlang/swift/pull/84826), these are now available.
+Previously, the `description` and `debugDescription` properties for floating-point types (`Float`, `Double`, etc.) were not available in the Embedded Swift standard library. With a new [all-Swift implementation](https://github.com/swiftlang/swift/pull/84826), you can use this with Embedded Swift.
 
 ### Embedded restriction diagnostics
 
@@ -29,11 +30,14 @@ swiftSettings: [
 
 ### Swift MMIO 0.1.x
 
-The [0.1.x release](https://github.com/apple/swift-mmio/releases/tag/0.1.0) of Swift MMIO brings a bunch of bug fixes and quality-of-life improvements, plus brand new comprehensive [documentation](https://swiftpackageindex.com/apple/swift-mmio/0.1.1/documentation/mmio) on the Swift Package Index.
+The [0.1.x release](https://github.com/apple/swift-mmio/releases/tag/0.1.0) of Swift MMIO brings a bunch of bug fixes and quality-of-life improvements, plus brand new comprehensive [documentation](https://swiftpackageindex.com/apple/swift-mmio/documentation/mmio) on the Swift Package Index.
 
-The biggest addition is code generation support. There's now an [svd2swift tool](https://swiftpackageindex.com/apple/swift-mmio/0.1.1/documentation/svd2swift) and corresponding [SwiftPM plugin](https://swiftpackageindex.com/apple/swift-mmio/0.1.1/documentation/svd2swift/usingsvd2swiftplugin) that generates Swift MMIO interfaces directly from CMSIS System View Description (SVD) files. You can run it manually from the command line, or configure the plugin to handle everything automatically at build time.
+The biggest addition is code generation support. There's now an [svd2swift tool](https://swiftpackageindex.com/apple/swift-mmio/documentation/svd2swift) and corresponding [SwiftPM plugin](https://swiftpackageindex.com/apple/swift-mmio/documentation/svd2swift/usingsvd2swiftplugin) that generates Swift MMIO interfaces directly from CMSIS System View Description (SVD) files. You can run it manually from the command line, or configure the plugin to handle everything automatically at build time.
 
-Debugging also got a nice upgrade with [SVD2LLDB](https://swiftpackageindex.com/apple/swift-mmio/0.1.1/documentation/svd2lldb). This LLDB plugin lets you work with device registers using their actual names instead of fumbling with raw memory addresses. It even includes visual decoding support to help you make sense of register values. For example, here's what it looks like when you decode a timer control register:
+Debugging also got a nice upgrade with [SVD2LLDB](https://swiftpackageindex.com/apple/swift-mmio/documentation/svd2lldb).
+This LLDB plugin lets you work with device registers using their actual names instead of fumbling with the raw memory addresses.
+It even includes visual decoding support to help you make sense of register values.
+For example, here's what it looks like when you decode a timer control register:
 
 ```swift
 (lldb) svd decode TIMER0.CR 0x0123_4567 --visual
@@ -65,39 +69,39 @@ TIMER0.CR: 0x0123_4567
 
 ### `@c` functions and enums
 
-[SE-0495](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0495-cdecl.md) provides support for defining C-compatible functions and enums with the `@c` attribute. For example, the following declaration
+The Swift evolution proposal [SE-0495](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0495-cdecl.md) provides support for defining C-compatible functions and enums with the `@c` attribute. For example, the following declaration defines a function that is callable from C with the name `MyLib_initialize`:
 
 ```swift
 @c(MyLib_initialize)
 public func initialize() { ... }
 ```
 
-Defines a function that is callable from C with the name `MyLib_initialize`. The Swift generated header, which can be included in any C/C++ code, will contain a declaration of this C function:
+The Swift generated header from the above example, which can be included in any C/C++ code, contains a declaration of this C function:
 
 ```c
 void MyLib_initialize(void); 
 ```
 
-This feature also works with the `@implementation` attribute introduced in [SE-0436](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0436-objc-implementation.md). If you have a pre-existing C header documenting a C interface, you can implement that C interface with a Swift function such as:
+This feature also works with the `@implementation` attribute introduced in [SE-0436](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0436-objc-implementation.md). If you have a pre-existing C header that documents a C interface, you can implement that C interface with a Swift function such as:
 
 ```swift
 @c @implementation
 public func MyLib_initialize() { ... }
 ```
 
-The Swift compiler will ensure that the signature of the Swift function matches that of the C header. This allows one to replace an existing C library with a Swift implementation without affecting C clients.
+The Swift compiler ensures that the signature of the Swift function matches that of the C header. This allows you to replace an existing C library with a Swift implementation without affecting C clients.
 
 The `@c` attribute formalizes the `@_cdecl` attribute, fixing a number of corner cases in the process.
 
 ### Improved tolerance of mismatching C signatures
 
-The Swift compiler has historically required precise consistency between the Swift types for C functions imported from headers or declared in Swift with `@c` (formerly `@_cdecl`) or `@_extern(c)`. For example, if a C function were declared without nullability annotations in a header:
+The Swift compiler has historically required precise consistency between the Swift types for C functions imported from headers or declared in Swift with `@c` (formerly `@_cdecl`) or `@_extern(c)`. For example, if you declared a C function without nullability annotations in a header:
 
 ```c
 void takePointer(const double *);
 ```
 
-And then separately defined in Swift with, e.g.,
+And then separately defined in Swift with, for example:
 
 ```swift
 @c func takePointer(_ values: UnsafePointer<Double>) { ... }
@@ -110,7 +114,8 @@ The compiler could fail to compile when it noticed the mismatch, often with a ha
 
 ### Debugger printing of values
 
-LLDB’s support for printing values of Swift types in Embedded Swift has been improved. In addition, the `memory read` command now supports an optional Swift type name, so that you can take an arbitrary address and render it as a value of the named Swift type with:
+LLDB’s support for printing the values of Swift types in Embedded Swift has been improved. In addition, the `memory read` command now supports an optional Swift type name, so that you can take an arbitrary address and render it as a value of that named Swift type.
+The following example shows interpreting the address as the type `MyMessage`:
 
 ```swift
 (lldb) memory read -t MyMessage 0x000000016fdfe970
@@ -124,13 +129,17 @@ LLDB’s support for printing values of Swift types in Embedded Swift has been i
 
 ### More data types inspectable in core dumps
 
-LLDB needs access to type layout information so it can display variables. Since Embedded Swift doesn't contain reflection metadata, the Swift compiler emits all the type layout information as DWARF debug info. There have been several improvements to Swift compiler's debug info output recently, such as support for type declarations nested inside an extension. At the same time LLDB added support for nested generic type aliases in Embedded Swift. These two improvements together make it possible to inspect many common standard library data types, such as `Dictionary` and `Array`, in Embedded Swift core dumps. Previously these data types were only accessible via the expression evaluator, which requires a live process. 
+LLDB needs access to type layout information so it can display variables. Since Embedded Swift doesn't contain reflection metadata, the Swift compiler emits all the type layout information as DWARF debug info.
+There have been several improvements to the Swift compiler's debug info output, such as support for type declarations nested inside an extension.
+At the same time LLDB added support for nested generic type aliases in Embedded Swift.
+These two improvements together make it possible to inspect many common standard library data types, such as `Dictionary` and `Array`, in Embedded Swift core dumps.
+Previously these data types were only accessible via the expression evaluator, which requires a live process. 
 
 LLDB also has native support for the new `InlineArray` data type.
 
 ### Debugger armv7m exception frames unwinding
 
-LLDB's support for producing backtraces after taking exceptions in armv7m has been greatly improved. Previously after taking an exception users would be presented with a back trace like the following:
+LLDB's support for producing backtraces after taking exceptions in armv7m has been greatly improved. Previously after taking an exception, you would be presented with a back trace like the following:
 
 ```swift
 (lldb) bt
@@ -145,7 +154,7 @@ LLDB's support for producing backtraces after taking exceptions in armv7m has be
 
 However this back trace would often be missing one or more frames before the start of the exception frame (`UsageFault_Handler` above).
 
-Now, LLDB is able to walk back through exception frames into the standard program frames and produce a backtrace containing the missing frame(s).
+Now, LLDB is able to walk back through exception frames into the standard program frames and produce a backtrace that contains the missing frame(s).
 
 ```swift
 (lldb) bt
@@ -162,7 +171,7 @@ Now, LLDB is able to walk back through exception frames into the standard progra
 
 ### `@section` and `@used` attributes
 
-[SE-0492](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0492-section-control.md) introduced two new attributes that are useful in Embedded Swift contexts. The `@section` attribute specifies that a particular global variable should be emitted into the named section:
+The Swift evolution proposal [SE-0492](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0492-section-control.md) introduced two new attributes that are useful in Embedded Swift. The `@section` attribute specifies that a particular global variable should be emitted into the named section:
 
 ```swift
 @section("__DATA,mysection")
@@ -170,7 +179,7 @@ Now, LLDB is able to walk back through exception frames into the standard progra
 let myLinkerSetEntry: Int = 42
 ```
 
-Also included is an `objectFormat` check that can be used within `#if` to conditionalize code on the various object formats (ELF, COFF, MachO, Wasm), which can be used to provide different section names:
+Also included is an `objectFormat` check that can be used within `#if` to conditionalize code on the various object formats (ELF, COFF, MachO, Wasm), that you can use to provide different section names:
 
 ```swift
 #if objectFormat(ELF)
@@ -181,11 +190,11 @@ Also included is an `objectFormat` check that can be used within `#if` to condit
 var global = ...
 ```
 
-The `@used` attribute states that the entity it’s attached to should always be emitted, even if it appears unused.
+The `@used` attribute lets the compiler know that the entity it’s attached to should always be emitted, even if it appears unused.
 
 ### Progress on the Embedded Swift linkage model
 
-Embedded Swift uses a different compilation model from regular Swift that delays code generation to later in the compilation process. This compilation model has not been fully defined, and has various practical problems. One such issue involves duplicate symbols: if you have four Embedded Swift libraries whose dependencies formed a diamond, like this:
+Embedded Swift uses a different compilation model from regular Swift that delays code generation to later in the compilation process. This compilation model has not been fully defined and has various practical problems. One such issue involves duplicate symbols: if you have four Embedded Swift libraries whose dependencies formed a diamond, like this:
 
 ```
   A
@@ -201,4 +210,4 @@ Another step along to path to formalizing the Embedded Swift linkage model is [S
 
 ## Try it out!
 
-Embedded Swift support is available in the [Swift development snapshots](https://www.swift.org/install/). The best way to get started is through the examples in the [Swift Embedded Examples](https://github.com/swiftlang/swift-embedded-examples) repository, which contains a number of sample projects to get Embedded Swift code building and running on various hardware. If you have questions or want to show off something cool you’ve done with Embedded Swift, please join us over on the [Swift forums](https://forums.swift.org/c/platform/embedded/).
+Embedded Swift support is available in the [Swift development snapshots](/install/). The best way to get started is through the examples in the [Swift Embedded Examples](https://github.com/swiftlang/swift-embedded-examples) repository, which contains a number of sample projects to get Embedded Swift code building and running on various hardware. If you have questions or want to show off something cool you’ve done with Embedded Swift, please join us over on the [Swift forums](https://forums.swift.org/c/platform/embedded/).
