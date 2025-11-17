@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2025-11-17 10:00:00
+date: 2025-11-17 12:00:00
 title: "Embedded Swift Improvements Coming in Swift 6.3"
 author: [doug_gregor, rauhul]
 category: "Adopters"
