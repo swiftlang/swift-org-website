@@ -16,7 +16,7 @@ These features and bug fixes are included in the upcoming [Swift 6.3](https://fo
 
 ### Printing floating point numbers
 
-Previously, the `description` and `debugDescription` properties for floating-point types (`Float`, `Double`, etc.) were not available in the Embedded Swift standard library. With a new [all-Swift implementation](https://github.com/swiftlang/swift/pull/84826), you can use this with Embedded Swift.
+Previously, the `description` and `debugDescription` properties for floating-point types (`Float`, `Double`, etc.) were not available in the Embedded Swift standard library. With a new [all-Swift implementation](https://github.com/swiftlang/swift/pull/84826), you can now use these with Embedded Swift.
 
 ### Embedded restriction diagnostics
 
@@ -134,7 +134,7 @@ The following example shows interpreting the address as the type `MyMessage`:
 
 LLDB needs access to type layout information so it can display variables. Since Embedded Swift doesn't contain reflection metadata, the Swift compiler emits all the type layout information as DWARF debug info.
 There have been several improvements to the Swift compiler's debug info output, such as support for type declarations nested inside an extension.
-At the same time LLDB added support for nested generic type aliases in Embedded Swift.
+At the same time, LLDB added support for nested generic type aliases in Embedded Swift.
 These two improvements together make it possible to inspect many common standard library data types, such as `Dictionary` and `Array`, in Embedded Swift core dumps.
 Previously these data types were only accessible via the expression evaluator, which requires a live process. 
 
@@ -157,7 +157,7 @@ LLDB's support for producing backtraces after taking exceptions in armv7m has be
 
 However this back trace would often be missing one or more frames before the start of the exception frame (`UsageFault_Handler` above).
 
-Now, LLDB is able to walk back through exception frames into the standard program frames and produce a backtrace that contains the missing frame(s).
+Now, LLDB is able to walk back through exception frames into the standard program frames and produce a backtrace that contains the missing frames.
 
 ```swift
 (lldb) bt
@@ -197,7 +197,7 @@ The `@used` attribute lets the compiler know that the entity it’s attached to 
 
 ### Progress on the Embedded Swift linkage model
 
-Embedded Swift uses a different compilation model from regular Swift that delays code generation to later in the compilation process. This compilation model has not been fully defined and has various practical problems. One such issue involves duplicate symbols: if you have four Embedded Swift libraries whose dependencies formed a diamond, like this:
+Embedded Swift uses a different compilation model from regular Swift that delays code generation to later in the compilation process. This compilation model has not been fully defined and has various practical problems. One such issue involves duplicate symbols: if you have four Embedded Swift libraries whose dependencies form a diamond, like this:
 
 ```
   A
@@ -209,7 +209,7 @@ B   C
 
 Then symbols from `A` that are used in both `B` and `C` would cause duplicate definition errors when linking both into `D`. The Swift compiler now emits symbols from imported modules using weak definitions, so the linker can de-duplicate them. This eliminates the need for flags like `-mergeable-symbols` and `-emit-empty-object-file` that provided partial workarounds.
 
-Another step along to path to formalizing the Embedded Swift linkage model is [SE-0497](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0497-definition-visibility.md), which defines a new `@export` attribute that controls how a function is visible to clients. The spelling `@export(implementation)` makes the implementation available for clients to emit, specialize, or inline, subsuming the longstanding but unofficial `@_alwaysEmitIntoClient` attribute. The spelling `@export(interface)` ensures that only the interface and *not* the definition of the function is made available to clients by emitting a callable symbol, allowing library developers to fully hide the implementation of a function even in Embedded Swift.
+Another step along the path to formalizing the Embedded Swift linkage model is [SE-0497](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0497-definition-visibility.md), which defines a new `@export` attribute that controls how a function is visible to clients. The spelling `@export(implementation)` makes the implementation available for clients to emit, specialize, or inline, subsuming the longstanding but unofficial `@_alwaysEmitIntoClient` attribute. The spelling `@export(interface)` ensures that only the interface and *not* the definition of the function is made available to clients by emitting a callable symbol, allowing library developers to fully hide the implementation of a function even in Embedded Swift.
 
 ## Try it out!
 
