@@ -123,10 +123,11 @@ The directories for each catalog residing at the root can host another DocC cata
 This also allows each catalog to also provide a Package.swift file, which is required today to enable support for DocC's feature Snippets, which validates that Swift code blocks compile.
 
 Catalogs with associated code, such as API reference documentation, that heavily leverage snippets, or that provide examples, are better served when wrapped inside a Swift package.
-These can also be hosted together in this repository, using the same "each directory owned/reviewed by a workgroup" pattern, but are only relevant for packages that would never be used as a dependency.
+These can also be hosted together in this repository, using the same "each directory owned/reviewed by a steering group" pattern, but are only relevant for packages that would never be used as a dependency.
 Swift conventions dictate that a package intended to be used as a dependency needs to be hosted in its own git repository, making it more difficult to use in a monorepo-style configuration.
 
-The workgroup or steering group associated with a collection identifies who to include as reviewers for their catalogs.
+The steering group associated with a collection identifies who to include as reviewers for their catalogs.
+This doesn't require them to directly be the reviewers, but to help identify and delegat the reviewers who approve content changes for each catalog.
 From a mechanical perspective, reviewers are listed in a `CODEOWNERS` file, which uses the GitHub groups that Swift provides, or lists GitHub usernames individually.
 
 For example, the structure of the catalogs above might line up to:
@@ -134,13 +135,13 @@ For example, the structure of the catalogs above might line up to:
 ```
 /swift/* @swiftlang/language-steering-group
 /ecosystem/* @swiftlang/ecosystem-steering-group
-/server/* @swiftlang/server-workgroup
+/server/* @swiftlang/ecosystem-steering-group
 /platform/* @swifting/platform-steering-group
 ```
 
-If a group dissolves, any catalogs can be associated with another group, or revert to control by the Swift Core Team.
+If a group dissolves, any catalogs can be updated to associate them with another group, or revert them to control by the Swift Core Team.
 
-New catalogs can be created at the request of the relevant workgroup or steering group, published and referenced from the swift.org website with the coordination of the Website workgroup.
+New catalogs can be created at the request of the relevant steering group, published and referenced from the swift.org website with the coordination of the Website workgroup to provide links to the relevant content from the Swift.org website.
 As new catalogs are created, the CODEOWNERS file is updated in sync to provide the relevant reviewers for the new content.
 
 The repository may also include a directory or directories to support continuous integration and scripts that build the static DocC archives to host them on Swift project infrastructure.
@@ -211,7 +212,7 @@ As mentioned above, the metadata for the earlier pages will remain on Swift.org 
 
 ### Remaining Swift.org documentation content
 
-A full migration needs to be coordinated with relevant workgroups, and proceed incrementally as the availability of the community and relevant workgroups allow. 
+A full migration needs to be coordinated with relevant groups, and proceed incrementally as the availability of the community and relevant workgroups allow.
 The migration process itself will be tracked by pull requests and within an issue or issues housed at https://github.com/swiftlang/swift-org-website/, and potentially moved to a new docs repository.
 
 - documentation/cxx-interop/index.md (Doug Gregor indicated a desire to reset and migrate this content into the Swift repository in the future)
@@ -281,11 +282,11 @@ The downsides:
 
 - DocC provides a Swift-aligned, familiar structure, including affordances like quicknav and an article Table of Content on the side (depending on viewing width). The structure is reasonably well defined, laying out into a clear hierarchical format by default. Jekyll, in comparison, requires the Author to provide and constantly maintain any structure even between pages and if they're hierarchical vs. spaghetti, and so on.
 
-- The process of finding reviewers and enabling reviews for content is heavily reliant on reviewers in the website workgroup to find and source reviews. This could be significantly streamlined by delegating it to workgroups or steering groups aligned with the content. Breaking the collected files out into a separate repository and having clearly defined reviewers for catalogs could significantly reduce the friction of getting updates and content available.
+- The process of finding reviewers and enabling reviews for content is heavily reliant on reviewers in the website workgroup to find and source reviews. This could be significantly streamlined by delegating it to steering groups (or delegated workgroups from a steering group) aligned with the content. Breaking the collected files out into a separate repository and having clearly defined reviewers for catalogs could significantly reduce the friction of getting updates and content available.
 
 ### Multiple Repos
 
-Instead of using a mono-repo layout that collects catalogs, create a repository per catalog. This follows the pattern of what exists today with the repositories https://github.com/apple/swift-migration-guide, https://github.com/apple/swift-embedded-examples, and https://github.com/swiftlang/swift-book/. Each repository could have its own set of reviewers and committers, aligned with their relevant workgroup or steering group.
+Instead of using a mono-repo layout that collects catalogs, create a repository per catalog. This follows the pattern of what exists today with the repositories https://github.com/apple/swift-migration-guide, https://github.com/apple/swift-embedded-examples, and https://github.com/swiftlang/swift-book/. Each repository could have its own set of reviewers and committers, aligned with their steering groups.
 
 The downside of this scenario is that this could represent a notable growth of repositories, and finding the relevant content would be notably less obvious than a single location. Additionally, some of these repositories would be quite thin - containing relatively little content for the overhead of maintaining a repository.
 
