@@ -7,7 +7,7 @@ author: [doug_gregor, rauhul]
 category: "Adopters"
 ---
 
-[Embedded Swift](/get-started/embedded/) is a subset of Swift that can be used to develop bare-metal, embedded, and standalone programs for a variety of hardware platforms and environments. Embedded Swift is currently an experimental feature that uses a special compilation mode to produce significantly smaller binaries than regular Swift, using techniques described in the [Embedded Swift vision document](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md).
+[Embedded Swift](/get-started/embedded/) is a subset of Swift that’s designed for low resource usage, making it capable of running on constrained environments like microcontrollers. Using a special compilation mode, Embedded Swift produces significantly smaller binaries than regular Swift. While some language features have been removed by design, the vast majority of the Swift Language works exactly the same in Embedded Swift. Additional information is described in the [Embedded Swift vision document](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md).
 
 Embedded Swift is evolving rapidly. This post describes a number of improvements made in the last few months, covering everything from improved C interoperability to better debugging and steps toward a complete linkage model for Embedded Swift.
 These features and bug fixes are included in the upcoming [Swift 6.3](https://forums.swift.org/t/swift-6-3-release-process/82843) release, and you can try them out today with a [Swift development snapshot](https://www.swift.org/install/).
@@ -111,7 +111,6 @@ And then separately defined in Swift with, for example:
 ```
 
 The compiler could fail to compile when it noticed the mismatch, often with a hard-to-understand “deserialization” failure. The compiler now keeps the different views on the underlying C declaration separate, diagnosing problems when the underlying C declarations themselves are inconsistent. This allows subtle differences such as nullability or sendability annotations to occur in C signatures without failing to compile.
-
 
 ## Debugging 
 
