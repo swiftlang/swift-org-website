@@ -212,4 +212,6 @@ Another step along the path to formalizing the Embedded Swift linkage model is [
 
 ## Try it out!
 
-Embedded Swift support is available in the [Swift development snapshots](/install/). The best way to get started is through the examples in the [Swift Embedded Examples](https://github.com/swiftlang/swift-embedded-examples) repository, which contains a number of sample projects to get Embedded Swift code building and running on various hardware. If you have questions or want to show off something cool you’ve done with Embedded Swift, please join us over on the [Swift forums](https://forums.swift.org/c/platform/embedded/).
+Embedded Swift support is available in the [Swift development snapshots](/install/). The best way to get started is through the examples in the [Swift Embedded Examples](https://github.com/swiftlang/swift-embedded-examples) repository, which contains a number of sample projects to get Embedded Swift code building and running on various hardware.
+
+If you have questions about the improvements described here, or want to discuss your own Embedded Swift work, we encourage you to join the conversation on the Swift forums. You can ask about this post in the [associated thread](), and share your experiences in the [Embedded Swift category](https://forums.swift.org/c/platform/embedded/).
