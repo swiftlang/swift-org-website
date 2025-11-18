@@ -79,8 +79,8 @@ but don't reflect all the possible future content we might create.
   - Swift language guides - moderated/reviewed by the Language Steering Group.
   - API guidelines - moderated/reviewed by the Language Steering Group.
   - Server guides - moderated/reviewed by the SSWG.
-  - Ecosystem tools guides - moderated/reviewed by ecosystem steering group.
-  - Platform guides - moderated/reviewed by platform steering group.
+  - Ecosystem tools guides - moderated/reviewed by Ecosystem Steering Group.
+  - Platform guides - moderated/reviewed by Platform Steering Group.
 
 An example `tree` view of such a repository:
 
