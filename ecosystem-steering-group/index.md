@@ -13,9 +13,9 @@ Specifically, the Ecosystem Steering Group will:
 
 - work with the Swift Core Team to define a roadmap for developer experience
   improvements and growing the package ecosystem,
-- work with the Platforms Steering Group to improve the experience of setting up
+- work with the [Platforms Steering Group](/platform-steering-group/) to improve the experience of setting up
   a Swift development environment on all supported platforms,
-- work with the Language Steering Group to create resources on best practices
+- work with the [Language Steering Group](/language-steering-group/) to create resources on best practices
   for effective use of Swift in packages, such as adopting strict concurrency
   checking or other new language features, or adopting tools such as the API
   checker to facilitate source-stable package evolution, define and facilitate an
@@ -104,8 +104,8 @@ Evolution authority of the Ecosystem Steering Group does not extend to:
 - The linker
 - Libraries, such as the sanitizers
 
-All of these are under the purview of the Language Steering Group or Platform
-Steering Group.
+All of these are under the purview of the [Language Steering Group](/language-steering-group/) or 
+[Platform Steering Group](/platform-steering-group/).
 
 # Workgroups
 
