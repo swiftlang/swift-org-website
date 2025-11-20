@@ -41,8 +41,8 @@ the viability of this approach:
 - [Naturitas](https://play.google.com/store/apps/details?id=com.naturitas.android) - An organic products marketplace running Swift in production
 
 These aren't experimental apps or proofs of concept—they're real businesses serving
-real users at scale. The fact that millions of people use Swift-powered Android apps
-daily without knowing shows both the stability of Swift on Android and the
+real users at scale. The fact that millions of people unknowingly use Swift-powered
+Android apps daily shows both the stability of Swift on Android and the
 practical benefits it provides to development teams sharing code across platforms.
 
 ### Coming up Next
