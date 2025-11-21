@@ -25,3 +25,6 @@ xcuserdata
 
 # Npm modules
 node_modules
+
+# Site check reports
+site-check-report.json
