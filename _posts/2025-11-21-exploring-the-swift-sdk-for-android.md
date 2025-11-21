@@ -49,15 +49,19 @@ the debugger and [Swift Language Server Protocol tool, sourcekit-lsp](/blog/gsoc
 into editors like [Visual Studio Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/),
 Android Studio, and [CodeEdit](https://www.codeedit.app/), another issue on our board.
 
-### Sharing Logic Versus Sharing UI
+## Sharing Logic Versus Sharing UI
 
-A common concern is that we do not provide a cross-platform GUI toolkit. As we
-write in [our draft vision document](https://github.com/swiftlang/swift-evolution/blob/807b844be42db582e434d1667fc907ae7a7a8775/visions/android.md),
+Swift on Android is primarily suited to sharing business logic, as we do not provide
+a cross-platform GUI toolkit. As we write in [our draft vision document](https://github.com/swiftlang/swift-evolution/blob/807b844be42db582e434d1667fc907ae7a7a8775/visions/android.md),
 the Android workgroup has no plans to create such a GUI toolkit, but will instead
-curate a list of cross-platform UI tools. See [our recent post in the Swift forums](https://forums.swift.org/t/swift-gui-toolkits-for-android/83337)
-listing a handful of popular and in-progress options.
+curate a list of cross-platform UI tools.
 
-### Diving in
+See [our recent post in the Swift forums](https://forums.swift.org/t/swift-gui-toolkits-for-android/83337)
+that lists a handful of popular and in-progress options we found, but have not
+validated regarding what their authors claim. We will work with those devs in the
+coming months to add more info on using their GUI tools with the Swift SDK for Android.
+
+## Diving in
 
 Finally, we intend to bring you interviews and information from those using Swift
 on Android already, as pioneers like [Readdle](https://readdle.com/blog/swift-for-android-our-experience-and-tools)
