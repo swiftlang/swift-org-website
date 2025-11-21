@@ -39,11 +39,11 @@ for many years. Here are some notable examples:
 - [MediQuo](https://play.google.com/store/apps/details?id=com.mediquo.main) - A healthcare app leveraging Swift for cross-platform development
 - [Naturitas](https://play.google.com/store/apps/details?id=com.naturitas.android) - An organic products marketplace running Swift in production
 
-### Coming up Next
+## Coming up Next
 
-Swift on Android [first got started as soon as the language was open-sourced a decade ago](https://lists.swift.org/pipermail/swift-dev/Week-of-Mon-20151207/000171.html),
-but it is by no means done. [The Android project board lists areas we are working on](https://github.com/orgs/swiftlang/projects/17)
-and easy debugging is a high priority for us next. While it [mostly works in limited use now](https://github.com/swiftlang/llvm-project/issues/10831),
+Grassroots community efforts to run Swift on Android [began as soon as the language source was opened in 2015](https://lists.swift.org/pipermail/swift-dev/Week-of-Mon-20151207/000171.html),
+and continue to this day. [The Android project board lists areas the workgroup determines important](https://github.com/orgs/swiftlang/projects/17),
+such as easy debugging, now a high priority for us. While it [mostly works in limited use](https://github.com/swiftlang/llvm-project/issues/10831),
 we need to test it more and make it easy to access. That will likely mean tying
 the debugger and [Swift Language Server Protocol tool, sourcekit-lsp](/blog/gsoc-2025-showcase-code-completion/),
 into editors like [Visual Studio Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/),
