@@ -12,12 +12,12 @@ the Android workgroup has seen a lot of questions about how it works and what's 
 
 ### Swift in the World of Android
 
-Swift is a natively-compiled language to machine code and Android is no different.
-That renders it on par with C and C++ code built using the Android NDK, which are
-languages more geared towards performance, while Swift essays a happier balance between
-performance, safety, and usability. To enable that, Swift apps must bundle a native
-runtime for Android that implements many of its features, including its standard library and
-core libraries like Dispatch and [Foundation](/blog/foundation-preview-now-available/).
+Swift compiles directly to native machine code on Android, the same way it does on other
+platforms. This gives it similar performance to C and C++ code using the Android Native
+Development Kit (NDK), while achieving a happier balance between performance, safety,
+and usability. To make this possible, Swift apps on Android bundle a native runtime
+that implements many of its features, including its standard library and core
+libraries like Dispatch and [Foundation](/blog/foundation-preview-now-available/).
 
 However, since most Android APIs are only made available through Java and Kotlin,
 Swift must call into the Android Runtime (ART). That is where the [Java interoperability
