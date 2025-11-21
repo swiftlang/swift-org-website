@@ -75,4 +75,5 @@ and was [interviewed by Swift Toolkit last month](https://www.swifttoolkit.dev/p
 
 Swift on Android has been a community effort for the last decade, snowballing
 from that initial patch to many businesses and developers making their livelihood
-with it today. Join us to make it even better!
+with it today. [Try out the preview SDK snapshots](/documentation/articles/swift-sdk-for-android-getting-started.html)
+and help us make it even better!
