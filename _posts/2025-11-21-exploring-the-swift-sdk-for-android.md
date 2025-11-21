@@ -19,14 +19,15 @@ performance, safety, and usability. To enable that, Swift apps must bundle a nat
 runtime for Android that implements many of its features, including its standard library and
 core libraries like Dispatch and [Foundation](/blog/foundation-preview-now-available/).
 
-However, since most Android APIs are only made available through Java and Kotlin
-in the Android Runtime (ART), a version of the Java Virtual Machine (JVM)
-optimized for mobile, we need to use the Java Native Interface (JNI) and write
-bindings both to call Swift from Java and go the other way. That is where the
-swift-java project's `jextract` tool and its [new support for generating such
-JNI bindings for you](/blog/gsoc-2025-showcase-swift-java/) comes in. Please
-watch its author Mads Odgaard's [Server-Side Swift Conference talk from last month](https://www.youtube.com/watch?v=tOH6V1IvTAc)
-and try out the tool for yourself with [this example Android app that he put together](https://github.com/swiftlang/swift-android-examples/tree/main/hello-swift-java).
+However, since most Android APIs are only made available through Java and Kotlin,
+Swift must call into the Android Runtime (ART). That is where the [Java interoperability
+project's](https://github.com/swiftlang/swift-java) `jextract` and `wrap-java`
+tools come in. These tools automatically create bindings that enable you to call
+Swift from Java or go the other way using the Java Native Interface (JNI), which
+allows Swift to seamlessly integrate with the Android platform. The [`jextract`
+tool gained a JNI mode recently](/blog/gsoc-2025-showcase-swift-java/):
+please watch its author Mads Odgaard's [Server Side Swift Conference talk from last month](https://www.youtube.com/watch?v=tOH6V1IvTAc).
+You can also check out [his hello-swift example in the Android examples repository](https://github.com/swiftlang/swift-android-examples/tree/main/hello-swift-java).
 
 ### Swift in Android app stores
 
