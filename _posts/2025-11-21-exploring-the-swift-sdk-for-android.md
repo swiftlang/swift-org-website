@@ -60,7 +60,7 @@ listing a handful of popular and in-progress options.
 ### Diving in
 
 Finally, we intend to bring you interviews and information from those using Swift
-on Android already, as pioneering companies like [Readdle](https://readdle.com/blog/swift-for-android-our-experience-and-tools)
+on Android already, as pioneers like [Readdle](https://readdle.com/blog/swift-for-android-our-experience-and-tools)
 and [Flowkey](https://medium.com/@ephemer/why-we-put-an-app-in-the-android-play-store-using-swift-96ac87c88dfc)
 have written about using Swift on Android for the last decade. The Left Bit's Pierluigi Cifani
 [wrote about their experiences recently](https://forums.swift.org/t/thoughts-on-swift-for-android/80961),
