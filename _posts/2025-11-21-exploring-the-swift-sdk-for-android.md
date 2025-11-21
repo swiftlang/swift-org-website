@@ -10,7 +10,7 @@ category: "Developer Tools"
 Since the announcement of [the preview Swift SDK for Android last month](/blog/nightly-swift-sdk-for-android/),
 the Android workgroup has seen a lot of questions about how it works and what's next. Please read on for those answers.
 
-### Swift in the World of Android
+## Swift in the World of Android
 
 Swift compiles directly to native machine code on Android, the same way it does on other
 platforms. This gives it similar performance to C and C++ code using the Android Native
@@ -29,22 +29,15 @@ tool gained a JNI mode recently](/blog/gsoc-2025-showcase-swift-java/):
 please watch its author Mads Odgaard's [Server Side Swift Conference talk from last month](https://www.youtube.com/watch?v=tOH6V1IvTAc).
 You can also check out [his hello-swift example in the Android examples repository](https://github.com/swiftlang/swift-android-examples/tree/main/hello-swift-java).
 
-### Swift in Android app stores
+## Swift on Android in production
 
-While Swift on Android may seem new, it's important to recognize that there are
-already millions of Android devices running Swift today. Production apps with
-substantial user bases have been shipping Swift on Android for years, proving
-the viability of this approach:
+Android apps built with Swift have millions of downloads and have been in production
+for many years. Here are some notable examples:
 
 - [Spark](https://play.google.com/store/apps/details?id=com.readdle.spark) - A popular email client using Swift to share code between mobile iOS/Android and desktop macOS/Windows versions
-- [flowkey](https://play.google.com/store/apps/details?id=com.flowkey.app) - This interactive piano learning app has been built with Swift on Android since the open-source release
+- [flowkey](https://play.google.com/store/apps/details?id=com.flowkey.app) - An interactive piano learning app built with Swift for Android for almost a decade
 - [MediQuo](https://play.google.com/store/apps/details?id=com.mediquo.main) - A healthcare app leveraging Swift for cross-platform development
 - [Naturitas](https://play.google.com/store/apps/details?id=com.naturitas.android) - An organic products marketplace running Swift in production
-
-These aren't experimental apps or proofs of concept—they're real businesses serving
-real users at scale. The fact that millions of people unknowingly use Swift-powered
-Android apps daily shows both the stability of Swift on Android and the
-practical benefits it provides to development teams sharing code across platforms.
 
 ### Coming up Next
 
