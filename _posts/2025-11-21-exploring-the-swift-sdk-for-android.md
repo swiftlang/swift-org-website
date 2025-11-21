@@ -60,8 +60,8 @@ Android Studio, and [CodeEdit](https://www.codeedit.app/), another issue on our 
 A common concern is that we do not provide a cross-platform GUI toolkit. As we
 write in [our draft vision document](https://github.com/swiftlang/swift-evolution/blob/807b844be42db582e434d1667fc907ae7a7a8775/visions/android.md),
 the Android workgroup has no plans to create such a GUI toolkit, but will instead
-curate a list of cross-platform UI tools. See our recent post in the Swift forums
-listing several popular and in-progress options. (editor: add this link)
+curate a list of cross-platform UI tools. See [our recent post in the Swift forums](https://forums.swift.org/t/swift-gui-toolkits-for-android/83337)
+listing a handful of popular and in-progress options.
 
 ### Diving in
 
