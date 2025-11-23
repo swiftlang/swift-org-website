@@ -117,3 +117,57 @@ or
 ```
 swift run --swift-sdk {{ tag }}_wasm-embedded
 ```
+
+## Editor Configuration
+
+This section shows you how to configure your development environment for Swift WebAssembly development using the Swift SDKs you installed in the previous section.
+
+### Visual Studio Code
+
+If you haven't set up VSCode for Swift development yet, see the [Configuring VS Code for Swift Development guide](/documentation/articles/getting-started-with-vscode-swift/).
+
+**Configure VSCode for WebAssembly:**
+
+1. Open your Swift package in VSCode.
+
+2. Use the Command Palette (`Cmd + Shift + P` on macOS, `Ctrl + Shift + P` on other platforms) and select `Swift: Select Toolchain...`.
+
+3. Choose your Swift toolchain from the list (should match the version installed with `swiftly`).
+
+4. When prompted, save the toolchain setting in **Workspace Settings**. This will create or update the `swift.path` setting in `.vscode/settings.json`.
+
+5. Create a `.sourcekit-lsp/config.json` file in your project root:
+
+   ```json
+   {
+       "swiftPM": {
+           "swiftSDK": "{{ tag }}_wasm"
+       }
+   }
+   ```
+
+   Replace `{{ tag }}_wasm` with the exact Swift SDK ID from your `swift sdk list` output. Use `{{ tag }}_wasm-embedded` if you're working with Embedded Swift.
+
+6. Reload VSCode using the Command Palette: `Developer: Reload Window`.
+
+### Other Editors
+
+For other editors (Vim, Neovim, Emacs, etc.) with LSP support already configured for Swift:
+
+1. Ensure your editor is using the correct Swift toolchain (the one installed with `swiftly`).
+
+2. Create a `.sourcekit-lsp/config.json` file in your project root:
+
+   ```json
+   {
+       "swiftPM": {
+           "swiftSDK": "{{ tag }}_wasm"
+       }
+   }
+   ```
+
+   Replace `{{ tag }}_wasm` with your Swift SDK ID from `swift sdk list`. Use `{{ tag }}_wasm-embedded` for Embedded Swift.
+
+For initial Swift LSP setup guides, see:
+- [Zero to Swift with Neovim](/documentation/articles/zero-to-swift-nvim/)
+- [Zero to Swift with Emacs](/documentation/articles/zero-to-swift-emacs/)
