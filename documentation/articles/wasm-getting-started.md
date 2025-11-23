@@ -100,7 +100,7 @@ Build of product 'Hello' complete! (1.31s)
 Hello from WASI!
 ```
 
-# Embedded Swift Support
+## Embedded Swift Support
 
 [Embedded Swift](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md) is an experimental [subset of the language](https://docs.swift.org/embedded/documentation/embedded/languagesubset)
 allowing the toolchain to produce Wasm binaries that are multiple orders of magnitude smaller. One of the Swift SDKs in the artifact bundle you've installed
