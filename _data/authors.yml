@@ -243,6 +243,10 @@ parkera:
    github: parkera
    about: "Tony Parker manages teams at Apple working on Foundation, Swift packages, and the Swift Standard Library."
 
+android-workgroup:
+   name: The Android workgroup
+   about: "The Android workgroup works toward furthering Swift on Android."
+
 diversity-workgroup:
    name: The Diversity in Swift workgroup
    about: "The Diversity in Swift workgroup is a group of volunteers working to make our community more approachable and inclusive."
