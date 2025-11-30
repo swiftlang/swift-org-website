@@ -13,11 +13,11 @@ const createAnchor = (postData) => {
   anchor.href = postData.url
   anchor.classList = 'post-link'
   anchor.innerHTML = `
-    <h3 class="title">${postData.title}</h3>
-    <time pubdate datetime="${postData.date}" class="blog-date">${postData.date}</time>
-    <p class="body-copy">${postData.excerpt}</p>
+    <h3 class="title-4">${postData.title}</h3>
+    <time pubdate datetime="${postData.date}" class="blog-date body">${postData.date}</time>
+    <p class="body">${postData.excerpt}</p>
     ${postData.categories.reduce((markup, category) => {
-      return markup + ` <span class="category body-copy">${category}</span>`
+      return markup + ` <span class="category body">${category}</span>`
     }, '')}
     `
   return anchor
@@ -83,7 +83,7 @@ window.addEventListener('click', (evt) => {
 
 // Select all category filters
 selectAllBox.addEventListener('click', () =>
-  selectAllCategories(selectAllBox, filters)
+  selectAllCategories(selectAllBox, filters),
 )
 
 filters.forEach((checkbox) => {
