@@ -1,0 +1,1331 @@
+---
+Name: WebGPU
+Tags:
+- Name: WGPUAdapterType
+  EnumExtensibility: closed
+- Name: WGPUAddressMode
+  EnumExtensibility: closed
+- Name: WGPUBackendType
+  EnumExtensibility: closed
+- Name: WGPUBlendFactor
+  EnumExtensibility: closed
+- Name: WGPUBlendOperation
+  EnumExtensibility: closed
+- Name: WGPUBufferBindingType
+  EnumExtensibility: closed
+- Name: WGPUBufferMapState
+  EnumExtensibility: closed
+- Name: WGPUCallbackMode
+  EnumExtensibility: closed
+- Name: WGPUCompareFunction
+  EnumExtensibility: closed
+- Name: WGPUCompilationInfoRequestStatus
+  EnumExtensibility: closed
+- Name: WGPUCompilationMessageType
+  EnumExtensibility: closed
+- Name: WGPUCompositeAlphaMode
+  EnumExtensibility: closed
+- Name: WGPUCreatePipelineAsyncStatus
+  EnumExtensibility: closed
+- Name: WGPUCullMode
+  EnumExtensibility: closed
+- Name: WGPUDeviceLostReason
+  EnumExtensibility: closed
+- Name: WGPUErrorFilter
+  EnumExtensibility: closed
+- Name: WGPUErrorType
+  EnumExtensibility: closed
+- Name: WGPUFeatureLevel
+  EnumExtensibility: closed
+- Name: WGPUFeatureName
+  EnumExtensibility: closed
+- Name: WGPUFilterMode
+  EnumExtensibility: closed
+- Name: WGPUFrontFace
+  EnumExtensibility: closed
+- Name: WGPUIndexFormat
+  EnumExtensibility: closed
+- Name: WGPUInstanceFeatureName
+  EnumExtensibility: closed
+- Name: WGPULoadOp
+  EnumExtensibility: closed
+- Name: WGPUMapAsyncStatus
+  EnumExtensibility: closed
+- Name: WGPUMipmapFilterMode
+  EnumExtensibility: closed
+- Name: WGPUOptionalBool
+  EnumExtensibility: closed
+- Name: WGPUPopErrorScopeStatus
+  EnumExtensibility: closed
+- Name: WGPUPowerPreference
+  EnumExtensibility: closed
+- Name: WGPUPredefinedColorSpace
+  EnumExtensibility: closed
+- Name: WGPUPresentMode
+  EnumExtensibility: closed
+- Name: WGPUPrimitiveTopology
+  EnumExtensibility: closed
+- Name: WGPUQueryType
+  EnumExtensibility: closed
+- Name: WGPUQueueWorkDoneStatus
+  EnumExtensibility: closed
+- Name: WGPURequestAdapterStatus
+  EnumExtensibility: closed
+- Name: WGPURequestDeviceStatus
+  EnumExtensibility: closed
+- Name: WGPUSType
+  EnumExtensibility: closed
+- Name: WGPUSamplerBindingType
+  EnumExtensibility: closed
+- Name: WGPUStatus
+  EnumExtensibility: closed
+- Name: WGPUStencilOperation
+  EnumExtensibility: closed
+- Name: WGPUStorageTextureAccess
+  EnumExtensibility: closed
+- Name: WGPUStoreOp
+  EnumExtensibility: closed
+- Name: WGPUSurfaceGetCurrentTextureStatus
+  EnumExtensibility: closed
+- Name: WGPUTextureAspect
+  EnumExtensibility: closed
+- Name: WGPUTextureDimension
+  EnumExtensibility: closed
+- Name: WGPUTextureFormat
+  EnumExtensibility: closed
+- Name: WGPUTextureSampleType
+  EnumExtensibility: closed
+- Name: WGPUTextureViewDimension
+  EnumExtensibility: closed
+- Name: WGPUToneMappingMode
+  EnumExtensibility: closed
+- Name: WGPUVertexFormat
+  EnumExtensibility: closed
+- Name: WGPUVertexStepMode
+  EnumExtensibility: closed
+- Name: WGPUWGSLLanguageFeatureName
+  EnumExtensibility: closed
+- Name: WGPUWaitStatus
+  EnumExtensibility: closed
+- Name: WGPUAdapterImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuAdapterRelease
+  SwiftRetainOp: wgpuAdapterAddRef
+- Name: WGPUBindGroupImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuBindGroupRelease
+  SwiftRetainOp: wgpuBindGroupAddRef
+- Name: WGPUBindGroupLayoutImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuBindGroupLayoutRelease
+  SwiftRetainOp: wgpuBindGroupLayoutAddRef
+- Name: WGPUBufferImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuBufferRelease
+  SwiftRetainOp: wgpuBufferAddRef
+- Name: WGPUCommandBufferImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuCommandBufferRelease
+  SwiftRetainOp: wgpuCommandBufferAddRef
+- Name: WGPUCommandEncoderImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuCommandEncoderRelease
+  SwiftRetainOp: wgpuCommandEncoderAddRef
+- Name: WGPUComputePassEncoderImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuComputePassEncoderRelease
+  SwiftRetainOp: wgpuComputePassEncoderAddRef
+- Name: WGPUComputePipelineImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuComputePipelineRelease
+  SwiftRetainOp: wgpuComputePipelineAddRef
+- Name: WGPUDeviceImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuDeviceRelease
+  SwiftRetainOp: wgpuDeviceAddRef
+- Name: WGPUInstanceImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuInstanceRelease
+  SwiftRetainOp: wgpuInstanceAddRef
+- Name: WGPUPipelineLayoutImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuPipelineLayoutRelease
+  SwiftRetainOp: wgpuPipelineLayoutAddRef
+- Name: WGPUQuerySetImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuQuerySetRelease
+  SwiftRetainOp: wgpuQuerySetAddRef
+- Name: WGPUQueueImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuQueueRelease
+  SwiftRetainOp: wgpuQueueAddRef
+- Name: WGPURenderBundleImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuRenderBundleRelease
+  SwiftRetainOp: wgpuRenderBundleAddRef
+- Name: WGPURenderBundleEncoderImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuRenderBundleEncoderRelease
+  SwiftRetainOp: wgpuRenderBundleEncoderAddRef
+- Name: WGPURenderPassEncoderImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuRenderPassEncoderRelease
+  SwiftRetainOp: wgpuRenderPassEncoderAddRef
+- Name: WGPURenderPipelineImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuRenderPipelineRelease
+  SwiftRetainOp: wgpuRenderPipelineAddRef
+- Name: WGPUSamplerImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuSamplerRelease
+  SwiftRetainOp: wgpuSamplerAddRef
+- Name: WGPUShaderModuleImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuShaderModuleRelease
+  SwiftRetainOp: wgpuShaderModuleAddRef
+- Name: WGPUSurfaceImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuSurfaceRelease
+  SwiftRetainOp: wgpuSurfaceAddRef
+- Name: WGPUTextureImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuTextureRelease
+  SwiftRetainOp: wgpuTextureAddRef
+- Name: WGPUTextureViewImpl
+  SwiftImportAs: reference
+  SwiftReleaseOp: wgpuTextureViewRelease
+  SwiftRetainOp: wgpuTextureViewAddRef
+Typedefs:
+- Name: WGPUBufferUsage
+  SwiftWrapper: struct
+- Name: WGPUColorWriteMask
+  SwiftWrapper: struct
+- Name: WGPUMapMode
+  SwiftWrapper: struct
+- Name: WGPUShaderStage
+  SwiftWrapper: struct
+- Name: WGPUTextureUsage
+  SwiftWrapper: struct
+Functions:
+- Name: wgpuAdapterAddRef
+  SwiftName: WGPUAdapterImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUAdapter _Nonnull"
+- Name: wgpuAdapterGetFeatures
+  SwiftName: WGPUAdapterImpl.getFeatures(self:features:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUAdapter _Nonnull"
+    - Position: 1
+      Type: " WGPUSupportedFeatures * _Nonnull"
+- Name: wgpuAdapterGetInfo
+  SwiftName: WGPUAdapterImpl.getInfo(self:info:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUAdapter _Nonnull"
+    - Position: 1
+      Type: " WGPUAdapterInfo * _Nonnull"
+- Name: wgpuAdapterGetLimits
+  SwiftName: WGPUAdapterImpl.getLimits(self:limits:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUAdapter _Nonnull"
+    - Position: 1
+      Type: " WGPULimits * _Nonnull"
+- Name: wgpuAdapterHasFeature
+  SwiftName: WGPUAdapterImpl.hasFeature(self:feature:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUAdapter _Nonnull"
+- Name: wgpuAdapterRelease
+  SwiftName: WGPUAdapterImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUAdapter _Nonnull"
+- Name: wgpuAdapterRequestDevice
+  SwiftName: WGPUAdapterImpl.requestDevice(self:descriptor:callbackInfo:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUAdapter _Nonnull"
+    - Position: 1
+      Type: " WGPU_NULLABLE WGPUDeviceDescriptor const * _Nonnull"
+- Name: wgpuBindGroupAddRef
+  SwiftName: WGPUBindGroupImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBindGroup _Nonnull"
+- Name: wgpuBindGroupLayoutAddRef
+  SwiftName: WGPUBindGroupLayoutImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBindGroupLayout _Nonnull"
+- Name: wgpuBindGroupLayoutRelease
+  SwiftName: WGPUBindGroupLayoutImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBindGroupLayout _Nonnull"
+- Name: wgpuBindGroupLayoutSetLabel
+  SwiftName: WGPUBindGroupLayoutImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBindGroupLayout _Nonnull"
+- Name: wgpuBindGroupRelease
+  SwiftName: WGPUBindGroupImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBindGroup _Nonnull"
+- Name: wgpuBindGroupSetLabel
+  SwiftName: WGPUBindGroupImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBindGroup _Nonnull"
+- Name: wgpuBufferAddRef
+  SwiftName: WGPUBufferImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+- Name: wgpuBufferDestroy
+  SwiftName: WGPUBufferImpl.destroy(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+- Name: wgpuBufferGetMapState
+  SwiftName: getter:WGPUBufferImpl.mapState(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+- Name: wgpuBufferGetSize
+  SwiftName: getter:WGPUBufferImpl.size(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+- Name: wgpuBufferGetUsage
+  SwiftName: getter:WGPUBufferImpl.usage(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+- Name: wgpuBufferMapAsync
+  SwiftName: WGPUBufferImpl.mapAsync(self:mode:offset:size:callbackInfo:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+- Name: wgpuBufferReadMappedRange
+  SwiftName: WGPUBufferImpl.readMappedRange(self:offset:data:size:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+    - Position: 2
+      Type: " void * _Nonnull"
+- Name: wgpuBufferRelease
+  SwiftName: WGPUBufferImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+- Name: wgpuBufferSetLabel
+  SwiftName: WGPUBufferImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+- Name: wgpuBufferUnmap
+  SwiftName: WGPUBufferImpl.unmap(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+- Name: wgpuBufferWriteMappedRange
+  SwiftName: WGPUBufferImpl.writeMappedRange(self:offset:data:size:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUBuffer _Nonnull"
+    - Position: 2
+      Type: " void const * _Nonnull"
+- Name: wgpuCommandBufferAddRef
+  SwiftName: WGPUCommandBufferImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandBuffer _Nonnull"
+- Name: wgpuCommandBufferRelease
+  SwiftName: WGPUCommandBufferImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandBuffer _Nonnull"
+- Name: wgpuCommandBufferSetLabel
+  SwiftName: WGPUCommandBufferImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandBuffer _Nonnull"
+- Name: wgpuCommandEncoderAddRef
+  SwiftName: WGPUCommandEncoderImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+- Name: wgpuCommandEncoderBeginComputePass
+  SwiftName: WGPUCommandEncoderImpl.beginComputePass(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+    - Position: 1
+      Type: " WGPU_NULLABLE WGPUComputePassDescriptor const * _Nonnull"
+- Name: wgpuCommandEncoderBeginRenderPass
+  SwiftName: WGPUCommandEncoderImpl.beginRenderPass(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+    - Position: 1
+      Type: " WGPURenderPassDescriptor const * _Nonnull"
+- Name: wgpuCommandEncoderClearBuffer
+  SwiftName: WGPUCommandEncoderImpl.clearBuffer(self:buffer:offset:size:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+- Name: wgpuCommandEncoderCopyBufferToBuffer
+  SwiftName: WGPUCommandEncoderImpl.copyBufferToBuffer(self:source:sourceOffset:destination:destinationOffset:size:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+- Name: wgpuCommandEncoderCopyBufferToTexture
+  SwiftName: WGPUCommandEncoderImpl.copyBufferToTexture(self:source:destination:copySize:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+    - Position: 1
+      Type: " WGPUTexelCopyBufferInfo const * _Nonnull"
+    - Position: 2
+      Type: " WGPUTexelCopyTextureInfo const * _Nonnull"
+    - Position: 3
+      Type: " WGPUExtent3D const * _Nonnull"
+- Name: wgpuCommandEncoderCopyTextureToBuffer
+  SwiftName: WGPUCommandEncoderImpl.copyTextureToBuffer(self:source:destination:copySize:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+    - Position: 1
+      Type: " WGPUTexelCopyTextureInfo const * _Nonnull"
+    - Position: 2
+      Type: " WGPUTexelCopyBufferInfo const * _Nonnull"
+    - Position: 3
+      Type: " WGPUExtent3D const * _Nonnull"
+- Name: wgpuCommandEncoderCopyTextureToTexture
+  SwiftName: WGPUCommandEncoderImpl.copyTextureToTexture(self:source:destination:copySize:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+    - Position: 1
+      Type: " WGPUTexelCopyTextureInfo const * _Nonnull"
+    - Position: 2
+      Type: " WGPUTexelCopyTextureInfo const * _Nonnull"
+    - Position: 3
+      Type: " WGPUExtent3D const * _Nonnull"
+- Name: wgpuCommandEncoderFinish
+  SwiftName: WGPUCommandEncoderImpl.finish(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+    - Position: 1
+      Type: " WGPU_NULLABLE WGPUCommandBufferDescriptor const * _Nonnull"
+- Name: wgpuCommandEncoderInsertDebugMarker
+  SwiftName: WGPUCommandEncoderImpl.insertDebugMarker(self:markerLabel:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+- Name: wgpuCommandEncoderPopDebugGroup
+  SwiftName: WGPUCommandEncoderImpl.popDebugGroup(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+- Name: wgpuCommandEncoderPushDebugGroup
+  SwiftName: WGPUCommandEncoderImpl.pushDebugGroup(self:groupLabel:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+- Name: wgpuCommandEncoderRelease
+  SwiftName: WGPUCommandEncoderImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+- Name: wgpuCommandEncoderResolveQuerySet
+  SwiftName: WGPUCommandEncoderImpl.resolveQuerySet(self:querySet:firstQuery:queryCount:destination:destinationOffset:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+- Name: wgpuCommandEncoderSetLabel
+  SwiftName: WGPUCommandEncoderImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+- Name: wgpuCommandEncoderWriteTimestamp
+  SwiftName: WGPUCommandEncoderImpl.writeTimestamp(self:querySet:queryIndex:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUCommandEncoder _Nonnull"
+- Name: wgpuComputePassEncoderAddRef
+  SwiftName: WGPUComputePassEncoderImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+- Name: wgpuComputePassEncoderDispatchWorkgroups
+  SwiftName: WGPUComputePassEncoderImpl.dispatchWorkgroups(self:workgroupCountX:workgroupCountY:workgroupCountZ:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+- Name: wgpuComputePassEncoderDispatchWorkgroupsIndirect
+  SwiftName: WGPUComputePassEncoderImpl.dispatchWorkgroupsIndirect(self:indirectBuffer:indirectOffset:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+- Name: wgpuComputePassEncoderEnd
+  SwiftName: WGPUComputePassEncoderImpl.end(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+- Name: wgpuComputePassEncoderInsertDebugMarker
+  SwiftName: WGPUComputePassEncoderImpl.insertDebugMarker(self:markerLabel:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+- Name: wgpuComputePassEncoderPopDebugGroup
+  SwiftName: WGPUComputePassEncoderImpl.popDebugGroup(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+- Name: wgpuComputePassEncoderPushDebugGroup
+  SwiftName: WGPUComputePassEncoderImpl.pushDebugGroup(self:groupLabel:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+- Name: wgpuComputePassEncoderRelease
+  SwiftName: WGPUComputePassEncoderImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+- Name: wgpuComputePassEncoderSetBindGroup
+  SwiftName: WGPUComputePassEncoderImpl.setBindGroup(self:groupIndex:group:dynamicOffsetCount:dynamicOffsets:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+    - Position: 4
+      Type: " uint32_t const * _Nonnull"
+- Name: wgpuComputePassEncoderSetLabel
+  SwiftName: WGPUComputePassEncoderImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+- Name: wgpuComputePassEncoderSetPipeline
+  SwiftName: WGPUComputePassEncoderImpl.setPipeline(self:pipeline:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePassEncoder _Nonnull"
+- Name: wgpuComputePipelineAddRef
+  SwiftName: WGPUComputePipelineImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePipeline _Nonnull"
+- Name: wgpuComputePipelineGetBindGroupLayout
+  SwiftName: WGPUComputePipelineImpl.getbindGroupLayout(self:groupIndex:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePipeline _Nonnull"
+- Name: wgpuComputePipelineRelease
+  SwiftName: WGPUComputePipelineImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePipeline _Nonnull"
+- Name: wgpuComputePipelineSetLabel
+  SwiftName: WGPUComputePipelineImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUComputePipeline _Nonnull"
+- Name: wgpuCreateInstance
+  SwiftName: WGPUInstanceImpl.init(descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUInstanceDescriptor const * _Nullable"
+- Name: wgpuDeviceAddRef
+  SwiftName: WGPUDeviceImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+- Name: wgpuDeviceCreateBindGroup
+  SwiftName: WGPUDeviceImpl.createBindGroup(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUBindGroupDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateBindGroupLayout
+  SwiftName: WGPUDeviceImpl.createBindGroupLayout(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUBindGroupLayoutDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateBuffer
+  SwiftName: WGPUDeviceImpl.createBuffer(self:descriptor:)
+  SwiftReturnOwnership: retained
+  ResultType: "WGPUBuffer _Nullable"
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUBufferDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateCommandEncoder
+  SwiftName: WGPUDeviceImpl.createCommandEncoder(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPU_NULLABLE WGPUCommandEncoderDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateComputePipeline
+  SwiftName: WGPUDeviceImpl.createComputePipeline(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUComputePipelineDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateComputePipelineAsync
+  SwiftName: WGPUDeviceImpl.createComputePipelineAsync(self:descriptor:callbackInfo:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUComputePipelineDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreatePipelineLayout
+  SwiftName: WGPUDeviceImpl.createPipelineLayout(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUPipelineLayoutDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateQuerySet
+  SwiftName: WGPUDeviceImpl.createQuerySet(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUQuerySetDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateRenderBundleEncoder
+  SwiftName: WGPUDeviceImpl.createRenderBundleEncoder(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPURenderBundleEncoderDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateRenderPipeline
+  SwiftName: WGPUDeviceImpl.createRenderPipeline(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPURenderPipelineDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateRenderPipelineAsync
+  SwiftName: WGPUDeviceImpl.createRenderPipelineAsync(self:descriptor:callbackInfo:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPURenderPipelineDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateSampler
+  SwiftName: WGPUDeviceImpl.createSampler(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPU_NULLABLE WGPUSamplerDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateShaderModule
+  SwiftName: WGPUDeviceImpl.createShaderModule(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUShaderModuleDescriptor const * _Nonnull"
+- Name: wgpuDeviceCreateTexture
+  SwiftName: WGPUDeviceImpl.createTexture(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUTextureDescriptor const * _Nonnull"
+- Name: wgpuDeviceDestroy
+  SwiftName: WGPUDeviceImpl.destroy(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+- Name: wgpuDeviceGetAdapterInfo
+  SwiftName: WGPUDeviceImpl.getAdapterInfo(self:adapterInfo:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUAdapterInfo * _Nonnull"
+- Name: wgpuDeviceGetFeatures
+  SwiftName: WGPUDeviceImpl.getFeatures(self:features:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPUSupportedFeatures * _Nonnull"
+- Name: wgpuDeviceGetLimits
+  SwiftName: WGPUDeviceImpl.getLimits(self:limits:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+    - Position: 1
+      Type: " WGPULimits * _Nonnull"
+- Name: wgpuDeviceGetLostFuture
+  SwiftName: getter:WGPUDeviceImpl.lostFuture(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+- Name: wgpuDeviceGetQueue
+  SwiftName: getter:WGPUDeviceImpl.queue(self:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+- Name: wgpuDeviceHasFeature
+  SwiftName: WGPUDeviceImpl.hasFeature(self:feature:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+- Name: wgpuDevicePopErrorScope
+  SwiftName: WGPUDeviceImpl.popErrorScope(self:callbackInfo:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+- Name: wgpuDevicePushErrorScope
+  SwiftName: WGPUDeviceImpl.pushErrorScope(self:filter:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+- Name: wgpuDeviceRelease
+  SwiftName: WGPUDeviceImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+- Name: wgpuDeviceSetLabel
+  SwiftName: WGPUDeviceImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUDevice _Nonnull"
+- Name: wgpuGetInstanceFeatures
+  Parameters:
+    - Position: 0
+      Type: "WGPUSupportedInstanceFeatures * _Nonnull"
+- Name: wgpuGetInstanceLimits
+  Parameters:
+    - Position: 0
+      Type: "WGPUInstanceLimits * _Nonnull"
+- Name: wgpuInstanceAddRef
+  SwiftName: WGPUInstanceImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUInstance _Nonnull"
+- Name: wgpuInstanceCreateSurface
+  SwiftName: WGPUInstanceImpl.createSurface(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUInstance _Nonnull"
+    - Position: 1
+      Type: " WGPUSurfaceDescriptor const * _Nonnull"
+- Name: wgpuInstanceGetWGSLLanguageFeatures
+  SwiftName: WGPUInstanceImpl.getwgslLanguageFeatures(self:features:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUInstance _Nonnull"
+    - Position: 1
+      Type: " WGPUSupportedWGSLLanguageFeatures * _Nonnull"
+- Name: wgpuInstanceHasWGSLLanguageFeature
+  SwiftName: WGPUInstanceImpl.haswgslLanguageFeature(self:feature:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUInstance _Nonnull"
+- Name: wgpuInstanceProcessEvents
+  SwiftName: WGPUInstanceImpl.processEvents(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUInstance _Nonnull"
+- Name: wgpuInstanceRelease
+  SwiftName: WGPUInstanceImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUInstance _Nonnull"
+- Name: wgpuInstanceRequestAdapter
+  SwiftName: WGPUInstanceImpl.requestAdapter(self:options:callbackInfo:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUInstance _Nonnull"
+    - Position: 1
+      Type: " WGPU_NULLABLE WGPURequestAdapterOptions const * _Nonnull"
+- Name: wgpuInstanceWaitAny
+  SwiftName: WGPUInstanceImpl.waitAny(self:futureCount:futures:timeoutNS:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUInstance _Nonnull"
+    - Position: 2
+      Type: " WGPU_NULLABLE WGPUFutureWaitInfo * _Nonnull"
+- Name: wgpuPipelineLayoutAddRef
+  SwiftName: WGPUPipelineLayoutImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUPipelineLayout _Nonnull"
+- Name: wgpuPipelineLayoutRelease
+  SwiftName: WGPUPipelineLayoutImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUPipelineLayout _Nonnull"
+- Name: wgpuPipelineLayoutSetLabel
+  SwiftName: WGPUPipelineLayoutImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUPipelineLayout _Nonnull"
+- Name: wgpuQuerySetAddRef
+  SwiftName: WGPUQuerySetImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQuerySet _Nonnull"
+- Name: wgpuQuerySetDestroy
+  SwiftName: WGPUQuerySetImpl.destroy(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQuerySet _Nonnull"
+- Name: wgpuQuerySetGetCount
+  SwiftName: getter:WGPUQuerySetImpl.count(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQuerySet _Nonnull"
+- Name: wgpuQuerySetGetType
+  SwiftName: getter:WGPUQuerySetImpl.type(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQuerySet _Nonnull"
+- Name: wgpuQuerySetRelease
+  SwiftName: WGPUQuerySetImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQuerySet _Nonnull"
+- Name: wgpuQuerySetSetLabel
+  SwiftName: WGPUQuerySetImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQuerySet _Nonnull"
+- Name: wgpuQueueAddRef
+  SwiftName: WGPUQueueImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQueue _Nonnull"
+- Name: wgpuQueueOnSubmittedWorkDone
+  SwiftName: WGPUQueueImpl.onsubmittedWorkDone(self:callbackInfo:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQueue _Nonnull"
+- Name: wgpuQueueRelease
+  SwiftName: WGPUQueueImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQueue _Nonnull"
+- Name: wgpuQueueSetLabel
+  SwiftName: WGPUQueueImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQueue _Nonnull"
+- Name: wgpuQueueSubmit
+  SwiftName: WGPUQueueImpl.submit(self:commandCount:commands:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQueue _Nonnull"
+    - Position: 2
+      Type: " WGPUCommandBuffer const * _Nonnull"
+- Name: wgpuQueueWriteBuffer
+  SwiftName: WGPUQueueImpl.writeBuffer(self:buffer:bufferOffset:data:size:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQueue _Nonnull"
+    - Position: 3
+      Type: " void const * _Nonnull"
+- Name: wgpuQueueWriteTexture
+  SwiftName: WGPUQueueImpl.writeTexture(self:destination:data:dataSize:dataLayout:writeSize:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUQueue _Nonnull"
+    - Position: 1
+      Type: " WGPUTexelCopyTextureInfo const * _Nonnull"
+    - Position: 2
+      Type: " void const * _Nonnull"
+    - Position: 4
+      Type: " WGPUTexelCopyBufferLayout const * _Nonnull"
+    - Position: 5
+      Type: " WGPUExtent3D const * _Nonnull"
+- Name: wgpuRenderBundleAddRef
+  SwiftName: WGPURenderBundleImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundle _Nonnull"
+- Name: wgpuRenderBundleEncoderAddRef
+  SwiftName: WGPURenderBundleEncoderImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderDraw
+  SwiftName: WGPURenderBundleEncoderImpl.draw(self:vertexCount:instanceCount:firstVertex:firstInstance:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderDrawIndexed
+  SwiftName: WGPURenderBundleEncoderImpl.drawIndexed(self:indexCount:instanceCount:firstIndex:baseVertex:firstInstance:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderDrawIndexedIndirect
+  SwiftName: WGPURenderBundleEncoderImpl.drawIndexedIndirect(self:indirectBuffer:indirectOffset:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderDrawIndirect
+  SwiftName: WGPURenderBundleEncoderImpl.drawIndirect(self:indirectBuffer:indirectOffset:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderFinish
+  SwiftName: WGPURenderBundleEncoderImpl.finish(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+    - Position: 1
+      Type: " WGPU_NULLABLE WGPURenderBundleDescriptor const * _Nonnull"
+- Name: wgpuRenderBundleEncoderInsertDebugMarker
+  SwiftName: WGPURenderBundleEncoderImpl.insertDebugMarker(self:markerLabel:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderPopDebugGroup
+  SwiftName: WGPURenderBundleEncoderImpl.popDebugGroup(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderPushDebugGroup
+  SwiftName: WGPURenderBundleEncoderImpl.pushDebugGroup(self:groupLabel:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderRelease
+  SwiftName: WGPURenderBundleEncoderImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderSetBindGroup
+  SwiftName: WGPURenderBundleEncoderImpl.setBindGroup(self:groupIndex:group:dynamicOffsetCount:dynamicOffsets:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+    - Position: 4
+      Type: " uint32_t const * _Nonnull"
+- Name: wgpuRenderBundleEncoderSetIndexBuffer
+  SwiftName: WGPURenderBundleEncoderImpl.setIndexBuffer(self:buffer:format:offset:size:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderSetLabel
+  SwiftName: WGPURenderBundleEncoderImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderSetPipeline
+  SwiftName: WGPURenderBundleEncoderImpl.setPipeline(self:pipeline:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleEncoderSetVertexBuffer
+  SwiftName: WGPURenderBundleEncoderImpl.setVertexBuffer(self:slot:buffer:offset:size:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundleEncoder _Nonnull"
+- Name: wgpuRenderBundleRelease
+  SwiftName: WGPURenderBundleImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundle _Nonnull"
+- Name: wgpuRenderBundleSetLabel
+  SwiftName: WGPURenderBundleImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderBundle _Nonnull"
+- Name: wgpuRenderPassEncoderAddRef
+  SwiftName: WGPURenderPassEncoderImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderBeginOcclusionQuery
+  SwiftName: WGPURenderPassEncoderImpl.beginOcclusionQuery(self:queryIndex:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderDraw
+  SwiftName: WGPURenderPassEncoderImpl.draw(self:vertexCount:instanceCount:firstVertex:firstInstance:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderDrawIndexed
+  SwiftName: WGPURenderPassEncoderImpl.drawIndexed(self:indexCount:instanceCount:firstIndex:baseVertex:firstInstance:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderDrawIndexedIndirect
+  SwiftName: WGPURenderPassEncoderImpl.drawIndexedIndirect(self:indirectBuffer:indirectOffset:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderDrawIndirect
+  SwiftName: WGPURenderPassEncoderImpl.drawIndirect(self:indirectBuffer:indirectOffset:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderEnd
+  SwiftName: WGPURenderPassEncoderImpl.end(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderEndOcclusionQuery
+  SwiftName: WGPURenderPassEncoderImpl.endOcclusionQuery(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderExecuteBundles
+  SwiftName: WGPURenderPassEncoderImpl.executeBundles(self:bundleCount:bundles:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+    - Position: 2
+      Type: " WGPURenderBundle const * _Nonnull"
+- Name: wgpuRenderPassEncoderInsertDebugMarker
+  SwiftName: WGPURenderPassEncoderImpl.insertDebugMarker(self:markerLabel:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderPopDebugGroup
+  SwiftName: WGPURenderPassEncoderImpl.popDebugGroup(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderPushDebugGroup
+  SwiftName: WGPURenderPassEncoderImpl.pushDebugGroup(self:groupLabel:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderRelease
+  SwiftName: WGPURenderPassEncoderImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderSetBindGroup
+  SwiftName: WGPURenderPassEncoderImpl.setBindGroup(self:groupIndex:group:dynamicOffsetCount:dynamicOffsets:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+    - Position: 4
+      Type: " uint32_t const * _Nonnull"
+- Name: wgpuRenderPassEncoderSetBlendConstant
+  SwiftName: WGPURenderPassEncoderImpl.setBlendConstant(self:color:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+    - Position: 1
+      Type: " WGPUColor const * _Nonnull"
+- Name: wgpuRenderPassEncoderSetIndexBuffer
+  SwiftName: WGPURenderPassEncoderImpl.setIndexBuffer(self:buffer:format:offset:size:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderSetLabel
+  SwiftName: WGPURenderPassEncoderImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderSetPipeline
+  SwiftName: WGPURenderPassEncoderImpl.setPipeline(self:pipeline:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderSetScissorRect
+  SwiftName: WGPURenderPassEncoderImpl.setScissorRect(self:_:_:width:height:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderSetStencilReference
+  SwiftName: WGPURenderPassEncoderImpl.setStencilReference(self:reference:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderSetVertexBuffer
+  SwiftName: WGPURenderPassEncoderImpl.setVertexBuffer(self:slot:buffer:offset:size:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPassEncoderSetViewport
+  SwiftName: WGPURenderPassEncoderImpl.setViewport(self:_:_:width:height:minDepth:maxDepth:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPassEncoder _Nonnull"
+- Name: wgpuRenderPipelineAddRef
+  SwiftName: WGPURenderPipelineImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPipeline _Nonnull"
+- Name: wgpuRenderPipelineGetBindGroupLayout
+  SwiftName: WGPURenderPipelineImpl.getbindGroupLayout(self:groupIndex:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPipeline _Nonnull"
+- Name: wgpuRenderPipelineRelease
+  SwiftName: WGPURenderPipelineImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPipeline _Nonnull"
+- Name: wgpuRenderPipelineSetLabel
+  SwiftName: WGPURenderPipelineImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPURenderPipeline _Nonnull"
+- Name: wgpuSamplerAddRef
+  SwiftName: WGPUSamplerImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSampler _Nonnull"
+- Name: wgpuSamplerRelease
+  SwiftName: WGPUSamplerImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSampler _Nonnull"
+- Name: wgpuSamplerSetLabel
+  SwiftName: WGPUSamplerImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSampler _Nonnull"
+- Name: wgpuShaderModuleAddRef
+  SwiftName: WGPUShaderModuleImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUShaderModule _Nonnull"
+- Name: wgpuShaderModuleGetCompilationInfo
+  SwiftName: WGPUShaderModuleImpl.getCompilationInfo(self:callbackInfo:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUShaderModule _Nonnull"
+- Name: wgpuShaderModuleRelease
+  SwiftName: WGPUShaderModuleImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUShaderModule _Nonnull"
+- Name: wgpuShaderModuleSetLabel
+  SwiftName: WGPUShaderModuleImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUShaderModule _Nonnull"
+- Name: wgpuSurfaceAddRef
+  SwiftName: WGPUSurfaceImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSurface _Nonnull"
+- Name: wgpuSurfaceConfigure
+  SwiftName: WGPUSurfaceImpl.configure(self:config:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSurface _Nonnull"
+    - Position: 1
+      Type: " WGPUSurfaceConfiguration const * _Nonnull"
+- Name: wgpuSurfaceGetCapabilities
+  SwiftName: WGPUSurfaceImpl.getCapabilities(self:adapter:capabilities:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSurface _Nonnull"
+    - Position: 2
+      Type: " WGPUSurfaceCapabilities * _Nonnull"
+- Name: wgpuSurfaceGetCurrentTexture
+  SwiftName: WGPUSurfaceImpl.getCurrentTexture(self:surfaceTexture:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSurface _Nonnull"
+    - Position: 1
+      Type: " WGPUSurfaceTexture * _Nonnull"
+- Name: wgpuSurfacePresent
+  SwiftName: WGPUSurfaceImpl.present(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSurface _Nonnull"
+- Name: wgpuSurfaceRelease
+  SwiftName: WGPUSurfaceImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSurface _Nonnull"
+- Name: wgpuSurfaceSetLabel
+  SwiftName: WGPUSurfaceImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSurface _Nonnull"
+- Name: wgpuSurfaceUnconfigure
+  SwiftName: WGPUSurfaceImpl.unconfigure(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUSurface _Nonnull"
+- Name: wgpuTextureAddRef
+  SwiftName: WGPUTextureImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureCreateView
+  SwiftName: WGPUTextureImpl.createView(self:descriptor:)
+  SwiftReturnOwnership: retained
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+    - Position: 1
+      Type: " WGPU_NULLABLE WGPUTextureViewDescriptor const * _Nonnull"
+- Name: wgpuTextureDestroy
+  SwiftName: WGPUTextureImpl.destroy(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureGetDepthOrArrayLayers
+  SwiftName: getter:WGPUTextureImpl.depthOrArrayLayers(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureGetDimension
+  SwiftName: getter:WGPUTextureImpl.dimension(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureGetFormat
+  SwiftName: getter:WGPUTextureImpl.format(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureGetHeight
+  SwiftName: getter:WGPUTextureImpl.height(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureGetMipLevelCount
+  SwiftName: getter:WGPUTextureImpl.mipLevelCount(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureGetSampleCount
+  SwiftName: getter:WGPUTextureImpl.sampleCount(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureGetUsage
+  SwiftName: getter:WGPUTextureImpl.usage(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureGetWidth
+  SwiftName: getter:WGPUTextureImpl.width(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureRelease
+  SwiftName: WGPUTextureImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureSetLabel
+  SwiftName: WGPUTextureImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTexture _Nonnull"
+- Name: wgpuTextureViewAddRef
+  SwiftName: WGPUTextureViewImpl.addRef(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTextureView _Nonnull"
+- Name: wgpuTextureViewRelease
+  SwiftName: WGPUTextureViewImpl.release(self:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTextureView _Nonnull"
+- Name: wgpuTextureViewSetLabel
+  SwiftName: WGPUTextureViewImpl.setLabel(self:label:)
+  Parameters:
+    - Position: 0
+      Type: "WGPUTextureView _Nonnull"
+Globals:
+- Name: WGPUBufferUsage_None
+  SwiftName: WGPUBufferUsage.none
+- Name: WGPUBufferUsage_MapRead
+  SwiftName: WGPUBufferUsage.mapRead
+- Name: WGPUBufferUsage_MapWrite
+  SwiftName: WGPUBufferUsage.mapWrite
+- Name: WGPUBufferUsage_CopySrc
+  SwiftName: WGPUBufferUsage.copySrc
+- Name: WGPUBufferUsage_CopyDst
+  SwiftName: WGPUBufferUsage.copyDst
+- Name: WGPUBufferUsage_Index
+  SwiftName: WGPUBufferUsage.index
+- Name: WGPUBufferUsage_Vertex
+  SwiftName: WGPUBufferUsage.vertex
+- Name: WGPUBufferUsage_Uniform
+  SwiftName: WGPUBufferUsage.uniform
+- Name: WGPUBufferUsage_Storage
+  SwiftName: WGPUBufferUsage.storage
+- Name: WGPUBufferUsage_Indirect
+  SwiftName: WGPUBufferUsage.indirect
+- Name: WGPUBufferUsage_QueryResolve
+  SwiftName: WGPUBufferUsage.queryResolve
+- Name: WGPUColorWriteMask_None
+  SwiftName: WGPUColorWriteMask.none
+- Name: WGPUColorWriteMask_Red
+  SwiftName: WGPUColorWriteMask.red
+- Name: WGPUColorWriteMask_Green
+  SwiftName: WGPUColorWriteMask.green
+- Name: WGPUColorWriteMask_Blue
+  SwiftName: WGPUColorWriteMask.blue
+- Name: WGPUColorWriteMask_Alpha
+  SwiftName: WGPUColorWriteMask.alpha
+- Name: WGPUColorWriteMask_All
+  SwiftName: WGPUColorWriteMask.all
+- Name: WGPUMapMode_None
+  SwiftName: WGPUMapMode.none
+- Name: WGPUMapMode_Read
+  SwiftName: WGPUMapMode.read
+- Name: WGPUMapMode_Write
+  SwiftName: WGPUMapMode.write
+- Name: WGPUShaderStage_None
+  SwiftName: WGPUShaderStage.none
+- Name: WGPUShaderStage_Vertex
+  SwiftName: WGPUShaderStage.vertex
+- Name: WGPUShaderStage_Fragment
+  SwiftName: WGPUShaderStage.fragment
+- Name: WGPUShaderStage_Compute
+  SwiftName: WGPUShaderStage.compute
+- Name: WGPUTextureUsage_None
+  SwiftName: WGPUTextureUsage.none
+- Name: WGPUTextureUsage_CopySrc
+  SwiftName: WGPUTextureUsage.copySrc
+- Name: WGPUTextureUsage_CopyDst
+  SwiftName: WGPUTextureUsage.copyDst
+- Name: WGPUTextureUsage_TextureBinding
+  SwiftName: WGPUTextureUsage.textureBinding
+- Name: WGPUTextureUsage_StorageBinding
+  SwiftName: WGPUTextureUsage.storageBinding
+- Name: WGPUTextureUsage_RenderAttachment
+  SwiftName: WGPUTextureUsage.renderAttachment
