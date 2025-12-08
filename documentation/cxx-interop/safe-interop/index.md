@@ -113,7 +113,7 @@ Some containers and protocols do not yet support non-escapable types in Swift 6.
 
 Building the code again will emit a new diagnostic for the `fileName` function about
 missing lifetime annotations. C and C++ functions that return non-escapable types need annotations
-to describe their lifetime contracts via [lifetimebound](https://clang.llvm.org/docs/AttributeReference.html#id8)
+to describe their lifetime contracts via [lifetimebound](https://clang.llvm.org/docs/AttributeReference.html#lifetimebound)
 and [lifetime_capture_by](https://clang.llvm.org/docs/AttributeReference.html#lifetime-capture-by) annotations.
 Not all versions of C and C++ support the `[[clang::lifetimebound]]` attribute syntax. Convenience macros for
 lifetime annotations using the GNU style attribute syntax are available in the `lifetimebound.h` header, and we'll
