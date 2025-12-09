@@ -13,7 +13,7 @@ The Documentation Tooling Workgroup will:
 * Actively guide development for documentation tooling such as Swift-DocC.
 * Define processes that govern contributions to Swift’s documentation
   experience.
-* Channel feedback to [Ecosystem Steering Group](https://www.swift.org/ecosystem-steering-group/) about the needs of the Swift community.
+* Channel feedback to [Ecosystem Steering Group](/ecosystem-steering-group/) about the needs of the Swift community.
 
 The current Documentation Tooling Workgroup consists of the following people:
 
