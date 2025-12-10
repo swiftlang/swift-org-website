@@ -10,13 +10,19 @@ hero-cards:
       dark: /assets/images/community/community-showcase-dark@2x.png
     alt: Community Showcase image
     label: Community Showcase
-    link: https://forums.swift.org
+    text: Swift content, conferences, projects, and products shared on the forums.
+    link:
+      text: Read more
+      url: https://forums.swift.org
   - image:
       light: /assets/images/community/featured-packages@2x.png
       dark: /assets/images/community/featured-packages-dark@2x.png
     alt: Featured Package image
     label: Featured Package
-    link: /packages/
+    text: New and interesting Swift packages curated by the Swift Website Workgroup.
+    link:
+      text: Read more
+      url: /
 section2:
   headline: Explore the forums
   text: The community's official channel for answering questions and discussing the development of Swift
@@ -25,10 +31,10 @@ section2:
       text: This area is intended for users to get help with or ask questions about Swift or its related tools and is not for discussion about work being done to the language itself.
       link: /
     - title: Swift development
-      text: Topics related to development and implementation of Swift.
+      text: Major Swift language features are openly developed as part of the Swift Evolution.
       link: /
     - title: Swift evolution
-      text: Topics related to the Swift Evolution Process. Another line here.
+      text: Topics related to the Swift Evolution Process.
       link: /
     - title: Related projects
       text: Dedicated to open source projects within the Swift community that are separate from the Swift language itself.
@@ -52,23 +58,33 @@ section3:
 section4:
   headline: Follow Swift
   links:
-    - image: /
+    - image:
+        light: /assets/images/community/bluesky.png
+        dark: /assets/images/community/bluesky-dark.png
       label: Bluesky
-      link: /
+      link: https://bsky.app/profile/swift.org
       alt: Bluesky icon
-    - image: /
+    - image:
+        light: /assets/images/community/mastodon.png
+        dark: /assets/images/community/mastodon-dark.png
       label: Mastodon
-      link: /
+      link: https://mastodon.social/@swiftlang
       alt: Mastodon icon
-    - image: /
+    - image:
+        light: /assets/images/community/x.png
+        dark: /assets/images/community/x-dark.png
       label: Twitter/X
-      link: /
+      link: https://x.com/swiftlang
       alt: Twitter/X icon
-    - image: /
+    - image:
+        light: /assets/images/community/swift-blog.png
+        dark: /assets/images/community/swift-blog-dark.png
       label: Swift blog
-      link: /
+      link: /blog
       alt: Swift blog icon
-    - image: /
+    - image:
+        light: /assets/images/community/github.png
+        dark: /assets/images/community/github-dark.png
       label: GitHub
-      link: /
+      link: https://github.com/swiftlang
       alt: GitHub icon
