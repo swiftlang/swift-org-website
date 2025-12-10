@@ -7,9 +7,11 @@ author: [honzadvorsky]
 category: "Developer Tools"
 ---
 
-[**Swift Configuration**](https://github.com/apple/swift-configuration) **1.0** is now available, providing a unified, type-safe approach to reading configuration in Swift applications and libraries.
+Every application has configuration: in environment variables, configuration files, values from remote services, command-line flags, or repositories for stored secrets like API keys. But until now, Swift developers have had to wire up each source individually, with parsing logic scattered throughout codebases and application code that is tightly coupled to specific configuration providers. 
 
-This major release marks the library’s production-readiness to serve as the common API for reading configuration across the Swift ecosystem. Since the [initial release announcement](https://forums.swift.org/t/introducing-swift-configuration/82368) in October 2025 over **40 pull requests** have been merged, and its API stability provides a foundation to unlock community integrations..
+[**Swift Configuration**](https://github.com/apple/swift-configuration) brings a unified, type-safe approach to this problem for Swift applications and libraries. What makes this compelling isn’t just that it reads configuration files: plenty of libraries do that. It’s the clean abstraction that it introduces between _how_ your code accesses configuration and _where_ that configuration comes from. This separation unlocks something powerful: libraries can now accept configuration without dictating the source, making them genuinely composable across different deployment environments.
+
+With the release of Swift Configuration 1.0, the library is production-ready to serve as the common API for reading configuration across the Swift ecosystem. Since the [initial release announcement](https://forums.swift.org/t/introducing-swift-configuration/82368) in October 2025 over **40 pull requests** have been merged, and its API stability provides a foundation to unlock community integrations..
 
 ## Why it exists
 
@@ -24,7 +26,16 @@ For a step-by-step tour of an example service, from hardcoded values all the way
 
 ## Getting started
 
-Swift Configuration's core strength is its ability to combine multiple configuration providers into a clear, predictable hierarchy. This allows you to establish sensible defaults while providing clean override for different deployment environments.
+After adding a package dependency to your project, reading configuration just requires a couple of lines of code. For example:
+
+```swift
+import Configuration
+
+let config = ConfigReader(provider: EnvironmentVariablesProvider())
+let timeout = config.bool(forKey: "logging.verbose", default: false)
+```
+
+But Swift Configuration's core strength is its ability to combine _multiple_ configuration providers into a clear, predictable hierarchy, allowing you to establish sensible defaults while providing clean override mechanisms for different deployment scenarios.
 
 For example, if you have default configuration in JSON:
 
