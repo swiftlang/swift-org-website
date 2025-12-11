@@ -11,7 +11,7 @@ Every application has configuration: in environment variables, configuration fil
 
 [**Swift Configuration**](https://github.com/apple/swift-configuration) brings a unified, type-safe approach to this problem for Swift applications and libraries. What makes this compelling isn’t just that it reads configuration files: plenty of libraries do that. It’s the clean abstraction that it introduces between _how_ your code accesses configuration and _where_ that configuration comes from. This separation unlocks something powerful: libraries can now accept configuration without dictating the source, making them genuinely composable across different deployment environments.
 
-With the release of Swift Configuration 1.0, the library is production-ready to serve as the common API for reading configuration across the Swift ecosystem. Since the [initial release announcement](https://forums.swift.org/t/introducing-swift-configuration/82368) in October 2025 over **40 pull requests** have been merged, and its API stability provides a foundation to unlock community integrations..
+With the release of Swift Configuration 1.0, the library is production-ready to serve as a common API for reading configuration across the Swift ecosystem. Since the [initial release announcement](https://forums.swift.org/t/introducing-swift-configuration/82368) in October 2025 over **40 pull requests** have been merged, and its API stability provides a foundation to unlock community integrations..
 
 ## Why it exists
 
