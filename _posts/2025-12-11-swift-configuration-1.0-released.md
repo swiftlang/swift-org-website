@@ -32,7 +32,7 @@ After adding a package dependency to your project, reading configuration values 
 import Configuration
 
 let config = ConfigReader(provider: EnvironmentVariablesProvider())
-let timeout = config.bool(forKey: "http.timeout", default: 60)
+let timeout = config.int(forKey: "http.timeout", default: 60)
 ```
 
 However, Swift Configuration's core strength is its ability to combine _multiple_ configuration providers into a clear, predictable hierarchy, allowing you to establish sensible defaults while providing clean override mechanisms for different deployment scenarios.
@@ -61,8 +61,8 @@ let config = ConfigReader(providers: [
     EnvironmentVariablesProvider(),
     try await FileProvider<JSONSnapshot>(filePath: "/etc/config.json")
 ])
-let httpTimeout = config.int(forKey: "http.timeout", default: 60)
-print(httpTimeout) // 15
+let timeout = config.int(forKey: "http.timeout", default: 60)
+print(timeout) // 15
 ```
 
 Providers are checked in the order you specify: earlier providers override later ones, followed by your fallback defaults. This removes ambiguity about which configuration source is actually being used.
