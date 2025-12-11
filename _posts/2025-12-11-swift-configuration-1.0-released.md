@@ -26,7 +26,7 @@ For a step-by-step tour of an example service, from hardcoded values all the way
 
 ## Getting started
 
-After adding a package dependency to your project, reading configuration values requires a couple of lines of code. For example:
+After adding a package dependency to your project, reading configuration values requires just a couple of lines of code. For example:
 
 ```swift
 import Configuration
