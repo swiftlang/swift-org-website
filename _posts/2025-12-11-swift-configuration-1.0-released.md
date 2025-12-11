@@ -32,7 +32,7 @@ After adding a package dependency to your project, reading configuration values 
 import Configuration
 
 let config = ConfigReader(provider: EnvironmentVariablesProvider())
-let timeout = config.bool(forKey: "logging.verbose", default: false)
+let timeout = config.bool(forKey: "http.timeout", default: 60)
 ```
 
 However, Swift Configuration's core strength is its ability to combine _multiple_ configuration providers into a clear, predictable hierarchy, allowing you to establish sensible defaults while providing clean override mechanisms for different deployment scenarios.
