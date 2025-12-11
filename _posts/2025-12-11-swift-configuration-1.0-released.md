@@ -103,8 +103,6 @@ Contributions and new integrations are welcome.
 
 With a stable foundation in place, libraries and applications can begin finalizing their own integrations and releasing API-stable versions built on Swift Configuration.
 
-We encourage you to continue sharing real-world experience across different deployment models and configuration patterns. Your feedback will continue to help guide future refinements of Swift Configuration.
-
-Try integrating Swift Configuration into your applications, tools, and libraries, check out the project's [documentation](https://swiftpackageindex.com/apple/swift-configuration/documentation), and share your feedback on the [GitHub repository](https://github.com/apple/swift-configuration) through issues, pull requests, or Swift Forums discussions.
+Try integrating Swift Configuration into your applications, tools, and libraries, check out the project's [documentation](https://swiftpackageindex.com/apple/swift-configuration/documentation), and continue sharing feedback from your real-world experience on the [GitHub repository](https://github.com/apple/swift-configuration) through issues, pull requests, or [Swift Forums](https://forums.swift.org/c/related-projects/swift-configuration/123) discussions.
 
 Happy configuring! ⚙️
