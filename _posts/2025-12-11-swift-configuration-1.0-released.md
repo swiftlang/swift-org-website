@@ -35,7 +35,7 @@ let config = ConfigReader(provider: EnvironmentVariablesProvider())
 let timeout = config.bool(forKey: "logging.verbose", default: false)
 ```
 
-But Swift Configuration's core strength is its ability to combine _multiple_ configuration providers into a clear, predictable hierarchy, allowing you to establish sensible defaults while providing clean override mechanisms for different deployment scenarios.
+However, Swift Configuration's core strength is its ability to combine _multiple_ configuration providers into a clear, predictable hierarchy, allowing you to establish sensible defaults while providing clean override mechanisms for different deployment scenarios.
 
 For example, if you have default configuration in JSON:
 
