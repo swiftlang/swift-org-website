@@ -54,7 +54,7 @@ And want to be able to provide an override using an environment variable:
 HTTP_TIMEOUT=15
 ```
 
-Sharing configuration as JSON or an environment are examples of Swift Configuration "providers". In this example, we've layered these two providers:
+Then what we have are two Swift Configuration "providers", and we can layer them:
 
 ```swift
 let config = ConfigReader(providers: [
