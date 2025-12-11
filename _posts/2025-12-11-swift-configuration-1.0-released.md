@@ -7,7 +7,7 @@ author: [honzadvorsky]
 category: "Developer Tools"
 ---
 
-Every application has configuration: in environment variables, configuration files, values from remote services, command-line flags, or repositories for stored secrets like API keys. But until now, Swift developers have had to wire up each source individually, with parsing logic scattered throughout codebases and application code that is tightly coupled to specific configuration providers. 
+Every application has configuration: in environment variables, configuration files, values from remote services, command-line flags, or repositories for stored secrets like API keys. But until now, Swift developers have had to wire up each source individually, with scattered parsing logic and application code that is tightly coupled to specific configuration providers. 
 
 [**Swift Configuration**](https://github.com/apple/swift-configuration) brings a unified, type-safe approach to this problem for Swift applications and libraries. What makes this compelling isn’t just that it reads configuration files: plenty of libraries do that. It’s the clean abstraction that it introduces between _how_ your code accesses configuration and _where_ that configuration comes from. This separation unlocks something powerful: libraries can now accept configuration without dictating the source, making them genuinely composable across different deployment environments.
 
