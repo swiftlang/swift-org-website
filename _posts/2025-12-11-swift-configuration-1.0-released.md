@@ -69,7 +69,7 @@ Providers are checked in the order you specify: earlier providers override later
 
 ## Advanced capabilities
 
-Beyond basic lookups, the library includes features intended for production environments:
+Beyond basic lookups, the library includes features for production environments:
 
 * [Multiple access patterns](https://swiftpackageindex.com/apple/swift-configuration/documentation/configuration#Three-access-patterns) – choose between the synchronous, asynchronous, and watching patterns.
 * [Hot reloading](https://swiftpackageindex.com/apple/swift-configuration/documentation/configuration#Hot-reloading) – apply configuration updates without restarting your service.
