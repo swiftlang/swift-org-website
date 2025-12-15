@@ -8,7 +8,7 @@ title: Install Swift
     aarch64="true"
     branch_dir="development"
     development="main"
-    docker_tag="nightly-fedora-39"
+    docker_tag="fedora-39"
     development_builds=site.data.builds.development.fedora39
     aarch64_development_builds=site.data.builds.development.fedora39-aarch64
     development_2="release/6.3"

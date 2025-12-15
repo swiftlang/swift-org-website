@@ -8,7 +8,7 @@ title: Install Swift
     aarch64="true"
     branch_dir="development"
     development="main"
-    docker_tag="nightly-debian-12"
+    docker_tag="debian-12"
     development_builds=site.data.builds.development.debian12
     aarch64_development_builds=site.data.builds.development.debian12-aarch64
     development_2="release/6.3"
