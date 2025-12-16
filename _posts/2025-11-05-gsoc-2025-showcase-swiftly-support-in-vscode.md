@@ -16,9 +16,9 @@ In this series of four blog posts, we'll highlight each of the Summer of Code co
 You can navigate between the posts using these convenient links:
 
 - Bringing Swiftly support to VS Code (this post)
-- JNI mode for swift-java’s source jextract tool _(coming soon)_
-- Improved display of documentation during code completion in SourceKit-LSP _(coming soon)_
-- Improved console output for Swift Testing _(coming soon)_
+- [Extending Swift-Java Interoperability](/blog/gsoc-2025-showcase-swift-java/)
+- [Improved code completion for Swift](/blog/gsoc-2025-showcase-code-completion/)
+- [Improved console output for Swift Testing](/blog/gsoc-2025-showcase-swift-testing-output/)
 
 Each GSoC contributor has shared a writeup about their project and experience in the program on the forums. The first project we're featuring on the blog brought Swiftly support to Visual Studio Code, contributed by Priyambada Roul.
 To learn more, you can read the [full post on the Swift forums](https://forums.swift.org/t/gsoc-2025-bringing-swiftly-support-to-vs-code/81886).

@@ -1,21 +1,21 @@
 ---
 layout: page
-title: Swift Documentation Workgroup
+title: Swift Documentation Tooling Workgroup
 ---
 
-The Documentation Workgroup is a steering team that helps guide the
+The Documentation Tooling Workgroup is a steering team that helps guide the
 documentation experience for Swift.
 
-The Documentation Workgroup will:
+The Documentation Tooling Workgroup will:
 
 * Define and prioritize efforts that address the documentation needs of the
   Swift community.
 * Actively guide development for documentation tooling such as Swift-DocC.
 * Define processes that govern contributions to Swift’s documentation
   experience.
-* Channel feedback to Swift Core Team about the needs of the Swift community.
+* Channel feedback to [Ecosystem Steering Group](/ecosystem-steering-group/) about the needs of the Swift community.
 
-The current Documentation Workgroup consists of the following people:
+The current Documentation Tooling Workgroup consists of the following people:
 
 * [Daniel Grumberg](https://github.com/daniel-grumberg)
 * [Dave Verwer](https://github.com/daveverwer)
@@ -36,7 +36,7 @@ We are grateful for the service of the following emeritus workgroup members:
 
 ## Charter
 
-The main goal of the Documentation Workgroup is to deliver a great
+The main goal of the Documentation Tooling Workgroup is to deliver a great
 documentation experience to the Swift community. To that end, the workgroup
 will develop tooling like Swift-DocC to support the experience it wants to
 provide for the ecosystem and future Swift language documentation efforts. Over
@@ -52,13 +52,13 @@ Workgroup members may also initiate projects to improve different aspects of
 the Swift documentation experience, such as documentation UI/UX
 design and the documentation authoring syntax.
 
-Members of the Documentation Workgroup serve at the discretion of the Swift
+Members of the Documentation Tooling Workgroup serve at the discretion of the Swift
 Core Team and the Swift project lead, who has the ultimate authority over the
 workgroup decisions.
 
 ## Membership
 
-Members of the Documentation Workgroup provide steerage of Swift’s
+Members of the Documentation Tooling Workgroup provide steerage of Swift’s
 documentation experience as outlined in the charter above. If you’d like to
 join the workgroup, please reach out to `@swift-documentation-workgroup` in the
 forums.
@@ -82,7 +82,7 @@ challenges with reaching consensus on significant decisions.
 
 ## Communication
 
-The Documentation Workgroup communicates with the broader Swift community using
+The Documentation Tooling Workgroup communicates with the broader Swift community using
 the [Swift-DocC forum](https://forums.swift.org/c/development/swift-docc) for
 general discussions about Swift-DocC. The workgroup can also be contacted
 privately by messaging `@swift-documentation-workgroup` on the Swift Forums.
@@ -90,15 +90,15 @@ privately by messaging `@swift-documentation-workgroup` on the Swift Forums.
 ## Community Participation
 
 Everyone is invited to participate in contributing to Swift’s documentation
-experience and the Documentation Workgroup’s initiatives. If you’d like to
+experience and the Documentation Tooling Workgroup’s initiatives. If you’d like to
 contribute, consider:
 
-* Joining the Documentation Workgroup’s open meetings on WebEx (reach out to
+* Joining the Documentation Tooling Workgroup’s open meetings on WebEx (reach out to
     `@swift-documentation-workgroup` in forums for details).
 * Discussing ideas in the Swift Forums, for example in the [Swift-DocC
   forum](https://forums.swift.org/c/development/swift-docc) for
   Swift-DocC–related ideas.
-* Opening issues to track enhancements and bugs for the projects governed by the Documentation Workgroup:
+* Opening issues to track enhancements and bugs for the projects governed by the Documentation Tooling Workgroup:
   [Swift-DocC](https://github.com/swiftlang/swift-docc/issues), [The Swift Programming Language book](https://github.com/swiftlang/swift-book/issues).
 * Participating in the [Swift Mentorship
   Program](/mentorship).

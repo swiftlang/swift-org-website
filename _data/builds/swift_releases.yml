@@ -2363,3 +2363,125 @@
       archs:
         - x86_64
         - arm64
+- name: "6.2.2"
+  tag: swift-6.2.2-RELEASE
+  xcode: Xcode 26.1
+  xcode_release: false
+  date: 2025-12-08
+  platforms:
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 6.2.2-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 24.04
+      platform: Linux
+      docker: 6.2.2-noble
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 12
+      platform: Linux
+      docker: 6.2.2-bookworm
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 39
+      platform: Linux
+      docker: 6.2.2-fedora39
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 6.2.2-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 6.2.2-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 6.2.2-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+        - arm64
+    - name: Static SDK
+      platform: static-sdk
+      checksum: a24285cd28eb5e6dcbe35495179b117711c6ca8e6d579e0507622b7b8752ee94
+      archs:
+        - x86_64
+        - arm64
+    - name: Wasm SDK
+      platform: wasm-sdk
+      checksum: 128fa003e0cad624897c2b1d5f07cedf400e3c8bd851d304e57440b591cbe606
+      archs:
+        - x86_64
+        - arm64
+- name: "6.2.3"
+  tag: swift-6.2.3-RELEASE
+  xcode: Xcode 26.2
+  xcode_release: true
+  date: 2025-12-12
+  platforms:
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 6.2.3-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 24.04
+      platform: Linux
+      docker: 6.2.3-noble
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 12
+      platform: Linux
+      docker: 6.2.3-bookworm
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 39
+      platform: Linux
+      docker: 6.2.3-fedora39
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 6.2.3-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 6.2.3-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 6.2.3-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+        - arm64
+    - name: Static SDK
+      platform: static-sdk
+      checksum: f30ec724d824ef43b5546e02ca06a8682dafab4b26a99fbb0e858c347e507a2c
+      archs:
+        - x86_64
+        - arm64
+    - name: Wasm SDK
+      platform: wasm-sdk
+      checksum: 394040ecd5260e68bb02f6c20aeede733b9b90702c2204e178f3e42413edad2a
+      archs:
+        - x86_64
+        - arm64

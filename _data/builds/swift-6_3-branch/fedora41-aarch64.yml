@@ -1,0 +1,40 @@
+- date: 2025-12-14 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-14-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-14-a-fedora41-aarch64.tar.gz
+  download_signature: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-14-a-fedora41-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-12-13 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-13-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-13-a-fedora41-aarch64.tar.gz
+  download_signature: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-13-a-fedora41-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-12-10 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-10-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-10-a-fedora41-aarch64.tar.gz
+  download_signature: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-10-a-fedora41-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-12-07 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-07-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-07-a-fedora41-aarch64.tar.gz
+  download_signature: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-07-a-fedora41-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-12-06 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-06-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-06-a-fedora41-aarch64.tar.gz
+  download_signature: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-06-a-fedora41-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-12-05 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-05-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-05-a-fedora41-aarch64.tar.gz
+  download_signature: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-05-a-fedora41-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-12-02 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-02-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-02-a-fedora41-aarch64.tar.gz
+  download_signature: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-02-a-fedora41-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-12-01 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-01-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-01-a-fedora41-aarch64.tar.gz
+  download_signature: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-01-a-fedora41-aarch64.tar.gz.sig
+  name: Swift Development Snapshot

@@ -1,3 +1,33 @@
+- checksum: 95626bb7c1372f1c3b1fa4c7817b56a52ad4c842e19ad26083b4948a5021a5ee
+  date: 2025-12-03 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-12-03-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-12-03-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-12-03-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: 202106b9b3efe0f99999cacab5cfc9bd05f25d10ee003b3c35385646194c0727
+  date: 2025-11-26 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-26-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-26-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-26-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: aa32e0b588eb6f7a90d2c79d43c2b9692515803d43708b9d7060844983bf4e99
+  date: 2025-11-20 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-20-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-20-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-20-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: 46bcd0072a0f5685271c29944c0497bcf3e31fad74537919214e7611ce412258
+  date: 2025-11-19 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-19-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-19-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-19-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
+- checksum: 46f3aa096d1b62d3ebb60e502dfffa13be5c60a7a2ec29194784cb6a52f1aecb
+  date: 2025-11-14 10:10:00-06:00
+  dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-14-a
+  download: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-14-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-14-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
 - checksum: af999295b5dfebd39958942c5ed52650e6431ed3eefe4487278efac22aaef307
   date: 2025-11-05 10:10:00-06:00
   dir: swift-6.2-DEVELOPMENT-SNAPSHOT-2025-11-05-a

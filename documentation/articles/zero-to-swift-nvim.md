@@ -37,11 +37,11 @@ Basic setup and configuration includes:
 The following sections are provided to help guide you through the setup:
 
 - [Prerequisites](#prerequisites)
-- [Package Management](#packaging-with-lazy)
+- [Package Management](#packaging-with-lazynvim)
 - [Language Server Support](#language-server-support)
     - [File Updates](#file-updating)
 - [Code Completion](#code-completion)
-- [Snippets](#Snippets)
+- [Snippets](#snippets)
 - [Fully Assembled Configuration Files](#files)
 
 > Tip: If you already have Neovim, Swift, and a package manager installed, you can skip to setting up [Language Server support](#language-server-support).
@@ -147,7 +147,7 @@ those directories now.
  $  mkdir lua/plugins lua/config
 ```
 
-See [lazy.nvim Configuration](https://github.com/folke/lazy.nvim?tab=readme-ov-file#%EF%B8%8F-configuration) for details on configuring _lazy.nvim_.
+See [lazy.nvim Configuration](https://lazy.folke.io/configuration) for details on configuring _lazy.nvim_.
 
 ![_lazy.nvim_ package manger](/assets/images/zero-to-swift-nvim/Lazy.png)
 
