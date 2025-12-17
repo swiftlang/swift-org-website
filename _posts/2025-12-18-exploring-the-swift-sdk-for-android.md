@@ -52,7 +52,7 @@ and continue to this day. [The Android project board lists areas the workgroup d
 such as easy debugging, now a high priority for us. While it [may work for small examples](https://github.com/swiftlang/llvm-project/issues/10831),
 we need to expand and test it more and make it easy to configure and access. That will likely
 mean tying the debugger and [Swift Language Server Protocol tool, sourcekit-lsp](/blog/gsoc-2025-showcase-code-completion/),
-into Integrated Development Environments (IDEs) like [Visual Studio Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/),
+into Integrated Development Environments (IDEs) like [Visual Studio Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
 and Android Studio, another issue on our board.
 
 [An Android workflow](https://github.com/swiftlang/github-workflows/pull/172) was
@@ -64,7 +64,7 @@ too.
 We are actively looking to onboard more contributors and have set up [a video call this
 weekend to discuss](https://forums.swift.org/t/swift-on-android-new-contributors-call/83729).
 We hope to make these contributor calls a recurring event moving forward, as more people
-pitch in to improving on these Swift tools themselves.
+pitch in to improve these Swift tools themselves.
 
 ## Sharing Logic Versus Sharing UI
 
@@ -83,7 +83,7 @@ SDK for Android.
 ## Android API versioning
 
 Until recently, Swift on Android did not support targeting multiple Android API levels
-in the same app, but the recent preview releases now bring the familiar `@available`
+in the same app, but recent preview releases bring the familiar `@available`
 attribute and `#available` runtime check that you know from Apple platforms to Android:
 
 ```swift
@@ -134,8 +134,9 @@ Try this new feature out on Android and let us know how it is working for you.
 Those using Swift on Android for many years have been sharing their experiences,
 as path-breakers like [Readdle](https://readdle.com/blog/swift-for-android-our-experience-and-tools)
 and [Flowkey](https://medium.com/@ephemer/why-we-put-an-app-in-the-android-play-store-using-swift-96ac87c88dfc)
-have written about their work for the last decade. The Left Bit's Pierluigi Cifani
-[wrote about their experiences recently](https://forums.swift.org/t/thoughts-on-swift-for-android/80961),
+have written about their work for the last decade.
+
+The Left Bit's Pierluigi Cifani [wrote about their experiences recently](https://forums.swift.org/t/thoughts-on-swift-for-android/80961),
 gave [a great talk at NSSpain 2025 a couple months ago](https://youtu.be/EIGl6GOo210),
 and was [interviewed by Swift Toolkit last month](https://www.swifttoolkit.dev/posts/dc-pier).
 
@@ -147,8 +148,7 @@ to Java instead. (editor: not sure we will get this in, but might be a good exam
 
 Finally, we are happy to announce that [an official Swift 6.3 SDK CI](https://ci.swift.org/job/oss-swift-6.3-package-swift-sdk-for-android/)
 has been set up, and it is producing [nightly preview releases of the Swift 6.3 SDK for Android](/install/macos/#swift-sdk-buindles-dev).
-Please follow the [Getting Started guide](/documentation/articles/swift-sdk-for-android-getting-sta
-rted.html)
+Please follow the [Getting Started guide](/documentation/articles/swift-sdk-for-android-getting-started.html)
 to install and use it. (editor: I will update that guide by 3 AM Thursday PST with 6.3 SDK info)
 
 Swift on Android has been a community effort for the last decade, growing
