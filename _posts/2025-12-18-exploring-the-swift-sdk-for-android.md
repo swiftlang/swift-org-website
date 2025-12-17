@@ -125,7 +125,8 @@ struct ExecutableDemo {
         #endif
     }
 }
-``` (editor: should we slim this down?)
+```
+(editor: should we slim this down?)
 Try this new feature out on Android and let us know how it is working for you.
 
 ## Learn from the community
