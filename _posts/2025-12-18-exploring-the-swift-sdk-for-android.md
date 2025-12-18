@@ -49,7 +49,7 @@ Grassroots community efforts to run Swift on Android [began as soon as the langu
 and continue to this day. The [Android project board](https://github.com/orgs/swiftlang/projects/17) lists areas the workgroup determines important,
 such as easy debugging, now a high priority for us. While it [may work for small examples](https://github.com/swiftlang/llvm-project/issues/10831),
 we need to expand and test it more and make it easy to configure and access. That will likely
-mean tying the debugger and [Swift Language Server Protocol tool, sourcekit-lsp](/blog/gsoc-2025-showcase-code-completion/),
+mean tying the debugger and Swift Language Server Protocol tool, [sourcekit-lsp](/blog/gsoc-2025-showcase-code-completion/),
 into Integrated Development Environments (IDEs) like [Visual Studio Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/)
 and Android Studio, another issue on our board.
 
