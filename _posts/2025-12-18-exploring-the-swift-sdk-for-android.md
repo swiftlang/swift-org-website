@@ -71,7 +71,7 @@ Swift allows you to target many platforms with the same business logic, and Swif
 on Android expands that much more, but we do not provide a cross-platform GUI toolkit.
 As we write in [our draft vision document](https://github.com/swiftlang/swift-evolution/blob/807b844be42db582e434d1667fc907ae7a7a8775/visions/android.md),
 the Android workgroup has no plans to create such a GUI toolkit, but will instead
-curate a list of cross-platform UI tools from the community.
+The workgroup is not providing a single GUI solution, however a number of nascent community projects have approached the challenge in different ways.
 
 Our [recent post in the Swift forums](https://forums.swift.org/t/swift-gui-toolkits-for-android/83337)
 lists a handful of popular and in-progress options. 
