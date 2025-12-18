@@ -31,7 +31,7 @@ allows Swift to seamlessly integrate with the Android platform.
 The [`jextract` tool gained a JNI mode this summer](/blog/gsoc-2025-showcase-swift-java/):
 you can watch its author Mads Odgaard's [Server Side Swift Conference talk from a couple months ago](https://www.youtube.com/watch?v=tOH6V1IvTAc)
 and try out [the new weather app he submitted in the Android examples repository](
-https://github.com/swiftlang/swift-android-examples/tree/main/swift-java-weather-app). (editor: link not live yet)
+https://github.com/swiftlang/swift-android-examples/tree/main/swift-java-weather-app).
 
 ## Swift on Android in production
 
@@ -133,7 +133,7 @@ to Java instead.
 Finally, we are happy to announce that [an official Swift 6.3 SDK CI](https://ci.swift.org/job/oss-swift-6.3-package-swift-sdk-for-android/)
 has been set up, and it is producing [nightly preview releases of the Swift 6.3 SDK for Android](/install/macos/#swift-sdk-buindles-dev).
 Please follow the [Getting Started guide](/documentation/articles/swift-sdk-for-android-getting-started.html)
-to install and use it. (editor: https://github.com/swiftlang/swift-org-website/pull/1275 will need to be merged alongside this post)
+to install and use it.
 
 Swift on Android has been a community effort for the last decade, growing
 from that initial patch to apps in production and an active group of developers.
