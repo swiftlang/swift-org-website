@@ -75,7 +75,7 @@ curate a list of cross-platform UI tools from the community.
 
 See [our recent post in the Swift forums](https://forums.swift.org/t/swift-gui-toolkits-for-android/83337)
 that lists a handful of popular and in-progress options a preliminary search found, but
-which we have not yet validated regarding what their authors claim. We plan to add
+While the workgroup has not validated the claims on individual projects, we plan to add
 more info on using compatible GUI tools with the Swift SDK for Android in the coming months.
 
 ## Android API versioning
