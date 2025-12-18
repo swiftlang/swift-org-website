@@ -29,7 +29,7 @@ Swift from Java or go the other way using the Java Native Interface (JNI), which
 allows Swift to seamlessly integrate with the Android platform.
 
 The [`jextract` tool gained a JNI mode this summer](/blog/gsoc-2025-showcase-swift-java/):
-you can watch its author Mads Odgaard's [Server Side Swift Conference talk from a couple months ago](https://www.youtube.com/watch?v=tOH6V1IvTAc)
+you can watch its author Mads Odgaard's [Server-Side Swift Conference talk](https://www.youtube.com/watch?v=tOH6V1IvTAc)
 and try out [the new weather app he submitted in the Android examples repository](
 https://github.com/swiftlang/swift-android-examples/tree/main/swift-java-weather-app).
 
