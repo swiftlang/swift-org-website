@@ -60,7 +60,7 @@ try building your Swift packages with the Swift SDK for Android, and work is und
 too.
 
 We are looking to onboard more contributors and have set up [a video call this
-weekend to discuss](https://forums.swift.org/t/swift-on-android-new-contributors-call/83729).
+weekend](https://forums.swift.org/t/swift-on-android-new-contributors-call/83729) to discuss getting started.
 We hope to make these contributor calls a recurring event moving forward, as more people
 pitch in to improve these Swift tools themselves.
 
