@@ -31,8 +31,7 @@ allows Swift to seamlessly integrate with the Android platform.
 The [`jextract` tool gained a JNI mode this summer](/blog/gsoc-2025-showcase-swift-java/):
 you can watch its author Mads Odgaard's [Server Side Swift Conference talk from a couple months ago](https://www.youtube.com/watch?v=tOH6V1IvTAc)
 and try out [the new weather example app he submitted in the Android examples repository](
-https://github.com/swiftlang/swift-android-examples/pull/25). (editor: linking his pull
-for now, we'll swap in the link to the final directory once that example is merged by morning PST)
+https://github.com/swiftlang/swift-android-examples/tree/main/swift-java-weather-app). (editor: link not live yet)
 
 ## Swift on Android in production
 
@@ -125,16 +124,16 @@ The Left Bit's Pierluigi Cifani [recently wrote about their experiences](https:/
 gave [a great talk at NSSpain 2025 a couple months ago](https://youtu.be/EIGl6GOo210),
 and was [interviewed by Swift Toolkit last month](https://www.swifttoolkit.dev/posts/dc-pier).
 
-A [community member recently contributed an example app](https://github.com/swiftlang/swift-android-examples/pull/24)
+A [community member recently contributed an example app](https://github.com/swiftlang/swift-android-examples/tree/main/hello-cpp-swift)
 that builds C++ using CMake and links it with Swift, using Swift's automated JNI bridging
-to Java instead. (editor: not sure we will get this in, but might be a good example to highlight for some)
+to Java instead.
 
 ## Swift 6.3 SDK nightly previews
 
 Finally, we are happy to announce that [an official Swift 6.3 SDK CI](https://ci.swift.org/job/oss-swift-6.3-package-swift-sdk-for-android/)
 has been set up, and it is producing [nightly preview releases of the Swift 6.3 SDK for Android](/install/macos/#swift-sdk-buindles-dev).
 Please follow the [Getting Started guide](/documentation/articles/swift-sdk-for-android-getting-started.html)
-to install and use it. (editor: I will update that guide by 7 AM Thursday PST with 6.3 SDK info)
+to install and use it. (editor: https://github.com/swiftlang/swift-org-website/pull/1275 will need to be merged alongside this post)
 
 Swift on Android has been a community effort for the last decade, growing
 from that initial patch to apps in production and an active group of developers.
