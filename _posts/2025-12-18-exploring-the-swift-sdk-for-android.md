@@ -1,6 +1,6 @@
 ---
 layout: new-layouts/post
-published: false
+published: true
 date: 2025-12-18 10:00:00
 title: "Exploring the Swift SDK for Android"
 author: android-workgroup
