@@ -65,7 +65,7 @@ weekend to discuss](https://forums.swift.org/t/swift-on-android-new-contributors
 We hope to make these contributor calls a recurring event moving forward, as more people
 pitch in to improve these Swift tools themselves.
 
-## Sharing Logic Versus Sharing UI
+## Sharing Swift across platforms: logic vs UI
 
 Swift allows you to target many platforms with the same business logic, and Swift
 on Android expands that much more.
