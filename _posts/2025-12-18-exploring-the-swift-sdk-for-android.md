@@ -22,7 +22,7 @@ that implements many of its features, including its standard library and core
 libraries, like Dispatch and [Foundation](/blog/foundation-preview-now-available/).
 
 However, since most Android APIs are only made available through Java and Kotlin,
-Swift must call into the Android Runtime (ART). That is where the [Java interoperability
+Swift must call into the Android Runtime (ART); that's where the [Java interoperability
 project's](https://github.com/swiftlang/swift-java) `jextract` and `wrap-java`
 tools come in. These tools automatically create bindings that enable you to call
 Swift from Java or go the other way using the Java Native Interface (JNI), which
