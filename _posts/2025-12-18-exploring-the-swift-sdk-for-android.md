@@ -46,7 +46,7 @@ collectively downloaded millions of times. Here are some notable examples:
 ## Ongoing work
 
 Grassroots community efforts to run Swift on Android [began as soon as the language source was opened in 2015](https://lists.swift.org/pipermail/swift-dev/Week-of-Mon-20151207/000171.html),
-and continue to this day. [The Android project board lists areas the workgroup determines important](https://github.com/orgs/swiftlang/projects/17),
+and continue to this day. The [Android project board](https://github.com/orgs/swiftlang/projects/17) lists areas the workgroup determines important,
 such as easy debugging, now a high priority for us. While it [may work for small examples](https://github.com/swiftlang/llvm-project/issues/10831),
 we need to expand and test it more and make it easy to configure and access. That will likely
 mean tying the debugger and [Swift Language Server Protocol tool, sourcekit-lsp](/blog/gsoc-2025-showcase-code-completion/),
