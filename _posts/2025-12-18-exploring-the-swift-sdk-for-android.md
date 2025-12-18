@@ -118,7 +118,7 @@ Try this new feature on Android and let us know how it works for you.
 
 Those using Swift on Android for many years have been sharing their experiences,
 as founding contributors like [Readdle](https://readdle.com/blog/swift-for-android-our-experience-and-tools)
-and [Flowkey](https://medium.com/@ephemer/why-we-put-an-app-in-the-android-play-store-using-swift-96ac87c88dfc)
+and [flowkey](https://medium.com/@ephemer/why-we-put-an-app-in-the-android-play-store-using-swift-96ac87c88dfc)
 have written about their work for the last decade.
 
 The Left Bit's Pierluigi Cifani [recently wrote about their experiences](https://forums.swift.org/t/thoughts-on-swift-for-android/80961),
