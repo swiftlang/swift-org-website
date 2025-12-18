@@ -30,7 +30,7 @@ allows Swift to seamlessly integrate with the Android platform.
 
 The [`jextract` tool gained a JNI mode this summer](/blog/gsoc-2025-showcase-swift-java/):
 you can watch its author Mads Odgaard's [Server Side Swift Conference talk from a couple months ago](https://www.youtube.com/watch?v=tOH6V1IvTAc)
-and try out [the new weather example app he submitted in the Android examples repository](
+and try out [the new weather app he submitted in the Android examples repository](
 https://github.com/swiftlang/swift-android-examples/tree/main/swift-java-weather-app). (editor: link not live yet)
 
 ## Swift on Android in production
