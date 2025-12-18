@@ -8,7 +8,7 @@ category: "Developer Tools"
 ---
 
 Since the announcement of [the preview Swift SDK for Android](/blog/nightly-swift-sdk-for-android/),
-the Android workgroup has seen a lot of questions about how it works and what's next.
+the Android workgroup has seen a lot of interest in how it works and what's next.
 Please read on for some answers to common questions about the technology and its
 future, and try out the new Swift 6.3 SDK nightly previews.
 
