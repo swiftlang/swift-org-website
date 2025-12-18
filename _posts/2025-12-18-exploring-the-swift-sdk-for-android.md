@@ -7,10 +7,10 @@ author: android-workgroup
 category: "Developer Tools"
 ---
 
-Since the announcement of [the preview Swift SDK for Android a couple months ago](/blog/nightly-swift-sdk-for-android/),
+Since the announcement of [the preview Swift SDK for Android](/blog/nightly-swift-sdk-for-android/),
 the Android workgroup has seen a lot of questions about how it works and what's next.
 Please read on for some answers to common questions about the technology and its
-future.
+future, and try out the new Swift 6.3 SDK nightly previews.
 
 ## How Swift works on Android
 
@@ -29,10 +29,10 @@ Swift from Java or go the other way using the Java Native Interface (JNI), which
 allows Swift to seamlessly integrate with the Android platform.
 
 The [`jextract` tool gained a JNI mode this summer](/blog/gsoc-2025-showcase-swift-java/):
-you can now watch its author Mads Odgaard's [Server Side Swift Conference talk from a couple months ago](https://www.youtube.com/watch?v=tOH6V1IvTAc)
-and try out [his new weather example app in the Android examples repository](
+you can watch its author Mads Odgaard's [Server Side Swift Conference talk from a couple months ago](https://www.youtube.com/watch?v=tOH6V1IvTAc)
+and try out [the new weather example app he submitted in the Android examples repository](
 https://github.com/swiftlang/swift-android-examples/pull/25). (editor: linking his pull
-for now, we'll swap in the link to the final directory once that example is merged later tonight PST)
+for now, we'll swap in the link to the final directory once that example is merged by morning PST)
 
 ## Swift on Android in production
 
@@ -61,7 +61,7 @@ try building your Swift packages with the Swift SDK for Android, and work is und
 [run your tests in an Android emulator](https://github.com/swiftlang/github-workflows/pull/215)
 too.
 
-We are actively looking to onboard more contributors and have set up [a video call this
+We are looking to onboard more contributors and have set up [a video call this
 weekend to discuss](https://forums.swift.org/t/swift-on-android-new-contributors-call/83729).
 We hope to make these contributor calls a recurring event moving forward, as more people
 pitch in to improve these Swift tools themselves.
@@ -76,9 +76,8 @@ curate a list of cross-platform UI tools from the community.
 
 See [our recent post in the Swift forums](https://forums.swift.org/t/swift-gui-toolkits-for-android/83337)
 that lists a handful of popular and in-progress options a preliminary search found, but
-which we have not yet validated regarding what their authors claim. We will work with
-those devs in the coming months to add more info on using their GUI tools with the Swift
-SDK for Android.
+which we have not yet validated regarding what their authors claim. We plan to add
+more info on using compatible GUI tools with the Swift SDK for Android in the coming months.
 
 ## Android API versioning
 
@@ -99,44 +98,30 @@ func backtrace() {
     }
 }
 
-@available(Android 35, *)
-func hello35() {
-    print("Hello from API 35")
-}
-
-@available(Android 27, *)
-func hello27() {
-    print("Hello, world!")
-}
-
 @main
 struct ExecutableDemo {
-
     static func main() {
         #if os(Android)
-          hello27()
+          print("Hello from Android API 28 or later")
           if #available(Android 33, *) {
+            // The following code is only run on Android 33+ devices.
             backtrace()
             print("Hello from Android API 33+")
-            if #available(Android 35, *) {
-              hello35()
-            }
           }
         #endif
     }
 }
 ```
-(editor: should we slim this down?)
-Try this new feature out on Android and let us know how it is working for you.
+Try this new feature on Android and let us know how it works for you.
 
 ## Learn from the community
 
 Those using Swift on Android for many years have been sharing their experiences,
-as path-breakers like [Readdle](https://readdle.com/blog/swift-for-android-our-experience-and-tools)
+as founding contributors like [Readdle](https://readdle.com/blog/swift-for-android-our-experience-and-tools)
 and [Flowkey](https://medium.com/@ephemer/why-we-put-an-app-in-the-android-play-store-using-swift-96ac87c88dfc)
 have written about their work for the last decade.
 
-The Left Bit's Pierluigi Cifani [wrote about their experiences recently](https://forums.swift.org/t/thoughts-on-swift-for-android/80961),
+The Left Bit's Pierluigi Cifani [recently wrote about their experiences](https://forums.swift.org/t/thoughts-on-swift-for-android/80961),
 gave [a great talk at NSSpain 2025 a couple months ago](https://youtu.be/EIGl6GOo210),
 and was [interviewed by Swift Toolkit last month](https://www.swifttoolkit.dev/posts/dc-pier).
 
@@ -149,9 +134,9 @@ to Java instead. (editor: not sure we will get this in, but might be a good exam
 Finally, we are happy to announce that [an official Swift 6.3 SDK CI](https://ci.swift.org/job/oss-swift-6.3-package-swift-sdk-for-android/)
 has been set up, and it is producing [nightly preview releases of the Swift 6.3 SDK for Android](/install/macos/#swift-sdk-buindles-dev).
 Please follow the [Getting Started guide](/documentation/articles/swift-sdk-for-android-getting-started.html)
-to install and use it. (editor: I will update that guide by 3 AM Thursday PST with 6.3 SDK info)
+to install and use it. (editor: I will update that guide by 7 AM Thursday PST with 6.3 SDK info)
 
 Swift on Android has been a community effort for the last decade, growing
-from the initial patch to apps in production and an active group of developers.
+from that initial patch to apps in production and an active group of developers.
 Try out the new preview releases of the Swift 6.3 SDK for Android and help us
 make it even better!
