@@ -157,9 +157,3 @@ In most cases, source distribution is not advised due to these security concerns
 ## Static linking and Curl/XML
 
 **Note:** if you are compiling with `-static-stdlib` and using Curl with FoundationNetworking or XML with FoundationXML you must have libcurl and/or libxml2 installed on the target system for it to work.
-
-### Add crash reporting for Linux deployments
-
-For production Linux deployments, add [`swift-backtrace`](https://github.com/swift-server/swift-backtrace) to your application. Unlike macOS, Linux doesn't provide detailed backtraces on crashes by default.
-This library fills that gap by installing signal handlers that print useful stack traces when your application encounters a fatal error.
-This functionality will eventually become a standard language feature, but until then, `swift-backtrace` is essential for debugging production crashes on Linux.

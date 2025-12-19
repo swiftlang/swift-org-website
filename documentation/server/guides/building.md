@@ -55,8 +55,7 @@ swift build -c release -Xcc -fno-omit-frame-pointer
 ```
 
 The `-Xcc` flag passes options to the C compiler.
-Here, `-fno-omit-frame-pointer` [tells the compiler](https://clang.llvm.org/docs/ClangCommandLineReference.html#cmdoption-clang-fomit-
-frame-pointer) to preserve frame pointers.
+Here, `-fno-omit-frame-pointer` [tells the compiler](https://clang.llvm.org/docs/ClangCommandLineReference.html#cmdoption-clang-fomit-frame-pointer) to preserve frame pointers.
 This ensures that debugging tools can produce accurate backtraces, critical when you need to diagnose a crash or for profiling performance.
 The performance impact is typically negligible for server workloads, while the debugging benefits are substantial.
 
@@ -70,8 +69,8 @@ swift build -c release -Xswiftc -cross-module-optimization
 
 The `-Xswiftc` flag passes options to the Swift compiler.
 Here, `-cross-module-optimization` allows the compiler to optimize code across module boundaries.
-By default, Swift optimizes each module in isolation. 
-Cross-module optimization removes this boundary, enabling optimizations such as inlining function calls between modules.
+By default, Swift optimizes each module in isolation.
+Cross-module optimization removes this boundary, enabling techniques such as inlining function calls between modules.
 
 For code that makes frequent use of small functions across module boundaries, this can yield meaningful performance improvements.
 However, results vary for every project, as they're specific to your code.
@@ -153,7 +152,7 @@ This command mounts your current directory into the container and runs `swift bu
 The `swift:latest` container image provides this environment.
 You get Linux-compatible build artifacts as a result.
 
-If you're on Apple Silicon but need to target Intel/AMD64 Linux servers, specify the platform explicitly:
+If you're on Apple Silicon but need to target x86_64 Linux servers, specify the platform explicitly:
 
 ```bash
 # Build with Container
@@ -173,7 +172,7 @@ docker run --rm -it \
 
 The `--platform` flag runs the container with emulation using QEMU.
 The `-e QEMU_CPU=max` environment variable enables advanced CPU features in QEMU.
-This includes AMD64 support.
+This includes x86_64 support.
 
 Note that emulation doesn't guarantee all processor-specific extensions are available, but this setting enables the broadest feature set supported by your system.
 
@@ -235,7 +234,8 @@ For containerized deployments, dynamic linking is usually preferable since the c
 
 ### Inspecting a binary
 
-If you're uncertain what platform a binary was built for, use the `file` command on macOS to get more information. This inspects the binary, and provides useful information which usually shows, for binaries, the platform target. The following example inspects a swift executable (`MyServer`)
+If you're uncertain what platform a binary was built for, use the `file` command to inspect the binary and determine its platform target.
+The following example inspects a swift executable (`MyServer`)
 
 ```
 file .build/debug/MyServer
@@ -253,7 +253,7 @@ The output when compiled, in debug configuration, on Linux using a container in 
 .build/debug/MyServer: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, for GNU/Linux 3.7.0, BuildID[sha1]=ec68ac934b11eb7364fce53c95c42f5b83c3cb8d, with debug_info, not stripped
 ```
 
-And the output for that same executable compiled, in debug configuration, on macOS through the Container with Linux x86/64 emulation (using the example in the section above):
+Here's the output for the same executable compiled in debug configuration on macOS using the Container tool with x86_64 emulation (from the example above):
 
 ```
 .build/debug/MyServer: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=40357329617ac9629e934b94415ff4078681b45a, with debug_info, not stripped
