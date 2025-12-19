@@ -7,7 +7,7 @@ author: [timsneath, davelester]
 category: "Digest"
 ---
 
-As we near the end of the year, it's a time for reflection and gratitude. This month's guest contributor reflects on how far Swift has come.
+As we near the end of the year, it's a time for reflection and gratitude. Let's start this edition of *What's new in Swift* with a contribution that reflects on how far Swift has come:
 
 ## Guest contributor highlights
 > It has been a monumental twelve months for Swift as an open source project.
@@ -59,7 +59,7 @@ As this month's guest contribution shared, Swift continues to expand the platfor
 * [Using Swift SDKs with Raspberry PIs](https://xtremekforever.substack.com/p/using-swift-sdks-with-raspberry-pis) - Did you know Swift can run on a Raspberry PI? This blog post does a deep dive, it's time to open your terminal and follow along!
 * [Swift for WASM December 2025 updates](https://forums.swift.org/t/swift-for-wasm-december-2025-updates/83778) - The most recent update on work related to Swift for WASM. In December the community also had an online meetup including talks.
 * [AWS blog post about AWS Lambda runtime](https://aws.amazon.com/blogs/opensource/the-swift-aws-lambda-runtime-moves-to-awslabs/) - The Swift AWS Lambda Runtime moved to the official AWS Labs GitHub organization. Swift not only runs on Linux, it runs on AWS Lambda as well!
-* [Swift on a Pebble Watch](https://x.com/lucaslovexoxo/status/1987516793372524727) - A developer used Embedded Swift to build a "hello world" example on a 10-year-old Pebble watch.
+* [Swift on a Pebble watch](https://x.com/lucaslovexoxo/status/1987516793372524727) - A developer used Embedded Swift to build a "hello world" example on a 10-year-old Pebble Time Round watch.
 
 ## Swift Evolution
 The Swift project adds new language features to the language through the Swift Evolution process. These are some of the proposals currently under discussion or recently accepted for a future Swift release.
