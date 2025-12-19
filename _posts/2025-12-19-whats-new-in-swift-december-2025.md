@@ -29,7 +29,7 @@ As we near the end of the year, it's a time for reflection and gratitude. Let's 
 > 
 > &mdash; Tim Sneath
 
-What a year it's been! In fact, December also marked a decade of open source Swift which opened to the world with a [simple blog post](https://www.swift.org/blog/welcome). To end this milestone year, let's look at what caught our attention this month.
+What a year it's been! In fact, December also marked a decade of open source Swift which opened to the world with a [simple blog post](https://www.swift.org/blog/welcome). To end this milestone year, we look at what caught our attention this month.
 
 ## Swift at FOSDEM 2026
 Get ready for [FOSDEM](http://fosdem.org), the world’s largest independently run open source conference, taking place in Brussels in late January / early February. The Swift community will be there, including a [Pre-FOSDEM Community Event](http://swiftlang.github.io/event-fosdem/) that has been announced along with its CFP for 20-min talks, open through 05 January (23:59 CET).
