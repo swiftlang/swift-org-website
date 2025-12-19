@@ -5,13 +5,13 @@ title: Building Swift Server Applications
 ---
 
 Use [Swift Package Manager](/documentation/package-manager/) to build server applications.
-It provides a cross-platform foundation for building Swift code and works well when you have one code base that you can edit and run on many Swift platforms.
-Build with Swift Package Manager either using the command line, or through an IDE such as Xcode or Visual Studio Code.
+It provides a cross-platform foundation for building Swift code.
+You can build using the command line or through an IDE such as Xcode or Visual Studio Code.
 
 ## Choose a build configuration
 
 The Swift package manager supports two distinct build configurations, each optimized for different stages of your development workflow.
-The configurations are **debug**, frequently used during development, and **release**, which you use when profiling or producing production build artifacts.
+The configurations are **debug**, frequently used during development, and **release**, which you use when profiling or creating production artifacts.
 
 ### Use debug builds during development
 
@@ -22,12 +22,12 @@ swift build
 ```
 
 These debug builds include full debugging symbols and runtime safety checks, which makes them invaluable during active development.
-The compiler skips most optimizations to keep build times fast, letting you quickly test changes.
+The compiler skips most optimizations to keep compilation times fast, letting you quickly test changes.
 However, this can come at a significant cost to runtime performance; debug builds typically run slower than their release counterparts.
 
 ### Create release builds for production
 
-For building to run in production, use the release configuration by adding the `-c release` flag:
+For production deployments, use the release configuration by adding the `-c release` flag:
 
 ```bash
 swift build -c release
@@ -44,8 +44,9 @@ Beyond choosing debug or release mode, several compiler flags can fine-tune your
 
 ### Preserve frame pointers
 
-Some builds choose to omit frame pointers (data structures that enable accurate stack traces) to gain additional performance. 
-This can make debugging production crashes more difficult, as stack traces become less reliable.
+Some builds omit frame pointers to gain additional performance.
+Frame pointers are data structures that enable accurate stack traces.
+Without them, debugging production crashes becomes more difficult because stack traces are less reliable.
 For production server applications, preserving frame pointers is usually worth the minimal performance cost.
 Frame pointers aren't omitted by default in release configurations, but you can be explicit to preserve them:
 
@@ -53,7 +54,9 @@ Frame pointers aren't omitted by default in release configurations, but you can 
 swift build -c release -Xcc -fno-omit-frame-pointer
 ```
 
-The `-Xcc -fno-omit-frame-pointer` passes the flag [-fno-omit-frame-pointer](https://clang.llvm.org/docs/ClangCommandLineReference.html#cmdoption-clang-fomit-frame-pointer) through to the LLVM compiler.
+The `-Xcc` flag passes options to the C compiler.
+Here, `-fno-omit-frame-pointer` [tells the compiler](https://clang.llvm.org/docs/ClangCommandLineReference.html#cmdoption-clang-fomit-
+frame-pointer) to preserve frame pointers.
 This ensures that debugging tools can produce accurate backtraces, critical when you need to diagnose a crash or for profiling performance.
 The performance impact is typically negligible for server workloads, while the debugging benefits are substantial.
 
@@ -65,7 +68,8 @@ Swift 5.2 added cross-module optimization, which lets the compiler optimize code
 swift build -c release -Xswiftc -cross-module-optimization
 ```
 
-The `-Xswiftc` passes the `-cross-module-optimization` flag to the Swift compiler.
+The `-Xswiftc` flag passes options to the Swift compiler.
+Here, `-cross-module-optimization` allows the compiler to optimize code across module boundaries.
 By default, Swift optimizes each module in isolation. 
 Cross-module optimization removes this boundary, enabling optimizations such as inlining function calls between modules.
 
@@ -75,14 +79,14 @@ Always benchmark your specific workload with and without this flag before deploy
 
 ### Build specific products
 
-If your package defines multiple executables or library products, when you invoke `swift build`, the Swift Package Manager assumes you want to build everything declared in the package.
-You can build just what you need using either the `--product` flag:
+If your package defines multiple executables or library products, Swift Package Manager builds everything declared in the package by default.
+You can build just what you need using the `--product` flag:
 
 ```bash
 swift build --product MyAPIServer
 ```
 
-This is particularly useful in monorepo setups or packages with multiple deployment targets, as it avoids building tools or test utilities you don't need for a particular deployment.
+This is particularly useful in monorepo setups or packages with multiple deployment targets, as it avoids compiling tools or test utilities you don't need for a particular deployment.
 
 ## Use package traits
 
@@ -97,7 +101,8 @@ For details on defining traits, conditional dependencies, trait unification, and
 
 ## Locate build artifacts
 
-After building with your chosen configuration and optimizations, you'll often need to know where Swift Package Manager placed your build artifacts. The location varies by build platform and architecture:
+After compiling, you'll need to locate your build artifacts.
+Swift Package Manager places them in platform-specific directories. The location varies by build platform and architecture:
 
 ```bash
 # Show where debug build artifacts are located
@@ -119,10 +124,10 @@ The `--show-bin-path` flag is particularly useful for deployment scripts, where 
 
 Once you know where your build artifacts are located, you may need to target different platforms.
 Swift build artifacts are both platform and architecture-specific.
-Build artifacts you create on macOS run only on macOS; those you create on Linux run only on Linux.
+Artifacts you create on macOS run only on macOS; those you create on Linux run only on Linux.
 This creates a challenge for a common development pattern where engineers work on macOS and deploy to Linux servers.
 
-Many developers take advantage of Xcode's excellent IDE features during development but need to produce Linux build artifacts for deployment.
+Many developers take advantage of Xcode's excellent IDE features during development but need to produce Linux artifacts for deployment.
 Swift provides two main approaches for cross-platform building.
 
 ### Build with Linux containers
@@ -144,8 +149,9 @@ docker run --rm -it \
   swift:latest swift build
 ```
 
-This command mounts your current directory into the container and runs `swift build` inside a Linux environment provided by the `swift:latest` container image.
-The resulting build artifacts are Linux-compatible.
+This command mounts your current directory into the container and runs `swift build` inside a Linux environment.
+The `swift:latest` container image provides this environment.
+You get Linux-compatible build artifacts as a result.
 
 If you're on Apple Silicon but need to target Intel/AMD64 Linux servers, specify the platform explicitly:
 
@@ -166,7 +172,8 @@ docker run --rm -it \
 ```
 
 The `--platform` flag runs the container with emulation using QEMU.
-The `-e QEMU_CPU=max` is passing an environment variable that asks QEMU to emulate the most advanced features, such as AMD64 support.
+The `-e QEMU_CPU=max` environment variable enables advanced CPU features in QEMU.
+This includes AMD64 support.
 
 Note that emulation doesn't guarantee all processor-specific extensions are available, but this setting enables the broadest feature set supported by your system.
 
@@ -192,8 +199,10 @@ These SDK targets use musl libc (a lightweight C library) instead of glibc (the 
 The resulting executables have minimal dependencies on the target Linux system, making them highly portable across Linux distributions.
 However, they may be larger than dynamically-linked equivalents.
 
-Cross-compilation is significantly faster than Docker-based builds because it runs natively on your Mac's architecture without emulation. 
-One of the tradeoffs is build environment fidelity: you're testing that your code cross-compiles to Linux, not that it actually builds on a Linux system.
+Cross-compilation runs significantly faster than Docker-based builds.
+It runs natively on your Mac's architecture without emulation.
+The tradeoff is build environment fidelity.
+You verify that your code cross-compiles to Linux, not that it builds on an actual Linux system.
 Another is that you can only use the static libraries that are available in the SDK, and your code can't use `dlopen` or other tools to dynamically load libraries that may be available on the target system.
 
 For most projects this distinction doesn't matter.
@@ -212,7 +221,8 @@ swift build -c release --static-swift-stdlib
 
 The resulting build artifacts still depend on dynamically linking to glibc, but have fewer dependency requirements on the target system.
 
-This bundles the Swift runtime directly into the build artifact:
+The resulting executables bundle the Swift runtime directly.
+This creates self-contained artifacts with fewer system dependencies:
 
 | Aspect | Dynamic Linking | Static Linking |
 |--------|----------------|----------------|
