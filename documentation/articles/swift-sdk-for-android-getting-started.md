@@ -46,7 +46,7 @@ Next, download and install the Swift SDK bundle using the built-in `swift sdk` c
 ```console
 $ swift sdk install https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle.tar.gz --checksum 5b5cd4da30ececb28c678c3a17a922f3c5fdb82f0ff6dc777bd44275fcc222e0
 
-Swift SDK bundle at `https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle.tar.gz` successfully installed as swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a-android.artifactbundle.
+Swift SDK bundle at `https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle.tar.gz` successfully installed as swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle.
 ```
 
 Similarly, you can install the latest 6.3 snapshot by copy-pasting [the install commands shown
@@ -56,7 +56,7 @@ You should now see the Android Swift SDK included in the `swift sdk list` comman
 
 ```console
 $ swiftly run swift sdk list
-swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a-android
+swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android
 ```
 
 #### 3. Install and configure the Android NDK
@@ -77,7 +77,7 @@ Once you have downloaded and unpacked the NDK, you must link it to the Swift SDK
 
 ```console
 $ cd ~/Library/org.swift.swiftpm || cd ~/.swiftpm
-$ ./swift-sdks/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a-android.artifactbundle/swift-android/scripts/setup-android-sdk.sh
+$ ./swift-sdks/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle/swift-android/scripts/setup-android-sdk.sh
 setup-android-sdk.sh: success: ndk-sysroot linked to Android NDK at android-ndk-r27d/toolchains/llvm/prebuilt
 ```
 
