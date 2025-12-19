@@ -611,3 +611,8 @@ doug_gregor:
   name: Doug Gregor
   github: DougGregor
   about: "Doug Gregor is a member of the Language Steering Group and works on the Swift compiler and runtime."
+
+timsneath:
+  name: Tim Sneath
+  github: timsneath
+  about: "Tim Sneath works on developer tools and frameworks at Apple."
