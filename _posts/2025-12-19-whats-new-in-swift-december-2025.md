@@ -38,7 +38,7 @@ Each edition we share updates that we hope will be useful to you whether you're 
  To end this milestone year, let's take a look at some of the things that caught our attention this month.
 
 ## Swift at FOSDEM 2026
-Get ready for [FOSDEM](http://fosdem.org), the world’s largest independently run open source conference, taking place in Brussels in late January / early February. The Swift community will be there, including a [Pre-FOSDEM Community Event](http://swiftlang.github.io/event-fosdem/) that has been announced along with its CFP for 20-min talks, open through 05 January (23:59 CET).
+Get ready for [FOSDEM](http://fosdem.org), the world’s largest independently run open source conference, taking place in Brussels in late January / early February. The Swift community will be there, including a [Pre-FOSDEM Community Event](http://swiftlang.github.io/event-fosdem/) that has been announced along with a CFP for 20-min talks, open through January 5th (23:59 CET).
 
 Outside of the pre-conference event, Swift talks will appear in several FOSDEM devrooms including Containers, BSD, LLVM, and SBOMs. Hope to see you there!
 
@@ -64,17 +64,17 @@ As this month's guest contribution shared, Swift continues to expand to new plat
 
 * [Using Swift SDKs with Raspberry PI](https://xtremekforever.substack.com/p/using-swift-sdks-with-raspberry-pis) - Did you know Swift can run on a Raspberry Pi? This blog post does a deep dive, it's time to open your terminal and follow along!
 * [Swift for WASM December 2025 updates](https://forums.swift.org/t/swift-for-wasm-december-2025-updates/83778) - An update on progress related to Swift for WASM. In December the community also had an online meetup including talks.
-* [AWS blog post about AWS Lambda runtime](https://aws.amazon.com/blogs/opensource/the-swift-aws-lambda-runtime-moves-to-awslabs/) - The Swift AWS Lambda Runtime moved to the official AWS Labs GitHub organization. Swift not only runs on Linux, it runs on AWS Lambda as well!
+* [AWS blog post about AWS Lambda runtime](https://aws.amazon.com/blogs/opensource/the-swift-aws-lambda-runtime-moves-to-awslabs/) - The Swift AWS Lambda Runtime moved to the official AWS Labs GitHub organization, delivering a vendor-sponsored approach to running Swift on AWS Lambda.
 * [Swift on a Pebble watch](https://x.com/lucaslovexoxo/status/1987516793372524727) - A fun example of how a developer used Swift's embedded support to build a "hello world" example on a 10-year-old Pebble Time Round watch.
 
 ## Swift Evolution
 The Swift project adds new language features to the language through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under discussion or recently accepted for a future Swift release.
 
 **Under Active Review:**
-* [SE-0501](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0501-swiftpm-html-coverage-report.md) HTML Coverage Report - This proposal adds HTML coverage report generation to Swift Package Manager's swift test command. Currently, SwiftPM only generates JSON coverage reports, which are useful for automated tools but not human-readable for developers. The new --coverage-format option would allow generating HTML reports alongside or instead of JSON, enabling visual inspection in CI systems and faster feedback during development.
+* [SE-0501](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0501-swiftpm-html-coverage-report.md) HTML Coverage Report - This proposal adds HTML coverage report generation to Swift Package Manager's swift test command. Currently, SwiftPM only generates JSON coverage reports, which are useful for automated tools but not so easy for developers to read. The new `--coverage-format` option would allow generating HTML reports alongside or instead of JSON, enabling visual inspection in CI systems and faster feedback during development.
 
 **Recently completed:**
-* [SE-0497](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0497-definition-visibility.md) Controlling function definition visibility in clients - The @inlinable attribute in Swift allows function definitions to be visible to callers, enabling optimizations like specialization and inlining. This proposal introduces explicit control over whether a function generates a callable symbol and makes its definition available for optimization purposes.
+* [SE-0497](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0497-definition-visibility.md) Controlling function definition visibility in clients - The `@inlinable` attribute in Swift allows function definitions to be visible to callers, enabling optimizations like specialization and inlining. This proposal introduces explicit control over whether a function generates a callable symbol and makes its definition available for optimization purposes.
 * [SE-0493](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0493-defer-async.md) Support async calls in defer bodies - Swift's defer statements provide scope-based cleanup but currently cannot perform asynchronous work, forcing developers to either manually insert cleanup on every exit path or spawn detached tasks. This proposal allows await calls within defer bodies when the enclosing context is async, with the defer statements implicitly awaited at scope exit to ensure proper cleanup completion.
 
 *Editor Note: With this update, we’re going to take a break from the blog for the next couple of weeks. Wishing everyone a restful end to 2025!*
