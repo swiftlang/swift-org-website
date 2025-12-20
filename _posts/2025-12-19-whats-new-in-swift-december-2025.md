@@ -7,16 +7,20 @@ author: [timsneath, davelester]
 category: "Digest"
 ---
 
-As we near the end of the year, it's a time for reflection and gratitude. Let's start this edition of *What's new in Swift* with a contribution that reflects on how far Swift has come:
 
-## Guest contributor highlights
-> It has been a monumental twelve months for Swift as an open source project.
-> 
-> The [/swiftlang organization](https://github.com/swiftlang) now comprises over 70 repositories, with hundreds of contributors every week bringing fresh perspectives, performance improvements, and tooling enhancements to the ecosystem.
+Welcome to the latest digest of news from the Swift project. 
+
+Each edition we share updates that we hope will be useful to you whether you're writing code with Swift or contributing to the language as a whole, and we start with an introduction from this edition's guest contributor:
+
+> As we near the end of the year, it's a time for reflection and gratitude. We're profoundly grateful for the energy, creativity, and dedication of our community: the hundreds of contributors who submit code to improve Swift, those who create and steward ecosystem packages with thoughtfulness, and the developers building remarkable things with this language. 
+>
+> Indeed, it has been a monumental twelve months for Swift as an open source project. 
+>
+> From its relatively humble roots as an open source project, starting with [a simple blog post](https://www.swift.org/blog/welcome) ten years ago this month, the [Swift project now comprises over 70 repositories](https://github.com/swiftlang), with hundreds of contributors every week bringing fresh perspectives, performance improvements, and tooling enhancements to the ecosystem.
 > 
 > The [release of Swift 6.2](https://www.swift.org/blog/swift-6.2-released/) brings more approachable concurrency with defaults that align with a philosophy of progressive disclosure: making advanced features available when you need them, but keeping them out of your way when you don't. Swift 6.2 also adds [WebAssembly support](https://www.swift.org/documentation/articles/wasm-getting-started.html), deep C++ interoperability, and improved memory safety features. 
 > 
-> This year proved that Swift truly runs everywhere:
+> This year proved that Swift truly runs everywhere, across a variety of platforms and use cases:
 > 
 > - **Embedded**: Embedded Swift is [rapidly evolving](https://www.swift.org/blog/embedded-swift-improvements-coming-in-swift-6.3/), moving from experimental to practical use cases, with significant updates targeted for the upcoming 6.3 release.
 > - **Android**: The workgroup is making strides with [daily snapshot builds](https://www.swift.org/blog/nightly-swift-sdk-for-android/) and end-to-end demos, bringing native Swift development closer to reality on Android devices.
@@ -25,11 +29,13 @@ As we near the end of the year, it's a time for reflection and gratitude. Let's 
 > - **AI**: The ecosystem is adapting quickly, with MLX providing a Swift-friendly API for machine learning on Apple Silicon, and numerous packages from [Hugging Face](https://github.com/huggingface?q=&type=all&language=swift) for Swift development.
 > - **Server**: Backend development remains a major growth area. At the recent AWS re:Invent conference, Amazon announced [integrated support for Swift in Amazon Linux](https://docs.aws.amazon.com/linux/al2023/release-notes/relnotes-2023.9.20251110.html#release-summary-2023.9.20251110) and adoption of the [AWS Lambda Runtime](https://aws.amazon.com/blogs/opensource/the-swift-aws-lambda-runtime-moves-to-awslabs/), signaling that the cloud is ready for Swift’s memory safety and speed.
 > 
-> And, of course, Swift remains the unrivaled language of choice for building apps across all **Apple platforms**.
-> 
+> And of course, Swift remains the unrivaled language of choice for building apps across all Apple platforms, whether you're building an app or a game for iPhone, iPad, Mac, Apple Watch, Apple TV or Apple Vision Pro!
+>
+> So thank you, once more, on behalf of all of us working on Swift: there would be no Swift community without you!
+>
 > &mdash; Tim Sneath
 
-What a year it's been! In fact, December also marked a decade of open source Swift which opened to the world with a [simple blog post](https://www.swift.org/blog/welcome). To end this milestone year, we look at what caught our attention this month.
+ To end this milestone year, let's take a look at some of the things that caught our attention this month.
 
 ## Swift at FOSDEM 2026
 Get ready for [FOSDEM](http://fosdem.org), the world’s largest independently run open source conference, taking place in Brussels in late January / early February. The Swift community will be there, including a [Pre-FOSDEM Community Event](http://swiftlang.github.io/event-fosdem/) that has been announced along with its CFP for 20-min talks, open through 05 January (23:59 CET).
