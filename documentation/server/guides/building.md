@@ -89,8 +89,8 @@ This is particularly useful in monorepo setups or packages with multiple deploym
 
 ## Use package traits
 
-Beyond additional compiler flags, Swift 6.2 introduces another way to control what gets built.
-Starting with Swift 6.2, packages can define traits, which enable or disable optional features at build time.
+Beyond additional compiler flags, Swift 6.1 introduces another way to control what gets built.
+Starting with Swift 6.1, packages can define traits, which enable or disable optional features at build time.
 
 Package Traits allows a package to define additional, optional code that you can enable for your service or library.
 You can toggle experimental APIs, performance monitoring, or deployment settings without creating separate branches. 
