@@ -60,15 +60,15 @@ In case you missed it, here are several recent blog posts you'll want to check o
 * 2025 Google Summer of Code contributors had posts featuring work related to several Swift-related projects, everything from [Bringing Swiftly support to VS Code](https://www.swift.org/blog/gsoc-2025-showcase-swiftly-support-in-vscode/), [Extending Swift-Java Interoperability](https://www.swift.org/blog/gsoc-2025-showcase-swift-java/), [Improved code completion for Swift](https://www.swift.org/blog/gsoc-2025-showcase-code-completion/), and [Improved console output for Swift Testing](https://www.swift.org/blog/gsoc-2025-showcase-swift-testing-output/).
 
 ## Swift everywhere
-As this month's guest contribution shared, Swift continues to expand the platforms where it runs. Here are a few recent examples from the community:
+As this month's guest contribution shared, Swift continues to expand to new platforms. Here are a few recent examples from the community:
 
-* [Using Swift SDKs with Raspberry PIs](https://xtremekforever.substack.com/p/using-swift-sdks-with-raspberry-pis) - Did you know Swift can run on a Raspberry PI? This blog post does a deep dive, it's time to open your terminal and follow along!
-* [Swift for WASM December 2025 updates](https://forums.swift.org/t/swift-for-wasm-december-2025-updates/83778) - The most recent update on work related to Swift for WASM. In December the community also had an online meetup including talks.
+* [Using Swift SDKs with Raspberry PI](https://xtremekforever.substack.com/p/using-swift-sdks-with-raspberry-pis) - Did you know Swift can run on a Raspberry Pi? This blog post does a deep dive, it's time to open your terminal and follow along!
+* [Swift for WASM December 2025 updates](https://forums.swift.org/t/swift-for-wasm-december-2025-updates/83778) - An update on progress related to Swift for WASM. In December the community also had an online meetup including talks.
 * [AWS blog post about AWS Lambda runtime](https://aws.amazon.com/blogs/opensource/the-swift-aws-lambda-runtime-moves-to-awslabs/) - The Swift AWS Lambda Runtime moved to the official AWS Labs GitHub organization. Swift not only runs on Linux, it runs on AWS Lambda as well!
-* [Swift on a Pebble watch](https://x.com/lucaslovexoxo/status/1987516793372524727) - A developer used Embedded Swift to build a "hello world" example on a 10-year-old Pebble Time Round watch.
+* [Swift on a Pebble watch](https://x.com/lucaslovexoxo/status/1987516793372524727) - A fun example of how a developer used Swift's embedded support to build a "hello world" example on a 10-year-old Pebble Time Round watch.
 
 ## Swift Evolution
-The Swift project adds new language features to the language through the Swift Evolution process. These are some of the proposals currently under discussion or recently accepted for a future Swift release.
+The Swift project adds new language features to the language through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under discussion or recently accepted for a future Swift release.
 
 **Under Active Review:**
 * [SE-0501](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0501-swiftpm-html-coverage-report.md) HTML Coverage Report - This proposal adds HTML coverage report generation to Swift Package Manager's swift test command. Currently, SwiftPM only generates JSON coverage reports, which are useful for automated tools but not human-readable for developers. The new --coverage-format option would allow generating HTML reports alongside or instead of JSON, enabling visual inspection in CI systems and faster feedback during development.
