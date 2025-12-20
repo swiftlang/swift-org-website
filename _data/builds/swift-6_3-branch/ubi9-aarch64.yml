@@ -1,3 +1,13 @@
+- date: 2025-12-18 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-18-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-18-a-ubi9-aarch64.tar.gz
+  download_signature: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-18-a-ubi9-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2025-12-17 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-17-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-17-a-ubi9-aarch64.tar.gz
+  download_signature: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-17-a-ubi9-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2025-12-14 10:10:00-06:00
   dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-14-a
   download: swift-6.3-DEVELOPMENT-SNAPSHOT-2025-12-14-a-ubi9-aarch64.tar.gz

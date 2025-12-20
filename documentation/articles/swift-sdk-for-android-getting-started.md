@@ -25,34 +25,38 @@ The first thing to note is that while `swift` may already be installed on your s
 The easiest and recommended way to manage host toolchains on macOS and Linux is to use [the swiftly command](/swiftly/documentation/swiftly/getting-started) command. Once that has been setup, you can install the host toolchain with:
 
 ```console
-$ swiftly install main-snapshot-2025-10-16
-Installing Swift main-snapshot-2025-10-16
+$ swiftly install main-snapshot-2025-12-17
+Installing Swift main-snapshot-2025-12-17
 Installing package in user home directory...
-main-snapshot-2025-10-16 installed successfully!
+main-snapshot-2025-12-17 installed successfully!
 
-$ swiftly use main-snapshot-2025-10-16
-The global default toolchain has been set to `main-snapshot-2025-10-16` (was 6.2.0)
+$ swiftly use main-snapshot-2025-12-17
+The global default toolchain has been set to `main-snapshot-2025-12-17` (was 6.2.3)
 
 $ swiftly run swift --version
-Apple Swift version 6.3-dev (LLVM 0d0246569621d5b, Swift 199240b3fe97eda)
+Apple Swift version 6.3-dev (LLVM 2bc32d2793f525d, Swift f1a704763ffd2c8)
 Target: arm64-apple-macosx15.0
 ```
+Alternately, you can install the latest `6.3-snapshot-2025-12-14`.
 
 #### 2. Install the Swift SDK for Android
 
 Next, download and install the Swift SDK bundle using the built-in `swift sdk` command:
 
 ```console
-$ swift sdk install https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a_android-0.1.artifactbundle.tar.gz --checksum 451844c232cf1fa02c52431084ed3dc27a42d103635c6fa71bae8d66adba2500
+$ swift sdk install https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle.tar.gz --checksum 5b5cd4da30ececb28c678c3a17a922f3c5fdb82f0ff6dc777bd44275fcc222e0
 
-Swift SDK bundle at `https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a_android-0.1.artifactbundle.tar.gz` successfully installed as swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a-android-0.1.artifactbundle.
+Swift SDK bundle at `https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle.tar.gz` successfully installed as swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle.
 ```
+
+Similarly, you can install the latest 6.3 snapshot by copy-pasting [the install commands shown
+for the various SDK bundles](/install/macos/#swift-sdk-buindles-dev) on the install pages.
 
 You should now see the Android Swift SDK included in the `swift sdk list` command:
 
 ```console
 $ swiftly run swift sdk list
-swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a-android-0.1
+swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android
 ```
 
 #### 3. Install and configure the Android NDK
@@ -73,7 +77,7 @@ Once you have downloaded and unpacked the NDK, you must link it to the Swift SDK
 
 ```console
 $ cd ~/Library/org.swift.swiftpm || cd ~/.swiftpm
-$ ./swift-sdks/swift-DEVELOPMENT-SNAPSHOT-2025-10-16-a-android-0.1.artifactbundle/swift-android/scripts/setup-android-sdk.sh
+$ ./swift-sdks/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle/swift-android/scripts/setup-android-sdk.sh
 setup-android-sdk.sh: success: ndk-sysroot linked to Android NDK at android-ndk-r27d/toolchains/llvm/prebuilt
 ```
 
@@ -150,9 +154,8 @@ Hello, world!
 
 Congratulations, you have built and run your first Swift program on Android!
 
-Note that Android applications are typically not deployed as command-line executable tools. Rather, they are assembled into an `.apk` archive and launched as an app from the home screen. To support this, Swift modules can be built as shared object libraries for each supported architecture and included in the app archive. The Swift code can then be accessed from the Android app — which is typically written in Java or Kotlin — through the Java Native Interface ([JNI](https://developer.android.com/training/articles/perf-jni)).
+Note that Android applications are typically not deployed as command-line executable tools. Rather, they are assembled into an `.apk` archive and launched as an app from the home screen. To support this, Swift modules can be built as shared object libraries for each supported architecture and included in the app archive. The Swift code can then be accessed from the Android app — which is typically written in Java or Kotlin — through the Java Native Interface ([JNI](https://developer.android.com/training/articles/perf-jni)) by using the [swift-java](https://github.com/swiftlang/swift-java) interoperability library and tools.
 
 Visit the [swift-android-examples](https://github.com/swiftlang/swift-android-examples) repository to see a variety of projects that demonstrate how to build full Android applications that utilize the Swift SDK for Android.
 
 These larger development topics will be expanded on in future articles and documentation. In the meantime, please visit the [Swift Android forums](https://forums.swift.org/c/platform/android/115) to discuss and seek help with the Swift SDK for Android.
-
