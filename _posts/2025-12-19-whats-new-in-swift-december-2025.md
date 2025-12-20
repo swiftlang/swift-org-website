@@ -7,10 +7,9 @@ author: [timsneath, davelester]
 category: "Digest"
 ---
 
-
 Welcome to the latest digest of news from the Swift project. 
 
-Each edition we share updates that we hope will be useful to you whether you're writing code with Swift or contributing to the language as a whole, and we start with an introduction from this edition's guest contributor:
+Each edition, we share updates that we hope will be useful to you whether you're writing code with Swift or contributing to the language as a whole, and we start with an introduction from this edition's guest contributor:
 
 > As we near the end of the year, it's a time for reflection and gratitude. We're profoundly grateful for the energy, creativity, and dedication of our community: the hundreds of contributors who submit code to improve Swift, those who create and steward ecosystem packages with thoughtfulness, and the developers building remarkable things with this language. 
 >
@@ -25,25 +24,25 @@ Each edition we share updates that we hope will be useful to you whether you're 
 > - **Embedded**: Embedded Swift is [rapidly evolving](https://www.swift.org/blog/embedded-swift-improvements-coming-in-swift-6.3/), moving from experimental to practical use cases, with significant updates targeted for the upcoming 6.3 release.
 > - **Android**: The workgroup is making strides with [daily snapshot builds](https://www.swift.org/blog/nightly-swift-sdk-for-android/) and end-to-end demos, bringing native Swift development closer to reality on Android devices.
 > - **Windows**: Support is maturing fast, with richer tooling via the VS Code extension and a growing library of packages that support Windows out of the box.
-> - **BSD**: The [Swift on FreeBSD Preview](https://forums.swift.org/t/swift-on-freebsd-preview/83064) is now available in preview for FreeBSD 14.3 and later, and will be featured in a FOSDEM 2026 talk about [Porting Swift to FreeBSD](https://fosdem.org/2026/schedule/event/swift-on-freebsd/).
+> - **BSD**: The preview of [Swift on FreeBSD](https://forums.swift.org/t/swift-on-freebsd-preview/83064) support is now available for FreeBSD 14.3 and later, and will be featured in a FOSDEM 2026 talk about [Porting Swift to FreeBSD](https://fosdem.org/2026/schedule/event/swift-on-freebsd/).
 > - **AI**: The ecosystem is evolving quickly, with MLX providing a Swift-friendly API for machine learning on Apple Silicon, and numerous packages from [Hugging Face](https://github.com/huggingface?q=&type=all&language=swift) for Swift development.
 > - **Server**: Backend development remains a major growth area. At the recent AWS re:Invent conference, Amazon announced [integrated support for Swift in Amazon Linux](https://docs.aws.amazon.com/linux/al2023/release-notes/relnotes-2023.9.20251110.html#release-summary-2023.9.20251110) and adoption of the [AWS Lambda Runtime](https://aws.amazon.com/blogs/opensource/the-swift-aws-lambda-runtime-moves-to-awslabs/), signaling that the cloud is ready for Swift’s memory safety and speed.
 > 
-> And of course, Swift remains the unrivaled language of choice for building apps across all Apple platforms, whether you're building an app or a game for iPhone, iPad, Mac, Apple Watch, Apple TV or Apple Vision Pro!
+> And of course, Swift remains the unrivaled language of choice for building apps across all Apple platforms, whether you're building an app or a game for iPhone, iPad, Mac, Apple Watch, Apple TV, or Apple Vision Pro!
 >
 > So thank you, once more, on behalf of all of us working on Swift: there would be no Swift community without you!
 >
 > &mdash; Tim Sneath
 
- To end this milestone year, let's take a look at some of the things that caught our attention this month.
+To end this milestone year, let's take a look at some of the things that caught our attention this month.
 
 ## Swift at FOSDEM 2026
-Get ready for [FOSDEM](http://fosdem.org), the world’s largest independently run open source conference, taking place in Brussels in late January / early February. The Swift community will be there, including a [Pre-FOSDEM Community Event](http://swiftlang.github.io/event-fosdem/) that has been announced along with a CFP for 20-min talks, open through January 5th (23:59 CET).
+Get ready for [FOSDEM](http://fosdem.org), the world’s largest independently run open source conference, taking place in Brussels in late January / early February. The Swift community will be there, with a [Pre-FOSDEM Community Event](http://swiftlang.github.io/event-fosdem/). The Call for Proposals is open for short talk submissions through January 5th, 2026 (23:59 CET).
 
 Outside of the pre-conference event, Swift talks will appear in several FOSDEM devrooms including Containers, BSD, LLVM, and SBOMs. Hope to see you there!
 
 ## Talks worth watching
-* [Beyond Web Services: Swift for Low-Level Container infrastructure](https://www.youtube.com/watch?v=I72qyQbXQgM) - Eric introduces us to Apple's Containerization and Container open source projects, built entirely in Swift.
+* [Beyond Web Services: Swift for Low-Level Container infrastructure](https://www.youtube.com/watch?v=I72qyQbXQgM) - Eric Ernst introduces us to Apple's Containerization and Container open source projects, built entirely in Swift.
 * [Separate code from configuration with Swift Configuration](https://www.youtube.com/watch?v=I3lYW6OEyIs) - Swift Configuration provides a unified approach to handling configuration in your Swift applications. For more information, also check out the [Swift Configuration 1.0 announcement](https://www.swift.org/blog/swift-configuration-1.0-released/) from last week.
 * [Getting started with gRPC Swift](https://www.youtube.com/watch?v=yo-7ipiQwNs) - A deep dive into the Swift package for gRPC, a key building block of performant cloud services.
 
@@ -71,7 +70,7 @@ As this month's guest contribution shared, Swift continues to expand to new plat
 The Swift project adds new language features to the language through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under discussion or recently accepted for a future Swift release.
 
 **Under Active Review:**
-* [SE-0501](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0501-swiftpm-html-coverage-report.md) HTML Coverage Report - This proposal adds HTML coverage report generation to Swift Package Manager's swift test command. Currently, SwiftPM only generates JSON coverage reports, which are useful for automated tools but not so easy for developers to read. The new `--coverage-format` option would allow generating HTML reports alongside or instead of JSON, enabling visual inspection in CI systems and faster feedback during development.
+* [SE-0501](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0501-swiftpm-html-coverage-report.md) HTML Coverage Report - This proposal adds HTML coverage report generation to Swift Package Manager's swift test command. Currently, SwiftPM only generates JSON coverage reports, which are useful for automated tools but difficult for developers to read directly. The new `--coverage-format` option would allow generating HTML reports alongside or instead of JSON, enabling visual inspection in CI systems and faster feedback during development.
 
 **Recently completed:**
 * [SE-0497](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0497-definition-visibility.md) Controlling function definition visibility in clients - The `@inlinable` attribute in Swift allows function definitions to be visible to callers, enabling optimizations like specialization and inlining. This proposal introduces explicit control over whether a function generates a callable symbol and makes its definition available for optimization purposes.
