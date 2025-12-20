@@ -62,7 +62,7 @@ In case you missed it, here are several recent blog posts you'll want to check o
 As this month's guest contribution shared, Swift continues to expand to new platforms. Here are a few recent examples from the community:
 
 * [Using Swift SDKs with Raspberry Pi](https://xtremekforever.substack.com/p/using-swift-sdks-with-raspberry-pis) - Did you know Swift can run on a Raspberry Pi? This blog post does a deep dive, it's time to open your terminal and follow along!
-* [Swift for WASM December 2025 updates](https://forums.swift.org/t/swift-for-wasm-december-2025-updates/83778) - An update on progress related to Swift for WASM. In December the community also had an online meetup including talks.
+* [Swift for Wasm December 2025 updates](https://forums.swift.org/t/swift-for-wasm-december-2025-updates/83778) - An update on progress related to Swift for Wasm. In December the community also had an online meetup including talks.
 * [AWS blog post about AWS Lambda runtime](https://aws.amazon.com/blogs/opensource/the-swift-aws-lambda-runtime-moves-to-awslabs/) - The Swift AWS Lambda Runtime moved to the official AWS Labs GitHub organization, delivering a vendor-supported approach to running Swift on AWS Lambda.
 * [Swift on a Pebble watch](https://x.com/lucaslovexoxo/status/1987516793372524727) - A fun example of how a developer used Swift's embedded support to build a "hello world" example on a 10-year-old Pebble Time Round watch.
 
