@@ -150,6 +150,35 @@ $ adb shell /data/local/tmp/hello
 Hello, world!
 ```
 
+### Troubleshooting
+
+#### Missing header errors after SDK installation
+
+If you see errors like:
+
+```
+error: 'semaphore.h' file not found
+error: 'stddef.h' file not found
+```
+
+This means the `setup-android-sdk.sh` script was not run after installing the SDK. Make sure `ANDROID_NDK_HOME` is set and run:
+
+```console
+$ export ANDROID_NDK_HOME=/path/to/android-ndk-r27d
+$ cd ~/Library/org.swift.swiftpm || cd ~/.swiftpm
+$ ./swift-sdks/*/swift-android/scripts/setup-android-sdk.sh
+```
+
+#### NDK version mismatch
+
+The Swift SDK for Android requires NDK version 27 or later. If you see:
+
+```
+setup-android-sdk.sh: error: minimum NDK version 27 required
+```
+
+Download NDK r27d or later from the [NDK Downloads page](https://developer.android.com/ndk/downloads).
+
 ### Next Steps
 
 Congratulations, you have built and run your first Swift program on Android!
