@@ -72,7 +72,7 @@ title: Community
                   {{ hero_card_3.label }}
                </h3>
                <p class="body-copy">{{ hero_card_3.text | strip_html}}</p>
-               <a class="card-link" href="{{ hero_card_3.link.link }}">
+               <a class="card-link" href="{{ hero_card_3.link.url }}">
                   <p class="card-cta" href="{{ hero_card_3.link.url }}">{{hero_card_3.link.text}}</p>
                </a>
             </div>
