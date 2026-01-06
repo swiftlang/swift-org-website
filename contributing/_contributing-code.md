@@ -225,21 +225,23 @@ A *Code Merger* has made several high-quality contributions, has enough knowledg
 - Growth
   - As an *Code Merger*, you are trusted not just with your own work but with helping others. In reviews, you can show that you are able to take care of a code area to become a *Code Owner*.
 
-#### Code Owners
+#### Code Owner
 
-Code owners are individuals assigned to specific areas of the Swift project, with code quality their primary responsibility. The umbrella Swift project is composed of numerous sub-projects including the Swift standard library, extensions to the LLDB debugger, and the Swift package manager, to name a few. Each sub-project will be assigned a code owner.  The code owner then works to get all contributions reviewed, gather feedback from the community, and shepherd approved patches into the product.
+A *Code Owner* has the expertise to decide whether a PR affecting their area should be merged.
 
-Anyone can review a piece of code, and we welcome code review from everyone that is interested. Code review procedures are not dictated by a central, global policy. Instead, the process is defined by each code owner.
-
-Any community member that is active and shows themselves to be valuable can offer to become a code owner via posting to the forums, or be nominated by another member.  If fellow contributors agree, the project lead will make the appointment and add the new owner's name to the code owners file. The position is completely voluntary, and can be resigned at any time.
-
-The list of current code owners can be found in the file `CODE_OWNERS.txt` in the root of the parent Swift source tree. We also maintain a mailing group so you can [send an email](mailto:code-owners@forums.swift.org) to all the code owners.
-
-There may be nothing more important to the success of Swift than strong, engaged code owners. We all owe them respect, gratitude, and whatever help we can offer.
-
-
-Each contributor is responsible for adding his or her name to the `CONTRIBUTORS.txt` file at the project's root and maintaining the contact information. If you are contributing under the umbrella of your company, please add your company’s information, and do not also list yourself as an additional copyright holder.
-
+* Requirements
+  * As a *Code Owner*, you must have detailed knowledge of your area. You should be able to review PRs, be confident to judge whether they have the necessary quality to be merged and be able to assess the risk of a change, and to decide whether it should be cherry-picked to a release branch.
+* Responsibilities
+  * Ensure that PRs get reviewed in a timely manner.
+  * Be a point of contact for any questions and issues regarding your area.
+  * Fix issues in your area or have the capacity to delegate the issues to somebody else.
+  * Upkeep a high-quality bar for contributions.
+  * Help *Code Mergers* grow by providing actionable feedback on their PR reviews.
+  * Encourage active *Code Mergers* who fulfill the *Code Owner* requirements to nominate themselves as a *Code Owner*.
+* Nomination
+  * Send a private message to the existing *Code Owners* of the area you want to own on the [Swift Forums](https://forums.swift.org), communicating your intent.
+  * After you have received positive feedback, formalize your nomination by creating a pull request that modifies the `.github/CODEOWNERS` file to add your username to the area you want to own and request a review from all existing *Code Owners* of that area. The request must be approved by at least one and must not be declined by any other of these *Code Owners*. All *Code Owners* of the area should have one week to formally reply to the nomination.
+  * The position of a *Code Owner* is voluntary and can be resigned at any time.
 
 [community]: /community  "Swift.org community overview"
 [get_started]: /getting-started/ "How to setup your own version of Swift"
