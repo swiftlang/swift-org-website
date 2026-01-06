@@ -178,8 +178,13 @@
                 text-align: center;
                 font-size: 20px;
                 line-height: 1.8;
-                max-width: 540px;
+                max-width: 680px;
                 margin: 40px auto;
+
+                a.card-link {
+                    color: var(--site-link-with-right-arrow-color);
+                    text-decoration: none;
+                }
             }
 
             .community-section-cards {
