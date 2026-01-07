@@ -1,4 +1,4 @@
-headline: Community
+headline: Swift Community
 read-more: Read more
 hero-cards:
   - image:
@@ -13,19 +13,19 @@ hero-cards:
     text: Swift content, conferences, projects, and products shared on the forums.
     link:
       text: Read more
-      url: /packages/showcase.html
+      url: https://forums.swift.org/c/community-showcase/66
   - image:
       light: /assets/images/community/featured-packages@2x.png
       dark: /assets/images/community/featured-packages-dark@2x.png
-    alt: Featured Package image
-    label: Featured Package
+    alt: Featured Packages image
+    label: Featured Packages
     text: New and interesting Swift packages curated by the Swift Website Workgroup.
     link:
       text: Read more
       url: /packages/
 section2:
   headline: Explore the forums
-  text: "The <a href=\"https://forums.swift.org\" class=\"card-link\" target=\"_blank\">Swift forums</a> are the official discussion channel for the Swift community. Whether you’re just getting started with Swift or want to participate in shaping the language’s future, the forums are the best place to connect with other Swift developers. Check out these topics:"
+  text: "The <a href=\"https://forums.swift.org\" class=\"card-link\" target=\"_blank\">Swift forums</a> are the official discussion channel for the Swift community. Whether you'rere just getting started with Swift or want to participate in shaping the language's future, the forums are the best place to connect with other Swift developers. Check out these topics:"
   cards:
     - title: Using Swift
       text: Beginner questions are welcome in this space devoting to helping you use Swift.
@@ -37,7 +37,7 @@ section2:
       text: Discuss the implementation of core parts of Swift and related tooling.
       link: https://forums.swift.org/c/development/16
     - title: Related Projects
-      text: All about Swift ecosystem projects outside the governance of <a href="https://swift.org">swift.org</a>.
+      text: All about Swift ecosystem projects outside the governance of swift.org.
       link: https://forums.swift.org/c/related-projects/25
 section3:
   headline: Contribute to Swift
@@ -53,7 +53,7 @@ section3:
       text: Contributions are welcome and we've written a contributor guide with info to get started.
       link: https://www.swift.org/contributing/#contributing-code
     - title: Participate in language design
-      text: The <a href="https://github.com/swiftlang/swift-evolution/blob/main/process.md" target="_blank">Swift Evolution Process</a> is community-driven and intended to guide the review of development.
+      text: The Swift Evolution Process is community-driven and intended to guide the review of development.
       link: https://forums.swift.org/c/evolution/18
 section4:
   headline: Follow Swift
@@ -73,9 +73,9 @@ section4:
     - image:
         light: /assets/images/community/x.png
         dark: /assets/images/community/x-dark.png
-      label: Twitter/X
+      label: X
       link: https://x.com/swiftlang
-      alt: Twitter/X icon
+      alt: X icon
     - image:
         light: /assets/images/community/swift-blog.png
         dark: /assets/images/community/swift-blog-dark.png
