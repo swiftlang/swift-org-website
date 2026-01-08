@@ -91,6 +91,16 @@
                 object-position: center;
                 margin-bottom: 26px;
                 transition: transform 0.3s ease;
+
+                &.with-full-width {
+                    @media only screen and (max-width: 768px) {
+                        border-radius: 0;
+                        margin-left: -15px;
+                        margin-right: -15px;
+                        width: calc(100% + 30px);
+                        max-width: none;
+                    }
+                }
             }
 
             .community-featured-hero-card-image.with-zoom:hover {
@@ -99,10 +109,6 @@
 
             .community-sub-featured-grid-headline {
                 text-align: left;
-
-                @media only screen and (max-width: 768px) {
-                    text-align: center;
-                }
             }
 
             .community-sub-featured {
@@ -123,6 +129,10 @@
 
                 .card-cta {
                     color: var(--site-link-with-right-arrow-color);
+
+                    @media only screen and (max-width: 768px) {
+                        margin-bottom: 26px;
+                    }
                 }
             }
 

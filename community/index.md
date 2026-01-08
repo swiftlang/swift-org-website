@@ -15,12 +15,12 @@ title: Community
          {% assign hero_card_1_image = hero_card_1.image %}
 
          <img
-            class="community-featured-hero-card-image hide-dark"
+            class="community-featured-hero-card-image with-full-width hide-dark"
             src="{{ hero_card_1_image.light }}"
             alt="{{ hero_card_1.alt }}"
          />
          <img
-            class="community-featured-hero-card-image hide-light"
+            class="community-featured-hero-card-image with-full-width hide-light"
             src="{{ hero_card_1_image.dark }}"
             alt="{{ hero_card_1.alt }}"
          />
