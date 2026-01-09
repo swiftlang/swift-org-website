@@ -205,7 +205,7 @@ A *Member* has constructively contributed to Swift multiple times. This role is 
   - Ability to trigger CI testing
   - Show your membership in the swiftlang organization on your GitHub profile
 - Nomination
-  - If you would like to become a *Member*, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) that includes your contribution and the GitHub user name that you want to use
+  - If you would like to become a *Member*, please send a message to [the code-owners group](https://forums.swift.org/g/code-owners) on the Swift forums that includes your contribution and the GitHub user name that you want to use
 - Growth
   - Show that you use the privileges constructively and continue contributing to gain commit access.
 
@@ -221,7 +221,7 @@ A *Code Merger* has made several high-quality contributions, has enough knowledg
   - Merge PRs in the repository that you’re a *Code Merger* of, including PRs authored by other contributors. You are expected to only merge PRs after you have received an approving review from a *Code Owner*. *Code Owners* might approve with comments, with the expectation that you, as a *Code Merger*, will re-request a review if you make major adjustments after the approving review and ensure that the comments are addressed in a timely manner.
   - Ability to label/triage issues and assign them to contributors.
 - Nomination
-  - Like for a *Member*, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) that includes your contributions, the GitHub user name that you want to use and the repositories you want to become a *Code Merger* for. At the digression of the code owner list, you may also be granted the *Code Merger* role for repositories that you have not contributed to but that are conceptually linked to your contributions, like `swift-syntax` and `swift-driver` after having contributed to the compiler.
+  - Like for a *Member*, please send a message to [the code-owners group](https://forums.swift.org/g/code-owners) on the Swift forums that includes your contributions, the GitHub user name that you want to use and the repositories you want to become a *Code Merger* for. At the digression of the code owner list, you may also be granted the *Code Merger* role for repositories that you have not contributed to but that are conceptually linked to your contributions, like `swift-syntax` and `swift-driver` after having contributed to the compiler.
 - Growth
   - As an *Code Merger*, you are trusted not just with your own work but with helping others. In reviews, you can show that you are able to take care of a code area to become a *Code Owner*.
 
