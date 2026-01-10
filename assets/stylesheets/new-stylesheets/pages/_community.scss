@@ -158,7 +158,7 @@
             background-color: var(--get-started-card-primary-bg);
 
             &.links {
-                padding-bottom: 30px;
+                padding-bottom: 22px;
             }
 
             @media only screen and (max-width: 1024px) {
@@ -309,30 +309,41 @@
                 background-color: #999;
             }
 
-            @media (max-width: 768px) {
+            @media only screen and (max-width: 768px) {
                 .community-section-links {
-                    flex-direction: column;
-                    height: auto;
+                    flex-direction: row !important;
+                    flex-wrap: wrap !important;
+                    height: auto !important;
+                    gap: 4px !important;
+                    max-width: 458px !important;
+                    margin: 0 auto !important
                 }
 
                 .community-section-links li {
-                    width: 100%;
-                    padding: 16px 0;
+                    width: 150px !important;
+                    padding: 16px 0 !important;
+                    flex: none !important;
+                    justify-content: center !important;
                 }
 
                 .community-section-links li:nth-child(3)::after {
-                    content: none;
+                    content: none !important;
                 }
 
                 .link-card {
-                    flex-direction: row;
-                    justify-content: center;
-                    gap: 12px;
+                    flex-direction: column !important;
+                    justify-content: center !important;
+                    align-items: center !important;
+                    gap: 12px !important;
+                }
+
+                .link-card-image {
+                    margin-bottom: 0 !important;
                 }
 
                 .link-card-text {
-                    text-align: left;
-                    font-size: 16px;
+                    text-align: center !important;
+                    font-size: 14px !important;
                 }
             }
         }
