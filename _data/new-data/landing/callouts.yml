@@ -54,8 +54,8 @@
     let uMagnitude = vec_mag(u.span)
 
 - title: Interoperable
-  subtitle: Adopt in existing code incrementally.
-  text: Swift provides unmatched interoperability with its combination of natively understanding C and C++ types without the need for foreign function interfaces, and by providing bridging for bi-directional access. Swift’s interoperability features allow you to incrementally adopt the language into existing codebases without requiring a full code rewrite.
+  subtitle: Adopt Swift in existing code incrementally.
+  text: Swift provides unmatched interoperability, with its combination of natively understanding C and C++ types, without the need for foreign function interfaces, and providing bridging for bi-directional access. Swift’s interoperability features allow you to incrementally adopt the language into existing codebases without requiring a full code rewrite.
   code: |-
     import CxxStdlib
 
@@ -71,7 +71,7 @@
 
 - title: Adaptable
   subtitle: From microcontrollers to servers.
-  text: "The only language that can span from embedded and kernel, to server and apps. Swift excels no matter where it’s used: from constrained environments like firmware where every byte counts, to cloud services handling billions of requests a day."
+  text: "Spanning from embedded and kernel to server and apps, Swift excels no matter where it’s used, from constrained environments like firmware, where every byte counts, to cloud services handling billions of requests a day."
   code: |-
     // Configure UART by direct register manipulation 
     // using Swift MMIO. Enables RX and TX, and sets
