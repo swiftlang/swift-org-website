@@ -280,9 +280,9 @@ considered a violation of exclusivity when two separate properties are
 written and read; `point.x` and `point.y`. Because `Point` is declared
 as a `struct`, it is considered a value type, meaning that all of its
 properties are part of a whole value, and accessing one property
-accesses the entire value. The compiler makes exception to this rule
+accesses the entire value. The compiler makes an exception to this rule
 when it can prove safety via a straighforward static analysis. In
-particular, when same statement initiates accesses of two disjoint
+particular, when the same statement initiates accesses of two disjoint
 stored properties, the compiler avoids reporting an exclusivity
 violation. In the next example, the statement that calls `modifyX`
 first accesses `point` in order to immediately pass its property `x`
