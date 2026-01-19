@@ -37,27 +37,6 @@ The Platform Steering Group selects one member of the Windows workgroup as the c
 
 Where the workgroup is uncertain of or unable to agree on the way forward, members may raise issues to the relevant Steering Group(s) for consideration. Significant decisions should be made following the usual Swift Evolution process to allow for community participation and Steering Group oversight.
 
-The core members of the Windows workgroup are:
-
-{% assign people = site.data['windows-workgroup'].members | sort: "name" %}
-<ul>
-{% for person in people %}
-<li>{{ person.name }}
-{%- if person.chair -%}
- (Chair)
-{% endif %}
-{%- if person.affiliation -%}
-, {{ person.affiliation }}
-{% endif %}
-{% if person.handle %}
-(<a href="https://forums.swift.org/u/{{person.handle}}/summary">@{{person.handle}}</a>)
-{% endif %}
-</li>
-{% endfor %}
-</ul>
-
-Core members have no additional rights or responsibilities, but are generally people who work on Swift for Windows as part of their day-to-day jobs; they are listed here solely to provide stable points of contact for the workgroup.  If you would like to be added to the list of core members, please reach out to a current core member, or send a request to the [Windows workgroup](https://forums.swift.org/g/windows-workgroup) directly.
-
 ## Meetings
 
 The Windows workgroup meets biweekly on Wednesday at 9am PST (U.S. Pacific Time).
