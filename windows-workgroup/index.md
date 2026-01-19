@@ -12,12 +12,12 @@ The goal of the Windows workgroup is to maintain Swift support for Windows, allo
 The Windows workgroup will:
 
 * Improve and maintain Windows support for the official Swift distribution.
-* Recommend enhancements to core Swift packages such as Foundation and Dispatch to work better with Windows idioms
-* Make recommendations to the Swift Project about the direction of future Windows support in Swift
-* Identify and recommend best practices for bridging between Swift and the Windows API, and for shipping Swift libraries with Windows applications
-* Improve and maintain support for debugging and profiling Swift applications on Windows
-* Improve and maintain support for Windows-specific tooling
-* Advise and assist with adding support for Windows to various community Swift packages
+* Recommend enhancements to core Swift packages such as Foundation and Dispatch to work better with Windows idioms.
+* Make recommendations to the Swift Project about the direction of future Windows support in Swift.
+* Identify and recommend best practices for bridging between Swift and the Windows API, and for shipping Swift libraries with Windows applications.
+* Improve and maintain support for debugging and profiling Swift applications on Windows.
+* Improve and maintain support for Windows-specific tooling.
+* Advise and assist with adding support for Windows to various community Swift packages.
 
 ## Communication
 
