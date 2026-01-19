@@ -51,7 +51,7 @@ Everyone is welcome to contribute in the following ways:
 * Asking or answering questions on the forums.
 * Reporting or triaging bugs.
 * Submitting pull requests to any of the Windows support library projects.
-* Discuss ideas on the Swift Forums. You can create new topics in the [Windows](https://forums.swift.org/c/platform/windows/67) category, or add the windows tag to any topic.
-* Develop new tools to aid the Windows experience or improve existing ones.
-* Provide feedback to the members of the Windows workgroup directly by sending a message to [@windows-workgroup](https://forums.swift.org/new-message?groupname=windows-workgroup) on the Forums. The workgroup chair brings outstanding issues and topics to the workgroup to discuss during regular meetings. The workgroup decides the actions for the issues.
-* Join the Windows workgroup’s regular video meetings. Send a message to [@windows-workgroup](https://forums.swift.org/new-message?groupname=windows-workgroup) to request access.
+* Discussing ideas on the Swift Forums. You can create new topics in the [Windows](https://forums.swift.org/c/platform/windows/67) category, or add the windows tag to any topic.
+* Developing new tools to aid the Windows experience or improve existing ones.
+* Providing feedback to the members of the Windows workgroup directly by sending a message to [@windows-workgroup](https://forums.swift.org/new-message?groupname=windows-workgroup) on the Forums. The workgroup chair brings outstanding issues and topics to the workgroup to discuss during regular meetings. The workgroup decides the actions for the issues.
+* Joining the Windows workgroup’s regular video meetings. Send a message to [@windows-workgroup](https://forums.swift.org/new-message?groupname=windows-workgroup) to request access.
