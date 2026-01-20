@@ -1,0 +1,5 @@
+headline: "Swift evolution"
+body: "Anyone with a good idea can help shape the future features and direction of the language. To reach the best possible solution to a problem, we discuss and iterate on ideas in a public forum. Once a proposal is refined and approved, it becomes a release goal, and is tracked as a feature of an upcoming version of Swift.\n\nTo support this process, the Swift Evolution repository collects the goals for the upcoming major and minor releases (as defined by the core team) as well as proposals for changes to Swift. The Swift evolution process document details how ideas are proposed, discussed, reviewed, and eventually accepted into upcoming releases."
+link:
+  href: "/swift-evolution"
+  copy: "View Proposals"

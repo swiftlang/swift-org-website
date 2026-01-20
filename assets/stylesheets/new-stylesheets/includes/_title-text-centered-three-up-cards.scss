@@ -1,0 +1,181 @@
+// Governance page specific overrides
+.governance {
+  #get-started-hero {
+    padding-bottom: 70px;
+    
+    .hero-content {
+      h1 {
+        // Dark text in light mode (default)
+        color: #051416 !important;
+      }
+      
+      > p {
+        font-size: 17px;
+        font-weight: 400;
+        // Dark text in light mode (default)
+        color: #051416 !important;
+      }
+    }
+  }
+  
+  // Ensure section headings are visible in both light and dark modes
+  .title-text-centered-three-up-cards .header-section h2 {
+    color: var(--site-text-color, #051416) !important;
+  }
+  
+  .title-text-centered-three-up-cards .header-section p {
+    color: var(--site-text-color, #051416);
+  }
+}
+
+.title-text-centered-three-up-cards {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0 auto 70px;
+  // Place above the noise overlay (which is z-index: 1)
+  position: relative;
+  z-index: 2;
+
+  .content {
+    max-width: 982px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .header-section {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    
+    h2 {
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 29px;
+      line-height: 1.2;
+      // Default to dark text for light mode
+      color: #051416 !important;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 32px;
+        line-height: 1.33;
+      }
+    }
+    
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      opacity: 0.9;
+      // Default to dark text for light mode
+      color: #051416;
+    }
+  }
+  
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .card {
+    background: var(--governance-card-bg, #384461);
+    color: var(--governance-card-text-color, #ffffff);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 191px;
+    box-sizing: border-box;
+    text-align: left;
+    
+    .card-body {
+      flex-grow: 1;
+    }
+    
+    .card-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 1.25;
+      text-align: left;
+      color: var(--governance-card-text-color, #ffffff);
+    }
+    
+    .card-content {
+      font-size: 17px;
+      line-height: 1.5;
+      text-align: left;
+      color: var(--governance-card-text-color, #ffffff);
+    }
+    
+    .card-footer {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      
+      .card-link {
+        color: var(--color-link, #5eb3f6);
+        text-decoration: none;
+        font-size: 17px;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      
+      .separator {
+        color: var(--color-link, #5eb3f6);
+        opacity: 0.5;
+      }
+    }
+  }
+  
+  // Two-column variant
+  &.two-columns {
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+      
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+// Dark mode overrides for the section headings and hero
+body[data-color-scheme='dark'] {
+  .governance {
+    #get-started-hero {
+      .hero-content {
+        h1 {
+          color: #ffffff !important;
+        }
+        
+        > p {
+          color: #ffffff !important;
+        }
+      }
+    }
+  }
+  
+  .title-text-centered-three-up-cards {
+    .header-section {
+      h2 {
+        color: #ffffff !important;
+      }
+      
+      p {
+        color: #ffffff;
+      }
+    }
+  }
+}
