@@ -9,7 +9,7 @@ category: "Language"
 
 There are many interesting, useful, and fun C libraries in the software ecosystem. While one could go and rewrite these libraries in Swift, usually there is no need, because Swift provides direct interoperability with C. With a little setup, you can directly use existing C libraries from your Swift code. 
 
-When you use a C library directly from Swift, it will look and feel similar to using it from C. That can be useful if you're following sample code or a tutorial written in C, but it can also feel out-of-place. For example, here's a small amount of code using a C API:
+When you use a C library directly from Swift, it will look and feel similar to using it from C. That can be useful if you're following sample code or a tutorial written in C, but it can also feel out of place. For example, here's a small amount of code using a C API:
 
 ```swift
   var instanceDescriptor = WGPUInstanceDescriptor()
@@ -29,7 +29,7 @@ The Swift code above has a very "C" feel to it. It has global function calls wit
 
 Fortunately, we can improve this situtation, providing a safer and more ergonomic interface to WebGPU from Swift that feels like it belongs in Swift. More importantly, we can do so without changing the WebGPU implementation: Swift provides a suite of annotations that you can apply to C headers to improve the way in which the C APIs are expressed in Swift. These annotations describe common conventions in C that match up with Swift constructs, projecting a more Swift-friendly interface on top of the C code.
 
-In this post, I'm going to leverage these annotations to improve how Swift interacts with WebGPU. By the end, we'll be able to take advantage of Swift features like argument labels, methods, enums, and automatic reference counting, like this:
+In this post, I'm going to use these annotations to improve how Swift interacts with the WebGPU C code. By the end, we'll be able to take advantage of Swift features like argument labels, methods, enums, and automatic reference counting, like this:
 
 ```swift
   var instanceDescriptor = WGPUInstanceDescriptor()
@@ -53,10 +53,11 @@ A [module map](https://clang.llvm.org/docs/Modules.html) is a way of layering a 
 ```swift
 module WebGPU {
   header "webgpu.h"
+  export *
 }
 ```
 
-The easiest thing to do is to put `module.modulemap` alongside the header itself. For my experiment here, I put it in the root direction of my `webgpu-headers` checkout. If you're in a Swift package, put it into its own target with this layout:
+The easiest thing to do is to put `module.modulemap` alongside the header itself. For my experiment here, I put it in the root directory of my `webgpu-headers` checkout. If you're in a Swift package, put it into its own target with this layout:
 
 ```swift
 ├── Package.swift
@@ -74,16 +75,16 @@ If you reference this `WebGPU` target from elsewhere in the package, you can `im
 
 There are a few ways to see what the Swift interface for a C library looks like. 
 
-* Xcode's "Swift 5 interface" counterpart to the `webgpu.h` header will show how the header has been mapped into Swift.
 * The `swift-synthesize-interface` tool in Swift 6.2+ prints the Swift interface to the terminal.
+* Xcode's "Swift 5 interface" counterpart to the `webgpu.h` header will show how the header has been mapped into Swift.
 
 I'm going to do it from the command line, using `swift-synthesize-interface`. From the directory containing `webgpu.h` and `module.modulemap`, run:
 
 ```swift
-swift-synthesize-interface -I . -module-name WebGPU -target arm64-apple-macos14 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk
+xcrun swift-synthesize-interface -I . -module-name WebGPU -target arm64-apple-macos15 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk
 ```
 
-The `-sdk` argument with the path is only needed because I'm on a Mac. The `-target` operation is the triple provided if you run `swiftc -print-target-info`. For me, it looks like this:
+The leading `xcrun` and the `-sdk` argument with the path is only needed because I'm on a Mac; on other platforms, make sure `swift-synthesize-interface` is in your path. The `-target` operation is the triple provided if you run `swiftc -print-target-info`. For me, it looks like this:
 
 ```json
 {
@@ -95,20 +96,11 @@ The `-sdk` argument with the path is only needed because I'm on a Mac. The `-tar
     "compatibilityLibraries": [ ],
     "librariesRequireRPath": false
   },
-  "paths": {
-    "runtimeLibraryPaths": [
-      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx",
-      "/usr/lib/swift"
-    ],
-    "runtimeLibraryImportPaths": [
-      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx"
-    ],
-    "runtimeResourcePath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift"
-  }
+  "paths": { ... }
 }
 ```
 
-The output of this is the Swift API for the WebGPU module, directly translated from C. For example, this code from the WebGPU header:
+The output of `swift-synthesize-interface` is the Swift API for the WebGPU module, directly translated from C. For example, this code from the WebGPU header:
 
 ```c
 typedef enum WGPUAdapterType {
@@ -120,7 +112,7 @@ typedef enum WGPUAdapterType {
 } WGPUAdapterType WGPU_ENUM_ATTRIBUTE;
 ```
 
-will be translated into:
+is translated into:
 
 ```swift
 public struct WGPUAdapterType : Hashable, Equatable, RawRepresentable {
@@ -136,7 +128,7 @@ public var WGPUAdapterType_Unknown: WGPUAdapterType { get }
 public var WGPUAdapterType_Force32: WGPUAdapterType { get }
 ```
 
-and there will be lots of global functions like this:
+and there are lots of global functions like this:
 
 ```swift
 public func wgpuComputePipelineGetBindGroupLayout(_ computePipeline: WGPUComputePipeline!, _ groupIndex: UInt32) -> WGPUBindGroupLayout!
@@ -149,7 +141,7 @@ It's a starting point! You can absolutely write Swift programs using these WebGP
 
 ## Cleaning up enumeration types
 
-C enums can be used for several things. Sometimes they really represent a choice among several alternatives. Sometimes they represent flags in a set of options, from which you can choose several. Sometimes they're just a convenient way to create a bunch of named constants. Swift conservatively imports enum types as wrappers over the underlying C type used to store values of the enum (e.g., `WGPUAdapterType` wraps a `UInt32`) and makes the enumerators into global constants. It covers all of the possible use cases, but it isn't *nice*.
+C enums can be used for several things. Sometimes they really represent a choice among a number of alternatives. Sometimes they represent flags in a set of options, from which you can choose several. Sometimes they're just a convenient way to create a bunch of named constants. Swift conservatively imports enum types as wrappers over the underlying C type used to store values of the enum (e.g., `WGPUAdapterType` wraps a `UInt32`) and makes the enumerators into global constants. It covers all of the possible use cases, but it isn't *nice*.
 
 The `WGPUAdapterType` enum really is a choice among one of several options, which would be best represented as an `enum` in Swift. If we were willing to modify the header, we could apply the [`enum_extensibility` attribute](https://clang.llvm.org/docs/AttributeReference.html#enum-extensibility) to the enum, like this:
 
@@ -190,7 +182,7 @@ That's great, but I already broke my rule: no header modifications unless I have
 
 ## API notes
 
-The problem of needing to layer information on top of existing C headers is not a new one. As noted earlier, Swift relies on a Clang feature called [API notes](https://clang.llvm.org/docs/APINotes.html) to let us express this same information in a separate file, so we don't have to edit the header. In this case, we create a file called `WebGPU.apinotes` (the name `WebGPU` matches the module name from `module.map`), which is a YAML file describing the extra information. We'll start with one that turns `WGPUAdapterType` into an `enum`:
+The problem of needing to layer information on top of existing C headers is not a new one. As noted earlier, Swift relies on a Clang feature called [API notes](https://clang.llvm.org/docs/APINotes.html) to let us express this same information in a separate file, so we don't have to edit the header. In this case, we create a file called `WebGPU.apinotes` (the name `WebGPU` matches the module name from `module.modulemap`), which is a YAML file describing the extra information. We'll start with one that turns `WGPUAdapterType` into an `enum`:
 
 ```yaml
 ---
@@ -202,7 +194,7 @@ Tags:
 
 `Tags` here is a term used in the C and C++ standard to refer to enum, struct, union, or class types. Any information about those types in the API notes file will go into that section.
 
-Put `WebGPU.apinotes` alongside the `module.map`, and now `WGPUAdapterType` gets mapped into a `Swift` enum. For a package, the structure will look like this:
+Put `WebGPU.apinotes` alongside the `module.modulemap`, and now `WGPUAdapterType` gets mapped into a `Swift` enum. For a package, the structure will look like this:
 
 ```swift
 ├── Package.swift
@@ -253,7 +245,7 @@ public class WGPUBindGroupImpl { }
 public typealias WGPUBindGroup = WGPUBindGroupImpl
 ```
 
-The extra typealias is a little weird, but overall this is a huge improvement: Swift is treating `WGPUBindGroup` as a class, meaning that it automatically manages retains and releases for you! This is both an ergonomic win (less code to write) and a safety win, because it's eliminated the possibility of mismanaging these instances.
+The extra typealias is a little unexpected, but overall this is a huge improvement: Swift is treating `WGPUBindGroup` as a class, meaning that it automatically manages retains and releases for you! This is both an ergonomic win (less code to write) and a safety win, because it's eliminated the possibility of mismanaging these instances.
 
 There's one more thing: when dealing with reference-counting APIs, you need to know whether a particular function that returns an object is expecting you to call "release" when you're done. In the WebGPU header, this information is embedded in a comment:
 
