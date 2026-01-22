@@ -27,7 +27,7 @@ The C library here that Swift is using comes from the [webgpu-headers project](h
 
 The Swift code above has a very "C" feel to it. It has global function calls with prefixed names like `wgpuInstanceCreateSurface` and global integer constants like `WGPUStatus_Error`. It pervasively uses unsafe pointers, some of which are managed with explicit reference counting, where the user provides calls to `wpuXYZAddRef` and `wgpuXYZRelease` functions. It works, but it doesn't feel like Swift, and inherits various safety problems of C.
 
-Fortunately, we can improve this situtation, providing a safer and more ergonomic interface to WebGPU from Swift that feels like it belongs in Swift. More importantly, we can do so without changing the WebGPU implementation: Swift provides a suite of annotations that you can apply to C headers to improve the way in which the C APIs are expressed in Swift. These annotations describe common conventions in C that match up with Swift constructs, projecting a more Swift-friendly interface on top of the C code.
+Fortunately, we can improve this situation, providing a safer and more ergonomic interface to WebGPU from Swift that feels like it belongs in Swift. More importantly, we can do so without changing the WebGPU implementation: Swift provides a suite of annotations that you can apply to C headers to improve the way in which the C APIs are expressed in Swift. These annotations describe common conventions in C that match up with Swift constructs, projecting a more Swift-friendly interface on top of the C code.
 
 In this post, I'm going to use these annotations to improve how Swift interacts with the WebGPU C code. By the end, we'll be able to take advantage of Swift features like argument labels, methods, enums, and automatic reference counting, like this:
 
@@ -78,13 +78,13 @@ There are a few ways to see what the Swift interface for a C library looks like.
 * The `swift-synthesize-interface` tool in Swift 6.2+ prints the Swift interface to the terminal.
 * Xcode's "Swift 5 interface" counterpart to the `webgpu.h` header will show how the header has been mapped into Swift.
 
-I'm going to do it from the command line, using `swift-synthesize-interface`. From the directory containing `webgpu.h` and `module.modulemap`, run:
+Let's do it from the command line, using `swift-synthesize-interface`. From the directory containing `webgpu.h` and `module.modulemap`, run:
 
 ```swift
 xcrun swift-synthesize-interface -I . -module-name WebGPU -target arm64-apple-macos15 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk
 ```
 
-The leading `xcrun` and the `-sdk` argument with the path is only needed because I'm on a Mac; on other platforms, make sure `swift-synthesize-interface` is in your path. The `-target` operation is the triple provided if you run `swiftc -print-target-info`. For me, it looks like this:
+The leading `xcrun` and the `-sdk` argument with the path is only needed on macOS; on other platforms, make sure `swift-synthesize-interface` is in your path. The `-target` operation is the triple provided if you run `swiftc -print-target-info`. It looks like this:
 
 ```json
 {
@@ -342,7 +342,7 @@ WGPU_EXPORT void wgpuQueueWriteBuffer(
 There are three things to notice about this `SWIFT_NAME` string:
 
 * It starts with `WGPUBufferImpl.`, which tells Swift to make this function a member inside `WGPUBufferImpl`.
-* I've changed the function name to `writeBuffer`, because we no longer need the `wgpuQueue` prefix to distinguish it from other "write buffer" operations on other types.
+* Let's change the function name to `writeBuffer`, because we no longer need the `wgpuQueue` prefix to distinguish it from other "write buffer" operations on other types.
 * The name of the first argument in parentheses is `self`, which indicates that the `self` argument (in Swift) should be passed as that positional argument to the C function. The other arguments are passed in-order.
 
 Note that this also requires `WGPUBuffer(Impl)` to be imported as a `class`, as we did earlier for `WGPUBindGroupImpl`. Once we've done so, we get a much-nicer Swift API:
@@ -358,7 +358,7 @@ evice-timeline
 }
 ```
 
-I've gone and hacked up the header again, but I didn't have to. In `WebGPU.apinotes`, you can put a `SwiftName` attribute on any entity. For `wgpuQueueWriteBuffer`, it would look like this (in the `Functions` section):
+We've hacked up the header again, but didn't have to. In `WebGPU.apinotes`, you can put a `SwiftName` attribute on any entity. For `wgpuQueueWriteBuffer`, it would look like this (in the `Functions` section):
 
 ```yaml
 - Name: wgpuQueueWriteBuffer
@@ -383,7 +383,7 @@ extension WGPUQuerySetImpl {
 }
 ```
 
-That's okay, but it's not what you'd do in Swift. Let's go one step further and turn them into read-only computed properties. To do so, we use the `getter:` prefix on the Swift name we define. I'll skip ahead to the YAML form that goes into API notes:
+That's okay, but it's not what you'd do in Swift. Let's go one step further and turn them into read-only computed properties. To do so, use the `getter:` prefix on the Swift name we define. We'll skip ahead to the YAML form that goes into API notes:
 
 ```yaml
 - Name: wgpuQuerySetGetCount
@@ -403,7 +403,7 @@ extension WGPUQuerySetImpl {
 
 ### Importing functions as initializers
 
-`SWIFT_NAME` can also be used to import a function that returns a new instance as a Swift initializer. For example, this function creates a new `WGPUInstance` (which I'm assuming is getting imported as a `class` like I've been doing above):
+`SWIFT_NAME` can also be used to import a function that returns a new instance as a Swift initializer. For example, this function creates a new `WGPUInstance` (which we assume is getting imported as a `class` like we've been doing above):
 
 ```c
 /**
