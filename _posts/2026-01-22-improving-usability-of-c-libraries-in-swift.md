@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2025-12-15 12:00:00
+date: 2026-01-22 12:00:00
 title: "Improving the usability of C libraries in Swift"
 author: [doug_gregor]
 category: "Language"
