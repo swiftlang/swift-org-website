@@ -655,7 +655,7 @@ The techniques described in this post can be applied to just about any C library
 
 A little bit of annotation work on your favorite C library can make for a safer, more ergonomic, more Swifty experience of working with that library.
 
-## Postscript: Thoughts for improving the generated `webgpu.h`
+## Postscript: Thoughts for improving the generated webgpu.h
 
 The regular structure of `webgpu.h` helped considerably when trying to expose the API nicely in Swift. That said, there are a few ways in which `webgpu.h` could be improved to require less annotation for this purpose:
 
