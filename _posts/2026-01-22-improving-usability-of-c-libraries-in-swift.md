@@ -625,7 +625,7 @@ To specific nullability of pointer parameters, one can identify them by position
 
 ## Scripting the creation of `WebGPU.apinotes`
 
-`webgpu.h` is about 6,400 lines long, and is regenerated from a database of the API as needed. Each of the WebGPU implementations seems to augment or tweak the header a bit. So, rather than grind through and manually do annotations, I wrote a little Swift script to "parse" `webgpu.h`, identify its patterns, and generate `WebGPU.apinotes` for most of what is discussed in this post. The entirety of the script is [here](improving-usability-of-c-libraries-in-swift/webgpu_apinotes.swift). It reads `webgpu.h` from standard input and prints `WebGPU.apinotes` to standard output.
+`webgpu.h` is about 6,400 lines long, and is regenerated from a database of the API as needed. Each of the WebGPU implementations seems to augment or tweak the header a bit. So, rather than grind through and manually do annotations, I wrote a little Swift script to "parse" `webgpu.h`, identify its patterns, and generate `WebGPU.apinotes` for most of what is discussed in this post. The entirety of the script is [here](/assets/blog/improving-usability-of-c-libraries-in-swift/webgpu_apinotes.swift). It reads `webgpu.h` from standard input and prints `WebGPU.apinotes` to standard output.
 
 Because `webgpu.h` is generated, it has a very regular structure that we can pick up on via regular expressions. For example:
 
@@ -641,7 +641,7 @@ let functionMatcher = /WGPU_EXPORT (?<nullableResult>WGPU_NULLABLE ?)?(?<resultT
 let parameterMatcher = /(?<type>[^),]+?) (?<name>\w+?)[),]/
 ```
 
-That's enough to identify all of the enum types (so we can emit the `EnumExtensibility: closed` API notes), object types (to turn them into shared references), and functions (which get nicer names and such). The script is just a big `readLine` loop that applies the regexes to capture all of the various types and functions, then does some quick classification before printing out the API notes. The resulting API notes are [in WebGPU.apinotes](/assets/blog/improving-usability-of-c-libraries-in-swift/WebGPU.apinotes), and the generated Swift interface after these API notes are applied is [here](improving-usability-of-c-libraries-in-swift/WebGPU.swiftinterface). You can run it with, e.g.,
+That's enough to identify all of the enum types (so we can emit the `EnumExtensibility: closed` API notes), object types (to turn them into shared references), and functions (which get nicer names and such). The script is just a big `readLine` loop that applies the regexes to capture all of the various types and functions, then does some quick classification before printing out the API notes. The resulting API notes are [in WebGPU.apinotes](/assets/blog/improving-usability-of-c-libraries-in-swift/WebGPU.apinotes), and the generated Swift interface after these API notes are applied is [here](/assets/blog/improving-usability-of-c-libraries-in-swift/WebGPU.swiftinterface). You can run it with, e.g.,
 
 ```shell
 swift -enable-bare-slash-regex webgpu_apinotes.swift < webgpu.h
