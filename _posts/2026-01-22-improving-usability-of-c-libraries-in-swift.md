@@ -647,7 +647,7 @@ That's enough to identify all of the enum types (so we can emit the `EnumExtensi
 swift -enable-bare-slash-regex webgpu_apinotes.swift < webgpu.h
 ```
 
-This script full of regular expressions is, admittedly, a bit of a hack. A better approach for an arbitrary C header would be to use [`libclang`](https://clang.llvm.org/docs/LibClang.html) to properly parse the headers. For WebGPU specifically, the webgpu-headers project contains a database from which the header is generated, and one could also generate API notes directly from that header. Regardless of how you get there, many C libraries have well-structured headers with conventions that can be leveraged to create safer, more ergonomic projections in Swift. 
+This script full of regular expressions is, admittedly, a bit of a hack. A better approach for an arbitrary C header would be to use [`libclang`](https://clang.llvm.org/docs/LibClang.html) to properly parse the headers. For WebGPU specifically, the webgpu-headers project contains a database from which the header is generated, and one could also generate API notes directly from that database. Regardless of how you get there, many C libraries have well-structured headers with conventions that can be leveraged to create safer, more ergonomic projections in Swift.
 
 ## Swiftifying your favorite C library
 
