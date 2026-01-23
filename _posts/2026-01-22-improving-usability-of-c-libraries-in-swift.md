@@ -349,11 +349,6 @@ Note that this also requires `WGPUQueue(Impl)` to be imported as a `class`, as w
 
 ```swift
 extension WGPUQueueImpl {
-  /**
-   * Produces a @ref DeviceError both content-timeline (`size` alignment) and d
-evice-timeline
-   * errors defined by the WebGPU specification.
-   */
   public func writeBuffer(buffer: WGPUBuffer!, bufferOffset: UInt64, data: UnsafeRawPointer!, size: Int)
 }
 ```
