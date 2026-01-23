@@ -336,16 +336,16 @@ There is more usable structure in this API. Note that the `wgpuQueueWriteBuffer`
 ```c
 WGPU_EXPORT void wgpuQueueWriteBuffer(
       WGPUQueue queue, WGPUBuffer buffer, uint64_t bufferOffset, void const * data, size_t size) 
-  WGPU_FUNCTION_ATTRIBUTE SWIFT_NAME("WGPUBufferImpl.writeBuffer(self:buffer:bufferOffset:data:size:)");
+  WGPU_FUNCTION_ATTRIBUTE SWIFT_NAME("WGPUQueueImpl.writeBuffer(self:buffer:bufferOffset:data:size:)");
 ```
 
 There are three things to notice about this `SWIFT_NAME` string:
 
-* It starts with `WGPUBufferImpl.`, which tells Swift to make this function a member inside `WGPUBufferImpl`.
+* It starts with `WGPUQueueImpl.`, which tells Swift to make this function a member inside `WGPUQueueImpl`.
 * Let's change the function name to `writeBuffer`, because we no longer need the `wgpuQueue` prefix to distinguish it from other "write buffer" operations on other types.
 * The name of the first argument in parentheses is `self`, which indicates that the `self` argument (in Swift) should be passed as that positional argument to the C function. The other arguments are passed in-order.
 
-Note that this also requires `WGPUBuffer(Impl)` to be imported as a `class`, as we did earlier for `WGPUBindGroupImpl`. Once we've done so, we get a much-nicer Swift API:
+Note that this also requires `WGPUQueue(Impl)` to be imported as a `class`, as we did earlier for `WGPUBindGroupImpl`. Once we've done so, we get a much-nicer Swift API:
 
 ```swift
 extension WGPUQueueImpl {
