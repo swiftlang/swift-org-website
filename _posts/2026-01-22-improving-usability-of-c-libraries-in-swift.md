@@ -625,7 +625,7 @@ To specific nullability of pointer parameters, one can identify them by position
 
 ## Scripting the creation of `WebGPU.apinotes`
 
-`webgpu.h` is about 6,400 lines long, and is regenerated from a database of the API as needed. Each of the WebGPU implementations seems to augment or tweak the header a bit. So, rather than grind through and manually do annotations, I wrote a little Swift script to "parse" `webgpu.h`, identify its patterns, and generate `WebGPU.apinotes` for most of what is discussed in this post. The entirety of the script is [here](improving-usability-of-c-libraries-in-swift/webgpu_apinotes.swift). It reads `webgpu.h` from standard input and prints `WebGPU.apinotes` to standard output.
+`webgpu.h` is about 6,400 lines long, and is regenerated from a database of the API as needed. Each of the WebGPU implementations seems to augment or tweak the header a bit. So, rather than grind through and manually do annotations, I wrote a little Swift script to "parse" `webgpu.h`, identify its patterns, and generate `WebGPU.apinotes` for most of what is discussed in this post. The entirety of the script is [here](webgpu_apinotes.swift). It reads `webgpu.h` from standard input and prints `WebGPU.apinotes` to standard output.
 
 Because `webgpu.h` is generated, it has a very regular structure that we can pick up on via regular expressions. For example:
 
