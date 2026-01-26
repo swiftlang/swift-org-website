@@ -41,6 +41,7 @@ Advancing the Swift programming language with a coherent, clear view of its evol
    * __[Swift on Server](/sswg)__ is a team that promotes the use of Swift for developing and deploying server applications.
    * __[Testing](/testing-workgroup)__ is a team that helps guide the experience, libraries, and tools for testing Swift code.
    * __[Website](/website-workgroup/)__ is a team that helps guide the evolution on the Swift.org website.
+   * __[Windows](/windows-workgroup/)__ is a team that works on the use of Swift for developing Windows applications.
 
 Most importantly, everyone that uses Swift is a valued member of our extended community.
 
