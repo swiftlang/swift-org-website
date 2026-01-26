@@ -1,0 +1,90 @@
+headline: Swift Community
+read-more: Read more
+hero-cards:
+  - image:
+      light: /assets/images/community/community-hero.png
+      dark: /assets/images/community/community-hero-dark.png
+    alt: Community Hero image
+  - image:
+      light: /assets/images/community/community-showcase@2x.png
+      dark: /assets/images/community/community-showcase-dark@2x.png
+    alt: Community Showcase image
+    label: Community Showcase
+    text: Swift content, conferences, projects, and products shared on the forums.
+    link:
+      text: Read more
+      url: https://forums.swift.org/c/community-showcase/66
+  - image:
+      light: /assets/images/community/featured-packages@2x.png
+      dark: /assets/images/community/featured-packages-dark@2x.png
+    alt: Featured Packages image
+    label: Featured Packages
+    text: New and interesting Swift packages curated by the Swift Website Workgroup.
+    link:
+      text: Read more
+      url: /packages/
+section2:
+  headline: Explore the forums
+  text: "The <a href=\"https://forums.swift.org\" class=\"card-link\" target=\"_blank\">Swift forums</a> are the official discussion channel for the Swift community. Whether you'rere just getting started with Swift or want to participate in shaping the language's future, the forums are the best place to connect with other Swift developers. Check out these topics:"
+  cards:
+    - title: Using Swift
+      text: Beginner questions are welcome in this space devoting to helping you use Swift.
+      link: https://forums.swift.org/c/swift-users/15
+    - title: Announcements
+      text: Follow general announcements related to the Swift project and Swift releases.
+      link: https://forums.swift.org/c/general-announce/24
+    - title: Development and Tooling
+      text: Discuss the implementation of core parts of Swift and related tooling.
+      link: https://forums.swift.org/c/development/16
+    - title: Related Projects
+      text: All about Swift ecosystem projects outside the governance of swift.org.
+      link: https://forums.swift.org/c/related-projects/25
+section3:
+  headline: Contribute to Swift
+  text: "As an open source project, Swift is open to contributions! There are many ways to contribute, including through code and non-code contributions. Here are some ways to get involved:"
+  cards:
+    - title: Reporting and triaging bugs
+      text: If something doesn't work as intended, let the community know.
+      link: https://www.swift.org/contributing/#reporting-bugs
+    - title: Good first issues
+      text: Tasks and areas of where code contributions should be accessible to new contributors. 
+      link: https://www.swift.org/contributing/#good-first-issues
+    - title: Contributing code
+      text: Contributions are welcome and we've written a contributor guide with info to get started.
+      link: https://www.swift.org/contributing/#contributing-code
+    - title: Participate in language design
+      text: The Swift Evolution Process is community-driven and intended to guide the review of development.
+      link: https://forums.swift.org/c/evolution/18
+section4:
+  headline: Follow Swift
+  links:
+    - image:
+        light: /assets/images/community/bluesky.png
+        dark: /assets/images/community/bluesky-dark.png
+      label: Bluesky
+      link: https://bsky.app/profile/swift.org
+      alt: Bluesky icon
+    - image:
+        light: /assets/images/community/mastodon.png
+        dark: /assets/images/community/mastodon-dark.png
+      label: Mastodon
+      link: https://mastodon.social/@swiftlang
+      alt: Mastodon icon
+    - image:
+        light: /assets/images/community/x.png
+        dark: /assets/images/community/x-dark.png
+      label: X
+      link: https://x.com/swiftlang
+      alt: X icon
+    - image:
+        light: /assets/images/community/swift-blog.png
+        dark: /assets/images/community/swift-blog-dark.png
+      label: Swift blog
+      link: /blog
+      alt: Swift blog icon
+    - image:
+        light: /assets/images/community/github.png
+        dark: /assets/images/community/github-dark.png
+      label: GitHub
+      link: https://github.com/swiftlang
+      alt: GitHub icon
