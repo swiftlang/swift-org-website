@@ -13,7 +13,7 @@ title: Swift Programming Language
 </div>
 <section id="what-is-swift" class="section">
     <div class="hero-content">
-        <h1>Swift is the powerful, flexible,<br /> multiplatform programming language.</h1>
+        <h1 class="title-1">Swift is the powerful, flexible,<br /> multiplatform programming language.</h1>
         <div class="sub-text"><h2>Fast. Expressive. Safe.</h2></div>
         <a href="/install/" data-text="Install">Install</a>
         <p>Tools for Linux, macOS, and Windows</p>

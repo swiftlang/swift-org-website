@@ -246,43 +246,6 @@
       }
     }
 
-    .tertiary-cards,
-    .primary-cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      // padding: 0 0 40px;
-
-      li {
-        background-color: var(--get-started-card-secondary-bg);
-        padding: 20px 30px 20px 20px;
-        display: flex;
-        text-align: left;
-
-        div {
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-          position: relative;
-
-          .name {
-            font-size: 24px;
-            line-height: 1.25;
-            margin-bottom: 10px;
-          }
-
-          .text {
-            font-size: 17px;
-            flex-grow: 1;
-          }
-        }
-      }
-
-      @media only screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-    }
-
     .tertiary-cards {
       img {
         width: 45px;
@@ -553,7 +516,7 @@
 
   @media only screen and (max-width: 768px) {
     nav {
-     width: 100%;
+      width: 100%;
 
       ul {
         white-space: nowrap;
