@@ -23,7 +23,7 @@ Windows has been an [officially supported platform](/blog/swift-on-windows/) sin
 
 To learn more and get involved:
 
-* Discuss this announcement on the forums, and share ideas in the [Windows](https://forums.swift.org/c/platform/windows/67) category.
+* [Discuss this announcement](https://forums.swift.org/t/announcing-the-windows-workgroup/84374) on the forums, and share ideas in the [Windows](https://forums.swift.org/c/platform/windows/67) category.
 * Learn more about the Windows workgroup by reading its [charter](/windows-workgroup/).
 * Join the Windows workgroup’s meetings every other Wednesday at 9:00 AM PT (Pacific Time Zone).
     * Workgroup membership and meetings are open to those who wish to participate, and contributors are welcome!
