@@ -1,13 +1,13 @@
-title: "Project governance"
+title: "Propose and make changes"
 description: ""
 columns: 2
 cards:
-  - title: "Project Lead"
+  - title: "Contributing to Swift"
     content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eui"
     links:
       - text: "One link"
         url: "/community#project-lead"
-  - title: "Core Team"
+  - title: "Swift Evolution"
     content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy"
     links:
       - text: "Multiple links"

@@ -8,16 +8,16 @@ title: Governance
 <!-- Hero Section -->
 {% include new-includes/components/governance-hero.html content=site.data.new-data.governance.hero %}
 
-<!-- Swift Evolution Section -->
-{% include new-includes/components/headline-section.html content=site.data.new-data.governance.swift-evolution %}
+<!-- Propose and Make Changes Section -->
+{% include new-includes/components/title-text-centered-three-up-cards.html content=site.data.new-data.governance.propose-changes %}
 
-<!-- Workgroups Section -->
+<!-- Join a Workgroup Section -->
 {% include new-includes/components/title-text-centered-three-up-cards.html content=site.data.new-data.governance.workgroups %}
 
-<!-- Steering Groups Section -->
-{% include new-includes/components/title-text-centered-three-up-cards.html content=site.data.new-data.governance.steering-groups %}
+<!-- Code of Conduct Section -->
+{% include new-includes/components/headline-section.html content=site.data.new-data.governance.swift-evolution %}
 
-<!-- Project Governance Section -->
-{% include new-includes/components/title-text-centered-three-up-cards.html content=site.data.new-data.governance.project-governance %}
+<!-- Project Roles section -->
+{% include new-includes/components/title-text-centered-three-up-cards.html content=site.data.new-data.governance.steering-groups %}
 
 </div>
