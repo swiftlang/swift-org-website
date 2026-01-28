@@ -149,6 +149,35 @@ We're looking for a prototype of an experimental feature in the Swift compiler t
 
 - [Max Desiatov](https://github.com/MaxDesiatov)
 
+### WebAssembly Swift SDK with Support for Multi-threading
+
+**Project size**: 100-160 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Proficiency in Swift and WebAssembly;
+- Basic understanding of Python and Swift compiler build system.
+
+**Description**
+
+Multi-threading support in WebAssembly requires building code against `wasm32-unknown-wasip1-threads` triple, which is already supported in WASI-libc dependency of the Swift standard library.
+
+Swift toolchain `build-script` infrastructure written in Python needs minor updates that will build and package artifacts built for this triple in existing Swift SDK bundle that's distributed on swift.org.
+
+As a stretch goal, we'd like this project to include a review of the existing test suite to ensure that the newly supported triple is well tested and supported by the core Swift libraries.
+
+**Expected outcome/benefits/deliverables**
+
+- New Swift SDK with `wasm32-unknown-wasip1-threads` triple added to the existing Wasm Swift SDK bundle;
+- Running Swift stdlib tests compiled for the new triple;
+- (Stretch) CI jobs for core Swift libraries building with the new Swift SDK.
+
+**Potential mentors**
+
+- [Max Desiatov](https://github.com/MaxDesiatov)
+
 ---
 
 
