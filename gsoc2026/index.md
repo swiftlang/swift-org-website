@@ -61,31 +61,6 @@ The outcome of this project is the complete removal of all property wrappers-spe
 
 - [Pavel Yaskevich](https://github.com/xedin)
 
-
-### Example project name
-
-**Project size**: N hours
-
-**Estimated difficulty**: ???
-
-**Recommended skills**
-
-- Basic proficiency in Swift.
-- ...
-
-**Description**
-
-Description of the project goes here.
-
-**Expected outcomes/benefits/deliverables**
-
-- Expected deliverables of the project go here
-
-**Potential mentors**
-
-- Mentor name and link to their github
-
-
 ### Qualified name lookup for swift-syntax
 
 **Project size**: 350 hours
@@ -140,3 +115,30 @@ The goal of this project is to investigate data structures we might use to track
 **Potential mentors**
 
 - [Alastair Houghton](https://github.com/al45tair)
+
+---
+
+
+### Example project name
+
+**Project size**: N hours
+
+**Estimated difficulty**: ???
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+- ...
+
+**Description**
+
+Description of the project goes here.
+
+**Expected outcomes/benefits/deliverables**
+
+- Expected deliverables of the project go here
+
+**Potential mentors**
+
+- Mentor name and link to their github
+
