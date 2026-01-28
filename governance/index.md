@@ -15,9 +15,9 @@ title: Governance
 {% include new-includes/components/title-text-centered-three-up-cards.html content=site.data.new-data.governance.workgroups %}
 
 <!-- Code of Conduct Section -->
-{% include new-includes/components/headline-section.html content=site.data.new-data.governance.swift-evolution %}
+{% include new-includes/components/headline-section.html content=site.data.new-data.governance.code-of-conduct %}
 
 <!-- Project Roles section -->
-{% include new-includes/components/title-text-centered-three-up-cards.html content=site.data.new-data.governance.steering-groups %}
+{% include new-includes/components/title-text-centered-three-up-cards.html content=site.data.new-data.governance.project-roles %}
 
 </div>
