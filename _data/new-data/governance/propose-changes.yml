@@ -3,14 +3,14 @@ description: ""
 columns: 2
 cards:
   - title: "Contributing to Swift"
-    content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eui"
+    content: "Everyone is welcome to contribute to Swift.  Learn about best practices for contributing code, as well as non-code contributions like bug reports blog posts."
     links:
-      - text: "One link"
-        url: "/community#project-lead"
+      - text: "Contribution Guide"
+        url: "/contributing"
   - title: "Swift Evolution"
-    content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy"
+    content: "Shape future features and direction of the language. To reach the best possible solution to a problem, we discuss and iterate on ideas in a public forum."
     links:
-      - text: "Multiple links"
-        url: "/community#core-team"
-      - text: "Charter"
-        url: "/community#core-team"
+      - text: "Evolution Process"
+        url: "https://github.com/swiftlang/swift-evolution/blob/main/process.md#swift-evolution-process"
+      - text: "Proposal Dashboard"
+        url: "https://www.swift.org/swift-evolution/"
