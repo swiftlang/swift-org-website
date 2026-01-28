@@ -18,6 +18,7 @@ Swift.org uses [Jekyll](https://jekyllrb.com), a blog-aware, static site generat
 ### Running locally
 
 Requirements
+
 - Git
 - Ruby 3.3 or higher
   _(a Ruby installation manager, such as
@@ -38,6 +39,7 @@ open "http://localhost:4000"
 If you’d like to contribute to this project, please run Prettier before submitting your pull request to ensure consistent code style across the project.
 
 Requirements
+
 - [Node v18.17.1 or higher](https://nodejs.org)
 
 ```shell
