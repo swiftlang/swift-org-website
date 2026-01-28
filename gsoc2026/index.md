@@ -87,3 +87,34 @@ Qualified name lookup is the process by which a compiler resolves a reference  `
 **Potential mentors**
 
 - [Pavel Yaskevich](https://github.com/xedin)
+
+
+### Task and TaskGroup tracking for Swift Concurrency
+
+**Project size**: 160 hours
+
+**Estimated difficulty**: Advanced
+
+**Recommended skills**
+
+- Proficiency in C/C++ and Swift
+- Understanding of atomics and memory ordering
+
+**Description**
+
+The Concurrency runtime presently does not provide a way to keep track of which `Task`s and `TaskGroup`s are executing.  This information is especially useful for debugging programs that use Swift Concurrency; without it, it's possible to end up in situations where no progress is being made but you cannot see which tasks are outstanding since none of them are actually executing on a thread (so they don't show up in backtraces).
+
+An easy solution might be to have a global linked list of `Task`s and `TaskGroup`s, but that would cause unnecessary synchronization (or, for atomics, contention) between threads, which is highly undesirable.
+
+The goal of this project is to investigate data structures we might use to track `Task`s and `TaskGroup`s and to measure their overhead to make sure that it is acceptable.  A stretch goal might be to implement the necessary support to provide a list of extant `Task`s and `TaskGroup`s in Swift's on-crash backtraces, and to provide some Python macros for LLDB that can list `Task`s and `TaskGroup`s.
+
+**Expected outcome/benefits/deliverables**
+
+- An implementation of `Task`/`TaskGroup` tracking for the Concurrency runtime
+- A document detailing the design of the data structures used in the implementation and characterising their overheads, possibly by comparison to the naïve global list approach
+- (Stretch) Support for dumping the list of `Task`s and `TaskGroup`s in the on-crash backtracer
+- (Stretch) A Python module for LLDB to allow inspection of Concurrency runtime state
+
+**Potential mentors**
+
+- [Alastair Houghton](https://github.com/al45tair)
