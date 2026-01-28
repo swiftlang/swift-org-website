@@ -56,7 +56,7 @@ title: Swift Programming Language
         </p>
         <br />
         <p class="pillar-intro">
-            It's the combination of approachability, speed, safety, and all of<br class="hide-small"/> Swift’s strengths that make it so unique.
+            It's the combination of approachability, speed, safety, and all of<br class="hide-medium"/> Swift’s strengths that make it so unique.
         </p>
     </div>
     {% for callout in pillar1_callouts %}
