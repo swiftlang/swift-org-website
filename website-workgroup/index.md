@@ -65,8 +65,7 @@ Membership in the workgroup is contribution-based and expected to evolve over ti
 Adding new members and removing inactive ones is subject to a workgroup vote and requires unanimous agreement.
 The workgroup's vote then needs to be approved by the Swift core team.
 
-Individuals that would like to join the workgroup should apply by expressing their interest privately by contacting [@swift-website-workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup) on the Swift Forums.
-Applications will then be reviewed in the next available workgroup meeting.
+Individuals who would like to join the workgroup should apply by contacting [@swift-website-workgroup](https://forums.swift.org/new-message?groupname=swift-website-workgroup) on the Swift Forums. In your message, please include why you're interested in joining and how you'd like to contribute to the workgroup. Applications will be reviewed at the next available workgroup meeting.
 
 Membership term is capped at 2 years, but exiting members may re-apply at the end of their term.
 When multiple candidates compete for the same seat, the workgroup will vote between all candidates, with a final voting round between the two candidates that received most votes in the first round.
