@@ -28,3 +28,8 @@ The [Swift Package Index](https://swiftpackageindex.com/) is a community-run pac
 - [Have compatibility with both iOS and macOS platforms](https://swiftpackageindex.com/search?query=swiftui+platform:ios,macos)
 - [Include an executable helper or tool](https://swiftpackageindex.com/search?query=swiftui+product:executable)
 - [Have been created by a specific author](https://swiftpackageindex.com/search?query=author:apple)
+
+
+## Best Practices
+
+The [Ecosystem Steering Group](/ecosystem-steering-group/) maintains a set of best practices for package authors in the Swift ecosystem that cover things like version support, documentation and CI. You can find them [here](/packages/best-practices/).
