@@ -172,7 +172,7 @@ As a stretch goal, we'd like this project to include a review of the existing te
 
 - New Swift SDK with `wasm32-unknown-wasip1-threads` triple added to the existing Wasm Swift SDK bundle;
 - Running Swift stdlib tests compiled for the new triple;
-- (Stretch) CI jobs for core Swift libraries building with the new Swift SDK.
+- (Stretch) CI setup for core Swift libraries building with the new Swift SDK.
 
 **Potential mentors**
 
