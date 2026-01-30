@@ -40,7 +40,7 @@ And now for what's new in Swift this month.
 * Registration is open for several Swift community conferences, including [SwiftCraft](https://swiftcraft.uk) and [try! Swift Tokyo](https://tryswift.jp/en/). The Call for Proposals (CFP) is still open for try! Swift Tokyo. 
 
 ## Swift Evolution
-The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
+The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
 
 **Under active review:**
 * [SE-0506](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0506-advanced-observation-tracking.md) Advanced Observation Tracking - `@Observable` types automatically track when their properties change. However, advanced use cases like developing middleware infrastructure or widgeting systems require more control and features. This proposal adds options to the existing `withObservationTracking` to control when/which changes are observed, and a continuous variant that re-observes automatically after coalesced events.
