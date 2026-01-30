@@ -1,13 +1,13 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2026-01-30 14:00:00
+date: 2026-01-30 15:15:00
 title: "What's new in Swift: January 2026 Edition"
 author: [nicksloan, davelester]
 category: "Digest"
 ---
 
-Earlier this month, a Reddit discussion asked: [Has anyone built web apps with Swift?](https://www.reddit.com/r/swift/comments/1qhhiod/) Yes, many developers and companies! For this edition of "What's new in Swift", we invited one to share their adoption story:
+A [Reddit thread](https://www.reddit.com/r/swift/comments/1qhhiod/) earlier this month asked about building web apps with Swift. For this edition of "What's new in Swift," we invited a developer to share their experience:
 
 > Hi, I'm Nick Sloan. I'm the head of engineering at [Studioworks](https://studioworks.app/), a platform that makes it easy and fun to run your creative studio, agency or freelance business.
 > 
