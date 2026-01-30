@@ -21,7 +21,7 @@ Earlier this month, a Reddit discussion asked: [Has anyone built web apps with S
 > 
 > &mdash; Nick Sloan
 
-Learn more about Swift on Linux and server-based use cases by checking out our [October edition](/blog/whats-new-in-swift-october-2025/), which featured highlights from the Server-Side Swift Conference. The swift.org website also has a use case page dedicated to [cloud services](https://www.swift.org/get-started/cloud-services/), including a [tutorial](https://docs.swift.org/getting-started-swift-server/tutorials/getting-started-swift-server/) to get started.
+Learn more about Swift on Linux and server-based use cases by checking out our [October edition](/blog/whats-new-in-swift-october-2025/), which featured highlights from the Server-Side Swift Conference. The swift.org website also has a use case page dedicated to [cloud services](/get-started/cloud-services/), including a [tutorial](https://docs.swift.org/getting-started-swift-server/tutorials/getting-started-swift-server/) to get started.
 
 And now for what's new in Swift this month.
 
