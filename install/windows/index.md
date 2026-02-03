@@ -13,7 +13,14 @@ title: Install Swift - Windows
 {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Windows 10' | first %}
 
 <div class="content">
-  <h3 id="winget" class="header-with-anchor">1. Install Swift via WinGet</h3>
+  <div class="release-box section">
+    <div class="content">
+      <h2 id="prerequisites" class="header-with-anchor">Prerequisites</h2>
+      {% include install/_windows_dependencies.md %}
+      <p class="body-copy"><strong>Important:</strong> The WinGet command in step 1 below will automatically install Visual Studio for you. If you prefer to use the manual installer, you must install these prerequisites separately before installing Swift.</p>
+    </div>
+  </div>
+  <h3 id="winget" class="header-with-anchor">1. Install Swift and Dependencies via WinGet</h3>
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.winget %}
