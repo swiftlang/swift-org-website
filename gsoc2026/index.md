@@ -179,6 +179,34 @@ As a stretch goal, we'd like this project to include a review of the existing te
 
 - [Max Desiatov](https://github.com/MaxDesiatov)
 
+### DocC Language Features in SourceKit-LSP
+
+**Project size**: 200 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift.
+- Basic proficiency in TypeScript.
+
+**Description**
+
+SourceKit-LSP has recently added DocC Live Preview support that can be used in editors such as VS Code. It allows users to view a real time side-by-side preview of their documentation directly in their editor.
+
+Live preview could be further improved by providing language features such as go to definition as well as diagnostics for invalid/missing symbol names within DocC markdown and tutorial files. It would also be useful to have the links within the preview window take the user to the relevant symbol or documentation file within the code base.
+
+**Expected outcomes/benefits/deliverables**
+
+- Syntax highlighting for DocC markdown and tutorial files
+- Go to definition for symbols that appear in DocC documentation
+- Diagnostics that report missing/invalid symbol names in DocC documentation
+- Clicking on links within live preview should take the user to the symbol
+
+**Potential mentors**
+
+- [Matthew Bastien](https://github.com/matthewbastien)
+
 ---
 
 
