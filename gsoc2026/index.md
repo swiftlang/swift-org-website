@@ -207,6 +207,34 @@ Live preview could be further improved by providing language features such as go
 
 - [Matthew Bastien](https://github.com/matthewbastien)
 
+### SwiftPM System Executables for Enhanced Plugin User Experience
+
+**Project size**: 200 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift
+- Basic proficiency in SwiftPM packages
+
+**Description**
+
+SwiftPM is somewhat unique as a package manager because it supports marking dependencies on packages from foreign package managers, such as apt, yum, and homebrew. Today this is mainly used for libraries to be linked into SwiftPM products.
+
+SwiftPM plugins can depend on executable tools, built from source, to help generate code and resources. If a tool cannot be built from source using SwiftPM then the plugin can invoke it using an absolute path. But, how will it know if the tool is present at that path? Also, how will the user be guided to install the package if it is missing?
+
+The idea is to implement a system executable target, similar to system library targets where package names can be specified based on different package managers. Plugins can then depend on system executable targets so that warnings are emitted if the tool cannot be found on the path, along with the recommended remedy (e.g. "apt-get install foo") for any build errors. Since package manager may place tools in different locations based on the platform, there would be a SwiftPM plugin API for a plugin to specify the tool name and then it can discover the full path location. Add in some popular language-specific package manager support to gain access to many more tools (e.g. npm, and pip).
+
+**Expected outcomes/benefits/deliverables**
+
+- Complete SwiftPM proposal and working pull request
+
+
+**Potential mentors**
+
+- [Chris McGee](https://github.com/cmcgee1024)
+
 ---
 
 
