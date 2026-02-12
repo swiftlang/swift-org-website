@@ -237,7 +237,7 @@ The idea is to implement a system executable target, similar to system library t
 
 ### Sysroot Support in Swift's build-script
 
-**Project size**: 100-160 hours
+**Project size**: 160 hours
 
 **Estimated difficulty**: Intermediate
 
