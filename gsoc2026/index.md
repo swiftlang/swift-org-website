@@ -243,7 +243,8 @@ The idea is to implement a system executable target, similar to system library t
 
 **Recommended skills**
 
-- Understanding of CMake, Python and Swift compiler build system.
+- Basic understanding of CMake, Python 
+- Experience with the Swift compiler build system is a plus
 
 
 **Description**
