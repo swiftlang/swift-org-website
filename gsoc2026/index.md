@@ -207,6 +207,68 @@ Live preview could be further improved by providing language features such as go
 
 - [Matthew Bastien](https://github.com/matthewbastien)
 
+### SwiftPM System Executables for Enhanced Plugin User Experience
+
+**Project size**: 200 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic proficiency in Swift
+- Basic proficiency in SwiftPM packages
+
+**Description**
+
+SwiftPM is somewhat unique as a package manager because it supports marking dependencies on packages from foreign package managers, such as apt, yum, and homebrew. Today this is mainly used for libraries to be linked into SwiftPM products.
+
+SwiftPM plugins can depend on executable tools, built from source, to help generate code and resources. If a tool cannot be built from source using SwiftPM then the plugin can invoke it using an absolute path. But, how will it know if the tool is present at that path? Also, how will the user be guided to install the package if it is missing?
+
+The idea is to implement a system executable target, similar to system library targets where package names can be specified based on different package managers. Plugins can then depend on system executable targets so that warnings are emitted if the tool cannot be found on the path, along with the recommended remedy (e.g. "apt-get install foo") for any build errors. Since package manager may place tools in different locations based on the platform, there would be a SwiftPM plugin API for a plugin to specify the tool name and then it can discover the full path location. Add in some popular language-specific package manager support to gain access to many more tools (e.g. npm, and pip).
+
+**Expected outcomes/benefits/deliverables**
+
+- Complete SwiftPM proposal and working pull request
+
+
+**Potential mentors**
+
+- [Chris McGee](https://github.com/cmcgee1024)
+
+### Sysroot Support in Swift's build-script
+
+**Project size**: 160 hours
+
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+- Basic understanding of CMake, Python 
+- Experience with the Swift compiler build system is a plus
+
+
+**Description**
+
+Extend Swift‘s `build-script` with an experimental flag which
+provides the path to the sysroot of the target triple. This enables
+[cross-compiling](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md)
+to other sysroots, meaning the host triple is different to the target triple.
+[Wasm](https://github.com/swiftlang/swift/blob/main/utils/swift_build_support/swift_build_support/products/wasmswiftsdk.py)
+already uses a [sysroot](https://github.com/swiftlang/swift/blob/main/utils/swift_build_support/swift_build_support/products/wasmswiftsdk.py).
+The approach is to generalize the mechanism by splitting out the Swift core library builds into separate build products to be used for cross-compiling.
+
+
+**Expected outcomes/benefits/deliverables**
+- New build products for cross-compiling Swift core libraries (reuse from Wasm).
+- The new experimental flag from `build-script` is propagated to the new build products.
+- Cross-compilation succeeds and tests run successfully on target system.
+- Benefit is to be able to cross-compile to various Linux distros from one host system.
+    It enables generation of Swift SDKs for cross-compilation.
+
+**Potential mentors**
+
+- [Max Desiatov](https://github.com/MaxDesiatov)
+
 ---
 
 
