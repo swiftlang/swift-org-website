@@ -206,6 +206,7 @@ Live preview could be further improved by providing language features such as go
 **Potential mentors**
 
 - [Matthew Bastien](https://github.com/matthewbastien)
+- [Prajwal Nadig](https://github.com/snprajwal)
 
 ### SwiftPM System Executables for Enhanced Plugin User Experience
 
