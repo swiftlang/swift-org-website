@@ -47,6 +47,11 @@
   --get-started-boxes-bg: rgba(255, 255, 255, 0.5);
   --get-started-code-box-pre-bg: #fff;
   --get-started-code-box-pre-border: 1px solid #d5d5d5;
+  
+  --governance-card-bg: #ECECEC;
+  --governance-card-text-color: #051416;
+  --governance-hero-bg: none;
+  --governance-swoop-image: url('/assets/images/governance/governance-swoop-light.png');
 
   --homepage-hero-bg: linear-gradient(
     179deg,
@@ -174,6 +179,16 @@
   --get-started-boxes-bg: rgba(25, 52, 74, 0.5);
   --get-started-code-box-pre-bg: #111727;
   --get-started-code-box-pre-border: 1px solid #575757;
+  
+  --governance-card-bg: #384461;
+  --governance-card-text-color: #ffffff;
+  --governance-hero-bg: linear-gradient(
+    179deg,
+    #144173 1%,
+    #000000 90%,
+    #000000 100%
+  );
+  --governance-swoop-image: url('/assets/images/governance/governance-swoop-dark.png');
 
   --homepage-install-text: #dedede;
   --homepage-hero-bg: linear-gradient(
