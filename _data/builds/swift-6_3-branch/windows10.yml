@@ -10,6 +10,10 @@
   dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2026-02-14-a
   download: swift-6.3-DEVELOPMENT-SNAPSHOT-2026-02-14-a-windows10.exe
   name: Windows 10 Swift Development Snapshot
+- date: 2026-02-14 10:10:00-06:00
+  dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2026-02-14-a
+  download: swift-6.3-DEVELOPMENT-SNAPSHOT-2026-02-14-a-windows10.exe
+  name: Windows 10 Swift Development Snapshot
 - date: 2026-01-29 10:10:00-06:00
   dir: swift-6.3-DEVELOPMENT-SNAPSHOT-2026-01-29-a
   download: swift-6.3-DEVELOPMENT-SNAPSHOT-2026-01-29-a-windows10.exe
