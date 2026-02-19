@@ -72,15 +72,10 @@ please see the
 ```console
  $  sudo snap install nvim --classic
  $  nvim --version
-NVIM v0.9.4
+NVIM v0.11.5
 Build type: RelWithDebInfo
-LuaJIT 2.1.1692716794
-Compilation: /usr/bin/cc -O2 -g -Og -g -Wall -Wextra -pedantic -Wno-unused-pa...
-
-   system vimrc file: "$VIM/sysinit.vim"
-  fall-back for $VIM: "/usr/share/nvim"
-
-Run :checkhealth for more info
+LuaJIT 2.1.1741730670
+Run "nvim -V1 -v" for more info
 ```
 
 ## Getting Started
@@ -117,15 +112,18 @@ packages.
 At the top of your `init.lua` write:
 ```lua
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable",
-        lazypath
-    })
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out, "WarningMsg" },
+            { "\nPress any key to exit..." },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
 end
 vim.opt.rtp:prepend(lazypath)
 ```
@@ -137,6 +135,7 @@ specs.
 ```lua
 require("lazy").setup("plugins")
 ```
+> NOTE: If you see the error 'No specs found for module "plugins"', This is expected since we haven't added any plugins to the 'lua/plugins' directory yet.
 
 This configures _lazy.nvim_ to look in a `plugins/` directory under our `lua/`
 directory for each plugin. We'll also want a place to put our own non-plugin
@@ -190,8 +189,8 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require('lspconfig')
-            lspconfig.sourcekit.setup {}
+            vim.lsp.config.sourcekit = {}
+            vim.lsp.enable("sourcekit")
         end,
     }
 }
@@ -207,8 +206,8 @@ languages.
 
 ```lua
 config = function()
-    local lspconfig = require('lspconfig')
-    lspconfig.sourcekit.setup {}
+    vim.lsp.config.sourcekit = {}
+    vim.lsp.enable("sourcekit")
 
     vim.api.nvim_create_autocmd('LspAttach', {
         desc = 'LSP Actions',
@@ -242,14 +241,14 @@ statically. We'll update our `sourcekit` setup configuration to manually set the
 `didChangeWatchedFiles` capability.
 
 ```lua
-lspconfig.sourcekit.setup {
-    capabilities = {
-        workspace = {
-            didChangeWatchedFiles = {
-                dynamicRegistration = true,
-            },
-        },
+vim.lsp.config.sourcekit = {
+  capabilities = {
+    workspace = {
+      didChangeWatchedFiles = {
+        dynamicRegistration = true,
+      },
     },
+  },
 }
 ```
 
@@ -536,15 +535,18 @@ Here are the files for this configuration in their final form.
 ```lua
 -- init.lua
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable",
-        lazypath
-    })
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins", {
@@ -648,16 +650,16 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require('lspconfig')
-    lspconfig.sourcekit.setup {
-      capabilities = {
-          workspace = {
-            didChangeWatchedFiles = {
-              dynamicRegistration = true,
+      vim.lsp.config.sourcekit = {
+        capabilities = {
+            workspace = {
+                didChangeWatchedFiles = {
+                    dynamicRegistration = true,
+                },
             },
-          },
         },
       }
+      vim.lsp.enable("sourcekit")
 
       vim.api.nvim_create_autocmd('LspAttach', {
         desc = "LSP Actions",
