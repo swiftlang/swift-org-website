@@ -622,3 +622,9 @@ nicksloan:
   github: nicksloan
   gravatar: "8e28bdba3005737d98f9e96e25355a8f9c277f20985d190d441187fca7f72002"
   about: "Nick Sloan is a software developer and engineering leader at Studioworks and a partner at Sloates & Coan."
+
+vladimir_kukushkin:
+  name: Vladimir Kukushkin
+  email: kukushechkin@apple.com
+  github: kukushechkin
+  about: "Vladimir Kukushkin works on foundational Swift server libraries at Apple, and is a maintainer of Swift System Metrics."
