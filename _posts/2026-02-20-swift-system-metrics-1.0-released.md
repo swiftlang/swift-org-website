@@ -26,7 +26,7 @@ In reaching the 1.0 milestone, the API is now stable and ready for use. Note tha
     * Virtual and resident memory usage
     * Open and maximum available file descriptors
     * Process start time
-* New API-stable public interface
+* API-stable public interface
 * Support on both Linux and macOS
 * musl libc compatibility
 
