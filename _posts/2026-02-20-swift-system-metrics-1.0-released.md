@@ -73,7 +73,7 @@ struct Application {
 
     // Create the service
     let serviceGroup = ServiceGroup(
-      services: [service, systemMetricsMonitor],
+      services: [otelService, service, systemMetricsMonitor],
       gracefulShutdownSignals: [.sigint],
       cancellationSignals: [.sigterm],
       logger: logger
