@@ -17,7 +17,7 @@ Monitoring process metrics enables you to detect performance issues, optimize re
 
 Swift System Metrics is part of a larger set of packages that provide an end-to-end solution for integrating metrics into your Swift applications and services. Once system metrics are collected, they’re reported to [Swift Metrics](https://github.com/apple/swift-metrics), a backend-agnostic metrics API that can work with popular backends like Prometheus and OpenTelemetry. Swift System Metrics also leverages [Swift Service Lifecycle](https://github.com/swift-server/swift-service-lifecycle) to handle process bootstrapping and resource cleanup.
 
-In reaching the 1.0 milestone, the API is now stable and ready for use. Note that this package was previously `swift-metrics-extras`, and renamed to better reflect its purpose.
+With the 1.0 milestone, the API is now stable and ready for use. Note that this package was previously `swift-metrics-extras`, and renamed to better reflect its purpose.
 
 ## Highlights
 
