@@ -7,7 +7,7 @@ author: [vladimir_kukushkin]
 category: "Developer Tools"
 ---
 
-We’re excited to announce the 1.0 release of [swift-system-metrics](https://github.com/apple/swift-system-metrics), a Swift package that collects process-level system metrics like CPU utilization time and memory usage. Swift System Metrics runs on both Linux and macOS, providing a common API across platforms.
+We are excited to announce the 1.0 release of [Swift System Metrics](https://github.com/apple/swift-system-metrics), a Swift package that collects process-level system metrics like CPU utilization time and memory usage. Swift System Metrics runs on both Linux and macOS, providing a common API across platforms.
 
 <img src="/assets/images/system-metrics-1.0/grafana.png" alt="Swift System Metrics visualized in Grafana, demonstrating what's possible with real-time monitoring." title="Swift System Metrics visualized in Grafana, demonstrating what's possible with real-time monitoring." style="width: 100%;" />
 <p style="text-align: center;"><em>Swift System Metrics visualized in Grafana, demonstrating what's possible with real-time monitoring.</em></p>
@@ -22,13 +22,13 @@ In reaching the 1.0 milestone, the API is now stable and ready for use. Note tha
 ## Highlights
 
 * Collects and reports:
-    * CPU utilization time.
-    * Virtual and resident memory usage.
-    * Open and maximum available file descriptors.
-    * Process start time.
-* New API-stable public interface.
-* Support on both Linux and macOS.
-* musl libc compatibility.
+    * CPU utilization time
+    * Virtual and resident memory usage
+    * Open and maximum available file descriptors
+    * Process start time
+* New API-stable public interface
+* Support on both Linux and macOS
+* musl libc compatibility
 
 The package includes an [example Grafana dashboard configuration](https://github.com/apple/swift-system-metrics/blob/main/Examples/ServiceIntegration/grafana/provisioning/dashboards/grafana-dashboard-service-process-metrics.json) to start visualizing metrics immediately.
 
@@ -88,6 +88,6 @@ The complete documentation is available on [Swift Package Index](https://swiftpa
 
 ## Get Involved
 
-We're looking for contributions to grow the list of process metrics collected and to expand platform support. PRs are welcome - our [contribution guidelines](https://github.com/apple/swift-system-metrics/blob/main/CONTRIBUTING.md) describes how to get started.
+We're looking for contributions to grow the list of process metrics collected and to expand platform support. PRs are welcome - our [contribution guidelines](https://github.com/apple/swift-system-metrics/blob/main/CONTRIBUTING.md) describe how to get started.
 
 By reaching 1.0, this project will maintain a backwards-compatible API as it continues to evolve. Thanks to everyone who contributed to this release.
