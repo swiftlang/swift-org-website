@@ -1,13 +1,17 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2026-02-19 10:00:00
+date: 2026-02-20 10:00:00
 title: "Announcing Swift System Metrics 1.0: Process-Level Monitoring"
 author: [vladimir_kukushkin]
 category: "Developer Tools"
 ---
 
 We’re excited to announce the 1.0 release of [swift-system-metrics](https://github.com/apple/swift-system-metrics), a Swift package that collects process-level system metrics like CPU utilization time and memory usage. Swift System Metrics runs on both Linux and macOS, providing a common API across platforms.
+
+<img src="/assets/images/system-metrics-1.0/grafana.png" alt="Swift System Metrics visualized in Grafana, demonstrating what's possible with real-time monitoring." title="Swift System Metrics visualized in Grafana, demonstrating what's possible with real-time monitoring." style="width: 100%;" />
+<p style="text-align: center;"><em>Swift System Metrics visualized in Grafana, demonstrating what's possible with real-time monitoring.</em></p>
+<br/>
 
 Monitoring process metrics enables you to detect performance issues, optimize resource usage, and ensure your service remains reliable and cost-effective under varying loads. You can integrate Swift System Metrics into your service in just a few lines of code, making observability accessible to every developer and ensuring that even the smallest services can have production-grade visibility from day one.
 
