@@ -2,7 +2,7 @@
 layout: new-layouts/post
 published: true
 date: 2026-02-19 10:00:00
-title: "Swift System Metrics 1.0 released"
+title: "Announcing Swift System Metrics 1.0: Process-Level Monitoring"
 author: [vladimir_kukushkin]
 category: "Developer Tools"
 ---
@@ -15,7 +15,7 @@ Swift System Metrics is part of a larger set of packages that provide an end-to-
 
 In reaching the 1.0 milestone, the API is now stable and ready for use. Note that this package was previously `swift-metrics-extras`, and renamed to better reflect its purpose.
 
-## Key 1.0 features
+## Highlights
 
 * Collects and reports:
     * CPU utilization time.
@@ -25,9 +25,10 @@ In reaching the 1.0 milestone, the API is now stable and ready for use. Note tha
 * New API-stable public interface.
 * Support on both Linux and macOS.
 * musl libc compatibility.
-* An example Grafana dashboard configuration.
 
-## Get started
+The package includes an [example Grafana dashboard configuration](https://github.com/apple/swift-system-metrics/blob/main/Examples/ServiceIntegration/grafana/provisioning/dashboards/grafana-dashboard-service-process-metrics.json) to start visualizing metrics immediately.
+
+## Get Started
 
 Add the dependency to your `Package.swift`:
 
@@ -60,7 +61,7 @@ struct Application {
     otelConfig.serviceName = "Application"
     let otelService = try OTel.bootstrap(configuration: otelConfig)
 
-    // Setup you service
+    // Setup your service
     let service = FooService()
 
     // Create the monitor
@@ -81,8 +82,8 @@ struct Application {
 
 The complete documentation is available on [Swift Package Index](https://swiftpackageindex.com/apple/swift-system-metrics/documentation).
 
-## Get involved
+## Get Involved
 
-We're looking for contributions to expand the library with additional metrics and platform support. PRs are welcome - our [contribution guidelines](https://github.com/apple/swift-system-metrics/blob/main/CONTRIBUTING.md) have details on the process.
+We're looking for contributions to grow the list of process metrics collected and to expand platform support. PRs are welcome - our [contribution guidelines](https://github.com/apple/swift-system-metrics/blob/main/CONTRIBUTING.md) describes how to get started.
 
-Thanks to everyone who contributed to this release. The API will evolve in backwards-compatible ways from here.
+By reaching 1.0, this project will maintain a backwards-compatible API as it continues to evolve. Thanks to everyone who contributed to this release.
