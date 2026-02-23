@@ -191,5 +191,9 @@ Commits that clearly violate these quality standards may be reverted, in particu
 
 ### Contributor Ladder
 
-[Swift's contributor ladder](https://github.com/swiftlang/project-operations/blob/main/contributor-ladder.md) defines the roles you might gain while contributing to Swift on GitHub. Each role has privileges associated, which requires building trust with the community of contributors. We recognize there are many different types of contributors to Swift and we appreciate every single one! Everyone who has participated in the open source Swift project is a *Contributor*: This can be by writing code, answering questions on the forums, reporting or triaging bugs, or participating in the Swift evolution process. Read about the GitHub specific roles above. 
+[Swift's contributor ladder](https://github.com/swiftlang/project-operations/blob/main/contributor-ladder.md) defines the roles you might gain while contributing to Swift on GitHub.
+Each role has privileges associated, which requires building trust with the community of contributors.
+We recognize there are many different types of contributors to Swift and we appreciate every single one!
+Everyone who has participated in the open source Swift project is a *Contributor*: This can be by writing code, answering questions on the forums, reporting or triaging bugs, or participating in the Swift evolution process.
+Read about the GitHub specific roles above. 
 
