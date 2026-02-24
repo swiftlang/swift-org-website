@@ -208,6 +208,34 @@ Live preview could be further improved by providing language features such as go
 - [Matthew Bastien](https://github.com/matthewbastien)
 - [Prajwal Nadig](https://github.com/snprajwal)
 
+### Support SPM Templates in VS Code
+
+**Project size:** 200 Hours
+
+**Estimated difficulty:** Intermediate
+
+**Recommended skills**
+* Basic proficiency using TypeScript
+* Familiarity with VS Code Extensions
+* Experience with frontend web development
+
+**Description**
+
+Add first-class support for the new Swift Package Manager (SwiftPM) template system in the official Swift VS Code extension. To increase adoption of the feature and provide an intuitive experience for users, the VS Code extension should be updated to interface with the template system without requiring the user to leave the VS Code experience by falling back to the command line.
+
+For more details on how templates work in SPM, please review [the accepted proposal](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0500-package-manager-templates.md) on the Swift forums.
+
+**Expected outcomes/benefits/deliverables**
+
+* Add a GUI webview-based wizard that guides the user through creating a template provided by a package
+* Drive template options by using the JSON output of the `--experimental-dump-help` SPM flag
+* Showcase your work with a demo of the wizard and examples of how package authors and developers could use the system to improve workflows
+
+**Potential mentors**
+
+* [Will Paceley](https://github.com/willpaceley)
+* [Matthew Bastien](https://github.com/matthewbastien)
+
 ### SwiftPM System Executables for Enhanced Plugin User Experience
 
 **Project size**: 200 hours
