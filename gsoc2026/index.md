@@ -221,7 +221,7 @@ Live preview could be further improved by providing language features such as go
 
 **Description**
 
-Add first-class support for the new Swift Package Manager (SPM) template system in the official Swift VS Code extension. To increase adoption of the feature and provide an intuitive experience for users, the VS Code extension should be updated to interface with the template system without requiring the user to leave the VS Code experience by falling back to the command line.
+Add first-class support for the new Swift Package Manager (SwiftPM) template system in the official Swift VS Code extension. To increase adoption of the feature and provide an intuitive experience for users, the VS Code extension should be updated to interface with the template system without requiring the user to leave the VS Code experience by falling back to the command line.
 
 For more details on how templates work in SPM, please review [the accepted proposal](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0500-package-manager-templates.md) on the Swift forums.
 
