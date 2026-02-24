@@ -336,13 +336,17 @@
       padding: 23px 0 20px;
     }
 
+    .dropdown-toggle-arrow {
+      transform: rotate(180deg);
+    }
+
     &.active {
       .dropdown-menu {
         display: block;
       }
 
       .dropdown-toggle-arrow {
-        transform: rotate(180deg);
+        transform: rotate(0);
       }
 
       .dropdown-toggle,
