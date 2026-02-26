@@ -355,6 +355,38 @@ Iterativelt refine the documentation coverage file format based on what you lear
 
 - [David Rönnqvist](https://github.com/d-ronnqvist)
 
+
+### Globally Scoped Traits for Swift Testing via runtime configuration schema
+
+**Project size**: 80 hours
+**Estimated difficulty**: Intermediate
+
+**Recommended skills**
+
+* Basic proficiency in Swift.
+
+**Description**
+
+[Traits are a powerful tool](https://developer.apple.com/documentation/testing/traits) for customising test functions and suites. For example, you can specify timeout and retry on a test case or suite basis. It would be especially useful to apply a trait globally. For example, users may want to run all tests with a specific timeout in CI.
+
+As an initial foray into globally scoped traits, implement a configuration to set global traits at runtime for Swift Testing.
+
+**Expected outcomes/benefits/deliverables**
+
+* Design and implement a schema for configuring globally-scoped traits.
+* Consume the configuration at runtime via `swift test`
+* Land the changes behind experimental flags, then submit a proposal to the community and the Testing Workgroup to formally enable the feature.
+* Summarise your effort with a demo of the new functionality including screenshots or recordings.
+* Time permitting, extend this project further by implementing globally configurable traits elsewhere:
+    * With CLI parameters like `--retry-count` and `--test-timeout`
+    * As part of the `.testTarget()` in `Package.swift~
+    * As part of a new test plan file format
+    * And of course, figuring how all these different places where traits are specified will interact with each other!
+
+**Potential mentors**
+
+- [Jerry Chen](https://github.com/jerryjrchen)
+
 ---
 
 
