@@ -628,3 +628,9 @@ vladimir_kukushkin:
   email: kukushechkin@apple.com
   github: kukushechkin
   about: "Vladimir Kukushkin works on foundational Swift server libraries at Apple, and is a maintainer of Swift System Metrics."
+
+danieljilg:
+  name: Daniel Jilg
+  email: daniel@telemetrydeck.com
+  github: winsmith
+  about: "Daniel Jilg is the co-founder of TelemetryDeck, a privacy-first analytics platform built entirely on Swift."
