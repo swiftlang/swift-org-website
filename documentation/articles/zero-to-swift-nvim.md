@@ -177,23 +177,58 @@ To check that it's working:
 
 Language servers respond to editor requests providing language-specific support.
 Neovim has support for Language Server Protocol (LSP) built-in, so you don't
-need an external package for LSP, but adding a configuration for each LSP server
+need an external package for LSP. Neovim looks for lsp configurations in `<runtimepath>/lsp`. For more information run `:help lsp` and `:help rtp` in neovim. 
+
+Go ahead and create a new file under `nvim/lsp/sourcekit.lua` which is a runtimepath. In it, we'll start by adding the following snippet. 
+
+```lua
+-- lsp/sourcekit.lua
+return {
+  cmd = { 'sourcekit-lsp' },
+  filetypes = { 'swift' },
+  root_markers = {
+    '.git',
+    'compile_commands.json',
+    '.sourcekit-lsp',
+    'Package.swift',
+  },
+  get_language_id = function(_, ftype)
+    return ftype
+  end,
+  capabilities = {
+    workspace = {
+      didChangeWatchedFiles = {
+        dynamicRegistration = true,
+      },
+    },
+    textDocument = {
+      diagnostic = {
+        dynamicRegistration = true,
+        relatedDocumentSupport = true,
+      },
+    },
+  },
+}
+```
+
+This informs neovim we have a new language server called sourcekit but is not enabled by default. 
+The `cmd` field should be the path to `sourcekit-lsp` if it is not in your $PATH environment variable. 
+
+> Adding a configuration for each LSP server
 manually is a lot of work. Neovim has a package for configuring LSP servers,
 [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
 
-Go ahead and create a new file under `lua/plugins/lsp.lua`. In it, we'll start
-by adding the following snippet.
+Create a new file in `lua/config/lsp.lua` to enable the sourcekit language server.
 
 ```lua
-return {
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
-            vim.lsp.config.sourcekit = {}
-            vim.lsp.enable("sourcekit")
-        end,
-    }
-}
+-- lua/config/lsp.lua
+vim.lsp.enable("sourcekit")
+```
+Then import the configs in the `init.lua` file. 
+
+```lua
+-- init.lua
+require("config.lsp")
 ```
 
 While this gives us LSP support through SourceKit-LSP, there are no keybindings,
@@ -205,18 +240,16 @@ applied to all LSP servers so you end up with a consistent experience across
 languages.
 
 ```lua
-config = function()
-    vim.lsp.config.sourcekit = {}
-    vim.lsp.enable("sourcekit")
+-- lua/config/lsp.lua
+vim.lsp.enable("sourcekit")
 
-    vim.api.nvim_create_autocmd('LspAttach', {
-        desc = 'LSP Actions',
-        callback = function(args)
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {noremap = true, silent = true})
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {noremap = true, silent = true})
-        end,
-    })
-end,
+vim.api.nvim_create_autocmd('LspAttach', {
+    desc = 'LSP Actions',
+    callback = function(args)
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, {noremap = true, silent = true})
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {noremap = true, silent = true})
+    end,
+})
 ```
 
 ![LSP powered live error messages](/assets/images/zero-to-swift-nvim/LSP-Error.png)
@@ -226,36 +259,6 @@ numbers](https://oeis.org/A000045) asynchronously.
 Pressing `shift` + `k` on one of the references to the `fibonacci` function
 shows the documentation for that function, along with the function signature.
 The LSP integration is also showing that we have an error in the code.
-
-### File Updating
-
-SourceKit-LSP increasingly relies on the editor informing the server when
-certain files change. This need is communicated through _dynamic registration_.
-You don't have to understand what that means, but Neovim doesn't implement
-dynamic registration. You'll notice this when you update your package manifest,
-or add new files to your `compile_commands.json` file and LSP doesn't work without
-restarting Neovim.
-
-Instead, we know that SourceKit-LSP needs this functionality, so we'll enable it
-statically. We'll update our `sourcekit` setup configuration to manually set the
-`didChangeWatchedFiles` capability.
-
-```lua
-vim.lsp.config.sourcekit = {
-  capabilities = {
-    workspace = {
-      didChangeWatchedFiles = {
-        dynamicRegistration = true,
-      },
-    },
-  },
-}
-```
-
-If you're interested in reading more about this issue, the conversations in the
-following issues describe the issue in more detail:
- - [LSP: Implement dynamicRegistration](https://github.com/neovim/neovim/issues/13634)
- - [add documentFormattingProvider to server capabilities response](https://github.com/microsoft/vscode-eslint/pull/1307)
 
 ## Code Completion
 
@@ -314,32 +317,34 @@ the module from within its own configuration function and will call the setup
 function explicitly.
 
 ```lua
-{
+return {
+  {
     "hrsh7th/nvim-cmp",
     version = false,
     event = "InsertEnter",
     dependencies = {
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-path",
-        "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-buffer",
     },
     config = function()
-        local cmp = require('cmp')
-        local opts = {
-            -- Where to get completion results from
-            sources = cmp.config.sources {
-                { name = "nvim_lsp" },
-                { name = "buffer"},
-                { name = "path" },
-            },
-            -- Make 'enter' key select the completion
-            mapping = cmp.mapping.preset.insert({
-                ["<CR>"] = cmp.mapping.confirm({ select = true })
-            }),
-        }
-        cmp.setup(opts)
+      local cmp = require('cmp')
+      local opts = {
+        -- Where to get completion results from
+        sources = cmp.config.sources {
+          { name = "nvim_lsp" },
+          { name = "buffer"},
+          { name = "path" },
+        },
+        -- Make 'enter' key select the completion
+        mapping = cmp.mapping.preset.insert({
+          ["<CR>"] = cmp.mapping.confirm({ select = true })
+        }),
+      }
+      cmp.setup(opts)
     end,
-},
+  },
+...
 ```
 
 Using the `tab` key to select completions is a fairly popular option, so we'll
@@ -568,6 +573,7 @@ require("lazy").setup("plugins", {
     },
   },
 })
+require("config.lsp")
 
 vim.opt.wildmenu = true
 vim.opt.wildmode = "list:longest,list:full" -- don't insert, show options
@@ -645,31 +651,46 @@ return {
 ```
 
 ```lua
--- lua/plugins/lsp.lua
+-- lsp/sourcekit.lua
 return {
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      vim.lsp.config.sourcekit = {
-        capabilities = {
-            workspace = {
-                didChangeWatchedFiles = {
-                    dynamicRegistration = true,
-                },
-            },
-        },
-      }
-      vim.lsp.enable("sourcekit")
-
-      vim.api.nvim_create_autocmd('LspAttach', {
-        desc = "LSP Actions",
-        callback = function(args)
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, {noremap = true, silent = true})
-          vim.keymap.set("n", "gd", vim.lsp.buf.definition, {noremap = true, silent = true})
-        end,
-      })
-    end,
+  cmd = { 'sourcekit-lsp' },
+  filetypes = { 'swift' },
+  root_markers = {
+    '.git',
+    'compile_commands.json',
+    '.sourcekit-lsp',
+    'Package.swift',
   },
+  get_language_id = function(_, ftype)
+    return ftype
+  end,
+  capabilities = {
+    workspace = {
+      didChangeWatchedFiles = {
+        dynamicRegistration = true,
+      },
+    },
+    textDocument = {
+      diagnostic = {
+        dynamicRegistration = true,
+        relatedDocumentSupport = true,
+      },
+    },
+  },
+}
+```
+
+```lua
+-- lua/config/lsp.lua
+vim.lsp.enable("sourcekit")
+
+vim.api.nvim_create_autocmd('LspAttach', {
+  desc = "LSP Actions",
+  callback = function(args)
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, {noremap = true, silent = true})
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, {noremap = true, silent = true})
+  end,
+})
 }
 ```
 
