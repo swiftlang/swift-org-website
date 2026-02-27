@@ -7,7 +7,7 @@ author: [danieljilg]
 category: 'Adopters'
 ---
 
-[TelemetryDeck](https://telemetrydeck.com) is an analytics service specifically for app developers, designed to manage usage analytics that are anonymized, privacy-focused, and really easy to use. TelemetryDeck is touching the lives of over 16 million people every month, helping thousands of app publishers improve their products, and we're doing it all with a Swift-based infrastructure.
+TelemetryDeck is an [app analytics service](https://telemetrydeck.com) specifically for developers, designed to manage usage analytics that are anonymized, privacy-focused, and really easy to use. TelemetryDeck is touching the lives of over 16 million people every month, helping thousands of app publishers improve their products, and we're doing it all with a Swift-based infrastructure.
 
 The decision to go with Swift brought a lot of unexpected advantages for us. We come from a world of iOS in the frontend, Python, Node, or Ruby in the backend for server-based applications. Compared to these languages and frameworks, Swift is just as easy to use, and its compiled nature allows us to catch a lot of possible errors at compile time instead of runtime, making it ideal for a hardened, high-performance web service.
 
