@@ -1810,6 +1810,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: 7984c2cf175bde52ba6ea1fcbe27fc4a148a6237c41c719209c9288ed3ceb652
       archs:
         - x86_64
@@ -1871,6 +1872,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: d4f46ba40e11e697387468e18987ee622908bc350310d8af54eb5e17c2ff5481
       archs:
         - x86_64
@@ -1932,6 +1934,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: aa5515476a403797223fc2aad4ca0c3bf83995d5427fb297cab1d93c68cee075
       archs:
         - x86_64
@@ -1993,6 +1996,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: 67f765e0030e661a7450f7e4877cfe008db4f57f177d5a08a6e26fd661cdd0bd
       archs:
         - x86_64
@@ -2054,6 +2058,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: 111c6f7d280a651208b8c74c0521dd99365d785c1976a6e23162f55f65379ac6
       archs:
         - x86_64
@@ -2115,6 +2120,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: 8a69753e181e40c202465f03bcafcc898070a86817ca0f39fc808f76638e90c2
       archs:
         - x86_64
@@ -2176,6 +2182,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: df0b40b9b582598e7e3d70c82ab503fd6fbfdff71fd17e7f1ab37115a0665b3b
       archs:
         - x86_64
@@ -2237,6 +2244,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: 7a741da46ce64cdbd6dd504a2617b211b88e7f66a9ada7ea4e55bcc9c06ff2b2
       archs:
         - x86_64
@@ -2292,6 +2300,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: d2225840e592389ca517bbf71652f7003dbf45ac35d1e57d98b9250368769378
       archs:
         - x86_64
@@ -2353,6 +2362,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: 08e1939a504e499ec871b36826569173103e4562769e12b9b8c2a50f098374ad
       archs:
         - x86_64
@@ -2414,6 +2424,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: a24285cd28eb5e6dcbe35495179b117711c6ca8e6d579e0507622b7b8752ee94
       archs:
         - x86_64
@@ -2475,6 +2486,7 @@
         - arm64
     - name: Static SDK
       platform: static-sdk
+      version: 0.0.1
       checksum: f30ec724d824ef43b5546e02ca06a8682dafab4b26a99fbb0e858c347e507a2c
       archs:
         - x86_64
@@ -2482,6 +2494,74 @@
     - name: Wasm SDK
       platform: wasm-sdk
       checksum: 394040ecd5260e68bb02f6c20aeede733b9b90702c2204e178f3e42413edad2a
+      archs:
+        - x86_64
+        - arm64
+- name: "6.2.4"
+  tag: swift-6.2.4-RELEASE
+  xcode: Xcode 26.3
+  xcode_release: true
+  date: 2025-02-26
+  platforms:
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 6.2.4-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 24.04
+      platform: Linux
+      docker: 6.2.4-noble
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 12
+      platform: Linux
+      docker: 6.2.4-bookworm
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 39
+      platform: Linux
+      docker: 6.2.4-fedora39
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 41
+      platform: Linux
+      docker: 6.2.4-fedora41
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 6.2.4-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 6.2.4-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 6.2.4-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+        - arm64
+    - name: Static SDK
+      platform: static-sdk
+      version: 0.1.0
+      checksum: 24bdf84495dd31a6de2eb679647c1982b747bfbfe1a2060c779d84dcecd902a4
+      archs:
+        - x86_64
+        - arm64
+    - name: Wasm SDK
+      platform: wasm-sdk
+      checksum: 32fdb8772d73bb174f77b5c59bc88a0d55003d75712832129394d3465158fb43
       archs:
         - x86_64
         - arm64
