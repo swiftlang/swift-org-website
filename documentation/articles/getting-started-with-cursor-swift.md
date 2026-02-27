@@ -7,7 +7,7 @@ author: [gbraden]
 
 [Cursor](https://cursor.com/home) is a popular AI-native editor. It offers [coding agents](https://cursor.com/product) and [AI-powered autocomplete](https://cursor.com/product/tab). Cursor becomes [a bicycle for the developer's mind](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DNjIhmzU0Y8Y&ved=2ahUKEwiu48qq9tSSAxU3KFkFHZJyHdcQkPEHegQIGRAB&usg=AOvVaw1eoZQFor8WUGf_KT7O16EI) if it's given the right tools and context. 
 
-Since Cursor is a fork of VS Code, [the Swift VS Code extension](https://www.swift.org/documentation/articles/getting-started-with-vscode-swift.html) works with Cursor. The extension includes: 
+Since Cursor is a fork of VS Code, [the Swift VS Code extension](/documentation/articles/getting-started-with-vscode-swift.html) works with Cursor. The extension includes: 
 
 {% include_relative _shared-extension-features.md %}
 
