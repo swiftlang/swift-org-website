@@ -312,6 +312,7 @@
         display: block;
         margin: 1px 0 0 18px;
         display: inline-block;
+        transform: rotate(180deg);
       }
     }
 
@@ -342,7 +343,7 @@
       }
 
       .dropdown-toggle-arrow {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
       }
 
       .dropdown-toggle,

@@ -618,7 +618,7 @@ Now, I did cheat by hacking the header. Instead, we can express this with API no
 
 To specific nullability of pointer parameters, one can identify them by position (where 0 is the first parameter to the function) and then specify whether the parameter should come into Swift as optional (`O`, corresponds to `_Nullable`), non-optional (`N`, corresponds to `_Nonnull`) or by left unspecified as an implicitly-unwrapped optional (`U`, corresponds to `_Null_unspecified`). For the result type, it's a little different: we specified the result type along with the nullability specifier, i.e., `WGPUInstance _Nonnull`. The end result of these annotations is the same as the modified header, so we can layer nullability information on top of the header.
 
-## Scripting the creation of `WebGPU.apinotes`
+## Scripting the creation of WebGPU.apinotes
 
 `webgpu.h` is about 6,400 lines long, and is regenerated from a database of the API as needed. Each of the WebGPU implementations seems to augment or tweak the header a bit. So, rather than grind through and manually do annotations, I wrote a little Swift script to "parse" `webgpu.h`, identify its patterns, and generate `WebGPU.apinotes` for most of what is discussed in this post. The entirety of the script is [here](/assets/blog/improving-usability-of-c-libraries-in-swift/webgpu_apinotes.swift). It reads `webgpu.h` from standard input and prints `WebGPU.apinotes` to standard output.
 

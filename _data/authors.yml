@@ -628,3 +628,9 @@ gbraden:
   email: g_braden@apple.com
   github: thePianoKid
   about: "Gabe is a developer on the cross platforom IDE team at Apple"
+
+vladimir_kukushkin:
+  name: Vladimir Kukushkin
+  email: kukushechkin@apple.com
+  github: kukushechkin
+  about: "Vladimir Kukushkin works on foundational Swift server libraries at Apple, and is a maintainer of Swift System Metrics."
