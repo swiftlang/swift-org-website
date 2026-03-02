@@ -69,7 +69,8 @@ blockquote {
   }
 }
 
-.header-with-anchor {
+.header-with-anchor,
+.html-header-with-anchor {
   scroll-margin-top: 80px;
 
   a {
@@ -82,7 +83,8 @@ blockquote {
   }
 }
 
-h2.header-with-anchor {
+h2.header-with-anchor,
+.html-header-with-anchor {
   &:hover {
     a {
       display: inline-block;
