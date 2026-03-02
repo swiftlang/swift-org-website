@@ -39,7 +39,7 @@ Lastly, [Swift System Metrics 1.0](https://www.swift.org/blog/swift-system-metri
 * Interested in writing Swift using agents? At Swift Barcelona, a talk on [Building Agentic Apps with MCP in Swift](https://www.youtube.com/watch?v=ekOzNd1_vo8) demonstrated several open source tools. And if you're an Xcode user, check out a recent [code-along covering coding intelligence in Xcode 26](https://www.youtube.com/watch?v=U1WM3ALwQX8).
 
 ## Community highlights
-* Swift was accepted to Google Summer of Code in 2026! 🎉 A recent [forums post announced the process](https://forums.swift.org/t/swift-google-summer-of-code-2026/85007) and outlined key dates to learn more. This is a great opportunity if you're a student interested in contributing to Swift!
+* Swift is participating in Google Summer of Code 2026! 🎉 A recent [forums post announced the process](https://forums.swift.org/t/swift-google-summer-of-code-2026/85007) and outlined key dates to learn more. This is a great opportunity if you're a student interested in contributing to Swift!
 * A community member recently blogged about their experience [profiling Swift applications on Windows and macOS with Tracy](https://compositorapp.com/blog/2026-02-07/Tracy/), covering how to visualize and analyze their application performance.
 
 ## Swift Evolution
