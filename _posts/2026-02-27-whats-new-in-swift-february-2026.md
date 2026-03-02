@@ -27,7 +27,7 @@ Now on to other news about Swift:
 * Originally developed for searching financial databases for strings like stock tickers, [FuzzyMatch](https://github.com/ordo-one/FuzzyMatch) brings high-performance fuzzy string matching to Swift.
 * Now you can expose GraphQL APIs in your applications with new [Vapor and Hummingbird packages](https://forums.swift.org/t/introducing-graphql-vapor-hummingbird-packages/84758).
 * Using Microsoft SQL Server? [SQLClient-Swift](https://github.com/vkuttyp/SQLClient-Swift) is a native client for iOS, macOS, and Linux that's built using modern Swift concurrency.
-* Developers now have more options to create terminal-based Swift applications with [TuiKit](https://tuikit.dev), a declarative, SwiftUI-like framework for building Terminal User Interfaces. TuiKit joins [Noora](https://noora.tuist.dev) which provides themeable components for CLIs.
+* Developers now have more options to create terminal-based Swift applications with [TuiKit](https://tuikit.dev), a declarative, SwiftUI-like framework for building Terminal User Interfaces. TuiKit joins [Noora](https://noora.tuist.dev), which provides themeable components for CLIs.
 
 Lastly, [Swift System Metrics 1.0](https://www.swift.org/blog/swift-system-metrics-1.0-released/) was announced, making the collection of process-level metrics easy.
 
