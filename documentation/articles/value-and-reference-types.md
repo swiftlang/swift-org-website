@@ -42,14 +42,21 @@ Since it is an independent instance, changing the `text` of `friendDoc` does not
 struct Document {
   var text: String
 }
+```
+Example
+```swift
+class UseStructDocument {
+  var myDoc = Document(text: "Great new article")
 
-var myDoc = Document(text: "Great new article")
-var friendDoc = myDoc
+  init() {
+    var friendDoc = myDoc
 
-friendDoc.text = "Blah blah blah"
+    friendDoc.text = "Blah blah blah"
 
-print(friendDoc.text) // prints "Blah blah blah"
-print(myDoc.text) // prints "Great new article"
+    print(friendDoc.text) // prints "Blah blah blah"
+    print(myDoc.text) // prints "Great new article"
+  }
+}
 ```
 
 When you send your friend a copy of a document, you are in complete control of when *your* copy changes. You never have to worry about your friend making some unexpected change to your copy of the document.
@@ -73,16 +80,26 @@ Since it is a reference to the same instance, changing the `text` of `friendDoc`
 
 ```swift
 class Document {
-  var text: String
+  var text: String = ""
+
+  init(text: String) {
+    self.text = text
+  }
 }
+```
+Example
+```swift
+class UseClassDocument {
+  var myDoc = Document(text: "Great new article")
 
-var myDoc = Document(text: "Great new article")
-var friendDoc = myDoc
+  init() {
+    let friendDoc = myDoc
+    friendDoc.text = "Blah blah blah"
 
-friendDoc.text = "Blah blah blah"
-
-print(friendDoc.text) // prints "Blah blah blah"
-print(myDoc.text) // prints "Blah blah blah"
+    print(friendDoc.text) // prints "Blah blah blah"
+    print(myDoc.text) // prints "Blah blah blah"
+  }
+}
 ```
 
 When you send your friend a link to a shared document, your friend can make changes to the document without you knowing about it. You might be relying on your document staying the same.
