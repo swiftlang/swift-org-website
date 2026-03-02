@@ -623,6 +623,12 @@ nicksloan:
   gravatar: "8e28bdba3005737d98f9e96e25355a8f9c277f20985d190d441187fca7f72002"
   about: "Nick Sloan is a software developer and engineering leader at Studioworks and a partner at Sloates & Coan."
 
+gbraden:
+  name: Gabe Braden
+  email: g_braden@apple.com
+  github: thePianoKid
+  about: "Gabe is a developer on the cross platforom IDE team at Apple"
+
 vladimir_kukushkin:
   name: Vladimir Kukushkin
   email: kukushechkin@apple.com
