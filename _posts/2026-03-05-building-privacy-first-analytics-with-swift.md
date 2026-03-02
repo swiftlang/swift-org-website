@@ -21,7 +21,7 @@ Similar to [other Vapor-based projects like Things](https://www.swift.org/blog/h
 
 In the very beginning, when TelemetryDeck was just a little explorative hobby project, I wanted to go with Swift on the Server simply because I love Swift, and I'm pretty decent at it. Vapor was new, and I figured, let's try this out and learn a new way to apply and combine my skills.
 
-In the end this decision turned out to be exactly the right one and resulted in a lean architecture that is highly performant, stable, and allows us to develop and iterate quickly.
+In the end, this decision turned out to be exactly the right one and resulted in a lean architecture that is highly performant, stable, and allows us to develop and iterate quickly.
 
 Swift's performance characteristics are remarkable. Especially in multithreading, where Python struggles with the Global Interpreter Lock and true parallelism, Swift excels. Our infrastructure handles 16 million users per month with resources that would buckle other architectures. The efficiency gains aren't just theoretical—they translate directly to lower infrastructure costs and a better user experience.
 
