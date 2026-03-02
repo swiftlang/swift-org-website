@@ -28,7 +28,6 @@ Now onto what's new in Swift this month:
 * Now you can expose GraphQL APIs in your applications with new [Vapor and Hummingbird packages](https://forums.swift.org/t/introducing-graphql-vapor-hummingbird-packages/84758).
 * Using Microsoft SQL Server? [SQLClient-Swift](https://github.com/vkuttyp/SQLClient-Swift) is a native client for iOS, macOS, and Linux that's built using modern Swift concurrency.
 * Developers now have more options to create terminal-based Swift applications with [TuiKit](https://tuikit.dev), a declarative, SwiftUI-like framework for building Terminal User Interfaces. TuiKit joins [Noora](https://noora.tuist.dev) which provides themeable components for CLIs.
-* [BeautifulMermaid](https://github.com/lukilabs/beautiful-mermaid-swift) allows you to parse and render Mermaid diagrams as SVGs or ASCII art without WebViews or JavaScript. It currently works on iOS and macOS.
 
 Lastly, [Swift System Metrics 1.0](https://www.swift.org/blog/swift-system-metrics-1.0-released/) was announced, making the collection of process-level metrics easy.
 
