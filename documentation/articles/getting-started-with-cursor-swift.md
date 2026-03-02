@@ -55,7 +55,7 @@ Open the project you want to add a skill to in Cursor, then open the terminal (<
 npx skills add <skill-repo> --skill <name-of-skill>
 ```
 
-For the [Swift Concurrency skill](https://github.com/AvdLee/Swift-Concurrency-Agent-Skill), the command would be:
+For example, to install the [Swift Concurrency skill](https://github.com/AvdLee/Swift-Concurrency-Agent-Skill), the command would be:
 
 ```bash
 npx skills \
