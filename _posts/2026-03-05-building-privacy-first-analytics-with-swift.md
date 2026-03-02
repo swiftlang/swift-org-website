@@ -2,7 +2,7 @@
 layout: new-layouts/post
 published: true
 date: 2026-03-05 10:00:00
-title: Building a Privacy-First Analytics Business based entirely on Swift
+title: Building a privacy-first analytics business based entirely on Swift
 author: [danieljilg]
 category: 'Adopters'
 ---
