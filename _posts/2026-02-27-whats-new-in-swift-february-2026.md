@@ -17,7 +17,7 @@ category: "Digest"
 >
 > I wanted to highlight Simon Leeb’s talk, [Swift in the Browser with ElementaryUI](https://www.youtube.com/watch?v=OmQ881sOTIc&list=PLeb93j_rsErO182fdoJ4m1p_suKAOcBnM&index=6), as a popular talk from the event which showed how to run Swift applications natively in the browser with WebAssembly.
 >
-> FOSDEM may be over (for now) but I’m already excited about how the Swift community will show up next year!
+> FOSDEM may be over (for now), but I’m already excited about how the Swift community will show up next year!
 
 To catch up on _all_ the talks at the Pre-FOSDEM event, check out the [YouTube playlist](https://www.youtube.com/watch?v=jAgydnnjj0Y&list=PLeb93j_rsErO182fdoJ4m1p_suKAOcBnM).
 
