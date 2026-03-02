@@ -628,3 +628,9 @@ vladimir_kukushkin:
   email: kukushechkin@apple.com
   github: kukushechkin
   about: "Vladimir Kukushkin works on foundational Swift server libraries at Apple, and is a maintainer of Swift System Metrics."
+
+karenchu:
+  name: Karen Chu
+  email: karenchu@apple.com
+  github: karenhchu
+  about: "Karen Chu focuses on Swift's open source community initiatives as part of Apple's Open Source Program Office."
