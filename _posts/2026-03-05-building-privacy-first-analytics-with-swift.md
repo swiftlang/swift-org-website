@@ -32,7 +32,7 @@ In an API-based application, you spend an enormous amount of time encoding and d
 ```swift
 struct Notebook: Codable, Content {
     let appID: UUID
-    let var snapshots: [NotebookSnapshot]
+    var snapshots: [NotebookSnapshot]
     let createdAt: Date
     let title: String
 }
