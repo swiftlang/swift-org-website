@@ -21,7 +21,7 @@ category: "Digest"
 
 To catch up on _all_ the talks at the Pre-FOSDEM event, check out the [YouTube playlist](https://www.youtube.com/watch?v=jAgydnnjj0Y&list=PLeb93j_rsErO182fdoJ4m1p_suKAOcBnM).
 
-Now onto what's new in Swift this month:
+Now on to other news about Swift:
 
 ## New package releases
 * Originally developed for searching financial databases for strings like stock tickers, [FuzzyMatch](https://github.com/ordo-one/FuzzyMatch) brings high-performance fuzzy string matching to Swift.
