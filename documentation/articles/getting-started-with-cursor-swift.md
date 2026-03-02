@@ -36,7 +36,7 @@ Since Cursor is a fork of VS Code, [the Swift VS Code extension](/documentation/
 {% include_relative _shared-testing.md editor_name="Cursor" sidebar_position="right sidebar" run_tests_image="/assets/images/getting-started-with-cursor-swift/testing/run-tests.png" test_explorer_extra="Open the explorer by selecting the arrow in the top right corner:" test_explorer_image="/assets/images/getting-started-with-cursor-swift/testing/open-testing.gif" %}
 
 ## Give Context
-The Cursor coding agent might not be aware of the nuances of the Swift language, so it's important to provide context. The best way to do this is to create a set of "skills" that conform to the [Agent Skills open format](https://agentskills.io/specification). From the [agentskills.io home page](https://agentskills.io/home):
+The Cursor coding agent might not be aware of the nuances of the Swift language, so it's important to provide context. One way to do this is to create a set of "skills" that conform to the [Agent Skills open format](https://agentskills.io/specification). From the [agentskills.io home page](https://agentskills.io/home):
 
 > _Agent Skills are folders of instructions, scripts, and resources that agents can discover and use to do things more accurately and efficiently_. 
 
@@ -58,7 +58,9 @@ npx skills add <skill-repo> --skill <name-of-skill>
 For the [Swift Concurrency skill](https://github.com/AvdLee/Swift-Concurrency-Agent-Skill), the command would be:
 
 ```bash
-npx skills add https://github.com/avdlee/swift-concurrency-agent-skill --skill swift-concurrency
+npx skills \
+    add https://github.com/avdlee/swift-concurrency-agent-skill \
+   --skill swift-concurrency
 ```
 
 Once the package installs, you will be prompted to choose an agent. Start typing `Cursor` to search for the Cursor coding agent.

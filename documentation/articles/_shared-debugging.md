@@ -36,12 +36,12 @@ You can launch a debugging session via the Debug view in {{ include.editor_name 
 1. Select the launch configuration you wish to debug.
 2. Click on the green play button to launch a debugging session.
 
-The executable will be launched and you can set breakpoints in
-your Swift code that will be hit as code executes.
+{{ include.editor_name }} launches the executable and you can set breakpoints in
+your Swift code that it will hit as code executes.
 
 The screenshot below shows an example of debugging a Hello World program. It
 is paused on a breakpoint and you can see that the Debug View shows the values
-of variables in scope. You can also hover over identifiers in the editor to see
+of variables in scope. You can hover over identifiers in the editor to see
 their variable values:
 
 ![Debugging]({{ include.debugging_image }})

@@ -7,5 +7,5 @@
 
 The Swift extension is designed to support the following projects:
 
-- Swift Package Manager projects (e.g. using a `Package.swift`)
+- Swift Package Manager projects (for example, using `Package.swift`)
 - Projects that can generate a `compile_commands.json` (e.g. using CMake)

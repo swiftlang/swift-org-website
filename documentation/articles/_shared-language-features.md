@@ -1,5 +1,5 @@
 The Swift extension uses [SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp)
-to power language features. SourceKit-LSP provides the following features in the
+to power language features. SourceKit-LSP provides the several features in the
 editor. Use these links to see the documentation for each topic:
 
 - [Code completion](https://code.visualstudio.com/docs/editor/intellisense)
@@ -23,6 +23,5 @@ Code actions can include:
 
 <div class="warning" markdown="1">
 Prior to Swift 6.1 you must perform a `swift build` command on your project either
-on the command line or using a task in {{ include.editor_name }} before language features can be used.
-This populates the index in SourceKit-LSP.
+on the command line or using a task in {{ include.editor_name }} to populate the index for SourceKit-LSP before language features can be used.
 </div>
