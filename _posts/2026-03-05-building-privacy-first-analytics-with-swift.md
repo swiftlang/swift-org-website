@@ -92,7 +92,7 @@ Building a production service teaches you things that tutorials never will. Here
 
 **Use the Swift Package system.** A package is a fantastic way to structure and isolate code. Since our services are packages anyway, it's natural to further subdivide them where it makes sense.
 
-**Your Swift Vapor service is almost never the bottleneck.** Although profiling Swift code is easy, most slowdowns in a web service will arise from a combination of database, storage, and sheer user numbers. You'll migrate the way you store and access data frequently as you build experience.
+**Your Swift Vapor service is almost never the bottleneck.** Although profiling Swift code is easy, most slowdowns in a web service will arise from a combination of database, storage, and sheer user numbers. You'll migrate the way you store and access data frequently as you gain experience.
 
 **Embrace Vapor's built-in features.** Queues and jobs, migrations, and middleware. Vapor has mature solutions for common patterns. We use Fluent almost exclusively over raw SQL, and Vapor's queue system handles everything from data processing to billing tasks.
 
