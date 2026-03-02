@@ -8,7 +8,7 @@ title: Install Swift
     aarch64="true"
     branch_dir="development"
     development="main"
-    docker_tag="nightly-rhel-ubi9"
+    docker_tag="rhel-ubi9"
     development_builds=site.data.builds.development.ubi9
     aarch64_development_builds=site.data.builds.development.ubi9-aarch64
     development_2="release/6.3"

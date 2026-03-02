@@ -8,7 +8,7 @@ title: Install Swift
   aarch64="true"
   branch_dir="development"
   development="main"
-  docker_tag="nightly-amazonlinux2"
+  docker_tag="amazonlinux2"
   development_builds=site.data.builds.development.amazonlinux2
   aarch64_development_builds=site.data.builds.development.amazonlinux2-aarch64
   development_2="release/6.3"
