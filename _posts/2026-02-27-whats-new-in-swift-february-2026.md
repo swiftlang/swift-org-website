@@ -13,7 +13,7 @@ category: "Digest"
 >
 > As a follow-up to Swift’s presence at FOSDEM last year, this year we expanded our approach by running our own [Pre-FOSDEM fringe event](https://swiftlang.github.io/event-fosdem/), which included 11 talks across various non-Apple platforms, in addition to [four Swift talks across various devroom tracks](https://swiftlang.github.io/event-fosdem/#swift-talks-at-fosdem).
 >
-> Though it was my first year at FOSDEM, it was delightful to meet several people who attended the Swift devroom last year and also came through again this year. With the vast array of attendee backgrounds (I met recent grads, former Swift mentees, Swift WG members, folks from the Swift Core Team, and more) and talks covering different platforms (embedded, server, BSD, Android, and more), that weekend showed me just how much momentum Swift has gained as a general purpose language that can benefit everyone.
+> Though it was my first year at FOSDEM, it was delightful to meet several people who attended the Swift devroom last year and also came through again this year. With the vast array of attendee backgrounds (I met recent grads, former Swift mentees, Swift workgroup members, folks from the Swift Core Team, and more) and talks covering different platforms (embedded, server, BSD, Android, and more), that weekend showed me just how much momentum Swift has gained as a general purpose language that can benefit everyone.
 >
 > I wanted to highlight Simon Leeb’s talk, [Swift in the Browser with ElementaryUI](https://www.youtube.com/watch?v=OmQ881sOTIc&list=PLeb93j_rsErO182fdoJ4m1p_suKAOcBnM&index=6), as a popular talk from the event which showed how to run Swift applications natively in the browser with WebAssembly.
 >
