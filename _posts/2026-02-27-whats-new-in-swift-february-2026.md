@@ -11,7 +11,7 @@ category: "Digest"
 
 > Hey there! Karen Chu here. 👋 I help grow and support the Swift open source community, and one of my favorite things has been increasing Swift’s participation in open source events.
 >
-> As a follow-up to Swift’s presence at FOSDEM last year, this year we expanded our approach by running our own [Pre-FOSDEM fringe event](https://swiftlang.github.io/event-fosdem/), which included 11 talks across various non-Apple platforms, in addition to [four Swift talks across various devroom tracks](https://swiftlang.github.io/event-fosdem/#swift-talks-at-fosdem).
+> As a follow-up to Swift’s presence at FOSDEM last year, this year we expanded our approach by running our own [Pre-FOSDEM fringe event](https://swiftlang.github.io/event-fosdem/), which included 11 talks across multiple platforms, in addition to [four Swift talks across various devroom tracks](https://swiftlang.github.io/event-fosdem/#swift-talks-at-fosdem).
 >
 > Though it was my first year at FOSDEM, it was delightful to meet several people who attended the Swift devroom last year and also came through again this year. With the vast array of attendee backgrounds (I met recent grads, former Swift mentees, Swift workgroup members, folks from the Swift Core Team, and more) and talks covering different platforms (embedded, server, BSD, Android, and more), that weekend showed me just how much momentum Swift has gained as a general purpose language that can benefit everyone.
 >
