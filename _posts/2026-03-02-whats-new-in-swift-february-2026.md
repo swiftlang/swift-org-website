@@ -9,7 +9,7 @@ category: "Digest"
 
 Welcome to this edition of "What's New in Swift," where we share interesting projects and updates in the Swift community that deserve visibility to a broader audience.
 
-[FOSDEM](https://fosdem.org/2026/) is the largest open source conference in the world, and this year's event featured Swift talks across multiple tracks and a dedicated Swift event. Here's a report from the Swift community:
+[FOSDEM](https://fosdem.org/2026/) is the largest open source conference in the world, and this year Swift was featured in talks across multiple tracks and a dedicated pre-conference event. Here's a report from the Swift community:
 
 > Hey there! Karen Chu here. 👋 I help grow and support the Swift open source community, and one of my favorite things has been increasing Swift’s participation in open source events.
 >
