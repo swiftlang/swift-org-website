@@ -7,7 +7,9 @@ author: [karenchu, davelester]
 category: "Digest"
 ---
 
-[FOSDEM](https://fosdem.org/2026/) is the largest open source conference in the world, and this year Swift showed up in a big way. We invited the lead organizer of a pre-conference Swift event to share their experience:
+Welcome to this edition of "What's New in Swift", where we share interesting projects and updates in the Swift community that deserve visibility to a broader audience.
+
+[FOSDEM](https://fosdem.org/2026/) is the largest open source conference in the world, and this year's event featured Swift talks across multiple tracks and a dedicated Swift event. Here's a report from the Swift community:
 
 > Hey there! Karen Chu here. 👋 I help grow and support the Swift open source community, and one of my favorite things has been increasing Swift’s participation in open source events.
 >
