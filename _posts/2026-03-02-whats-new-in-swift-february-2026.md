@@ -7,7 +7,7 @@ author: [karenchu, davelester]
 category: "Digest"
 ---
 
-Welcome to this edition of "What's New in Swift", where we share interesting projects and updates in the Swift community that deserve visibility to a broader audience.
+Welcome to this edition of "What's New in Swift," where we share interesting projects and updates in the Swift community that deserve visibility to a broader audience.
 
 [FOSDEM](https://fosdem.org/2026/) is the largest open source conference in the world, and this year's event featured Swift talks across multiple tracks and a dedicated Swift event. Here's a report from the Swift community:
 
