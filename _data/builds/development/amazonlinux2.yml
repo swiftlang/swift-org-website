@@ -1,3 +1,13 @@
+- date: 2026-03-02 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-03-02-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-03-02-a-amazonlinux2.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-03-02-a-amazonlinux2.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2026-03-01 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-03-01-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-03-01-a-amazonlinux2.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-03-01-a-amazonlinux2.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2026-02-24 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2026-02-24-a
   download: swift-DEVELOPMENT-SNAPSHOT-2026-02-24-a-amazonlinux2.tar.gz

@@ -6,15 +6,15 @@
     <h2>Static Linux</h2>
     <p class="body-copy">
     {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/static-sdk/" | append: tag | append: "/" | append: tag %}
-    {% assign command = "swift sdk install " | append: base_url | append: "_static-linux-0.0.1.artifactbundle.tar.gz --checksum " | append: platform.checksum %}
+    {% assign command = "swift sdk install " | append: base_url | append: "_static-linux-" | append: platform.version | append: ".artifactbundle.tar.gz --checksum " | append: platform.checksum %}
     <button onclick="copyToClipboard(this, '{{ command | escape }}')">
         Copy install command
     </button>
     </p>
     <div class="link-wrapper">
     <div class="link-group">
-        <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-0.0.1.artifactbundle.tar.gz" class="body-copy">Download Linux Static SDK</a> |
-        <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-0.0.1.artifactbundle.tar.gz.sig" class="body-copy">Signature (PGP)</a>
+        <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-{{ platform.version }}.artifactbundle.tar.gz" class="body-copy">Download Linux Static SDK</a> |
+        <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-{{ platform.version }}.artifactbundle.tar.gz.sig" class="body-copy">Signature (PGP)</a>
     </div>
     </div>
     <div class="link-wrapper">

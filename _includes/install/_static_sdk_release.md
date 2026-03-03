@@ -7,12 +7,12 @@
   <p class="description">
     Static Linux SDK - Cross compile to Linux
     <ul>
-      <li><a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-0.0.1.artifactbundle.tar.gz.sig">Signature (PGP)</a>
+      <li><a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-{{ platform.version }}.artifactbundle.tar.gz.sig">Signature (PGP)</a>
       </li>
       <li>
         Checksum: <code>{{ platform.checksum }}</code></li>
     </ul>
   </p>
-  <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-0.0.1.artifactbundle.tar.gz" class="cta-secondary">Download Linux Static SDK</a>
+  <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-{{ platform.version }}.artifactbundle.tar.gz" class="cta-secondary">Download Linux Static SDK</a>
   <a href="/documentation/articles/static-linux-getting-started.html" class="cta-secondary">Instructions (Static Linux SDK)</a>
 </li>
