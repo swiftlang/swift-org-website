@@ -17,7 +17,7 @@ Let me share our journey and history with you.
 
 TelemetryDeck is built on [Vapor](https://vapor.codes/), a web framework written in Swift, for building scalable APIs and services.
 
-Similar to [other Vapor-based projects like Things](https://www.swift.org/blog/how-swifts-server-support-powers-things-cloud/), TelemetryDeck runs on containers hosted in Kubernetes. Our metadata lives in Postgres, and our analytics data is stored in Apache Druid. We use Swift-native connectors to access APIs for these services. Some of those come from the Swift community, others we've written ourselves and are giving back to the Open-Source ecosystem.
+Similar to [other Vapor-based projects like Things](https://www.swift.org/blog/how-swifts-server-support-powers-things-cloud/), TelemetryDeck runs on containers hosted in Kubernetes. Our metadata lives in Postgres, and our analytics data is stored in Apache Druid. We use Swift-native connectors to access APIs for these services. Some of those come from the Swift community, others we've written ourselves and are giving back to the open source ecosystem.
 
 In the very beginning, when TelemetryDeck was just a little exploratory hobby project, I wanted to go with Swift on the Server simply because I love Swift, and I'm pretty decent at it. Vapor was new, and I figured, let's try this out and learn a new way to apply and combine my skills.
 
