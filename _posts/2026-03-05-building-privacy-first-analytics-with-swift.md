@@ -42,7 +42,7 @@ With just these few lines, we get parsing, validation, and type safety.
 
 Just like the postal system – which only accepts letters addressed in a specific format – the API endpoint described in the above bit of code will reject any data that doesn't fit into this Codable.
 
-We don't have to check for types, additional properties, or JSON parseability, something that lets us trust our APIs more when developing and sleep easy after deploying. "Just lick the stamp and send it", as an Australian friend of mine once encouraged me.
+We don't have to check for types, additional properties, or JSON validity, something that lets us trust our APIs more when developing and sleep easy after deploying. "Just lick the stamp and send it," as a friend of mine once encouraged me.
 
 ## Sharing Data Transfer Objects between Client and Server
 
