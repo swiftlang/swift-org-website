@@ -74,7 +74,7 @@ One underappreciated aspect of Swift on the server is the development experience
 
 Under the hood, a Swift Vapor project is just a Swift Package with some dependencies. You open it in Xcode, you press Cmd+U to run the tests, you run it and set breakpoints and step through them when you're following a bug through the stack.
 
-Web API services usually have a database attached to them, so when we're developing, we can either run PostgreSQL on our machines right next to the code, or we can ask Swift Vapor's database layer (Fluent) to use a different database for development, such as a local SQLite file.
+Our web API services usually have a database attached to them, so when we're developing, we can either run PostgreSQL on our machines right next to the code, or we can ask Swift Vapor's database layer (Fluent) to use a different database for development, such as a local SQLite file.
 
 The end result is a very comfortable experience that allows us to use an IDE specifically built for Swift development, without having to play around with containers or terminal commands, although that is also a possibility of course.
 
