@@ -176,8 +176,10 @@ To check that it's working:
 ## Language Server Support
 
 Language servers respond to editor requests providing language-specific support.
-Neovim has support for Language Server Protocol (LSP) built-in, so you don't
-need an external package for LSP. Neovim looks for lsp configurations in `<runtimepath>/lsp`. For more information run `:help lsp` and `:help rtp` in neovim. 
+Neovim has support for Language Server Protocol (LSP) built-in.
+Your configuration for each language server is installed to
+`<runtimepath>/lsp` and enabled by calling `vim.lsp.enable`.
+For more information run `:help lsp` and `:help rtp` in neovim.
 
 Go ahead and create a new file under `nvim/lsp/sourcekit.lua` which is a runtimepath. In it, we'll start by adding the following snippet. 
 
