@@ -84,7 +84,7 @@ This flexibility matters when you're building a business. We can onboard new dev
 
 We love the open source ecosystem around Swift on the server. There are Swift packages for external services like payment providers and transactional emails. There are tools like Imperial for Single Sign-On, and Swift-Crypto for good cryptography.
 
-Whenever a piece of the puzzle is missing, we try to give back as much as possible. That is partly because the Swift developer community is fantastic in coming up with SDKs for various services, and we try to contribute to existing projects like StripeKit or even release our own new SDKs like BrevoKit.
+Whenever a piece of the puzzle is missing, we try to give back as much as possible. That is partly because the Swift developer community is fantastic in coming up with SDKs for various services, and we try to contribute to existing projects like StripeKit or even release our own new SDKs like [BrevoKit](https://github.com/TelemetryDeck/brevo-kit).
 
 ## Lessons learned
 
