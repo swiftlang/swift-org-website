@@ -104,7 +104,7 @@ Building a production service teaches you things that tutorials never will. Here
 
 Now we use a combination of [Swift Distributed Tracing](https://github.com/apple/swift-distributed-tracing) and our own analytics-based middleware to find performance bottlenecks and errors that are predictors of service crashes, and we can right the ship before most of our customers notice.
 
-## Still we rise
+## Where we are now
 
 TelemetryDeck proves that Swift isn't just for apps—it's a legitimate choice for building scalable, performant backend services. We're processing millions of events, serving thousands of developers, and doing it all with Swift and Vapor. The language that powers apps on billions of iOS devices is equally capable of powering the services behind them.
 
