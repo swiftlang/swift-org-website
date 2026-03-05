@@ -519,7 +519,7 @@ if Bool(fromCxx: conn) {
 }
 ```
 
-Swift **does not** implicitly convert C++ types with `operator bool` to `Bool`.
+Swift **does not** implicitly convert C++ types with `operator bool()` to `Bool`.
 The conversion using `Bool(fromCxx:)` is always explicit in Swift.
 
 ### Accessing Inherited Members from Swift
@@ -1466,8 +1466,8 @@ automatically.
 
 ### Using `std::optional`
 
-The `std::optional<T>` C++ type becomes a structure in Swift. Swift does not
-automatically bridge it to Swift's `Optional<T>` type. Instead, you can use the
+The `std::optional<T>` C++ type is imported as a Swift `struct`. Swift does not
+automatically bridge it to Swift's `Optional<T>` type (also spelled as `T?`). Instead, you can use the
 `Optional(fromCxx:)` initializer to convert a C++ `std::optional<T>` value to a
 Swift `Optional<T>`:
 
