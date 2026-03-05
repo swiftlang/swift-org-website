@@ -499,6 +499,29 @@ to C++, where you can only call virtual methods on a pointer or a reference.
 
 Static C++ member functions become `static` Swift methods.
 
+#### Bool Conversion Operator
+
+When a C++ type defines a bool conversion operator (`operator bool()`), Swift
+represents it as an initializer `Bool(fromCxx:)`. This allows converting a C++
+object to a `Bool` value in Swift:
+
+```c++
+class Connection {
+public:
+  operator bool() const { return isConnected; }
+};
+```
+
+```swift
+let conn = getConnection()
+if Bool(fromCxx: conn) {
+  print("Connected!")
+}
+```
+
+Swift **does not** implicitly convert C++ types with `operator bool` to `Bool`.
+The conversion using `Bool(fromCxx:)` is always explicit in Swift.
+
 ### Accessing Inherited Members from Swift
 
 A C++ class or structure becomes a standalone type in Swift. Its
@@ -1440,6 +1463,23 @@ let swiftString = String(cxxString)
 
 Swift does not convert C++ `std::string` type to Swift's `String` type
 automatically.
+
+### Using `std::optional`
+
+The `std::optional<T>` C++ type becomes a structure in Swift. Swift does not
+automatically bridge it to Swift's `Optional<T>` type. Instead, you can use the
+`Optional(fromCxx:)` initializer to convert a C++ `std::optional<T>` value to a
+Swift `Optional<T>`:
+
+```c++
+#include <optional>
+
+std::optional<int> findMagicNumber();
+```
+
+```swift
+let maybeMagic: Int? = Optional(fromCxx: findMagicNumber())
+```
 
 ## Working with C++ References and View Types in Swift
 
