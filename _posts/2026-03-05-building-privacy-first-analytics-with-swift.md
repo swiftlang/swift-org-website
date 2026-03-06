@@ -106,7 +106,7 @@ Now we use a combination of [Swift Distributed Tracing](https://github.com/apple
 
 ## Where we are now
 
-TelemetryDeck proves that Swift isn't just for apps—it's a legitimate choice for building scalable, performant backend services. We're processing millions of events, serving thousands of developers, and doing it all with Swift and Vapor. The language that powers apps on billions of iOS devices is equally capable of powering the services behind them.
+TelemetryDeck proves that Swift isn't just for apps — it's a legitimate choice for building scalable, performant backend services. We're processing millions of events, serving thousands of developers, and doing it all with Swift and Vapor. The language that powers apps on billions of iOS devices is equally capable of powering the services behind them.
 
 The performance gains are real: we can crunch and encode tens of thousands of data points in milliseconds. The development velocity is fantastic: we work in Xcode and write tests for behaviour and not for data parsing. And the type safety prevents entire categories of bugs that dynamically typed languages like Python or JavaScript need additional code to guard against. Perhaps most importantly, the joy of writing Swift makes the long hours of building a business more bearable.
 
