@@ -80,7 +80,7 @@ The end result is a very comfortable experience that allows us to use an IDE spe
 
 This flexibility matters when you're building a business. We can onboard new developers quickly because the tooling is familiar. We can iterate rapidly because the feedback loop is tight. And we can maintain high code quality because Swift's type system catches errors at compile time, not in production.
 
-## We win and lose together
+## Building the ecosystem we want to use
 
 We love the open source ecosystem around Swift on the server. There are Swift packages for external services like payment providers and transactional emails. There are tools like [Imperial](https://github.com/vapor-community/Imperial) for Single Sign-On, and [Swift Crypto](https://github.com/apple/swift-crypto) for standards-compliant cryptography.
 
