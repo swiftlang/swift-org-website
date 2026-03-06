@@ -76,7 +76,7 @@ Under the hood, a Swift Vapor project is just a Swift Package with some dependen
 
 Our web API services usually have a database attached to them, so when we're developing, we can either run PostgreSQL on our machines right next to the code, or we can ask Swift Vapor's database layer (Fluent) to use a different database for development, such as a local SQLite file.
 
-The end result is a very comfortable experience that allows us to use an IDE specifically built for Swift development, without having to play around with containers or terminal commands, although that is also a possibility of course.
+The end result is a very comfortable experience that allows us to use an IDE specifically built for Swift development, without needing to spin up containers.
 
 This flexibility matters when you're building a business. We can onboard new developers quickly because the tooling is familiar. We can iterate rapidly because the feedback loop is tight. And we can maintain high code quality because Swift's type system catches errors at compile time, not in production.
 
