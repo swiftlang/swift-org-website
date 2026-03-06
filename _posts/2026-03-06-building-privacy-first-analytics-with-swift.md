@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2026-03-05 10:00:00
+date: 2026-03-06 11:00:00
 title: Swift at scale: building the TelemetryDeck analytics service
 author: [danieljilg]
 category: 'Adopters'
