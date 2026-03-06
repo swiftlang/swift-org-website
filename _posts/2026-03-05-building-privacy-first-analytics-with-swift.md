@@ -23,7 +23,7 @@ In the very beginning, when TelemetryDeck was just a little exploratory hobby pr
 
 In the end, this decision turned out to be exactly the right one and resulted in a lean architecture that is highly performant, stable, and allows us to develop and iterate quickly.
 
-Swift's performance characteristics are remarkable. Especially in multithreading, where Python struggles with the Global Interpreter Lock and true parallelism, Swift excels. Our infrastructure handles 16 million users per month with resources that would buckle other architectures. The efficiency gains aren't just theoretical—they translate directly to lower infrastructure costs and a better user experience.
+Swift's performance characteristics are remarkable. Especially in multithreading, where Python struggles with the Global Interpreter Lock and true parallelism, Swift excels. Our infrastructure handles 16 million users per month with resources that would buckle other architectures. The efficiency gains aren't just theoretical — they translate directly to lower infrastructure costs and a better user experience.
 
 ## Swift's Codable protocol
 
