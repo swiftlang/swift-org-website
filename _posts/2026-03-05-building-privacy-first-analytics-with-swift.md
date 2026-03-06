@@ -2,7 +2,7 @@
 layout: new-layouts/post
 published: true
 date: 2026-03-05 10:00:00
-title: Building a privacy-first analytics business based entirely on Swift
+title: Swift at scale: building the TelemetryDeck analytics service
 author: [danieljilg]
 category: 'Adopters'
 ---
