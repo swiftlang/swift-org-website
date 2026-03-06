@@ -46,7 +46,7 @@ We don't have to check for types, additional properties, or JSON validity, somet
 
 ## Sharing Data Transfer Objects between Client and Server
 
-For a long time, TelemetryDeck was offering a SwiftUI-based desktop application for interacting with analytics data, displaying dashboards, and exploring correlations. This meant we could use the same structs for encoding data on the server and decoding it on the client – these are called Data Transfer Objects or DTOs. We kept a separate package "SwiftDTOs" that was shared between both clients and the server code.
+For a long time, TelemetryDeck offered a SwiftUI-based desktop application for interacting with analytics data, displaying dashboards, and exploring correlations. This meant we could use the same structs for encoding data on the server and decoding it on the client – these are called Data Transfer Objects or DTOs. We kept a separate package "SwiftDTOs" that was shared between both clients and the server code.
 
 However, we ran into trouble when we updated our APIs to new versions with slightly different inputs and outputs. We always have the API version in our paths, which helps us to continuously develop them while keeping compatibility with clients that take a while to update, but this structure made it hard to keep updating the Data Transfer Objects quickly because it unnecessarily coupled our API versions together in an uncomfortable way.
 
