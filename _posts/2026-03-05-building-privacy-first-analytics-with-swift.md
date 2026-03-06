@@ -70,7 +70,7 @@ The lesson? Keep your DTOs close to your controllers. It's simpler, more maintai
 
 ## Developer experience matters
 
-One underappreciated aspect of Swift on the server is the development experience. We can develop in Xcode, our favorite IDE, with full debugging capabilities.
+One underappreciated aspect of Swift on the server is the development experience. Swift services can be developed using your favorite IDE, including VS Code, Cursor, Xcode, and editors supporting the Language Server Protocol (LSP). We chose to develop in Xcode, our favorite IDE, with full debugging capabilities.
 
 Under the hood, a Swift Vapor project is just a Swift Package with some dependencies. You open it in Xcode, you press Cmd+U to run the tests, you run it and set breakpoints and step through them when you're following a bug through the stack.
 
