@@ -19,6 +19,7 @@
 .prettierignore
 .prettierrc
 .ruby-version
+.unacceptablelanguageignore
 _copy_from_aux
 _layouts/source.liquid
 _plugins/*.rb
