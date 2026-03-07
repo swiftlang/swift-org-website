@@ -18,6 +18,7 @@ jobs:
     with:
       license_header_check_project_name: "Swift.org"
       api_breakage_check_enabled: false
+      unacceptable_language_check_word_list: "blacklist whitelist slave sane sanity insane insanity kill killed killing hung hanged hanging"
 
   build-site:
     name: Build the Jekyll Site
