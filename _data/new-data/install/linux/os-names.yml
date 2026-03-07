@@ -42,4 +42,3 @@
     - name: Ubuntu 20.04
       slug: Ubuntu20_04
       url: /install/linux/ubuntu/20_04
-

@@ -27,36 +27,36 @@ paths:
               schema:
                 $ref: '#/components/schemas/ProposalListSnapshot'
 components:
-    schemas:
-      ProposalListSnapshot:
-        type: object
-        properties:
-          schemaVersion:
-            type: string
-            description: The version of the schema used for this data.
-            example: '1.0.0'
-          toolVersion:
-            type: string
-            description: The version of the tool used to generate this data.
-            example: '0.1.0'
-          commit:
-            type: string
-            description: The commit hash of the data.
-            example: 'be37f35a0f06ab07dc6c84b3676833260cb86ddd'
-          creationDate:
-            type: string
-            format: date-time
-            description: The creation date of the data.
-            example: '2024-11-08T16:50:22Z'
-          implementationVersions:
-            type: array
-            items:
-              $ref: '#/components/schemas/SwiftVersion'
-            description: The known versions of Swift for the returned proposals.
-          proposals:
-            type: array
-            items:
-              $ref: '#/components/schemas/Proposal'
+  schemas:
+    ProposalListSnapshot:
+      type: object
+      properties:
+        schemaVersion:
+          type: string
+          description: The version of the schema used for this data.
+          example: '1.0.0'
+        toolVersion:
+          type: string
+          description: The version of the tool used to generate this data.
+          example: '0.1.0'
+        commit:
+          type: string
+          description: The commit hash of the data.
+          example: 'be37f35a0f06ab07dc6c84b3676833260cb86ddd'
+        creationDate:
+          type: string
+          format: date-time
+          description: The creation date of the data.
+          example: '2024-11-08T16:50:22Z'
+        implementationVersions:
+          type: array
+          items:
+            $ref: '#/components/schemas/SwiftVersion'
+          description: The known versions of Swift for the returned proposals.
+        proposals:
+          type: array
+          items:
+            $ref: '#/components/schemas/Proposal'
         required:
           - schemaVersion
           - toolVersion
@@ -257,7 +257,7 @@ components:
             type: string
             description: A brief summary of the proposal.
             example: |-
-              This year we are improving the usability of Swift for command line and server-side 
+              This year we are improving the usability of Swift for command line and server-side
               development by adding first-class support for backtraces to Swift.
           status:
             $ref: '#/components/schemas/ProposalStatus'

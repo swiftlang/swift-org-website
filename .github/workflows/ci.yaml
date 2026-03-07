@@ -8,8 +8,8 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  pull_request: { types: [opened, reopened, synchronize, ready_for_review] }
-  push: { branches: [ main ] }
+  pull_request: {types: [opened, reopened, synchronize, ready_for_review]}
+  push: {branches: [main]}
 
 jobs:
   soundness:
@@ -40,6 +40,6 @@ jobs:
           DOWNLOADSWIFTORG_SERVER_NAME: local
           SWIFTORG_SERVER_NAME: local
         run: |
-            docker compose -f ../../docker-compose.yaml run build 
+            docker compose -f ../../docker-compose.yaml run build
             docker compose -f ../../docker-compose.yaml run -d -p 4000:4000 website
             swift run swiftorgClient
