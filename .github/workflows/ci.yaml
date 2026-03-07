@@ -17,6 +17,7 @@ jobs:
     uses: swiftlang/github-workflows/.github/workflows/soundness.yml@0.0.8
     with:
       license_header_check_project_name: "Swift.org"
+      api_breakage_check_enabled: false
 
   build-site:
     name: Build the Jekyll Site
