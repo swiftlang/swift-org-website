@@ -71,10 +71,10 @@ extension StringProtocol {
     var numUppercased = 0
     for c in self {
       if c.isUppercase {
-	numUppercased += 1
+        numUppercased += 1
       }
     }
-    
+
     return String(prefix(numUppercased)).lowercased() + String(dropFirst(numUppercased))
   }
 }
@@ -128,7 +128,8 @@ struct Function {
   /// If this is a method of a type, the name of that type.
   var enclosingType: String? {
     guard let selfParameter = parameters.first,
-        name.starts(with: selfParameter.type.lowercaseWebGPUPrefix) else {
+      name.starts(with: selfParameter.type.lowercaseWebGPUPrefix)
+    else {
       return nil
     }
 
@@ -145,13 +146,13 @@ struct Function {
     case "wgpuCreateInstance": return "WGPUInstanceImpl.init(descriptor:)"
     default: break
     }
-    
+
     guard let selfType = enclosingType, importedTypes.contains(selfType) else {
       return nil
     }
 
     let unprefixedName = name.dropFirst(selfType.count)
-    
+
     // If this has the shape of a getter, map it to a property getter.
     let baseName: String
     var namePrefix: String?
@@ -162,18 +163,18 @@ struct Function {
       baseName = unprefixedName.lowercasingInitialism
       namePrefix = nil
     }
-    
+
     let parameterNameString = "self:" + parameters.dropFirst().map { $0.swiftName + ":" }.joined()
     return "\(namePrefix ?? "")\(selfType)Impl.\(baseName)(\(parameterNameString))"
   }
 
   /// Whether we should annotate this function.
   func shouldAnnotate(importedTypes: Set<String>) -> Bool {
-    returnsRetained || swiftName(importedTypes: importedTypes) != nil ||
-    nullableResult || resultType.typeRequiresNullability(importedTypes: importedTypes) || 
-    parameters.contains { 
-      $0.requiresNullability(importedTypes: importedTypes) 
-    }
+    returnsRetained || swiftName(importedTypes: importedTypes) != nil || nullableResult
+      || resultType.typeRequiresNullability(importedTypes: importedTypes)
+      || parameters.contains {
+        $0.requiresNullability(importedTypes: importedTypes)
+      }
   }
 }
 
@@ -192,7 +193,8 @@ let globalConstantMatcher = /static const (?<type>\w+?) (?<typename>\w+?)_(?<nam
 let objectMatcher = /typedef struct (?<implName>\w+?)\* (?<name>\w+?) WGPU_OBJECT_ATTRIBUTE;/
 
 // Function declarations, marked by WGPU_FUNCTION_ATTRIBUTE
-let functionMatcher = /WGPU_EXPORT (?<nullableResult>WGPU_NULLABLE ?)?(?<resultType>\w+?) (?<name>\w+?)\((?<parameters>.*\)?) WGPU_FUNCTION_ATTRIBUTE;/
+let functionMatcher =
+  /WGPU_EXPORT (?<nullableResult>WGPU_NULLABLE ?)?(?<resultType>\w+?) (?<name>\w+?)\((?<parameters>.*\)?) WGPU_FUNCTION_ATTRIBUTE;/
 let parameterMatcher = /((?<nullable>WGPU_NULLABLE ?)?(?<type>[^),]+?)) (?<name>\w+?)[),]/
 
 // Extract information about the various declarations in the header.
@@ -224,8 +226,10 @@ while let line = readLine() {
   if let matchedGlobalConstant = line.firstMatch(of: globalConstantMatcher) {
     if matchedGlobalConstant.type == matchedGlobalConstant.typename {
       globalConstants.append(
-        (typename: String(matchedGlobalConstant.type),
-	  name: String(matchedGlobalConstant.name))
+        (
+          typename: String(matchedGlobalConstant.type),
+          name: String(matchedGlobalConstant.name)
+        )
       )
     }
     continue
@@ -247,13 +251,14 @@ while let line = readLine() {
       )
     }
 
-    functions.append(Function(
-      name: String(matchedFunction.name),
-      resultType: String(matchedFunction.resultType),
-      returnsRetained: nextReturnsRetained,
-      nullableResult: matchedFunction.nullableResult != nil,
-      parameters: parameters
-    ))
+    functions.append(
+      Function(
+        name: String(matchedFunction.name),
+        resultType: String(matchedFunction.resultType),
+        returnsRetained: nextReturnsRetained,
+        nullableResult: matchedFunction.nullableResult != nil,
+        parameters: parameters
+      ))
 
     nextReturnsRetained = false
     continue
@@ -261,7 +266,8 @@ while let line = readLine() {
 }
 
 // APINotes YAML header
-print("""
+print(
+  """
   ---
   Name: WebGPU
   """)
@@ -271,7 +277,8 @@ print("Tags:")
 
 // WebGPU enum types import as Swift enums.
 for enumName in enums.sorted() {
-  print("""
+  print(
+    """
     - Name: \(enumName)
       EnumExtensibility: closed
     """)
@@ -280,7 +287,8 @@ for enumName in enums.sorted() {
 // WebGPU object types import as Swift foreign reference types.
 for objectTypeName in objectTypes.sorted() {
   let methodPrefix = objectTypeName.lowercaseWebGPUPrefix
-  print("""
+  print(
+    """
     - Name: \(objectTypeName)Impl
       SwiftImportAs: reference
       SwiftReleaseOp: \(methodPrefix)Release
@@ -291,14 +299,16 @@ for objectTypeName in objectTypes.sorted() {
 // All typedefs (option sets, etc.).
 print("Typedefs:")
 for flagSetName in flagSets.sorted() {
-  print("""
+  print(
+    """
     - Name: \(flagSetName)
       SwiftWrapper: struct
     """)
 }
 
 // Functions can be imported as methods, properties, or initializers.
-print("""
+print(
+  """
   Functions:
   """)
 for function in functions.sorted(by: { $0.name < $1.name }) {
@@ -306,32 +316,38 @@ for function in functions.sorted(by: { $0.name < $1.name }) {
     continue
   }
 
-  print("""
+  print(
+    """
     - Name: \(function.name)
     """)
   if let swiftName = function.swiftName(importedTypes: objectTypes) {
-    print("""
+    print(
+      """
         SwiftName: \(swiftName)
       """)
   }
   if function.returnsRetained {
-    print("""
+    print(
+      """
         SwiftReturnOwnership: retained
       """)
   }
   if function.nullableResult {
-    print("""
+    print(
+      """
         ResultType: "\(function.resultType) _Nullable"
       """)
   }
   if function.parameters.contains(where: { $0.requiresNullability(importedTypes: objectTypes) }) {
-    print("""
-          Parameters:
-        """)
+    print(
+      """
+        Parameters:
+      """)
     for (index, param) in function.parameters.enumerated() {
       guard param.requiresNullability(importedTypes: objectTypes) else { continue }
 
-      print("""
+      print(
+        """
             - Position: \(index)
               Type: "\(param.type) \(param.nullable ? "_Nullable" : "_Nonnull")"
         """)
@@ -340,13 +356,15 @@ for function in functions.sorted(by: { $0.name < $1.name }) {
 }
 
 // Globals can be imported as static properties, if we know the type.
-print("""
+print(
+  """
   Globals:
   """)
 for (typename, name) in globalConstants {
   guard flagSets.contains(typename) else { continue }
 
-  print("""
+  print(
+    """
     - Name: \(typename)_\(name)
       SwiftName: \(typename).\(name.lowercasingInitialism)
     """)
