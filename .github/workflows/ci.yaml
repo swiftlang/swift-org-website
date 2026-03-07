@@ -13,13 +13,10 @@ on:
 
 jobs:
   soundness:
-    name: Soundness Checks
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Run script
-        run: ./scripts/soundness.sh
+    name: Soundness
+    uses: swiftlang/github-workflows/.github/workflows/soundness.yml@0.0.8
+    with:
+      license_header_check_project_name: "Swift.org"
 
   build-site:
     name: Build the Jekyll Site
