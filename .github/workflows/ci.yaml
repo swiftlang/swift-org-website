@@ -8,18 +8,17 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  pull_request: { types: [opened, reopened, synchronize, ready_for_review] }
-  push: { branches: [ main ] }
+  pull_request: {types: [opened, reopened, synchronize, ready_for_review]}
+  push: {branches: [main]}
 
 jobs:
   soundness:
-    name: Soundness Checks
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Run script
-        run: ./scripts/soundness.sh
+    name: Soundness
+    uses: swiftlang/github-workflows/.github/workflows/soundness.yml@0.0.8
+    with:
+      license_header_check_project_name: "Swift.org"
+      api_breakage_check_enabled: false
+      unacceptable_language_check_word_list: "blacklist whitelist slave sane sanity insane insanity kill killed killing hung hanged hanging"  # ignore-unacceptable-language
 
   build-site:
     name: Build the Jekyll Site
@@ -42,6 +41,6 @@ jobs:
           DOWNLOADSWIFTORG_SERVER_NAME: local
           SWIFTORG_SERVER_NAME: local
         run: |
-            docker compose -f ../../docker-compose.yaml run build 
+            docker compose -f ../../docker-compose.yaml run build
             docker compose -f ../../docker-compose.yaml run -d -p 4000:4000 website
             swift run swiftorgClient
