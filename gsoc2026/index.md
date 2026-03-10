@@ -359,6 +359,7 @@ Iterativelt refine the documentation coverage file format based on what you lear
 ### Globally Scoped Traits for Swift Testing via runtime configuration schema
 
 **Project size**: 80 hours
+
 **Estimated difficulty**: Intermediate
 
 **Recommended skills**
