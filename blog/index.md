@@ -22,7 +22,11 @@ title: Blog
         {% endif %}
         <span class="blog-title">{{ hero_card_post.title }}</span>
         <time class="blog-date body-copy" pubdate datetime="{{ hero_card_post.date | date_to_xmlschema }}">{{ hero_card_post.date | date: "%B %-d, %Y" }}</time>
+        {% if hero_card_post.description %}
+        <span class="blog-excerpt body-copy">{{ hero_card_post.description | strip_html }}</span>
+        {% else %}
         <span class="blog-excerpt body-copy">{{ hero_card_post.excerpt | strip_html }}</span>
+        {% endif %}
         <a class="blog-post-cta body-copy" href="{{ hero_card_post.url }}">{{site.data.new-data.blog.page-data.read-more}}</a>
       </div>
       <ul class="blog-featured-category-posts">

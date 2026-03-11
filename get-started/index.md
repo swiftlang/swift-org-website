@@ -1,3 +1,3 @@
 ---
-redirect_to: /get-started/machine-learning-and-ai/
+redirect_to: /getting-started/
 ---
