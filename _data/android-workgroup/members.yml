@@ -1,6 +1,6 @@
-- name: Abe White
-  handle: aabewhite
-  github: aabewhite
+- name: Alsey Coleman Miller
+  handle: colemancda
+  github: colemancda
   affiliation:
 
 - name: Andrew Druk
@@ -18,9 +18,9 @@
   github: finagolfin
   affiliation:
 
-- name: Jason Foreman
-  handle: threeve
-  github: threeve
+- name: Gabriele Mondada
+  handle: gabriele
+  github: gmondada
   affiliation:
 
 - name: Joannis Orlandos
@@ -31,6 +31,11 @@
 - name: Luke Howard
   handle: lukeh
   github: lhoward
+  affiliation:
+
+- name: Mads Odgaard
+  handle: madsodgaard
+  github: madsodgaard
   affiliation:
 
 - name: Marc Prud’hommeaux
