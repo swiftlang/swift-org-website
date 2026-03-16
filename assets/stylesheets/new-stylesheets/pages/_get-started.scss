@@ -525,6 +525,10 @@
   p,
   a {
     font-size: 17px;
+
+    &.debug {
+      font-size: 12px;
+    }
   }
 
   p {
