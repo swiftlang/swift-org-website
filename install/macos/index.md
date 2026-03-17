@@ -109,10 +109,10 @@ title: Install Swift - macOS
             Toolchain package installer (.pkg)
           </p>
           <div class="link-wrapper">
-            <a href="https://download.swift.org/development/xcode/{{ xcode_dev_builds.first.dir }}/{{ xcode_dev_builds.first.debug_info }}" class="body-copy">Debugging Symbols</a>
+            <a href="https://download.swift.org/development/xcode/{{ xcode_dev_builds.first.dir }}/{{ xcode_dev_builds.first.download }}" class="body-copy">Download Toolchain</a>
           </div>
           <div class="link-wrapper">
-            <a href="https://download.swift.org/development/xcode/{{ xcode_dev_builds.first.dir }}/{{ xcode_dev_builds.first.download }}" class="body-copy">Download Toolchain</a>
+            <a href="https://download.swift.org/development/xcode/{{ xcode_dev_builds.first.dir }}/{{ xcode_dev_builds.first.debug_info }}" class="debug">Debugging Symbols</a>
           </div>
         </div>
       </div>
@@ -126,10 +126,10 @@ title: Install Swift - macOS
             Toolchain package installer (.pkg)
           </p>
           <div class="link-wrapper">
-            <a href="https://download.swift.org/swift-6.3-branch/xcode/{{ xcode_6_3_builds.first.dir }}/{{ xcode_6_3_builds.first.debug_info }}" class="body-copy">Debugging Symbols</a>
+            <a href="https://download.swift.org/swift-6.3-branch/xcode/{{ xcode_6_3_builds.first.dir }}/{{ xcode_6_3_builds.first.download }}" class="body-copy">Download Toolchain</a>
           </div>
           <div class="link-wrapper">
-            <a href="https://download.swift.org/swift-6.3-branch/xcode/{{ xcode_6_3_builds.first.dir }}/{{ xcode_6_3_builds.first.download }}" class="body-copy">Download Toolchain</a>
+            <a href="https://download.swift.org/swift-6.3-branch/xcode/{{ xcode_6_3_builds.first.dir }}/{{ xcode_6_3_builds.first.debug_info }}" class="debug">Debugging Symbols</a>
           </div>
         </div>
       </div>
