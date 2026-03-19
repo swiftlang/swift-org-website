@@ -542,6 +542,10 @@ For the protocol server, we use lldb-dap which is bundled with the Swift toolcha
 Add both plugins to your configuration.
 ```lua
 -- lua/plugins/debug.lua
+local function find_lldb_dap()
+  -- Will be implemented later.
+end
+
 return {
   {
     "mfussenegger/nvim-dap",
@@ -561,7 +565,33 @@ We need to configure three things before debugging works end-to-end:
 ###  Register lldb-dap
 We need to tell nvim-dap where to find the lldb-dap executable and how to launch it.
 
-Add the `find_lldb_dap` helper at the top of the file. It first tries to locate the binary via 
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  -- Will be implemented later.
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+        -- Create the lldb-dap adapter.
+        -- This tells the plugin where to find the lldb-dap executable and how to start it.
+      local dap = require("dap")
+      dap.adapters["lldb-dap"] = {
+        type = "executable",
+        name = "lldb-dap",
+        command = find_lldb_dap(),
+        options = {
+          -- Uncomment and set a path to enable lldb-dap logging (useful for bug reports).
+          -- env = { LLDBDAP_LOG = "/path/to/store/lldb-dap.log" },
+        },
+      }
+    end,
+  }
+```
+
+Let's fill in the `find_lldb_dap` helper at the top of the file. It first tries to locate the binary via 
 `xcrun`, then falls back to whatever is in your `${PATH}`.
 
 ```lua
@@ -595,32 +625,6 @@ return {
 }
 ```
 
-Then register the adapter.
-
-```lua
--- lua/plugins/debug.lua
-...
-return {
-  {
-    "mfussenegger/nvim-dap",
-    config = function()
-        -- Create the lldb-dap adapter.
-        -- This tells the plugin where to find the lldb-dap executable and how to start it.
-      local dap = require("dap")
-      dap.adapters["lldb-dap"] = {
-        type = "executable",
-        name = "lldb-dap",
-        command = find_lldb_dap(),
-        options = {
-          -- Uncomment and set a path to enable lldb-dap logging (useful for bug reports).
-          -- env = { LLDBDAP_LOG = "/path/to/store/lldb-dap.log" },
-        },
-      }
-    end,
-  }
-  ...
-```
-
 <div class="warning" markdown="1">
 Warning: The lldb-dap binary from the LLVM repository or Linux package managers is most likely not built with Swift support and will be unable to debug Swift binaries. Use the version bundled with the Swift toolchain instead.
 </div>
@@ -630,6 +634,10 @@ With the adapter registered, we can define how debug sessions are started. The t
 
 ```lua
 -- lua/plugins/debug.lua
+local function find_lldb_dap()
+  ...
+end
+
 return {
   ...
       dap.adapters["lldb-dap"] = {
@@ -683,11 +691,15 @@ See [lldb-dap's configuration reference](https://lldb.llvm.org/use/lldbdap.html#
 
 #### Automatically show and hide UI panes.
 
-By default, running :DapContinue shows no debug panes.
+By default, running `:DapContinue` shows no debug panes.
 Hook into the DAP session lifecycle to open the UI when a session starts and close it when it ends.
 
 ```lua
 -- lua/plugins/debug.lua
+local function find_lldb_dap()
+  ...
+end
+
 return {
   ...
   {
@@ -730,6 +742,10 @@ Let's add keyboard shortcuts for debug sessions. Feel free to change the values 
 
 ```lua
 --- lua/plugins/debug.lua
+local function find_lldb_dap()
+  ...
+end
+
 return {
   {
     "mfussenegger/nvim-dap",
@@ -753,7 +769,6 @@ return {
       { "<leader>dt", function() require("dap").terminate() end, desc = "Terminate" },
       { "<leader>dh", function() require("dap.ui.widgets").hover() end, desc = "Widgets" },
     },
-    ...
   }
 ...
 ```
@@ -765,7 +780,8 @@ you should have a working debug session. Similar to the screenshot below.
 
 If you see `[?]` instead of button icons, your font does not support 
 [`codicons`](https://github.com/microsoft/vscode-codicons.git),
-which `nvim-dap` uses by default. Replace them with plain Unicode characters.
+which `nvim-dap` uses by default. Replace them with plain Unicode characters by
+add the the following snippet to the config.
 
 ```lua
 -- debug/plugins/debug.lua
@@ -1075,7 +1091,8 @@ return {
         name = "lldb-dap",
         command = find_lldb_dap(),
         options = {
-          env = { LLDBDAP_LOG = "/Volumes/workspace/Dev/scratch/test_swift/logs/nvim_dap.log" },
+          -- Uncomment and set a path to enable lldb-dap logging (useful for bug reports).
+          -- env = { LLDBDAP_LOG = "/path/to/store/lldb-dap.log" },
         },
       }
 
