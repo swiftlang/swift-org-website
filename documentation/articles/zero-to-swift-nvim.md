@@ -33,7 +33,7 @@ Basic setup and configuration includes:
 3. Configuring the SourceKit-LSP server.
 4. Setting up Language-Server-driven code completion with _nvim-cmp_.
 5. Setting up snippets with _LuaSnip_.
-5. Setting up the lldb debugger.
+5. Setting up the LLDB debugger.
 
 The following sections are provided to help guide you through the setup:
 
@@ -570,7 +570,7 @@ local function find_lldb_dap()
   -- If you know the path to the lldb-dap binary change the line below.
   -- return "/path/to/lldb-dap"
 
-  -- Try lldb-dap with xcrun.
+  -- macOS: Try lldb-dap with xcrun.
   local xcrun_result = vim.system({ "xcrun", "--find", "lldb-dap" }, { text = true }):wait()
   if xcrun_result.code == 0 then
     local xcrun_dap_path = vim.fn.trim(xcrun_result.stdout)
@@ -1042,7 +1042,7 @@ local function find_lldb_dap()
   -- If you know the path to the lldb-dap change the line
   -- return "/path/to/lldb-dap"
 
-  -- Try lldb-dap with xcrun.
+  -- macOS: Try lldb-dap with xcrun.
   local xcrun_result = vim.system({ "xcrun", "--find", "lldb-dap" }, { text = true }):wait()
   if xcrun_result.code == 0 then
     local xcrun_dap_path = vim.fn.trim(xcrun_result.stdout)
