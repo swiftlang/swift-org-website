@@ -1258,7 +1258,6 @@ function latestRevisionDiscussionLink(proposal) {
 * @param {string} name - Suffix of discussion name.
 * @returns {?string} URL string
 */
-
 function latestDiscussionLinkForName(proposal, name) {
   let lastReviewDiscussion = proposal.discussions.findLast(e => e.name.endsWith(name))
   if (lastReviewDiscussion) { return lastReviewDiscussion.link }
