@@ -31,7 +31,7 @@ Please provide the feedback that you have on the
 [Swift Forums](https://forums.swift.org/c/development/c-interoperability/), or
 by filing an [issue on GitHub](https://github.com/swiftlang/swift/issues/new/choose).
 Future changes to the design or functionality of C++ interoperability will not
-break code in existing codebases [by default](#source-stability-guarantees-for-mixed-language-codebases).
+break code in existing codebases by default.
 </div>
 
 ## Overview
@@ -392,7 +392,7 @@ C++ standard library. When such APIs are appropriately annotated, the Swift
 compiler can bridge those span-like parameters to Swift's
 [`Span`](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0447-span-access-shared-contiguous-storage.md)
 and [`MutableSpan`](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0467-MutableSpan.md)
-types, and the user with a safe and convenient interface to those imported APIs.
+types, and provide the user with a safe and convenient interface to those imported APIs.
 These interfaces are *in addition to* the interfaces generated without annotations:
 adding additional annotations to C or C++ APIs will not affect Swift code currently
 relying on the plain interface. Adding additional information may alter the signature
@@ -408,7 +408,7 @@ to the Swift compiler.
 ### Safe Overloads for C++ `std::span`
 
 APIs taking or returning C++'s `std::span` with sufficient lifetime
-annotations will automatically get safe overloads take or return Swift
+annotations will automatically get safe overloads that take or return Swift
 `Span` and `MutableSpan` types.
 
 The following table summarizes the generated convenience overloads:
@@ -577,7 +577,7 @@ func change_ptr(_ x: UnsafeBufferPointer<Int32>)
 
 </table>
 
-The `UnsafeBufferPointer` overloads provide the same bounds safety as their `Span` equvalents
+The `UnsafeBufferPointer` overloads provide the same bounds safety as their `Span` equivalents
 (NB: `UnsafeBufferPointer` is not bounds checked on memory access in release builds, but the generated
 `UnsafeBufferPointer` overloads contain bounds checks in the same cases as the `Span` overloads, *even in release builds*),
 but without lifetime safety. If lifetime information is available the generated safe overload will always
@@ -590,7 +590,7 @@ adding any bounds or lifetime annotations.
 
 #### Bounds Annotations using API Notes
 
-In cases where you don't want to modify the imported headers, bounds annotations can be applied using API Notes.
+In cases where you don't want to modify the imported headers, bounds annotations can be applied using [API Notes](https://clang.llvm.org/docs/APINotes.html).
 Given the following header:
 ```c
 void foo(int *p, int len);
