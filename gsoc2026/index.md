@@ -22,14 +22,6 @@ Please use the forums to tag and communicate with the project's mentor to figure
 
 If you would like to reach out to a mentor privately rather than making a public forum post, and the forums are not allowing you to send private messages yet, please reach out to Konrad Malawski at `ktoso AT apple.com` directly via email with the `[gsoc2026]` tag in the email subject and describe the project you would like to work on. We will route you to the appropriate mentor. In general, public communications on the forums are preferred though, as this is closer to the normal open-source way of getting things done in the Swift project.
 
-## Participating in GSoC
-
-Summer of Code is a *learning experience*, and while we allow the use of AI tools to assist your experience, you should not use them to completely automate any part of your GSoC experience with the Swift project.
-For example, please do not use AI tools to generate project proposals, replies to discussions or questions from the community or mentors, or overly rely on coding assistants to perform the coding tasks of your project.
-Make use of this experience to learn about the Swift project, community, and let us learn about you! It should be an enjoyable and personal experience for everyone involved.
-
-For more details, please review the Swift project's guidelines on [use of AI tools in learning-oriented contributions](https://github.com/swiftlang/project-operations/blob/main/contributing/ai-tools.md#learning-oriented-contributions).
-
 ## Writing a proposal
 
 Getting familiar with the codebase you are interested in working on during GSoC helps to write a good proposal because it helps you get a better understanding of how everything works and how you might best approach the project you are interested in. How you want to do that is really up to you and your style of learning. You could just clone the repository, read through the source code and follow the execution path of a test case by setting a breakpoint and stepping through the different instructions, read the available documentation or try to fix a simple bug in the codebase. The latter is how many open-source contributors got started, but it's really up to you. If you do want to go and fix a simple bug, our repositories contain a label "good first issue" that marks issues that should be easy to fix and doable by newcomers to the project.
