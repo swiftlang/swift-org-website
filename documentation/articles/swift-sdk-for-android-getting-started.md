@@ -15,53 +15,55 @@ To cross-compile Swift code for Android, you need three separate components:
 
 1. **The Host Toolchain**: this is the `swift` command and related tools that you will use to build and run your Swift code.
 2. **The Swift SDK for Android**: the set of libraries, headers, and other resources needed to generate and run Swift code for the Android target.
-3. **The Android NDK**: the "Native Development Kit" for Android includes the cross-compilation tools like `clang` and `ld` that are used by the host toolchain to cross-compile and link.
+3. **The Android NDK**: the "Native Development Kit" for Android includes cross-compilation tools like `clang` and `lld` that are used by the host toolchain to cross-compile and link.
 
 
 #### 1. Install the Host Toolchain
 
-The first thing to note is that while `swift` may already be installed on your system (such as through an Xcode installation on macOS), using a cross-compilation Swift SDK requires that the host toolchain and the Swift SDK versions match exactly. For this reason, you will need to install the specific version of the host toolchain for the given Swift SDK version.
+While `swift` may already be installed on your system (such as through an Xcode installation on macOS), using a cross-compilation Swift SDK requires that the host toolchain and the Swift SDK versions match exactly. For this reason, you will need to install the specific version of the host toolchain for the given Swift SDK version.
 
 The easiest and recommended way to manage host toolchains on macOS and Linux is to use [the swiftly command](/swiftly/documentation/swiftly/getting-started) command. Once that has been setup, you can install the host toolchain with:
 
 ```console
-$ swiftly install main-snapshot-2025-12-17
-Installing Swift main-snapshot-2025-12-17
+$ swiftly install latest
+Fetching the latest stable Swift release...
+Installing Swift 6.3
+
 Installing package in user home directory...
-main-snapshot-2025-12-17 installed successfully!
+Swift 6.3 is installed successfully!
+$ swiftly use latest
+The global default toolchain has been set to `Swift 6.3` (was 6.2.4)
 
-$ swiftly use main-snapshot-2025-12-17
-The global default toolchain has been set to `main-snapshot-2025-12-17` (was 6.2.3)
-
-$ swiftly run swift --version
-Apple Swift version 6.3-dev (LLVM 2bc32d2793f525d, Swift f1a704763ffd2c8)
-Target: arm64-apple-macosx15.0
+$ swift -version
+Apple Swift version 6.3 (swift-6.3-RELEASE)
+Target: arm64-apple-macosx26.0
+Build config: +assertions
 ```
-Alternately, you can install the latest `6.3-snapshot-2025-12-14`.
+Alternately, you can install the latest test snapshot toolchains with `swiftly install 6.3-snapshot` or `swiftly install main-snapshot`, and then pick which one you want to use.
 
 #### 2. Install the Swift SDK for Android
 
-Next, download and install the Swift SDK bundle using the built-in `swift sdk` command:
+Next, download and install the Swift SDK bundle using the `swift sdk` command:
 
 ```console
-$ swift sdk install https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle.tar.gz --checksum 5b5cd4da30ececb28c678c3a17a922f3c5fdb82f0ff6dc777bd44275fcc222e0
+$ swift sdk install https://download.swift.org/swift-6.3-release/android-sdk/swift-6.3-RELEASE/swift-6.3-RELEASE_android.artifactbundle.tar.gz --checksum 2f2942c4bcea7965a08665206212c66991dabe23725aeec7c4365fc91acad088
 
-Swift SDK bundle at `https://download.swift.org/development/android-sdk/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle.tar.gz` successfully installed as swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle.
+Swift SDK bundle at `https://download.swift.org/swift-6.3-release/android-sdk/swift-6.3-RELEASE/swift-6.3-RELEASE_android.artifactbundle.tar.gz` successfully installed as swift-6.3-RELEASE_android.artifactbundle.
 ```
 
-Similarly, you can install the latest 6.3 snapshot by copy-pasting [the install commands shown
-for the various SDK bundles](/install/macos/#swift-sdk-buindles-dev) on the install pages.
+Similarly, you can install the latest snapshot by copy-pasting [the install commands shown
+for the various test SDK bundles](/install/macos/#swift-sdk-buindles-dev) on the install pages.
 
 You should now see the Android Swift SDK included in the `swift sdk list` command:
 
 ```console
-$ swiftly run swift sdk list
-swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android
+$ swift sdk list
+swift-6.3-RELEASE_android
 ```
 
 #### 3. Install and configure the Android NDK
 
-The Swift SDK for Android depends on the Android NDK version 27d to provide the headers and tools necessary for cross-compiling to Android architectures. There are a variety of ways to [install the Android NDK](https://developer.android.com/ndk/guides), but the simplest is to just download and unzip the archive from the [NDK Downloads page](https://developer.android.com/ndk/downloads/#lts-downloads) directly.
+The Swift SDK for Android depends on the Android NDK, LTS version 27d or later, to provide the headers and tools necessary for cross-compiling to Android architectures. There are a variety of ways to [install the Android NDK](https://developer.android.com/ndk/guides), but the simplest is to just download and unzip the archive from the [NDK Downloads page](https://developer.android.com/ndk/downloads/#lts-downloads) directly.
 
 You can automate this with the following commands in a directory of your choosing:
 
@@ -77,34 +79,29 @@ Once you have downloaded and unpacked the NDK, you must link it to the Swift SDK
 
 ```console
 $ cd ~/Library/org.swift.swiftpm || cd ~/.swiftpm
-$ ./swift-sdks/swift-DEVELOPMENT-SNAPSHOT-2025-12-17-a_android.artifactbundle/swift-android/scripts/setup-android-sdk.sh
+$ ./swift-sdks/swift-6.3-RELEASE_android.artifactbundle/swift-android/scripts/setup-android-sdk.sh
 setup-android-sdk.sh: success: ndk-sysroot linked to Android NDK at android-ndk-r27d/toolchains/llvm/prebuilt
 ```
 
-*Note that if you have already installed the NDK in a different location, you can simply set the `ANDROID_NDK_HOME` environment variable to that location and run the `setup-android-sdk.sh` script.*
+*If you have already installed the NDK in a different location, you can simply set the `ANDROID_NDK_HOME` environment variable to that location and run the `setup-android-sdk.sh` script.*
 
-At this point, you will have a fully working cross-compilation toolchain for Android.
+At this point, you will have a fully working cross-compilation toolchain for Android, and can unset `ANDROID_NDK_HOME` if you'd like.
 
 ### Hello World on Android
 
-Now let's try it out with the canonical "Hello World" program. First, create a directory to hold your code:
+Now let's try the canonical "Hello World" program, by first creating a directory to hold your code and initialize a new package:
 
 ```console
 $ cd /tmp
 $ mkdir hello
 $ cd hello
+$ swift package init --type executable
 ```
 
-Next, ask Swift to create a new package for you:
+Check the new package by building and running locally for the host:
 
 ```console
-$ swiftly run swift package init --type executable
-```
-
-Try it out by building and running locally for the host machine:
-
-```console
-$ swiftly run swift build
+$ swift build
 Building for debugging...
 [8/8] Applying hello
 Build complete! (15.29s)
@@ -116,7 +113,7 @@ Hello, world!
 With the Swift SDK for Android installed and configured, you can now cross-compile the executable to Android for the `x86_64` architecture:
 
 ```console
-$ swiftly run swift build --swift-sdk x86_64-unknown-linux-android28 --static-swift-stdlib
+$ swift build --swift-sdk x86_64-unknown-linux-android28 --static-swift-stdlib
 Building for debugging...
 [8/8] Linking hello
 Build complete! (2.04s)
@@ -128,7 +125,7 @@ $ file .build/x86_64-unknown-linux-android28/debug/hello
 or for the `aarch64` architecture:
 
 ```console
-$ swiftly run swift build --swift-sdk aarch64-unknown-linux-android28 --static-swift-stdlib
+$ swift build --swift-sdk aarch64-unknown-linux-android28 --static-swift-stdlib
 Building for debugging...
 [8/8] Linking hello
 Build complete! (2.04s)
@@ -137,7 +134,7 @@ $ file .build/aarch64-unknown-linux-android28/debug/hello
 .build/aarch64-unknown-linux-android28/debug/hello: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, with debug_info, not stripped
 ```
 
-With a connected Android device that has [USB debugging enabled](https://developer.android.com/studio/debug/dev-options#Enable-debugging) or a locally-running Android [emulator](https://developer.android.com/studio/run/emulator#get-started), you can now copy the executable over, along with the required `libc++_shared.so` dependency from the Android NDK, and run it with the [`adb`](https://developer.android.com/tools/adb) utility:
+Using a connected Android device that has [USB debugging enabled](https://developer.android.com/studio/debug/dev-options#Enable-debugging) or [a locally-running Android emulator](https://developer.android.com/studio/run/emulator#get-started), you can now copy the executable over, along with the required `libc++_shared.so` dependency from the Android NDK, and run it with [the `adb` utility](https://developer.android.com/tools/adb):
 
 ```console
 $ adb push .build/aarch64-unknown-linux-android28/debug/hello /data/local/tmp
@@ -154,8 +151,8 @@ Hello, world!
 
 Congratulations, you have built and run your first Swift program on Android!
 
-Note that Android applications are typically not deployed as command-line executable tools. Rather, they are assembled into an `.apk` archive and launched as an app from the home screen. To support this, Swift modules can be built as shared object libraries for each supported architecture and included in the app archive. The Swift code can then be accessed from the Android app — which is typically written in Java or Kotlin — through the Java Native Interface ([JNI](https://developer.android.com/training/articles/perf-jni)) by using the [swift-java](https://github.com/swiftlang/swift-java) interoperability library and tools.
+Android applications are typically not deployed as command-line executable tools. Rather, they are assembled into an `.apk` archive and launched as an app from the home screen. To support this, Swift modules can be built as shared libraries for each supported architecture and included in an app archive. Swift code can then be accessed from the Android app — which is typically written in Java or Kotlin — through [the Java Native Interface (JNI)](https://developer.android.com/training/articles/perf-jni) by using [the swift-java interoperability library and tools](https://github.com/swiftlang/swift-java).
 
-Visit the [swift-android-examples](https://github.com/swiftlang/swift-android-examples) repository to see a variety of projects that demonstrate how to build full Android applications that utilize the Swift SDK for Android.
+Visit [the Android Examples repository](https://github.com/swiftlang/swift-android-examples) to see a variety of projects that demonstrate how to build full Android applications that utilize the Swift SDK for Android.
 
-These larger development topics will be expanded on in future articles and documentation. In the meantime, please visit the [Swift Android forums](https://forums.swift.org/c/platform/android/115) to discuss and seek help with the Swift SDK for Android.
+These larger development topics will be expanded on in future articles and documentation. In the meantime, please visit [the Android category in the Swift forums](https://forums.swift.org/c/platform/android/115) to discuss and seek help with the Swift SDK for Android.
