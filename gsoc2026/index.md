@@ -267,7 +267,8 @@ previously not supported end-to-end by Swift SDKs.
 
 **Potential mentors**
 
-- [Max Desiatov](https://github.com/MaxDesiatov)
+- [Max Desiatov](https://github.com/MaxDesiatov) 
+- [Yuta Saito](https://github.com/kateinoigakukun)
 
 
 ### Improved documentation for command line tools
