@@ -7,14 +7,14 @@ author: [hborla, heckj]
 category: "Language"
 ---
 
-Swift 6.3 is here, a release that expands Swift into new domains and improves developer ergonomics across the board. This release features:
+Swift is designed to be the language you reach for at every layer of the software stack. Whether you're building embedded firmware, internet-scale services, or full-featured mobile apps, Swift delivers strong safety guarantees, performance control when you need it, and expressive language features and APIs.
 
-* An official Swift SDK for Android
-* Improvements for using Swift in embedded environments
+Swift 6.3 makes these benefits more accessible across the stack. This release expands Swift into new domains and improves developer ergonomics across the board, featuring:
+
 * More flexible C interoperability
 * Improvements to cross-platform build tooling
-
-Swift is designed to be the language you reach for at every layer of the software stack. Whether you're building embedded firmware, internet-scale services, or full-featured mobile apps, Swift delivers strong safety guarantees, performance control when you need it, and expressive language features and APIs. Swift 6.3 makes these benefits more accessible across the stack.
+* Improvements for using Swift in embedded environments
+* An official Swift SDK for Android
 
 Read on for an overview of the changes and next steps to get started.
 
