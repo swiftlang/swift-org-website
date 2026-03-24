@@ -235,7 +235,7 @@ The idea is to implement a system executable target, similar to system library t
 
 - [Chris McGee](https://github.com/cmcgee1024)
 
-### Sysroot Support in Swift's build-script
+### Sysroot Support in Swift's `build-script` for Cross-Compilation Targets
 
 **Project size**: 160 hours
 
@@ -243,27 +243,27 @@ The idea is to implement a system executable target, similar to system library t
 
 **Recommended skills**
 
-- Basic understanding of CMake, Python 
+- Basic understanding of CMake, Python
 - Experience with the Swift compiler build system is a plus
-
 
 **Description**
 
 Extend Swift‘s `build-script` with an experimental flag which
-provides the path to the sysroot of the target triple. This enables
-[cross-compiling](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md)
-to other sysroots, meaning the host triple is different to the target triple.
+provides the path to the sysroot of the target triple used when cross-compiling core libraries (not the Swift toolchain). This enables
+[cross-compilation targets](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md)
+with other sysroots.
 [Wasm](https://github.com/swiftlang/swift/blob/main/utils/swift_build_support/swift_build_support/products/wasmswiftsdk.py)
-already uses a [sysroot](https://github.com/swiftlang/swift/blob/main/utils/swift_build_support/swift_build_support/products/wasmswiftsdk.py).
-The approach is to generalize the mechanism by splitting out the Swift core library builds into separate build products to be used for cross-compiling.
-
+already uses a [sysroot](https://github.com/swiftlang/swift/blob/main/utils/swift_build_support/swift_build_support/products/wasmswiftsdk.py),
+the approach is to generalize the mechanism by splitting out the Swift core library builds into separate build products to be used for cross-compilation
+to other target platforms.
+This idea is narrowly limited in scope to cross-compilation of Swift core libraries, cross-compiled Swift toolchains handled by `--cross-compile-hosts` option are out of scope.
 
 **Expected outcomes/benefits/deliverables**
 - New build products for cross-compiling Swift core libraries (reuse from Wasm).
 - The new experimental flag from `build-script` is propagated to the new build products.
-- Cross-compilation succeeds and tests run successfully on target system.
-- Benefit is to be able to cross-compile to various Linux distros from one host system.
-    It enables generation of Swift SDKs for cross-compilation.
+- Cross-compilation of core libraries succeeds and tests run successfully on target system.
+- Benefit is to enable cross-compilation of Swift packages to more operating systems that use sysroots
+previously not supported end-to-end by Swift SDKs.
 
 **Potential mentors**
 
