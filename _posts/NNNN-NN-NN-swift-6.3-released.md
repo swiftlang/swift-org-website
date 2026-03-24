@@ -48,7 +48,7 @@ func callFromC() { ... }
 void MyLibrary_callFromC(void);
 ```
 
-`@c` also works together with `@implementation`, to let you provide a Swift implementation for a function declared in a C header:
+`@c` also works together with `@implementation`. This lets you provide a Swift implementation for a function declared in a C header:
 
 ```c
 // C header
@@ -62,6 +62,8 @@ void callFromC(void);
 @c @implementation
 func callFromC() { ... }
 ```
+
+When using `@c` together with `@implementation`, Swift will validate that the Swift function matches a pre-existing declaration in a C header, rather than including a C declaration in the generated header.
 
 ### Module name selectors
 
