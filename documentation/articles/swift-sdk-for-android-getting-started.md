@@ -48,7 +48,7 @@ Next, download and install the Swift SDK bundle using the `swift sdk` command:
 ```console
 $ swift sdk install https://download.swift.org/swift-6.3-release/android-sdk/swift-6.3-release/swift-6.3-RELEASE_android.artifactbundle.tar.gz --checksum 5b5cd4da30ececb28c678c3a17a922f3c5fdb82f0ff6dc777bd44275fcc222e0
 
-Swift SDK bundle at `https://download.swift.org/swift-6.3-release/android-sdk/swift-6.3-release/swift-6.3-RELEASE_android.artifactbundle.tar.gz` successfully installed as swift-6.3-RELEASE_android.artifactbundle.
+Swift SDK bundle at `https://download.swift.org/swift-6.3-release/android-sdk/swift-6.3-RELEASE/swift-6.3-RELEASE_android.artifactbundle.tar.gz` successfully installed as swift-6.3-RELEASE_android.artifactbundle.
 ```
 
 Similarly, you can install the latest snapshot by copy-pasting [the install commands shown
