@@ -354,12 +354,12 @@ function renderProposals() {
       if (state === State.acceptedWithRevisions) detailNodes.push(renderStatus(proposal.status))
 
       if (state === State.activeReview || state === State.scheduledForReview) {
-        detailNodes.push(renderStatus(proposal.status))
+        detailNodes.push(renderStatus(proposal.status, latestReviewDiscussionLink(proposal)))
         detailNodes.push(renderReviewPeriod(proposal.status))
       }
 
       if (state === State.returnedForRevision) {
-        detailNodes.push(renderStatus(proposal.status))
+        detailNodes.push(renderStatus(proposal.status, latestRevisionDiscussionLink(proposal)))
       }
 
       var details = html('div', { className: 'proposal-details' }, detailNodes)
@@ -490,15 +490,23 @@ function renderVersion(version) {
 }
 
 /** For some proposal states like `.activeReview`, it helps to see the status in the same details list. */
-function renderStatus (status) {
+function renderStatus (status, link = null) {
   return html('div', { className: 'proposal-detail' }, [
     html('div', { className: 'proposal-detail-label' }, [
       'Status: '
     ]),
     html('div', { className: 'proposal-detail-value' }, [
-      states[status.state].name
+       renderStatusValue(status, link)
     ])
   ])
+}
+
+/** Some proposal states like `.activeReview` link to the appropriate discussion thread */
+function renderStatusValue(status, link) {
+  if (link) {
+    return html('a', { href: link, target: '_blank' }, states[status.state].name)
+  }
+  return document.createTextNode(states[status.state].name)
 }
 
 /**
@@ -1222,4 +1230,37 @@ function listStringForStatuses(options, conjunction, useStatusPrefix) {
   } else {
     return optionNames.slice(0, -1).join(", ") + " " + conjunction + " " + optionNames.slice(-1)[0]
   }
+}
+
+/**
+* Returns link to the most recent proposal review discussion if present.
+* @param {object} proposal - Proposal object.
+* @returns {?string} URL string
+*/
+function latestReviewDiscussionLink(proposal) {
+  return latestDiscussionLinkForName(proposal, "review")
+}
+
+/**
+* Returns link to the most recent proposal revision discussion if present.
+* @param {object} proposal - Proposal object.
+* @returns {?string} URL string
+*/
+function latestRevisionDiscussionLink(proposal) {
+  return latestDiscussionLinkForName(proposal, "revision")
+}
+
+/**
+* Returns link to the latest proposal review discussion ending with the specified name if present.
+* Handles multiple discussions of the same name (e.g. 'first review' 'second review').
+* Also handles discussions about proposal amendments (e.g. 'amendment review').
+* @param {object} proposal - Proposal object.
+* @param {string} name - Suffix of discussion name.
+* @returns {?string} URL string
+*/
+
+function latestDiscussionLinkForName(proposal, name) {
+  let lastReviewDiscussion = proposal.discussions.findLast(e => e.name.endsWith(name))
+  if (lastReviewDiscussion) { return lastReviewDiscussion.link }
+  else { return null }
 }
