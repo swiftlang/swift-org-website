@@ -3,7 +3,7 @@
 {% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
 
 <div class="code-box content-wrapper">
-    <h2>Static Linux</h2>
+    <h2>Swift SDK for Static Linux</h2>
     <p class="body-copy">
     {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/static-sdk/" | append: tag | append: "/" | append: tag %}
     {% assign command = "swift sdk install " | append: base_url | append: "_static-linux-" | append: platform.version | append: ".artifactbundle.tar.gz --checksum " | append: platform.checksum %}
@@ -13,7 +13,7 @@
     </p>
     <div class="link-wrapper">
     <div class="link-group">
-        <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-{{ platform.version }}.artifactbundle.tar.gz" class="body-copy">Download Linux Static SDK</a> |
+        <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-{{ platform.version }}.artifactbundle.tar.gz" class="body-copy">Download SDK</a> |
         <a href="https://download.swift.org/{{ tag_downcase }}/static-sdk/{{ tag }}/{{ tag }}_static-linux-{{ platform.version }}.artifactbundle.tar.gz.sig" class="body-copy">Signature (PGP)</a>
     </div>
     </div>
