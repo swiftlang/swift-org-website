@@ -28,7 +28,7 @@ Summer of Code is a *learning experience*, and while we allow the use of AI tool
 For example, please do not use AI tools to generate project proposals, replies to discussions or questions from the community or mentors, or overly rely on coding assistants to perform the coding tasks of your project.
 Make use of this experience to learn about the Swift project, community, and let us learn about you! It should be an enjoyable and personal experience for everyone involved.
 
-For more details, please review the Swift project's guidelines on [use of AI tools in learning-oriented contributions](https://github.com/hborla/project-operations/blob/3d9dc3634ee4bdf4a5de47f6237b857ab88be82f/contributing/ai-tools.md#learning-oriented-contributions).
+For more details, please review the Swift project's guidelines on [use of AI tools in learning-oriented contributions](https://github.com/swiftlang/project-operations/blob/main/contributing/ai-tools.md#learning-oriented-contributions).
 
 ## Writing a proposal
 
