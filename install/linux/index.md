@@ -51,6 +51,11 @@ title: Install Swift - Linux
       {% include new-includes/components/wasm-sdk.html %}
     </div>
     </div>
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/android-sdk.html %}
+      </div>
+    </div>
   </div>
 <br><br>
 <hr>

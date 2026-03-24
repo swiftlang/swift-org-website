@@ -55,6 +55,11 @@ title: Install Swift - macOS
         {% include new-includes/components/wasm-sdk.html %}
       </div>
     </div>
+    <div class="release-box section">
+      <div class="content">
+        {% include new-includes/components/android-sdk.html %}
+      </div>
+    </div>
   </div>
   <h3 id="alternative-install-options" class="header-with-anchor">Alternative toolchain install options</h3>
     <div class="release-box section">
