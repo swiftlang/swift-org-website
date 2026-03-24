@@ -253,7 +253,7 @@ provides the path to the sysroot of the target triple used when cross-compiling 
 [cross-compilation targets](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0387-cross-compilation-destinations.md)
 with other sysroots.
 [Wasm](https://github.com/swiftlang/swift/blob/main/utils/swift_build_support/swift_build_support/products/wasmswiftsdk.py)
-already uses a [sysroot](https://github.com/swiftlang/swift/blob/main/utils/swift_build_support/swift_build_support/products/wasmswiftsdk.py),
+already uses a [sysroot](https://github.com/swiftlang/swift/blob/main/utils/swift_build_support/swift_build_support/products/wasisysroot.py),
 the approach is to generalize the mechanism by splitting out the Swift core library builds into separate build products to be used for cross-compilation
 to other target platforms.
 This idea is narrowly limited in scope to cross-compilation of Swift core libraries, cross-compiled Swift toolchains handled by `--cross-compile-hosts` option are out of scope.
