@@ -14,7 +14,7 @@ Swift 6.3 is here, a release that expands Swift into new domains and improves de
 * More flexible C interoperability
 * Improvements to cross-platform build tooling
 
-Swift is designed to be the language you reach for at every layer of the software stack. Whether you're building embedded firmware, internet-scale services, or full-featured mobile apps, Swift delivers strong safety guarantees, performance control when you need it, and expressive language features and APIs. Swift 6.3 lowers the barrier to getting these benefits across more of the stack.
+Swift is designed to be the language you reach for at every layer of the software stack. Whether you're building embedded firmware, internet-scale services, or full-featured mobile apps, Swift delivers strong safety guarantees, performance control when you need it, and expressive language features and APIs. Swift 6.3 makes these benefits more accessible across the stack.
 
 Read on for an overview of the changes and next steps to get started.
 
@@ -91,11 +91,11 @@ Swift 6.3 introduces new attributes that give library authors finer-grained cont
 * **Inlining:** Guarantee inlining — a compiler optimization that expands the body of a function at the call-site — for direct calls to a function with `@inline(always)`. Use this attribute only when you’ve determined that the benefits of inlining outweigh any increase in code size.
 * **Function implementation visibility:** Expose the implementation of a function in an ABI-stable library to clients with `@export(implementation)`. This allows the function to participate in more compiler optimizations.
 
-For a full list of language evolution proposals in Swift 6.3, see the [Swift Evolution dashboard](https://www.swift.org/swift-evolution/#?version=6.3).
+For a full list of language evolution proposals in Swift 6.3, see the [Swift Evolution dashboard](/swift-evolution/#?version=6.3).
 
 ## Package and Build Improvements
 
-Swift 6.3 includes a preview of Swift Build integrated into Swift Package Manager. This preview brings a unified build engine for SwiftPM across all supported platforms for a more consistent cross-platform development experience. To learn more, check out [Preview the Swift Build System Integration.](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/swiftbuildpreview) We encourage you to try it out in your own packages and [report any issues](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/swiftbuildpreview/#Reporting-issues) you encounter.
+Swift 6.3 includes a preview of [Swift Build](https://github.com/swiftlang/swift-build) integrated into Swift Package Manager. This preview brings a unified build engine across all supported platforms for a more consistent cross-platform development experience. To learn more, check out [Preview the Swift Build System Integration](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/swiftbuildpreview). We encourage you to try it in your own packages and [report any issues](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/swiftbuildpreview/#Reporting-issues) you encounter.
 
 Swift 6.3 also brings the following Swift Package Manager improvements:
 
@@ -122,7 +122,7 @@ The list of Swift Testing evolution proposals included in Swift 6.3 are [ST-0012
 Swift 6.3 adds three new experimental capabilities to DocC:
 
 * **Markdown output:** Generate Markdown versions of your documentation pages alongside the standard rendered JSON covering symbols, articles, and tutorials. Try it out by passing `--enable-experimental-markdown-output` to `docc convert`.
-* **Per-page static HTML content:** Embed a lightweight HTML summary of each page — including title, description, availability, declarations, and discussion — directly into the index.html file within a `<noscript>` tag. This improves discoverability by search engines and accessibility for screen readers without requiring JavaScript. Try it out by passing `--transform-for-static-hosting --experimental-transform-for-static=hosting-with-content` to `docc convert`.
+* **Per-page static HTML content:** Embed a lightweight HTML summary of each page — including title, description, availability, declarations, and discussion — directly into the index.html file within a `<noscript>` tag. This improves discoverability by search engines and accessibility for screen readers without requiring JavaScript. Try it out by passing `--transform-for-static-hosting --experimental-transform-for-static-hosting-with-content` to `docc convert`.
 * **Code block annotations:** Unlock new formatting annotations for code blocks, including `nocopy` for disabling copy-to-clipboard, `highlight` to highlight specific lines by number, `showLineNumbers` to display line numbers, and `wrap` to wrap long lines by column width. Specify these options in a comma-separated list after the language name on the opening fence line:
 
   ````
@@ -151,13 +151,13 @@ Swift 6.3 adds three new experimental capabilities to DocC:
 
 ### Embedded Swift
 
-Embedded Swift has a wide range of improvements in Swift 6.3, from enhanced C interoperability and better debugging support to meaningful steps toward a complete linkage model. For a detailed look at what’s new in embedded Swift, see [Embedded Swift Improvements coming in Swift 6.3](https://www.swift.org/blog/embedded-swift-improvements-coming-in-swift-6.3/).
+Embedded Swift has a wide range of improvements in Swift 6.3, from enhanced C interoperability and better debugging support to meaningful steps toward a complete linkage model. For a detailed look at what’s new in embedded Swift, see [Embedded Swift Improvements coming in Swift 6.3](/blog/embedded-swift-improvements-coming-in-swift-6.3/).
 
 ### Android
 
 Swift 6.3 includes the first official release of the Swift SDK for Android. With this SDK, you can start developing native Android applications in Swift, update your Swift packages to support building for Android, and use [Swift Java](https://github.com/swiftlang/swift-java) to integrate Swift code into existing Android applications written in Kotlin/Java. This is a significant milestone that opens new opportunities for cross-platform development in Swift.
 
-To learn more and try out Swift for Android development in your own projects, see [Getting Started with the Swift SDK for Android](https://www.swift.org/documentation/articles/swift-sdk-for-android-getting-started.html).
+To learn more and try out Swift for Android development in your own projects, see [Getting Started with the Swift SDK for Android](/documentation/articles/swift-sdk-for-android-getting-started.html).
 
 ## Thank You
 
@@ -167,4 +167,4 @@ If you'd like to get involved in what comes next, the [Swift Forums](http://foru
 
 ## Next Steps
 
-Try out Swift 6.3 today! The easiest way to install the standalone Swift 6.3 toolchain is using [swiftly](https://www.swift.org/swiftly/documentation/swiftlydocs/), a Swift version manager that runs on macOS and Linux. If you’re building apps for Apple platforms, Swift 6.3 is included in Xcode 26.4. Additional installation methods, including for Windows and Android, are included on the [Install Swift](https://www.swift.org/install/) page.
+Try out Swift 6.3 today! You can find instructions for installing a Swift 6.3 toolchain on the [Install Swift](/install/) page.
