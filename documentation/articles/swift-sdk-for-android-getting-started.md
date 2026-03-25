@@ -17,63 +17,6 @@ To cross-compile Swift code for Android, you need three separate components:
 2. **The Swift SDK for Android**: the set of libraries, headers, and other resources needed to generate and run Swift code for the Android target.
 3. **The Android NDK**: the "Native Development Kit" for Android includes cross-compilation tools like `clang` and `lld` that are used by the host toolchain to cross-compile and link.
 
-### Installing the SDK
-
-#### (1) Prerequisites
-
-Before starting, please note the following requirements:
-
-* You need to install an open-source [Swift toolchain](/install/) from
-  swift.org.
-
-* If you are using macOS, note that you cannot use the toolchain
-  provided with Xcode to build programs using the SDK. Instead, you
-  must use the Swift compiler from the open-source toolchain (see
-  above).
-
-
-#### (2) Pre-Installation Notes
-
-Please be aware of:
-
-* Version compatibility: The Swift toolchain must match the version of
-  the Swift SDK for Android that you install.
-
-* Clean installation: If you previously installed an SDK for a
-  different Swift toolchain version, remove the old one before
-  installing the new one (see management commands below).
-
-* Checksum verification: When installing Swift SDKs from remote URLs,
-  you must pass a `--checksum` option with the corresponding checksum
-  provided by the SDK author.
-
-* Command pattern: The installation follows the pattern described in
-  the next sections.
-
-
-#### (3) Download and Install the Swift SDK for Android
-
-To obtain the Swift SDK for Android:
-
-* Visit the swift.org [installation
-  page](https://www.swift.org/install) for complete Swift SDK for Android
-  installation instructions, where you can download directly or click
-  "Copy install command".
-
-* For previous releases, navigate to "Previous Releases" on the
-  installation page.
-
-#### (4) Installation Commands Pattern
-
-The basic installation command follows this pattern:
-
-```console
-$ swift sdk install <URL-or-filename-here> [--checksum <checksum-for-archive-URL>]
-```
-
-You can provide either a URL (with corresponding checksum) or a local
-filename where the SDK can be found.
-
 <!--
 {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Android SDK'| first %}
 {% assign tag = site.data.builds.swift_releases.last.tag %}
@@ -84,32 +27,51 @@ filename where the SDK can be found.
 {% comment %} Generate branch information - ONLY major.minor {% endcomment %}
 -->
 
-For example, if you have installed the {{ tag }} toolchain, you would enter:
+#### 1. Install the Host Toolchain
+
+While `swift` may already be installed on your system (such as through an Xcode installation on macOS), using a cross-compilation Swift SDK requires using an open-source toolchain and that the Swift SDK version matches exactly.
+
+The easiest and recommended way to manage host toolchains on macOS and Linux is to use [the swiftly command](/swiftly/documentation/swiftly/getting-started) command. Once that has been setup, you can install the host toolchain with:
+
+```console
+$ swiftly install latest
+Fetching the latest stable Swift release...
+Installing Swift 6.3
+
+Installing package in user home directory...
+Swift 6.3 is installed successfully!
+$ swiftly use latest
+The global default toolchain has been set to `Swift 6.3`
+
+$ swift -version
+Apple Swift version 6.3 ({{tag}})
+Target: arm64-apple-macosx26.0
+Build config: +assertions
+```
+You can also find [direct links to the open-source Swift toolchains](/install/), if you prefer manually installing then adding Swift to your `PATH`.
+
+#### 2. Install the Swift SDK for Android
+
+Next, download and install the Swift SDK bundle using the `swift sdk` command:
 
 ```console
 $ {{ command }}
 ```
 
-This will download and install the corresponding Swift SDK for Android on
-your system.
-
-#### (5) Managing Installed SDKs
-
-After installation, you can manage your SDKs using these commands:
-
-List all installed SDKs:
+You should now see the Android Swift SDK included in the `swift sdk list` command:
 
 ```console
 $ swift sdk list
+{{tag}}_android
 ```
 
-Remove an SDK:
+Make sure to remove any old Android SDKs you have installed:
 
 ```console
 $ swift sdk remove <name-of-SDK>
 ```
 
-#### (6) Install and configure the Android NDK
+#### 3. Install and configure the Android NDK
 
 The Swift SDK for Android depends on the Android NDK, LTS version 27d or later, to provide the headers and tools necessary for cross-compiling to Android architectures. There are a variety of ways to [install the Android NDK](https://developer.android.com/ndk/guides), but the simplest is to just download and unzip the archive from the [NDK Downloads page](https://developer.android.com/ndk/downloads/#lts-downloads) directly.
 
@@ -202,7 +164,7 @@ Hello, world!
 
 Congratulations, you have built and run your first Swift program on Android!
 
-Android applications are typically not deployed as command-line executable tools. Rather, they are assembled into an `.apk` archive and launched as an app from the home screen. To support this, Swift modules can be built as shared libraries for each supported architecture and included in an app archive. Swift code can then be accessed from the Android app — which is typically written in Java or Kotlin — through [the Java Native Interface (JNI)](https://developer.android.com/training/articles/perf-jni) by using the low-level [swiftlang/swift-java-jni-core](https://github.com/swiftlang/swift-java-jni-core) and higher-level [swiftlang/swift-java](https://github.com/swiftlang/swift-java) interoperability library and tools.
+Android applications are typically not deployed as command-line executable tools. Rather, they are assembled into an `.apk` archive and launched as an app from the home screen. To support this, Swift modules can be built as shared libraries for each supported architecture and included in an app archive. Swift code can then be accessed from the Android app — which is typically written in Java or Kotlin — through [the Java Native Interface (JNI)](https://developer.android.com/training/articles/perf-jni) by using [the swift-java interoperability library and tools](https://github.com/swiftlang/swift-java).
 
 Visit [the Android Examples repository](https://github.com/swiftlang/swift-android-examples) to see a variety of projects that demonstrate how to build full Android applications that utilize the Swift SDK for Android.
 
