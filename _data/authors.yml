@@ -517,10 +517,9 @@ parispittman:
 
 marcprux:
     name: Marc Prud'hommeaux
-    email: marc@skip.tools
-    gravatar: marcprux
+    email: marc@skip.dev
     github: marcprux
-    about: "Marc Prud'hommeaux works on bringing Swift application development to Android at Skip.tools."
+    about: "Marc Prud'hommeaux works on bringing Swift application development to Android at Skip.dev."
 
 maxdesiatov:
     name: Max Desiatov
