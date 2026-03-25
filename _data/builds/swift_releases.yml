@@ -2501,7 +2501,7 @@
   tag: swift-6.2.4-RELEASE
   xcode: Xcode 26.3
   xcode_release: true
-  date: 2025-02-26
+  date: 2026-02-26
   platforms:
     - name: Ubuntu 22.04
       platform: Linux
@@ -2569,7 +2569,7 @@
   tag: swift-6.3-RELEASE
   xcode: Xcode 26.4
   xcode_release: true
-  date: 2025-03-24
+  date: 2026-03-24
   platforms:
     - name: Ubuntu 22.04
       platform: Linux
