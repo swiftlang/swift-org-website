@@ -38,7 +38,7 @@ Cross-compilation for Android requires installing three separate components:
 {% comment %} Generate branch information - ONLY major.minor {% endcomment %}
 -->
 
-#### 1. Install the Host Toolchain
+#### 1. Install the Swift Toolchain
 
 While `swift` may already be installed on your system (such as through an Xcode installation on macOS), using a cross-compilation Swift SDK requires using an open-source toolchain and for the Swift SDK version to match exactly.
 
@@ -54,10 +54,9 @@ Swift {{version}} is installed successfully!
 $ swiftly use latest
 The global default toolchain has been set to `Swift {{version}}`
 
-$ swift -version
+$ swift --version
 Apple Swift version {{version}} ({{tag}})
 Target: arm64-apple-macosx26.0
-Build config: +assertions
 ```
 You can also find [direct links to the open-source Swift toolchains](/install/), if you prefer manually installing then adding Swift to your `PATH`.
 
