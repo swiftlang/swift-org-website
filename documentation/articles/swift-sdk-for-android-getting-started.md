@@ -18,7 +18,7 @@ Cross-compilation for Android requires installing three separate components:
 
 1. The **Swift Toolchain**: The core Swift compiler and related tools needed to
    compile and run Swift code on your host machine. This includes the `swift`
-   command line tooling, standard library, and LLVM backend.
+   command-line tooling, standard library, and LLVM backend.
 2. The **Swift SDK for Android**: An additional bundle of Swift libraries,
    headers, and configuration files that extends the Swift toolchain with the
    specific support needed to cross-compile for Android.
