@@ -5,7 +5,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 3.5rem;
+    min-height: 2.5rem;
   }
 
   #search-filter {
@@ -15,6 +15,7 @@
     appearance: textfield;
     border: 0.1rem solid var(--color-dropdown-border);
     border-radius: 0.5rem;
+    width: 20rem;
   }
 
   @supports ((position: sticky) or (position: -webkit-sticky)) {
