@@ -9,13 +9,22 @@ Since it was first open-sourced in 2015, Swift has grown from a language focused
 
 ### Getting Started
 
-Building a Swift package for Android involves installing and configuring a cross-compilation SDK. Cross-compilation is the process of building code on one platform, the host, to run on a different platform, the target. In the context of Swift for Android, this typically involves compiling Swift code on a host macOS or Linux machine to produce executables or libraries for the target Android OS. This differs from compiling Swift for the host platform, where the host and target are the same (for example, compiling and running Swift code on macOS for macOS).
+Building a Swift package for Android requires cross-compiling: building code on
+one platform (the _host_) to run on a different platform (the _target_). In the
+context of Android, the host is a desktop operating system like macOS or Linux,
+and the target is an Android device or emulator. 
 
-To cross-compile Swift code for Android, you need three separate components:
+Cross-compilation for Android requires installing three separate components:
 
-1. **The Host Toolchain**: this is the `swift` command and related tools that you will use to build and run your Swift code.
-2. **The Swift SDK for Android**: the set of libraries, headers, and other resources needed to generate and run Swift code for the Android target.
-3. **The Android NDK**: the "Native Development Kit" for Android includes cross-compilation tools like `clang` and `lld` that are used by the host toolchain to cross-compile and link.
+1. The **Swift Toolchain**: The core Swift compiler and related tools needed to
+   compile and run Swift code on your host machine. This includes the `swift`
+   command line tooling, standard library, and LLVM backend.
+2. The **Swift SDK for Android**: An additional bundle of Swift libraries,
+   headers, and configuration files that extends the Swift toolchain with the
+   specific support needed to cross-compile for Android.
+3. The **Android NDK**: The Android Native Development Kit provides
+   platform-specific headers, system libraries, and linker tools required to
+   build native binaries for Android architectures.
 
 ### Installing the SDK
 
