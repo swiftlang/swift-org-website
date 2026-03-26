@@ -164,7 +164,7 @@ Hello, world!
 
 Congratulations, you have built and run your first Swift program on Android!
 
-Android applications are typically not deployed as command-line executable tools. Rather, they are assembled into an `.apk` archive and launched as an app from the home screen. To support this, Swift modules can be built as shared libraries for each supported architecture and included in an app archive. Swift code can then be accessed from the Android app — which is typically written in Java or Kotlin — through [the Java Native Interface (JNI)](https://developer.android.com/training/articles/perf-jni) by using [the swift-java interoperability library and tools](https://github.com/swiftlang/swift-java).
+Android applications are typically not deployed as command-line executable tools. Rather, they are assembled into an `.apk` archive and launched as an app from the home screen. To support this, Swift modules can be built as shared libraries for each supported architecture and included in an app archive. Swift code can then be accessed from the Android app — which is typically written in Java or Kotlin — through [the swift-java interoperability library and tools](https://github.com/swiftlang/swift-java), which handle [the Java Native Interface (JNI)](https://developer.android.com/training/articles/perf-jni) for you. For advanced uses, [Swift Java JNI Core](https://github.com/swiftlang/swift-java-jni-core) is also available as a low-level interface.
 
 Visit [the Android Examples repository](https://github.com/swiftlang/swift-android-examples) to see a variety of projects that demonstrate how to build full Android applications that utilize the Swift SDK for Android.
 
