@@ -29,6 +29,8 @@ Cross-compilation for Android requires installing three separate components:
 <!--
 {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Android SDK'| first %}
 {% assign tag = site.data.builds.swift_releases.last.tag %}
+{% assign version = site.data.builds.swift_releases.last.name %}
+{% assign sdk_snapshot_tag = site.data.builds.development.android-sdk.last.tag %}
 {% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
 {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/android-sdk/" | append: tag | append: "/" | append: tag %}
 {% assign command = "swift sdk install " | append: base_url | append: "_android" | append: ".artifactbundle.tar.gz --checksum " | append: platform.checksum %}
@@ -38,22 +40,22 @@ Cross-compilation for Android requires installing three separate components:
 
 #### 1. Install the Host Toolchain
 
-While `swift` may already be installed on your system (such as through an Xcode installation on macOS), using a cross-compilation Swift SDK requires using an open-source toolchain and that the Swift SDK version matches exactly.
+While `swift` may already be installed on your system (such as through an Xcode installation on macOS), using a cross-compilation Swift SDK requires using an open-source toolchain and for the Swift SDK version to match exactly.
 
-The easiest and recommended way to manage host toolchains on macOS and Linux is to use [the swiftly command](/swiftly/documentation/swiftly/getting-started) command. Once that has been setup, you can install the host toolchain with:
+The easiest and recommended way to manage host toolchains on macOS and Linux is to use [the swiftly command](/swiftly/documentation/swiftly/getting-started). Once that has been setup, you can install the host toolchain with:
 
 ```console
 $ swiftly install latest
 Fetching the latest stable Swift release...
-Installing Swift 6.3
+Installing Swift {{version}}
 
 Installing package in user home directory...
-Swift 6.3 is installed successfully!
+Swift {{version}} is installed successfully!
 $ swiftly use latest
-The global default toolchain has been set to `Swift 6.3`
+The global default toolchain has been set to `Swift {{version}}`
 
 $ swift -version
-Apple Swift version 6.3 ({{tag}})
+Apple Swift version {{version}} ({{tag}})
 Target: arm64-apple-macosx26.0
 Build config: +assertions
 ```
@@ -66,18 +68,19 @@ Next, download and install the Swift SDK bundle using the `swift sdk` command:
 ```console
 $ {{ command }}
 ```
+You can provide either the URL, with a corresponding checksum, or a local
+filename where the SDK can be found.
 
-You should now see the Android Swift SDK included in the `swift sdk list` command:
+You should now see the Android Swift SDK included with the `swift sdk list` command:
 
 ```console
 $ swift sdk list
 {{tag}}_android
 ```
-
 Make sure to remove any old Android SDKs you have installed:
 
 ```console
-$ swift sdk remove <name-of-SDK>
+$ swift sdk remove {{sdk_snapshot_tag}}_android
 ```
 
 #### 3. Install and configure the Android NDK
