@@ -23,7 +23,7 @@ The [Swift Extension for Visual Studio Code](https://marketplace.visualstudio.co
 
 To start using the Swift extension in any Open VSX-compatible editor, simply open the Extensions panel, search for ‘Swift’ and install the extension. 
 
-If you’re using Cursor, getting started is easier than ever. Check out our new dedicated guide: [Setting up Cursor for Swift Development](https://www.swift.org/documentation/articles/getting-started-with-cursor-swift.html). It walks you through the setup, features and includes how to configure custom Swift skills for your AI workflows. 
+If you’re using Cursor, getting started is easier than ever. Check out our new dedicated guide: [Setting up Cursor for Swift Development](/documentation/articles/getting-started-with-cursor-swift.html). It walks you through the setup, features and includes how to configure custom Swift skills for your AI workflows. 
 
 Swift now has support for a wider range of modern editors and IDEs to meet developers where they are. Download the extension, try it out in your editor of choice, and don’t forget to [share your feedback](https://open-vsx.org/extension/swiftlang/swift-vscode/reviews)! 
 
