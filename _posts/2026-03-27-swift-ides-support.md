@@ -7,9 +7,9 @@ author: [tracymiranda]
 category: 'Developer Tools'
 ---
 
-The Swift ecosystem is expanding to meet developers where they are. You can now write Swift in a broader range of popular IDEs, including Cursor, VSCodium, AWS’s Kiro, and Google’s Antigravity. By leveraging VS Code extension compatibility, these editors tap directly into the Open VSX Registry, where [the official Swift extension is now live](https://open-vsx.org/extension/swiftlang/swift-vscode).
+You can now write Swift in a broader range of popular IDEs, including Cursor, VSCodium, AWS’s Kiro, and Google’s Antigravity. By leveraging VS Code extension compatibility, these editors tap directly into the Open VSX Registry, where [the official Swift extension is now live](https://open-vsx.org/extension/swiftlang/swift-vscode).
 
-Swift has long supported development using multiple IDEs including VS Code, Xcode, Neovim, and Emacs. Swift is also compatible with editors that implement the Language Server Protocol (LSP). This growing ecosystem of editor support is particularly significant as Swift continues to show its versatility and how well suited it is for vibe coding. Swift’s expressive syntax as well as its strong static typing are a perfect match for modern, coding workflows.
+Swift has long supported development using [multiple IDEs](https://www.swift.org/tools/) including VS Code, Xcode, Neovim, and Emacs. Swift is also compatible with editors that implement the Language Server Protocol (LSP). This growing ecosystem of editor support is particularly significant as Swift continues to show its versatility and how well suited it is for vibe coding. Swift’s expressive syntax as well as its strong static typing are a perfect match for modern, coding workflows.
 
 ## Swift on Open VSX
 
