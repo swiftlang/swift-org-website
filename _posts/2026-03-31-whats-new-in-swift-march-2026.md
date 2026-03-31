@@ -22,13 +22,14 @@ Welcome to "What's new in Swift," a curated digest of releases, videos, and disc
 Now on to other news about Swift:
 
 ## Videos to watch
-* Interested in Swift for systems programming? [The -ization of Containerization](https://www.youtube.com/watch?v=TRw0bsrtCjA&t=12052s), presented at SCaLE, covers the Containerization team's experience building the Swift package.
+* Interested in Swift for systems programming? [The -ization of Containerization](https://www.youtube.com/watch?v=TRw0bsrtCjA&t=12052s), presented at SCaLE, covers the Containerization project and their experience adopting Swift.
 * [Swift community meetup #8](https://www.youtube.com/watch?v=wCdE8sPJwTo) featured two talks: real-time computer vision on NVIDIA Jetson, and a production AI data pipeline built with Vapor.
-* A new interview with Matt Massicotte, answering questions about Swift Concurrency: [Swift Concurrency Explained](https://www.youtube.com/watch?v=cUu0M5ewpPM).
+* A [new interview with Matt Massicotte](https://www.youtube.com/watch?v=cUu0M5ewpPM) on the Swift Academy podcast goes in-depth on Swift Concurrency.
 
 ## Community highlights
-* How can you gradually deprecate APIs ahead of a major release? Point-Free blogged [Hard Deprecations and Soft Landings with SwiftPM Traits](https://www.pointfree.co/blog/posts/203-hard-deprecations-and-soft-landings-with-swiftpm-traits), a clever approach to API deprecation, worth trying out.
-* Daniel Jilg shared [TelemetryDeck's adoption story](/blog/building-privacy-first-analytics-with-swift/) on the Swift blog, including how they use Swift for backend services.
+* How can you gradually deprecate APIs ahead of a major release? Point-Free blogged [Hard Deprecations and Soft Landings with SwiftPM Traits](https://www.pointfree.co/blog/posts/203-hard-deprecations-and-soft-landings-with-swiftpm-traits), a clever approach to solving a common API deprecation problem.
+* Daniel Jilg shared [TelemetryDeck's adoption story](/blog/building-privacy-first-analytics-with-swift/) on the Swift blog, including how they use Swift and Vapor for backend services.
+* The March 2026 [Swift for Wasm updates](https://forums.swift.org/t/swift-for-wasm-march-2026-updates/85725) are out, highlighting a new JavaScriptKit release with BridgeJS improvements, and continued work in WasmKit.
 
 ## Swift Evolution
 The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
