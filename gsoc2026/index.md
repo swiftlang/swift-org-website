@@ -36,7 +36,7 @@ Getting familiar with the codebase you are interested in working on during GSoC 
 
 When it comes to writing the proposal, the [Google Summer of Code Guide](https://google.github.io/gsocguides/student/writing-a-proposal) contains general, good advice.
 
-The best proposals include a detailed timeline, specific milestones and goals as well as an outline the technical challenges you foresee. It is best if you engage with your potential project mentor on the forums before contriburing, and have them clarify the goals and steps that they think are necessary for the project to be successful. Your proposal should have a clear goal, which can be successfully achieved as part of the weeks you'll be working it. Provide details about your approach, significant milestones you wish to achieve, and clarify with your potential mentor if they agree those seem reasonable. The time before proposal submissions is there for you to reach out and polish your proposal, so make sure you use it well! Good luck!
+The best proposals include a detailed timeline, specific milestones and goals as well as an outline the technical challenges you foresee. It is best if you engage with your potential project mentor on the forums before contributing, and have them clarify the goals and steps that they think are necessary for the project to be successful. Your proposal should have a clear goal, which can be successfully achieved as part of the weeks you'll be working it. Provide details about your approach, significant milestones you wish to achieve, and clarify with your potential mentor if they agree those seem reasonable. The time before proposal submissions is there for you to reach out and polish your proposal, so make sure you use it well! Good luck!
 
 ## Potential Projects
 
@@ -360,7 +360,7 @@ As an initial foray into globally scoped traits, implement a configuration to se
 * Summarise your effort with a demo of the new functionality including screenshots or recordings.
 * Time permitting, extend this project further by implementing globally configurable traits elsewhere:
     * With CLI parameters like `--retry-count` and `--test-timeout`
-    * As part of the `.testTarget()` in `Package.swift~
+    * As part of the `.testTarget()` in `Package.swift`
     * As part of a new test plan file format
     * And of course, figuring how all these different places where traits are specified will interact with each other!
 
@@ -392,5 +392,5 @@ Description of the project goes here.
 
 **Potential mentors**
 
-- Mentor name and link to their github
+- Mentor name and link to their GitHub
 
