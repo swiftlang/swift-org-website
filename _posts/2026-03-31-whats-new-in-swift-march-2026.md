@@ -28,7 +28,7 @@ Now on to other news about Swift:
 
 ## Community highlights
 * How can you gradually deprecate APIs ahead of a major release? Point-Free blogged [Hard Deprecations and Soft Landings with SwiftPM Traits](https://www.pointfree.co/blog/posts/203-hard-deprecations-and-soft-landings-with-swiftpm-traits), a clever approach to API deprecation, worth trying out.
-* Daniel Jilg shared [TelemetryDeck's adoption story](https://www.swift.org/blog/building-privacy-first-analytics-with-swift/) on the Swift blog, including how they use Swift for backend services.
+* Daniel Jilg shared [TelemetryDeck's adoption story](/blog/building-privacy-first-analytics-with-swift/) on the Swift blog, including how they use Swift for backend services.
 
 ## Swift Evolution
 The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
