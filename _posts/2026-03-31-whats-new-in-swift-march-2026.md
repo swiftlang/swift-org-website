@@ -22,7 +22,7 @@ Welcome to "What's new in Swift," a curated digest of releases, videos, and disc
 Now on to other news about Swift:
 
 ## Videos to watch
-* Interested in Swift for systems programming? [The -ization of Containerization](https://www.youtube.com/watch?v=TRw0bsrtCjA&t=12052s), presented at SCaLE, covers the Containerization project and their experience adopting Swift.
+* Interested in Swift for systems programming? [The -ization of Containerization](https://www.youtube.com/live/TRw0bsrtCjA?t=13975s), presented at SCaLE, covers the Containerization project and their experience adopting Swift.
 * [Swift community meetup #8](https://www.youtube.com/watch?v=wCdE8sPJwTo) featured two talks: real-time computer vision on NVIDIA Jetson, and a production AI data pipeline built with Vapor.
 * A [new interview with Matt Massicotte](https://www.youtube.com/watch?v=cUu0M5ewpPM) on the Swift Academy podcast goes in-depth on Swift Concurrency.
 
