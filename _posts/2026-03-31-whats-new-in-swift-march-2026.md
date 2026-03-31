@@ -17,7 +17,7 @@ Welcome to "What's new in Swift," a curated digest of releases, videos, and disc
 > 
 > Most recently, [the main branch of Swift started using Swift Build as its default build system](https://github.com/swiftlang/swift-package-manager/pull/9661), paving the way for Swift Build to be the out-of-the-box option for Swift developers in a future Swift release.
 > 
-> Over the coming months, we’ll continue sharing our progress and driving down the remaining bugs to bring the build system to parity. We encourage you to [give it a try](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/swiftbuildpreview/) and [file bugs that you encounter](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/swiftbuildpreview/#Reporting-issues). We’re excited by this progress, and look forward to building future tooling improvements across all platforms and project models that will benefit from this single build system.
+> Over the coming months, we’ll continue sharing our progress and driving down the remaining bugs to bring the build system to parity. We encourage you to [give it a try](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/swiftbuildpreview/) and [file bugs that you encounter](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/swiftbuildpreview/#Reporting-issues). We’re excited by this progress, and look forward to building future tooling improvements across all platforms and project models that will benefit from this build system.
 
 Now on to other news about Swift:
 
