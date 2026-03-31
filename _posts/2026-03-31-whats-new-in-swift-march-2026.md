@@ -31,7 +31,7 @@ Now on to other news about Swift:
 * Daniel Jilg shared [TelemetryDeck's adoption story](https://www.swift.org/blog/building-privacy-first-analytics-with-swift/) on the Swift blog, including how they use Swift for backend services.
 
 ## Swift Evolution
-The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
+The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
 
 **Under active review:**
 * [SE-0522](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0522-source-warning-control.md) Source-Level Control Over Compiler Warnings - Swift lets you configure warning behavior at the module level using compiler flags, but that's an all-or-nothing approach. This proposal adds fine-grained warning control: a `@warn` attribute that lets you override warning behavior for a specific diagnostic group within the scope of a single declaration, with support for escalating it to an error, downgrading it to a warning, or suppressing it entirely, without affecting the rest of your module.
