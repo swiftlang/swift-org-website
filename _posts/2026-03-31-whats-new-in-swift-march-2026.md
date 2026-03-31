@@ -11,7 +11,7 @@ Welcome to "What's new in Swift," a curated digest of releases, videos, and disc
 
 [Swift 6.3 has been released](/blog/swift-6.3-released/), expanding Swift into new domains and improving developer ergonomics. A highlight of its release is work to improve cross-platform build tooling. Owen Voorhees shares an update on that effort:
 
-> Hi! I’m Owen, a lead engineer on the Core Build team at Apple. Last year we [shared our goal](https://www.swift.org/blog/the-next-chapter-in-swift-build-technologies/) to bring Swift Build to Swift Package Manager, in an effort to deduplicate build technologies within the Swift ecosystem and deliver a consistent build experience across all platforms that Swift supports.
+> Hi! I’m Owen, a lead engineer on the Core Build team at Apple. Last year we [shared our goal](/blog/the-next-chapter-in-swift-build-technologies/) to bring Swift Build to Swift Package Manager, in an effort to deduplicate build technologies within the Swift ecosystem and deliver a consistent build experience across all platforms that Swift supports.
 > 
 > Since the announcement, we’ve been working in the open, landing hundreds of patches to improve Swift Build’s support across various platforms including Linux and Windows, and to integrate it deeply in Swift Package Manager. With Swift 6.3, developers have the [option](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/swiftbuildpreview/) to enable this integration and try it out with their packages. To validate parity with the previous build system, we’ve used the package list from swiftpackageindex.com, testing thousands of open source packages with Swift Build.
 > 
