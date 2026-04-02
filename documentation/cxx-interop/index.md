@@ -1396,8 +1396,8 @@ This includes pure virtual methods.
 
 #### Exposing C++ Shared Reference Types back from Swift
 
-C++ can call into Swift APIs that take or return C++ Shared Reference Types. Objects of these types are always created on the C++ side,
-but their references can be passed back and forth between Swift and C++. This section explains the conventions of incrementing and decrementing
+C++ can call into Swift APIs that take or return C++ Shared Reference Types.
+This section explains the conventions of incrementing and decrementing
 the reference counts when passing such references across the language boundaries. Consider the following Swift APIs:
 
 ```swift
