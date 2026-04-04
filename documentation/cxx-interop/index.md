@@ -925,6 +925,53 @@ printDeserialized(getSerializedInt())
 printDeserialized(getSerializedFloat())
 ```
 
+### Accessing Private C++ Members in Swift
+
+By default, `private` and `protected` members of a C++ type are not accessible from Swift.
+The `SWIFT_PRIVATE_FILEID` annotation lets you designate a specific Swift file where
+extensions of the annotated C++ type may access its non-public members.
+This is useful when writing a Swift wrapper around a C++ type that needs to access
+`private` or `protected` implementation details.
+
+For example, suppose you want to write a Swift wrapper that accesses the private
+members of `DataBuffer`:
+
+```c++
+#include <swift/bridging>
+
+class DataBuffer {
+  ...
+private:
+  int count;
+  void resize(int newCount);
+} SWIFT_PRIVATE_FILEID("MyModule/DataBufferExt.swift");
+```
+
+Extensions of `DataBuffer` declared in `MyModule/DataBufferExt.swift` may access
+the private `count` field and `resize` method:
+
+```swift
+// MyModule/DataBufferExt.swift
+
+extension DataBuffer {
+  mutating func doubleCapacity() {
+    resize(count * 2)  // OK: private members accessible in extensions here
+  }
+}
+```
+
+Outside of extensions, or in any other Swift file, these members remain inaccessible.
+
+Only one `SWIFT_PRIVATE_FILEID` annotation is allowed per C++ type.
+The file ID passed to `SWIFT_PRIVATE_FILEID` uses the format `"ModuleName/filename.swift"`.
+The directory path of the file within the module does not matter —
+a file at `Sources/helpers/DataBufferExt.swift` compiled in `MyModule`
+matches `"MyModule/DataBufferExt.swift"`.
+
+Both `private` and `protected` C++ members are imported as `private` members in Swift.
+Derived C++ types can access `protected` base members as long as they are also
+annotated with `SWIFT_PRIVATE_FILEID`.
+
 ## Working with C++ Containers
 
 C++ container types, like the [`std::vector`](https://en.cppreference.com/w/cpp/container/vector) class
@@ -2139,6 +2186,7 @@ that are outlined in the documentation above.
 | `SWIFT_MUTATING` | [Constant Member Functions Must Not Mutate the Object](#constant-member-functions-must-not-mutate-the-object) |
 | `SWIFT_NONCOPYABLE` | [C++ Structures and Classes are Value Types by Default](#c-structures-and-classes-are-value-types-by-default) |
 | `SWIFT_SELF_CONTAINED` | [Annotating C++ Structures or Classes as Self Contained](#annotating-c-structures-or-classes-as-self-contained) |
+| `SWIFT_PRIVATE_FILEID` | [Accessing Private C++ Members in Swift](#accessing-private-c-members-in-swift) |
 
 ## Document Revision History
 
