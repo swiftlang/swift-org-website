@@ -38,7 +38,7 @@
     }
     $map: map.get($map, $key);
   }
-  @return if($map, $map, $default);
+  @return if(sass($map): $map; else: $default);
 }
 
 ////

@@ -38,6 +38,10 @@
         }
     }
 
+    .headline-section {
+        margin-top: 80px;
+    }
+
     .community-featured-grid {
         margin-top: 146px;
         line-height: 1.53;
@@ -67,6 +71,14 @@
                     line-height: 1.33;
                     margin-bottom: 22px;
                 }
+            }
+
+            .section-text {
+                text-align: center;
+                font-size: 26px;
+                line-height: 1.8;
+                max-width: 680px;
+                margin: 20px auto 40px;
             }
 
             .community-sub-featured-grid-headline {

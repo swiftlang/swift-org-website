@@ -11,19 +11,9 @@ title: Community
             {{ site.data.new-data.community.page-data.headline }}
          </h2>
 
-         {% assign hero_card_1 = site.data.new-data.community.page-data.hero-cards[0] %}
-         {% assign hero_card_1_image = hero_card_1.image %}
-
-         <img
-            class="community-featured-hero-card-image with-full-width hide-dark"
-            src="{{ hero_card_1_image.light }}"
-            alt="{{ hero_card_1.alt }}"
-         />
-         <img
-            class="community-featured-hero-card-image with-full-width hide-light"
-            src="{{ hero_card_1_image.dark }}"
-            alt="{{ hero_card_1.alt }}"
-         />
+         <p class="section-text">
+            {{ site.data.new-data.community.page-data.text }}
+         </p>
 
          <div class="community-sub-featured">
             <div class="hero-card-2">
@@ -102,18 +92,19 @@ title: Community
          </ul>
       </div>
    </div>
+   {% include new-includes/components/headline-section.html content=site.data.new-data.community.page-data.section3 %}
    <div class="section community-section-grid">
       <div class="content">
          <h2 class="community-section-grid-headline">
-            {{ site.data.new-data.community.page-data.section3.headline }}
+            {{ site.data.new-data.community.page-data.section4.headline }}
          </h2>
 
          <p class="section-text">
-            {{ site.data.new-data.community.page-data.section3.text }}
+            {{ site.data.new-data.community.page-data.section4.text }}
          </p>
 
          <ul class="community-section-cards">
-         {% for card in site.data.new-data.community.page-data.section3.cards %}
+         {% for card in site.data.new-data.community.page-data.section4.cards %}
                <li>
                   <a class="card-link" href="{{ card.link }}">
                   <h3 class="community-card-headline">{{ card.title }}</h3>
@@ -127,11 +118,11 @@ title: Community
    </div>
    <div class="section community-section-grid">
       <h2 class="community-section-grid-headline">
-         {{ site.data.new-data.community.page-data.section4.headline }}
+         {{ site.data.new-data.community.page-data.section5.headline }}
       </h2>
       <div class="content links">
          <ul class="community-section-links">
-         {% for card in site.data.new-data.community.page-data.section4.links %}
+         {% for card in site.data.new-data.community.page-data.section5.links %}
             <li>
                <a href="{{ card.link }}" class="link-card">
                   <img src="{{ card.image.light }}" alt="{{ card.alt }}" class="link-card-image hide-dark">

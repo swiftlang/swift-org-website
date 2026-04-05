@@ -1,5 +1,6 @@
 headline: Swift Community
 read-more: Read more
+text: The Swift.org community aims to create the world's best general-purpose programming language. We develop it in the open, inviting contributions from anyone.
 hero-cards:
   - image:
       light: /assets/images/community/community-hero.png
@@ -40,6 +41,12 @@ section2:
       text: All about Swift ecosystem projects outside the governance of swift.org.
       link: https://forums.swift.org/c/related-projects/25
 section3:
+  headline: Work with us
+  body: "text text more text, text text more text"
+  link:
+    copy: Read more
+    href: /
+section4:
   headline: Contribute to Swift
   text: "As an open source project, Swift is open to contributions! There are many ways to contribute, including through code and non-code contributions. Here are some ways to get involved:"
   cards:
@@ -55,7 +62,7 @@ section3:
     - title: Participate in language design
       text: The Swift Evolution Process is community-driven and intended to guide the review of development.
       link: https://forums.swift.org/c/evolution/18
-section4:
+section5:
   headline: Follow Swift
   links:
     - image:
