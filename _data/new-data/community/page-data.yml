@@ -54,7 +54,7 @@ section4:
       text: If something doesn't work as intended, let the community know.
       link: https://www.swift.org/contributing/#reporting-bugs
     - title: Good first issues
-      text: Tasks and areas of where code contributions should be accessible to new contributors. 
+      text: Tasks and areas of where code contributions should be accessible to new contributors.
       link: https://www.swift.org/contributing/#good-first-issues
     - title: Contributing code
       text: Contributions are welcome and we've written a contributor guide with info to get started.

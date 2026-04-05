@@ -27,7 +27,6 @@ cards:
       - text: "Learn more"
         url: "/documentation-workgroup"
   - title: "Foundation"
-    content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy"
     content: "Governs the Swift Foundation project and manages reviews of community API proposals."
     links:
       - text: "Learn more"
