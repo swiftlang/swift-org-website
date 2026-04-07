@@ -82,6 +82,30 @@ if (navigator && navigator.clipboard) {
   });
 }
 
+// Copy to clipboard for SDK install command buttons
+function copyToClipboard(button, text) {
+  const originalText = button.innerText;
+
+  navigator.clipboard.writeText(text).then(() => {
+    button.innerText = 'Copied!';
+    setTimeout(() => {
+      button.innerText = originalText;
+    }, 1000);
+  }).catch(err => {
+    console.error('Failed to copy:', err);
+    button.innerText = 'Failed';
+    setTimeout(() => {
+      button.innerText = originalText;
+    }, 2000);
+  });
+}
+
+document.querySelectorAll('[data-copy-text]').forEach((button) => {
+  button.addEventListener('click', () => {
+    copyToClipboard(button, button.getAttribute('data-copy-text'));
+  });
+});
+
 // Check for reduced motion setting
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.body.classList.add('reduced-motion')
