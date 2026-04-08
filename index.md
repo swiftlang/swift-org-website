@@ -52,7 +52,7 @@ title: Swift Programming Language
 <section id="pillar-1" class="section pillar">
     <div class="pillar-wrapper content-wrapper">
         <p class="pillar-intro">
-            Swift is designed to be the language you reach for at every layer of the software stack. Whether you’re building embedded firmware, internet-scale services, or full-featured mobile apps, Swift delivers strong safety guarantees, performance control when you need it, and expressive language features and APIs.
+            Swift is designed to be the language you reach for at every layer of the software stack. Whether you are building embedded firmware, full-featured mobile apps, or internet-scale services, Swift delivers expressive language features and APIs, performance control when you need it, and strong safety guarantees.
         </p>
     </div>
     {% for callout in pillar1_callouts %}
