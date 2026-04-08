@@ -645,3 +645,8 @@ karenchu:
     email: karenchu@apple.com
     github: karenhchu
     about: "Karen Chu focuses on Swift's open source community initiatives as part of Apple's Open Source Program Office."
+
+tracymiranda:
+    name: Tracy Miranda
+    github: tracymiranda
+    about: "Tracy is a member of the Build and Packaging Workgroup and works on Swift tooling at Apple."
