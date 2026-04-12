@@ -1,6 +1,6 @@
-headline: Swift Community
+headline: Community
 read-more: Read more
-text: The Swift.org community aims to create the world's best general-purpose programming language. We develop it in the open, inviting contributions from anyone.
+text: Swift is built in the open, and everyone is welcome. Join us in building the world’s best general purpose programming language.
 hero-cards:
   - image:
       light: /assets/images/community/community-hero.png
@@ -26,7 +26,7 @@ hero-cards:
       url: /packages/
 section2:
   headline: Explore the forums
-  text: "The <a href=\"https://forums.swift.org\" class=\"card-link\" target=\"_blank\">Swift forums</a> are the official discussion channel for the Swift community. Whether you'rere just getting started with Swift or want to participate in shaping the language's future, the forums are the best place to connect with other Swift developers. Check out these topics:"
+  text: "The <a href=\"https://forums.swift.org\" class=\"card-link\" target=\"_blank\">Swift forums</a> are the official discussion channel for the Swift community. Whether you’re just getting started with Swift or want to participate in shaping the language’s future, the forums are the best place to connect with other Swift developers. Check out these topics:"
   cards:
     - title: Using Swift
       text: Beginner questions are welcome in this space devoting to helping you use Swift.
@@ -41,11 +41,11 @@ section2:
       text: All about Swift ecosystem projects outside the governance of swift.org.
       link: https://forums.swift.org/c/related-projects/25
 section3:
-  headline: Work with us
-  body: "text text more text, text text more text"
+  headline: How we work
+  body: "Swift relies on community processes to evolve the language, groups to organize how the project gets work done, and a Code of Conduct that guides everything we do."
   link:
     copy: Read more
-    href: /
+    href: /governance
 section4:
   headline: Contribute to Swift
   text: "As an open source project, Swift is open to contributions! There are many ways to contribute, including through code and non-code contributions. Here are some ways to get involved:"
