@@ -11,7 +11,7 @@ hero-cards:
       dark: /assets/images/community/community-showcase-dark@2x.png
     alt: Community Showcase image
     label: Community Showcase
-    text: Swift content, conferences, projects, and products shared on the forums.
+    text: Swift content, conferences, projects, and products shared on the forums by community members.
     link:
       text: Read more
       url: https://forums.swift.org/c/community-showcase/66
@@ -20,7 +20,7 @@ hero-cards:
       dark: /assets/images/community/featured-packages-dark@2x.png
     alt: Featured Packages image
     label: Featured Packages
-    text: New and interesting Swift packages curated by the Swift Website Workgroup.
+    text: New and interesting Swift packages, curated by the Swift Website Workgroup.
     link:
       text: Read more
       url: /packages/
