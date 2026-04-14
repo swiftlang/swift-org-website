@@ -26,7 +26,7 @@ jobs:
     container: ruby:3.3
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Build site
         run: bundle install && bundle exec jekyll build --strict_front_matter
 
@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Run OpenAPI Tester
         working-directory: openapi/TestSwiftOrgClient
         env:
