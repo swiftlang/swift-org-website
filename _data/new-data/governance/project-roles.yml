@@ -1,8 +1,8 @@
 title: "Project roles"
-description: "The Swift project defines formal roles and community structures that guide how individiual contributors participate and the overall project operates."
+description: "The Swift project defines formal roles and community structures that guide how individual contributors participate and the overall project operates."
 cards:
   - title: "Contributor roles"
-    content: "Swift's contributor ladder defines the roles you might gain while contributing to Swift on GitHub."
+    content: "Swift's contributor ladder defines the roles you can progress through while contributing on GitHub."
     links:
       - text: "Learn more"
         url: "/contributing/#contributor-ladder"
