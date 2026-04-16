@@ -33,6 +33,7 @@ Basic setup and configuration includes:
 3. Configuring the SourceKit-LSP server.
 4. Setting up Language-Server-driven code completion with _nvim-cmp_.
 5. Setting up snippets with _LuaSnip_.
+5. Setting up the LLDB debugger.
 
 The following sections are provided to help guide you through the setup:
 
@@ -42,12 +43,13 @@ The following sections are provided to help guide you through the setup:
     - [File Updates](#file-updating)
 - [Code Completion](#code-completion)
 - [Snippets](#snippets)
+- [Debugger Support](#debugger-support)
 - [Fully Assembled Configuration Files](#files)
 
 > Tip: If you already have Neovim, Swift, and a package manager installed, you can skip to setting up [Language Server support](#language-server-support).
 
 > Note: If you are bypassing the [Prerequisites](#prerequisites) section, make sure your
-copy of Neovim is version v0.9.4 or higher, or you may experience issues with some
+copy of Neovim is version v0.11 or higher, or you may experience issues with some
 of the Language Server Protocol (LSP) Lua APIs.
 
 ## Prerequisites
@@ -528,6 +530,294 @@ Another popular snippet plugin worth mentioning is
 Python while defining the snippet, allowing you to write some very powerful
 snippets.
 
+## Debugger Support
+
+Neovim does not natively support the [Debug Adapter Protocol](https://microsoft.github.io/debug-adapter-protocol/overview). To enable debugging, we rely on two plugins: 
+- [nvim-dap](https://github.com/mfussenegger/nvim-dap.git) for the protocol client implementation.
+- [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui.git) for the debug UI in neovim.
+
+For the protocol server, we use lldb-dap which is bundled with the Swift toolchain.
+
+### Installation
+Add both plugins to your configuration.
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  -- Will be implemented later.
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+  },
+}
+```
+
+We need to configure three things before debugging works end-to-end:
+- [Register lldb-dap as a debug adapter.](#register-lldb-dap)
+- [Define how Swift debug sessions are started.](#add-swift-debug-session-configurations)
+- [Setup the debug UI.](#setup-the-debug-ui)
+
+###  Register lldb-dap
+We need to tell nvim-dap where to find the lldb-dap executable and how to launch it.
+
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  -- Will be implemented later.
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+        -- Create the lldb-dap adapter.
+        -- This tells the plugin where to find the lldb-dap executable and how to start it.
+      local dap = require("dap")
+      dap.adapters["lldb-dap"] = {
+        type = "executable",
+        name = "lldb-dap",
+        command = find_lldb_dap(),
+        options = {
+          -- Uncomment and set a path to enable lldb-dap logging (useful for bug reports).
+          -- env = { LLDBDAP_LOG = "/path/to/store/lldb-dap.log" },
+        },
+      }
+    end,
+  }
+```
+
+Let's fill in the `find_lldb_dap` helper at the top of the file. It first tries to locate the binary via 
+`xcrun`, then falls back to whatever is in your `${PATH}`.
+
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  -- If you know the path to the lldb-dap binary change the line below.
+  -- return "/path/to/lldb-dap"
+
+  -- macOS: Try lldb-dap with xcrun.
+  local xcrun_result = vim.system({ "xcrun", "--find", "lldb-dap" }, { text = true }):wait()
+  if xcrun_result.code == 0 then
+    local xcrun_dap_path = vim.fn.trim(xcrun_result.stdout)
+    if vim.fn.executable(xcrun_dap_path) then
+      return xcrun_dap_path
+    end
+  end
+
+  -- Fallback the lldb-dap in the ${PATH} environment.
+  if vim.fn.executable("lldb-dap") == 1 then
+    return "lldb-dap"
+  end
+
+  vim.notify("lldb-dap not found, add it to your ${PATH}", vim.log.levels.WARN)
+  return ""
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+    ...
+}
+```
+
+<div class="warning" markdown="1">
+Warning: The lldb-dap binary from the LLVM repository or Linux package managers is most likely not built with Swift support and will be unable to debug Swift binaries. Use the version bundled with the Swift toolchain instead.
+</div>
+
+### Add Swift Debug Session Configurations.
+With the adapter registered, we can define how debug sessions are started. The three configurations below cover the most common workflows: Launching a program, Launching with arguments, and Attaching to a running process. You can add more configurations if needed by your workflow.
+
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  ...
+end
+
+return {
+  ...
+      dap.adapters["lldb-dap"] = {
+        ...
+      },
+
+      -- Add lldb-dap configurations.
+      dap.configurations.swift = {
+        {
+          name = "Launch program",
+          type = "lldb-dap",
+          request = "launch",
+          program = function()
+            return require("dap.utils").pick_file({ executables = true })
+          end,
+          cwd = "${workspaceFolder}",
+        },
+        {
+          name = "Launch program with arguments",
+          type = "lldb-dap",
+          request = "launch",
+          program = function()
+            return require("dap.utils").pick_file({ executables = true })
+          end,
+          cwd = "${workspaceFolder}",
+          args = function()
+            local args_str = vim.fn.input("Arguments: ")
+            return require("dap.utils").splitstr(args_str)
+          end,
+        },
+        {
+          name = "Attach to program",
+          type = "lldb-dap",
+          request = "attach",
+          pid = function()
+            return require("dap.utils").pick_process()
+          end,
+        },
+      }
+  ...
+}
+```
+
+> NOTE: nvim-dap plugin supports additional variables such as `${file}` and `${workspaceFolder}` 
+inside configurations. Run `:help dap-configurations` in Neovim for the full list.
+
+> NOTE: lldb-dap supports additional options such as `env` and `initCommands`. 
+See [lldb-dap's configuration reference](https://lldb.llvm.org/use/lldbdap.html#configuration-settings-reference) for the full list.
+
+### Setup The Debug UI.
+
+#### Automatically show and hide UI panes.
+
+By default, running `:DapContinue` shows no debug panes.
+Hook into the DAP session lifecycle to open the UI when a session starts and close it when it ends.
+
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  ...
+end
+
+return {
+  ...
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    config = function(_, opts)
+      local dap = require("dap")
+      local dapui = require("dapui")
+      dapui.setup(opts)
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open({})
+      end
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close({})
+      end
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close({})
+      end
+    end
+  },
+}
+```
+#### Highlight the current stopped line
+
+Add a sign and highlight group so it is always clear where execution has paused.
+
+```lua
+--- lua/plugins/debug.lua
+    ...
+    "mfussenegger/nvim-dap",
+    config = function()
+      -- highlight the current stopped line
+      vim.api.nvim_set_hl(0, "DapStopped", { default = true, link = "Visual" })
+      vim.fn.sign_define('DapStopped', { linehl = 'DapStopped' })
+    ...
+```
+
+#### Keymaps
+Let's add keyboard shortcuts for debug sessions. Feel free to change the values to your preferred shortcuts.
+
+```lua
+--- lua/plugins/debug.lua
+local function find_lldb_dap()
+  ...
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      ...
+    end,
+    keys = {
+      { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, desc = "Breakpoint Condition" },
+      { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+      { "<leader>dc", function() require("dap").continue() end, desc = "Run/Continue" },
+      { "<leader>dC", function() require("dap").run_to_cursor() end, desc = "Run to Cursor" },
+      { "<leader>dg", function() require("dap").goto_() end, desc = "Go to Line (No Execute)" },
+      { "<leader>di", function() require("dap").step_into() end, desc = "Step Into" },
+      { "<leader>dj", function() require("dap").down() end, desc = "Go Down a Frame" },
+      { "<leader>dk", function() require("dap").up() end, desc = "Go Up a Frame" },
+      { "<leader>dO", function() require("dap").step_out() end, desc = "Step Out" },
+      { "<leader>do", function() require("dap").step_over() end, desc = "Step Over" },
+      { "<leader>dP", function() require("dap").pause() end, desc = "Pause" },
+      { "<leader>dr", function() require("dap").repl.toggle() end, desc = "Toggle REPL" },
+      { "<leader>ds", function() require("dap").session() end, desc = "Session" },
+      { "<leader>dt", function() require("dap").terminate() end, desc = "Terminate" },
+      { "<leader>dh", function() require("dap.ui.widgets").hover() end, desc = "Widgets" },
+    },
+  }
+...
+```
+
+Start a debug session with `<leader>dc` or `:DapContinue`. After selecting a configuration,
+you should have a working debug session. Similar to the screenshot below.
+
+![Debugging swift code in neovim](/assets/images/zero-to-swift-nvim/DAP-debug-session.png)
+
+If you see `[?]` instead of button icons, your font does not support 
+[`codicons`](https://github.com/microsoft/vscode-codicons.git),
+which `nvim-dap` uses by default. Replace them with plain Unicode characters by
+add the the following snippet to the config.
+
+```lua
+-- debug/plugins/debug.lua
+  ...
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    config = function(_, opts)
+      local dap = require("dap")
+      local dapui = require("dapui")
+      local new_opts = opts
+      new_opts = vim.tbl_deep_extend("keep", new_opts, {
+        icons = {
+          expanded = "▾",
+          collapsed = "▸",
+          current_frame = "►",
+        },
+        controls = {
+          icons = {
+            pause = "⏸",
+            play = "▶",
+            step_into = "↓",
+            step_over = "→",
+            step_out = "↑",
+            step_back = "←",
+            run_last = "↺",
+            terminate = "□",
+            disconnect = "×",
+          },
+        },
+      })
+    ...
+    end
+  ...
+```
+
 # Conclusion
 
 Swift development with Neovim is a solid experience once everything is
@@ -761,4 +1051,145 @@ snippet main
       $2
     }
   }$0
+```
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  -- If you know the path to the lldb-dap change the line
+  -- return "/path/to/lldb-dap"
+
+  -- macOS: Try lldb-dap with xcrun.
+  local xcrun_result = vim.system({ "xcrun", "--find", "lldb-dap" }, { text = true }):wait()
+  if xcrun_result.code == 0 then
+    local xcrun_dap_path = vim.fn.trim(xcrun_result.stdout)
+    if vim.fn.executable(xcrun_dap_path) then
+      return xcrun_dap_path
+    end
+  end
+
+  -- Fallback the lldb-dap in the ${PATH} environment.
+  if vim.fn.executable("lldb-dap") == 1 then
+    return "lldb-dap"
+  end
+
+  vim.notify("lldb-dap not found, add it to your PATH environment variable", vim.log.levels.WARN)
+  return ""
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      -- highlight the current stopped line
+      vim.api.nvim_set_hl(0, "DapStopped", { default = true, link = "Visual" })
+      vim.fn.sign_define('DapStopped', { linehl = 'DapStopped' })
+      -- Create the lldb-dap adapter
+      -- This tells the plugin where to find the lldb-dap executable and how to start it.
+      local dap = require("dap")
+      dap.adapters["lldb-dap"] = {
+        type = "executable",
+        name = "lldb-dap",
+        command = find_lldb_dap(),
+        options = {
+          -- Uncomment and set a path to enable lldb-dap logging (useful for bug reports).
+          -- env = { LLDBDAP_LOG = "/path/to/store/lldb-dap.log" },
+        },
+      }
+
+      -- Add a new configuration
+      -- We pass the information to lldb-dap when we launch the debugger
+      -- this tells lldb-dap how to launch our program
+      dap.configurations.swift = {
+        {
+          name = "Launch",
+          type = "lldb-dap",
+          request = "launch",
+          program = function()
+            return require("dap.utils").pick_file({ executables = true })
+          end,
+          cwd = "${workspaceFolder}",
+        },
+        {
+          name = "Launch with arguments",
+          type = "lldb-dap",
+          request = "launch",
+          program = function()
+            return require("dap.utils").pick_file({ executables = true })
+          end,
+          cwd = "${workspaceFolder}",
+          args = function()
+            local args_str = vim.fn.input("Arguments: ")
+            return require("dap.utils").splitstr(args_str)
+          end,
+        },
+        {
+          name = "Attach",
+          type = "lldb-dap",
+          request = "attach",
+          pid = function()
+            return require("dap.utils").pick_process()
+          end,
+        },
+
+      }
+    end,
+    keys = {
+      { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, desc = "Breakpoint Condition" },
+      { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+      { "<leader>dc", function() require("dap").continue() end, desc = "Run/Continue" },
+      { "<leader>dC", function() require("dap").run_to_cursor() end, desc = "Run to Cursor" },
+      { "<leader>dg", function() require("dap").goto_() end, desc = "Go to Line (No Execute)" },
+      { "<leader>di", function() require("dap").step_into() end, desc = "Step Into" },
+      { "<leader>dj", function() require("dap").down() end, desc = "Go Down a Frame" },
+      { "<leader>dk", function() require("dap").up() end, desc = "Go Up a Frame" },
+      { "<leader>dO", function() require("dap").step_out() end, desc = "Step Out" },
+      { "<leader>do", function() require("dap").step_over() end, desc = "Step Over" },
+      { "<leader>dP", function() require("dap").pause() end, desc = "Pause" },
+      { "<leader>dr", function() require("dap").repl.toggle() end, desc = "Toggle REPL" },
+      { "<leader>ds", function() require("dap").session() end, desc = "Session" },
+      { "<leader>dt", function() require("dap").terminate() end, desc = "Terminate" },
+      { "<leader>dh", function() require("dap.ui.widgets").hover() end, desc = "Widgets" },
+    },
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    config = function(_, opts)
+      local dap = require("dap")
+      local dapui = require("dapui")
+      local new_opts = opts
+      -- Remove if your font does supports codicons.
+      new_opts = vim.tbl_deep_extend("keep", new_opts, {
+        icons = {
+          expanded = "▾",
+          collapsed = "▸",
+          current_frame = "►",
+        },
+        controls = {
+          icons = {
+            pause = "⏸",
+            play = "▶",
+            step_into = "↓",
+            step_over = "→",
+            step_out = "↑",
+            step_back = "←",
+            run_last = "↺",
+            terminate = "□",
+            disconnect = "×",
+          },
+        },
+      })
+      dapui.setup(new_opts)
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open({})
+      end
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close({})
+      end
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close({})
+      end
+    end
+  },
+}
 ```
