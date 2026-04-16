@@ -1,6 +1,6 @@
 ---
 layout: new-layouts/base
-title: Governance
+title: How we work
 ---
 
 <div class="get-started governance" id="governance-page">
