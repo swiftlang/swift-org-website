@@ -45,7 +45,7 @@ section3:
   body: "Swift relies on community processes to evolve the language, groups to organize how the project gets work done, and a Code of Conduct that guides everything we do."
   link:
     copy: Read more
-    href: /how-we-work
+    href: /community/how-we-work
 section4:
   headline: Contribute to Swift
   text: "As an open source project, Swift is open to contributions! There are many ways to contribute, including through code and non-code contributions. Here are some ways to get involved:"
