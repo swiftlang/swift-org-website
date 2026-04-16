@@ -4,15 +4,15 @@ cards:
   - title: "Contributor roles"
     content: "Swift's contributor ladder defines the roles you can progress through while contributing on GitHub."
     links:
-      - text: "Learn more"
+      - text: "Read more"
         url: "/contributing/#contributor-ladder"
   - title: "Steering groups"
     content: "Stewards of Swift's strategic vision around core project areas and alignment of technical work."
     links:
-      - text: "Learn more"
+      - text: "Read more"
         url: "/language-steering-group#charter"
   - title: "Core Team"
     content: "Provides leadership and oversight of the Swift community’s workgroups and initiatives."
     links:
-      - text: "Learn more"
+      - text: "Read more"
         url: "https://github.com/swiftlang/project-operations/blob/main/groups/core-team.md"

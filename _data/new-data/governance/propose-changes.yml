@@ -3,7 +3,7 @@ description: ""
 columns: 2
 cards:
   - title: "Contributing to Swift"
-    content: "Everyone is welcome to contribute to Swift.  Learn about best practices for contributing code, as well as non-code contributions like bug reports and blog posts."
+    content: "Everyone is welcome to contribute to Swift. Learn about best practices for contributing code, as well as non-code contributions like bug reports and blog posts."
     links:
       - text: "Contribution Guide"
         url: "/contributing"
