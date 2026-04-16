@@ -14,59 +14,6 @@ title: Community
          <p class="section-text">
             {{ site.data.new-data.community.page-data.text }}
          </p>
-
-         <div class="community-sub-featured">
-            <div class="hero-card-2">
-               {% assign hero_card_2 = site.data.new-data.community.page-data.hero-cards[1] %}
-               {% assign hero_card_2_image = hero_card_2.image %}
-
-               <a href="{{ hero_card_2.link.url }}">
-                  <img
-                     class="community-featured-hero-card-image with-zoom hide-dark"
-                     src="{{ hero_card_2_image.light }}"
-                     alt="{{ hero_card_2.alt }}"
-                  />
-                  <img
-                     class="community-featured-hero-card-image with-zoom hide-light"
-                     src="{{ hero_card_2_image.dark }}"
-                     alt="{{ hero_card_2.alt }}"
-                  />
-               </a>
-
-               <h3 class="community-sub-featured-grid-headline">
-                  {{ hero_card_2.label }}
-               </h3>
-               <p class="body-copy">{{ hero_card_2.text | strip_html}}</p>
-               <a class="card-link" href="{{ hero_card_2.link.url }}">
-                  <p class="card-cta">{{hero_card_2.link.text}}</p>
-               </a>
-            </div>
-            <div class="hero-card-3">
-               {% assign hero_card_3 = site.data.new-data.community.page-data.hero-cards[2] %}
-               {% assign hero_card_3_image = hero_card_3.image %}
-
-               <a href="{{ hero_card_3.link.url }}">
-                  <img
-                     class="community-featured-hero-card-image with-zoom hide-dark"
-                     src="{{ hero_card_3_image.light }}"
-                     alt="{{ hero_card_3.alt }}"
-                  />
-                  <img
-                     class="community-featured-hero-card-image with-zoom hide-light"
-                     src="{{ hero_card_3_image.dark }}"
-                     alt="{{ hero_card_3.alt }}"
-                  />
-               </a>
-
-               <h3 class="community-sub-featured-grid-headline">
-                  {{ hero_card_3.label }}
-               </h3>
-               <p class="body-copy">{{ hero_card_3.text | strip_html}}</p>
-               <a class="card-link" href="{{ hero_card_3.link.url }}">
-                  <p class="card-cta">{{hero_card_3.link.text}}</p>
-               </a>
-            </div>
-         </div>
       </div>
    </div>
    <div class="section community-section-grid">
