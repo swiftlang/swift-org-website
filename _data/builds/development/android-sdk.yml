@@ -1,3 +1,9 @@
+- checksum: 844cf766db5dbd6991c21ea45b314926b6abf04ad034b6ff488d9c85329f2231
+  date: 2026-04-17 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-04-17-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-04-17-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-04-17-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
 - checksum: daa28c02b3ce0ae6d28b34680849add4a1a4e6d085eeb65266737c9a6b665e0a
   date: 2026-04-01 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2026-04-01-a
