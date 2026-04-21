@@ -19,14 +19,18 @@ A core principle for the Swift project is that the community is an open and incl
 
 - In order to fight certain kinds of automated spam and abuse, the [Swift forums software](https://www.discourse.org) limits what brand new users can do.  These limits will be automatically lifted as you spend time on the forums.  Please read the [Discourse documentation about trust levels](https://blog.discourse.org/2018/06/understanding-discourse-trust-levels/) for more information.
 
-- Some community members with very high trust levels gain the ability to make certain changes to other people's posts, such as moving the thread to different category, adding or removing tags, and even editing the thread title.  Community members should use these powers conscientiously.
+- Some community members with very high trust levels gain the ability to make certain changes to other people's posts, such as moving the thread to a different category, adding or removing tags, and even editing the thread title.  Community members should use these powers conscientiously.
 
   - Threads should only be moved when they are clearly in the wrong category: for example, if a thread asking for help understanding a compiler diagnostic is in Development&nbsp;>&nbsp;Compiler instead of Using Swift.
 
-  - Threads should only be retitled if the current title is excessively vague or inflammatory: for example, changing "What is going on?" to "How does optional chaining interact with actor isolation?", or removing charged words like "insane".
+  - Threads should only be retitled when doing so would fix a significant problem, such as:
+    - ensuring the title states the actual subject of the thread, for example by changing "What is going on here?" to "How does optional chaining interact with actor isolation?";
+    - fixing typos or similar mistakes in the title, for example by changing "error sharing a `Span`" to "error sharing a `MutableSpan`"; or
+    - making the title less inflammatory or argumentative, for example by removing charged words like "ridiculous".
 
-  Close cases should be left to the moderators. If you feel that someone has used these powers inappropriately on one of your posts, please contact the `@moderators` group.
+  Close cases should be left to the moderators, especially when editing titles, as this can be seen as putting words in someone else's mouth. Do not alter posts from people you've recently argued with or you have a poor relationship with. If you feel that someone has used any of these powers inappropriately on one of your posts, please contact the `@moderators` group.
 
+- Forum moderators are responsible for keeping forum discussions productive, on-topic, and well-organized. In addition to what high-trust users can do, moderators can, as needed, perform additional forum housekeeping, such as closing threads, moving posts between threads, or splitting threads when discussions go in different directions. If you would like to request this, please contact the `@moderators` group.
 
 ### Announcements
 [Announcements]: #announcements
