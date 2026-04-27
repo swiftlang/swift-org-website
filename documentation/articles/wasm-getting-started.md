@@ -124,7 +124,7 @@ This section shows you how to configure your development environment for Swift W
 
 ### Visual Studio Code
 
-If you haven't set up VSCode for Swift development yet, see the [Configuring VS Code for Swift Development guide](/documentation/articles/getting-started-with-vscode-swift/).
+If you haven't set up VSCode for Swift development yet, see the [Configuring VS Code for Swift Development guide](/documentation/articles/getting-started-with-vscode-swift.html).
 
 **Configure VSCode for WebAssembly:**
 
@@ -169,5 +169,5 @@ For other editors (Vim, Neovim, Emacs, etc.) with LSP support already configured
    Replace `{{ tag }}_wasm` with your Swift SDK ID from `swift sdk list`. Use `{{ tag }}_wasm-embedded` for Embedded Swift.
 
 For initial Swift LSP setup guides, see:
-- [Zero to Swift with Neovim](/documentation/articles/zero-to-swift-nvim/)
-- [Zero to Swift with Emacs](/documentation/articles/zero-to-swift-emacs/)
+- [Zero to Swift with Neovim](/documentation/articles/zero-to-swift-nvim.html)
+- [Zero to Swift with Emacs](/documentation/articles/zero-to-swift-emacs.html)
