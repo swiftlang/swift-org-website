@@ -30,7 +30,8 @@ Cross-compilation for Android requires installing three separate components:
 {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Android SDK'| first %}
 {% assign tag = site.data.builds.swift_releases.last.tag %}
 {% assign version = site.data.builds.swift_releases.last.name %}
-{% assign sdk_snapshot_tag = site.data.builds.development.android-sdk.last.tag %}
+{% assign previous_releases = site.data.builds.swift_releases | offset:1 %}
+{% assign previous_sdk_name = previous_releases.last.name | append: "_android" %}
 {% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
 {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/android-sdk/" | append: tag | append: "/" | append: tag %}
 {% assign command = "swift sdk install " | append: base_url | append: "_android" | append: ".artifactbundle.tar.gz --checksum " | append: platform.checksum %}
@@ -79,7 +80,7 @@ $ swift sdk list
 Make sure to remove any old Android SDKs you have installed:
 
 ```console
-$ swift sdk remove {{sdk_snapshot_tag}}_android
+$ swift sdk remove {{previous_sdk_name}}
 ```
 
 #### 3. Install and configure the Android NDK
