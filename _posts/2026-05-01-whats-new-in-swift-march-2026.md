@@ -3,7 +3,7 @@ layout: new-layouts/post
 published: true
 date: 2026-05-01 10:30:00
 title: "What's new in Swift: April 2026 Edition"
-author: [adamfowler, davelester]
+author: [adam-fowler, davelester]
 category: "Digest"
 ---
 
