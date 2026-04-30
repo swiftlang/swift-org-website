@@ -11,7 +11,17 @@ Welcome to "What's new in Swift," a curated digest of releases, videos, and disc
 
 The 1.0 release of valkey-swift was recently announced on the Valkey blog. We've invited one of the authors to be this month's guest contributor:
 
-> Will insert a guest contribution written by Adam Fowler.
+> Hi, I'm Adam Fowler an open source developer working in the swift on server ecosystem. I am excited to announce the 1.0 release of [valkey-swift](https://github.com/valkey-io/valkey-swift) - a production-grade Swift client for [Valkey](https://valkey.io).
+>
+> Valkey is a high performance datastore commonly used as a caching layer or message broker in server applications. It is an open source fork of Redis. 
+> 
+> Valkey-swift is a client library targeted at Valkey servers but is equally capable of working with Redis. It is built from the ground up with Swift 6 and structured concurrency. Every Valkey command returns typed responses checked at compile time, and strict concurrency checking is enabled throughout so that data races are caught by the compiler, not in production. Connection and subscriptions are all scoped through structured concurrency, so resources clean up automatically.
+> 
+> The client covers every standard Valkey command, auto-generated from Valkey's own command specifications to stay in sync as the server evolves. 
+> 
+> Previously the de-facto client library for Redis was RediStack. But it was built on top of pre-concurrency concepts, retro-fitting structured concurrency would have been awkward and some of the new features in valkey-swift infeasible. Also at the same time Redis changed its licensing structure and the open source fork Valkey was created. So it felt a good time to make a break and build a new library.
+> 
+> If you're building server-side Swift and need a fast key-value store, add valkey-swift via Swift Package Manager and you're ready to go. If you are using RediStack to connect with a Redis server we have a [guide](https://swiftpackageindex.com/valkey-io/valkey-swift/1.3.0/documentation/valkey/migrating-from-redistack) to help you migrate to valkey-swift. Complete [documentation is available](https://swiftpackageindex.com/valkey-io/valkey-swift/documentation/valkey), and contributions are welcome on [GitHub](https://github.com/valkey-io/valkey-swift).
 
 Now on to other news about Swift:
 
