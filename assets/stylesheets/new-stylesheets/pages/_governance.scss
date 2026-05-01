@@ -15,7 +15,7 @@ div.get-started.governance::before {
 .governance {
   // Reset any inherited backgrounds
   background: none;
-  
+
   #get-started-hero {
     // Apply pillar-1 style background gradient to hero only
     background-image: var(--governance-hero-bg);
@@ -24,22 +24,22 @@ div.get-started.governance::before {
     // Extended padding to allow gradient to reach Workgroups section
     padding-bottom: 1200px;
     margin-bottom: -1130px;
-    
+
     // Noise texture overlay for hero only - dark mode only
     &::before {
       content: none;
       display: none;
     }
-    
+
     .hero-content {
       position: relative;
       z-index: 2;
-      
+
       h1 {
         // Dark text in light mode (default)
         color: #051416 !important;
       }
-      
+
       > p {
         font-size: 17px;
         font-weight: 400;
@@ -47,7 +47,7 @@ div.get-started.governance::before {
         color: #051416 !important;
       }
     }
-    
+
     // Governance swoosh styling - positioned at the top right, flush with viewport edge
     .governance-swoop {
       z-index: 3;
@@ -57,18 +57,18 @@ div.get-started.governance::before {
       background-repeat: no-repeat;
       display: block;
       position: absolute;
-      top: 0;
+      top: -46px;
       left: auto;
       right: calc(-1 * (100vw - 100%) / 2);
       width: 100vw;
       height: 350px;
       pointer-events: none;
-      
+
       // Scale up on larger viewports
       @media only screen and (min-width: 1200px) {
         height: 450px;
       }
-      
+
       @media only screen and (min-width: 1600px) {
         height: 550px;
       }
@@ -94,12 +94,12 @@ body[data-color-scheme='dark'] {
         z-index: 1;
         pointer-events: none;
       }
-      
+
       .hero-content {
         h1 {
           color: #ffffff !important;
         }
-        
+
         > p {
           color: #ffffff !important;
         }
