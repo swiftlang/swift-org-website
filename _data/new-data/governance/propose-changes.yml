@@ -13,4 +13,4 @@ cards:
       - text: "Evolution Process"
         url: "https://github.com/swiftlang/swift-evolution/blob/main/process.md#swift-evolution-process"
       - text: "Proposal Dashboard"
-        url: "https://www.swift.org/swift-evolution/"
+        url: "/swift-evolution"
