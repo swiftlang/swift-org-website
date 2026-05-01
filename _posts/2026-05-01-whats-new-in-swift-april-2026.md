@@ -33,7 +33,7 @@ Now on to other news about Swift:
 * Nil Coalescing published a new video on some of the lesser known options for working with optionals in [Advanced Techniques for Working with Optionals in Swift](https://www.youtube.com/watch?v=qgDIOrKnmuw).
 
 ## New package releases
-* [IndustrialKit](https://github.com/MalkarovPark/IndustrialKit) is a framework for designing, programing, and controlling robotic systems that was recently [discussed on the Swift forums](https://forums.swift.org/t/industrialkit-a-swift-framework-for-design-and-control-of-robotic-means-of-production/86168).
+* [IndustrialKit](https://github.com/MalkarovPark/IndustrialKit) is a framework for designing, programming, and controlling robotic systems that was recently [discussed on the Swift forums](https://forums.swift.org/t/industrialkit-a-swift-framework-for-design-and-control-of-robotic-means-of-production/86168).
 * [swift-tar](https://forums.swift.org/t/swift-tar-a-pure-swift-tar-archive-read-write-extract-library/85844) is a pure Swift library for reading, writing, and extracting TAR archives. swift-tar is cross-platform, works without requiring any system framework or Foundation, and supports GNU & PAX extensions.
 * [Xylem](https://github.com/compnerd/xylem) is a pure Swift XML parser with zero dependencies, covering SAX, DOM, and XPath 1.0.
 
