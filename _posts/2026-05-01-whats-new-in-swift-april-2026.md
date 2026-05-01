@@ -11,7 +11,7 @@ Welcome to "What's new in Swift," a curated digest of releases, videos, and disc
 
 The 1.0 release of valkey-swift was recently [announced on the Valkey blog](https://valkey.io/blog/valkey-swift-1.0/). We've invited one of the authors to be this month's guest contributor:
 
-> Hi, I'm Adam Fowler, an open source developer working in the swift on server ecosystem. I am excited to announce the 1.0 release of [valkey-swift](https://github.com/valkey-io/valkey-swift) - a production-grade Swift client for [Valkey](https://valkey.io).
+> Hi, I'm Adam Fowler, an open source developer working in the Swift on server ecosystem. I am excited to announce the 1.0 release of [valkey-swift](https://github.com/valkey-io/valkey-swift) - a production-grade Swift client for [Valkey](https://valkey.io).
 >
 > Valkey is a high-performance datastore commonly used as a caching layer or message broker in server applications. It is an open source fork of Redis. 
 > 
