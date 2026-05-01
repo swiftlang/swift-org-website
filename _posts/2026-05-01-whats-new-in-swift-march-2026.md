@@ -35,7 +35,7 @@ Now on to other news about Swift:
 ## New package releases
 * [IndustrialKit](https://github.com/MalkarovPark/IndustrialKit) is a framework for building to design, program, and control robotic systems that was recently [discussed on the Swift forums](https://forums.swift.org/t/industrialkit-a-swift-framework-for-design-and-control-of-robotic-means-of-production/86168).
 * [swift-tar](https://forums.swift.org/t/swift-tar-a-pure-swift-tar-archive-read-write-extract-library/85844) is a pure Swift library for reading, writing, and extracting TAR archives. swift-tar is cross-platform, works without requiring any system framework or Foundation, and supports GNU & PAX extensions.
-* [Xylem](https://github.com/compnerd/xylem) is pure Swift XML parser with zero dependencies, covering SAX, DOM, and XPath 1.0.
+* [Xylem](https://github.com/compnerd/xylem) is a pure Swift XML parser with zero dependencies, covering SAX, DOM, and XPath 1.0.
 
 ## Swift Evolution
 The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
