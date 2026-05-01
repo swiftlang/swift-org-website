@@ -9,7 +9,7 @@ category: "Digest"
 
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
 
-The 1.0 release of valkey-swift was recently announced on the Valkey blog. We've invited one of the authors to be this month's guest contributor:
+The 1.0 release of valkey-swift was recently [announced on the Valkey blog](https://valkey.io/blog/valkey-swift-1.0/). We've invited one of the authors to be this month's guest contributor:
 
 > Hi, I'm Adam Fowler, an open source developer working in the swift on server ecosystem. I am excited to announce the 1.0 release of [valkey-swift](https://github.com/valkey-io/valkey-swift) - a production-grade Swift client for [Valkey](https://valkey.io).
 >
