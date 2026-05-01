@@ -15,7 +15,7 @@ The 1.0 release of valkey-swift was recently announced on the Valkey blog. We've
 >
 > Valkey is a high-performance datastore commonly used as a caching layer or message broker in server applications. It is an open source fork of Redis. 
 > 
-> Valkey-swift is a client library targeted at Valkey servers but is equally capable of working with Redis. It is built from the ground up with Swift 6 and structured concurrency. Every Valkey command returns typed responses checked at compile time, and strict concurrency checking is enabled throughout so that data races are caught by the compiler, not in production. Connection and subscriptions are all scoped through structured concurrency, so resources clean up automatically.
+> Valkey-swift is a client library targeted at Valkey servers but is equally capable of working with Redis. It is built from the ground up with Swift 6 and structured concurrency. Every Valkey command returns typed responses checked at compile time, and strict concurrency checking is enabled throughout so that data races are caught by the compiler, not in production. Connections and subscriptions are all scoped through structured concurrency, so resources clean up automatically.
 > 
 > The client covers every standard Valkey command, auto-generated from Valkey's own command specifications to stay in sync as the server evolves. 
 > 
