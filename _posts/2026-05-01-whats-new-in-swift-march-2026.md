@@ -21,7 +21,7 @@ The 1.0 release of valkey-swift was recently announced on the Valkey blog. We've
 > 
 > Previously, the de facto client library for Redis was RediStack, which was built on top of pre-concurrency concepts. Retrofitting structured concurrency would have been awkward and some of the new features in valkey-swift infeasible. Around the same time Redis changed its licensing structure and the open source fork Valkey was created. So it felt like a good time to make a clean break and build a new library.
 > 
-> If you're building server-side Swift and need a fast key-value store, add valkey-swift via Swift Package Manager and you're ready to go. If you are using RediStack to connect with a Redis server we have a [guide](https://swiftpackageindex.com/valkey-io/valkey-swift/1.3.0/documentation/valkey/migrating-from-redistack) to help you migrate to valkey-swift. Complete [documentation is available](https://swiftpackageindex.com/valkey-io/valkey-swift/documentation/valkey), and contributions are welcome on [GitHub](https://github.com/valkey-io/valkey-swift).
+> If you're building server-side Swift and need a fast key-value store, add valkey-swift via Swift Package Manager, and you're ready to go. If you are using RediStack to connect with a Redis server, we have a [guide](https://swiftpackageindex.com/valkey-io/valkey-swift/1.3.0/documentation/valkey/migrating-from-redistack) to help you migrate to valkey-swift. Complete [documentation is available](https://swiftpackageindex.com/valkey-io/valkey-swift/documentation/valkey), and contributions are welcome on [GitHub](https://github.com/valkey-io/valkey-swift).
 
 Now on to other news about Swift:
 
