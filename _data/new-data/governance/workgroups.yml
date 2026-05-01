@@ -10,7 +10,7 @@ cards:
     content: "Focused on building a great build and packaging experience for the Swift community."
     links:
       - text: "Read more"
-        url: "/android-workgroup"
+        url: "/build-and-packaging-workgroup/"
   - title: "C++ Interoperability"
     content: "Adding support for bidirectional interoperability between Swift and C++."
     links:
