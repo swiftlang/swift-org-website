@@ -1391,7 +1391,6 @@ let unOwned = getUnOwnedObject()
 unOwned.doSomething()
 ```
 
-Note that the Swift compiler will automatically infer the ownership conventons for Swift functions returning `SWIFT_SHARED_REFERENCE` types.
 See [Exposing C++ Shared Reference Types back from Swift](#exposing-c-shared-reference-types-back-from-swift) for calling Swift functions returning `SWIFT_SHARED_REFERENCE` types from C++.
 
 #### Calling conventions when passing Shared Reference Types from Swift to C++
