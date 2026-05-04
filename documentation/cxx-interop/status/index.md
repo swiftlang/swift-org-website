@@ -189,7 +189,7 @@ type of such data member is supported in Swift.
 
 The following C++ standard library types are supported in Swift:
 
-- `std::string`, `std::u16string`, `std::u32string`
+- `std::string`, `std::u16string`, `std::u32string`, `std::string_view`
 - Specializations of `std::pair`
 - Specializations of `std::vector`
 - Specializations of `std::map` and `std::unordered_map`
