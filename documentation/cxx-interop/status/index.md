@@ -199,10 +199,11 @@ The following C++ standard library types are supported in Swift:
 - Specializations of `std::shared_ptr`
 - Specializations of `std::unique_ptr`
 - Specializations of `std::array`
+- Specializations of `std::function`
 - `std::chrono::seconds`, `std::chrono::milliseconds`, `std::chrono::microseconds` and `std::chrono::nanoseconds`
 
-Other standard library types, like `std::function` and `std::variant`, are not
-yet supported in Swift.
+Other standard library types, like `std::tuple` and `std::variant`, are not
+yet fully supported in Swift.
 
 ### Other C++ Features Handled by Swift
 
