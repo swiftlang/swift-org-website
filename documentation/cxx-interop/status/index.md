@@ -190,15 +190,11 @@ type of such data member is supported in Swift.
 The following C++ standard library types are supported in Swift:
 
 - `std::string`, `std::u16string`, `std::u32string`, `std::string_view`
-- Specializations of `std::pair`
-- Specializations of `std::vector`
+- Specializations of `std::pair` and `std::optional`
+- Specializations of `std::vector`, `std::array`, and `std::span`
 - Specializations of `std::map`, `std::unordered_map` and `std::multimap`
 - Specializations of `std::set`, `std::unordered_set` and `std::multiset`
-- Specializations of `std::optional`
-- Specializations of `std::span`
-- Specializations of `std::shared_ptr`
-- Specializations of `std::unique_ptr`
-- Specializations of `std::array`
+- Specializations of `std::shared_ptr` and `std::unique_ptr`
 - Specializations of `std::function`
 - `std::chrono::seconds`, `std::chrono::milliseconds`, `std::chrono::microseconds` and `std::chrono::nanoseconds`
 
