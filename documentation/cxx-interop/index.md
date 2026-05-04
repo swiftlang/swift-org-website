@@ -1233,10 +1233,9 @@ let vector = createCxxVectorOfInt()
 takesVectorType(vector) // 'vector' is copied here.
 ```
 
-Swift's upcoming
-[parameter ownership modifiers](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md),
-which will be provided in an upcoming Swift release, will let you avoid copies
-when passing immutable values to functions. Mutable values can be passed
+Swift's
+[parameter ownership modifiers](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md)
+let you avoid copies when passing immutable values to functions. Mutable values can be passed
 by `inout` to a Swift function, which lets you avoid a deep copy of
 the C++ container:
 
@@ -2187,6 +2186,8 @@ that are outlined in the documentation above.
 | `SWIFT_NONCOPYABLE` | [C++ Structures and Classes are Value Types by Default](#c-structures-and-classes-are-value-types-by-default) |
 | `SWIFT_SELF_CONTAINED` | [Annotating C++ Structures or Classes as Self Contained](#annotating-c-structures-or-classes-as-self-contained) |
 | `SWIFT_PRIVATE_FILEID` | [Accessing Private C++ Members in Swift](#accessing-private-c-members-in-swift) |
+| `SWIFT_RETURNS_RETAINED` | [Calling conventions when returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
+| `SWIFT_RETURNS_UNRETAINED` | [Calling conventions when returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
 
 ## Document Revision History
 
