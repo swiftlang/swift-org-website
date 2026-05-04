@@ -192,8 +192,8 @@ The following C++ standard library types are supported in Swift:
 - `std::string`, `std::u16string`, `std::u32string`, `std::string_view`
 - Specializations of `std::pair`
 - Specializations of `std::vector`
-- Specializations of `std::map` and `std::unordered_map`
-- Specializations of `std::set`, `std::multiset` and `std::unordered_set`
+- Specializations of `std::map`, `std::unordered_map` and `std::multimap`
+- Specializations of `std::set`, `std::unordered_set` and `std::multiset`
 - Specializations of `std::optional`
 - Specializations of `std::shared_ptr`
 - Specializations of `std::unique_ptr`
