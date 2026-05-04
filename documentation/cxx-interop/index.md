@@ -1391,6 +1391,25 @@ let unOwned = getUnOwnedObject()
 unOwned.doSomething()
 ```
 
+Calling a function that returns a shared reference without a known ownership convention is memory unsafe and will eventually be treated as an error.
+
+Shared reference types that are always returned as unretained can be annotated with `SWIFT_RETURNED_AS_UNRETAINED_BY_DEFAULT`. When this annotation is present, functions without explicit return ownership annotations are treated as if they were annotated with `SWIFT_RETURNS_RETAINED`:
+
+```c++
+class CallerRetainedObject : IntrusiveReferenceCounted<CallerRetainedObject> {
+    ...
+} SWIFT_SHARED_REFERENCE(retainCallerRetainedObject, releaseCallerRetainedObject)
+  SWIFT_RETURNED_AS_UNRETAINED_BY_DEFAULT;
+
+// Returns +0 ownership.
+CallerRetainedObject* _Nonnull getCallerRetainedObject();
+
+// Returns +1 ownership.
+CallerRetainedObject* _Nonnull makeCallerRetainedObject() SWIFT_RETURNS_RETAINED;
+```
+
+Note that there is not an equivalent annotation for objects that are returned as retained by default.
+
 See [Exposing C++ Shared Reference Types back from Swift](#exposing-c-shared-reference-types-back-from-swift) for calling Swift functions returning `SWIFT_SHARED_REFERENCE` types from C++.
 
 #### Calling conventions when passing Shared Reference Types from Swift to C++
@@ -2187,6 +2206,7 @@ that are outlined in the documentation above.
 | `SWIFT_PRIVATE_FILEID` | [Accessing Private C++ Members in Swift](#accessing-private-c-members-in-swift) |
 | `SWIFT_RETURNS_RETAINED` | [Calling conventions when returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
 | `SWIFT_RETURNS_UNRETAINED` | [Calling conventions when returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
+| `SWIFT_RETURNED_AS_UNRETAINED_BY_DEFAULT` | [Calling conventions when returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
 
 ## Document Revision History
 
