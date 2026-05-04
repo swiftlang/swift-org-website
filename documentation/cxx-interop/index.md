@@ -2207,6 +2207,9 @@ that are outlined in the documentation above.
 | `SWIFT_RETURNS_RETAINED` | [Calling conventions when returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
 | `SWIFT_RETURNS_UNRETAINED` | [Calling conventions when returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
 | `SWIFT_RETURNED_AS_UNRETAINED_BY_DEFAULT` | [Calling conventions when returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
+| `SWIFT_NONESCAPABLE` | [(Safely Mixing Swift and C/C++) Escapability Annotations in Detail](safe-interop#escapability-annotations-in-detail) |
+| `SWIFT_ESCAPABLE` | [(Safely Mixing Swift and C/C++) Escapability Annotations in Detail](safe-interop#escapability-annotations-in-detail) |
+| `SWIFT_ESCAPABLE_IF` | [(Safely Mixing Swift and C/C++) Escapability Annotations in Detail](safe-interop#escapability-annotations-in-detail) |
 
 ## Document Revision History
 
