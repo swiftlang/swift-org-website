@@ -1376,7 +1376,7 @@ These annotations tell the Swift compiler whether the type is returned as `+1` (
 SharedObject* _Nonnull makeOwnedObject() SWIFT_RETURNS_RETAINED;
 
 // Returns +0 ownership.
-SharedObject* _Nonnull getUnOwnedObject() SWIFT_RETURNS_UNRETAINED;
+SharedObject* _Nonnull getUnownedObject() SWIFT_RETURNS_UNRETAINED;
 ```
 
 These annotations are necessary to ensure that appropriate `retain`/`release` operations are inserted at the boundary:
@@ -1386,9 +1386,9 @@ let owned = makeOwnedObject()
 owned.doSomething()
 // `owned` is already at +1, so no further retain is needed here
 
-let unOwned = getUnOwnedObject()
+let unowned = getUnownedObject()
 // Swift inserts a retain operation on `unowned` here to bring it to +1.
-unOwned.doSomething()
+unowned.doSomething()
 ```
 
 Calling a function that returns a shared reference without a known ownership convention is memory unsafe and will eventually be treated as an error.
