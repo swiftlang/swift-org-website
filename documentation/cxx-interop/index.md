@@ -562,12 +562,6 @@ struct Fern {
 }
 ```
 
-The exact rules that determine when members from inherited base types
-are introduced to the Swift type that represents the C++ structure or class
-are not yet finalized in Swift 5.9. The following
-[GitHub issue](https://github.com/swiftlang/swift/issues/66323)
-tracks their finalization in Swift 5.9.
-
 ### Using C++ Enumerations
 
 Scoped C++ enumerations become Swift enumerations with raw values.
