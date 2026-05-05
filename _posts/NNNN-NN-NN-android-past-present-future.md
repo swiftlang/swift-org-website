@@ -7,7 +7,7 @@ author: [marcprux]
 category: "Developer Tools"
 ---
 
-The [Swift 6.3 release][swift63] in March 2026 marked the arrival of an officially supported Swift SDK for Android.[^swift63android] Together with macOS, iOS, Linux, and Windows, the addition of Android finally brings Swift platform support to every major consumer-facing operating system.The [Swift 6.3 release][swift63] in March 2026 marked the arrival of an officially supported Swift SDK for Android.[^swift63android] Together with macOS, iOS, Linux, and Windows, the addition of Android finally brings Swift platform support to every major consumer-facing operating system.
+The [Swift 6.3 release][swift63] in March 2026 marked the arrival of an officially supported Swift SDK for Android.[^swift63android] Together with macOS, iOS, Linux, and Windows, the addition of Android finally brings Swift platform support to every major consumer-facing operating system.
 
 Reactions to this development on various internet forums tended to be of the variety: "Swift for Android wasn't on my 2026 bingo card!" And yet, Swift/Android integration work is by no means a recent endeavor. It is the outcome of more than a decade of community experimentation and tinkering that has gradually coalesced into a single unified and focused effort.
 
