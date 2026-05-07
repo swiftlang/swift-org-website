@@ -53,7 +53,7 @@ function initializeCopyButtons() {
       event.preventDefault();
 
       const rawText = codeElement.innerText.trim();
-      const separatorIndex = rawText.search(/^\s*--\s*$/m);
+      const separatorIndex = rawText.search(/\n\s*--\s*(?:\n|$)/);
       const clipboardText = separatorIndex >= 0 ? rawText.slice(0, separatorIndex).trim() : rawText;
 
       try {

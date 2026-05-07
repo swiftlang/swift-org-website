@@ -88,23 +88,53 @@ layout: source
       })
     }
 
-    if (navigator && navigator.clipboard) {
-      const copyCodeButtons = document.querySelectorAll('[class^="language-"] button');
+    function initializeCopyButtons() {
+      if (!(navigator && navigator.clipboard)) {
+        return;
+      }
 
-      copyCodeButtons.forEach(function(button) {
-        const codeElement = button.parentElement.querySelector('code');
-        const originalText = button.innerText;
+      const copyIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>';
+      const copiedIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>';
 
-        button.addEventListener('mousedown', async function() {
-          await navigator.clipboard.writeText(codeElement.innerText);
+      document.querySelectorAll('pre:not(.no-copy)').forEach(function(pre) {
+        if (pre.querySelector('.copy-button')) {
+          return;
+        }
 
-          button.innerText = 'Copied!';
+        const codeElement = pre.querySelector('code') || pre;
+        const button = document.createElement('button');
 
-          setTimeout(() => {
-            button.innerText = originalText;
-          }, 1000);
+        button.type = 'button';
+        button.className = 'copy-button';
+        button.setAttribute('aria-label', 'Copy code');
+        button.title = 'Copy code';
+        button.innerHTML = copyIcon;
+        pre.appendChild(button);
+
+        button.addEventListener('click', async function(event) {
+          event.preventDefault();
+
+          const rawText = codeElement.innerText.trim();
+          const separatorIndex = rawText.search(/\n\s*--\s*(?:\n|$)/);
+          const clipboardText = separatorIndex >= 0 ? rawText.slice(0, separatorIndex).trim() : rawText;
+
+          try {
+            await navigator.clipboard.writeText(clipboardText);
+
+            button.classList.add('copied');
+            button.innerHTML = copiedIcon;
+
+            setTimeout(() => {
+              button.classList.remove('copied');
+              button.innerHTML = copyIcon;
+            }, 1200);
+          } catch (err) {
+            console.error('Failed to copy text: ', err);
+          }
         });
       });
     }
+
+    initializeCopyButtons();
   });
 })();
