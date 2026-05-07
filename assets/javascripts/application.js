@@ -1,7 +1,3 @@
----
-layout: source
----
-
 (function () {
   var navbarElement = document.querySelectorAll('nav[role="navigation"] > .list-items > ul li.active ul li a');
   var headerElement = document.querySelectorAll('nav[role="navigation"] > .list-items > ul li.active ul li');
