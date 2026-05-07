@@ -51,8 +51,13 @@ function initializeCopyButtons() {
 
     button.addEventListener('click', async (event) => {
       event.preventDefault();
+
+      const rawText = codeElement.innerText.trim();
+      const separatorIndex = rawText.search(/^\s*--\s*$/m);
+      const clipboardText = separatorIndex >= 0 ? rawText.slice(0, separatorIndex).trim() : rawText;
+
       try {
-        await navigator.clipboard.writeText(codeElement.innerText.trim());
+        await navigator.clipboard.writeText(clipboardText);
 
         button.classList.add('copied');
         button.innerHTML = copiedIcon;
@@ -67,6 +72,7 @@ function initializeCopyButtons() {
     });
   });
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const sectionToggles = document.querySelectorAll('.section-toggle')
