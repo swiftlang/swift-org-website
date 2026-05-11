@@ -332,7 +332,8 @@
                 .community-section-links li {
                     flex: 1 !important;
                     width: auto !important;
-                    padding: 16px 0 !important;
+                    height: 50px !important;
+                    padding: 0 !important;
                     justify-content: center !important;
                 }
 
@@ -354,6 +355,7 @@
                 }
 
                 .link-card-image {
+                    height: 25px !important;
                     margin-bottom: 0 !important;
                 }
 
