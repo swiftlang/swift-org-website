@@ -11,23 +11,23 @@ If the mentee has not contributed to the project before, they will first work wi
 
 ## Current Program
 
-### 2025 Timeline
+### 2026 Timeline
 
-| Date             | Event                            |
-|:-----------------|:---------------------------------|
-| **June 2**       |  Mentor Interest surveys open    |
-| **June 16**      |  Mentor Interest survey deadline |
-| **June 23**      |  Mentee Interest surveys open    |
-| **June 30**      |  Mentee Interest survey deadline |
-| **July 14**      |  Mentorship pairings announced   |
-| **July 21**      |  10-week cohort begins           |
-| **August 25**    |  Halfway checkpoint              |
-| **September 26** |  10-week cohort ends             |
-| **October 6**    |  Feedback deadline               |
+| Date             | Event                               |
+|:-----------------|:---------------------------------   |
+| **May 18th**       |  Mentor Interest surveys open     |
+| **June 1st**       |  Mentor Interest survey deadline  |
+| **June 8th**       |  Mentee Interest surveys open     |
+| **June 15th**      |  Mentee Interest survey deadline  |
+| **June 29th**      |  Mentorship pairings announced    |
+| **July 6th**       |  10-week cohort begins            |
+| **August 10th**    |  Halfway checkpoint               |
+| **September 11th** |  10-week cohort ends              |
+| **September 18th** |  Feedback deadline                |
 
 ### Participation
 
-The 2025 interest survey submissions will be open in accordance with the above timeline. If you are interested in participating as:
+The 2026 interest survey submissions will be open in accordance with the above timeline. If you are interested in participating as:
 
 * A mentor, please fill out the interest survey [here][mentor survey].
 * A mentee, please fill out the interest survey [here][mentee survey].
