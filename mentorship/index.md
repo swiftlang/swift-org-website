@@ -32,8 +32,8 @@ The 2026 interest survey submissions will be open in accordance with the above t
 * A mentor, please fill out the interest survey [here][mentor survey].
 * A mentee, please fill out the interest survey [here][mentee survey].
 
-[mentor survey]: https://essentials.applesurveys.com/jfe/form/SV_0UuJQKrOLDnui7I
-[mentee survey]: https://essentials.applesurveys.com/jfe/form/SV_55Z5pywWOkKTnZY
+[mentor survey]: https://essentials.applesurveys.com/jfe/form/SV_3K59vexOcyZXP4G
+[mentee survey]: https://essentials.applesurveys.com/jfe/form/SV_0iAf6ULvMqY3EJU
 
 The mentee interest survey is not an application; but rather it will tell the Contributor Experience workgroup about your technical interests and learning goals, which will be used to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the workgroup may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
 
