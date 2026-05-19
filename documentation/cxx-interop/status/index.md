@@ -194,7 +194,7 @@ The following C++ standard library types are supported in Swift:
 - Specializations of `std::vector`, `std::array`, and `std::span`
 - Specializations of `std::map`, `std::unordered_map` and `std::multimap`
 - Specializations of `std::set`, `std::unordered_set` and `std::multiset`
-- Specializations of `std::shared_ptr` and `std::unique_ptr`
+- Specializations of `std::shared_ptr` and `std::unique_ptr` (not supported on Windows)
 - Specializations of `std::function`
 - `std::chrono::seconds`, `std::chrono::milliseconds`, `std::chrono::microseconds` and `std::chrono::nanoseconds`
 
