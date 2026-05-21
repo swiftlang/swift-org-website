@@ -1,4 +1,4 @@
-{% assign static_sdk_dev_builds = site.data.builds.development.static_sdk | sort: 'date' | reverse %}
+{% assign static_sdk_dev_builds = site.data.builds.development['static-sdk'] | sort: 'date' | reverse %}
 {% assign static_sdk_6_3_builds = site.data.builds.swift-6_3-branch.static-sdk | sort: 'date' | reverse %}
 
 <div class="releases-grid">
