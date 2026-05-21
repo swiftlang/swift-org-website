@@ -356,11 +356,9 @@ imported as `~Copyable`.
 Alternatively, there are two ways to make `ResourceWrapper`'s copyability
 depend on the template arguments.
 
-**1. Constrain the copy constructor with a `requires` clause (C++20).** 
+**1. Constrain the copy constructor with a [`requires` clause](https://en.cppreference.com/cpp/language/requires) (since C++20).** 
 This is the idiomatic C++ approach and is preferred when available. 
-The copy constructor only participates in overload resolution when `T` is itself
-copy-constructible, so specializations of `ResourceWrapper` where this fails are 
-imported as `~Copyable`:
+Instantiations of `ResourceWrapper` where `std::is_copy_constructible_v<T>` is true will be imported as `Copyable`, and as `~Copyable` otherwise:
 
 ```c++
 template <class T>
