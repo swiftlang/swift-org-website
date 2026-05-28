@@ -16,8 +16,8 @@ If the mentee has not contributed to the project before, they will first work wi
 | Date             | Event                               |
 |:-----------------|:---------------------------------   |
 | **May 18th**       |  Mentor Interest surveys open     |
+| **May 28th** ~~June 8th~~ |  Mentee Interest surveys open (Opened early) |
 | **June 1st**       |  Mentor Interest survey deadline  |
-| **Now Open!** ~~June 8th~~ |  Mentee Interest surveys open (Opened early) |
 | **June 15th**      |  Mentee Interest survey deadline  |
 | **June 29th**      |  Mentorship pairings announced    |
 | **July 6th**       |  10-week cohort begins            |
