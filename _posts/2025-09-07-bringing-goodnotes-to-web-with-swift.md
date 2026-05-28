@@ -106,7 +106,7 @@ Xcode doesn't currently have WebAssembly platform support, so code completion an
 
 ### Debugging and development tools
 
-You can debug Swift code directly in Chrome DevTools: set breakpoints, inspect variables, and step through your Swift code as naturally as JavaScript. We developed a Chrome DevTools extension library that enables Swift-specific variable reflection and source-level debugging, building upon the existing [WebAssembly debugging capabilities](https://developer.chrome.com/docs/devtools/wasm). For more details on the enhanced DWARF extension for Swift, see the [Swift on WebAssembly debugging guide](https://book.swiftwasm.org/getting-started/debugging.html#enhanced-dwarf-extension-for-swift).
+You can debug Swift code directly in Chrome DevTools: set breakpoints, inspect variables, and step through your Swift code as naturally as JavaScript. We developed a Chrome DevTools extension library that enables Swift-specific variable reflection and source-level debugging, building upon the existing [WebAssembly debugging capabilities](https://developer.chrome.com/docs/devtools/wasm). For more details on the enhanced DWARF extension for Swift, see the [Swift on WebAssembly debugging guide](https://swiftpackageindex.com/swiftwasm/javascriptkit/0.53.0/documentation/javascriptkit/debugging#Enhanced-DWARF-Extension-for-Swift).
 
 <div style="margin: 2em auto;">
   <img
