@@ -98,7 +98,7 @@ There is no formal evaluation at the end of the mentorship program. However, the
 <details class="download">
   <summary>I'm interested in being a mentor! What should I do?</summary>
 
-Please fill out the <a href="https://essentials.applesurveys.com/jfe/form/SV_3CSIxEKQmL1MVhQ">Mentor Interest Survey</a> if you are interested in participating as a mentor.
+Please fill out the <a href="https://essentials.applesurveys.com/jfe/form/SV_3K59vexOcyZXP4G">mentor interest survey</a> if you are interested in participating as a mentor.
 </details>
 
 <details class="download">
