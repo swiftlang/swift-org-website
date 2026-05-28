@@ -16,13 +16,13 @@ _Goodnotes has been helping millions of users take handwritten notes on iPad for
 
 This journey demonstrates that Swift excels as a cross-platform language, running high-performance applications while sharing the same codebase. Every bug fix and improvement to Goodnotes benefits all our users simultaneously, regardless of which platform they use.
 
-After two years of development and over two years in production at Goodnotes, we've demonstrated that Swift on WebAssembly is a viable, powerful approach for building complex, performance-critical web applications.
+After two years of development and over two years in production at Goodnotes, we've shown that Swift on WebAssembly is a viable, powerful approach for building complex, performance-critical web applications.
 
 ## Why we chose Swift for the web
 
 When we decided to bring Goodnotes to the web in 2021, we faced a critical decision. After more than 10 years of development, we had accumulated millions of lines of Swift code that implemented countless refinements and optimizations for digital ink rendering, document synchronization, conflict resolution using Conflict-Free Replicated Data Types (CRDTs), and content search and document indexing.
 
-We need to maintain more than 60 frames per second (FPS) for real-time ink rendering, which makes performance critical. A JavaScript rewrite, Flutter, or Kotlin Multiplatform would all require rewriting our entire rendering engine from scratch, a substantial undertaking that would have delayed our web launch by years and inevitably introduced behavioral differences between platforms.
+We need to maintain more than 60 Frames Per Second (FPS) for real-time ink rendering, which makes performance critical. A JavaScript rewrite, Flutter, or Kotlin Multiplatform would all require rewriting our entire rendering engine from scratch, a substantial undertaking that would have delayed our web launch by years and inevitably introduced behavioral differences between platforms.
 
 [SwiftWasm](https://swiftwasm.org/) emerged as the solution. This community-driven project allows Swift code to compile to WebAssembly, running in browsers with good performance. We started experimenting with SwiftWasm, building prototypes to validate the approach. Our first experiment focused on our handwriting component, a performance-critical part of Goodnotes that would serve as a good indicator of WebAssembly's capabilities. The results were promising enough that we committed to this path.
 
@@ -74,7 +74,7 @@ When sharing code between iOS and WebAssembly targets, we encountered several im
 
 **Concurrency Model**: libdispatch APIs are unavailable on WebAssembly targets. We migrated from direct libdispatch usage to Swift Concurrency's [`async`/`await` and actors](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/), for better cross-platform compatibility.
 
-**Architecture Differences**: On wasm32, Swift's `Int` has a 32-bit width. Code that assumed `Int` could hold 64-bit values needed to be updated to use `Int64` explicitly.
+**Architecture Differences**: On wasm32, Swift's `Int` has a 32-bit width. Some code assumed `Int` only held 64-bit values, so it had to be updated to use `Int64` explicitly.
 
 **Dependency Injection**: Network access and other I/O operations are abstracted through dependency injection, allowing us to provide platform-specific implementations while keeping the core logic shared.
 
@@ -88,7 +88,7 @@ One of the most significant technical achievements was implementing true paralle
 
 Swift Concurrency's [Custom Actor Executors (SE-0392)](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0392-custom-actor-executors.md) were crucial for managing the web platform's constraints. JavaScript objects are isolated to their originating thread, so we needed precise control over where our Swift actors execute. [JavaScriptKit provides several APIs](https://swiftpackageindex.com/swiftwasm/javascriptkit/0.35.0/documentation/javascripteventloop/webworkerdedicatedexecutor) to create a SerialExecutor for a dedicated Web Worker, enabling us to pin specific actors to specific Web Workers.
 
-This architecture ensures that computationally intensive tasks like handwriting recognition run in the background while UI operations stay on the main thread, while still allowing access to JavaScript objects inside background threads.
+This architecture ensures that computationally-intensive tasks like handwriting recognition run in the background while UI operations stay on the main thread, while still allowing access to JavaScript objects inside background threads.
 
 **Performance Impact**: This multithreading approach delivered a greater than 2x improvement in [Interaction to Next Paint (INP)](https://web.dev/articles/inp), significantly enhancing the UI responsiveness during complex operations.
 
