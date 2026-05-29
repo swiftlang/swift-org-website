@@ -49,7 +49,7 @@ Mentors and mentees will each fill out an interest survey. The survey is not an 
 <details class="download">
   <summary>Are there any necessary qualifications to participate?</summary>
 
-There are no necessary qualifications for mentees — the mentorship program is open to anybody 18 years and older who is willing to learn about Swift! This program is designed to encourage and help diverse developers overcome barriers and actively participate in the Swift community. Mentors must be members of the Swift community (e.g., iOS developers, Swift compiler contributors, etc). Prior experience with mentorship is a plus, but not required.
+Designed to broaden participation and make the Swift community more inclusive, the program is open to everyone 18 years and older who is eager to learn about Swift. No prior qualifications are needed for mentees! Mentors must be active members of the Swift community, such as workgroup members, contributors, package maintainers, or developers across any platform Swift supports. Prior mentorship experience is a plus, but not required.
 </details>
 
 <details class="download">
