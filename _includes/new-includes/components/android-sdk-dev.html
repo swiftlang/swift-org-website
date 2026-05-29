@@ -9,7 +9,7 @@
             <small>{{ android_sdk_dev_builds.first.date | date: '%B %-d, %Y' }}</small><br />
             {% assign base_url = "https://download.swift.org/development/android-sdk/" | append: android_sdk_dev_builds.first.dir | append: "/" | append: android_sdk_dev_builds.first.download %}
             {% assign command = "swift sdk install " | append: base_url | append: " --checksum " | append: android_sdk_dev_builds.first.checksum %}
-            <button onclick="copyToClipboard(this, '{{ command | escape }}')">
+            <button data-copy-text="{{ command | escape }}">
                 Copy install command
             </button>
             </p>
@@ -30,7 +30,7 @@
             <small>{{ android_sdk_6_3_dev_builds.first.date | date: '%B %-d, %Y' }}</small><br />
             {% assign base_url = "https://download.swift.org/swift-6.3-branch/android-sdk/" | append: android_sdk_6_3_dev_builds.first.dir | append: "/" | append: android_sdk_6_3_dev_builds.first.download %}
             {% assign command = "swift sdk install " | append: base_url | append: " --checksum " | append: android_sdk_6_3_dev_builds.first.checksum %}
-            <button onclick="copyToClipboard(this, '{{ command | escape }}')">
+            <button data-copy-text="{{ command | escape }}">
                 Copy install command
             </button>
             </p>
