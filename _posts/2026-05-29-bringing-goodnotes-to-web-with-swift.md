@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2026-05-29 11:30:00
+date: 2026-05-29 12:30:00
 title: "Bringing Goodnotes to the web with Swift and WebAssembly"
 author: [kateinoigakukun]
 category: "Adopters"
@@ -15,11 +15,10 @@ featured-image-dark:
 
 _Goodnotes has been helping millions of users take handwritten notes on iPad for over a decade, earning recognition as Apple's iPad App of the Year in 2022. Today, the same Swift code that powers our iOS app also runs seamlessly in web browsers through WebAssembly, delivering the exact same ink rendering and note-taking experience users love._
 
-<picture style="max-width: 80%; margin: 0 auto; display: block;">
-  <source srcset="/assets/images/bringing-goodnotes-to-web-with-swift/goodnotes-logo-dark.png" media="(prefers-color-scheme: dark)">
-  <source srcset="/assets/images/bringing-goodnotes-to-web-with-swift/goodnotes-logo-light.png" media="(prefers-color-scheme: light)">
-  <img src="/assets/images/bringing-goodnotes-to-web-with-swift/goodnotes-logo-light.png" alt="Goodnotes Logo">
-</picture>
+<div style="max-width: 500px; margin: 30px auto;">
+  <img srcset="/assets/images/bringing-goodnotes-to-web-with-swift/goodnotes-logo-dark@2x.png 2x" alt="Goodnotes Logo" class="hide-light">
+  <img srcset="/assets/images/bringing-goodnotes-to-web-with-swift/goodnotes-logo-light@2x.png 2x" alt="Goodnotes Logo" class="hide-dark">
+</div>
 
 This journey demonstrates that Swift excels as a cross-platform language, running high-performance applications while sharing the same codebase. Every bug fix and improvement to Goodnotes benefits all our users simultaneously, regardless of which platform they use.
 
