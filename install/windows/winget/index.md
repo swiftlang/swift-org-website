@@ -14,7 +14,7 @@ title: Installation via Windows Package Manager
    The required C++ toolchain and Windows SDK are installed as part of Visual Studio 2022. The instructions below are for the Community edition, but you may want to [use a different Visual Studio edition](https://visualstudio.microsoft.com/vs/compare/) based on your usage and team size.
 
    ~~~ batch
-   winget install --id Microsoft.VisualStudio.2022.Community --exact --force --custom "--add Microsoft.VisualStudio.Component.Windows11SDK.22000 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64"
+   winget install --id Microsoft.VisualStudio.2022.Community --exact --force --custom "--add Microsoft.VisualStudio.Component.Windows11SDK.22000 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64" --source winget 
    ~~~
 
 0. Install Swift and other dependencies:
@@ -22,5 +22,5 @@ title: Installation via Windows Package Manager
    Install the latest Swift developer package, as well as compatible Git and Python tools if they don't exist.
 
    ~~~ batch
-   winget install --id Swift.Toolchain -e
+   winget install --id Swift.Toolchain -e --source winget 
    ~~~

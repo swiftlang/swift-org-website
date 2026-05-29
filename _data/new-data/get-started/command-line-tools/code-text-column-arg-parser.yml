@@ -11,13 +11,13 @@ code: |-
   struct Repeat: ParsableCommand {
     @Argument(help: "The phrase to repeat.")
     var phrase: String
-    
+
     @Option(help: "The number of times to repeat 'phrase'.")
     var count: Int? = nil
-    
+
     mutating func run() throws {
       let repeatCount = count ?? .max
-      
+
       for i in 1...repeatCount {
         print(phrase)
       }

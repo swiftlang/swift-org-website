@@ -1,40 +1,39 @@
 - name: Tony Allevato
   github: allevato
-  affiliation: 
-  
+  affiliation:
+
 - name: Holly Borla
   github: hborla
-  affiliation: 
-  
+  affiliation:
+
 - name: Steve Canon
   github: stephentyrone
-  affiliation: 
-  
+  affiliation:
+
 - name: Ben Cohen
   github: airspeedswift
-  affiliation: 
-  
+  affiliation:
+
 - name: Doug Gregor
   github: DougGregor
-  affiliation: 
-  
+  affiliation:
+
 - name: Joe Groff
   github: jckarter
-  affiliation: 
-  
+  affiliation:
+
 - name: Freddy Kellison-Linn
   github: Jumhyn
-  affiliation: 
-  
+  affiliation:
+
 - name: John McCall
   github: rjmccall
   affiliation: Chair
-  
+
 - name: Becca Royal-Gordon
   github: beccadax
-  affiliation: 
-  
+  affiliation:
+
 - name: Xiaodi Wu
   github: xwu
-  affiliation: 
-  
+  affiliation:

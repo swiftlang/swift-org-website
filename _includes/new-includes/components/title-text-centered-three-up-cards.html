@@ -1,0 +1,30 @@
+<div class="section title-text-centered-three-up-cards{% if include.content.columns == 2 %} two-columns{% endif %}">
+  <div class="content">
+    <!-- Centered header section -->
+    <div class="header-section">
+      <h2>{{ include.content.title }}</h2>
+      <p>{{ include.content.description }}</p>
+    </div>
+
+    <!-- Card grid (configurable columns, n rows) -->
+    <div class="cards-grid">
+      {% for card in include.content.cards %}
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">{{ card.title }}</h3>
+          <p class="card-content">{{ card.content }}</p>
+        </div>
+        
+        {% if card.links %}
+        <div class="card-footer">
+          {% for link in card.links %}
+          <a href="{{ link.url }}" class="card-link">{{ link.text }}</a>
+          {% unless forloop.last %}<span class="separator">|</span>{% endunless %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

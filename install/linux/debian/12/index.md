@@ -11,11 +11,11 @@ title: Install Swift
     docker_tag="nightly-debian-12"
     development_builds=site.data.builds.development.debian12
     aarch64_development_builds=site.data.builds.development.debian12-aarch64
-    development_2="release/6.2"
-    docker_tag_2="nightly-6.2-debian12"
-    development_builds_2=site.data.builds.swift-6_2-branch.debian12
-    aarch64_development_builds_2=site.data.builds.swift-6_2-branch.debian12-aarch64
-    branch_dir_2="swift-6.2-branch"
+    development_2="release/6.3"
+    docker_tag_2="nightly-6.3-debian12"
+    development_builds_2=site.data.builds.swift-6_3-branch.debian12
+    aarch64_development_builds_2=site.data.builds.swift-6_3-branch.debian12-aarch64
+    branch_dir_2="swift-6.3-branch"
 %}
 
 {% include /new-includes/components/linux-releases.html

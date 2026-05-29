@@ -1,5 +1,6 @@
 {% assign android_sdk_dev_builds = site.data.builds.development.android-sdk | sort: 'date' | reverse %}
-
+{% assign android_sdk_6_3_dev_builds = site.data.builds.swift-6_3-branch.android-sdk | sort: 'date' | reverse %}
+<div class="releases-grid">
     <div class="release-box section">
         <div class="content">
         <div class="code-box content-wrapper">
@@ -21,3 +22,25 @@
         </div>
         </div>
     </div>
+    <div class="release-box section">
+        <div class="content">
+        <div class="code-box content-wrapper">
+            <h2>release/6.3</h2>
+            <p class="body-copy">
+            <small>{{ android_sdk_6_3_dev_builds.first.date | date: '%B %-d, %Y' }}</small><br />
+            {% assign base_url = "https://download.swift.org/swift-6.3-branch/android-sdk/" | append: android_sdk_6_3_dev_builds.first.dir | append: "/" | append: android_sdk_6_3_dev_builds.first.download %}
+            {% assign command = "swift sdk install " | append: base_url | append: " --checksum " | append: android_sdk_6_3_dev_builds.first.checksum %}
+            <button onclick="copyToClipboard(this, '{{ command | escape }}')">
+                Copy install command
+            </button>
+            </p>
+            <div class="link-wrapper">
+            <div class="link-group">
+                <a href="https://download.swift.org/swift-6.3-branch/android-sdk/{{ android_sdk_6_3_dev_builds.first.dir }}/{{ android_sdk_6_3_dev_builds.first.download }}" class="body-copy">Download</a> |
+                <a href="https://download.swift.org/swift-6.3-branch/android-sdk/{{ android_sdk_6_3_dev_builds.first.dir }}/{{ android_sdk_6_3_dev_builds.first.download_signature }}" class="body-copy">Signature (PGP)</a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

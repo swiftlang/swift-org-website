@@ -52,11 +52,7 @@ title: Swift Programming Language
 <section id="pillar-1" class="section pillar">
     <div class="pillar-wrapper content-wrapper">
         <p class="pillar-intro">
-            Swift is the only language that scales from embedded devices and kernels to apps and cloud infrastructure. It’s simple, and expressive, with incredible performance and safety. And it has unmatched interoperability with C and C++.
-        </p>
-        <br />
-        <p class="pillar-intro">
-            It's the combination of approachability, speed, safety, and all of<br class="hide-small"/> Swift’s strengths that make it so unique.
+            Swift is designed to be the language you reach for at every layer of the software stack. Whether you are building embedded firmware, full-featured mobile apps, or internet-scale services, Swift delivers expressive language features and APIs, performance control when you need it, and strong safety guarantees.
         </p>
     </div>
     {% for callout in pillar1_callouts %}

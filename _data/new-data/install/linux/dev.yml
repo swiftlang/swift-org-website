@@ -7,9 +7,9 @@ latest-dev:
       - label: main
         code: |-
           swiftly install main-snapshot
-      - label: release/6.2
+      - label: release/6.3
         code: |-
-          swiftly install 6.2-snapshot
+          swiftly install 6.3-snapshot
     links:
       - href: '/install/linux/swiftly'
         copy: 'Instructions'

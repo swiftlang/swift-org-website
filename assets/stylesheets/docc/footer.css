@@ -55,6 +55,7 @@ footer[role="contentinfo"] aside i {
   float: right;
   height: var(--icon-size);
   width: var(--icon-size);
+  margin-left: 10px;
 }
 
 footer[role="contentinfo"] aside i.feed {

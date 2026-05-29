@@ -22,11 +22,11 @@ defaults:
             layout: "post"
 
 plugins:
-  - jekyll-redirect-from
+    - jekyll-redirect-from
 
 whitelist:
-  - jekyll-redirect-from
+    - jekyll-redirect-from
 
 include:
- - .well-known
- - assets/fonts
+    - .well-known
+    - assets/fonts

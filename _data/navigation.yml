@@ -141,6 +141,8 @@
       url: /testing-workgroup/
     - title: Android
       url: /android-workgroup/
+    - title: Windows
+      url: /windows-workgroup/
     - section: Governance
     - title: Code of Conduct
       url: /code-of-conduct/

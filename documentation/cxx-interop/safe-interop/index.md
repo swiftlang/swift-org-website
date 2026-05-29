@@ -31,7 +31,7 @@ Please provide the feedback that you have on the
 [Swift Forums](https://forums.swift.org/c/development/c-interoperability/), or
 by filing an [issue on GitHub](https://github.com/swiftlang/swift/issues/new/choose).
 Future changes to the design or functionality of C++ interoperability will not
-break code in existing codebases [by default](#source-stability-guarantees-for-mixed-language-codebases).
+break code in existing codebases by default.
 </div>
 
 ## Overview
@@ -113,7 +113,7 @@ Some containers and protocols do not yet support non-escapable types in Swift 6.
 
 Building the code again will emit a new diagnostic for the `fileName` function about
 missing lifetime annotations. C and C++ functions that return non-escapable types need annotations
-to describe their lifetime contracts via [lifetimebound](https://clang.llvm.org/docs/AttributeReference.html#id8)
+to describe their lifetime contracts via [lifetimebound](https://clang.llvm.org/docs/AttributeReference.html#lifetimebound)
 and [lifetime_capture_by](https://clang.llvm.org/docs/AttributeReference.html#lifetime-capture-by) annotations.
 Not all versions of C and C++ support the `[[clang::lifetimebound]]` attribute syntax. Convenience macros for
 lifetime annotations using the GNU style attribute syntax are available in the `lifetimebound.h` header, and we'll
@@ -392,7 +392,7 @@ C++ standard library. When such APIs are appropriately annotated, the Swift
 compiler can bridge those span-like parameters to Swift's
 [`Span`](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0447-span-access-shared-contiguous-storage.md)
 and [`MutableSpan`](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0467-MutableSpan.md)
-types, and the user with a safe and convenient interface to those imported APIs.
+types, and provide the user with a safe and convenient interface to those imported APIs.
 These interfaces are *in addition to* the interfaces generated without annotations:
 adding additional annotations to C or C++ APIs will not affect Swift code currently
 relying on the plain interface. Adding additional information may alter the signature
@@ -408,7 +408,7 @@ to the Swift compiler.
 ### Safe Overloads for C++ `std::span`
 
 APIs taking or returning C++'s `std::span` with sufficient lifetime
-annotations will automatically get safe overloads take or return Swift
+annotations will automatically get safe overloads that take or return Swift
 `Span` and `MutableSpan` types.
 
 The following table summarizes the generated convenience overloads:
@@ -577,20 +577,22 @@ func change_ptr(_ x: UnsafeBufferPointer<Int32>)
 
 </table>
 
-The `UnsafeBufferPointer` overloads provide the same bounds safety as their `Span` equvalents
-(NB: `UnsafeBufferPointer` is not bounds checked on memory access in release builds, but the generated
-`UnsafeBufferPointer` overloads contain bounds checks in the same cases as the `Span` overloads, *even in release builds*),
-but without lifetime safety. If lifetime information is available the generated safe overload will always
-choose to use `Span` - no `UnsafeBufferPointer` overload will be generated in this case. This means
+The `UnsafeBufferPointer` overloads provide the same bounds safety as their `Span` equivalents,
+but without lifetime safety. Note that while `UnsafeBufferPointer` itself is not bounds checked on memory
+access in release builds, the generated `UnsafeBufferPointer` overloads contain bounds checks in the same
+cases as the `Span` overloads, *even in release builds*.
+
+If lifetime information is available, the generated bounds-safe overload will always
+use `Span` — no `UnsafeBufferPointer` overload will be generated in this case. This means
 that existing callers are not affected by annotating an API with `__counted_by`, but callers using the
-safe overload after adding `__counted_by` *will* be affected if `__noescape` is also added later on, or
+bounds-safe overload after adding `__counted_by` *will* be affected if `__noescape` is also added later on, or
 if another parameter is then also annotated with `__counted_by`.
 To prevent source breaking changes, make sure to fully annotate the bounds and lifetimes of an API when
 adding any bounds or lifetime annotations.
 
 #### Bounds Annotations using API Notes
 
-In cases where you don't want to modify the imported headers, bounds annotations can be applied using API Notes.
+In cases where you don't want to modify the imported headers, bounds annotations can be applied using [API Notes](https://clang.llvm.org/docs/APINotes.html).
 Given the following header:
 ```c
 void foo(int *p, int len);

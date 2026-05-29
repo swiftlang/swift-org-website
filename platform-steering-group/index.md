@@ -6,8 +6,8 @@ title: Platform Steering Group
 The Platform Steering Group enables the Swift language and its tools to be used in new environments. The Platform Steering Group’s primary goal is to **drive development work that brings the Swift toolchain and language runtime to a variety of platforms**. Specifically, the Platform Steering Group will:
 
 * work with the Swift Core Team to define a roadmap for toolchain improvements and expanded platform support,
-* work with the (to be formed) Ecosystem Steering Group to improve the experience of setting up a Swift development environment on all supported platforms,
-* work with the Language Steering Group to define Swift language support in specific environments,
+* work with the [Ecosystem Steering Group](/ecosystem-steering-group/) to improve the experience of setting up a Swift development environment on all supported platforms,
+* work with the [Language Steering Group](/language-steering-group/) to define Swift language support in specific environments,
 * implement an evolution process for the Swift toolchain and new platform support, and
 * keep the community informed about changes to the project roadmap, the status of accepted proposals, and the availability of platform support, their support tier, and their requirements.
 
@@ -54,7 +54,7 @@ Evolution authority of the Platform Steering Group does not extend to
 * DocC, or
 * The SwiftPM dependency management and distribution features
 
-All of these are under the purview of the (to be formed) Ecosystem Steering Group.
+All of these are under the purview of the [Ecosystem Steering Group](/ecosystem-steering-group/).
 
 Not all changes driven by the Platform Steering Group will under go evolution review. Evolution review is critical for defining new platform support and new features of existing platforms that have major implications on ABI stability and toolchain compatibility. The Platform Steering Group will also participate in standard processes of related communities, such as submitting proposals for the DWARF Debugging Standard in support of LLDB. The evolution process only concerns itself with implementation details where they interact with the underlying platform. It is also not necessary for day-to-day engineering work for reaching a higher support tier for a particular platform, general bug fixes, performance improvements, and other quality-of-life changes.
 

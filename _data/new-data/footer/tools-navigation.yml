@@ -6,5 +6,7 @@
   link: /documentation/articles/zero-to-swift-emacs.html
 - title: Neovim
   link: /documentation/articles/zero-to-swift-nvim.html
+- title: Cursor
+  link: /documentation/articles/getting-started-with-cursor-swift.html
 - title: Other Editors
   link: https://github.com/swiftlang/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md

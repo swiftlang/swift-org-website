@@ -488,6 +488,10 @@
   p,
   a {
     font-size: 17px;
+
+    &.debug {
+      font-size: 12px;
+    }
   }
 
   p {
@@ -935,3 +939,4 @@
     @include link-with-right-arrow;
   }
 }
+

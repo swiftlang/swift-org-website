@@ -1,0 +1,53 @@
+title: "Join a workgroup"
+description: "Workgroups are community-led efforts, formally recognized by the Swift project, that focus on driving work in particular areas. Workgroups have regular meetings and are a great way to get involved in the Swift project."
+cards:
+  - title: "Android"
+    content: "Maintaining Android as an officially supported platform for the Swift language."
+    links:
+      - text: "Read more"
+        url: "/android-workgroup"
+  - title: "Build and Packaging"
+    content: "Focused on building a great build and packaging experience for the Swift community."
+    links:
+      - text: "Read more"
+        url: "/build-and-packaging-workgroup/"
+  - title: "C++ Interoperability"
+    content: "Adding support for bidirectional interoperability between Swift and C++."
+    links:
+      - text: "Read more"
+        url: "/cxx-interop-workgroup"
+  - title: "Contributor Experience"
+    content: "Making Swift more approachable and lowering the barrier to entry for contributing to the project."
+    links:
+      - text: "Read more"
+        url: "/contributor-experience-workgroup"
+  - title: "Documentation Tooling"
+    content: "Guiding the experience of Swift documentation through the development of tooling like Swift-DocC."
+    links:
+      - text: "Read more"
+        url: "/documentation-workgroup"
+  - title: "Foundation"
+    content: "Governs the Swift Foundation project and managing reviews of community API proposals."
+    links:
+      - text: "Read more"
+        url: "/foundation-workgroup"
+  - title: "Server"
+    content: "Supporting use of Swift on servers by establishing standards for libraries and tools."
+    links:
+      - text: "Read more"
+        url: "/sswg"
+  - title: "Testing"
+    content: "Guiding the experience, libraries, and tools for testing Swift code."
+    links:
+      - text: "Read more"
+        url: "/testing-workgroup"
+  - title: "Swift.org Website"
+    content: "Guiding the evolution of the Swift.org website including development and content."
+    links:
+      - text: "Read more"
+        url: "/website-workgroup"
+  - title: "Windows"
+    content: "Maintaining Swift support for Windows, and advancing support in associated tools."
+    links:
+      - text: "Read more"
+        url: "/windows-workgroup"

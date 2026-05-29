@@ -499,6 +499,29 @@ to C++, where you can only call virtual methods on a pointer or a reference.
 
 Static C++ member functions become `static` Swift methods.
 
+#### Bool Conversion Operator
+
+When a C++ type defines a bool conversion operator (`operator bool()`), Swift
+represents it as an initializer `Bool(fromCxx:)`. This allows converting a C++
+object to a `Bool` value in Swift:
+
+```c++
+class Connection {
+public:
+  operator bool() const { return isConnected; }
+};
+```
+
+```swift
+let conn = getConnection()
+if Bool(fromCxx: conn) {
+  print("Connected!")
+}
+```
+
+Swift **does not** implicitly convert C++ types with `operator bool` to `Bool`.
+The conversion using `Bool(fromCxx:)` is always explicit in Swift.
+
 ### Accessing Inherited Members from Swift
 
 A C++ class or structure becomes a standalone type in Swift. Its
@@ -538,12 +561,6 @@ struct Fern {
   mutating func trim()
 }
 ```
-
-The exact rules that determine when members from inherited base types
-are introduced to the Swift type that represents the C++ structure or class
-are not yet finalized in Swift 5.9. The following
-[GitHub issue](https://github.com/swiftlang/swift/issues/66323)
-tracks their finalization in Swift 5.9.
 
 ### Using C++ Enumerations
 
@@ -901,6 +918,53 @@ func printDeserialized<T: Deserializable>(_ item: T) {
 printDeserialized(getSerializedInt())
 printDeserialized(getSerializedFloat())
 ```
+
+### Accessing Private C++ Members in Swift
+
+By default, `private` and `protected` members of a C++ type are not accessible from Swift.
+The `SWIFT_PRIVATE_FILEID` annotation lets you designate a specific Swift file where
+extensions of the annotated C++ type may access its non-public members.
+This is useful when writing a Swift wrapper around a C++ type that needs to access
+`private` or `protected` implementation details.
+
+For example, suppose you want to write a Swift wrapper that accesses the private
+members of `DataBuffer`:
+
+```c++
+#include <swift/bridging>
+
+class DataBuffer {
+  ...
+private:
+  int count;
+  void resize(int newCount);
+} SWIFT_PRIVATE_FILEID("MyModule/DataBufferExt.swift");
+```
+
+Extensions of `DataBuffer` declared in `MyModule/DataBufferExt.swift` may access
+the private `count` field and `resize` method:
+
+```swift
+// MyModule/DataBufferExt.swift
+
+extension DataBuffer {
+  mutating func doubleCapacity() {
+    resize(count * 2)  // OK: private members accessible in extensions here
+  }
+}
+```
+
+Outside of extensions, or in any other Swift file, these members remain inaccessible.
+
+Only one `SWIFT_PRIVATE_FILEID` annotation is allowed per C++ type.
+The file ID passed to `SWIFT_PRIVATE_FILEID` uses the format `"ModuleName/filename.swift"`.
+The directory path of the file within the module does not matter —
+a file at `Sources/helpers/DataBufferExt.swift` compiled in `MyModule`
+matches `"MyModule/DataBufferExt.swift"`.
+
+Both `private` and `protected` C++ members are imported as `private` members in Swift.
+Derived C++ types can access `protected` base members as long as they are also
+annotated with `SWIFT_PRIVATE_FILEID`.
 
 ## Working with C++ Containers
 
@@ -1373,8 +1437,8 @@ This includes pure virtual methods.
 
 #### Exposing C++ Shared Reference Types back from Swift
 
-C++ can call into Swift APIs that take or return C++ Shared Reference Types. Objects of these types are always created on the C++ side,
-but their references can be passed back and forth between Swift and C++. This section explains the conventions of incrementing and decrementing
+C++ can call into Swift APIs that take or return C++ Shared Reference Types.
+This section explains the conventions of incrementing and decrementing
 the reference counts when passing such references across the language boundaries. Consider the following Swift APIs:
 
 ```swift
@@ -1440,6 +1504,23 @@ let swiftString = String(cxxString)
 
 Swift does not convert C++ `std::string` type to Swift's `String` type
 automatically.
+
+### Using `std::optional`
+
+The `std::optional<T>` C++ type becomes a structure in Swift. Swift does not
+automatically bridge it to Swift's `Optional<T>` type. Instead, you can use the
+`Optional(fromCxx:)` initializer to convert a C++ `std::optional<T>` value to a
+Swift `Optional<T>`:
+
+```c++
+#include <optional>
+
+std::optional<int> findMagicNumber();
+```
+
+```swift
+let maybeMagic: Int? = Optional(fromCxx: findMagicNumber())
+```
 
 ## Working with C++ References and View Types in Swift
 
@@ -2099,6 +2180,7 @@ that are outlined in the documentation above.
 | `SWIFT_MUTATING` | [Constant Member Functions Must Not Mutate the Object](#constant-member-functions-must-not-mutate-the-object) |
 | `SWIFT_NONCOPYABLE` | [C++ Structures and Classes are Value Types by Default](#c-structures-and-classes-are-value-types-by-default) |
 | `SWIFT_SELF_CONTAINED` | [Annotating C++ Structures or Classes as Self Contained](#annotating-c-structures-or-classes-as-self-contained) |
+| `SWIFT_PRIVATE_FILEID` | [Accessing Private C++ Members in Swift](#accessing-private-c-members-in-swift) |
 
 ## Document Revision History
 

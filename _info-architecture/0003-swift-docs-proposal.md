@@ -76,59 +76,72 @@ If the documentation grows to where we find ourselves wanting to host significan
 The initial catalogs listed below are based on the existing content within `/documentation` at Swift.org,
 but don't reflect all the possible future content we might create.
 
+  - Swift language guides - moderated/reviewed by the Language Steering Group.
   - API guidelines - moderated/reviewed by the Language Steering Group.
   - Server guides - moderated/reviewed by the SSWG.
-  - Swift Migration guides - moderated by lang/platforms.
-  - Tools Guides - moderated/reviewed by platform & ecosystem.
-  - WASM - moderated/reviewed by platform steering group.
+  - Ecosystem tools guides - moderated/reviewed by Ecosystem Steering Group.
+  - Platform guides - moderated/reviewed by Platform Steering Group.
 
 An example `tree` view of such a repository:
 
 ```
-├── APIGuidelines
-│   └── APIGuideliness.docc
-│       ├── Documentation.md
-│       ├── ...
 ├── CODEOWNERS
+├── common
+│   ├── footer.html
+│   ├── header.html
+│   ├── README
+│   └── theme-settings.json
+├── ecosystem
+│   ├── EcosystemTools.docc
+│   │   ├── Documentation.md
+│   │   ├── getting-started-with-vscode-swift.md
+│   │   ├── zero-to-swift-emacs.md
+│   │   └── zero-to-swift-nvim.md
+├── platform
+│   └── PlatformGuides.docc
+│       └── Documentation.md
 ├── README.md
-├── Server
+├── server
 │   └── ServerGuides.docc
-│       └── Documentation.md
-├── SwiftLangGuides
-│   └── SwiftLangGuides.docc
-│       └── Documentation.md
-│       ├── ...
-├── Tools
-│   └── ToolsAndEditors.docc
-│       ├── Documentation.md
-│       ├── ...
-└── WASM
-    └── WASM.docc
+│       ├── building.md
+│       ├── Documentation.md
+│       └── testing.md
+├── swift
+│   ├── APIGuidelines.docc
+│   │   ├── DocComment.md
+│   │   ├── Documentation.md
+│   │   ├── include-words-to-avoid-ambiguity.md
+│   │   ├── name-according-to-roles.md
+│   │   ├── omit-needless-words.md
+│   │   └── weak-type-information.md
+│   └── LanguageGuides.docc
+│       ├── Documentation.md
+│       └── value-and-reference-types.md
 ```
 
 The directories for each catalog residing at the root can host another DocC catalog (a directory ending with .docc), to host the markdown content in a typical DocC fashion.
 This also allows each catalog to also provide a Package.swift file, which is required today to enable support for DocC's feature Snippets, which validates that Swift code blocks compile.
 
 Catalogs with associated code, such as API reference documentation, that heavily leverage snippets, or that provide examples, are better served when wrapped inside a Swift package.
-These can also be hosted together in this repository, using the same "each directory owned/reviewed by a workgroup" pattern, but are only relevant for packages that would never be used as a dependency.
+These can also be hosted together in this repository, using the same "each directory owned/reviewed by a steering group" pattern, but are only relevant for packages that would never be used as a dependency.
 Swift conventions dictate that a package intended to be used as a dependency needs to be hosted in its own git repository, making it more difficult to use in a monorepo-style configuration.
 
-The workgroup or steering group associated with a collection identifies who to include as reviewers for their catalogs.
+The steering group associated with a collection identifies who to include as reviewers for their catalogs.
+This doesn't require them to directly be the reviewers, but to help identify and delegat the reviewers who approve content changes for each catalog.
 From a mechanical perspective, reviewers are listed in a `CODEOWNERS` file, which uses the GitHub groups that Swift provides, or lists GitHub usernames individually.
 
 For example, the structure of the catalogs above might line up to:
 
 ```
-/APIGuides.docc/* @swiftlang/language-steering-group
-/ServerGuides.docc/* @swiftlang/server-workgroup
-/InteropGuides.docc/* @swiftlang/cxx-interop-workgroup
-/SwiftLangGuides.docc/* @swiftlang/language-steering-group
-/ToolGuides.docc/* @swiftlang/platform-steering-group
+/swift/* @swiftlang/language-steering-group
+/ecosystem/* @swiftlang/ecosystem-steering-group
+/server/* @swiftlang/ecosystem-steering-group
+/platform/* @swifting/platform-steering-group
 ```
 
-If a group dissolves, any catalogs can be associated with another group, or revert to control by the Swift Core Team.
+If a group dissolves, any catalogs can be updated to associate them with another group, or revert them to control by the Swift Core Team.
 
-New catalogs can be created at the request of the relevant workgroup or steering group, published and referenced from the swift.org website with the coordination of the Website workgroup.
+New catalogs can be created at the request of the relevant steering group, published and referenced from the swift.org website with the coordination of the Website workgroup to provide links to the relevant content from the Swift.org website.
 As new catalogs are created, the CODEOWNERS file is updated in sync to provide the relevant reviewers for the new content.
 
 The repository may also include a directory or directories to support continuous integration and scripts that build the static DocC archives to host them on Swift project infrastructure.
@@ -166,118 +179,92 @@ Like the Swift Embedded examples repository, it benefits from close proximity be
 ### Migrating Jekyll to DocC content in the Swift Docs Repository
 
 Based on the existing content in Swift.org, the general goal is to migrate the majority of what is general documentation content into a DocC format, grouped into the collections below.
-A few exceptions are detailed after the file names, to accommodate very out-of-date content, or content that's already replicated in other locations.
-
-This proposal is primarily meant to provide a guide to the structure for content as we want to see it,
-and isn't meant to provide a full and discrete audit of all existing content.
-Nevertheless, a few examples stand out and have been discussed previously within the community as needing updates, or removal and relevant links redirected to more up-to-date and recent content.
-A full audit of the documentation for recency and relevancy is worthwhile, but beyond the scope of this proposal.
-
-The notes of this migration are intended to be guides, and any migration process isn't expected to be done immediately and in one sweep.
-The migration can, and should, occur incrementally, building into the docs repository as supported by the community including content reviewers and their availability.
 
 All of the listed markdown files would remain in `/documentation`, with their front matter (Jekyll metadata) updated to redirect the URL requests to the new locations as content is migrated and accepted into the new docs repository.
 Markdown files prefixed with `_` are typically only included in other files and not referenced by URL, and can be removed after they are migrated.
 
-- API guidelines
+## Initial Migration Plan
 
-  - documentation/api-design-guidelines/index.md
+This proposal is primarily meant to provide a guide to the structure for content as we want to see it.
+In the process of establishing this new repository and structure of DocC catalogs, the following initial files from swift.org will be updated (if needed) and migrated, to establish the initial structure.
 
-- Server guides
+Files to migrate under the `documentation` directory on Swift.org:
 
-  - documentation/server/index.md
+| `source` | status & destination |
+| - | - | 
+| [`api-design-guidelines/index.md`](https://www.swift.org/documentation/api-design-guidelines/) | translate to docc, break into multiple articles in `api-guidelines/APIGuidelines.docc` |
+| [`server/index.md`](https://www.swift.org/documentation/server/index.html) | deprecate & redirect to https://www.swift.org/get-started/cloud-services/ |
+| [`server/guides/index.md`](https://www.swift.org/documentation/server/guides/index.html) | translate, migrate to top level of `server-guides/ServerGuides.docc` |
+| [`server/guides/building.md`](https://www.swift.org/documentation/server/guides/building.html) | refine/update to provide examples of building, add section for debug vs. release and swift tooling, link to SwiftPM docs on building, add section about building in Linux using containers, add section on building with devContainers, add detail on static linux SDK, break out some content to a CI related article |
+| [`server/guides/testing.md`](https://www.swift.org/documentation/server/guides/testing.html) | quite dated - update to swift 6, swift-testing, break out some content into a "CI" focused article - focus on unit testing, leave room for functional, integration testing as sep articles |
+| [`articles/static-linux-getting-started.md`](https://www.swift.org/documentation/articles/static-linux-getting-started.html) | migrate as is  - consider renaming or breaking into multiple, smaller focused articles, review any changes with previous authors (Alastair, Melissa) |
+| [`articles/value-and-reference-types.md`](https://www.swift.org/documentation/articles/value-and-reference-types.html) | migrate content into `swift/LanguageGuides`|
+| [`concurrency/index.md`](https://www.swift.org/documentation/concurrency/index.html) | redirect to content at https://www.swift.org/migration/documentation/|  |swift-6-concurrency-migration-guide/enabledataracesafety |
+| [`articles/zero-to-swift-nvim.md`](https://www.swift.org/documentation/articles/zero-to-swift-nvim.html) | migrate into `ecosystem/EcosystemTools.docc` |
+| [`articles/zero-to-swift-emacs.md`](https://www.swift.org/documentation/articles/zero-to-swift-emacs.html) | migrate into `ecosystem/EcosystemTools.docc` |
+| [`articles/getting-started-with-vscode-swift.md`](https://www.swift.org/documentation/articles/getting-started-with-vscode-swift.html) | migrate into `ecosystem/EcosystemTools.docc` |
+| [`articles/wasm-getting-started.md`](https://www.swift.org/documentation/articles/wasm-getting-started.html) | translate and migrate into `ecosystem/WASM.docc` |
 
-  - documentation/server/guides/index.md
-  - documentation/server/guides/building.md
-  - documentation/server/guides/testing.md
-  - documentation/server/guides/memory-leaks-and-usage.md
-  - documentation/server/guides/allocations.md
-    - documentation/server/guides/linux-perf.md
-    - documentation/server/guides/performance.md
+The Swift.org [documentation page](https://www.swift.org/documentation/) will be updated to point to these new DocC catalogs as the content migrates, to provide a way to navigate to the relevant content from swift.org.
+The navigability between DocC collections and integration of those collections into the broader design constraints for swift.org are being dealt with separately, as part of the Swift.org redesign efforts, and beyond the immediate scope of this proposal.
 
-  - documentation/server/guides/llvm-sanitizers.md
-  - documentation/server/guides/deployment.md
-  - documentation/server/guides/packaging.md
-  - documentation/server/guides/passkeys.md
+As mentioned above, the metadata for the earlier pages will remain on Swift.org for some time, with the stubs of those articles being updated to provide HTML redirects for legacy URLs to the new location once the updated content is published using the DocC catalog.
 
-  - documentation/server/guides/libraries/log-levels.md: migrate content into swift-log
-  - documentation/server/guides/libraries/concurrency-adoption-guidelines.md: remove content & redirect link to existing migration guide
+### Remaining Swift.org documentation content
 
-  - documentation/server/guides/deploying/aws-sam-lambda.md
-  - documentation/server/guides/deploying/aws-copilot-fargate-vapor-mongo.md
-  - documentation/server/guides/deploying/aws.md
-  - documentation/server/guides/deploying/digital-ocean.md
-    - documentation/server/guides/deploying/ubuntu.md
-  - documentation/server/guides/deploying/heroku.md
-  - documentation/server/guides/deploying/gcp.md
-  - documentation/articles/static-linux-getting-started.md
-    
-- Swift Language Guides
+A full migration needs to be coordinated with relevant groups, and proceed incrementally as the availability of the community and relevant workgroups allow.
+The migration process itself will be tracked by pull requests and within an issue or issues housed at https://github.com/swiftlang/swift-org-website/, and potentially moved to a new docs repository.
 
-  - migrate all of these pieces into https://github.com/swiftlang/swift-migration-guide
-  - documentation/articles/value-and-reference-types.md
-  - migration-guide-swift3/_migration-guide.md
-  - migration-guide-swift3/se-0107-migrate.md
-  - migration-guide-swift3/index.md
-  - migration-guide-swift4/_migration-guide.md
-  - migration-guide-swift4/index.md
-  - migration-guide-swift4.2/_migration-guide.md
-  - migration-guide-swift4.2/index.md
-  - migration-guide-swift5/_migration-guide.md
-  - migration-guide-swift5/index.md
-  - documentation/concurrency/index.md (redirect only, its content is effectively already there)
-
-- Tool Guides
-
-  - documentation/articles/zero-to-swift-nvim.md
-  - documentation/articles/zero-to-swift-emacs.md
-  - documentation/articles/getting-started-with-vscode-swift.md
-
-- WASM
-
-  - documentation/articles/wasm-getting-started.md
-
-- C/C++ Interop Guides
-  - Doug Gregor has indicated a desire to reset and migrate this content into the Swift repository, leveraging code validation that is beyond Swift's Documentation tooling today, and to keep it closely aligned with the relvant code that provides the interop functionality.
-  - documentation/cxx-interop/index.md
-  - documentation/cxx-interop/safe-interop/index.md
-  - documentation/cxx-interop/project-build-setup/index.md
-  - documentation/cxx-interop/status/index.md
-  - documentation/articles/wrapping-c-cpp-library-in-swift.md
-
-### Swift.org documentation files & directories remaining:
-
-- Remain on swift.org
-  - documentation/core-libraries/index.md
-    - documentation/core-libraries/_foundation.md
-    - documentation/core-libraries/_libdispatch.md
-    - documentation/core-libraries/_swift-testing.md
-    - documentation/core-libraries/_xctest.md
-
-- documentation/package-manager/index.md
-  (currently redirects to https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
-
-- documentation/articles/value-and-reference-types.md
-
-- documentation/tspl/index.md (stays as is, references into TSPL and links to translations)
-
-- documentation/lldb/index.md: migrate to github.com/swiftlang/swift:`userdocs/`
+- documentation/cxx-interop/index.md (Doug Gregor indicated a desire to reset and migrate this content into the Swift repository in the future)
+- documentation/cxx-interop/safe-interop/index.md
+- documentation/cxx-interop/project-build-setup/index.md
+- documentation/cxx-interop/status/index.md
+- documentation/articles/wrapping-c-cpp-library-in-swift.md
+- documentation/continuous-integration/index.md
+- documentation/core-libraries/index.md
+  - documentation/core-libraries/_foundation.md
+  - documentation/core-libraries/_libdispatch.md
+  - documentation/core-libraries/_swift-testing.md
+  - documentation/core-libraries/_xctest.md
+- documentation/package-manager/index.md (currently redirects to https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/)
+- documentation/tspl/index.md
+- documentation/lldb/index.md
   - documentation/lldb/_playground-support.md
-
-- documentation/swift-compiler/index.md: migrate to github.com/swiftlang/swift:`userdocs/`
+- documentation/migration-guide-swift3/index.md
+  - documentation/migration-guide-swift3/_migration-guide.md
+  - documentation/migration-guide-swift3/se-0107-migrate.md
+- documentation/migration-guide-swift4/index.md
+  - documentation/migration-guide-swift4/_migration-guide.md
+- documentation/migration-guide-swift4.2/index.md
+  - documentation/migration-guide-swift4.2/_migration-guide.md
+- documentation/migration-guide-swift5/index.md
+  - documentation/migration-guide-swift5/_migration-guide.md
+- documentation/source-code/index.md
+- documentation/source-compatibility/index.md
+- documentation/server/guides/memory-leaks-and-usage.md
+- documentation/server/guides/allocations.md
+- documentation/server/guides/linux-perf.md
+- documentation/server/guides/performance.md
+- documentation/server/guides/llvm-sanitizers.md
+- documentation/server/guides/packaging.md
+- documentation/server/guides/packaging.md
+- documentation/server/guides/passkeys.md
+- documentation/server/guides/libraries/log-levels.md
+- documentation/server/guides/libraries/concurrency-adoption-guidelines.md
+- documentation/server/guides/deployment.md
+- documentation/server/guides/deploying/aws-sam-lambda.md
+- documentation/server/guides/deploying/aws-copilot-fargate-vapor-mongo.md
+- documentation/server/guides/deploying/aws.md
+- documentation/server/guides/deploying/aws.md
+- documentation/server/guides/deploying/digital-ocean.md
+- documentation/server/guides/deploying/ubuntu.md
+- documentation/server/guides/deploying/heroku.md
+- documentation/server/guides/deploying/gcp.md
+- documentation/swift-compiler/index.md
   - documentation/swift-compiler/_compiler-architecture.md
-
 - documentation/standard-library/index.md
   - documentation/standard-library/_preview-package.md
   - documentation/standard-library/_stdlib-design.md
-
-- documentation/source-compatibility/index.md: migrate to github.com/swiftlang/project-operations repository
-  (referencess to swift source compatibility project)
-
-- documentation/source-code/index.md: migrate to github.com/swiftlang/project-operations repository
-  (partial list to existing source code that goes into toolchain, needs updating if kept)
-
-- documentation/continuous-integration/index.md: migrate to github.com/swiftlang/project-operations repository
 
 ## Alternatives Considered
 
@@ -295,11 +282,11 @@ The downsides:
 
 - DocC provides a Swift-aligned, familiar structure, including affordances like quicknav and an article Table of Content on the side (depending on viewing width). The structure is reasonably well defined, laying out into a clear hierarchical format by default. Jekyll, in comparison, requires the Author to provide and constantly maintain any structure even between pages and if they're hierarchical vs. spaghetti, and so on.
 
-- The process of finding reviewers and enabling reviews for content is heavily reliant on reviewers in the website workgroup to find and source reviews. This could be significantly streamlined by delegating it to workgroups or steering groups aligned with the content. Breaking the collected files out into a separate repository and having clearly defined reviewers for catalogs could significantly reduce the friction of getting updates and content available.
+- The process of finding reviewers and enabling reviews for content is heavily reliant on reviewers in the website workgroup to find and source reviews. This could be significantly streamlined by delegating it to steering groups (or delegated workgroups from a steering group) aligned with the content. Breaking the collected files out into a separate repository and having clearly defined reviewers for catalogs could significantly reduce the friction of getting updates and content available.
 
 ### Multiple Repos
 
-Instead of using a mono-repo layout that collects catalogs, create a repository per catalog. This follows the pattern of what exists today with the repositories https://github.com/apple/swift-migration-guide, https://github.com/apple/swift-embedded-examples, and https://github.com/swiftlang/swift-book/. Each repository could have its own set of reviewers and committers, aligned with their relevant workgroup or steering group.
+Instead of using a mono-repo layout that collects catalogs, create a repository per catalog. This follows the pattern of what exists today with the repositories https://github.com/apple/swift-migration-guide, https://github.com/apple/swift-embedded-examples, and https://github.com/swiftlang/swift-book/. Each repository could have its own set of reviewers and committers, aligned with their steering groups.
 
 The downside of this scenario is that this could represent a notable growth of repositories, and finding the relevant content would be notably less obvious than a single location. Additionally, some of these repositories would be quite thin - containing relatively little content for the overhead of maintaining a repository.
 
