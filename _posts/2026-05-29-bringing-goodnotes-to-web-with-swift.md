@@ -1,9 +1,16 @@
 ---
-layout: post
+layout: new-layouts/post
 published: true
-date: 2026-05-20 10:00:00
+date: 2026-05-29 11:30:00
 title: "Bringing Goodnotes to the web with Swift and WebAssembly"
-author: kateinoigakukun
+author: [kateinoigakukun]
+category: "Adopters"
+featured-image:
+  url: '/assets/images/bringing-goodnotes-to-web-with-swift/blog-hero@2x.png'
+  alt: 'Featured blog image with the screenshot of Goodnotes'
+featured-image-dark:
+  url: '/assets/images/bringing-goodnotes-to-web-with-swift/blog-hero-dark@2x.png'
+  alt: 'Featured blog image with the screenshot of Goodnotes'
 ---
 
 _Goodnotes has been helping millions of users take handwritten notes on iPad for over a decade, earning recognition as Apple's iPad App of the Year in 2022. Today, the same Swift code that powers our iOS app also runs seamlessly in web browsers through WebAssembly, delivering the exact same ink rendering and note-taking experience users love._
