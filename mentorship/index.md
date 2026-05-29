@@ -3,7 +3,7 @@ layout: page
 title: Swift Mentorship Program
 ---
 
-The Swift Mentorship Program is designed to encourage developers to actively participate in the Swift open source community through direct mentorship with experienced developers. The program is open to everyone! The program also looks to foster mentorship relationships within Swift's [community groups](/diversity/#community-groups), for those who are interested. Members of Women in Swift, Black in Swift, and Pride in Swift are strongly encouraged to participate!
+The Swift Mentorship Program is designed to encourage developers to actively participate in the Swift open source community through direct mentorship with experienced developers. The program is open to everyone!
 
 Each mentee will have the opportunity to connect with and learn from an experienced developer within the Swift community, with the goal of them contributing code directly to an open source project. The mentee can contribute to any open source project written in Swift, or even in the Swift compiler itself, depending on the mentee's learning goals. Mentors and mentees will be matched based on the learning goals of the mentee and the experience of the mentor.
 
@@ -34,8 +34,6 @@ The 2026 interest surveys are now open. If you'd like to participate, please sub
 
 The mentee interest survey is not an application; it simply helps the Contributor Experience workgroup understand your technical interests and learning goals to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the workgroup may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
 
-The Swift Mentorship Program is also a leadership opportunity for veteran community members, particularly if they are already an open source project maintainer or frequent contributor. If you're passionate about lowering the barrier to entry for new contributors in our community, please consider getting involved as a mentor!
-
 ## Frequently Asked Questions
 
 Participation in the Swift Mentorship program is governed by the [Swift Code of Conduct](/code-of-conduct), and participants agree to the Swift Mentorship Program [terms and conditions](/mentorship-tos/). If you have any questions or concerns throughout the program, please reach out to [@contributor-experience-workgroup](https://forums.swift.org/new-message?groupname=contributor-experience-workgroup) on the Swift Forums.
@@ -49,8 +47,7 @@ Mentors and mentees will each fill out an interest survey. The survey is not an 
 <details class="download">
   <summary>Are there any necessary qualifications to participate?</summary>
 
-There are no necessary qualifications for mentees — the mentorship program is open to anybody 18 years and older who is willing to learn about Swift! Since this program is designed to encourage and help diverse developers overcome barriers and actively participate in the Swift community, the Contributor Experience workgroup strongly encourages members of Women in Swift and Black in Swift to participate.
-Mentors must be members of the Swift community (e.g., iOS developers, Swift compiler contributors, etc). Prior experience with mentorship is a plus, but not required.
+Designed to broaden participation and make the Swift community more inclusive, the program is open to everyone 18 years and older who is eager to learn about Swift. No prior qualifications are needed for mentees! Mentors must be active members of the Swift community, such as workgroup members, contributors, package maintainers, or developers across any platform Swift supports. Prior mentorship experience is a plus, but not required.
 </details>
 
 <details class="download">
