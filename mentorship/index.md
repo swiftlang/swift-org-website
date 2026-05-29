@@ -34,8 +34,6 @@ The 2026 interest surveys are now open. If you'd like to participate, please sub
 
 The mentee interest survey is not an application; it simply helps the Contributor Experience workgroup understand your technical interests and learning goals to help match you with a suitable mentor. Although the survey won't be evaluated like an application, the workgroup may not be able to match every interested mentee if there aren't enough mentors, or if none of the mentors are equipped to help with your specific learning goals.
 
-The Swift Mentorship Program is also a leadership opportunity for veteran community members, particularly if they are already an open source project maintainer or frequent contributor. If you're passionate about lowering the barrier to entry for new contributors in our community, please consider getting involved as a mentor!
-
 ## Frequently Asked Questions
 
 Participation in the Swift Mentorship program is governed by the [Swift Code of Conduct](/code-of-conduct), and participants agree to the Swift Mentorship Program [terms and conditions](/mentorship-tos/). If you have any questions or concerns throughout the program, please reach out to [@contributor-experience-workgroup](https://forums.swift.org/new-message?groupname=contributor-experience-workgroup) on the Swift Forums.
