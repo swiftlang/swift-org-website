@@ -335,12 +335,12 @@ struct SWIFT_NONCOPYABLE FileDescriptor {
 };
 ```
 
-For class templates, we may need more control over how each specialization behaves. 
+Class templates may need more control over how copyability is determined for each specialization. 
 Consider this `ResourceWrapper`, which provides a copy constructor
 that copies its underlying resource:
 
 ```c++
-template <class T>
+template <typename T>
 struct ResourceWrapper {
   T resource;
   ResourceWrapper(const ResourceWrapper &other) : resource(other.resource) {}
@@ -357,11 +357,11 @@ Alternatively, there are two ways to make `ResourceWrapper`'s copyability
 depend on the template arguments.
 
 **1. Constrain the copy constructor with a [`requires` clause](https://en.cppreference.com/cpp/language/requires) (since C++20).** 
-This is the idiomatic C++ approach and is preferred when available. 
+This is the idiomatic C++ approach and is preferred when concepts are available. 
 Instantiations of `ResourceWrapper` where `std::is_copy_constructible_v<T>` is true will be imported as `Copyable`, and as `~Copyable` otherwise:
 
 ```c++
-template <class T>
+template <typename T>
 struct ResourceWrapper {
   T resource;
   ResourceWrapper(const ResourceWrapper &other) requires std::is_copy_constructible_v<T>
@@ -378,7 +378,7 @@ The specialization is imported as `Copyable` only when every listed parameter is
 itself imported as `Copyable`:
 
 ```c++
-template <class T>
+template <typename T>
 struct SWIFT_COPYABLE_IF(T) ResourceWrapper {
   T resource;
   ResourceWrapper(const ResourceWrapper &other) : resource(other.resource) {}
