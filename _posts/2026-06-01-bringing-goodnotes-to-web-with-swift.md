@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2026-05-29 12:30:00
+date: 2026-06-01 12:00:00
 title: "Bringing Goodnotes to the web with Swift and WebAssembly"
 author: [kateinoigakukun]
 category: "Adopters"
