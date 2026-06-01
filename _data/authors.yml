@@ -46,6 +46,12 @@ k8stone:
     email: k8stone@apple.com
     github: k8stone
 
+kateinoigakukun:
+    name: Yuta Saito
+    email: yuta@goodnotes.com
+    github: kateinoigakukun
+    about: "Yuta Saito is a Software Engineer at Goodnotes, working on WebAssembly platform support in Swift."
+
 eeckstein:
     name: Erik Eckstein
     email: eeckstein@apple.com
