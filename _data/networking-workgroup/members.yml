@@ -1,0 +1,44 @@
+- name: Cory Benfield
+  handle: Lukasa
+  github: Lukasa
+  affiliation: Apple
+
+- name: Eric Kinnear
+  handle: ekinnear
+  github: ekinnear
+  affiliation: Apple (chair)
+
+- name: Franz Busch
+  handle: FranzBusch
+  github: FranzBusch
+  affiliation: Apple
+
+- name: Tim Condon
+  handle: 0xTim
+  github: 0xTim
+  affiliation: Vapor
+
+- name: Adam Fowler
+  handle: adam-fowler
+  github: adam-fowler
+  affiliation: Hummingbird
+
+- name: Joannis Orlandos
+  handle: Joannis_Orlandos
+  github: Joannis
+  affiliation: Hummingbird/Wendy
+
+- name: Jon Shier
+  handle: Jon_Shier
+  github: jshier
+  affiliation: Alamofire
+
+- name: Soroush Khanlou
+  handle: Soroush
+  github: khanlou
+  affiliation: Meridian
+
+- name: Tommy Pauly
+  handle: tfpauly
+  github: tfpauly
+  affiliation: Apple
