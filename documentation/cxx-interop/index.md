@@ -1497,7 +1497,7 @@ void useRef(RefOfShared r);
 
 ```swift
 let obj: SharedObject = makeRef()   // makeRef() returns SharedObject in Swift
-useRef(obj)                          // useRef takes SharedObject in Swift
+useRef(obj)                         // useRef takes SharedObject in Swift
 ```
 
 Functions that take the smart pointer by reference (`Ref<T>&`, `const Ref<T>&`, or `Ref<T>&&`) are not bridged.
