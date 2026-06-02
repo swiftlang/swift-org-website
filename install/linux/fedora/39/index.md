@@ -11,11 +11,11 @@ title: Install Swift
     docker_tag="nightly-fedora-39"
     development_builds=site.data.builds.development.fedora39
     aarch64_development_builds=site.data.builds.development.fedora39-aarch64
-    development_2="release/6.3"
-    docker_tag_2="nightly-6.3-fedora39"
-    development_builds_2=site.data.builds.swift-6_3-branch.fedora39
-    aarch64_development_builds_2=site.data.builds.swift-6_3-branch.fedora39-aarch64
-    branch_dir_2="swift-6.3-branch"
+    development_2="release/6.4.x"
+    docker_tag_2="nightly-6.4.x-fedora39"
+    development_builds_2=site.data.builds.swift-6_4_x-branch.fedora41
+    aarch64_development_builds_2=site.data.builds.swift-6_4_x-branch.fedora41-aarch64
+    branch_dir_2="swift-6.4.x-branch"
 %}
 
 {% include /new-includes/components/linux-releases.html
