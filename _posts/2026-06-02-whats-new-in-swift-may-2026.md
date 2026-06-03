@@ -18,7 +18,7 @@ Welcome to "What's new in Swift," a curated digest of releases, videos, and disc
 > * Local community: they’re building local connections among Swift developers and organizations.
 > * Variety of talks: I appreciate how meetups sometimes feature works in progress, which conference talks often lack. Having spaces to explore and get feedback on ideas and to improve and to learn is really valuable.
 > 
-> I want to encourage more folks to not only get involved in their local Swift meetup but also to get in touch if your local group starts publishing content, and videos, I’ll definitely follow!
+> I encourage more folks to get involved in their local Swift meetup. And if your local group starts publishing content and videos, please share on the [Swift Forums](https://forums.swift.org) in the [Community Showcase category](https://forums.swift.org/c/community-showcase/66).
 > 
 > &mdash; Dave Lester
 
