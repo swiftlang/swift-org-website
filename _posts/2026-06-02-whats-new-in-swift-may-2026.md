@@ -36,7 +36,7 @@ Now on to other news about Swift:
 * Members of the community using and contributing to the VS Code Swift Extension met in May during the [Swift Extension Community Office Hours](https://forums.swift.org/t/swift-extension-community-office-hours-agenda-may-21-2026/86279/2), featuring demonstrations of using Kiro and more.
 
 ## New package releases
-* You can build an AI agent in Swift? The [Swift Bedrock Library](https://github.com/build-on-aws/swift-bedrock-library) gives you a native library for Amazon Bedrock foundation models.
+* Want to build an AI agent in Swift? The [Swift Bedrock Library](https://github.com/build-on-aws/swift-bedrock-library) gives you a Swift library for Amazon Bedrock foundation models.
 * [SwiftOSC](https://github.com/orchetect/swift-osc) is an Open Sound Control (OSC) toolkit written in Swift which recently became cross-platform, now supporting Apple platforms, Linux, and Android. It's music to our ears! Steffan Andrews, who developed SwiftOSC, has also released other music-related Swift packages including [SwiftMIDI](https://github.com/orchetect/swift-midi) and [SwiftTimecode](https://github.com/orchetect/swift-timecode).
 * Ordo One shipped version 1.33.0 of [Benchmark](https://github.com/ordo-one/benchmark), a package for creating sophisticated Swift performance benchmarks for a [wide variety of metrics](https://swiftpackageindex.com/ordo-one/benchmark/1.33.0/documentation/benchmark/metrics).
 
