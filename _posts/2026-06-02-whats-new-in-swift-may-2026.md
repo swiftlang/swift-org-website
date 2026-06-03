@@ -25,7 +25,7 @@ Welcome to "What's new in Swift," a curated digest of releases, videos, and disc
 Now on to other news about Swift:
 
 ## Videos to watch
-* Interested in using Swift for backend server development? Mohammad Azam recorded an [Introduction to Hummingbird](https://www.youtube.com/watch?v=BKMaXnSK5Kc) livestream focused on the Hummingbird web framework written in Swift. The video walks through installation and basics of developing with it.
+* Interested in using Swift for backend server development? Mohammad Azam posted a livestream recording of [Introduction to Hummingbird](https://www.youtube.com/watch?v=BKMaXnSK5Kc), a walkthrough of the Swift web framework covering installation and the basics of developing with it.
 * [Meet the Temporal Swift SDK](https://www.youtube.com/watch?v=LaU7z77cc2s&t=24s), from Replay 2026, introduces the SDK that brings Temporal's durable workflows (long-running processes that survive crashes, retries, and restarts without losing state) to Swift. The SDK recently reached its 1.0.0 release.
 * Sébastien Stormacq shares a great introduction to what's possible with AWS Lambda and Swift, presenting [Swift, Server-side, & Serverless](https://www.youtube.com/watch?v=qcp99G6JGIU) on the DevStandup YouTube channel.
 
