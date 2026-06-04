@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2026-06-03 17:30
+date: 2026-06-03 17:45
 title: "What's new in Swift: May 2026 Edition"
 author: [davelester]
 category: "Digest"
@@ -9,16 +9,16 @@ category: "Digest"
 
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
 
-To start, we're focusing on some of the many local meetup groups that are actively sharing Swift content:
+To start, we're focusing on some of the many local meetup groups sharing Swift content:
 
 > Around the world, local meetup groups and conferences bring Swift developers together, and some even predate Swift itself! Many have YouTube channels where they share videos from their events, so you can tune in remotely. Let's highlight a few.
 > 
-> In May the SF Swift meetup hosted a talk by Dan Federman, [Agentify Your Swift Repo](https://vimeo.com/1195418169?autoplay=1&muted=1&stream_id=Y2xpcHN8MjM2NTA1NDQ2fGlkOmRlc2N8W10%3D), which covers building an agent for CI and review feedback. [Swift Barcelona](https://www.youtube.com/@SwiftBarcelona) has a dedicated YouTube presence, while some groups, like the new MLX India meetup, have playlists of their events, which include a talk about [using MLX Swift in iOS apps](https://www.youtube.com/watch?v=EIwP73vV2a0&list=PLW4mt_1SMN_kQiK-HaZIoe-p5SNg8ocGU&index=3) that's worth checking out. And there's even a community-organized [Swift Community Meetups YouTube channel](https://www.youtube.com/@SwiftCommunityMeetups), hosting meetups online and home to a series of cross-platform Swift talks.
+> In May the SF Swift meetup hosted a talk by Dan Federman, [Agentify Your Swift Repo](https://vimeo.com/1195418169?autoplay=1&muted=1&stream_id=Y2xpcHN8MjM2NTA1NDQ2fGlkOmRlc2N8W10%3D), which covers building an agent for CI and review feedback. [Swift Barcelona](https://www.youtube.com/@SwiftBarcelona) has a dedicated YouTube presence, while some groups, like the new MLX India meetup, post event playlists, including a recent talk about [using MLX Swift in iOS apps](https://www.youtube.com/watch?v=EIwP73vV2a0&list=PLW4mt_1SMN_kQiK-HaZIoe-p5SNg8ocGU&index=3) that's worth checking out. And there's even a community-organized [Swift Community Meetups YouTube channel](https://www.youtube.com/@SwiftCommunityMeetups), which hosts meetups online and is home to a series of cross-platform Swift talks.
 > 
-> It's great to see the many ways developers are using Swift. These groups support developers in a few ways worth calling out:
+> These groups support developers in a few ways worth calling out:
 > 
 > * Local community: they're building local connections among Swift developers and organizations.
-> * Room for experimentation: by being less formal and sometimes featuring works in progress, meetups create space to share ideas we're exploring, get feedback, and learn from one another.
+> * Room for experimentation: by being less formal and sometimes featuring works in progress, meetups create space to share ideas, get feedback, and learn from one another.
 > 
 > I encourage more folks to get involved in their local Swift meetup. And if your group starts publishing content and videos, please share on the [Swift Forums](https://forums.swift.org) in the [Community Showcase category](https://forums.swift.org/c/community-showcase/66).
 > 
@@ -33,7 +33,7 @@ Now on to other news about Swift:
 
 ## Community highlights
 * Swift and WebAssembly continues to be an exciting part of the project, with regular activity shared on the Swift forums, including the most recent [Swift for Wasm May 2026 Updates](https://forums.swift.org/t/swift-for-wasm-may-2026-updates/86981). And if you missed it, check out the new [blog post by Goodnotes](/blog/bringing-goodnotes-to-web-with-swift/) about how they brought Goodnotes to the web with Swift and WebAssembly.
-* The [2026 Swift Mentorship Program](https://www.swift.org/mentorship/) was announced, and there's still time until June 15, 2026, to complete the interest survey to be a mentee. Working on contributions is a great way to learn. And on that note, [three Swift projects were accepted for GSoC 2026](https://forums.swift.org/t/gsoc-2026-accepted-projects/86398). 
+* The [2026 Swift Mentorship Program](https://www.swift.org/mentorship/) was announced, and there's still time until June 15, 2026, to complete the interest survey to be a mentee. Working on contributions is a rewarding way to learn. And on that note, [three Swift projects were accepted for GSoC 2026](https://forums.swift.org/t/gsoc-2026-accepted-projects/86398).
 * [Training an LLM in Swift, Part 1](https://www.cocoawithlove.com/blog/matrix-multiplications-swift.html) - Matt Gallagher takes handwritten matrix multiplication for a Swift port of llm.c from 2.8 Gflop/s to 1.1 Tflop/s, a 382x speedup, using Swift 6.2's `MutableSpan` and `InlineArray`, `Relaxed.multiplyAdd` from Swift Numerics, `DispatchQueue.concurrentPerform`, and finally AMX and Metal. A thorough tour of performance optimization in modern Swift.
 * Members of the community using and contributing to the VS Code Swift Extension met in May during the [Swift Extension Community Office Hours](https://forums.swift.org/t/swift-extension-community-office-hours-agenda-may-21-2026/86279/2), featuring demonstrations of using Kiro and more.
 
