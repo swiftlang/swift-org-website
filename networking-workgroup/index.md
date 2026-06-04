@@ -92,7 +92,7 @@ Workgroup members will try to make decisions independently by consensus whenever
 
 ## Meetings
 
-The Networking Workgroup meets biweekly. A regular meeting time is being finalized and will be announced on the forums ahead of the first public meeting.
+The Networking Workgroup meets every two weeks, unless otherwise communicated.
 
 Many workgroup meetings are meant for open discussion, and any Swift community member may attend by sending a message to [@networking-workgroup](https://forums.swift.org/new-message?groupname=networking-workgroup) beforehand to request an invite. Some meetings are reserved for private discussion by group members, for example, to make decisions on proposals under review.
 
