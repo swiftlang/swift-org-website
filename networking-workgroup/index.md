@@ -58,7 +58,7 @@ The workgroup's scope spans the networking stack: from I/O primitives and transp
 
 ### Relationship with the Swift Server Workgroup
 
-The Swift Server Workgroup (SSWG) promotes the use of Swift for server application development and runs an incubation process for server-oriented libraries. There is natural overlap: many of the networking libraries the Networking Workgroup governs are heavily used in server contexts, and several SSWG-incubated packages (such as Async HTTP Client) are networking libraries.
+The Swift Server Workgroup (SSWG) promotes the use of Swift for server application development and runs an incubation process for server-oriented libraries. There is natural overlap: many of the networking libraries the Networking Workgroup governs are heavily used in server contexts, and several SSWG-incubated packages (such as AsyncHTTPClient) are networking libraries.
 
 The two groups have complementary responsibilities:
 
