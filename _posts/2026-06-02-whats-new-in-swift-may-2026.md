@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2026-06-03 15:30:00
+date: 2026-06-03 17:00
 title: "What's new in Swift: May 2026 Edition"
 author: [davelester]
 category: "Digest"
@@ -9,14 +9,14 @@ category: "Digest"
 
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community. This month, we're featuring the many local meetup groups that are showcasing great Swift content:
 
-> As I’ve contributed to these digest posts, I’ve been keen to follow the many local meetup groups and conferences featuring Swift content around the world. Some of these groups predate even Swift itself, while others are much newer. I wanted to highlight a few of them and encourage others to follow in their footsteps.
+> Around the world, local meetup groups and conferences feature Swift content, and some even predate Swift itself! Many have YouTube channels where they share videos from their events so you can tune in remotely. Let's highlight a few and encourage others to do the same.
 > 
-> Several meetup groups have YouTube channels and have shared videos from their events that you can tune into remotely. In May the SF Swift meetup hosted a talk by Dan Federman, [Agentify Your Swift Repo](https://vimeo.com/1195418169?autoplay=1&muted=1&stream_id=Y2xpcHN8MjM2NTA1NDQ2fGlkOmRlc2N8W10%3D), which covers building an agent for CI and review feedback. [Swift Barcelona](https://www.youtube.com/@SwiftBarcelona) has a dedicated YouTube presence, while some groups like the new MLX India meetup have playlists of their events, which include an [MLX Swift talk about using MLX Swift in iOS apps](https://www.youtube.com/watch?v=EIwP73vV2a0&list=PLW4mt_1SMN_kQiK-HaZIoe-p5SNg8ocGU&index=3) that's worth checking out. And there’s even a community-organized [Swift Community Meetups YouTube channel](https://www.youtube.com/@SwiftCommunityMeetups), which hosts meetups online and is home to a series of cross-platform Swift talks.
+> In May the SF Swift meetup hosted a talk by Dan Federman, [Agentify Your Swift Repo](https://vimeo.com/1195418169?autoplay=1&muted=1&stream_id=Y2xpcHN8MjM2NTA1NDQ2fGlkOmRlc2N8W10%3D), which covers building an agent for CI and review feedback. [Swift Barcelona](https://www.youtube.com/@SwiftBarcelona) has a dedicated YouTube presence, while some groups like the new MLX India meetup have playlists of their events, which include a talk about [using MLX Swift in iOS apps](https://www.youtube.com/watch?v=EIwP73vV2a0&list=PLW4mt_1SMN_kQiK-HaZIoe-p5SNg8ocGU&index=3) that's worth checking out. And there's even a community-organized [Swift Community Meetups YouTube channel](https://www.youtube.com/@SwiftCommunityMeetups), hosting meetups online and home to a series of cross-platform Swift talks.
 > 
-> It’s great to see the many ways developers are using Swift, and I’m encouraged by these groups:
+> It's great to see the many ways developers are using Swift. These groups support developers in a few ways worth calling out:
 > 
-> * Local community: they’re building local connections among Swift developers and organizations.
-> * Variety of talks: I appreciate how meetups sometimes feature works in progress, which conference talks often lack. Having spaces to explore and get feedback on ideas and to improve and to learn is really valuable.
+> * Local community: they're building local connections among Swift developers and organizations.
+> * Room for experimentation: by being less formal and sometimes featuring works in progress, meetups create space to share ideas we're exploring, get feedback, and learn from one another.
 > 
 > I encourage more folks to get involved in their local Swift meetup. And if your local group starts publishing content and videos, please share on the [Swift Forums](https://forums.swift.org) in the [Community Showcase category](https://forums.swift.org/c/community-showcase/66).
 > 
