@@ -33,7 +33,7 @@ Basic setup and configuration includes:
 3. Configuring the SourceKit-LSP server.
 4. Setting up Language-Server-driven code completion with _nvim-cmp_.
 5. Setting up snippets with _LuaSnip_.
-5. Setting up the LLDB debugger.
+6. Setting up the LLDB debugger.
 
 The following sections are provided to help guide you through the setup:
 
