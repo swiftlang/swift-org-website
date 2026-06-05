@@ -176,7 +176,6 @@ components:
         - fedora39
         - macos
         - ubi9
-        - ubuntu2004
         - ubuntu2204
         - ubuntu2404
         - windows10
@@ -262,6 +261,7 @@ components:
         - '6.0'
         - '6.1'
         - '6.2'
+        - '6.3'
     SourceBranch:
       anyOf:
         - $ref: '#/components/schemas/KnownSourceBranch'
