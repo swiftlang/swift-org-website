@@ -23,7 +23,7 @@ The new Networking workgroup joins a growing list of Swift workgroups, including
 
 To learn more and get involved:
 
-* [Discuss this announcement](https://forums.swift.org/t/announcing-the-networking-workgroup/87116) on the forums, and share ideas in the [Networking](https://forums.swift.org/c/related-projects/networking/) category.
+* [Discuss this announcement](https://forums.swift.org/t/announcing-the-networking-workgroup/87116) on the forums, and share ideas in the [Networking](https://forums.swift.org/c/development/networking/129) category.
 * Learn more about the Networking workgroup by reading its [charter](/networking-workgroup/).
 * The workgroup meets biweekly. A regular meeting time is being finalized and will be announced on the forums ahead of the first public meeting.
     * Workgroup membership and meetings are open to those who wish to participate, and contributors are welcome!
