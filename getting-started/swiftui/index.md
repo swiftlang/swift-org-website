@@ -6,7 +6,6 @@ title: Build an iOS app with SwiftUI
 > The source code for this guide can be found [on GitHub](https://github.com/0xTim/swift-org-swiftui-tutorial)
 
 In this tutorial you’re going to use Swift and SwiftUI to build a small app to recommend fun new activities to users. Along the way you’ll meet several of the basic components of a SwiftUI app, including text, images, buttons, shapes, stacks, and program state.
-
 To get started, you’ll need to [download Xcode from the Mac App Store](https://apps.apple.com/app/xcode/id497799835?mt=12). It’s free, and comes with Swift and all the other tools you need to follow this tutorial.
 
 Go ahead and launch Xcode once it’s installed, then select Create a new Xcode Project. Select the iOS tab at the top, then select the App template and press Next.
@@ -228,7 +227,7 @@ So, change your `Image` code this:
 Image(systemName: "figure.\(selected.lowercased())")
 ```
 
-Those changes mean our UI will display whatever the `selected` property is set to, so can see it all change if you place a new string in that property:
+Those changes mean our UI will display whatever the `selected` property is set to, so you can see it all change if you place a new string in that property:
 
 ```swift
 var selected = "Baseball"
