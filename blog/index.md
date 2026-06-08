@@ -7,7 +7,7 @@ title: Blog
   <div class="blog-swoop"></div>
   <div class="section blog-featured-grid">
     <div class="content">
-      <h2 class="blog-featured-grid-headline title-1">{{site.data.new-data.blog.page-data.headline}}</h2>
+      <h2 class="blog-featured-grid-headline title-0">{{site.data.new-data.blog.page-data.headline}}</h2>
       {% assign hero_card_title = site.data.new-data.blog.page-data.category_titles[0] %}
       {% assign hero_card_post = site.categories[hero_card_title][0] %}
       {% assign hero_card_thumbnail = hero_card_post.featured-image %}
