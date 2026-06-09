@@ -1245,217 +1245,455 @@ takesVectorType(&vector) // 'vector' is not copied!
 
 ## Mapping C++ Types to Swift Reference Types
 
-The Swift compiler allows you to annotate some C++ types and import them as reference types (or `class` types) in Swift. Whether a C++ type should be imported as a reference type is a complex question, and there are two primary criteria that go into answering it.
+By default, Swift imports C++ class and structure types as Swift `struct` types
+with [value semantics](#c-structures-and-classes-are-value-types-by-default).
+This works well for types that are small, self-contained, and copied by value.
+Some C++ types, however, are designed around identity and shared ownership rather
+than value semantics. For these types, you can use customization macros from the
+`<swift/bridging>` header to instruct Swift to import them as **foreign reference
+types**.
 
-The first criterion is whether object identity is part of the "value" of the type. Is comparing the address of two objects just asking whether they're stored at the same location, or is it deciding whether they represent the "same object" in a more significant sense?
+Foreign reference types are imported with reference semantics that resemble
+Swift classes: variables hold references to the same underlying object,
+modifications are visible through every reference, and a `let`-declared
+reference can still call non-`const` C++ methods. Pointers and references to a
+foreign reference type in C++ bridge directly to the Swift reference type,
+rather than to an `UnsafePointer` variant.
 
-The second criterion whether objects of the C++ class are always passed around by reference.  Are objects predominantly passed around using a pointer or reference type, such as a raw pointer (`*`), C++ reference (`&` or `&&`), or a smart pointer (like `std::unique_ptr` or `std::shared_ptr`)?  When passed by raw pointer or reference, is there an expectation that that memory is stable and will continue to stay valid, or are receivers expected to copy the object if they need to keep the value alive independently?  If objects are generally allocated and remain at a stable address, even if that address is not semantically part of the "value" of an object, the class may be idiomatically a reference type. This will sometimes be a judgment call for the programmer.
+Types that are never stack-allocated and are predominantly passed by raw
+pointer (`*`), C++ reference (`&` or `&&`), or smart pointer (such as
+`std::unique_ptr` or `std::shared_ptr`) are natural candidates for being
+imported as reference types. Reference types also frequently delete the copy
+constructor to prevent accidental value copies that would bypass reference
+counting.
 
-The first and most important criteria is often not possible for a compiler to answer automatically by just looking at the code. If you want the Swift compiler to map a C++ type to a Swift reference type, you must annotate the C++ type with one of the following
-customization macros from the `<swift/bridging>` header:
+Swift supports three foreign reference type variants, declared by applying one
+of the following customization macros from `<swift/bridging>`:
 
-- [`SWIFT_IMMORTAL_REFERENCE`](#immortal-reference-types)
-- [`SWIFT_SHARED_REFERENCE`](#shared-reference-types)
-- [`SWIFT_UNSAFE_REFERENCE`](#unsafe-reference-types)
+- [`SWIFT_SHARED_REFERENCE`](#shared-reference-types) for reference-counted
+  types.
+- [`SWIFT_IMMORTAL_REFERENCE`](#immortal-reference-types) for persistent
+  objects like singletons.
+- [`SWIFT_UNSAFE_REFERENCE`](#unsafe-reference-types) for types whose lifetime
+  is managed manually outside of Swift.
 
-### Immortal Reference Types
-
-**Immortal** reference types are not designed to be managed individually by the program. Objects of these types are allocated and then intentionally "leaked" without tracking their uses. Sometimes these objects are not truly immortal: for example, they may be arena-allocated, with an expectation that they will only be referenced from other objects within the arena. Nonetheless, they aren't expected to be individually managed.
-
-The only reasonable thing Swift can do with immortal reference types is import them as unmanaged classes.  This is perfectly fine when objects are truly immortal.  If the object is arena-allocated, this is unsafe, but it's essentially an unavoidable level of unsafety given the choices of the C++ API.
-
-To specify that a C++ type is an immortal reference type, apply the `SWIFT_IMMORTAL_REFERENCE` attribute. Here's an example of `SWIFT_IMMORTAL_REFERENCE` being applied to the C++ type `LoggerSingleton`:
-```c++
-class LoggerSingleton {
-public:
-    LoggerSingleton(const LoggerSingleton &) = delete; // non-copyable
-
-    static LoggerSingleton &getInstance();
-    void log(int x);
-} SWIFT_IMMORTAL_REFERENCE;
-```
-
-Now that `LoggerSingleton` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
-```swift
-let logger = LoggerSingleton.getInstance()
-logger.log(123)
-```
+Applying more than one of these annotations to a single C++ type is an error.
 
 ### Shared Reference Types
 
-**Shared** reference types are reference-counted types that are passed around by
-pointer or reference in C++. They typically use either:
-
-- custom retain and release operations that increment and decrement
-  a reference count stored intrusively in the object.
-- or, a non-intrusive shared pointer type like `std::shared_ptr`,
-  that can store the reference count outside of the object.
-
-Currently Swift can map C++ classes or structures that use custom retain
-and release operations together with a reference count stored intrusively in the object
-to a Swift reference type (that behaves like a Swift `class`). Other types
-that rely on `std::shared_ptr` for reference counting can still be used
-as value types in Swift.
-
-To specify that a C++ type is a shared reference type, use the `SWIFT_SHARED_REFERENCE` customization macro. This macro expects two arguments: a retain and release function. These functions must be global functions that take exactly one argument and return void. The argument must be a pointer to the C++ type (not a base type). Swift will call these custom retain and release functions where it would otherwise retain and release Swift classes. Here's an example of `SWIFT_SHARED_REFERENCE` being applied to the C++ type `SharedObject`:
+**Shared** reference types are reference-counted objects with custom retain
+and release operations. The `SWIFT_SHARED_REFERENCE` macro takes two arguments,
+naming the retain and release operations that Swift calls when copying and
+dropping references. Prefix a name with `.` to refer to a member function of
+the annotated type:
 
 ```c++
-class SharedObject : IntrusiveReferenceCounted<SharedObject> {
-public:
-    SharedObject(const SharedObject &) = delete; // non-copyable
-    SharedObject();
-    static SharedObject* _Nonnull create() SWIFT_RETURNS_RETAINED;
-    void doSomething();
-} SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject);
-
-void retainSharedObject(SharedObject *);
-void releaseSharedObject(SharedObject *);
+struct Image {
+    Image(const Image &) = delete;
+    void doRetain() const;
+    void doRelease() const;
+    // ...
+private:
+    mutable unsigned refCount = 1;
+} SWIFT_SHARED_REFERENCE(.doRetain, .doRelease);
 ```
 
-In the example above, the `SWIFT_RETURNS_RETAINED` annotation specifies that the returned value is passed with `+1` ownership.
-For more details, see [Calling conventions when returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift).
-
-Now that `SharedObject` is imported as a reference type in Swift, the programmer will be able to use it in the following manner:
-```swift
-let object1 = SharedObject.create()
-let object2 = SharedObject() // The C++ constructor is imported as a Swift initializer
-object1.doSomething()
-object2.doSomething()
-// `object` will be released here.
-```
-
-#### Constructing objects of Shared Reference Types from Swift
-
-As demonstrated in the provided example, starting from Swift 6.2, you can create instances of `SWIFT_SHARED_REFERENCE` types by invoking their initializers.
-Note that the Swift compiler uses the default `new` operator to construct C++ shared reference types. 
-
-You can also import a user-defined C++ static factory function as a Swift initializer by annotating it with `SWIFT_NAME("init(…)")` annotation macro, ensuring that the number of underscore placeholders matches the number of parameters in the factory function. 
-For example:
-
-```cpp
-struct SharedObject {
-  static SharedObject* make(int id) SWIFT_NAME("init(_:)");
-
-  void doSomething();
-} SWIFT_SHARED_REFERENCE(retainSharedObject, releaseSharedObject);
-```
-
-In this case, Swift will import the static `make` function as a Swift initializer:
-
-```swift
-let object = SharedObject(42)
-```
-
-Note that if a C++ constructor and a user-annotated static factory (using `SWIFT_NAME`) have identical parameter signatures, Swift favors the static factory when resolving initializer calls. 
-This is particularly useful when you want to use a custom allocator or want to disable direct construction entirely and expose only factories.
-
-#### Inference of Shared Reference behaviour in Derived Types
-
-When a C++ type inherits from a `SWIFT_SHARED_REFERENCE` base type, the Swift compiler automatically infers `SWIFT_SHARED_REFERENCE` annotation for the derived type.
-The derived type also gets imported as a reference type, and uses the same `retain` and `release` functions as its base class.
-This inference works as long as all the annotated base types in the inheritance chain (including multiple or indirect inheritance) have the same `retain` and `release` functions.
-If multiple base types have conflicting `retain` or `release` functions, the derived type is imported as a Swift value type, and the compiler emits a warning.
-
-
-Note that this inference currently applies only to `SWIFT_SHARED_REFERENCE`. 
-It does not apply to types annotated with `SWIFT_IMMORTAL_REFERENCE` or `SWIFT_UNSAFE_REFERENCE`.
-
-#### Calling conventions when returning Shared Reference Types from C++ to Swift
-
-When C++ functions and methods return `SWIFT_SHARED_REFERENCE` types, it is necessary to specify the ownership of the returned value.
-For this you should use the `SWIFT_RETURNS_RETAINED` and `SWIFT_RETURNS_UNRETAINED` annotations on functions and methods.
-These annotations tell the Swift compiler whether the type is returned as `+1` (retained) or `+0` (unretained).
+Swift imports `Image` as a reference type. The retain operation is called when
+Swift copies a reference, and the release operation is called when a reference
+goes out of scope. The type is expected to maintain its own reference count,
+usually by storing an intrusive reference count. When the last reference is
+dropped, the release operation is responsible for freeing all memory and
+resources owned by the object. A typical implementation increments and
+decrements an intrusive count:
 
 ```c++
-// Returns +1 ownership.
-SharedObject* _Nonnull makeOwnedObject() SWIFT_RETURNS_RETAINED;
+void Image::doRetain() const {
+    ++refCount;
+}
 
-// Returns +0 ownership.
-SharedObject* _Nonnull getUnOwnedObject() SWIFT_RETURNS_UNRETAINED;
-```
-
-These annotations are necessary to ensure that appropriate `retain`/`release` operations are inserted at the boundary:
-
-```swift
-let owned = makeOwnedObject()
-owned.doSomething()
-// `owned` is already at +1, so no further retain is needed here
-
-let unOwned = getUnOwnedObject()
-// Swift inserts a retain operation on `unowned` here to bring it to +1.
-unOwned.doSomething()
-```
-
-Note that the Swift compiler will automatically infer the ownership conventons for Swift functions returning `SWIFT_SHARED_REFERENCE` types.
-See [Exposing C++ Shared Reference Types back from Swift](#exposing-c-shared-reference-types-back-from-swift) for calling Swift functions returning `SWIFT_SHARED_REFERENCE` types from C++.
-
-#### Calling conventions when passing Shared Reference Types from Swift to C++
-
-If a C++ shared reference type is passed as an argument to a C++ API from Swift, the Swift compiler guarantees that the passed value would be alive. 
-Swift also retains the ownership of the value.
-In other words, the argument is passed at `+0` and there is no transfer of ownership.
-The C++ function should not assume that it has the ownership of the value and should do necessary retain operations if it is needs to take ownership.
-The C++ function is responsible for ensuring that the value pointed to by the parameter is alive during and at the end of the function call.
-
-
-```swift
-var obj = SharedObject.create()
-receiveSharedObject(obj) // Swift guarantees that obj is alive and it is passed at +0
-```
-
-```c++
-void receiveSharedObject(SharedObject *sobj) {
-  ...
-  // Swift assumes that sobj is a valid, non-null object at the end of this function
+void Image::doRelease() const {
+    if (--refCount == 0) delete this;
 }
 ```
 
-Note that if the argument is an inout (non-const reference) as shown below:
+The retain and release operations may also be provided as free functions
+rather than member functions. Each free function must take a single argument,
+a pointer to the foreign reference type or to one of its base classes:
 
 ```c++
-void takeSharedObjectAsInout(SharedObject *& x) { ... }
+void retainImage(Image *img);
+void releaseImage(Image *img);
+
+struct Image {
+    // ...
+} SWIFT_SHARED_REFERENCE(retainImage, releaseImage);
 ```
 
-which would be imported in Swift as
+Either way, Swift calls the retain and release operations automatically; the
+programmer does not call them directly:
 
 ```swift
-func takeSharedObjectAsInout(_ x: inout SharedObject) { ... }
+let img = createImage(1920, 1080)
+print(img.width()) // Prints "1920".
+print(img.height()) // Prints "1080".
+// `img` is released here when it goes out of scope.
 ```
 
-The C++ function can overwrite the value of the argument with the new value.
-However, the C++ function is responsible for releasing the old value, and ensuring that the new value is properly retained so that the Swift caller has ownership of the new value when the function returns.
-Adhering to these rules is necessary to safely and correctly pass around `SWIFT_SHARED_REFERENCE` between Swift and C++.
-These rules are also generally recommended conventions to manage shared objects that use reference counting.
+#### Calling Conventions when Returning Shared Reference Types from C++ to Swift
+
+When a C++ function returns a shared reference type, Swift needs to know
+whether the returned value is already retained for the caller, or whether the
+caller is expected to retain it. C and C++ functions that return shared
+references follow one of two ownership conventions: a function may retain the
+value before returning it (called `+1` or "retained"), or expect the caller
+to retain the value if it needs to extend the object's lifetime (called `+0`
+or "unretained").
+
+Since ownership conventions are not part of a function's type signature,
+functions returning shared reference types should be explicitly annotated with
+either `SWIFT_RETURNS_RETAINED` or `SWIFT_RETURNS_UNRETAINED`. For example, a
+factory function that returns a newly allocated object with a reference count
+of 1 should be annotated with `SWIFT_RETURNS_RETAINED`:
+
+```c++
+SWIFT_RETURNS_RETAINED
+Image *createImage(int width, int height);
+```
+
+A function that returns an existing reference without retaining it should be
+annotated with `SWIFT_RETURNS_UNRETAINED`:
+
+```c++
+SWIFT_RETURNS_UNRETAINED
+Image *mostRecentImage();
+```
+
+These annotations ensure that the appropriate `retain` and `release`
+operations are inserted at the language boundary:
+
+```swift
+let owned = createImage(1920, 1080)
+owned.width()
+// `owned` is already at +1, so no further retain is needed here.
+
+let unowned = mostRecentImage()
+// Swift inserts a retain operation on `unowned` here to bring it to +1.
+unowned.width()
+```
+
+Without an annotation, Swift cannot tell whether the returned object needs to
+be retained. An extraneous retain leaks memory; a missing retain may free the
+object while it is still in use. Calling unannotated functions that return a
+shared reference type currently triggers a compiler warning; in a future Swift
+release it will become a compilation error.
+
+A type that consistently uses the same ownership convention can be annotated
+with `SWIFT_RETURNED_AS_UNRETAINED_BY_DEFAULT`, eliminating the need to
+annotate every function returning that type:
+
+```c++
+struct Connection {
+    // ...
+} SWIFT_SHARED_REFERENCE(.retain, .release)
+  SWIFT_RETURNED_AS_UNRETAINED_BY_DEFAULT;
+```
+
+With this annotation, all functions returning `Connection *` are assumed to
+return `+0` unless explicitly annotated with `SWIFT_RETURNS_RETAINED`.
+A symmetric `SWIFT_RETURNED_AS_RETAINED_BY_DEFAULT` annotation is not yet
+implemented.
+
+#### Calling Conventions when Passing Shared Reference Types from Swift to C++
+
+When Swift passes a shared reference type to a C++ function, the Swift
+compiler guarantees that the passed value is alive for the duration of the
+call. Swift retains ownership of the value; the argument is passed at `+0`,
+with no transfer of ownership. The C++ function should not assume that it has
+ownership of the value, and must perform a retain explicitly if it needs to
+extend the object's lifetime beyond the call. The C++ function is responsible
+for ensuring that the value pointed to by the parameter remains alive during
+and at the end of the function call.
+
+```swift
+let img = createImage(1920, 1080)
+receiveImage(img) // Swift guarantees that `img` is alive and passed at +0.
+```
+
+```c++
+void receiveImage(Image *img) {
+    // ...
+    // Swift assumes that `img` is a valid, non-null object
+    // at the end of this function.
+}
+```
+
+If the argument is an `inout` (non-`const` reference) as shown below:
+
+```c++
+void replaceImage(Image *&x);
+```
+
+it is imported in Swift as:
+
+```swift
+func replaceImage(_ x: inout Image)
+```
+
+The C++ function may overwrite the value of the argument with a new value.
+The C++ function is responsible for releasing the old value, and for ensuring
+that the new value is properly retained so that the Swift caller owns the new
+value when the function returns. These rules are necessary to safely and
+correctly pass shared references between Swift and C++, and they match the
+general conventions for managing shared objects that use reference counting.
+
+#### Constructing Shared Reference Types from Swift
+
+If a shared reference type has a public constructor, Swift imports it as an
+initializer that allocates memory with the type's `operator new` and calls the
+C++ constructor:
+
+```c++
+struct Document {
+    SWIFT_RETURNS_RETAINED
+    Document(int pageCount);
+    // ...
+} SWIFT_SHARED_REFERENCE(.doRetain, .doRelease);
+```
+
+Like any other function that returns a shared reference type, the constructor
+should be annotated with an ownership annotation. `SWIFT_RETURNS_RETAINED` is
+the typical choice for a constructor, since the constructor returns a newly
+created object that the caller owns.
+
+Swift code can then call `Document`'s initializer like any other Swift type:
+
+```swift
+let doc = Document(10)
+print(doc.pageCount()) // Prints "10".
+```
+
+C++ static factory methods can also be exposed as Swift initializers by
+applying the `SWIFT_NAME` macro. The number of underscore placeholders or
+parameter labels in `init(...)` must match the number of parameters of the
+factory function:
+
+```c++
+struct Canvas {
+    SWIFT_RETURNS_RETAINED
+    SWIFT_NAME(init(width:height:))
+    static Canvas *create(int width, int height);
+    // ...
+} SWIFT_SHARED_REFERENCE(.doRetain, .doRelease);
+```
+
+```swift
+let canvas = Canvas(width: 800, height: 600)
+print(canvas.width()) // Prints "800".
+```
+
+If a C++ constructor and a user-annotated static factory have identical
+parameter signatures, Swift favors the static factory when resolving
+initializer calls. This is useful when you want to use a custom allocator, or
+when you want to disable direct construction entirely and expose only
+factories.
 
 #### Inheritance and Virtual Member Functions
 
-Similar to value types, casting an instance of a derived reference type to a
-base reference type, or vice versa, is not yet supported by Swift.
+A C++ class that inherits from a foreign reference type is itself a foreign
+reference type. This lets every type in a class hierarchy share a single
+intrusive reference counting implementation.
 
-If a reference type has virtual methods, you can call those methods from Swift.
-This includes pure virtual methods.
+The base class from which a derived type inherits its foreign reference type
+annotation is its **FRT base**. A derived class uses the retain and release
+functions specified by its FRT base, so there is no need to re-annotate each
+derived class:
+
+```c++
+struct Shape {
+    void retain() const;
+    void release() const;
+    virtual ~Shape() = default;
+    // ...
+} SWIFT_SHARED_REFERENCE(.retain, .release);
+
+struct Circle : Shape {
+    SWIFT_RETURNS_RETAINED Circle(double radius);
+    double radius() const;
+};
+
+struct Rectangle : Shape {
+    SWIFT_RETURNS_RETAINED Rectangle(double width, double height);
+    double width() const;
+    double height() const;
+};
+```
+
+`Shape`'s destructor is virtual so that `release` can delete through the base
+pointer. `Circle` and `Rectangle` inherit `Shape`'s `SWIFT_SHARED_REFERENCE`
+annotation, including its `retain` and `release` operations:
+
+```swift
+let circle = Circle(5.0)
+let rect = Rectangle(3.0, 4.0)
+print(circle.radius()) // Prints "5.0".
+print(rect.width()) // Prints "3.0".
+print(rect.height()) // Prints "4.0".
+```
+
+Virtual methods, including pure virtual methods, can be called on foreign
+reference type instances and dispatch dynamically as expected. Casting
+between base and derived foreign reference types is not yet supported by
+Swift.
+
+The curiously recurring template pattern (CRTP) is also a common way to
+implement an FRT base. Using CRTP avoids the need for a virtual destructor by
+statically downcasting to the derived type before deleting:
+
+```c++
+template<typename Derived>
+struct CRTPShape {
+    void retain() const { ++refCount; }
+    void release() const {
+        if (--refCount == 0)
+            delete const_cast<Derived *>(static_cast<const Derived *>(this));
+    }
+    // ...
+} SWIFT_SHARED_REFERENCE(.retain, .release);
+
+struct CRTPCircle : CRTPShape<CRTPCircle> {
+    SWIFT_RETURNS_RETAINED CRTPCircle(double radius);
+    double radius() const;
+};
+```
+
+The annotation on the template base class is inherited by each derived class
+through its template instantiation.
+
+The retain and release operations of an FRT base can be overridden by
+re-annotating a derived class with its own `SWIFT_SHARED_REFERENCE`. The
+derived class then becomes the FRT base for itself and any further
+descendants. `SWIFT_RETURNED_AS_UNRETAINED_BY_DEFAULT` follows the same
+inheritance rules: derived classes inherit the default ownership convention
+of their FRT base, and a derived class that overrides its FRT base should
+re-specify the default if desired.
+
+`SWIFT_IMMORTAL_REFERENCE` and `SWIFT_UNSAFE_REFERENCE` follow the same
+inheritance semantics as `SWIFT_SHARED_REFERENCE`, except that retain and
+release operations are no-ops when the FRT base is immortal or unsafe.
+
+A class that inherits from multiple foreign reference type bases with
+different retain and release functions is ambiguous and rejected:
+
+```c++
+struct A { ... } SWIFT_SHARED_REFERENCE(.retainA, .releaseA);
+struct B { ... } SWIFT_SHARED_REFERENCE(.retainB, .releaseB);
+struct C : A, B { ... }; // Error: ambiguous FRT base.
+```
+
+The ambiguity can be resolved by providing an explicit overriding annotation
+on the derived class:
+
+```c++
+struct CC : A, B { ... } SWIFT_SHARED_REFERENCE(.retainC, .releaseC); // OK
+struct CA : A, B { ... } SWIFT_SHARED_REFERENCE(.retainA, .releaseA); // OK
+```
+
+The same rule applies to diamond inheritance, where a derived class is
+invalid if it has multiple instances of the same FRT base, unless the base is
+inherited virtually:
+
+```c++
+struct B : A { ... };
+struct C : A { ... };
+struct D : B, C { ... }; // Error: ambiguous FRT base (B::A / C::A).
+
+struct VB : virtual A { ... };
+struct VC : virtual A { ... };
+struct VD : VB, VC { ... }; // OK: VB and VC share the same virtual A instance.
+```
+
+An overriding annotation on a derived class is always authoritative: it opts
+out of the inheritance inference logic, and can also be used to work around
+compiler limitations while the implementation of foreign reference type
+inheritance is refined.
 
 #### Exposing C++ Shared Reference Types back from Swift
 
-C++ can call into Swift APIs that take or return C++ Shared Reference Types.
-This section explains the conventions of incrementing and decrementing
-the reference counts when passing such references across the language boundaries. Consider the following Swift APIs:
+C++ can call into Swift APIs that take or return C++ shared reference types.
+This section explains the conventions for incrementing and decrementing
+reference counts when passing such references across the language boundary.
+Consider the following Swift APIs:
 
 ```swift
-public func takeSharedObject(_ x : SharedObject) { ... }
+public func takeImage(_ x: Image) { ... }
 
-public func returnSharedObject() -> SharedObject { ... }
+public func returnImage() -> Image { ... }
 ```
 
-In case of the `takeSharedObject` function, the compiler will automatically insert calls to retain and release for `x` as necessary to satisfy the semantics of
-owned/guaranteed calling conventions. The C++ callers must guarantee that `x` is alive for the duration of the call.
-Note that functions returning a shared reference type such as `returnSharedObject` transfer the ownership to the caller.
-The C++ caller of this function is responsible for releasing the object.
+For `takeImage`, the compiler automatically inserts calls to retain and
+release for `x` as necessary to satisfy the semantics of owned/guaranteed
+calling conventions. The C++ caller must guarantee that `x` is alive for the
+duration of the call.
+
+Functions returning a shared reference type, such as `returnImage`, transfer
+ownership of the returned value to the caller. The C++ caller of such a
+function is responsible for releasing the object.
+
+### Immortal Reference Types
+
+**Immortal** reference types are not designed to be managed individually by
+the program. Objects of these types are allocated and then intentionally
+"leaked" without tracking their uses, such as singletons, global objects, and
+static instances. Sometimes these objects are not truly immortal: for
+example, they may be arena-allocated, with an expectation that they will only
+be referenced from other objects within the arena. Nonetheless, they are not
+expected to be individually managed, so Swift imports them as unmanaged
+classes with no retain or release operations.
+
+To specify that a C++ type is an immortal reference type, apply the
+`SWIFT_IMMORTAL_REFERENCE` annotation. For example:
+
+```c++
+struct EventLog {
+    static EventLog &shared();
+    void log(const char *message) const;
+} SWIFT_IMMORTAL_REFERENCE;
+```
+
+As with shared references, the immortal reference returned by `shared()` is
+imported as `EventLog`, rather than as a pointer or as `UnsafePointer<EventLog>`:
+
+```swift
+let log = EventLog.shared()
+log.log("Application started")
+```
 
 ### Unsafe Reference Types
 
-The `SWIFT_UNSAFE_REFERENCE` annotation macro has the same effect as `SWIFT_IMMORTAL_REFERENCE`
-annotation macro. However, it communicates different semantics: the type is intended to be used unsafely, rather than living for the duration of the program.
+`SWIFT_UNSAFE_REFERENCE` behaves like `SWIFT_IMMORTAL_REFERENCE` at runtime,
+also skipping retain and release operations. The difference is that
+`SWIFT_UNSAFE_REFERENCE` is intended for types whose lifetimes are managed
+manually outside of Swift, rather than for objects that live for the duration
+of the program. This is appropriate for objects managed by an arena
+allocator, objects owned by C code, or otherwise not reference-counted.
+
+```c++
+struct RenderTarget {
+    int width() const;
+    int height() const;
+} SWIFT_UNSAFE_REFERENCE;
+```
+
+```swift
+let target = getDefaultRenderTarget()
+print(target.width()) // Prints "1024".
+print(target.height()) // Prints "768".
+```
+
+Under [strict memory safety mode](safe-interop), uses of unsafe reference
+types require the `unsafe` expression keyword. Use `SWIFT_UNSAFE_REFERENCE`
+only when the object's lifetime is well-understood and managed outside of
+Swift.
 
 ## Using C++ Standard Library from Swift
 
@@ -2176,6 +2414,9 @@ that are outlined in the documentation above.
 | `SWIFT_IMMORTAL_REFERENCE` | [Immortal Reference Types](#immortal-reference-types) |
 | `SWIFT_SHARED_REFERENCE` | [Shared Reference Types](#shared-reference-types) |
 | `SWIFT_UNSAFE_REFERENCE` | [Unsafe Reference Types](#unsafe-reference-types) |
+| `SWIFT_RETURNS_RETAINED` | [Calling Conventions when Returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
+| `SWIFT_RETURNS_UNRETAINED` | [Calling Conventions when Returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
+| `SWIFT_RETURNED_AS_UNRETAINED_BY_DEFAULT` | [Calling Conventions when Returning Shared Reference Types from C++ to Swift](#calling-conventions-when-returning-shared-reference-types-from-c-to-swift) |
 | `SWIFT_RETURNS_INDEPENDENT_VALUE` | [Annotating Methods Returning Independent References or Views](#annotating-methods-returning-independent-references-or-views) |
 | `SWIFT_MUTATING` | [Constant Member Functions Must Not Mutate the Object](#constant-member-functions-must-not-mutate-the-object) |
 | `SWIFT_NONCOPYABLE` | [C++ Structures and Classes are Value Types by Default](#c-structures-and-classes-are-value-types-by-default) |
