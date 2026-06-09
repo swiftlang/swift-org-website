@@ -2420,6 +2420,9 @@ that are outlined in the documentation above.
 | `SWIFT_RETURNS_INDEPENDENT_VALUE` | [Annotating Methods Returning Independent References or Views](#annotating-methods-returning-independent-references-or-views) |
 | `SWIFT_MUTATING` | [Constant Member Functions Must Not Mutate the Object](#constant-member-functions-must-not-mutate-the-object) |
 | `SWIFT_NONCOPYABLE` | [C++ Structures and Classes are Value Types by Default](#c-structures-and-classes-are-value-types-by-default) |
+| `SWIFT_NONESCAPABLE` | [(Safely Mixing Swift and C/C++) Escapability Annotations in Detail](safe-interop#escapability-annotations-in-detail) |
+| `SWIFT_ESCAPABLE` | [(Safely Mixing Swift and C/C++) Escapability Annotations in Detail](safe-interop#escapability-annotations-in-detail) |
+| `SWIFT_ESCAPABLE_IF` | [(Safely Mixing Swift and C/C++) Escapability Annotations in Detail](safe-interop#escapability-annotations-in-detail) |
 | `SWIFT_SELF_CONTAINED` | [Annotating C++ Structures or Classes as Self Contained](#annotating-c-structures-or-classes-as-self-contained) |
 | `SWIFT_PRIVATE_FILEID` | [Accessing Private C++ Members in Swift](#accessing-private-c-members-in-swift) |
 
