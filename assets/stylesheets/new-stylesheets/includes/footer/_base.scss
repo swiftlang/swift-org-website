@@ -131,7 +131,7 @@ footer.global-footer {
         }
 
         input:checked + .color-scheme-toggle-label {
-          background: #fca76c;
+          background: var(--site-navigation-selected-background);
           color: #1e162e;
         }
       }
