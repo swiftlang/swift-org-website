@@ -12,7 +12,7 @@ curl -O "https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.sw
 You can verify the integrity of the archive using the PGP signature. This will download the signature, install the swift.org signatures into your keychain, and verify the signature.
 
 ```
-curl https://www.swift.org/keys/all-keys.asc | gpg --import -
+curl --compressed https://www.swift.org/keys/all-keys.asc | gpg --import -
 curl -O "https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz.sig"
 gpg --verify swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz.sig swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz
 ```
@@ -41,29 +41,3 @@ Now that swiftly and swift are installed, you can access the `swift` command fro
 swift --version
 --
 Swift version {{ site.data.builds.swift_releases.last.name }} (swift-{{ site.data.builds.swift_releases.last.name }}-RELEASE)
-Target: x86_64-unknown-linux-gnu
-```
-
-Or, you can install (and use) another swift release:
-
-```
-swiftly install --use 5.10
-swift --version
---
-Swift version 5.10 (swift-5.10-RELEASE)
-Target: x86_64-unknown-linux-gnu
-```
-
-There's also an option to install the latest snapshot release and get access to the latest features:
-
-```
-swiftly install --use main-snapshot
-```
-
-Check for updates to swiftly and install them by running the self-update command:
-
-```
-swiftly self-update
-```
-
-You can discover more about swiftly in the [documentation](https://www.swift.org/swiftly/documentation/swiftlydocs/)
