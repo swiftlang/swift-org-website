@@ -12,7 +12,7 @@ curl -O "https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.sw
 You can verify the integrity of the archive using the PGP signature. This will download the signature, install the swift.org signatures into your keychain, and verify the signature.
 
 ```
-curl https://www.swift.org/keys/all-keys.asc | gpg --import -
+curl --compressed https://www.swift.org/keys/all-keys.asc | gpg --import -
 curl -O "https://download.swift.org/swiftly/linux/swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz.sig"
 gpg --verify swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz.sig swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz
 ```
