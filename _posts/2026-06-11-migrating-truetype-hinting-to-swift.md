@@ -16,9 +16,9 @@ featured-image-dark:
 
 TrueType is a widely used vector font standard for rendering text in web pages, PDFs, operating systems, and applications. Familiar fonts like Helvetica, Garamond, and Monaco are all built on TrueType outlines. The format specifies a [hinting interpreter](https://developer.apple.com/fonts/TrueType-Reference-Manual/RM02/Chap2.html#environment) intended to help outlines rasterize faithfully on low-resolution displays. Modern high-resolution displays enable beautiful typography from outlines alone, but TrueType fonts that need hinting to render legibly remain in use and we continue to support them.
 
-Font parsers process data from untrusted sources, making the TrueType hinting interpreter a security-critical attack surface. To make the format more resilient on Apple platforms, we rewrote its hinting interpreter from C to memory-safe Swift for the Fall 2025 releases. In addition to memory safety, we also improved performance: on average, our Swift interpreter runs 13% faster than the C interpreter it replaced.
+Font parsers process data from untrusted sources, making the TrueType hinting interpreter a security-critical attack surface. To make the format more resilient on Apple platforms, we rewrote its hinting interpreter from C to [memory-safe](https://docs.swift.org/compiler/documentation/diagnostics/strict-memory-safety/) Swift for the Fall 2025 releases. In addition to memory safety, we also improved performance: on average, our Swift interpreter runs 13% faster than the C interpreter it replaced.
 
-We hope sharing our experience helps others doing similar work in Swift. To accompany this post, we've also [published the source code of the TrueType hinting interpreter](TODO-add-github-url).
+To accompany this post, we've also [published the source code of the Swift TrueType hinting interpreter](TODO-add-github-url). We hope sharing our experience helps others doing similar work in Swift.
 
 ## TrueType and the hinting engine
 
@@ -26,42 +26,45 @@ Apple developed TrueType in the late 1980s and released it with the launch of Sy
 
 Then the internet revolutionized how fonts were used. TrueType became embeddable in PDF files in 1994 and in web pages in 2008, and it remains as relevant as ever. However, these new use cases brought additional risk: TrueType could now be exposed to untrusted fonts from anywhere on the internet.
 
-A TrueType font is not static data; it may also contain a program the hinting engine runs through a bytecode interpreter. These interpreters involve input-driven control flow, complex data structures, and careful memory management, exactly the kind of code that's hard to make perfect and where memory errors are easier to exploit. These components have high inherent complexity, which makes correctness especially important.
+TrueType fonts may contain programs the hinting engine runs through a bytecode interpreter. This interpreter involves input-driven control flow, complex data structures, and careful memory management—exactly the kind of code that's hard to make perfect and where memory errors are easier to exploit. This high inherent complexity also makes correctness especially important.
 
 ## Rewriting in Swift
 
-A rewrite required a memory-safe language, one that could integrate into the existing codebase and provide the level of performance demanded by its use cases.
+A rewrite required a memory-safe language that could integrate into the existing codebase and provide an equivalent level of performance to the implementation it was replacing. Swift was the obvious choice for the task.
 
-Binary compatibility was crucial for this project to succeed: existing Apple and third-party programs had to continue to work as they do now, effectively unaware that a new implementation is in place. This means not just API compatibility but pixel-identical glyph rendering as well, relative to the C implementation. Hinting can radically change the on-screen appearance of glyphs, so a small change in the interpreter's behavior could result in substantial user-visible changes. For this project, we defined *correctness* to mean exact compatibility with the C implementation's outputs.
+Binary compatibility was crucial for this project to succeed: existing programs had to continue to function the same as they did before, effectively unaware that a new implementation was in place. This means not just interface compatibility but pixel-identical glyph rendering as well, relative to the C implementation. Hinting can radically change the on-screen appearance of glyphs, so a small change in the interpreter's behavior could result in substantial user-visible changes. For this project, we defined *correctness* to mean exact compatibility with the C implementation's outputs.
 
 ## Validating correctness
 
-To ensure correctness, we developed two test suites. First, we built a unit test suite that can target both implementations and provides exhaustive code coverage for both. (We wrote nearly four times as many lines of unit test code as we wrote for the Swift interpreter itself.)
+To ensure correctness, we developed two test suites. The first was a unit test suite that can target both implementations, providing exhaustive (99.7%) code coverage for both. This suite is included with the open source release of the Swift interpreter.
 
 Then, to represent real-world workloads, we used a fuzzer to minimize a corpus of 10 million PDF files down to 4,200 without any loss of code coverage. The documents in the minimized corpus embedded 25,572 fonts with a total of 27 million glyphs that we rendered using four different transformations each, comparing the resulting bitmaps against the reference interpreter. This gave us confidence in the new interpreter's compatibility.
 
+By the end of the project, we wrote nearly four times as many lines of test code as we wrote for the Swift interpreter itself.
+
 ## Achieving high performance
 
-Once our new implementation passed all its tests, we turned our attention to performance. We assessed performance at a high level using PDF render time, and then iterated on improvements using four benchmarks that rendered all of the glyphs from three different fonts. These improvements fell into four main categories.
+Once our new implementation passed all its tests, we turned our attention to performance. We assessed performance at a high level using PDF render time, and then iterated on improvements guided by benchmarks that rendered all of the glyphs from three different fonts. These improvements fell into four main categories.
 
 ### Minimizing runtime overhead
 
-Swift uses [automatic reference counting](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/) (ARC) for managing the lifetime of shared reference types, and runtime exclusivity checking for preventing overlapping access to data structures. These can be eliminated on the hottest code paths by adopting noncopyable types ([`~Copyable`](https://developer.apple.com/documentation/Swift/Copyable)), which trade the convenience of copyability for zero runtime overhead. We used this to great effect by identifying these hot paths in Instruments and looking at time spent in functions like `swift_retain`. These sources of overhead are often artifacts of aliasing, and we eliminated the runtime costs by adopting `~Copyable` value types ([`struct` instead of `class`](https://developer.apple.com/documentation/swift/choosing-between-structures-and-classes)) throughout the architecture, reserving reference types for high-level abstractions. [`Span`](https://developer.apple.com/documentation/swift/span), introduced in Swift 6.2 with back-deployment support all the way back to macOS 10.14.4 and iOS 12.2, allows us to efficiently operate on sequences of these types.
+Swift uses [automatic reference counting](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/) (ARC) for managing the lifetime of shared reference types, and runtime exclusivity checking for preventing overlapping access to data structures. These sources of overhead are often exacerbated by aliasing, an irreducible amount of which existed in the interpreter's specification by design.
+
+These sources of overhead can be eliminated by giving up the convenience of copyability, adopting [`~Copyable`](https://developer.apple.com/documentation/Swift/Copyable) value types (see also: [`struct` instead of `class`](https://developer.apple.com/documentation/swift/choosing-between-structures-and-classes)) throughout the architecture, reserving reference types for high-level abstractions. [`Span`](https://developer.apple.com/documentation/swift/span), introduced in Swift 6.2 with back-deployment support all the way back to macOS 10.14.4 and iOS 12.2, allowed us to efficiently operate on sequences of these types.
 
 But you also don't have to optimize everything! All of the new interpreter's internal state was written in terms of noncopyable structures that were borrowed by its operations, but the top-level type itself is an `@objc class` that gets called directly from an Objective-C++ file. The hot paths are fast, and the cold paths are convenient.
 
 ### Moving data around
 
-Sometimes we need to change the "shape" of structured data when crossing language boundaries to better match the idioms on the other side. In Swift, glyph outlines are represented by a sequence of points, each of which carries a flag for whether it's 'on a curve', flags for whether it's been 'touched' on each axis, and three coordinate pairs: original (in the font's base units), scaled (to the desired point size), and hinted (the interpreter program's output).
+Sometimes we want to change the "shape" of structured data when crossing language boundaries to better match the idioms on the other side. In Swift, glyph outlines are represented by a sequence of points, each of which carries a flag for whether it's 'on a curve', flags for whether it's been 'touched' on each axis, and three coordinate pairs: original (in the font's base units), scaled (to the desired point size), and hinted (the interpreter program's output).
 
 The original C code stored these points in one struct with eight arrays. This is good from a performance perspective because it's cache-friendly: you can operate on a dimension of many points in long runs, which is fast. But exposing the data in Swift as a collection of point elements resulted in source code that was easier to follow.
 
-The initial cross-language bridging code we wrote prioritized safety and simplicity by copying the glyph's data from its C struct into Swift and then back after the program completed. Those copies accounted for around 20% of the new interpreter's runtime. In the end we wound up using projection types that provide bounds-checked access to the underlying C structure. Swift thus gives us readability without copying or transforming the data structure.
+The initial cross-language bridging code we wrote prioritized expediency, safety, and simplicity by copying the glyph's data from its C struct into Swift and then back after the program completed. Initially, those copies accounted for around 20% of the new interpreter's runtime. In the end we wound up using projection types that provide safe access to the underlying C structure. Swift thus gives us readability without copying or otherwise transforming the underlying data structure.
 
-Following WebKit's [Safer Swift Guidelines](https://github.com/WebKit/WebKit/wiki/Safer-Swift-Guidelines), the example below demonstrates how to wrap an unsafe bridged structure from C in a projection type that uses [`Ref`](https://github.com/apple/swift-collections/blob/main/Sources/ContainersPreview/Types/Ref.swift) for lifetime safety and brokers bounds-safe access to the underlying data using safe, idiomatic Swift types. All `unsafe` expressions bear `// SAFETY:` comments that document the safety invariants and the reasoning which guarantees that they are true.
+Following WebKit's [Safer Swift Guidelines](https://github.com/WebKit/WebKit/wiki/Safer-Swift-Guidelines), the example below demonstrates how to wrap a bridged structure from C in a projection type that uses [`Ref`](https://github.com/apple/swift-collections/blob/main/Sources/ContainersPreview/Types/Ref.swift) for lifetime safety, brokers bounds-safe access to the underlying data, and returns idiomatic Swift types to its callers. All `unsafe` expressions bear `// SAFETY:` comments that document the safety invariants and the reasoning which guarantees that they are true.
 
 ```swift
-// Zone provides bounds and lifetime safety to callers based on the premises described in `init(_:element:)`.
 @safe struct Zone: ~Copyable, ~Escapable {
   let _element: Ref<fnt_ElementType>
 
@@ -83,11 +86,11 @@ Following WebKit's [Safer Swift Guidelines](https://github.com/WebKit/WebKit/wik
 
 ### Short-lived allocations
 
-While runtime overhead imposes its costs in aggregate, and while copying data across the language border showed up as specific hot spots, the costs of short-lived memory allocations can show up in both ways.
+While runtime overhead imposes its costs in aggregate, and copying data across the language border showed up as a specific hot spot, the costs of short-lived memory allocations can show up in both ways.
 
-Operations like `filter` and `map` allocate memory, but that allocation is only necessary if we plan to return it to a caller. The Swift standard library provides `.lazy.map` and `.lazy.filter`, but they don't work in every case. For logic that only *iterates* over the filter or map, it's much more efficient to loop with `continue` (or use `for … in … where`) and transform elements into local variables as necessary.
+Operations like `filter` and `map` allocate memory, but that allocation is only necessary if the value escapes. The Swift standard library provides `.lazy.map` and `.lazy.filter`, but they don't work in every case. For logic that only *iterates* over the filter or map, it's much more efficient to loop with `continue` (or use `for … in … where`) and transform elements into local variables as necessary.
 
-Allocations that exist to return results to a function's caller can be elided too. For example, we often needed to `pop` the last `n` elements from the interpreter's stack. The obvious implementation of this operation has to allocate space for the elements it returns (because the function simultaneously removes them) and looks something like:
+Allocations that exist exclusively to pass results to a function's caller can be elided too. For example, we often needed to `pop` the last `n` elements from the interpreter's stack. The obvious implementation of this operation has to allocate space for the elements it returns (because the function simultaneously removes them) and looks something like:
 
 ```swift
 mutating func pop(
@@ -112,13 +115,13 @@ mutating func pop<R, E: Error>(
 
 ### Dynamic dispatch
 
-Abstraction mechanisms like protocols, generics, and inheritance are very powerful, but they introduce method-call indirection that may manifest at runtime as dynamic dispatch. This overhead can often be eliminated by the optimizer, but that is not possible in all conditions. In our case, not making abstractions more generic than necessary and encouraging the toolchain to inline were sufficient for the optimizer to specialize generic contexts and hoist bounds checks. When you're profiling your code, if you see unspecialized generics or protocol witness tables in hot paths, that's a sign that the optimizer does not have sufficient visibility to optimize the call sites and that your implementation may benefit from inlining.
+Abstraction mechanisms like protocols, generics, and inheritance are very powerful, but they introduce method-call indirection that may manifest at runtime as dynamic dispatch. This overhead can often be eliminated by the optimizer, but that is not possible in all conditions. In our case, not making abstractions more generic than necessary and encouraging the toolchain to inline were sufficient for the optimizer to hoist bounds checks and specialize all of our generic contexts. When you're profiling your code, if you see unspecialized generics or protocol witness tables in hot paths, that's a sign that the optimizer does not have sufficient visibility to optimize the call sites and that your implementation may benefit from inlining.
 
 ## Zero-cost abstractions
 
 At this point, anyone accustomed to grinding out performance improvements in a project might reasonably expect that our optimizations could come at the cost of readability, but in reality Swift's type system and optimizer enabled us to employ abstractions that resulted in highly legible code. For example:
 
-- Fixed-point types provided the same ergonomics as any other numeric type.
+- `FixedPoint` types provided the same ergonomics as integral types, encapsulating complex rounding and shifting arithmetic.
 - `StackElement` provided access to 32-bit values with built-in conversions for all eight of its supported numeric types.
 - Our projection types provided safe and natural access to data that was not structured with those considerations in mind.
 
@@ -126,9 +129,9 @@ Swift's type system makes it possible to define powerful and expressive abstract
 
 ## Memory-safe and faster than C
 
-Our goal for this project was to make the TrueType hinting interpreter fully memory-safe, to have the same user-visible rendering behavior as the C implementation, and to achieve performance parity within some margin (to account for the small but unavoidable costs of runtime safety checking).
+Our goal for this project was to make the TrueType hinting interpreter fully memory-safe, to have the same observable rendering behavior as the C implementation, and to achieve a level of performance that did not regress any user-visible benchmarks.
 
-We met these goals. The Swift interpreter includes a small number of thoroughly verified `unsafe` statements at the language interop boundary; there have been no bugs reported against it since it was enabled; and the new code is *faster* than the C implementation it replaced.
+We met these goals. The Swift interpreter includes a small number of thoroughly verified `unsafe` statements at the language interop boundary; there have been no bugs reported against it since it was enabled; and it's *faster*.
 
 On average, the Swift interpreter runs 13% faster than the C interpreter it replaced. Here is a chart showing the average CPU megacycles spent per glyph in the Swift implementation versus the C implementation for all of the hinted fonts that ship on macOS, plus a sampling of third-party fonts:
 
@@ -219,10 +222,10 @@ plot(TP,'tp');
 
 ## Swift in practice
 
-Swift is memory-safe, has great ergonomics, and can be as fast as carefully written C. This makes it an excellent language for both application and systems development.
+The Swift language made this project possible. Swift is memory-safe, has great ergonomics, and can be as fast as carefully written C. This makes it an excellent language for both application and systems development.
 
-The Swift language made this possible. Code using noncopyable types, value types, and `Span` is both safe and fast by default, and the use of module-private types to collectively define an architecture is free. Together with high test coverage, these well-defined interface boundaries make refactoring substantially easier, which in turn accelerates the measure-and-fix optimization loop while minimizing the risk of introducing bugs.
+Code using noncopyable types, value types, and `Span` is both safe and fast by default, and module-private types can be used to collectively define an architecture at no additional cost. Together with exhaustive test coverage, these well-defined internal interface boundaries make refactoring substantially easier, which in turn accelerates the measure-and-fix optimization loop while minimizing the risk of introducing bugs.
 
 This migration effort has deepened our Swift expertise and given us a foundation to build on. After completing the migration, we distilled what we learned into instructions for LLM coding assistants, and have since used them successfully in other projects. LLMs have improved the efficiency of our team's work converting C/C++ to Swift, and have proven valuable in performing the kind of code transformations used in this effort.
 
-To accompany this post, we've published the source code for the [TrueType hinting interpreter on GitHub](TODO-add-github-url). This is production code, intended as a reference implementation rather than an ongoing open source project. We hope seeing how these techniques work in practice helps others achieve similar results.
+To accompany this post, we've published the source code for the [Swift TrueType hinting interpreter on GitHub](TODO-add-github-url). This is production code, intended as a reference implementation rather than an ongoing open source project. We hope seeing how these techniques work in practice helps others achieve similar results.
