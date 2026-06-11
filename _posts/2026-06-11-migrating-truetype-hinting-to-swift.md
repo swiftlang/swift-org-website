@@ -8,10 +8,10 @@ category: "Adopters"
 description: "We rewrote Apple's TrueType hinting interpreter from C to memory-safe Swift for the Fall 2025 releases. Beyond memory safety, the new implementation runs 13% faster than the C interpreter it replaced."
 featured-image:
   url: '/assets/images/migrating-truetype-hinting-to-swift/blog-hero@2x.png'
-  alt: 'The text "hello" drawn three ways, a vector outline laid over unhinted and hinted rasterizations. In some places, the hinted pixels fall entirely outside of the outline''s bounds, resulting in output that is more faithful to the font''s design at the chosen point size.'
+  alt: 'The text ''hello'' drawn three ways, a vector outline laid over unhinted and hinted rasterizations. In some places, the hinted pixels fall entirely outside of the outline''s bounds, resulting in output that is more faithful to the font''s design at the chosen point size.'
 featured-image-dark:
   url: '/assets/images/migrating-truetype-hinting-to-swift/blog-hero-dark@2x.png'
-  alt: 'The text "hello" drawn three ways, a vector outline laid over unhinted and hinted rasterizations. In some places, the hinted pixels fall entirely outside of the outline''s bounds, resulting in output that is more faithful to the font''s design at the chosen point size.'
+  alt: 'The text ''hello'' drawn three ways, a vector outline laid over unhinted and hinted rasterizations. In some places, the hinted pixels fall entirely outside of the outline''s bounds, resulting in output that is more faithful to the font''s design at the chosen point size.'
 ---
 
 TrueType is a widely used vector font standard for rendering text in web pages, PDFs, operating systems, and applications. Familiar fonts like Helvetica, Garamond, and Monaco are all built on TrueType outlines. The format specifies a [hinting interpreter](https://developer.apple.com/fonts/TrueType-Reference-Manual/RM02/Chap2.html#environment) intended to help outlines rasterize faithfully on low-resolution displays. Modern high-resolution displays enable beautiful typography from outlines alone, but TrueType fonts that need hinting to render legibly remain in use and we continue to support them.
