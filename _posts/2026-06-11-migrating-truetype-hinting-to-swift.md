@@ -3,7 +3,7 @@ layout: new-layouts/post
 published: true
 date: 2026-06-11 16:00:00
 title: "Swift at Apple: Migrating the TrueType Hinting Interpreter"
-author: numist
+author: [numist]
 category: "Adopters"
 description: "We rewrote Apple's TrueType hinting interpreter from C to memory-safe Swift for the Fall 2025 releases. Beyond memory safety, the new implementation runs 13% faster than the C interpreter it replaced."
 featured-image:
