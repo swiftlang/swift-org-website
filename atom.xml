@@ -23,7 +23,7 @@
     <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ site.url }}{{ post.url }}</id>
-    <content type="html">{{ post.content | xml_escape }}</content>
+    <content type="html">{% if post.excerpt_separator %}{{ post.excerpt | xml_escape }}{% else %}{{ post.content | xml_escape }}{% endif %}</content>
   </entry>
   {% endfor %}
 </feed>

@@ -5,6 +5,7 @@ date: 2026-06-11 16:00:00
 title: "Swift at Apple: Migrating the TrueType Hinting Interpreter"
 author: [numist]
 category: "Adopters"
+excerpt_separator: <!--read more-->
 description: "We rewrote Apple's TrueType hinting interpreter from C to memory-safe Swift for the Fall 2025 releases. Beyond memory safety, the new implementation runs 13% faster than the C interpreter it replaced."
 featured-image:
   url: '/assets/images/migrating-truetype-hinting-to-swift/blog-hero@2x.png'
@@ -19,6 +20,8 @@ TrueType is a widely used vector font standard for rendering text in web pages, 
 Font parsers process data from untrusted sources, making the TrueType hinting interpreter a security-critical attack surface. To make the format more resilient on Apple platforms, we rewrote its hinting interpreter from C to [memory-safe](https://docs.swift.org/compiler/documentation/diagnostics/strict-memory-safety/) Swift for the Fall 2025 releases. In addition to memory safety, we also improved performance: on average, our Swift interpreter runs 13% faster than the C interpreter it replaced.
 
 To accompany this post, we've also [published the source code of the Swift TrueType hinting interpreter](TODO-add-github-url). We hope sharing our experience helps others doing similar work in Swift.
+
+<!--read more-->
 
 ## TrueType and the hinting engine
 
