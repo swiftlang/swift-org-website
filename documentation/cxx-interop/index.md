@@ -612,7 +612,7 @@ The cases of unscoped C++ enumerations become
 variables outside of the Swift structure:
 
 ```swift
-struct MushroomKind : Equatable, RawRepresentable {
+struct MushroomKind : Hashable, Equatable, RawRepresentable {
     public init(_ rawValue: UInt32)
     public init(rawValue: UInt32)
     public var rawValue: UInt32
