@@ -19,7 +19,7 @@ TrueType is a widely used vector font standard for rendering text in web pages, 
 
 Font parsers process data from untrusted sources, making the TrueType hinting interpreter a security-critical attack surface. To make the format more resilient on Apple platforms, we rewrote its hinting interpreter from C to [memory-safe](https://docs.swift.org/compiler/documentation/diagnostics/strict-memory-safety/) Swift for the Fall 2025 releases. In addition to memory safety, we also improved performance: on average, our Swift interpreter runs 13% faster than the C interpreter it replaced.
 
-To accompany this post, we've also [published the source code of the Swift TrueType hinting interpreter](TODO-add-github-url). We hope sharing our experience helps others doing similar work in Swift.
+To accompany this post, we've also published the source code of [the Swift TrueType hinting interpreter](https://github.com/apple/truetype-hinting-interpreter-example). We hope sharing our experience helps others doing similar work in Swift.
 
 <!--read more-->
 
@@ -231,4 +231,4 @@ Code using noncopyable types, value types, and `Span` is both safe and fast by d
 
 This migration effort has deepened our Swift expertise and given us a foundation to build on. After completing the migration, we distilled what we learned into instructions for LLM coding assistants, and have since used them successfully in other projects. LLMs have improved the efficiency of our team's work converting C/C++ to Swift, and have proven valuable in performing the kind of code transformations used in this effort.
 
-To accompany this post, we've published the source code for the [Swift TrueType hinting interpreter on GitHub](TODO-add-github-url). This is production code, intended as a reference implementation rather than an ongoing open source project. We hope seeing how these techniques work in practice helps others achieve similar results.
+To accompany this post, we've published the source code for [the Swift TrueType hinting interpreter](https://github.com/apple/truetype-hinting-interpreter-example) on GitHub. This is production code, intended as a reference implementation rather than an ongoing open source project. We hope seeing how these techniques work in practice helps others achieve similar results.
