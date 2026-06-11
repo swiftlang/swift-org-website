@@ -133,7 +133,7 @@ Our goal for this project was to make the TrueType hinting interpreter fully mem
 
 We met these goals. The Swift interpreter includes a small number of thoroughly verified `unsafe` statements at the language interop boundary; there have been no bugs reported against it since it was enabled; and it's *faster*.
 
-On average, the Swift interpreter runs 13% faster than the C interpreter it replaced. Here is a chart showing the average CPU megacycles spent per glyph in the Swift implementation versus the C implementation for all of the hinted fonts that ship on macOS, plus a sampling of third-party fonts:
+On average, the Swift interpreter runs 13% faster than the C interpreter it replaced. Here is a chart showing the average CPU megacycles spent per glyph in the Swift implementation versus the C implementation for all of the hinted fonts that ship on macOS, plus a sampling of non-system fonts:
 
 <div id="hinting-chart-wrap" style="margin: 1.2em 0;">
 <style>
