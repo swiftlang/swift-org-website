@@ -208,7 +208,7 @@ function plot(arr, cls){
         '<span class="dim">Reference:</span> '+p.x.toFixed(4)+' Mc/glyph<br>'+
         '<span class="dim">Swift:</span> '+p.y.toFixed(4)+' Mc/glyph<br>'+
         '<span class="sp">'+
-        (fast?('Swift '+p.sp.toFixed(1)+'% faster'):('Swift '+(-p.sp).toFixed(1)+'% slower'))+'</span>'+
+        (fast?('Swift '+p.sp.toFixed(1)+'% faster'):('C '+(-p.sp).toFixed(1)+'% faster'))+'</span>'+
         (p.g!=null?(' <span class="dim">&middot; '+p.g.toLocaleString()+' glyphs</span>'):'');
       tip.style.left=e.clientX+'px'; tip.style.top=e.clientY+'px'; tip.style.opacity=1;
     });
