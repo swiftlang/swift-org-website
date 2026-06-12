@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2026-06-11 16:00:00
+date: 2026-06-12 10:00:00
 title: "Swift at Apple: Migrating the TrueType Hinting Interpreter"
 author: [numist]
 category: "Adopters"
