@@ -386,7 +386,7 @@ struct SWIFT_COPYABLE_IF(T) ResourceWrapper {
 };
 ```
 
-For multiple parameters, list each one that participates, e.g.
+For multiple parameters, list each one that participates. For example:
 `SWIFT_COPYABLE_IF(T1, T2)`.
 
 All of the above describes how Swift imports a C++ type as a value type. 
