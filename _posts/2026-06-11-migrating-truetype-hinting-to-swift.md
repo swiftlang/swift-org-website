@@ -55,8 +55,6 @@ Swift uses [automatic reference counting](https://docs.swift.org/swift-book/docu
 
 These sources of overhead can be eliminated by giving up the convenience of copyability, adopting [`~Copyable`](https://developer.apple.com/documentation/Swift/Copyable) value types (see also: [`struct` instead of `class`](https://developer.apple.com/documentation/swift/choosing-between-structures-and-classes)) throughout the architecture, reserving reference types for high-level abstractions. [`Span`](https://developer.apple.com/documentation/swift/span), introduced in Swift 6.2 with back-deployment support all the way back to macOS 10.14.4 and iOS 12.2, allowed us to efficiently operate on sequences of these types.
 
-But you also don't have to optimize everything! All of the new interpreter's internal state was written in terms of noncopyable structures that were borrowed by its operations, but the top-level type itself is an `@objc class` that gets called directly from an Objective-C++ file. The hot paths are fast, and the cold paths are convenient.
-
 ### Moving data around
 
 Sometimes we want to change the "shape" of structured data when crossing language boundaries to better match the idioms on the other side. In Swift, glyph outlines are represented by a sequence of points, each of which carries a flag for whether it's 'on a curve', flags for whether it's been 'touched' on each axis, and three coordinate pairs: original (in the font's base units), scaled (to the desired point size), and hinted (the interpreter program's output).
@@ -212,6 +210,8 @@ plot(SYS,'sys');
 plot(TP,'tp');
 })();
 </script>
+
+Despite the overall performance improvement, we did not optimize everything! All of the new interpreter's internal state was written in terms of noncopyable structures that were borrowed by its operations, but the top-level type itself is an `@objc class` that gets called across a module boundary from an Objective-C++ file. The hot paths are fast, and the cold paths are convenient.
 
 ## Swift in practice
 
