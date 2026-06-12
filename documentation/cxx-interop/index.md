@@ -391,7 +391,7 @@ For multiple parameters, list each one that participates. For example:
 
 All of the above describes how Swift imports a C++ type as a value type. 
 Some C++ types, however, are always passed around using a pointer 
-or a reference in C++.
+or a reference.
 As such it might not make sense to map them to value types in Swift. These
 types can be annotated in C++ to instruct the Swift compiler to map them to
 [reference types in Swift instead](#mapping-c-types-to-swift-reference-types).
