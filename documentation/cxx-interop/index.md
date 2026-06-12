@@ -325,7 +325,73 @@ non-copyable Swift types (`~Copyable`). If a C++ type has a valid copy
 constructor, it is still possible to make it non-copyable in Swift by annotating
 it with a `SWIFT_NONCOPYABLE` macro.
 
-Some C++ types are always passed around using a pointer or a reference in C++.
+For example, this `FileDescriptor` has an implicit copy constructor. Annotating it with `SWIFT_NONCOPYABLE`
+makes Swift import it as `~Copyable`, while leaving the type copyable in C++.
+
+```c++
+struct SWIFT_NONCOPYABLE FileDescriptor {
+  FileDescriptor(const char *path);
+  ~FileDescriptor();
+};
+```
+
+Class templates may need more control over how copyability is determined for each specialization. 
+Consider this `ResourceWrapper`, which provides a copy constructor
+that copies its underlying resource:
+
+```c++
+template <typename T>
+struct ResourceWrapper {
+  T resource;
+  ResourceWrapper(const ResourceWrapper &other) : resource(other.resource) {}
+  ResourceWrapper(ResourceWrapper &&other) = default;
+};
+```
+
+By default, Swift imports every specialization of `ResourceWrapper`
+as `Copyable`, since it has a copy constructor.
+Applying `SWIFT_NONCOPYABLE` has the opposite effect: every specialization gets
+imported as `~Copyable`.
+
+Alternatively, there are two ways to make `ResourceWrapper`'s copyability
+depend on the template arguments.
+
+**1. Constrain the copy constructor with a [`requires` clause](https://en.cppreference.com/cpp/language/requires) (since C++20).** 
+This is the idiomatic C++ approach and is preferred when concepts are available. 
+Instantiations of `ResourceWrapper` where `std::is_copy_constructible_v<T>` is true will be imported as `Copyable`, and as `~Copyable` otherwise:
+
+```c++
+template <typename T>
+struct ResourceWrapper {
+  T resource;
+  ResourceWrapper(const ResourceWrapper &other) requires std::is_copy_constructible_v<T>
+    : resource(other.resource) {}
+  ResourceWrapper(ResourceWrapper &&other) = default;
+};
+```
+
+**2. Annotate the template with `SWIFT_COPYABLE_IF`.** 
+When `requires` is not an option, you can annotate the template 
+with `SWIFT_COPYABLE_IF` and list the template parameters that 
+determine copyability. 
+The specialization is imported as `Copyable` only when every listed parameter is
+itself imported as `Copyable`:
+
+```c++
+template <typename T>
+struct SWIFT_COPYABLE_IF(T) ResourceWrapper {
+  T resource;
+  ResourceWrapper(const ResourceWrapper &other) : resource(other.resource) {}
+  ResourceWrapper(ResourceWrapper &&other) = default;
+};
+```
+
+For multiple parameters, list each one that participates. For example:
+`SWIFT_COPYABLE_IF(T1, T2)`.
+
+All of the above describes how Swift imports a C++ type as a value type. 
+Some C++ types, however, are always passed around using a pointer 
+or a reference.
 As such it might not make sense to map them to value types in Swift. These
 types can be annotated in C++ to instruct the Swift compiler to map them to
 [reference types in Swift instead](#mapping-c-types-to-swift-reference-types).
@@ -2243,6 +2309,7 @@ that are outlined in the documentation above.
 | `SWIFT_RETURNS_INDEPENDENT_VALUE` | [Annotating Methods Returning Independent References or Views](#annotating-methods-returning-independent-references-or-views) |
 | `SWIFT_MUTATING` | [Constant Member Functions Must Not Mutate the Object](#constant-member-functions-must-not-mutate-the-object) |
 | `SWIFT_NONCOPYABLE` | [C++ Structures and Classes are Value Types by Default](#c-structures-and-classes-are-value-types-by-default) |
+| `SWIFT_COPYABLE_IF` | [C++ Structures and Classes are Value Types by Default](#c-structures-and-classes-are-value-types-by-default) |
 | `SWIFT_SELF_CONTAINED` | [Annotating C++ Structures or Classes as Self Contained](#annotating-c-structures-or-classes-as-self-contained) |
 | `SWIFT_PRIVATE_FILEID` | [Accessing Private C++ Members in Swift](#accessing-private-c-members-in-swift) |
 
