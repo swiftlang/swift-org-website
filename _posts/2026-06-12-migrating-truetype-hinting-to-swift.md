@@ -51,7 +51,7 @@ Once our new implementation passed all its tests, we turned our attention to per
 
 ### Minimizing runtime overhead
 
-Swift uses [automatic reference counting](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/) (ARC) for managing the lifetime of shared reference types, and runtime exclusivity checking for preventing overlapping access to data structures. These sources of overhead are often exacerbated by aliasing, an irreducible amount of which existed in the interpreter's specification by design.
+Swift uses [automatic reference counting](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/automaticreferencecounting/) for managing the lifetime of shared reference types, and runtime exclusivity checking for preventing overlapping access to data structures. These sources of overhead are often exacerbated by aliasing, an irreducible amount of which existed in the interpreter's specification by design.
 
 These sources of overhead can be eliminated by giving up the convenience of copyability, adopting [`~Copyable`](https://developer.apple.com/documentation/Swift/Copyable) value types (see also: [`struct` instead of `class`](https://developer.apple.com/documentation/swift/choosing-between-structures-and-classes)) throughout the architecture, reserving reference types for high-level abstractions. [`Span`](https://developer.apple.com/documentation/swift/span), introduced in Swift 6.2 with back-deployment support all the way back to macOS 10.14.4 and iOS 12.2, allowed us to efficiently operate on sequences of these types.
 
