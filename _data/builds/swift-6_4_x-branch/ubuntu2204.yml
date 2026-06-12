@@ -1,3 +1,8 @@
+- date: 2026-06-10 10:10:00-06:00
+  dir: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-06-10-a
+  download: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-06-10-a-ubuntu22.04.tar.gz
+  download_signature: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-06-10-a-ubuntu22.04.tar.gz.sig
+  name: Swift Development Snapshot
 - date: 2026-06-08 10:10:00-06:00
   dir: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-06-08-a
   download: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-06-08-a-ubuntu22.04.tar.gz
