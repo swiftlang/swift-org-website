@@ -13,13 +13,13 @@ title: Install Swift - Windows
 {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Windows 10' | first %}
 
 <div class="content">
-  <h3 id="winget" class="header-with-anchor">1. Install Swift via WinGet</h3>
+  <h3 id="winget" class="html-header-with-anchor">1. Install Swift via WinGet</h3>
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.winget %}
     </div>
   </div>
-  <h3 id="editor" class="header-with-anchor">2. Select an Editor</h3>
+  <h3 id="editor" class="html-header-with-anchor">2. Select an Editor</h3>
   <div class="releases-grid">
     <div class="release-box section">
       <div class="content">
@@ -32,13 +32,13 @@ title: Install Swift - Windows
       </div>
     </div>
   </div>
-  <h3 id="build-a-command-line-tool" class="header-with-anchor">3. Build a Command-line Tool</h3>
+  <h3 id="build-a-command-line-tool" class="html-header-with-anchor">3. Build a Command-line Tool</h3>
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.build-a-package%}
     </div>
   </div>
-  <h2 id="alternative-install-options" class="header-with-anchor">Alternative install options</h2>
+  <h2 id="alternative-install-options" class="html-header-with-anchor">Alternative install options</h2>
   <div class="releases-grid">
     <div class="release-box section">
       <div class="content">
@@ -76,7 +76,7 @@ title: Install Swift - Windows
       </div>
     </div>
   </div>
-  <h2 id="previous-releases" class="header-with-anchor">Previous Releases</h2>
+  <h2 id="previous-releases" class="html-header-with-anchor">Previous Releases</h2>
   <div>
     <p class="content-copy">Previous releases of Swift are available for installation on Windows using the manual installer, <a href="/install/windows/archived">as documented here</a>.</p>
   </div>
@@ -88,7 +88,7 @@ title: Install Swift - Windows
         </details>
     </div>
   </div>
-  <h2 id="development-snapshots" class="header-with-anchor">Development Snapshots</h2>
+  <h2 id="development-snapshots" class="html-header-with-anchor">Development Snapshots</h2>
   <div>
     <p class="content-copy">Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.</p>
   </div>
