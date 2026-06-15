@@ -1651,6 +1651,34 @@ std::optional<int> findMagicNumber();
 let maybeMagic: Int? = Optional(fromCxx: findMagicNumber())
 ```
 
+### Using `std::function`
+
+`std::function` can be constructed from a Swift closure by calling its
+initializer. This is useful when working with C++ APIs that take a callback as a
+`std::function` parameter. The closure is allowed to capture variables from its
+surrounding context. For example:
+
+```c++
+void registerCallback(std::function<int(int)> callback);
+```
+
+```swift
+let multiplier: Int32 = 3
+registerCallback(.init { x in x * multiplier })
+```
+
+A `std::function` value returned from C++ can be invoked from Swift through the
+`callAsFunction()` method, or using the equivalent `()` call syntax:
+
+```c++
+std::function<int(int)> getCallback();
+```
+
+```swift
+let callback = getCallback()
+let result = callback(42)              // shorthand for callback.callAsFunction(42)
+```
+
 ## Working with C++ References and View Types in Swift
 
 <div class="info" markdown="1">
