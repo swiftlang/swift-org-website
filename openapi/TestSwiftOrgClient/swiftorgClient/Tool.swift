@@ -59,6 +59,12 @@ struct Tool {
       .init(branch: ._6_0, platform: .debian12),
       .init(branch: ._6_0, platform: .fedora39),
       .init(branch: ._6_0, platform: .ubuntu2404),
+      .init(branch: ._6_3, platform: .centos7),
+      .init(branch: ._6_3, platform: .fedora39),
+      .init(branch: ._6_3, platform: .ubuntu2004),
+      .init(branch: ._6_4_x, platform: .centos7),
+      .init(branch: ._6_4_x, platform: .fedora39),
+      .init(branch: ._6_4_x, platform: .ubuntu2004),
     ]
     for branch in Components.Schemas.KnownSourceBranch.allCases {
       for platform in Components.Schemas.KnownPlatformIdentifier.allCases {
