@@ -95,7 +95,7 @@ title: Install Swift - macOS
   </div>
   <div class="release-box section">
     <div class="content">
-      {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.linux.dev.latest-dev.swiftly %}
+      {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.macos.dev.latest-dev.swiftly %}
     </div>
   </div>
   <h3>Toolchain</h3>
