@@ -8,7 +8,7 @@
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>tag:swift.org,2015-12-03:Swift</id>
 
-  {% assign posts = site.posts | sort: 'updated' %}
+  {% assign posts = site.posts | sort: 'date' | reverse %}
   {% for post in posts limit: 20 %}
   <entry>
     <title>{{ post.title }}</title>
