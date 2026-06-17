@@ -21,7 +21,9 @@ latest-release:
       - href: 'https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt'
         copy: 'License: Apache-2.0'
       - href: 'https://download.swift.org/swiftly/linux/swiftly-x86_64.tar.gz.sig'
-        copy: 'PGP: Signature'
+        copy: 'PGP: Signature (x86_64)'
+      - href: 'https://download.swift.org/swiftly/linux/swiftly-aarch64.tar.gz.sig'
+        copy: 'PGP: Signature (aarch64)'
       - href: 'https://www.swift.org/install/linux/swiftly'
         copy: 'Instructions'
   container:
