@@ -112,6 +112,26 @@ struct Tool {
         )
       )
     }
+    // Android dev SDKs are published for `main` and every release branch from 6.3
+    // onward; the pre-Android branches (6.0–6.2) return 404. Iterate all known
+    // branches and skip those, mirroring the `excluded` deny-matrix above so a new
+    // branch is covered automatically once it appears in KnownSourceBranch.
+    let androidUnsupportedBranches: Set<Components.Schemas.KnownSourceBranch> = [
+      ._6_0, ._6_1, ._6_2,
+    ]
+    for branch in Components.Schemas.KnownSourceBranch.allCases
+    where !androidUnsupportedBranches.contains(branch) {
+      tests.append(
+        .init(
+          name: "listAndroidSDKDevToolchains(\(branch.rawValue))",
+          work: {
+            _ = try await client.listAndroidSDKDevToolchains(
+              .init(path: .init(branch: .init(value1: branch)))
+            ).ok.body.json
+          }
+        )
+      )
+    }
     tests.append(
       .init(
         name: "getCurrentSwiftlyRelease",

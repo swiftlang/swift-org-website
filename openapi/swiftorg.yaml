@@ -93,6 +93,25 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DevToolchainsForArch'
+  /install/dev/{branch}/android-sdk.json:
+    parameters:
+      - name: branch
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/SourceBranch'
+    get:
+      operationId: listAndroidSDKDevToolchains
+      summary: Fetch all development Swift SDKs for Android
+      tags:
+        - Toolchains
+      responses:
+        '200':
+          description: A successful response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DevToolchainsForArch'
   /swiftly.json:
     get:
       operationId: getCurrentSwiftlyRelease
@@ -196,6 +215,11 @@ components:
         - Swift Development Snapshot
         - Swift Static SDK Development Snapshot
         - Swift Wasm SDK Development Snapshot
+        # The Android SDK is published under two names: `main` uses the first, while
+        # release branches (6.3, 6.4.x, …) use the second. Both are live — keep both;
+        # neither is a removable duplicate.
+        - Swift SDK for Android Development Snapshot
+        - Swift Android SDK Development Snapshot
     DevToolchainKind:
       anyOf:
         - $ref: '#/components/schemas/KnownDevToolchainKind'
