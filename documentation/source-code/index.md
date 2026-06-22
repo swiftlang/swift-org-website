@@ -24,7 +24,7 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 [swift-corelibs-foundation](https://github.com/swiftlang/swift-corelibs-foundation)
 : The source code for Foundation, which provides common functionality for all applications.
 
-[swift-corelibs-libdispatch](https://github.com/apple/swift-corelibs-libdispatch)
+[swift-corelibs-libdispatch](https://github.com/swiftlang/swift-corelibs-libdispatch)
 : The source code for libdispatch, which provides concurrency primitives for working on multicore hardware.
 
 [swift-corelibs-xctest](https://github.com/swiftlang/swift-corelibs-xctest)
