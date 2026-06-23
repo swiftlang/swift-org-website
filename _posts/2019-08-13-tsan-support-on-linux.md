@@ -105,7 +105,7 @@ A good place to start for understanding Thread Sanitizer reports is the summary 
 
 * The type of bug detected, in this case a "Swift access race"
 * The source location, main.swift:41, which is `results.append(r)`
-* The enclosing function, which in this case is a a compiler-generated closure
+* The enclosing function, which in this case is a compiler-generated closure
 
 Note that a data race involves at least two threads concurrently accessing the same memory location (without proper synchronization) where at least one of them writes. Thread Sanitizer reports which threads were involved ("Modifying access/Previous modifying access ... by thread ...") and provides the stack traces of these two conflicting accesses.
 
