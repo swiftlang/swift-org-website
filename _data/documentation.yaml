@@ -99,6 +99,10 @@
       url: /documentation/swift-compiler/
       description: |
        Overview of the Swift compiler architecture.
+    - title: Compiler Diagnostics
+      url: https://docs.swift.org/compiler/documentation/diagnostics
+      description: |
+        Documentation on diagnostics emitted by the Swift compiler and settings that control them.
     - title: Monthly Non-Darwin Swift Releases
       url: /documentation/monthly-non-darwin-release/
       description: |
