@@ -1127,7 +1127,7 @@ type to automatically conform to `RandomAccessCollection` in Swift:
 - The C++ container type must have `begin` and `end` member functions. Both
   functions must be constant and must return the same iterator type.
 - The C++ iterator type must satisfy the
-  [`RandomAccessIterator`]( https://en.cppreference.com/w/cpp/named_req/RandomAccessIterator)
+  [`RandomAccessIterator`](https://en.cppreference.com/w/cpp/named_req/RandomAccessIterator)
   C++ requirement. It must be possible to advance it using `operator +=` in C++
   and also to subscript into it using `operator []` in C++.
 - The C++ iterator type must be comparable using `operator ==`.
@@ -1315,7 +1315,7 @@ The Swift compiler allows you to annotate some C++ types and import them as refe
 
 The first criterion is whether object identity is part of the "value" of the type. Is comparing the address of two objects just asking whether they're stored at the same location, or is it deciding whether they represent the "same object" in a more significant sense?
 
-The second criterion whether objects of the C++ class are always passed around by reference.  Are objects predominantly passed around using a pointer or reference type, such as a raw pointer (`*`), C++ reference (`&` or `&&`), or a smart pointer (like `std::unique_ptr` or `std::shared_ptr`)?  When passed by raw pointer or reference, is there an expectation that that memory is stable and will continue to stay valid, or are receivers expected to copy the object if they need to keep the value alive independently?  If objects are generally allocated and remain at a stable address, even if that address is not semantically part of the "value" of an object, the class may be idiomatically a reference type. This will sometimes be a judgment call for the programmer.
+The second criterion is whether objects of the C++ class are always passed around by reference.  Are objects predominantly passed around using a pointer or reference type, such as a raw pointer (`*`), C++ reference (`&` or `&&`), or a smart pointer (like `std::unique_ptr` or `std::shared_ptr`)?  When passed by raw pointer or reference, is there an expectation that that memory is stable and will continue to stay valid, or are receivers expected to copy the object if they need to keep the value alive independently?  If objects are generally allocated and remain at a stable address, even if that address is not semantically part of the "value" of an object, the class may be idiomatically a reference type. This will sometimes be a judgment call for the programmer.
 
 The first and most important criteria is often not possible for a compiler to answer automatically by just looking at the code. If you want the Swift compiler to map a C++ type to a Swift reference type, you must annotate the C++ type with one of the following
 customization macros from the `<swift/bridging>` header:

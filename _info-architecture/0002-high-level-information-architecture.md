@@ -21,7 +21,7 @@ Note also that the focus areas are not strictly divided along audience or channe
 
 For purposes of discussion, this document and the Swift Information Architecture Project will use the following terms:
 
-* *Channel*: A website, service, or other mechanisms where the the Swift community can receive information.
+* *Channel*: A website, service, or other mechanisms where the Swift community can receive information.
 * *Audience*: One of the high-level audience categories defined in the [project overview document](0001-swift-information-architecture-project.md).Those high-level audiences are defined as:
   1. Newcomers
   2. Swift Developers

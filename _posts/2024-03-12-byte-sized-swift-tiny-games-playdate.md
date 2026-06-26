@@ -380,7 +380,7 @@ To turn the math into an algorithm, I had to perform the following steps:
 
 1. Check if the object the ball collided with is the paddle
 2. Compute the location of the collision along the paddle from -1 to +1
-3. Map the location into a deflection angle from from -π/6 to +π/6
+3. Map the location into a deflection angle from -π/6 to +π/6
 4. Rotate the collision normal vector by the deflection angle
 5. Reflect the ball's velocity along the rotated normal
 

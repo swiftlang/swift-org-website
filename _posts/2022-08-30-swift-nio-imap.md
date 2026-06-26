@@ -34,7 +34,7 @@ IMAP uses a text-based “human readable” wire format, and SwiftNIO IMAP bridg
 
 ### Example Exchange
 
-As a quick example, here’s part of the the exchange listed in RFC 3501 section 8, where lines starting with `S:` and `C:` are from the server and client respectively:
+As a quick example, here’s part of the exchange listed in RFC 3501 section 8, where lines starting with `S:` and `C:` are from the server and client respectively:
 
 ```text
 S:   * OK IMAP4rev1 Service Ready
