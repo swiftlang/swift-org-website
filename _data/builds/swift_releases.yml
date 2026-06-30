@@ -2799,3 +2799,83 @@
       archs:
         - x86_64
         - arm64
+- name: "6.3.3"
+  tag: swift-6.3.3-RELEASE
+  xcode: Xcode 26.6
+  xcode_release: true
+  date: 2026-06-29
+  platforms:
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 6.3.3-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 24.04
+      platform: Linux
+      docker: 6.3.3-noble
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 12
+      platform: Linux
+      docker: 6.3.3-bookworm
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 39
+      platform: Linux
+      docker: 6.3.3-fedora39
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 41
+      platform: Linux
+      docker: 6.3.3-fedora41
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2
+      platform: Linux
+      docker: 6.3.3-amazonlinux2
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2023
+      platform: Linux
+      docker: 6.3.3-amazonlinux2023
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 6.3.3-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 6.3.3-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+        - arm64
+    - name: Static SDK
+      platform: static-sdk
+      version: 0.1.0
+      checksum: 87c3eaf908e67c0e13a84367119e12273cec1d2cd3d81f7d74bb36722d6b607b
+      archs:
+        - x86_64
+        - arm64
+    - name: Wasm SDK
+      platform: wasm-sdk
+      checksum: cabfa08b73bb8ac783927ecd15fa386e99d0c139c5f232445067bcf58379cae7
+      archs:
+        - x86_64
+        - arm64
+    - name: Android SDK
+      platform: android-sdk
+      checksum: d160cc3206dd1886dae3fef2337af5e25ec034692cd0ec225721c56cc69da7f5
+      archs:
+        - x86_64
+        - arm64
