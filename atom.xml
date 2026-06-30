@@ -12,14 +12,22 @@
   {% for post in posts limit: 20 %}
   <entry>
     <title>{{ post.title }}</title>
-    {% assign author = site.data.authors[post.author] %}
-    <author>
-    {% if author.name %}
-      <name>{{ author.name }}</name>
+    {% if post.author %}
+      {% for author_key in post.author %}
+        {% assign author = site.data.authors[author_key] %}
+        <author>
+        {% if author.name %}
+          <name>{{ author.name }}</name>
+        {% else %}
+          <name>Swift.org</name>
+        {% endif %}
+        </author>
+      {% endfor %}
     {% else %}
-      <name>Swift.org</name>
+      <author>
+        <name>Swift.org</name>
+      </author>
     {% endif %}
-    </author>
     <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ site.url }}{{ post.url }}</id>
