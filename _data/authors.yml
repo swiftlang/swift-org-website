@@ -667,3 +667,13 @@ numist:
     github: numist
     gravatar: 23c0fdb3d2e6705bd9b6e38231e22ce6d91174292711b5334e86acf216d029e8
     about: "Scott Perry is a member of Apple's Security team, focusing on Swift adoption."
+
+mikaelacaron:
+    name: Mikaela Caron
+    github: mikaelacaron
+    about: "Mikaela Caron is a Senior iOS Engineer and member of the Swift Ecosystem Workgroup, building her own apps and sharing her experience on social media."
+
+swifteves:
+    name: Adrian Eves
+    github: swifteves
+    about: "Adrian Eves is an iOS developer and community organizer passionate about accessibility, indie apps, and bringing Apple developers together."
