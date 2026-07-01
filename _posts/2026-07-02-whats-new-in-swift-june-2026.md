@@ -38,7 +38,7 @@ At its WWDC26 conference, Apple provided an update on its adoption of Swift and 
 ## Community highlights
 * [Swift Package Index joined Apple](https://swiftpackageindex.com/blog/swift-package-index-joins-apple) and remains open source. The team says they're working together to build a comprehensive package registry for the Swift community.
 * Yeo Kheng Meng blogged about [bringing Swift to the Apple II](https://yeokhengmeng.com/2026/06/swift-on-apple-ii/), complete with a REPL, compiler, file browser, and editor. It's a subset of Swift and was built with AI assistance.
-* Apple published a new Swift adoption story: [Migrating the TrueType Hinting Interpreter](https://www.swift.org/blog/migrating-truetype-hinting-to-swift/), covering how the TrueType hinting interpreter in macOS and iOS was rewritten in Swift from C. It runs 13% faster on average.
+* Apple shared an adoption story on the Swift blog: [Migrating the TrueType Hinting Interpreter](https://www.swift.org/blog/migrating-truetype-hinting-to-swift/), covering how the TrueType hinting interpreter in macOS and iOS was rewritten in Swift from C. It runs 13% faster on average.
 * The Swift Ecosystem Steering Group [announced the creation of the Networking workgroup](https://www.swift.org/blog/announcing-networking-workgroup/). This group will work on a unified networking stack for Swift, layered from low-level I/O primitives, through common protocols, to a modern HTTP client and server API.
 
 ## New package releases
