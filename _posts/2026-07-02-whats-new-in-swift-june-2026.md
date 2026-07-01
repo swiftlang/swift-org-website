@@ -23,12 +23,12 @@ Now on to other news about Swift:
 
 At its WWDC26 conference, Apple provided an update on its adoption of Swift and made a variety of new Swift-related announcements. Some highlights:
 
-* Apple shared Swift-related updates in its [Platforms State of the Union](https://www.youtube.com/watch?v=yl2jsIoMfDU&t=2118s), and for upcoming releases, it has started writing parts of the core operating system kernel in Swift.
+* During the [Platforms State of the Union](https://www.youtube.com/watch?v=yl2jsIoMfDU&t=2118s), Apple announced that parts of the core operating system kernel are being written in Swift for upcoming releases.
 * [What’s new in Swift](https://www.youtube.com/watch?v=ssppiors2Ak) featured changes in Swift since last year, including a preview of what's coming in Swift 6.4, like up to 4x faster URL parsing and support for async code in defer blocks.
 * The QUIC transport layer in Apple's networking stack was rewritten in Swift. The [project has been open sourced](https://github.com/apple/swift-nio-quic) and is available for cross-platform use through SwiftNIO integration.
 * A new Swift package, [Foundation Models framework utilities](https://github.com/apple/foundation-models-utilities), was released with tools for working with LLMs, including custom skills and context management helpers. It runs on Apple platforms and select Linux distributions.
 * The Foundation Models framework itself will be open sourced in the future, meaning the same Swift APIs you use in your app could run on your server.
-* [Container Machine](https://github.com/apple/container/blob/main/docs/container-machine.md) is a new tool included in [Container](https://github.com/apple/container) that provides a lightweight, persistent Linux environment on a Mac with images that can be shared across environments. And it's written in Swift!
+* [Container Machine](https://github.com/apple/container/blob/main/docs/container-machine.md) is a new tool included in [Container](https://github.com/apple/container) that provides a lightweight, persistent Linux environment on a Mac with images that can be shared across environments. It's written in Swift and open source.
 
 ## Videos to watch
 * [Build real-time apps and services with gRPC and Swift](https://www.youtube.com/watch?v=CCFxlFF9XRI) walks through integrating an iOS app and gRPC service using live race data from a go-karting league. See if you can spot where the track is located. 👀
@@ -50,7 +50,7 @@ At its WWDC26 conference, Apple provided an update on its adoption of Swift and 
 The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
 
 **Under active review:**
-* [SE-0526](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0526-deadline.md) `withDeadline` - Asynchronous operations in Swift can run indefinitely, and implementing time limits manually using task groups and clock sleep operations is verbose and error-prone. This proposal adds `withDeadline`, a function that executes an async operation with a composable absolute time limit specified as a clock instant, canceling the operation if it hasn't completed by that time, and allowing multiple nested operations to share the same deadline without the drift that accumulates when relative durations are passed through call layers.
+* [SE-0526](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0526-deadline.md) `withDeadline` - Asynchronous operations in Swift can run indefinitely, and implementing time limits manually using task groups and clock sleep operations is verbose and error-prone. This proposal adds `withDeadline`, a function that executes an async operation with a composable absolute time limit specified as a clock instant, canceling the operation if it hasn't completed in time. It also allows multiple nested operations to share the same deadline, avoiding the drift that accumulates when relative durations are passed through call layers.
 
 **Recently accepted:**
 * [SE-0474](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0474-yielding-accessors.md) Yielding Accessors - When you call a mutating method on a computed property, Swift creates the illusion of in-place mutation by getting a copy, mutating it, then setting it back. This causes unnecessary copy-on-write buffer duplication for types like `String`, and is impossible for noncopyable types, which can't be copied out at all. This proposal adds `yielding borrow` and `yielding mutate`, two new ways to implement computed properties and subscripts that instead lend the caller direct access to the underlying value without copying it.
