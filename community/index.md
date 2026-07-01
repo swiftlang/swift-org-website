@@ -64,10 +64,10 @@ title: Community
       </div>
    </div>
    <div class="section community-section-grid">
-      <h2 class="community-section-grid-headline">
-         {{ site.data.new-data.community.page-data.section5.headline }}
-      </h2>
       <div class="content links">
+         <h2 class="community-section-grid-headline">
+            {{ site.data.new-data.community.page-data.section5.headline }}
+         </h2>
          <ul class="community-section-links">
          {% for card in site.data.new-data.community.page-data.section5.links %}
             <li>

@@ -1,3 +1,63 @@
+- checksum: f7e7547ef50af975259d6500f481d5b6fe02cdfcc5982040a1b64181a2595550
+  date: 2026-06-24 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-06-24-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-06-24-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-06-24-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
+- checksum: 7df80209b1d0b646e2cd7f82877db281d2821213d8d2215ecfbc940f6bae5905
+  date: 2026-05-27 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-27-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-27-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-27-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
+- checksum: 79e263592d007ae57cd44326bc1f6cbf9691f69d7d2a2ea70b30e51bcfa9c8f6
+  date: 2026-05-20 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-20-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-20-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-20-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
+- checksum: 102ebbb984cdf7cd7bf240606eb17fad4f579b87fc699563457404546e39021c
+  date: 2026-05-18 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-18-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-18-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-18-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
+- checksum: fb3452dbda3c7e8e492b0464daaf3144901e7109e6d41d04cdcd9eec9347595d
+  date: 2026-05-17 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-17-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-17-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-17-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
+- checksum: 0d0589db7a693f742d52f6a2335f1d2a1ee8528e425690d50ebe6b026b5893c4
+  date: 2026-05-16 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-16-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-16-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-16-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
+- checksum: 34f7403f22d9507fe205975301a5bece041210fc7e6e537e07d5d66702972906
+  date: 2026-05-15 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-15-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-15-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-15-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
+- checksum: b1781203887375d153dd5e0d7ad2020f93ac2d1274211e0964cec06eb3d1ff1a
+  date: 2026-05-12 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-12-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-12-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-12-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
+- checksum: 6c72b9356ba56d0f8e5cf4dbdf3f89cf42d2ecbafb9ef12335e2b9e5947b47a9
+  date: 2026-05-07 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-07-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-07-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-07-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
+- checksum: 058ba1d836bd68e5e3d585cdd089243453e02e0c496d12533c5167702f31c7eb
+  date: 2026-05-04 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-04-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-04-a_android.artifactbundle.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-04-a_android.artifactbundle.tar.gz.sig
+  name: Swift SDK for Android Development Snapshot
 - checksum: c28124759ef3fe8a805721c8dbaff1e398b0a8f06705880114bd5b7abb97b3a0
   date: 2026-04-30 10:10:00-06:00
   dir: swift-DEVELOPMENT-SNAPSHOT-2026-04-30-a

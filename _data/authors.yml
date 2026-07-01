@@ -46,6 +46,12 @@ k8stone:
     email: k8stone@apple.com
     github: k8stone
 
+kateinoigakukun:
+    name: Yuta Saito
+    email: yuta@goodnotes.com
+    github: kateinoigakukun
+    about: "Yuta Saito is a Software Engineer at Goodnotes, working on WebAssembly platform support in Swift."
+
 eeckstein:
     name: Erik Eckstein
     email: eeckstein@apple.com
@@ -246,6 +252,10 @@ parkera:
 android-workgroup:
     name: The Android workgroup
     about: "The Android workgroup works toward furthering Swift on Android."
+
+ecosystem-steering-group:
+    name: The Ecosystem Steering Group
+    about: "The Ecosystem Steering Group guides the evolution of the Swift ecosystem, including libraries, tools, and platform support."
 
 diversity-workgroup:
     name: The Diversity in Swift workgroup
@@ -650,3 +660,10 @@ tracymiranda:
     name: Tracy Miranda
     github: tracymiranda
     about: "Tracy is a member of the Build and Packaging Workgroup and works on Swift tooling at Apple."
+
+numist:
+    name: Scott Perry
+    email: numist@apple.com
+    github: numist
+    gravatar: 23c0fdb3d2e6705bd9b6e38231e22ce6d91174292711b5334e86acf216d029e8
+    about: "Scott Perry is a member of Apple's Security team, focusing on Swift adoption."

@@ -24,7 +24,7 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 [swift-corelibs-foundation](https://github.com/swiftlang/swift-corelibs-foundation)
 : The source code for Foundation, which provides common functionality for all applications.
 
-[swift-corelibs-libdispatch](https://github.com/apple/swift-corelibs-libdispatch)
+[swift-corelibs-libdispatch](https://github.com/swiftlang/swift-corelibs-libdispatch)
 : The source code for libdispatch, which provides concurrency primitives for working on multicore hardware.
 
 [swift-corelibs-xctest](https://github.com/swiftlang/swift-corelibs-xctest)
@@ -71,7 +71,7 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 ## Cloned Repositories
 
 Swift builds upon several other open-source projects, most notably
-[the LLVM Compiler Infrastructure](http://llvm.org). Swift's clones of
+[the LLVM Compiler Infrastructure](https://llvm.org). Swift's clones of
 the repositories of those open-source projects contain Swift-specific
 changes and are merged regularly from their upstream sources. 
 For more information about the clone of the LLVM repository, see
@@ -79,7 +79,7 @@ For more information about the clone of the LLVM repository, see
 in the [project-operations](https://github.com/swiftlang/project-operations/) repository.
 
 [llvm-project](https://github.com/swiftlang/llvm-project)
-: The source code for [LLVM](http://llvm.org), with a handful of Swift-specific additions. Merged regularly from the [LLVM sources at llvm.org](https://github.com/llvm/llvm-project).
+: The source code for [LLVM](https://llvm.org), with a handful of Swift-specific additions. Merged regularly from the [LLVM sources at llvm.org](https://github.com/llvm/llvm-project).
 
 [swift-cmark](https://github.com/swiftlang/swift-cmark)
 : The source code for [CommonMark](https://github.com/jgm/cmark), which is used in the Swift compiler.

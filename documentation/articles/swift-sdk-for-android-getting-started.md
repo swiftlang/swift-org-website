@@ -30,8 +30,10 @@ Cross-compilation for Android requires installing three separate components:
 {% assign platform = site.data.builds.swift_releases.last.platforms | where: 'name', 'Android SDK'| first %}
 {% assign tag = site.data.builds.swift_releases.last.tag %}
 {% assign version = site.data.builds.swift_releases.last.name %}
-{% assign previous_releases = site.data.builds.swift_releases | offset:1 %}
-{% assign previous_sdk_name = previous_releases.last.name | append: "_android" %}
+{% assign release_count = site.data.builds.swift_releases.size %}
+{% assign previous_index = release_count | minus: 2 %}
+{% assign previous_release = site.data.builds.swift_releases | slice: previous_index %}
+{% assign previous_sdk_name = previous_release.tag | append: "_android" %}
 {% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
 {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/android-sdk/" | append: tag | append: "/" | append: tag %}
 {% assign command = "swift sdk install " | append: base_url | append: "_android" | append: ".artifactbundle.tar.gz --checksum " | append: platform.checksum %}

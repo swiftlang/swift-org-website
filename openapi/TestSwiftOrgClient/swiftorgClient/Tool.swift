@@ -59,6 +59,12 @@ struct Tool {
       .init(branch: ._6_0, platform: .debian12),
       .init(branch: ._6_0, platform: .fedora39),
       .init(branch: ._6_0, platform: .ubuntu2404),
+      .init(branch: ._6_3, platform: .centos7),
+      .init(branch: ._6_3, platform: .fedora39),
+      .init(branch: ._6_3, platform: .ubuntu2004),
+      .init(branch: ._6_4_x, platform: .centos7),
+      .init(branch: ._6_4_x, platform: .fedora39),
+      .init(branch: ._6_4_x, platform: .ubuntu2004),
     ]
     for branch in Components.Schemas.KnownSourceBranch.allCases {
       for platform in Components.Schemas.KnownPlatformIdentifier.allCases {
@@ -100,6 +106,26 @@ struct Tool {
           name: "listWasmSDKDevToolchains(\(branch.rawValue))",
           work: {
             _ = try await client.listWasmSDKDevToolchains(
+              .init(path: .init(branch: .init(value1: branch)))
+            ).ok.body.json
+          }
+        )
+      )
+    }
+    // Android dev SDKs are published for `main` and every release branch from 6.3
+    // onward; the pre-Android branches (6.0–6.2) return 404. Iterate all known
+    // branches and skip those, mirroring the `excluded` deny-matrix above so a new
+    // branch is covered automatically once it appears in KnownSourceBranch.
+    let androidUnsupportedBranches: Set<Components.Schemas.KnownSourceBranch> = [
+      ._6_0, ._6_1, ._6_2,
+    ]
+    for branch in Components.Schemas.KnownSourceBranch.allCases
+    where !androidUnsupportedBranches.contains(branch) {
+      tests.append(
+        .init(
+          name: "listAndroidSDKDevToolchains(\(branch.rawValue))",
+          work: {
+            _ = try await client.listAndroidSDKDevToolchains(
               .init(path: .init(branch: .init(value1: branch)))
             ).ok.body.json
           }

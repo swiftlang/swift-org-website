@@ -1,0 +1,30 @@
+- date: 2026-06-30 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-06-30-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-06-30-a-ubi10-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-06-30-a-ubi10-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2026-06-24 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-06-24-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-06-24-a-ubi10-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-06-24-a-ubi10-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2026-06-12 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-06-12-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-06-12-a-ubi10-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-06-12-a-ubi10-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2026-06-10 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-06-10-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-06-10-a-ubi10-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-06-10-a-ubi10-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2026-05-27 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-27-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-27-a-ubi10-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-27-a-ubi10-aarch64.tar.gz.sig
+  name: Swift Development Snapshot
+- date: 2026-05-18 10:10:00-06:00
+  dir: swift-DEVELOPMENT-SNAPSHOT-2026-05-18-a
+  download: swift-DEVELOPMENT-SNAPSHOT-2026-05-18-a-ubi10-aarch64.tar.gz
+  download_signature: swift-DEVELOPMENT-SNAPSHOT-2026-05-18-a-ubi10-aarch64.tar.gz.sig
+  name: Swift Development Snapshot

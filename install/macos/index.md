@@ -6,7 +6,7 @@ title: Install Swift - macOS
 ---
 
 {% assign xcode_dev_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}
-{% assign xcode_6_3_builds = site.data.builds.swift-6_3-branch.xcode | sort: 'date' | reverse %}
+{% assign xcode_6_4_x_builds = site.data.builds.swift-6_4_x-branch.xcode | sort: 'date' | reverse %}
 
 
 <div class="content">
@@ -95,7 +95,7 @@ title: Install Swift - macOS
   </div>
   <div class="release-box section">
     <div class="content">
-      {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.linux.dev.latest-dev.swiftly %}
+      {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.macos.dev.latest-dev.swiftly %}
     </div>
   </div>
   <h3>Toolchain</h3>
@@ -125,16 +125,16 @@ title: Install Swift - macOS
     <div class="release-box section">
       <div class="content">
         <div class="code-box content-wrapper">
-          <h2>release/6.3</h2>
+          <h2>release/6.4.x</h2>
           <p class="body-copy">
-            <small>{{ xcode_6_3_builds.first.date | date: '%B %-d, %Y' }}</small><br />
+            <small>{{ xcode_6_4_x_builds.first.date | date: '%B %-d, %Y' }}</small><br />
             Toolchain package installer (.pkg)
           </p>
           <div class="link-wrapper">
-            <a href="https://download.swift.org/swift-6.3-branch/xcode/{{ xcode_6_3_builds.first.dir }}/{{ xcode_6_3_builds.first.download }}" class="body-copy">Download Toolchain</a>
+            <a href="https://download.swift.org/swift-6.4.x-branch/xcode/{{ xcode_6_4_x_builds.first.dir }}/{{ xcode_6_4_x_builds.first.download }}" class="body-copy">Download Toolchain</a>
           </div>
           <div class="link-wrapper">
-            <a href="https://download.swift.org/swift-6.3-branch/xcode/{{ xcode_6_3_builds.first.dir }}/{{ xcode_6_3_builds.first.debug_info }}" class="debug">Debugging Symbols</a>
+            <a href="https://download.swift.org/swift-6.4.x-branch/xcode/{{ xcode_6_4_x_builds.first.dir }}/{{ xcode_6_4_x_builds.first.debug_info }}" class="debug">Debugging Symbols</a>
           </div>
         </div>
       </div>
@@ -151,8 +151,8 @@ title: Install Swift - macOS
   <div class="release-box section">
     <div class="content">
         <details class="download" style="margin-bottom: 0;">
-        <summary>Previous Snapshots (release/6.3)</summary>
-        {% include_relative _older-6_3-snapshots.md %}
+        <summary>Previous Snapshots (release/6.4.x)</summary>
+        {% include_relative _older-6_4_x-snapshots.md %}
         </details>
     </div>
   </div>
