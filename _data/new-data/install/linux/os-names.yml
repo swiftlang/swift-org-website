@@ -5,6 +5,9 @@
     - name: Amazon Linux 2
       slug: amazonlinux2
       url: /install/linux/amazonlinux/2
+    - name: Amazon Linux 2023
+      slug: amazonlinux2023
+      url: /install/linux/amazonlinux/2023
 - name: Debian
   slug: debian
   url: /install/linux/debian/12
