@@ -31,7 +31,7 @@ At its WWDC26 conference, Apple provided an update on its adoption of Swift and 
 * [Container Machine](https://github.com/apple/container/blob/main/docs/container-machine.md) is a new tool included in [Container](https://github.com/apple/container) that provides a lightweight, persistent Linux environment on a Mac with images that can be shared across environments. And it's written in Swift!
 
 ## Videos to watch
-* [Build real-time apps and services with gRPC and Swift](https://www.youtube.com/watch?v=CCFxlFF9XRI) walks through integrating an iOS app and gRPC service using live race data from a go karting league. See if you can spot where the track is located. 👀
+* [Build real-time apps and services with gRPC and Swift](https://www.youtube.com/watch?v=CCFxlFF9XRI) walks through integrating an iOS app and gRPC service using live race data from a go-karting league. See if you can spot where the track is located. 👀
 * Want to learn about Swift macros with hands-on tutorials? Stewart Lynch published two videos and sample code to follow along: [Swift Macros Demystified: Build a Freestanding Expression Macro](https://www.youtube.com/watch?v=7W6R2TIoEW8), and [Swift Attached Macros: Build a Real-World Member Macro from Scratch](https://www.youtube.com/watch?v=iQYEG3tPWpw).
 * A new [10-minute Embedded Swift demo](https://www.youtube.com/watch?v=_YwwTJ3TDpE) uses an accelerometer and the XIAO ESP32-C6 to control a Swift bird that glides across a mini OLED screen. No soldering required!
 
