@@ -23,7 +23,7 @@ Now on to other news about Swift:
 
 At its WWDC26 conference, Apple provided an update on its adoption of Swift and made a variety of new Swift-related announcements. Some highlights:
 
-* Apple shared Swift-related updates in their [Platforms State of the Union](https://www.youtube.com/watch?v=yl2jsIoMfDU&t=2118s), and for upcoming releases, they've started writing parts of the core operating system kernel in Swift.
+* Apple shared Swift-related updates in its [Platforms State of the Union](https://www.youtube.com/watch?v=yl2jsIoMfDU&t=2118s), and for upcoming releases, it has started writing parts of the core operating system kernel in Swift.
 * [What’s new in Swift](https://www.youtube.com/watch?v=ssppiors2Ak) featured changes in Swift since last year, including a preview of what's coming in Swift 6.4, like URL parsing up to 4x faster and async code in defer blocks.
 * The QUIC transport layer in Apple's networking stack was rewritten in Swift, and the [project has been open sourced](https://github.com/apple/swift-nio-quic) and is available for cross-platform use through SwiftNIO integration.
 * A new Swift package, [Foundation Models framework utilities](https://github.com/apple/foundation-models-utilities), was released with tools for working with LLMs via the Foundation Models framework, including custom skills and context management helpers. It runs on Apple platforms and select Linux distributions.
