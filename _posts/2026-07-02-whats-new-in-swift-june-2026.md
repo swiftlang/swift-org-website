@@ -15,7 +15,7 @@ June was an exciting month for Swift, featuring announcements at WWDC and commun
 > 
 > CommunityKit brought together over 250 developers in real life to geek out over the announcements, stay for the community and vibes, see what everyone is creating, and learn from each other. Some of the highlights from this year’s event were the Indie Fair, where developers showcased their apps; the Watch Party, our annual gathering to watch the keynotes together; and Make Something, Ship Nothing, a hands-on postcard-making hangout to close the week. This year we also introduced workshops, including “Inclusive by Design” by Danielle Lewis, and for the Swift community: “Write Faster, Smarter Swift” by Paul Hudson.
 > 
-> We can’t wait to hear about what you’ve built and hope to see you at CommunityKit and iOSDevHappyHour next year!
+> We can’t wait to hear about what everyone builds and brings to next year’s Indie Fair, and hope to see you at CommunityKit and iOSDevHappyHour!
 
 Now on to other news about Swift:
 
