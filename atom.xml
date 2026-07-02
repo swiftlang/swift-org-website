@@ -8,7 +8,7 @@
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>tag:swift.org,2015-12-03:Swift</id>
 
-  {% assign posts = site.posts | sort: 'updated' %}
+  {% assign posts = site.posts | sort: 'date' | reverse %}
   {% for post in posts limit: 20 %}
   <entry>
     <title>{{ post.title }}</title>
@@ -31,7 +31,7 @@
     <link href="{{ site.url }}{{ post.url }}"/>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <id>{{ site.url }}{{ post.url }}</id>
-    <content type="html">{% if post.excerpt_separator %}{{ post.excerpt | xml_escape }}{% else %}{{ post.content | xml_escape }}{% endif %}</content>
+    <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
   {% endfor %}
 </feed>
