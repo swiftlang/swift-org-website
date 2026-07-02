@@ -1,0 +1,16 @@
+{% comment %} Params: title, url, excerpt, date (optional), cta (default "Read more"). {% endcomment %}
+<div class="content-card">
+  <span class="content-card-title title-4">{{ include.title }}</span>
+  {% if include.date %}
+  <time
+    class="content-card-date body"
+    pubdate
+    datetime="{{ include.date | date_to_xmlschema }}"
+    >{{ include.date | date: "%B %-d, %Y" }}</time
+  >
+  {% endif %}
+  <p class="content-card-excerpt body">{{ include.excerpt | strip_html }}</p>
+  <a class="content-card-cta body" href="{{ include.url }}"
+    >{% if include.cta %}{{ include.cta }}{% else %}Read more{% endif %}</a
+  >
+</div>

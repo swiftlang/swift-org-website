@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use 'sass:map';
 
 @mixin flex-between {
   display: flex;
@@ -197,20 +198,84 @@
 
 body[data-color-scheme='light'] {
   .hide-light {
-    display: none
-  }    
+    display: none;
+  }
 }
 
 body[data-color-scheme='dark'] {
   .hide-dark {
-    display: none
-  }    
+    display: none;
+  }
 }
-
-
 
 @mixin underline {
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
   text-underline-offset: 2px;
+}
+
+// Clamp text to N lines with an ellipsis.
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  line-clamp: $lines;
+  overflow: hidden;
+}
+
+// Type ramp tokens. `*-mobile` entries hold phone sizes.
+$type-mobile-breakpoint: 768px;
+
+$type-scale: (
+  title-0: (
+    size: 56px,
+    weight: 600,
+    line-height: 1.2,
+  ),
+  title-0-mobile: (
+    size: 40px,
+    weight: 600,
+    line-height: 1.2,
+  ),
+  title-1: (
+    size: 48px,
+    weight: 500,
+    line-height: 1.2,
+  ),
+  title-1-mobile: (
+    size: 32px,
+    weight: 500,
+    line-height: 1.33,
+  ),
+  title-2: (
+    size: 42px,
+    weight: 500,
+    line-height: 1.2,
+  ),
+  title-3: (
+    size: 24px,
+    weight: 500,
+    line-height: 1.2,
+  ),
+  title-4: (
+    size: 22px,
+    weight: 500,
+    line-height: 1.2,
+  ),
+  body: (
+    size: 17px,
+    weight: 400,
+    line-height: 1.53,
+  ),
+);
+
+// Emit font declarations for a named type token. Pass a `-mobile` token inside a media query for responsive sizing.
+@mixin typography($name) {
+  $spec: map.get($type-scale, $name);
+  @if $spec == null {
+    @error "Unknown typography token: #{$name}.";
+  }
+  font-size: map.get($spec, size);
+  font-weight: map.get($spec, weight);
+  line-height: map.get($spec, line-height);
 }

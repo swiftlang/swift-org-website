@@ -36,12 +36,7 @@ title: Blog
               <li>
                 <h3 class="blog-featured-grid-category-headline title-3">{{ category_title }}</h3>
                   <!-- <a class="news-item-link" href="{{ latest_post.url }}"> -->
-                    <div class="blog-featured-category-post">
-                        <span class="blog-title title-4">{{ latest_post.title }}</span>
-                        <time  class="blog-date body" pubdate datetime="{{ latest_post.date | date_to_xmlschema }}">{{ latest_post.date | date: "%B %-d, %Y" }}</time>
-                        <p class="blog-excerpt body">{{ latest_post.excerpt | strip_html}}</p>
-                        <a class="blog-post-cta body" href="{{ latest_post.url }}">{{site.data.new-data.blog.page-data.read-more}}</a>
-                    </div>
+                    {% include new-includes/components/content-card.html title=latest_post.title date=latest_post.date excerpt=latest_post.excerpt url=latest_post.url cta=site.data.new-data.blog.page-data.read-more %}
                   <!-- </a> -->
               </li>
           {% endif %}

@@ -33,14 +33,18 @@
     }
 
     h1 {
-      font-size: 2.2em;
       margin-bottom: 40px;
+    }
+    // Body headings keep in-article sizing; the page title uses .title-0.
+    .details h1 {
+      font-size: 2.2em;
     }
     h2 {
       font-size: 1.8em;
     }
 
-    p {
+    // Exclude the content-card excerpt from article prose spacing.
+    p:not(.content-card-excerpt) {
       margin-bottom: 1em;
 
       &:has(+ ul) {
@@ -60,7 +64,8 @@
       color: var(--site-link-with-right-arrow-color);
     }
 
-    time {
+    // Article's own date only — scoped so it doesn't leak into nested cards.
+    > time {
       color: var(--blog-page-time-text-color);
       font-size: 0.8em;
       text-transform: uppercase;
@@ -100,14 +105,6 @@
       .content {
         background: transparent;
         padding: 0;
-
-        time {
-          margin-bottom: 10px;
-        }
-
-        h3 {
-          margin-top: 0;
-        }
       }
     }
   }

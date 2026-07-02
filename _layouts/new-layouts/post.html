@@ -6,7 +6,7 @@ layout: new-layouts/base
   <div class="swoop swoop-1"></div>
 
   <div class="content">
-    <h1>{{ page.title }}</h1>
+    <h1 class="title-0">{{ page.title }}</h1>
 
     {% assign compact_flag = false %}
     {% if page.author.size > 1 %}
@@ -52,32 +52,14 @@ layout: new-layouts/base
       {% if page.previous or page.next %}
       <nav class="section card-grid">
         <div class="content">
-          <ul class="tertiary-cards">
+          <ul class="content-card-grid">
             {% if page.previous %}
             <li>
-              <div>
-                <h3>{{ page.previous.title }}</h3>
-                <time pubdate datetime="{{ page.date | date_to_xmlschema }}"
-                  >{{ page.previous.date | date: "%B %-d, %Y" }}</time
-                >
-                <p class="nav-excerpt">
-                  {{ page.previous.excerpt | strip_html | truncate: 80, '..' }}
-                </p>
-                <a href="{{ page.previous.url }}" rel="prev"> More </a>
-              </div>
+              {% include new-includes/components/content-card.html title=page.previous.title date=page.previous.date excerpt=page.previous.excerpt url=page.previous.url %}
             </li>
             {% endif %} {% if page.next %}
             <li>
-              <div>
-                <h3>{{ page.next.title }}</h3>
-                <time pubdate datetime="{{ page.date | date_to_xmlschema }}"
-                  >{{ page.next.date | date: "%B %-d, %Y" }}</time
-                >
-                <p class="nav-excerpt">
-                  {{ page.next.excerpt | strip_html | truncate: 80, '..' }}
-                </p>
-                <a href="{{ page.next.url }}" rel="next"> More </a>
-              </div>
+              {% include new-includes/components/content-card.html title=page.next.title date=page.next.date excerpt=page.next.excerpt url=page.next.url %}
             </li>
             {% endif %}
           </ul>
