@@ -9,11 +9,11 @@ category: "Digest"
 
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
 
-June was an exciting month for Swift, featuring announcements at WWDC and community-organized events around the globe. We invited the organizers of one of the many community events to share with us:
+June was an exciting month for Swift, featuring announcements at WWDC and community events around the globe. We invited the organizers of one of them to share with us:
 
 > Hey, it’s Mikaela and Adrian. We are organizers of [CommunityKit](https://communitykit.social), a community-organized conference that takes place the same week as WWDC, and [iOSDevHappyHour](https://links.iosdevhappyhour.com), a monthly online meetup that keeps the community connected year-round. This is our fifth year coming out to Cupertino, and we love being able to create a place for the community to thrive, no matter where developers live.
 > 
-> At CommunityKit, we brought together over 250 developers in real life to geek over the announcements, stay for the community and vibes, see what everyone is creating, and learn from each other. Some of the highlights from this year’s event were the Indie Fair, where developers showcased their apps; the Watch Party, our annual gathering to watch the keynotes together; and Make Something, Ship Nothing, a hands-on postcard-making hangout to close the week. This year we also introduced workshops, including “Inclusive by Design” by Danielle Lewis, and for the Swift community: “Write Faster, Smarter Swift” by Paul Hudson.
+> CommunityKit brought together over 250 developers in real life to geek out over the announcements, stay for the community and vibes, see what everyone is creating, and learn from each other. Some of the highlights from this year’s event were the Indie Fair, where developers showcased their apps; the Watch Party, our annual gathering to watch the keynotes together; and Make Something, Ship Nothing, a hands-on postcard-making hangout to close the week. This year we also introduced workshops, including “Inclusive by Design” by Danielle Lewis, and for the Swift community: “Write Faster, Smarter Swift” by Paul Hudson.
 > 
 > We can’t wait to hear about what you’ve built and hope to see you at CommunityKit and iOSDevHappyHour next year!
 
@@ -28,7 +28,7 @@ At its WWDC26 conference, Apple provided an update on its adoption of Swift and 
 * The QUIC transport layer in Apple's networking stack was rewritten in Swift. The [project has been open sourced](https://github.com/apple/swift-nio-quic) and is available for cross-platform use through SwiftNIO integration.
 * A new Swift package, [Foundation Models framework utilities](https://github.com/apple/foundation-models-utilities), was released with tools for working with LLMs, including custom skills and context management helpers. It runs on Apple platforms and select Linux distributions.
 * The Foundation Models framework itself will be open sourced in the future, meaning the same Swift APIs you use in your app could run on your server.
-* [Container Machine](https://github.com/apple/container/blob/main/docs/container-machine.md) is a new tool included in [Container](https://github.com/apple/container) that provides a lightweight, persistent Linux environment on a Mac with images that can be shared across environments. It's written in Swift and open source.
+* [Container Machine](https://github.com/apple/container/blob/main/docs/container-machine.md) is a new tool included in [Container](https://github.com/apple/container) that provides a lightweight, persistent Linux environment on a Mac with images that can be shared across environments and support for mounting your home directory and host configuration. It's written in Swift and open source.
 
 ## Videos to watch
 * [Build real-time apps and services with gRPC and Swift](https://www.youtube.com/watch?v=CCFxlFF9XRI) walks through integrating an iOS app and gRPC service using live race data from a go-karting league. See if you can spot where the track is located. 👀
@@ -42,8 +42,8 @@ At its WWDC26 conference, Apple provided an update on its adoption of Swift and 
 * The Swift Ecosystem Steering Group [announced the creation of the Networking workgroup](https://www.swift.org/blog/announcing-networking-workgroup/). This group will work on a unified networking stack for Swift, layered from low-level I/O primitives, through common protocols, to a modern HTTP client and server API.
 
 ## New package releases
-* New [Swift bindings for the OkHttp Java library](https://forums.swift.org/t/swift-okhttp-swift-bindings-for-okhttp-on-android-java/87128) were released, if you're using Swift on Android and looking for an HTTP client this may be useful. The project was generated with [swift-java](https://github.com/swiftlang/swift-java).
-* [Kiln](https://forums.swift.org/t/kiln-a-documentation-engine-written-in-swift/87287) is a new documentation engine written in Swift, built to replace MkDocs-based documentation sites. For the Swift community, it gives even more options for rendering docs, in addition to the [DocC](https://www.swift.org/documentation/docc/) project which is used for the official Swift documentation. You can see Kiln in action, it's being used by the [Vapor documentation](https://docs.vapor.codes).
+* New [Swift bindings for the OkHttp Java library](https://forums.swift.org/t/swift-okhttp-swift-bindings-for-okhttp-on-android-java/87128) were released. If you're using Swift on Android and looking for an HTTP client this may be useful. The project was generated with [swift-java](https://github.com/swiftlang/swift-java).
+* [Kiln](https://forums.swift.org/t/kiln-a-documentation-engine-written-in-swift/87287) is a new documentation engine written in Swift. Built to replace MkDocs-based documentation sites, it gives more options for the Swift community to render docs, in addition to the [DocC](https://www.swift.org/documentation/docc/) project which is used for the official Swift documentation. You can see Kiln in action at the [Vapor documentation](https://docs.vapor.codes).
 * Version 0.4.0 of [Elementary UI](https://github.com/elementary-swift/elementary-ui) was released, a frontend framework for running Swift applications natively in the browser.
 
 ## Swift Evolution
