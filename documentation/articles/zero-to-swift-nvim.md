@@ -148,7 +148,7 @@ those directories now.
 
 See [lazy.nvim Configuration](https://lazy.folke.io/configuration) for details on configuring _lazy.nvim_.
 
-![_lazy.nvim_ package manger](/assets/images/zero-to-swift-nvim/Lazy.png)
+![_lazy.nvim_ package manager](/assets/images/zero-to-swift-nvim/Lazy.png)
 
 Note that your configuration won't look exactly like this.
 We have only installed _lazy.nvim_, so that is the only plugin that is listed on
@@ -390,7 +390,7 @@ Create a new file in your plugins directory for configuring the snippet plugin.
 return {
     {
         'L3MON4D3/LuaSnip',
-        conifg = function(opts)
+        config = function(opts)
             require('luasnip').setup(opts)
             require('luasnip.loaders.from_snipmate').load({ paths = "./snippets" })
         end,
