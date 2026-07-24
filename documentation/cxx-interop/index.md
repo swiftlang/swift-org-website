@@ -800,7 +800,7 @@ the following C++ class gets renamed to `CxxLibraryError` structure in Swift:
 ```c++
 class Error {
   ...
-} SWIFT_NAME("CxxLibraryError");
+} SWIFT_NAME(CxxLibraryError);
 ```
 
 When renaming a function, you need to specify the Swift function name
