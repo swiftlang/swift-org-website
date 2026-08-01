@@ -249,7 +249,7 @@ NotificationCenter.default().post(name: MyController.MyGreatNotification, object
             let myGlobal = { … global contains initialization in a call to a closure … }()
             _ = myGlobal  // using myGlobal will invoke the initialization code only the first time it is used.
 	- There are now specific protocols for each of the `DispatchSource` types.  You should change `dispatch_source_t` to one of these specific protocols, such as `DispatchSourceTimer`, `DispatchSourceProcess`, etc. as appropriate.
-	- The Dispatch queue APIs now use the `DispatchAttributes` `OptionSet`.  If you previously used `dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_DEFAULT, 0))`, you should now use use the option set, as in `DispatchQueue(label: name, attributes: [.serial, .qosDefault])`
+	- The Dispatch queue APIs now use the `DispatchAttributes` `OptionSet`.  If you previously used `dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_DEFAULT, 0))`, you should now use `DispatchQueue(label: name, qos: .default)`
 	- `dispatch_get_specific` no longer takes an `UnsafeMutablePointer<Void>`, and it does not add the required argument label.
 		- Workaround: Replace your `UnsafeMutablePointer<Void>` keys with `DispatchSpecificKey<T>` , and add the missing `key:` label.
 
