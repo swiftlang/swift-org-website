@@ -331,9 +331,12 @@ makes Swift import it as `~Copyable`, while leaving the type copyable in C++.
 ```c++
 struct SWIFT_NONCOPYABLE FileDescriptor {
   FileDescriptor(const char *path);
-  ~FileDescriptor();
 };
 ```
+
+A type annotated with `SWIFT_NONCOPYABLE` must still be movable in C++. This may
+require explicitly declaring the move constructor in cases where it would
+otherwise be implicitly deleted.
 
 Class templates may need more control over how copyability is determined for each specialization. 
 Consider this `ResourceWrapper`, which provides a copy constructor
