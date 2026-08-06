@@ -9,7 +9,7 @@ category: "Digest"
 
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
 
-Swift is built by contributors working on far more than the language and compiler. Alex Sandberg reflects on what that kind of contribution looks like, and why there's a place for you too:
+Swift is built by contributors working on far more than the language and compiler. Alexander Sandberg reflects on what that kind of contribution looks like, and why there's a place for you too:
 
 > Hi, I'm Alex. Four years ago I joined the Swift Website Workgroup to help care for the website you're likely reading this on. I was still fairly new to the Swift community then, but I wanted to get involved somehow and make a difference.
 > 
