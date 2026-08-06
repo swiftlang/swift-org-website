@@ -19,7 +19,7 @@ Swift is built by contributors working on far more than the language and compile
 > 
 > After four years, [I've stepped away to focus on other things in life](https://alexandersandberg.com/articles/leaving-the-swift-website-workgroup/). Thank you to everyone I got to work with over these years! I'm leaving the workgroup, but not the community, and I'll still be around helping push Swift forward where I can.
 
-For more information about workgroups, the [How we work page](https://www.swift.org/community/how-we-work/) lists all workgroups. And on the [Swift forums](https://forums.swift.org) you'll often see workgroups sharing open meetings if you're looking to get involved!
+For more information about workgroups, the [How we work page](/community/how-we-work/) lists all workgroups. And on the [Swift forums](https://forums.swift.org) you'll often see workgroups sharing open meetings if you're looking to get involved!
 
 Now on to other news about Swift:
 
