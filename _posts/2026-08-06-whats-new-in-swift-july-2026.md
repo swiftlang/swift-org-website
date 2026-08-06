@@ -40,7 +40,7 @@ Now on to other news about Swift:
 * [any-error-swift](https://github.com/MFB-Technologies-Inc/any-error-swift) takes a different approach to error handling, offering a concrete, value-semantic, `Hashable` type that erases any Swift error, no Foundation required, and works on every platform Swift runs on.
 
 ## Swift Evolution
-The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals recently accepted for a future Swift release.
+The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals recently accepted for a future Swift release.
 
 **Recently accepted:**
 * [ST-0025](https://github.com/swiftlang/swift-evolution/blob/main/proposals/testing/0025-tag-based-test-execution-filtering.md) Tag-based Test Execution Filtering - Swift Testing lets you annotate tests with named tags, and separately lets you include or exclude tests by regex using the `--filter` and `--skip` options, but there's no way to combine the two and filter by tag. This proposal adds a `tag:` prefix to those options, so you can run commands like `swift test --skip tag:uiTest` to selectively run or skip tests based on their tags rather than relying on a consistent naming scheme.
