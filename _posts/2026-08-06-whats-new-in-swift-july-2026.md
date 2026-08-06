@@ -11,7 +11,7 @@ Welcome to "What's new in Swift," a curated digest of releases, videos, and disc
 
 Swift is built by contributors working on far more than the language and compiler. Alexander Sandberg reflects on what that kind of contribution looks like, and why there's a place for you too:
 
-> Hi, I'm Alex. Four years ago I joined the Swift Website Workgroup to help care for the website you're likely reading this on. I was still fairly new to the Swift community then, but I wanted to get involved somehow and make a difference.
+> Hi, I'm Alex. Four years ago I joined the Swift Website Workgroup to help care for the website you're reading this on. I was still fairly new to the Swift community then, but I wanted to get involved somehow and make a difference.
 > 
 > Contributing to Swift sounds like it should involve working on the compiler or writing and reviewing language evolution proposals, but there's a lot going on around the language itself too. What I actually spent my time doing was helping improve the site's content and navigation, taking part in the big redesign, writing release blog posts, reviewing pull requests, and answering issues and forum posts. All of it is work anyone can learn to do, and all of it ends up in front of everyone who comes to Swift.org—which made even the smallest fixes feel worth doing.
 > 
