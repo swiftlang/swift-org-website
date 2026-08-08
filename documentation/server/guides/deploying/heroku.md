@@ -112,7 +112,7 @@ You can use this command in terminal to set the file
 echo "web: NIOHTTP1Server 0.0.0.0 $PORT" > Procfile
 ```
 
-The contents of this file may vary depending on your server framework. For Vapor apps, the default Procfile content is the follwowing:
+The contents of this file may vary depending on your server framework. For Vapor apps, the default Procfile content is the following:
 
 ```bash
 web: Run serve --env production --hostname 0.0.0.0 --port $PORT

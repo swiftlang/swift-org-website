@@ -434,7 +434,7 @@ type `T` is transformed to `MutableSpan<T>` on the Swift side.
 If an API uses raw pointers rather than `std::span` - perhaps because it's written in C or Objective-C,
 or because it's an older C++ API that doesn't want to break backwards compatibility -
 it can still receive the same interop safety as `std::span`. This added bounds safety doesn't break
-source compatiblity, nor does it affect ABI. Instead it leverages bounds annotations to express the
+source compatibility, nor does it affect ABI. Instead it leverages bounds annotations to express the
 pointer bounds in terms of other parameters in the function signature.
 
 #### Annotating Pointers with Bounds Annotations
