@@ -190,14 +190,19 @@ components:
       type: string
       enum:
         - amazonlinux2
+        - amazonlinux2023
         - centos7
         - debian12
+        - debian13
         - fedora39
+        - fedora41
         - macos
+        - ubi10
         - ubi9
         - ubuntu2004
         - ubuntu2204
         - ubuntu2404
+        - ubuntu2604
         - windows10
     PlatformIdentifier:
       anyOf:
