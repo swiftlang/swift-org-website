@@ -257,7 +257,7 @@ watchTermination(of: other) { terminatedIdentity in
 }
 ~~~
 
-It is important that the watch API does not retain the actor, and thus won’t keep it alive - otherwise the the termination would never be observed after all.
+It is important that the watch API does not retain the actor, and thus won’t keep it alive - otherwise the termination would never be observed after all.
 
 Distributed actors may need to keep themselves alive by storing strong references to them in some kind of "manager" actor, some registry, or having the receptionist retain them (e.g. until they unregister, or some other condition happens).
 

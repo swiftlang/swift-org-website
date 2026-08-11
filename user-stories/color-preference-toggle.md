@@ -1,4 +1,4 @@
-# User Stories - color color scheme Toggle
+# User Stories - color scheme Toggle
 
 Feature: Initial site load with initial color scheme preference
     Background (all):

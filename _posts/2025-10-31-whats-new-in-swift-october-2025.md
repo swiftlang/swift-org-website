@@ -7,7 +7,7 @@ author: [heckj, davelester]
 category: "Digest"
 ---
 
-*Editor Note: This is the first of a new series, What’s new in Swift, a monthly digest featuring what's new in the Swift project and ecosystem, with insights and perspectives from across the Swift world. This October edition covers highlights from the Server Side Swift conference, major package releases, and the latest Swift Evolution proposals.*
+*Editor Note: This is the first of a new series, What’s new in Swift, a regular digest featuring what's new in the Swift project and ecosystem, with insights and perspectives from across the Swift world. This October edition covers highlights from the Server Side Swift conference, major package releases, and the latest Swift Evolution proposals.*
 
 *Thanks to Joe Heck for sharing his conference experience and insights as our inaugural guest contributor.*
 

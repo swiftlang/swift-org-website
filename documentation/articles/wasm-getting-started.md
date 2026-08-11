@@ -29,7 +29,7 @@ The distributed artifact bundles also include support for the experimental Embed
 
 Note that these steps are required on macOS even if you already have latest Xcode installed. Cross-compilation with Swift SDKs on Windows hosts is [not supported yet](https://github.com/swiftlang/swift-package-manager/issues/9148).
 
-1. [Install `swiftly` per the instructions](https://www.swift.org/install/) for the platform that you're bulding on.
+1. [Install `swiftly` per the instructions](https://www.swift.org/install/) for the platform that you're building on.
 
 2. Install Swift {{ release_name }} with `swiftly install {{ release_name }}`.
 
@@ -124,7 +124,7 @@ This section shows you how to configure your development environment for Swift W
 
 ### Visual Studio Code
 
-If you haven't set up VSCode for Swift development yet, see the [Configuring VS Code for Swift Development guide](/documentation/articles/getting-started-with-vscode-swift/).
+If you haven't set up VSCode for Swift development yet, see the [Configuring VS Code for Swift Development guide](/documentation/articles/getting-started-with-vscode-swift.html).
 
 **Configure VSCode for WebAssembly:**
 
@@ -169,5 +169,5 @@ For other editors (Vim, Neovim, Emacs, etc.) with LSP support already configured
    Replace `{{ tag }}_wasm` with your Swift SDK ID from `swift sdk list`. Use `{{ tag }}_wasm-embedded` for Embedded Swift.
 
 For initial Swift LSP setup guides, see:
-- [Zero to Swift with Neovim](/documentation/articles/zero-to-swift-nvim/)
-- [Zero to Swift with Emacs](/documentation/articles/zero-to-swift-emacs/)
+- [Zero to Swift with Neovim](/documentation/articles/zero-to-swift-nvim.html)
+- [Zero to Swift with Emacs](/documentation/articles/zero-to-swift-emacs.html)

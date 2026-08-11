@@ -18,7 +18,7 @@
   pitched: 2019-01-08
   accepted: 2019-04-04
   url: http://github.com/apple/swift-metrics.git
-    
+
 - name: PostgresNIO
   description: PostgreSQL driver
   maturity: Graduated
@@ -32,7 +32,7 @@
   pitched: 2019-01-07
   accepted: 2019-06-27
   url: https://github.com/swift-server/RediStack.git
-    
+
 - name: AsyncHTTPClient
   description: HTTP Client
   maturity: Graduated
@@ -60,7 +60,7 @@
   pitched: 2018-11-18
   accepted: 2019-08-11
   url: https://github.com/swift-server/swift-prometheus.git
-    
+
 - name: gRPC Swift
   description: gRPC client & server framework
   maturity: Graduated
@@ -74,49 +74,49 @@
   pitched: 2020-02-20
   accepted: 2020-03-04
   url: https://github.com/apple/swift-crypto.git
-  
+
 - name: OpenAPIKit
   description: OpenAPI client
   maturity: Incubating
   pitched: 2020-01-14
   accepted: 2020-04-29
   url: https://github.com/mattpolzin/OpenAPIKit.git
-  
+
 - name: Swift AWS Lambda Runtime
   description: Runtime library for AWS Lambda functions in Swift
   maturity: Sandbox
   pitched: N/A
   accepted: 2020-06-24
   url: https://github.com/swift-server/swift-aws-lambda-runtime.git
-  
+
 - name: Service Lifecycle
   description: Lifecycle management
   maturity: Incubating
   pitched: N/A
   accepted: 2020-09-02
   url: https://github.com/swift-server/swift-service-lifecycle.git
-  
+
 - name: Soto for AWS
   description: Third-party SDK for AWS
   maturity: Graduated
   pitched: 2020-10-01
   accepted: 2020-11-12
   url: https://github.com/soto-project/soto.git
-  
+
 - name: MultipartKit
   description: Multipart parser and serializer with Codable support for Multipart Form Data
   maturity: Graduated
   pitched: 2021-03-03
   accepted: 2021-11-11
   url: https://github.com/vapor/multipart-kit.git
-  
+
 - name: MQTT NIO
   description: A Swift NIO MQTT v3.1.1 and v5.0 Client
   maturity: Sandbox
   pitched: 2021-11-02
   accepted: 2022-01-19
   url: https://github.com/swift-server-community/mqtt-nio.git
-  
+
 - name: GraphQL
   description: GraphQL query language implementation
   maturity: Incubating

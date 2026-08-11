@@ -5,7 +5,7 @@ Reporting bugs is a great way for anyone to help improve Swift. The open source 
 <div class="info" markdown="1">
 If a bug can be reproduced only within an Xcode project or a playground,
 or if the bug is associated with an Apple NDA,
-please file a report to Apple's [bug reporter][apple-bugtracker] instead.
+please file a report to Apple's [Feedback Assistant][apple-bugtracker] instead.
 </div>
 
 When opening an issue, please include the following:
@@ -26,5 +26,5 @@ Before filing an issue requesting a new language feature, see the [Swift Evoluti
 </div>
 
 [bugtracker]: http://github.com/swiftlang/swift/issues
-[apple-bugtracker]: https://bugreport.apple.com
+[apple-bugtracker]: https://feedbackassistant.apple.com
 [evolution-repo]: https://github.com/swiftlang/swift-evolution "Link to the Swift evolution repository on GitHub"

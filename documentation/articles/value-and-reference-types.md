@@ -74,6 +74,10 @@ Since it is a reference to the same instance, changing the `text` of `friendDoc`
 ```swift
 class Document {
   var text: String
+
+  init(text: String) {
+    self.text = text
+  }
 }
 
 var myDoc = Document(text: "Great new article")

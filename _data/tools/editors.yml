@@ -14,6 +14,10 @@
   description: Neovim is an extensible cross-platform text editor. Swift editing support can be enabled through your pick of community-provided plugins.
   link: https://neovim.io/
   guide: /documentation/articles/zero-to-swift-nvim.html
+- name: Cursor
+  description: Cursor is an AI-native editor that supports Swift through the Swift extension.
+  link: https://cursor.com/home
+  guide: /documentation/articles/getting-started-with-cursor-swift.html
 - name: Other Editors
   description: Any editor that supports the Language Server Protocol (LSP) can use SourceKit-LSP to provide intelligent editor functionality for Swift.
   link: https://github.com/swiftlang/sourcekit-lsp/tree/main/Documentation/Editor%20Integration.md

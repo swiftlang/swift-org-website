@@ -17,21 +17,21 @@ The Documentation Tooling Workgroup will:
 
 The current Documentation Tooling Workgroup consists of the following people:
 
-* [Daniel Grumberg](https://github.com/daniel-grumberg)
 * [Dave Verwer](https://github.com/daveverwer)
 * [David Rönnqvist](https://github.com/d-ronnqvist)
-* [Diana Ma](https://github.com/tayloraswift)
 * [Franklin Schrans](https://github.com/franklinsch) (chair)
 * [Joe Heck](https://github.com/heckj)
-* [Kyle Ye](https://github.com/Kyle-Ye)
 * [Sofía Rodríguez Morales](https://github.com/sofiaromorales)
 * [Sven Schmidt](https://github.com/finestructure)
 * [Vera Mitchell](https://github.com/QuietMisdreavus)
 
 We are grateful for the service of the following emeritus workgroup members:
 
+* [Daniel Grumberg](https://github.com/daniel-grumberg)
+* [Diana Ma](https://github.com/tayloraswift)
 * [Ethan Kusters](https://github.com/ethan-kusters)
 * [Kyle Murray](https://github.com/krilnon)
+* [Kyle Ye](https://github.com/Kyle-Ye)
 * [Max Obermeier](https://github.com/theMomax)
 
 ## Charter
