@@ -23,7 +23,7 @@ Extract the archive.
 tar -zxf swiftly-{{ site.data.builds.swiftly_release.version }}-$(uname -m).tar.gz
 ```
 
-Run the following command in your terminal, to configure swiftly for your account, and automatically download the latest swift toolchain.
+Run the following command in your terminal to configure swiftly for your account and automatically download the latest Swift toolchain.
 
 ```
 ./swiftly init
