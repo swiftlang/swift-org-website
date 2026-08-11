@@ -26,31 +26,25 @@ services:
       image: swift-website-builder
       depends_on: [docker-setup]
       volumes:
-        - .:/srv/jekyll:cached
-        - ./.output:/output:z
+         - .:/srv/jekyll:cached
+         - ./.output:/output:z
 
    build:
       <<: *common
       command: /bin/bash -cl "
         bundle check
         && bundle exec jekyll doctor --source /srv/jekyll --destination /output
-        && bundle exec jekyll build --source /srv/jekyll --destination /output"
+        && bundle exec jekyll build --strict_front_matter --source /srv/jekyll --destination /output"
 
    test:
       <<: *common
       command: /bin/bash -cl "
         bundle check
         && bundle exec jekyll doctor --source /srv/jekyll --destination /output
-        && bundle exec jekyll build --source /srv/jekyll --destination /output"
+        && bundle exec jekyll build --strict_front_matter --source /srv/jekyll --destination /output"
 
    website:
-     <<: *common
-     command: /bin/bash -cl "bundle check && bundle exec jekyll serve --source /srv/jekyll --destination /output --host 0.0.0.0 --watch"
-     ports:
-        - "4000:4000"
-
-   soundness:
-     <<: *common
-     command: /bin/bash -cl "/code/scripts/soundness.sh"
-     volumes:
-       - .:/code:z
+      <<: *common
+      command: /bin/bash -cl "bundle check && bundle exec jekyll serve --source /srv/jekyll --strict_front_matter --destination /output --host 0.0.0.0 --watch"
+      ports:
+         - "4000:4000"

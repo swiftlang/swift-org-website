@@ -4,6 +4,16 @@
 @use 'fonts';
 @use 'themes' as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
@@ -69,7 +79,8 @@ blockquote {
   }
 }
 
-.header-with-anchor {
+.header-with-anchor,
+.html-header-with-anchor {
   scroll-margin-top: 80px;
 
   a {
@@ -82,7 +93,8 @@ blockquote {
   }
 }
 
-h2.header-with-anchor {
+h2.header-with-anchor,
+.html-header-with-anchor {
   &:hover {
     a {
       display: inline-block;

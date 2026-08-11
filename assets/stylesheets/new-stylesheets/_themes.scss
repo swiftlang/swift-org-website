@@ -40,6 +40,8 @@
   --blog-page-time-text-color: #8d8d8d;
   --blog-page-code-bg: #f2f2f2;
   --blog-divider-border: #979797;
+  --blog-table-border-color: #e2e2e2;
+  --blog-table-header-bg: #f2f2f2;
 
   --get-started-page-bg: #fafafa;
   --get-started-card-primary-bg: rgba(255, 255, 255, 0.9);
@@ -47,6 +49,11 @@
   --get-started-boxes-bg: rgba(255, 255, 255, 0.5);
   --get-started-code-box-pre-bg: #fff;
   --get-started-code-box-pre-border: 1px solid #d5d5d5;
+  
+  --governance-card-bg: #ECECEC;
+  --governance-card-text-color: #051416;
+  --governance-hero-bg: none;
+  --governance-swoop-image: url('/assets/images/governance/governance-swoop-light.png');
 
   --homepage-hero-bg: linear-gradient(
     179deg,
@@ -128,6 +135,8 @@
   --dropdown-check-icon: url('/assets/images/icon-check-dark.svg');
   --dropdown-check-icon-inverse: url('/assets/images/icon-check-light.svg');
   --dropdown-all-background: #384ff0;
+
+  --community-featured-image-1: url('/assets/images/community/community-bg-hero@2x.png');
 }
 
 @mixin dark-theme() {
@@ -136,6 +145,7 @@
   --site-navigation-box-shadow: none;
   --site-navigation-background: rgba(0, 0, 0, 0.3);
   --site-navigation-text-color: #ffffff;
+  --site-navigation-text-color-selected: #1e162e;
   --site-navigation-item-background: rgba(0, 0, 0, 0.4);
   --site-tabs-background: rgba(35, 52, 74, 1);
   --site-tabs-active-background: #505f83;
@@ -167,6 +177,8 @@
   --blog-page-time-text-color: #8d8d8d;
   --blog-page-code-bg: #111727;
   --blog-divider-border: #979797;
+  --blog-table-border-color: #384461;
+  --blog-table-header-bg: #111727;
 
   --get-started-page-bg: rgb(5, 20, 35);
   --get-started-card-primary-bg: rgba(35, 52, 74, 0.9);
@@ -174,6 +186,16 @@
   --get-started-boxes-bg: rgba(25, 52, 74, 0.5);
   --get-started-code-box-pre-bg: #111727;
   --get-started-code-box-pre-border: 1px solid #575757;
+  
+  --governance-card-bg: #384461;
+  --governance-card-text-color: #ffffff;
+  --governance-hero-bg: linear-gradient(
+    179deg,
+    #144173 1%,
+    #000000 90%,
+    #000000 100%
+  );
+  --governance-swoop-image: url('/assets/images/governance/governance-swoop-dark.png');
 
   --homepage-install-text: #dedede;
   --homepage-hero-bg: linear-gradient(
@@ -251,4 +273,6 @@
   --dropdown-check-icon: url('/assets/images/icon-check-light.svg');
   --dropdown-check-icon-inverse: url('/assets/images/icon-check-dark.svg');
   --dropdown-all-background: #1dc2fe;
+
+  --community-featured-image-1: url('/assets/images/community/community-bg-hero-dark@2x.png');
 }

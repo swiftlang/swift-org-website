@@ -5,16 +5,16 @@ tertiary_cards:
   - name: A title
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     link_text: Lorem ipsum
-    link: #
+    link: "#"
   - name: A title
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     link_text: Lorem ipsum
-    link: #
+    link: "#"
   - name: A title
     text: Pure Swift MongoDB drive built for Server Side Swift.
     link_text: Lorem ipsum
-    link: #
+    link: "#"
   - name: A title
     text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     link_text: Lorem ipsum
-    link: #
+    link: "#"

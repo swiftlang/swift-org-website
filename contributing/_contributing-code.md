@@ -191,56 +191,9 @@ Commits that clearly violate these quality standards may be reverted, in particu
 
 ### Contributor Ladder
 
-This contributor ladder defines the roles you might gain while contributing to Swift on GitHub. Each role has privileges associated, which requires building trust with the community of contributors. We recognize there are many different types of contributors to Swift and we appreciate every single one! Everyone who has participated in the open source Swift project is a *Contributor*: This can be by writing code, answering questions on the forums, reporting or triaging bugs, or participating in the Swift evolution process.
-
-As you climb the contributor ladder by contributing to Swift on GitHub, you gain new privileges but also gain trust and responsibilities that you are expected to fulfill. If a contributor violates this trust and these responsibilities, the Core Team may give them a notice and upon repeated infringements revoke their level. We believe in a healthy community and hope this action will never be necessary.
-
-#### Member
-
-A *Member* has constructively contributed to Swift multiple times. This role is held across the entire organization, becoming a *Member* allows you to trigger CI on all repositories in the swiftlang organization on GitHub.
-
-- Requirements
-  - Make multiple constructive contributions to the Swift projects. This can be in the form of PRs, engagement on the Swift Forums, filing valuable issue, triaging them, or similar.
-- Privileges
-  - Ability to trigger CI testing
-  - Show your membership in the swiftlang organization on your GitHub profile
-- Nomination
-  - If you would like to become a *Member*, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) that includes your contribution and the GitHub user name that you want to use
-- Growth
-  - Show that you use the privileges constructively and continue contributing to gain commit access.
-
-#### Code Merger
-
-A *Code Merger* has made several high-quality contributions, has enough knowledge to review PRs in their area, and is trusted to merge changes after getting approvals. The *Code Merger* level is granted on a per-repository basis.
-
-- Requirements
-  - Author 5 small to medium-sized, non-trivial, high-quality PRs (or equivalent) that needed little guidance.
-- Responsibilities
-  - Provide PR reviews, answer questions, and triage issues in your area.
-- Privileges
-  - Merge PRs in the repository that you’re a *Code Merger* of, including PRs authored by other contributors. You are expected to only merge PRs after you have received an approving review from a *Code Owner*. *Code Owners* might approve with comments, with the expectation that you, as a *Code Merger*, will re-request a review if you make major adjustments after the approving review and ensure that the comments are addressed in a timely manner.
-  - Ability to label/triage issues and assign them to contributors.
-- Nomination
-  - Like for a *Member*, please send an email to [the code owners list](mailto:code-owners@forums.swift.org) that includes your contributions, the GitHub user name that you want to use and the repositories you want to become a *Code Merger* for. At the digression of the code owner list, you may also be granted the *Code Merger* role for repositories that you have not contributed to but that are conceptually linked to your contributions, like `swift-syntax` and `swift-driver` after having contributed to the compiler.
-- Growth
-  - As an *Code Merger*, you are trusted not just with your own work but with helping others. In reviews, you can show that you are able to take care of a code area to become a *Code Owner*.
-
-#### Code Owners
-
-Code owners are individuals assigned to specific areas of the Swift project, with code quality their primary responsibility. The umbrella Swift project is composed of numerous sub-projects including the Swift standard library, extensions to the LLDB debugger, and the Swift package manager, to name a few. Each sub-project will be assigned a code owner.  The code owner then works to get all contributions reviewed, gather feedback from the community, and shepherd approved patches into the product.
-
-Anyone can review a piece of code, and we welcome code review from everyone that is interested. Code review procedures are not dictated by a central, global policy. Instead, the process is defined by each code owner.
-
-Any community member that is active and shows themselves to be valuable can offer to become a code owner via posting to the forums, or be nominated by another member.  If fellow contributors agree, the project lead will make the appointment and add the new owner's name to the code owners file. The position is completely voluntary, and can be resigned at any time.
-
-The list of current code owners can be found in the file `CODE_OWNERS.txt` in the root of the parent Swift source tree. We also maintain a mailing group so you can [send an email](mailto:code-owners@forums.swift.org) to all the code owners.
-
-There may be nothing more important to the success of Swift than strong, engaged code owners. We all owe them respect, gratitude, and whatever help we can offer.
-
-
-Each contributor is responsible for adding his or her name to the `CONTRIBUTORS.txt` file at the project's root and maintaining the contact information. If you are contributing under the umbrella of your company, please add your company’s information, and do not also list yourself as an additional copyright holder.
-
-
-[community]: /community  "Swift.org community overview"
-[get_started]: /getting-started/ "How to setup your own version of Swift"
+[Swift's contributor ladder](https://github.com/swiftlang/project-operations/blob/main/contributing/contributor-ladder.md) defines the roles you might gain while contributing to Swift on GitHub.
+Each role has privileges associated, which requires building trust with the community of contributors.
+We recognize there are many different types of contributors to Swift and we appreciate every single one!
+Everyone who has participated in the open source Swift project is a *Contributor*: This can be by writing code, answering questions on the forums, reporting or triaging bugs, or participating in the Swift evolution process.
+Read about the GitHub specific roles above. 
 

@@ -1,7 +1,11 @@
+- name: Alexander Sandberg
+  github: alexandersandberg
+  affiliation:
+
 - name: Christopher Thielen
   github: cthielen
   affiliation: Apple
-  
+
 - name: Kristina Fox
   github: krstnfx
   affiliation: Apple

@@ -325,7 +325,76 @@ non-copyable Swift types (`~Copyable`). If a C++ type has a valid copy
 constructor, it is still possible to make it non-copyable in Swift by annotating
 it with a `SWIFT_NONCOPYABLE` macro.
 
-Some C++ types are always passed around using a pointer or a reference in C++.
+For example, this `FileDescriptor` has an implicit copy constructor. Annotating it with `SWIFT_NONCOPYABLE`
+makes Swift import it as `~Copyable`, while leaving the type copyable in C++.
+
+```c++
+struct SWIFT_NONCOPYABLE FileDescriptor {
+  FileDescriptor(const char *path);
+};
+```
+
+A type annotated with `SWIFT_NONCOPYABLE` must still be movable in C++. This may
+require explicitly declaring the move constructor in cases where it would
+otherwise be implicitly deleted.
+
+Class templates may need more control over how copyability is determined for each specialization. 
+Consider this `ResourceWrapper`, which provides a copy constructor
+that copies its underlying resource:
+
+```c++
+template <typename T>
+struct ResourceWrapper {
+  T resource;
+  ResourceWrapper(const ResourceWrapper &other) : resource(other.resource) {}
+  ResourceWrapper(ResourceWrapper &&other) = default;
+};
+```
+
+By default, Swift imports every specialization of `ResourceWrapper`
+as `Copyable`, since it has a copy constructor.
+Applying `SWIFT_NONCOPYABLE` has the opposite effect: every specialization gets
+imported as `~Copyable`.
+
+Alternatively, there are two ways to make `ResourceWrapper`'s copyability
+depend on the template arguments.
+
+**1. Constrain the copy constructor with a [`requires` clause](https://en.cppreference.com/cpp/language/requires) (since C++20).** 
+This is the idiomatic C++ approach and is preferred when concepts are available. 
+Instantiations of `ResourceWrapper` where `std::is_copy_constructible_v<T>` is true will be imported as `Copyable`, and as `~Copyable` otherwise:
+
+```c++
+template <typename T>
+struct ResourceWrapper {
+  T resource;
+  ResourceWrapper(const ResourceWrapper &other) requires std::is_copy_constructible_v<T>
+    : resource(other.resource) {}
+  ResourceWrapper(ResourceWrapper &&other) = default;
+};
+```
+
+**2. Annotate the template with `SWIFT_COPYABLE_IF`.** 
+When `requires` is not an option, you can annotate the template 
+with `SWIFT_COPYABLE_IF` and list the template parameters that 
+determine copyability. 
+The specialization is imported as `Copyable` only when every listed parameter is
+itself imported as `Copyable`:
+
+```c++
+template <typename T>
+struct SWIFT_COPYABLE_IF(T) ResourceWrapper {
+  T resource;
+  ResourceWrapper(const ResourceWrapper &other) : resource(other.resource) {}
+  ResourceWrapper(ResourceWrapper &&other) = default;
+};
+```
+
+For multiple parameters, list each one that participates. For example:
+`SWIFT_COPYABLE_IF(T1, T2)`.
+
+All of the above describes how Swift imports a C++ type as a value type. 
+Some C++ types, however, are always passed around using a pointer 
+or a reference.
 As such it might not make sense to map them to value types in Swift. These
 types can be annotated in C++ to instruct the Swift compiler to map them to
 [reference types in Swift instead](#mapping-c-types-to-swift-reference-types).
@@ -499,6 +568,29 @@ to C++, where you can only call virtual methods on a pointer or a reference.
 
 Static C++ member functions become `static` Swift methods.
 
+#### Bool Conversion Operator
+
+When a C++ type defines a bool conversion operator (`operator bool()`), Swift
+represents it as an initializer `Bool(fromCxx:)`. This allows converting a C++
+object to a `Bool` value in Swift:
+
+```c++
+class Connection {
+public:
+  operator bool() const { return isConnected; }
+};
+```
+
+```swift
+let conn = getConnection()
+if Bool(fromCxx: conn) {
+  print("Connected!")
+}
+```
+
+Swift **does not** implicitly convert C++ types with `operator bool` to `Bool`.
+The conversion using `Bool(fromCxx:)` is always explicit in Swift.
+
 ### Accessing Inherited Members from Swift
 
 A C++ class or structure becomes a standalone type in Swift. Its
@@ -538,12 +630,6 @@ struct Fern {
   mutating func trim()
 }
 ```
-
-The exact rules that determine when members from inherited base types
-are introduced to the Swift type that represents the C++ structure or class
-are not yet finalized in Swift 5.9. The following
-[GitHub issue](https://github.com/swiftlang/swift/issues/66323)
-tracks their finalization in Swift 5.9.
 
 ### Using C++ Enumerations
 
@@ -595,7 +681,7 @@ The cases of unscoped C++ enumerations become
 variables outside of the Swift structure:
 
 ```swift
-struct MushroomKind : Equatable, RawRepresentable {
+struct MushroomKind : Hashable, Equatable, RawRepresentable {
     public init(_ rawValue: UInt32)
     public init(rawValue: UInt32)
     public var rawValue: UInt32
@@ -717,7 +803,7 @@ the following C++ class gets renamed to `CxxLibraryError` structure in Swift:
 ```c++
 class Error {
   ...
-} SWIFT_NAME("CxxLibraryError");
+} SWIFT_NAME(CxxLibraryError);
 ```
 
 When renaming a function, you need to specify the Swift function name
@@ -902,6 +988,53 @@ printDeserialized(getSerializedInt())
 printDeserialized(getSerializedFloat())
 ```
 
+### Accessing Private C++ Members in Swift
+
+By default, `private` and `protected` members of a C++ type are not accessible from Swift.
+The `SWIFT_PRIVATE_FILEID` annotation lets you designate a specific Swift file where
+extensions of the annotated C++ type may access its non-public members.
+This is useful when writing a Swift wrapper around a C++ type that needs to access
+`private` or `protected` implementation details.
+
+For example, suppose you want to write a Swift wrapper that accesses the private
+members of `DataBuffer`:
+
+```c++
+#include <swift/bridging>
+
+class DataBuffer {
+  ...
+private:
+  int count;
+  void resize(int newCount);
+} SWIFT_PRIVATE_FILEID("MyModule/DataBufferExt.swift");
+```
+
+Extensions of `DataBuffer` declared in `MyModule/DataBufferExt.swift` may access
+the private `count` field and `resize` method:
+
+```swift
+// MyModule/DataBufferExt.swift
+
+extension DataBuffer {
+  mutating func doubleCapacity() {
+    resize(count * 2)  // OK: private members accessible in extensions here
+  }
+}
+```
+
+Outside of extensions, or in any other Swift file, these members remain inaccessible.
+
+Only one `SWIFT_PRIVATE_FILEID` annotation is allowed per C++ type.
+The file ID passed to `SWIFT_PRIVATE_FILEID` uses the format `"ModuleName/filename.swift"`.
+The directory path of the file within the module does not matter —
+a file at `Sources/helpers/DataBufferExt.swift` compiled in `MyModule`
+matches `"MyModule/DataBufferExt.swift"`.
+
+Both `private` and `protected` C++ members are imported as `private` members in Swift.
+Derived C++ types can access `protected` base members as long as they are also
+annotated with `SWIFT_PRIVATE_FILEID`.
+
 ## Working with C++ Containers
 
 C++ container types, like the [`std::vector`](https://en.cppreference.com/w/cpp/container/vector) class
@@ -997,7 +1130,7 @@ type to automatically conform to `RandomAccessCollection` in Swift:
 - The C++ container type must have `begin` and `end` member functions. Both
   functions must be constant and must return the same iterator type.
 - The C++ iterator type must satisfy the
-  [`RandomAccessIterator`]( https://en.cppreference.com/w/cpp/named_req/RandomAccessIterator)
+  [`RandomAccessIterator`](https://en.cppreference.com/w/cpp/named_req/RandomAccessIterator)
   C++ requirement. It must be possible to advance it using `operator +=` in C++
   and also to subscript into it using `operator []` in C++.
 - The C++ iterator type must be comparable using `operator ==`.
@@ -1185,7 +1318,7 @@ The Swift compiler allows you to annotate some C++ types and import them as refe
 
 The first criterion is whether object identity is part of the "value" of the type. Is comparing the address of two objects just asking whether they're stored at the same location, or is it deciding whether they represent the "same object" in a more significant sense?
 
-The second criterion whether objects of the C++ class are always passed around by reference.  Are objects predominantly passed around using a pointer or reference type, such as a raw pointer (`*`), C++ reference (`&` or `&&`), or a smart pointer (like `std::unique_ptr` or `std::shared_ptr`)?  When passed by raw pointer or reference, is there an expectation that that memory is stable and will continue to stay valid, or are receivers expected to copy the object if they need to keep the value alive independently?  If objects are generally allocated and remain at a stable address, even if that address is not semantically part of the "value" of an object, the class may be idiomatically a reference type. This will sometimes be a judgment call for the programmer.
+The second criterion is whether objects of the C++ class are always passed around by reference.  Are objects predominantly passed around using a pointer or reference type, such as a raw pointer (`*`), C++ reference (`&` or `&&`), or a smart pointer (like `std::unique_ptr` or `std::shared_ptr`)?  When passed by raw pointer or reference, is there an expectation that that memory is stable and will continue to stay valid, or are receivers expected to copy the object if they need to keep the value alive independently?  If objects are generally allocated and remain at a stable address, even if that address is not semantically part of the "value" of an object, the class may be idiomatically a reference type. This will sometimes be a judgment call for the programmer.
 
 The first and most important criteria is often not possible for a compiler to answer automatically by just looking at the code. If you want the Swift compiler to map a C++ type to a Swift reference type, you must annotate the C++ type with one of the following
 customization macros from the `<swift/bridging>` header:
@@ -1373,8 +1506,8 @@ This includes pure virtual methods.
 
 #### Exposing C++ Shared Reference Types back from Swift
 
-C++ can call into Swift APIs that take or return C++ Shared Reference Types. Objects of these types are always created on the C++ side,
-but their references can be passed back and forth between Swift and C++. This section explains the conventions of incrementing and decrementing
+C++ can call into Swift APIs that take or return C++ Shared Reference Types.
+This section explains the conventions of incrementing and decrementing
 the reference counts when passing such references across the language boundaries. Consider the following Swift APIs:
 
 ```swift
@@ -1387,6 +1520,69 @@ In case of the `takeSharedObject` function, the compiler will automatically inse
 owned/guaranteed calling conventions. The C++ callers must guarantee that `x` is alive for the duration of the call.
 Note that functions returning a shared reference type such as `returnSharedObject` transfer the ownership to the caller.
 The C++ caller of this function is responsible for releasing the object.
+
+#### Bridging Smart Pointers to Shared Reference Types
+
+C++ codebases often pass and store reference-counted objects through smart pointers. The `SWIFT_REFCOUNTED_PTR` annotation makes such smart pointers ergonomic in Swift by:
+
+- importing C++ APIs that take or return the smart pointer **by value** as if they used the underlying reference type, and
+- introducing an `asReference` property that converts to the underlying Swift reference type.
+
+Its argument names an accessor that returns a raw pointer (or lvalue reference) to the wrapped object — a member function name prefixed with `.`, or a free function. The accessor's return type determines the underlying reference type, which must be a `SWIFT_SHARED_REFERENCE`, and the accessor must not change the reference count.
+
+The smart pointer must also provide a constructor taking a raw pointer or an lvalue reference to the pointee. The constructor must retain its argument (taken at `+0`). If both forms exist, Swift selects the pointer-taking constructor for implicit bridging.
+
+For example:
+
+```c++
+class SharedObject : IntrusiveReferenceCounted<SharedObject> {
+public:
+    void doSomething();
+    void retain();
+    void release();
+} SWIFT_SHARED_REFERENCE(.retain, .release);
+
+template <class T>
+struct SWIFT_REFCOUNTED_PTR(.getPtr) Ref {
+    Ref(T *_Nonnull ptr);
+    T *_Nonnull getPtr() const;
+
+    Ref(const Ref& r);
+    Ref(Ref&& r);
+    Ref& operator=(const Ref& r);
+    Ref& operator=(Ref&& r);
+    ~Ref();
+};
+
+using RefOfShared = Ref<SharedObject>;
+```
+
+Functions taking or returning the smart pointer by value are bridged:
+
+```c++
+RefOfShared makeRef();
+void useRef(RefOfShared r);
+```
+
+```swift
+let obj: SharedObject = makeRef()   // makeRef() returns SharedObject in Swift
+useRef(obj)                         // useRef takes SharedObject in Swift
+```
+
+Functions that take the smart pointer by reference (`Ref<T>&`, `const Ref<T>&`, or `Ref<T>&&`) are not bridged.
+
+By default, smart pointers are assumed nullable, so `asReference` and bridged signatures use optional reference types. If both the constructor's parameter and the accessor's return type are `_Nonnull`, Swift treats the smart pointer as non-null and bridged signatures use the underlying reference type directly.
+
+For class templates, the annotation applies to each concrete instantiation, not to the template pattern itself.
+
+Conversions are available in Swift with `asReference` and the smart pointer's initializer:
+
+```swift
+func f(_ r: RefOfShared) {
+    let obj: SharedObject = r.asReference
+    let r2 = RefOfShared(obj)
+}
+```
 
 ### Unsafe Reference Types
 
@@ -1440,6 +1636,51 @@ let swiftString = String(cxxString)
 
 Swift does not convert C++ `std::string` type to Swift's `String` type
 automatically.
+
+### Using `std::optional`
+
+The `std::optional<T>` C++ type becomes a structure in Swift. Swift does not
+automatically bridge it to Swift's `Optional<T>` type. Instead, you can use the
+`Optional(fromCxx:)` initializer to convert a C++ `std::optional<T>` value to a
+Swift `Optional<T>`:
+
+```c++
+#include <optional>
+
+std::optional<int> findMagicNumber();
+```
+
+```swift
+let maybeMagic: Int? = Optional(fromCxx: findMagicNumber())
+```
+
+### Using `std::function`
+
+`std::function` can be constructed from a Swift closure by calling its
+initializer. This is useful when working with C++ APIs that take a callback as a
+`std::function` parameter. The closure is allowed to capture variables from its
+surrounding context. For example:
+
+```c++
+void registerCallback(std::function<int(int)> callback);
+```
+
+```swift
+let multiplier: Int32 = 3
+registerCallback(.init { x in x * multiplier })
+```
+
+A `std::function` value returned from C++ can be invoked from Swift through the
+`callAsFunction()` method, or using the equivalent `()` call syntax:
+
+```c++
+std::function<int(int)> getCallback();
+```
+
+```swift
+let callback = getCallback()
+let result = callback(42)              // shorthand for callback.callAsFunction(42)
+```
 
 ## Working with C++ References and View Types in Swift
 
@@ -2095,10 +2336,13 @@ that are outlined in the documentation above.
 | `SWIFT_IMMORTAL_REFERENCE` | [Immortal Reference Types](#immortal-reference-types) |
 | `SWIFT_SHARED_REFERENCE` | [Shared Reference Types](#shared-reference-types) |
 | `SWIFT_UNSAFE_REFERENCE` | [Unsafe Reference Types](#unsafe-reference-types) |
+| `SWIFT_REFCOUNTED_PTR` | [Bridging Smart Pointers to Shared Reference Types](#bridging-smart-pointers-to-shared-reference-types) |
 | `SWIFT_RETURNS_INDEPENDENT_VALUE` | [Annotating Methods Returning Independent References or Views](#annotating-methods-returning-independent-references-or-views) |
 | `SWIFT_MUTATING` | [Constant Member Functions Must Not Mutate the Object](#constant-member-functions-must-not-mutate-the-object) |
 | `SWIFT_NONCOPYABLE` | [C++ Structures and Classes are Value Types by Default](#c-structures-and-classes-are-value-types-by-default) |
+| `SWIFT_COPYABLE_IF` | [C++ Structures and Classes are Value Types by Default](#c-structures-and-classes-are-value-types-by-default) |
 | `SWIFT_SELF_CONTAINED` | [Annotating C++ Structures or Classes as Self Contained](#annotating-c-structures-or-classes-as-self-contained) |
+| `SWIFT_PRIVATE_FILEID` | [Accessing Private C++ Members in Swift](#accessing-private-c-members-in-swift) |
 
 ## Document Revision History
 

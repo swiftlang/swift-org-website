@@ -7,7 +7,7 @@ author: [etcwilde, ktoso, yim-lee]
 
 There are many great libraries out there that are written in C/C++. It is possible to
 make use of these libraries in your Swift code without having to rewrite any of them
-in Swift. This article will explain a couple of ways to acheive this and best practices
+in Swift. This article will explain a couple of ways to achieve this and best practices
 when working with C/C++ in Swift.
 
 ## Package

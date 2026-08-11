@@ -12,114 +12,166 @@
 //
 //===----------------------------------------------------------------------===//
 
-import OpenAPIURLSession
 import Foundation
+import OpenAPIURLSession
 import Shared
 
 enum SwiftOrgServerName: String {
-    case prod
-    case local
+  case prod
+  case local
 }
 
 @main
 struct Tool {
-    static func main() async throws {
-        let serverURL: URL
-        if
-            let name = ProcessInfo.processInfo.environment["SWIFTORG_SERVER_NAME"],
-            let serverName = SwiftOrgServerName(rawValue: name)
-        {
-            switch serverName {
-            case .prod:
-                serverURL = try Servers.Server1.url()
-            case .local:
-                serverURL = try Servers.Server2.url()
-            }
-        } else {
-            serverURL = try Servers.Server1.url()
-        }
+  static func main() async throws {
+    let serverURL: URL
+    if let name = ProcessInfo.processInfo.environment["SWIFTORG_SERVER_NAME"],
+      let serverName = SwiftOrgServerName(rawValue: name)
+    {
+      switch serverName {
+      case .prod:
+        serverURL = try Servers.Server1.url()
+      case .local:
+        serverURL = try Servers.Server2.url()
+      }
+    } else {
+      serverURL = try Servers.Server1.url()
+    }
 
-        print("Testing swift.org API at \(serverURL.absoluteString)...")
+    print("Testing swift.org API at \(serverURL.absoluteString)...")
 
-        let client = Client(
-            serverURL: serverURL,
-            transport: URLSessionTransport()
-        )
+    let client = Client(
+      serverURL: serverURL,
+      transport: URLSessionTransport()
+    )
 
-        var tests: [Test] = [
-            .init(
-                name: "listReleases",
-                work: { _ = try await client.listReleases().ok.body.json }
-            ),
-        ]
-        struct DevToolchainBranchPlatform: Hashable {
-            var branch: Components.Schemas.KnownSourceBranch
-            var platform: Components.Schemas.KnownPlatformIdentifier
-        }
-        let excluded: Set<DevToolchainBranchPlatform> = [
-            .init(branch: ._6_0, platform: .debian12),
-            .init(branch: ._6_0, platform: .fedora39),
-            .init(branch: ._6_0, platform: .ubuntu2404),
-        ]
-        for branch in Components.Schemas.KnownSourceBranch.allCases {
-            for platform in Components.Schemas.KnownPlatformIdentifier.allCases {
-                guard !excluded.contains(.init(branch: branch, platform: platform)) else {
-                    continue
-                }
-                tests.append(
-                    .init(
-                        name: "listDevToolchains(\(branch.rawValue), \(platform.rawValue))",
-                        work: {
-                            _ = try await client.listDevToolchains(.init(
-                                path: .init(
-                                    branch: .init(value1: branch),
-                                    platform: .init(value1: platform)
-                                )
-                            )).ok.body.json
-                        }
-                    )
-                )
-            }
-        }
-        for branch in Components.Schemas.KnownSourceBranch.allCases {
-            tests.append(
-                .init(
-                    name: "listStaticSDKDevToolchains(\(branch.rawValue))",
-                    work: {
-                        _ = try await client.listStaticSDKDevToolchains(.init(path: .init(branch: .init(value1: branch)))).ok.body.json
-                    }
-                )
-            )
-        }
-        for branch in Components.Schemas.KnownSourceBranch.allCases {
-            tests.append(
-                .init(
-                    name: "listWasmSDKDevToolchains(\(branch.rawValue))",
-                    work: {
-                        _ = try await client.listWasmSDKDevToolchains(.init(path: .init(branch: .init(value1: branch)))).ok.body.json
-                    }
-                )
-            )
+    var tests: [Test] = [
+      .init(
+        name: "listReleases",
+        work: { _ = try await client.listReleases().ok.body.json }
+      )
+    ]
+    struct DevToolchainBranchPlatform: Hashable {
+      var branch: Components.Schemas.KnownSourceBranch
+      var platform: Components.Schemas.KnownPlatformIdentifier
+    }
+    let excluded: Set<DevToolchainBranchPlatform> = [
+      .init(branch: ._6_0, platform: .amazonlinux2023),
+      .init(branch: ._6_0, platform: .debian12),
+      .init(branch: ._6_0, platform: .debian13),
+      .init(branch: ._6_0, platform: .fedora39),
+      .init(branch: ._6_0, platform: .fedora41),
+      .init(branch: ._6_0, platform: .ubi10),
+      .init(branch: ._6_0, platform: .ubuntu2404),
+      .init(branch: ._6_0, platform: .ubuntu2604),
+      .init(branch: ._6_1, platform: .amazonlinux2023),
+      .init(branch: ._6_1, platform: .debian13),
+      .init(branch: ._6_1, platform: .fedora41),
+      .init(branch: ._6_1, platform: .ubi10),
+      .init(branch: ._6_1, platform: .ubuntu2604),
+      .init(branch: ._6_2, platform: .amazonlinux2023),
+      .init(branch: ._6_2, platform: .debian13),
+      .init(branch: ._6_2, platform: .fedora41),
+      .init(branch: ._6_2, platform: .ubi10),
+      .init(branch: ._6_2, platform: .ubuntu2604),
+      .init(branch: ._6_3, platform: .centos7),
+      .init(branch: ._6_3, platform: .debian13),
+      .init(branch: ._6_3, platform: .fedora39),
+      .init(branch: ._6_3, platform: .ubi10),
+      .init(branch: ._6_3, platform: .ubuntu2004),
+      .init(branch: ._6_3, platform: .ubuntu2604),
+      .init(branch: ._6_4_x, platform: .centos7),
+      .init(branch: ._6_4_x, platform: .debian13),
+      .init(branch: ._6_4_x, platform: .fedora39),
+      .init(branch: ._6_4_x, platform: .ubuntu2004),
+      .init(branch: ._6_4_x, platform: .ubuntu2604),
+    ]
+    for branch in Components.Schemas.KnownSourceBranch.allCases {
+      for platform in Components.Schemas.KnownPlatformIdentifier.allCases {
+        guard !excluded.contains(.init(branch: branch, platform: platform)) else {
+          continue
         }
         tests.append(
-            .init(
-                name: "getCurrentSwiftlyRelease",
-                work: {
-                    _ = try await client.getCurrentSwiftlyRelease().ok.body.json
-                }
-            )
-        )
-        for level in Components.Schemas.SSWGIncubationFilter.allCases {
-            tests.append(
+          .init(
+            name: "listDevToolchains(\(branch.rawValue), \(platform.rawValue))",
+            work: {
+              _ = try await client.listDevToolchains(
                 .init(
-                    name: "listSSWGIncubatedPackages(\(level.rawValue))",
-                    work: {
-                        _ = try await client.listSSWGIncubatedPackages(.init(path: .init(filter: level))).ok.body.json
-                    }
+                  path: .init(
+                    branch: .init(value1: branch),
+                    platform: .init(value1: platform)
+                  )
                 )
-            )
-        }
-
-        try await Tester.run(tests)
+              ).ok.body.json
+            }
+          )
+        )
+      }
     }
+    for branch in Components.Schemas.KnownSourceBranch.allCases {
+      tests.append(
+        .init(
+          name: "listStaticSDKDevToolchains(\(branch.rawValue))",
+          work: {
+            _ = try await client.listStaticSDKDevToolchains(
+              .init(path: .init(branch: .init(value1: branch)))
+            ).ok.body.json
+          }
+        )
+      )
+    }
+    for branch in Components.Schemas.KnownSourceBranch.allCases {
+      tests.append(
+        .init(
+          name: "listWasmSDKDevToolchains(\(branch.rawValue))",
+          work: {
+            _ = try await client.listWasmSDKDevToolchains(
+              .init(path: .init(branch: .init(value1: branch)))
+            ).ok.body.json
+          }
+        )
+      )
+    }
+    // Android dev SDKs are published for `main` and every release branch from 6.3
+    // onward; the pre-Android branches (6.0–6.2) return 404. Iterate all known
+    // branches and skip those, mirroring the `excluded` deny-matrix above so a new
+    // branch is covered automatically once it appears in KnownSourceBranch.
+    let androidUnsupportedBranches: Set<Components.Schemas.KnownSourceBranch> = [
+      ._6_0, ._6_1, ._6_2,
+    ]
+    for branch in Components.Schemas.KnownSourceBranch.allCases
+    where !androidUnsupportedBranches.contains(branch) {
+      tests.append(
+        .init(
+          name: "listAndroidSDKDevToolchains(\(branch.rawValue))",
+          work: {
+            _ = try await client.listAndroidSDKDevToolchains(
+              .init(path: .init(branch: .init(value1: branch)))
+            ).ok.body.json
+          }
+        )
+      )
+    }
+    tests.append(
+      .init(
+        name: "getCurrentSwiftlyRelease",
+        work: {
+          _ = try await client.getCurrentSwiftlyRelease().ok.body.json
+        }
+      )
+    )
+    for level in Components.Schemas.SSWGIncubationFilter.allCases {
+      tests.append(
+        .init(
+          name: "listSSWGIncubatedPackages(\(level.rawValue))",
+          work: {
+            _ = try await client.listSSWGIncubatedPackages(.init(path: .init(filter: level))).ok
+              .body.json
+          }
+        )
+      )
+    }
+
+    try await Tester.run(tests)
+  }
 }

@@ -167,7 +167,7 @@ filename where the SDK can be found.
 {% assign tag = site.data.builds.swift_releases.last.tag %}
 {% assign tag_downcase = site.data.builds.swift_releases.last.tag | downcase %}
 {% assign base_url = "https://download.swift.org/" | append: tag_downcase | append: "/static-sdk/" | append: tag | append: "/" | append: tag %}
-{% assign command = "swift sdk install " | append: base_url | append: "_static-linux-0.0.1.artifactbundle.tar.gz --checksum " | append: platform.checksum %}
+{% assign command = "swift sdk install " | append: base_url | append: "_static-linux-" | append: platform.version | append: ".artifactbundle.tar.gz --checksum " | append: platform.checksum %}
 
 {% comment %} Generate branch information - ONLY major.minor {% endcomment %}
 -->
@@ -254,7 +254,7 @@ Hello, world!
 
 ### What about package dependencies?
 
-Swift packages that make use of Foundation or Swift NIO should just
+Swift packages that make use of Foundation or SwiftNIO should just
 work.  If you try to use a package that uses the C library, however,
 you may have a little work to do.  Such packages often contain files
 with code like the following:
@@ -267,7 +267,7 @@ import Glibc
 #elseif os(Windows)
 import ucrt
 #else
-#error(Unknown platform)
+#error("Unknown platform")
 #endif
 ```
 
@@ -294,7 +294,7 @@ import Musl
 #elseif os(Windows)
 import ucrt
 #else
-#error(Unknown platform)
+#error("Unknown platform")
 #endif
 ```
 

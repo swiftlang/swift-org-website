@@ -33,21 +33,23 @@ Basic setup and configuration includes:
 3. Configuring the SourceKit-LSP server.
 4. Setting up Language-Server-driven code completion with _nvim-cmp_.
 5. Setting up snippets with _LuaSnip_.
+6. Setting up the LLDB debugger.
 
 The following sections are provided to help guide you through the setup:
 
 - [Prerequisites](#prerequisites)
-- [Package Management](#packaging-with-lazy)
+- [Package Management](#packaging-with-lazynvim)
 - [Language Server Support](#language-server-support)
     - [File Updates](#file-updating)
 - [Code Completion](#code-completion)
-- [Snippets](#Snippets)
+- [Snippets](#snippets)
+- [Debugger Support](#debugger-support)
 - [Fully Assembled Configuration Files](#files)
 
 > Tip: If you already have Neovim, Swift, and a package manager installed, you can skip to setting up [Language Server support](#language-server-support).
 
 > Note: If you are bypassing the [Prerequisites](#prerequisites) section, make sure your
-copy of Neovim is version v0.9.4 or higher, or you may experience issues with some
+copy of Neovim is version v0.11 or higher, or you may experience issues with some
 of the Language Server Protocol (LSP) Lua APIs.
 
 ## Prerequisites
@@ -72,15 +74,10 @@ please see the
 ```console
  $  sudo snap install nvim --classic
  $  nvim --version
-NVIM v0.9.4
+NVIM v0.11.5
 Build type: RelWithDebInfo
-LuaJIT 2.1.1692716794
-Compilation: /usr/bin/cc -O2 -g -Og -g -Wall -Wextra -pedantic -Wno-unused-pa...
-
-   system vimrc file: "$VIM/sysinit.vim"
-  fall-back for $VIM: "/usr/share/nvim"
-
-Run :checkhealth for more info
+LuaJIT 2.1.1741730670
+Run "nvim -V1 -v" for more info
 ```
 
 ## Getting Started
@@ -117,15 +114,18 @@ packages.
 At the top of your `init.lua` write:
 ```lua
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable",
-        lazypath
-    })
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out, "WarningMsg" },
+            { "\nPress any key to exit..." },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
 end
 vim.opt.rtp:prepend(lazypath)
 ```
@@ -137,6 +137,7 @@ specs.
 ```lua
 require("lazy").setup("plugins")
 ```
+> NOTE: If you see the error 'No specs found for module "plugins"', This is expected since we haven't added any plugins to the 'lua/plugins' directory yet.
 
 This configures _lazy.nvim_ to look in a `plugins/` directory under our `lua/`
 directory for each plugin. We'll also want a place to put our own non-plugin
@@ -147,9 +148,9 @@ those directories now.
  $  mkdir lua/plugins lua/config
 ```
 
-See [lazy.nvim Configuration](https://github.com/folke/lazy.nvim?tab=readme-ov-file#%EF%B8%8F-configuration) for details on configuring _lazy.nvim_.
+See [lazy.nvim Configuration](https://lazy.folke.io/configuration) for details on configuring _lazy.nvim_.
 
-![_lazy.nvim_ package manger](/assets/images/zero-to-swift-nvim/Lazy.png)
+![_lazy.nvim_ package manager](/assets/images/zero-to-swift-nvim/Lazy.png)
 
 Note that your configuration won't look exactly like this.
 We have only installed _lazy.nvim_, so that is the only plugin that is listed on
@@ -177,24 +178,61 @@ To check that it's working:
 ## Language Server Support
 
 Language servers respond to editor requests providing language-specific support.
-Neovim has support for Language Server Protocol (LSP) built-in, so you don't
-need an external package for LSP, but adding a configuration for each LSP server
+Neovim has support for Language Server Protocol (LSP) built-in.
+Your configuration for each language server is installed to
+`<runtimepath>/lsp` and enabled by calling `vim.lsp.enable`.
+For more information run `:help lsp` and `:help rtp` in neovim.
+
+Go ahead and create a new file under `nvim/lsp/sourcekit.lua` which is a runtimepath. In it, we'll start by adding the following snippet. 
+
+```lua
+-- lsp/sourcekit.lua
+return {
+  cmd = { 'sourcekit-lsp' },
+  filetypes = { 'swift' },
+  root_markers = {
+    '.git',
+    'compile_commands.json',
+    '.sourcekit-lsp',
+    'Package.swift',
+  },
+  get_language_id = function(_, ftype)
+    return ftype
+  end,
+  capabilities = {
+    workspace = {
+      didChangeWatchedFiles = {
+        dynamicRegistration = true,
+      },
+    },
+    textDocument = {
+      diagnostic = {
+        dynamicRegistration = true,
+        relatedDocumentSupport = true,
+      },
+    },
+  },
+}
+```
+
+This informs neovim we have a new language server called sourcekit but is not enabled by default. 
+The `cmd` field should be the path to `sourcekit-lsp` if it is not in your $PATH environment variable. 
+
+> Adding a configuration for each LSP server
 manually is a lot of work. Neovim has a package for configuring LSP servers,
 [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
 
-Go ahead and create a new file under `lua/plugins/lsp.lua`. In it, we'll start
-by adding the following snippet.
+Create a new file in `lua/config/lsp.lua` to enable the sourcekit language server.
 
 ```lua
-return {
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
-            local lspconfig = require('lspconfig')
-            lspconfig.sourcekit.setup {}
-        end,
-    }
-}
+-- lua/config/lsp.lua
+vim.lsp.enable("sourcekit")
+```
+Then import the configs in the `init.lua` file. 
+
+```lua
+-- init.lua
+require("config.lsp")
 ```
 
 While this gives us LSP support through SourceKit-LSP, there are no keybindings,
@@ -206,18 +244,16 @@ applied to all LSP servers so you end up with a consistent experience across
 languages.
 
 ```lua
-config = function()
-    local lspconfig = require('lspconfig')
-    lspconfig.sourcekit.setup {}
+-- lua/config/lsp.lua
+vim.lsp.enable("sourcekit")
 
-    vim.api.nvim_create_autocmd('LspAttach', {
-        desc = 'LSP Actions',
-        callback = function(args)
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {noremap = true, silent = true})
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {noremap = true, silent = true})
-        end,
-    })
-end,
+vim.api.nvim_create_autocmd('LspAttach', {
+    desc = 'LSP Actions',
+    callback = function(args)
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, {noremap = true, silent = true})
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {noremap = true, silent = true})
+    end,
+})
 ```
 
 ![LSP powered live error messages](/assets/images/zero-to-swift-nvim/LSP-Error.png)
@@ -227,36 +263,6 @@ numbers](https://oeis.org/A000045) asynchronously.
 Pressing `shift` + `k` on one of the references to the `fibonacci` function
 shows the documentation for that function, along with the function signature.
 The LSP integration is also showing that we have an error in the code.
-
-### File Updating
-
-SourceKit-LSP increasingly relies on the editor informing the server when
-certain files change. This need is communicated through _dynamic registration_.
-You don't have to understand what that means, but Neovim doesn't implement
-dynamic registration. You'll notice this when you update your package manifest,
-or add new files to your `compile_commands.json` file and LSP doesn't work without
-restarting Neovim.
-
-Instead, we know that SourceKit-LSP needs this functionality, so we'll enable it
-statically. We'll update our `sourcekit` setup configuration to manually set the
-`didChangeWatchedFiles` capability.
-
-```lua
-lspconfig.sourcekit.setup {
-    capabilities = {
-        workspace = {
-            didChangeWatchedFiles = {
-                dynamicRegistration = true,
-            },
-        },
-    },
-}
-```
-
-If you're interested in reading more about this issue, the conversations in the
-following issues describe the issue in more detail:
- - [LSP: Implement dynamicRegistration](https://github.com/neovim/neovim/issues/13634)
- - [add documentFormattingProvider to server capabilities response](https://github.com/microsoft/vscode-eslint/pull/1307)
 
 ## Code Completion
 
@@ -315,32 +321,34 @@ the module from within its own configuration function and will call the setup
 function explicitly.
 
 ```lua
-{
+return {
+  {
     "hrsh7th/nvim-cmp",
     version = false,
     event = "InsertEnter",
     dependencies = {
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-path",
-        "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-buffer",
     },
     config = function()
-        local cmp = require('cmp')
-        local opts = {
-            -- Where to get completion results from
-            sources = cmp.config.sources {
-                { name = "nvim_lsp" },
-                { name = "buffer"},
-                { name = "path" },
-            },
-            -- Make 'enter' key select the completion
-            mapping = cmp.mapping.preset.insert({
-                ["<CR>"] = cmp.mapping.confirm({ select = true })
-            }),
-        }
-        cmp.setup(opts)
+      local cmp = require('cmp')
+      local opts = {
+        -- Where to get completion results from
+        sources = cmp.config.sources {
+          { name = "nvim_lsp" },
+          { name = "buffer"},
+          { name = "path" },
+        },
+        -- Make 'enter' key select the completion
+        mapping = cmp.mapping.preset.insert({
+          ["<CR>"] = cmp.mapping.confirm({ select = true })
+        }),
+      }
+      cmp.setup(opts)
     end,
-},
+  },
+...
 ```
 
 Using the `tab` key to select completions is a fairly popular option, so we'll
@@ -384,7 +392,7 @@ Create a new file in your plugins directory for configuring the snippet plugin.
 return {
     {
         'L3MON4D3/LuaSnip',
-        conifg = function(opts)
+        config = function(opts)
             require('luasnip').setup(opts)
             require('luasnip.loaders.from_snipmate').load({ paths = "./snippets" })
         end,
@@ -522,6 +530,294 @@ Another popular snippet plugin worth mentioning is
 Python while defining the snippet, allowing you to write some very powerful
 snippets.
 
+## Debugger Support
+
+Neovim does not natively support the [Debug Adapter Protocol](https://microsoft.github.io/debug-adapter-protocol/overview). To enable debugging, we rely on two plugins: 
+- [nvim-dap](https://github.com/mfussenegger/nvim-dap.git) for the protocol client implementation.
+- [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui.git) for the debug UI in neovim.
+
+For the protocol server, we use lldb-dap which is bundled with the Swift toolchain.
+
+### Installation
+Add both plugins to your configuration.
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  -- Will be implemented later.
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+  },
+}
+```
+
+We need to configure three things before debugging works end-to-end:
+- [Register lldb-dap as a debug adapter.](#register-lldb-dap)
+- [Define how Swift debug sessions are started.](#add-swift-debug-session-configurations)
+- [Setup the debug UI.](#setup-the-debug-ui)
+
+###  Register lldb-dap
+We need to tell nvim-dap where to find the lldb-dap executable and how to launch it.
+
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  -- Will be implemented later.
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+        -- Create the lldb-dap adapter.
+        -- This tells the plugin where to find the lldb-dap executable and how to start it.
+      local dap = require("dap")
+      dap.adapters["lldb-dap"] = {
+        type = "executable",
+        name = "lldb-dap",
+        command = find_lldb_dap(),
+        options = {
+          -- Uncomment and set a path to enable lldb-dap logging (useful for bug reports).
+          -- env = { LLDBDAP_LOG = "/path/to/store/lldb-dap.log" },
+        },
+      }
+    end,
+  }
+```
+
+Let's fill in the `find_lldb_dap` helper at the top of the file. It first tries to locate the binary via 
+`xcrun`, then falls back to whatever is in your `${PATH}`.
+
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  -- If you know the path to the lldb-dap binary change the line below.
+  -- return "/path/to/lldb-dap"
+
+  -- macOS: Try lldb-dap with xcrun.
+  local xcrun_result = vim.system({ "xcrun", "--find", "lldb-dap" }, { text = true }):wait()
+  if xcrun_result.code == 0 then
+    local xcrun_dap_path = vim.fn.trim(xcrun_result.stdout)
+    if vim.fn.executable(xcrun_dap_path) then
+      return xcrun_dap_path
+    end
+  end
+
+  -- Fallback the lldb-dap in the ${PATH} environment.
+  if vim.fn.executable("lldb-dap") == 1 then
+    return "lldb-dap"
+  end
+
+  vim.notify("lldb-dap not found, add it to your ${PATH}", vim.log.levels.WARN)
+  return ""
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+    ...
+}
+```
+
+<div class="warning" markdown="1">
+Warning: The lldb-dap binary from the LLVM repository or Linux package managers is most likely not built with Swift support and will be unable to debug Swift binaries. Use the version bundled with the Swift toolchain instead.
+</div>
+
+### Add Swift Debug Session Configurations.
+With the adapter registered, we can define how debug sessions are started. The three configurations below cover the most common workflows: Launching a program, Launching with arguments, and Attaching to a running process. You can add more configurations if needed by your workflow.
+
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  ...
+end
+
+return {
+  ...
+      dap.adapters["lldb-dap"] = {
+        ...
+      },
+
+      -- Add lldb-dap configurations.
+      dap.configurations.swift = {
+        {
+          name = "Launch program",
+          type = "lldb-dap",
+          request = "launch",
+          program = function()
+            return require("dap.utils").pick_file({ executables = true })
+          end,
+          cwd = "${workspaceFolder}",
+        },
+        {
+          name = "Launch program with arguments",
+          type = "lldb-dap",
+          request = "launch",
+          program = function()
+            return require("dap.utils").pick_file({ executables = true })
+          end,
+          cwd = "${workspaceFolder}",
+          args = function()
+            local args_str = vim.fn.input("Arguments: ")
+            return require("dap.utils").splitstr(args_str)
+          end,
+        },
+        {
+          name = "Attach to program",
+          type = "lldb-dap",
+          request = "attach",
+          pid = function()
+            return require("dap.utils").pick_process()
+          end,
+        },
+      }
+  ...
+}
+```
+
+> NOTE: nvim-dap plugin supports additional variables such as `${file}` and `${workspaceFolder}` 
+inside configurations. Run `:help dap-configurations` in Neovim for the full list.
+
+> NOTE: lldb-dap supports additional options such as `env` and `initCommands`. 
+See [lldb-dap's configuration reference](https://lldb.llvm.org/use/lldbdap.html#configuration-settings-reference) for the full list.
+
+### Setup The Debug UI.
+
+#### Automatically show and hide UI panes.
+
+By default, running `:DapContinue` shows no debug panes.
+Hook into the DAP session lifecycle to open the UI when a session starts and close it when it ends.
+
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  ...
+end
+
+return {
+  ...
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    config = function(_, opts)
+      local dap = require("dap")
+      local dapui = require("dapui")
+      dapui.setup(opts)
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open({})
+      end
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close({})
+      end
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close({})
+      end
+    end
+  },
+}
+```
+#### Highlight the current stopped line
+
+Add a sign and highlight group so it is always clear where execution has paused.
+
+```lua
+--- lua/plugins/debug.lua
+    ...
+    "mfussenegger/nvim-dap",
+    config = function()
+      -- highlight the current stopped line
+      vim.api.nvim_set_hl(0, "DapStopped", { default = true, link = "Visual" })
+      vim.fn.sign_define('DapStopped', { linehl = 'DapStopped' })
+    ...
+```
+
+#### Keymaps
+Let's add keyboard shortcuts for debug sessions. Feel free to change the values to your preferred shortcuts.
+
+```lua
+--- lua/plugins/debug.lua
+local function find_lldb_dap()
+  ...
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      ...
+    end,
+    keys = {
+      { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, desc = "Breakpoint Condition" },
+      { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+      { "<leader>dc", function() require("dap").continue() end, desc = "Run/Continue" },
+      { "<leader>dC", function() require("dap").run_to_cursor() end, desc = "Run to Cursor" },
+      { "<leader>dg", function() require("dap").goto_() end, desc = "Go to Line (No Execute)" },
+      { "<leader>di", function() require("dap").step_into() end, desc = "Step Into" },
+      { "<leader>dj", function() require("dap").down() end, desc = "Go Down a Frame" },
+      { "<leader>dk", function() require("dap").up() end, desc = "Go Up a Frame" },
+      { "<leader>dO", function() require("dap").step_out() end, desc = "Step Out" },
+      { "<leader>do", function() require("dap").step_over() end, desc = "Step Over" },
+      { "<leader>dP", function() require("dap").pause() end, desc = "Pause" },
+      { "<leader>dr", function() require("dap").repl.toggle() end, desc = "Toggle REPL" },
+      { "<leader>ds", function() require("dap").session() end, desc = "Session" },
+      { "<leader>dt", function() require("dap").terminate() end, desc = "Terminate" },
+      { "<leader>dh", function() require("dap.ui.widgets").hover() end, desc = "Widgets" },
+    },
+  }
+...
+```
+
+Start a debug session with `<leader>dc` or `:DapContinue`. After selecting a configuration,
+you should have a working debug session. Similar to the screenshot below.
+
+![Debugging swift code in neovim](/assets/images/zero-to-swift-nvim/DAP-debug-session.png)
+
+If you see `[?]` instead of button icons, your font does not support 
+[`codicons`](https://github.com/microsoft/vscode-codicons.git),
+which `nvim-dap` uses by default. Replace them with plain Unicode characters by
+add the the following snippet to the config.
+
+```lua
+-- debug/plugins/debug.lua
+  ...
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    config = function(_, opts)
+      local dap = require("dap")
+      local dapui = require("dapui")
+      local new_opts = opts
+      new_opts = vim.tbl_deep_extend("keep", new_opts, {
+        icons = {
+          expanded = "▾",
+          collapsed = "▸",
+          current_frame = "►",
+        },
+        controls = {
+          icons = {
+            pause = "⏸",
+            play = "▶",
+            step_into = "↓",
+            step_over = "→",
+            step_out = "↑",
+            step_back = "←",
+            run_last = "↺",
+            terminate = "□",
+            disconnect = "×",
+          },
+        },
+      })
+    ...
+    end
+  ...
+```
+
 # Conclusion
 
 Swift development with Neovim is a solid experience once everything is
@@ -536,15 +832,18 @@ Here are the files for this configuration in their final form.
 ```lua
 -- init.lua
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable",
-        lazypath
-    })
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins", {
@@ -566,6 +865,7 @@ require("lazy").setup("plugins", {
     },
   },
 })
+require("config.lsp")
 
 vim.opt.wildmenu = true
 vim.opt.wildmode = "list:longest,list:full" -- don't insert, show options
@@ -643,31 +943,46 @@ return {
 ```
 
 ```lua
--- lua/plugins/lsp.lua
+-- lsp/sourcekit.lua
 return {
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      local lspconfig = require('lspconfig')
-    lspconfig.sourcekit.setup {
-      capabilities = {
-          workspace = {
-            didChangeWatchedFiles = {
-              dynamicRegistration = true,
-            },
-          },
-        },
-      }
-
-      vim.api.nvim_create_autocmd('LspAttach', {
-        desc = "LSP Actions",
-        callback = function(args)
-          vim.keymap.set("n", "K", vim.lsp.buf.hover, {noremap = true, silent = true})
-          vim.keymap.set("n", "gd", vim.lsp.buf.definition, {noremap = true, silent = true})
-        end,
-      })
-    end,
+  cmd = { 'sourcekit-lsp' },
+  filetypes = { 'swift' },
+  root_markers = {
+    '.git',
+    'compile_commands.json',
+    '.sourcekit-lsp',
+    'Package.swift',
   },
+  get_language_id = function(_, ftype)
+    return ftype
+  end,
+  capabilities = {
+    workspace = {
+      didChangeWatchedFiles = {
+        dynamicRegistration = true,
+      },
+    },
+    textDocument = {
+      diagnostic = {
+        dynamicRegistration = true,
+        relatedDocumentSupport = true,
+      },
+    },
+  },
+}
+```
+
+```lua
+-- lua/config/lsp.lua
+vim.lsp.enable("sourcekit")
+
+vim.api.nvim_create_autocmd('LspAttach', {
+  desc = "LSP Actions",
+  callback = function(args)
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, {noremap = true, silent = true})
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, {noremap = true, silent = true})
+  end,
+})
 }
 ```
 
@@ -736,4 +1051,145 @@ snippet main
       $2
     }
   }$0
+```
+```lua
+-- lua/plugins/debug.lua
+local function find_lldb_dap()
+  -- If you know the path to the lldb-dap change the line
+  -- return "/path/to/lldb-dap"
+
+  -- macOS: Try lldb-dap with xcrun.
+  local xcrun_result = vim.system({ "xcrun", "--find", "lldb-dap" }, { text = true }):wait()
+  if xcrun_result.code == 0 then
+    local xcrun_dap_path = vim.fn.trim(xcrun_result.stdout)
+    if vim.fn.executable(xcrun_dap_path) then
+      return xcrun_dap_path
+    end
+  end
+
+  -- Fallback the lldb-dap in the ${PATH} environment.
+  if vim.fn.executable("lldb-dap") == 1 then
+    return "lldb-dap"
+  end
+
+  vim.notify("lldb-dap not found, add it to your PATH environment variable", vim.log.levels.WARN)
+  return ""
+end
+
+return {
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      -- highlight the current stopped line
+      vim.api.nvim_set_hl(0, "DapStopped", { default = true, link = "Visual" })
+      vim.fn.sign_define('DapStopped', { linehl = 'DapStopped' })
+      -- Create the lldb-dap adapter
+      -- This tells the plugin where to find the lldb-dap executable and how to start it.
+      local dap = require("dap")
+      dap.adapters["lldb-dap"] = {
+        type = "executable",
+        name = "lldb-dap",
+        command = find_lldb_dap(),
+        options = {
+          -- Uncomment and set a path to enable lldb-dap logging (useful for bug reports).
+          -- env = { LLDBDAP_LOG = "/path/to/store/lldb-dap.log" },
+        },
+      }
+
+      -- Add a new configuration
+      -- We pass the information to lldb-dap when we launch the debugger
+      -- this tells lldb-dap how to launch our program
+      dap.configurations.swift = {
+        {
+          name = "Launch",
+          type = "lldb-dap",
+          request = "launch",
+          program = function()
+            return require("dap.utils").pick_file({ executables = true })
+          end,
+          cwd = "${workspaceFolder}",
+        },
+        {
+          name = "Launch with arguments",
+          type = "lldb-dap",
+          request = "launch",
+          program = function()
+            return require("dap.utils").pick_file({ executables = true })
+          end,
+          cwd = "${workspaceFolder}",
+          args = function()
+            local args_str = vim.fn.input("Arguments: ")
+            return require("dap.utils").splitstr(args_str)
+          end,
+        },
+        {
+          name = "Attach",
+          type = "lldb-dap",
+          request = "attach",
+          pid = function()
+            return require("dap.utils").pick_process()
+          end,
+        },
+
+      }
+    end,
+    keys = {
+      { "<leader>dB", function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, desc = "Breakpoint Condition" },
+      { "<leader>db", function() require("dap").toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+      { "<leader>dc", function() require("dap").continue() end, desc = "Run/Continue" },
+      { "<leader>dC", function() require("dap").run_to_cursor() end, desc = "Run to Cursor" },
+      { "<leader>dg", function() require("dap").goto_() end, desc = "Go to Line (No Execute)" },
+      { "<leader>di", function() require("dap").step_into() end, desc = "Step Into" },
+      { "<leader>dj", function() require("dap").down() end, desc = "Go Down a Frame" },
+      { "<leader>dk", function() require("dap").up() end, desc = "Go Up a Frame" },
+      { "<leader>dO", function() require("dap").step_out() end, desc = "Step Out" },
+      { "<leader>do", function() require("dap").step_over() end, desc = "Step Over" },
+      { "<leader>dP", function() require("dap").pause() end, desc = "Pause" },
+      { "<leader>dr", function() require("dap").repl.toggle() end, desc = "Toggle REPL" },
+      { "<leader>ds", function() require("dap").session() end, desc = "Session" },
+      { "<leader>dt", function() require("dap").terminate() end, desc = "Terminate" },
+      { "<leader>dh", function() require("dap.ui.widgets").hover() end, desc = "Widgets" },
+    },
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+    config = function(_, opts)
+      local dap = require("dap")
+      local dapui = require("dapui")
+      local new_opts = opts
+      -- Remove if your font does supports codicons.
+      new_opts = vim.tbl_deep_extend("keep", new_opts, {
+        icons = {
+          expanded = "▾",
+          collapsed = "▸",
+          current_frame = "►",
+        },
+        controls = {
+          icons = {
+            pause = "⏸",
+            play = "▶",
+            step_into = "↓",
+            step_over = "→",
+            step_out = "↑",
+            step_back = "←",
+            run_last = "↺",
+            terminate = "□",
+            disconnect = "×",
+          },
+        },
+      })
+      dapui.setup(new_opts)
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open({})
+      end
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close({})
+      end
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close({})
+      end
+    end
+  },
+}
 ```

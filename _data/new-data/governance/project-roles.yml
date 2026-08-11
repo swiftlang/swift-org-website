@@ -1,0 +1,18 @@
+title: "Project roles"
+description: "The Swift project defines formal roles and community structures that guide how individual contributors participate and the overall project operates."
+cards:
+  - title: "Contributor roles"
+    content: "Swift's contributor ladder defines the roles you can progress through while contributing on GitHub."
+    links:
+      - text: "Read more"
+        url: "https://github.com/swiftlang/project-operations/blob/main/contributing/contributor-ladder.md"
+  - title: "Steering groups"
+    content: "Stewards of Swift's strategic vision around core project areas and alignment of technical work."
+    links:
+      - text: "Read more"
+        url: "https://github.com/swiftlang/project-operations/blob/main/groups/steering.md"
+  - title: "Core Team"
+    content: "Provides leadership and oversight of the Swift community’s workgroups and initiatives."
+    links:
+      - text: "Read more"
+        url: "https://github.com/swiftlang/project-operations/blob/main/groups/core-team.md"
