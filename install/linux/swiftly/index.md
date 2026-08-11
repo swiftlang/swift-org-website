@@ -44,7 +44,7 @@ Swift version {{ site.data.builds.swift_releases.last.name }} (swift-{{ site.dat
 Target: x86_64-unknown-linux-gnu
 ```
 
-Or, you can install (and use) another swift release:
+Or, you can install (and use) another Swift release:
 
 ```
 swiftly install --use 5.10
