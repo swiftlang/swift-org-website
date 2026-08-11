@@ -1,46 +1,47 @@
 [class^='language-'] .highlight,
-.code-box pre {
+.code-box pre,
+pre:not(.no-copy) {
   position: relative;
+}
 
-  button {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    background: none;
-    border: medium;
-    cursor: pointer;
-    padding: 7px 6px;
-    border-radius: 6px;
-    transition: all 0.2s ease-in-out;
-    display: none;
-    background-color: var(--color-syntax-clipboard-bg);
+.copy-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: none;
+  border-radius: 999px;
+  background-color: rgba(242, 242, 247, 0.9);
+  color: var(--color-syntax-clipboard-check-color);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
 
-    svg {
-      width: 20px;
-      height: 20px;
-      opacity: 0.8;
-    }
+.copy-button svg {
+  width: 18px;
+  height: 18px;
+  opacity: 0.9;
+}
 
-    &.copied {
-      svg {
-        color: var(--color-syntax-clipboard-check-color);
-      }
-    }
+.copy-button:hover,
+.copy-button:focus {
+  background-color: var(--color-syntax-clipboard-hover-bg);
+  transform: translateY(-1px);
+}
 
-    &:hover {
-      background-color: var(--color-syntax-clipboard-hover-bg);
+.copy-button.copied svg {
+  color: var(--color-syntax-clipboard-check-color);
+}
 
-      svg {
-        opacity: 1;
-      }
-    }
-  }
-
-  &:hover {
-    button {
-      display: flex;
-    }
-  }
+pre:hover > .copy-button {
+  display: flex;
 }
 
 pre.highlight {
