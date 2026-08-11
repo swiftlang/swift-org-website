@@ -199,7 +199,6 @@ components:
         - macos
         - ubi10
         - ubi9
-        - ubuntu2004
         - ubuntu2204
         - ubuntu2404
         - ubuntu2604
