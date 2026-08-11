@@ -66,4 +66,4 @@ Check for updates to swiftly and install them by running the self-update command
 swiftly self-update
 ```
 
-You can discover more about swiftly in the [documentation](https://www.swift.org/swiftly/documentation/swiftlydocs/)
+You can discover more about swiftly in the [documentation](https://www.swift.org/swiftly/documentation/swiftlydocs/).
