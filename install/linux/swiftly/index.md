@@ -35,7 +35,7 @@ Your current shell may need some additional steps to update your session. Follow
 
 There can be certain packages that need to be installed on your system so that the Swift toolchain can function. The swiftly initialization routine will show you how to install any missing packages.
 
-Now that swiftly and swift are installed, you can access the `swift` command from the latest Swift release:
+Now that swiftly and Swift are installed, you can access the `swift` command from the latest Swift release:
 
 ```
 swift --version
