@@ -17,7 +17,8 @@ $icons: (
 .section {
   text-align: center;
 
-  h2 {
+  // Exclude .title-0 headlines until refactor to new typography classes is complete
+  h2:not(.title-0) {
     font-size: 45px;
     color: #3d3d3d;
     letter-spacing: 0;
@@ -88,12 +89,8 @@ $icons: (
   }
 
   h1 {
-    font-size: 48px;
-    line-height: 1.2;
     color: var(--site-code-box-text);
     letter-spacing: 0;
-    text-align: center;
-    font-weight: 600;
     margin-bottom: 30px;
     position: relative;
     z-index: 3;

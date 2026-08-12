@@ -6,17 +6,17 @@ title: Install Swift - macOS
 ---
 
 {% assign xcode_dev_builds = site.data.builds.development.xcode | sort: 'date' | reverse %}
-{% assign xcode_6_3_builds = site.data.builds.swift-6_3-branch.xcode | sort: 'date' | reverse %}
+{% assign xcode_6_4_x_builds = site.data.builds.swift-6_4_x-branch.xcode | sort: 'date' | reverse %}
 
 
 <div class="content">
-  <h3 id="swiftly" class="header-with-anchor">1. Install Swift via Swiftly</h3>
+  <h3 id="swiftly" class="html-header-with-anchor">1. Install Swift via Swiftly</h3>
   <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.macos.releases.latest-release.swiftly%}
     </div>
   </div>
-  <h3 id="editor" class="header-with-anchor">2. Select an Editor</h3>
+  <h3 id="editor" class="html-header-with-anchor">2. Select an Editor</h3>
   <div class="releases-grid">
   <div class="release-box section">
     <div class="content">
@@ -34,13 +34,13 @@ title: Install Swift - macOS
       {% include new-includes/components/code-box.html content = site.data.new-data.install.macos.releases.latest-release.other_editors%}
     </div>
   </div>
-  <h3 id="build-a-command-line-tool" class="header-with-anchor">3. Build a Command-line Tool</h3>
+  <h3 id="build-a-command-line-tool" class="html-header-with-anchor">3. Build a Command-line Tool</h3>
 <div class="release-box section">
     <div class="content">
       {% include new-includes/components/code-box.html content = site.data.new-data.install.windows.releases.latest-release.build-a-package%}
     </div>
   </div>
-  <h2 id="swift-sdk-bundles" class="header-with-anchor">Swift SDK Bundles</h2>
+  <h2 id="swift-sdk-bundles" class="html-header-with-anchor">Swift SDK Bundles</h2>
   <div>
     <p class="content-copy">Additional components for cross-compilation</p>
   </div>
@@ -61,7 +61,7 @@ title: Install Swift - macOS
       </div>
     </div>
   </div>
-  <h3 id="alternative-install-options" class="header-with-anchor">Alternative toolchain install options</h3>
+  <h3 id="alternative-install-options" class="html-header-with-anchor">Alternative toolchain install options</h3>
     <div class="release-box section">
       <div class="content">
         <div class="code-box content-wrapper">
@@ -88,14 +88,14 @@ title: Install Swift - macOS
   </div>
   <br><br>
   <hr>
-  <h2 id="development-snapshots" class="header-with-anchor">Development Snapshots</h2>
+  <h2 id="development-snapshots" class="html-header-with-anchor">Development Snapshots</h2>
   <div>
     <p class="content-copy">Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.</p>
     <p class="content-copy">The easiest way to install development snapshots is with the Swiftly tool. Read more on the <a href="/install/macos/swiftly">instructions page</a>.</p>
   </div>
   <div class="release-box section">
     <div class="content">
-      {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.linux.dev.latest-dev.swiftly %}
+      {% include new-includes/components/code-box.html with-tabs = true content = site.data.new-data.install.macos.dev.latest-dev.swiftly %}
     </div>
   </div>
   <h3>Toolchain</h3>
@@ -125,16 +125,16 @@ title: Install Swift - macOS
     <div class="release-box section">
       <div class="content">
         <div class="code-box content-wrapper">
-          <h2>release/6.3</h2>
+          <h2>release/6.4.x</h2>
           <p class="body-copy">
-            <small>{{ xcode_6_3_builds.first.date | date: '%B %-d, %Y' }}</small><br />
+            <small>{{ xcode_6_4_x_builds.first.date | date: '%B %-d, %Y' }}</small><br />
             Toolchain package installer (.pkg)
           </p>
           <div class="link-wrapper">
-            <a href="https://download.swift.org/swift-6.3-branch/xcode/{{ xcode_6_3_builds.first.dir }}/{{ xcode_6_3_builds.first.download }}" class="body-copy">Download Toolchain</a>
+            <a href="https://download.swift.org/swift-6.4.x-branch/xcode/{{ xcode_6_4_x_builds.first.dir }}/{{ xcode_6_4_x_builds.first.download }}" class="body-copy">Download Toolchain</a>
           </div>
           <div class="link-wrapper">
-            <a href="https://download.swift.org/swift-6.3-branch/xcode/{{ xcode_6_3_builds.first.dir }}/{{ xcode_6_3_builds.first.debug_info }}" class="debug">Debugging Symbols</a>
+            <a href="https://download.swift.org/swift-6.4.x-branch/xcode/{{ xcode_6_4_x_builds.first.dir }}/{{ xcode_6_4_x_builds.first.debug_info }}" class="debug">Debugging Symbols</a>
           </div>
         </div>
       </div>
@@ -151,12 +151,12 @@ title: Install Swift - macOS
   <div class="release-box section">
     <div class="content">
         <details class="download" style="margin-bottom: 0;">
-        <summary>Previous Snapshots (release/6.3)</summary>
-        {% include_relative _older-6_3-snapshots.md %}
+        <summary>Previous Snapshots (release/6.4.x)</summary>
+        {% include_relative _older-6_4_x-snapshots.md %}
         </details>
     </div>
   </div>
-  <h2 id="swift-sdk-buindles-dev" class="header-with-anchor">Swift SDK Bundles</h2>
+  <h2 id="swift-sdk-buindles-dev" class="html-header-with-anchor">Swift SDK Bundles</h2>
   <div>
     <p class="content-copy">Additional components for cross-compilation</p>
   </div>

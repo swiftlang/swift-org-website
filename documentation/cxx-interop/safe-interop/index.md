@@ -434,7 +434,7 @@ type `T` is transformed to `MutableSpan<T>` on the Swift side.
 If an API uses raw pointers rather than `std::span` - perhaps because it's written in C or Objective-C,
 or because it's an older C++ API that doesn't want to break backwards compatibility -
 it can still receive the same interop safety as `std::span`. This added bounds safety doesn't break
-source compatiblity, nor does it affect ABI. Instead it leverages bounds annotations to express the
+source compatibility, nor does it affect ABI. Instead it leverages bounds annotations to express the
 pointer bounds in terms of other parameters in the function signature.
 
 #### Annotating Pointers with Bounds Annotations
@@ -577,13 +577,15 @@ func change_ptr(_ x: UnsafeBufferPointer<Int32>)
 
 </table>
 
-The `UnsafeBufferPointer` overloads provide the same bounds safety as their `Span` equivalents
-(NB: `UnsafeBufferPointer` is not bounds checked on memory access in release builds, but the generated
-`UnsafeBufferPointer` overloads contain bounds checks in the same cases as the `Span` overloads, *even in release builds*),
-but without lifetime safety. If lifetime information is available the generated safe overload will always
-choose to use `Span` - no `UnsafeBufferPointer` overload will be generated in this case. This means
+The `UnsafeBufferPointer` overloads provide the same bounds safety as their `Span` equivalents,
+but without lifetime safety. Note that while `UnsafeBufferPointer` itself is not bounds checked on memory
+access in release builds, the generated `UnsafeBufferPointer` overloads contain bounds checks in the same
+cases as the `Span` overloads, *even in release builds*.
+
+If lifetime information is available, the generated bounds-safe overload will always
+use `Span` — no `UnsafeBufferPointer` overload will be generated in this case. This means
 that existing callers are not affected by annotating an API with `__counted_by`, but callers using the
-safe overload after adding `__counted_by` *will* be affected if `__noescape` is also added later on, or
+bounds-safe overload after adding `__counted_by` *will* be affected if `__noescape` is also added later on, or
 if another parameter is then also annotated with `__counted_by`.
 To prevent source breaking changes, make sure to fully annotate the bounds and lifetimes of an API when
 adding any bounds or lifetime annotations.

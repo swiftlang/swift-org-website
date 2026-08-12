@@ -29,15 +29,16 @@ This table shows the minimum OS version for which a Swift application can be dep
 
 | Platform running Swift application | Minimum deployment version |
 |:----------------------------------:|:--------------------------:|
-| **macOS**                          |10.13                       |
-| **iOS**                            |11.0                        |
-| **watchOS**                        |4.0                         |
-| **tvOS**                           |11.0                        |
+| **macOS**                          |13.0                        |
+| **iOS**                            |16.0                        |
+| **watchOS**                        |9.0                         |
+| **tvOS**                           |16.0                        |
+| **visonOS**                        |1.0                         |
 | **Android**                        |9 (API 28)                  |
-| **Ubuntu**                         |20.04                       |
+| **Ubuntu**                         |22.04                       |
 | **Debian**                         |12                          |
-| **Fedora**                         |39                          |
-| **Amazon Linux**                   |2                           |
+| **Fedora**                         |41                          |
+| **Amazon Linux**                   |2023                        |
 | **Red Hat Universal Base Image**   |9                           |
 | **Windows**                        |10.0                        |
 

@@ -124,7 +124,7 @@ Because Objective-C generics are not represented at runtime,  there are some lim
 
   - Foundation container classes `NS[Mutable]Array`, `NS[Mutable]Set`, and  `NS[Mutable]Dictionary` are still imported as nongeneric classes for the time being.
 
-- **Objective-C id is imported as as Swift Any type**
+- **Objective-C id is imported as Swift Any type**
 [SE-0116 - Import Objective-C id as Swift Any type](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0116-id-as-any.md)
 Objective-C interfaces that use `id` and untyped collections will be imported into Swift as taking the `Any` type instead of `AnyObject`.
 

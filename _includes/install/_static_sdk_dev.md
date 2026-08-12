@@ -1,4 +1,4 @@
-{% assign static_sdk_dev_builds = site.data.builds.development.static_sdk | sort: 'date' | reverse %}
+{% assign static_sdk_dev_builds = site.data.builds.development['static-sdk'] | sort: 'date' | reverse %}
 {% assign static_sdk_6_1_builds = site.data.builds.swift-6_1-branch.static_sdk | sort: 'date' | reverse %}
   <h3> Static Linux SDK </h3>
 <ul class="grid-level-0 grid-layout-2-column">

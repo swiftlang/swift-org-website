@@ -68,7 +68,7 @@ Easy/Medium
 
 **Description**
 
-[SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp) provides full-fledged language support for Swift and C-based languages, for editors that support the LSP protocol, like VSCode and SublimeText. It supports SwiftPM projects and clang's compilation database. The Swift Standard Library has a custom build process that prevents StdLib authors from utilizing SourceKit-LSP for their developement experience. The task is to make the necessary changes and allow SourceKit-LSP to provide first-class support for authoring the Swift Standard Library.
+[SourceKit-LSP](https://github.com/swiftlang/sourcekit-lsp) provides full-fledged language support for Swift and C-based languages, for editors that support the LSP protocol, like VSCode and SublimeText. It supports SwiftPM projects and clang's compilation database. The Swift Standard Library has a custom build process that prevents StdLib authors from utilizing SourceKit-LSP for their development experience. The task is to make the necessary changes and allow SourceKit-LSP to provide first-class support for authoring the Swift Standard Library.
 
 **Expected outcomes/benefits/deliverables**
 

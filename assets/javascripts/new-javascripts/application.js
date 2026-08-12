@@ -137,7 +137,7 @@ if (codeBoxes.length) {
   })
 }
 
-document.querySelectorAll('h2.header-with-anchor').forEach(header => {
+document.querySelectorAll('h2.html-header-with-anchor').forEach(header => {
   if (!header.id) return;
 
   const link = document.createElement('a');

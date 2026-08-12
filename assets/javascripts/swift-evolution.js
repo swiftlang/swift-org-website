@@ -528,7 +528,7 @@ function renderReviewPeriod (status) {
   if (startMonth === endMonth) {
     detailNodes.push(
       start.getUTCDate().toString(),
-      '–',
+      ' – ',
       end.getUTCDate().toString()
     )
   } else {

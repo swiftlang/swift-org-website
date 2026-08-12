@@ -228,7 +228,7 @@ So, change your `Image` code this:
 Image(systemName: "figure.\(selected.lowercased())")
 ```
 
-Those changes mean our UI will display whatever the `selected` property is set to, so can see it all change if you place a new string in that property:
+Those changes mean our UI will display whatever the `selected` property is set to, so you can see it all change if you place a new string in that property:
 
 ```swift
 var selected = "Baseball"
