@@ -5,7 +5,7 @@ columns:
       - text: Embedded Swift documentation
         url: 'https://docs.swift.org/embedded/documentation/embedded'
       - text: Getting started with Embedded Swift
-        url: 'https://docs.swift.org/embedded/documentation/embedded/waystogetstarted'
+        url: 'https://docs.swift.org/embedded/documentation/embedded/introduction'
       - text: Embedded Swift vision document
         url: 'https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md'
       - text: Embedded Swift example projects
