@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: false
-date: 2028-08-19 12:00:00
+date: 2026-08-19 12:00:00
 title: "Embedded Swift Improvements Coming in Swift 6.4"
 author: [doug_gregor]
 category: "Language"
@@ -13,7 +13,7 @@ Embedded Swift is evolving rapidly. Following our updates on [Embedded Swift imp
 
 ## Language improvements
 
-Embedded Swift continues to expand the language subset to include more aspects of “full” Swift, making it easier than ever to make Swift code bases compatible with Embedded Swift. Many of these features have some dynamic aspect to them, meaning that they have an impact on runtime performance (e.g., due to indirect calls) and code size (due to requiring additional metadata). However, this impact only occurs where these dynamic language features are actually used: highly code size- and performance-sensitive code can choose to avoid them.
+Embedded Swift continues to expand the its subset of the language to include more aspects of “full” Swift, making it easier than ever to bring compatibility with Embedded Swift to existing Swift code bases. Many of these features have some dynamic aspect to them, meaning that they have an impact on runtime performance (for example, due to indirect calls) and code size (due to requiring additional metadata). However, this impact only occurs where these dynamic language features are actually used: highly code size- and performance-sensitive code can choose to avoid them.
 
 ### Generalized support for existential (`any`) types
 
@@ -32,7 +32,7 @@ let a: any P = 17
 a.method() // prints "17 is here"
 ```
 
-The Embedded Swift generics compilation model, which requires that all generic functions and types eventually be specialized, implies some limitations on the use of `any` types. Specifically, a generic function cannot be called on an `any`type:
+The Embedded Swift generics compilation model, which requires that all generic functions and types eventually be specialized, implies some limitations on the use of `any` types. Specifically, a generic function cannot be called on an `any` type:
 
 ```
 extension P {
@@ -67,7 +67,7 @@ Embedded Swift has traditionally allowed metatypes (e.g., `Int.self`) only in ve
 rawPointer.bindMemory(to: Value.self, capacity: 1)
 ```
 
-Swift 6.4 introduces complete support for metatypes in Embedded Swift: one can create and use instances of metatype type, including existential types like `any (DefaultInitalizable.Type)`. For example, this is now permitted and works in the same way as full Swift:
+Swift 6.4 introduces complete support for metatypes in Embedded Swift: one can create and use instances of metatype type, including existential types like `any (DefaultInitializable.Type)`. For example, this is now permitted and works in the same way as full Swift:
 
 ```
 protocol DefaultInitializable {
