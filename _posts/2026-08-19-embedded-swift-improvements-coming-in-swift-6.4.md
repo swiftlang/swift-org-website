@@ -7,13 +7,13 @@ author: [doug_gregor]
 category: "Language"
 ---
 
-[Embedded Swift](https://www.swift.org/get-started/embedded/) is a subset of Swift that’s designed for low resource usage, making it capable of running on constrained environments like microcontrollers. Using a special compilation mode, Embedded Swift produces significantly smaller binaries than regular Swift. While a subset of the full language, the vast majority of the Swift language works exactly the same in Embedded Swift. Additional information is described in the [Embedded Swift vision document](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md).
+[Embedded Swift](/get-started/embedded/) is a subset of Swift that’s designed for low resource usage, making it capable of running on constrained environments like microcontrollers. Using a special compilation mode, Embedded Swift produces significantly smaller binaries than regular Swift. While a subset of the full language, the vast majority of the Swift language works exactly the same in Embedded Swift. Additional information is described in the [Embedded Swift vision document](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md).
 
-Embedded Swift is evolving rapidly. Following our updates on [Embedded Swift improvements in Swift 6.3](https://www.swift.org/blog/embedded-swift-improvements-coming-in-swift-6.3/) late last year, this post describes a number of additional improvements made in the upcoming Swift 6.4 release. You can try them out today with a [Swift development snapshot](https://www.swift.org/install/).
+Embedded Swift is evolving rapidly. Following our updates on [Embedded Swift improvements in Swift 6.3](/blog/embedded-swift-improvements-coming-in-swift-6.3/) late last year, this post describes a number of additional improvements made in the upcoming Swift 6.4 release. You can try them out today with a [Swift development snapshot](/install/).
 
 ## Language improvements
 
-Embedded Swift continues to expand the its subset of the language to include more aspects of “full” Swift, making it easier than ever to bring compatibility with Embedded Swift to existing Swift code bases. Many of these features have some dynamic aspect to them, meaning that they have an impact on runtime performance (for example, due to indirect calls) and code size (due to requiring additional metadata). However, this impact only occurs where these dynamic language features are actually used: highly code size- and performance-sensitive code can choose to avoid them.
+Embedded Swift continues to expand its subset of the language to include more aspects of “full” Swift, making it easier than ever to bring compatibility with Embedded Swift to existing Swift code bases. Many of these features have some dynamic aspect to them, meaning that they have an impact on runtime performance (for example, due to indirect calls) and code size (due to requiring additional metadata). However, this impact only occurs where these dynamic language features are actually used: code that is highly sensitive to code size and performance can choose to avoid them.
 
 ### Generalized support for existential (`any`) types
 
@@ -67,7 +67,7 @@ Embedded Swift has traditionally allowed metatypes (e.g., `Int.self`) only in ve
 rawPointer.bindMemory(to: Value.self, capacity: 1)
 ```
 
-Swift 6.4 introduces complete support for metatypes in Embedded Swift: one can create and use instances of metatype type, including existential types like `any (DefaultInitializable.Type)`. For example, this is now permitted and works in the same way as full Swift:
+Swift 6.4 introduces complete support for metatypes in Embedded Swift: one can create and use instances of metatypes, including existential types like `any (DefaultInitializable.Type)`. For example, this is now permitted and works in the same way as full Swift:
 
 ```
 protocol DefaultInitializable {
@@ -115,6 +115,6 @@ print(try await task.value)
 
 ## Try it out!
 
-Embedded Swift support is available in the [Swift development snapshots](https://www.swift.org/install/). The best way to get started is through the examples in the [Swift Embedded Examples](https://github.com/swiftlang/swift-embedded-examples) repository, which contains a number of sample projects to get Embedded Swift code building and running on various hardware.
+Embedded Swift support is available in the [Swift development snapshots](/install/). The best way to get started is through the examples in the [Swift Embedded Examples](https://github.com/swiftlang/swift-embedded-examples) repository, which contains a number of sample projects to get Embedded Swift code building and running on various hardware.
 
 If you have questions about the improvements described here, or want to discuss your own Embedded Swift work, we encourage you to join the conversation on the Swift forums. You can ask about this post in the [associated thread](https://forums.swift.org/t/embedded-swift-improvements-coming-in-swift-6-4/TODO), and share your experiences in the [Embedded Swift category](https://forums.swift.org/c/platform/embedded/). (TODO: post associated thread before publishing this)
