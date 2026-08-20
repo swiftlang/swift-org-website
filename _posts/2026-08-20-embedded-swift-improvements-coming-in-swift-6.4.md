@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
-published: false
-date: 2026-08-20 12:00:00
+published: true
+date: 2026-08-20 13:45:00
 title: "Embedded Swift Improvements Coming in Swift 6.4"
 author: [doug_gregor]
 category: "Language"
