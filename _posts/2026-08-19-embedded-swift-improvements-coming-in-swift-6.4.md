@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: false
-date: 2026-08-19 12:00:00
+date: 2026-08-20 12:00:00
 title: "Embedded Swift Improvements Coming in Swift 6.4"
 author: [doug_gregor]
 category: "Language"
@@ -51,7 +51,7 @@ Embedded Swift previously only allowed throwing specific error types, like this:
 func parseRecord() throws(ParsingError) -> Record { ... }
 ```
 
-“Untyped” throws, which can throw any `Error`-conforming instance, was previously prohibited in Embedded Swift:
+“Untyped” throws, which can throw any `Error`-conforming instance, was previously disallowed in Embedded Swift:
 
 ```
 func loadImage() throws -> Image { ... } // previously disallowed in Embedded Swift
