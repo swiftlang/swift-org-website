@@ -1,0 +1,51 @@
+@use '../helpers' as *;
+
+// Shared card + grid (source: /blog featured card). Used on /blog, article Continue Reading, /community.
+
+.content-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.content-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  box-sizing: border-box;
+  text-align: left;
+  overflow: hidden;
+  background-color: var(--get-started-card-secondary-bg);
+  border-radius: 22px;
+  padding: 30px;
+
+  &-title {
+    display: block;
+    margin: 0 0 5px;
+  }
+
+  &-date {
+    display: block;
+    color: var(--blog-muted-color);
+    margin-bottom: 10px;
+  }
+
+  &-excerpt {
+    @include line-clamp(2);
+  }
+
+  &-cta {
+    text-decoration: none;
+    color: var(--site-link-with-right-arrow-color);
+    margin-top: auto; // pin to bottom
+  }
+}

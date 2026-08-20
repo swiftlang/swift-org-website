@@ -7,7 +7,7 @@ title: Community
    <div class="community-swoop-1"></div>
    <div class="section community-featured-grid">
       <div class="content">
-         <h2 class="community-featured-grid-headline">
+         <h2 class="community-featured-grid-headline title-0">
             {{ site.data.new-data.community.page-data.headline }}
          </h2>
 
@@ -18,7 +18,7 @@ title: Community
    </div>
    <div class="section community-section-grid">
       <div class="content">
-         <h2 class="community-section-grid-headline">
+         <h2 class="community-section-grid-headline title-1">
             {{ site.data.new-data.community.page-data.section2.headline }}
          </h2>
 
@@ -26,14 +26,10 @@ title: Community
             {{ site.data.new-data.community.page-data.section2.text }}
          </p>
 
-         <ul class="community-section-cards">
+         <ul class="content-card-grid">
          {% for card in site.data.new-data.community.page-data.section2.cards %}
                <li>
-                  <a class="card-link" href="{{ card.link }}">
-                  <h3 class="community-card-headline">{{ card.title }}</h3>
-                     <p class="body-copy">{{ card.text }}</p>
-                     <p class="card-cta">{{site.data.new-data.community.page-data.read-more}}</p>
-                  </a>
+                  {% include new-includes/components/content-card.html title=card.title excerpt=card.text url=card.link cta=site.data.new-data.community.page-data.read-more %}
                </li>
          {% endfor %}
          </ul>
@@ -42,7 +38,7 @@ title: Community
    {% include new-includes/components/headline-section.html content=site.data.new-data.community.page-data.section3 %}
    <div class="section community-section-grid">
       <div class="content">
-         <h2 class="community-section-grid-headline">
+         <h2 class="community-section-grid-headline title-1">
             {{ site.data.new-data.community.page-data.section4.headline }}
          </h2>
 
@@ -50,14 +46,10 @@ title: Community
             {{ site.data.new-data.community.page-data.section4.text }}
          </p>
 
-         <ul class="community-section-cards">
+         <ul class="content-card-grid">
          {% for card in site.data.new-data.community.page-data.section4.cards %}
                <li>
-                  <a class="card-link" href="{{ card.link }}">
-                  <h3 class="community-card-headline">{{ card.title }}</h3>
-                     <p class="body-copy">{{ card.text }}</p>
-                     <p class="card-cta">{{site.data.new-data.community.page-data.read-more}}</p>
-                  </a>
+                  {% include new-includes/components/content-card.html title=card.title excerpt=card.text url=card.link cta=site.data.new-data.community.page-data.read-more %}
                </li>
          {% endfor %}
          </ul>
@@ -65,7 +57,7 @@ title: Community
    </div>
    <div class="section community-section-grid">
       <div class="content links">
-         <h2 class="community-section-grid-headline">
+         <h2 class="community-section-grid-headline title-1">
             {{ site.data.new-data.community.page-data.section5.headline }}
          </h2>
          <ul class="community-section-links">
