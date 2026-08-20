@@ -13,7 +13,7 @@ Embedded Swift is evolving rapidly. Following our updates on [Embedded Swift imp
 
 ## Language improvements
 
-Embedded Swift continues to expand its subset of the language to include more aspects of “full” Swift, making it easier than ever to bring compatibility with Embedded Swift to existing Swift code bases. Many of these features have some dynamic aspect to them, meaning that they have an impact on runtime performance (for example, due to indirect calls) and code size (due to requiring additional metadata). However, this impact only occurs where these dynamic language features are actually used: code that is highly sensitive to code size and performance can choose to avoid them.
+Embedded Swift continues to expand its subset of the language to include more aspects of “full” Swift, making it easier than ever to bring compatibility with Embedded Swift to existing Swift code bases. Many of these features have some dynamic aspect to them, meaning that they have an impact on runtime performance (for example, due to indirect calls) and code size (due to requiring additional metadata). However, this impact only occurs where these dynamic language features are actually used: code that is highly sensitive to code size and performance can choose to avoid them, for example by enabling warnings in the [`PerformanceHints` diagnostic group](https://docs.swift.org/compiler/documentation/diagnostics/performance-hints).
 
 ### Generalized support for existential (`any`) types
 
