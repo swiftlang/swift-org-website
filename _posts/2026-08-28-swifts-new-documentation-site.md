@@ -16,7 +16,6 @@ Content is updated at least daily from across the [swiftlang](https://github.com
 
 - Latest release (canonical) docs: <https://docs.swift.org/latest/documentation/>
 - Nightly `main` branch docs: <https://docs.swift.org/main/documentation/>
-- The "Docs" menu on [swift.org](https://swift.org) and [docs.swift.org](https://docs.swift.org/) point here too, and old links redirect.
 
 This is a living site, not a finished product.
 We wanted to make it available right away, and we'll keep improving it.
@@ -33,4 +32,5 @@ A `6.4` slug for previously released documentation is coming once 6.4 ships.
 ## Next steps
 
 There's a lot more behind this launch: nearly two years of work, what's still missing, what's coming next, and ways to get involved.
+The coordination and some of the content is hosted at [swiftlang/docs](https://github.com/swiftlang/docs), with much of the content coming from repositories in the [swiftlang](https://github.com/swiftlang).
 For the full story, or if you're inclined to get involved, see [the announcement on the Swift Forums](https://forums.swift.org/t/swifts-new-documentation-site/89192).
