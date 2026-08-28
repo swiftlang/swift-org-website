@@ -22,7 +22,7 @@ We wanted to make it available right away, and we'll keep improving it.
 Documentation for libraries and Swift packages continues to live on the Swift Package Index.
 
 One gap worth noting: Foundation's reference API isn't included yet.
-We're working on open sourcing that content, the same way we did for the Swift standard library.
+Work is underway to open source that content, as has been done for the Swift standard library.
 
 ## A note on versions
 
