@@ -10,7 +10,7 @@ description: "Swift has a new hosted documentation site at docs.swift.org, bring
 
 A reorganized and refreshed Swift documentation site is live at [docs.swift.org](https://docs.swift.org/latest/documentation/).
 It brings together the Swift Programming Language guide, the reference API for the standard library and testing, and documentation for the toolchain and Swift on each platform.
-Content is updated at least daily from across the [swiftlang](https://github.com/swiftlang/) repositories.
+The site is updated at least daily with any documentation changes across [swiftlang](https://github.com/swiftlang/) repositories.
 
 ## Where to look
 
