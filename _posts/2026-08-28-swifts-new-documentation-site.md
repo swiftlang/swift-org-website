@@ -8,7 +8,7 @@ category: "Community"
 description: "Swift has a new hosted documentation site at docs.swift.org, bringing together the language guide, the standard library and testing reference, and toolchain documentation, updated at least daily."
 ---
 
-New documentation for Swift is live at [docs.swift.org](https://docs.swift.org/latest/documentation/).
+A reorganized and refreshed Swift documentation site is live at [docs.swift.org](https://docs.swift.org/latest/documentation/).
 It brings together the Swift Programming Language guide, the reference API for the standard library and testing, and documentation for the toolchain and Swift on each platform.
 Content is updated at least daily from across the [swiftlang](https://github.com/swiftlang/) repositories.
 
