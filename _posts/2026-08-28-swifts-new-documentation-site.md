@@ -2,10 +2,10 @@
 layout: new-layouts/post
 published: true
 date: 2026-08-28 10:00:00
-title: "Swift's New Documentation Site Is Now Live"
+title: "A New Home For Swift Documentation Site Is Now Live"
 author: [heckj]
 category: "Community"
-description: "Swift has a new hosted documentation site at docs.swift.org, bringing together the language guide, the standard library and testing reference, and toolchain documentation, updated at least daily."
+description: "Swift's documentation is now consolidated at docs.swift.org. The site brings together the language guide, standard library and testing references, and toolchain docs, built with DocC and updated at least daily."
 ---
 
 A reorganized and refreshed Swift documentation site is live at [docs.swift.org](https://docs.swift.org/latest/documentation/).
@@ -14,20 +14,21 @@ The site is updated at least daily with any documentation changes across [swiftl
 
 ## Where to look
 
-- Latest release (canonical) docs: <https://docs.swift.org/latest/documentation/>
+- Latest release docs: <https://docs.swift.org/latest/documentation/>
 - Nightly `main` branch docs: <https://docs.swift.org/main/documentation/>
 
+The URL with `latest` will track the most recently released branch, to make this initial setup easier, it's currently built from the 6.4.x release branch. 
+Going forward, the URL with `latest` is the stable URL to find the latest release docs.
+The URL with `main` tracks nightly development, and a URL `6.4` is coming after the 6.4 release.
+
+## Evolving content
+
 This is a living site, not a finished product.
-We wanted to make it available right away, and we'll keep improving it.
+We wanted to make it available right away, we'll keep improving it, and it's open to contribution.
 Documentation for libraries and Swift packages continues to live on the Swift Package Index.
 
-One gap worth noting: Foundation's reference API isn't included yet.
+One gap worth noting: Foundation's reference API isn't yet included.
 Work is underway to open source that content, as has been done for the Swift standard library.
-
-## A note on versions
-
-`latest` tracks the most recently released branch, and `main` tracks nightly development.
-A `6.4` slug for previously released documentation is coming once 6.4 ships.
 
 ## Next steps
 
