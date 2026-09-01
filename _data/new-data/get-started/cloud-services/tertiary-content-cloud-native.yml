@@ -4,7 +4,7 @@ tertiary_cards:
     text: The Swift language implementation of gRPC.
     link_text: View on GitHub
     link: https://github.com/grpc/grpc-swift
-  - name: Swift OTel 
+  - name: Swift OTel
     text: OpenTelemetry client built for Swift observability libraries.
     link_text: View on GitHub
     link: https://github.com/swift-otel/swift-otel
