@@ -7,8 +7,6 @@ author: [sliemeobn, davelester]
 category: "Digest"
 ---
 
-# What's new in Swift: August 2026 Edition
-
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
 
 Here's an update on efforts to bring Swift to the web:
@@ -39,6 +37,11 @@ Now on to other news about Swift:
 * The Swift Package Index blog explains [what a package registry actually is](https://swiftpackageindex.com/blog/what-is-a-package-registry), how it fits alongside SwiftPM and package indexes, and walks through an example of switching a dependency managed from Git to a Swift registry.
 * [Embedded Swift Improvements Coming in Swift 6.4](https://www.swift.org/blog/embedded-swift-improvements-coming-in-swift-6.4/) rounds up what's ahead for Swift on microcontrollers and other constrained environments.
 * The Browser Company's [Swift on Windows: A year of refinement](https://speakinginswift.substack.com/p/swift-on-windows-a-year-of-refinement) reflects on a year of work making Swift on Windows more predictable.
+
+## New package releases
+* Write an interface once with [SwiftTUI](https://swifttui.sh) using a declarative, state-driven syntax, then ship it as a terminal app, as a native macOS or iOS app, as an Android app, or as a WASI build for the browser.
+* Tired of hand-writing `RawRepresentable` and `LosslessStringConvertible` conformances? [lexic](https://github.com/ordo-one/lexic) generates them for you via macros, and runs the same on Linux as on Apple platforms.
+* [StructuredQueries](https://github.com/pointfreeco/swift-structured-queries), Point-Free's SQLite query builder, now has fully type-safe support for JSON and JSONB columns, including a `json_each` table function, so nested data can be queried and updated by key path without leaving Swift's type system.
 
 ## Swift Evolution
 The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
