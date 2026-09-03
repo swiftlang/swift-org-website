@@ -17,7 +17,7 @@ Here's an update on efforts to bring Swift to the web:
 > 
 > That led to the creation of [Elementary](https://github.com/elementary-swift/elementary): a modern and efficient HTML rendering library with a familiar declarative API, built for the web. It integrates easily with frameworks like Vapor and Hummingbird, and has become a practical option for server-rendered web UIs.
 > 
-> Around that same time, years of community work in the [swift-wasm](https://swiftwasm.org/) project made compiling Swift to WebAssembly increasingly viable, while Embedded Swift was taking its first experimental steps. This made me wonder: "How hard can it be to use Embedded Swift and build a state-driven web UI framework that produces tiny WebAssembly binaries?", the kind of small, fast-loading bundles that let Swift run natively in the browser. Turns out: quite hard, actually!
+> Around that same time, years of community work in the [swift-wasm](https://swiftwasm.org/) project made compiling Swift to WebAssembly increasingly viable, while Embedded Swift was taking its first experimental steps. This made me wonder: "How hard can it be to use Embedded Swift and build a state-driven web UI framework that produces tiny WebAssembly binaries?" Turns out: quite hard, actually!
 > 
 > But it was too late. Despite my better judgment, I was in the middle of creating what is now known as [ElementaryUI](https://elementary.codes/). Where Elementary renders HTML on the server, ElementaryUI runs in the browser itself. You can watch my [talk at Swift@FOSDEM 2026](https://www.youtube.com/watch?v=OmQ881sOTIc) if you want to know more about the why, what, and how.
 > 
