@@ -29,7 +29,7 @@ Now on to other news about Swift:
 
 ## Videos to watch
 * Saleem Abdulrasool joined the Empower Apps podcast to discuss [Swift on Windows](https://www.youtube.com/watch?v=ZIC-Q1B7FHM), server-side Swift, SwiftWin32, Swift's C++ interop, and how to get started.
-* Building memory-safe software? [Write security-sensitive code in Swift](https://www.youtube.com/watch?v=nBuUinlZuow) covers how Swift guarantees safety across bounds, lifetimes, types, initialization, and concurrency, with primitives like `Span` and non-copyable types, plus how to audit `unsafe` code with Strict Memory Safety and incrementally migrate existing C modules.
+* Building memory-safe software? [Write security-sensitive code in Swift](https://www.youtube.com/watch?v=nBuUinlZuow) covers how Swift guarantees safety across bounds, lifetimes, types, initialization, and concurrency, with primitives like `Span` and non-copyable types, plus how to audit `unsafe` code with strict memory safety and incrementally migrate existing C modules.
 * Two short videos about running Embedded Swift on Raspberry Pi Pico: a video on getting started on macOS called [Let it blink!](https://www.youtube.com/watch?v=p2e_RPgMo5g) and [Fun with traffic lights in 60 seconds](https://www.youtube.com/watch?v=Ht_gejbvAHA).
 
 ## Community highlights
