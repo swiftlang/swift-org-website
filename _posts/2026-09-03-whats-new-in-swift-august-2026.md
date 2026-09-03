@@ -35,7 +35,7 @@ Now on to other news about Swift:
 ## Community highlights
 * [Building scalable backend apps in Swift](https://theswiftdev.com/building-scalable-backend-apps-in-swift/) shares an approach to structuring server-side Swift codebases, separating business logic from database and framework details so the code stays easier to test and change over time.
 * The Swift Package Index blog explains [what a package registry actually is](https://swiftpackageindex.com/blog/what-is-a-package-registry), how it fits alongside SwiftPM and package indexes, and walks through an example of switching a dependency managed from Git to a Swift registry.
-* [Embedded Swift Improvements Coming in Swift 6.4](https://www.swift.org/blog/embedded-swift-improvements-coming-in-swift-6.4/) rounds up what's ahead for Swift on microcontrollers and other constrained environments.
+* [Embedded Swift Improvements Coming in Swift 6.4](/blog/embedded-swift-improvements-coming-in-swift-6.4/) rounds up what's ahead for Swift on microcontrollers and other constrained environments.
 * The Browser Company's [Swift on Windows: A year of refinement](https://speakinginswift.substack.com/p/swift-on-windows-a-year-of-refinement) reflects on a year of work making Swift on Windows more predictable.
 
 ## New package releases
@@ -44,7 +44,7 @@ Now on to other news about Swift:
 * [StructuredQueries](https://github.com/pointfreeco/swift-structured-queries), Point-Free's SQLite query builder, now has fully type-safe support for JSON and JSONB columns, including a `json_each` table function, so nested data can be queried and updated by key path without leaving Swift's type system.
 
 ## Swift Evolution
-The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
+The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
 
 **Under active review:**
 * [ST-0029](https://github.com/swiftlang/swift-evolution/blob/main/proposals/testing/0029-add-issue-metadata-event-stream.md) Include additional issue metadata in event stream - Today, Swift Testing's JSON event stream reports only bare-bones details when an issue occurs, making it hard to tell a thrown error apart from a manual `Issue.record` call. This proposal adds structured fields, including `error`, `confirmationMiscount`, `exceededTimeLimit`, and `expression`, so tools like Xcode and VS Code can show richer, more specific failure information.
