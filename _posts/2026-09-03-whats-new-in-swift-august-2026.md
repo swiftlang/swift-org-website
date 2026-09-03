@@ -13,7 +13,7 @@ Here's an update from guest contributor Simon Leeb on Swift's progress as a lang
 
 > Hi, Simon here! I am the creator of the [elementary-swift](https://github.com/elementary-swift) project, a collection of packages born from a simple wish: I want to build web UIs in Swift and ultimately help Swift become a first-class choice for the web.
 > 
-> This journey began after I started using server-side Swift for backend services. The web frontend, however, still lived in a separate ecosystem, and I really wanted it to feel as ergonomic, safe, and efficient as the Swift I was writing everywhere else.
+> This journey began after I started using Swift for backend services. The web frontend, however, still lived in a separate ecosystem, and I really wanted it to feel as ergonomic, safe, and efficient as the Swift I was writing everywhere else.
 > 
 > That led to the creation of [Elementary](https://github.com/elementary-swift/elementary): a modern and efficient HTML rendering library with a familiar declarative API, built for the web. It integrates easily with frameworks like Vapor and Hummingbird, and has become a practical option for server-rendered web UIs.
 > 
