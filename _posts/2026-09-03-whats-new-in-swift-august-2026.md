@@ -9,7 +9,7 @@ category: "Digest"
 
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
 
-Here's an update on efforts to bring Swift to the web:
+Here's an update from guest contributor Simon Leeb on Swift's progress as a language for web scenarios:
 
 > Hi, Simon here! I am the creator of the [elementary-swift](https://github.com/elementary-swift) project, a collection of packages born from a simple wish: I want to build web UIs in Swift and ultimately help Swift become a first-class choice for the web.
 > 
