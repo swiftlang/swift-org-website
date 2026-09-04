@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2026-09-03 13:30
+date: 2026-09-04 12:30
 title: "What's new in Swift: August 2026 Edition"
 author: [sliemeobn, davelester]
 category: "Digest"
