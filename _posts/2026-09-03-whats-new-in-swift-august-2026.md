@@ -23,7 +23,7 @@ Here's an update from guest contributor Simon Leeb on Swift's progress as a lang
 > 
 > To showcase where the project is heading, I recently posted a small [Full-Stack Swift on Cloudflare demo](https://forums.swift.org/t/edge-of-tomorrow-full-stack-swift-on-both-sides-of-fetch/89175). It features Swift in the browser communicating with a Swift backend on an edge worker through shared message types. I hope it gives people a concrete sense of how much the core technologies and the surrounding tooling have advanced.
 > 
-> ElementaryUI is still young, with plenty left to build. Visit [elementary.codes](https://elementary.codes/) to try it, share feedback, contribute, or sponsor its development. I am convinced that if we just want it badly enough, we can make Swift a first-class choice for the web!
+> ElementaryUI is still young, with plenty left to build. Visit [elementary.codes](https://elementary.codes/) to try it, share feedback, contribute, or sponsor its development. Let's work together and make Swift a first-class choice for the web!
 
 Now on to other news about Swift:
 
