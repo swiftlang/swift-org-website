@@ -2,37 +2,36 @@
 layout: page
 title: Swift.org security
 ---
+## Report a security vulnerability
 
-## Security Process
+### How to report a security vulnerability
 
-For the protection of our community, Swift.org doesn't disclose, discuss, or confirm security issues until our investigation is complete and any necessary updates are generally available.
+This document outlines security procedures and general policies for the Swift project.
 
-Recent security updates are listed in the [Security Updates](#security-updates) section below.
+The Swift project prioritizes the security of its open source projects and values the contributions of the security research community.
+If you believe that you have discovered a security vulnerability in our open source software, please report it to us using the [GitHub private vulnerability feature](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/privately-reporting-a-security-vulnerability).
 
-Swift.org security documents reference vulnerabilities by [CVE-ID](https://www.cve.org/About/Overview) when possible.
+This can be done by navigating to the "Security" tab of the specific repository where you found the issue.
 
-### Reporting a security or privacy vulnerability
+Reports should include specific software version(s) that you believe are affected; a technical description of the behavior that you observed and the behavior that you expected; the steps required to reproduce the issue; and a proof of concept or exploit.
 
-If you believe you have discovered a security or privacy vulnerability in a Swift.org project, please report it to us.
-We welcome reports from everyone, including security researchers, developers, and users.
+### How these reports are handled
 
-To report a security or privacy vulnerability, please send an email to [cve@forums.swift.org](mailto:cve@forums.swift.org) that includes:
+Our goal is to confirm all security reports. This is neither an acceptance nor a rejection of the report.
+We may follow up with further questions while working through the details of your report.
+We may prioritize vulnerability remediation, and resolution times may vary according to several factors, such as complexity, severity, and active maintenance of a project.
 
-* The specific project and software version(s) which you believe are affected.
-* A description of the behavior you observed as well as the behavior that you expected.
-* A numbered list of steps required to reproduce the issue and/or a video demonstration, if the steps may be hard to follow.
+For the development of secure product and the protection of our users, the project will not disclose or discuss security issues until the investigation is complete and any necessary updates are generally available, unless required by law.
+After updates are made available, reports will be published as GitHub Security Advisories.
 
-Please use [Swift.org's CVE PGP key](/keys/cve-signing-key-1.asc) to encrypt sensitive information that you send by email.
+Some projects have additional security pages with further details or aggregated findings - consult project specific documentation for details.
 
-You'll receive an email reply from Swift.org to acknowledge that we received your report, and we’ll contact you if we need more information.
+### Additional guidelines
 
-### How Swift.org handles these reports
+Output from automated security scans or fuzzers must include additional context demonstrating the vulnerability with a proof of concept or working exploit.
+Please include enough information to allow us to reproduce the issue. We will credit you in the public advisory if the report is accepted.
 
-For the protection of our community, Swift.org doesn't disclose, discuss, or confirm security issues until our investigation is complete and any necessary updates are generally available.
-
-Swift.org uses security advisories and our security-announce mailing list to publish information about security fixes in our projects and to publicly credit people or organizations that have reported security issues to us.
-
-## Security Updates
+### Security Updates
 
 {% assign cve_list = site.data.security.cve | sort: "date" %}
 
