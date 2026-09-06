@@ -5,7 +5,7 @@
     // Vectorized check that a utf8 buffer is all ASCII
     func isASCII(utf8: Span<SIMD16<UInt8>>) -> Bool {
       // combine all the code units into a single entry
-      utf8.indices.reduce(into: SIMD16()) {
+      utf8.indices.reduce(into: SIMD16<UInt8>()) {
         // fold each set of code units into the result
         $0 |= utf8[$1]
       }
