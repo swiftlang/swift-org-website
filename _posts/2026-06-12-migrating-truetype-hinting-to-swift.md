@@ -208,7 +208,9 @@ function plot(arr, cls){
         '<span class="dim">Reference:</span> '+p.x.toFixed(4)+' Mc/glyph<br>'+
         '<span class="dim">Swift:</span> '+p.y.toFixed(4)+' Mc/glyph<br>'+
         '<span class="sp">'+
-        (fast?('Swift '+p.sp.toFixed(1)+'% faster'):('C '+(-p.sp).toFixed(1)+'% faster'))+'</span>'+
+        // "% faster" is relative to the slower side's cost: p.sp is Swift's reduction vs C's cost,
+        // so when C wins the figure must be recomputed against Swift's (larger) cost instead.
+        (fast?('Swift '+p.sp.toFixed(1)+'% faster'):('C '+((p.y-p.x)/p.y*100).toFixed(1)+'% faster'))+'</span>'+
         (p.g!=null?(' <span class="dim">&middot; '+p.g.toLocaleString()+' glyphs</span>'):'');
       tip.style.left=e.clientX+'px'; tip.style.top=e.clientY+'px'; tip.style.opacity=1;
     });
