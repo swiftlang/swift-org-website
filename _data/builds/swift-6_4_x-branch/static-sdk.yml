@@ -1,3 +1,9 @@
+- checksum: a99b063cc553a11aba025803d4f3fa262d85751c1f4101e18ac8c41d38acd45a
+  date: 2026-09-10 10:10:00-06:00
+  dir: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-09-10-a
+  download: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-09-10-a_static-linux-0.1.0.artifactbundle.tar.gz
+  download_signature: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-09-10-a_static-linux-0.1.0.artifactbundle.tar.gz.sig
+  name: Swift Static SDK Development Snapshot
 - checksum: c38ebb276944eb13294c181b7212f260ef80338877c7ef9fd672ee2cbf9257d9
   date: 2026-09-04 10:10:00-06:00
   dir: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-09-04-a
