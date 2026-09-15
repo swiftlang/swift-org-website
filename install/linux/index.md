@@ -96,7 +96,7 @@ title: Install Swift - Linux
   <div class="callout">
     <div>
       <p class="content-copy">
-        <a class="content-link block" href="/install/linux/amazonlinux/2">Alternate Install Options</a>
+        <a class="content-link block" href="/install/linux/amazonlinux/2023">Alternate Install Options</a>
       </p>
     </div>
   </div>
