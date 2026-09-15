@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Swift.org security
+redirect_from:
+  - "/support/security.html"
 ---
 ## Report a security vulnerability
 
