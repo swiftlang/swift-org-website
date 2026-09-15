@@ -1,10 +1,7 @@
 - name: Amazon Linux
   slug: amazonlinux
-  url: /install/linux/amazonlinux/2
+  url: /install/linux/amazonlinux/2023
   versions:
-    - name: Amazon Linux 2
-      slug: amazonlinux2
-      url: /install/linux/amazonlinux/2
     - name: Amazon Linux 2023
       slug: amazonlinux2023
       url: /install/linux/amazonlinux/2023
@@ -15,13 +12,13 @@
     - name: Debian 12
       slug: debian12
       url: /install/linux/debian/12
+    - name: Debian 13
+      slug: debian13
+      url: /install/linux/debian/13
 - name: Fedora
   slug: fedora
-  url: /install/linux/fedora/39
+  url: /install/linux/fedora/41
   versions:
-    - name: Fedora 39
-      slug: fedora39
-      url: /install/linux/fedora/39
     - name: Fedora 41
       slug: fedora41
       url: /install/linux/fedora/41
@@ -32,16 +29,19 @@
     - name: Red Hat Universal Base Image 9
       slug: ubi9
       url: /install/linux/ubi/9
+    - name: Red Hat Universal Base Image 10
+      slug: ubi10
+      url: /install/linux/ubi/10
 - name: Ubuntu
   slug: ubuntu
-  url: /install/linux/ubuntu/24_04
+  url: /install/linux/ubuntu/26_04
   versions:
+    - name: Ubuntu 26.04
+      slug: Ubuntu26_04
+      url: /install/linux/ubuntu/26_04
     - name: Ubuntu 24.04
       slug: Ubuntu24_04
       url: /install/linux/ubuntu/24_04
     - name: Ubuntu 22.04
       slug: Ubuntu22_04
       url: /install/linux/ubuntu/22_04
-    - name: Ubuntu 20.04
-      slug: Ubuntu20_04
-      url: /install/linux/ubuntu/20_04

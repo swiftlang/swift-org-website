@@ -8,7 +8,7 @@ The Swift project follows an [incremental development model](/contributing/#cont
 
 ## Configuration
 
-Our [continuous integration system](https://ci.swift.org) is powered by [Jenkins](https://jenkins.io) and currently supports building and testing on macOS, Ubuntu 18.04, Ubuntu 20.04, Ubuntu 22.04, CentOS 7, and Amazon Linux 2. Testing on the iOS, tvOS, and watchOS simulator is also supported.
+Our [continuous integration system](https://ci.swift.org) is powered by [Jenkins](https://jenkins.io) and currently supports building and testing on macOS, Ubuntu 18.04, and Ubuntu 22.04. Testing on the iOS, tvOS, and watchOS simulator is also supported.
 
 ### Job organization
 

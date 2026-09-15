@@ -1,2 +1,4 @@
 - name: Red Hat Universal Base Image 9
   url: /install/linux/ubi/9
+- name: Red Hat Universal Base Image 10
+  url: /install/linux/ubi/10
