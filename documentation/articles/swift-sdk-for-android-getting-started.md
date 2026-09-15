@@ -18,7 +18,7 @@ Cross-compilation for Android requires installing three separate components:
 
 1. The **Swift Toolchain**: The core Swift compiler and related tools needed to
    compile and run Swift code on your host machine. This includes the `swift`
-   command-line tooling, standard library, and LLVM backend.
+   command-line and LLVM tools.
 2. The **Swift SDK for Android**: An additional bundle of Swift libraries,
    headers, and configuration files that extends the Swift toolchain with the
    specific support needed to cross-compile for Android.
@@ -76,40 +76,22 @@ You should now see the Android Swift SDK included with the `swift sdk list` comm
 $ swift sdk list
 {{tag}}_android
 ```
-Make sure to remove any old Android SDKs you have installed:
-
-```console
-$ swift sdk remove swift-6.3.2-RELEASE_android
-```
 
 #### 3. Install and configure the Android NDK
 
-The Swift SDK for Android depends on the Android NDK, LTS version 27d or later, to provide the headers and tools necessary for cross-compiling to Android architectures. There are a variety of ways to [install the Android NDK](https://developer.android.com/ndk/guides), but the simplest is to just download and unzip the archive from the [NDK Downloads page](https://developer.android.com/ndk/downloads/#lts-downloads) directly.
+The Swift SDK for Android depends on the Android NDK, LTS version 30, to provide the headers and tools necessary for cross-compiling to Android architectures. There are a variety of ways to [install the Android NDK](https://developer.android.com/ndk/guides), but the simplest is to just download and unzip the archive from the [NDK Downloads page](https://developer.android.com/ndk/downloads/#lts-downloads) directly.
 
-You can automate this with the following commands by first changing to the installation directory of the Swift SDK for Android. For macOS:
-
-```console
-$ cd ~/Library/org.swift.swiftpm/swift-sdks/{{ tag }}_android.artifactbundle/swift-android/
-```
-
-or for Linux:
+You can automate this with the following commands:
 
 ```console
-$ cd ~/.swiftpm/swift-sdks/{{ tag }}_android.artifactbundle/swift-android/
-```
-
-Then run:
-
-```console
-$ curl -fSL -o ndk.zip https://dl.google.com/android/repository/android-ndk-r27d-$(uname -s).zip
+$ curl -fSL -o ndk.zip https://dl.google.com/android/repository/android-ndk-r30-$(uname -s).zip
 $ unzip -qo ndk.zip
-$ export ANDROID_NDK_HOME=$PWD/android-ndk-r27d
-$ ./scripts/setup-android-sdk.sh
+$ export ANDROID_NDK_HOME=$PWD/android-ndk-r30
 ```
 
-*If you have already installed the NDK in a different location, you can simply set the `ANDROID_NDK_HOME` environment variable to that location and run the `setup-android-sdk.sh` script.*
+*If you have already installed the NDK in a different location, you can simply set the `ANDROID_NDK_HOME` environment variable to that location.*
 
-At this point, you will have a fully working cross-compilation toolchain for Android, and can unset `ANDROID_NDK_HOME` if you'd like.
+At this point, you will have a fully working cross-compilation toolchain for Android.
 
 ### Hello World on Android
 
@@ -137,32 +119,32 @@ Hello, world!
 With the Swift SDK for Android installed and configured, you can now cross-compile the executable to Android for the `x86_64` architecture:
 
 ```console
-$ swift build --swift-sdk x86_64-unknown-linux-android28 --static-swift-stdlib
+$ swift build --swift-sdk {{tag}}_android --triple x86_64-unknown-linux-android23 --static-swift-stdlib
 Building for debugging...
 [8/8] Linking hello
 Build complete! (2.04s)
 
-$ file .build/x86_64-unknown-linux-android28/debug/hello
-.build/x86_64-unknown-linux-android28/debug/hello: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, with debug_info, not stripped
+$ file .build/x86_64-unknown-linux-android23/debug/hello
+.build/x86_64-unknown-linux-android23/debug/hello: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, with debug_info, not stripped
 ```
 
 or for the `aarch64` architecture:
 
 ```console
-$ swift build --swift-sdk aarch64-unknown-linux-android28 --static-swift-stdlib
+$ swift build --swift-sdk {{tag}}_android --triple aarch64-unknown-linux-android23 --static-swift-stdlib
 Building for debugging...
 [8/8] Linking hello
 Build complete! (2.04s)
 
-$ file .build/aarch64-unknown-linux-android28/debug/hello
-.build/aarch64-unknown-linux-android28/debug/hello: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, with debug_info, not stripped
+$ file .build/aarch64-unknown-linux-android23/debug/hello
+.build/aarch64-unknown-linux-android23/debug/hello: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, with debug_info, not stripped
 ```
 
 Using a connected Android device that has [USB debugging enabled](https://developer.android.com/studio/debug/dev-options#Enable-debugging) or [a locally-running Android emulator](https://developer.android.com/studio/run/emulator#get-started), you can now copy the executable over, along with the required `libc++_shared.so` dependency from the Android NDK, and run it with [the `adb` utility](https://developer.android.com/tools/adb):
 
 ```console
-$ adb push .build/aarch64-unknown-linux-android28/debug/hello /data/local/tmp
-.build/aarch64-unknown-linux-android28/debug/hello: 1 file pushed, 0 skipped. 155.9 MB/s (69559568 bytes in 0.425s)
+$ adb push .build/aarch64-unknown-linux-android23/debug/hello /data/local/tmp
+.build/aarch64-unknown-linux-android23/debug/hello: 1 file pushed, 0 skipped. 155.9 MB/s (69559568 bytes in 0.425s)
 
 $ adb push $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/*/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so /data/local/tmp/
 aarch64-linux-android/libc++_shared.so: 1 file pushed, 0 skipped. 145.7 MB/s (1794776 bytes in 0.012s)
@@ -179,4 +161,4 @@ Android applications are typically not deployed as command-line executable tools
 
 Visit [the Android Examples repository](https://github.com/swiftlang/swift-android-examples) to see a variety of projects that demonstrate how to build full Android applications that utilize the Swift SDK for Android.
 
-These larger development topics will be expanded on in future articles and documentation. In the meantime, please visit [the Android category in the Swift forums](https://forums.swift.org/c/platform/android/115) to discuss and seek help with the Swift SDK for Android.
+More [documentation is being placed online](https://docs.swift.org/latest/documentation/swiftandroid), and these larger development topics will be expanded on in future posts. You can visit [the Android category in the Swift forums](https://forums.swift.org/c/platform/android/115) to discuss and seek help with the Swift SDK for Android.
