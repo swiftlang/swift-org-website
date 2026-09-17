@@ -279,7 +279,7 @@ function renderSearchBar () {
           type: 'checkbox',
           id: 'filter-by-swift-' + _idSafeName(version),
           className: 'filter-by-swift-version',
-          value: 'swift-' + _idSafeName(version)
+          value: version
         }),
         html('label', {
           tabindex: '0',
@@ -566,11 +566,7 @@ function addEventListeners() {
   // Typing in the search field causes the filter to be reapplied.
   searchInput.addEventListener('input', filterProposals)
 
-  // Each of the individual statuses needs to trigger filtering as well
-  ;[].forEach.call(document.querySelectorAll('.filter-list input'), function (element) {
-    element.addEventListener('change', filterProposals)
-  })
-
+  // Register this event listener first, so version filter state is updated before filterProposals() is called
   var expandableArea = document.querySelector('.filter-options')
   var implementedToggle = document.querySelector('#filter-by-implemented')
   implementedToggle.addEventListener('change', function () {
@@ -587,6 +583,11 @@ function addEventListeners() {
     // Update the 'Hide Filters' / 'Show Filters' / 'n Filters' text
     var allCheckedStateCheckboxes = document.querySelectorAll('.filter-list input:checked')
     updateStatusFilterToggleText(allCheckedStateCheckboxes.length)
+  })
+  
+  // Each of the individual statuses needs to trigger filtering as well
+  ;[].forEach.call(document.querySelectorAll('.filter-list input'), function (element) {
+    element.addEventListener('change', filterProposals)
   })
 
   document.querySelector('#status-filter-button').addEventListener('click', toggleStatusFiltering)
@@ -832,10 +833,14 @@ function _applyFlagFilter(matchingProposals) {
  */
 function _applyStatusFilter(matchingProposals) {
   // Get all checked state checkboxes, both status and version as an array
-  var allCheckedStateCheckboxes = Array.from(document.querySelectorAll('.filter-list input:checked'))
+  const allCheckedStateCheckboxes = Array.from(document.querySelectorAll('.filter-list input:checked'))
+  const allCheckedVersionCheckboxes = Array.from(document.querySelectorAll('.filter-by-swift-version:checked'))
   
-  // Get checkbox values for all checked state checkboxes, both status and version
-  var selectedStates = allCheckedStateCheckboxes.map(function (checkbox) { return checkbox.value })
+  // Get checkbox values for *all* checked state checkboxes, both status and version
+  const selectedStates = allCheckedStateCheckboxes.map(checkbox => checkbox.value)
+  
+  // Get selectedVersions separately for filtering and version status string generation 
+  const selectedVersions = allCheckedVersionCheckboxes.map(checkbox => checkbox.value)
 
   updateStatusFilterToggleText(selectedStates.length)
 
@@ -846,7 +851,7 @@ function _applyStatusFilter(matchingProposals) {
     return array
   }, [])
 
-  updateStatusFilterSubheading(selectedStatusNames)
+  updateStatusFilterSubheading(selectedStatusNames, selectedVersions)
 
   // Use all selected states, status and version to filter out proposals based on the grouping checkboxes
   if (selectedStates.length) {
@@ -858,19 +863,11 @@ function _applyStatusFilter(matchingProposals) {
       })
 
     // Handle version-specific filtering options
-    if (selectedStates.some(function (state) { return state.match(/swift/i) })) {
+    if (selectedVersions.length) {
       matchingProposals = matchingProposals
         .filter(function (proposal) {
-          return selectedStates.some(function (state) {
-            if (!(proposal.status.state === State.implemented)) return true // only filter among Implemented (N.N.N)
-            if (state === 'swift-swift-Next' && proposal.status.version === 'Next') return true // special case
-
-            var version = state.split(/\D+/).filter(function (s) { return s.length }).join('.')
-
-            if (!version.length) return false // it's not a state that represents a version number
-            if (proposal.status.version === version) return true
-            return false
-          })
+          // Return proposals with state != implemented and proposals matching selected implementation versions
+          return (!(proposal.status.state === State.implemented)) || (selectedVersions.includes(proposal.status.version))
         })
     }
   }
@@ -1054,10 +1051,8 @@ function _updateURIFragment() {
     actions.search = search.value
   }
 
-  var selectedVersions = document.querySelectorAll('.filter-by-swift-version:checked')
-  var versions = [].map.call(selectedVersions, function (checkbox) {
-    return checkbox.value.split('swift-swift-')[1].split('-').join('.')
-  })
+  var selectedVersions = Array.from(document.querySelectorAll('.filter-by-swift-version:checked'))
+  var versions = selectedVersions.map(checkbox => checkbox.value)
 
   actions.version = versions
 
@@ -1113,9 +1108,9 @@ function _idSafeName (name) {
   *
   * @param {string[]} selectedStates - each element is a key in the states objects. For example: '.accepted'.
   */
-function updateStatusFilterSubheading(selectedStates) {
+function updateStatusFilterSubheading(selectedStates, selectedVersions) {
   var statusFilterSubheading = document.querySelector('#status-filter-description')
-  statusFilterSubheading.innerText = descriptionForSelectedStatuses(selectedStates)
+  statusFilterSubheading.innerText = descriptionForSelectedStatuses(selectedStates, selectedVersions)
 }
 
 /**
@@ -1184,7 +1179,7 @@ function addNumberToState (state, count) {
 *
 * @param {string[]} selectedOptions - each element is a key in the states objects. For example: '.accepted'.
 */
-function descriptionForSelectedStatuses(selectedOptions) {
+function descriptionForSelectedStatuses(selectedOptions, selectedVersions) {
   let allStateOptions = [
     State.awaitingReview, State.scheduledForReview, State.activeReview, State.accepted,
     State.previewing, State.implemented, State.returnedForRevision, State.rejected, State.withdrawn
@@ -1194,16 +1189,67 @@ function descriptionForSelectedStatuses(selectedOptions) {
   let ALL_EXCEPT_MAX_COUNT = 3
   let allExceptThreshold = totalCount - ALL_EXCEPT_MAX_COUNT
 
-  if (selectedCount === 0 || selectedCount === totalCount) {
-    return "All Statuses"
-  } else if (selectedCount >= allExceptThreshold) {
-    let unselectedOptions = allStateOptions.filter(function (option) {
-      return selectedOptions.indexOf(option) === -1
-    })
-    return "All Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
+  console.log("Selected Versions: " + selectedVersions)
+  if (selectedVersions.length === 0) {
+    if (selectedCount === 0 || selectedCount === totalCount) {
+      return "All Statuses"
+    } else if (selectedCount >= allExceptThreshold) {
+      let unselectedOptions = allStateOptions.filter(function (option) {
+        return selectedOptions.indexOf(option) === -1
+      })
+      return "All Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
+    } else {
+      return listStringForStatuses(selectedOptions, "or", true)
+    }
   } else {
-    return listStringForStatuses(selectedOptions, "or", true)
+    if (selectedCount === 0) {
+      return "All Statuses"
+    } else if (selectedCount === totalCount) {
+      return "Implemented " + selectedVersionStatusString(selectedVersions) + " and All Other Statuses"
+    } else if (selectedCount >= allExceptThreshold) {
+      let unselectedOptions = allStateOptions.filter(function (option) {
+        return selectedOptions.indexOf(option) === -1
+      })
+      let implementedIndex = selectedOptions.indexOf("implemented")
+      if (implementedIndex > -1) {
+        selectedOptions.splice(implementedIndex, 1)
+      }
+      return listStringForStatuses(["implemented"], "or", true, selectedVersions) + " and\nAll Other Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
+    } else {
+      let implementedIndex = selectedOptions.indexOf("implemented")
+      if (implementedIndex > -1) {
+        selectedOptions.splice(implementedIndex, 1)
+        selectedOptions.push("implemented")
+      }
+      return listStringForStatuses(selectedOptions, "or", true, selectedVersions)
+    }
   }
+}
+
+function selectedVersionStatusString(selectedVersions) {
+  var currentRange = null
+  var rangeArray = []
+  const lastItemIndex = languageVersions.length - 1
+  for (const [i, version] of languageVersions.entries() ) {
+    let versionSelected = selectedVersions.includes(version)
+    if (versionSelected) {
+      if (currentRange) { currentRange.end = version }
+      else { currentRange = {start: version } }
+    }
+    
+    if (!versionSelected || i === lastItemIndex) {
+      if (currentRange) {
+        rangeArray.push(currentRange)
+        currentRange = null
+      }
+    }
+  }
+  const rangeStrings = rangeArray.map(function (range) {
+        return range.start + (range.end ? "-" + range.end : "")
+      })
+  const rangePrefix = " in Swift "
+  const versionString = rangePrefix + rangeStrings.join(", ")
+  return versionString
 }
 
 /**
@@ -1219,11 +1265,15 @@ function descriptionForSelectedStatuses(selectedOptions) {
 * @param {string} conjunction - Used to join the last element if two or more elements are present.
 * @param {boolean} useStatusPrefix - Uses prepends statusPrefix, if defined, on the status name.
 */
-function listStringForStatuses(options, conjunction, useStatusPrefix) {
+function listStringForStatuses(options, conjunction, useStatusPrefix, implementationVersions) {
   let optionNames = options.map( function (option) {
     let state = states[option]
     let prefix = useStatusPrefix ? (state.statusPrefix ?? '') : ''
-     return prefix + state.shortName
+    let statusName = prefix + state.shortName
+    if (option === 'implemented' && implementationVersions) {
+      statusName = statusName + selectedVersionStatusString(implementationVersions)
+    }
+     return statusName
   })
   if (optionNames.length === 1){
     return optionNames[0]
