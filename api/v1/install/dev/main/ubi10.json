@@ -1,6 +1,0 @@
----
-layout: none
----
-{ "x86_64": {{ site.data.builds.development.ubi10 | jsonify }},
-  "aarch64": {{ site.data.builds.development.ubi10-aarch64 | jsonify }}
-}

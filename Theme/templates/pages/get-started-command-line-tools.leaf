@@ -1,0 +1,18 @@
+#extend("base"):
+#export("content"):
+<div class="get-started">
+#extend("partials/components/get-started-hero", boxed.new_data.get_started.command_line_tools.hero)
+
+#extend("partials/components/full-width-text-code-column", boxed.new_data.get_started.command_line_tools.code_text_column_arg_parser)
+
+#extend("partials/components/code-box", boxed.new_data.get_started.command_line_tools.code_box_with_tabs)
+
+#extend("partials/components/headline-section", boxed.new_data.get_started.command_line_tools.headline_section)
+
+#extend("partials/components/card-grid", boxed.new_data.get_started.command_line_tools.tertiary_content)
+
+#extend("partials/components/full-width-text-code-column", boxed.new_data.get_started.command_line_tools.full_width_text_code_column)
+
+</div>
+#endexport
+#endextend

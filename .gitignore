@@ -20,6 +20,11 @@ xcuserdata
 # Build output
 .output
 
+# Swift package build state, the rendered site, and the local Kiln checkout.
+.build/
+/site/
+/.kiln/
+
 # VS Code files
 .vscode
 

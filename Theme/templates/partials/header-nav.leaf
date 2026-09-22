@@ -1,0 +1,18 @@
+#comment:
+  `_includes/new-includes/header/navigation.html`. The trailing Install item is
+  hard-coded in the Jekyll template too — it carries the current release number
+  and has its own active rule.
+#endcomment
+<ul class="navigation-items">
+  #for(item in data.new_data.header.navigation):
+  <li class="nav-item#if(page.url == item.url): active#endif">
+    <a href="#(item.url)" data-text="#(item.header)"><span>#(item.header)</span></a>
+  </li>
+  #endfor
+  <li class="border">
+    <span />
+  </li>
+  <li class="nav-item#if(startsWith(page.url, "/install")): active#endif">
+    <a href="/install" data-text="Install"><span>Install <span>(#(latestRelease))</span></span></a>
+  </li>
+</ul>

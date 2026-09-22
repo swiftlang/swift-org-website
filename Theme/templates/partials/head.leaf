@@ -1,0 +1,65 @@
+<meta charset="utf-8" />
+<title>#if(page.isHome):#(page.title)#else:#(page.title) | #(site.name)#endif</title>
+<meta name="author" content="Apple Inc." />
+<meta name="viewport" content="width=device-width initial-scale=1" />
+#if(page.isHome):
+<link rel="prefetch" href="/assets/images/landing-page/hero/bird.png" as="image" />
+<link rel="prefetch" href="/assets/images/landing-page/hero/orange-swoop-bottom.png" as="image" />
+<link rel="prefetch" href="/assets/images/landing-page/hero/orange-swoop-top.png" as="image" />
+<link rel="prefetch" href="/assets/images/landing-page/hero/purple-swoop.png" as="image" />
+<link rel="prefetch" href="/assets/images/landing-page/hero/white-swoop-1.png" as="image" />
+<link rel="prefetch" href="/assets/images/landing-page/hero/white-swoop-2.png" as="image" />
+#endif
+#if(page.frontMatter.description):
+<meta name="description" content="#(page.frontMatter.description)" />
+#endif
+<link rel="license" href="/LICENSE.txt" />
+<script src="/assets/javascripts/new-javascripts/color-scheme-toggle.js"></script>
+#if(page.isHome):
+<script src="/assets/javascripts/new-javascripts/vendor/anime.iife.min.js"></script>
+<script src="/assets/javascripts/new-javascripts/hero.js"></script>
+#endif
+<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+<link rel="mask-icon" href="/assets/images/icon-swift.svg" color="#F05339" />
+<link rel="alternate" type="application/atom+xml" title="Swift.org (Atom Feed)" href="/atom.xml" />
+<link rel="canonical" href="#(page.canonicalURL)" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="#(site.twitterSite)" />
+#if(page.frontMatter.date):
+<meta name="twitter:title" content="#(page.title)" />
+<meta name="twitter:description" content="#(page.frontMatter.description)" />
+#else:
+<meta name="twitter:title" content="#(site.name)" />
+<meta name="twitter:description" content="#(site.description)" />
+#endif
+
+<meta property="og:site_name" content="#(site.name)" />
+<meta property="og:image" content="#(site.url)/apple-touch-icon-180x180.png" />
+#if(noindex):
+<meta name="robots" content="noindex" />
+#endif
+#if(page.frontMatter.date):
+<meta property="og:type" content="article" />
+<meta property="og:title" content="#(page.title)" />
+<meta property="og:url" content="#(page.canonicalURL)" />
+<meta property="og:description" content="#(page.frontMatter.description)" />
+<meta property="article:published_time" content="#(page.frontMatter.date)" />
+<meta property="article:modified_time" content="#(buildTime)" />
+#else:
+<meta property="og:title" content="#(site.name)" />
+<meta property="og:url" content="#(site.url)" />
+<meta property="og:description" content="#(site.description)" />
+#endif
+#if(page.structuredData):
+<script type="application/ld+json">#unsafeHTML(page.structuredData)</script>
+#endif

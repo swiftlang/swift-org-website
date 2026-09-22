@@ -1,0 +1,10 @@
+<div class="headline-section content-wrapper">
+<hr class="top-hr" />
+<div class="copy-wrapper">
+<h2>#(content.headline)</h2>
+<p class="body-copy">#unsafeHTML(content.body)</p>
+<a class="body-copy" href="#(content.link.href)">#(content.link.copy)
+</a>
+</div>
+<hr class="bottom-hr" />
+</div>

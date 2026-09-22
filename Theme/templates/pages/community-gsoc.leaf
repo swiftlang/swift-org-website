@@ -1,0 +1,16 @@
+#extend("base"):
+#export("content"):
+<div class="get-started governance" id="governance-page">
+
+<!-- Hero Section -->
+#extend("partials/components/governance-hero", boxed.new_data.gsoc.hero)
+
+<!-- Years Section -->
+#extend("partials/components/title-text-centered-three-up-cards", boxed.new_data.gsoc.years)
+
+<!-- Get Involved Section -->
+#extend("partials/components/title-text-centered-three-up-cards", boxed.new_data.gsoc.get_involved)
+
+</div>
+#endexport
+#endextend

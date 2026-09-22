@@ -1,0 +1,11 @@
+<div class="full-width-text-image-column content-wrapper">
+<div class="text-wrapper">
+<h2>#(content.headline)</h2>
+#for(paragraph in content.paragraphs):
+<p class="body-copy">#unsafeHTML(paragraph)</p>
+#endfor
+<a class="body-copy" href="#(content.link.url)">#(content.link.text)
+</a>
+</div>
+<img src="#(content.image.url)" alt="#(content.image.alt)" />
+</div>

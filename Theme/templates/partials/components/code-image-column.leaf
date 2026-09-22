@@ -1,0 +1,18 @@
+<div class="code-image-column content-wrapper">
+<div class="text-wrapper">
+#if(content.headline):
+<h2>#(content.headline)</h2>
+#endif
+#if(content.body):
+<p class="body-copy">#unsafeHTML(content.body)</p>
+#endif
+#if(content.link):
+<a class="body-copy" href="#(content.link.url)">#(content.link.text)
+</a>
+#endif
+</div>
+<div class="card-wrapper">
+<div class="code body-copy">#swiftCode(content.code)</div>
+<img src="#(content.image.url)" alt="#(content.image.alt)" />
+</div>
+</div>

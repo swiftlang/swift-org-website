@@ -1,0 +1,26 @@
+#extend("base"):
+#export("content"):
+<div class="get-started">
+
+#extend("partials/components/get-started-hero", boxed.new_data.get_started.cloud_services.hero)
+
+#extend("partials/components/image-text-row", boxed.new_data.get_started.cloud_services.image_text_row)
+
+#extend("partials/components/card-grid", boxed.new_data.get_started.cloud_services.secondary_content)
+
+#extend("partials/components/card-grid", boxed.new_data.get_started.cloud_services.tertiary_content_cloud_native)
+
+
+#extend("partials/components/headline-section", boxed.new_data.get_started.cloud_services.headline_section)
+
+#extend("partials/components/code-box", boxed.new_data.get_started.cloud_services.code_box)
+
+#extend("partials/components/card-grid", boxed.new_data.get_started.cloud_services.tertiary_content)
+
+<!-- Resources -->
+
+#extend("partials/components/link-columns", boxed.new_data.get_started.cloud_services.link_columns)
+
+</div>
+#endexport
+#endextend

@@ -1,4 +1,0 @@
----
-layout: none
----
-{{ site.data.builds.swiftly_release | jsonify }}

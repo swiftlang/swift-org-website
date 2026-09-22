@@ -1,0 +1,3 @@
+{ "x86_64": {{builds.development.windows10}},
+  "arm64": {{builds.development.windows10-arm64}}
+}

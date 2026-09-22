@@ -1,0 +1,1 @@
+{{ site.data.server-workgroup.projects | where:"maturity","Graduated" | map: "url" | jsonify }}

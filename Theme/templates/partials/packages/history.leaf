@@ -1,0 +1,11 @@
+<!-- One month of the Community Showcase archive. `month` comes from PageContext. -->
+<section class="package-list">
+  <nav>
+    <a href="/packages/showcase.html" rel="parent">Community Showcase</a>
+  </nav>
+  <ul>
+    #for(package in month.packages):
+    #extend("partials/packages/package", package)
+    #endfor
+  </ul>
+</section>

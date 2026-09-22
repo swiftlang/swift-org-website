@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" media="all" href="/assets/stylesheets/new-stylesheets/application.css" />
+    #extend("partials/head")
+  </head>
+
+  <body>
+    <script>
+      // Set theme before body content to avoid flash of light styles in dark mode
+      setColorScheme(getStoredScheme())
+    </script>
+    <main>
+      #extend("partials/header")
+      #import("content")
+      #extend("partials/footer")
+    </main>
+
+    <script src="/assets/javascripts/new-javascripts/application.js"></script>
+    #if(page.isHome):
+    <script src="/assets/javascripts/new-javascripts/landing.js"></script>
+    #endif
+    #if(page.frontMatter.blogIndex):
+    <script src="/assets/javascripts/new-javascripts/blog.js"></script>
+    #endif
+    #extend("partials/metrics")
+  </body>
+</html>

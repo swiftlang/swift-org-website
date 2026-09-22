@@ -1,0 +1,46 @@
+<!-- `_includes/new-includes/components/code-box.html`.
+     Context: `content` (a `_data` entry) and optional `withTabs`. -->
+<div class="code-box content-wrapper #if(withTabs):code-box-with-tabs#endif">
+<h2>#(content.headline)</h2>
+#if(content.pre_code_text):
+<p class="body-copy">#unsafeHTML(content.pre_code_text)</p>
+#endif
+#if(content.tabs):
+<nav>
+<ul class="code-box-tabs">
+#for(tab in content.tabs):
+<li class="body-copy#if(isFirst): active#endif">
+<button data-tab-index="#(index)">#(tab.label)</button>
+</li>
+#endfor
+</ul>
+</nav>
+#for(tab in content.tabs):
+<pre data-tab-index="#(index)" class="#if(isFirst):active#endif"><code>#(tab.code)</code></pre>
+#endfor
+#else:
+#if(content.code):
+<pre><code>#(content.code)</code></pre>
+#endif
+#endif
+#if(content.after_code_text):
+<p class="body-copy">#unsafeHTML(content.after_code_text)</p>
+#endif
+#if(content.links):
+<div class="link-wrapper">
+#for(link in content.links):
+#if(link.group):
+<div class="link-group">
+#for(item in link.group):
+<a class="body-copy" href="#(item.href)">#(item.copy)</a>#if(!isLast):|#endif
+#endfor
+</div>
+#else:
+<div class="link-single">
+<a class="body-copy" href="#(link.href)">#(link.copy)</a>
+</div>
+#endif
+#endfor
+</div>
+#endif
+</div>

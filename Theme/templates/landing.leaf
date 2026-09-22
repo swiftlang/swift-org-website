@@ -1,0 +1,69 @@
+#extend("base"):
+#export("content"):
+<div class="animation-container">
+<canvas id="purple-swoop" width="1248" height="1116"></canvas>
+<canvas id="white-swoop-1" width="1248" height="1116"></canvas>
+<canvas id="orange-swoop-top" width="1248" height="1116"></canvas>
+<canvas id="orange-swoop-bottom" width="1248" height="1116"></canvas>
+<canvas id="white-swoop-2" width="1248" height="1116"></canvas>
+<canvas id="bird" width="1248" height="1116"></canvas>
+</div>
+<section id="what-is-swift" class="section">
+<div class="hero-content">
+<h1 class="title-0">Swift is the powerful, flexible,<br /> multiplatform programming language.</h1>
+<div class="sub-text"><h2>Fast. Expressive. Safe.</h2></div>
+<a href="/install/" data-text="Install">Install</a>
+<p>Tools for Linux, macOS, and Windows</p>
+<h2>Create using Swift</h2>
+</div>
+<nav aria-label="Get started with Swift">
+<ul class="primary-links">
+#for(item in data.new_data.landing.get_started_primary):
+<li>
+<a href="#(item.link)" data-text="#(item.data_text)">
+<i class="#(item.icon)"></i>
+<div>
+<h3 class="title">#(item.title)</h3>
+<p class="subtitle">#(item.subtitle)</p>
+</div>
+</a>
+</li>
+#endfor
+</ul>
+<ul class="secondary-links">
+#for(item in data.new_data.landing.get_started_secondary):
+<li>
+<a href="#(item.link)" data-text="#(item.data_text)">
+<h4 class="title">#(item.title)</h4>
+</a>
+</li>
+#endfor
+</ul>
+</nav>
+<div class="swoop swoop-0 swoop-anim"></div>
+</section>
+<section id="pillar-1" class="section pillar">
+<div class="pillar-wrapper content-wrapper">
+<p class="pillar-intro">
+Swift is designed to be the language you reach for at every layer of the software stack. Whether you are building embedded firmware, full-featured mobile apps, or internet-scale services, Swift delivers expressive language features and APIs, performance control when you need it, and strong safety guarantees.
+</p>
+</div>
+#for(callout in pillar1):
+#extend("partials/components/callout", callout)
+#endfor
+<div class="swoop swoop-1 swoop-anim"></div>
+</section>
+<section id="pillar-2" class="section pillar">
+#for(callout in pillar2):
+#extend("partials/components/callout", callout)
+#endfor
+<div class="swoop swoop-2 swoop-anim"></div>
+</section>
+<section id="pillar-3" class="section pillar">
+#for(callout in pillar3):
+#extend("partials/components/callout", callout)
+#endfor
+</section>
+
+#endexport
+#endextend
