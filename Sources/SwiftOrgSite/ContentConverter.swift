@@ -106,7 +106,7 @@ struct ContentConverter {
                 "displayDate": DateFormat.display.string(from: post.date),
                 "category": post.category,
                 "authors": post.authors.joined(separator: ","),
-                "description": (post.description ?? post.excerpt).strippingHTML,
+                "description": (post.description ?? post.excerpt).markdownExcerptText,
             ]
             if let url = post.featuredImage["url"].string {
                 frontMatter["featuredImage"] = url
@@ -122,13 +122,13 @@ struct ContentConverter {
             if index > 0 {
                 frontMatter["previousTitle"] = posts[index - 1].title
                 frontMatter["previousURL"] = posts[index - 1].url
-                frontMatter["previousExcerpt"] = posts[index - 1].excerpt.strippingHTML
+                frontMatter["previousExcerpt"] = posts[index - 1].excerpt.markdownExcerptText
                 frontMatter["previousDate"] = DateFormat.display.string(from: posts[index - 1].date)
             }
             if index < posts.count - 1 {
                 frontMatter["nextTitle"] = posts[index + 1].title
                 frontMatter["nextURL"] = posts[index + 1].url
-                frontMatter["nextExcerpt"] = posts[index + 1].excerpt.strippingHTML
+                frontMatter["nextExcerpt"] = posts[index + 1].excerpt.markdownExcerptText
                 frontMatter["nextDate"] = DateFormat.display.string(from: posts[index + 1].date)
             }
             try write(frontMatter: frontMatter, body: post.body, to: post.contentPath)
@@ -222,9 +222,11 @@ struct ContentConverter {
         let source = document.sourcePath
 
         // `redirect_from` aliases point at this page's own URL, whether or not
-        // the page itself then redirects onward.
-        let aliases = (document.frontMatter["redirect_from"].string ?? "")
-            .split(separator: ",")
+        // the page itself then redirects onward. Jekyll accepts either a YAML
+        // list or a lone value, so take both: a list that silently read as no
+        // aliases would drop the redirects without a word.
+        let aliases = document.frontMatter["redirect_from"].array
+            .flatMap { ($0.string ?? "").split(separator: ",") }
             .map { $0.trimmingCharacters(in: .whitespaces) }
             .filter { !$0.isEmpty }
         for alias in aliases {

@@ -1,6 +1,7 @@
 ---
 template: page
 title: Getting Started with Swift SDKs for WebAssembly
+contentTemplating: true
 ---
 
 [WebAssembly (Wasm) is a virtual instruction set](https://webassembly.org/) focused on portability, security, and
@@ -56,11 +57,11 @@ platform:
 @main
 struct wasi_test {
     static func main() {
-#if os(WASI)
+\#if os(WASI)
         print("Hello from WASI!")
-#else
+\#else
         print("Hello from the host system!")
-#endif
+\#endif
     }
 }
 ```

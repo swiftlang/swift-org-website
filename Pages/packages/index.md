@@ -21,6 +21,14 @@ Browse a small selection of interesting packages in popular categories from arou
 </li>
 #endfor
 </ul>
+<p>
+  There are thousands more packages to browse at the
+  <a href="https://swiftpackageindex.com" target="_blank">Swift Package Index</a>,
+  along with all the metadata you need to make better decisions about your dependencies.
+</p>
+<a href="https://swiftpackageindex.com" target="_blank" class="cta-secondary external">
+  Browse more packages
+</a>
 <p class="banner">
   <strong>Get involved!</strong> Packages in the Community Showcase are nominated by community members like you. This is your chance to share new or interesting packages with others. <a href="https://forums.swift.org/t/68168">Nominate packages here</a> and you could see them featured next month!
 </p>

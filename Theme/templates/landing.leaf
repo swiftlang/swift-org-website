@@ -34,7 +34,8 @@
 #for(item in data.new_data.landing.get_started_secondary):
 <li>
 <a href="#(item.link)" data-text="#(item.data_text)">
-<h4 class="title">#(item.title)</h4>
+<!-- The data writes HTML entities (`&amp;`) and Liquid passed them through. -->
+<h4 class="title">#unsafeHTML(item.title)</h4>
 </a>
 </li>
 #endfor
