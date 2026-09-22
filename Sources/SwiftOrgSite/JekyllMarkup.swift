@@ -26,12 +26,31 @@ extension PostProcessor {
         var changed = 0
         for file in try htmlFiles() {
             let html = try String(contentsOf: file, encoding: .utf8)
-            let rewritten = Self.markInlineCode(Self.addHeadingAnchors(html))
+            let rewritten = Self.addAndroidTrademark(Self.markInlineCode(Self.addHeadingAnchors(html)))
             guard rewritten != html else { continue }
             try rewritten.write(to: file, atomically: true, encoding: .utf8)
             changed += 1
         }
         return changed
+    }
+
+    /// Jekyll's footer carried `{% if content contains "android" %}`, so the
+    /// Android trademark line shows only on pages whose own content mentions
+    /// Android. A Leaf partial can't see the rendered body, so it goes here,
+    /// where the whole page is in hand.
+    static func addAndroidTrademark(_ html: String) -> String {
+        let marker = "<div class=\"copyright\">"
+        guard let copyright = html.range(of: marker),
+              html[html.startIndex..<copyright.lowerBound].contains("android")
+        else { return html }
+
+        let appleTrademark = "Swift and the Swift logo are trademarks of Apple Inc.\n          </p>"
+        guard let end = html.range(of: appleTrademark, range: copyright.upperBound..<html.endIndex) else {
+            return html
+        }
+        return html.replacingCharacters(
+            in: end,
+            with: appleTrademark + "\n          <p>Android is a trademark of Google LLC.</p>")
     }
 
     /// Replace Kiln's `<a class="headerlink">#</a>` with the Jekyll anchor.

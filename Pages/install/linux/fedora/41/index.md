@@ -1,6 +1,5 @@
 ---
 template: install-linux-version
 title: Install Swift
-redirect_from:
-  - /install/linux/fedora/39
+redirect_from: /install/linux/fedora/39
 ---

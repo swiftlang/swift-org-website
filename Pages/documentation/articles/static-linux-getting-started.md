@@ -1,6 +1,7 @@
 ---
 template: page
 title: Getting Started with the Static Linux SDK
+contentTemplating: true
 ---
 
 It's well known that Swift can be used to build software for Apple
@@ -252,15 +253,15 @@ you may have a little work to do.  Such packages often contain files
 with code like the following:
 
 ```swift
-#if os(macOS) || os(iOS)
+\#if os(macOS) || os(iOS)
 import Darwin
-#elseif os(Linux)
+\#elseif os(Linux)
 import Glibc
-#elseif os(Windows)
+\#elseif os(Windows)
 import ucrt
-#else
-#error("Unknown platform")
-#endif
+\#else
+\#error("Unknown platform")
+\#endif
 ```
 
 The Static Linux SDK does not use Glibc; instead, it is built on top
@@ -277,17 +278,17 @@ If you are using such a dependency, you will therefore need to adjust
 it to import the `Musl` module instead of the `Glibc` module:
 
 ```swift
-#if os(macOS) || os(iOS)
+\#if os(macOS) || os(iOS)
 import Darwin
-#elseif canImport(Glibc)
+\#elseif canImport(Glibc)
 import Glibc
-#elseif canImport(Musl)
+\#elseif canImport(Musl)
 import Musl
-#elseif os(Windows)
+\#elseif os(Windows)
 import ucrt
-#else
-#error("Unknown platform")
-#endif
+\#else
+\#error("Unknown platform")
+\#endif
 ```
 
 Occasionally there might be a difference between the way a C library

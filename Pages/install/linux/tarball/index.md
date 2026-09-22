@@ -1,6 +1,7 @@
 ---
 template: page
 title: Linux Installation via Tarball
+contentTemplating: true
 ---
 
 ## Installation via Tarball
@@ -155,7 +156,7 @@ $ apt-get install \
 </details>
 
 
-**2. Download the latest binary release** ([#(data.builds.swift_releases.last.name)](/download/#releases)).
+**2. Download the latest binary release** ([#(latestRelease)](/download/#releases)).
 
 The `swift-<VERSION>-<PLATFORM>.tar.gz` file is the toolchain itself.
 The `.sig` file is the digital signature.
