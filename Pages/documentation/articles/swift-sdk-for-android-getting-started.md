@@ -1,6 +1,7 @@
 ---
 template: page
 title: Getting Started with the Swift SDK for Android
+contentTemplating: true
 ---
 
 Since it was first open-sourced in 2015, Swift has grown from a language focused on creating apps for Darwin-based systems (iOS, macOS, etc.) into a cross-platform development language supporting Linux, Windows, and various embedded systems. With the release of the Swift SDK for Android, it is now possible to use Swift for Android application development as well.

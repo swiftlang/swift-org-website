@@ -2,9 +2,7 @@
 template: page
 title: Swift.org security
 contentTemplating: true
-redirect_from:
-  - /support/security.html
-  - /support/security
+redirect_from: /support/security.html, /support/security
 ---
 ## Report a security vulnerability
 

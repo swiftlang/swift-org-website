@@ -294,7 +294,7 @@ extension InstallData {
         }
 
         return .dictionary([
-            "dockerImage": entry["docker"] ?? .string(""),
+            "dockerImage": .string(entry["docker"].string ?? ""),
             "tarballs": .array(tarballs),
         ])
     }
