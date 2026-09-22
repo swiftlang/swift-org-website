@@ -1,6 +1,6 @@
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/CLI/StaticFileServer.swift .kiln/Sources/CLI/StaticFileServer.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/CLI/StaticFileServer.swift	2026-09-22 19:40:47
-+++ .kiln/Sources/CLI/StaticFileServer.swift	2026-09-22 19:54:25
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/CLI/StaticFileServer.swift kiln-rebase/Sources/CLI/StaticFileServer.swift
+--- kiln-head/Sources/CLI/StaticFileServer.swift	2026-09-22 20:13:06
++++ kiln-rebase/Sources/CLI/StaticFileServer.swift	2026-09-22 20:13:14
 @@ -98,6 +98,21 @@
          return components.joined(separator: "/")
      }
@@ -58,16 +58,16 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
      }
  
      private func writeResponse(context: ChannelHandlerContext, status: HTTPResponseStatus,
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Configuration/KilnSite.swift .kiln/Sources/Kiln/Configuration/KilnSite.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Configuration/KilnSite.swift	2026-09-22 19:40:47
-+++ .kiln/Sources/Kiln/Configuration/KilnSite.swift	2026-08-29 03:01:22
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Configuration/KilnSite.swift kiln-rebase/Sources/Kiln/Configuration/KilnSite.swift
+--- kiln-head/Sources/Kiln/Configuration/KilnSite.swift	2026-09-22 20:13:06
++++ kiln-rebase/Sources/Kiln/Configuration/KilnSite.swift	2026-09-22 20:16:44
 @@ -1,3 +1,5 @@
 +public import LeafKit
 +
  /// Information about the source repository, used for "edit this page" links
  /// and the repository link in the header.
  public struct Repository: Sendable {
-@@ -103,6 +105,25 @@
+@@ -103,6 +105,29 @@
      /// when the site is not versioned; otherwise each ``DocVersion`` carries its
      /// own unlisted pages.
      public var unlistedPages: [UnlistedPage]
@@ -84,6 +84,10 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
 +    ///
 +    /// Leaf can't subscript by a variable, so a page that needs to select data
 +    /// by its own identity resolves it here instead.
++    ///
++    /// Set after construction (`site.pageContext = { … }`) rather than in
++    /// ``init(name:url:...)``: a closure parameter there would capture the
++    /// trailing closure that existing call sites use for `navigation`.
 +    public var pageContext: (@Sendable (String) -> [String: LeafData])?
 +    /// Extra top-level values exposed to every template, merged into the render
 +    /// context alongside `site`, `page` and `nav`. Lets a site drive templates
@@ -93,29 +97,27 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
      /// The navigation tree (used when the site is not versioned; otherwise each
      /// ``DocVersion`` carries its own navigation).
      public var navigation: [NavItem]
-@@ -135,6 +156,9 @@
+@@ -135,6 +160,8 @@
          docc: DocCSite? = nil,
          versions: [DocVersion] = [],
          unlistedPages: [UnlistedPage] = [],
 +        extraContext: [String: LeafData] = [:],
 +        contentTemplating: Bool = false,
-+        pageContext: (@Sendable (String) -> [String: LeafData])? = nil,
          @NavBuilder navigation: () -> [NavItem] = { [] }
      ) {
          self.name = name
-@@ -160,6 +184,9 @@
+@@ -160,6 +187,8 @@
          self.docc = docc
          self.versions = versions
          self.unlistedPages = unlistedPages
 +        self.extraContext = extraContext
 +        self.contentTemplating = contentTemplating
-+        self.pageContext = pageContext
          self.navigation = navigation()
      }
  
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Configuration/MarkdownExtensions.swift .kiln/Sources/Kiln/Configuration/MarkdownExtensions.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Configuration/MarkdownExtensions.swift	2026-09-22 19:40:47
-+++ .kiln/Sources/Kiln/Configuration/MarkdownExtensions.swift	2026-09-22 19:36:29
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Configuration/MarkdownExtensions.swift kiln-rebase/Sources/Kiln/Configuration/MarkdownExtensions.swift
+--- kiln-head/Sources/Kiln/Configuration/MarkdownExtensions.swift	2026-09-22 20:13:06
++++ kiln-rebase/Sources/Kiln/Configuration/MarkdownExtensions.swift	2026-09-22 20:13:14
 @@ -30,14 +30,27 @@
      public var metadata: Bool
      /// Table-of-contents / heading anchor options (`toc`).
@@ -145,9 +147,9 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
 +        self.codeRenderer = codeRenderer
      }
  }
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Content/FrontMatter.swift .kiln/Sources/Kiln/Content/FrontMatter.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Content/FrontMatter.swift	2026-09-22 19:40:47
-+++ .kiln/Sources/Kiln/Content/FrontMatter.swift	2026-08-29 03:02:32
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Content/FrontMatter.swift kiln-rebase/Sources/Kiln/Content/FrontMatter.swift
+--- kiln-head/Sources/Kiln/Content/FrontMatter.swift	2026-09-22 20:13:06
++++ kiln-rebase/Sources/Kiln/Content/FrontMatter.swift	2026-09-22 20:13:14
 @@ -24,6 +24,15 @@
      public var image: String? { values["image"] }
      /// An optional Leaf template name override (e.g. `template: landing`).
@@ -164,9 +166,9 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
  
      public static let empty = FrontMatter()
  }
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Markdown/HTMLRenderer.swift .kiln/Sources/Kiln/Markdown/HTMLRenderer.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Markdown/HTMLRenderer.swift	2026-09-22 19:40:47
-+++ .kiln/Sources/Kiln/Markdown/HTMLRenderer.swift	2026-09-22 19:37:16
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Markdown/HTMLRenderer.swift kiln-rebase/Sources/Kiln/Markdown/HTMLRenderer.swift
+--- kiln-head/Sources/Kiln/Markdown/HTMLRenderer.swift	2026-09-22 20:13:06
++++ kiln-rebase/Sources/Kiln/Markdown/HTMLRenderer.swift	2026-09-22 20:13:14
 @@ -40,15 +40,23 @@
      private let slugger: Slugger
      private let toc: TableOfContentsOptions
@@ -263,9 +265,9 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
          result += "<p>"
          descendInto(paragraph)
          result += "</p>\n"
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Markdown/MarkdownRenderer.swift .kiln/Sources/Kiln/Markdown/MarkdownRenderer.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Markdown/MarkdownRenderer.swift	2026-09-22 19:40:47
-+++ .kiln/Sources/Kiln/Markdown/MarkdownRenderer.swift	2026-09-22 19:37:16
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Markdown/MarkdownRenderer.swift kiln-rebase/Sources/Kiln/Markdown/MarkdownRenderer.swift
+--- kiln-head/Sources/Kiln/Markdown/MarkdownRenderer.swift	2026-09-22 20:13:06
++++ kiln-rebase/Sources/Kiln/Markdown/MarkdownRenderer.swift	2026-09-22 20:13:14
 @@ -81,7 +81,7 @@
              case .markdown(let text):
                  guard !text.isBlank else { continue }
@@ -275,9 +277,9 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
                  renderer.visit(document)
                  html += renderer.result
                  headings.append(contentsOf: renderer.headings)
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/InMemoryLeafSource.swift .kiln/Sources/Kiln/Rendering/InMemoryLeafSource.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/InMemoryLeafSource.swift	1970-01-01 01:00:00
-+++ .kiln/Sources/Kiln/Rendering/InMemoryLeafSource.swift	2026-08-29 03:00:30
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Rendering/InMemoryLeafSource.swift kiln-rebase/Sources/Kiln/Rendering/InMemoryLeafSource.swift
+--- kiln-head/Sources/Kiln/Rendering/InMemoryLeafSource.swift	1970-01-01 01:00:00
++++ kiln-rebase/Sources/Kiln/Rendering/InMemoryLeafSource.swift	2026-09-22 20:13:14
 @@ -0,0 +1,33 @@
 +import LeafKit
 +import NIOConcurrencyHelpers
@@ -312,9 +314,9 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
 +        return eventLoop.makeSucceededFuture(buffer)
 +    }
 +}
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/MarkdownTag.swift .kiln/Sources/Kiln/Rendering/MarkdownTag.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/MarkdownTag.swift	1970-01-01 01:00:00
-+++ .kiln/Sources/Kiln/Rendering/MarkdownTag.swift	2026-08-29 03:10:52
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Rendering/MarkdownTag.swift kiln-rebase/Sources/Kiln/Rendering/MarkdownTag.swift
+--- kiln-head/Sources/Kiln/Rendering/MarkdownTag.swift	1970-01-01 01:00:00
++++ kiln-rebase/Sources/Kiln/Rendering/MarkdownTag.swift	2026-09-22 20:13:14
 @@ -0,0 +1,21 @@
 +import LeafKit
 +
@@ -337,9 +339,9 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
 +        return .string(renderer.render(source).html)
 +    }
 +}
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/RenderContext.swift .kiln/Sources/Kiln/Rendering/RenderContext.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/RenderContext.swift	2026-09-22 19:40:47
-+++ .kiln/Sources/Kiln/Rendering/RenderContext.swift	2026-08-29 03:01:22
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Rendering/RenderContext.swift kiln-rebase/Sources/Kiln/Rendering/RenderContext.swift
+--- kiln-head/Sources/Kiln/Rendering/RenderContext.swift	2026-09-22 20:13:06
++++ kiln-rebase/Sources/Kiln/Rendering/RenderContext.swift	2026-09-22 20:13:14
 @@ -152,8 +152,15 @@
          language.siteName ?? site.name
      }
@@ -366,9 +368,9 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
      }
  
      private var currentVersionData: LeafData {
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/TemplateRenderer.swift .kiln/Sources/Kiln/Rendering/TemplateRenderer.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/TemplateRenderer.swift	2026-09-22 19:40:47
-+++ .kiln/Sources/Kiln/Rendering/TemplateRenderer.swift	2026-08-29 03:00:30
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Rendering/TemplateRenderer.swift kiln-rebase/Sources/Kiln/Rendering/TemplateRenderer.swift
+--- kiln-head/Sources/Kiln/Rendering/TemplateRenderer.swift	2026-09-22 20:13:06
++++ kiln-rebase/Sources/Kiln/Rendering/TemplateRenderer.swift	2026-09-22 20:13:14
 @@ -18,6 +18,8 @@
      private let eventLoopGroup: MultiThreadedEventLoopGroup
      private let threadPool: NIOThreadPool
@@ -408,9 +410,24 @@ diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users
      }
  
      /// Render a template (e.g. `"page"`, `"partials/nav"`) with the given context.
-diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Site/SiteGenerator.swift .kiln/Sources/Kiln/Site/SiteGenerator.swift
---- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Site/SiteGenerator.swift	2026-09-22 19:40:47
-+++ .kiln/Sources/Kiln/Site/SiteGenerator.swift	2026-08-29 03:10:58
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Search/SearchIndexBuilder.swift kiln-rebase/Sources/Kiln/Search/SearchIndexBuilder.swift
+--- kiln-head/Sources/Kiln/Search/SearchIndexBuilder.swift	2026-09-22 20:13:06
++++ kiln-rebase/Sources/Kiln/Search/SearchIndexBuilder.swift	2026-09-22 20:24:33
+@@ -53,7 +53,10 @@
+ 
+     func jsonData() throws -> Data {
+         let encoder = JSONEncoder()
+-        encoder.outputFormatting = [.withoutEscapingSlashes]
++        // `.sortedKeys` keeps the index byte-reproducible: JSONEncoder's keyed
++        // containers otherwise serialise in per-process hash order, so two
++        // builds of unchanged content produce differing files.
++        encoder.outputFormatting = [.sortedKeys, .withoutEscapingSlashes]
+         return try encoder.encode(SearchIndex(docs: documents))
+     }
+ 
+diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Site/SiteGenerator.swift kiln-rebase/Sources/Kiln/Site/SiteGenerator.swift
+--- kiln-head/Sources/Kiln/Site/SiteGenerator.swift	2026-09-22 20:13:06
++++ kiln-rebase/Sources/Kiln/Site/SiteGenerator.swift	2026-09-22 20:13:14
 @@ -71,7 +71,11 @@
          try site.validate()
  
