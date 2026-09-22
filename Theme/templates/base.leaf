@@ -16,6 +16,8 @@
       #extend("partials/footer")
     </main>
 
+    <script src="/assets/javascripts/new-javascripts/vendor/highlight.min.js"></script>
+    <script src="/assets/javascripts/new-javascripts/syntax-highlighting.js"></script>
     <script src="/assets/javascripts/new-javascripts/application.js"></script>
     #if(page.isHome):
     <script src="/assets/javascripts/new-javascripts/landing.js"></script>

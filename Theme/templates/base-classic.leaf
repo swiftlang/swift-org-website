@@ -15,6 +15,8 @@
       #import("content")
     </main>
     #extend("partials/footer")
+    <script src="/assets/javascripts/new-javascripts/vendor/highlight.min.js"></script>
+    <script src="/assets/javascripts/new-javascripts/syntax-highlighting.js"></script>
     <script src="/assets/javascripts/application.js"></script>
     #extend("partials/metrics")
   </body>

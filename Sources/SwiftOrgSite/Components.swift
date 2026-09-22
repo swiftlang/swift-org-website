@@ -101,7 +101,7 @@ struct Components: Sendable {
         html += "</div>"
 
         if let code, hasCode {
-            html += #"<div class="code">\#(SwiftHighlighter.codeBlock(code))</div>"#
+            html += #"<div class="code">\#(CodeBlock.render(code))</div>"#
         }
 
         let links = callout["links"].array

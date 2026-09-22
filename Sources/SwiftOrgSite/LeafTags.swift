@@ -29,7 +29,7 @@ struct CurrentYearTag: LeafTag {
 struct SwiftCodeTag: UnsafeUnescapedLeafTag {
     func render(_ ctx: LeafContext) throws -> LeafData {
         guard let source = ctx.parameters.first?.string, !source.isEmpty else { return .string("") }
-        return .string(SwiftHighlighter.codeBlock(source, language: "swift"))
+        return .string(CodeBlock.render(source, language: "swift"))
     }
 }
 

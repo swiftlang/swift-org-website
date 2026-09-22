@@ -205,16 +205,16 @@ Skip this step if you have imported the keys in the past. This does not apply to
 
   <div class="language-shell highlighter-rouge">
     <div class="highlight">
-      <pre class="highlight"><code><span class="nv">$ </span>gpg <span class="nt">--keyserver</span> hkp://keyserver.ubuntu.com <span class="nt">--refresh-keys</span> Swift</code></pre>
+      <pre class="highlight"><code class="language-shell">$ gpg --keyserver hkp://keyserver.ubuntu.com --refresh-keys Swift</code></pre>
     </div>
   </div>
   <p>Then, use the signature file to verify that the archive is intact:</p>
   <div class="language-shell highlighter-rouge">
     <div class="highlight">
       <pre class="highlight">
-        <code><span class="nv">$ </span>gpg <span class="nt">--verify</span> swift-&lt;VERSION&gt;-&lt;PLATFORM&gt;.tar.gz.sig
+        <code class="language-shell">$ gpg --verify swift-&lt;VERSION&gt;-&lt;PLATFORM&gt;.tar.gz.sig
   ...
-  gpg: Good signature from <span class="s2">"Swift Automatic Signing Key #4 &lt;swift-infrastructure@forums.swift.org&gt;"</span>
+  gpg: Good signature from "Swift Automatic Signing Key #4 &lt;swift-infrastructure@forums.swift.org&gt;"
         </code>
       </pre>
     </div>
@@ -226,7 +226,7 @@ Skip this step if you have imported the keys in the past. This does not apply to
   <div class="language-shell highlighter-rouge">
     <div class="highlight">
       <pre class="highlight">
-        <code>gpg: WARNING: This key is not certified with a trusted signature!
+        <code class="language-shell">gpg: WARNING: This key is not certified with a trusted signature!
   gpg: There is no indication that the signature belongs to the owner.
         </code>
       </pre>
