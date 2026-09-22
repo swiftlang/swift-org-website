@@ -1,0 +1,14 @@
+<div class="code-text-row content-wrapper">
+<h2>#(content.headline)</h2>
+<div class="card-wrapper">
+<div class="code body-copy">#swiftCode(content.code)</div>
+<div class="copy-wrapper">
+<h3>#(content.copy.headline)</h3>
+#for(paragraph in content.copy.paragraphs):
+<p class="body-copy">#unsafeHTML(paragraph)</p>
+#endfor
+<a href="#(content.copy.link.url)">#(content.copy.link.text)
+</a>
+</div>
+</div>
+</div>

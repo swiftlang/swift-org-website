@@ -1,0 +1,12 @@
+#extend("base-classic"):
+#export("content"):
+<article class="page-wide">
+  #if(page.frontMatter.hideTitle):#else:
+  <header>
+    <h1>#(page.title)</h1>
+  </header>
+  #endif
+  #unsafeHTML(page.content)
+</article>
+#endexport
+#endextend

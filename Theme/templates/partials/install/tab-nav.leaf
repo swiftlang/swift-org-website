@@ -1,0 +1,11 @@
+<!-- `_includes/new-includes/components/tab-nav.html`. Context: `tabs`, `class`,
+     `selected` — each tab pre-marked `isSelected` by PageContext. -->
+<div class="tab-nav #(class)">
+<div class="tabs">
+#for(tab in tabs):
+<a href="#(tab.url)" class="body-copy#if(tab.isSelected): active#endif" data-tab-nameX="#(tab.slug)" aria-pressed="#if(tab.isSelected):true#else:false#endif">
+#(tab.name)
+</a>
+#endfor
+</div>
+</div>

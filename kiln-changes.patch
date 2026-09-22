@@ -1,0 +1,509 @@
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/CLI/StaticFileServer.swift .kiln/Sources/CLI/StaticFileServer.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/CLI/StaticFileServer.swift	2026-09-22 19:40:47
++++ .kiln/Sources/CLI/StaticFileServer.swift	2026-09-22 19:54:25
+@@ -98,6 +98,21 @@
+         return components.joined(separator: "/")
+     }
+ 
++    /// The trailing-slash form of a directory URI, when the request omitted it
++    /// and the directory really does hold an `index.html`. `nil` when the URI is
++    /// already canonical, names a file, or resolves to nothing.
++    static func canonicalRedirect(forURI uri: String, relative: String, in directory: URL) -> String? {
++        var path = uri
++        var suffix = ""
++        if let separator = path.firstIndex(where: { $0 == "?" || $0 == "#" }) {
++            suffix = String(path[separator...])
++            path = String(path[..<separator])
++        }
++        guard !path.isEmpty, !path.hasSuffix("/"), relative.hasSuffix("index.html") else { return nil }
++        guard (try? directory.appendingPathComponent(relative).checkResourceIsReachable()) == true else { return nil }
++        return path + "/" + suffix
++    }
++
+     /// A `Content-Type` value for a file extension (lowercased, no dot).
+     static func contentType(forExtension ext: String) -> String {
+         switch ext.lowercased() {
+@@ -169,6 +184,16 @@
+             return
+         }
+ 
++        // A directory URL without its trailing slash gets the canonical redirect
++        // every production host issues (nginx, Netlify, S3/CloudFront, GitHub
++        // Pages). Serving `foo/index.html` straight from `/foo` would resolve the
++        // page's *relative* links against `/` instead of `/foo/`, so a script
++        // doing `location.replace("macos")` would land on `/macos`.
++        if let canonical = StaticFileServer.canonicalRedirect(forURI: head.uri, relative: relative, in: directory) {
++            writeRedirect(context: context, location: canonical, keepAlive: keepAlive)
++            return
++        }
++
+         let fileURL = directory.appendingPathComponent(relative)
+         if let data = try? Data(contentsOf: fileURL) {
+             let ext = (relative as NSString).pathExtension
+@@ -188,6 +213,17 @@
+                           contentType: "text/plain; charset=utf-8",
+                           body: Array("404 Not Found".utf8), keepAlive: keepAlive)
+         }
++    }
++
++    private func writeRedirect(context: ChannelHandlerContext, location: String, keepAlive: Bool) {
++        var headers = HTTPHeaders()
++        headers.add(name: "Location", value: location)
++        headers.add(name: "Content-Length", value: "0")
++        headers.add(name: "Connection", value: keepAlive ? "keep-alive" : "close")
++        let responseHead = HTTPResponseHead(version: .http1_1, status: .movedPermanently, headers: headers)
++        context.write(wrapOutboundOut(.head(responseHead)), promise: nil)
++        context.writeAndFlush(wrapOutboundOut(.end(nil)), promise: nil)
++        if !keepAlive { context.close(promise: nil) }
+     }
+ 
+     private func writeResponse(context: ChannelHandlerContext, status: HTTPResponseStatus,
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Configuration/KilnSite.swift .kiln/Sources/Kiln/Configuration/KilnSite.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Configuration/KilnSite.swift	2026-09-22 19:40:47
++++ .kiln/Sources/Kiln/Configuration/KilnSite.swift	2026-08-29 03:01:22
+@@ -1,3 +1,5 @@
++public import LeafKit
++
+ /// Information about the source repository, used for "edit this page" links
+ /// and the repository link in the header.
+ public struct Repository: Sendable {
+@@ -103,6 +105,25 @@
+     /// when the site is not versioned; otherwise each ``DocVersion`` carries its
+     /// own unlisted pages.
+     public var unlistedPages: [UnlistedPage]
++    /// Render each page's markdown body as a Leaf template before converting it
++    /// to HTML, so content can use the same partials, tags and context as the
++    /// theme (`#extend("partials/members")`, `#for(item in data.…)`).
++    ///
++    /// Off by default: a body containing `#` sequences would otherwise be
++    /// interpreted as Leaf syntax.
++    public var contentTemplating: Bool
++    /// Per-page template values, keyed by the page's logical path (e.g.
++    /// `"install/macos/index.md"`). Merged over ``extraContext`` and under
++    /// Kiln's own reserved keys.
++    ///
++    /// Leaf can't subscript by a variable, so a page that needs to select data
++    /// by its own identity resolves it here instead.
++    public var pageContext: (@Sendable (String) -> [String: LeafData])?
++    /// Extra top-level values exposed to every template, merged into the render
++    /// context alongside `site`, `page` and `nav`. Lets a site drive templates
++    /// from its own data (`#for(item in data.navigation)`) instead of having to
++    /// pre-render fragments to HTML.
++    public var extraContext: [String: LeafData]
+     /// The navigation tree (used when the site is not versioned; otherwise each
+     /// ``DocVersion`` carries its own navigation).
+     public var navigation: [NavItem]
+@@ -135,6 +156,9 @@
+         docc: DocCSite? = nil,
+         versions: [DocVersion] = [],
+         unlistedPages: [UnlistedPage] = [],
++        extraContext: [String: LeafData] = [:],
++        contentTemplating: Bool = false,
++        pageContext: (@Sendable (String) -> [String: LeafData])? = nil,
+         @NavBuilder navigation: () -> [NavItem] = { [] }
+     ) {
+         self.name = name
+@@ -160,6 +184,9 @@
+         self.docc = docc
+         self.versions = versions
+         self.unlistedPages = unlistedPages
++        self.extraContext = extraContext
++        self.contentTemplating = contentTemplating
++        self.pageContext = pageContext
+         self.navigation = navigation()
+     }
+ 
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Configuration/MarkdownExtensions.swift .kiln/Sources/Kiln/Configuration/MarkdownExtensions.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Configuration/MarkdownExtensions.swift	2026-09-22 19:40:47
++++ .kiln/Sources/Kiln/Configuration/MarkdownExtensions.swift	2026-09-22 19:36:29
+@@ -30,14 +30,27 @@
+     public var metadata: Bool
+     /// Table-of-contents / heading anchor options (`toc`).
+     public var tableOfContents: TableOfContentsOptions
++    /// Renders a fenced code block to HTML.
++    ///
++    /// Given the block's source and its language (`nil` when the fence carries
++    /// none), this returns the complete markup — wrapper included — so a site can
++    /// emit whatever its stylesheet expects. When unset, Kiln emits a plain
++    /// `<pre><code class="language-…">`.
++    ///
++    /// Only code blocks the *markdown* produced go through it, which is the
++    /// point: HTML that arrives some other way (a raw block, a value from a data
++    /// file) is left exactly as the author wrote it.
++    public var codeRenderer: (@Sendable (_ code: String, _ language: String?) -> String)?
+ 
+     public init(
+         admonitions: Bool = true,
+         metadata: Bool = true,
+-        tableOfContents: TableOfContentsOptions = TableOfContentsOptions()
++        tableOfContents: TableOfContentsOptions = TableOfContentsOptions(),
++        codeRenderer: (@Sendable (_ code: String, _ language: String?) -> String)? = nil
+     ) {
+         self.admonitions = admonitions
+         self.metadata = metadata
+         self.tableOfContents = tableOfContents
++        self.codeRenderer = codeRenderer
+     }
+ }
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Content/FrontMatter.swift .kiln/Sources/Kiln/Content/FrontMatter.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Content/FrontMatter.swift	2026-09-22 19:40:47
++++ .kiln/Sources/Kiln/Content/FrontMatter.swift	2026-08-29 03:02:32
+@@ -24,6 +24,15 @@
+     public var image: String? { values["image"] }
+     /// An optional Leaf template name override (e.g. `template: landing`).
+     public var template: String? { values["template"] }
++    /// Per-page override of ``KilnSite/contentTemplating``.
++    ///
++    /// Content templating parses the body as Leaf, so a page containing `#if`,
++    /// `#available` or any other `#name(` sequence — Swift code samples, most
++    /// obviously — must leave it off. Opting in per page keeps a migration
++    /// incremental and the rest of the site safe.
++    public var contentTemplating: Bool? {
++        values["contentTemplating"].map { $0 == "true" }
++    }
+ 
+     public static let empty = FrontMatter()
+ }
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Markdown/HTMLRenderer.swift .kiln/Sources/Kiln/Markdown/HTMLRenderer.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Markdown/HTMLRenderer.swift	2026-09-22 19:40:47
++++ .kiln/Sources/Kiln/Markdown/HTMLRenderer.swift	2026-09-22 19:37:16
+@@ -40,15 +40,23 @@
+     private let slugger: Slugger
+     private let toc: TableOfContentsOptions
+     private let linkResolver: LinkResolver?
++    /// Renders a fenced code block; `nil` emits Kiln's plain `<pre><code>`.
++    private let codeRenderer: (@Sendable (String, String?) -> String)?
+ 
+     private var inTableHead = false
+     private var tableColumnAlignments: [Table.ColumnAlignment?]? = nil
+     private var currentTableColumn = 0
+ 
+-    init(slugger: Slugger, tocOptions: TableOfContentsOptions, linkResolver: LinkResolver? = nil) {
++    init(
++        slugger: Slugger,
++        tocOptions: TableOfContentsOptions,
++        linkResolver: LinkResolver? = nil,
++        codeRenderer: (@Sendable (String, String?) -> String)? = nil
++    ) {
+         self.slugger = slugger
+         self.toc = tocOptions
+         self.linkResolver = linkResolver
++        self.codeRenderer = codeRenderer
+     }
+ 
+     /// Rewrite a relative link/asset destination via the resolver, if present.
+@@ -65,6 +73,12 @@
+     }
+ 
+     mutating func visitCodeBlock(_ codeBlock: CodeBlock) {
++        // A site-supplied renderer owns the whole block, wrapper included.
++        if let render = codeRenderer {
++            let language = codeBlock.language.flatMap { $0.isEmpty ? nil : $0 }
++            result += render(codeBlock.code, language) + "\n"
++            return
++        }
+         let languageAttr: String
+         if let language = codeBlock.language, !language.isEmpty {
+             languageAttr = " class=\"language-\(HTMLEscaping.attribute(language))\""
+@@ -96,6 +110,28 @@
+         if !html.rawHTML.hasSuffix("\n") { result += "\n" }
+     }
+ 
++    /// Whether the list currently being rendered is *loose*.
++    ///
++    /// CommonMark wraps a list item's text in `<p>` only for a loose list — one
++    /// whose items are separated by blank lines, or which has an item holding
++    /// more than one block. swift-markdown drops that flag when it parses, so it
++    /// is recovered here from the items' source ranges.
++    private var inLooseList = false
++
++    private static func isLoose(_ list: any ListItemContainer) -> Bool {
++        let items = Array(list.listItems)
++        // An item with two blocks makes the whole list loose.
++        if items.contains(where: { $0.childCount > 1 }) { return true }
++        // So does a blank line between any two items.
++        for (previous, next) in zip(items, items.dropFirst()) {
++            guard let end = previous.range?.upperBound.line,
++                  let start = next.range?.lowerBound.line
++            else { continue }
++            if start > end + 1 { return true }
++        }
++        return false
++    }
++
+     mutating func visitListItem(_ listItem: ListItem) {
+         result += "<li>"
+         if let checkbox = listItem.checkbox {
+@@ -110,17 +146,28 @@
+     mutating func visitOrderedList(_ orderedList: OrderedList) {
+         let start = orderedList.startIndex != 1 ? " start=\"\(orderedList.startIndex)\"" : ""
+         result += "<ol\(start)>\n"
++        let enclosing = inLooseList
++        inLooseList = Self.isLoose(orderedList)
+         descendInto(orderedList)
++        inLooseList = enclosing
+         result += "</ol>\n"
+     }
+ 
+     mutating func visitUnorderedList(_ unorderedList: UnorderedList) {
+         result += "<ul>\n"
++        let enclosing = inLooseList
++        inLooseList = Self.isLoose(unorderedList)
+         descendInto(unorderedList)
++        inLooseList = enclosing
+         result += "</ul>\n"
+     }
+ 
+     mutating func visitParagraph(_ paragraph: Paragraph) {
++        // A tight list item's text is emitted bare, as CommonMark requires.
++        if paragraph.parent is ListItem, !inLooseList {
++            descendInto(paragraph)
++            return
++        }
+         result += "<p>"
+         descendInto(paragraph)
+         result += "</p>\n"
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Markdown/MarkdownRenderer.swift .kiln/Sources/Kiln/Markdown/MarkdownRenderer.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Markdown/MarkdownRenderer.swift	2026-09-22 19:40:47
++++ .kiln/Sources/Kiln/Markdown/MarkdownRenderer.swift	2026-09-22 19:37:16
+@@ -81,7 +81,7 @@
+             case .markdown(let text):
+                 guard !text.isBlank else { continue }
+                 let document = Document(parsing: text)
+-                var renderer = HTMLRenderer(slugger: slugger, tocOptions: options.tableOfContents, linkResolver: linkResolver)
++                var renderer = HTMLRenderer(slugger: slugger, tocOptions: options.tableOfContents, linkResolver: linkResolver, codeRenderer: options.codeRenderer)
+                 renderer.visit(document)
+                 html += renderer.result
+                 headings.append(contentsOf: renderer.headings)
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/InMemoryLeafSource.swift .kiln/Sources/Kiln/Rendering/InMemoryLeafSource.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/InMemoryLeafSource.swift	1970-01-01 01:00:00
++++ .kiln/Sources/Kiln/Rendering/InMemoryLeafSource.swift	2026-08-29 03:00:30
+@@ -0,0 +1,33 @@
++import LeafKit
++import NIOConcurrencyHelpers
++import NIOCore
++
++/// A `LeafSource` backed by strings held in memory.
++///
++/// Kiln uses this for *content templating*: a page's markdown body is itself a
++/// Leaf template, so it has to reach `LeafRenderer`, which only resolves
++/// templates by path. The body is stored here under a per-page key and rendered
++/// through the normal pipeline, so content gets the same tags, partials and
++/// context as any template.
++///
++/// Keys are unique per page, which keeps Leaf's AST cache correct.
++final class InMemoryLeafSource: LeafSource, @unchecked Sendable {
++    private let lock = NIOLock()
++    private var templates: [String: String] = [:]
++
++    func store(_ contents: String, at key: String) {
++        lock.withLock { templates[key] = contents }
++    }
++
++    func file(template: String, escape: Bool, on eventLoop: any EventLoop) throws -> EventLoopFuture<ByteBuffer> {
++        // LeafKit may hand us the key with or without its extension.
++        let key = template.hasSuffix(".leaf") ? String(template.dropLast(5)) : template
++        guard let contents = lock.withLock({ templates[key] }) else {
++            // Not ours — let the next source in the layer try.
++            return eventLoop.makeFailedFuture(LeafError(.noTemplateExists(template)))
++        }
++        var buffer = ByteBufferAllocator().buffer(capacity: contents.utf8.count)
++        buffer.writeString(contents)
++        return eventLoop.makeSucceededFuture(buffer)
++    }
++}
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/MarkdownTag.swift .kiln/Sources/Kiln/Rendering/MarkdownTag.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/MarkdownTag.swift	1970-01-01 01:00:00
++++ .kiln/Sources/Kiln/Rendering/MarkdownTag.swift	2026-08-29 03:10:52
+@@ -0,0 +1,21 @@
++import LeafKit
++
++/// `#markdown("…")` — render a markdown string to HTML inside a template.
++///
++/// Data-driven pages often hold prose in YAML (a package description, a callout
++/// body) that has to reach the page as HTML. This renders it with the same
++/// ``MarkdownRenderer`` the page bodies use, so the markup matches.
++///
++/// The result is HTML and must not be escaped again, hence
++/// `UnsafeUnescapedLeafTag` — it can be emitted with `#markdown(...)` directly
++/// rather than needing `#unsafeHTML(...)` around it.
++struct MarkdownTag: UnsafeUnescapedLeafTag {
++    let renderer: MarkdownRenderer
++
++    func render(_ ctx: LeafContext) throws -> LeafData {
++        guard let source = ctx.parameters.first?.string, !source.isEmpty else {
++            return .string("")
++        }
++        return .string(renderer.render(source).html)
++    }
++}
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/RenderContext.swift .kiln/Sources/Kiln/Rendering/RenderContext.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/RenderContext.swift	2026-09-22 19:40:47
++++ .kiln/Sources/Kiln/Rendering/RenderContext.swift	2026-08-29 03:01:22
+@@ -152,8 +152,15 @@
+         language.siteName ?? site.name
+     }
+ 
++    /// Values supplied by ``KilnSite/pageContext`` for this page.
++    var pageValues: [String: LeafData] = [:]
++
+     var leafData: [String: LeafData] {
+-        [
++        // A site's own values first, so the reserved keys below always win;
++        // per-page values override site-wide ones.
++        site.extraContext
++            .merging(pageValues) { _, perPage in perPage }
++            .merging([
+             "site": siteData,
+             "language": languageData,
+             "languages": .array(alternates.map(Self.alternateData)),
+@@ -184,7 +191,7 @@
+             // and `#if(blogListing)` are false on every non-blog page.
+             "blogPost": blogPost ?? .trueNil,
+             "blogListing": blogListing ?? .trueNil,
+-        ]
++        ]) { _, reserved in reserved }
+     }
+ 
+     private var currentVersionData: LeafData {
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/TemplateRenderer.swift .kiln/Sources/Kiln/Rendering/TemplateRenderer.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Rendering/TemplateRenderer.swift	2026-09-22 19:40:47
++++ .kiln/Sources/Kiln/Rendering/TemplateRenderer.swift	2026-08-29 03:00:30
+@@ -18,6 +18,8 @@
+     private let eventLoopGroup: MultiThreadedEventLoopGroup
+     private let threadPool: NIOThreadPool
+     private let renderer: LeafRenderer
++    /// Holds page bodies for content templating — see ``InMemoryLeafSource``.
++    private let inlineSource: InMemoryLeafSource
+     /// Set once `shutdown()` has released the NIO resources, so `deinit` knows
+     /// not to shut them down a second time (a double `syncShutdownGracefully()`
+     /// blocks forever — the worker threads have already exited and never
+@@ -43,7 +45,11 @@
+                 viewDirectory: directory.path
+             )
+         }
+-        let layered = LayeredLeafSource(sources: leafSources)
++        // The in-memory source goes first so a page's own body (stored under a
++        // per-page key) resolves before any file on disk.
++        let inlineSource = InMemoryLeafSource()
++        self.inlineSource = inlineSource
++        let layered = LayeredLeafSource(sources: [inlineSource] + leafSources)
+ 
+         let rootDirectory = templateDirectories.last?.path ?? FileManager.default.currentDirectoryPath
+         self.eventLoopGroup = group
+@@ -59,6 +65,16 @@
+             sources: .singleSource(layered),
+             eventLoop: group.next()
+         )
++    }
++
++    /// Render a string as a Leaf template, under a caller-supplied cache key.
++    ///
++    /// Used for content templating, where the "template" is the page's own body
++    /// rather than a file in the theme. `key` must be unique per body — Leaf
++    /// caches parsed templates by path.
++    func renderInline(_ contents: String, key: String, context: [String: LeafData]) async throws -> String {
++        inlineSource.store(contents, at: key)
++        return try await render(key, context: context)
+     }
+ 
+     /// Render a template (e.g. `"page"`, `"partials/nav"`) with the given context.
+diff --color -ruN --exclude=.build --exclude=.git /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Site/SiteGenerator.swift .kiln/Sources/Kiln/Site/SiteGenerator.swift
+--- /private/tmp/claude-501/-Users-timc-Developer-Swiftlang-swift-org-website/574eb770-6807-4c3d-8a12-40328b7f0465/scratchpad/kiln-base/Sources/Kiln/Site/SiteGenerator.swift	2026-09-22 19:40:47
++++ .kiln/Sources/Kiln/Site/SiteGenerator.swift	2026-08-29 03:10:58
+@@ -71,7 +71,11 @@
+         try site.validate()
+ 
+         let theme = try resolveTheme()
+-        let renderer = TemplateRenderer(templateDirectories: theme.templates, leafTags: leafTags)
++        // `#markdown(...)` is always available; a caller tag of the same name wins.
++        let renderer = TemplateRenderer(
++            templateDirectories: theme.templates,
++            leafTags: leafTags.merging(["markdown": MarkdownTag(renderer: MarkdownRenderer(options: site.markdown))]) { caller, _ in caller }
++        )
+         // `shutdown()` is async (it must not block — see TemplateRenderer), so we
+         // can't use `defer`; await it on both the success and error paths instead.
+         do {
+@@ -457,7 +461,26 @@
+ 
+         let linkResolver = LinkResolver(currentLogicalPath: logicalPath, locale: language.locale, urls: urls,
+                                         knownLocales: build.locales)
+-        let rendered = markdown.render(page.body, linkResolver: linkResolver)
++        let pageValues = site.pageContext?(logicalPath) ?? [:]
++
++        // Content templating: the body is a Leaf template producing markdown, so
++        // a page can use the theme's partials and the site's data. Rendered
++        // before the markdown pass, exactly where Jekyll ran Liquid.
++        var body = page.body
++        if page.frontMatter.contentTemplating ?? site.contentTemplating {
++            body = try await renderer.renderInline(
++                body,
++                key: "__content__/\(version.id)/\(language.locale)/\(logicalPath)",
++                context: contentContext(
++                    page: page,
++                    logicalPath: logicalPath,
++                    language: language,
++                    build: build,
++                    pageValues: pageValues
++                )
++            )
++        }
++        let rendered = markdown.render(body, linkResolver: linkResolver)
+         let title = page.frontMatter.title ?? rendered.firstHeading ?? navTitle
+         let isFallback = !language.isDefault && !store.hasTranslation(forLogicalPath: logicalPath, locale: language.locale)
+         let pageNavigation = build.navigationBuilder.contextualise(resolvedNav, currentLogicalPath: logicalPath)
+@@ -486,7 +509,7 @@
+             noindex: isVersioned && !version.isDefault
+         )
+ 
+-        let context = RenderContext(
++        var context = RenderContext(
+             site: site,
+             language: language,
+             defaultLanguage: version.defaultLanguage,
+@@ -519,6 +542,7 @@
+             navigation: pageNavigation,
+             version: versionContext
+         )
++        context.pageValues = pageValues
+ 
+         let templateName = page.frontMatter.template ?? (page.isHome ? "home" : "page")
+         let html = try await renderer.render(templateName, context: context.leafData)
+@@ -1091,4 +1115,37 @@
+             )
+         }
+     }
++
++    /// The context a page's body is rendered against during content templating.
++    ///
++    /// The full ``RenderContext`` isn't available yet — it needs the HTML this
++    /// pass produces — so content sees the site's own data, the page's
++    /// ``KilnSite/pageContext`` values, and its front matter.
++    private func contentContext(
++        page: ContentPage,
++        logicalPath: String,
++        language: Language,
++        build: VersionBuild,
++        pageValues: [String: LeafData]
++    ) -> [String: LeafData] {
++        var frontMatter: [String: LeafData] = [:]
++        for (key, value) in page.frontMatter.values {
++            frontMatter[key] = .string(value)
++        }
++        let pageData: LeafData = .dictionary([
++            "title": .string(page.frontMatter.title),
++            "url": .string(build.urls.urlPath(forLogicalPath: logicalPath, locale: language.locale)),
++            "frontMatter": .dictionary(frontMatter),
++            "isHome": .bool(page.isHome),
++            "locale": .string(language.locale),
++        ])
++        return site.extraContext
++            .merging(pageValues) { _, perPage in perPage }
++            .merging([
++                "page": pageData,
++                "basePath": .string(SiteURLs.normaliseBasePath(site.basePath)),
++                "baseURL": .string(site.url),
++            ]) { _, reserved in reserved }
++    }
++
+ }

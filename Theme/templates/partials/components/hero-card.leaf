@@ -1,0 +1,3 @@
+<div class="hero-card#if(standAlone): content-wrapper#endif">
+<img src="#(image.url)" alt="#(image.alt)" />
+</div>

@@ -1,0 +1,10 @@
+<!-- `_includes/new-includes/components/content-card.html`.
+     Context: title, url, excerpt, date (optional), cta. -->
+<div class="content-card">
+<span class="content-card-title title-4">#(title)</span>
+#if(date):
+<time class="content-card-date body" pubdate datetime="#(isoDate)">#(date)</time>
+#endif
+<p class="content-card-excerpt body">#(excerpt)</p>
+<a class="content-card-cta body" href="#(url)">#(cta)</a>
+</div>

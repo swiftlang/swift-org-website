@@ -1,6 +1,0 @@
----
-layout: none
----
-{ "x86_64": {{ site.data.builds.development.windows10 | jsonify }},
-  "arm64": {{ site.data.builds.development.windows10-arm64 | jsonify }}
-}

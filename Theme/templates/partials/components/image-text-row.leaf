@@ -1,0 +1,16 @@
+<div class="image-text-row content-wrapper#if(background): background#endif">
+#if(content.headline):
+<h2>#(content.headline)</h2>
+#endif
+<div class="card-wrapper">
+<img src="#(content.image.src)" alt="#(content.image.alt)" />
+<div class="copy-wrapper">
+<h3>#(content.copy.headline)</h3>
+#for(paragraph in content.copy.paragraphs):
+<p class="body-copy">#unsafeHTML(paragraph)</p>
+#endfor
+<a class="body-copy" href="#(content.copy.link.href)">#(content.copy.link.text)
+</a>
+</div>
+</div>
+</div>

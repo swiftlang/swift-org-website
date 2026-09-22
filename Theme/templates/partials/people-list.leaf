@@ -1,0 +1,7 @@
+<!-- Shared roster block for the workgroup and steering-group pages.
+     The list arrives as `people`, supplied per page by PageContext. -->
+<ul>
+#for(person in people):
+<li>#(person.name)#if(person.affiliation):, #(person.affiliation)#endif#if(person.handle): (<a href="https://forums.swift.org/u/#(person.handle)/summary">@#(person.handle)</a>)#endif</li>
+#endfor
+</ul>

@@ -1,0 +1,26 @@
+<div class="section title-text-centered-three-up-cards#if(twoColumns): two-columns#endif">
+<div class="content">
+<div class="header-section">
+<h2>#(content.title)</h2>
+<p>#unsafeHTML(content.description)</p>
+</div>
+<div class="cards-grid">
+#for(card in content.cards):
+<div class="card">
+<div class="card-body">
+<h3 class="card-title">#(card.title)</h3>
+<p class="card-content">#unsafeHTML(card.content)</p>
+</div>
+#if(card.links):
+<div class="card-footer">
+#for(link in card.links):
+<a href="#(link.url)" class="card-link">#(link.text)</a>
+#if(!isLast):<span class="separator">|</span>#endif
+#endfor
+</div>
+#endif
+</div>
+#endfor
+</div>
+</div>
+</div>

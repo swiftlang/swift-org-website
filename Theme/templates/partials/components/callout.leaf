@@ -1,0 +1,26 @@
+<!-- `_includes/new-includes/components/callout.html`. `isReversed` and
+     `hasCode` are resolved by PageContext, which also groups the callouts into
+     the three landing-page pillars. -->
+<div class="callout#if(isReversed): reverse#endif#if(hasCode): with-code#endif">
+<div class="text">
+#if(title):
+<h3 class="callout-title title-1">#(title)</h3>
+#endif
+#if(subtitle):
+<p class="callout-subtitle title-2">#(subtitle)</p>
+#endif
+#if(text):
+<p class="callout-text body">#unsafeHTML(text)</p>
+#endif
+</div>
+#if(hasCode):
+<div class="code">#swiftCode(code)</div>
+#endif
+#if(links):
+<div class="links">
+#for(link in links):
+<a href="#(link.link)">#(link.text)</a>
+#endfor
+</div>
+#endif
+</div>

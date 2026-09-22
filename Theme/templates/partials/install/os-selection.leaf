@@ -1,0 +1,5 @@
+<!-- `_includes/new-includes/components/os-selection.html` -->
+<div class="os-selection-navigation">
+<h1>Install Swift</h1>
+#extend("partials/install/tab-nav", osTabs)
+</div>

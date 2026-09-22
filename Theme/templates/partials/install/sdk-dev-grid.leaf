@@ -1,0 +1,24 @@
+<!-- The development SDK grid. Context: `boxes` — one per branch. -->
+<div class="releases-grid">
+#for(box in boxes):
+<div class="release-box section">
+<div class="content">
+<div class="code-box content-wrapper">
+<h2>#(box.title)</h2>
+<p class="body-copy">
+<small>#(box.date)</small><br />
+<button data-copy-text="#(box.command)">
+Copy install command
+</button>
+</p>
+<div class="link-wrapper">
+<div class="link-group">
+<a href="#(box.download)" class="body-copy">Download</a> |
+<a href="#(box.signature)" class="body-copy">Signature (PGP)</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+#endfor
+</div>

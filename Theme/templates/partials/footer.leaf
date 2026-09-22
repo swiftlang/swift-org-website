@@ -1,0 +1,79 @@
+#comment:
+  `_includes/new-includes/footer/footer.html` and its four link columns. Each
+  column loops over its own list in `_data/new-data/footer`.
+#endcomment
+<footer class="global-footer">
+  <div class="container">
+    <div class="footer-navigation-container">
+      <nav aria-label="Main">
+        <a class="logo" href="/" title="Swift.org"> #extend("partials/logo") </a>
+        <ul>
+          #for(item in data.new_data.footer.main_navigation):
+          <li class="item"><a href="#(item.link)" data-text="#(item.title)">#(item.title)</a></li>
+          #endfor
+        </ul>
+      </nav>
+
+      <nav aria-label="Tools">
+        <h3>Tools</h3>
+        <ul>
+          #for(item in data.new_data.footer.tools_navigation):
+          <li class="item"><a href="#(item.link)" data-text="#(item.title)">#(item.title)</a></li>
+          #endfor
+        </ul>
+      </nav>
+
+      <nav aria-label="Community">
+        <h3>Community</h3>
+        <ul>
+          #for(item in data.new_data.footer.community_navigation):
+          <li class="item"><a href="#(item.link)" data-text="#(item.title)">#(item.title)</a></li>
+          #endfor
+        </ul>
+      </nav>
+
+      <nav class="governance" aria-label="Governance">
+        <h3>Governance</h3>
+        <ul>
+          #for(item in data.new_data.footer.governance_navigation):
+          <li class="item"><a href="#(item.link)" data-text="#(item.title)">#(item.title)</a></li>
+          #endfor
+        </ul>
+        #extend("partials/theme-toggle")
+      </nav>
+    </div>
+
+    <div class="sub-navigation">
+      <div class="legals">
+        <div class="copyright">
+          #if(page.frontMatter.blogLicense):
+          <p>Except where otherwise noted, all content on this blog is licensed<br /> under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>.</p>
+          #endif
+          <p>
+            Copyright © #currentYear() Apple Inc. All rights reserved.
+          </p>
+          <p>
+            Swift and the Swift logo are trademarks of Apple Inc.
+          </p>
+        </div>
+        <nav aria-label="Legals">
+          <ul>
+            #for(item in data.new_data.footer.legals_navigation):
+            <li class="item"><a href="#(item.link)">#(item.title)</a></li>
+            #endfor
+          </ul>
+        </nav>
+      </div>
+
+      <nav class="socials" aria-label="Socials">
+        <ul>
+          #for(item in data.new_data.footer.social_navigation):
+          <li class="item">
+            <a href="#(item.link)" rel="me" title="#(item.title)"><i class="#(item.class)"></i></a>
+          </li>
+          #endfor
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>

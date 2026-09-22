@@ -1,0 +1,18 @@
+<!-- A release SDK download box. Context: title, command, download, signature, instructions. -->
+<div class="code-box content-wrapper">
+<h2>#(title)</h2>
+<p class="body-copy">
+<button data-copy-text="#(command)">
+Copy install command
+</button>
+</p>
+<div class="link-wrapper">
+<div class="link-group">
+<a href="#(download)" class="body-copy">Download SDK</a> |
+<a href="#(signature)" class="body-copy">Signature (PGP)</a>
+</div>
+</div>
+<div class="link-wrapper">
+<a href="#(instructions)" class="body-copy">Instructions</a>
+</div>
+</div>

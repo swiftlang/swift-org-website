@@ -1,0 +1,39 @@
+#extend("base"):
+#export("content"):
+<div class="get-started">
+
+<!-- Hero -->
+
+#extend("partials/components/get-started-hero", boxed.new_data.get_started.embedded.hero)
+
+<!-- Runs on many embedded platforms -->
+
+#extend("partials/components/card-grid", boxed.new_data.get_started.embedded.card_grid)
+
+<!-- Explore example projects -->
+
+#extend("partials/components/card-grid", boxed.new_data.get_started.embedded.primary_content)
+
+<!-- Dive into Embedded Swift -->
+
+#extend("partials/components/headline-section", boxed.new_data.get_started.embedded.headline_section)
+
+<!-- Read the blog -->
+
+#extend("partials/components/card-grid", boxed.new_data.get_started.embedded.blogposts)
+
+<!-- Ergonomic and performant -->
+
+#extend("partials/components/full-width-text-image-column", boxed.new_data.get_started.embedded.full_width_text_image_column)
+
+<!-- Squeeze into the smallest places -->
+
+#extend("partials/components/code-image-column", boxed.new_data.get_started.embedded.code_image_column)
+
+<!-- Resources -->
+
+#extend("partials/components/link-columns", boxed.new_data.get_started.embedded.link_columns)
+
+</div>
+#endexport
+#endextend

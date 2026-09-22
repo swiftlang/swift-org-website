@@ -1,0 +1,10 @@
+<!-- `_includes/new-includes/components/linux-os-selection.html` -->
+<div class="os-selection-navigation">
+<h2>Alternate Install Options</h2>
+<label>Select Linux platform:</label>
+#extend("partials/install/tab-nav", linuxPlatformTabs)
+#if(linuxVersionTabs):
+<label>Select #(selectedPlatformName) version:</label>
+#extend("partials/install/tab-nav", linuxVersionTabs)
+#endif
+</div>

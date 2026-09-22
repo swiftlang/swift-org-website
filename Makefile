@@ -1,51 +1,23 @@
-# Makefile for managing the Swift website with container
+# Build and serve the Swift website.
+#
+# The site is a Swift package rendered with Kiln:
+# https://github.com/brokenhandsio/kiln
 
-# Define the container runtime. Default to `container`.
-# Can be overridden from the command line, e.g., `make CONTAINER=docker website`
-CONTAINER ?= container
-
-.PHONY: help build run-build website stop clean
+.PHONY: help build serve clean
 
 help:
 	@echo "Usage:"
-	@echo "  make build      Build the swift-website-builder container image"
-	@echo "  make run-build  Build the Jekyll website"
-	@echo "  make website    Run the Jekyll development server"
-	@echo "  make stop       Stop the running website container"
-	@echo "  make clean      Stop the container and remove the build output"
-	@echo ""
-	@echo "To use a different container runtime (e.g. podman), run:"
-	@echo "  make CONTAINER=podman build"
+	@echo "  make build    Build the website into ./site"
+	@echo "  make serve    Serve it at http://localhost:4000, rebuilding on changes"
+	@echo "  make clean    Remove the build output"
 
-# Build the primary container image
+# `kiln build` runs this package's executable, which renders the site.
 build:
-	$(CONTAINER) build --tag swift-website-builder --file Dockerfile .
+	kiln build
 
-# Run a one-off Jekyll build
-run-build:
-	@mkdir -p ./.output
-	$(CONTAINER) run --rm \
-	  -v "$(CURDIR)":/srv/jekyll \
-	  -v "$(CURDIR)/.output":/output \
-	  swift-website-builder \
-	  /bin/bash -cl "bundle check && bundle exec jekyll build --source /srv/jekyll --destination /output"
+# `kiln serve` builds, serves, and rebuilds whenever a source file changes.
+serve:
+	kiln serve --port 4000
 
-# Run the development web server
-website:
-	@mkdir -p ./.output
-	$(CONTAINER) run -d --rm --name swift-website \
-	  -p 4000:4000 \
-	  -v "$(CURDIR)":/srv/jekyll \
-	  -v "$(CURDIR)/.output":/output \
-	  swift-website-builder \
-	  /bin/bash -cl "bundle check && bundle exec jekyll serve --source /srv/jekyll --destination /output --host 0.0.0.0 --watch"
-	@echo "Website is running at http://localhost:4000"
-
-# Stop the development server
-stop:
-	$(CONTAINER) stop swift-website
-
-# Clean up build artifacts
-clean: stop
-	@echo "Removing .output directory..."
-	@rm -rf ./.output
+clean:
+	rm -rf site .build

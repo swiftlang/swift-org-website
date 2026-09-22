@@ -1,0 +1,60 @@
+#extend("base"):
+#export("content"):
+<div class="blog">
+<div class="blog-swoop"></div>
+<div class="section blog-featured-grid">
+<div class="content">
+<h2 class="blog-featured-grid-headline title-0">#(blogIndex.headline)</h2>
+<h3 class="blog-featured-grid-category-headline title-3">#(blogIndex.hero.category)</h3>
+<div class="blog-featured-hero-card #if(blogIndex.hero.image): blog-featured-hero-card-with-image #endif">
+#if(blogIndex.hero.image):
+<img class="blog-featured-hero-card-image #if(blogIndex.hero.imageDark):hide-dark#endif" src="#(blogIndex.hero.image)" alt="#(blogIndex.hero.imageAlt)" />
+#endif
+#if(blogIndex.hero.imageDark):
+<img class="blog-featured-hero-card-image hide-light" src="#(blogIndex.hero.imageDark)" alt="#(blogIndex.hero.imageDarkAlt)" />
+#endif
+<span class="blog-title title-4">#(blogIndex.hero.title)</span>
+<time class="blog-date body" pubdate datetime="#(blogIndex.hero.isoDate)">#(blogIndex.hero.date)</time>
+<span class="blog-excerpt body">#(blogIndex.hero.excerpt)</span>
+<a class="blog-post-cta body" href="#(blogIndex.hero.url)">#(blogIndex.readMore)</a>
+</div>
+<ul class="blog-featured-category-posts">
+#for(category in blogIndex.categories):
+<li>
+<h3 class="blog-featured-grid-category-headline title-3">#(category.title)</h3>
+#extend("partials/blog/content-card", category.post)
+</li>
+#endfor
+</ul>
+</div>
+</div>
+<section class="blogs-and-filter-wrapper content">
+<div class="dropdown blogs-filter">
+<button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-menu">
+<span class="body">Categories</span>
+<span class="dropdown-toggle-arrow"></span>
+</button>
+<div class="dropdown-menu" role="menu">
+<div class="dropdown-header">
+<label>
+<input disabled name="select-all" class="select-all" type="checkbox" value="select-all" checked="true">
+<span class="checkbox-symbol"></span> <span>All Categories</span>
+</label>
+</div>
+<hr>
+#for(category in blogIndex.categoryTitles):
+<label>
+<input name="#(category)" class="category-filter body" type="checkbox" value="#(category)" checked>
+<span></span> <span class="checkbox-symbol"></span> <span>#(category)</span>
+</label>
+#endfor
+</div>
+</div>
+<div class="blogs-wrapper"></div>
+<script type="application/json" id="post-data">
+#unsafeHTML(blogIndex.postsJSON)
+</script>
+</section>
+</div>
+#endexport
+#endextend

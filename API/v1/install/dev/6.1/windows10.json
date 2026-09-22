@@ -1,0 +1,3 @@
+{ "x86_64": {{builds.swift-6_1-branch.windows10}},
+  "arm64": {{builds.swift-6_1-branch.windows10-arm64}}
+}

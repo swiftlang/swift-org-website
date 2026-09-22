@@ -1,0 +1,35 @@
+#extend("base"):
+#export("content"):
+<section id="post" class="section">
+  <div class="swoop swoop-1"></div>
+
+  <div class="content">
+    <h1 class="title-0">#(page.title)</h1>
+
+    #unsafeHTML(component("authors", "auto-compact", "fullwidth"))
+
+    <time pubdate datetime="#(page.frontMatter.date)">#(page.frontMatter.displayDate)</time>
+    #if(page.frontMatter.featuredImage):
+    <img class="featured#if(page.frontMatter.featuredImageDark): hide-dark#endif"
+         src="#(page.frontMatter.featuredImage)"
+         alt="#(page.frontMatter.featuredImageAlt)" />
+    #endif
+    #if(page.frontMatter.featuredImageDark):
+    <img class="featured hide-light"
+         src="#(page.frontMatter.featuredImageDark)"
+         alt="#(page.frontMatter.featuredImageDarkAlt)" />
+    #endif
+    <div class="details">
+      #unsafeHTML(page.content)
+      #unsafeHTML(component("post-authors-footer"))
+
+      <hr />
+
+      <h2>Continue Reading</h2>
+
+      #unsafeHTML(component("post-navigation"))
+    </div>
+  </div>
+</section>
+#endexport
+#endextend
