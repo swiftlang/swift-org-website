@@ -1,0 +1,122 @@
+// highlight.js token colours.
+//
+// The palette is the one the Rouge classes used, so light/dark theming and the
+// colours themselves are unchanged; only the class names differ. Mixed in by
+// both stylesheets, each under its own code-block selector.
+
+@mixin hljs-tokens {
+  .hljs-comment,
+  .hljs-quote,
+  .hljs-doctag,
+  .hljs-meta {
+    color: var(--color-syntax-comments);
+  }
+
+  .hljs-keyword,
+  .hljs-literal,
+  .hljs-type,
+  .hljs-built_in,
+  .hljs-selector-tag,
+  .hljs-meta .hljs-keyword {
+    color: var(--color-syntax-keywords);
+  }
+
+  .hljs-title,
+  .hljs-title.function_,
+  .hljs-section,
+  .hljs-variable {
+    color: var(--color-syntax-project-constants);
+  }
+
+  .hljs-string,
+  .hljs-char.escape_,
+  .hljs-meta .hljs-string,
+  .hljs-template-variable {
+    color: var(--color-syntax-strings);
+  }
+
+  .hljs-attr,
+  .hljs-attribute,
+  .hljs-property,
+  .hljs-selector-attr,
+  .hljs-selector-pseudo {
+    color: var(--color-syntax-attributes);
+  }
+
+  .hljs-title.class_,
+  .hljs-title.class_.inherited__,
+  .hljs-symbol,
+  .hljs-variable.constant_,
+  .hljs-selector-class,
+  .hljs-selector-id {
+    color: var(--color-syntax-other-type-names);
+  }
+
+  .hljs-number {
+    color: var(--color-syntax-numbers);
+  }
+
+  .hljs-operator,
+  .hljs-punctuation {
+    color: var(--color-syntax-brackets-dots);
+  }
+
+  .hljs-name,
+  .hljs-tag {
+    color: var(--color-syntax-characters);
+  }
+
+  .hljs-variable.language_ {
+    color: var(--color-syntax-other-declarations);
+  }
+
+  // Rouge coloured plain identifiers and argument labels with this purple; it
+  // has no `--color-syntax-*` variable of its own.
+  .hljs-params,
+  .hljs-title.class_.inherited__ {
+    color: #b181ec;
+  }
+
+  .hljs-regexp {
+    color: var(--color-figure-green);
+  }
+
+  .hljs-deletion {
+    color: var(--color-syntax-plain-text);
+    background-color: var(--color-fill-red-secondary);
+  }
+
+  .hljs-addition {
+    color: var(--color-syntax-plain-text);
+    background-color: var(--color-fill-green-secondary);
+  }
+
+  .hljs-emphasis {
+    font-style: italic;
+  }
+
+  .hljs-strong {
+    font-weight: bold;
+  }
+
+  // Shell prompts stay unselectable, so a reader copying a command doesn't
+  // pick up the `$`.
+  .hljs-meta.prompt_ {
+    color: var(--color-syntax-comments);
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+// C and C++ put their preprocessor directives and builtin types in the keyword
+// colour, as the Rouge rules did.
+@mixin hljs-c-family-overrides {
+  .language-c,
+  .language-cpp,
+  .language-c\+\+ {
+    .hljs-meta,
+    .hljs-type {
+      color: var(--color-syntax-keywords);
+    }
+  }
+}

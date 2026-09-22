@@ -83,7 +83,7 @@ var site = KilnSite(
     // came from a data file is left exactly as authored, as Jekyll left it.
     markdown: MarkdownExtensions(
         codeRenderer: { code, language in
-            SwiftHighlighter.codeBlock(code, language: language ?? "plaintext")
+            CodeBlock.render(code, language: language ?? "plaintext")
         }
     ),
     // `llms.txt` mirrors a navigation tree this site doesn't have.
