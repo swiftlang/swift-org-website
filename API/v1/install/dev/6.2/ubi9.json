@@ -1,0 +1,3 @@
+{ "x86_64": {{builds.swift-6_2-branch.ubi9}},
+  "aarch64": {{builds.swift-6_2-branch.ubi9-aarch64}}
+}

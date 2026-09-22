@@ -1,0 +1,28 @@
+<!-- `_includes/install/_older_snapshots.md`. Context: `snapshots`. -->
+<table id="linux-builds" class="downloads">
+<thead>
+<tr>
+<th class="download">Download</th>
+</tr>
+</thead>
+<tbody>
+#for(build in olderSnapshots):
+<tr>
+<td class="download">
+<span class="release">
+<a href="#(build.download)" title="Download" download>#(build.date)</a>
+#if(build.signature):
+<a href="#(build.signature)" title="PGP Signature" class="signature">Signature</a>
+#endif
+#if(build.debugInfo):
+<a href="#(build.debugInfo)" title="Debugging Symbols" class="debug">Debugging Symbols</a>
+#if(build.debugInfoSignature):
+<a href="#(build.debugInfoSignature)" title="PGP Signature for Debugging Symbols">Signature</a>
+#endif
+#endif
+</span>
+</td>
+</tr>
+#endfor
+</tbody>
+</table>

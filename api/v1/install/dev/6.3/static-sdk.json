@@ -1,4 +1,0 @@
----
-layout: none
----
-{{ site.data.builds.swift-6_3-branch.static-sdk | jsonify }}

@@ -1,0 +1,3 @@
+{ "x86_64": {{builds.development.ubuntu2004}},
+  "aarch64": {{builds.development.ubuntu2004-aarch64}}
+}

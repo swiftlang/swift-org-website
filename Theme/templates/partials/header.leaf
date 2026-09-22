@@ -1,0 +1,25 @@
+<header class="site-navigation">
+  <div class="wrapper">
+    <h1 class="logo">
+      <a href="/" title="Swift.org"> #extend("partials/logo") </a>
+    </h1>
+
+    <!-- desktop-navigation -->
+    <nav class="desktop-navigation" role="navigation">
+      #extend("partials/header-nav")
+    </nav>
+
+    <!-- toggle -->
+    <button
+      id="menu-toggle"
+      class="menu-item menu-toggle open"
+      aria-expanded="false"
+      aria-label="Toggle Navigation Menu"
+    />
+  </div>
+
+  <!-- mobile-navigation -->
+  <nav class="mobile-navigation" role="navigation">
+    #extend("partials/header-nav")
+  </nav>
+</header>

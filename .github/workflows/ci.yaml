@@ -21,14 +21,14 @@ jobs:
       unacceptable_language_check_word_list: "blacklist whitelist slave sane sanity insane insanity kill killed killing hung hanged hanging"  # ignore-unacceptable-language
 
   build-site:
-    name: Build the Jekyll Site
+    name: Build the Site
     runs-on: ubuntu-latest
-    container: ruby:3.3
+    container: swift:6.3
     steps:
       - name: Checkout
         uses: actions/checkout@v7
       - name: Build site
-        run: bundle install && bundle exec jekyll build --strict_front_matter
+        run: swift run SwiftOrgSite
 
   test-openapi:
     runs-on: ubuntu-latest
@@ -36,7 +36,7 @@ jobs:
       - name: Check out
         uses: actions/checkout@v7
       - name: Run OpenAPI Tester
-        working-directory: openapi/TestSwiftOrgClient
+        working-directory: Static/openapi/TestSwiftOrgClient
         env:
           DOWNLOADSWIFTORG_SERVER_NAME: local
           SWIFTORG_SERVER_NAME: local

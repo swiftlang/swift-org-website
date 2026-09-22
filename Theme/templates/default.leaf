@@ -1,0 +1,5 @@
+#extend("base-classic"):
+#export("content"):
+#unsafeHTML(page.content)
+#endexport
+#endextend

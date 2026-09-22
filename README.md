@@ -13,27 +13,58 @@ See [website overview](/website) for more information about the Swift.org websit
 
 ## Technical
 
-Swift.org uses [Jekyll](https://jekyllrb.com), a blog-aware, static site generator in Ruby.
+Swift.org is built with [Kiln](https://github.com/brokenhandsio/kiln), a static
+site generator written in Swift.
+
+The repository *is* the site — a Swift package rendered by Kiln:
+
+| Directory | Contents |
+| --- | --- |
+| `Pages/` | Every page — markdown, with [Leaf](https://docs.vapor.codes/leaf/overview/) where a page is data-driven |
+| `Posts/` | The blog posts |
+| `Data/` | The YAML behind the navigation, installers and package lists |
+| `Theme/` | Leaf templates and partials |
+| `Static/` | Files published verbatim (signing keys, the OpenAPI spec) |
+| `API/` | The JSON endpoints under `/api/` |
+| `Sources/` | The build program |
+| `assets/` | Stylesheets (`.scss`), scripts and images |
 
 ### Running locally
 
 Requirements
 - Git
-- Ruby 3.3 or higher
-  _(a Ruby installation manager, such as
-  [rbenv](https://github.com/sstephenson/rbenv) or
-  [RVM](https://rvm.io) is recommended, but not required)_
-- [Bundler](https://bundler.io/)
+- Swift 6.3 or higher
+- The [Kiln](https://github.com/brokenhandsio/kiln) CLI:
+  ```shell
+  brew install brokenhandsio/tap/kiln
+  ```
+- [Dart Sass](https://sass-lang.com/install) on your `PATH`, for the stylesheets:
+  ```shell
+  brew install sass/sass/sass
+  ```
 
-To run the site locally, enter the following commands into a terminal window:
+To run the site locally:
 
 ```shell
 git clone https://github.com/swiftlang/swift-org-website.git
 cd swift-org-website
-bundle install
-LC_ALL=en_us.UTF-8 bundle exec jekyll serve --config _config.yml,_config_dev.yml
+make serve
 open "http://localhost:4000"
 ```
+
+`make serve` runs `kiln serve`, which builds the site, serves it, and rebuilds
+whenever you change a page, a template or a data file — just reload the browser.
+
+You can also drive Kiln directly from the package:
+
+```shell
+kiln serve                 # build, serve on :8080, rebuild on changes
+kiln serve --port 4000     # ...on a different port
+kiln serve --no-watch      # build and serve once
+kiln build                 # build into ./site without serving
+```
+
+See [`ARCHITECTURE.md`](ARCHITECTURE.md) for how the site is put together.
 
 If you’d like to contribute to this project, please run Prettier before submitting your pull request to ensure consistent code style across the project.
 

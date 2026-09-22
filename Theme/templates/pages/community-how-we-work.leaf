@@ -1,0 +1,22 @@
+#extend("base"):
+#export("content"):
+<div class="get-started governance" id="governance-page">
+
+<!-- Hero Section -->
+#extend("partials/components/governance-hero", boxed.new_data.governance.hero)
+
+<!-- Propose and Make Changes Section -->
+#extend("partials/components/title-text-centered-three-up-cards", boxed.new_data.governance.propose_changes)
+
+<!-- Join a Workgroup Section -->
+#extend("partials/components/title-text-centered-three-up-cards", boxed.new_data.governance.workgroups)
+
+<!-- Code of Conduct Section -->
+#extend("partials/components/headline-section", boxed.new_data.governance.code_of_conduct)
+
+<!-- Project Roles section -->
+#extend("partials/components/title-text-centered-three-up-cards", boxed.new_data.governance.project_roles)
+
+</div>
+#endexport
+#endextend

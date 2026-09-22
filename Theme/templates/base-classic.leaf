@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" media="all" href="/assets/stylesheets/application.css" />
+    #extend("partials/head")
+  </head>
+
+  <body>
+    <script>
+      setColorScheme(getStoredScheme())
+    </script>
+    <script src="/assets/javascripts/color-scheme-toggle.js"></script>
+    #extend("partials/header")
+    <main role="main">
+      #import("content")
+    </main>
+    #extend("partials/footer")
+    <script src="/assets/javascripts/application.js"></script>
+    #extend("partials/metrics")
+  </body>
+</html>

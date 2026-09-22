@@ -1,0 +1,9 @@
+#extend("base"):
+#export("content"):
+<section id="install" class="section">
+#extend("partials/install/os-selection")
+#extend("partials/install/linux-os-selection")
+<div class="swoop swoop-1"></div>
+</section>
+#endexport
+#endextend

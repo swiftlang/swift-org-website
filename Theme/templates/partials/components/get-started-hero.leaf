@@ -1,0 +1,21 @@
+<section id="get-started-hero" class="section">
+<div class="hero-content">
+<h1>#(content.headline)</h1>
+<p>#unsafeHTML(content.body)</p>
+#if(content.boxes):
+<ul>
+#for(box in content.boxes):
+<li>
+<span class="title">#(box.title)</span>
+<span class="text">#unsafeHTML(box.text)</span>
+</li>
+#endfor
+</ul>
+#endif
+#if(content.link.text):
+<a href="#(content.link.url)" data-text="#(content.link.text)">#(content.link.text)</a>
+#endif
+<div class="swoop swoop-1"></div>
+<div class="swoop swoop-2"></div>
+</div>
+</section>

@@ -1,0 +1,142 @@
+<!-- `_includes/new-includes/components/linux-releases.html`.
+     `release` and `devBranches` come from InstallData via PageContext;
+     `releaseSDKs` and `devSDKs` are site-wide. -->
+<div class="content">
+#if(release):
+<div class="releases-grid">
+<div class="release-box section">
+<div class="content">
+<div class="code-box content-wrapper">
+<h2>Container</h2>
+<p class="body-copy">
+Official container images are available for compiling and running Swift on a variety of distributions.
+</p>
+<div class="link-wrapper">
+<a href="https://hub.docker.com/_/swift" class="body-copy">#(release.dockerImage)</a>
+</div>
+<div class="link-wrapper">
+<a href="/install/linux/docker" class="body-copy">Instructions</a>
+</div>
+</div>
+</div>
+</div>
+<div class="release-box section">
+<div class="content">
+<div class="code-box content-wrapper">
+<h2>Tarball</h2>
+<p class="body-copy">
+Tarball packages (.tar.gz)
+</p>
+<div class="link-wrapper">
+#for(tarball in release.tarballs):
+<div class="link-group">
+<a class="body-copy" href="#(tarball.download)" class="cta-secondary">
+Download (#(tarball.arch))
+</a> |
+<a class="body-copy" href="#(tarball.signature)">#(tarball.arch)</a>
+</div>
+#endfor
+</div>
+<div class="link-wrapper">
+<a href="/install/linux/tarball" class="body-copy">Instructions</a>
+</div>
+</div>
+</div>
+</div>
+<div class="release-box section">
+<div class="content">
+#extend("partials/install/sdk-box", releaseSDKs.staticLinux)
+</div>
+</div>
+<div class="release-box section">
+<div class="content">
+#extend("partials/install/sdk-box", releaseSDKs.wasm)
+</div>
+</div>
+<div class="release-box section">
+<div class="content">
+#extend("partials/install/sdk-box", releaseSDKs.android)
+</div>
+</div>
+</div>
+<div class="release-box section">
+<div class="content">
+<details class="download">
+<summary>Previous Releases</summary>
+#extend("partials/install/older-releases", olderReleases)
+</details>
+</div>
+</div>
+#endif
+<h2 id="development-snapshots" class="html-header-with-anchor">Development Snapshots</h2>
+<div>
+<p class="content-copy">Swift snapshots are prebuilt binaries that are automatically created from the branch. These snapshots are not official releases. They have gone through automated unit testing, but they have not gone through the full testing that is performed for official releases.</p>
+</div>
+<div>
+<p class="content-copy">
+<a class="content-link" href="https://www.swift.org/install/linux/tarball">Instructions (Tarball)</a>
+</p>
+</div>
+<div>
+<p class="content-copy">
+<a class="content-link" href="https://www.swift.org/install/linux/docker">Instructions (Docker)</a>
+</p>
+</div>
+<div class="releases-grid">
+#for(branch in devBranches):
+<div class="release-box section">
+<div class="content">
+<div class="code-box content-wrapper">
+<h2>#(branch.title)</h2>
+<p class="body-copy">
+<small>#(branch.date)</small><br />
+</p>
+#if(branch.x86):
+<div class="link-wrapper">
+<div class="link-group">
+<a href="#(branch.x86.download)" class="body-copy">Download (x86_64)</a> |
+<a href="#(branch.x86.signature)" class="body-copy">Signature (PGP)</a>
+</div>
+</div>
+#endif
+#if(branch.aarch64):
+<div class="link-wrapper">
+<div class="link-group">
+<a href="#(branch.aarch64.download)" class="body-copy">Download (aarch64)</a> |
+<a href="#(branch.aarch64.signature)" class="body-copy">Signature (PGP)</a>
+</div>
+</div>
+#endif
+<div class="link-wrapper">
+<a href="https://hub.docker.com/r/swiftlang/swift/tags" class="body-copy">#(branch.dockerTag)</a>
+</div>
+</div>
+</div>
+</div>
+#endfor
+</div>
+#for(branch in devBranches):
+<div class="release-box section">
+<div class="content">
+<details class="download">
+<summary>Previous Snapshots (#(branch.title))</summary>
+#extend("partials/install/older-snapshots", branch)
+</details>
+</div>
+</div>
+#endfor
+<h3>Static Linux SDK</h3>
+<div>
+<p class="content-copy">
+<a class="content-link" href="/documentation/articles/static-linux-getting-started.html">Instructions</a>
+</p>
+</div>
+#extend("partials/install/sdk-dev-grid", devSDKs.staticLinux)
+<h3>Swift SDK for WebAssembly</h3>
+<div>
+<p class="content-copy">
+<a class="content-link" href="/documentation/articles/wasm-getting-started.html">Instructions</a>
+</p>
+</div>
+#extend("partials/install/sdk-dev-grid", devSDKs.wasm)
+</div>
