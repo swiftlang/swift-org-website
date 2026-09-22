@@ -66,7 +66,7 @@ let unlisted = (staged.pagePaths + staged.posts.map(\.contentPath))
     .filter { $0 != "index.md" }
     .map { UnlistedPage(Post.title(forContentPath: $0), $0) }
 
-let site = KilnSite(
+var site = KilnSite(
     name: "Swift.org",
     url: "https://swift.org",
     author: "Apple Inc.",
@@ -112,16 +112,16 @@ let site = KilnSite(
         "releaseSDKs": InstallData(data: siteData).releaseSDKs(),
         "devSDKs": InstallData(data: siteData).developmentSDKs(),
     ],
-    // Per-page values for pages that have migrated to Leaf: Leaf has no
-    // assignment and can't subscript by a variable, so anything a page selects
-    // by its own identity is resolved here.
-    pageContext: { [pageContext = PageContext(data: siteData, posts: staged.posts)] path in
-        pageContext.values(forLogicalPath: path)
-    },
     navigation: {
         Page("Swift Programming Language", "index.md")
     }
 )
+
+// Per-page values: Leaf has no assignment and can't subscript by a variable, so
+// anything a page selects by its own identity is resolved here.
+site.pageContext = { [pageContext = PageContext(data: siteData, posts: staged.posts)] path in
+    pageContext.values(forLogicalPath: path)
+}
 
 // MARK: - Build
 

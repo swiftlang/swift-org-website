@@ -54,14 +54,20 @@ tables, release lists, workgroup rosters and package catalogue. Rendering that i
 Leaf needs the data in the template context, and Kiln's `RenderContext` exposes a
 closed set of keys.
 
-`kiln-changes.patch` carries four additions, all in `.kiln/`:
+`kiln-changes.patch` carries five additions and three bug fixes, all in
+`.kiln/`. It is cut against Kiln `main` (`167e969`) and applies with
+`patch -p1`; Kiln's own 253 tests pass with it applied.
 
-| Addition | Why |
+| Change | Why |
 | --- | --- |
 | `KilnSite.extraContext: [String: LeafData]` | Site-wide data in the template context, so `#for(item in data.…)` works. The same mechanism Kiln already uses for `blogListing`. |
-| `KilnSite.pageContext: (String) -> [String: LeafData]` | Leaf has no assignment and can't subscript by a variable, so anything a page selects by its own identity (its package category, its Linux platform) is resolved in Swift. Replaces Jekyll's `{% assign %}`. |
+| `KilnSite.pageContext: (String) -> [String: LeafData]` (a property, set after construction) | Leaf has no assignment and can't subscript by a variable, so anything a page selects by its own identity (its package category, its Linux platform) is resolved in Swift. Replaces Jekyll's `{% assign %}`. |
 | `KilnSite.contentTemplating` + front-matter `contentTemplating:` | Renders a page's markdown body as Leaf *before* the markdown pass — exactly where Jekyll ran Liquid — so prose pages can call partials. Opt-in per page, because a body containing `#if(...)` (any Swift code sample) would otherwise parse as Leaf. |
 | `#markdown("…")` Leaf tag | Renders a markdown string inside a template, using Kiln's own `MarkdownRenderer` so the markup matches page content. Replaces Liquid's `markdownify`. |
+| `MarkdownExtensions.codeRenderer` | Lets the site render fenced code blocks itself, so `SwiftHighlighter` can reproduce Rouge's `highlighter-rouge` markup byte for byte. |
+| *Fix:* CommonMark list tightness in `HTMLRenderer` | Kiln wrapped loose-list items in `<p>` where CommonMark does not, so migrated lists did not match Jekyll's output. |
+| *Fix:* `.sortedKeys` on the search-index encoder | `JSONEncoder` serialises keyed containers in per-process hash order, so `search/search_index.json` differed between builds of identical content. Every other JSON writer in Kiln already sorts. |
+| *Fix:* canonical trailing-slash 301 in `CLI/StaticFileServer.swift` | Production redirects `/install` → `/install/`; `kiln serve` did not, so `install.js`'s relative `location.replace("macos")` resolved to `/macos` and 404'd. |
 
 Content templating needed one supporting type, `InMemoryLeafSource`: `LeafRenderer`
 only resolves templates by path, so a page body is stored under a per-page key and
@@ -83,6 +89,11 @@ internal, so a tag cannot serialise its own body), and teaching `#for` to accept
 tag call would mean changing `Syntax.Loop.array` from a `String` to a resolvable
 expression inside a shared Vapor dependency. Leaf's lack of assignment is handled
 by `pageContext` instead.
+
+`pageContext` is a settable property rather than an `init` parameter on
+purpose: a closure parameter ahead of `@NavBuilder navigation:` captures the
+trailing closure under Swift's forward-scan rule, which would break every
+existing `KilnSite(…) { Page(…) }` call site.
 
 ## Migration state
 
