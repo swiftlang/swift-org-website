@@ -681,3 +681,23 @@ sliemeobn:
     name: Simon Leeb
     github: sliemeobn
     about: "Simon is a software developer, co-founder and CTO of a logistics software company, and a part-time open-source developer in the Swift ecosystem."
+
+padmashree:
+    name: Padmashree S S
+    github: Padmashree06
+    about: "Padmashree is a Google Summer of Code 2026 contributor, where she worked on DocC language features in SourceKit-LSP."
+
+egekaya:
+    name: Ege Kaya
+    github: egekaya1
+    about: "Ege is a Google Summer of Code 2026 contributor, where he worked on Task and TaskGroup tracking for the Swift Concurrency runtime."
+
+filipsakel:
+    name: Filip Sakel
+    github: filip-sakel
+    about: "Filip is a Google Summer of Code 2026 contributor, where he worked on qualified name lookup for swift-syntax."
+
+samkhouri:
+    name: Sam Khouri
+    github: bkhouri
+    about: "Sam is a member of the Contributor Experience Workgroup, where he helps organize the Swift Google Summer of Code program."
