@@ -279,7 +279,7 @@ function renderSearchBar () {
           type: 'checkbox',
           id: 'filter-by-swift-' + _idSafeName(version),
           className: 'filter-by-swift-version',
-          value: 'swift-' + _idSafeName(version)
+          value: version
         }),
         html('label', {
           tabindex: '0',
@@ -566,11 +566,7 @@ function addEventListeners() {
   // Typing in the search field causes the filter to be reapplied.
   searchInput.addEventListener('input', filterProposals)
 
-  // Each of the individual statuses needs to trigger filtering as well
-  ;[].forEach.call(document.querySelectorAll('.filter-list input'), function (element) {
-    element.addEventListener('change', filterProposals)
-  })
-
+  // Register this event listener first, so version filter state is updated before filterProposals() is called
   var expandableArea = document.querySelector('.filter-options')
   var implementedToggle = document.querySelector('#filter-by-implemented')
   implementedToggle.addEventListener('change', function () {
@@ -587,6 +583,11 @@ function addEventListeners() {
     // Update the 'Hide Filters' / 'Show Filters' / 'n Filters' text
     var allCheckedStateCheckboxes = document.querySelectorAll('.filter-list input:checked')
     updateStatusFilterToggleText(allCheckedStateCheckboxes.length)
+  })
+
+  // Each of the individual statuses needs to trigger filtering as well
+  ;[].forEach.call(document.querySelectorAll('.filter-list input'), function (element) {
+    element.addEventListener('change', filterProposals)
   })
 
   document.querySelector('#status-filter-button').addEventListener('click', toggleStatusFiltering)
@@ -832,10 +833,15 @@ function _applyFlagFilter(matchingProposals) {
  */
 function _applyStatusFilter(matchingProposals) {
   // Get all checked state checkboxes, both status and version as an array
-  var allCheckedStateCheckboxes = Array.from(document.querySelectorAll('.filter-list input:checked'))
-  
-  // Get checkbox values for all checked state checkboxes, both status and version
-  var selectedStates = allCheckedStateCheckboxes.map(function (checkbox) { return checkbox.value })
+  const allCheckedStateCheckboxes = Array.from(document.querySelectorAll('.filter-list input:checked'))
+  // Get checked version checkboxes
+  const allCheckedVersionCheckboxes = Array.from(document.querySelectorAll('.filter-by-swift-version:checked'))
+
+  // Get checkbox values for *all* checked state checkboxes, both status and version
+  const selectedStates = allCheckedStateCheckboxes.map(checkbox => checkbox.value)
+
+  // Get selectedVersions separately for filtering and version status string generation 
+  const selectedVersions = allCheckedVersionCheckboxes.map(checkbox => checkbox.value)
 
   updateStatusFilterToggleText(selectedStates.length)
 
@@ -858,19 +864,11 @@ function _applyStatusFilter(matchingProposals) {
       })
 
     // Handle version-specific filtering options
-    if (selectedStates.some(function (state) { return state.match(/swift/i) })) {
+    if (selectedVersions.length) {
       matchingProposals = matchingProposals
         .filter(function (proposal) {
-          return selectedStates.some(function (state) {
-            if (!(proposal.status.state === State.implemented)) return true // only filter among Implemented (N.N.N)
-            if (state === 'swift-swift-Next' && proposal.status.version === 'Next') return true // special case
-
-            var version = state.split(/\D+/).filter(function (s) { return s.length }).join('.')
-
-            if (!version.length) return false // it's not a state that represents a version number
-            if (proposal.status.version === version) return true
-            return false
-          })
+          // Return proposals with state != implemented and proposals matching selected implementation versions
+          return (!(proposal.status.state === State.implemented)) || (selectedVersions.includes(proposal.status.version))
         })
     }
   }
@@ -1054,10 +1052,8 @@ function _updateURIFragment() {
     actions.search = search.value
   }
 
-  var selectedVersions = document.querySelectorAll('.filter-by-swift-version:checked')
-  var versions = [].map.call(selectedVersions, function (checkbox) {
-    return checkbox.value.split('swift-swift-')[1].split('-').join('.')
-  })
+  var selectedVersions = Array.from(document.querySelectorAll('.filter-by-swift-version:checked'))
+  var versions = selectedVersions.map(checkbox => checkbox.value)
 
   actions.version = versions
 
