@@ -245,8 +245,8 @@ function renderSearchBar () {
     var className = states[state].className
 
     return html('li', null, [
-      html('input', { type: 'checkbox', className: 'filtered-by-status', id: 'filter-by-' + className, value: className }),
-      html('label', { className: className, tabindex: '0', role: 'button', 'for': 'filter-by-' + className, 'data-state-key': state }, [
+      html('input', { type: 'checkbox', className: 'filtered-by-status', id: 'filter-by-' + className, 'data-state-key': state, value: className }),
+      html('label', { className: className, tabindex: '0', role: 'button', 'for': 'filter-by-' + className }, [
         addNumberToState(states[state].name, states[state].count)
       ])
     ])
@@ -832,36 +832,22 @@ function _applyFlagFilter(matchingProposals) {
  * @returns {Proposal[]} The results of applying the status filter.
  */
 function _applyStatusFilter(matchingProposals) {
-  // Get all checked state checkboxes, both status and version as an array
-  const allCheckedStateCheckboxes = Array.from(document.querySelectorAll('.filter-list input:checked'))
-  // Get checked version checkboxes
-  const allCheckedVersionCheckboxes = Array.from(document.querySelectorAll('.filter-by-swift-version:checked'))
 
-  // Get checkbox values for *all* checked state checkboxes, both status and version
-  const selectedStates = allCheckedStateCheckboxes.map(checkbox => checkbox.value)
+  // Get selected status state keys (e.g. 'activeReview', 'returnedForRevision', 'accepted')
+  const selectedStateKeys = Array.from(document.querySelectorAll('.filtered-by-status:checked')).map(checkbox => checkbox.dataset.stateKey)
 
-  // Get selectedVersions separately for filtering and version status string generation 
-  const selectedVersions = allCheckedVersionCheckboxes.map(checkbox => checkbox.value)
+  // Get selected version strings (e.g. '3.0', '5.9.2', 'Next')
+  const selectedVersions = Array.from(document.querySelectorAll('.filter-by-swift-version:checked')).map(checkbox => checkbox.value)
 
-  updateStatusFilterToggleText(selectedStates.length)
+  const filterCount = selectedStateKeys.length + selectedVersions.length
 
-  // Get array of keys for only selected *statuses* to update the status filter subheading
-  var selectedStatusNames = allCheckedStateCheckboxes.reduce(function(array, checkbox) {
-    let value = checkbox.nextElementSibling.getAttribute("data-state-key")
-    if (value) { array.push(value) }
-    return array
-  }, [])
-
-  updateStatusFilterSubheading(selectedStatusNames)
+  updateStatusFilterToggleText(filterCount)
+  updateStatusFilterSubheading(selectedStateKeys)
 
   // Use all selected states, status and version to filter out proposals based on the grouping checkboxes
-  if (selectedStates.length) {
+  if (filterCount) {
     matchingProposals = matchingProposals
-      .filter(function (proposal) {
-        return selectedStates.some(function (state) {
-          return proposal.status.state.toLowerCase().indexOf(state.split('-')[0]) >= 0
-        })
-      })
+      .filter(proposal => selectedStateKeys.includes(proposal.status.state))
 
     // Handle version-specific filtering options
     if (selectedVersions.length) {
@@ -1157,16 +1143,10 @@ function updateProposalsCount (count) {
 }
 
 function updateFilterStatus () {
-  var labels = [].concat.apply([], document.querySelectorAll('#status-options label'))
-  labels.forEach(function (label) {
-    var count = states[label.getAttribute('data-state-key')].count
-    var cleanedLabel = cleanNumberFromState(label.innerText)
-    label.innerText = addNumberToState(cleanedLabel, count)
+  document.querySelectorAll('#status-options label').forEach(function (label) {
+    const stateKey = label.control.dataset.stateKey
+    label.innerText = addNumberToState(states[stateKey].name, states[stateKey].count)
   })
-}
-
-function cleanNumberFromState (state) {
-  return state.replace(/ *\([^)]*\) */g, '')
 }
 
 function addNumberToState (state, count) {
