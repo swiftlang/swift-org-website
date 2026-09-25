@@ -75,7 +75,7 @@ Swift builds upon several other open-source projects, most notably
 the repositories of those open-source projects contain Swift-specific
 changes and are merged regularly from their upstream sources. 
 For more information about the clone of the LLVM repository, see
-[LLVM and Swift](https://github.com/swiftlang/project-operations/blob/main/llvm-and-swift.md)
+[LLVM and Swift](https://github.com/swiftlang/project-operations/blob/main/contributing/llvm-and-swift.md)
 in the [project-operations](https://github.com/swiftlang/project-operations/) repository.
 
 [llvm-project](https://github.com/swiftlang/llvm-project)

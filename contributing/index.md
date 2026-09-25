@@ -28,5 +28,5 @@ as described in [Source Code](/documentation/source-code).
 ### LLVM and Swift
 
 For more information about the clone of the LLVM repository, see
-[LLVM and Swift](https://github.com/swiftlang/project-operations/blob/main/llvm-and-swift.md)
+[LLVM and Swift](https://github.com/swiftlang/project-operations/blob/main/contributing/llvm-and-swift.md)
 in the [project-operations](https://github.com/swiftlang/project-operations/) repository.
