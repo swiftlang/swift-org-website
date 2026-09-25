@@ -245,8 +245,8 @@ function renderSearchBar () {
     var className = states[state].className
 
     return html('li', null, [
-      html('input', { type: 'checkbox', className: 'filtered-by-status', id: 'filter-by-' + className, value: className }),
-      html('label', { className: className, tabindex: '0', role: 'button', 'for': 'filter-by-' + className, 'data-state-key': state }, [
+      html('input', { type: 'checkbox', className: 'filtered-by-status', id: 'filter-by-' + className, 'data-state-key': state, value: className }),
+      html('label', { className: className, tabindex: '0', role: 'button', 'for': 'filter-by-' + className }, [
         addNumberToState(states[state].name, states[state].count)
       ])
     ])
@@ -279,7 +279,7 @@ function renderSearchBar () {
           type: 'checkbox',
           id: 'filter-by-swift-' + _idSafeName(version),
           className: 'filter-by-swift-version',
-          value: 'swift-' + _idSafeName(version)
+          value: version
         }),
         html('label', {
           tabindex: '0',
@@ -566,11 +566,7 @@ function addEventListeners() {
   // Typing in the search field causes the filter to be reapplied.
   searchInput.addEventListener('input', filterProposals)
 
-  // Each of the individual statuses needs to trigger filtering as well
-  ;[].forEach.call(document.querySelectorAll('.filter-list input'), function (element) {
-    element.addEventListener('change', filterProposals)
-  })
-
+  // Register this event listener first, so version filter state is updated before filterProposals() is called
   var expandableArea = document.querySelector('.filter-options')
   var implementedToggle = document.querySelector('#filter-by-implemented')
   implementedToggle.addEventListener('change', function () {
@@ -587,6 +583,11 @@ function addEventListeners() {
     // Update the 'Hide Filters' / 'Show Filters' / 'n Filters' text
     var allCheckedStateCheckboxes = document.querySelectorAll('.filter-list input:checked')
     updateStatusFilterToggleText(allCheckedStateCheckboxes.length)
+  })
+
+  // Each of the individual statuses needs to trigger filtering as well
+  ;[].forEach.call(document.querySelectorAll('.filter-list input'), function (element) {
+    element.addEventListener('change', filterProposals)
   })
 
   document.querySelector('#status-filter-button').addEventListener('click', toggleStatusFiltering)
@@ -831,46 +832,29 @@ function _applyFlagFilter(matchingProposals) {
  * @returns {Proposal[]} The results of applying the status filter.
  */
 function _applyStatusFilter(matchingProposals) {
-  // Get all checked state checkboxes, both status and version as an array
-  var allCheckedStateCheckboxes = Array.from(document.querySelectorAll('.filter-list input:checked'))
-  
-  // Get checkbox values for all checked state checkboxes, both status and version
-  var selectedStates = allCheckedStateCheckboxes.map(function (checkbox) { return checkbox.value })
 
-  updateStatusFilterToggleText(selectedStates.length)
+  // Get selected status state keys (e.g. 'activeReview', 'returnedForRevision', 'accepted')
+  const selectedStateKeys = Array.from(document.querySelectorAll('.filtered-by-status:checked')).map(checkbox => checkbox.dataset.stateKey)
 
-  // Get array of keys for only selected *statuses* to update the status filter subheading
-  var selectedStatusNames = allCheckedStateCheckboxes.reduce(function(array, checkbox) {
-    let value = checkbox.nextElementSibling.getAttribute("data-state-key")
-    if (value) { array.push(value) }
-    return array
-  }, [])
+  // Get selected version strings (e.g. '3.0', '5.9.2', 'Next')
+  const selectedVersions = Array.from(document.querySelectorAll('.filter-by-swift-version:checked')).map(checkbox => checkbox.value)
 
-  updateStatusFilterSubheading(selectedStatusNames)
+  const filterCount = selectedStateKeys.length + selectedVersions.length
+
+  updateStatusFilterToggleText(filterCount)
+  updateStatusFilterSubheading(selectedStateKeys, selectedVersions)
 
   // Use all selected states, status and version to filter out proposals based on the grouping checkboxes
-  if (selectedStates.length) {
+  if (filterCount) {
     matchingProposals = matchingProposals
-      .filter(function (proposal) {
-        return selectedStates.some(function (state) {
-          return proposal.status.state.toLowerCase().indexOf(state.split('-')[0]) >= 0
-        })
-      })
+      .filter(proposal => selectedStateKeys.includes(proposal.status.state))
 
     // Handle version-specific filtering options
-    if (selectedStates.some(function (state) { return state.match(/swift/i) })) {
+    if (selectedVersions.length) {
       matchingProposals = matchingProposals
         .filter(function (proposal) {
-          return selectedStates.some(function (state) {
-            if (!(proposal.status.state === State.implemented)) return true // only filter among Implemented (N.N.N)
-            if (state === 'swift-swift-Next' && proposal.status.version === 'Next') return true // special case
-
-            var version = state.split(/\D+/).filter(function (s) { return s.length }).join('.')
-
-            if (!version.length) return false // it's not a state that represents a version number
-            if (proposal.status.version === version) return true
-            return false
-          })
+          // Return proposals with state != implemented and proposals matching selected implementation versions
+          return (!(proposal.status.state === State.implemented)) || (selectedVersions.includes(proposal.status.version))
         })
     }
   }
@@ -1054,10 +1038,8 @@ function _updateURIFragment() {
     actions.search = search.value
   }
 
-  var selectedVersions = document.querySelectorAll('.filter-by-swift-version:checked')
-  var versions = [].map.call(selectedVersions, function (checkbox) {
-    return checkbox.value.split('swift-swift-')[1].split('-').join('.')
-  })
+  var selectedVersions = Array.from(document.querySelectorAll('.filter-by-swift-version:checked'))
+  var versions = selectedVersions.map(checkbox => checkbox.value)
 
   actions.version = versions
 
@@ -1111,11 +1093,12 @@ function _idSafeName (name) {
 /**
   * Updates the status filter subheading
   *
-  * @param {string[]} selectedStates - each element is a key in the states objects. For example: '.accepted'.
+  * @param {string[]} selectedStateKeys - each element is a key in the states objects. For example: 'accepted'.
+  * @param {string[]} selectedVersions - each element is a version string. For example: '5.4', 'Next'.
   */
-function updateStatusFilterSubheading(selectedStates) {
+function updateStatusFilterSubheading(selectedStateKeys, selectedVersions) {
   var statusFilterSubheading = document.querySelector('#status-filter-description')
-  statusFilterSubheading.innerText = descriptionForSelectedStatuses(selectedStates)
+  statusFilterSubheading.innerText = descriptionForSelectedFilters(selectedStateKeys, selectedVersions)
 }
 
 /**
@@ -1161,16 +1144,10 @@ function updateProposalsCount (count) {
 }
 
 function updateFilterStatus () {
-  var labels = [].concat.apply([], document.querySelectorAll('#status-options label'))
-  labels.forEach(function (label) {
-    var count = states[label.getAttribute('data-state-key')].count
-    var cleanedLabel = cleanNumberFromState(label.innerText)
-    label.innerText = addNumberToState(cleanedLabel, count)
+  document.querySelectorAll('#status-options label').forEach(function (label) {
+    const stateKey = label.control.dataset.stateKey
+    label.innerText = addNumberToState(states[stateKey].name, states[stateKey].count)
   })
-}
-
-function cleanNumberFromState (state) {
-  return state.replace(/ *\([^)]*\) */g, '')
 }
 
 function addNumberToState (state, count) {
@@ -1182,28 +1159,93 @@ function addNumberToState (state, count) {
 * To prevent listing more than five statuses, when more than five are selected
 * the generated string uses the form "All Statuses Except" followed by unselected statuses.
 *
-* @param {string[]} selectedOptions - each element is a key in the states objects. For example: '.accepted'.
+* @param {string[]} selectedStateKeys - each element is a key in the states objects. For example: 'accepted'.
+* @param {string[]} selectedVersions - each element is a version string. For example: '5.4', 'Next'.
 */
-function descriptionForSelectedStatuses(selectedOptions) {
-  let allStateOptions = [
+function descriptionForSelectedFilters(selectedStateKeys, selectedVersions) {
+  const allStateOptions = [
     State.awaitingReview, State.scheduledForReview, State.activeReview, State.accepted,
     State.previewing, State.implemented, State.returnedForRevision, State.rejected, State.withdrawn
   ]
-  let selectedCount = selectedOptions.length
-  let totalCount = allStateOptions.length
-  let ALL_EXCEPT_MAX_COUNT = 3
-  let allExceptThreshold = totalCount - ALL_EXCEPT_MAX_COUNT
+  const selectedCount = selectedStateKeys.length
+  const totalCount = allStateOptions.length
+  const ALL_EXCEPT_MAX_COUNT = 3
+  const allExceptThreshold = totalCount - ALL_EXCEPT_MAX_COUNT
+  
+  // Early exit for selected status state filters
+  if (selectedCount === 0) { return "All Statuses" }
 
-  if (selectedCount === 0 || selectedCount === totalCount) {
-    return "All Statuses"
-  } else if (selectedCount >= allExceptThreshold) {
-    let unselectedOptions = allStateOptions.filter(function (option) {
-      return selectedOptions.indexOf(option) === -1
-    })
-    return "All Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
+  if (selectedVersions.length === 0) {
+    if (selectedCount === totalCount) {
+      return "All Statuses"
+    } else if (selectedCount >= allExceptThreshold) {
+      let unselectedOptions = allStateOptions.filter(stateKey => !selectedStateKeys.includes(stateKey) )
+      return "All Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
+    } else {
+      return listStringForStatuses(selectedStateKeys, "or", true)
+    }
   } else {
-    return listStringForStatuses(selectedOptions, "or", true)
+      if (selectedCount === totalCount) {
+        return implementedStateDescription(selectedVersions) + " and All Other Statuses"
+      } else if (selectedCount >= allExceptThreshold) {
+        let unselectedOptions = allStateOptions.filter(stateKey => !selectedStateKeys.includes(stateKey) )
+        selectedStateKeys = _omitOrMoveStateKey(selectedStateKeys, State.implemented, false)
+        return implementedStateDescription(selectedVersions) + " and\nAll Other Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
+      } else {
+        selectedStateKeys = _omitOrMoveStateKey(selectedStateKeys, State.implemented, true)
+        return listStringForStatuses(selectedStateKeys, "or", true, selectedVersions)
+    }
   }
+}
+
+/**
+* Utility function to adjust an array of state keys for display purposes. 
+* The provided state key is removed from the provided array of state keys if present.
+* If the 'moveToEnd' parameter is true, the specified state key will be moved to the end of the list
+*
+* @param {string[]} stateKeys - each element is a key in the states objects. For example: 'accepted'.
+* @param {string} stateKey - a key in the states object to be removed or moved. For example: 'implemented'.
+* @param {boolean} moveToEnd - if true, removed state key will be appended to the end of the provided list.
+*/
+function _omitOrMoveStateKey(stateKeys, stateKey, moveToEnd) {
+  const foundIndex = stateKeys.indexOf(stateKey)
+  if (foundIndex > -1) {
+    stateKeys.splice(foundIndex, 1)
+    if (moveToEnd) { stateKeys.push(stateKey) }
+  }
+  return stateKeys
+}
+
+function implementedStateDescription(selectedVersions) {
+  return states[State.implemented].shortName + (selectedVersions ? (' in Swift ' + versionListDescription(selectedVersions)) : '')
+}
+
+/**
+* Generates the user-presentable description for an array of version strings. 
+* This assumes the version list is sorted in semantic versioning order with 'Next' as a possible last element. 
+* Consecutive versions are displayed as a range ('4.0-4.3'). 
+*
+* @param {string[]} versionList - Array of version strings. For example: '5.4', 'Next'.
+*/
+function versionListDescription(versionList) {
+  var currentRange = null
+  var rangeArray = []
+  const lastItemIndex = languageVersions.length - 1
+  for (const [i, version] of languageVersions.entries() ) {
+    let isVersionSelected = versionList.includes(version)
+    if (isVersionSelected) {
+      if (currentRange) { currentRange.end = version }
+      else { currentRange = {start: version } }
+    }
+    
+    if (!isVersionSelected || i === lastItemIndex) {
+      if (currentRange) {
+        rangeArray.push(currentRange)
+        currentRange = null
+      }
+    }
+  }
+  return rangeArray.map(range => range.start + (range.end ? "-" + range.end : "")).join(', ')
 }
 
 /**
@@ -1215,15 +1257,20 @@ function descriptionForSelectedStatuses(selectedOptions) {
 * For a list of exact status names, Use false for useStatusPrefix.
 * For a list of status names that reads like a sentence, Use true for useStatusPrefix. 
 *
-* @param {string[]} options - each element is a key in the states objects. For example: '.accepted'.
+* @param {string[]} options - each element is a key in the states objects. For example: 'accepted'.
 * @param {string} conjunction - Used to join the last element if two or more elements are present.
 * @param {boolean} useStatusPrefix - Uses prepends statusPrefix, if defined, on the status name.
+* @param {string[]} implementationVersions - optional array of version strings. For example '6.4', 'Next'.
 */
-function listStringForStatuses(options, conjunction, useStatusPrefix) {
+function listStringForStatuses(options, conjunction, useStatusPrefix, implementationVersions) {
   let optionNames = options.map( function (option) {
     let state = states[option]
     let prefix = useStatusPrefix ? (state.statusPrefix ?? '') : ''
-     return prefix + state.shortName
+     let statusName = prefix + state.shortName
+     if (option === State.implemented && implementationVersions) {
+       statusName = implementedStateDescription(implementationVersions)
+     }
+      return statusName
   })
   if (optionNames.length === 1){
     return optionNames[0]
