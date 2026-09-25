@@ -842,7 +842,7 @@ function _applyStatusFilter(matchingProposals) {
   const filterCount = selectedStateKeys.length + selectedVersions.length
 
   updateStatusFilterToggleText(filterCount)
-  updateStatusFilterSubheading(selectedStateKeys)
+  updateStatusFilterSubheading(selectedStateKeys, selectedVersions)
 
   // Use all selected states, status and version to filter out proposals based on the grouping checkboxes
   if (filterCount) {
@@ -1093,11 +1093,12 @@ function _idSafeName (name) {
 /**
   * Updates the status filter subheading
   *
-  * @param {string[]} selectedStates - each element is a key in the states objects. For example: '.accepted'.
+  * @param {string[]} selectedStateKeys - each element is a key in the states objects. For example: 'accepted'.
+  * @param {string[]} selectedVersions - each element is a version string. For example: '5.4', 'Next'.
   */
-function updateStatusFilterSubheading(selectedStates) {
+function updateStatusFilterSubheading(selectedStateKeys, selectedVersions) {
   var statusFilterSubheading = document.querySelector('#status-filter-description')
-  statusFilterSubheading.innerText = descriptionForSelectedStatuses(selectedStates)
+  statusFilterSubheading.innerText = descriptionForSelectedFilters(selectedStateKeys, selectedVersions)
 }
 
 /**
@@ -1158,28 +1159,93 @@ function addNumberToState (state, count) {
 * To prevent listing more than five statuses, when more than five are selected
 * the generated string uses the form "All Statuses Except" followed by unselected statuses.
 *
-* @param {string[]} selectedOptions - each element is a key in the states objects. For example: '.accepted'.
+* @param {string[]} selectedStateKeys - each element is a key in the states objects. For example: 'accepted'.
+* @param {string[]} selectedVersions - each element is a version string. For example: '5.4', 'Next'.
 */
-function descriptionForSelectedStatuses(selectedOptions) {
-  let allStateOptions = [
+function descriptionForSelectedFilters(selectedStateKeys, selectedVersions) {
+  const allStateOptions = [
     State.awaitingReview, State.scheduledForReview, State.activeReview, State.accepted,
     State.previewing, State.implemented, State.returnedForRevision, State.rejected, State.withdrawn
   ]
-  let selectedCount = selectedOptions.length
-  let totalCount = allStateOptions.length
-  let ALL_EXCEPT_MAX_COUNT = 3
-  let allExceptThreshold = totalCount - ALL_EXCEPT_MAX_COUNT
+  const selectedCount = selectedStateKeys.length
+  const totalCount = allStateOptions.length
+  const ALL_EXCEPT_MAX_COUNT = 3
+  const allExceptThreshold = totalCount - ALL_EXCEPT_MAX_COUNT
+  
+  // Early exit for selected status state filters
+  if (selectedCount === 0) { return "All Statuses" }
 
-  if (selectedCount === 0 || selectedCount === totalCount) {
-    return "All Statuses"
-  } else if (selectedCount >= allExceptThreshold) {
-    let unselectedOptions = allStateOptions.filter(function (option) {
-      return selectedOptions.indexOf(option) === -1
-    })
-    return "All Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
+  if (selectedVersions.length === 0) {
+    if (selectedCount === totalCount) {
+      return "All Statuses"
+    } else if (selectedCount >= allExceptThreshold) {
+      let unselectedOptions = allStateOptions.filter(stateKey => !selectedStateKeys.includes(stateKey) )
+      return "All Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
+    } else {
+      return listStringForStatuses(selectedStateKeys, "or", true)
+    }
   } else {
-    return listStringForStatuses(selectedOptions, "or", true)
+      if (selectedCount === totalCount) {
+        return implementedStateDescription(selectedVersions) + " and All Other Statuses"
+      } else if (selectedCount >= allExceptThreshold) {
+        let unselectedOptions = allStateOptions.filter(stateKey => !selectedStateKeys.includes(stateKey) )
+        selectedStateKeys = _omitOrMoveStateKey(selectedStateKeys, State.implemented, false)
+        return implementedStateDescription(selectedVersions) + " and\nAll Other Statuses Except " + listStringForStatuses(unselectedOptions, "and", false)
+      } else {
+        selectedStateKeys = _omitOrMoveStateKey(selectedStateKeys, State.implemented, true)
+        return listStringForStatuses(selectedStateKeys, "or", true, selectedVersions)
+    }
   }
+}
+
+/**
+* Utility function to adjust an array of state keys for display purposes. 
+* The provided state key is removed from the provided array of state keys if present.
+* If the 'moveToEnd' parameter is true, the specified state key will be moved to the end of the list
+*
+* @param {string[]} stateKeys - each element is a key in the states objects. For example: 'accepted'.
+* @param {string} stateKey - a key in the states object to be removed or moved. For example: 'implemented'.
+* @param {boolean} moveToEnd - if true, removed state key will be appended to the end of the provided list.
+*/
+function _omitOrMoveStateKey(stateKeys, stateKey, moveToEnd) {
+  const foundIndex = stateKeys.indexOf(stateKey)
+  if (foundIndex > -1) {
+    stateKeys.splice(foundIndex, 1)
+    if (moveToEnd) { stateKeys.push(stateKey) }
+  }
+  return stateKeys
+}
+
+function implementedStateDescription(selectedVersions) {
+  return states[State.implemented].shortName + (selectedVersions ? (' in Swift ' + versionListDescription(selectedVersions)) : '')
+}
+
+/**
+* Generates the user-presentable description for an array of version strings. 
+* This assumes the version list is sorted in semantic versioning order with 'Next' as a possible last element. 
+* Consecutive versions are displayed as a range ('4.0-4.3'). 
+*
+* @param {string[]} versionList - Array of version strings. For example: '5.4', 'Next'.
+*/
+function versionListDescription(versionList) {
+  var currentRange = null
+  var rangeArray = []
+  const lastItemIndex = languageVersions.length - 1
+  for (const [i, version] of languageVersions.entries() ) {
+    let isVersionSelected = versionList.includes(version)
+    if (isVersionSelected) {
+      if (currentRange) { currentRange.end = version }
+      else { currentRange = {start: version } }
+    }
+    
+    if (!isVersionSelected || i === lastItemIndex) {
+      if (currentRange) {
+        rangeArray.push(currentRange)
+        currentRange = null
+      }
+    }
+  }
+  return rangeArray.map(range => range.start + (range.end ? "-" + range.end : "")).join(', ')
 }
 
 /**
@@ -1191,15 +1257,20 @@ function descriptionForSelectedStatuses(selectedOptions) {
 * For a list of exact status names, Use false for useStatusPrefix.
 * For a list of status names that reads like a sentence, Use true for useStatusPrefix. 
 *
-* @param {string[]} options - each element is a key in the states objects. For example: '.accepted'.
+* @param {string[]} options - each element is a key in the states objects. For example: 'accepted'.
 * @param {string} conjunction - Used to join the last element if two or more elements are present.
 * @param {boolean} useStatusPrefix - Uses prepends statusPrefix, if defined, on the status name.
+* @param {string[]} implementationVersions - optional array of version strings. For example '6.4', 'Next'.
 */
-function listStringForStatuses(options, conjunction, useStatusPrefix) {
+function listStringForStatuses(options, conjunction, useStatusPrefix, implementationVersions) {
   let optionNames = options.map( function (option) {
     let state = states[option]
     let prefix = useStatusPrefix ? (state.statusPrefix ?? '') : ''
-     return prefix + state.shortName
+     let statusName = prefix + state.shortName
+     if (option === State.implemented && implementationVersions) {
+       statusName = implementedStateDescription(implementationVersions)
+     }
+      return statusName
   })
   if (optionNames.length === 1){
     return optionNames[0]
