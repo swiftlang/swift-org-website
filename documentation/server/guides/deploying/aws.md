@@ -65,7 +65,7 @@ There are two alternative ways to compile code on the instance, either by:
 - or by [using docker, and compiling inside a docker container](#compile-with-docker)
 
 ### Compile using a downloaded toolchain
-Run the following command in the SSH terminal. Note that there may be a more up to date version of the swift toolchain. Check [https://swift.org/download/#releases](/download/#releasess) for the latest available toolchain url for Amazon Linux 2.
+Run the following command in the SSH terminal. Note that there may be a more up to date version of the swift toolchain. Check the [Linux installation page](/install/linux/) for the latest available toolchain url for Amazon Linux 2.
 
 ```
 SwiftToolchainUrl="https://swift.org/builds/swift-5.4.1-release/amazonlinux2/swift-5.4.1-RELEASE/swift-5.4.1-RELEASE-amazonlinux2.tar.gz"
