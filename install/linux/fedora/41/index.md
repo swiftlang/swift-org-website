@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - '/install/linux/fedora/39'
 layout: new-layouts/install-linux-version
 title: Install Swift
 ---

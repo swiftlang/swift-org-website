@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - '/install/linux/amazonlinux/2'
 layout: new-layouts/install-linux-version
 title: Install Swift
 ---

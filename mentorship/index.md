@@ -7,7 +7,7 @@ The Swift Mentorship Program is designed to encourage developers to actively par
 
 Each mentee will have the opportunity to connect with and learn from an experienced developer within the Swift community, with the goal of them contributing code directly to an open source project. The mentee can contribute to any open source project written in Swift, or even in the Swift compiler itself, depending on the mentee's learning goals. Mentors and mentees will be matched based on the learning goals of the mentee and the experience of the mentor.
 
-If the mentee has not contributed to the project before, they will first work with their mentor to submit their first patch and overcome any workflow hurdles. The core of the mentorship program is making contributions that work toward the mentee's learning goals. These contributions can range from implementing a small feature within the project, to several independent bug fixes within the same area of the project. At the end of the mentorship, mentees will have an opportunity for their contributions and learnings to be featured in a dedicated post on the Swift.org blog.
+If the mentee has not contributed to the project before, they will first work with their mentor to submit their first patch and overcome any workflow hurdles. The core of the mentorship program is making contributions that work toward the mentee's learning goals. These contributions can range from implementing a small feature within the project, to several independent bug fixes within the same area of the project.
 
 ## Current Program
 
@@ -89,7 +89,7 @@ If the mentee does not have any ideas in mind, project maintainers and mentors m
 <details class="download">
   <summary>Is there an evaluation at the end of the program?</summary>
 
-There is no formal evaluation at the end of the mentorship program. However, there will be an opt-in exit survey for all participants. There will also be a post on the Swift.org blog to highlight mentees' contributions and their learnings.
+There is no formal evaluation at the end of the mentorship program. However, there will be an opt-in exit survey for all participants.
 </details>
 
 <details class="download">

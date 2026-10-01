@@ -151,7 +151,7 @@
     - title: License
       url: /legal/license.html
     - title: Security
-      url: /support/security.html
+      url: /security/
       sections:
         - title: Security Process
           name: security-process

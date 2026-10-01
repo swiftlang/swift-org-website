@@ -1,2 +1,4 @@
 - name: Debian 12
   url: /install/linux/debian/12
+- name: Debian 13
+  url: /install/linux/debian/13
