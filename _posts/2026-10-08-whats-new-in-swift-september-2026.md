@@ -27,9 +27,8 @@ In September, the big news in the Swift community was the release of Swift 6.4, 
 * [Stop Sleeping: Deterministic Tests for Concurrent Swift Code](https://raska.io/blog/testing-concurrent-code/)
 * [Swift for Wasm September 2026 Updates](https://forums.swift.org/t/swift-for-wasm-september-2026-updates/89836)
 
-## Packages
+## New package releases
 * [WasmKit](https://github.com/swiftwasm/WasmKit) is a WebAssembly interpreter written in Swift. The [0.4 release](https://katei.dev/blog/2026/09/18/wasmkit-0-4-0/) doubles interpreter speed, and can now run on ESP32-C6 microcontrollers and the Playdate.
-* [JBird](https://www.usejbird.com) is a type-safe library for working with JSON in Swift. The latest 3.0 release focused on parsing performance and correctness.
 * [Swift AWS Lambda Runtime](https://github.com/awslabs/swift-aws-lambda-runtime) 3.0 was released, adding SwiftPM plugins for init, build, and deploy. With build you can now package as a zip or OCI image, and choose how you compile: with Docker, Apple's `container`, or cross-compile using the Swift Static Linux SDK.
 
 ## Swift Evolution
