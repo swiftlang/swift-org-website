@@ -24,7 +24,9 @@ The Vapor web framework recently had a week-long celebration called Vapor Week! 
 Now on to other news about Swift:
 
 ## Swift 6.4 release
-In September, the big news in the Swift community was the release of Swift 6.4, in [Swift 6.4 Released](https://www.swift.org/blog/swift-6.4-released/). In the lead-up to the release, we also blogged a few deep dives into parts of the release:
+In September, the project's headline story was the [release of Swift 6.4](https://www.swift.org/blog/swift-6.4-released/), which brings deeper interoperability, stronger platform support, and easier everyday code.
+
+In the weeks leading up to the release we also shared a few deep dives about some of the features it includes:
 
 * [Module Tracking in Swift Debug Info](https://www.swift.org/blog/module-tracking-in-debug-info/) explains how precise, path-based module imports make LLDB lookups more reliable and shrink dSYMs and binaries. Build-system maintainers (Bazel, Buck, CMake) will want to replace `-modulewrap`/`-add_ast_path` with -`debug-module-path`.
 * [Embedded Swift Improvements Coming in Swift 6.4](https://www.swift.org/blog/embedded-swift-improvements-coming-in-swift-6.4/) rounds up what's ahead for Swift on microcontrollers and other constrained environments.
