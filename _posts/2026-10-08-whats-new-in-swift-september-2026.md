@@ -9,7 +9,7 @@ category: "Digest"
 
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
 
-The Vapor web framework recently had a week-long celebration called Vapor Week! We've invited one of the authors of Vapor as this month's guest contributor:
+The [Vapor](vapor.codes) web framework recently turned ten and celebrated with Vapor Week! We've invited one of the authors of Vapor as this month's guest contributor:
 
 > Hi, I'm Tim from the Vapor Core Team! 10 years ago, in September, Vapor 1.0 was released, and over the years Vapor has matured into a comprehensive framework for building backends and APIs in Swift.
 >
@@ -26,19 +26,19 @@ Now on to other news about Swift:
 ## Swift 6.4 release
 In September, the project's headline story was the [release of Swift 6.4](/blog/swift-6.4-released/), which brings deeper interoperability, stronger platform support, and easier everyday code.
 
-In the weeks leading up to the release we also shared a few deep dives about some of the features it includes:
+In the weeks leading up to the release we also shared two deep dives into some features it includes:
 
 * [Module Tracking in Swift Debug Info](/module-tracking-in-debug-info/) explains how precise, path-based module imports make LLDB lookups more reliable and shrink dSYMs and binaries. Build-system maintainers (Bazel, Buck, CMake) will want to replace `-modulewrap`/`-add_ast_path` with `-debug-module-path`.
 * [Embedded Swift Improvements Coming in Swift 6.4](/blog/embedded-swift-improvements-coming-in-swift-6.4/) rounds up what's ahead for Swift on microcontrollers and other constrained environments.
 
 ## Community highlights
-* Solbach Leads [shared their Swift adoption story](https://itnext.io/from-spring-boot-to-swift-the-business-logic-was-the-cheap-part-2068281d7f0b), including how they migrated a production AI data pipeline from Kotlin / Spring Boot to Swift / Vapor. Six months in, it handles over 52 million tasks a month.
+* Solbach Leads [shared their Swift adoption story](https://itnext.io/from-spring-boot-to-swift-the-business-logic-was-the-cheap-part-2068281d7f0b), including how they migrated a production AI data pipeline from Kotlin and Spring Boot to Swift and Vapor. Six months in, it handles over 52 million tasks a month.
 * Curious what it takes to run Swift with no OS at all? [A minimal kernel in Swift running in QEMU](https://carette.xyz/posts/minimal_swift_kernel_on_qemu/) uses Embedded Swift and the `@c` attribute to boot a kernel that prints a message and echoes typed input.
 * [Stop Sleeping: Deterministic Tests for Concurrent Swift Code](https://raska.io/blog/testing-concurrent-code/) shows how to replace `Task.sleep` in tests with test spies, so Swift Testing tests can check timeouts, errors, and cancellation without waiting on the clock.
-* The monthly Swift for Wasm update is out. [September 2026 updates](https://forums.swift.org/t/swift-for-wasm-september-2026-updates/89836) highlights experimental threads support in the Wasm Swift SDK, JavaScriptKit's new uWASI option, and custom elements in ElementaryUI.
+* The monthly Swift for Wasm update is out. [September 2026 updates](https://forums.swift.org/t/swift-for-wasm-september-2026-updates/89836) highlights experimental threads support in the Wasm Swift SDK (currently in nightly snapshots), JavaScriptKit's new uWASI option, and custom elements in ElementaryUI.
 
 ## New package releases
-* [WasmKit](https://github.com/swiftwasm/WasmKit) is a WebAssembly interpreter written in Swift. The [0.4 release](https://katei.dev/blog/2026/09/18/wasmkit-0-4-0/) doubles interpreter speed, and it can now run on ESP32-C6 microcontrollers and the Playdate.
+* [WasmKit](https://github.com/swiftwasm/WasmKit) is a WebAssembly runtime written in Swift. The [0.4 release](https://katei.dev/blog/2026/09/18/wasmkit-0-4-0/) doubles interpreter speed, and it can now run on ESP32-C6 microcontrollers and the Playdate.
 * [Swift AWS Lambda Runtime](https://github.com/awslabs/swift-aws-lambda-runtime) 3.0 was released, adding SwiftPM plugins for init, build, and deploy. With build you can now package as a zip or OCI image, and choose how you compile: with Docker, Apple's `container`, or cross-compile using the Swift Static Linux SDK.
 
 ## Swift Evolution
@@ -48,7 +48,7 @@ The Swift project adds new language features through the [Swift Evolution proces
 - [SE-0554](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0554-deployment-target-conditional-compilation.md) Deployment target conditional compilation - Swift can test whether an API is available at runtime with `if #available(...)`, but that cannot select between imports, type aliases, conformances, stored properties, or complete declarations; those choices have to be made while the module is being compiled. This proposal adds `#if deploymentTargetAtLeast(...)`, so a library can compile different source for different minimum OS versions without maintaining a separate build-system flag.
 
 **Recently accepted:**
-- [SE-0546](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0546-memberwise-init-extensions.md) Same-file memberwise initializer extensions - When a struct's memberwise initializer is meant to be `public`, it is only possible to define it in its base declaration; defining it in an extension is a redeclaration error, and for macro-generated structs there is no way to publicize their memberwise initializers. This proposal allows memberwise initializers, and default `init()`, to be defined in same-file extensions, where a handwritten initializer indistinguishable from the synthesized one suppresses it.
+- [SE-0546](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0546-memberwise-init-extensions.md) Same-file memberwise initializer extensions - When a struct's memberwise initializer is meant to be `public`, it is only possible to define it in its base declaration; defining it in an extension is a redeclaration error, and for macro-generated structs there is no way to publicize their memberwise initializers. This proposal allows memberwise initializers, and default `init()`, to be defined in same-file extensions.
 - [SE-0548](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0548-resign-remote-id.md) `resignRemoteID` for remote distributed actor references - Today, a `DistributedActorSystem` observes the lifecycle of local distributed actors through `assignID(_:)` / `resignID(_:)`, and participates in creating remote references through `resolve(id:as:)`, but there is no way to observe when a remote reference has been deinitialized. This proposal adds `resignRemoteID(_:)`, invoked when a remote distributed actor proxy is deinitialized, so systems can keep connections alive only while at least one remote reference still uses them.
 - [ST-0029](https://github.com/swiftlang/swift-evolution/blob/main/proposals/testing/0029-add-issue-metadata-event-stream.md) Include additional issue metadata in event stream - Tools such as Xcode and VS Code consume Swift Testing's JSON event stream, but there isn't enough structured information to distinguish between different kinds of issues, for example a thrown error versus a manual `Issue.record` call. This proposal adds new fields to the issue event type, including error, confirmation miscount, exceeded time limit, and expression, so tools can show richer failure context.
 
