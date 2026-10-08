@@ -24,12 +24,12 @@ The Vapor web framework recently had a week-long celebration called Vapor Week! 
 Now on to other news about Swift:
 
 ## Swift 6.4 release
-In September, the project's headline story was the [release of Swift 6.4](https://www.swift.org/blog/swift-6.4-released/), which brings deeper interoperability, stronger platform support, and easier everyday code.
+In September, the project's headline story was the [release of Swift 6.4](/blog/swift-6.4-released/), which brings deeper interoperability, stronger platform support, and easier everyday code.
 
 In the weeks leading up to the release we also shared a few deep dives about some of the features it includes:
 
-* [Module Tracking in Swift Debug Info](https://www.swift.org/blog/module-tracking-in-debug-info/) explains how precise, path-based module imports make LLDB lookups more reliable and shrink dSYMs and binaries. Build-system maintainers (Bazel, Buck, CMake) will want to replace `-modulewrap`/`-add_ast_path` with `-debug-module-path`.
-* [Embedded Swift Improvements Coming in Swift 6.4](https://www.swift.org/blog/embedded-swift-improvements-coming-in-swift-6.4/) rounds up what's ahead for Swift on microcontrollers and other constrained environments.
+* [Module Tracking in Swift Debug Info](/module-tracking-in-debug-info/) explains how precise, path-based module imports make LLDB lookups more reliable and shrink dSYMs and binaries. Build-system maintainers (Bazel, Buck, CMake) will want to replace `-modulewrap`/`-add_ast_path` with `-debug-module-path`.
+* [Embedded Swift Improvements Coming in Swift 6.4](/blog/embedded-swift-improvements-coming-in-swift-6.4/) rounds up what's ahead for Swift on microcontrollers and other constrained environments.
 
 ## Community highlights
 * Solbach Leads [shared their Swift adoption story](https://itnext.io/from-spring-boot-to-swift-the-business-logic-was-the-cheap-part-2068281d7f0b), including how they migrated a production AI data pipeline from Kotlin / Spring Boot to Swift / Vapor. Six months in, it handles over 52 million tasks a month.
@@ -42,7 +42,7 @@ In the weeks leading up to the release we also shared a few deep dives about som
 * [Swift AWS Lambda Runtime](https://github.com/awslabs/swift-aws-lambda-runtime) 3.0 was released, adding SwiftPM plugins for init, build, and deploy. With build you can now package as a zip or OCI image, and choose how you compile: with Docker, Apple's `container`, or cross-compile using the Swift Static Linux SDK.
 
 ## Swift Evolution
-The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
+The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
 
 **Under active review:**
 - [SE-0554](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0554-deployment-target-conditional-compilation.md) Deployment target conditional compilation - Swift can test whether an API is available at runtime with `if #available(...)`, but that cannot select between imports, type aliases, conformances, stored properties, or complete declarations; those choices have to be made while the module is being compiled. This proposal adds `#if deploymentTargetAtLeast(...)`, so a library can compile different source for different minimum OS versions without maintaining a separate build-system flag.
