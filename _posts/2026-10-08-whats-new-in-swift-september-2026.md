@@ -24,7 +24,7 @@ The [Vapor](https://www.vapor.codes) web framework recently turned ten and celeb
 Now on to other news about Swift:
 
 ## Swift 6.4 release
-In September, the project's headline story was the [release of Swift 6.4](/blog/swift-6.4-released/), which brings deeper interoperability, stronger platform support, and easier everyday code.
+In September, the project's headline story was the [release of Swift 6.4](/blog/swift-6.4-released/), which brings deeper interoperability, stronger platform support, and easier everyday code. Highlights include Swift Build as the new default in Swift Package Manager, Subprocess reaching 1.0, and up to 40x faster WebAssembly bridging with JavaScriptKit.
 
 In the weeks leading up to the release we also shared two deep dives into some features it includes:
 
@@ -39,7 +39,7 @@ In the weeks leading up to the release we also shared two deep dives into some f
 
 ## New package releases
 * [WasmKit](https://github.com/swiftwasm/WasmKit) is a WebAssembly runtime written in Swift. The [0.4 release](https://katei.dev/blog/2026/09/18/wasmkit-0-4-0/) doubles interpreter speed, and it can now run on ESP32-C6 microcontrollers and the Playdate.
-* [Swift AWS Lambda Runtime](https://github.com/awslabs/swift-aws-lambda-runtime) 3.0 was released, adding SwiftPM plugins for init, build, and deploy. The build plugin can now package as a zip or OCI image, and choose how you compile: with Docker, Apple's `container`, or cross-compile using the Swift Static Linux SDK.
+* [Swift AWS Lambda Runtime](https://github.com/awslabs/swift-aws-lambda-runtime) 3.0 was released, adding SwiftPM plugins for init, build, and deploy. The build plugin can now package as a zip or OCI image, and can choose how you compile: with Docker, Apple's `container`, or cross-compile using the Swift Static Linux SDK.
 
 ## Swift Evolution
 The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
