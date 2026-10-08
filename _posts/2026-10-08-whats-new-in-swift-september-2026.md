@@ -11,7 +11,15 @@ Welcome to "What's new in Swift," a curated digest of releases, videos, and disc
 
 The Vapor web framework recently had a week-long celebration called Vapor Week! We've invited one of the authors of Vapor as this month's guest contributor:
 
-> TODO: insert @0xTim contribution re: Vapor Week
+> Hi, I'm Tim from the Vapor Core Team! 10 years ago, in September, Vapor 1.0 was released, and over the years Vapor has matured into a comprehensive framework for building backends and APIs in Swift.
+>
+> On the anniversary we released the [first beta of Vapor 5](https://blog.vapor.codes/posts/vapor-5-beta/), the next major version of Vapor, which is a complete rewrite, removing 6 years of tech debt, adding full structured concurrency support, and (finally!) saying goodbye to `EventLoopFuture`s.
+>
+> From the very beginning, Vapor's goals haven't changed: an expressive, easy-to-use and powerful framework for building server applications in Swift. With Vapor 5 we can make use of the new Swift HTTP Server to handle the actual HTTP parts and concentrate on being a great web framework, using the latest Swift features where they make sense.
+>
+> It's amazing to see the range of people using Vapor, from indie developers to large companies. You can find the full story, including our updated, localised and more accessible docs, in [Vapor Week](https://blog.vapor.codes/posts/ten-years-of-vapor/).
+>
+> If you're curious about server-side Swift, give the Vapor 5 beta a try and let us know what you think!
 
 Now on to other news about Swift:
 
