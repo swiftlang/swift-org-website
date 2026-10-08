@@ -9,7 +9,7 @@ category: "Digest"
 
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
 
-The [Vapor](vapor.codes) web framework recently turned ten and celebrated with Vapor Week! We've invited one of the authors of Vapor as this month's guest contributor:
+The [Vapor](https://www.vapor.codes) web framework recently turned ten and celebrated with Vapor Week! We've invited one of the authors of Vapor as this month's guest contributor:
 
 > Hi, I'm Tim from the Vapor Core Team! 10 years ago, in September, Vapor 1.0 was released, and over the years Vapor has matured into a comprehensive framework for building backends and APIs in Swift.
 >
@@ -28,7 +28,7 @@ In September, the project's headline story was the [release of Swift 6.4](/blog/
 
 In the weeks leading up to the release we also shared two deep dives into some features it includes:
 
-* [Module Tracking in Swift Debug Info](/module-tracking-in-debug-info/) explains how precise, path-based module imports make LLDB lookups more reliable and shrink dSYMs and binaries. Build-system maintainers (Bazel, Buck, CMake) will want to replace `-modulewrap`/`-add_ast_path` with `-debug-module-path`.
+* [Module Tracking in Swift Debug Info](/blog/module-tracking-in-debug-info/) explains how precise, path-based module imports make LLDB lookups more reliable and shrink dSYMs and binaries. Build-system maintainers (Bazel, Buck, CMake) will want to replace `-modulewrap`/`-add_ast_path` with `-debug-module-path`.
 * [Embedded Swift Improvements Coming in Swift 6.4](/blog/embedded-swift-improvements-coming-in-swift-6.4/) rounds up what's ahead for Swift on microcontrollers and other constrained environments.
 
 ## Community highlights
