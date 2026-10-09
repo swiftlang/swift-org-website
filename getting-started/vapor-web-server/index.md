@@ -117,7 +117,7 @@ app.get("json", ":name") { req async throws -> UserResponse in
 
 Here's what this code does:
 
-1. Define a new route handler that handles a **GET** request to `/json`. Importantly, the return type for the closure is `UserResponse`.
+1. Define a new route handler that handles a **GET** request to `/json/<NAME>`. Importantly, the return type for the closure is `UserResponse`.
 2. Get the name as before and construct the message.
 3. Return the `UserResponse`.
 
