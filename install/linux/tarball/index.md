@@ -24,7 +24,8 @@ Skip this step if you have imported the keys in the past. This does not apply to
     <code>$ gpg --keyserver hkp://keyserver.ubuntu.com \
           --recv-keys \
           'A62A E125 BBBF BB96 A6E0  42EC 925C C1CC ED3D 1561'\
-          'E813 C892 820A 6FA1 3755  B268 F167 DF1A CF9C E069'
+          'E813 C892 820A 6FA1 3755  B268 F167 DF1A CF9C E069'\
+          '52BB 7E3D E28A 71BE 22EC 05FF EF80 A866 B47A 981F'
     </code>
   </pre>
 
@@ -67,13 +68,13 @@ Skip this step if you have imported the keys in the past. This does not apply to
       <pre class="highlight">
         <code><span class="nv">$ </span>gpg <span class="nt">--verify</span> swift-&lt;VERSION&gt;-&lt;PLATFORM&gt;.tar.gz.sig
   ...
-  gpg: Good signature from <span class="s2">"Swift Automatic Signing Key #4 &lt;swift-infrastructure@forums.swift.org&gt;"</span>
+  gpg: Good signature from <span class="s2">"Swift 6.x Release Signing Key &lt;swift-infrastructure@forums.swift.org&gt;"</span>
         </code>
       </pre>
     </div>
   </div>
   <p>If <code class="language-plaintext highlighter-rouge">gpg</code> fails to verify because you don’t have the public key (<code class="language-plaintext highlighter-rouge">gpg: Can't
-  check signature: No public key</code>), please follow the instructions in <a href="#active-signing-keys">Active Signing Keys</a> below to import the keys into your keyring.
+  check signature: No public key</code>), please follow the instructions in <a href="/keys/active">Active Signing Keys</a> to import the keys into your keyring.
   </p>
   <p>You might see a warning:</p>
   <div class="language-shell highlighter-rouge">
