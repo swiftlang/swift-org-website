@@ -24,4 +24,4 @@ If you are deploying to your own servers (e.g. bare metal, VMs or Docker) there 
 
     instead of `./my-program` to get something akin to a 'crash report' on crash.
 
-- If you don't have `--privileged` (or `--security-opt seccomp=unconfined`) containers (meaning you won't be able to use `lldb`) or you don't want to use lldb, consider using a library like [`swift-backtrace`](https://github.com/swift-server/swift-backtrace) to get stack traces on crash.
+- If you don't have `--privileged` (or `--security-opt seccomp=unconfined`) containers (meaning you won't be able to use `lldb`) or you don't want to use lldb, rely on the Swift runtime's built-in backtracer, which prints a backtrace on crash on Linux in Swift 5.9 and later. See [On-Crash Backtraces in Swift](/blog/swift-5.9-backtraces/) for details.
