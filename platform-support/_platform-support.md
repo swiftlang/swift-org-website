@@ -25,7 +25,7 @@ These are the platforms one can use for Swift's development tools. This table sh
 
 #### Minimum deployment version
 
-This table shows the minimum OS version for which a Swift application can be deployed.  For example, a Swift application can run on iOS 7.0 or later, but not iOS 6.
+This table shows the minimum OS version for which a Swift application can be deployed.  For example, a Swift application can run on iOS 16.0 or later, but not iOS 15.
 
 | Platform running Swift application | Minimum deployment version |
 |:----------------------------------:|:--------------------------:|
@@ -33,7 +33,7 @@ This table shows the minimum OS version for which a Swift application can be dep
 | **iOS**                            |16.0                        |
 | **watchOS**                        |9.0                         |
 | **tvOS**                           |16.0                        |
-| **visonOS**                        |1.0                         |
+| **visionOS**                       |1.0                         |
 | **Android**                        |9 (API 28)                  |
 | **Ubuntu**                         |22.04                       |
 | **Debian**                         |12                          |
