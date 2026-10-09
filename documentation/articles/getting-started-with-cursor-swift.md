@@ -17,7 +17,7 @@ Since Cursor is a fork of VS Code, [the Swift VS Code extension](/documentation/
 
 ## Create a New Swift Project
 
-{% include_relative _shared-create-project.md %}
+{% include_relative _shared-create-project.md editor_name="Cursor" %}
 
 ## Language Features
 
