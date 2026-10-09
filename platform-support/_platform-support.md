@@ -71,6 +71,8 @@ The table below list the available capabilities on each platform for running Swi
 | **watchOS**                       | ✓       |     |
 | **tvOS**                          | ✓       |     |
 | **visionOS**                      | ✓       |     |
+| **Android**                       | ✓       |     |
+| **WebAssembly**                   | ✓       |     |
 | **Ubuntu**                        | ✓       | ✓   |
 | **Debian**                        | ✓       | ✓   |
 | **Fedora**                        | ✓       | ✓   |
