@@ -1,10 +1,10 @@
 ---
 redirect_from: "server/guides/deploying/aws"
 layout: page
-title: Deploying to AWS on Amazon Linux 2
+title: Deploying to AWS on Amazon Linux 2023
 ---
 
-This guide describes how to launch an AWS instance running Amazon Linux 2 and configure it to run Swift. The approach taken here is a step by step approach through the console. This is a great way to learn, but for a more mature approach we recommend using Infrastructure as Code tools such as AWS Cloudformation, and the instances are created and managed through automated tools such as Autoscaling Groups. For one approach using those tools see this blog article: https://aws.amazon.com/blogs/opensource/continuous-delivery-with-server-side-swift-on-amazon-linux-2/
+This guide describes how to launch an AWS instance running Amazon Linux 2023 and configure it to run Swift. The approach taken here is a step by step approach through the console. This is a great way to learn, but for a more mature approach we recommend using Infrastructure as Code tools such as AWS Cloudformation, and the instances are created and managed through automated tools such as Autoscaling Groups. For one approach using those tools see this blog article: https://aws.amazon.com/blogs/opensource/continuous-delivery-with-server-side-swift-on-amazon-linux-2/
 
 ## Launch AWS Instance
 
@@ -20,7 +20,7 @@ Click on "Launch Instance", either on the top of the screen, or if this is the f
 
 ![Launch instance](/assets/images/server-guides/aws/launch-0.png)
 
-Choose an Amazon Machine Image (AMI). In this case the guide is assuming that we will be using Amazon Linux 2, so select that AMI type.
+Choose an Amazon Machine Image (AMI). In this case the guide is assuming that we will be using Amazon Linux 2023, so select that AMI type.
 
 ![Choose AMI](/assets/images/server-guides/aws/launch-1.png)
 
@@ -65,11 +65,11 @@ There are two alternative ways to compile code on the instance, either by:
 - or by [using docker, and compiling inside a docker container](#compile-with-docker)
 
 ### Compile using a downloaded toolchain
-Run the following command in the SSH terminal. Note that there may be a more up to date version of the swift toolchain. Check the [Linux installation page](/install/linux/) for the latest available toolchain url for Amazon Linux 2.
+Run the following command in the SSH terminal. Note that there may be a more up to date version of the swift toolchain. Check the [Linux installation page](/install/linux/amazonlinux/2023/) for the latest available toolchain url for Amazon Linux 2023.
 
 ```
-SwiftToolchainUrl="https://swift.org/builds/swift-5.4.1-release/amazonlinux2/swift-5.4.1-RELEASE/swift-5.4.1-RELEASE-amazonlinux2.tar.gz"
-sudo yum install ruby binutils gcc git glibc-static gzip libbsd libcurl libedit libicu libsqlite libstdc++-static libuuid libxml2 tar tzdata ruby -y
+SwiftToolchainUrl="https://download.swift.org/swift-6.4.0-release/amazonlinux2023/swift-6.4.0-RELEASE/swift-6.4.0-RELEASE-amazonlinux2023.tar.gz"
+sudo dnf install -y binutils gcc git unzip glibc-static gzip libbsd libcurl-devel libedit libicu libstdc++-static libuuid libxml2-devel openssl-devel tar tzdata wget
 cd $(mktemp -d)
 wget ${SwiftToolchainUrl} -O swift.tar.gz
 gunzip < swift.tar.gz | sudo tar -C / -xv --strip-components 1
@@ -79,7 +79,7 @@ Finally, check that Swift is correctly installed by running the Swift REPL: `swi
 
 ![Invoke REPL](/assets/images/server-guides/aws/repl.png)
 
-Let's now download and build an test application. We will use the `--static-swift-stdlib` option so that it can be deployed to a different server without the Swift toolchain installed. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server), but you can test with your own project.
+Let's now download and build an test application. We will use the `--static-swift-stdlib` option so that it can be deployed to a different server without the Swift toolchain installed. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/main/Sources/NIOHTTP1Server), but you can test with your own project.
 
 ```
 git clone https://github.com/apple/swift-nio.git
@@ -92,18 +92,20 @@ swift build -v --static-swift-stdlib -c release
 Ensure that Docker and git are installed on the instance:
 
 ```
-sudo yum install docker git
+sudo dnf install -y docker git
 sudo usermod -a -G docker ec2-user
 sudo systemctl start docker
 ```
 
 You may have to log out and log back in to be able to use Docker. Check by running `docker ps`, and ensure that it runs without errors.
 
-Download and compile SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server):
+Download and compile SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/main/Sources/NIOHTTP1Server):
 
 ```
-docker run --rm  -v "$PWD:/workspace"  -w /workspace swift:5.4-amazonlinux2   /bin/bash -cl ' \
-     swift build -v --static-swift-stdlib -c release
+git clone https://github.com/apple/swift-nio.git
+cd swift-nio
+docker run --rm -v "$PWD:/workspace" -w /workspace swift:6.4-amazonlinux2023 \
+     /bin/bash -cl 'swift build -v --static-swift-stdlib -c release'
 ```
 ## Test binary
 Using the same steps as above, launch a second instance (but don't run any of the bash commands above!). Be sure to use the same SSH keypair.
@@ -111,14 +113,14 @@ Using the same steps as above, launch a second instance (but don't run any of th
 From within the AWS management console, navigate to the EC2 service and find the instance that you just launched. Click on the instance to see the details, and find the internal IP. In my example, the internal IP is `172.31.3.29`
 
 From the original build instance, copy the binary to the new server instance:
-```scp .build/release/NIOHTTP1Server ec2-user@172.31.3.29```
+```scp .build/release/NIOHTTP1Server ec2-user@172.31.3.29:```
 
 Now connect to the new instance:
 ```ssh ec2-user@172.31.3.29```
 
 From within the new instance, test the Swift binary:
 ```
-NIOHTTP1Server localhost 8080 &
+./NIOHTTP1Server localhost 8080 &
 curl localhost:8080
 ```
 
