@@ -34,7 +34,7 @@ This will generate a new directory called _MyLibrary_ with the following files:
 `Package.swift` is the manifest file for Swift. It’s where you keep metadata for your project, as well as its dependencies.
 
 `Sources/MyLibrary/MyLibrary.swift` is the library initial source file and where we’ll write our library code.
-`Test/MyLibraryTests/MyLibraryTests.swift` is where we can write tests for our library.
+`Tests/MyLibraryTests/MyLibraryTests.swift` is where we can write tests for our library.
 
 In fact, SwiftPM generated a "Hello, world!" project for us, including some unit tests!
 We can run the tests by running  `swift test`  in our terminal.
