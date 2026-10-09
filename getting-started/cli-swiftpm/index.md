@@ -23,13 +23,19 @@ This will generate a new directory called MyCLI with the following files:
 ~~~no-highlight
 .
 ├── Package.swift
-└── Sources
-    └── main.swift
+├── Sources
+│   └── MyCLI
+│       └── MyCLI.swift
+└── Tests
+    └── MyCLITests
+        └── MyCLITests.swift
 ~~~
 
 `Package.swift` is the manifest file for Swift. It’s where you keep metadata for your project, as well as dependencies.
 
-`Sources/main.swift` is the application entry point and where we’ll write our application code.
+`Sources/MyCLI/MyCLI.swift` is the application entry point and where we’ll write our application code.
+
+`Tests/MyCLITests/MyCLITests.swift` is where we can write tests for our application.
 
 In fact, SwiftPM generated a "Hello, world!" project for us!
 
@@ -38,8 +44,7 @@ We can run the program by running  `swift run`  in our terminal.
 ~~~bash
 $ swift run MyCLI
 Building for debugging...
-[3/3] Linking MyCLI
-Build complete! (0.68s)
+Build complete! (3.39 sec)
 Hello, world!
 ~~~
 
@@ -51,10 +56,11 @@ In this project, we’ll use a package called [example-package-figlet](https://g
 
 You can find more interesting libraries on [Swift Package Index](https://swiftpackageindex.com) -- the unofficial package index for Swift.
 
-To do so, we extend our `Package.swift` file with the following information:
+To do so, we extend our `Package.swift` file with the following information.
+Depending on your version of Swift, your generated `Package.swift` may specify a newer tools version or include additional settings; keep those as they are and add the `dependencies` entries shown here:
 
 ~~~swift
-// swift-tools-version: 5.8
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -71,8 +77,12 @@ let package = Package(
             name: "MyCLI",
             dependencies: [
                 .product(name: "Figlet", package: "example-package-figlet"),
-            ],
-            path: "Sources"),
+            ]
+        ),
+        .testTarget(
+            name: "MyCLITests",
+            dependencies: ["MyCLI"]
+        ),
     ]
 )
 ~~~
@@ -84,7 +94,7 @@ This file is a snapshot of the exact versions of the dependencies we are using l
 
 ## A small application
 
-Start by removing `main.swift`. We’ll replace it with a new file called `MyCLI.swift`. Add the following code to it:
+Replace the contents of `Sources/MyCLI/MyCLI.swift` with the following code:
 
 ~~~swift
 import Figlet
@@ -97,7 +107,7 @@ struct FigletTool {
 }
 ~~~
 
-This provides a new entrypoint to the app which could be asynchronous if required. You can either have a `main.swift` file or a `@main` entrypoint, but not both.
+The `@main` attribute marks this type as the entry point to the app, which could be asynchronous if required. You can either have a `main.swift` file or a `@main` entry point, but not both.
 
 With `import Figlet` we can now use the `Figlet` module that the `example-package-figlet` package exports.
 
@@ -122,7 +132,7 @@ To add this capability to our application, we add a dependency on [swift-argumen
 To do so, we extend our `Package.swift` file with the following information:
 
 ~~~swift
-// swift-tools-version: 5.8
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -141,8 +151,12 @@ let package = Package(
             dependencies: [
                 .product(name: "Figlet", package: "example-package-figlet"),
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-            ],
-            path: "Sources"),
+            ]
+        ),
+        .testTarget(
+            name: "MyCLITests",
+            dependencies: ["MyCLI"]
+        ),
     ]
 )
 ~~~
