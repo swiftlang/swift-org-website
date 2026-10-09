@@ -42,4 +42,4 @@ SwiftPM can show you the full binary path using `swift build --show-bin-path -c 
 
 - For best performance in Swift 5.2 or later, pass `-Xswiftc -cross-module-optimization` (this won't work in Swift versions before 5.2) - enabling this should be verified with performance tests (as any optimization changes) as it may sometimes cause performance regressions.
 
-- Integrate [`swift-backtrace`](https://github.com/swift-server/swift-backtrace) into your application to make sure backtraces are printed on crash. Backtraces do not work out-of-the-box on Linux, and this library helps to fill the gap. Eventually this will become a language feature and not require a discrete library.
+- Since Swift 5.9, the Swift runtime on Linux catches crashes and prints a backtrace by default, including for `async` functions, so you don't need an additional library. See [On-Crash Backtraces in Swift](/blog/swift-5.9-backtraces/) for details and configuration options.
