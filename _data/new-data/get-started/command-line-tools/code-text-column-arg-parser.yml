@@ -16,9 +16,9 @@ code: |-
     var count: Int? = nil
 
     mutating func run() throws {
-      let repeatCount = count ?? .max
+      let repeatCount = count ?? 2
 
-      for i in 1...repeatCount {
+      for _ in 0..<repeatCount {
         print(phrase)
       }
     }
