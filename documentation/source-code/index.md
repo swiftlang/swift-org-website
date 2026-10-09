@@ -4,12 +4,15 @@ layout: page
 title: Source Code
 ---
 
-The code for the Swift project is divided into several open-source repositories, all hosted on [GitHub](https://github.com/apple/).
+The code for the Swift project is divided into several open-source repositories, all hosted on [GitHub](https://github.com/swiftlang/).
 
 ## Compiler and Standard Library
 
 [swift](https://github.com/swiftlang/swift)
 : The main Swift repository, which contains the source code for the Swift compiler, standard library, and SourceKit.
+
+[swift-driver](https://github.com/swiftlang/swift-driver)
+: The source code for the Swift compiler driver, which coordinates compilation of Swift code.
 
 [swift-evolution](https://github.com/swiftlang/swift-evolution)
 : Documents related to the continued evolution of Swift, including goals for upcoming releases proposals for changes to and extensions of Swift.
@@ -21,11 +24,17 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 
 ## Core Libraries
 
+[swift-foundation](https://github.com/swiftlang/swift-foundation)
+: The source code for the shared implementation of key Foundation API for all platforms, which provides common functionality for all applications. On non-Apple platforms it's available as the `FoundationEssentials` and `FoundationInternationalization` modules.
+
 [swift-corelibs-foundation](https://github.com/swiftlang/swift-corelibs-foundation)
-: The source code for Foundation, which provides common functionality for all applications.
+: The source code for the `Foundation`, `FoundationXML`, and `FoundationNetworking` modules on platforms without an Objective-C runtime, which re-export swift-foundation and provide a compatibility implementation of the remaining Foundation API.
 
 [swift-corelibs-libdispatch](https://github.com/swiftlang/swift-corelibs-libdispatch)
 : The source code for libdispatch, which provides concurrency primitives for working on multicore hardware.
+
+[swift-testing](https://github.com/swiftlang/swift-testing)
+: The source code for Swift Testing, the recommended framework for writing tests for Swift apps and libraries.
 
 [swift-corelibs-xctest](https://github.com/swiftlang/swift-corelibs-xctest)
 : The source code for XCTest, which provides fundamental testing infrastructure for Swift apps and libraries.
@@ -35,6 +44,9 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 [swift-package-manager](https://github.com/swiftlang/swift-package-manager)
 : The source code for the Swift package manager.
 
+[swift-build](https://github.com/swiftlang/swift-build)
+: The source code for Swift Build, a high-level build system used by Xcode and the Swift package manager.
+
 [swift-llbuild](https://github.com/swiftlang/swift-llbuild)
 : The source code for llbuild, a low-level build system used by the Swift package manager.
 
@@ -43,7 +55,7 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 
 ## Xcode Playground Support
 
-[swift-xcode-playground-support](https://github.com/apple/swift-xcode-playground-support)
+[swift-xcode-playground-support](https://github.com/swiftlang/swift-xcode-playground-support)
 : The source code to enable playground integration with Xcode.
 
 ## Source Tooling
@@ -62,6 +74,11 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 [indexstore-db](https://github.com/swiftlang/indexstore-db)
 : The source code for the index database library.
 
+
+## Toolchain Installation
+
+[swiftly](https://github.com/swiftlang/swiftly)
+: The source code for swiftly, which installs and manages Swift toolchains.
 
 ## Swift.org Website
 
