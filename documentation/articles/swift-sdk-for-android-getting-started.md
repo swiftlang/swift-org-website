@@ -124,8 +124,8 @@ Building for debugging...
 [8/8] Linking hello
 Build complete! (2.04s)
 
-$ file .build/x86_64-unknown-linux-android23/debug/hello
-.build/x86_64-unknown-linux-android23/debug/hello: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, with debug_info, not stripped
+$ file .build/debug/hello
+.build/debug/hello: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, with debug_info, not stripped
 ```
 
 or for the `aarch64` architecture:
@@ -136,15 +136,15 @@ Building for debugging...
 [8/8] Linking hello
 Build complete! (2.04s)
 
-$ file .build/aarch64-unknown-linux-android23/debug/hello
-.build/aarch64-unknown-linux-android23/debug/hello: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, with debug_info, not stripped
+$ file .build/debug/hello
+.build/debug/hello: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /system/bin/linker64, with debug_info, not stripped
 ```
 
 Using a connected Android device that has [USB debugging enabled](https://developer.android.com/studio/debug/dev-options#Enable-debugging) or [a locally-running Android emulator](https://developer.android.com/studio/run/emulator#get-started), you can now copy the executable over, along with the required `libc++_shared.so` dependency from the Android NDK, and run it with [the `adb` utility](https://developer.android.com/tools/adb):
 
 ```console
-$ adb push .build/aarch64-unknown-linux-android23/debug/hello /data/local/tmp
-.build/aarch64-unknown-linux-android23/debug/hello: 1 file pushed, 0 skipped. 155.9 MB/s (69559568 bytes in 0.425s)
+$ adb push .build/debug/hello /data/local/tmp
+.build/debug/hello: 1 file pushed, 0 skipped. 155.9 MB/s (69559568 bytes in 0.425s)
 
 $ adb push $ANDROID_NDK_HOME/toolchains/llvm/prebuilt/*/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so /data/local/tmp/
 aarch64-linux-android/libc++_shared.so: 1 file pushed, 0 skipped. 145.7 MB/s (1794776 bytes in 0.012s)
