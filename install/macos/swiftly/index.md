@@ -35,12 +35,14 @@ Target: arm64-apple-macosx15.0
 Or, you can install (and use) another swift release:
 
 ```
-swiftly install --use 5.10
+swiftly install --use 6.3
 swift --version
 --
-Apple Swift version 5.10 (swift-5.10-RELEASE)
+Apple Swift version 6.3.3 (swift-6.3.3-RELEASE)
 Target: arm64-apple-macosx15.0
 ```
+
+When you specify only a major and minor version, swiftly installs the latest patch release of that version.
 
 There's also an option to install the latest snapshot release and get access to the latest features:
 

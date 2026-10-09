@@ -47,12 +47,14 @@ Target: x86_64-unknown-linux-gnu
 Or, you can install (and use) another Swift release:
 
 ```
-swiftly install --use 5.10
+swiftly install --use 6.3
 swift --version
 --
-Swift version 5.10 (swift-5.10-RELEASE)
+Swift version 6.3.3 (swift-6.3.3-RELEASE)
 Target: x86_64-unknown-linux-gnu
 ```
+
+When you specify only a major and minor version, swiftly installs the latest patch release of that version. Older releases may not be available for newer Linux distributions; check [the install page](/install/linux/) for the releases available on your platform.
 
 There's also an option to install the latest snapshot release and get access to the latest features:
 
