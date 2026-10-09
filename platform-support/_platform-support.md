@@ -60,6 +60,8 @@ The Swift compiler and debugger run on platforms supporting development.  Suppor
 
 Each platform that supports running Swift applications is required to provide documentation for getting started. The documentation should contain information for installing Swift, using the REPL, using the Swift Package Manager and using the Debugger. Every platform is expected to have core runtime, Standard Library support, and core libraries, except where explicitly documented otherwise.
 
+Swift SDKs let you build Swift programs on a development platform for deployment-only targets, including the [Swift SDK for Android](/documentation/articles/swift-sdk-for-android-getting-started.html), the [Swift SDK for WebAssembly](/documentation/articles/wasm-getting-started.html), and the [Static Linux SDK](/documentation/articles/static-linux-getting-started.html).
+
 The table below list the available capabilities on each platform for running Swift applications:
 
 | Platform running Swift application | Debugger| REPL|
@@ -68,6 +70,7 @@ The table below list the available capabilities on each platform for running Swi
 | **iOS**                           | ✓       |     |
 | **watchOS**                       | ✓       |     |
 | **tvOS**                          | ✓       |     |
+| **visionOS**                      | ✓       |     |
 | **Ubuntu**                        | ✓       | ✓   |
 | **Debian**                        | ✓       | ✓   |
 | **Fedora**                        | ✓       | ✓   |
@@ -85,11 +88,11 @@ Platform owners help facilitate contributors to the Swift project to collaborate
 
 |                      | Getting Started                     | Toolchain Provider                                | Pull Request Testing Required|
 |:--------------------:|:-----------------------------------:|:-------------------------------------------------:|:----------------------------:|
-| **Apple platforms**  | [Docs](/getting-started/#on-macos)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
-| **Linux**            | [Docs](/getting-started/#on-linux)  | [Apple Inc.](https://www.apple.com)               | ✓                            |
-| **Windows**          | [Docs](/getting-started/#on-windows)| [Apple Inc.](https://www.apple.com)               | ✓                            |
+| **Apple platforms**  | [Docs](/install/macos/)             | [Apple Inc.](https://www.apple.com)               | ✓                            |
+| **Linux**            | [Docs](/install/linux/)             | [Apple Inc.](https://www.apple.com)               | ✓                            |
+| **Windows**          | [Docs](/install/windows/)           | [Apple Inc.](https://www.apple.com)               | ✓                            |
 
-* Apple platforms includes macOS, iOS, tvOS, and watchOS.
+* Apple platforms includes macOS, iOS, tvOS, watchOS, and visionOS.
 * Linux includes Ubuntu, Debian, Fedora, Amazon Linux and Red Hat Universal Base Image platforms.
 
 ### Continuous Integration for Platforms
