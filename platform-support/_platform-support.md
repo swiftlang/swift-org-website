@@ -44,7 +44,7 @@ This table shows the minimum OS version for which a Swift application can be dep
 
 #### Development Tools
 
-The Swift compiler and debugger run on platforms supporting development.  Support for the Swift Package Manager and [SourceKit-LSP] are currently supported on most, but not all platforms that support the tools.  This table provides the current breakdown of what tools are available on what platforms.
+The Swift compiler and debugger run on platforms supporting development.  The Swift Package Manager and [SourceKit-LSP] are supported on all platforms that support the development tools, as shown in this table.
 
 | Platform running development tools | [Swift Package Manager]| [SourceKit-LSP]|
 |:----------------------------------:|:----------------------:|:--------------:|
