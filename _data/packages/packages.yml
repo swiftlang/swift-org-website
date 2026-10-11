@@ -44,7 +44,7 @@ categories:
           Supports cyclomatic and cognitive complexity, integrates with Xcode, and provides
           various output formats for CI/CD pipelines and code quality enforcement.
         owner: Fumiya Tanaka
-        swift_compatibility: 6.1+
+        swift_compatibility: 6.2+
         platform_compatibility:
           - Apple
           - Linux
@@ -52,7 +52,7 @@ categories:
           - Android
         platform_compatibility_tooltip: Apple (iOS, macOS, visionOS, watchOS, tvOS), Linux,
           Wasm, and Android
-        license: No license
+        license: MIT
         url: https://swiftpackageindex.com/fummicc1/swift-complexity
         note: Discussed on [Episode 61 of Swift Package Indexing](https://swiftpackageindexing.transistor.fm/episodes/61-people-have-been-working-on-it-for-ten-years){:target='_blank'}.
       - name: VisualizeTouches
