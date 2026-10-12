@@ -4,8 +4,9 @@ can be used to select between toolchains if you have multiple installed.
 
 <div class="warning" markdown="1">
 This is an advanced feature used to configure {{ include.editor_name }} with a toolchain other
-than the default on your machine. It is recommended to use `xcode-select` on
-macOS or `swiftly` on Linux to switch between toolchains globally.
+than the default on your machine. It is recommended to use `swiftly` on macOS
+and Linux, or `xcode-select` for Xcode toolchains on macOS, to switch between
+toolchains globally.
 </div>
 
 You may be prompted to select where to configure this new path. Your options are
