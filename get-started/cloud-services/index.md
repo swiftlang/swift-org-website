@@ -1,6 +1,6 @@
 ---
 layout: new-layouts/base
-title: Use case
+title: Cloud Services
 ---
 
 <div class="get-started">
