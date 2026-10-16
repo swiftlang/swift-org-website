@@ -1,6 +1,6 @@
 image:
   src: /assets/images/get-started/swift-performance-graph@2x.png
-  alt:
+  alt: "Chart comparing Things Cloud's memory use and response time before and after moving to Swift"
 copy:
   headline: Low memory footprint. Massive performance.
   paragraphs:
