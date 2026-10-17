@@ -6,8 +6,8 @@ columns:
         url: 'https://docs.swift.org/getting-started-swift-server/tutorials/getting-started-swift-server/'
       - text: 'Swift server development guides'
         url: '/documentation/server/guides/'
-      - text: 'Swift on AWS documentation'
-        url: 'https://aws.amazon.com/developer/language/swift/'
+      - text: 'AWS Tools & Resources for Swift'
+        url: 'https://builder.aws.com/content/2zZDg8mkuC499M1xYP0t76WDAcz/aws-tools-and-resources-swift'
   - headline: Talks
     links:
       - text: 'Explore the Swift on Server ecosystem'
