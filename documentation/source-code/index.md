@@ -4,7 +4,7 @@ layout: page
 title: Source Code
 ---
 
-The code for the Swift project is divided into several open-source repositories, all hosted on [GitHub](https://github.com/swiftlang/).
+The code for the Swift project is divided into several open source repositories, all hosted on [GitHub](https://github.com/swiftlang/).
 
 ## Compiler and Standard Library
 
@@ -15,7 +15,7 @@ The code for the Swift project is divided into several open-source repositories,
 : The source code for the Swift compiler driver, which coordinates compilation of Swift code.
 
 [swift-evolution](https://github.com/swiftlang/swift-evolution)
-: Documents related to the continued evolution of Swift, including goals for upcoming releases proposals for changes to and extensions of Swift.
+: Documents related to the continued evolution of Swift, including goals for upcoming releases and proposals for changes to and extensions of Swift.
 
 Directions for building the Swift compiler and standard library, along
 with its prerequisites, are provided by the [main Swift repository's
@@ -28,7 +28,7 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 : The source code for the shared implementation of key Foundation API for all platforms, which provides common functionality for all applications. On non-Apple platforms it's available as the `FoundationEssentials` and `FoundationInternationalization` modules.
 
 [swift-corelibs-foundation](https://github.com/swiftlang/swift-corelibs-foundation)
-: The source code for the `Foundation`, `FoundationXML`, and `FoundationNetworking` modules on platforms without an Objective-C runtime, which re-export swift-foundation and provide a compatibility implementation of the remaining Foundation API.
+: The source code for the `Foundation`, `FoundationXML`, and `FoundationNetworking` modules on platforms without an Objective-C runtime, such as Linux and Windows. `Foundation` re-exports swift-foundation and provides a compatibility implementation of the remaining Foundation API.
 
 [swift-corelibs-libdispatch](https://github.com/swiftlang/swift-corelibs-libdispatch)
 : The source code for libdispatch, which provides concurrency primitives for working on multicore hardware.
@@ -66,6 +66,9 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 [swift-format](https://github.com/swiftlang/swift-format)
 : The source code for the formatting technology for Swift source code.
 
+[swift-docc](https://github.com/swiftlang/swift-docc)
+: The source code for DocC, the documentation compiler that produces rich API reference documentation and interactive tutorials for Swift frameworks and packages.
+
 ## SourceKit-LSP Service
 
 [sourcekit-lsp](https://github.com/swiftlang/sourcekit-lsp)
@@ -73,7 +76,6 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 
 [indexstore-db](https://github.com/swiftlang/indexstore-db)
 : The source code for the index database library.
-
 
 ## Toolchain Installation
 
@@ -87,9 +89,9 @@ file](https://github.com/swiftlang/swift/blob/main/README.md).
 
 ## Cloned Repositories
 
-Swift builds upon several other open-source projects, most notably
+Swift builds upon several other open source projects, most notably
 [the LLVM Compiler Infrastructure](https://llvm.org). Swift's clones of
-the repositories of those open-source projects contain Swift-specific
+the repositories of those open source projects contain Swift-specific
 changes and are merged regularly from their upstream sources. 
 For more information about the clone of the LLVM repository, see
 [LLVM and Swift](https://github.com/swiftlang/project-operations/blob/main/contributing/llvm-and-swift.md)
