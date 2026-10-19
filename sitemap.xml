@@ -6,6 +6,8 @@
     {% for page in pages %}
         {% unless page.layout %}{% continue %}{% endunless %}
         {% if page.robots == "noindex" %}{% continue %}{% endif %}
+        {% if page.sitemap == false %}{% continue %}{% endif %}
+        {% if page.url contains "/assets/" %}{% continue %}{% endif %}
         {% if page.url contains "/staging-" %}{% continue %}{% endif %}
         <url>
             <loc>{{ site.url }}{{ page.url }}</loc>
