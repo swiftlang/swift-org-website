@@ -20,11 +20,11 @@ When making a new project, Xcode will ask you for a few pieces of information:
 - For Interface make sure SwiftUI is selected.
 - You can uncheck the boxes for Core Data and Include Tests; we won’t be using them here.
 
-![New Xcode Project]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/new-project.png)
+![New Xcode Project](/assets/images/getting-started-guides/swiftui-ios/new-project.png)
 
 When you press Next, Xcode will ask where you want to save the project. You’re welcome to choose wherever suits you, but you might find your Desktop is easiest. Once that’s done, Xcode will create the new project for you, then open ContentView.swift for editing. This is where we’ll write all our code, and you’ll see some default SwiftUI code in there for us.
 
-![Initial SwiftUI project]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/initial-view.png)
+![Initial SwiftUI project](/assets/images/getting-started-guides/swiftui-ios/initial-view.png)
 
 The example code Xcode made for us creates a new view called `ContentView`. Views are how SwiftUI represents our app’s user interface on the screen, and we can add custom layout and logic in there.
 
@@ -38,7 +38,7 @@ var body: some View {
 }
 ```
 
-![Hello SwiftUI]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/hello-swift-ui.png)
+![Hello SwiftUI](/assets/images/getting-started-guides/swiftui-ios/hello-swift-ui.png)
 
 You should see your preview update immediately, which makes for really fast prototyping while you work. This is a computed property called `body`, and SwiftUI will call that whenever it wants to display our user interface.
 
@@ -53,7 +53,7 @@ The main part of our user interface will be a circle showing the currently recom
 Circle()
 ```
 
-![SwiftUI Circle]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle.png)
+![SwiftUI Circle](/assets/images/getting-started-guides/swiftui-ios/swiftui-circle.png)
 
 In your preview you’ll see a large black circle fills the available screen width. That’s a start, but it’s not quite right – we want some color in there, and ideally adding a little space on either side so it doesn’t look so tight.
 
@@ -65,7 +65,7 @@ Circle()
     .padding()
 ```
 
-![SwiftUI Circle with Color and Padding]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-color.png)
+![SwiftUI Circle with Color and Padding](/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-color.png)
 
 The `.blue` color is one of several built-in options, such as `.red`, `.white`, and `.green`. These are all appearance aware, which means they look subtly different depending on the whether the device is in dark mode or light mode.
 
@@ -82,7 +82,7 @@ Circle()
     )
 ```
 
-![SwiftUI Circle with Icon]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-icon.png)
+![SwiftUI Circle with Icon](/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-icon.png)
 
 You should see a small, black archery icon over our large, blue circle – it’s the right idea, but it doesn’t look great.
 
@@ -96,7 +96,7 @@ Image(systemName: "figure.archery")
     .foregroundColor(.white)
 ```
 
-![SwiftUI Circle with Icon Sized]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-icon-sized.png)
+![SwiftUI Circle with Icon Sized](/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-icon-sized.png)
 
 **Tip:** That `font()` modifier asks for a 144-point system font, which is nice and big on all devices.
 
@@ -129,7 +129,7 @@ var body: some View {
 }
 ```
 
-![Circle With Title Text]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/circle-with-title.png)
+![Circle With Title Text](/assets/images/getting-started-guides/swiftui-ios/circle-with-title.png)
 
 However, what you see in Xcode’s preview probably won’t match what you were expecting: you’ll see the same icon as before, but no text. What gives?
 
@@ -155,7 +155,7 @@ VStack {
 
 And now you should see the layout you expected earlier: our archery icon above the text “Archery!”.
 
-![Circle With Title Text in a VStack]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/circle-with-title-vstack.png)
+![Circle With Title Text in a VStack](/assets/images/getting-started-guides/swiftui-ios/circle-with-title-vstack.png)
 
 That’s much better!
 
@@ -186,7 +186,7 @@ VStack {
 
 That makes the new text have a large title font, and also makes it bold so it stands out better as a real title for our screen.
 
-![Why Not Try Title Added]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/why-not-try-title.png)
+![Why Not Try Title Added](/assets/images/getting-started-guides/swiftui-ios/why-not-try-title.png)
 
 Now we have two `VStack` views: an inner one that holds the circle and “Archery!” text, and an outer one that adds a title around the inner `VStack`. This will be very helpful later on when we add animation!
 
@@ -234,7 +234,7 @@ Those changes mean our UI will display whatever the `selected` property is set t
 var selected = "Baseball"
 ```
 
-![Showing Baseball]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/baseball.png)
+![Showing Baseball](/assets/images/getting-started-guides/swiftui-ios/baseball.png)
 
 Of course, we want that to change *dynamically* rather than having to edit the code each time, so we’re going to add a button below our inner `VStack` that will change the selected activity every time it’s pressed. This is still inside the outer `VStack`, though, which means it will be arranged below the title and activity icon.
 
@@ -247,7 +247,7 @@ Button("Try again") {
 .buttonStyle(.borderedProminent)
 ```
 
-![Try Again Button]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/try-again-button.png)
+![Try Again Button](/assets/images/getting-started-guides/swiftui-ios/try-again-button.png)
 
 So, your structure should be this:
 
@@ -275,7 +275,7 @@ selected = activities.randomElement()
 
 That code *looks* right, but it will actually cause compiler errors. We’re telling Swift to pick a random element from the array and place it into the `selected` property, but there’s no way for Swift to be sure there’s anything in that array – it could be empty, in which case there’s no random element to return.
 
-![Random Element Error]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/random-element-error.png)
+![Random Element Error](/assets/images/getting-started-guides/swiftui-ios/random-element-error.png)
 
 Swift calls these *optionals*: `randomElement()` won’t return a regular string, it will return an *optional* string. This means the string might not be there, so it’s not safe to assign to the `selected` property.
 
@@ -287,7 +287,7 @@ selected = activities.randomElement() ?? "Archery"
 
 That partly fixes our code, but Xcode will still be showing an error. The problem now is that SwiftUI doesn’t like us changing our program’s state right inside our view structs without warning – it wants us to mark all the mutable state ahead of time, so it knows to watch for changes.
 
-![Non-@State mutating]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/non-state-mutating.png)
+![Non-@State mutating](/assets/images/getting-started-guides/swiftui-ios/non-state-mutating.png)
 
 This is done by writing `@State` before any view properties that will change, like this:
 
@@ -299,7 +299,7 @@ This is called a *property wrapper*, meaning that it wraps our `selected` proper
 
 That fixes the two errors in our code, so you can now press Cmd+R to build and run your app in the iOS simulator. It will suggest baseball by default, but every time you press “Try again” you’ll see it change.
 
-<img class="device-aspect-ratio" src="{{site.url}}/assets/images/getting-started-guides/swiftui-ios/running-in-simulator.png" alt="Running The App in the Simulator">
+<img class="device-aspect-ratio" src="/assets/images/getting-started-guides/swiftui-ios/running-in-simulator.png" alt="Running The App in the Simulator">
 
 ## Adding some polish
 
@@ -344,7 +344,7 @@ Button("Try again") {
 
 If you add multiple spacers, they will divide the space equally between them. If you try placing a second spacer before the “Why not try…” text you’ll see what I mean – SwiftUI will create and equal amount of space above the text and below the activity name.
 
-![View With Spacers]({{site.url}}/assets/images/getting-started-guides/swiftui-ios/spacers.png)
+![View With Spacers](/assets/images/getting-started-guides/swiftui-ios/spacers.png)
 
 And fourth, it would be nice if the change between activities was smoother, which we can do by animating the change. In SwiftUI, this is done by wrapping changes we want to animate with a call to the `withAnimation()` function, like this:
 
@@ -401,7 +401,7 @@ So, add these two modifiers to the inner `VStack`, telling SwiftUI to identify t
 Press Cmd+R to run your app one last time, and you should see that pressing “Try Again” now smoothly animates the old activity off the screen, and replaces it with a new one. It even overlaps animations if you press “Try Again” repeatedly!
 
 <video class="device-aspect-ratio" autoplay loop muted>
-  <source src="{{site.url}}/assets/videos/getting-started-guides/swiftui-app/demo.mp4" type="video/mp4">
+  <source src="/assets/videos/getting-started-guides/swiftui-app/demo.mp4" type="video/mp4">
 </video>
 
 ## Where now?
