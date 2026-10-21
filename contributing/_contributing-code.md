@@ -2,7 +2,7 @@
 
 ### Getting Started
 
-It is highly recommended that you become familiar with using Swift in your own projects before contributing directly to the language itself. We put together handy [Getting Started][get_started] guides with step-by-step instructions to get you up and running.
+It is highly recommended that you become familiar with using Swift in your own projects before contributing directly to the language itself. We put together handy [Getting Started](/getting-started/) guides with step-by-step instructions to get you up and running.
 
 ### Incremental Development
 
@@ -69,7 +69,7 @@ In addition, don't commit changes authored by others unless they have submitted 
 
 ### Code Templates
 
-As mentioned in the [Community Overview][community], the license and copyright protections for Swift.org code are called out at the top of every source code file.  On the rare occasion you contribute a change that includes a new source file, ensure that the header is filled out appropriately.
+As mentioned in the [Community Overview](/community), the license and copyright protections for Swift.org code are called out at the top of every source code file.  On the rare occasion you contribute a change that includes a new source file, ensure that the header is filled out appropriately.
 
 For Swift source files the code header should look this:
 
