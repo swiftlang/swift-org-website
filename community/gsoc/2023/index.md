@@ -1,4 +1,5 @@
 ---
+redirect_from: "gsoc2023"
 layout: page
 title: Project Ideas for GSoC 2023
 ---
