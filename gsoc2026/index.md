@@ -44,7 +44,7 @@ We are currently collecting project ideas on the forums in the dedicated [GSoC c
 
 Potential mentors, please feel free to propose project ideas to this page directly, by [opening a pull request](https://github.com/swiftlang/swift-org-website/edit/main/gsoc2026/index.md) to the Swift website.
 
-You can browse previous year's project ideas here: [2025](https://www.swift.org/gsoc2025/), [2024](https://www.swift.org/gsoc2024/), [2023](https://www.swift.org/gsoc2023/), [2022](https://www.swift.org/gsoc2022/), [2021](https://www.swift.org/gsoc2021/), [2020](https://www.swift.org/gsoc2020/), [2019](https://www.swift.org/gsoc2019/).
+You can browse previous year's project ideas here: [2025](/community/gsoc/2025/), [2024](/community/gsoc/2024/), [2023](/community/gsoc/2023/), [2022](/community/gsoc/2022/), [2021](/community/gsoc/2021/), [2020](/community/gsoc/2020/), [2019](/community/gsoc/2019/).
 
 
 ### Re-implement property wrappers with macros
