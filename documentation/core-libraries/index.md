@@ -23,9 +23,7 @@ have a goal of providing stable and useful features in the following key areas:
 
 ### Project Status
 
-These libraries are part of our ongoing work to extend the cross-platform capabilities of Swift.  We chose to make them part of our open source release so that we can work on them together with the community.
-
-Writing code that provides all of this functionality from scratch would be an enormous undertaking. Therefore, we've decided to bootstrap this project by taking advantage of great work that has already been done in these areas. Specifically, we will reuse the API and as much implementation as is possible from three existing libraries: `Foundation`, `libdispatch`, and `XCTest`. In addition to these there is `Swift Testing`, a new testing library designed from the ground up for Swift.
+The core libraries are developed in the open together with the community. On Apple platforms they're provided by the operating system and Xcode; on other platforms they're included in the Swift toolchain. They consist of four libraries: `Foundation`, `libdispatch`, and `XCTest`, which provide APIs familiar from Apple platforms, and `Swift Testing`, a testing library designed from the ground up for Swift.
 
 * * *
 
