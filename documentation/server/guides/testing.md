@@ -4,7 +4,7 @@ layout: page
 title: Testing
 ---
 
-SwiftPM is integrated with [XCTest, Apple’s unit test framework](https://developer.apple.com/documentation/xctest). Running `swift test` from the terminal, or triggering the test action in your IDE (Xcode or similar), will run all of your XCTest test cases. Test results will be displayed in your IDE or printed out to the terminal.
+SwiftPM is integrated with [Swift Testing](https://github.com/swiftlang/swift-testing), the recommended framework for writing new tests, and with [XCTest](https://github.com/swiftlang/swift-corelibs-xctest). Both are included in the Swift toolchain on all supported platforms. Running `swift test` from the terminal, or triggering the test action in your IDE (Xcode or similar), will run all of your Swift Testing and XCTest tests. Test results will be displayed in your IDE or printed out to the terminal.
 
 A convenient way to test on Linux is using Docker. For example:
 
@@ -14,15 +14,9 @@ The above command will run the tests using the latest Swift Docker image, utiliz
 
 Swift supports architecture-specific code. By default, Foundation imports architecture-specific libraries like Darwin or Glibc. While developing on macOS, you may end up using APIs that are not available on Linux. Since you are most likely to deploy a cloud service on Linux, it is critical to test on Linux.
 
-A historically important detail about testing for Linux is the `Tests/LinuxMain.swift` file.
-
-- In Swift versions 5.4 and newer tests are automatically discovered on all platforms, no special file or flag needed.
-- In Swift versions >= 5.1 < 5.4, tests can be automatically discovered on Linux using `swift test --enable-test-discovery` flag.
-- In Swift versions older than 5.1 the `Tests/LinuxMain.swift` file provides SwiftPM an index of all the tests it needs to run on Linux and it is critical to keep this file up-to-date as you add more unit tests. To regenerate this file, run `swift test --generate-linuxmain` after adding tests. It is also a good idea to include this command as part of your continuous integration setup.
+Tests are automatically discovered on all platforms, so no special file or flag is needed. (Swift versions before 5.4 required a `Tests/LinuxMain.swift` file or the `--enable-test-discovery` flag to find tests on Linux.)
 
 ### Testing for production
-
-- For Swift versions between Swift 5.1 and 5.4, always test with `--enable-test-discovery` to avoid forgetting tests on Linux.
 
 - Make use of the sanitizers. Before running code in production, and preferably as a regular part of your CI process, do the following:
     * Run your test suite with TSan (thread sanitizer): `swift test --sanitize=thread`
