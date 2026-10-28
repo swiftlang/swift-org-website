@@ -152,8 +152,6 @@ we recommend that you:
 
 - Clearly communicate to clients that they have to enable C++
   interoperability when depending on targets from such package.
-- Clearly communicate to clients that your package relies on an unreleased
-  version of Swift that is still in development.
 
 ## Mixing Swift and C++ Using Xcode
 
