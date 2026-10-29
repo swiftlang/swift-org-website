@@ -1,0 +1,14 @@
+title: "Get involved"
+description: "Interested in contributing to Swift through GSoC? Start here."
+columns: 2
+cards:
+  - title: "GSoC on the Swift Forums"
+    content: "Discuss project ideas and connect with mentors in the GSoC category on the Swift Forums."
+    links:
+      - text: "Visit the GSoC category"
+        url: "https://forums.swift.org/c/development/gsoc/98"
+  - title: "Contributing to Swift"
+    content: "Learn best practices for contributing code and other contributions to the Swift project."
+    links:
+      - text: "Contribution Guide"
+        url: "/contributing"

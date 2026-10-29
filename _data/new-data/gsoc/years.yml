@@ -1,0 +1,43 @@
+title: "Participation by year"
+description: "Accepted projects and project ideas from each year Swift has taken part in Google Summer of Code."
+cards:
+  - title: "GSoC 2026"
+    content: "3 accepted projects, focused on DocC, Swift Concurrency and swift-syntax."
+    links:
+      - text: "View GSoC 2026"
+        url: "/community/gsoc/2026/"
+  - title: "GSoC 2025"
+    content: "4 accepted projects, focused on SourceKit-LSP, Swift Testing and VS Code."
+    links:
+      - text: "View GSoC 2025"
+        url: "/community/gsoc/2025/"
+  - title: "GSoC 2024"
+    content: "4 accepted projects, focused on server clients, macros and swift-syntax."
+    links:
+      - text: "View GSoC 2024"
+        url: "/community/gsoc/2024/"
+  - title: "GSoC 2023"
+    content: "3 accepted projects, focused on parsing, type inference and server clients."
+    links:
+      - text: "View GSoC 2023"
+        url: "/community/gsoc/2023/"
+  - title: "GSoC 2022"
+    content: "5 accepted projects, focused on DocC, SwiftSyntax and server packages."
+    links:
+      - text: "View GSoC 2022"
+        url: "/community/gsoc/2022/"
+  - title: "GSoC 2021"
+    content: "5 accepted projects, focused on tooling, scripting and property wrappers."
+    links:
+      - text: "View GSoC 2021"
+        url: "/community/gsoc/2021/"
+  - title: "GSoC 2020"
+    content: "4 accepted projects, focused on tracing, debugging, LTO and diagnostics."
+    links:
+      - text: "View GSoC 2020"
+        url: "/community/gsoc/2020/"
+  - title: "GSoC 2019"
+    content: "1 accepted project, focused on integrating libSyntax into the compiler."
+    links:
+      - text: "View GSoC 2019"
+        url: "/community/gsoc/2019/"
