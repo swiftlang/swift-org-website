@@ -1,5 +1,5 @@
 ---
-redirect_from: "gsoc2022"
+redirect_from: "/gsoc2022/"
 layout: page
 title: Project Ideas for GSoC 2022
 ---
