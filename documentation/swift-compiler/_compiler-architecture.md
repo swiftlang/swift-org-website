@@ -23,6 +23,10 @@ high-level description of the major components of the Swift compiler:
   or errors for semantic problems in the source code. Semantic
   analysis includes type inference and, on success, indicates that it
   is safe to generate code from the resulting, type-checked AST.
+  The declaration checker and generics system is described in
+  [Compiling Swift Generics](https://github.com/swiftlang/swift/tree/main/docs/Generics).
+  The constraint solver for type checking expressions is described in
+  [docs/TypeChecker.md](https://github.com/swiftlang/swift/tree/main/docs/TypeChecker.md).
 
 * **Clang importer**: The Clang importer (implemented in
   [lib/ClangImporter](https://github.com/swiftlang/swift/tree/main/lib/ClangImporter))

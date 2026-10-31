@@ -75,7 +75,7 @@ code for a specific deployment platform:
 
 | Platform running Swift application  | Default C++ Standard Library |
 | ------------------------- | ------------- |
-| **Apple platforms**     | libc++  |
+| **Apple platforms, FreeBSD**      | libc++  |
 | **Ubuntu, CentOS, Amazon Linux**  | libstdc++ |
 | **Windows**   | Microsoft C++ Standard Library (msvcprt)  |
 
@@ -89,6 +89,7 @@ Swift when building for various Linux versions:
 |-----------------------------------------|--------------------------|
 | Ubuntu 22.04                            | libc++-15-dev            |
 | Ubuntu 24.04                            | libc++-18-dev            |
+| Ubuntu 26.04                            | libc++-20-dev            |
 
 Swift does not currently support selecting an alternative standard library for
 other platforms. For example, you can't use libc++ when building Swift code for

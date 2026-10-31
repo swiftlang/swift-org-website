@@ -1,4 +1,5 @@
 ---
+redirect_from: "/gsoc2026/"
 layout: page
 title: Project Ideas for GSoC 2026
 ---
