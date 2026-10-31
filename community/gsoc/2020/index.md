@@ -1,5 +1,5 @@
 ---
-redirect_from: "gsoc2020"
+redirect_from: "/gsoc2020/"
 layout: page
 title: Project Ideas for GSoC 2020
 ---
