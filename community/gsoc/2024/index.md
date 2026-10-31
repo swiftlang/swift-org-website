@@ -17,7 +17,7 @@ When posting on the forums about GSoC this year, please use the [`gsoc-2024` tag
 
 The Swift forums are powered by discourse, a discussion forums platform with spam avoidance mechanisms built-in. If this is your first time joining the forums, you _may_ not be able to send mentors a direct message, as this requires a minimum amount of prior participation before the "send private message" feature is automatically enabled.
 
-To start things off, we recommend starting a new thread or joining an existing discussion about the project you are interested in on the dedicated [GSoC forums category](https://www.swift.org/gsoc2024/). You should also _tag_ your thread with the `gsoc-2024` tag. It is best if you start a thread after having explored the topic a little bit already, and come up with specific questions about parts of the project you are not sure about. For example, you may have tried to build the project, but not sure where a functionality would be implemented; or you may not be sure about the scope of the project.
+To start things off, we recommend starting a new thread or joining an existing discussion about the project you are interested in on the dedicated [GSoC forums category](/community/gsoc/2024/). You should also _tag_ your thread with the `gsoc-2024` tag. It is best if you start a thread after having explored the topic a little bit already, and come up with specific questions about parts of the project you are not sure about. For example, you may have tried to build the project, but not sure where a functionality would be implemented; or you may not be sure about the scope of the project.
 
 Please use the forums to tag and communicate with the project's mentor to figure out the details of the project, such that when it comes to writing the official proposal plan, and submitting it on the Summer of Code website, you have a firm understanding of the project and can write a good, detailed proposal (see next section about hints on that).
 
@@ -35,7 +35,7 @@ We are currently collecting project ideas on the forums in the dedicated [GSoC](
 
 Potential mentors, please feel free to propose project ideas to this page directly, by [opening a pull request](https://github.com/swiftlang/swift-org-website/edit/main/gsoc2024/index.md) to the Swift website. 
 
-You can browse previous year's project ideas here: [2023](https://www.swift.org/gsoc2023/), [2022](https://www.swift.org/gsoc2022/), [2021](https://www.swift.org/gsoc2021/), [2020](https://www.swift.org/gsoc2020/), [2019](https://www.swift.org/gsoc2019/).
+You can browse previous year's project ideas here: [2023](/community/gsoc/2023/), [2022](/community/gsoc/2022/), [2021](/community/gsoc/2021/), [2020](/community/gsoc/2020/), [2019](/community/gsoc/2019/).
 
 ### Create Real-World Swift Macro Examples
 
