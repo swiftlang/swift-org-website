@@ -526,9 +526,8 @@ parispittman:
 
 marcprux:
     name: Marc Prud'hommeaux
-    email: marc@skip.dev
     github: marcprux
-    about: "Marc Prud'hommeaux works on bringing Swift application development to Android at Skip.dev."
+    about: "Marc Prud'hommeaux was a founding member of the Swift Android workgroup."
 
 maxdesiatov:
     name: Max Desiatov
