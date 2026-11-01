@@ -117,7 +117,7 @@ To be accepted at Graduated level, a project must meet the [SSWG graduation requ
 
 ### Ecosystem Index
 
-All projects and their respective levels will be listed on the [Swift Server Ecosystem Index](/documentation/server/#projects).
+All projects and their respective levels will be listed on the [Swift Server Ecosystem Index](/sswg/incubated-packages.html).
 In cases where more than one project solves a particular problem (e.g., two similar database drivers), they will be ordered by popularity.
 The SSWG reserves the right to define a singular solution for critical building blocks, such as Logging or Metrics APIs, where consistency across the ecosystem is of a critical nature.
 
