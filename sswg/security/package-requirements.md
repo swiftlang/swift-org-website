@@ -9,7 +9,7 @@ This information is intended for package authors who have packages incubated by 
 
 ---
 
-Packages that are incubated by the SSWG and are listed on the [SSWG's package index](server/#projects) are required to follow the following guidelines around security.
+Packages that are incubated by the SSWG and are listed on the [SSWG's package index](/sswg/incubated-packages.html) are required to follow the following guidelines around security.
 
 Where security vulnerabilities are involved, it is key to ensure that somebody who discovers a vulnerability in your package can quickly find information on how to report it. As the package author, you know best where to put important information about your software. Bear in mind that many of your users will see your repository's readme file (usually `README.md`) first. So make sure to link to your security policy from there.
 

@@ -372,7 +372,7 @@ They are currently [tracked on GitHub](https://github.com/swiftlang/swift/issues
 ### Swift Package Manager Constraints
 
 A Swift target that enables C++ interoperability in Swift Package Manager
-[requires](project-build-setup#vending-packages-that-enable-c-interoperability)
+[requires](/documentation/cxx-interop/project-build-setup#vending-packages-that-enable-c-interoperability)
 its dependencies to enable C++ interoperability as well.
 A Swift GitHub issue tracks the status of this constraint:
 
