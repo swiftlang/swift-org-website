@@ -41,3 +41,8 @@ cards:
     links:
       - text: "View GSoC 2019"
         url: "/community/gsoc/2019/"
+  - title: "GSoC 2018"
+    content: "Swift's first year, with 8 project ideas and no accepted projects."
+    links:
+      - text: "View GSoC 2018"
+        url: "/community/gsoc/2018/"
