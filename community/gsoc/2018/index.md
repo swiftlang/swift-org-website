@@ -1,6 +1,7 @@
 ---
+redirect_from: "/project-ideas/"
 layout: page
-title: Project Ideas
+title: Project Ideas for GSoC 2018
 ---
 
 This page contains a list of potential project ideas that we are keen to develop during GSoC 2018. If you would like to apply as a GSoC student, please follow these two steps to get started:
