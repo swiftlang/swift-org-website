@@ -52,7 +52,7 @@ Replace `<executable-name>` with your `executableTarget` (ie. "Server"):
 
 ```Dockerfile
 #------- build -------
-FROM swift:centos as builder
+FROM swift:noble AS builder
 
 # set up the workspace
 RUN mkdir /workspace
@@ -64,7 +64,7 @@ COPY . /workspace
 RUN swift build -c release --static-swift-stdlib
 
 #------- package -------
-FROM centos:8
+FROM ubuntu:noble
 # copy executable
 COPY --from=builder /workspace/.build/release/<executable-name> /
 
