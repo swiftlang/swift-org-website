@@ -1,58 +1,51 @@
 ---
 redirect_from: "/gsoc2026/"
 layout: page
-title: Project Ideas for GSoC 2026
+title: Google Summer of Code 2026
 ---
 
-This page contains a non-exhaustive list of potential project ideas that we are keen to develop during [Google Summer of Code 2026](https://summerofcode.withgoogle.com/). If you would like to apply to GSoC as a contributor, please follow these steps to get started:
+Swift participated in Google Summer of Code 2026 with three accepted projects, focused on DocC, Swift Concurrency and swift-syntax. Here are the accepted projects and the project ideas we offered that year. Browse the other years on the [GSoC page](/community/gsoc/).
 
-1. Read through this page and the Google Summer of Code guides,
-2. Identify, or come up with your own project ideas you find interesting.
-3. Check out the [Development forum](https://forums.swift.org/c/development/gsoc/98) to connect with potential mentors.
-- Feel free to mention the project mentors on the forums, when starting a thread about your interest in participating in a specific project they are offering to mentor.
+Discussions from this year are tagged [`gsoc-2026`](https://forums.swift.org/tag/gsoc-2026) on the Swift forums.
 
-When posting on the forums about GSoC this year, please use the [`gsoc-2026` tag](https://forums.swift.org/tag/gsoc-2026), so it is easy to identify.
+## Accepted projects
 
-## Tips for contacting mentors
+Projects accepted for Swift in Google Summer of Code 2026, as [announced on the Swift forums](https://forums.swift.org/t/86398).
 
-The Swift forums are powered by discourse, a discussion forums platform with spam avoidance mechanisms built-in. If this is your first time joining the forums, you _may_ not be able to send mentors a direct message, as this requires a minimum amount of prior participation before the "send private message" feature is automatically enabled.
+### Task and TaskGroup tracking for Swift Concurrency
 
-To start things off, we recommend starting a new thread or joining an existing discussion about the project you are interested in on the dedicated [GSoC forums category](https://forums.swift.org/c/development/gsoc/98). You should also _tag_ your thread with the `gsoc-2026` tag. It is best if you start a thread after having explored the topic a little bit already, and come up with specific questions about parts of the project you are not sure about. For example, you may have tried to build the project, but not sure where a functionality would be implemented; or you may not be sure about the scope of the project.
+**Contributor**: Ege Kaya
 
-Please use the forums to tag and communicate with the project's mentor to figure out the details of the project, such that when it comes to writing the official proposal plan, and submitting it on the Summer of Code website, you have a firm understanding of the project and can write a good, detailed proposal (see next section about hints on that).
+**Mentors**: Mike Ash, Alastair Houghton
 
-If you would like to reach out to a mentor privately rather than making a public forum post, and the forums are not allowing you to send private messages yet, please reach out to Konrad Malawski at `ktoso AT apple.com` directly via email with the `[gsoc2026]` tag in the email subject and describe the project you would like to work on. We will route you to the appropriate mentor. In general, public communications on the forums are preferred though, as this is closer to the normal open-source way of getting things done in the Swift project.
+**Results**: [Task and TaskGroup tracking for Swift Concurrency](https://forums.swift.org/t/89084)
 
-## Participating in GSoC
+### Qualified name lookup for swift-syntax
 
-Summer of Code is a *learning experience*, and while we allow the use of AI tools to assist your experience, you should not use them to completely automate any part of your GSoC experience with the Swift project.
-For example, please do not use AI tools to generate project proposals, replies to discussions or questions from the community or mentors, or overly rely on coding assistants to perform the coding tasks of your project.
-Make use of this experience to learn about the Swift project, community, and let us learn about you! It should be an enjoyable and personal experience for everyone involved.
+**Contributor**: Filip Sakellariou
 
-For more details, please review the Swift project's guidelines on [use of AI tools in learning-oriented contributions](https://github.com/swiftlang/project-operations/blob/main/contributing/ai-tools.md#learning-oriented-contributions).
+**Mentor**: Pavel Yaskevich
 
-## Writing a proposal
+**Results**: [Qualified Name Lookup for swift-syntax](https://forums.swift.org/t/89331)
 
-Getting familiar with the codebase you are interested in working on during GSoC helps to write a good proposal because it helps you get a better understanding of how everything works and how you might best approach the project you are interested in. How you want to do that is really up to you and your style of learning. You could just clone the repository, read through the source code and follow the execution path of a test case by setting a breakpoint and stepping through the different instructions, read the available documentation or try to fix a simple bug in the codebase. The latter is how many open-source contributors got started, but it's really up to you. If you do want to go and fix a simple bug, our repositories contain a label "good first issue" that marks issues that should be easy to fix and doable by newcomers to the project.
+### DocC language features in SourceKit-LSP
 
-When it comes to writing the proposal, the [Google Summer of Code Guide](https://google.github.io/gsocguides/student/writing-a-proposal) contains general, good advice.
+**Contributor**: Padmashree S S
 
-The best proposals include a detailed timeline, specific milestones and goals as well as an outline the technical challenges you foresee. It is best if you engage with your potential project mentor on the forums before contributing, and have them clarify the goals and steps that they think are necessary for the project to be successful. Your proposal should have a clear goal, which can be successfully achieved as part of the weeks you'll be working it. Provide details about your approach, significant milestones you wish to achieve, and clarify with your potential mentor if they agree those seem reasonable. The time before proposal submissions is there for you to reach out and polish your proposal, so make sure you use it well! Good luck!
+**Mentors**: Prajwal Nadig, Matthew Bastien
 
-## Potential Projects
+**Results**: [DocC Language Features in SourceKit-LSP](https://forums.swift.org/t/89281)
 
-We are currently collecting project ideas on the forums in the dedicated [GSoC category](https://forums.swift.org/c/development/gsoc/98).
-
-Potential mentors, please feel free to propose project ideas to this page directly, by [opening a pull request](https://github.com/swiftlang/swift-org-website/edit/main/gsoc2026/index.md) to the Swift website.
-
-You can browse previous year's project ideas here: [2025](https://www.swift.org/gsoc2025/), [2024](https://www.swift.org/gsoc2024/), [2023](https://www.swift.org/gsoc2023/), [2022](https://www.swift.org/gsoc2022/), [2021](https://www.swift.org/gsoc2021/), [2020](https://www.swift.org/gsoc2020/), [2019](https://www.swift.org/gsoc2019/).
-
+## Project ideas
 
 ### Re-implement property wrappers with macros
 
 **Project size**: 350 hours
+
 **Estimated difficulty**: Intermediate
+
 **Recommended skills**
+
 - Proficiency in Swift and C++
 
 **Description**
@@ -195,6 +188,7 @@ Live preview could be further improved by providing language features such as go
 **Estimated difficulty:** Intermediate
 
 **Recommended skills**
+
 * Basic proficiency using TypeScript
 * Familiarity with VS Code Extensions
 * Experience with frontend web development
@@ -268,6 +262,7 @@ to other target platforms.
 This idea is narrowly limited in scope to cross-compilation of Swift core libraries, cross-compiled Swift toolchains handled by `--cross-compile-hosts` option are out of scope.
 
 **Expected outcomes/benefits/deliverables**
+
 - New build products for cross-compiling Swift core libraries (reuse from Wasm).
 - The new experimental flag from `build-script` is propagated to the new build products.
 - Cross-compilation of core libraries succeeds and tests run successfully on target system.
@@ -368,30 +363,3 @@ As an initial foray into globally scoped traits, implement a configuration to se
 **Potential mentors**
 
 - [Jerry Chen](https://github.com/jerryjrchen)
-
----
-
-
-### Example project name
-
-**Project size**: N hours
-
-**Estimated difficulty**: ???
-
-**Recommended skills**
-
-- Basic proficiency in Swift.
-- ...
-
-**Description**
-
-Description of the project goes here.
-
-**Expected outcomes/benefits/deliverables**
-
-- Expected deliverables of the project go here
-
-**Potential mentors**
-
-- Mentor name and link to their GitHub
-

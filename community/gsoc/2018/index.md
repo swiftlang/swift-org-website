@@ -1,15 +1,14 @@
 ---
 redirect_from: "/project-ideas/"
 layout: page
-title: Project Ideas for GSoC 2018
+title: Google Summer of Code 2018
 ---
 
-This page contains a list of potential project ideas that we are keen to develop during GSoC 2018. If you would like to apply as a GSoC student, please follow these two steps to get started:
+Swift's first year in Google Summer of Code, with eight project ideas and no accepted projects. Here are the project ideas we offered that year. Browse the other years on the [GSoC page](/community/gsoc/).
 
-1. Read through this page and identify the project ideas you find interesting.
-2. Check out the [Development forum](https://forums.swift.org/c/development) to connect with potential mentors.
+Discussions from this year are tagged [`gsoc-2018`](https://forums.swift.org/tag/gsoc-2018) on the Swift forums.
 
-## Potential Projects
+## Project ideas
 
 ### Fuzzing/stress-testing tool
 

@@ -1,15 +1,26 @@
 ---
 redirect_from: "/gsoc2019/"
 layout: page
-title: Project Ideas for GSoC 2019
+title: Google Summer of Code 2019
 ---
 
-This page contains a list of potential project ideas that we are keen to develop during [GSoC 2019](https://summerofcode.withgoogle.com/). If you would like to apply as a GSoC student, please follow these two steps to get started:
+Swift participated in Google Summer of Code 2019 with one accepted project, focused on integrating libSyntax into the compiler. Here are the accepted project and the project ideas we offered that year. Browse the other years on the [GSoC page](/community/gsoc/).
 
-1. Read through this page and identify the project ideas you find interesting.
-2. Check out the [Development forum](https://forums.swift.org/c/development) to connect with potential mentors.
+Discussions from this year are tagged [`gsoc-2019`](https://forums.swift.org/tag/gsoc-2019) on the Swift forums.
 
-## Potential Projects
+## Accepted projects
+
+The project accepted for Swift in Google Summer of Code 2019, as [announced on the Swift forums](https://forums.swift.org/t/24225).
+
+### Integration of libSyntax with the compiler pipeline
+
+**Contributor**: Jan Svoboda
+
+**Mentor**: Rintaro Ishizaki
+
+**Results**: [Integrating libSyntax with the Rest of the Compiler Pipeline - GSoC 2019 Summary](https://forums.swift.org/t/28332)
+
+## Project ideas
 
 ### Integration of libSyntax with the rest of the compiler pipeline.
 

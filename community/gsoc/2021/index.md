@@ -1,25 +1,54 @@
 ---
 redirect_from: "/gsoc2021/"
 layout: page
-title: Project Ideas for GSoC 2021
+title: Google Summer of Code 2021
 ---
 
-This page contains a non-exhaustive list of potential project ideas that we are keen to develop during [GSoC 2021](https://summerofcode.withgoogle.com/). If you would like to apply as a GSoC student, please follow these steps to get started:
+Swift participated in Google Summer of Code 2021 with five accepted projects, focused on tooling, scripting and property wrappers. Here are the accepted projects and the project ideas we offered that year. Browse the other years on the [GSoC page](/community/gsoc/).
 
-1. Read through this page and the Google Summer of Code guides,
-2. Identify, or come up with your own project ideas you find interesting.
-2. Check out the [Development forum](https://forums.swift.org/c/development) to connect with potential mentors.
-    - Feel free to mention the project mentors on the forums, when starting a thread about your interest in participating in a specific project they are offering to mentor.
+Discussions from this year are tagged [`gsoc-2021`](https://forums.swift.org/tag/gsoc-2021) on the Swift forums.
 
-When posting on the forums about GSoC this year, please use the [`gsoc-2021` tag](https://forums.swift.org/tag/gsoc-2021), so it is easy to identify.
+## Accepted projects
 
-## Tips for contacting mentors
+Projects accepted for Swift in Google Summer of Code 2021, as [announced on the Swift forums](https://forums.swift.org/t/44689).
 
-The Swift forums are powered by discourse, a discussion forums platform which also has a number of spam avoidance mechanisms built-in. If this is your first time joining the forums, you _may_ not be able to send mentors a direct-message, as this requires a minimum amount of prior participation before the "send private message" feature is automatically enabled.
+### SwiftPM support for Swift scripts
 
-If you would like to reach out to a mentor privately, rather than making a public forums post, and the forums are not allowing you to send private messages (yet), please reach out to Konrad Malawski at `ktoso @ apple.com` directly via email with the `[gsoc2021]` tag in the email subject and describe the project you would like to work on – and we'll route you to the appropriate mentor.
+**Contributor**: YR Chen
 
-## Potential Projects
+**Results**: [[Pitch] SwiftPM support for Swift scripts (revision)](https://forums.swift.org/t/46717/38)
+
+<!-- REVIEW: mentor not stated in the announcement; contributor inferred from the forum pitch thread -->
+
+### Inlay type hints for SourceKit-LSP
+
+<!-- REVIEW: contributor and mentor not stated in the announcement -->
+
+### Alive2 for SIL
+
+**Contributor**: Justin Fargnoli
+
+**Mentor**: Robert Widmann
+
+**Results**: [Verifying SIL Optimization Passes](https://forums.swift.org/t/50274)
+
+### A "Bite-Sized" BitArray
+
+**Contributor**: Mahanaz Atiqullah
+
+**Results**: [Bit Array and Bit Set API Review](https://forums.swift.org/t/51396)
+
+<!-- REVIEW: mentor not stated in the announcement -->
+
+### Shared Storage for Property Wrappers
+
+**Contributor**: Isabel Lima
+
+**Results**: [Shared storage for property wrappers and @expanded parameters](https://forums.swift.org/t/51355)
+
+<!-- REVIEW: mentor not stated in the announcement -->
+
+## Project ideas
 
 ### Tracking for typechecker’s type inference
 

@@ -1,25 +1,62 @@
 ---
 redirect_from: "/gsoc2022/"
 layout: page
-title: Project Ideas for GSoC 2022
+title: Google Summer of Code 2022
 ---
 
-This page contains a non-exhaustive list of potential project ideas that we are keen to develop during [GSoC 2022](https://summerofcode.withgoogle.com/). If you would like to apply as a GSoC student, please follow these steps to get started:
+Swift participated in Google Summer of Code 2022 with five accepted projects, focused on DocC, SwiftSyntax and server packages. Here are the accepted projects and the project ideas we offered that year. Browse the other years on the [GSoC page](/community/gsoc/).
 
-1. Read through this page and the Google Summer of Code guides,
-2. Identify, or come up with your own project ideas you find interesting.
-2. Check out the [Development forum](https://forums.swift.org/c/development) to connect with potential mentors.
-- Feel free to mention the project mentors on the forums, when starting a thread about your interest in participating in a specific project they are offering to mentor.
+Discussions from this year are tagged [`gsoc-2022`](https://forums.swift.org/tag/gsoc-2022) on the Swift forums.
 
-When posting on the forums about GSoC this year, please use the [`gsoc-2022` tag](https://forums.swift.org/tag/gsoc-2022), so it is easy to identify.
+## Accepted projects
 
-## Tips for contacting mentors
+Projects accepted for Swift in Google Summer of Code 2022, as [announced on the Swift forums](https://forums.swift.org/t/55820). For an overview of the whole program, read the [Swift Summer of Code 2022 summary](https://www.swift.org/blog/swift-summer-of-code-2022-summary/) on the Swift blog.
 
-The Swift forums are powered by discourse, a discussion forums platform which also has a number of spam avoidance mechanisms built-in. If this is your first time joining the forums, you _may_ not be able to send mentors a direct-message, as this requires a minimum amount of prior participation before the "send private message" feature is automatically enabled.
+### Improving the debug output of the type inference algorithm
 
-If you would like to reach out to a mentor privately, rather than making a public forums post, and the forums are not allowing you to send private messages (yet), please reach out to Konrad Malawski at `ktoso AT apple.com` directly via email with the `[gsoc2022]` tag in the email subject and describe the project you would like to work on – and we'll route you to the appropriate mentor.
+**Contributor**: Amritpan Kaur
 
-## Potential Projects
+**Mentor**: Pavel Yaskevich
+
+**Blog**: [Improving the debug output of the type inference algorithm](https://www.swift.org/blog/swift-summer-of-code-2022-summary/#improving-the-debug-output-of-the-type-inference-algorithm)
+
+**Results**: [Improving the Debug Output of the Type Inference Algorithm - An Update](https://forums.swift.org/t/60521)
+
+### Kafka client package for Swift
+
+**Contributor**: Felix Schlegel
+
+**Mentor**: Franz Busch
+
+**Blog**: [Kafka client package for Swift](https://www.swift.org/blog/swift-summer-of-code-2022-summary/#kafka-client-package-for-swift)
+
+### Bootstrapping SwiftSyntaxBuilder
+
+**Contributor**: Fredrik Wieczerkowski
+
+**Mentor**: Alex Hoppen
+
+**Blog**: [Bootstrapping SwiftSyntaxBuilder](https://www.swift.org/blog/swift-summer-of-code-2022-summary/#bootstrapping-swiftsyntaxbuilder)
+
+### Interactive mode for ArgumentParser
+
+**Contributor**: Kth
+
+**Mentor**: Nate Cook
+
+**Blog**: [Interactive mode for ArgumentParser](https://www.swift.org/blog/swift-summer-of-code-2022-summary/#interactive-mode-for-argumentparser)
+
+### Quick navigation in Swift-DocC Render
+
+**Contributor**: Sofía Rodríguez
+
+**Mentors**: Marina Aísa, Franklin Schrans, Beatriz Magalhães
+
+**Blog**: [Quick navigation in Swift-DocC websites](https://www.swift.org/blog/swift-summer-of-code-2022-summary/#quick-navigation-in-swift-docc-websites)
+
+**Results**: [Quick navigation in DocC Render](https://forums.swift.org/t/59550)
+
+## Project ideas
 
 ### SwiftSyntax
 
@@ -92,6 +129,7 @@ Tom Doron, Mishal Shah
 Today, Swift does not produce backtraces when a process crashes on Linux, which could hinder users ability to troubleshoot production issues. To address the need, the Swift server workgroup has created a library which relies on private APIs and is a stop gap solution. The goal of this project is to design and prototype a high quality solution that can be integrated into the Swift runtime.
 
 **Expected outcomes/benefits/deliverables**:
+
 Swift produces quality backtraces when a process crashes on Linux.
 
 **Potential mentors**:
@@ -275,6 +313,7 @@ Marina Aisa, Beatriz Magalhaes
 ArgumentParser provides a straightforward way to declare command-line interfaces in Swift, with the dual goals of making it (1) fast and easy to create (2) high-quality, user-friendly CLI tools. For this project, we would design and implement an interactive mode for tools built using ArgumentParser that prompts for any required arguments not given in the initial command. This work would need to allow partial initialization of types, and could include features like validation and auto-completion for user input.
 
 **Expected outcomes/benefits/deliverables**:
+
 Design, implementation, and tests of an interactive CLI.
 
 
@@ -417,5 +456,6 @@ The participant will learn more about Swift's type system, the Swift standard li
 Successful implementation of this project would enable Swift users to use certain C++ standard library types such as std::vector with APIs vended by the Swift standard library. E.g., this would enable iterating over a `std::vector` with a Swift for-in loop or invoking a compactMap method on it.
 
 **Potential mentors**:
+
 Egor Zhdan and Alex Lorenz
 
