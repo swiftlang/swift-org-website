@@ -94,7 +94,7 @@ Note the above uses `gcr.io/distroless/cc-debian10` as the runtime image which s
 
 ## Archive (Tarball, ZIP file, etc.)
 
-Since cross-compiling Swift for Linux is not (yet) supported on Mac or Windows, we need to use virtualization technologies like Docker to compile applications we are targeting to run on Linux.
+You can cross-compile a Swift application for Linux from macOS or another host platform using the [Static Linux SDK](/documentation/articles/static-linux-getting-started.html), which produces statically linked executables with no runtime dependencies. Alternatively, you can use virtualization technologies like Docker to compile applications on the Linux distribution you are targeting, as shown in the example below.
 
 That said, this does not mean we must also package the applications as Docker images in order to deploy them. While using Docker images for deployment is convenient and popular, an application can also be packaged using a simple and lightweight archive format like tarball or ZIP file, then uploaded to the server where it can be extracted and run.
 
