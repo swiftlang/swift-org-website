@@ -1,6 +1,6 @@
 ## Swift Testing
 
-Swift Testing is a package with expressive and intuitive APIs that make testing your Swift code a breeze.
+Swift Testing is a testing library, included in the Swift toolchain since Swift 6, with expressive and intuitive APIs that make testing your Swift code a breeze.
 
 It provides detailed output when a test fails using macros like `#expect`. And it scales to large codebases with features like parameterization to easily repeat a test with different arguments.
 

@@ -2,6 +2,6 @@
 
 Grand Central Dispatch (GCD or libdispatch) provides comprehensive support for concurrent code execution on multicore hardware.
 
-libdispatch is currently available on all Darwin platforms. This project aims to make a modern version of libdispatch available on all other Swift platforms. To do this, we will implement as much of the portable subset of the API as possible, using the existing open source C implementation.
+libdispatch is part of the operating system on Apple platforms. The swift-corelibs-libdispatch project makes libdispatch available on non-Apple platforms such as Linux and Windows, implementing the portable subset of the API using the open source C implementation.
 
-More information about libdispatch for Linux is available on our [GitHub project page](https://github.com/swiftlang/swift-corelibs-libdispatch).
+More information about libdispatch on non-Apple platforms is available on our [GitHub project page](https://github.com/swiftlang/swift-corelibs-libdispatch).
