@@ -8,7 +8,7 @@ Once you have your Ubuntu virtual machine ready, you can deploy your Swift app. 
 
 - [DigitalOcean](/server/guides/deploying/digital-ocean.html)
 
-The [packaging](/server/guides/packaging.html) guide provides an overview of available deployment options. This guide takes you through each deployment option step-by-step for Ubuntu specifically. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server), but you can test with your own project.
+The [packaging](/server/guides/packaging.html) guide provides an overview of available deployment options. This guide takes you through each deployment option step-by-step for Ubuntu specifically. These examples will deploy SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/main/Sources/NIOHTTP1Server), but you can test with your own project.
 
 - [Binary Deployment](#binary-deployment)
 - [Source Deployment](#source-deployment)
@@ -26,13 +26,13 @@ git clone https://github.com/apple/swift-nio.git
 cd swift-nio
 ```
 
-Once inside the project folder, use the following command to build the app though Docker and copy all build artifacts into `.build/install`. Since this example will be deploying to Ubuntu 18.04, the `-bionic` Docker image is used to build.
+Once inside the project folder, use the following command to build the app though Docker and copy all build artifacts into `.build/install`. Since this example will be deploying to Ubuntu 24.04, the `-noble` Docker image is used to build.
 
 ```sh
 docker run --rm \
   -v "$PWD:/workspace" \
   -w /workspace \
-  swift:5.7-bionic  \
+  swift:6.4-noble \
   /bin/bash -cl ' \
      swift build && \
      rm -rf .build/install && mkdir -p .build/install && \
@@ -77,7 +77,7 @@ You can now start the executable. Supply the desired IP address and port. Bindin
 ./hello-world/NIOHTTP1Server <server_ip> 8080
 ```
 
-You may need to install additional system libraries like `libxml` or `tzdata` if your app uses Foundation. The system dependencies installed by Swift's slim docker images are a [good reference](https://github.com/swiftlang/swift-docker/blob/master/5.2/ubuntu/18.04/slim/Dockerfile).
+You may need to install additional system libraries like `libxml` or `tzdata` if your app uses Foundation. The system dependencies installed by Swift's slim docker images are a [good reference](https://github.com/swiftlang/swift-docker/blob/main/6.4/ubuntu/24.04/slim/Dockerfile).
 
 Finally, visit your server's IP via browser or local terminal and you should see a response.
 
@@ -108,23 +108,21 @@ Install Swift's required dependencies.
 
 ```sh
 sudo apt update
-sudo apt install clang libicu-dev build-essential pkg-config
+sudo apt install binutils git unzip gnupg2 libc6-dev libcurl4-openssl-dev libedit2 libgcc-13-dev libpython3-dev libsqlite3-0 libstdc++-13-dev libxml2-dev libncurses-dev libz3-dev pkg-config tzdata zlib1g-dev
 ```
 
 ### Download Toolchain
 
-This guide will install Swift 5.2. Visit the [Swift Downloads](/download/#releases) page for a link to latest release. Copy the download link for Ubuntu 18.04.
-
-![Download Swift](/assets/images/server-guides/swift-download-ubuntu-18-copy-link.png)
+This guide will install Swift 6.4 on Ubuntu 24.04. Visit the [Ubuntu 24.04 install page](/install/linux/ubuntu/24_04/) for a link to the latest release.
 
 Download and decompress the Swift toolchain.
 
 ```sh
-wget https://swift.org/builds/swift-5.2-release/ubuntu1804/swift-5.2-RELEASE/swift-5.2-RELEASE-ubuntu18.04.tar.gz
-tar xzf swift-5.2-RELEASE-ubuntu18.04.tar.gz
+wget https://download.swift.org/swift-6.4.0-release/ubuntu2404/swift-6.4.0-RELEASE/swift-6.4.0-RELEASE-ubuntu24.04.tar.gz
+tar xzf swift-6.4.0-RELEASE-ubuntu24.04.tar.gz
 ```
 
-> Note: Swift's [Using Downloads](/download/#using-downloads) guide includes information on how to verify downloads using PGP signatures.
+> Note: The [tarball installation guide](/install/linux/tarball/) includes information on how to verify downloads using PGP signatures.
 
 ### Install Toolchain
 
@@ -132,13 +130,13 @@ Move Swift somewhere easy to access. This guide will use `/swift` with each comp
 
 ```sh
 sudo mkdir /swift
-sudo mv swift-5.2-RELEASE-ubuntu18.04 /swift/5.2.0
+sudo mv swift-6.4.0-RELEASE-ubuntu24.04 /swift/6.4.0
 ```
 
 Add Swift to `/usr/bin` so it can be executed by `swift` and `root`.
 
 ```sh
-sudo ln -s /swift/5.2.0/usr/bin/swift /usr/bin/swift
+sudo ln -s /swift/6.4.0/usr/bin/swift /usr/bin/swift
 ```
 
 Verify that Swift was installed correctly.
@@ -149,7 +147,7 @@ swift --version
 
 ## Setup Project
 
-Now that Swift is installed, let's clone and compile your project. For this example, we'll be using SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/master/Sources/NIOHTTP1Server).
+Now that Swift is installed, let's clone and compile your project. For this example, we'll be using SwiftNIO's [example HTTP server](https://github.com/apple/swift-nio/tree/main/Sources/NIOHTTP1Server).
 
 First let's install SwiftNIO's system dependencies.
 

@@ -12,7 +12,7 @@ Use the create menu to create a new Droplet.
 
 ![Create Droplet](/assets/images/server-guides/digital-ocean-create-droplet.png)
 
-Under distributions, select Ubuntu 18.04 LTS.
+Under distributions, select Ubuntu 24.04 LTS.
 
 ![Ubuntu Distro](/assets/images/server-guides/digital-ocean-distributions-ubuntu-18.png)
 
