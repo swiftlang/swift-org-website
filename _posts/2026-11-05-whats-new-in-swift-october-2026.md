@@ -9,7 +9,15 @@ category: "Digest"
 
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
 
-> TODO: add @daveverwer's guest contribution
+> Hi, I’m Dave Verwer, co-creator of the [Swift Package Index](https://swiftpackageindex.com/) and now part of a team at Apple working on a public package registry for cross-platform Swift. How developers find, share, and manage dependencies across the entire ecosystem is something we think about a lot.
+>
+> CocoaPods, a dependency manager for Swift and Objective-C Cocoa projects, has been part of the developer ecosystem since 2011, long before Swift and the Swift Package Manager (SwiftPM) existed. For many people who started developing with the iPhone SDK, it was a first look at what a dependency manager could do. Today, Swift has expanded across platforms, and SwiftPM has become the standard for managing dependencies everywhere Swift runs.
+>
+> Following a two-year sunset period, the [CocoaPods project will stop accepting new pods and pod versions on December 2nd](https://blog.cocoapods.org/CocoaPods-Specs-Repo/). With that date less than a month away, we wanted to make sure this milestone is on your radar, and to share what it means for your projects. If your project still uses CocoaPods, this change won’t immediately break your builds. All current pods and versions will still be available, just in a read-only state. However, with pod authors no longer able to publish updates, if you haven't switched to SwiftPM yet, now is the time.
+>
+> Most pods in your dependencies that are still being maintained will already be compatible with SwiftPM, and the easiest way to check is to look for them on [Swift Package Index](https://swiftpackageindex.com). Every package in the index is a SwiftPM package, and if you find any incompatible pods, you can search for an alternative so you don’t leave yourself with unmaintained dependencies.
+>
+> I'd like to extend a personal thank you to everyone who worked on CocoaPods for creating and maintaining it for the last fifteen years. Their work shaped how the community shares code, and it helped lay the groundwork for the modern, cross-platform package ecosystem we have today. I also want to express my admiration for how the team managed this sunset and communicated the transition so clearly.
 
 Now on to other news about Swift:
 
