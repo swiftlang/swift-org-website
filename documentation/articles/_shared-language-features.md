@@ -18,7 +18,7 @@ SourceKit-LSP also provides code actions to automate common tasks.{% if include.
 Code actions can include:
 
 - Adding targets to your `Package.swift`
-- Converting JSON to protocols
+- Converting JSON to `Codable` structs
 - Adding documentation to your functions
 
 <div class="warning" markdown="1">
