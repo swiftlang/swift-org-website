@@ -10,6 +10,6 @@ To open the Command Palette to find and invoke this command, use the key combina
    ![Create New Project command showing available project templates](/assets/images/getting-started-with-vscode-swift/create-new-project/select-project-template.png)
 3. Choose the directory to store the project.
 4. Give your project a name.
-5. Open the newly created project. Cursor prompts you to open the project in
+5. Open the newly created project. {{ include.editor_name }} prompts you to open the project in
    the current window, a new window, or add it to the current workspace. Configure the default behavior with the
    `swift.openAfterCreateNewProject` setting.
