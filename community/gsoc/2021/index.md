@@ -18,11 +18,13 @@ Projects accepted for Swift in Google Summer of Code 2021, as [announced on the 
 
 **Results**: [[Pitch] SwiftPM support for Swift scripts (revision)](https://forums.swift.org/t/46717/38)
 
-<!-- REVIEW: mentor not stated in the announcement; contributor inferred from the forum pitch thread -->
+**Mentors**: Boris Beugling, Anders Bertelrud, Tom Doron
 
 ### Inlay type hints for SourceKit-LSP
 
-<!-- REVIEW: contributor and mentor not stated in the announcement -->
+**Contributor**: Fredrik Wieczerkowski
+
+**Mentor**: Alex Hoppen
 
 ### Alive2 for SIL
 
@@ -38,7 +40,7 @@ Projects accepted for Swift in Google Summer of Code 2021, as [announced on the 
 
 **Results**: [Bit Array and Bit Set API Review](https://forums.swift.org/t/51396)
 
-<!-- REVIEW: mentor not stated in the announcement -->
+**Mentors**: David Smith, Karoy Lorenty
 
 ### Shared Storage for Property Wrappers
 
@@ -46,7 +48,7 @@ Projects accepted for Swift in Google Summer of Code 2021, as [announced on the 
 
 **Results**: [Shared storage for property wrappers and @expanded parameters](https://forums.swift.org/t/51355)
 
-<!-- REVIEW: mentor not stated in the announcement -->
+**Mentor**: Holly Borla
 
 ## Project ideas
 
