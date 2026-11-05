@@ -681,3 +681,8 @@ sliemeobn:
     name: Simon Leeb
     github: sliemeobn
     about: "Simon is a software developer, co-founder and CTO of a logistics software company, and a part-time open-source developer in the Swift ecosystem."
+
+samkhouri:
+    name: Sam Khouri
+    github: bkhouri
+    about: "Sam is a contributor to Swift Package Manager and is a member of the Contributor Experience Workgroup, where he helps organize the Swift Google Summer of Code program."
