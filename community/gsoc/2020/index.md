@@ -1,15 +1,50 @@
 ---
 redirect_from: "/gsoc2020/"
 layout: page
-title: Project Ideas for GSoC 2020
+title: Google Summer of Code 2020
 ---
 
-This page contains a list of potential project ideas that we are keen to develop during [GSoC 2020](https://summerofcode.withgoogle.com/). If you would like to apply as a GSoC student, please follow these two steps to get started:
+Swift participated in Google Summer of Code 2020 with four accepted projects, focused on tracing, debugging, LTO and diagnostics. Here are the accepted projects and the project ideas we offered that year. Browse the other years on the [GSoC page](/community/gsoc/).
 
-1. Read through this page and identify the project ideas you find interesting.
-2. Check out the [Development forum](https://forums.swift.org/c/development) to connect with potential mentors.
+Discussions from this year are tagged [`gsoc-2020`](https://forums.swift.org/tag/gsoc-2020) on the Swift forums.
 
-## Potential Projects
+## Accepted projects
+
+Projects accepted for Swift in Google Summer of Code 2020, as [announced on the Swift forums](https://forums.swift.org/t/36147).
+
+### Improving Swift's debugger experience on Linux
+
+**Contributor**: Augusto Noronha
+
+**Mentors**: Vedant Kumar, Adrian Prantl
+
+**Results**: [Google Summer of Code "Improving Swift’s Debugger experience on Linux" Final Report](https://forums.swift.org/t/39893)
+
+### Swift (Server) Distributed Tracing
+
+**Contributor**: Moritz Lang
+
+**Mentors**: Konrad Malawski, Tom Doron
+
+**Results**: [Current state of Swift Tracing](https://forums.swift.org/t/39830)
+
+### Localization of Compiler Diagnostic Messages
+
+**Contributor**: Hassan ElDesouky
+
+**Mentor**: Pavel Yaskevich
+
+**Results**: [Localization of Compiler Diagnostic Messages](https://forums.swift.org/t/36412/41), [My GSoC Experience](https://forums.swift.org/t/45698)
+
+### LTO support for Swift
+
+**Contributor**: Yuta Saito
+
+**Mentor**: Saleem Abdulrasool
+
+**Results**: [LTO support progress report](https://forums.swift.org/t/37149)
+
+## Project ideas
 
 ### Localization of Compiler Diagnostic Messages
 
