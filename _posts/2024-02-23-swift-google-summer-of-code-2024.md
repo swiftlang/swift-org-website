@@ -22,7 +22,7 @@ This is the most exciting part for us: helping you become a part of the Swift co
 If you are [eligible](https://summerofcode.withgoogle.com/get-started), and would like to contribute to Swift during
 this year's GSoC, these are the steps to take:
 
-1. Check out the existing [project ideas page](https://www.swift.org/gsoc2024/).
+1. Check out the existing [project ideas page](/community/gsoc/2024/).
 2. If a project excites you, [proceed to the GSoC category on the Swift forums](https://forums.swift.org/c/development/gsoc/98) to discuss the project.
 3. Once you are confident in your understanding of the project and how to approach it, [write an official proposal](https://google.github.io/gsocguides/student/writing-a-proposal) and submit it to the [GSoC website](https://summerofcode.withgoogle.com).
 
