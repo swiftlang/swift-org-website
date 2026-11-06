@@ -13,7 +13,7 @@ The following Visual Studio components should be installed:
 |-----------|------------------|
 | MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest)[^1] | Microsoft.VisualStudio.Component.VC.Tools.x86.x64 |
 | MSVC v143 - VS 2022 C++ ARM64/ARM64EC build tools (Latest)[^1] | Microsoft.VisualStudio.Component.VC.Tools.ARM64 |
-| Windows 11 SDK (10.0.22000.0)[^2] | Microsoft.VisualStudio.Component.Windows11SDK.22000 |
+| Windows 11 SDK (10.0.22621.0)[^2] | Microsoft.VisualStudio.Component.Windows11SDK.22621 |
 
 [^1]: At minimum, Swift requires the build tools that match your machine architecture. Installing other architectures is recommended in order to cross-compile Swift binaries to run on different machine architectures.
 
