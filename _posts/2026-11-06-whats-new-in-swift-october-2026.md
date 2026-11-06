@@ -24,7 +24,7 @@ To start things off, our guest contributor shares a timely reminder for anyone r
 Now on to other news about Swift:
 
 ## Videos to watch
-* Tim Condon's ACCU 2026 talk, [Incrementally Migrating C++ to a Memory Safe Language with Swift](https://www.youtube.com/watch?v=LMQ21X6_2FQ) shows how Swift's C++ interoperability lets you adopt memory safety incrementally, without rewriting everything at once.
+* Tim Condon's ACCU 2026 talk, [Incrementally Migrating C++ to a Memory Safe Language with Swift](https://www.youtube.com/watch?v=LMQ21X6_2FQ), shows how Swift's C++ interoperability lets you adopt memory safety incrementally, without rewriting everything at once.
 * [Building Android App with Swift: First-Hand Experience](https://www.youtube.com/watch?v=AibwYt3esbk) is a conversation with Pierluigi Cifani, who describes how his team shares business logic and ViewModels between iOS and Android, with native UI on each and Skip bridging the two, in apps like Polymarket.
 * Want to build Minecraft mods in Swift? A recent iOSDC Japan lightning talk, [Creating a Minecraft Java mod with Swift](https://www.youtube.com/watch?v=r_A44OiLASw), shows how, using swift-java to interoperate with Minecraft Java Edition. The speaker's [blog post](https://note.com/1mash0/n/n107a49ec76a3) has the slides and more demo videos. The talk is in Japanese, with an auto-dubbed English track available on YouTube.
 
