@@ -9,6 +9,8 @@ category: "Digest"
 
 Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
 
+To start things off, our guest contributor shares a timely reminder for anyone relying on CocoaPods:
+
 > Hi, I’m Dave Verwer, co-creator of the [Swift Package Index](https://swiftpackageindex.com/) and now part of a team at Apple working on a public package registry for cross-platform Swift. How developers find, share, and manage dependencies across the entire ecosystem is something we think about a lot.
 >
 > CocoaPods, a dependency manager for Swift and Objective-C Cocoa projects, has been part of the developer ecosystem since 2011, long before Swift and the Swift Package Manager (SwiftPM) existed. For many people who started developing with the iPhone SDK, it was a first look at what a dependency manager could do. Today, Swift has expanded across platforms, and SwiftPM has become the standard for managing dependencies everywhere Swift runs.
