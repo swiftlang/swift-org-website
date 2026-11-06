@@ -36,7 +36,7 @@ Now on to other news about Swift:
 
 ## New package releases
 * [Swift Kafka Client](https://github.com/swift-server/swift-kafka-client/releases/tag/1.0.0) has reached 1.0.0. The client for Apache Kafka, the event streaming platform, is built on librdkafka and works with structured concurrency, with built-in metrics through swift-metrics and static Linux builds.
-* Robotics meets Swift. [swift-ros2](https://github.com/swift-ros2/swift-ros2) is a native client library for ROS 2, the robotics framework. It runs on Apple platforms, Linux, Windows, and Android, and version 3.1.0 adds a topic graph API for discovering what's available on a robot network.
+* Robotics meets Swift. [swift-ros2](https://github.com/swift-ros2/swift-ros2) is a native client library for ROS 2, the robotics framework. It runs on Apple platforms, Linux, Windows, and Android, and version 3.1.0 recently added a topic graph API for discovering what's available on a robot network.
 * [Perfect-NIO](https://github.com/PerfectlySoft/Perfect-NIO), the HTTP layer of the Perfect server framework, has been rewritten on SwiftNIO and Swift 6 concurrency. Version 0.1.0 uses async, `@Sendable` route handlers, and 0.2.0 adds WebSocket message size limits.
 
 ## Swift Evolution
