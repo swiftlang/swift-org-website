@@ -1,3 +1,9 @@
+- checksum: 6bcc84c4aea3bb8138008eca4209b650ae977b2f0b9d18eb317cab04eef2b81f
+  date: 2026-11-06 10:10:00-06:00
+  dir: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-11-06-a
+  download: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-11-06-a_wasm.artifactbundle.tar.gz
+  download_signature: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-11-06-a_wasm.artifactbundle.tar.gz.sig
+  name: Swift Wasm SDK Development Snapshot
 - checksum: 64bfa1ae25e8cf39dec280f03963fb6d1634c6e28818c15c3b018dc1e9ba3bf1
   date: 2026-11-04 10:10:00-06:00
   dir: swift-6.4.x-DEVELOPMENT-SNAPSHOT-2026-11-04-a
