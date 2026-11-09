@@ -7,7 +7,7 @@ author: [daveverwer, davelester]
 category: "Digest"
 ---
 
-Welcome to "What's new in Swift," a curated digest of releases, videos, and discussions in the Swift project and community.
+Welcome to the latest edition of "What's new in Swift," a curated digest of releases, news, and discussions from the Swift project and community.
 
 To start things off, our guest contributor shares a timely reminder for anyone relying on CocoaPods:
 
