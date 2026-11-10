@@ -4,7 +4,7 @@ hero_card:
   alt: "A sample Swift code snippet with a blinking microcontroller next to it"
 tertiary_cards:
   - name: "Integrate with Raspberry Pi Pico SDK"
-    text: "Take advantage of seamless interoperatibility and use existing APIs from the Pico SDK directly from your Swift code."
+    text: "Take advantage of seamless interoperability and use existing APIs from the Pico SDK directly from your Swift code."
     link_text: Open guide
     link: https://docs.swift.org/latest/documentation/embeddedswift/integratewithpico/
   - name: "Go baremetal on STM32 chips"
