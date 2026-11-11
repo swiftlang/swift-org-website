@@ -1,7 +1,7 @@
 ---
 layout: new-layouts/post
 published: true
-date: 2026-11-10 12:45:00
+date: 2026-11-11 9:00:00
 title: "What's new in Swift: November 2026 Edition"
 author: [daveverwer, davelester]
 category: "Digest"
