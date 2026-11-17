@@ -241,7 +241,9 @@ struct PageContext: Sendable {
             // Leaf can't compare inside a condition, so the one branch the
             // template needs is resolved here.
             dictionary["isShowcase"] = .bool(name == "showcase")
-            values["category"] = DataValue.dictionary(dictionary).leafData
+            var leaf = DataValue.dictionary(dictionary).leafData.dictionary ?? [:]
+            leaf["packages"] = Self.packageCards(category["packages"])
+            values["category"] = .dictionary(leaf)
         }
     }
 
@@ -267,10 +269,20 @@ struct PageContext: Sendable {
     private func showcaseMonth(slug: String, year: String) -> LeafData? {
         for entry in data["packages/showcase-history/years"].array where entry["year"].string == year {
             for month in entry["months"].array where month["slug"].string == slug {
-                return month.leafData
+                var leaf = month.leafData.dictionary ?? [:]
+                leaf["packages"] = Self.packageCards(month["packages"])
+                leaf["year"] = .string(year)
+                return .dictionary(leaf)
             }
         }
         return nil
+    }
+
+    /// Packages shaped for `partials/packages/package`. `#extend` with a value
+    /// makes that value the partial's whole context, so each one is wrapped
+    /// under the `package` key the partial reads.
+    private static func packageCards(_ packages: DataValue) -> LeafData {
+        .array(packages.array.map { .dictionary(["package": $0.leafData]) })
     }
 
     /// A roster sorted by name, as `sort: "name"` did.
