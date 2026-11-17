@@ -1,5 +1,5 @@
 {
-  "originHash" : "638aa161f0dabcb439698ed41400f4136739e04a8276c25c948253fda33f5c9c",
+  "originHash" : "1c3f6c904397a752a06df24e4a93cbfe70a3e3af5b7704547cef21cb3f52c0dc",
   "pins" : [
     {
       "identity" : "leaf-kit",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "64cc0a5c8dcf4fbd03be73b944f6850c0b82e439",
         "version" : "1.14.3"
+      }
+    },
+    {
+      "identity" : "leaf-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vapor-community/leaf-markdown.git",
+      "state" : {
+        "revision" : "a2292ee724754962c91d294d9fd2f416317f7a88",
+        "version" : "4.0.0"
       }
     },
     {
