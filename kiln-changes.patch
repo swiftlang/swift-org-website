@@ -1,7 +1,8 @@
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/CLI/StaticFileServer.swift kiln-rebase/Sources/CLI/StaticFileServer.swift
---- kiln-head/Sources/CLI/StaticFileServer.swift	2026-09-22 20:13:06
-+++ kiln-rebase/Sources/CLI/StaticFileServer.swift	2026-09-22 20:13:14
-@@ -98,6 +98,21 @@
+diff --git a/Sources/CLI/StaticFileServer.swift b/Sources/CLI/StaticFileServer.swift
+index 9de2bbb..52abd74 100644
+--- a/Sources/CLI/StaticFileServer.swift
++++ b/Sources/CLI/StaticFileServer.swift
+@@ -98,6 +98,21 @@ final class StaticFileServer {
          return components.joined(separator: "/")
      }
  
@@ -23,7 +24,7 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/CLI/St
      /// A `Content-Type` value for a file extension (lowercased, no dot).
      static func contentType(forExtension ext: String) -> String {
          switch ext.lowercased() {
-@@ -169,6 +184,16 @@
+@@ -169,6 +184,16 @@ private final class StaticFileHandler: ChannelInboundHandler, @unchecked Sendabl
              return
          }
  
@@ -40,12 +41,10 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/CLI/St
          let fileURL = directory.appendingPathComponent(relative)
          if let data = try? Data(contentsOf: fileURL) {
              let ext = (relative as NSString).pathExtension
-@@ -188,6 +213,17 @@
-                           contentType: "text/plain; charset=utf-8",
-                           body: Array("404 Not Found".utf8), keepAlive: keepAlive)
+@@ -190,6 +215,17 @@ private final class StaticFileHandler: ChannelInboundHandler, @unchecked Sendabl
          }
-+    }
-+
+     }
+ 
 +    private func writeRedirect(context: ChannelHandlerContext, location: String, keepAlive: Bool) {
 +        var headers = HTTPHeaders()
 +        headers.add(name: "Location", value: location)
@@ -55,19 +54,22 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/CLI/St
 +        context.write(wrapOutboundOut(.head(responseHead)), promise: nil)
 +        context.writeAndFlush(wrapOutboundOut(.end(nil)), promise: nil)
 +        if !keepAlive { context.close(promise: nil) }
-     }
- 
++    }
++
      private func writeResponse(context: ChannelHandlerContext, status: HTTPResponseStatus,
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Configuration/KilnSite.swift kiln-rebase/Sources/Kiln/Configuration/KilnSite.swift
---- kiln-head/Sources/Kiln/Configuration/KilnSite.swift	2026-09-22 20:13:06
-+++ kiln-rebase/Sources/Kiln/Configuration/KilnSite.swift	2026-09-22 20:16:44
+                                contentType: String, body: [UInt8], keepAlive: Bool) {
+         var headers = HTTPHeaders()
+diff --git a/Sources/Kiln/Configuration/KilnSite.swift b/Sources/Kiln/Configuration/KilnSite.swift
+index 37a04b0..0277ec8 100644
+--- a/Sources/Kiln/Configuration/KilnSite.swift
++++ b/Sources/Kiln/Configuration/KilnSite.swift
 @@ -1,3 +1,5 @@
 +public import LeafKit
 +
  /// Information about the source repository, used for "edit this page" links
  /// and the repository link in the header.
  public struct Repository: Sendable {
-@@ -103,6 +105,29 @@
+@@ -103,6 +105,29 @@ public struct KilnSite: Sendable {
      /// when the site is not versioned; otherwise each ``DocVersion`` carries its
      /// own unlisted pages.
      public var unlistedPages: [UnlistedPage]
@@ -97,7 +99,7 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/C
      /// The navigation tree (used when the site is not versioned; otherwise each
      /// ``DocVersion`` carries its own navigation).
      public var navigation: [NavItem]
-@@ -135,6 +160,8 @@
+@@ -135,6 +160,8 @@ public struct KilnSite: Sendable {
          docc: DocCSite? = nil,
          versions: [DocVersion] = [],
          unlistedPages: [UnlistedPage] = [],
@@ -106,7 +108,7 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/C
          @NavBuilder navigation: () -> [NavItem] = { [] }
      ) {
          self.name = name
-@@ -160,6 +187,8 @@
+@@ -160,6 +187,8 @@ public struct KilnSite: Sendable {
          self.docc = docc
          self.versions = versions
          self.unlistedPages = unlistedPages
@@ -115,10 +117,11 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/C
          self.navigation = navigation()
      }
  
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Configuration/MarkdownExtensions.swift kiln-rebase/Sources/Kiln/Configuration/MarkdownExtensions.swift
---- kiln-head/Sources/Kiln/Configuration/MarkdownExtensions.swift	2026-09-22 20:13:06
-+++ kiln-rebase/Sources/Kiln/Configuration/MarkdownExtensions.swift	2026-09-22 20:13:14
-@@ -30,14 +30,27 @@
+diff --git a/Sources/Kiln/Configuration/MarkdownExtensions.swift b/Sources/Kiln/Configuration/MarkdownExtensions.swift
+index 3f5159f..1d60381 100644
+--- a/Sources/Kiln/Configuration/MarkdownExtensions.swift
++++ b/Sources/Kiln/Configuration/MarkdownExtensions.swift
+@@ -30,14 +30,27 @@ public struct MarkdownExtensions: Sendable {
      public var metadata: Bool
      /// Table-of-contents / heading anchor options (`toc`).
      public var tableOfContents: TableOfContentsOptions
@@ -147,10 +150,11 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/C
 +        self.codeRenderer = codeRenderer
      }
  }
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Content/FrontMatter.swift kiln-rebase/Sources/Kiln/Content/FrontMatter.swift
---- kiln-head/Sources/Kiln/Content/FrontMatter.swift	2026-09-22 20:13:06
-+++ kiln-rebase/Sources/Kiln/Content/FrontMatter.swift	2026-09-22 20:13:14
-@@ -24,6 +24,15 @@
+diff --git a/Sources/Kiln/Content/FrontMatter.swift b/Sources/Kiln/Content/FrontMatter.swift
+index bc15e74..65af6be 100644
+--- a/Sources/Kiln/Content/FrontMatter.swift
++++ b/Sources/Kiln/Content/FrontMatter.swift
+@@ -24,6 +24,15 @@ public struct FrontMatter: Sendable, Equatable {
      public var image: String? { values["image"] }
      /// An optional Leaf template name override (e.g. `template: landing`).
      public var template: String? { values["template"] }
@@ -166,10 +170,11 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/C
  
      public static let empty = FrontMatter()
  }
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Markdown/HTMLRenderer.swift kiln-rebase/Sources/Kiln/Markdown/HTMLRenderer.swift
---- kiln-head/Sources/Kiln/Markdown/HTMLRenderer.swift	2026-09-22 20:13:06
-+++ kiln-rebase/Sources/Kiln/Markdown/HTMLRenderer.swift	2026-09-22 20:13:14
-@@ -40,15 +40,23 @@
+diff --git a/Sources/Kiln/Markdown/HTMLRenderer.swift b/Sources/Kiln/Markdown/HTMLRenderer.swift
+index 35f02ac..9951dcd 100644
+--- a/Sources/Kiln/Markdown/HTMLRenderer.swift
++++ b/Sources/Kiln/Markdown/HTMLRenderer.swift
+@@ -40,15 +40,23 @@ struct HTMLRenderer: MarkupWalker {
      private let slugger: Slugger
      private let toc: TableOfContentsOptions
      private let linkResolver: LinkResolver?
@@ -194,7 +199,7 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/M
      }
  
      /// Rewrite a relative link/asset destination via the resolver, if present.
-@@ -65,6 +73,12 @@
+@@ -65,6 +73,12 @@ struct HTMLRenderer: MarkupWalker {
      }
  
      mutating func visitCodeBlock(_ codeBlock: CodeBlock) {
@@ -207,36 +212,48 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/M
          let languageAttr: String
          if let language = codeBlock.language, !language.isEmpty {
              languageAttr = " class=\"language-\(HTMLEscaping.attribute(language))\""
-@@ -96,6 +110,28 @@
+@@ -96,6 +110,40 @@ struct HTMLRenderer: MarkupWalker {
          if !html.rawHTML.hasSuffix("\n") { result += "\n" }
      }
  
 +    /// Whether the list currently being rendered is *loose*.
 +    ///
-+    /// CommonMark wraps a list item's text in `<p>` only for a loose list — one
-+    /// whose items are separated by blank lines, or which has an item holding
-+    /// more than one block. swift-markdown drops that flag when it parses, so it
-+    /// is recovered here from the items' source ranges.
++    /// CommonMark wraps a list item's text in `<p>` only for a loose list: one
++    /// whose items are separated by a blank line, or with an item whose direct
++    /// children are. swift-markdown doesn't keep cmark's tight flag, so it is
++    /// recovered here from source ranges.
 +    private var inLooseList = false
 +
 +    private static func isLoose(_ list: any ListItemContainer) -> Bool {
 +        let items = Array(list.listItems)
-+        // An item with two blocks makes the whole list loose.
-+        if items.contains(where: { $0.childCount > 1 }) { return true }
-+        // So does a blank line between any two items.
-+        for (previous, next) in zip(items, items.dropFirst()) {
-+            guard let end = previous.range?.upperBound.line,
-+                  let start = next.range?.lowerBound.line
-+            else { continue }
-+            if start > end + 1 { return true }
++        if zip(items, items.dropFirst()).contains(where: isBlankLineBetween) { return true }
++        return items.contains { item in
++            let children = Array(item.children)
++            return zip(children, children.dropFirst()).contains(where: isBlankLineBetween)
 +        }
-+        return false
++    }
++
++    private static func isBlankLineBetween(_ first: any Markup, _ second: any Markup) -> Bool {
++        guard let end = lastContentLine(of: first), let start = second.range?.lowerBound.line else { return false }
++        return start > end + 1
++    }
++
++    /// The last line holding content in `markup`. A container's range runs on
++    /// over any blank lines that follow it (ending at column 1 of the next line),
++    /// so this measures its leaf blocks instead.
++    private static func lastContentLine(of markup: any Markup) -> Int? {
++        let blocks = markup.children.filter { $0 is any BlockMarkup }
++        if !blocks.isEmpty {
++            return blocks.compactMap(lastContentLine).max()
++        }
++        guard let end = markup.range?.upperBound else { return nil }
++        return end.column == 1 ? end.line - 1 : end.line
 +    }
 +
      mutating func visitListItem(_ listItem: ListItem) {
          result += "<li>"
          if let checkbox = listItem.checkbox {
-@@ -110,17 +146,28 @@
+@@ -110,17 +158,28 @@ struct HTMLRenderer: MarkupWalker {
      mutating func visitOrderedList(_ orderedList: OrderedList) {
          let start = orderedList.startIndex != 1 ? " start=\"\(orderedList.startIndex)\"" : ""
          result += "<ol\(start)>\n"
@@ -265,10 +282,11 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/M
          result += "<p>"
          descendInto(paragraph)
          result += "</p>\n"
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Markdown/MarkdownRenderer.swift kiln-rebase/Sources/Kiln/Markdown/MarkdownRenderer.swift
---- kiln-head/Sources/Kiln/Markdown/MarkdownRenderer.swift	2026-09-22 20:13:06
-+++ kiln-rebase/Sources/Kiln/Markdown/MarkdownRenderer.swift	2026-09-22 20:13:14
-@@ -81,7 +81,7 @@
+diff --git a/Sources/Kiln/Markdown/MarkdownRenderer.swift b/Sources/Kiln/Markdown/MarkdownRenderer.swift
+index 891256c..4b055ec 100644
+--- a/Sources/Kiln/Markdown/MarkdownRenderer.swift
++++ b/Sources/Kiln/Markdown/MarkdownRenderer.swift
+@@ -81,7 +81,7 @@ public struct MarkdownRenderer: Sendable {
              case .markdown(let text):
                  guard !text.isBlank else { continue }
                  let document = Document(parsing: text)
@@ -277,9 +295,11 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/M
                  renderer.visit(document)
                  html += renderer.result
                  headings.append(contentsOf: renderer.headings)
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Rendering/InMemoryLeafSource.swift kiln-rebase/Sources/Kiln/Rendering/InMemoryLeafSource.swift
---- kiln-head/Sources/Kiln/Rendering/InMemoryLeafSource.swift	1970-01-01 01:00:00
-+++ kiln-rebase/Sources/Kiln/Rendering/InMemoryLeafSource.swift	2026-09-22 20:13:14
+diff --git a/Sources/Kiln/Rendering/InMemoryLeafSource.swift b/Sources/Kiln/Rendering/InMemoryLeafSource.swift
+new file mode 100644
+index 0000000..b40ecce
+--- /dev/null
++++ b/Sources/Kiln/Rendering/InMemoryLeafSource.swift
 @@ -0,0 +1,33 @@
 +import LeafKit
 +import NIOConcurrencyHelpers
@@ -314,35 +334,11 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/R
 +        return eventLoop.makeSucceededFuture(buffer)
 +    }
 +}
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Rendering/MarkdownTag.swift kiln-rebase/Sources/Kiln/Rendering/MarkdownTag.swift
---- kiln-head/Sources/Kiln/Rendering/MarkdownTag.swift	1970-01-01 01:00:00
-+++ kiln-rebase/Sources/Kiln/Rendering/MarkdownTag.swift	2026-09-22 20:13:14
-@@ -0,0 +1,21 @@
-+import LeafKit
-+
-+/// `#markdown("…")` — render a markdown string to HTML inside a template.
-+///
-+/// Data-driven pages often hold prose in YAML (a package description, a callout
-+/// body) that has to reach the page as HTML. This renders it with the same
-+/// ``MarkdownRenderer`` the page bodies use, so the markup matches.
-+///
-+/// The result is HTML and must not be escaped again, hence
-+/// `UnsafeUnescapedLeafTag` — it can be emitted with `#markdown(...)` directly
-+/// rather than needing `#unsafeHTML(...)` around it.
-+struct MarkdownTag: UnsafeUnescapedLeafTag {
-+    let renderer: MarkdownRenderer
-+
-+    func render(_ ctx: LeafContext) throws -> LeafData {
-+        guard let source = ctx.parameters.first?.string, !source.isEmpty else {
-+            return .string("")
-+        }
-+        return .string(renderer.render(source).html)
-+    }
-+}
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Rendering/RenderContext.swift kiln-rebase/Sources/Kiln/Rendering/RenderContext.swift
---- kiln-head/Sources/Kiln/Rendering/RenderContext.swift	2026-09-22 20:13:06
-+++ kiln-rebase/Sources/Kiln/Rendering/RenderContext.swift	2026-09-22 20:13:14
-@@ -152,8 +152,15 @@
+diff --git a/Sources/Kiln/Rendering/RenderContext.swift b/Sources/Kiln/Rendering/RenderContext.swift
+index e00d252..7790bc4 100644
+--- a/Sources/Kiln/Rendering/RenderContext.swift
++++ b/Sources/Kiln/Rendering/RenderContext.swift
+@@ -152,8 +152,15 @@ struct RenderContext {
          language.siteName ?? site.name
      }
  
@@ -359,7 +355,7 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/R
              "site": siteData,
              "language": languageData,
              "languages": .array(alternates.map(Self.alternateData)),
-@@ -184,7 +191,7 @@
+@@ -184,7 +191,7 @@ struct RenderContext {
              // and `#if(blogListing)` are false on every non-blog page.
              "blogPost": blogPost ?? .trueNil,
              "blogListing": blogListing ?? .trueNil,
@@ -368,10 +364,11 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/R
      }
  
      private var currentVersionData: LeafData {
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Rendering/TemplateRenderer.swift kiln-rebase/Sources/Kiln/Rendering/TemplateRenderer.swift
---- kiln-head/Sources/Kiln/Rendering/TemplateRenderer.swift	2026-09-22 20:13:06
-+++ kiln-rebase/Sources/Kiln/Rendering/TemplateRenderer.swift	2026-09-22 20:13:14
-@@ -18,6 +18,8 @@
+diff --git a/Sources/Kiln/Rendering/TemplateRenderer.swift b/Sources/Kiln/Rendering/TemplateRenderer.swift
+index a8989db..cdfdd5b 100644
+--- a/Sources/Kiln/Rendering/TemplateRenderer.swift
++++ b/Sources/Kiln/Rendering/TemplateRenderer.swift
+@@ -18,6 +18,8 @@ final class TemplateRenderer {
      private let eventLoopGroup: MultiThreadedEventLoopGroup
      private let threadPool: NIOThreadPool
      private let renderer: LeafRenderer
@@ -380,7 +377,7 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/R
      /// Set once `shutdown()` has released the NIO resources, so `deinit` knows
      /// not to shut them down a second time (a double `syncShutdownGracefully()`
      /// blocks forever — the worker threads have already exited and never
-@@ -43,7 +45,11 @@
+@@ -43,7 +45,11 @@ final class TemplateRenderer {
                  viewDirectory: directory.path
              )
          }
@@ -393,12 +390,10 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/R
  
          let rootDirectory = templateDirectories.last?.path ?? FileManager.default.currentDirectoryPath
          self.eventLoopGroup = group
-@@ -59,6 +65,16 @@
-             sources: .singleSource(layered),
-             eventLoop: group.next()
+@@ -61,6 +67,16 @@ final class TemplateRenderer {
          )
-+    }
-+
+     }
+ 
 +    /// Render a string as a Leaf template, under a caller-supplied cache key.
 +    ///
 +    /// Used for content templating, where the "template" is the page's own body
@@ -407,13 +402,16 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/R
 +    func renderInline(_ contents: String, key: String, context: [String: LeafData]) async throws -> String {
 +        inlineSource.store(contents, at: key)
 +        return try await render(key, context: context)
-     }
- 
++    }
++
      /// Render a template (e.g. `"page"`, `"partials/nav"`) with the given context.
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Search/SearchIndexBuilder.swift kiln-rebase/Sources/Kiln/Search/SearchIndexBuilder.swift
---- kiln-head/Sources/Kiln/Search/SearchIndexBuilder.swift	2026-09-22 20:13:06
-+++ kiln-rebase/Sources/Kiln/Search/SearchIndexBuilder.swift	2026-09-22 20:24:33
-@@ -53,7 +53,10 @@
+     func render(_ template: String, context: [String: LeafData]) async throws -> String {
+         let buffer = try await renderer.render(path: template, context: context).get()
+diff --git a/Sources/Kiln/Search/SearchIndexBuilder.swift b/Sources/Kiln/Search/SearchIndexBuilder.swift
+index 1c10df4..aef12be 100644
+--- a/Sources/Kiln/Search/SearchIndexBuilder.swift
++++ b/Sources/Kiln/Search/SearchIndexBuilder.swift
+@@ -53,7 +53,10 @@ struct SearchIndexBuilder {
  
      func jsonData() throws -> Data {
          let encoder = JSONEncoder()
@@ -425,23 +423,11 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/S
          return try encoder.encode(SearchIndex(docs: documents))
      }
  
-diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/Site/SiteGenerator.swift kiln-rebase/Sources/Kiln/Site/SiteGenerator.swift
---- kiln-head/Sources/Kiln/Site/SiteGenerator.swift	2026-09-22 20:13:06
-+++ kiln-rebase/Sources/Kiln/Site/SiteGenerator.swift	2026-09-22 20:13:14
-@@ -71,7 +71,11 @@
-         try site.validate()
- 
-         let theme = try resolveTheme()
--        let renderer = TemplateRenderer(templateDirectories: theme.templates, leafTags: leafTags)
-+        // `#markdown(...)` is always available; a caller tag of the same name wins.
-+        let renderer = TemplateRenderer(
-+            templateDirectories: theme.templates,
-+            leafTags: leafTags.merging(["markdown": MarkdownTag(renderer: MarkdownRenderer(options: site.markdown))]) { caller, _ in caller }
-+        )
-         // `shutdown()` is async (it must not block — see TemplateRenderer), so we
-         // can't use `defer`; await it on both the success and error paths instead.
-         do {
-@@ -457,7 +461,26 @@
+diff --git a/Sources/Kiln/Site/SiteGenerator.swift b/Sources/Kiln/Site/SiteGenerator.swift
+index e5b6570..f6b5842 100644
+--- a/Sources/Kiln/Site/SiteGenerator.swift
++++ b/Sources/Kiln/Site/SiteGenerator.swift
+@@ -457,7 +457,26 @@ public struct SiteGenerator {
  
          let linkResolver = LinkResolver(currentLogicalPath: logicalPath, locale: language.locale, urls: urls,
                                          knownLocales: build.locales)
@@ -469,7 +455,7 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/S
          let title = page.frontMatter.title ?? rendered.firstHeading ?? navTitle
          let isFallback = !language.isDefault && !store.hasTranslation(forLogicalPath: logicalPath, locale: language.locale)
          let pageNavigation = build.navigationBuilder.contextualise(resolvedNav, currentLogicalPath: logicalPath)
-@@ -486,7 +509,7 @@
+@@ -486,7 +505,7 @@ public struct SiteGenerator {
              noindex: isVersioned && !version.isDefault
          )
  
@@ -478,7 +464,7 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/S
              site: site,
              language: language,
              defaultLanguage: version.defaultLanguage,
-@@ -519,6 +542,7 @@
+@@ -519,6 +538,7 @@ public struct SiteGenerator {
              navigation: pageNavigation,
              version: versionContext
          )
@@ -486,7 +472,7 @@ diff --color -ruN -x .git -x .build -x Package.resolved kiln-head/Sources/Kiln/S
  
          let templateName = page.frontMatter.template ?? (page.isHome ? "home" : "page")
          let html = try await renderer.render(templateName, context: context.leafData)
-@@ -1091,4 +1115,37 @@
+@@ -1094,4 +1114,37 @@ public struct SiteGenerator {
              )
          }
      }

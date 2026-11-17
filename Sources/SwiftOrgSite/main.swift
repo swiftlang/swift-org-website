@@ -1,5 +1,6 @@
 import Foundation
 import Kiln
+import LeafMarkdown
 
 // The Swift.org website, built with Kiln.
 //
@@ -133,7 +134,16 @@ try await Kiln.build(
     // The Jekyll site links to many pages this port hasn't staged yet, and to
     // externally-hosted docs; broken links are reported by `make check` instead.
     linkChecking: .off,
-    leafTags: ["component": componentTag, "startsWith": StartsWithTag(), "currentYear": CurrentYearTag(), "swiftCode": SwiftCodeTag(), "stripHTML": StripHTMLTag()]
+    leafTags: [
+        "component": componentTag,
+        "startsWith": StartsWithTag(),
+        "currentYear": CurrentYearTag(),
+        "swiftCode": SwiftCodeTag(),
+        "stripHTML": StripHTMLTag(),
+        // `#markdown(…)`, Liquid's `markdownify`. `.smart` and `.unsafe` match
+        // Kiln's own renderer: curly quotes, raw HTML passed through.
+        "markdown": LeafMarkdown.MarkdownTag(options: [.unsafe, .smart]),
+    ]
 )
 
 // MARK: - Post-processing
