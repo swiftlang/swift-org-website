@@ -54,11 +54,21 @@ tables, release lists, workgroup rosters and package catalogue. Rendering that i
 Leaf needs the data in the template context, and Kiln's `RenderContext` exposes a
 closed set of keys.
 
-`kiln-changes.patch` carries four additions and three bug fixes, all in
-`.kiln/`. It is cut against Kiln `main` (`c64e4ba`) and applies with
-`git apply`; Kiln's own 262 tests pass with it applied. (`.kiln/` itself is the
-older `235ccc3` plus the same changes — none of the patched files differ
-between the two apart from `SearchIndexBuilder`, where the change is one line.)
+`kiln-changes.patch` carries four additions, all in `.kiln/`, a clone of Kiln
+`main` (`572baba`) with the patch applied as uncommitted changes. Kiln's own 270
+tests pass with it. To set it up, or to regenerate the patch after editing
+`.kiln/`:
+
+```bash
+git clone https://github.com/brokenhandsio/kiln.git .kiln
+git -C .kiln checkout 572baba && git -C .kiln apply ../kiln-changes.patch
+# after changing .kiln:
+git -C .kiln add -N . && git -C .kiln diff > kiln-changes.patch
+```
+
+The bug fixes the port needed (CommonMark list tightness, `kiln serve`'s
+trailing-slash redirect, a reproducible search index) landed upstream in
+[brokenhandsio/kiln#45](https://github.com/brokenhandsio/kiln/pull/45).
 
 | Change | Why |
 | --- | --- |
@@ -66,9 +76,6 @@ between the two apart from `SearchIndexBuilder`, where the change is one line.)
 | `KilnSite.pageContext: (String) -> [String: LeafData]` (a property, set after construction) | Leaf has no assignment and can't subscript by a variable, so anything a page selects by its own identity (its package category, its Linux platform) is resolved in Swift. Replaces Jekyll's `{% assign %}`. |
 | `KilnSite.contentTemplating` + front-matter `contentTemplating:` | Renders a page's markdown body as Leaf *before* the markdown pass — exactly where Jekyll ran Liquid — so prose pages can call partials. Opt-in per page, because a body containing `#if(...)` (any Swift code sample) would otherwise parse as Leaf. |
 | `MarkdownExtensions.codeRenderer` | Lets the site render fenced code blocks itself, so `CodeBlock` can emit kramdown's `highlighter-rouge` wrapper, which the stylesheet and the copy-to-clipboard button target. highlight.js adds the tokens in the browser. |
-| *Fix:* CommonMark list tightness in `HTMLRenderer` | Kiln wrapped every list item in `<p>`; CommonMark does that only for loose lists. With the fix, `<li><p>` counts match production on 53 of 55 list-heavy pages (kramdown decides per item rather than per list, so a CommonMark renderer can't match the other two). |
-| *Fix:* `.sortedKeys` on the search-index encoder | `JSONEncoder` serialises keyed containers in per-process hash order, so `search/search_index.json` differed between builds of identical content. Every other JSON writer in Kiln already sorts. |
-| *Fix:* canonical trailing-slash 301 in `CLI/StaticFileServer.swift` | Production redirects `/install` → `/install/`; `kiln serve` did not, so `install.js`'s relative `location.replace("macos")` resolved to `/macos` and 404'd. |
 
 `#markdown("…")` — Liquid's `markdownify` — needs no Kiln change: it comes from
 [leaf-markdown](https://github.com/vapor-community/leaf-markdown), registered in

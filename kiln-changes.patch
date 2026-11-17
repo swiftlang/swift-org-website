@@ -1,64 +1,3 @@
-diff --git a/Sources/CLI/StaticFileServer.swift b/Sources/CLI/StaticFileServer.swift
-index 9de2bbb..52abd74 100644
---- a/Sources/CLI/StaticFileServer.swift
-+++ b/Sources/CLI/StaticFileServer.swift
-@@ -98,6 +98,21 @@ final class StaticFileServer {
-         return components.joined(separator: "/")
-     }
- 
-+    /// The trailing-slash form of a directory URI, when the request omitted it
-+    /// and the directory really does hold an `index.html`. `nil` when the URI is
-+    /// already canonical, names a file, or resolves to nothing.
-+    static func canonicalRedirect(forURI uri: String, relative: String, in directory: URL) -> String? {
-+        var path = uri
-+        var suffix = ""
-+        if let separator = path.firstIndex(where: { $0 == "?" || $0 == "#" }) {
-+            suffix = String(path[separator...])
-+            path = String(path[..<separator])
-+        }
-+        guard !path.isEmpty, !path.hasSuffix("/"), relative.hasSuffix("index.html") else { return nil }
-+        guard (try? directory.appendingPathComponent(relative).checkResourceIsReachable()) == true else { return nil }
-+        return path + "/" + suffix
-+    }
-+
-     /// A `Content-Type` value for a file extension (lowercased, no dot).
-     static func contentType(forExtension ext: String) -> String {
-         switch ext.lowercased() {
-@@ -169,6 +184,16 @@ private final class StaticFileHandler: ChannelInboundHandler, @unchecked Sendabl
-             return
-         }
- 
-+        // A directory URL without its trailing slash gets the canonical redirect
-+        // every production host issues (nginx, Netlify, S3/CloudFront, GitHub
-+        // Pages). Serving `foo/index.html` straight from `/foo` would resolve the
-+        // page's *relative* links against `/` instead of `/foo/`, so a script
-+        // doing `location.replace("macos")` would land on `/macos`.
-+        if let canonical = StaticFileServer.canonicalRedirect(forURI: head.uri, relative: relative, in: directory) {
-+            writeRedirect(context: context, location: canonical, keepAlive: keepAlive)
-+            return
-+        }
-+
-         let fileURL = directory.appendingPathComponent(relative)
-         if let data = try? Data(contentsOf: fileURL) {
-             let ext = (relative as NSString).pathExtension
-@@ -190,6 +215,17 @@ private final class StaticFileHandler: ChannelInboundHandler, @unchecked Sendabl
-         }
-     }
- 
-+    private func writeRedirect(context: ChannelHandlerContext, location: String, keepAlive: Bool) {
-+        var headers = HTTPHeaders()
-+        headers.add(name: "Location", value: location)
-+        headers.add(name: "Content-Length", value: "0")
-+        headers.add(name: "Connection", value: keepAlive ? "keep-alive" : "close")
-+        let responseHead = HTTPResponseHead(version: .http1_1, status: .movedPermanently, headers: headers)
-+        context.write(wrapOutboundOut(.head(responseHead)), promise: nil)
-+        context.writeAndFlush(wrapOutboundOut(.end(nil)), promise: nil)
-+        if !keepAlive { context.close(promise: nil) }
-+    }
-+
-     private func writeResponse(context: ChannelHandlerContext, status: HTTPResponseStatus,
-                                contentType: String, body: [UInt8], keepAlive: Bool) {
-         var headers = HTTPHeaders()
 diff --git a/Sources/Kiln/Configuration/KilnSite.swift b/Sources/Kiln/Configuration/KilnSite.swift
 index 37a04b0..0277ec8 100644
 --- a/Sources/Kiln/Configuration/KilnSite.swift
@@ -171,7 +110,7 @@ index bc15e74..65af6be 100644
      public static let empty = FrontMatter()
  }
 diff --git a/Sources/Kiln/Markdown/HTMLRenderer.swift b/Sources/Kiln/Markdown/HTMLRenderer.swift
-index 35f02ac..9951dcd 100644
+index 1f78347..9951dcd 100644
 --- a/Sources/Kiln/Markdown/HTMLRenderer.swift
 +++ b/Sources/Kiln/Markdown/HTMLRenderer.swift
 @@ -40,15 +40,23 @@ struct HTMLRenderer: MarkupWalker {
@@ -212,76 +151,6 @@ index 35f02ac..9951dcd 100644
          let languageAttr: String
          if let language = codeBlock.language, !language.isEmpty {
              languageAttr = " class=\"language-\(HTMLEscaping.attribute(language))\""
-@@ -96,6 +110,40 @@ struct HTMLRenderer: MarkupWalker {
-         if !html.rawHTML.hasSuffix("\n") { result += "\n" }
-     }
- 
-+    /// Whether the list currently being rendered is *loose*.
-+    ///
-+    /// CommonMark wraps a list item's text in `<p>` only for a loose list: one
-+    /// whose items are separated by a blank line, or with an item whose direct
-+    /// children are. swift-markdown doesn't keep cmark's tight flag, so it is
-+    /// recovered here from source ranges.
-+    private var inLooseList = false
-+
-+    private static func isLoose(_ list: any ListItemContainer) -> Bool {
-+        let items = Array(list.listItems)
-+        if zip(items, items.dropFirst()).contains(where: isBlankLineBetween) { return true }
-+        return items.contains { item in
-+            let children = Array(item.children)
-+            return zip(children, children.dropFirst()).contains(where: isBlankLineBetween)
-+        }
-+    }
-+
-+    private static func isBlankLineBetween(_ first: any Markup, _ second: any Markup) -> Bool {
-+        guard let end = lastContentLine(of: first), let start = second.range?.lowerBound.line else { return false }
-+        return start > end + 1
-+    }
-+
-+    /// The last line holding content in `markup`. A container's range runs on
-+    /// over any blank lines that follow it (ending at column 1 of the next line),
-+    /// so this measures its leaf blocks instead.
-+    private static func lastContentLine(of markup: any Markup) -> Int? {
-+        let blocks = markup.children.filter { $0 is any BlockMarkup }
-+        if !blocks.isEmpty {
-+            return blocks.compactMap(lastContentLine).max()
-+        }
-+        guard let end = markup.range?.upperBound else { return nil }
-+        return end.column == 1 ? end.line - 1 : end.line
-+    }
-+
-     mutating func visitListItem(_ listItem: ListItem) {
-         result += "<li>"
-         if let checkbox = listItem.checkbox {
-@@ -110,17 +158,28 @@ struct HTMLRenderer: MarkupWalker {
-     mutating func visitOrderedList(_ orderedList: OrderedList) {
-         let start = orderedList.startIndex != 1 ? " start=\"\(orderedList.startIndex)\"" : ""
-         result += "<ol\(start)>\n"
-+        let enclosing = inLooseList
-+        inLooseList = Self.isLoose(orderedList)
-         descendInto(orderedList)
-+        inLooseList = enclosing
-         result += "</ol>\n"
-     }
- 
-     mutating func visitUnorderedList(_ unorderedList: UnorderedList) {
-         result += "<ul>\n"
-+        let enclosing = inLooseList
-+        inLooseList = Self.isLoose(unorderedList)
-         descendInto(unorderedList)
-+        inLooseList = enclosing
-         result += "</ul>\n"
-     }
- 
-     mutating func visitParagraph(_ paragraph: Paragraph) {
-+        // A tight list item's text is emitted bare, as CommonMark requires.
-+        if paragraph.parent is ListItem, !inLooseList {
-+            descendInto(paragraph)
-+            return
-+        }
-         result += "<p>"
-         descendInto(paragraph)
-         result += "</p>\n"
 diff --git a/Sources/Kiln/Markdown/MarkdownRenderer.swift b/Sources/Kiln/Markdown/MarkdownRenderer.swift
 index 891256c..4b055ec 100644
 --- a/Sources/Kiln/Markdown/MarkdownRenderer.swift
@@ -407,22 +276,6 @@ index a8989db..cdfdd5b 100644
      /// Render a template (e.g. `"page"`, `"partials/nav"`) with the given context.
      func render(_ template: String, context: [String: LeafData]) async throws -> String {
          let buffer = try await renderer.render(path: template, context: context).get()
-diff --git a/Sources/Kiln/Search/SearchIndexBuilder.swift b/Sources/Kiln/Search/SearchIndexBuilder.swift
-index 1c10df4..aef12be 100644
---- a/Sources/Kiln/Search/SearchIndexBuilder.swift
-+++ b/Sources/Kiln/Search/SearchIndexBuilder.swift
-@@ -53,7 +53,10 @@ struct SearchIndexBuilder {
- 
-     func jsonData() throws -> Data {
-         let encoder = JSONEncoder()
--        encoder.outputFormatting = [.withoutEscapingSlashes]
-+        // `.sortedKeys` keeps the index byte-reproducible: JSONEncoder's keyed
-+        // containers otherwise serialise in per-process hash order, so two
-+        // builds of unchanged content produce differing files.
-+        encoder.outputFormatting = [.sortedKeys, .withoutEscapingSlashes]
-         return try encoder.encode(SearchIndex(docs: documents))
-     }
- 
 diff --git a/Sources/Kiln/Site/SiteGenerator.swift b/Sources/Kiln/Site/SiteGenerator.swift
 index e5b6570..f6b5842 100644
 --- a/Sources/Kiln/Site/SiteGenerator.swift
