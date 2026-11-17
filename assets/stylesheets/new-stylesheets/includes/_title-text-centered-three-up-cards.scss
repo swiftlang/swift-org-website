@@ -123,7 +123,7 @@
       flex-wrap: wrap;
       
       .card-link {
-        color: var(--color-link, #5eb3f6);
+        color: var(--site-link-with-right-arrow-color);
         text-decoration: none;
         font-size: 17px;
         
@@ -133,7 +133,7 @@
       }
       
       .separator {
-        color: var(--color-link, #5eb3f6);
+        color: var(--site-link-with-right-arrow-color);
         opacity: 0.5;
       }
     }
