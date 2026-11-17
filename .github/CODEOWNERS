@@ -27,10 +27,10 @@
 * @swiftlang/website-workgroup
 
 CODEOWNERS @timsneath @tkremenek @shahmishal @davelester
-/index.md @timsneath @tkremenek @shahmishal @davelester
-/_data/new-data/landing/* @timsneath @tkremenek @shahmishal @davelester
-/_posts/* @timsneath @tkremenek @shahmishal @davelester
+/Pages/index.md @timsneath @tkremenek @shahmishal @davelester
+/Data/new-data/landing/* @timsneath @tkremenek @shahmishal @davelester
+/Posts/* @timsneath @tkremenek @shahmishal @davelester
 
-/community/gsoc/ @ktoso @swiftlang/website-workgroup
+/Pages/community/gsoc/ @ktoso @swiftlang/website-workgroup
 
-/openapi/ @czechboy0 @swiftlang/website-workgroup
+/Static/openapi/ @czechboy0 @swiftlang/website-workgroup

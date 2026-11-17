@@ -17,6 +17,8 @@ extension PostProcessor {
     ///   link — the plugin skips those;
     /// * inline `<code>` gains kramdown's `language-plaintext highlighter-rouge`
     ///   classes;
+    /// * kramdown definition lists (`term` then `: definition`), which
+    ///   CommonMark reads as a paragraph, become `<dl>`;
     ///
     /// Runs before the highlighting pass, which introduces `<pre>` markup of its
     /// own that these rules must not touch.
@@ -26,7 +28,8 @@ extension PostProcessor {
         var changed = 0
         for file in try htmlFiles() {
             let html = try String(contentsOf: file, encoding: .utf8)
-            let rewritten = Self.addAndroidTrademark(Self.markInlineCode(Self.addHeadingAnchors(html)))
+            let rewritten = Self.addAndroidTrademark(
+                Self.markInlineCode(Self.addDefinitionLists(Self.addHeadingAnchors(html))))
             guard rewritten != html else { continue }
             try rewritten.write(to: file, atomically: true, encoding: .utf8)
             changed += 1
@@ -87,6 +90,31 @@ extension PostProcessor {
             }
             rebuilt += result[cursor...]
             result = rebuilt
+        }
+        return result
+    }
+
+    /// kramdown's definition list — a one-line term, then the definition on a
+    /// line starting `: ` — reaches Kiln as plain CommonMark, which renders it
+    /// as `<p>term\n: definition</p>`. Rewrite each such paragraph as a `<dt>`
+    /// and `<dd>`, merging a run of them into one `<dl>` as kramdown did.
+    static func addDefinitionLists(_ html: String) -> String {
+        let entry = #"<p>([^\n]*?)\n: (.*?)</p>"#
+        guard let run = try? NSRegularExpression(pattern: #"(?:\#(entry)\s*)+"#, options: [.dotMatchesLineSeparators]),
+              let single = try? NSRegularExpression(pattern: entry, options: [.dotMatchesLineSeparators])
+        else { return html }
+        var result = html
+        for match in run.matches(in: html, range: NSRange(html.startIndex..., in: html)).reversed() {
+            guard let range = Range(match.range, in: html) else { continue }
+            let block = String(html[range])
+            var list = "<dl>\n"
+            for item in single.matches(in: block, range: NSRange(block.startIndex..., in: block)) {
+                guard let term = Range(item.range(at: 1), in: block),
+                      let definition = Range(item.range(at: 2), in: block) else { continue }
+                list += "  <dt>\(block[term])</dt>\n  <dd>\(block[definition])</dd>\n"
+            }
+            list += "</dl>\n\n"
+            result.replaceSubrange(range, with: list)
         }
         return result
     }
