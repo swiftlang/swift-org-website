@@ -27,6 +27,9 @@ struct ContentConverter {
         var posts: [Post] = []
         /// Content-relative paths of every staged page, e.g. `install/macos/index.md`.
         var pagePaths: [String] = []
+        /// Pages with `sitemap: false`, kept out of the sitemap as Jekyll's
+        /// `sitemap.xml` template did.
+        var unindexedPaths: Set<String> = []
         /// Pages whose Liquid could not be rendered, with the reason.
         var liquidFailures: [String] = []
         /// `redirect_from` sources → destination URL, for the redirect pass.
@@ -275,6 +278,9 @@ struct ContentConverter {
         try write(frontMatter: frontMatter, body: body, to: contentPath)
         staged.pagePaths.append(contentPath)
         staged.migratedPages.append(originalPath)
+        if document.frontMatter["sitemap"].bool == false {
+            staged.unindexedPaths.insert(contentPath)
+        }
 
         let url = Self.jekyllURL(for: originalPath)
         if url.hasSuffix(".html") { staged.htmlAliases.append(url) }

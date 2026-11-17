@@ -12,7 +12,7 @@ Swift is a general-purpose programming language that's approachable for newcomer
 
 ## Tools
 
-Tools are a critical part of the Swift ecosystem. We strive to integrate well within a developer's toolset, to build quickly, to present excellent diagnostics, and to enable interactive development experiences. Tools can make programming so much more powerful, like Swift-based playgrounds do in Xcode, or a web-based REPL can when working with Linux server-side code.
+Tools are a critical part of the Swift ecosystem. We strive to integrate well within a developer's toolset, to build quickly, to present excellent diagnostics, and to enable interactive development experiences. Tools can make programming so much more powerful, like Swift-based playgrounds do in Xcode.
 
 ## Features
 
@@ -41,18 +41,15 @@ One of the most exciting aspects of developing Swift in the open is knowing that
 
 Our goal is to provide source compatibility for Swift across all platforms, even though the actual implementation mechanisms may differ from one platform to the next. The primary example is that the Apple platforms include the Objective-C runtime, which is required to access Apple platform frameworks such as UIKit and AppKit. On other platforms, such as Linux, no Objective-C runtime is present, because it isn't necessary.
 
-The [Swift core libraries project](/documentation/core-libraries/) aims to
-extend the cross-platform capabilities of Swift by providing portable
-implementations of fundamental Apple frameworks (such as Foundation)
-without dependencies on the Objective-C runtime. Although the core
-libraries are in an early stage of development, they will eventually
-provide improved source compatibility for Swift code across all
-platforms.
+The [Swift core libraries](/documentation/core-libraries/) extend the
+cross-platform capabilities of Swift by providing portable implementations
+of fundamental Apple frameworks (such as Foundation) without dependencies on
+the Objective-C runtime, so that Swift code can be shared across platforms.
 
 ### Apple Platforms
 
 Open-source Swift can be used on the Mac to target all of the Apple
-platforms: iOS, macOS, watchOS, and tvOS. Moreover, binary builds of
+platforms: iOS, macOS, watchOS, tvOS, and visionOS. Moreover, binary builds of
 open-source Swift integrate with the Xcode developer tools, including
 complete support for the Xcode build system, code completion in the
 editor, and integrated debugging, allowing anyone to experiment with
@@ -63,12 +60,24 @@ development environment.
 ### Linux
 
 Open-source Swift can be used on Linux to build Swift libraries and
-applications. The open-source binary builds provide the Swift compiler and standard library, Swift REPL and debugger (LLDB), and the [core libraries](/documentation/core-libraries/), so one can jump right in to Swift development.
+applications. The open-source binary builds provide the Swift compiler and standard library, Swift REPL and debugger (LLDB), and the [core libraries](/documentation/core-libraries/), so one can jump right in to Swift development. The [Static Linux SDK](/documentation/articles/static-linux-getting-started.html) builds fully statically linked Linux executables, and can be used to cross-compile for Linux from other platforms.
 
 
 ### Windows
 
 Open source Swift can be used on Windows to build Swift libraries and applications. The open source binary builds provide C/C++/Swift toolchains, the standard library, and debugger (LLDB), as well as the [core libraries](/documentation/core-libraries/), so one can jump right in to Swift development. SourceKit-LSP is bundled into the releases to enable developers to be quickly productive with the IDE of their choice.
+
+### Android
+
+The official [Swift SDK for Android](/documentation/articles/swift-sdk-for-android-getting-started.html) lets you cross-compile Swift libraries and executables for Android from a host such as macOS or Linux.
+
+### WebAssembly
+
+The [Swift SDK for WebAssembly](/documentation/articles/wasm-getting-started.html) lets you compile Swift code to Wasm modules that run in the browser or in other WebAssembly runtimes.
+
+### Embedded Systems
+
+[Embedded Swift](/get-started/embedded/) is a compilation mode that produces small, freestanding binaries for microcontrollers and other constrained environments.
 
 ### New Platforms
 
@@ -76,9 +85,9 @@ We can't wait to see the new places we can bring Swift---together.  We truly bel
 
 ## Swift.org and Open Source
 
-On December 3, 2015, the Swift language, supporting libraries, debugger, and package manager were published under the [Apache 2.0 license with a Runtime Library Exception](/LICENSE.txt), and Swift.org was created to host the project. The source code is [hosted on GitHub](http://github.com/apple) where it is easy for anyone to get the code, build it themselves, and even create pull requests to contribute code back to the project. Everyone is welcome, even just to [file a bug report](/contributing/#reporting-bugs). There are excellent [Getting Started](/getting-started/) guides available here on the site as well.
+On December 3, 2015, the Swift language, supporting libraries, debugger, and package manager were published under the [Apache 2.0 license with a Runtime Library Exception](/LICENSE.txt), and Swift.org was created to host the project. The source code is [hosted on GitHub](https://github.com/swiftlang) where it is easy for anyone to get the code, build it themselves, and even create pull requests to contribute code back to the project. Everyone is welcome, even just to [file a bug report](/contributing/#reporting-bugs). There are excellent [Getting Started](/getting-started/) guides available here on the site as well.
 
-The project is governed by a core team of engineers that drive the strategic direction by working with the community, and a collection of code owners responsible for the day-to-day project management. Technical leaders come from the community of contributors and anyone can earn the right to lead an area of Swift.  The [Community Overview](/community/) includes detailed information on how the Swift community is managed.
+The project is led by the Core Team, which provides leadership and oversight of the project's initiatives. Steering groups steward the strategic direction of core areas such as the language, platforms, and ecosystem, and workgroups drive work in particular areas by working with the community. Technical leaders come from the community of contributors and anyone can earn the right to lead an area of Swift. The [How we work](/community/how-we-work/) page includes detailed information on how the Swift project is managed.
 
 
 ### Projects

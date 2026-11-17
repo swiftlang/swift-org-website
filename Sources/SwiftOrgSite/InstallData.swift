@@ -450,7 +450,7 @@ extension InstallData {
         if !isWindows,
            let staticSDK = release["platforms"].array.first(where: { $0["name"].string == "Static SDK" }) {
             row["staticSDKCommand"] = .string(
-                "swift sdk install https://download.swift.org/\(tagLowercased)/static-sdk/\(tag)/\(tag)_static-linux-0.0.1.artifactbundle.tar.gz --checksum \(staticSDK["checksum"].string ?? "")"
+                "swift sdk install https://download.swift.org/\(tagLowercased)/static-sdk/\(tag)/\(tag)_static-linux-\(staticSDK["version"].string ?? "").artifactbundle.tar.gz --checksum \(staticSDK["checksum"].string ?? "")"
             )
         }
         return .dictionary(row)

@@ -31,6 +31,55 @@ $ apt install \
 
 </details>
 <details class="download" style="margin-bottom: 0;">
+  <summary>Debian 13</summary>
+  
+```bash
+$ apt install \
+      binutils \
+      binutils-gold \
+      gcc \
+      git \
+      libcurl4-openssl-dev \
+      libedit-dev \
+      libicu-dev \
+      libncurses-dev \
+      libpython3-dev \
+      libsqlite3-dev \
+      libstdc++-14-dev \
+      libxml2-dev \
+      pkg-config \
+      tzdata \
+      unzip \
+      uuid-dev \
+      zip
+```
+
+
+</details>
+<details class="download" style="margin-bottom: 0;">
+  <summary>Fedora 41</summary>
+  
+```bash
+$ dnf install \
+      binutils \
+      gcc \
+      git \
+      libcurl-devel \
+      libedit-devel \
+      libicu-devel \
+      libuuid-devel \
+      libstdc++-devel \
+      libstdc++-static \
+      libxml2-devel \
+      python3-devel \
+      sqlite-devel \
+      unzip \
+      zip
+```
+
+
+</details>
+<details class="download" style="margin-bottom: 0;">
   <summary>Red Hat UBI 9</summary>
   
 ```bash
@@ -47,6 +96,34 @@ yum install         \
   sqlite-devel      \
   unzip             \
   zip
+```
+
+
+</details>
+<details class="download" style="margin-bottom: 0;">
+  <summary>Ubuntu 26.04</summary>
+  
+```bash
+$ apt-get install \
+          binutils \
+          binutils-gold \
+          git \
+          gnupg2 \
+          libc6-dev \
+          libcurl4-openssl-dev \
+          libedit2 \
+          libgcc-15-dev \
+          libpython3-dev \
+          libsqlite3-0 \
+          libstdc++-15-dev \
+          libxml2-dev \
+          libncurses-dev \
+          libz3-dev \
+          pkg-config \
+          tzdata \
+          unzip \
+          zip \
+          zlib1g-dev
 ```
 
 
@@ -79,33 +156,6 @@ $ apt-get install \
 
 </details>
 <details class="download" style="margin-bottom: 0;">
-  <summary>Ubuntu 23.10</summary>
-  
-```bash
-$ apt-get install \
-          binutils \
-          git \
-          gnupg2 \
-          libc6-dev \
-          libcurl4-openssl-dev \
-          libedit2 \
-          libgcc-11-dev \
-          libpython3-dev \
-          libsqlite3-0 \
-          libstdc++-11-dev \
-          libxml2-dev \
-          libz3-dev \
-          pkg-config \
-          python3-lldb-13 \
-          tzdata \
-          zip \
-          unzip \
-          zlib1g-dev
-```
-
-
-</details>
-<details class="download" style="margin-bottom: 0;">
   <summary>Ubuntu 22.04</summary>
   
 ```bash
@@ -127,28 +177,6 @@ $ apt-get install \
           tzdata \
           zip \
           unzip \
-          zlib1g-dev
-```
-
-
-</details>
-<details class="download" style="margin-bottom: 0;">
-  <summary>Ubuntu 18.04</summary>
-  
-```bash
-$ apt-get install \
-          binutils \
-          git \
-          libc6-dev \
-          libcurl4 \
-          libedit2 \
-          libgcc-5-dev \
-          libpython2.7 \
-          libsqlite3-0 \
-          libstdc++-5-dev \
-          libxml2 \
-          pkg-config \
-          tzdata \
           zlib1g-dev
 ```
 

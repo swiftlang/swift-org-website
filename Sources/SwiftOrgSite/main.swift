@@ -65,11 +65,11 @@ let componentTag = ComponentTag(components: components)
 // rendered by the header/footer components, not by Kiln's navigation tree.
 let unlisted = (staged.pagePaths + staged.posts.map(\.contentPath))
     .filter { $0 != "index.md" }
-    .map { UnlistedPage(Post.title(forContentPath: $0), $0) }
+    .map { UnlistedPage(Post.title(forContentPath: $0), $0, indexed: !staged.unindexedPaths.contains($0)) }
 
 var site = KilnSite(
     name: "Swift.org",
-    url: "https://swift.org",
+    url: "https://www.swift.org",
     author: "Apple Inc.",
     description: "Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.",
     image: "apple-touch-icon-180x180.png",
