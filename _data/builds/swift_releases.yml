@@ -3140,3 +3140,90 @@
       archs:
         - x86_64
         - arm64
+- name: "6.4.3"
+  tag: swift-6.4.3-RELEASE
+  xcode: Xcode 27.2
+  xcode_release: false
+  date: 2026-11-19
+  platforms:
+    - name: Ubuntu 22.04
+      platform: Linux
+      docker: 6.4.3-jammy
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 24.04
+      platform: Linux
+      docker: 6.4.3-noble
+      archs:
+        - x86_64
+        - aarch64
+    - name: Ubuntu 26.04
+      platform: Linux
+      docker: 6.4.3-resolute
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 12
+      platform: Linux
+      docker: 6.4.3-bookworm
+      archs:
+        - x86_64
+        - aarch64
+    - name: Debian 13
+      platform: Linux
+      docker: 6.4.3-trixie
+      archs:
+        - x86_64
+        - aarch64
+    - name: Fedora 41
+      platform: Linux
+      docker: 6.4.3-fedora41
+      archs:
+        - x86_64
+        - aarch64
+    - name: Amazon Linux 2023
+      platform: Linux
+      docker: 6.4.3-amazonlinux2023
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 9
+      platform: Linux
+      docker: 6.4.3-rhel-ubi9
+      dir: ubi9
+      archs:
+        - x86_64
+        - aarch64
+    - name: Red Hat Universal Base Image 10
+      platform: Linux
+      docker: 6.4.3-rhel-ubi10
+      dir: ubi10
+      archs:
+        - x86_64
+        - aarch64
+    - name: Windows 10
+      platform: Windows
+      docker: 6.4.3-windowsservercore-ltsc2022
+      archs:
+        - x86_64
+        - arm64
+    - name: Static SDK
+      platform: static-sdk
+      version: 0.1.0
+      checksum: 529e6982974de78793c8348c1459105a772f54b464a51edf074e5b9c4bfe7c73
+      archs:
+        - x86_64
+        - arm64
+    - name: Wasm SDK
+      platform: wasm-sdk
+      checksum: 5f24408dc9737ce4cb23b7e3ed4306cabfa02cc02f22ab260b14579b955d4b12
+      archs:
+        - x86_64
+        - arm64
+    - name: Android SDK
+      platform: android-sdk
+      checksum: a78839edf4ec161e03b9f1e22a0ef94e565ece3f3ce5c03e3c79246c6b71f0a9
+      archs:
+        - x86_64
+        - arm64
