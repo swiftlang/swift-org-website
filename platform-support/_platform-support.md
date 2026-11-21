@@ -34,7 +34,7 @@ This table shows the minimum OS version for which a Swift application can be dep
 | **watchOS**                        |9.0                         |
 | **tvOS**                           |16.0                        |
 | **visionOS**                       |1.0                         |
-| **Android**                        |9 (API 28)                  |
+| **Android**                        |6 (API 23)                  |
 | **Ubuntu**                         |22.04                       |
 | **Debian**                         |12                          |
 | **Fedora**                         |41                          |
