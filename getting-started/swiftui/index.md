@@ -11,14 +11,14 @@ To get started, you’ll need to [download Xcode from the Mac App Store](https:/
 
 Go ahead and launch Xcode once it’s installed, then select Create a new Xcode Project. Select the iOS tab at the top, then select the App template and press Next.
 
-**Tip:** Although we’ll be targeting iOS 16, our code will also work great on macOS Ventura and beyond.
+**Tip:** This tutorial needs iOS 16 or later (the archery icon requires SF Symbols 4), and the same code also works great on macOS 13 Ventura and later, including the latest macOS release.
 
 When making a new project, Xcode will ask you for a few pieces of information:
 
 - For Product Name, enter “WhyNotTry”.
 - For Organization Identifier you can enter com.example. In real apps we’d normally enter our own domain name here, e.g. org.swift.
 - For Interface make sure SwiftUI is selected.
-- You can uncheck the boxes for Core Data and Include Tests; we won’t be using them here.
+- For Storage choose None, and for Testing System choose None; we won’t be using them here. (Older versions of Xcode show checkboxes for Core Data and Include Tests instead – leave those unchecked.)
 
 ![New Xcode Project](/assets/images/getting-started-guides/swiftui-ios/new-project.png)
 
@@ -26,9 +26,9 @@ When you press Next, Xcode will ask where you want to save the project. You’re
 
 ![Initial SwiftUI project](/assets/images/getting-started-guides/swiftui-ios/initial-view.png)
 
-The example code Xcode made for us creates a new view called `ContentView`. Views are how SwiftUI represents our app’s user interface on the screen, and we can add custom layout and logic in there.
+The example code Xcode made for us creates a new view called `ContentView`, along with a `#Preview` block at the bottom of the file that tells Xcode how to show that view in the preview canvas. Your template may also include a globe icon and a “Hello, world!” message – we’ll replace those shortly. Views are how SwiftUI represents our app’s user interface on the screen, and we can add custom layout and logic in there.
 
-On the right-hand side of Xcode, you’ll see a live preview of that code running – if you make a change to the code on the left, it will appear in the preview straight away. If you can't see the preview, follow [these instructions](https://developer.apple.com/documentation/swiftui/previews-in-xcode) to enable it.
+On the right-hand side of Xcode, you’ll see a live preview (if it’s hidden, choose Editor > Canvas) of that code running – if you make a change to the code on the left, it will appear in the preview straight away. If you can't see the preview, follow [these instructions](https://developer.apple.com/documentation/swiftui/previews-in-xcode) to enable it.
 
 For example, try replacing the default `body` code with this:
 
@@ -67,7 +67,7 @@ Circle()
 
 ![SwiftUI Circle with Color and Padding](/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-color.png)
 
-The `.blue` color is one of several built-in options, such as `.red`, `.white`, and `.green`. These are all appearance aware, which means they look subtly different depending on the whether the device is in dark mode or light mode.
+The `.blue` color is one of several built-in options, such as `.red`, `.white`, and `.green`. These are all appearance aware, which means they look subtly different depending on whether the device is in dark mode or light mode.
 
 Over that blue circle we’re going to place an icon showing the activity we recommend. iOS comes with several thousand free icons called *SF Symbols*, and there’s a [free app you can download that shows you all the options](https://developer.apple.com/sf-symbols/). Each of these icons is available in multiple weights, can be scaled up or down smoothly, and many can also be colored.
 
@@ -77,23 +77,23 @@ Here, though, we want something nice and simple: we want just one icon placed ov
 Circle()
     .fill(.blue)
     .padding()
-    .overlay(
+    .overlay {
         Image(systemName: "figure.archery")
-    )
+    }
 ```
 
 ![SwiftUI Circle with Icon](/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-icon.png)
 
 You should see a small, black archery icon over our large, blue circle – it’s the right idea, but it doesn’t look great.
 
-What we really want is the archery icon to be much bigger, and also much more visible on that background. For that we need another two modifiers: `font()` to control the size of the icon, and `foregroundColor()` to change its color. Yes, we use a font modifier to control the icon’s size – SF Symbols like this one automatically scale with the rest of our text, which makes them really flexible.
+What we really want is the archery icon to be much bigger, and also much more visible on that background. For that we need another two modifiers: `font()` to control the size of the icon, and `foregroundStyle()` to change its color. Yes, we use a font modifier to control the icon’s size – SF Symbols like this one automatically scale with the rest of our text, which makes them really flexible.
 
 Adjust your `Image` code to this:
 
 ```swift
 Image(systemName: "figure.archery")
     .font(.system(size: 144))
-    .foregroundColor(.white)
+    .foregroundStyle(.white)
 ```
 
 ![SwiftUI Circle with Icon Sized](/assets/images/getting-started-guides/swiftui-ios/swiftui-circle-icon-sized.png)
@@ -118,11 +118,11 @@ var body: some View {
     Circle()
         .fill(.blue)
         .padding()
-        .overlay(
+        .overlay {
             Image(systemName: "figure.archery")
                 .font(.system(size: 144))
-                .foregroundColor(.white)
-        )
+                .foregroundStyle(.white)
+        }
 
     Text("Archery!")
         .font(.title)
@@ -142,11 +142,11 @@ VStack {
     Circle()
         .fill(.blue)
         .padding()
-        .overlay(
+        .overlay {
             Image(systemName: "figure.archery")
                 .font(.system(size: 144))
-                .foregroundColor(.white)
-        )
+                .foregroundStyle(.white)
+        }
 
     Text("Archery!")
         .font(.title)
@@ -172,11 +172,11 @@ VStack {
         Circle()
             .fill(.blue)
             .padding()
-            .overlay(
+            .overlay {
                 Image(systemName: "figure.archery")
                     .font(.system(size: 144))
-                    .foregroundColor(.white)
-            )
+                    .foregroundStyle(.white)
+            }
 
         Text("Archery!")
             .font(.title)
@@ -222,7 +222,7 @@ Text("\(selected)!")
 
 For the image this is a little more complicated, because we need to prefix it with `figure.` then lowercase the activity name – we want `figure.archery` rather than `figure.Archery`, otherwise the SF Symbol won’t be loaded.
 
-So, change your `Image` code this:
+So, change your `Image` code to this:
 
 ```swift
 Image(systemName: "figure.\(selected.lowercased())")
@@ -265,7 +265,7 @@ The new button code does three things:
 
 1. We create the `Button` by passing in a title to show as the button’s label.
 2. The `// change activity` comment is code that will be run when the button is pressed.
-3. The `buttonStyle()` modifier tells SwiftUI we want this button to stand out, so you’ll see it appear in a blue rectangle with white text.
+3. The `buttonStyle()` modifier tells SwiftUI we want this button to stand out, so you’ll see it appear with a blue background and white text.
 
 Just having a comment as the button’s action isn’t very interesting – really we want to make it set `selected` to a random element from the `activities` array. We can pick a random element from the array by calling the helpfully named `randomElement()` method on it, so replace the comment with this:
 
@@ -342,7 +342,7 @@ Button("Try again") {
 }
 ```
 
-If you add multiple spacers, they will divide the space equally between them. If you try placing a second spacer before the “Why not try…” text you’ll see what I mean – SwiftUI will create and equal amount of space above the text and below the activity name.
+If you add multiple spacers, they will divide the space equally between them. If you try placing a second spacer before the “Why not try…” text you’ll see what I mean – SwiftUI will create an equal amount of space above the text and below the activity name.
 
 ![View With Spacers](/assets/images/getting-started-guides/swiftui-ios/spacers.png)
 
@@ -398,7 +398,7 @@ So, add these two modifiers to the inner `VStack`, telling SwiftUI to identify t
 .id(id)
 ```
 
-Press Cmd+R to run your app one last time, and you should see that pressing “Try Again” now smoothly animates the old activity off the screen, and replaces it with a new one. It even overlaps animations if you press “Try Again” repeatedly!
+Press Cmd+R to run your app one last time, and you should see that pressing “Try again” now smoothly animates the old activity off the screen, and replaces it with a new one. It even overlaps animations if you press “Try again” repeatedly!
 
 <video class="device-aspect-ratio" autoplay loop muted>
   <source src="/assets/videos/getting-started-guides/swiftui-app/demo.mp4" type="video/mp4">
