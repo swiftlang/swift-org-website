@@ -2,6 +2,7 @@
 template: page
 title: Configuring VS Code for Swift Development
 contentTemplating: true
+authors: matthewbastien, plemarquand
 ---
 
 [Visual Studio Code](https://code.visualstudio.com/) (VS Code) is a popular general purpose editor that supports a

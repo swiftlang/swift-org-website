@@ -90,7 +90,7 @@ The following commands must be run in PowerShell.
    or:
 
    ~~~ powershell
-   $ wget https://swift.org/keys/#('all_keys.asc') -UseBasicParsing | Select-Object -Expand Content | gpg.exe —import -
+   $ wget https://swift.org/keys/all-keys.asc -UseBasicParsing | Select-Object -Expand Content | gpg.exe —import -
    ~~~
 
    Skip this step if you have imported the keys in the past.

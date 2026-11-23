@@ -1,1 +1,1 @@
-{{ site.data.builds.development['static-sdk'] | jsonify }}
+{{builds.development.static-sdk}}

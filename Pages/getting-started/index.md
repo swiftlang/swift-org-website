@@ -98,17 +98,7 @@ Ready to dive deeper? Here are some hand-picked resources covering various Swift
         #markdown(resource.description)
       </p>
 
-      <a href="#(resource.content_url)" class="cta-secondary#if(resource.external): external" target="_blank"#else:"#endif>
-        #if(resource.content_type == "video"):
-        Watch video
-        #elseif(resource.content_type == "article"):
-        Read article
-        #elseif(resource.content_type == "book"):
-        Read book
-        #else:
-        View resource
-        #endif
-      </a>
+      <a href="#(resource.content_url)" class="cta-secondary#if(resource.external): external" target="_blank"#else:"#endif>#if(resource.content_type == "video"):Watch video#elseif(resource.content_type == "article"):Read article#elseif(resource.content_type == "book"):Read book#else:View resource#endif</a>
   </li>
   #endfor
 </ul>

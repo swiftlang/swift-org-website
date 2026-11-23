@@ -109,7 +109,8 @@ struct ContentConverter {
                 "displayDate": DateFormat.display.string(from: post.date),
                 "category": post.category,
                 "authors": post.authors.joined(separator: ","),
-                "description": (post.description ?? post.excerpt).markdownExcerptText,
+                // Jekyll's head uses the excerpt even when a post sets `description:`.
+                "description": post.excerpt.markdownExcerptText,
             ]
             if let url = post.featuredImage["url"].string {
                 frontMatter["featuredImage"] = url
@@ -126,13 +127,13 @@ struct ContentConverter {
                 frontMatter["previousTitle"] = posts[index - 1].title
                 frontMatter["previousURL"] = posts[index - 1].url
                 frontMatter["previousExcerpt"] = posts[index - 1].excerpt.markdownExcerptText
-                frontMatter["previousDate"] = DateFormat.display.string(from: posts[index - 1].date)
+                frontMatter["previousDate"] = DateFormat.xmlSchema.string(from: posts[index - 1].date)
             }
             if index < posts.count - 1 {
                 frontMatter["nextTitle"] = posts[index + 1].title
                 frontMatter["nextURL"] = posts[index + 1].url
                 frontMatter["nextExcerpt"] = posts[index + 1].excerpt.markdownExcerptText
-                frontMatter["nextDate"] = DateFormat.display.string(from: posts[index + 1].date)
+                frontMatter["nextDate"] = DateFormat.xmlSchema.string(from: posts[index + 1].date)
             }
             try write(frontMatter: frontMatter, body: post.body, to: post.contentPath)
         }
@@ -268,7 +269,7 @@ struct ContentConverter {
         }
         // A migrated body is Leaf, but its *output* still goes through markdown,
         // so indented markup would be read as a code block just the same.
-        let body = Self.dedentingHTMLLines(document.body)
+        let body = Self.dedentingHTMLLines(Self.expandingMarkdownBlocks(document.body))
         // Anything left over means the page was only half converted.
         if body.contains("{%") || body.contains("{{") {
             staged.liquidFailures.append("\(originalPath): migrated page still contains Liquid")
@@ -339,14 +340,82 @@ struct ContentConverter {
         return output.joined(separator: "\n")
     }
 
-    /// Whether a line leaves an HTML tag unterminated.
+    /// Whether a line leaves an HTML tag unterminated. A `<` only opens a tag
+    /// before a name or `/`, and never inside a code span: prose like `` `..<` ``
+    /// isn't markup.
     private static func endsInsideTag(_ line: String, startingInsideTag: Bool) -> Bool {
         var open = startingInsideTag
-        for character in line {
-            if character == "<" { open = true }
+        var insideCode = false
+        let characters = Array(line)
+        for (index, character) in characters.enumerated() {
+            if character == "`", !open { insideCode.toggle() }
+            guard !insideCode else { continue }
+            if character == "<", index + 1 < characters.count {
+                let next = characters[index + 1]
+                if next == "/" || (next.isASCII && next.isLetter) { open = true }
+            }
             if character == ">" { open = false }
         }
         return open
+    }
+
+    /// kramdown's `<div markdown="1">`: the block's content is markdown. CommonMark
+    /// gets there with a blank line after the opening tag and before the closing
+    /// one, so the attribute becomes those, and the content loses its indent so it
+    /// isn't read as a code block. Nested blocks are expanded the same way.
+    static func expandingMarkdownBlocks(_ body: String) -> String {
+        guard let opening = try? NSRegularExpression(
+            pattern: #"^\s*<([a-zA-Z][a-zA-Z0-9]*)\b([^>]*?)\s+markdown=["']?1["']?([^>]*)>\s*$"#
+        ) else { return body }
+
+        func expand(_ lines: [String]) -> [String] {
+            var output: [String] = []
+            var insideFence = false
+            var index = 0
+            while index < lines.count {
+                let line = lines[index]
+                let trimmed = line.trimmingCharacters(in: .whitespaces)
+                if trimmed.hasPrefix("```") || trimmed.hasPrefix("~~~") { insideFence.toggle() }
+                guard !insideFence,
+                      let match = opening.firstMatch(in: line, range: NSRange(line.startIndex..., in: line)),
+                      let nameRange = Range(match.range(at: 1), in: line),
+                      let beforeRange = Range(match.range(at: 2), in: line),
+                      let afterRange = Range(match.range(at: 3), in: line),
+                      let close = closingLine(for: String(line[nameRange]), in: lines, after: index)
+                else {
+                    output.append(line)
+                    index += 1
+                    continue
+                }
+                output.append("<\(line[nameRange])\(line[beforeRange])\(line[afterRange])>")
+                output.append("")
+                output += expand(removingCommonIndent(Array(lines[(index + 1)..<close])))
+                output.append("")
+                output.append(lines[close].trimmingCharacters(in: .whitespaces))
+                index = close + 1
+            }
+            return output
+        }
+        return expand(body.components(separatedBy: "\n")).joined(separator: "\n")
+    }
+
+    /// The line closing the `name` element opened on line `start`.
+    private static func closingLine(for name: String, in lines: [String], after start: Int) -> Int? {
+        var depth = 1
+        for index in (start + 1)..<max(start + 1, lines.count) {
+            let line = lines[index]
+            depth += line.components(separatedBy: "<\(name)").count - 1
+            depth -= line.components(separatedBy: "</\(name)>").count - 1
+            if depth <= 0 { return index }
+        }
+        return nil
+    }
+
+    private static func removingCommonIndent(_ lines: [String]) -> [String] {
+        let indent = lines.filter { !$0.allSatisfy(\.isWhitespace) }
+            .map { $0.prefix(while: { $0 == " " || $0 == "\t" }).count }
+            .min() ?? 0
+        return lines.map { String($0.dropFirst(min(indent, $0.count))) }
     }
 
     // MARK: - Path mapping

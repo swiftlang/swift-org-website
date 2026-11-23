@@ -129,6 +129,8 @@ What you need your hypervisor to support (& allow) is "PMU passthrough" or "PMU 
 
 If you use `libvirt` to manage your hypervisor and VMs, you can use `sudo virsh edit your-domain` and replace the `<cpu .../>` XML tag with
 
-    <cpu mode='host-passthrough' check='none'/>
+```
+<cpu mode='host-passthrough' check='none'/>
+```
 
 to allow the PMU to be passed through to the guest. For other hypervisors, an internet search will usually reveal how to enable PMU passthrough.

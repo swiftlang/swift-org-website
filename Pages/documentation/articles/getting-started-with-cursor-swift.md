@@ -2,6 +2,7 @@
 template: page
 title: Setting up Cursor for Swift Development
 contentTemplating: true
+authors: gbraden
 ---
 
 [Cursor](https://cursor.com/home) is a popular AI-native editor. It offers [coding agents](https://cursor.com/product) and [AI-powered autocomplete](https://cursor.com/product/tab).

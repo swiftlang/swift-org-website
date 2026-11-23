@@ -1,1 +1,1 @@
-{{ site.data.server-workgroup.projects | map: "url" | jsonify }}
+{{sswg-incubation.all}}

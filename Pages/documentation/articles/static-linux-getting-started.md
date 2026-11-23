@@ -2,6 +2,7 @@
 template: page
 title: Getting Started with the Static Linux SDK
 contentTemplating: true
+authors: al45tair, incertum, etcwilde
 ---
 
 It's well known that Swift can be used to build software for Apple

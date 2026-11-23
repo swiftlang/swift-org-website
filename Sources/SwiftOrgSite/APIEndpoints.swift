@@ -42,11 +42,25 @@ struct APIEndpoints {
                   let pathRange = Range(match.range(at: 1), in: template)
             else { continue }
             result += template[cursor..<full.lowerBound]
-            // The data path is dotted; `_data` nests by directory.
-            result += data[String(template[pathRange]).replacingOccurrences(of: ".", with: "/")].json
+            result += value(at: String(template[pathRange])).json
             cursor = full.upperBound
         }
         result += template[cursor...]
         return result
+    }
+
+    /// The value a hole names. Paths are dotted (`_data` nests by directory),
+    /// except `sswg-incubation.<maturity>`, the project URLs at that maturity.
+    private func value(at path: String) -> DataValue {
+        let incubation = "sswg-incubation."
+        guard path.hasPrefix(incubation) else {
+            return data[path.replacingOccurrences(of: ".", with: "/")]
+        }
+        let maturity = String(path.dropFirst(incubation.count))
+        let projects = data["server-workgroup/projects"].array
+        let selected = maturity == "all"
+            ? projects
+            : projects.filter { $0["maturity"].string == maturity.capitalized }
+        return .array(selected.map { $0["url"] })
     }
 }

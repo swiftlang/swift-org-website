@@ -69,6 +69,7 @@ struct Components: Sendable {
         var html = #"<div class="content-card">"#
         html += #"<span class="content-card-title title-4">\#(HTML.escape(title))</span>"#
         if let date {
+            html += "\n"
             html += """
             <time class="content-card-date body" pubdate datetime="\(DateFormat.xmlSchema.string(from: date))">\
             \(DateFormat.display.string(from: date))</time>

@@ -70,7 +70,7 @@ struct ComponentTag: LeafTag {
                 title: title,
                 url: url,
                 excerpt: field("\(prefix)Excerpt") ?? "",
-                date: field("\(prefix)Date").flatMap { DateFormat.display.date(from: $0) }
+                date: field("\(prefix)Date").flatMap { DateFormat.xmlSchema.date(from: $0) }
             ) + "</li>")
         }
         guard !cards.isEmpty else { return "" }

@@ -92,8 +92,9 @@ struct PageContext: Sendable {
         if let source = Self.rosterSources[logicalPath] {
             // Wrapped in a dictionary because `#extend(_:context)` takes one —
             // the partial reads `people` from it.
-            values["members"] = .dictionary(["people": sortedPeople(data["\(source)/members"])])
-            values["emeriti"] = .dictionary(["people": sortedPeople(data["\(source)/emeriti"])])
+            let link = Self.rosterLinks[logicalPath] ?? .github
+            values["members"] = .dictionary(["people": sortedPeople(data["\(source)/members"], link: link)])
+            values["emeriti"] = .dictionary(["people": sortedPeople(data["\(source)/emeriti"], link: link)])
         }
         return values
     }
@@ -285,10 +286,41 @@ struct PageContext: Sendable {
         .array(packages.array.map { .dictionary(["package": $0.leafData]) })
     }
 
+    /// Where a roster's `@name` links to.
+    private enum RosterLink {
+        case github, forumProfile, forumMessage
+
+        func profile(for person: DataValue) -> (name: String, url: String)? {
+            let key = self == .github ? "github" : "handle"
+            guard let name = person[key].string, !name.isEmpty else { return nil }
+            switch self {
+            case .github: return (name, "https://github.com/\(name)")
+            case .forumProfile: return (name, "https://forums.swift.org/u/\(name)/summary")
+            case .forumMessage: return (name, "https://forums.swift.org/new-message?username=\(name)")
+            }
+        }
+    }
+
+    /// The pages that don't link people to GitHub.
+    private static let rosterLinks: [String: RosterLink] = [
+        "android-workgroup/index.md": .forumProfile,
+        "build-and-packaging-workgroup/index.md": .forumProfile,
+        "foundation-workgroup/index.md": .forumMessage,
+        "networking-workgroup/index.md": .forumMessage,
+        "testing-workgroup/index.md": .forumMessage,
+    ]
+
     /// A roster sorted by name, as `sort: "name"` did.
-    private func sortedPeople(_ value: DataValue) -> LeafData {
+    private func sortedPeople(_ value: DataValue, link: RosterLink) -> LeafData {
         let people = value.array.sorted { ($0["name"].string ?? "") < ($1["name"].string ?? "") }
-        return .array(people.map(\.leafData))
+        return .array(people.map { person in
+            var leaf = person.leafData.dictionary ?? [:]
+            if let profile = link.profile(for: person) {
+                leaf["profileName"] = .string(profile.name)
+                leaf["profileURL"] = .string(profile.url)
+            }
+            return .dictionary(leaf)
+        })
     }
 }
 

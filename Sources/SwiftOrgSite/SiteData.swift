@@ -10,6 +10,9 @@ import Yams
 /// between files.
 indirect enum DataValue: Sendable {
     case string(String)
+    /// A YAML timestamp. `value` is the normalised form everything else reads;
+    /// `authored` keeps the source's UTC offset, as Liquid's `jsonify` printed it.
+    case timestamp(value: String, authored: String)
     case int(Int)
     case double(Double)
     case bool(Bool)
@@ -23,7 +26,7 @@ indirect enum DataValue: Sendable {
     /// containers and null, so `if let` reads as "is there a usable value here".
     var string: String? {
         switch self {
-        case .string(let value): return value
+        case .string(let value), .timestamp(let value, _): return value
         case .int(let value): return String(value)
         case .double(let value): return String(value)
         case .bool(let value): return value ? "true" : "false"
@@ -119,6 +122,9 @@ extension DataValue {
             self = .int(value)
         case let value as Double:
             self = .double(value)
+        case let value as SiteData.AuthoredTimestamp:
+            let normalised = DataValue(yaml: value.date).string ?? ""
+            self = .timestamp(value: normalised, authored: value.jsonForm ?? normalised)
         case let value as Date:
             // Yams parses unquoted ISO-ish scalars as dates. Normalise back to
             // the authored form: date-only when the scalar carried no time,
@@ -166,6 +172,37 @@ struct SiteData: Sendable {
         return formatter
     }()
 
+    /// A YAML timestamp with the scalar it was parsed from. Yams keeps only the
+    /// instant, but the JSON endpoints publish the offset the data was written in.
+    struct AuthoredTimestamp {
+        let date: Date
+        let scalar: String
+
+        /// `2025-03-25 10:10:00-06:00` as `2025-03-25 10:10:00 -0600`; `nil` for a
+        /// scalar with no explicit offset.
+        var jsonForm: String? {
+            let pattern = #"^(\d{4}-\d{1,2}-\d{1,2})[Tt ]+(\d{1,2}:\d{2}:\d{2})(?:\.\d+)?\s*([+-])(\d{1,2})(?::?(\d{2}))?$"#
+            guard let regex = try? NSRegularExpression(pattern: pattern),
+                  let match = regex.firstMatch(in: scalar, range: NSRange(scalar.startIndex..., in: scalar))
+            else { return nil }
+            func group(_ index: Int) -> String {
+                Range(match.range(at: index), in: scalar).map { String(scalar[$0]) } ?? ""
+            }
+            let hours = group(4).count == 1 ? "0" + group(4) : group(4)
+            let minutes = group(5).isEmpty ? "00" : group(5)
+            return "\(group(1)) \(group(2)) \(group(3))\(hours)\(minutes)"
+        }
+    }
+
+    /// Yams' default constructor, with timestamps keeping their source scalar.
+    private static func dataConstructor() -> Constructor {
+        var scalars = Constructor.defaultScalarMap
+        scalars[.timestamp] = { scalar in
+            Date.construct(from: scalar).map { AuthoredTimestamp(date: $0, scalar: scalar.string) }
+        }
+        return Constructor(scalars)
+    }
+
     /// Recursively load every YAML/JSON file under `directory`.
     init(directory: URL) throws {
         self.root = try Self.load(directory: directory)
@@ -190,7 +227,7 @@ struct SiteData: Sendable {
             guard ["yml", "yaml", "json"].contains(ext) else { continue }
             let text = try String(contentsOf: entry, encoding: .utf8)
             let name = entry.deletingPathExtension().lastPathComponent
-            result[name] = DataValue(yaml: try Yams.load(yaml: text))
+            result[name] = DataValue(yaml: try Yams.load(yaml: text, .default, Self.dataConstructor()))
         }
         return .dictionary(result)
     }
@@ -209,7 +246,7 @@ extension DataValue {
     /// The value as `LeafData`, so templates can iterate `_data` directly.
     var leafData: LeafData {
         switch self {
-        case .string(let value): return .string(value)
+        case .string(let value), .timestamp(let value, _): return .string(value)
         case .int(let value): return .int(value)
         case .double(let value): return .double(value)
         case .bool(let value): return .bool(value)
@@ -256,6 +293,7 @@ extension DataValue {
         case .bool(let flag): return flag ? "true" : "false"
         case .int(let value): return String(value)
         case .double(let value): return String(value)
+        case .timestamp(_, let authored): return DataValue.string(authored).json
         case .string(let text):
             var escaped = ""
             for character in text {

@@ -12,7 +12,9 @@ struct PostProcessor {
 
     /// Write the meta-refresh pages `jekyll-redirect-from` generates.
     func writeRedirects(_ redirects: [(from: String, to: String)]) throws {
-        for redirect in redirects {
+        // Two pages can claim one alias (`/download/`), and the first written wins,
+        // so write in a fixed order: the shallowest destination, as on production.
+        for redirect in redirects.sorted(by: { ($0.from, $0.to) < ($1.from, $1.to) }) {
             try writeRedirectPage(at: redirect.from, to: redirect.to)
         }
     }
@@ -30,6 +32,13 @@ struct PostProcessor {
             if FileManager.default.fileExists(atPath: destination.path) {
                 try FileManager.default.removeItem(at: destination)
             }
+            // Jekyll's URL is the `.html` one, so that is the canonical form.
+            let prettyURL = siteURL + String(url.dropLast(".html".count)) + "/"
+            let html = try String(contentsOf: source, encoding: .utf8).replacingOccurrences(
+                of: #"<link rel="canonical" href="\#(prettyURL)""#,
+                with: #"<link rel="canonical" href="\#(siteURL)\#(url)""#
+            )
+            try html.write(to: source, atomically: true, encoding: .utf8)
             try FileManager.default.copyItem(at: source, to: destination)
         }
     }
@@ -170,7 +179,11 @@ struct PostProcessor {
         }
         for name in rootFiles {
             let target = outputDirectory.appendingPathComponent(name)
-            if fileManager.fileExists(atPath: target.path) { continue }
+            if fileManager.fileExists(atPath: target.path) {
+                // Kiln writes a default robots.txt; the site's own replaces it.
+                guard name == "robots.txt" else { continue }
+                try fileManager.removeItem(at: target)
+            }
             try fileManager.copyItem(at: siteRoot.appendingPathComponent(name), to: target)
         }
     }
@@ -181,7 +194,12 @@ struct PostProcessor {
     /// files left are the OpenAPI spec and its viewer.
     func copyStaticFiles(from directory: URL) throws {
         let fileManager = FileManager.default
-        guard let enumerator = fileManager.enumerator(at: directory, includingPropertiesForKeys: [.isRegularFileKey]) else {
+        // Hidden files stay out, as in Jekyll (`openapi/TestSwiftOrgClient/.gitignore`).
+        guard let enumerator = fileManager.enumerator(
+            at: directory,
+            includingPropertiesForKeys: [.isRegularFileKey],
+            options: [.skipsHiddenFiles]
+        ) else {
             return
         }
         while let item = enumerator.nextObject() as? URL {

@@ -2,6 +2,7 @@
 template: page
 title: Getting Started with Swift SDKs for WebAssembly
 contentTemplating: true
+authors: maxdesiatov
 ---
 
 [WebAssembly (Wasm) is a virtual instruction set](https://webassembly.org/) focused on portability, security, and
