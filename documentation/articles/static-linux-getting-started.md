@@ -143,7 +143,7 @@ Please be aware of:
 To obtain the Static Linux SDK:
 
 * Visit the swift.org [installation
-  page](https://www.swift.org/install) for complete Static Linux SDK
+  page](/install) for complete Static Linux SDK
   installation instructions, where you can download directly or click
   "Copy install command".
 
@@ -368,7 +368,7 @@ its header files to the compiler's include path. The only
 Swift-specific part is that you will need a module map for the
 library, but this is also true outside of the Static SDK for Linux
 (see [Mixing Swift and
-C++](https://www.swift.org/documentation/cxx-interop/)).
+C++](/documentation/cxx-interop/)).
 
 Some of the dependencies bundled in the Static SDK may be pulled in by
 Swift’s runtime libraries, if you use the functionality that requires

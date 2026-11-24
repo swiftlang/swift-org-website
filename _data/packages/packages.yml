@@ -7,7 +7,7 @@ categories:
     description: This showcase celebrates new and interesting packages discussed by
       the Swift community. Package selection in this section is an editorial process
       organised via [this thread in the Swift Forums](https://forums.swift.org/t/68168)
-      and curated by the [Swift Website Workgroup](https://www.swift.org/website-workgroup/).
+      and curated by the [Swift Website Workgroup](/website-workgroup/).
     packages:
       - name: swift-configuration
         description: swift-configuration enables applications and libraries to read configuration

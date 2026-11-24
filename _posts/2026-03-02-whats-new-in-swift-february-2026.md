@@ -31,7 +31,7 @@ Now on to other news about Swift:
 * Using Microsoft SQL Server? [SQLClient-Swift](https://github.com/vkuttyp/SQLClient-Swift) is a native client for iOS, macOS, and Linux that's built using modern Swift concurrency.
 * Developers now have more options to create terminal-based Swift applications with [TuiKit](https://tuikit.dev), a declarative, SwiftUI-like framework for building Terminal User Interfaces. TuiKit joins [Noora](https://noora.tuist.dev), which provides themeable components for CLIs.
 
-Lastly, [Swift System Metrics 1.0](https://www.swift.org/blog/swift-system-metrics-1.0-released/) was announced, making the collection of process-level metrics easy.
+Lastly, [Swift System Metrics 1.0](/blog/swift-system-metrics-1.0-released/) was announced, making the collection of process-level metrics easy.
 
 ## Videos to watch
 * Interested in writing Swift using agents? At Swift Barcelona, a talk on [Building Agentic Apps with MCP in Swift](https://www.youtube.com/watch?v=ekOzNd1_vo8) demonstrated several open source tools. And if you're an Xcode user, check out a recent [code-along covering coding intelligence in Xcode 26](https://www.youtube.com/watch?v=U1WM3ALwQX8).
@@ -44,7 +44,7 @@ Lastly, [Swift System Metrics 1.0](https://www.swift.org/blog/swift-system-metri
 * A community member recently blogged about their experience [profiling Swift applications on Windows and macOS with Tracy](https://compositorapp.com/blog/2026-02-07/Tracy/), covering how to visualize and analyze their application performance.
 
 ## Swift Evolution
-The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
+The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
 
 **Under active review:**
 * [SE-0514](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0514-hashable-conformance-for-dictionarykeys-collectionofone-emptycollection.md) Hashable Conformance for `Dictionary.Keys`, `CollectionOfOne` and `EmptyCollection` - Three standard library collection types can't currently be used in sets or as dictionary keys. This proposal adds `Hashable` conformance to all three, for consistency with the rest of the standard library.

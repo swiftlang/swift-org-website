@@ -20,7 +20,7 @@ latest-release:
     links:
       - href: 'https://raw.githubusercontent.com/swiftlang/swiftly/refs/heads/main/LICENSE.txt'
         copy: 'License: Apache-2.0'
-      - href: 'https://www.swift.org/install/macos/swiftly'
+      - href: '/install/macos/swiftly'
         copy: 'Instructions'
   xcode:
     pre-code-text: To develop with Swift for Apple platforms, download the latest version of Xcode, which is regularly refreshed with the latest Swift toolchain.
@@ -34,5 +34,5 @@ latest-release:
     pre-code-text: Any editor that supports the Language Server Protocol (LSP) can use SourceKit-LSP to provide intelligent editor functionality for Swift.
     headline: Other editors
     links:
-      - href: 'https://www.swift.org/tools/#editors'
+      - href: '/tools/#editors'
         copy: 'Learn more'

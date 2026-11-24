@@ -10,7 +10,7 @@ category: "Language"
 [Embedded Swift](/get-started/embedded/) is a subset of Swift that’s designed for low resource usage, making it capable of running on constrained environments like microcontrollers. Using a special compilation mode, Embedded Swift produces significantly smaller binaries than regular Swift. While a subset of the full language, the vast majority of the Swift language works exactly the same in Embedded Swift. Additional information is described in the [Embedded Swift vision document](https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md).
 
 Embedded Swift is evolving rapidly. This post describes a number of improvements made in the last few months, covering everything from improved C interoperability to better debugging and steps toward a complete linkage model for Embedded Swift.
-These features and bug fixes are included in the upcoming [Swift 6.3](https://forums.swift.org/t/swift-6-3-release-process/82843) release, and you can try them out today with a [Swift development snapshot](https://www.swift.org/install/).
+These features and bug fixes are included in the upcoming [Swift 6.3](https://forums.swift.org/t/swift-6-3-release-process/82843) release, and you can try them out today with a [Swift development snapshot](/install/).
 
 ## Libraries and Diagnostics
 

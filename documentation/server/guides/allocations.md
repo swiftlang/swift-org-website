@@ -26,7 +26,7 @@ For high-performance software in Swift, understanding the source of your heap al
 ## Profiling
 You can use different tools and techniques to profile your Swift code, depending on the specific requirements of your project. Some commonly used profiling techniques include:
 
-- Using OS vendor-supplied profiling tools like [Instruments](https://help.apple.com/instruments/mac/current/#/dev7b09c84f5) on macOS or [`perf`](https://www.swift.org/server/guides/linux-perf.html) on Linux.
+- Using OS vendor-supplied profiling tools like [Instruments](https://help.apple.com/instruments/mac/current/#/dev7b09c84f5) on macOS or [`perf`](/server/guides/linux-perf.html) on Linux.
 - Adding manual timing measurements using techniques like adding timestamps before and after critical code sections.
 - Leveraging performance profiling libraries and frameworks for Swift, such as [SwiftMetrics](https://swiftpackageregistry.com/RuntimeTools/SwiftMetrics) or [XCGLogger](https://github.com/XCGLogger/).
 
@@ -46,7 +46,7 @@ Step 1. **Build your code** in `release` mode by running this command:
 swift run -c release
 ```
 
-Step 2. [**Install `perf`**](https://www.swift.org/server/guides/linux-perf.html) to profile your code for your environment to gather performance-related data and optimize the performance of your Swift server applications.
+Step 2. [**Install `perf`**](/server/guides/linux-perf.html) to profile your code for your environment to gather performance-related data and optimize the performance of your Swift server applications.
 
 Step 3. **Clone the FlameGraph project** to generate a flame graph visualization that helps you quickly identify hotspots in the codebase, visualize call paths, understand the flow of execution, and optimize performance. To generate a flame graph, you will need to clone the [`FlameGraph`](https://github.com/brendangregg/FlameGraph) repository on your machine or into a container, making it available at `~/FlameGraph`. 
 
@@ -80,7 +80,7 @@ The `perf` tool is a performance profiling and analysis tool available on Linux 
 > Tip 1: If you’re running `perf` in a Docker container, you will need a privileged container to provide the necessary permissions and access to the tool to gather performance data.
 
 > Tip 2: Prefix the commands with `sudo` if you need `root` access.
-See [Getting `perf` to work](https://www.swift.org/server/guides/linux-perf.html) for more information.
+See [Getting `perf` to work](/server/guides/linux-perf.html) for more information.
 
 ## Installing a perf user probe
 As previously mentioned, this document's example programs focus on counting the *number* of allocations. 

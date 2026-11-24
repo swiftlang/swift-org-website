@@ -159,7 +159,7 @@ Or if you prefer to watch a video, check out [Meet Swift OpenAPI Generator](http
 To ask a question, request a feature, or report a bug, [reach out to us on Github][file-an-issue] 👋.
 
 [openapi]: https://openapis.org
-[previous-blog-post]: https://www.swift.org/blog/introducing-swift-openapi-generator
+[previous-blog-post]: /blog/introducing-swift-openapi-generator
 [documentation]: https://swiftpackageindex.com/apple/swift-openapi-generator/documentation
 [examples]: https://github.com/apple/swift-openapi-generator/blob/1.2.0/Examples/README.md
 [tutorials]: https://swiftpackageindex.com/apple/swift-openapi-generator/tutorials/swift-openapi-generator

@@ -8,7 +8,7 @@ category: "Community"
 
 In Swift 5.5, the Swift Package Manager adds support for package collections — bite size curated lists of packages that make it easy to discover, share and adopt packages.
 
-> At the time of this article’s publication, Swift 5.5 is available as a preview both from [Swift.org](http://swift.org/) and in the Xcode 13 seeds.  Swift 5.5 will be released officially later this year.
+> At the time of this article’s publication, Swift 5.5 is available as a preview both from [Swift.org](/) and in the Xcode 13 seeds.  Swift 5.5 will be released officially later this year.
 
 The goal of package collections is to improve two key aspects of the package ecosystem:
 

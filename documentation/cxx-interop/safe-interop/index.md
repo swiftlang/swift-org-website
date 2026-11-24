@@ -47,7 +47,7 @@ to safely interface with them. This document describes how such code needs to be
 Normally, C++ types imported into Swift are assumed to not impact Swift's memory
 safety, and can be used without safety-related restrictions. However, a small
 set of C++ APIs e.g. pointers/references and methods returning pointers will be
-imported as unsafe (section [Working with C++ references and view types in Swift](https://www.swift.org/documentation/cxx-interop/#working-with-c-references-and-view-types-in-swift)
+imported as unsafe (section [Working with C++ references and view types in Swift](/documentation/cxx-interop/#working-with-c-references-and-view-types-in-swift)
 explains this in more detail.) Under the strict memory safety mode, the compiler will flip the polarity of its safety assumptions.
 It will treat all types that are not known to be safe as unsafe, and emit diagnostics for usage of unsafe types without the `unsafe` keyword.
 In this section,

@@ -40,7 +40,7 @@ Now on to other news about Swift:
 * [Perfect-NIO](https://github.com/PerfectlySoft/Perfect-NIO), the HTTP layer of the Perfect server framework, has been rewritten on SwiftNIO and Swift 6 concurrency. Version 0.1.0 uses async, `@Sendable` route handlers, and 0.2.0 adds WebSocket message size limits.
 
 ## Swift Evolution
-The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
+The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
 
 **Under active review:**
 - [SE-0559](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0559-unicode-bidi-class.md) Add `bidiClass` to `Unicode.Scalar.Properties` - If your code lays out or transforms text that mixes right-to-left and left-to-right scripts, you often need to know how specific characters behave. This proposal adds `bidiClass` to `Unicode.Scalar.Properties`, so you can look up a character's bidirectional class in Swift without needing to bridge to external libraries like ICU.

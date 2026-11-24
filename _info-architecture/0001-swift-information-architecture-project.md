@@ -5,7 +5,7 @@
 
 ## Overview
 
-Over the past ten years, the Swift project has grown from a handful of GitHub repositories to a large number of projects, including the [Swift.org](http://Swift.org) website. Over that time there has been no unified information architecture—content and its organization has developed organically. This project aims to define underlying principles for information architecture and then apply those principles to existing and future content across all of the sites of the Swift project.
+Over the past ten years, the Swift project has grown from a handful of GitHub repositories to a large number of projects, including the [Swift.org](/) website. Over that time there has been no unified information architecture—content and its organization has developed organically. This project aims to define underlying principles for information architecture and then apply those principles to existing and future content across all of the sites of the Swift project.
 
 At a high level the development of the information architecture will have three phases:
 
@@ -18,9 +18,9 @@ All architecture documents will be made available in the Swift forums for commun
 ### Principles
 
 * **Organization-wide Architecture**
-The Swift project provides information in a variety of ways including [Swift.org](http://Swift.org) pages, DocC-generated documentation, GitHub repositories, and more. The information architecture needs to span all of these to provide a cohesive strategy for the entire project.
+The Swift project provides information in a variety of ways including [Swift.org](/) pages, DocC-generated documentation, GitHub repositories, and more. The information architecture needs to span all of these to provide a cohesive strategy for the entire project.
 * **Best Suited Site**
-Information will be presented where it is best suited for the content and audience. For example, GitHub is well suited to host content about contributing to swiftlang projects, whereas [Swift.org](http://Swift.org) is well suited for content aimed at newcomers and users of the Swift language.
+Information will be presented where it is best suited for the content and audience. For example, GitHub is well suited to host content about contributing to swiftlang projects, whereas [Swift.org](/) is well suited for content aimed at newcomers and users of the Swift language.
 * **Single Source of Truth**
 The project should strive to have a single source of truth for a topic across all official Swift project sites.
 * **Progressive Disclosure**
@@ -35,9 +35,9 @@ Where appropriate, content should present encouragement and next steps focusing 
 
 ### Sites / Information Sources
 
-In addition to [Swift.org](http://Swift.org), the Swift project has a number of online sources of information and community interaction:
+In addition to [Swift.org](/), the Swift project has a number of online sources of information and community interaction:
 
-* [Swift.org](http://Swift.org)
+* [Swift.org](/)
 * Swift Forums
 * GitHub repositories
 
@@ -60,13 +60,13 @@ At a high-level the audience falls into three categories:
 3. Contributors
 a. Potential Contributors
 
-Each section and page on [Swift.org](http://Swift.org) should have a specific audience in mind. A page or piece of content may be useful to more than one audience, but the content and tone should be geared towards the primary audience.
+Each section and page on [Swift.org](/) should have a specific audience in mind. A page or piece of content may be useful to more than one audience, but the content and tone should be geared towards the primary audience.
 
 The 'Potential Contributors' audience is a case where pages or content that are primarily focused on another audience may have this as a secondary or tertiary audience in the form of an encouragement or call to action to contribute.
 
 ### Use Cases / Specialties
 
-In addition to audiences as mentioned above, another way to categorize the audience is by use case or specialty. This is an area that could potentially lead to a significant expansion of [Swift.org](http://Swift.org), for example providing specific landing pages focused on use cases such as server-side Swift or embedded Swift.
+In addition to audiences as mentioned above, another way to categorize the audience is by use case or specialty. This is an area that could potentially lead to a significant expansion of [Swift.org](/), for example providing specific landing pages focused on use cases such as server-side Swift or embedded Swift.
 
 Current use cases beyond Apple platform app development include:
 
@@ -85,7 +85,7 @@ This section contains some examples demonstrating issues with the current inform
 
 ### "Slippery Slope" Example
 
-The diagram below depicts the current state of trying to get from the *Contributing* item on the main page of [swift.org](http://swift.org) to the *Getting Started* directions of contributing to the `swiftlang/swift` project.
+The diagram below depicts the current state of trying to get from the *Contributing* item on the main page of [swift.org](/) to the *Getting Started* directions of contributing to the `swiftlang/swift` project.
 
 At present, the site is a tangle of links and backlinks with only one path that actually brings the visitor to steps to get started contributing.
 
@@ -113,8 +113,8 @@ The Swift Package Manager currently has at least four different sources of docum
 
 This makes it difficult for newcomers and developers to find all the relevant documentation for Swift packages and make it likely that one part of the documentation or another will become out of date.
 
-There is the overview and tutorial on [Swift.org](http://Swift.org):
-[Swift.org - Package Manager](https://www.swift.org/documentation/package-manager/)
+There is the overview and tutorial on [Swift.org](/):
+[Swift.org - Package Manager](/documentation/package-manager/)
 
 The markdown documentation in swiftlang/swift-package-mananger:
 https://github.com/swiftlang/swift-package-manager/blob/main/Documentation/README.md

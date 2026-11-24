@@ -347,5 +347,5 @@ can [download the latest snapshot][Download] and try it out!
 [SE-0143]: https://github.com/swiftlang/swift-evolution/blob/master/proposals/0143-conditional-conformances.md
 [Optional.map]: https://developer.apple.com/documentation/swift/optional/#topics
 [Issue]: https://github.com/apple/swift/issues/49240
-[EvolutionProcess]: https://www.swift.org/swift-evolution
+[EvolutionProcess]: /swift-evolution
 [Download]: /download/#snapshots

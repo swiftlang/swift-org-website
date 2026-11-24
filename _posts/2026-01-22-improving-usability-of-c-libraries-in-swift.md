@@ -232,7 +232,7 @@ WGPU_EXPORT void wgpuBindGroupRelease(WGPUBindGroup bindGroup) WGPU_FUNCTION_ATT
 
 Of course, you can use these functions in Swift exactly how you do in C, making sure to balance out calls to `AddRef` and `Release`, but then it would be every bit as unsafe as C.
 
-We can do better with [`SWIFT_SHARED_REFERENCE`](https://www.swift.org/documentation/cxx-interop/#shared-reference-types). It's a macro (defined in the `<swift/bridging>` header) that can turn a reference-counted C type like the above into an automatically reference-counted `class` in Swift. Here's how we would use it in the header:
+We can do better with [`SWIFT_SHARED_REFERENCE`](/documentation/cxx-interop/#shared-reference-types). It's a macro (defined in the `<swift/bridging>` header) that can turn a reference-counted C type like the above into an automatically reference-counted `class` in Swift. Here's how we would use it in the header:
 
 ```swift
 typedef struct SWIFT_SHARED_REFERENCE(wgpuBindGroupAddRef, wgpuBindGroupRelease) WGPUBindGroupImpl* WGPUBindGroup WGPU_OBJECT_ATTRIBUTE;

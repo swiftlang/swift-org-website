@@ -165,7 +165,7 @@ Swift has fulfilled its promise as a powerful, expressive language that works ev
 The Swift on WebAssembly ecosystem is more accessible than ever. Here's how you can get involved:
 
 **For Developers:**
-- Try out the [Swift on WebAssembly getting started guide](https://www.swift.org/documentation/articles/wasm-getting-started.html) and build your first web application.
+- Try out the [Swift on WebAssembly getting started guide](/documentation/articles/wasm-getting-started.html) and build your first web application.
 - Explore the [JavaScriptKit Hello World tutorial](https://swiftpackageindex.com/swiftwasm/javascriptkit/tutorials/javascriptkit/hello-world) for hands-on learning.
 - Use the [WebAssembly debugging guide](https://book.swiftwasm.org/getting-started/debugging.html) to set up your development environment.
 

@@ -13,7 +13,7 @@ WebAssembly support in Swift started out as a community project. Any instruction
 standardized ABI and system interfaces, and from its inception Wasm support in Swift targeted [WebAssembly System
 Interface](https://wasi.dev/), which made porting Swift core libraries to this platform much easier.
 
-Starting with Swift 6.2 and development snapshots you can easily cross-compile and run Wasm modules with Swift SDKs for Wasm distributed on [swift.org](https://swift.org/download).
+Starting with Swift 6.2 and development snapshots you can easily cross-compile and run Wasm modules with Swift SDKs for Wasm distributed on [swift.org](/download).
 The distributed artifact bundles also include support for the experimental Embedded Swift mode.
 
 ## Installation
@@ -29,7 +29,7 @@ The distributed artifact bundles also include support for the experimental Embed
 
 Note that these steps are required on macOS even if you already have latest Xcode installed. Cross-compilation with Swift SDKs on Windows hosts is [not supported yet](https://github.com/swiftlang/swift-package-manager/issues/9148).
 
-1. [Install `swiftly` per the instructions](https://www.swift.org/install/) for the platform that you're building on.
+1. [Install `swiftly` per the instructions](/install/) for the platform that you're building on.
 
 2. Install Swift {{ release_name }} with `swiftly install {{ release_name }}`.
 

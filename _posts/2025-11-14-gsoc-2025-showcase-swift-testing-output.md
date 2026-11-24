@@ -26,7 +26,7 @@ Hello everyone! My name is Kelvin Bui, and I'm excited to share my GSoC 2025 pro
 
 ### Overview
 
-This summer, as part of Google Summer of Code 2025, I had the incredible opportunity to work on [improving the console output for the Swift Testing framework](https://www.swift.org/gsoc2025/). The primary goal was to transform the existing static log into a modern, clear, and highly useful tool for developers. The main achievement of this project is the design and implementation of a new, two-phase console reporter, with a primary focus on delivering a comprehensive **Hierarchical Summary** and **Detailed Failure Report**. It also leverages serialization to allow emitting output from a separate supervisor process, in alignment with future project directions.
+This summer, as part of Google Summer of Code 2025, I had the incredible opportunity to work on [improving the console output for the Swift Testing framework](/gsoc2025/). The primary goal was to transform the existing static log into a modern, clear, and highly useful tool for developers. The main achievement of this project is the design and implementation of a new, two-phase console reporter, with a primary focus on delivering a comprehensive **Hierarchical Summary** and **Detailed Failure Report**. It also leverages serialization to allow emitting output from a separate supervisor process, in alignment with future project directions.
 
 ### Problem & Motivation
 
@@ -93,4 +93,4 @@ I learned how to accept and act on high-quality feedback from senior engineers, 
 
 I'd like to express my deepest gratitude to my mentor, Stuart Montgomery, for his exceptional guidance, patience, and technical insights throughout this entire project. His mentorship has been invaluable.
 
-I'd also like to thank Jonathan Grynspan for his crucial, in-depth architectural feedback, which significantly improved the project's long-term viability. Thank you as well to **[Swift Testing Workgroup](https://www.swift.org/testing-workgroup/)**, and all the other members of the Swift community who provided thoughtful feedback on the forums. This project would not have been possible without your collective expertise and support.
+I'd also like to thank Jonathan Grynspan for his crucial, in-depth architectural feedback, which significantly improved the project's long-term viability. Thank you as well to **[Swift Testing Workgroup](/testing-workgroup/)**, and all the other members of the Swift community who provided thoughtful feedback on the forums. This project would not have been possible without your collective expertise and support.

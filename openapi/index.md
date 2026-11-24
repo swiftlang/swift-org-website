@@ -25,4 +25,4 @@ You can generate a type-safe client from OpenAPI documents using [Swift OpenAPI 
 ## Tools using the Swift.org APIs
 
 - [swiftly](https://github.com/swiftlang/swiftly)
-- [Swift Evolution](https://www.swift.org/swift-evolution/)
+- [Swift Evolution](/swift-evolution/)

@@ -10,7 +10,7 @@ Discussions from this year are tagged [`gsoc-2023`](https://forums.swift.org/tag
 
 ## Accepted projects
 
-Projects accepted for Swift in Google Summer of Code 2023, as [announced on the Swift forums](https://forums.swift.org/t/64850). For an overview of the whole program, read the [Swift Summer of Code 2023 summary](https://www.swift.org/blog/summer-of-code-2023-summary/) on the Swift blog.
+Projects accepted for Swift in Google Summer of Code 2023, as [announced on the Swift forums](https://forums.swift.org/t/64850). For an overview of the whole program, read the [Swift Summer of Code 2023 summary](/blog/summer-of-code-2023-summary/) on the Swift blog.
 
 ### Key path inference and diagnostic improvements
 
@@ -18,7 +18,7 @@ Projects accepted for Swift in Google Summer of Code 2023, as [announced on the 
 
 **Mentor**: Pavel Yaskevich
 
-**Blog**: [Key Path Inference and Diagnostic Improvements](https://www.swift.org/blog/summer-of-code-2023-summary/#key-path-inference-and-diagnostic-improvements)
+**Blog**: [Key Path Inference and Diagnostic Improvements](/blog/summer-of-code-2023-summary/#key-path-inference-and-diagnostic-improvements)
 
 **Results**: [Key Path inference and diagnostic improvements - An Update](https://forums.swift.org/t/69632)
 
@@ -28,7 +28,7 @@ Projects accepted for Swift in Google Summer of Code 2023, as [announced on the 
 
 **Mentor**: Franz Busch
 
-**Blog**: [Swift Memcache](https://www.swift.org/blog/summer-of-code-2023-summary/#swift-memcache)
+**Blog**: [Swift Memcache](/blog/summer-of-code-2023-summary/#swift-memcache)
 
 ### Implement incremental re-parsing in SwiftParser
 
@@ -36,7 +36,7 @@ Projects accepted for Swift in Google Summer of Code 2023, as [announced on the 
 
 **Mentor**: Alex Hoppen
 
-**Blog**: [Implement Incremental Re-Parsing in SwiftParser](https://www.swift.org/blog/summer-of-code-2023-summary/#implement-incremental-re-parsing-in-swiftparser)
+**Blog**: [Implement Incremental Re-Parsing in SwiftParser](/blog/summer-of-code-2023-summary/#implement-incremental-re-parsing-in-swiftparser)
 
 **Results**: [My GSoC Experience](https://forums.swift.org/t/67340)
 

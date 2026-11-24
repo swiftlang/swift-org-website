@@ -164,6 +164,6 @@ Here are a few impressions of the mentees about their experience:
 
 We hope this writeup inspires you to either apply to work with us or become a mentor on the Swift project in a future!
 
-We are always looking for ideas, mentors, and general input about how we can make Swift’s ecosystem more inclusive and easier to participate in. If you have some ideas, would like to become a mentor in future editions, or if you’re just curious about other project ideas that were floated during previous editions, visit the [dedicated GSoC category](https://forums.swift.org/c/development/gsoc/98) on the Swift forums. You can also check out [last year’s GSoC summary blog post](https://www.swift.org/blog/swift-summer-of-code-2022-summary/), where we highlighted last year’s projects. 
+We are always looking for ideas, mentors, and general input about how we can make Swift’s ecosystem more inclusive and easier to participate in. If you have some ideas, would like to become a mentor in future editions, or if you’re just curious about other project ideas that were floated during previous editions, visit the [dedicated GSoC category](https://forums.swift.org/c/development/gsoc/98) on the Swift forums. You can also check out [last year’s GSoC summary blog post](/blog/swift-summer-of-code-2022-summary/), where we highlighted last year’s projects. 
 
 If you’re interested in participating as a mentee, keep an eye on the official [GSoC schedule](https://summerofcode.withgoogle.com/) and on the Swift forum’s [GSoC category](https://forums.swift.org/c/development/gsoc/98).

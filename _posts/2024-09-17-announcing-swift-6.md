@@ -21,7 +21,7 @@ Read on for a deep dive into changes to the language, standard libraries, debugg
 
 Swift has long offered memory safety, ensuring that variables are initialized before they’re used, memory isn’t accessed after it’s been deallocated, and array indices are checked for out-of-bounds errors.  Swift 6 now includes a new, opt-in language mode that extends Swift’s safety guarantees to prevent data races in concurrent code by diagnosing potential data races in your code as compiler errors.
 
-Data-race safety checks were previously available as warnings in Swift 5.10 through the `-strict-concurrency=complete` compiler flag. Thanks to improved `Sendable` inference and new compiler analysis for transferring mutable state from one actor to another, Swift 6 warnings about data-race safety have fewer false positives. You can find more information about the Swift 6 language mode and how to migrate at [Swift.org/migration](http://swift.org/migration).
+Data-race safety checks were previously available as warnings in Swift 5.10 through the `-strict-concurrency=complete` compiler flag. Thanks to improved `Sendable` inference and new compiler analysis for transferring mutable state from one actor to another, Swift 6 warnings about data-race safety have fewer false positives. You can find more information about the Swift 6 language mode and how to migrate at [Swift.org/migration](/migration).
 
 Swift 6 marks the start of the journey to make data-race safety dramatically easier. The usability of data-race safety remains an area of active development, and your feedback will help shape future improvements.
 
@@ -115,9 +115,9 @@ Swift 6 rounds out the set of low-level integer primitives with the addition of 
 
 ### Productivity enhancements
 
-Swift 6 introduces a number of productivity enhancements, including [`count(where:)`](https://developer.apple.com/documentation/swift/sequence/count(where:)) to streamline counting the number of elements in a sequence that satisfy a predicate, [pack iteration](https://www.swift.org/blog/pack-iteration/) for writing natural `for`-loops over the elements in a value parameter pack, access control for imports to keep implementation details from leaking into your public APIs, `@attached(body)` macros for synthesizing and augmenting function implementations, expression macros as default arguments, and more.
+Swift 6 introduces a number of productivity enhancements, including [`count(where:)`](https://developer.apple.com/documentation/swift/sequence/count(where:)) to streamline counting the number of elements in a sequence that satisfy a predicate, [pack iteration](/blog/pack-iteration/) for writing natural `for`-loops over the elements in a value parameter pack, access control for imports to keep implementation details from leaking into your public APIs, `@attached(body)` macros for synthesizing and augmenting function implementations, expression macros as default arguments, and more.
 
-You can find a complete list of language proposals that were accepted through the [Swift Evolution](https://github.com/swiftlang/swift-evolution) process and implemented in Swift 6 on the [Swift Evolution dashboard](https://www.swift.org/swift-evolution/#?version=6.0).
+You can find a complete list of language proposals that were accepted through the [Swift Evolution](https://github.com/swiftlang/swift-evolution) process and implemented in Swift 6 on the [Swift Evolution dashboard](/swift-evolution/#?version=6.0).
 
 ## Debugging
 
@@ -191,11 +191,11 @@ To learn more about this new open source project, visit the [swift-testing](http
 
 ## Platform Support
 
-Swift is designed to support development and execution on all major operating systems, and platform consistency and expansion underpins Swift’s ability to reach new programming domains. Swift 6 brings major improvements to Linux and Windows across the board, including support for more Linux distributions and Windows architectures. Toolchains for all of the following platforms are available for download from [Swift.org/install](https://www.swift.org/install/).
+Swift is designed to support development and execution on all major operating systems, and platform consistency and expansion underpins Swift’s ability to reach new programming domains. Swift 6 brings major improvements to Linux and Windows across the board, including support for more Linux distributions and Windows architectures. Toolchains for all of the following platforms are available for download from [Swift.org/install](/install/).
 
 ### Fully static SDK for Linux
 
-Swift 6 supports building fully statically linked executables for Linux; these have no external dependencies, so they are ideal for situations where you want to copy a program directly onto a system or into a container and run it without installing any extra software. The SDK can also be used to cross-compile to Linux from other platforms. Learn how to [get started with the static SDK for Linux](https://www.swift.org/documentation/articles/static-linux-getting-started.html) on [Swift.org](http://swift.org/).
+Swift 6 supports building fully statically linked executables for Linux; these have no external dependencies, so they are ideal for situations where you want to copy a program directly onto a system or into a container and run it without installing any extra software. The SDK can also be used to cross-compile to Linux from other platforms. Learn how to [get started with the static SDK for Linux](/documentation/articles/static-linux-getting-started.html) on [Swift.org](/).
 
 ### New Linux distributions
 
@@ -209,20 +209,20 @@ Prebuilt toolchains are now available for the arm64 architecture, which provides
 
 ### Download Swift 6
 
-You can try out these exciting new developments in Swift 6 today! Install the official Swift 6 toolchains for macOS, Linux, and Windows at [Swift.org/install](https://www.swift.org/install/).
+You can try out these exciting new developments in Swift 6 today! Install the official Swift 6 toolchains for macOS, Linux, and Windows at [Swift.org/install](/install/).
 
 ### Get started with Swift
 
 [The Swift Programming Language](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/) book has been updated to reflect the latest Swift 6 syntax and features. It serves as the official Swift guide and an excellent starting point for learning the language.
 
-To help kickstart your Swift journey, [Swift.org/getting-started](https://www.swift.org/getting-started/) offers tutorials for various use cases, including building a cross-platform library, a web service using Vapor, and an embedded application for a microcontroller. There are also articles for diving deeper into some of Swift’s most popular features.
+To help kickstart your Swift journey, [Swift.org/getting-started](/getting-started/) offers tutorials for various use cases, including building a cross-platform library, a web service using Vapor, and an embedded application for a microcontroller. There are also articles for diving deeper into some of Swift’s most popular features.
 
 ### Explore the package ecosystem
 
-The Swift package ecosystem is continuously growing with new technologies to help you with a variety of tasks in your projects. You can explore package highlights at [Swift.org/packages](https://www.swift.org/packages/), which features popular package categories and a selection of new and notable packages that are hand-curated from an open nomination process every month.
+The Swift package ecosystem is continuously growing with new technologies to help you with a variety of tasks in your projects. You can explore package highlights at [Swift.org/packages](/packages/), which features popular package categories and a selection of new and notable packages that are hand-curated from an open nomination process every month.
 
 ### Get involved
 
-Your experience with Swift 6 and your feedback can help shape the future evolution of the language, the tools, the package ecosystem, and the community. You can get involved by sharing your packages, documentation improvements, educational content, bug reports and enhancement requests, code contributions, and participating in forum discussions. Learn more at [Swift.org/contributing](http://swift.org/contributing).
+Your experience with Swift 6 and your feedback can help shape the future evolution of the language, the tools, the package ecosystem, and the community. You can get involved by sharing your packages, documentation improvements, educational content, bug reports and enhancement requests, code contributions, and participating in forum discussions. Learn more at [Swift.org/contributing](/contributing).
 
 Swift 6 is the culmination of countless contributions from members across the Swift community, and it marks a decade of building this incredible language, ecosystem, and community together. Thank you to everyone who participated in development and provided feedback. Your contributions make Swift a better language.

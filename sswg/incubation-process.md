@@ -204,6 +204,6 @@ Updates resulting in a version bump require a super-majority vote from the SSWG.
 ## Resources and References
 
 - [Incubated packages](/sswg/incubated-packages.html)
-* [Swift Evolution](https://www.swift.org/swift-evolution/)
+* [Swift Evolution](/swift-evolution/)
 * [CNCF Project Lifecycle & Process](https://github.com/cncf/toc/tree/main/process)
 * [The Apache Incubator](https://incubator.apache.org)

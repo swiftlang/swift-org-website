@@ -28,7 +28,7 @@ There are more opportunities to contribute to an improved documentation experien
 [docc]: https://github.com/swiftlang/swift-docc
 [forum]: https://forums.swift.org/c/92
 [oss-tspl]: https://forums.swift.org/t/59989
-[translation]: https://www.swift.org/documentation/tspl/#translations
+[translation]: /documentation/tspl/#translations
 [tspl-issues]: https://github.com/swiftlang/swift-book/milestone/2
 [tspl]: https://docs.swift.org/swift-book/documentation/the-swift-programming-language/
-[se]: https://www.swift.org/swift-evolution/
+[se]: /swift-evolution/

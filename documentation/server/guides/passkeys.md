@@ -33,7 +33,7 @@ Passkeys are integrated into our browsers, which expose a JavaScript API that ca
 
 These two prompts are the result of calling `navigator.credentials.create(...)` and `navigator.credentials.get(...)`.
 
-To get a better understanding let's quickly play around with this API. Open [Swift.org](https://swift.org) in a new tab, open the developer panel of your browser and switch to the JavaScript console. Create the following variable:
+To get a better understanding let's quickly play around with this API. Open [Swift.org](/) in a new tab, open the developer panel of your browser and switch to the JavaScript console. Create the following variable:
 
 ```js
 const publicKeyCredentialCreationOptions = {
