@@ -141,7 +141,7 @@ title: Install Swift - Windows
     <div class="content">
         <details class="download">
         <summary>Previous Snapshots (main)</summary>
-        {% include install/_older_snapshots.md builds=windows_dev_builds name="windows" platform_dir="windows10" branch_dir="development" %}
+        {% include install/_older_snapshots.md builds=windows_dev_builds arm64_builds=windows_arm64_dev_builds name="windows" platform_dir="windows10" branch_dir="development" %}
         </details>
     </div>
   </div>
@@ -149,7 +149,7 @@ title: Install Swift - Windows
     <div class="content">
         <details class="download">
         <summary>Previous Snapshots (release/6.4.x)</summary>
-        {% include install/_older_snapshots.md builds=windows10_6_4_x_builds name="windows" platform_dir="windows10" branch_dir="swift-6.4.x-branch" %}
+        {% include install/_older_snapshots.md builds=windows10_6_4_x_builds arm64_builds=windows10_arm64_6_4_x_builds name="windows" platform_dir="windows10" branch_dir="swift-6.4.x-branch" %}
         </details>
     </div>
   </div>
