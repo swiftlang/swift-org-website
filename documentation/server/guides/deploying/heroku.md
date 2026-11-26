@@ -69,10 +69,10 @@ heroku git:remote -a your-apps-name-here
 
 ### Stack Selection
 
-As of December 2023, Heroku’s default stack is Heroku 22:
+The Swift buildpack used below supports the Heroku-24 stack, which is based on Ubuntu 24.04:
 
 ```bash
-heroku stack:set heroku-22 -a your-apps-name-here
+heroku stack:set heroku-24 -a your-apps-name-here
 ```
 
 Currently available stacks are listed [here](https://devcenter.heroku.com/articles/stack).
@@ -87,15 +87,13 @@ heroku buildpacks:set vapor/vapor
 
 ### Swift Version Selection
 
-The buildpack we added looks for a **.swift-version** file in the project root directory to know which version of Swift to use.
+The buildpack installs the latest release of Swift by default. To pin a specific version, create a **.swift-version** file in the project root directory:
 
 ```bash
-echo "5.9" > .swift-version
+echo "6.4" > .swift-version
 ```
 
-This creates **.swift-version** with `5.9` as its contents.
-
-When new versions of Swift are released, the buildpack needs to be updated before you can adopt the latest version.
+This creates **.swift-version** with `6.4` as its contents. The buildpack uses [swiftly](/install/linux/swiftly/) to install Swift, so any version that swiftly accepts, such as `6.4` or `6.4.0`, works here.
 
 ### Procfile Creation
 
