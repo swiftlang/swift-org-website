@@ -12,11 +12,11 @@ One of the most popular ways to package applications these days is using contain
 
 Using Docker's tooling, we can build and package the application as a Docker image, publish it to a Docker repository, and later launch it directly on a server or on a platform that supports Docker deployments such as [Kubernetes](https://kubernetes.io). Many public cloud providers including AWS, GCP, Azure, IBM and others encourage this kind of deployment.
 
-Here is an example `Dockerfile` that builds and packages the application on top of CentOS:
+Here is an example `Dockerfile` that builds and packages the application on top of Ubuntu:
 
 ```Dockerfile
 #------- build -------
-FROM swift:centos8 as builder
+FROM swift:noble AS builder
 
 # set up the workspace
 RUN mkdir /workspace
@@ -28,7 +28,7 @@ COPY . /workspace
 RUN swift build -c release --static-swift-stdlib
 
 #------- package -------
-FROM centos
+FROM ubuntu:noble
 # copy executables
 COPY --from=builder /workspace/.build/release/<executable-name> /
 
@@ -67,8 +67,8 @@ Since distroless supports Docker and is based on Debian, packaging a Swift appli
 
 ```Dockerfile
 #------- build -------
-# Building using Ubuntu Bionic since its compatible with Debian runtime
-FROM swift:bionic as builder
+# Building using Debian 13 to match the distroless Debian 13 runtime
+FROM swift:trixie AS builder
 
 # set up the workspace
 RUN mkdir /workspace
@@ -82,7 +82,7 @@ RUN swift build -c release --static-swift-stdlib
 #------- package -------
 # Running on distroless C++ since it includes
 # all(*) the runtime dependencies Swift programs need
-FROM gcr.io/distroless/cc-debian10
+FROM gcr.io/distroless/cc-debian13
 # copy executables
 COPY --from=builder /workspace/.build/release/<executable-name> /
 
@@ -90,7 +90,7 @@ COPY --from=builder /workspace/.build/release/<executable-name> /
 CMD ["<executable-name>"]
 ```
 
-Note the above uses `gcr.io/distroless/cc-debian10` as the runtime image which should work for Swift programs that do not use `FoundationNetworking` or `FoundationXML`. In order to provide more complete support we (the community) could put in a PR into distroless to introduce a base image for Swift that includes `libcurl` and `libxml` which are required for `FoundationNetworking` and `FoundationXML` respectively.
+Note the above uses `gcr.io/distroless/cc-debian13` as the runtime image which should work for Swift programs that do not use `FoundationNetworking` or `FoundationXML`. In order to provide more complete support we (the community) could put in a PR into distroless to introduce a base image for Swift that includes `libcurl` and `libxml` which are required for `FoundationNetworking` and `FoundationXML` respectively.
 
 ## Archive (Tarball, ZIP file, etc.)
 
@@ -106,7 +106,7 @@ First, use the `docker run` command from the application's source location to bu
 $ docker run --rm \
   -v "$PWD:/workspace" \
   -w /workspace \
-  swift:bionic \
+  swift:noble \
   /bin/bash -cl "swift build -c release --static-swift-stdlib"
 ```
 
@@ -118,7 +118,7 @@ Next we can create a staging area with the application's executable:
 $ docker run --rm \
   -v "$PWD:/workspace" \
   -w /workspace \
-  swift:bionic  \
+  swift:noble \
   /bin/bash -cl ' \
      rm -rf .build/install && mkdir -p .build/install && \
      cp -P .build/release/<executable-name> .build/install/'
@@ -136,7 +136,7 @@ We can test the integrity of the tarball by extracting it to a directory and run
 
 ```bash
 $ cd <extracted directory>
-$ docker run -v "$PWD:/app" -w /app bionic ./<executable-name>
+$ docker run -v "$PWD:/app" -w /app ubuntu:noble ./<executable-name>
 ```
 
 Deploying the application's tarball to the target server can be done using utilities like `scp`, or in a more sophisticated setup using configuration management system like `chef`, `puppet`, `ansible`, etc.
@@ -146,7 +146,7 @@ Deploying the application's tarball to the target server can be done using utili
 
 Another distribution technique popular with dynamic languages like Ruby or Javascript is distributing the source to the server, then compiling it on the server itself.
 
-To build Swift applications directly on the server, the server must have the correct Swift toolchain installed. [Swift.org](/download/#linux) publishes toolchains for a variety of Linux distributions, make sure to use the one matching your server Linux version and desired Swift version.
+To build Swift applications directly on the server, the server must have the correct Swift toolchain installed. [Swift.org](/install/linux/) publishes toolchains for a variety of Linux distributions, make sure to use the one matching your server Linux version and desired Swift version.
 
 The main advantage of this approach is that it is easy. Additional advantage is the server has the full toolchain (e.g. debugger) that can help troubleshoot issues "live" on the server.
 
