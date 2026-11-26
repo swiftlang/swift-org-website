@@ -9,13 +9,28 @@ A core principle for the Swift project is that the community is an open and incl
 
 - All discussion on the forums should adhere to Swift project's [Code of Conduct](/code-of-conduct).
 
-- Different users may have different preferences in choice of language for discussion and are encouraged to use their language of choice.
+- The forums are moderated.  If you see a post that you feel is rude or inappropriate, please report it the moderators by flagging the post (click the "..." icon beneath the post, then the flag icon).  It may take a few hours for a moderator to respond.  In the meantime, please just ignore the post and try to avoid making the problem worse.
 
-- As a matter of courtesy, responses to a post should be in the same language as the original post in order to maintain the original inclusiveness of the discussion and not inadvertantly exclude other participants already engaged on the thread (including the author of the original post).
+- If you are concerned about someone's behavior on the forums, or if you disagree with a moderation decision, please send a DM to the `@moderators` group on the forums. The moderators group will review your message and take appropriate action, escalating to a Code of Conduct review if necessary. There is no need to separately message the Core Team, as the moderators group already includes several members of the Core Team.
 
-- A response to a post has the option of providing _additional text_ in a different language if that is helpful.
+- There is no official language for the forums.  Different users may have different preferences in choice of language for discussion and are encouraged to use their language of choice.  As a matter of courtesy, responses to a post should be in the same language as the original post in order to maintain the original inclusiveness of the discussion and not inadvertantly exclude other participants already engaged on the thread (including the author of the original post).  A response to a post has the option of providing _additional text_ in a different language if that is helpful.
 
 - Posts should not use expressive images, such as memes; violations may be removed.  Please see the [forum post introducing this policy](https://forums.swift.org/t/forums-policy-on-memes-and-other-expressive-images/75714) for more information.
+
+- In order to fight certain kinds of automated spam and abuse, the [Swift forums software](https://www.discourse.org) limits what brand new users can do.  These limits will be automatically lifted as you spend time on the forums.  Please read the [Discourse documentation about trust levels](https://blog.discourse.org/2018/06/understanding-discourse-trust-levels/) for more information.
+
+- Some community members with very high trust levels gain the ability to make certain changes to other people's posts, such as moving the thread to a different category, adding or removing tags, and even editing the thread title.  Community members should use these powers conscientiously.
+
+  - Threads should only be moved when they are clearly in the wrong category: for example, if a thread asking for help understanding a compiler diagnostic is in Development&nbsp;>&nbsp;Compiler instead of Using Swift.
+
+  - Threads should only be retitled when doing so would fix a significant problem, such as:
+    - ensuring the title states the actual subject of the thread, for example by changing "What is going on here?" to "How does optional chaining interact with actor isolation?";
+    - fixing typos or similar mistakes in the title, for example by changing "error sharing a `Span`" to "error sharing a `MutableSpan`"; or
+    - making the title less inflammatory or argumentative, for example by removing charged words like "ridiculous".
+
+  Close cases should be left to the moderators, especially when editing titles, as this can be seen as putting words in someone else's mouth. Do not alter posts from people you've recently argued with or you have a poor relationship with. If you feel that someone has used any of these powers inappropriately on one of your posts, please contact the `@moderators` group.
+
+- Forum moderators are responsible for keeping forum discussions productive, on-topic, and well-organized. In addition to what high-trust users can do, moderators can, as needed, perform additional forum housekeeping, such as closing threads, moving posts between threads, or splitting threads when discussions go in different directions. If you would like to request this, please contact the `@moderators` group.
 
 ### Announcements
 [Announcements]: #announcements
