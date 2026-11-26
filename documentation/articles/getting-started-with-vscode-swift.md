@@ -20,7 +20,7 @@ The Swift extension includes:
 
 ## Creating a new Swift project
 
-{% include_relative _shared-create-project.md %}
+{% include_relative _shared-create-project.md editor_name="Visual Studio Code" %}
 
 ## Language Features
 
