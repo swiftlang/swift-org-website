@@ -399,8 +399,8 @@ relying on the plain interface. Adding additional information may alter the sign
 of any existing safe overload however, since only 1 safe overload per imported function is generated.
 
 <div class="info" markdown="1">
-At the time of writing, the features described in this section
-are behind an experimental feature flag on the Swift 6.2 release branch.
+As of Swift 6.4, the features described in this section
+are behind an experimental feature flag.
 To enable these features, pass `-enable-experimental-feature SafeInteropWrappers`
 to the Swift compiler.
 </div>

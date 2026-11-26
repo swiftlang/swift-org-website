@@ -14,7 +14,7 @@ redirect_from:
 
 ## Introduction
 
-C++ interoperability is a new feature in Swift 5.9. 
+C++ interoperability is available in Swift 5.9 and later.
 A great variety of C++ APIs can be called directly from Swift, and select Swift APIs can be used from C++.
 
 This document is the reference guide describing how to mix Swift and C++. It
@@ -2044,28 +2044,8 @@ extension Forest {
 }
 ```
 
-The `borrowing` ownership modifier used above is a
-[new addition](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md)
-in Swift 5.9. Some development versions of Swift 5.9 might not allow you to
-use `borrowing` for copyable C++ types like `Forest`. In such cases, prior
-to the release of Swift 5.9, you can
-use a `mutating` method call chain instead to safely copy the `Tree` returned
-by `getRootTree` instead:
-
-```swift
-import forestLib
-
-extension Forest {
-  private mutating func getRootTreeCopy() -> Tree {
-    return __getRootTreeUnsafeMutating().pointee
-  }
-
-  var rootTree: Tree {
-    var mutCopy = self
-    return mutCopy.getRootTreeCopy()
-  }
-}
-```
+The `borrowing` ownership modifier used above was introduced in Swift 5.9 by
+[SE-0377](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0377-parameter-ownership-modifiers.md).
 
 ### Using Methods That Return References and Views with Independent Lifetime
 
