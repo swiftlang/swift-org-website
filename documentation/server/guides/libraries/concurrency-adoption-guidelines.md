@@ -6,5 +6,5 @@ redirect_to: /migration/documentation/swift-6-concurrency-migration-guide/enable
 ---
 
 <meta http-equiv="refresh" content="0; url=/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety/">
-<link rel="canonical" href="https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety/">
+<link rel="canonical" href="/migration/documentation/swift-6-concurrency-migration-guide/enabledataracesafety/">
 

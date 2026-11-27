@@ -7,7 +7,7 @@ author: [daveverwer, svenaschmidt]
 category: "Language"
 ---
 
-Swift 6 introduces [compile-time data race safety checking](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/dataracesafety) for any code that [opts in to use the Swift 6 language mode](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/swift6mode). While individual modules can adopt this mode incrementally and independently of their dependencies, the full benefit of runtime data race safety is only realized when all modules have opted in. Therefore, the quick adoption of Swift 6 language mode across the ecosystem of open-source packages will play a key role in advancing data race safety across the entire Swift ecosystem.
+Swift 6 introduces [compile-time data race safety checking](/migration/documentation/swift-6-concurrency-migration-guide/dataracesafety) for any code that [opts in to use the Swift 6 language mode](/migration/documentation/swift-6-concurrency-migration-guide/swift6mode). While individual modules can adopt this mode incrementally and independently of their dependencies, the full benefit of runtime data race safety is only realized when all modules have opted in. Therefore, the quick adoption of Swift 6 language mode across the ecosystem of open-source packages will play a key role in advancing data race safety across the entire Swift ecosystem.
 
 Data races can lead to crashes, inconsistent behaviour, and performance issues in apps so the sooner apps and their dependencies can adopt the Swift 6 language mode and opt in to these checks, the better!
 
@@ -23,7 +23,7 @@ Over time, successful adoption of Swift 6 language mode in the package ecosystem
 
 ## Data Race Safety Indicators
 
-When evaluating a package, it is helpful to know if that package has any reported data race safety issues. To assist with this, the Swift Package Index now displays a “Safe from data races” label alongside other package metadata when packages compile with zero errors [using `complete` strict concurrency checks](https://www.swift.org/migration/documentation/swift-6-concurrency-migration-guide/completechecking).
+When evaluating a package, it is helpful to know if that package has any reported data race safety issues. To assist with this, the Swift Package Index now displays a “Safe from data races” label alongside other package metadata when packages compile with zero errors [using `complete` strict concurrency checks](/migration/documentation/swift-6-concurrency-migration-guide/completechecking).
 
 ![Package metadata shown on the Swift Package Index showing that the package has no data race errors](/assets/images/ready-for-swift-6-blog/package-showing-safe-from-data-races.png)
 
@@ -37,4 +37,4 @@ When compiling packages to check compatibility with Swift 6, the Swift Package I
 
 ## Call to Action: Adopt the Swift 6 Language Mode
 
-Compile-time data race safety is a major advance for the Swift language, eliminating an entire class of potential concurrency bugs and elevating your code's safety and maintainability. Every module that migrates to Swift 6 contributes to the community-wide transition to bring data race safety to the Swift software ecosystem. You can help by [updating your own packages](https://www.swift.org/migration/), and you can follow the broader ecosystem's progress on the [Ready for Swift 6 page on the Swift Package Index](https://swiftpackageindex.com/ready-for-swift-6).
+Compile-time data race safety is a major advance for the Swift language, eliminating an entire class of potential concurrency bugs and elevating your code's safety and maintainability. Every module that migrates to Swift 6 contributes to the community-wide transition to bring data race safety to the Swift software ecosystem. You can help by [updating your own packages](/migration/), and you can follow the broader ecosystem's progress on the [Ready for Swift 6 page on the Swift Package Index](https://swiftpackageindex.com/ready-for-swift-6).

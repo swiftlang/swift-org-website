@@ -80,7 +80,7 @@ Valgrind is an open-source framework for debugging and profiling Linux applicati
 
 To debug memory leaks for Swift on Linux using Valgrind, install it on your system. 
 
-1. Install Swift on your Linux system. You can download and install Swift from the [official website](https://swift.org/download/).
+1. Install Swift on your Linux system. You can download and install Swift from the [official website](/download/).
 2. Install Valgrind on your Linux system by using your package manager. For example, if you are using Ubuntu, you can run the following command:
 ```
 sudo apt-get install valgrind
@@ -241,7 +241,7 @@ In this example, the allocation that leaked is coming from:
 
 A GUI front-end analyzer `heaptrack_gui` is available in addition to command line access. The analyzer allows for diffing between two different runs of your application to troubleshoot variations in `malloc` behavior between the `feature branch` and `main`.
 
-Using a different example, here’s a short how-to using [Ubuntu](https://www.swift.org/download/) to analyze transient usage.
+Using a different example, here’s a short how-to using [Ubuntu](/download/) to analyze transient usage.
 
 Step 1: Install `heaptrack` by running this command:
 ```

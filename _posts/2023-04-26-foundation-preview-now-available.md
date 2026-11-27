@@ -7,7 +7,7 @@ author: [parkera]
 category: "Developer Tools"
 ---
 
-I'm pleased to announce that a preview of the [future of Foundation](https://www.swift.org/blog/future-of-foundation/) is now available on [GitHub](https://github.com/swiftlang/swift-foundation)!
+I'm pleased to announce that a preview of the [future of Foundation](/blog/future-of-foundation/) is now available on [GitHub](https://github.com/swiftlang/swift-foundation)!
 
 This preview provides a unified implementation of Foundation, written in Swift, that is faster, safer, and more approachable to new contributors.
 
@@ -39,7 +39,7 @@ The following types are available in the preview package, with more to come late
 
 For internationalization support on non-Darwin platforms, we created a separate package named *[FoundationICU](https://github.com/swiftlang/swift-foundation-icu)*. This repository contains the necessary ICU implementations and data from the upstream [Apple OSS Distribution ICU](https://github.com/apple-oss-distributions/ICU). Using a common version of ICU will result in more reliable and consistent results when formatting dates, times and numbers.
 
-> Note: The Foundation Preview package depends on the under-development [Swift 5.9 toolchain](https://www.swift.org/download).
+> Note: The Foundation Preview package depends on the under-development [Swift 5.9 toolchain](/download).
 
 ## Performance
 

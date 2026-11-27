@@ -60,7 +60,7 @@ Not all changes driven by the Platform Steering Group will under go evolution re
 
 ## Communication
 
-The Platform Steering Group communicates with the community primarily using the [Platform category](https://forums.swift.org/c/platform) on the Swift forums.  It may also prepare special posts for the [Swift Blog](https://www.swift.org/blog/).
+The Platform Steering Group communicates with the community primarily using the [Platform category](https://forums.swift.org/c/platform) on the Swift forums.  It may also prepare special posts for the [Swift Blog](/blog/).
 
 The Steering Group is presently working on a process for platform evolution and will update this charter when details of this process have been finalised, but it is expected that the Steering Group will be responsible for:
 
@@ -72,7 +72,7 @@ The Steering Group is presently working on a process for platform evolution and 
 The Steering Group will also be partially responsible for the content of platform and runtime library documentation:
 
 * It will have editorial authority over platform evolution proposals as primary documents.
-* It will review, alongside other steering groups, the technical content as relates to platform support of any language, library, runtime, or platform documentation hosted on [swift.org](https://swift.org), but editorial authority over that documentation rests with the Website Workgroup or other groups as appropriate.
+* It will review, alongside other steering groups, the technical content as relates to platform support of any language, library, runtime, or platform documentation hosted on [swift.org](/), but editorial authority over that documentation rests with the Website Workgroup or other groups as appropriate.
 
 ## Platform Evolution process
 
@@ -84,5 +84,5 @@ The Platform Steering Group is not separate from the Swift community. Steering G
 
 Proposals or feedback about Swift platform support, the Platform Evolution process, a specific Platform Evolution proposal, or any other topic under the purview of the Platform Steering Group are always welcome.  The primary way to communicate with the Platform Steering Group is simply to post in the Evolution category on the Swift forums, either by adding a reply to an existing review, pitch, or other discussion thread, or by creating a new thread in [Evolution > Discussion](https://forums.swift.org/c/evolution/discuss) or [Evolution > Pitches](https://forums.swift.org/c/evolution/pitches).  Community members may also reach out privately to members of the Platform Steering Group by email or private message on the forums.
 
-The Platform Steering Group follows the [Swift Code of Conduct](https://www.swift.org/code-of-conduct/).  Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported by contacting the Steering Group chair or a member of the [Swift Core Team](https://www.swift.org/community/#community-structure) or by flagging the behavior for moderation, whether you are the target of that behaviour or not.
+The Platform Steering Group follows the [Swift Code of Conduct](/code-of-conduct/).  Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported by contacting the Steering Group chair or a member of the [Swift Core Team](/community/#community-structure) or by flagging the behavior for moderation, whether you are the target of that behaviour or not.
 

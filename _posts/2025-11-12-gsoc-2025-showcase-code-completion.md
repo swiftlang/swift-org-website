@@ -57,7 +57,7 @@ We reused the existing argument completion logic to determine the overloads and 
 Here’s a quick demo of signature help in VS Code.
 
 ![Signature help demo in VS Code.|690x441](/assets/images/gsoc-25/output.gif)
-To try this out in VS Code for yourself, you can [download a main development snapshot from swift.org](https://swift.org/download). If using Swiftly you can run `swiftly install main-snapshot`. Then, in VS Code you can pick "Select Toolchain" from the Command Palette and select the newly downloaded toolchain.
+To try this out in VS Code for yourself, you can [download a main development snapshot from swift.org](/download). If using Swiftly you can run `swiftly install main-snapshot`. Then, in VS Code you can pick "Select Toolchain" from the Command Palette and select the newly downloaded toolchain.
 
 ### Closing Thoughts
 

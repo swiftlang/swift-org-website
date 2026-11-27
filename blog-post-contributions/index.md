@@ -3,7 +3,7 @@ layout: page
 title: Blog Post Contributions
 ---
 
-The [Swift.org blog](https://www.swift.org/blog/) helps to keep the Swift community informed of recent developments in the language, the release roadmap, interesting new features, libraries, tools, and announcing project & community initiatives. It is central to Diversity in Swift’s mission to recognize and highlight work across the community. We welcome blog post contributions from everyone, regardless of background or experience.
+The [Swift.org blog](/blog/) helps to keep the Swift community informed of recent developments in the language, the release roadmap, interesting new features, libraries, tools, and announcing project & community initiatives. It is central to Diversity in Swift’s mission to recognize and highlight work across the community. We welcome blog post contributions from everyone, regardless of background or experience.
 
 Are you doing interesting things using Swift? The community would love to hear how you’ve been using the language. See the process below for details on how to submit a blog post.
 

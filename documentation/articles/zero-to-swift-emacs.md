@@ -20,7 +20,7 @@ Tour](https://www.gnu.org/software/emacs/tour/).
 
 We assume for the purposes of this guide that you have already
 installed Swift; if not, please [follow the installation instructions
-for your platform on the Swift website](https://www.swift.org/install)
+for your platform on the Swift website](/install)
 before continuing.
 
 ## Installing Emacs

@@ -38,7 +38,7 @@ Now on to other news about Swift:
 * [Xylem](https://github.com/compnerd/xylem) is a pure Swift XML parser with zero dependencies, covering SAX, DOM, and XPath 1.0.
 
 ## Swift Evolution
-The Swift project adds new language features through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
+The Swift project adds new language features through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under review or recently accepted for a future Swift release.
 
 **Under active review:**
 * [SE-0529](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0529-filepath-in-stdlib.md) Add `FilePath` to the Standard Library - `FilePath` in the swift-system package parses platform-specific path syntax on the developer's behalf, provides a normalized view of path components, and enables filesystem resolution. However, shipping in an external package means the standard library, Swift runtime, and toolchain libraries such as Foundation cannot depend on it. This proposal adds `FilePath` and its associated types to the `Swift` module, alongside essential functionality for construction, decomposition, resolution, and C interoperability.

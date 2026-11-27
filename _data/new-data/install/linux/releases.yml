@@ -24,7 +24,7 @@ latest-release:
         copy: 'PGP: Signature (x86_64)'
       - href: 'https://download.swift.org/swiftly/linux/swiftly-aarch64.tar.gz.sig'
         copy: 'PGP: Signature (aarch64)'
-      - href: 'https://www.swift.org/install/linux/swiftly'
+      - href: '/install/linux/swiftly'
         copy: 'Instructions'
   container:
     pre-code-text: |-
@@ -33,5 +33,5 @@ latest-release:
     links:
       - href: 'https://hub.docker.com/_/swift'
         copy: 'Docker Hub'
-      - href: 'https://www.swift.org/install/linux/docker'
+      - href: '/install/linux/docker'
         copy: 'Instructions'

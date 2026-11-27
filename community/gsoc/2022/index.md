@@ -10,7 +10,7 @@ Discussions from this year are tagged [`gsoc-2022`](https://forums.swift.org/tag
 
 ## Accepted projects
 
-Projects accepted for Swift in Google Summer of Code 2022, as [announced on the Swift forums](https://forums.swift.org/t/55820). For an overview of the whole program, read the [Swift Summer of Code 2022 summary](https://www.swift.org/blog/swift-summer-of-code-2022-summary/) on the Swift blog.
+Projects accepted for Swift in Google Summer of Code 2022, as [announced on the Swift forums](https://forums.swift.org/t/55820). For an overview of the whole program, read the [Swift Summer of Code 2022 summary](/blog/swift-summer-of-code-2022-summary/) on the Swift blog.
 
 ### Improving the debug output of the type inference algorithm
 
@@ -18,7 +18,7 @@ Projects accepted for Swift in Google Summer of Code 2022, as [announced on the 
 
 **Mentor**: Pavel Yaskevich
 
-**Blog**: [Improving the debug output of the type inference algorithm](https://www.swift.org/blog/swift-summer-of-code-2022-summary/#improving-the-debug-output-of-the-type-inference-algorithm)
+**Blog**: [Improving the debug output of the type inference algorithm](/blog/swift-summer-of-code-2022-summary/#improving-the-debug-output-of-the-type-inference-algorithm)
 
 **Results**: [Improving the Debug Output of the Type Inference Algorithm - An Update](https://forums.swift.org/t/60521)
 
@@ -28,7 +28,7 @@ Projects accepted for Swift in Google Summer of Code 2022, as [announced on the 
 
 **Mentor**: Franz Busch
 
-**Blog**: [Kafka client package for Swift](https://www.swift.org/blog/swift-summer-of-code-2022-summary/#kafka-client-package-for-swift)
+**Blog**: [Kafka client package for Swift](/blog/swift-summer-of-code-2022-summary/#kafka-client-package-for-swift)
 
 ### Bootstrapping SwiftSyntaxBuilder
 
@@ -36,7 +36,7 @@ Projects accepted for Swift in Google Summer of Code 2022, as [announced on the 
 
 **Mentor**: Alex Hoppen
 
-**Blog**: [Bootstrapping SwiftSyntaxBuilder](https://www.swift.org/blog/swift-summer-of-code-2022-summary/#bootstrapping-swiftsyntaxbuilder)
+**Blog**: [Bootstrapping SwiftSyntaxBuilder](/blog/swift-summer-of-code-2022-summary/#bootstrapping-swiftsyntaxbuilder)
 
 ### Interactive mode for ArgumentParser
 
@@ -44,7 +44,7 @@ Projects accepted for Swift in Google Summer of Code 2022, as [announced on the 
 
 **Mentor**: Nate Cook
 
-**Blog**: [Interactive mode for ArgumentParser](https://www.swift.org/blog/swift-summer-of-code-2022-summary/#interactive-mode-for-argumentparser)
+**Blog**: [Interactive mode for ArgumentParser](/blog/swift-summer-of-code-2022-summary/#interactive-mode-for-argumentparser)
 
 ### Quick navigation in Swift-DocC Render
 
@@ -52,7 +52,7 @@ Projects accepted for Swift in Google Summer of Code 2022, as [announced on the 
 
 **Mentors**: Marina Aísa, Franklin Schrans, Beatriz Magalhães
 
-**Blog**: [Quick navigation in Swift-DocC websites](https://www.swift.org/blog/swift-summer-of-code-2022-summary/#quick-navigation-in-swift-docc-websites)
+**Blog**: [Quick navigation in Swift-DocC websites](/blog/swift-summer-of-code-2022-summary/#quick-navigation-in-swift-docc-websites)
 
 **Results**: [Quick navigation in DocC Render](https://forums.swift.org/t/59550)
 

@@ -20,7 +20,7 @@ It is not a tutorial on how to use Neovim and assumes some familiarity
 with modal text editors like _Neovim_, _Vim_, or _Vi_.
 We are also assuming that you have already installed a Swift toolchain on your
 computer. If not, please see the
-[Swift installation instructions](https://www.swift.org/install).
+[Swift installation instructions](/install).
 
 Although the article references Ubuntu 22.04, the configuration itself works on
 any operating system where a recent version of Neovim and a Swift toolchain is

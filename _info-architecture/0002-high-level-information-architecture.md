@@ -39,7 +39,7 @@ This section refines that design principle and adds a new principle.
 At present, two channels serve as sources of truth:
 
 * GitHub repositories
-This is the primary source of truth for Swiftlang content. Even channels such as [Swift.org](http://Swift.org) are ultimately derived from content in a GitHub repository.
+This is the primary source of truth for Swiftlang content. Even channels such as [Swift.org](/) are ultimately derived from content in a GitHub repository.
 * Swift Forums
 A small but important percentage of content is available only on the Swift Forums. This content includes Swift Evolution proposal pitches, review threads, and the rationale for proposal decisions.
 
@@ -61,9 +61,9 @@ Adhering to this principle can be addressed in various ways including separate r
 
 Information is presented to the Swift community across a variety of channels. Part of the information architecture of the project is a clear definition and rationale of which content is presented in which channel.
 
-### [Swift.org](http://Swift.org)
+### [Swift.org](/)
 
-[Swift.org](http://Swift.org) can be thought of as the ‘front door’ or ‘front of house’ of the Swift project. It serves two main purposes:
+[Swift.org](/) can be thought of as the ‘front door’ or ‘front of house’ of the Swift project. It serves two main purposes:
 
 * Provide an excellent ‘front door’ to newcomers to the Swift language and ecosystem. Some of the pages/content is focused entirely on newcomers:
   * Getting Started
@@ -79,7 +79,7 @@ Newcomer and Developer audiences
 
 #### Interaction
 
-This channel is for presenting information and does not provide facilities for discussion or interaction. In general the content on [Swift.org](http://Swift.org) can be considered ‘read only’.
+This channel is for presenting information and does not provide facilities for discussion or interaction. In general the content on [Swift.org](/) can be considered ‘read only’.
 
 #### User Experience
 
@@ -89,7 +89,7 @@ One of the core strengths of this channel is complete control over its appearanc
 
 GitHub serves as the ‘back of house’ of the Swift project.
 
-Work on Swiftlang projects happens in GitHub repositories. These repositories contain the source to everything from the Swift compiler and standard library to The Swift Programming Language book, to the contents of [Swift.org](http://Swift.org).
+Work on Swiftlang projects happens in GitHub repositories. These repositories contain the source to everything from the Swift compiler and standard library to The Swift Programming Language book, to the contents of [Swift.org](/).
 
 The purpose of this channel is to provide information about contributing, both for the swiftlang organization overall and individual repositories.
 
@@ -107,7 +107,7 @@ GitHub Discussions are not used for Swiftlang projects, discussions are conducte
 
 This channel is the standard GitHub user experience. This provides a familiar interface for users of GitHub. Control over the user experience is limited to the settings available in GitHub.
 
-There is also the potential to present some content using GitHub Pages which would provide more control over the user experience of the pages. It would be important to establish guidelines regarding using GitHub as a way to present webpages as opposed to [Swift.org](http://Swift.org).
+There is also the potential to present some content using GitHub Pages which would provide more control over the user experience of the pages. It would be important to establish guidelines regarding using GitHub as a way to present webpages as opposed to [Swift.org](/).
 
 ### Swift Forums
 
@@ -175,7 +175,7 @@ Focus areas exist for the purpose of dividing the information architecture proje
 
 Although some focus areas are larger in scope than others, when taken all together, they should address all of the audiences and channels defined above.
 
-The set of focus areas listed below uses the [Swift.org](http://Swift.org) site as of April 2025 as a starting point.
+The set of focus areas listed below uses the [Swift.org](/) site as of April 2025 as a starting point.
 
 ### Contributor Audience
 
@@ -189,7 +189,7 @@ Because the vast majority of activity for contributors happens on GitHub, GitHub
 
 #### Contributor Overview
 
-Although the vast majority of contributor information will use GitHub, an aspirational page that encourages the broad variety of contributions to the project may be better suited for [Swift.org](http://Swift.org).
+Although the vast majority of contributor information will use GitHub, an aspirational page that encourages the broad variety of contributions to the project may be better suited for [Swift.org](/).
 
 Audience: Potential Contributors
 
@@ -197,12 +197,12 @@ Audience: Potential Contributors
 
 Governance information describes the Swiftlang organization, how it is structured, governed, and run. This includes overviews of all workgroups and steering groups, as well as charters and membership for each group.
 
-Similarly, it may make sense for things such as the project code of conduct to be presented both on GitHub and on [Swift.org](http://Swift.org).
+Similarly, it may make sense for things such as the project code of conduct to be presented both on GitHub and on [Swift.org](/).
 
 Audience: Mixed
 The audience for this information is mixed. Newcomers may want to get an overview of how the project is managed before deciding to select Swift as a language. Existing Swift Developers may be curious about how decisions get made about the language they use on a daily basis. Contributors may also be curious about how the project is structured.
 
-This information is relatively static and may be a good candidate to be presented on [Swift.org](http://Swift.org) (although likely with less top-level menu entries than the current site). Which channel to present this information bears discussion and so is a separate focus area.
+This information is relatively static and may be a good candidate to be presented on [Swift.org](/) (although likely with less top-level menu entries than the current site). Which channel to present this information bears discussion and so is a separate focus area.
 
 #### Workgroup Operations
 
@@ -210,17 +210,17 @@ As opposed to governance information which is fairly static, workgroup operation
 
 ### Newcomer and Swift Developer Audiences
 
-The primary channel for both the Newcomer and Swift Developer audiences is [Swift.org](http://Swift.org).
+The primary channel for both the Newcomer and Swift Developer audiences is [Swift.org](/).
 
-Some pages on [Swift.org](http://Swift.org) serve a definite audience and so are different focus areas.
+Some pages on [Swift.org](/) serve a definite audience and so are different focus areas.
 
-Some parts of [Swift.org](http://Swift.org), such as navigation, need to be designed to take the entirety of the site into account.
+Some parts of [Swift.org](/), such as navigation, need to be designed to take the entirety of the site into account.
 
-With [Swift.org](http://Swift.org) in particular there are areas that do not fit neatly into isolated focus areas. Areas of expected overlap are noted.
+With [Swift.org](/) in particular there are areas that do not fit neatly into isolated focus areas. Areas of expected overlap are noted.
 
-Another note is that the core pages of [Swift.org](http://Swift.org) are generated as a static site using Jekyll, while other content, such as documentation, is generated separately.
+Another note is that the core pages of [Swift.org](/) are generated as a static site using Jekyll, while other content, such as documentation, is generated separately.
 
-The focus areas on this section are separated into the current core pages / sections of the [Swift.org](http://Swift.org) site.
+The focus areas on this section are separated into the current core pages / sections of the [Swift.org](/) site.
 
 Note also that the information architecture project is being run in parallel with the [Swift.org Redesign Project](https://forums.swift.org/t/announcing-the-swift-org-redesign-project/75865). The two projects will work in tandem.
 
@@ -236,7 +236,7 @@ Audience: Newcomers
 
 Newcomers are the audience for this page. Note that things such as tutorials for newcomers and how they are authored and delivered may have some overlap with Documentation.
 
-Also, providing a path for newcomers interested in particular specializations (e.g. Embedded Swift, Server-side Swift, etc.) may require coordination with how these specialized communities are supported on [Swift.org](http://Swift.org) overall.
+Also, providing a path for newcomers interested in particular specializations (e.g. Embedded Swift, Server-side Swift, etc.) may require coordination with how these specialized communities are supported on [Swift.org](/) overall.
 
 #### Blog / News
 
@@ -244,7 +244,7 @@ Audience: Swift Developers
 
 The audience for blog posts are existing Swift Developers. Newcomers may also read blog posts, and give a newcomer a sense of what is going on in the Swift ecosystem, but the posts are written for those already in the ecosystem.
 
-A related item that overlaps with the Home Page focus area is the notion of some way of presenting project news on [Swift.org](http://Swift.org). At present the only mechanism for announcing or highlighting something on [Swift.org](http://Swift.org) is through blog posts. Having a way to present information that is more lightweight may be very beneficial.
+A related item that overlaps with the Home Page focus area is the notion of some way of presenting project news on [Swift.org](/). At present the only mechanism for announcing or highlighting something on [Swift.org](/) is through blog posts. Having a way to present information that is more lightweight may be very beneficial.
 
 This area of focus also includes the social media channel as one way of getting news about Swift. It also includes RSS feeds as another means of getting news.
 
@@ -266,7 +266,7 @@ Audience: Newcomers / Swift Developers / Potential Contributors
 
 All audiences may be interested in learning more about the Swift community.
 
-Currently the top-level menu has many items. In conjunction with the Governance and Contributor Overview focus areas, this focus area would discuss how (or if) community information should appear on [Swift.org](http://Swift.org).
+Currently the top-level menu has many items. In conjunction with the Governance and Contributor Overview focus areas, this focus area would discuss how (or if) community information should appear on [Swift.org](/).
 
 #### Install / Downloads
 
@@ -274,13 +274,13 @@ Audience: Newcomers and Swift Developers
 
 There are two audiences for installation and downloads. Newcomers need an easy way to install and get started with Swift. Day to day developers need easy ways to download different Swift versions including daily development builds.
 
-This section of [Swift.org](http://Swift.org) needs to support both use cases well.
+This section of [Swift.org](/) needs to support both use cases well.
 
-The introduction of swiftly may change the requiremets of installation and downloads on [Swift.org](http://Swift.org).
+The introduction of swiftly may change the requiremets of installation and downloads on [Swift.org](/).
 
 #### Documentation
 
-Documentation is currently split between being statically generated as part of the core [Swift.org](http://Swift.org) site, and being generated via DocC and appearing in the [docs.swift.org](http://docs.swift.org) subdomain.
+Documentation is currently split between being statically generated as part of the core [Swift.org](/) site, and being generated via DocC and appearing in the [docs.swift.org](http://docs.swift.org) subdomain.
 
 Audience: Swift Developers
 Although contributors and newcomers will also look at documentation, documentation should be geared towards day to day use by Swift developers.
@@ -289,7 +289,7 @@ Because documentation pages are generated in a different way and has its own set
 
 Topics that may also fall out of the Documentation focus area include documentation for Swift specializations such as C++ Interoperability, Server Side Swift, etc. Also, how best to incorporate sample code as part of documentation.
 
-#### [Swift.org](http://Swift.org) Site-wide Areas
+#### [Swift.org](/) Site-wide Areas
 
 The primary site-wide area is navigation and overall site structure. This includes top-level navigation items and how the site is organized.
 
@@ -307,13 +307,13 @@ At present these are all included in this single focus areas but could be broken
 
 Specializations are use cases of Swift where specialized information is required. These include areas such as Embedded Swift, Swift on Server, etc. In addition, there is typically a community of developers who specialize in these areas.
 
-The purpose of this focus area is to work through how these communities should be supported on [Swift.org](http://Swift.org) - both newcomers coming to Swift with an interest in a specialization and day to day developers who work in these areas.
+The purpose of this focus area is to work through how these communities should be supported on [Swift.org](/) - both newcomers coming to Swift with an interest in a specialization and day to day developers who work in these areas.
 
 Note that this focus area overlaps with a number of other focus areas (Getting Started page, Documentation) and may propose other solutions such as a landing page for a specialization.
 
 ### APIs / Dashboards
 
-[Swift.org](http://Swift.org) vends various APIs, including the JSON file that drives the Swift Evolution Dashboard.
+[Swift.org](/) vends various APIs, including the JSON file that drives the Swift Evolution Dashboard.
 
 This focus area will catalog all of the existing APIs, developer criteria for what purpose APIs should serve and when adding an API would be appropriate.
 

@@ -28,7 +28,7 @@ The proposal's goal is to provide a consistent place to host a diversity of Swif
 
 ## Proposed Solution
 
-Leverage Swift's [documentation tooling](https://www.swift.org/documentation/docc/) to provide a means to collect and organize the documentation, grouped into common collections.
+Leverage Swift's [documentation tooling](/documentation/docc/) to provide a means to collect and organize the documentation, grouped into common collections.
 For documentation content aligned with a tool or library, host the source of the documentation alongside the source for that tool or library.
 
 For documentation content that cuts across the ecosystem, or isn't aligned with a single repository, organize the content into collections within a single "docs" repository.
@@ -192,20 +192,20 @@ Files to migrate under the `documentation` directory on Swift.org:
 
 | `source` | status & destination |
 | - | - | 
-| [`api-design-guidelines/index.md`](https://www.swift.org/documentation/api-design-guidelines/) | translate to docc, break into multiple articles in `api-guidelines/APIGuidelines.docc` |
-| [`server/index.md`](https://www.swift.org/documentation/server/index.html) | deprecate & redirect to https://www.swift.org/get-started/cloud-services/ |
-| [`server/guides/index.md`](https://www.swift.org/documentation/server/guides/index.html) | translate, migrate to top level of `server-guides/ServerGuides.docc` |
-| [`server/guides/building.md`](https://www.swift.org/documentation/server/guides/building.html) | refine/update to provide examples of building, add section for debug vs. release and swift tooling, link to SwiftPM docs on building, add section about building in Linux using containers, add section on building with devContainers, add detail on static linux SDK, break out some content to a CI related article |
-| [`server/guides/testing.md`](https://www.swift.org/documentation/server/guides/testing.html) | quite dated - update to swift 6, swift-testing, break out some content into a "CI" focused article - focus on unit testing, leave room for functional, integration testing as sep articles |
-| [`articles/static-linux-getting-started.md`](https://www.swift.org/documentation/articles/static-linux-getting-started.html) | migrate as is  - consider renaming or breaking into multiple, smaller focused articles, review any changes with previous authors (Alastair, Melissa) |
-| [`articles/value-and-reference-types.md`](https://www.swift.org/documentation/articles/value-and-reference-types.html) | migrate content into `swift/LanguageGuides`|
-| [`concurrency/index.md`](https://www.swift.org/documentation/concurrency/index.html) | redirect to content at https://www.swift.org/migration/documentation/|  |swift-6-concurrency-migration-guide/enabledataracesafety |
-| [`articles/zero-to-swift-nvim.md`](https://www.swift.org/documentation/articles/zero-to-swift-nvim.html) | migrate into `ecosystem/EcosystemTools.docc` |
-| [`articles/zero-to-swift-emacs.md`](https://www.swift.org/documentation/articles/zero-to-swift-emacs.html) | migrate into `ecosystem/EcosystemTools.docc` |
-| [`articles/getting-started-with-vscode-swift.md`](https://www.swift.org/documentation/articles/getting-started-with-vscode-swift.html) | migrate into `ecosystem/EcosystemTools.docc` |
-| [`articles/wasm-getting-started.md`](https://www.swift.org/documentation/articles/wasm-getting-started.html) | translate and migrate into `ecosystem/WASM.docc` |
+| [`api-design-guidelines/index.md`](/documentation/api-design-guidelines/) | translate to docc, break into multiple articles in `api-guidelines/APIGuidelines.docc` |
+| [`server/index.md`](/documentation/server/index.html) | deprecate & redirect to https://www.swift.org/get-started/cloud-services/ |
+| [`server/guides/index.md`](/documentation/server/guides/index.html) | translate, migrate to top level of `server-guides/ServerGuides.docc` |
+| [`server/guides/building.md`](/documentation/server/guides/building.html) | refine/update to provide examples of building, add section for debug vs. release and swift tooling, link to SwiftPM docs on building, add section about building in Linux using containers, add section on building with devContainers, add detail on static linux SDK, break out some content to a CI related article |
+| [`server/guides/testing.md`](/documentation/server/guides/testing.html) | quite dated - update to swift 6, swift-testing, break out some content into a "CI" focused article - focus on unit testing, leave room for functional, integration testing as sep articles |
+| [`articles/static-linux-getting-started.md`](/documentation/articles/static-linux-getting-started.html) | migrate as is  - consider renaming or breaking into multiple, smaller focused articles, review any changes with previous authors (Alastair, Melissa) |
+| [`articles/value-and-reference-types.md`](/documentation/articles/value-and-reference-types.html) | migrate content into `swift/LanguageGuides`|
+| [`concurrency/index.md`](/documentation/concurrency/index.html) | redirect to content at https://www.swift.org/migration/documentation/|  |swift-6-concurrency-migration-guide/enabledataracesafety |
+| [`articles/zero-to-swift-nvim.md`](/documentation/articles/zero-to-swift-nvim.html) | migrate into `ecosystem/EcosystemTools.docc` |
+| [`articles/zero-to-swift-emacs.md`](/documentation/articles/zero-to-swift-emacs.html) | migrate into `ecosystem/EcosystemTools.docc` |
+| [`articles/getting-started-with-vscode-swift.md`](/documentation/articles/getting-started-with-vscode-swift.html) | migrate into `ecosystem/EcosystemTools.docc` |
+| [`articles/wasm-getting-started.md`](/documentation/articles/wasm-getting-started.html) | translate and migrate into `ecosystem/WASM.docc` |
 
-The Swift.org [documentation page](https://www.swift.org/documentation/) will be updated to point to these new DocC catalogs as the content migrates, to provide a way to navigate to the relevant content from swift.org.
+The Swift.org [documentation page](/documentation/) will be updated to point to these new DocC catalogs as the content migrates, to provide a way to navigate to the relevant content from swift.org.
 The navigability between DocC collections and integration of those collections into the broader design constraints for swift.org are being dealt with separately, as part of the Swift.org redesign efforts, and beyond the immediate scope of this proposal.
 
 As mentioned above, the metadata for the earlier pages will remain on Swift.org for some time, with the stubs of those articles being updated to provide HTML redirects for legacy URLs to the new location once the updated content is published using the DocC catalog.

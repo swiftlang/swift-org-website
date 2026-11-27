@@ -15,14 +15,14 @@ Each edition, we share updates that we hope will be useful to you whether you're
 >
 > Indeed, it has been a monumental twelve months for Swift as an open source project. 
 >
-> From its relatively humble roots as an open source project, starting with [a simple blog post](https://www.swift.org/blog/welcome) ten years ago this month, the [Swift project now comprises over 70 repositories](https://github.com/swiftlang), with hundreds of contributors every week bringing fresh perspectives, performance improvements, and tooling enhancements to the ecosystem.
+> From its relatively humble roots as an open source project, starting with [a simple blog post](/blog/welcome) ten years ago this month, the [Swift project now comprises over 70 repositories](https://github.com/swiftlang), with hundreds of contributors every week bringing fresh perspectives, performance improvements, and tooling enhancements to the ecosystem.
 > 
-> The [release of Swift 6.2](https://www.swift.org/blog/swift-6.2-released/) brings more approachable concurrency with defaults that align with a philosophy of progressive disclosure: making advanced features available when you need them, but keeping them out of your way when you don't. Swift 6.2 also adds [WebAssembly support](https://www.swift.org/documentation/articles/wasm-getting-started.html), deep C++ interoperability, and improved memory safety features. 
+> The [release of Swift 6.2](/blog/swift-6.2-released/) brings more approachable concurrency with defaults that align with a philosophy of progressive disclosure: making advanced features available when you need them, but keeping them out of your way when you don't. Swift 6.2 also adds [WebAssembly support](/documentation/articles/wasm-getting-started.html), deep C++ interoperability, and improved memory safety features. 
 > 
 > This year proved that Swift truly runs everywhere, across a variety of platforms and use cases:
 > 
-> - **Embedded**: Embedded Swift is [rapidly evolving](https://www.swift.org/blog/embedded-swift-improvements-coming-in-swift-6.3/), moving from experimental to practical use cases, with significant updates targeted for the upcoming 6.3 release.
-> - **Android**: The workgroup is making strides with [daily snapshot builds](https://www.swift.org/blog/nightly-swift-sdk-for-android/) and end-to-end demos, bringing native Swift development closer to reality on Android devices.
+> - **Embedded**: Embedded Swift is [rapidly evolving](/blog/embedded-swift-improvements-coming-in-swift-6.3/), moving from experimental to practical use cases, with significant updates targeted for the upcoming 6.3 release.
+> - **Android**: The workgroup is making strides with [daily snapshot builds](/blog/nightly-swift-sdk-for-android/) and end-to-end demos, bringing native Swift development closer to reality on Android devices.
 > - **Windows**: Support is maturing fast, with richer tooling via the VS Code extension and a growing library of packages that support Windows out of the box.
 > - **BSD**: The preview of [Swift on FreeBSD](https://forums.swift.org/t/swift-on-freebsd-preview/83064) support is now available for FreeBSD 14.3 and later, and will be featured in a FOSDEM 2026 talk about [Porting Swift to FreeBSD](https://fosdem.org/2026/schedule/event/swift-on-freebsd/).
 > - **AI**: The ecosystem is evolving quickly, with MLX providing a Swift-friendly API for machine learning on Apple Silicon, and numerous packages from [Hugging Face](https://github.com/huggingface?q=&type=all&language=swift) for Swift development.
@@ -43,7 +43,7 @@ Outside of the pre-conference event, Swift talks will appear in several FOSDEM d
 
 ## Talks worth watching
 * [Beyond Web Services: Swift for Low-Level Container infrastructure](https://www.youtube.com/watch?v=I72qyQbXQgM) - Eric Ernst introduces us to Apple's Containerization and Container open source projects, built entirely in Swift.
-* [Separate code from configuration with Swift Configuration](https://www.youtube.com/watch?v=I3lYW6OEyIs) - Swift Configuration provides a unified approach to handling configuration in your Swift applications. For more information, also check out the [Swift Configuration 1.0 announcement](https://www.swift.org/blog/swift-configuration-1.0-released/) from last week.
+* [Separate code from configuration with Swift Configuration](https://www.youtube.com/watch?v=I3lYW6OEyIs) - Swift Configuration provides a unified approach to handling configuration in your Swift applications. For more information, also check out the [Swift Configuration 1.0 announcement](/blog/swift-configuration-1.0-released/) from last week.
 * [Getting started with gRPC Swift](https://www.youtube.com/watch?v=yo-7ipiQwNs) - A deep dive into the Swift package for gRPC, a key building block of performant cloud services.
 
 ## Behind the scenes interviews
@@ -54,9 +54,9 @@ Outside of the pre-conference event, Swift talks will appear in several FOSDEM d
 ## Swift blog highlights
 In case you missed it, here are several recent blog posts you'll want to check out:
 
-* [Exploring the Swift SDK for Android](https://www.swift.org/blog/exploring-the-swift-sdk-for-android/) - Common questions about Swift on Android are answered by the Android workgroup, and new Swift 6.3 SDK nightly previews were announced.
-* [Temporal Swift SDK introduced](https://www.swift.org/blog/swift-temporal-sdk/) - Temporal has also blogged about [using Swift with Temporal](https://temporal.io/blog/temporal-now-supports-swift).
-* 2025 Google Summer of Code contributors had posts featuring work related to several Swift-related projects, everything from [Bringing Swiftly support to VS Code](https://www.swift.org/blog/gsoc-2025-showcase-swiftly-support-in-vscode/), [Extending Swift-Java Interoperability](https://www.swift.org/blog/gsoc-2025-showcase-swift-java/), [Improved code completion for Swift](https://www.swift.org/blog/gsoc-2025-showcase-code-completion/), and [Improved console output for Swift Testing](https://www.swift.org/blog/gsoc-2025-showcase-swift-testing-output/).
+* [Exploring the Swift SDK for Android](/blog/exploring-the-swift-sdk-for-android/) - Common questions about Swift on Android are answered by the Android workgroup, and new Swift 6.3 SDK nightly previews were announced.
+* [Temporal Swift SDK introduced](/blog/swift-temporal-sdk/) - Temporal has also blogged about [using Swift with Temporal](https://temporal.io/blog/temporal-now-supports-swift).
+* 2025 Google Summer of Code contributors had posts featuring work related to several Swift-related projects, everything from [Bringing Swiftly support to VS Code](/blog/gsoc-2025-showcase-swiftly-support-in-vscode/), [Extending Swift-Java Interoperability](/blog/gsoc-2025-showcase-swift-java/), [Improved code completion for Swift](/blog/gsoc-2025-showcase-code-completion/), and [Improved console output for Swift Testing](/blog/gsoc-2025-showcase-swift-testing-output/).
 
 ## Swift everywhere
 As this month's guest contribution shared, Swift continues to expand to new platforms. Here are a few recent examples from the community:
@@ -67,7 +67,7 @@ As this month's guest contribution shared, Swift continues to expand to new plat
 * [Swift on a Pebble watch](https://x.com/lucaslovexoxo/status/1987516793372524727) - A fun example of how a developer used Swift's embedded support to build a "hello world" example on a 10-year-old Pebble Time Round watch.
 
 ## Swift Evolution
-The Swift project adds new language features to the language through the [Swift Evolution process](https://www.swift.org/swift-evolution/). These are some of the proposals currently under discussion or recently accepted for a future Swift release.
+The Swift project adds new language features to the language through the [Swift Evolution process](/swift-evolution/). These are some of the proposals currently under discussion or recently accepted for a future Swift release.
 
 **Under Active Review:**
 * [SE-0501](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0501-swiftpm-html-coverage-report.md) HTML Coverage Report - This proposal adds HTML coverage report generation to Swift Package Manager's swift test command. Currently, SwiftPM only generates JSON coverage reports, which are useful for automated tools but difficult for developers to read directly. The new `--coverage-format` option would allow generating HTML reports alongside or instead of JSON, enabling visual inspection in CI systems and faster feedback during development.

@@ -14,7 +14,7 @@ to open source projects. Participants usually are students, but do not have to b
 
 Swift has been participating in Summer of Code since 2018, and every year we've had successful projects,
 helping the Swift project among various aspects including the compiler, runtime, and general package and tooling ecosystem.
-If you're curious, here are the two most recent project summaries for [2022](https://www.swift.org/blog/swift-summer-of-code-2022-summary/) and [2023](https://www.swift.org/blog/summer-of-code-2023-summary/).
+If you're curious, here are the two most recent project summaries for [2022](/blog/swift-summer-of-code-2022-summary/) and [2023](/blog/summer-of-code-2023-summary/).
 
 Many GSoC participants become part of the Swift community and keep contributing even as the program ends.
 This is the most exciting part for us: helping you become a part of the Swift community!
@@ -22,7 +22,7 @@ This is the most exciting part for us: helping you become a part of the Swift co
 If you are [eligible](https://summerofcode.withgoogle.com/get-started), and would like to contribute to Swift during
 this year's GSoC, these are the steps to take:
 
-1. Check out the existing [project ideas page](https://www.swift.org/gsoc2024/).
+1. Check out the existing [project ideas page](/gsoc2024/).
 2. If a project excites you, [proceed to the GSoC category on the Swift forums](https://forums.swift.org/c/development/gsoc/98) to discuss the project.
 3. Once you are confident in your understanding of the project and how to approach it, [write an official proposal](https://google.github.io/gsocguides/student/writing-a-proposal) and submit it to the [GSoC website](https://summerofcode.withgoogle.com).
 

@@ -37,7 +37,7 @@ which provides a functional example backend to test the Live Caller ID Lookup
 feature using homomorphic encryption.
 
 These two packages take full advantage of features such as:
-* [Swift on Server](https://www.swift.org/documentation/server/), including the Hummingbird HTTP framework and cross-platform support
+* [Swift on Server](/documentation/server/), including the Hummingbird HTTP framework and cross-platform support
 * easy benchmarking with the [Benchmark](https://github.com/ordo-one/package-benchmark) library
 * performant low-level cryptography primitives in [Swift Crypto](https://github.com/apple/swift-crypto).
 

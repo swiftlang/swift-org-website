@@ -7,7 +7,7 @@ author: krilnon
 category: "Community"
 ---
 
-We're pleased to announce the release of the new [Swift Evolution](https://www.swift.org/swift-evolution/) status page as a one-stop destination for information about proposed changes to Swift.
+We're pleased to announce the release of the new [Swift Evolution](/swift-evolution/) status page as a one-stop destination for information about proposed changes to Swift.
 
 The Swift.org community has wholeheartedly embraced the [Swift Evolution process](https://github.com/swiftlang/swift-evolution/blob/master/process.md)—to date, members have contributed to over 100 proposals. Each new proposal generates a burst of activity in the community.
 

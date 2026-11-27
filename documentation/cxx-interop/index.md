@@ -1923,7 +1923,7 @@ let result = callback(42)              // shorthand for callback.callAsFunction(
 ## Working with C++ References and View Types in Swift
 
 <div class="info" markdown="1">
-Swift 6.2 introduces a new [safe interoperability](https://www.swift.org/documentation/cxx-interop/safe-interop)
+Swift 6.2 introduces a new [safe interoperability](/documentation/cxx-interop/safe-interop)
 mode, which makes it possible to use C/C++ pointers and specific view types,
 such as `std::span`, safely from Swift. We recommend enabling safe
 interoperability mode, since it provides stronger safety guarantees. The

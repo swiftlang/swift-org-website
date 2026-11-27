@@ -66,7 +66,7 @@ The workgroup is also partially responsible for the content of language and libr
 
 * It has editorial authority over evolution proposals as primary documents.
 * It has editorial authority over the naming guidelines and other “style” documents which are under the control of the evolution process.
-* It reviews the technical content of any language and library documentation hosted on [swift.org](http://swift.org/), but editorial authority over that documentation rests with the Website Workgroup or other groups as appropriate.
+* It reviews the technical content of any language and library documentation hosted on [swift.org](/), but editorial authority over that documentation rests with the Website Workgroup or other groups as appropriate.
 
 ## Evolution process
 

@@ -29,9 +29,9 @@ Joe's conference experience highlights some of the exciting developments we're s
 
 ### Featured community projects
 
-* [Swift SDK for Android](https://forums.swift.org/t/announcing-the-swift-sdk-for-android/82845) - The Android workgroup [announced in the blog](https://www.swift.org/blog/nightly-swift-sdk-for-android/) a preview release of an SDK supporting Android, and a [dedicated Android platforms category](https://forums.swift.org/c/platform/android/115) in the Forums.
+* [Swift SDK for Android](https://forums.swift.org/t/announcing-the-swift-sdk-for-android/82845) - The Android workgroup [announced in the blog](/blog/nightly-swift-sdk-for-android/) a preview release of an SDK supporting Android, and a [dedicated Android platforms category](https://forums.swift.org/c/platform/android/115) in the Forums.
 * The [Swift Extension of VS Code](https://docs.swift.org/vscode/documentation/userdocs/) - Useful for developing server apps in Swift, the Swift Extension of VS Code is rapidly evolving and [just released v2.12.0 featuring swiftly integration and a new walkthrough for first-time users](https://forums.swift.org/t/vs-code-swift-extension-2-12-0-release-now-available/82947).
-* [Swift Build and Packaging Workgroup](https://www.swift.org/build-and-packaging-workgroup/) - A new workgroup under the [ecosystem steering group](https://www.swift.org/ecosystem-steering-group/) with a focus on the tools used to build and package Swift code.
+* [Swift Build and Packaging Workgroup](/build-and-packaging-workgroup/) - A new workgroup under the [ecosystem steering group](/ecosystem-steering-group/) with a focus on the tools used to build and package Swift code.
 * [Swift Package Manager documentation](https://docs.swift.org/swiftpm/documentation/packagemanagerdocs/) - The documentation for the Package Manager is refreshed and now published, including the API references, on docs.swift.org.
 
 
@@ -66,4 +66,4 @@ The Swift project adds new language features to the language through the [Swift 
 
 
 ### Share what you're working on
-If you’re making something available that you’d like to highlight, create a thread on the [Swift Forums Community Showcase](https://forums.swift.org/c/community-showcase/66). Please also [nominate packages that you find interesting](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168) for potential inclusion into the [Package Showcase](https://www.swift.org/packages/showcase.html) hosted on [Swift.org](http://swift.org/)
+If you’re making something available that you’d like to highlight, create a thread on the [Swift Forums Community Showcase](https://forums.swift.org/c/community-showcase/66). Please also [nominate packages that you find interesting](https://forums.swift.org/t/nominations-for-the-packages-community-showcase-on-swift-org/68168) for potential inclusion into the [Package Showcase](/packages/showcase.html) hosted on [Swift.org](/)
